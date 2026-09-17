@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique identifier of a review template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of a review template.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Review template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Review template name. The length cannot exceed 64 characters.
- * @method string getComment() Obtain Review template description information, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Review template description information, with a length limit of 256 characters.
- * @method array getLabels() Obtain The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
- * @method void setLabels(array $Labels) Set The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method array getLabels() Obtain 
+ * @method void setLabels(array $Labels) Set 
  */
 class ModifyReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of a review template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Review template name. The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Review template description information, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var array The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+     * @var array 
      */
     public $Labels;
 
     /**
-     * @param integer $Definition Unique identifier of a review template.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Review template name. The length cannot exceed 64 characters.
-     * @param string $Comment Review template description information, with a length limit of 256 characters.
-     * @param array $Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+     * @param integer $Definition 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param array $Labels 
      */
     function __construct()
     {

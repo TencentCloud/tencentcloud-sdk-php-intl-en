@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcFaceInfo request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method array getFileInfos() Obtain Need to get the input video information for face information, containing at most one file.
- * @method void setFileInfos(array $FileInfos) Set Need to get the input video information for face information, containing at most one file.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getFileInfos() Obtain 
+ * @method void setFileInfos(array $FileInfos) Set 
  */
 class DescribeAigcFaceInfoRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var array Need to get the input video information for face information, containing at most one file.
+     * @var array 
      */
     public $FileInfos;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param array $FileInfos Need to get the input video information for face information, containing at most one file.
+     * @param integer $SubAppId 
+     * @param array $FileInfos 
      */
     function __construct()
     {

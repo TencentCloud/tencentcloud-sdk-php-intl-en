@@ -18,52 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin-pull authentication for other origins
+ * 
  *
- * @method string getSwitch() Obtain Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method string getAccessKey() Obtain Access ID.
- * @method void setAccessKey(string $AccessKey) Set Access ID.
- * @method string getSecretKey() Obtain Key.
- * @method void setSecretKey(string $SecretKey) Set Key.
- * @method string getRegion() Obtain Region.
- * @method void setRegion(string $Region) Set Region.
- * @method string getBucket() Obtain Bucket name
- * @method void setBucket(string $Bucket) Set Bucket name
+ * @method string getSwitch() Obtain Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getAccessKey() Obtain 
+ * @method void setAccessKey(string $AccessKey) Set 
+ * @method string getSecretKey() Obtain 
+ * @method void setSecretKey(string $SecretKey) Set 
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
+ * @method string getBucket() Obtain 
+ * @method void setBucket(string $Bucket) Set 
  */
 class OthersPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var string Access ID.
+     * @var string 
      */
     public $AccessKey;
 
     /**
-     * @var string Key.
+     * @var string 
      */
     public $SecretKey;
 
     /**
-     * @var string Region.
+     * @var string 
      */
     public $Region;
 
     /**
-     * @var string Bucket name
+     * @var string 
      */
     public $Bucket;
 
     /**
-     * @param string $Switch Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param string $AccessKey Access ID.
-     * @param string $SecretKey Key.
-     * @param string $Region Region.
-     * @param string $Bucket Bucket name
+     * @param string $Switch Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $AccessKey 
+     * @param string $SecretKey 
+     * @param string $Region 
+     * @param string $Bucket 
      */
     function __construct()
     {

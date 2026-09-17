@@ -18,92 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of face recognition task
+ * 
  *
- * @method string getSwitch() Obtain Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
- * @method float getScore() Obtain Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
- * @method void setScore(float $Score) Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
- * @method array getDefaultLibraryLabelSet() Obtain Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sports celebrities</li>
-<li>`politician`: politically sensitive people</li>
- * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sports celebrities</li>
-<li>`politician`: politically sensitive people</li>
- * @method array getUserDefineLibraryLabelSet() Obtain Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
-You can specify up to 100 labels, with each containing up to 16 characters.
- * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
-You can specify up to 100 labels, with each containing up to 16 characters.
- * @method string getFaceLibrary() Obtain Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
-Default value: All (both default and custom figure libraries will be used.)
- * @method void setFaceLibrary(string $FaceLibrary) Set Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
-Default value: All (both default and custom figure libraries will be used.)
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method float getScore() Obtain 
+ * @method void setScore(float $Score) Set 
+ * @method array getDefaultLibraryLabelSet() Obtain 
+ * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set 
+ * @method array getUserDefineLibraryLabelSet() Obtain 
+ * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set 
+ * @method string getFaceLibrary() Obtain 
+ * @method void setFaceLibrary(string $FaceLibrary) Set 
  */
 class FaceConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var float Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
+     * @var float 
      */
     public $Score;
 
     /**
-     * @var array Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sports celebrities</li>
-<li>`politician`: politically sensitive people</li>
+     * @var array 
      */
     public $DefaultLibraryLabelSet;
 
     /**
-     * @var array Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
-You can specify up to 100 labels, with each containing up to 16 characters.
+     * @var array 
      */
     public $UserDefineLibraryLabelSet;
 
     /**
-     * @var string Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
-Default value: All (both default and custom figure libraries will be used.)
+     * @var string 
      */
     public $FaceLibrary;
 
     /**
-     * @param string $Switch Switch of face recognition task. Valid values:
-<li>ON: enables intelligent face recognition task;</li>
-<li>OFF: disables intelligent face recognition task.</li>
-     * @param float $Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
-     * @param array $DefaultLibraryLabelSet Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sports celebrities</li>
-<li>`politician`: politically sensitive people</li>
-     * @param array $UserDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
-You can specify up to 100 labels, with each containing up to 16 characters.
-     * @param string $FaceLibrary Figure library. Valid values:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-<li>All: both default and custom figure libraries will be used.</li>
-Default value: All (both default and custom figure libraries will be used.)
+     * @param string $Switch 
+     * @param float $Score 
+     * @param array $DefaultLibraryLabelSet 
+     * @param array $UserDefineLibraryLabelSet 
+     * @param string $FaceLibrary 
      */
     function __construct()
     {

@@ -18,84 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Full speech recognition result.
+ * 
  *
- * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method AiRecognitionTaskAsrFullTextResultInput getInput() Obtain Input information of full speech recognition task.
- * @method void setInput(AiRecognitionTaskAsrFullTextResultInput $Input) Set Input information of full speech recognition task.
- * @method AiRecognitionTaskAsrFullTextResultOutput getOutput() Obtain Output information on the speech full-text recognition task.
- * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set Output information on the speech full-text recognition task.
- * @method integer getProgress() Obtain Speech full-text recognition task progress, value range [0-100].
- * @method void setProgress(integer $Progress) Set Speech full-text recognition task progress, value range [0-100].
- * @method string getBeginProcessTime() Obtain The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method string getFinishTime() Obtain The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setFinishTime(string $FinishTime) Set The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method AiRecognitionTaskAsrFullTextResultInput getInput() Obtain 
+ * @method void setInput(AiRecognitionTaskAsrFullTextResultInput $Input) Set 
+ * @method AiRecognitionTaskAsrFullTextResultOutput getOutput() Obtain 
+ * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
  */
 class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var AiRecognitionTaskAsrFullTextResultInput Input information of full speech recognition task.
+     * @var AiRecognitionTaskAsrFullTextResultInput 
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskAsrFullTextResultOutput Output information on the speech full-text recognition task.
+     * @var AiRecognitionTaskAsrFullTextResultOutput 
      */
     public $Output;
 
     /**
-     * @var integer Speech full-text recognition task progress, value range [0-100].
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var string The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $BeginProcessTime;
 
     /**
-     * @var string The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $FinishTime;
 
     /**
-     * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-     * @param string $Message Error message.
-     * @param AiRecognitionTaskAsrFullTextResultInput $Input Input information of full speech recognition task.
-     * @param AiRecognitionTaskAsrFullTextResultOutput $Output Output information on the speech full-text recognition task.
-     * @param integer $Progress Speech full-text recognition task progress, value range [0-100].
-     * @param string $BeginProcessTime The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param string $FinishTime The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param AiRecognitionTaskAsrFullTextResultInput $Input 
+     * @param AiRecognitionTaskAsrFullTextResultOutput $Output 
+     * @param integer $Progress 
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
      */
     function __construct()
     {

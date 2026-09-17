@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlindWatermarkTemplates request structure.
  *
- * @method integer getSubAppId() Obtain VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
- * @method void setSubAppId(integer $SubAppId) Set VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
- * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
- * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
- * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
- * @method void setType(string $Type) Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
- * @method void setLimit(integer $Limit) Set Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getDefinitions() Obtain 
+ * @method void setDefinitions(array $Definitions) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeBlindWatermarkTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var array Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
+     * @var array 
      */
     public $Definitions;
 
     /**
-     * @var string Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
-     * @param array $Definitions Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
-     * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+     * @param integer $SubAppId 
+     * @param array $Definitions 
+     * @param string $Type 
+     * @param integer $Offset 
+     * @param integer $Limit 
      */
     function __construct()
     {

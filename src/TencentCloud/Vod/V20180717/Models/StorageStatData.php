@@ -18,68 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VOD storage usage by region.
+ * 
  *
- * @method string getArea() Obtain VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
- * @method void setArea(string $Area) Set VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
- * @method integer getTotalStorage() Obtain Current total storage capacity in bytes.
- * @method void setTotalStorage(integer $TotalStorage) Set Current total storage capacity in bytes.
- * @method integer getInfrequentStorage() Obtain Current STANDARD_IA storage capacity in bytes.
- * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current STANDARD_IA storage capacity in bytes.
- * @method integer getStandardStorage() Obtain Current STANDARD storage capacity in bytes.
- * @method void setStandardStorage(integer $StandardStorage) Set Current STANDARD storage capacity in bytes.
- * @method integer getArchiveStorage() Obtain Current ARCHIVE storage usage in bytes
- * @method void setArchiveStorage(integer $ArchiveStorage) Set Current ARCHIVE storage usage in bytes
- * @method integer getDeepArchiveStorage() Obtain Current DEEP ARCHIVE storage usage in bytes
- * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) Set Current DEEP ARCHIVE storage usage in bytes
+ * @method string getArea() Obtain 
+ * @method void setArea(string $Area) Set 
+ * @method integer getTotalStorage() Obtain 
+ * @method void setTotalStorage(integer $TotalStorage) Set 
+ * @method integer getInfrequentStorage() Obtain 
+ * @method void setInfrequentStorage(integer $InfrequentStorage) Set 
+ * @method integer getStandardStorage() Obtain 
+ * @method void setStandardStorage(integer $StandardStorage) Set 
+ * @method integer getArchiveStorage() Obtain 
+ * @method void setArchiveStorage(integer $ArchiveStorage) Set 
+ * @method integer getDeepArchiveStorage() Obtain 
+ * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) Set 
  */
 class StorageStatData extends AbstractModel
 {
     /**
-     * @var string VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * @var string 
      */
     public $Area;
 
     /**
-     * @var integer Current total storage capacity in bytes.
+     * @var integer 
      */
     public $TotalStorage;
 
     /**
-     * @var integer Current STANDARD_IA storage capacity in bytes.
+     * @var integer 
      */
     public $InfrequentStorage;
 
     /**
-     * @var integer Current STANDARD storage capacity in bytes.
+     * @var integer 
      */
     public $StandardStorage;
 
     /**
-     * @var integer Current ARCHIVE storage usage in bytes
+     * @var integer 
      */
     public $ArchiveStorage;
 
     /**
-     * @var integer Current DEEP ARCHIVE storage usage in bytes
+     * @var integer 
      */
     public $DeepArchiveStorage;
 
     /**
-     * @param string $Area VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-     * @param integer $TotalStorage Current total storage capacity in bytes.
-     * @param integer $InfrequentStorage Current STANDARD_IA storage capacity in bytes.
-     * @param integer $StandardStorage Current STANDARD storage capacity in bytes.
-     * @param integer $ArchiveStorage Current ARCHIVE storage usage in bytes
-     * @param integer $DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+     * @param string $Area 
+     * @param integer $TotalStorage 
+     * @param integer $InfrequentStorage 
+     * @param integer $StandardStorage 
+     * @param integer $ArchiveStorage 
+     * @param integer $DeepArchiveStorage 
      */
     function __construct()
     {

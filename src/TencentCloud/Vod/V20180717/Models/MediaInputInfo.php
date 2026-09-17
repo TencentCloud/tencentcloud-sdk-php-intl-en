@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information, name, and customer ID of the source video to be processed
+ * 
  *
- * @method string getUrl() Obtain Video URL.
- * @method void setUrl(string $Url) Set Video URL.
- * @method string getName() Obtain Video name.
- * @method void setName(string $Name) Set Video name.
- * @method string getId() Obtain Custom video ID.
- * @method void setId(string $Id) Set Custom video ID.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getId() Obtain 
+ * @method void setId(string $Id) Set 
  */
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string Video URL.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string Video name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Custom video ID.
+     * @var string 
      */
     public $Id;
 
     /**
-     * @param string $Url Video URL.
-     * @param string $Name Video name.
-     * @param string $Id Custom video ID.
+     * @param string $Url 
+     * @param string $Name 
+     * @param string $Id 
      */
     function __construct()
     {

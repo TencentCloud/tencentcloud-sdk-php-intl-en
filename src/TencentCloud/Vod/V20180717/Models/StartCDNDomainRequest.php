@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartCDNDomain request structure.
  *
- * @method string getDomain() Obtain Domain.
- * @method void setDomain(string $Domain) Set Domain.
- * @method string getOperation() Obtain Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
- * @method void setOperation(string $Operation) Set Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method string getDomain() Obtain <p>Domain name.</p>
+ * @method void setDomain(string $Domain) Set <p>Domain name.</p>
+ * @method string getOperation() Obtain <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
+ * @method void setOperation(string $Operation) Set <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
  */
 class StartCDNDomainRequest extends AbstractModel
 {
     /**
-     * @var string Domain.
+     * @var string <p>Domain name.</p>
      */
     public $Domain;
 
     /**
-     * @var string Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * @var string <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
      */
     public $Operation;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain Domain.
-     * @param string $Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param string $Domain <p>Domain name.</p>
+     * @param string $Operation <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     function __construct()
     {

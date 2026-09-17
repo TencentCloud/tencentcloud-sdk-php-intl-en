@@ -20,86 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMediaStorageClass request structure.
  *
- * @method array getFileIds() Obtain Unique identifier list of media files. Maximum length: 100.
- * @method void setFileIds(array $FileIds) Set Unique identifier list of media files. Maximum length: 100.
- * @method string getStorageClass() Obtain Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
- * @method void setStorageClass(string $StorageClass) Set Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getRestoreTier() Obtain Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
- * @method void setRestoreTier(string $RestoreTier) Set Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
+ * @method array getFileIds() Obtain 
+ * @method void setFileIds(array $FileIds) Set 
+ * @method string getStorageClass() Obtain 
+ * @method void setStorageClass(string $StorageClass) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getRestoreTier() Obtain 
+ * @method void setRestoreTier(string $RestoreTier) Set 
  */
 class ModifyMediaStorageClassRequest extends AbstractModel
 {
     /**
-     * @var array Unique identifier list of media files. Maximum length: 100.
+     * @var array 
      */
     public $FileIds;
 
     /**
-     * @var string Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+     * @var string 
      */
     public $StorageClass;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
+     * @var string 
      */
     public $RestoreTier;
 
     /**
-     * @param array $FileIds Unique identifier list of media files. Maximum length: 100.
-     * @param string $StorageClass Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
+     * @param array $FileIds 
+     * @param string $StorageClass 
+     * @param integer $SubAppId 
+     * @param string $RestoreTier 
      */
     function __construct()
     {

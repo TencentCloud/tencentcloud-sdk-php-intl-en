@@ -18,28 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for QR code detection in video.
+ * 
  *
- * @method string getSwitch() Obtain QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
- * @method void setSwitch(string $Switch) Set QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  */
 class QRCodeConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @param string $Switch QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * @param string $Switch 
      */
     function __construct()
     {

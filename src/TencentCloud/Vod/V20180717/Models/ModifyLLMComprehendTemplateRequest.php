@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLLMComprehendTemplate request structure.
  *
- * @method integer getDefinition() Obtain <p>Unique identifier of the Large Model Understanding Template</p>
- * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the Large Model Understanding Template</p>
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
- * @method string getName() Obtain <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
- * @method void setName(string $Name) Set <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
- * @method string getComment() Obtain <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
- * @method void setComment(string $Comment) Set <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
- * @method string getModel() Obtain <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
- * @method void setModel(string $Model) Set <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
- * @method LLMComprehendSummaryForUpdate getSummary() Obtain <p>Segment summary parsing configuration</p>
- * @method void setSummary(LLMComprehendSummaryForUpdate $Summary) Set <p>Segment summary parsing configuration</p>
- * @method LLMComprehendAsrForUpdate getAsr() Obtain <p>Text transcription parsing configuration</p>
- * @method void setAsr(LLMComprehendAsrForUpdate $Asr) Set <p>Text transcription parsing configuration</p>
- * @method LLMComprehendFaceRecognitionForUpdate getFaceRecognition() Obtain <p>Face identification configuration</p>
- * @method void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate $FaceRecognition) Set <p>Face identification configuration</p>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getModel() Obtain 
+ * @method void setModel(string $Model) Set 
+ * @method LLMComprehendSummaryForUpdate getSummary() Obtain 
+ * @method void setSummary(LLMComprehendSummaryForUpdate $Summary) Set 
+ * @method LLMComprehendAsrForUpdate getAsr() Obtain 
+ * @method void setAsr(LLMComprehendAsrForUpdate $Asr) Set 
+ * @method LLMComprehendFaceRecognitionForUpdate getFaceRecognition() Obtain 
+ * @method void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate $FaceRecognition) Set 
  */
 class ModifyLLMComprehendTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Unique identifier of the Large Model Understanding Template</p>
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * @var string 
      */
     public $Model;
 
     /**
-     * @var LLMComprehendSummaryForUpdate <p>Segment summary parsing configuration</p>
+     * @var LLMComprehendSummaryForUpdate 
      */
     public $Summary;
 
     /**
-     * @var LLMComprehendAsrForUpdate <p>Text transcription parsing configuration</p>
+     * @var LLMComprehendAsrForUpdate 
      */
     public $Asr;
 
     /**
-     * @var LLMComprehendFaceRecognitionForUpdate <p>Face identification configuration</p>
+     * @var LLMComprehendFaceRecognitionForUpdate 
      */
     public $FaceRecognition;
 
     /**
-     * @param integer $Definition <p>Unique identifier of the Large Model Understanding Template</p>
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
-     * @param string $Name <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
-     * @param string $Comment <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
-     * @param string $Model <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
-     * @param LLMComprehendSummaryForUpdate $Summary <p>Segment summary parsing configuration</p>
-     * @param LLMComprehendAsrForUpdate $Asr <p>Text transcription parsing configuration</p>
-     * @param LLMComprehendFaceRecognitionForUpdate $FaceRecognition <p>Face identification configuration</p>
+     * @param integer $Definition 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param string $Model 
+     * @param LLMComprehendSummaryForUpdate $Summary 
+     * @param LLMComprehendAsrForUpdate $Asr 
+     * @param LLMComprehendFaceRecognitionForUpdate $FaceRecognition 
      */
     function __construct()
     {

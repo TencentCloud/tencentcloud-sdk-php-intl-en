@@ -20,118 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAdaptiveDynamicStreamingTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique identifier of the adaptive transcoding template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of the adaptive transcoding template.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Template name. The length cannot exceed 64 characters.
- * @method string getFormat() Obtain Adaptive Transcoding Format, with a value range of
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
- * @method void setFormat(string $Format) Set Adaptive Transcoding Format, with a value range of
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
- * @method integer getDisableHigherVideoBitrate() Obtain Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
- * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
- * @method integer getDisableHigherVideoResolution() Obtain Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
- * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
- * @method array getStreamInfos() Obtain Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
-Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
- * @method void setStreamInfos(array $StreamInfos) Set Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
-Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
- * @method string getComment() Obtain Template description, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
- * @method string getSegmentType() Obtain Segment type, valid when Format is HLS. Value range:
-<li>ts: ts slicing;</li>
-<li>fmp4: fmp4 segment.</li>
- * @method void setSegmentType(string $SegmentType) Set Segment type, valid when Format is HLS. Value range:
-<li>ts: ts slicing;</li>
-<li>fmp4: fmp4 segment.</li>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method integer getDisableHigherVideoBitrate() Obtain 
+ * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set 
+ * @method integer getDisableHigherVideoResolution() Obtain 
+ * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set 
+ * @method array getStreamInfos() Obtain 
+ * @method void setStreamInfos(array $StreamInfos) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getSegmentType() Obtain 
+ * @method void setSegmentType(string $SegmentType) Set 
+ * @method integer getSegmentDuration() Obtain 
+ * @method void setSegmentDuration(integer $SegmentDuration) Set 
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of the adaptive transcoding template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Template name. The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Adaptive Transcoding Format, with a value range of
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var integer Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
+     * @var integer 
      */
     public $DisableHigherVideoBitrate;
 
     /**
-     * @var integer Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
+     * @var integer 
      */
     public $DisableHigherVideoResolution;
 
     /**
-     * @var array Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
-Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
+     * @var array 
      */
     public $StreamInfos;
 
     /**
-     * @var string Template description, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string Segment type, valid when Format is HLS. Value range:
-<li>ts: ts slicing;</li>
-<li>fmp4: fmp4 segment.</li>
+     * @var string 
      */
     public $SegmentType;
 
     /**
-     * @param integer $Definition Unique identifier of the adaptive transcoding template.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Template name. The length cannot exceed 64 characters.
-     * @param string $Format Adaptive Transcoding Format, with a value range of
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
-     * @param integer $DisableHigherVideoBitrate Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
-     * @param integer $DisableHigherVideoResolution Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
-<li>`0`: no,</li>
-<li>1: Yes.</li>
-     * @param array $StreamInfos Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
-Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
-     * @param string $Comment Template description, with a length limit of 256 characters.
-     * @param string $SegmentType Segment type, valid when Format is HLS. Value range:
-<li>ts: ts slicing;</li>
-<li>fmp4: fmp4 segment.</li>
+     * @var integer 
+     */
+    public $SegmentDuration;
+
+    /**
+     * @param integer $Definition 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Format 
+     * @param integer $DisableHigherVideoBitrate 
+     * @param integer $DisableHigherVideoResolution 
+     * @param array $StreamInfos 
+     * @param string $Comment 
+     * @param string $SegmentType 
+     * @param integer $SegmentDuration 
      */
     function __construct()
     {
@@ -185,6 +157,10 @@ Note: The frame rate of each stream must remain consistent. If inconsistent, use
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
             $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("SegmentDuration",$param) and $param["SegmentDuration"] !== null) {
+            $this->SegmentDuration = $param["SegmentDuration"];
         }
     }
 }

@@ -18,44 +18,88 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP blocklist/allowlist path-based configuration
+ * 
  *
- * @method string getFilterType() Obtain IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
- * @method void setFilterType(string $FilterType) Set IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
- * @method array getFilters() Obtain IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
- * @method void setFilters(array $Filters) Set IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
- * @method string getRuleType() Obtain Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
- * @method void setRuleType(string $RuleType) Set Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
- * @method array getRulePaths() Obtain Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
- * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+ * @method string getFilterType() Obtain IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blacklist: blocklist.</li>
+ * @method void setFilterType(string $FilterType) Set IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blacklist: blocklist.</li>
+ * @method array getFilters() Obtain IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
+ * @method string getRuleType() Obtain Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+ * @method void setRuleType(string $RuleType) Set Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+ * @method array getRulePaths() Obtain Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+ * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
  */
 class IpFilterPathRule extends AbstractModel
 {
     /**
-     * @var string IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+     * @var string IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blacklist: blocklist.</li>
      */
     public $FilterType;
 
     /**
-     * @var array IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+     * @var array IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public $Filters;
 
     /**
-     * @var string Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+     * @var string Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
      */
     public $RuleType;
 
     /**
-     * @var array Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+     * @var array Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
      */
     public $RulePaths;
 
     /**
-     * @param string $FilterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
-     * @param array $Filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
-     * @param string $RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-     * @param array $RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+     * @param string $FilterType IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blacklist: blocklist.</li>
+     * @param array $Filters IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
+     * @param string $RuleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+     * @param array $RulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
      */
     function __construct()
     {

@@ -20,50 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMPSTemplate request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
- * @method string getTemplateType() Obtain Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
- * @method void setTemplateType(string $TemplateType) Set Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
- * @method integer getDefinition() Obtain Template Unique Identifier of the MPS task.
- * @method void setDefinition(integer $Definition) Set Template Unique Identifier of the MPS task.
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+ * @method string getTemplateType() Obtain <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
+ * @method void setTemplateType(string $TemplateType) Set <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
+ * @method integer getDefinition() Obtain <p>Unique identifier of the MPS task template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the MPS task template.</p>
  */
 class DeleteMPSTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * @var integer <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
+     * @var string <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
      */
     public $TemplateType;
 
     /**
-     * @var integer Template Unique Identifier of the MPS task.
+     * @var integer <p>Unique identifier of the MPS task template.</p>
      */
     public $Definition;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
-     * @param string $TemplateType Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
-     * @param integer $Definition Template Unique Identifier of the MPS task.
+     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param string $TemplateType <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
+     * @param integer $Definition <p>Unique identifier of the MPS task template.</p>
      */
     function __construct()
     {

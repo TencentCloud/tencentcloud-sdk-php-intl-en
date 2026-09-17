@@ -18,156 +18,116 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video editing task information
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Progress of a video editing task. Value range: [0, 100]
- * @method void setProgress(integer $Progress) Set Progress of a video editing task. Value range: [0, 100]
- * @method EditMediaTaskInput getInput() Obtain Video editing task input.
- * @method void setInput(EditMediaTaskInput $Input) Set Video editing task input.
- * @method EditMediaTaskOutput getOutput() Obtain Output of the video editing task.
- * @method void setOutput(EditMediaTaskOutput $Output) Set Output of the video editing task.
- * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
- * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
- * @method string getProcedureTaskId() Obtain The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
- * @method void setProcedureTaskId(string $ProcedureTaskId) Set The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
- * @method string getReviewAudioVideoTaskId() Obtain The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
- * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
- * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method EditMediaTaskInput getInput() Obtain 
+ * @method void setInput(EditMediaTaskInput $Input) Set 
+ * @method EditMediaTaskOutput getOutput() Obtain 
+ * @method void setOutput(EditMediaTaskOutput $Output) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method string getProcedureTaskId() Obtain 
+ * @method void setProcedureTaskId(string $ProcedureTaskId) Set 
+ * @method string getReviewAudioVideoTaskId() Obtain 
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
  */
 class EditMediaTask extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var integer Progress of a video editing task. Value range: [0, 100]
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var EditMediaTaskInput Video editing task input.
+     * @var EditMediaTaskInput 
      */
     public $Input;
 
     /**
-     * @var EditMediaTaskOutput Output of the video editing task.
+     * @var EditMediaTaskOutput 
      */
     public $Output;
 
     /**
-     * @var MediaMetaData The metadata of the output video.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var string The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * @var string 
      */
     public $ProcedureTaskId;
 
     /**
-     * @var string The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * @var string 
      */
     public $ReviewAudioVideoTaskId;
 
     /**
-     * @var string The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ErrCode Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Progress of a video editing task. Value range: [0, 100]
-     * @param EditMediaTaskInput $Input Video editing task input.
-     * @param EditMediaTaskOutput $Output Output of the video editing task.
-     * @param MediaMetaData $MetaData The metadata of the output video.
-     * @param string $ProcedureTaskId The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
-     * @param string $ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
-     * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $ErrCodeExt 
+     * @param string $Message 
+     * @param integer $Progress 
+     * @param EditMediaTaskInput $Input 
+     * @param EditMediaTaskOutput $Output 
+     * @param MediaMetaData $MetaData 
+     * @param string $ProcedureTaskId 
+     * @param string $ReviewAudioVideoTaskId 
+     * @param string $SessionId 
+     * @param string $SessionContext 
      */
     function __construct()
     {

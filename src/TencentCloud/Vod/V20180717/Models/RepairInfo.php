@@ -18,52 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The video quality remastering parameters.
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method void setSwitch(string $Switch) Set Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method string getType() Obtain The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
- * @method void setType(string $Type) Set The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class RepairInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param string $Type The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * @param string $Switch 
+     * @param string $Type 
      */
     function __construct()
     {

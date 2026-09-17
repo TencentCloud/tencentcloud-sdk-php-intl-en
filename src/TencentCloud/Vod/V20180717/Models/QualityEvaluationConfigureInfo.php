@@ -18,36 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for video quality evaluation.
+ * 
  *
- * @method string getSwitch() Obtain Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
- * @method void setSwitch(string $Switch) Set Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
- * @method integer getScore() Obtain Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
- * @method void setScore(integer $Score) Set Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method integer getScore() Obtain 
+ * @method void setScore(integer $Score) Set 
  */
 class QualityEvaluationConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var integer Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
+     * @var integer 
      */
     public $Score;
 
     /**
-     * @param string $Switch Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-     * @param integer $Score Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
+     * @param string $Switch 
+     * @param integer $Score 
      */
     function __construct()
     {

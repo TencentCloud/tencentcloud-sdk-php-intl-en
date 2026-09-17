@@ -18,48 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image async processing configuration.
+ * 
  *
- * @method ImageEncodeConfig getEncodeConfig() Obtain <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ImageEnhanceConfig getEnhanceConfig() Obtain <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ImageBeautyConfig getBeautyConfig() Obtain <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBeautyConfig(ImageBeautyConfig $BeautyConfig) Set <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ImageEncodeConfig getEncodeConfig() Obtain 
+ * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set 
+ * @method ImageEnhanceConfig getEnhanceConfig() Obtain 
+ * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set 
+ * @method ImageBeautyConfig getBeautyConfig() Obtain 
+ * @method void setBeautyConfig(ImageBeautyConfig $BeautyConfig) Set 
+ * @method AiCutOutConfig getAiCutOutConfig() Obtain 
+ * @method void setAiCutOutConfig(AiCutOutConfig $AiCutOutConfig) Set 
  */
 class ProcessImageAsyncTask extends AbstractModel
 {
     /**
-     * @var ImageEncodeConfig <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ImageEncodeConfig 
      */
     public $EncodeConfig;
 
     /**
-     * @var ImageEnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ImageEnhanceConfig 
      */
     public $EnhanceConfig;
 
     /**
-     * @var ImageBeautyConfig <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ImageBeautyConfig 
      */
     public $BeautyConfig;
 
     /**
-     * @param ImageEncodeConfig $EncodeConfig <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageEnhanceConfig $EnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageBeautyConfig $BeautyConfig <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiCutOutConfig 
+     */
+    public $AiCutOutConfig;
+
+    /**
+     * @param ImageEncodeConfig $EncodeConfig 
+     * @param ImageEnhanceConfig $EnhanceConfig 
+     * @param ImageBeautyConfig $BeautyConfig 
+     * @param AiCutOutConfig $AiCutOutConfig 
      */
     function __construct()
     {
@@ -87,6 +83,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("BeautyConfig",$param) and $param["BeautyConfig"] !== null) {
             $this->BeautyConfig = new ImageBeautyConfig();
             $this->BeautyConfig->deserialize($param["BeautyConfig"]);
+        }
+
+        if (array_key_exists("AiCutOutConfig",$param) and $param["AiCutOutConfig"] !== null) {
+            $this->AiCutOutConfig = new AiCutOutConfig();
+            $this->AiCutOutConfig->deserialize($param["AiCutOutConfig"]);
         }
     }
 }

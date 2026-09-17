@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of AI-based intelligent video analysis
+ * 
  *
- * @method integer getDefinition() Obtain Video content analysis template ID.
- * @method void setDefinition(integer $Definition) Set Video content analysis template ID.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
     /**
-     * @var integer Video content analysis template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Video content analysis template ID.
+     * @param integer $Definition 
      */
     function __construct()
     {

@@ -18,29 +18,29 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The output of digital watermark extraction.
+ * 
  *
- * @method string getUv() Obtain Player's ID, represented in hexadecimal, 6 digits in total.
- * @method void setUv(string $Uv) Set Player's ID, represented in hexadecimal, 6 digits in total.
- * @method string getUid() Obtain This parameter has been deprecated.
- * @method void setUid(string $Uid) Set This parameter has been deprecated.
+ * @method string getUv() Obtain 
+ * @method void setUv(string $Uv) Set 
+ * @method string getUid() Obtain 
+ * @method void setUid(string $Uid) Set 
  */
 class ExtractTraceWatermarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string Player's ID, represented in hexadecimal, 6 digits in total.
+     * @var string 
      */
     public $Uv;
 
     /**
-     * @var string This parameter has been deprecated.
+     * @var string 
      * @deprecated
      */
     public $Uid;
 
     /**
-     * @param string $Uv Player's ID, represented in hexadecimal, 6 digits in total.
-     * @param string $Uid This parameter has been deprecated.
+     * @param string $Uv 
+     * @param string $Uid 
      */
     function __construct()
     {

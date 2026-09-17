@@ -18,76 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Review template detail
+ * 
  *
- * @method integer getDefinition() Obtain Unique tag of the moderation template.
- * @method void setDefinition(integer $Definition) Set Unique tag of the moderation template.
- * @method string getName() Obtain The template name.
- * @method void setName(string $Name) Set The template name.
- * @method string getComment() Obtain The template description.
- * @method void setComment(string $Comment) Set The template description.
- * @method string getType() Obtain The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
- * @method void setType(string $Type) Set The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
- * @method array getLabels() Obtain The violation labels used.
- * @method void setLabels(array $Labels) Set The violation labels used.
- * @method string getCreateTime() Obtain The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method array getLabels() Obtain 
+ * @method void setLabels(array $Labels) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class ReviewTemplate extends AbstractModel
 {
     /**
-     * @var integer Unique tag of the moderation template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string The template name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string The template description.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var array The violation labels used.
+     * @var array 
      */
     public $Labels;
 
     /**
-     * @var string The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition Unique tag of the moderation template.
-     * @param string $Name The template name.
-     * @param string $Comment The template description.
-     * @param string $Type The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
-     * @param array $Labels The violation labels used.
-     * @param string $CreateTime The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Definition 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param string $Type 
+     * @param array $Labels 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

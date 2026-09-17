@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWatermarkTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getType() Obtain Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
- * @method void setType(string $Type) Set Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method array getDefinitions() Obtain Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
- * @method void setDefinitions(array $Definitions) Set Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
- * @method integer getLimit() Obtain Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
- * @method void setLimit(integer $Limit) Set Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method array getDefinitions() Obtain 
+ * @method void setDefinitions(array $Definitions) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var array Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
+     * @var array 
      */
     public $Definitions;
 
     /**
-     * @var integer Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Type Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param array $Definitions Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
-     * @param integer $Limit Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+     * @param integer $SubAppId 
+     * @param string $Type 
+     * @param integer $Offset 
+     * @param array $Definitions 
+     * @param integer $Limit 
      */
     function __construct()
     {

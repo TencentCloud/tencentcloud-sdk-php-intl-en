@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent knowledge base info for media assets
+ * 
  *
- * @method array getBases() Obtain <p>Current library list of media assets to import</p>
- * @method void setBases(array $Bases) Set <p>Current library list of media assets to import</p>
- * @method array getKnowledgeAnalysisInfos() Obtain <p>Media analysis information in the knowledge base</p>
- * @method void setKnowledgeAnalysisInfos(array $KnowledgeAnalysisInfos) Set <p>Media analysis information in the knowledge base</p>
+ * @method array getBases() Obtain 
+ * @method void setBases(array $Bases) Set 
+ * @method array getKnowledgeAnalysisInfos() Obtain 
+ * @method void setKnowledgeAnalysisInfos(array $KnowledgeAnalysisInfos) Set 
+ * @method array getKnowledgeBaseDetails() Obtain 
+ * @method void setKnowledgeBaseDetails(array $KnowledgeBaseDetails) Set 
  */
 class KnowledgeBasesInfo extends AbstractModel
 {
     /**
-     * @var array <p>Current library list of media assets to import</p>
+     * @var array 
      */
     public $Bases;
 
     /**
-     * @var array <p>Media analysis information in the knowledge base</p>
+     * @var array 
      */
     public $KnowledgeAnalysisInfos;
 
     /**
-     * @param array $Bases <p>Current library list of media assets to import</p>
-     * @param array $KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+     * @var array 
+     */
+    public $KnowledgeBaseDetails;
+
+    /**
+     * @param array $Bases 
+     * @param array $KnowledgeAnalysisInfos 
+     * @param array $KnowledgeBaseDetails 
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class KnowledgeBasesInfo extends AbstractModel
                 $obj = new KnowledgeAnalysisInfo();
                 $obj->deserialize($value);
                 array_push($this->KnowledgeAnalysisInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("KnowledgeBaseDetails",$param) and $param["KnowledgeBaseDetails"] !== null) {
+            $this->KnowledgeBaseDetails = [];
+            foreach ($param["KnowledgeBaseDetails"] as $key => $value){
+                $obj = new KnowledgeBaseDetail();
+                $obj->deserialize($value);
+                array_push($this->KnowledgeBaseDetails, $obj);
             }
         }
     }

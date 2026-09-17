@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The TRTC recording information.
+ * 
  *
- * @method integer getSdkAppId() Obtain The TRTC application ID.
- * @method void setSdkAppId(integer $SdkAppId) Set The TRTC application ID.
- * @method string getRoomId() Obtain The TRTC room ID.
- * @method void setRoomId(string $RoomId) Set The TRTC room ID.
- * @method string getTaskId() Obtain The recording task ID.
- * @method void setTaskId(string $TaskId) Set The recording task ID.
- * @method array getUserIds() Obtain The IDs of users whose streams are mixed.
- * @method void setUserIds(array $UserIds) Set The IDs of users whose streams are mixed.
+ * @method integer getSdkAppId() Obtain 
+ * @method void setSdkAppId(integer $SdkAppId) Set 
+ * @method string getRoomId() Obtain 
+ * @method void setRoomId(string $RoomId) Set 
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method array getUserIds() Obtain 
+ * @method void setUserIds(array $UserIds) Set 
  */
 class TrtcRecordInfo extends AbstractModel
 {
     /**
-     * @var integer The TRTC application ID.
+     * @var integer 
      */
     public $SdkAppId;
 
     /**
-     * @var string The TRTC room ID.
+     * @var string 
      */
     public $RoomId;
 
     /**
-     * @var string The recording task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var array The IDs of users whose streams are mixed.
+     * @var array 
      */
     public $UserIds;
 
     /**
-     * @param integer $SdkAppId The TRTC application ID.
-     * @param string $RoomId The TRTC room ID.
-     * @param string $TaskId The recording task ID.
-     * @param array $UserIds The IDs of users whose streams are mixed.
+     * @param integer $SdkAppId 
+     * @param string $RoomId 
+     * @param string $TaskId 
+     * @param array $UserIds 
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlindWatermarkTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique identifier of the digital watermark template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of the digital watermark template.
- * @method integer getSubAppId() Obtain VOD application ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (default application or newly created application).
- * @method void setSubAppId(integer $SubAppId) Set VOD application ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (default application or newly created application).
- * @method string getName() Obtain Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
- * @method string getComment() Obtain Description information of the digital watermark template. The length cannot exceed 256 characters.
- * @method void setComment(string $Comment) Set Description information of the digital watermark template. The length cannot exceed 256 characters.
- * @method string getTextContent() Obtain Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.
- * @method void setTextContent(string $TextContent) Set Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getTextContent() Obtain 
+ * @method void setTextContent(string $TextContent) Set 
  */
 class ModifyBlindWatermarkTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of the digital watermark template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer VOD application ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (default application or newly created application).
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Description information of the digital watermark template. The length cannot exceed 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.
+     * @var string 
      */
     public $TextContent;
 
     /**
-     * @param integer $Definition Unique identifier of the digital watermark template.
-     * @param integer $SubAppId VOD application ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (default application or newly created application).
-     * @param string $Name Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
-     * @param string $Comment Description information of the digital watermark template. The length cannot exceed 256 characters.
-     * @param string $TextContent Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.
+     * @param integer $Definition 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param string $TextContent 
      */
     function __construct()
     {

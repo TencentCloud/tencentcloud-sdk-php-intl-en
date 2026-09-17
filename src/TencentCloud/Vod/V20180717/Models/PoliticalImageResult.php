@@ -18,56 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The moderation result for politically sensitive content in an image.
+ * 
  *
- * @method float getConfidence() Obtain The confidence score for the moderation result. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for the moderation result. Value range: 0-100.
- * @method string getSuggestion() Obtain The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
- * @method string getName() Obtain The name of the politically sensitive content or banned icon detected.
- * @method void setName(string $Name) Set The name of the politically sensitive content or banned icon detected.
- * @method array getAreaCoordSet() Obtain The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
- * @method void setAreaCoordSet(array $AreaCoordSet) Set The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method array getAreaCoordSet() Obtain 
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set 
  */
 class PoliticalImageResult extends AbstractModel
 {
     /**
-     * @var float The confidence score for the moderation result. Value range: 0-100.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var string The name of the politically sensitive content or banned icon detected.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var array The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+     * @var array 
      */
     public $AreaCoordSet;
 
     /**
-     * @param float $Confidence The confidence score for the moderation result. Value range: 0-100.
-     * @param string $Suggestion The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
-     * @param string $Name The name of the politically sensitive content or banned icon detected.
-     * @param array $AreaCoordSet The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param string $Name 
+     * @param array $AreaCoordSet 
      */
     function __construct()
     {

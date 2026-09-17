@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Watermark cycle configuration.
+ * 
  *
- * @method float getStartTime() Obtain Playback time point in seconds when a watermark appears in a video for the first time.
- * @method void setStartTime(float $StartTime) Set Playback time point in seconds when a watermark appears in a video for the first time.
- * @method float getDisplayDuration() Obtain Display duration of a watermark in a watermark cycle in seconds.
- * @method void setDisplayDuration(float $DisplayDuration) Set Display duration of a watermark in a watermark cycle in seconds.
- * @method float getCycleDuration() Obtain Duration of a watermark cycle in seconds.
-If 0 is entered, a watermark will last for only one cycle (i.e., visible for `DisplayDuration` seconds throughout the video).
- * @method void setCycleDuration(float $CycleDuration) Set Duration of a watermark cycle in seconds.
-If 0 is entered, a watermark will last for only one cycle (i.e., visible for `DisplayDuration` seconds throughout the video).
+ * @method float getStartTime() Obtain 
+ * @method void setStartTime(float $StartTime) Set 
+ * @method float getDisplayDuration() Obtain 
+ * @method void setDisplayDuration(float $DisplayDuration) Set 
+ * @method float getCycleDuration() Obtain 
+ * @method void setCycleDuration(float $CycleDuration) Set 
  */
 class WatermarkCycleConfigForUpdate extends AbstractModel
 {
     /**
-     * @var float Playback time point in seconds when a watermark appears in a video for the first time.
+     * @var float 
      */
     public $StartTime;
 
     /**
-     * @var float Display duration of a watermark in a watermark cycle in seconds.
+     * @var float 
      */
     public $DisplayDuration;
 
     /**
-     * @var float Duration of a watermark cycle in seconds.
-If 0 is entered, a watermark will last for only one cycle (i.e., visible for `DisplayDuration` seconds throughout the video).
+     * @var float 
      */
     public $CycleDuration;
 
     /**
-     * @param float $StartTime Playback time point in seconds when a watermark appears in a video for the first time.
-     * @param float $DisplayDuration Display duration of a watermark in a watermark cycle in seconds.
-     * @param float $CycleDuration Duration of a watermark cycle in seconds.
-If 0 is entered, a watermark will last for only one cycle (i.e., visible for `DisplayDuration` seconds throughout the video).
+     * @param float $StartTime 
+     * @param float $DisplayDuration 
+     * @param float $CycleDuration 
      */
     function __construct()
     {

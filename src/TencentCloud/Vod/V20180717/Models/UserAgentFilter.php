@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UserAgent:blacklist/whitelist configuration
+ * 
  *
- * @method string getSwitch() Obtain UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method array getFilterRules() Obtain UA blacklist/whitelist effect rule list
- * @method void setFilterRules(array $FilterRules) Set UA blacklist/whitelist effect rule list
+ * @method string getSwitch() Obtain UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method array getFilterRules() Obtain 
+ * @method void setFilterRules(array $FilterRules) Set 
  */
 class UserAgentFilter extends AbstractModel
 {
     /**
-     * @var string UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var array UA blacklist/whitelist effect rule list
+     * @var array 
      */
     public $FilterRules;
 
     /**
-     * @param string $Switch UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param array $FilterRules UA blacklist/whitelist effect rule list
+     * @param string $Switch UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param array $FilterRules 
      */
     function __construct()
     {

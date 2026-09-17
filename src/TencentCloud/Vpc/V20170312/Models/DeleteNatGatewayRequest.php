@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNatGateway request structure.
  *
- * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
- * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
+ * @method string getNatGatewayId() Obtain NAT gateway ID, for example, `nat-df45454`.
+ * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID, for example, `nat-df45454`.
+ * @method boolean getIgnoreOperationRisk() Obtain Ignores operation risks.
+ * @method void setIgnoreOperationRisk(boolean $IgnoreOperationRisk) Set Ignores operation risks.
  */
 class DeleteNatGatewayRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the NAT gateway, such as `nat-df45454`.
+     * @var string NAT gateway ID, for example, `nat-df45454`.
      */
     public $NatGatewayId;
 
     /**
-     * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+     * @var boolean Ignores operation risks.
+     */
+    public $IgnoreOperationRisk;
+
+    /**
+     * @param string $NatGatewayId NAT gateway ID, for example, `nat-df45454`.
+     * @param boolean $IgnoreOperationRisk Ignores operation risks.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteNatGatewayRequest extends AbstractModel
         }
         if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
             $this->NatGatewayId = $param["NatGatewayId"];
+        }
+
+        if (array_key_exists("IgnoreOperationRisk",$param) and $param["IgnoreOperationRisk"] !== null) {
+            $this->IgnoreOperationRisk = $param["IgnoreOperationRisk"];
         }
     }
 }

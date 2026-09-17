@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DNS verification information
+ * 
  *
- * @method string getSubDomain() Obtain sub-parsing.
- * @method void setSubDomain(string $SubDomain) Set sub-parsing.
- * @method string getRecord() Obtain parse value.
- * @method void setRecord(string $Record) Set parse value.
- * @method string getRecordType() Obtain parsing type.
- * @method void setRecordType(string $RecordType) Set parsing type.
+ * @method string getSubDomain() Obtain 
+ * @method void setSubDomain(string $SubDomain) Set 
+ * @method string getRecord() Obtain 
+ * @method void setRecord(string $Record) Set 
+ * @method string getRecordType() Obtain 
+ * @method void setRecordType(string $RecordType) Set 
  */
 class DNSVerifyInfo extends AbstractModel
 {
     /**
-     * @var string sub-parsing.
+     * @var string 
      */
     public $SubDomain;
 
     /**
-     * @var string parse value.
+     * @var string 
      */
     public $Record;
 
     /**
-     * @var string parsing type.
+     * @var string 
      */
     public $RecordType;
 
     /**
-     * @param string $SubDomain sub-parsing.
-     * @param string $Record parse value.
-     * @param string $RecordType parsing type.
+     * @param string $SubDomain 
+     * @param string $Record 
+     * @param string $RecordType 
      */
     function __construct()
     {

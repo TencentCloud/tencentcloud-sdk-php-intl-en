@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcApiToken request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate on-demand services from december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate on-demand services from december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class CreateAigcApiTokenRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate on-demand services from december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate on-demand services from december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
+     * @param integer $SubAppId 
      */
     function __construct()
     {

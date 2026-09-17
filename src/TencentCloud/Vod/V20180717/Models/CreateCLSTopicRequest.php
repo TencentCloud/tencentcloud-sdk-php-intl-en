@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCLSTopic request structure.
  *
- * @method string getCLSRegion() Obtain Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
- * @method void setCLSRegion(string $CLSRegion) Set Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
- * @method string getTopicName() Obtain Log topic name.
- * @method void setTopicName(string $TopicName) Set Log topic name.
- * @method string getLogsetId() Obtain Log Set ID.
- * @method void setLogsetId(string $LogsetId) Set Log Set ID.
+ * @method string getCLSRegion() Obtain 
+ * @method void setCLSRegion(string $CLSRegion) Set 
+ * @method string getTopicName() Obtain 
+ * @method void setTopicName(string $TopicName) Set 
+ * @method string getLogsetId() Obtain 
+ * @method void setLogsetId(string $LogsetId) Set 
  */
 class CreateCLSTopicRequest extends AbstractModel
 {
     /**
-     * @var string Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * @var string 
      */
     public $CLSRegion;
 
     /**
-     * @var string Log topic name.
+     * @var string 
      */
     public $TopicName;
 
     /**
-     * @var string Log Set ID.
+     * @var string 
      */
     public $LogsetId;
 
     /**
-     * @param string $CLSRegion Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
-     * @param string $TopicName Log topic name.
-     * @param string $LogsetId Log Set ID.
+     * @param string $CLSRegion 
+     * @param string $TopicName 
+     * @param string $LogsetId 
      */
     function __construct()
     {

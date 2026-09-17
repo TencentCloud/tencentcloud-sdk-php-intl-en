@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based sample management - figure information.
+ * 
  *
- * @method string getPersonId() Obtain Figure ID.
- * @method void setPersonId(string $PersonId) Set Figure ID.
- * @method string getName() Obtain Figure name.
- * @method void setName(string $Name) Set Figure name.
- * @method string getDescription() Obtain Figure description.
- * @method void setDescription(string $Description) Set Figure description.
- * @method array getFaceInfoSet() Obtain Face information.
- * @method void setFaceInfoSet(array $FaceInfoSet) Set Face information.
- * @method array getTagSet() Obtain Figure tag.
- * @method void setTagSet(array $TagSet) Set Figure tag.
- * @method array getUsageSet() Obtain Use case.
- * @method void setUsageSet(array $UsageSet) Set Use case.
- * @method string getCreateTime() Obtain Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getPersonId() Obtain 
+ * @method void setPersonId(string $PersonId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
+ * @method array getFaceInfoSet() Obtain 
+ * @method void setFaceInfoSet(array $FaceInfoSet) Set 
+ * @method array getTagSet() Obtain 
+ * @method void setTagSet(array $TagSet) Set 
+ * @method array getUsageSet() Obtain 
+ * @method void setUsageSet(array $UsageSet) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class AiSamplePerson extends AbstractModel
 {
     /**
-     * @var string Figure ID.
+     * @var string 
      */
     public $PersonId;
 
     /**
-     * @var string Figure name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Figure description.
+     * @var string 
      */
     public $Description;
 
     /**
-     * @var array Face information.
+     * @var array 
      */
     public $FaceInfoSet;
 
     /**
-     * @var array Figure tag.
+     * @var array 
      */
     public $TagSet;
 
     /**
-     * @var array Use case.
+     * @var array 
      */
     public $UsageSet;
 
     /**
-     * @var string Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param string $PersonId Figure ID.
-     * @param string $Name Figure name.
-     * @param string $Description Figure description.
-     * @param array $FaceInfoSet Face information.
-     * @param array $TagSet Figure tag.
-     * @param array $UsageSet Use case.
-     * @param string $CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $PersonId 
+     * @param string $Name 
+     * @param string $Description 
+     * @param array $FaceInfoSet 
+     * @param array $TagSet 
+     * @param array $UsageSet 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

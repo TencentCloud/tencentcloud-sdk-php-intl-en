@@ -22,16 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCastId() Obtain 
  * @method void setCastId(string $CastId) Set 
- * @method string getStatus() Obtain Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
- * @method void setStatus(string $Status) Set Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
  */
 class MediaCastEvent extends AbstractModel
 {
@@ -41,21 +33,13 @@ class MediaCastEvent extends AbstractModel
     public $CastId;
 
     /**
-     * @var string Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+     * @var string 
      */
     public $Status;
 
     /**
      * @param string $CastId 
-     * @param string $Status Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+     * @param string $Status 
      */
     function __construct()
     {

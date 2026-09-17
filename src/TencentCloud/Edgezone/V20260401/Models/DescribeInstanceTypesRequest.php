@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain Availability zone code, such as ap-guangzhou-1. If not passed, return models under the account in all AZs.
  * @method void setZone(string $Zone) Set Availability zone code, such as ap-guangzhou-1. If not passed, return models under the account in all AZs.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Pagination size. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Pagination size. Default value: 20. Maximum value: 100.
  */
 class DescribeInstanceTypesRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeInstanceTypesRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var integer Pagination offset. Default value: 0.
+     */
+    public $Offset;
+
+    /**
+     * @var integer Pagination size. Default value: 20. Maximum value: 100.
+     */
+    public $Limit;
+
+    /**
      * @param string $Zone Availability zone code, such as ap-guangzhou-1. If not passed, return models under the account in all AZs.
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Pagination size. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeInstanceTypesRequest extends AbstractModel
         }
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

@@ -18,72 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * An image processing template, which can contain at most three operations, for example, cropping, scaling, and cropping again.
+ * 
  *
- * @method integer getDefinition() Obtain The template ID.
- * @method void setDefinition(integer $Definition) Set The template ID.
- * @method string getType() Obtain The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
- * @method void setType(string $Type) Set The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
- * @method string getName() Obtain The template name.
- * @method void setName(string $Name) Set The template name.
- * @method string getComment() Obtain The template description.
- * @method void setComment(string $Comment) Set The template description.
- * @method array getOperations() Obtain An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
- * @method void setOperations(array $Operations) Set An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
- * @method string getCreateTime() Obtain The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
- * @method void setCreateTime(string $CreateTime) Set The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method array getOperations() Obtain 
+ * @method void setOperations(array $Operations) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
  */
 class ImageProcessingTemplate extends AbstractModel
 {
     /**
-     * @var integer The template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string The template name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string The template description.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var array An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+     * @var array 
      */
     public $Operations;
 
     /**
-     * @var string The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @param integer $Definition The template ID.
-     * @param string $Type The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
-     * @param string $Name The template name.
-     * @param string $Comment The template description.
-     * @param array $Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
-     * @param string $CreateTime The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
+     * @param integer $Definition 
+     * @param string $Type 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param array $Operations 
+     * @param string $CreateTime 
      */
     function __construct()
     {

@@ -20,114 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEnhanceMediaTemplate request structure.
  *
- * @method string getContainer() Obtain Container format. Valid values: mp4, flv, and hls.
- * @method void setContainer(string $Container) Set Container format. Valid values: mp4, flv, and hls.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Audio and video quality rebirth template name, with a length limit of 64 characters.
- * @method void setName(string $Name) Set Audio and video quality rebirth template name, with a length limit of 64 characters.
- * @method string getComment() Obtain Template description, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
- * @method RebuildVideoInfo getRebuildVideoInfo() Obtain Audio-visual quality revival video control information.
- * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set Audio-visual quality revival video control information.
- * @method RebuildAudioInfo getRebuildAudioInfo() Obtain Audio-visual quality revival audio control information.
- * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set Audio-visual quality revival audio control information.
- * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain Output target video control information.
- * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set Output target video control information.
- * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain Output target audio control information.
- * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set Output target audio control information.
- * @method integer getRemoveVideo() Obtain Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
- * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
- * @method integer getRemoveAudio() Obtain Remove audio data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
- * @method void setRemoveAudio(integer $RemoveAudio) Set Remove audio data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
+ * @method string getContainer() Obtain 
+ * @method void setContainer(string $Container) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method RebuildVideoInfo getRebuildVideoInfo() Obtain 
+ * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set 
+ * @method RebuildAudioInfo getRebuildAudioInfo() Obtain 
+ * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set 
+ * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain 
+ * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set 
+ * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain 
+ * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set 
+ * @method integer getRemoveVideo() Obtain 
+ * @method void setRemoveVideo(integer $RemoveVideo) Set 
+ * @method integer getRemoveAudio() Obtain 
+ * @method void setRemoveAudio(integer $RemoveAudio) Set 
  */
 class CreateEnhanceMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Container format. Valid values: mp4, flv, and hls.
+     * @var string 
      */
     public $Container;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Audio and video quality rebirth template name, with a length limit of 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Template description, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var RebuildVideoInfo Audio-visual quality revival video control information.
+     * @var RebuildVideoInfo 
      */
     public $RebuildVideoInfo;
 
     /**
-     * @var RebuildAudioInfo Audio-visual quality revival audio control information.
+     * @var RebuildAudioInfo 
      */
     public $RebuildAudioInfo;
 
     /**
-     * @var RebuildMediaTargetVideoStream Output target video control information.
+     * @var RebuildMediaTargetVideoStream 
      */
     public $TargetVideoInfo;
 
     /**
-     * @var RebuildMediaTargetAudioStream Output target audio control information.
+     * @var RebuildMediaTargetAudioStream 
      */
     public $TargetAudioInfo;
 
     /**
-     * @var integer Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
+     * @var integer 
      */
     public $RemoveVideo;
 
     /**
-     * @var integer Remove audio data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
+     * @var integer 
      */
     public $RemoveAudio;
 
     /**
-     * @param string $Container Container format. Valid values: mp4, flv, and hls.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Audio and video quality rebirth template name, with a length limit of 64 characters.
-     * @param string $Comment Template description, with a length limit of 256 characters.
-     * @param RebuildVideoInfo $RebuildVideoInfo Audio-visual quality revival video control information.
-     * @param RebuildAudioInfo $RebuildAudioInfo Audio-visual quality revival audio control information.
-     * @param RebuildMediaTargetVideoStream $TargetVideoInfo Output target video control information.
-     * @param RebuildMediaTargetAudioStream $TargetAudioInfo Output target audio control information.
-     * @param integer $RemoveVideo Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
-     * @param integer $RemoveAudio Remove audio data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-Default value: 0.
+     * @param string $Container 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param RebuildVideoInfo $RebuildVideoInfo 
+     * @param RebuildAudioInfo $RebuildAudioInfo 
+     * @param RebuildMediaTargetVideoStream $TargetVideoInfo 
+     * @param RebuildMediaTargetAudioStream $TargetAudioInfo 
+     * @param integer $RemoveVideo 
+     * @param integer $RemoveAudio 
      */
     function __construct()
     {

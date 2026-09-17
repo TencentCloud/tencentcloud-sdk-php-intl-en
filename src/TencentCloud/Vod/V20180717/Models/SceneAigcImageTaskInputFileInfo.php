@@ -18,60 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input file information for the scenario-based AIGC image generation task.
+ * 
  *
- * @method string getType() Obtain Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
- * @method void setType(string $Type) Set Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
- * @method string getFileId() Obtain The media File ID of the image File, which is the globally unique identifier of the File in vod, is assigned by the vod backend after successful upload. you can obtain this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File.
-Note:
-1. recommended for use with images less than 7 mb.
-2. image format value is jpeg, jpg, png, webp.
- * @method void setFileId(string $FileId) Set The media File ID of the image File, which is the globally unique identifier of the File in vod, is assigned by the vod backend after successful upload. you can obtain this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File.
-Note:
-1. recommended for use with images less than 7 mb.
-2. image format value is jpeg, jpg, png, webp.
- * @method string getUrl() Obtain Accessible file URL. this parameter is valid when Type value is Url.
-Note:
-1. recommended for use with images less than 7 MB.
-2. image format value is jpeg, jpg, png, webp.
- * @method void setUrl(string $Url) Set Accessible file URL. this parameter is valid when Type value is Url.
-Note:
-1. recommended for use with images less than 7 MB.
-2. image format value is jpeg, jpg, png, webp.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class SceneAigcImageTaskInputFileInfo extends AbstractModel
 {
     /**
-     * @var string Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string The media File ID of the image File, which is the globally unique identifier of the File in vod, is assigned by the vod backend after successful upload. you can obtain this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File.
-Note:
-1. recommended for use with images less than 7 mb.
-2. image format value is jpeg, jpg, png, webp.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Accessible file URL. this parameter is valid when Type value is Url.
-Note:
-1. recommended for use with images less than 7 MB.
-2. image format value is jpeg, jpg, png, webp.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param string $Type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
-     * @param string $FileId The media File ID of the image File, which is the globally unique identifier of the File in vod, is assigned by the vod backend after successful upload. you can obtain this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File.
-Note:
-1. recommended for use with images less than 7 mb.
-2. image format value is jpeg, jpg, png, webp.
-     * @param string $Url Accessible file URL. this parameter is valid when Type value is Url.
-Note:
-1. recommended for use with images less than 7 MB.
-2. image format value is jpeg, jpg, png, webp.
+     * @param string $Type 
+     * @param string $FileId 
+     * @param string $Url 
      */
     function __construct()
     {

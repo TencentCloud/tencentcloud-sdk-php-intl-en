@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomainVerifyRecord request structure.
  *
- * @method string getDomain() Obtain Need to access the VOD acceleration domain name.
- * @method void setDomain(string $Domain) Set Need to access the VOD acceleration domain name.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
+ * @method string getDomain() Obtain 
+ * @method void setDomain(string $Domain) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class CreateDomainVerifyRecordRequest extends AbstractModel
 {
     /**
-     * @var string Need to access the VOD acceleration domain name.
+     * @var string 
      */
     public $Domain;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain Need to access the VOD acceleration domain name.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
+     * @param string $Domain 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

@@ -18,52 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Track information
+ * 
  *
- * @method string getType() Obtain Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
- * @method void setType(string $Type) Set Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
- * @method array getTrackItems() Obtain List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTrackItems(array $TrackItems) Set List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method array getTrackItems() Obtain 
+ * @method void setTrackItems(array $TrackItems) Set 
  */
 class MediaTrack extends AbstractModel
 {
     /**
-     * @var string Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var array List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $TrackItems;
 
     /**
-     * @param string $Type Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
-     * @param array $TrackItems List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Type 
+     * @param array $TrackItems 
      */
     function __construct()
     {

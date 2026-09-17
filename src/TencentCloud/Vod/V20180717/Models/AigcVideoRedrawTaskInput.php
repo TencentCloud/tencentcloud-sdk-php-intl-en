@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of the AIGC video conversion task.
+ * 
  *
- * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain <p>Input info of the AIGC video conversion task.</p>
- * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set <p>Input info of the AIGC video conversion task.</p>
- * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain <p>AIGC video conversion task parameter information.</p>
- * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set <p>AIGC video conversion task parameter information.</p>
- * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain <p>AIGC video conversion output configuration.</p>
- * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set <p>AIGC video conversion output configuration.</p>
+ * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain 
+ * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set 
+ * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain 
+ * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set 
+ * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set 
  */
 class AigcVideoRedrawTaskInput extends AbstractModel
 {
     /**
-     * @var AigcVideoRedrawTaskInputFileInfo <p>Input info of the AIGC video conversion task.</p>
+     * @var AigcVideoRedrawTaskInputFileInfo 
      */
     public $FileInfo;
 
     /**
-     * @var AigcVideoRedrawTaskInfo <p>AIGC video conversion task parameter information.</p>
+     * @var AigcVideoRedrawTaskInfo 
      */
     public $TaskInfo;
 
     /**
-     * @var AigcVideoRedrawOutputConfig <p>AIGC video conversion output configuration.</p>
+     * @var AigcVideoRedrawOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>Input info of the AIGC video conversion task.</p>
-     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>AIGC video conversion task parameter information.</p>
-     * @param AigcVideoRedrawOutputConfig $OutputConfig <p>AIGC video conversion output configuration.</p>
+     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo 
+     * @param AigcVideoRedrawTaskInfo $TaskInfo 
+     * @param AigcVideoRedrawOutputConfig $OutputConfig 
      */
     function __construct()
     {

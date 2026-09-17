@@ -18,60 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio enhancement configuration.
+ * 
  *
- * @method AudioDenoiseInfo getDenoise() Obtain Audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDenoise(AudioDenoiseInfo $Denoise) Set Audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioSeparateInfo getSeparate() Obtain Audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSeparate(AudioSeparateInfo $Separate) Set Audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioVolumeBalanceInfo getVolumeBalance() Obtain Volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVolumeBalance(AudioVolumeBalanceInfo $VolumeBalance) Set Volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioBeautifyInfo getBeautify() Obtain Volume beautification configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBeautify(AudioBeautifyInfo $Beautify) Set Volume beautification configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AudioDenoiseInfo getDenoise() Obtain 
+ * @method void setDenoise(AudioDenoiseInfo $Denoise) Set 
+ * @method AudioSeparateInfo getSeparate() Obtain 
+ * @method void setSeparate(AudioSeparateInfo $Separate) Set 
+ * @method AudioVolumeBalanceInfo getVolumeBalance() Obtain 
+ * @method void setVolumeBalance(AudioVolumeBalanceInfo $VolumeBalance) Set 
+ * @method AudioBeautifyInfo getBeautify() Obtain 
+ * @method void setBeautify(AudioBeautifyInfo $Beautify) Set 
  */
 class AudioEnhanceConfig extends AbstractModel
 {
     /**
-     * @var AudioDenoiseInfo Audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioDenoiseInfo 
      */
     public $Denoise;
 
     /**
-     * @var AudioSeparateInfo Audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioSeparateInfo 
      */
     public $Separate;
 
     /**
-     * @var AudioVolumeBalanceInfo Volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioVolumeBalanceInfo 
      */
     public $VolumeBalance;
 
     /**
-     * @var AudioBeautifyInfo Volume beautification configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioBeautifyInfo 
      */
     public $Beautify;
 
     /**
-     * @param AudioDenoiseInfo $Denoise Audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioSeparateInfo $Separate Audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioVolumeBalanceInfo $VolumeBalance Volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioBeautifyInfo $Beautify Volume beautification configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AudioDenoiseInfo $Denoise 
+     * @param AudioSeparateInfo $Separate 
+     * @param AudioVolumeBalanceInfo $VolumeBalance 
+     * @param AudioBeautifyInfo $Beautify 
      */
     function __construct()
     {

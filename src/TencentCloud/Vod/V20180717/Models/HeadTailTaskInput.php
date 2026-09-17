@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameters for a video opening/closing credits generation task
+ * 
  *
- * @method integer getDefinition() Obtain Video opening/closing credits configuration template ID
- * @method void setDefinition(integer $Definition) Set Video opening/closing credits configuration template ID
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class HeadTailTaskInput extends AbstractModel
 {
     /**
-     * @var integer Video opening/closing credits configuration template ID
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Video opening/closing credits configuration template ID
+     * @param integer $Definition 
      */
     function __construct()
     {

@@ -18,145 +18,117 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task flow template details
+ * 
  *
- * @method string getName() Obtain Task flow name.
- * @method void setName(string $Name) Set Task flow name.
- * @method string getType() Obtain Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
- * @method void setType(string $Type) Set Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
- * @method string getComment() Obtain Template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAiRecognitionTaskSet() Obtain Parameters for the AI content recognition task.
- * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set Parameters for the AI content recognition task.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() Obtain Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput $MiniProgramPublishTask) Set Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain 
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set 
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain 
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set 
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method array getAiRecognitionTaskSet() Obtain 
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set 
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
+ * @method WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() Obtain 
+ * @method void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput $MiniProgramPublishTask) Set 
+ * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain 
+ * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set 
+ * @method array getImportMediaKnowledgeTaskSet() Obtain 
+ * @method void setImportMediaKnowledgeTaskSet(array $ImportMediaKnowledgeTaskSet) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class ProcedureTemplate extends AbstractModel
 {
     /**
-     * @var string Task flow name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Template description. Length limit: 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var MediaProcessTaskInput Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskInput 
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiContentReviewTaskInput 
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskInput 
      */
     public $AiAnalysisTask;
 
     /**
-     * @var array Parameters for the AI content recognition task.
+     * @var array 
      */
     public $AiRecognitionTaskSet;
 
     /**
-     * @var AiRecognitionTaskInput This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskInput 
      * @deprecated
      */
     public $AiRecognitionTask;
 
     /**
-     * @var WechatMiniProgramPublishTaskInput Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var WechatMiniProgramPublishTaskInput 
      */
     public $MiniProgramPublishTask;
 
     /**
-     * @var ProcedureReviewAudioVideoTaskInput The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ProcedureReviewAudioVideoTaskInput 
      */
     public $ReviewAudioVideoTask;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var array 
+     */
+    public $ImportMediaKnowledgeTaskSet;
+
+    /**
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param string $Name Task flow name.
-     * @param string $Type Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
-     * @param string $Comment Template description. Length limit: 256 characters.
-     * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiContentReviewTaskInput $AiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AiRecognitionTaskSet Parameters for the AI content recognition task.
-     * @param AiRecognitionTaskInput $AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishTaskInput $MiniProgramPublishTask Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $Name 
+     * @param string $Type 
+     * @param string $Comment 
+     * @param MediaProcessTaskInput $MediaProcessTask 
+     * @param AiContentReviewTaskInput $AiContentReviewTask 
+     * @param AiAnalysisTaskInput $AiAnalysisTask 
+     * @param array $AiRecognitionTaskSet 
+     * @param AiRecognitionTaskInput $AiRecognitionTask 
+     * @param WechatMiniProgramPublishTaskInput $MiniProgramPublishTask 
+     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask 
+     * @param array $ImportMediaKnowledgeTaskSet 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {
@@ -220,6 +192,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
             $this->ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput();
             $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
+        }
+
+        if (array_key_exists("ImportMediaKnowledgeTaskSet",$param) and $param["ImportMediaKnowledgeTaskSet"] !== null) {
+            $this->ImportMediaKnowledgeTaskSet = [];
+            foreach ($param["ImportMediaKnowledgeTaskSet"] as $key => $value){
+                $obj = new ImportMediaKnowledgeTaskInput();
+                $obj->deserialize($value);
+                array_push($this->ImportMediaKnowledgeTaskSet, $obj);
+            }
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

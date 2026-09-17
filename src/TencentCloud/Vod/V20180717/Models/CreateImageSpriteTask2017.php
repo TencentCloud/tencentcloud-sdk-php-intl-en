@@ -18,112 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of an image sprite task. This parameter is only valid for tasks initiated by the v2017 image sprite API.
+ * 
  *
- * @method string getTaskId() Obtain Image sprite generating task ID.
- * @method void setTaskId(string $TaskId) Set Image sprite generating task ID.
- * @method integer getErrCode() Obtain Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileId() Obtain ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileId(string $FileId) Set ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDefinition() Obtain Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getImageSpriteUrlSet() Obtain Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImageSpriteUrlSet(array $ImageSpriteUrlSet) Set Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getWebVttUrl() Obtain Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWebVttUrl(string $WebVttUrl) Set Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getTotalCount() Obtain 
+ * @method void setTotalCount(integer $TotalCount) Set 
+ * @method array getImageSpriteUrlSet() Obtain 
+ * @method void setImageSpriteUrlSet(array $ImageSpriteUrlSet) Set 
+ * @method string getWebVttUrl() Obtain 
+ * @method void setWebVttUrl(string $WebVttUrl) Set 
  */
 class CreateImageSpriteTask2017 extends AbstractModel
 {
     /**
-     * @var string Image sprite generating task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var integer Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var string ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $TotalCount;
 
     /**
-     * @var array Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $ImageSpriteUrlSet;
 
     /**
-     * @var string Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $WebVttUrl;
 
     /**
-     * @param string $TaskId Image sprite generating task ID.
-     * @param integer $ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileId ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Definition Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ImageSpriteUrlSet Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param string $FileId 
+     * @param integer $Definition 
+     * @param integer $TotalCount 
+     * @param array $ImageSpriteUrlSet 
+     * @param string $WebVttUrl 
      */
     function __construct()
     {

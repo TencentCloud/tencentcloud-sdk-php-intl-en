@@ -20,82 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getStatus() Obtain Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
- * @method void setStatus(string $Status) Set Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
- * @method string getFileId() Obtain Filter criteria: file ID.
- * @method void setFileId(string $FileId) Set Filter criteria: file ID.
- * @method TimeRange getCreateTime() Obtain Filter condition: Task creation time.
- * @method void setCreateTime(TimeRange $CreateTime) Set Filter condition: Task creation time.
- * @method TimeRange getFinishTime() Obtain Filter condition: Task end time.
- * @method void setFinishTime(TimeRange $FinishTime) Set Filter condition: Task end time.
- * @method SortBy getSort() Obtain Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
- * @method void setSort(SortBy $Sort) Set Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
- * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
- * @method string getScrollToken() Obtain Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
- * @method void setScrollToken(string $ScrollToken) Set Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method TimeRange getCreateTime() Obtain 
+ * @method void setCreateTime(TimeRange $CreateTime) Set 
+ * @method TimeRange getFinishTime() Obtain 
+ * @method void setFinishTime(TimeRange $FinishTime) Set 
+ * @method SortBy getSort() Obtain 
+ * @method void setSort(SortBy $Sort) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method string getScrollToken() Obtain 
+ * @method void setScrollToken(string $ScrollToken) Set 
  */
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Filter criteria: file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var TimeRange Filter condition: Task creation time.
+     * @var TimeRange 
      */
     public $CreateTime;
 
     /**
-     * @var TimeRange Filter condition: Task end time.
+     * @var TimeRange 
      */
     public $FinishTime;
 
     /**
-     * @var SortBy Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
+     * @var SortBy 
      */
     public $Sort;
 
     /**
-     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @var string Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
+     * @var string 
      */
     public $ScrollToken;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Status Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
-     * @param string $FileId Filter criteria: file ID.
-     * @param TimeRange $CreateTime Filter condition: Task creation time.
-     * @param TimeRange $FinishTime Filter condition: Task end time.
-     * @param SortBy $Sort Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
-     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param string $ScrollToken Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
+     * @param integer $SubAppId 
+     * @param string $Status 
+     * @param string $FileId 
+     * @param TimeRange $CreateTime 
+     * @param TimeRange $FinishTime 
+     * @param SortBy $Sort 
+     * @param integer $Limit 
+     * @param string $ScrollToken 
      */
     function __construct()
     {

@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessImageAsync request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
- * @method string getFileId() Obtain <p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
- * @method void setFileId(string $FileId) Set <p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
- * @method string getUrl() Obtain <p>Url for image processing. Cannot be used with FileId.</p>
- * @method void setUrl(string $Url) Set <p>Url for image processing. Cannot be used with FileId.</p>
- * @method string getBase64() Obtain <p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
- * @method void setBase64(string $Base64) Set <p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
- * @method ProcessImageAsyncTaskInput getImageTaskInput() Obtain <p>Image processing parameter.</p>
- * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) Set <p>Image processing parameter.</p>
- * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain <p>Output media file configuration for the image processing task.</p>
- * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set <p>Output media file configuration for the image processing task.</p>
- * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method string getSessionContext() Obtain <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method integer getTasksPriority() Obtain <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
- * @method void setTasksPriority(integer $TasksPriority) Set <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
- * @method string getExtInfo() Obtain <p>Reserved field, used when special purpose.</p>
- * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used when special purpose.</p>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getBase64() Obtain 
+ * @method void setBase64(string $Base64) Set 
+ * @method ProcessImageAsyncTaskInput getImageTaskInput() Obtain 
+ * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) Set 
+ * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class ProcessImageAsyncRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string <p>Url for image processing. Cannot be used with FileId.</p>
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string <p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
+     * @var string 
      */
     public $Base64;
 
     /**
-     * @var ProcessImageAsyncTaskInput <p>Image processing parameter.</p>
+     * @var ProcessImageAsyncTaskInput 
      */
     public $ImageTaskInput;
 
     /**
-     * @var ProcessImageAsyncOutputConfig <p>Output media file configuration for the image processing task.</p>
+     * @var ProcessImageAsyncOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string <p>Reserved field, used when special purpose.</p>
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
-     * @param string $FileId <p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
-     * @param string $Url <p>Url for image processing. Cannot be used with FileId.</p>
-     * @param string $Base64 <p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
-     * @param ProcessImageAsyncTaskInput $ImageTaskInput <p>Image processing parameter.</p>
-     * @param ProcessImageAsyncOutputConfig $OutputConfig <p>Output media file configuration for the image processing task.</p>
-     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-     * @param string $SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
-     * @param string $ExtInfo <p>Reserved field, used when special purpose.</p>
+     * @param integer $SubAppId 
+     * @param string $FileId 
+     * @param string $Url 
+     * @param string $Base64 
+     * @param ProcessImageAsyncTaskInput $ImageTaskInput 
+     * @param ProcessImageAsyncOutputConfig $OutputConfig 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

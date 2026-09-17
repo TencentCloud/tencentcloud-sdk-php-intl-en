@@ -18,28 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for video jitter and ghost detection.
+ * 
  *
- * @method string getSwitch() Obtain Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
- * @method void setSwitch(string $Switch) Set Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  */
 class JitterConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @param string $Switch Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+     * @param string $Switch 
      */
     function __construct()
     {

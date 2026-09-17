@@ -18,88 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom video transcoding parameters.
+ * 
  *
- * @method string getContainer() Obtain Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
- * @method void setContainer(string $Container) Set Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
- * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
- * @method void setRemoveVideo(integer $RemoveVideo) Set Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
- * @method integer getRemoveAudio() Obtain Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
- * @method void setRemoveAudio(integer $RemoveAudio) Set Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
- * @method VideoTemplateInfoForUpdate getVideoTemplate() Obtain Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TEHDConfigForUpdate getTEHDConfig() Obtain Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getContainer() Obtain 
+ * @method void setContainer(string $Container) Set 
+ * @method integer getRemoveVideo() Obtain 
+ * @method void setRemoveVideo(integer $RemoveVideo) Set 
+ * @method integer getRemoveAudio() Obtain 
+ * @method void setRemoveAudio(integer $RemoveAudio) Set 
+ * @method VideoTemplateInfoForUpdate getVideoTemplate() Obtain 
+ * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set 
+ * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain 
+ * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set 
+ * @method TEHDConfigForUpdate getTEHDConfig() Obtain 
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set 
+ * @method string getStdExtInfo() Obtain 
+ * @method void setStdExtInfo(string $StdExtInfo) Set 
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
     /**
-     * @var string Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+     * @var string 
      */
     public $Container;
 
     /**
-     * @var integer Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+     * @var integer 
      */
     public $RemoveVideo;
 
     /**
-     * @var integer Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+     * @var integer 
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfoForUpdate Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VideoTemplateInfoForUpdate 
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfoForUpdate Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioTemplateInfoForUpdate 
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TEHDConfigForUpdate 
      */
     public $TEHDConfig;
 
     /**
-     * @param string $Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
-     * @param integer $RemoveVideo Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-     * @param integer $RemoveAudio Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-     * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TEHDConfigForUpdate $TEHDConfig Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
+     */
+    public $StdExtInfo;
+
+    /**
+     * @param string $Container 
+     * @param integer $RemoveVideo 
+     * @param integer $RemoveAudio 
+     * @param VideoTemplateInfoForUpdate $VideoTemplate 
+     * @param AudioTemplateInfoForUpdate $AudioTemplate 
+     * @param TEHDConfigForUpdate $TEHDConfig 
+     * @param string $StdExtInfo 
      */
     function __construct()
     {
@@ -139,6 +119,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfigForUpdate();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

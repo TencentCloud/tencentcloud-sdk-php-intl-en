@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DRM-protected adaptive bitstream playback information
+ * 
  *
- * @method integer getSimpleAesDefinition() Obtain ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
- * @method void setSimpleAesDefinition(integer $SimpleAesDefinition) Set ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
- * @method integer getWidevineDefinition() Obtain The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
- * @method void setWidevineDefinition(integer $WidevineDefinition) Set The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
- * @method integer getFairPlayDefinition() Obtain The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
- * @method void setFairPlayDefinition(integer $FairPlayDefinition) Set The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+ * @method integer getSimpleAesDefinition() Obtain 
+ * @method void setSimpleAesDefinition(integer $SimpleAesDefinition) Set 
+ * @method integer getWidevineDefinition() Obtain 
+ * @method void setWidevineDefinition(integer $WidevineDefinition) Set 
+ * @method integer getFairPlayDefinition() Obtain 
+ * @method void setFairPlayDefinition(integer $FairPlayDefinition) Set 
  */
 class DrmStreamingsInfo extends AbstractModel
 {
     /**
-     * @var integer ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+     * @var integer 
      */
     public $SimpleAesDefinition;
 
     /**
-     * @var integer The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+     * @var integer 
      */
     public $WidevineDefinition;
 
     /**
-     * @var integer The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+     * @var integer 
      */
     public $FairPlayDefinition;
 
     /**
-     * @param integer $SimpleAesDefinition ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
-     * @param integer $WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
-     * @param integer $FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+     * @param integer $SimpleAesDefinition 
+     * @param integer $WidevineDefinition 
+     * @param integer $FairPlayDefinition 
      */
     function __construct()
     {

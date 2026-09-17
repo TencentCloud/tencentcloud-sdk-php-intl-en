@@ -18,144 +18,100 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The video remaster parameters.
+ * 
  *
- * @method RepairInfo getRepairInfo() Obtain The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRepairInfo(RepairInfo $RepairInfo) Set The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method SuperResolutionInfo getSuperResolutionInfo() Obtain The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method HDRInfo getHDRInfo() Obtain The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHDRInfo(HDRInfo $HDRInfo) Set The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ColorEnhanceInfo getColorInfo() Obtain The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method SharpEnhanceInfo getSharpInfo() Obtain The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method FaceEnhanceInfo getFaceInfo() Obtain The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method LowLightEnhanceInfo getLowLightInfo() Obtain The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ScratchRepairInfo getScratchRepairInfo() Obtain The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RepairInfo getRepairInfo() Obtain 
+ * @method void setRepairInfo(RepairInfo $RepairInfo) Set 
+ * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain 
+ * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set 
+ * @method SuperResolutionInfo getSuperResolutionInfo() Obtain 
+ * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set 
+ * @method HDRInfo getHDRInfo() Obtain 
+ * @method void setHDRInfo(HDRInfo $HDRInfo) Set 
+ * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain 
+ * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set 
+ * @method ColorEnhanceInfo getColorInfo() Obtain 
+ * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set 
+ * @method SharpEnhanceInfo getSharpInfo() Obtain 
+ * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set 
+ * @method FaceEnhanceInfo getFaceInfo() Obtain 
+ * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set 
+ * @method LowLightEnhanceInfo getLowLightInfo() Obtain 
+ * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set 
+ * @method ScratchRepairInfo getScratchRepairInfo() Obtain 
+ * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set 
+ * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain 
+ * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set 
  */
 class RebuildVideoInfo extends AbstractModel
 {
     /**
-     * @var RepairInfo The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RepairInfo 
      */
     public $RepairInfo;
 
     /**
-     * @var VideoFrameInterpolationInfo The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VideoFrameInterpolationInfo 
      */
     public $VideoFrameInterpolationInfo;
 
     /**
-     * @var SuperResolutionInfo The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SuperResolutionInfo 
      */
     public $SuperResolutionInfo;
 
     /**
-     * @var HDRInfo The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var HDRInfo 
      */
     public $HDRInfo;
 
     /**
-     * @var VideoDenoiseInfo The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VideoDenoiseInfo 
      */
     public $VideoDenoiseInfo;
 
     /**
-     * @var ColorEnhanceInfo The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ColorEnhanceInfo 
      */
     public $ColorInfo;
 
     /**
-     * @var SharpEnhanceInfo The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SharpEnhanceInfo 
      */
     public $SharpInfo;
 
     /**
-     * @var FaceEnhanceInfo The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var FaceEnhanceInfo 
      */
     public $FaceInfo;
 
     /**
-     * @var LowLightEnhanceInfo The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var LowLightEnhanceInfo 
      */
     public $LowLightInfo;
 
     /**
-     * @var ScratchRepairInfo The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ScratchRepairInfo 
      */
     public $ScratchRepairInfo;
 
     /**
-     * @var ArtifactRepairInfo The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ArtifactRepairInfo 
      */
     public $ArtifactRepairInfo;
 
     /**
-     * @param RepairInfo $RepairInfo The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuperResolutionInfo $SuperResolutionInfo The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HDRInfo $HDRInfo The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoDenoiseInfo $VideoDenoiseInfo The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ColorEnhanceInfo $ColorInfo The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SharpEnhanceInfo $SharpInfo The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FaceEnhanceInfo $FaceInfo The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LowLightEnhanceInfo $LowLightInfo The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScratchRepairInfo $ScratchRepairInfo The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ArtifactRepairInfo $ArtifactRepairInfo The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RepairInfo $RepairInfo 
+     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo 
+     * @param SuperResolutionInfo $SuperResolutionInfo 
+     * @param HDRInfo $HDRInfo 
+     * @param VideoDenoiseInfo $VideoDenoiseInfo 
+     * @param ColorEnhanceInfo $ColorInfo 
+     * @param SharpEnhanceInfo $SharpInfo 
+     * @param FaceEnhanceInfo $FaceInfo 
+     * @param LowLightEnhanceInfo $LowLightInfo 
+     * @param ScratchRepairInfo $ScratchRepairInfo 
+     * @param ArtifactRepairInfo $ArtifactRepairInfo 
      */
     function __construct()
     {

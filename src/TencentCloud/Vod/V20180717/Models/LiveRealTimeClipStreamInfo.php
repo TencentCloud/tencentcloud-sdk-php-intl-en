@@ -18,40 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of the live stream to clip.
+ * Live streaming Instant Editing stream information
  *
- * @method string getType() Obtain The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
- * @method void setType(string $Type) Set The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
- * @method integer getTemplateId() Obtain The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
- * @method void setTemplateId(integer $TemplateId) Set The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+ * @method string getType() Obtain Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
+ * @method void setType(string $Type) Set Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
+ * @method integer getTemplateId() Obtain Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
+ * @method void setTemplateId(integer $TemplateId) Set Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
  */
 class LiveRealTimeClipStreamInfo extends AbstractModel
 {
     /**
-     * @var string The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
+     * @var string Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
      */
     public $Type;
 
     /**
-     * @var integer The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+     * @var integer Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
      */
     public $TemplateId;
 
     /**
-     * @param string $Type The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
-     * @param integer $TemplateId The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+     * @param string $Type Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
+     * @param integer $TemplateId Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
      */
     function __construct()
     {

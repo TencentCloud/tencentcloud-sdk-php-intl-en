@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input type of intelligent tagging task
+ * 
  *
- * @method integer getDefinition() Obtain Intelligent video tagging template ID.
- * @method void setDefinition(integer $Definition) Set Intelligent video tagging template ID.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiAnalysisTaskTagInput extends AbstractModel
 {
     /**
-     * @var integer Intelligent video tagging template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Intelligent video tagging template ID.
+     * @param integer $Definition 
      */
     function __construct()
     {

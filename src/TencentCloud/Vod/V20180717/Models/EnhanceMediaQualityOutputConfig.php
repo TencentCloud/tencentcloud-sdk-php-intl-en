@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Remaster result file output
+ * 
  *
- * @method string getMediaName() Obtain Output file name, up to 64 characters. The system will specify the file name by default
- * @method void setMediaName(string $MediaName) Set Output file name, up to 64 characters. The system will specify the file name by default
- * @method integer getClassId() Obtain Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
- * @method void setClassId(integer $ClassId) Set Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
- * @method string getExpireTime() Obtain The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setExpireTime(string $ExpireTime) Set The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getMediaName() Obtain 
+ * @method void setMediaName(string $MediaName) Set 
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
  */
 class EnhanceMediaQualityOutputConfig extends AbstractModel
 {
     /**
-     * @var string Output file name, up to 64 characters. The system will specify the file name by default
+     * @var string 
      */
     public $MediaName;
 
     /**
-     * @var integer Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var string The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $ExpireTime;
 
     /**
-     * @param string $MediaName Output file name, up to 64 characters. The system will specify the file name by default
-     * @param integer $ClassId Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
-     * @param string $ExpireTime The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $MediaName 
+     * @param integer $ClassId 
+     * @param string $ExpireTime 
      */
     function __construct()
     {

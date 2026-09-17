@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of an adaptive bitrate (bitrate reduction) task.
+ * 
  *
- * @method string getStatus() Obtain The task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set The task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
- * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
- * @method string getMessage() Obtain The error message.
- * @method void setMessage(string $Message) Set The error message.
- * @method AdaptiveDynamicStreamingTaskInput getInput() Obtain The input of an adaptive bitrate task.
- * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set The input of an adaptive bitrate task.
- * @method AdaptiveDynamicStreamingInfoItem getOutput() Obtain The output of an adaptive bitrate task.
- * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) Set The output of an adaptive bitrate task.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method AdaptiveDynamicStreamingTaskInput getInput() Obtain 
+ * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set 
+ * @method AdaptiveDynamicStreamingInfoItem getOutput() Obtain 
+ * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) Set 
  */
 class ReduceMediaBitrateAdaptiveDynamicStreamingResult extends AbstractModel
 {
     /**
-     * @var string The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var string The error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var AdaptiveDynamicStreamingTaskInput The input of an adaptive bitrate task.
+     * @var AdaptiveDynamicStreamingTaskInput 
      */
     public $Input;
 
     /**
-     * @var AdaptiveDynamicStreamingInfoItem The output of an adaptive bitrate task.
+     * @var AdaptiveDynamicStreamingInfoItem 
      */
     public $Output;
 
     /**
-     * @param string $Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
-     * @param string $Message The error message.
-     * @param AdaptiveDynamicStreamingTaskInput $Input The input of an adaptive bitrate task.
-     * @param AdaptiveDynamicStreamingInfoItem $Output The output of an adaptive bitrate task.
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param string $Message 
+     * @param AdaptiveDynamicStreamingTaskInput $Input 
+     * @param AdaptiveDynamicStreamingInfoItem $Output 
      */
     function __construct()
     {

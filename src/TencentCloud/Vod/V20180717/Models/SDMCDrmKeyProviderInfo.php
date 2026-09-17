@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The DRM key information provided by SDMC.
+ * 
  *
- * @method string getUid() Obtain The user ID assigned by SDMC, which can contain up to 128 characters.
- * @method void setUid(string $Uid) Set The user ID assigned by SDMC, which can contain up to 128 characters.
- * @method string getSecretId() Obtain The secret ID assigned by SDMC, which can contain up to 128 characters.
- * @method void setSecretId(string $SecretId) Set The secret ID assigned by SDMC, which can contain up to 128 characters.
- * @method string getSecretKey() Obtain The secret key assigned by SDMC, which can contain up to 128 characters.
- * @method void setSecretKey(string $SecretKey) Set The secret key assigned by SDMC, which can contain up to 128 characters.
- * @method string getFairPlayCertificateUrl() Obtain The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
- * @method void setFairPlayCertificateUrl(string $FairPlayCertificateUrl) Set The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+ * @method string getUid() Obtain 
+ * @method void setUid(string $Uid) Set 
+ * @method string getSecretId() Obtain 
+ * @method void setSecretId(string $SecretId) Set 
+ * @method string getSecretKey() Obtain 
+ * @method void setSecretKey(string $SecretKey) Set 
+ * @method string getFairPlayCertificateUrl() Obtain 
+ * @method void setFairPlayCertificateUrl(string $FairPlayCertificateUrl) Set 
  */
 class SDMCDrmKeyProviderInfo extends AbstractModel
 {
     /**
-     * @var string The user ID assigned by SDMC, which can contain up to 128 characters.
+     * @var string 
      */
     public $Uid;
 
     /**
-     * @var string The secret ID assigned by SDMC, which can contain up to 128 characters.
+     * @var string 
      */
     public $SecretId;
 
     /**
-     * @var string The secret key assigned by SDMC, which can contain up to 128 characters.
+     * @var string 
      */
     public $SecretKey;
 
     /**
-     * @var string The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+     * @var string 
      */
     public $FairPlayCertificateUrl;
 
     /**
-     * @param string $Uid The user ID assigned by SDMC, which can contain up to 128 characters.
-     * @param string $SecretId The secret ID assigned by SDMC, which can contain up to 128 characters.
-     * @param string $SecretKey The secret key assigned by SDMC, which can contain up to 128 characters.
-     * @param string $FairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+     * @param string $Uid 
+     * @param string $SecretId 
+     * @param string $SecretKey 
+     * @param string $FairPlayCertificateUrl 
      */
     function __construct()
     {

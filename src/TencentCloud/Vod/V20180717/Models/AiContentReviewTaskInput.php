@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Type of intelligent recognition task
+ * 
  *
- * @method integer getDefinition() Obtain Intelligent recognition template ID
- * @method void setDefinition(integer $Definition) Set Intelligent recognition template ID
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiContentReviewTaskInput extends AbstractModel
 {
     /**
-     * @var integer Intelligent recognition template ID
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Intelligent recognition template ID
+     * @param integer $Definition 
      */
     function __construct()
     {

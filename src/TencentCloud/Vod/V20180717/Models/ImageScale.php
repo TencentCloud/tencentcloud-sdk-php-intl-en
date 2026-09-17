@@ -18,72 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image scaling details.
+ * 
  *
- * @method string getType() Obtain The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
- * @method void setType(string $Type) Set The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
- * @method integer getHeight() Obtain The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
- * @method void setHeight(integer $Height) Set The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
- * @method integer getWidth() Obtain The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
- * @method void setWidth(integer $Width) Set The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
- * @method integer getLongEdge() Obtain The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
- * @method void setLongEdge(integer $LongEdge) Set The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
- * @method integer getShortEdge() Obtain The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
- * @method void setShortEdge(integer $ShortEdge) Set The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
+ * @method integer getLongEdge() Obtain 
+ * @method void setLongEdge(integer $LongEdge) Set 
+ * @method integer getShortEdge() Obtain 
+ * @method void setShortEdge(integer $ShortEdge) Set 
  */
 class ImageScale extends AbstractModel
 {
     /**
-     * @var string The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var integer The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @var integer The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+     * @var integer 
      */
     public $LongEdge;
 
     /**
-     * @var integer The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+     * @var integer 
      */
     public $ShortEdge;
 
     /**
-     * @param string $Type The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
-     * @param integer $Height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
-     * @param integer $Width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
-     * @param integer $LongEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
-     * @param integer $ShortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+     * @param string $Type 
+     * @param integer $Height 
+     * @param integer $Width 
+     * @param integer $LongEdge 
+     * @param integer $ShortEdge 
      */
     function __construct()
     {

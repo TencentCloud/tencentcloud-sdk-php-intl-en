@@ -20,75 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoundPlays request structure.
  *
- * @method integer getSubAppId() Obtain <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
- * @method void setSubAppId(integer $SubAppId) Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
- * @method array getRoundPlayIds() Obtain Filter criteria: playlist identifier, array length limit: 100.
- * @method void setRoundPlayIds(array $RoundPlayIds) Set Filter criteria: playlist identifier, array length limit: 100.
- * @method string getStatus() Obtain Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
- * @method void setStatus(string $Status) Set Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
- * @method TimeRange getCreateTime() Obtain Filter criteria: playlist creation time.
- * @method void setCreateTime(TimeRange $CreateTime) Set Filter criteria: playlist creation time.
- * @method TimeRange getUpdateTime() Obtain Filter criteria: playlist update time.
- * @method void setUpdateTime(TimeRange $UpdateTime) Set Filter criteria: playlist update time.
- * @method string getScrollToken() Obtain Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
- * @method void setScrollToken(string $ScrollToken) Set Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
- * @method integer getOffset() Obtain Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
- * @method void setOffset(integer $Offset) Set Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
- * @method integer getLimit() Obtain Number of returned entries. default value: 10. maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. default value: 10. maximum value: 100.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getRoundPlayIds() Obtain 
+ * @method void setRoundPlayIds(array $RoundPlayIds) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method TimeRange getCreateTime() Obtain 
+ * @method void setCreateTime(TimeRange $CreateTime) Set 
+ * @method TimeRange getUpdateTime() Obtain 
+ * @method void setUpdateTime(TimeRange $UpdateTime) Set 
+ * @method string getScrollToken() Obtain 
+ * @method void setScrollToken(string $ScrollToken) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeRoundPlaysRequest extends AbstractModel
 {
     /**
-     * @var integer <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var array Filter criteria: playlist identifier, array length limit: 100.
+     * @var array 
      */
     public $RoundPlayIds;
 
     /**
-     * @var string Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var TimeRange Filter criteria: playlist creation time.
+     * @var TimeRange 
      */
     public $CreateTime;
 
     /**
-     * @var TimeRange Filter criteria: playlist update time.
+     * @var TimeRange 
      */
     public $UpdateTime;
 
     /**
-     * @var string Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
+     * @var string 
      */
     public $ScrollToken;
 
     /**
-     * @var integer Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+     * @var integer 
      * @deprecated
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. default value: 10. maximum value: 100.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
-     * @param array $RoundPlayIds Filter criteria: playlist identifier, array length limit: 100.
-     * @param string $Status Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
-     * @param TimeRange $CreateTime Filter criteria: playlist creation time.
-     * @param TimeRange $UpdateTime Filter criteria: playlist update time.
-     * @param string $ScrollToken Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
-     * @param integer $Offset Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
-     * @param integer $Limit Number of returned entries. default value: 10. maximum value: 100.
+     * @param integer $SubAppId 
+     * @param array $RoundPlayIds 
+     * @param string $Status 
+     * @param TimeRange $CreateTime 
+     * @param TimeRange $UpdateTime 
+     * @param string $ScrollToken 
+     * @param integer $Offset 
+     * @param integer $Limit 
      */
     function __construct()
     {

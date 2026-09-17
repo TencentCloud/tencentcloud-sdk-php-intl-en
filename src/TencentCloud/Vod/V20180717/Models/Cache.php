@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node cache expiration time configuration
+ * 
  *
- * @method array getRuleCache() Obtain Path cache configuration.
- * @method void setRuleCache(array $RuleCache) Set Path cache configuration.
+ * @method array getRuleCache() Obtain 
+ * @method void setRuleCache(array $RuleCache) Set 
  */
 class Cache extends AbstractModel
 {
     /**
-     * @var array Path cache configuration.
+     * @var array 
      */
     public $RuleCache;
 
     /**
-     * @param array $RuleCache Path cache configuration.
+     * @param array $RuleCache 
      */
     function __construct()
     {

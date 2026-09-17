@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ManageTask request structure.
  *
- * @method string getTaskId() Obtain Task ID of the video processing task.
- * @method void setTaskId(string $TaskId) Set Task ID of the video processing task.
- * @method string getOperationType() Obtain Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
- * @method void setOperationType(string $OperationType) Set Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getOperationType() Obtain 
+ * @method void setOperationType(string $OperationType) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class ManageTaskRequest extends AbstractModel
 {
     /**
-     * @var string Task ID of the video processing task.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+     * @var string 
      */
     public $OperationType;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $TaskId Task ID of the video processing task.
-     * @param string $OperationType Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $TaskId 
+     * @param string $OperationType 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

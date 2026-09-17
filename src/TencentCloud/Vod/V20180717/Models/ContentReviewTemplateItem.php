@@ -18,124 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent recognition template details
+ * 
  *
- * @method integer getDefinition() Obtain Unique ID of an intelligent recognition template
- * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent recognition template
- * @method string getName() Obtain Name of an intelligent recognition template. Max 64 characters
- * @method void setName(string $Name) Set Name of an intelligent recognition template. Max 64 characters
- * @method string getComment() Obtain Description of an intelligent recognition template. Max 256 characters
- * @method void setComment(string $Comment) Set Description of an intelligent recognition template. Max 256 characters
- * @method PornConfigureInfo getPornConfigure() Obtain Authentication involves control parameters for offensive information.
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Authentication involves control parameters for offensive information.
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Authentication involves control parameters for unsafe information.
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Authentication involves control parameters for unsafe information.
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Authentication involves control parameters for inappropriate information.
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Authentication involves control parameters for inappropriate information.
- * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
- * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Customize video moderation control parameters.
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Customize video moderation control parameters.
- * @method string getReviewWallSwitch() Obtain Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
- * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method PornConfigureInfo getPornConfigure() Obtain 
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set 
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain 
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set 
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain 
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set 
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain 
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set 
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain 
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set 
+ * @method string getReviewWallSwitch() Obtain 
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set 
+ * @method float getScreenshotInterval() Obtain 
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class ContentReviewTemplateItem extends AbstractModel
 {
     /**
-     * @var integer Unique ID of an intelligent recognition template
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Name of an intelligent recognition template. Max 64 characters
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Description of an intelligent recognition template. Max 256 characters
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfo Authentication involves control parameters for offensive information.
+     * @var PornConfigureInfo 
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo Authentication involves control parameters for unsafe information.
+     * @var TerrorismConfigureInfo 
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo Authentication involves control parameters for inappropriate information.
+     * @var PoliticalConfigureInfo 
      */
     public $PoliticalConfigure;
 
     /**
-     * @var ProhibitedConfigureInfo Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
+     * @var ProhibitedConfigureInfo 
      */
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo Customize video moderation control parameters.
+     * @var UserDefineConfigureInfo 
      */
     public $UserDefineConfigure;
 
     /**
-     * @var string Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
+     * @var string 
      */
     public $ReviewWallSwitch;
 
     /**
-     * @var float Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * @var float 
      */
     public $ScreenshotInterval;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition Unique ID of an intelligent recognition template
-     * @param string $Name Name of an intelligent recognition template. Max 64 characters
-     * @param string $Comment Description of an intelligent recognition template. Max 256 characters
-     * @param PornConfigureInfo $PornConfigure Authentication involves control parameters for offensive information.
-     * @param TerrorismConfigureInfo $TerrorismConfigure Authentication involves control parameters for unsafe information.
-     * @param PoliticalConfigureInfo $PoliticalConfigure Authentication involves control parameters for inappropriate information.
-     * @param ProhibitedConfigureInfo $ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
-     * @param UserDefineConfigureInfo $UserDefineConfigure Customize video moderation control parameters.
-     * @param string $ReviewWallSwitch Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
-     * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Definition 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param PornConfigureInfo $PornConfigure 
+     * @param TerrorismConfigureInfo $TerrorismConfigure 
+     * @param PoliticalConfigureInfo $PoliticalConfigure 
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure 
+     * @param UserDefineConfigureInfo $UserDefineConfigure 
+     * @param string $ReviewWallSwitch 
+     * @param float $ScreenshotInterval 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

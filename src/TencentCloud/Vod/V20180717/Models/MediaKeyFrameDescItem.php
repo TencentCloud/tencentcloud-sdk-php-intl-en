@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video timestamp information
+ * 
  *
- * @method float getTimeOffset() Obtain Offset time of video timestamp in seconds.
- * @method void setTimeOffset(float $TimeOffset) Set Offset time of video timestamp in seconds.
- * @method string getContent() Obtain Content string of timestamp containing 1-128 characters.
- * @method void setContent(string $Content) Set Content string of timestamp containing 1-128 characters.
+ * @method float getTimeOffset() Obtain 
+ * @method void setTimeOffset(float $TimeOffset) Set 
+ * @method string getContent() Obtain 
+ * @method void setContent(string $Content) Set 
  */
 class MediaKeyFrameDescItem extends AbstractModel
 {
     /**
-     * @var float Offset time of video timestamp in seconds.
+     * @var float 
      */
     public $TimeOffset;
 
     /**
-     * @var string Content string of timestamp containing 1-128 characters.
+     * @var string 
      */
     public $Content;
 
     /**
-     * @param float $TimeOffset Offset time of video timestamp in seconds.
-     * @param string $Content Content string of timestamp containing 1-128 characters.
+     * @param float $TimeOffset 
+     * @param string $Content 
      */
     function __construct()
     {

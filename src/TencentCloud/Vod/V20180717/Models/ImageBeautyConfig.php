@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image beauty effect configuration.
+ * 
  *
- * @method array getBeautyEffectItems() Obtain <p>Beauty effect item.</p>
- * @method void setBeautyEffectItems(array $BeautyEffectItems) Set <p>Beauty effect item.</p>
- * @method array getBeautyFilterItems() Obtain <p>Beauty filter item.</p>
- * @method void setBeautyFilterItems(array $BeautyFilterItems) Set <p>Beauty filter item.</p>
+ * @method array getBeautyEffectItems() Obtain 
+ * @method void setBeautyEffectItems(array $BeautyEffectItems) Set 
+ * @method array getBeautyFilterItems() Obtain 
+ * @method void setBeautyFilterItems(array $BeautyFilterItems) Set 
  */
 class ImageBeautyConfig extends AbstractModel
 {
     /**
-     * @var array <p>Beauty effect item.</p>
+     * @var array 
      */
     public $BeautyEffectItems;
 
     /**
-     * @var array <p>Beauty filter item.</p>
+     * @var array 
      */
     public $BeautyFilterItems;
 
     /**
-     * @param array $BeautyEffectItems <p>Beauty effect item.</p>
-     * @param array $BeautyFilterItems <p>Beauty filter item.</p>
+     * @param array $BeautyEffectItems 
+     * @param array $BeautyFilterItems 
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Statistics of task with specified specification.
+ * 
  *
- * @method string getSpecification() Obtain Task specification.
- * @method void setSpecification(string $Specification) Set Task specification.
- * @method array getData() Obtain Statistics.
- * @method void setData(array $Data) Set Statistics.
+ * @method string getSpecification() Obtain 
+ * @method void setSpecification(string $Specification) Set 
+ * @method array getData() Obtain 
+ * @method void setData(array $Data) Set 
  */
 class SpecificationDataItem extends AbstractModel
 {
     /**
-     * @var string Task specification.
+     * @var string 
      */
     public $Specification;
 
     /**
-     * @var array Statistics.
+     * @var array 
      */
     public $Data;
 
     /**
-     * @param string $Specification Task specification.
-     * @param array $Data Statistics.
+     * @param string $Specification 
+     * @param array $Data 
      */
     function __construct()
     {

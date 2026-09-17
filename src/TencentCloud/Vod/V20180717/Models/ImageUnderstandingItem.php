@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image understanding information item.
+ * 
  *
- * @method integer getDefinition() Obtain Template id.
- * @method void setDefinition(integer $Definition) Set Template id.
- * @method array getOutputFile() Obtain Task output file.
- * @method void setOutputFile(array $OutputFile) Set Task output file.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method array getOutputFile() Obtain 
+ * @method void setOutputFile(array $OutputFile) Set 
  */
 class ImageUnderstandingItem extends AbstractModel
 {
     /**
-     * @var integer Template id.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var array Task output file.
+     * @var array 
      */
     public $OutputFile;
 
     /**
-     * @param integer $Definition Template id.
-     * @param array $OutputFile Task output file.
+     * @param integer $Definition 
+     * @param array $OutputFile 
      */
     function __construct()
     {

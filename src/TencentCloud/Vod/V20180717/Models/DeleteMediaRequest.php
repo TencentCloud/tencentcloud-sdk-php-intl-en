@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMedia request structure.
  *
- * @method string getFileId() Obtain Unique identifier of the media file.
- * @method void setFileId(string $FileId) Set Unique identifier of the media file.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method array getDeleteParts() Obtain Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
- * @method void setDeleteParts(array $DeleteParts) Set Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getDeleteParts() Obtain 
+ * @method void setDeleteParts(array $DeleteParts) Set 
  */
 class DeleteMediaRequest extends AbstractModel
 {
     /**
-     * @var string Unique identifier of the media file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var array Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
+     * @var array 
      */
     public $DeleteParts;
 
     /**
-     * @param string $FileId Unique identifier of the media file.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param array $DeleteParts Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
+     * @param string $FileId 
+     * @param integer $SubAppId 
+     * @param array $DeleteParts 
      */
     function __construct()
     {

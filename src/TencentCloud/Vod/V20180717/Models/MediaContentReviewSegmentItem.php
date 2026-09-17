@@ -18,93 +18,77 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video segment containing detected pornographic or terrorism content
+ * 
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment in seconds.
- * @method float getConfidence() Obtain Confidence score for the detected pornographic content
- * @method void setConfidence(float $Confidence) Set Confidence score for the detected pornographic content
- * @method string getLabel() Obtain Label for the detected pornographic content
- * @method void setLabel(string $Label) Set Label for the detected pornographic content
- * @method string getSuggestion() Obtain Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
- * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
- * @method integer getPicUrlExpireTimeStamp() Obtain This field has been disused. Please use `PicUrlExpireTime`.
- * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set This field has been disused. Please use `PicUrlExpireTime`.
- * @method string getPicUrlExpireTime() Obtain Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getLabel() Obtain 
+ * @method void setLabel(string $Label) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method integer getPicUrlExpireTimeStamp() Obtain 
+ * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set 
+ * @method string getPicUrlExpireTime() Obtain 
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set 
  */
 class MediaContentReviewSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a suspected segment in seconds.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a suspected segment in seconds.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence score for the detected pornographic content
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string Label for the detected pornographic content
+     * @var string 
      */
     public $Label;
 
     /**
-     * @var string Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var string URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var integer This field has been disused. Please use `PicUrlExpireTime`.
+     * @var integer 
      * @deprecated
      */
     public $PicUrlExpireTimeStamp;
 
     /**
-     * @var string Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
-     * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
-     * @param float $Confidence Confidence score for the detected pornographic content
-     * @param string $Label Label for the detected pornographic content
-     * @param string $Suggestion Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param string $Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-     * @param integer $PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
-     * @param string $PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param float $Confidence 
+     * @param string $Label 
+     * @param string $Suggestion 
+     * @param string $Url 
+     * @param integer $PicUrlExpireTimeStamp 
+     * @param string $PicUrlExpireTime 
      */
     function __construct()
     {

@@ -18,56 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio gain adjustment parameter
+ * 
  *
- * @method integer getMute() Obtain Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
- * @method void setMute(integer $Mute) Set Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
- * @method float getGain() Obtain Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
- * @method void setGain(float $Gain) Set Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+ * @method integer getMute() Obtain 
+ * @method void setMute(integer $Mute) Set 
+ * @method float getGain() Obtain 
+ * @method void setGain(float $Gain) Set 
  */
 class AudioVolumeParam extends AbstractModel
 {
     /**
-     * @var integer Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
+     * @var integer 
      */
     public $Mute;
 
     /**
-     * @var float Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+     * @var float 
      */
     public $Gain;
 
     /**
-     * @param integer $Mute Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
-     * @param float $Gain Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+     * @param integer $Mute 
+     * @param float $Gain 
      */
     function __construct()
     {

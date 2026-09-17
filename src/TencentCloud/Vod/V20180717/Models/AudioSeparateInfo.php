@@ -18,68 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio separation configuration.
+ * 
  *
- * @method string getSwitch() Obtain Audio separation control switch. Available values:
-<li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
- * @method void setSwitch(string $Switch) Set Audio separation control switch. Available values:
-<li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
- * @method string getType() Obtain Scenario type. Valid values:
-<li>normal: Voice background sound scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
- * @method void setType(string $Type) Set Scenario type. Valid values:
-<li>normal: Voice background sound scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
- * @method string getTrack() Obtain Output audio track. Available values:
-<li>vocal: output voice</li>
-<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
-Default value: vocal.
- * @method void setTrack(string $Track) Set Output audio track. Available values:
-<li>vocal: output voice</li>
-<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
-Default value: vocal.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getTrack() Obtain 
+ * @method void setTrack(string $Track) Set 
  */
 class AudioSeparateInfo extends AbstractModel
 {
     /**
-     * @var string Audio separation control switch. Available values:
-<li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Scenario type. Valid values:
-<li>normal: Voice background sound scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Output audio track. Available values:
-<li>vocal: output voice</li>
-<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
-Default value: vocal.
+     * @var string 
      */
     public $Track;
 
     /**
-     * @param string $Switch Audio separation control switch. Available values:
-<li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
-     * @param string $Type Scenario type. Valid values:
-<li>normal: Voice background sound scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
-     * @param string $Track Output audio track. Available values:
-<li>vocal: output voice</li>
-<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
-Default value: vocal.
+     * @param string $Switch 
+     * @param string $Type 
+     * @param string $Track 
      */
     function __construct()
     {

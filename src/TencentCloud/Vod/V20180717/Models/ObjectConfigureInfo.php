@@ -18,52 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of object recognition task
+ * 
  *
- * @method string getSwitch() Obtain Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
- * @method string getObjectLibrary() Obtain Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
-Default value: All, i.e., both default and custom object libraries will be used.
- * @method void setObjectLibrary(string $ObjectLibrary) Set Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
-Default value: All, i.e., both default and custom object libraries will be used.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getObjectLibrary() Obtain 
+ * @method void setObjectLibrary(string $ObjectLibrary) Set 
  */
 class ObjectConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
-Default value: All, i.e., both default and custom object libraries will be used.
+     * @var string 
      */
     public $ObjectLibrary;
 
     /**
-     * @param string $Switch Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
-     * @param string $ObjectLibrary Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
-Default value: All, i.e., both default and custom object libraries will be used.
+     * @param string $Switch 
+     * @param string $ObjectLibrary 
      */
     function __construct()
     {

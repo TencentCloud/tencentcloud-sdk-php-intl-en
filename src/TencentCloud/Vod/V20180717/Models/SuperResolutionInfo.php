@@ -18,60 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Super resolution configuration.
+ * 
  *
- * @method string getSwitch() Obtain Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
- * @method void setSwitch(string $Switch) Set Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
- * @method string getType() Obtain The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
- * @method void setType(string $Type) Set The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
- * @method integer getSize() Obtain The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
- * @method void setSize(integer $Size) Set The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getSize() Obtain 
+ * @method void setSize(integer $Size) Set 
  */
 class SuperResolutionInfo extends AbstractModel
 {
     /**
-     * @var string Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+     * @var integer 
      */
     public $Size;
 
     /**
-     * @param string $Switch Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
-     * @param string $Type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
-     * @param integer $Size The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+     * @param string $Switch 
+     * @param string $Type 
+     * @param integer $Size 
      */
     function __construct()
     {

@@ -18,36 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * audio/video enhancement configuration
+ * 
  *
- * @method VideoEnhanceConfig getVideoEnhance() Obtain Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioEnhanceConfig getAudioEnhance() Obtain Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method VideoEnhanceConfig getVideoEnhance() Obtain 
+ * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set 
+ * @method AudioEnhanceConfig getAudioEnhance() Obtain 
+ * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set 
  */
 class EnhanceConfig extends AbstractModel
 {
     /**
-     * @var VideoEnhanceConfig Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VideoEnhanceConfig 
      */
     public $VideoEnhance;
 
     /**
-     * @var AudioEnhanceConfig Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioEnhanceConfig 
      */
     public $AudioEnhance;
 
     /**
-     * @param VideoEnhanceConfig $VideoEnhance Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioEnhanceConfig $AudioEnhance Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VideoEnhanceConfig $VideoEnhance 
+     * @param AudioEnhanceConfig $AudioEnhance 
      */
     function __construct()
     {

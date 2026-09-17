@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create custom voice type callback output.
+ * 
  *
- * @method array getInfoList() Obtain <p>Custom timbre list.</p>
- * @method void setInfoList(array $InfoList) Set <p>Custom timbre list.</p>
+ * @method array getInfoList() Obtain 
+ * @method void setInfoList(array $InfoList) Set 
  */
 class CreateAigcCustomVoiceOutput extends AbstractModel
 {
     /**
-     * @var array <p>Custom timbre list.</p>
+     * @var array 
      */
     public $InfoList;
 
     /**
-     * @param array $InfoList <p>Custom timbre list.</p>
+     * @param array $InfoList 
      */
     function __construct()
     {

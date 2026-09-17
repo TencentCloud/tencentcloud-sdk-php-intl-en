@@ -18,56 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The stream information of adaptive bitrate streaming.
+ * 
  *
- * @method string getType() Obtain The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
- * @method void setType(string $Type) Set The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
- * @method integer getWidth() Obtain The video width (px) if `Type` is `video`.
- * @method void setWidth(integer $Width) Set The video width (px) if `Type` is `video`.
- * @method integer getHeight() Obtain The video height (px) if `Type` is `video`.
- * @method void setHeight(integer $Height) Set The video height (px) if `Type` is `video`.
- * @method integer getSize() Obtain The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
- * @method void setSize(integer $Size) Set The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method integer getSize() Obtain 
+ * @method void setSize(integer $Size) Set 
  */
 class MediaSubStreamInfoItem extends AbstractModel
 {
     /**
-     * @var string The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer The video width (px) if `Type` is `video`.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @var integer The video height (px) if `Type` is `video`.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var integer The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+     * @var integer 
      */
     public $Size;
 
     /**
-     * @param string $Type The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
-     * @param integer $Width The video width (px) if `Type` is `video`.
-     * @param integer $Height The video height (px) if `Type` is `video`.
-     * @param integer $Size The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+     * @param string $Type 
+     * @param integer $Width 
+     * @param integer $Height 
+     * @param integer $Size 
      */
     function __construct()
     {

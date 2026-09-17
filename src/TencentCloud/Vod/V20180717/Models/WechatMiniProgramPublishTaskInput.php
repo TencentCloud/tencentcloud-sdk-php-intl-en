@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Type of a release on WeChat Mini Program task
+ * 
  *
- * @method integer getSourceDefinition() Obtain ID of the transcoding template corresponding to the published video. 0 represents the source video.
- * @method void setSourceDefinition(integer $SourceDefinition) Set ID of the transcoding template corresponding to the published video. 0 represents the source video.
+ * @method integer getSourceDefinition() Obtain 
+ * @method void setSourceDefinition(integer $SourceDefinition) Set 
  */
 class WechatMiniProgramPublishTaskInput extends AbstractModel
 {
     /**
-     * @var integer ID of the transcoding template corresponding to the published video. 0 represents the source video.
+     * @var integer 
      */
     public $SourceDefinition;
 
     /**
-     * @param integer $SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+     * @param integer $SourceDefinition 
      */
     function __construct()
     {

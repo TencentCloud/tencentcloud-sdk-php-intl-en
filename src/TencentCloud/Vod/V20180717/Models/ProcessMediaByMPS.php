@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MPS media processing task info.
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method void setStatus(string $Status) Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
- * @method void setErrCode(integer $ErrCode) Set Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
- * @method string getMessage() Obtain Error information. Return the corresponding exception Message in case of source error, otherwise please use each specific task Message.
- * @method void setMessage(string $Message) Set Error information. Return the corresponding exception Message in case of source error, otherwise please use each specific task Message.
- * @method array getSubTaskSet() Obtain MPS video processing task.
- * @method void setSubTaskSet(array $SubTaskSet) Set MPS video processing task.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method array getSubTaskSet() Obtain 
+ * @method void setSubTaskSet(array $SubTaskSet) Set 
  */
 class ProcessMediaByMPS extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error information. Return the corresponding exception Message in case of source error, otherwise please use each specific task Message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var array MPS video processing task.
+     * @var array 
      */
     public $SubTaskSet;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
-     * @param string $Message Error information. Return the corresponding exception Message in case of source error, otherwise please use each specific task Message.
-     * @param array $SubTaskSet MPS video processing task.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param array $SubTaskSet 
      */
     function __construct()
     {

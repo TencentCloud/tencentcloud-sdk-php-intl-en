@@ -20,178 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RebuildMedia request structure.
  *
- * @method string getFileId() Obtain Media File ID.
- * @method void setFileId(string $FileId) Set Media File ID.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method float getStartTimeOffset() Obtain Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
- * @method float getEndTimeOffset() Obtain End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
- * @method RepairInfo getRepairInfo() Obtain Image quality restoration control parameters.
- * @method void setRepairInfo(RepairInfo $RepairInfo) Set Image quality restoration control parameters.
- * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain Intelligent Frame Interpolation Control Parameters.
- * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set Intelligent Frame Interpolation Control Parameters.
- * @method SuperResolutionInfo getSuperResolutionInfo() Obtain Image super-resolution control parameters.
- * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set Image super-resolution control parameters.
- * @method HDRInfo getHDRInfo() Obtain High dynamic range type control parameter.
- * @method void setHDRInfo(HDRInfo $HDRInfo) Set High dynamic range type control parameter.
- * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain Video noise reduction control parameters.
- * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set Video noise reduction control parameters.
- * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain Audio noise reduction control parameters.
- * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set Audio noise reduction control parameters.
- * @method ColorEnhanceInfo getColorInfo() Obtain Color enhancement control parameters.
- * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set Color enhancement control parameters.
- * @method SharpEnhanceInfo getSharpInfo() Obtain Detail enhancement control parameters.
- * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set Detail enhancement control parameters.
- * @method FaceEnhanceInfo getFaceInfo() Obtain Face enhancement control parameters.
- * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set Face enhancement control parameters.
- * @method LowLightEnhanceInfo getLowLightInfo() Obtain Low-light control parameters.
- * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set Low-light control parameters.
- * @method ScratchRepairInfo getScratchRepairInfo() Obtain Scratch removal control parameter.
- * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set Scratch removal control parameter.
- * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain Deburring control parameter.
- * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set Deburring control parameter.
- * @method RebuildMediaTargetInfo getTargetInfo() Obtain Audio-Visual Quality Rebirth Output Target Parameters.
- * @method void setTargetInfo(RebuildMediaTargetInfo $TargetInfo) Set Audio-Visual Quality Rebirth Output Target Parameters.
- * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method integer getTasksPriority() Obtain Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
- * @method string getExtInfo() Obtain Reserved field, used when special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used when special purpose.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method RepairInfo getRepairInfo() Obtain 
+ * @method void setRepairInfo(RepairInfo $RepairInfo) Set 
+ * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain 
+ * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set 
+ * @method SuperResolutionInfo getSuperResolutionInfo() Obtain 
+ * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set 
+ * @method HDRInfo getHDRInfo() Obtain 
+ * @method void setHDRInfo(HDRInfo $HDRInfo) Set 
+ * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain 
+ * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set 
+ * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain 
+ * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set 
+ * @method ColorEnhanceInfo getColorInfo() Obtain 
+ * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set 
+ * @method SharpEnhanceInfo getSharpInfo() Obtain 
+ * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set 
+ * @method FaceEnhanceInfo getFaceInfo() Obtain 
+ * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set 
+ * @method LowLightEnhanceInfo getLowLightInfo() Obtain 
+ * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set 
+ * @method ScratchRepairInfo getScratchRepairInfo() Obtain 
+ * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set 
+ * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain 
+ * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set 
+ * @method RebuildMediaTargetInfo getTargetInfo() Obtain 
+ * @method void setTargetInfo(RebuildMediaTargetInfo $TargetInfo) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class RebuildMediaRequest extends AbstractModel
 {
     /**
-     * @var string Media File ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var float Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var RepairInfo Image quality restoration control parameters.
+     * @var RepairInfo 
      */
     public $RepairInfo;
 
     /**
-     * @var VideoFrameInterpolationInfo Intelligent Frame Interpolation Control Parameters.
+     * @var VideoFrameInterpolationInfo 
      */
     public $VideoFrameInterpolationInfo;
 
     /**
-     * @var SuperResolutionInfo Image super-resolution control parameters.
+     * @var SuperResolutionInfo 
      */
     public $SuperResolutionInfo;
 
     /**
-     * @var HDRInfo High dynamic range type control parameter.
+     * @var HDRInfo 
      */
     public $HDRInfo;
 
     /**
-     * @var VideoDenoiseInfo Video noise reduction control parameters.
+     * @var VideoDenoiseInfo 
      */
     public $VideoDenoiseInfo;
 
     /**
-     * @var AudioDenoiseInfo Audio noise reduction control parameters.
+     * @var AudioDenoiseInfo 
      */
     public $AudioDenoiseInfo;
 
     /**
-     * @var ColorEnhanceInfo Color enhancement control parameters.
+     * @var ColorEnhanceInfo 
      */
     public $ColorInfo;
 
     /**
-     * @var SharpEnhanceInfo Detail enhancement control parameters.
+     * @var SharpEnhanceInfo 
      */
     public $SharpInfo;
 
     /**
-     * @var FaceEnhanceInfo Face enhancement control parameters.
+     * @var FaceEnhanceInfo 
      */
     public $FaceInfo;
 
     /**
-     * @var LowLightEnhanceInfo Low-light control parameters.
+     * @var LowLightEnhanceInfo 
      */
     public $LowLightInfo;
 
     /**
-     * @var ScratchRepairInfo Scratch removal control parameter.
+     * @var ScratchRepairInfo 
      */
     public $ScratchRepairInfo;
 
     /**
-     * @var ArtifactRepairInfo Deburring control parameter.
+     * @var ArtifactRepairInfo 
      */
     public $ArtifactRepairInfo;
 
     /**
-     * @var RebuildMediaTargetInfo Audio-Visual Quality Rebirth Output Target Parameters.
+     * @var RebuildMediaTargetInfo 
      */
     public $TargetInfo;
 
     /**
-     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string Reserved field, used when special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param string $FileId Media File ID.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param float $StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
-     * @param float $EndTimeOffset End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
-     * @param RepairInfo $RepairInfo Image quality restoration control parameters.
-     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo Intelligent Frame Interpolation Control Parameters.
-     * @param SuperResolutionInfo $SuperResolutionInfo Image super-resolution control parameters.
-     * @param HDRInfo $HDRInfo High dynamic range type control parameter.
-     * @param VideoDenoiseInfo $VideoDenoiseInfo Video noise reduction control parameters.
-     * @param AudioDenoiseInfo $AudioDenoiseInfo Audio noise reduction control parameters.
-     * @param ColorEnhanceInfo $ColorInfo Color enhancement control parameters.
-     * @param SharpEnhanceInfo $SharpInfo Detail enhancement control parameters.
-     * @param FaceEnhanceInfo $FaceInfo Face enhancement control parameters.
-     * @param LowLightEnhanceInfo $LowLightInfo Low-light control parameters.
-     * @param ScratchRepairInfo $ScratchRepairInfo Scratch removal control parameter.
-     * @param ArtifactRepairInfo $ArtifactRepairInfo Deburring control parameter.
-     * @param RebuildMediaTargetInfo $TargetInfo Audio-Visual Quality Rebirth Output Target Parameters.
-     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param integer $TasksPriority Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
-     * @param string $ExtInfo Reserved field, used when special purpose.
+     * @param string $FileId 
+     * @param integer $SubAppId 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param RepairInfo $RepairInfo 
+     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo 
+     * @param SuperResolutionInfo $SuperResolutionInfo 
+     * @param HDRInfo $HDRInfo 
+     * @param VideoDenoiseInfo $VideoDenoiseInfo 
+     * @param AudioDenoiseInfo $AudioDenoiseInfo 
+     * @param ColorEnhanceInfo $ColorInfo 
+     * @param SharpEnhanceInfo $SharpInfo 
+     * @param FaceEnhanceInfo $FaceInfo 
+     * @param LowLightEnhanceInfo $LowLightInfo 
+     * @param ScratchRepairInfo $ScratchRepairInfo 
+     * @param ArtifactRepairInfo $ArtifactRepairInfo 
+     * @param RebuildMediaTargetInfo $TargetInfo 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

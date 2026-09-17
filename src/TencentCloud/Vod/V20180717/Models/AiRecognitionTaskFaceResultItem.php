@@ -18,52 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Face recognition result
+ * 
  *
- * @method string getId() Obtain Unique ID of figure.
- * @method void setId(string $Id) Set Unique ID of figure.
- * @method string getType() Obtain Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
- * @method void setType(string $Type) Set Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
- * @method string getName() Obtain Figure name.
- * @method void setName(string $Name) Set Figure name.
- * @method array getSegmentSet() Obtain Result set of segments that contain a figure.
- * @method void setSegmentSet(array $SegmentSet) Set Result set of segments that contain a figure.
+ * @method string getId() Obtain 
+ * @method void setId(string $Id) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
     /**
-     * @var string Unique ID of figure.
+     * @var string 
      */
     public $Id;
 
     /**
-     * @var string Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Figure name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var array Result set of segments that contain a figure.
+     * @var array 
      */
     public $SegmentSet;
 
     /**
-     * @param string $Id Unique ID of figure.
-     * @param string $Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-     * @param string $Name Figure name.
-     * @param array $SegmentSet Result set of segments that contain a figure.
+     * @param string $Id 
+     * @param string $Type 
+     * @param string $Name 
+     * @param array $SegmentSet 
      */
     function __construct()
     {

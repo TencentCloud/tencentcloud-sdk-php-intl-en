@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAigcApiToken request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate vod services after december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate vod services after december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
- * @method string getApiToken() Obtain API Token.
- * @method void setApiToken(string $ApiToken) Set API Token.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getApiToken() Obtain 
+ * @method void setApiToken(string $ApiToken) Set 
  */
 class DeleteAigcApiTokenRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate vod services after december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string API Token.
+     * @var string 
      */
     public $ApiToken;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate vod services after december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
-     * @param string $ApiToken API Token.
+     * @param integer $SubAppId 
+     * @param string $ApiToken 
      */
     function __construct()
     {

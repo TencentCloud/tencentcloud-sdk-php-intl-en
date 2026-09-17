@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Knowledge base media analysis information.
+ * 
  *
- * @method integer getDefinition() Obtain <p>Large model parsing template ID</p>
- * @method void setDefinition(integer $Definition) Set <p>Large model parsing template ID</p>
- * @method array getAnalysisResults() Obtain <p>Parsing result of large model</p>
- * @method void setAnalysisResults(array $AnalysisResults) Set <p>Parsing result of large model</p>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method array getAnalysisResults() Obtain 
+ * @method void setAnalysisResults(array $AnalysisResults) Set 
  */
 class KnowledgeAnalysisInfo extends AbstractModel
 {
     /**
-     * @var integer <p>Large model parsing template ID</p>
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var array <p>Parsing result of large model</p>
+     * @var array 
      */
     public $AnalysisResults;
 
     /**
-     * @param integer $Definition <p>Large model parsing template ID</p>
-     * @param array $AnalysisResults <p>Parsing result of large model</p>
+     * @param integer $Definition 
+     * @param array $AnalysisResults 
      */
     function __construct()
     {

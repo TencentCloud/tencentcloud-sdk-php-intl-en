@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of a time point screenshot task. This parameter is only valid for the v2017 time point screenshot API.
+ * 
  *
- * @method string getTaskId() Obtain Screencapturing task ID.
- * @method void setTaskId(string $TaskId) Set Screencapturing task ID.
- * @method string getFileId() Obtain Screenshot file ID.
- * @method void setFileId(string $FileId) Set Screenshot file ID.
- * @method integer getDefinition() Obtain screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method array getSnapshotInfoSet() Obtain Result information of screencapturing.
- * @method void setSnapshotInfoSet(array $SnapshotInfoSet) Set Result information of screencapturing.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method array getSnapshotInfoSet() Obtain 
+ * @method void setSnapshotInfoSet(array $SnapshotInfoSet) Set 
  */
 class SnapshotByTimeOffsetTask2017 extends AbstractModel
 {
     /**
-     * @var string Screencapturing task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Screenshot file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var array Result information of screencapturing.
+     * @var array 
      */
     public $SnapshotInfoSet;
 
     /**
-     * @param string $TaskId Screencapturing task ID.
-     * @param string $FileId Screenshot file ID.
-     * @param integer $Definition screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param array $SnapshotInfoSet Result information of screencapturing.
+     * @param string $TaskId 
+     * @param string $FileId 
+     * @param integer $Definition 
+     * @param array $SnapshotInfoSet 
      */
     function __construct()
     {

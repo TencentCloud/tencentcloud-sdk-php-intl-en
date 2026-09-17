@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based sample management - keyword output information.
+ * 
  *
- * @method string getKeyword() Obtain Keyword.
- * @method void setKeyword(string $Keyword) Set Keyword.
- * @method array getTagSet() Obtain Keyword tag.
- * @method void setTagSet(array $TagSet) Set Keyword tag.
- * @method array getUsageSet() Obtain Keyword use case.
- * @method void setUsageSet(array $UsageSet) Set Keyword use case.
- * @method string getCreateTime() Obtain Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getKeyword() Obtain 
+ * @method void setKeyword(string $Keyword) Set 
+ * @method array getTagSet() Obtain 
+ * @method void setTagSet(array $TagSet) Set 
+ * @method array getUsageSet() Obtain 
+ * @method void setUsageSet(array $UsageSet) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class AiSampleWord extends AbstractModel
 {
     /**
-     * @var string Keyword.
+     * @var string 
      */
     public $Keyword;
 
     /**
-     * @var array Keyword tag.
+     * @var array 
      */
     public $TagSet;
 
     /**
-     * @var array Keyword use case.
+     * @var array 
      */
     public $UsageSet;
 
     /**
-     * @var string Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param string $Keyword Keyword.
-     * @param array $TagSet Keyword tag.
-     * @param array $UsageSet Keyword use case.
-     * @param string $CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $Keyword 
+     * @param array $TagSet 
+     * @param array $UsageSet 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

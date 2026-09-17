@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameters for OCR-based recognition of banned content
+ * 
  *
- * @method integer getDefinition() Obtain Prohibited information detection template ID.
- * @method void setDefinition(integer $Definition) Set Prohibited information detection template ID.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiReviewProhibitedOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer Prohibited information detection template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Prohibited information detection template ID.
+     * @param integer $Definition 
      */
     function __construct()
     {

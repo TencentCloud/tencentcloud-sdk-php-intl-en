@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of prohibited information detection task
+ * 
  *
- * @method ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameter of prohibited information detection in speech.
- * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameter of prohibited information detection in speech.
- * @method ProhibitedOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of prohibited information detection in text.
- * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of prohibited information detection in text.
+ * @method ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain 
+ * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set 
+ * @method ProhibitedOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
  */
 class ProhibitedConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var ProhibitedAsrReviewTemplateInfoForUpdate Control parameter of prohibited information detection in speech.
+     * @var ProhibitedAsrReviewTemplateInfoForUpdate 
      */
     public $AsrReviewInfo;
 
     /**
-     * @var ProhibitedOcrReviewTemplateInfoForUpdate Control parameter of prohibited information detection in text.
+     * @var ProhibitedOcrReviewTemplateInfoForUpdate 
      */
     public $OcrReviewInfo;
 
     /**
-     * @param ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo Control parameter of prohibited information detection in speech.
-     * @param ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo Control parameter of prohibited information detection in text.
+     * @param ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo 
+     * @param ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
      */
     function __construct()
     {

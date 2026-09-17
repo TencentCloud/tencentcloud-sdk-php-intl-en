@@ -20,102 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVoices request structure.
  *
- * @method string getSubAppId() Obtain <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
- * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
- * @method string getVoiceId() Obtain <p>Voice ID.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
- * @method string getVoiceType() Obtain <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
- * @method void setVoiceType(string $VoiceType) Set <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
- * @method string getVoiceName() Obtain <p>Voice name.</p>
- * @method void setVoiceName(string $VoiceName) Set <p>Voice name.</p>
- * @method string getDescription() Obtain <p>Voice description.</p>
- * @method void setDescription(string $Description) Set <p>Voice description.</p>
- * @method string getGender() Obtain <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
- * @method void setGender(string $Gender) Set <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
- * @method string getAge() Obtain <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
- * @method void setAge(string $Age) Set <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
- * @method array getLanguages() Obtain <p>Language.</p>
- * @method void setLanguages(array $Languages) Set <p>Language.</p>
- * @method array getLabels() Obtain <p>Tag.</p>
- * @method void setLabels(array $Labels) Set <p>Tag.</p>
- * @method array getScenes() Obtain <p>Scenario.</p>
- * @method void setScenes(array $Scenes) Set <p>Scenario.</p>
- * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
- * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+ * @method string getSubAppId() Obtain 
+ * @method void setSubAppId(string $SubAppId) Set 
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
+ * @method string getVoiceType() Obtain 
+ * @method void setVoiceType(string $VoiceType) Set 
+ * @method string getVoiceName() Obtain 
+ * @method void setVoiceName(string $VoiceName) Set 
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
+ * @method string getGender() Obtain 
+ * @method void setGender(string $Gender) Set 
+ * @method string getAge() Obtain 
+ * @method void setAge(string $Age) Set 
+ * @method array getLanguages() Obtain 
+ * @method void setLanguages(array $Languages) Set 
+ * @method array getLabels() Obtain 
+ * @method void setLabels(array $Labels) Set 
+ * @method array getScenes() Obtain 
+ * @method void setScenes(array $Scenes) Set 
+ * @method string getExtParam() Obtain 
+ * @method void setExtParam(string $ExtParam) Set 
  */
 class DescribeVoicesRequest extends AbstractModel
 {
     /**
-     * @var string <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+     * @var string 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Voice ID.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @var string <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
+     * @var string 
      */
     public $VoiceType;
 
     /**
-     * @var string <p>Voice name.</p>
+     * @var string 
      */
     public $VoiceName;
 
     /**
-     * @var string <p>Voice description.</p>
+     * @var string 
      */
     public $Description;
 
     /**
-     * @var string <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+     * @var string 
      */
     public $Gender;
 
     /**
-     * @var string <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * @var string 
      */
     public $Age;
 
     /**
-     * @var array <p>Language.</p>
+     * @var array 
      */
     public $Languages;
 
     /**
-     * @var array <p>Tag.</p>
+     * @var array 
      */
     public $Labels;
 
     /**
-     * @var array <p>Scenario.</p>
+     * @var array 
      */
     public $Scenes;
 
     /**
-     * @var string <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+     * @var string 
      */
     public $ExtParam;
 
     /**
-     * @param string $SubAppId <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
-     * @param string $VoiceId <p>Voice ID.</p>
-     * @param string $VoiceType <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
-     * @param string $VoiceName <p>Voice name.</p>
-     * @param string $Description <p>Voice description.</p>
-     * @param string $Gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
-     * @param string $Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
-     * @param array $Languages <p>Language.</p>
-     * @param array $Labels <p>Tag.</p>
-     * @param array $Scenes <p>Scenario.</p>
-     * @param string $ExtParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+     * @param string $SubAppId 
+     * @param string $VoiceId 
+     * @param string $VoiceType 
+     * @param string $VoiceName 
+     * @param string $Description 
+     * @param string $Gender 
+     * @param string $Age 
+     * @param array $Languages 
+     * @param array $Labels 
+     * @param array $Scenes 
+     * @param string $ExtParam 
      */
     function __construct()
     {

@@ -18,41 +18,37 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Transition information
+ * 
  *
- * @method float getDuration() Obtain Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
- * @method void setDuration(float $Duration) Set Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
- * @method array getTransitions() Obtain List of transition operations. Up to one video image or audio transition operation is supported.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTransitions(array $Transitions) Set List of transition operations. Up to one video image or audio transition operation is supported.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getMediaTransitions() Obtain Transition operation list. Image transition operations and audio transition operations support at most one each.
- * @method void setMediaTransitions(array $MediaTransitions) Set Transition operation list. Image transition operations and audio transition operations support at most one each.
+ * @method float getDuration() Obtain 
+ * @method void setDuration(float $Duration) Set 
+ * @method array getTransitions() Obtain 
+ * @method void setTransitions(array $Transitions) Set 
+ * @method array getMediaTransitions() Obtain 
+ * @method void setMediaTransitions(array $MediaTransitions) Set 
  */
 class MediaTransitionItem extends AbstractModel
 {
     /**
-     * @var float Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
+     * @var float 
      */
     public $Duration;
 
     /**
-     * @var array List of transition operations. Up to one video image or audio transition operation is supported.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      * @deprecated
      */
     public $Transitions;
 
     /**
-     * @var array Transition operation list. Image transition operations and audio transition operations support at most one each.
+     * @var array 
      */
     public $MediaTransitions;
 
     /**
-     * @param float $Duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
-     * @param array $Transitions List of transition operations. Up to one video image or audio transition operation is supported.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $MediaTransitions Transition operation list. Image transition operations and audio transition operations support at most one each.
+     * @param float $Duration 
+     * @param array $Transitions 
+     * @param array $MediaTransitions 
      */
     function __construct()
     {

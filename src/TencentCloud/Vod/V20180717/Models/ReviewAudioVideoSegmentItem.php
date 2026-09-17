@@ -18,200 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The suspicious segment detected.
+ * 
  *
- * @method float getStartTimeOffset() Obtain The start time offset (seconds) of the segment.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set The start time offset (seconds) of the segment.
- * @method float getEndTimeOffset() Obtain The end time offset (seconds) of the segment.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set The end time offset (seconds) of the segment.
- * @method float getConfidence() Obtain The confidence score of the segment.
- * @method void setConfidence(float $Confidence) Set The confidence score of the segment.
- * @method string getSuggestion() Obtain The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
- * @method void setSuggestion(string $Suggestion) Set The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
- * @method string getLabel() Obtain The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
- * @method void setLabel(string $Label) Set The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
- * @method string getSubLabel() Obtain The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
- * @method void setSubLabel(string $SubLabel) Set The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
- * @method string getForm() Obtain The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
- * @method void setForm(string $Form) Set The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
- * @method array getAreaCoordSet() Obtain The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
- * @method string getText() Obtain The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
- * @method void setText(string $Text) Set The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
- * @method array getKeywordSet() Obtain The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
- * @method void setKeywordSet(array $KeywordSet) Set The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
- * @method string getUrl() Obtain The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
- * @method void setUrl(string $Url) Set The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
- * @method string getPicUrlExpireTime() Obtain The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getLabel() Obtain 
+ * @method void setLabel(string $Label) Set 
+ * @method string getSubLabel() Obtain 
+ * @method void setSubLabel(string $SubLabel) Set 
+ * @method string getForm() Obtain 
+ * @method void setForm(string $Form) Set 
+ * @method array getAreaCoordSet() Obtain 
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set 
+ * @method string getText() Obtain 
+ * @method void setText(string $Text) Set 
+ * @method array getKeywordSet() Obtain 
+ * @method void setKeywordSet(array $KeywordSet) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getPicUrlExpireTime() Obtain 
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set 
  */
 class ReviewAudioVideoSegmentItem extends AbstractModel
 {
     /**
-     * @var float The start time offset (seconds) of the segment.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float The end time offset (seconds) of the segment.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var float The confidence score of the segment.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var string The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
+     * @var string 
      */
     public $Label;
 
     /**
-     * @var string The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
+     * @var string 
      */
     public $SubLabel;
 
     /**
-     * @var string The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * @var string 
      */
     public $Form;
 
     /**
-     * @var array The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
+     * @var array 
      */
     public $AreaCoordSet;
 
     /**
-     * @var string The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
+     * @var string 
      */
     public $Text;
 
     /**
-     * @var array The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+     * @var array 
      */
     public $KeywordSet;
 
     /**
-     * @var string The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset The start time offset (seconds) of the segment.
-     * @param float $EndTimeOffset The end time offset (seconds) of the segment.
-     * @param float $Confidence The confidence score of the segment.
-     * @param string $Suggestion The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
-     * @param string $Label The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
-     * @param string $SubLabel The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
-     * @param string $Form The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
-     * @param array $AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
-     * @param string $Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
-     * @param array $KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
-     * @param string $Url The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
-     * @param string $PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param string $Label 
+     * @param string $SubLabel 
+     * @param string $Form 
+     * @param array $AreaCoordSet 
+     * @param string $Text 
+     * @param array $KeywordSet 
+     * @param string $Url 
+     * @param string $PicUrlExpireTime 
      */
     function __construct()
     {

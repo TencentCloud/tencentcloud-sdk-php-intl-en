@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateJustInTimeTranscodeTemplate request structure.
  *
- * @method string getName() Obtain Template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Template name. The length cannot exceed 64 characters.
- * @method VideoConfigureInfo getVideoConfigure() Obtain Video parameter configuration.
- * @method void setVideoConfigure(VideoConfigureInfo $VideoConfigure) Set Video parameter configuration.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method WatermarkConfigureInfo getWatermarkConfigure() Obtain Watermark parameter configuration.
- * @method void setWatermarkConfigure(WatermarkConfigureInfo $WatermarkConfigure) Set Watermark parameter configuration.
- * @method string getComment() Obtain Template description. The length cannot exceed 256 characters.
- * @method void setComment(string $Comment) Set Template description. The length cannot exceed 256 characters.
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method VideoConfigureInfo getVideoConfigure() Obtain 
+ * @method void setVideoConfigure(VideoConfigureInfo $VideoConfigure) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method WatermarkConfigureInfo getWatermarkConfigure() Obtain 
+ * @method void setWatermarkConfigure(WatermarkConfigureInfo $WatermarkConfigure) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  */
 class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Template name. The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var VideoConfigureInfo Video parameter configuration.
+     * @var VideoConfigureInfo 
      */
     public $VideoConfigure;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var WatermarkConfigureInfo Watermark parameter configuration.
+     * @var WatermarkConfigureInfo 
      */
     public $WatermarkConfigure;
 
     /**
-     * @var string Template description. The length cannot exceed 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @param string $Name Template name. The length cannot exceed 64 characters.
-     * @param VideoConfigureInfo $VideoConfigure Video parameter configuration.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param WatermarkConfigureInfo $WatermarkConfigure Watermark parameter configuration.
-     * @param string $Comment Template description. The length cannot exceed 256 characters.
+     * @param string $Name 
+     * @param VideoConfigureInfo $VideoConfigure 
+     * @param integer $SubAppId 
+     * @param WatermarkConfigureInfo $WatermarkConfigure 
+     * @param string $Comment 
      */
     function __construct()
     {

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetWxNFCResult request structure.
+ * DescribeCLSPushTargets request structure.
  *
- * @method string getNFCToken() Obtain <p>Unique identifier ID returned by the frontend NFC SDK</p>
- * @method void setNFCToken(string $NFCToken) Set <p>Unique identifier ID returned by the frontend NFC SDK</p>
+ * @method array getDomains() Obtain 
+ * @method void setDomains(array $Domains) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
-class GetWxNFCResultRequest extends AbstractModel
+class DescribeCLSPushTargetsRequest extends AbstractModel
 {
     /**
-     * @var string <p>Unique identifier ID returned by the frontend NFC SDK</p>
+     * @var array 
      */
-    public $NFCToken;
+    public $Domains;
 
     /**
-     * @param string $NFCToken <p>Unique identifier ID returned by the frontend NFC SDK</p>
+     * @var integer 
+     */
+    public $SubAppId;
+
+    /**
+     * @param array $Domains 
+     * @param integer $SubAppId 
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetWxNFCResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NFCToken",$param) and $param["NFCToken"] !== null) {
-            $this->NFCToken = $param["NFCToken"];
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

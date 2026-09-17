@@ -18,112 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The output of a moderation task.
+ * 
  *
- * @method string getSuggestion() Obtain The handling suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The handling suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method string getLabel() Obtain The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
- * @method void setLabel(string $Label) Set The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
- * @method string getForm() Obtain The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
- * @method void setForm(string $Form) Set The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
- * @method array getSegmentSet() Obtain A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
- * @method void setSegmentSet(array $SegmentSet) Set A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
- * @method string getSegmentSetFileUrl() Obtain The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
- * @method string getSegmentSetFileUrlExpireTime() Obtain The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
- * @method ReviewImageResult getCoverReviewResult() Obtain The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCoverReviewResult(ReviewImageResult $CoverReviewResult) Set The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getLabel() Obtain 
+ * @method void setLabel(string $Label) Set 
+ * @method string getForm() Obtain 
+ * @method void setForm(string $Form) Set 
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method string getSegmentSetFileUrl() Obtain 
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
+ * @method string getSegmentSetFileUrlExpireTime() Obtain 
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
+ * @method ReviewImageResult getCoverReviewResult() Obtain 
+ * @method void setCoverReviewResult(ReviewImageResult $CoverReviewResult) Set 
  */
 class ReviewAudioVideoTaskOutput extends AbstractModel
 {
     /**
-     * @var string The handling suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var string The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
+     * @var string 
      */
     public $Label;
 
     /**
-     * @var string The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * @var string 
      */
     public $Form;
 
     /**
-     * @var array A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+     * @var array 
      */
     public $SegmentSet;
 
     /**
-     * @var string The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+     * @var string 
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @var ReviewImageResult The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ReviewImageResult 
      */
     public $CoverReviewResult;
 
     /**
-     * @param string $Suggestion The handling suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param string $Label The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
-     * @param string $Form The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
-     * @param array $SegmentSet A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
-     * @param string $SegmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
-     * @param string $SegmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
-     * @param ReviewImageResult $CoverReviewResult The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Suggestion 
+     * @param string $Label 
+     * @param string $Form 
+     * @param array $SegmentSet 
+     * @param string $SegmentSetFileUrl 
+     * @param string $SegmentSetFileUrlExpireTime 
+     * @param ReviewImageResult $CoverReviewResult 
      */
     function __construct()
     {

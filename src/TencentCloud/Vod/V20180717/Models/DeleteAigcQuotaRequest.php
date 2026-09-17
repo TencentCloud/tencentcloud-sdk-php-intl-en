@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAigcQuota request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
- * @method string getQuotaType() Obtain <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
- * @method void setQuotaType(string $QuotaType) Set <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
- * @method string getApiToken() Obtain <p>Valid only when QuotaLimit=Text, used to select ApiToken for quota limit.</p>
- * @method void setApiToken(string $ApiToken) Set <p>Valid only when QuotaLimit=Text, used to select ApiToken for quota limit.</p>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getQuotaType() Obtain 
+ * @method void setQuotaType(string $QuotaType) Set 
+ * @method string getApiToken() Obtain 
+ * @method void setApiToken(string $ApiToken) Set 
  */
 class DeleteAigcQuotaRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
+     * @var string 
      */
     public $QuotaType;
 
     /**
-     * @var string <p>Valid only when QuotaLimit=Text, used to select ApiToken for quota limit.</p>
+     * @var string 
      */
     public $ApiToken;
 
     /**
-     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
-     * @param string $QuotaType <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
-     * @param string $ApiToken <p>Valid only when QuotaLimit=Text, used to select ApiToken for quota limit.</p>
+     * @param integer $SubAppId 
+     * @param string $QuotaType 
+     * @param string $ApiToken 
      */
     function __construct()
     {

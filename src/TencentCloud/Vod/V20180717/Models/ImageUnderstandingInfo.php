@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image understanding information.
+ * 
  *
- * @method array getImageUnderstandingSet() Obtain Image understanding collection.
- * @method void setImageUnderstandingSet(array $ImageUnderstandingSet) Set Image understanding collection.
+ * @method array getImageUnderstandingSet() Obtain 
+ * @method void setImageUnderstandingSet(array $ImageUnderstandingSet) Set 
  */
 class ImageUnderstandingInfo extends AbstractModel
 {
     /**
-     * @var array Image understanding collection.
+     * @var array 
      */
     public $ImageUnderstandingSet;
 
     /**
-     * @param array $ImageUnderstandingSet Image understanding collection.
+     * @param array $ImageUnderstandingSet 
      */
     function __construct()
     {

@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of speech keyword recognition.
+ * 
  *
- * @method array getResultSet() Obtain Speech keyword recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
- * @method void setResultSet(array $ResultSet) Set Speech keyword recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
- * @method string getResultSetFileUrl() Obtain URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
- * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
- * @method string getResultSetFileUrlExpireTime() Obtain Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
- * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+ * @method array getResultSet() Obtain 
+ * @method void setResultSet(array $ResultSet) Set 
+ * @method string getResultSetFileUrl() Obtain 
+ * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set 
+ * @method string getResultSetFileUrlExpireTime() Obtain 
+ * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set 
  */
 class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel
 {
     /**
-     * @var array Speech keyword recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * @var array 
      */
     public $ResultSet;
 
     /**
-     * @var string URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * @var string 
      */
     public $ResultSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @var string 
      */
     public $ResultSetFileUrlExpireTime;
 
     /**
-     * @param array $ResultSet Speech keyword recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
-     * @param string $ResultSetFileUrl URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
-     * @param string $ResultSetFileUrlExpireTime Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @param array $ResultSet 
+     * @param string $ResultSetFileUrl 
+     * @param string $ResultSetFileUrlExpireTime 
      */
     function __construct()
     {

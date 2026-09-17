@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output info of the AIGC video generation task.
+ * 
  *
- * @method array getFileInfos() Obtain <p>Output file info of the AIGC video task.</p>
- * @method void setFileInfos(array $FileInfos) Set <p>Output file info of the AIGC video task.</p>
- * @method array getProcedureTaskIds() Obtain <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
- * @method void setProcedureTaskIds(array $ProcedureTaskIds) Set <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
- * @method AigcVideoTaskUsage getUsage() Obtain <p>Usage information for AIGC video tasks.</p>
- * @method void setUsage(AigcVideoTaskUsage $Usage) Set <p>Usage information for AIGC video tasks.</p>
+ * @method array getFileInfos() Obtain 
+ * @method void setFileInfos(array $FileInfos) Set 
+ * @method array getProcedureTaskIds() Obtain 
+ * @method void setProcedureTaskIds(array $ProcedureTaskIds) Set 
+ * @method AigcVideoTaskUsage getUsage() Obtain 
+ * @method void setUsage(AigcVideoTaskUsage $Usage) Set 
  */
 class AigcVideoTaskOutput extends AbstractModel
 {
     /**
-     * @var array <p>Output file info of the AIGC video task.</p>
+     * @var array 
      */
     public $FileInfos;
 
     /**
-     * @var array <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+     * @var array 
      */
     public $ProcedureTaskIds;
 
     /**
-     * @var AigcVideoTaskUsage <p>Usage information for AIGC video tasks.</p>
+     * @var AigcVideoTaskUsage 
      */
     public $Usage;
 
     /**
-     * @param array $FileInfos <p>Output file info of the AIGC video task.</p>
-     * @param array $ProcedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
-     * @param AigcVideoTaskUsage $Usage <p>Usage information for AIGC video tasks.</p>
+     * @param array $FileInfos 
+     * @param array $ProcedureTaskIds 
+     * @param AigcVideoTaskUsage $Usage 
      */
     function __construct()
     {

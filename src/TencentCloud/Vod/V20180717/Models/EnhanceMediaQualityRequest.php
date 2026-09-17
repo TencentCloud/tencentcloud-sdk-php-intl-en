@@ -20,82 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnhanceMediaQuality request structure.
  *
- * @method integer getDefinition() Obtain Remaster template ID, please contact Tencent Cloud for details
- * @method void setDefinition(integer $Definition) Set Remaster template ID, please contact Tencent Cloud for details
- * @method string getFileId() Obtain Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
- * @method void setFileId(string $FileId) Set Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
- * @method string getMediaStoragePath() Obtain Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
- * @method void setMediaStoragePath(string $MediaStoragePath) Set Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
- * @method integer getSubAppId() Obtain <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
- * @method EnhanceMediaQualityOutputConfig getOutputConfig() Obtain Configuration of media files after Remaster
- * @method void setOutputConfig(EnhanceMediaQualityOutputConfig $OutputConfig) Set Configuration of media files after Remaster
- * @method string getSessionId() Obtain The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
- * @method void setSessionId(string $SessionId) Set The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
- * @method string getSessionContext() Obtain Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
- * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
- * @method integer getTasksPriority() Obtain The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
- * @method void setTasksPriority(integer $TasksPriority) Set The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getMediaStoragePath() Obtain 
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method EnhanceMediaQualityOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(EnhanceMediaQualityOutputConfig $OutputConfig) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
  */
 class EnhanceMediaQualityRequest extends AbstractModel
 {
     /**
-     * @var integer Remaster template ID, please contact Tencent Cloud for details
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
+     * @var string 
      */
     public $MediaStoragePath;
 
     /**
-     * @var integer <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var EnhanceMediaQualityOutputConfig Configuration of media files after Remaster
+     * @var EnhanceMediaQualityOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @var string The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @param integer $Definition Remaster template ID, please contact Tencent Cloud for details
-     * @param string $FileId Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
-     * @param string $MediaStoragePath Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
-     * @param integer $SubAppId <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
-     * @param EnhanceMediaQualityOutputConfig $OutputConfig Configuration of media files after Remaster
-     * @param string $SessionId The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
-     * @param string $SessionContext Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
-     * @param integer $TasksPriority The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
+     * @param integer $Definition 
+     * @param string $FileId 
+     * @param string $MediaStoragePath 
+     * @param integer $SubAppId 
+     * @param EnhanceMediaQualityOutputConfig $OutputConfig 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
      */
     function __construct()
     {

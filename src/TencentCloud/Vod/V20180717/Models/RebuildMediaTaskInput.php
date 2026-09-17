@@ -18,148 +18,148 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The input parameters of an audio/video remastering task.
+ * 
  *
- * @method string getFileId() Obtain The file ID.
- * @method void setFileId(string $FileId) Set The file ID.
- * @method float getStartTimeOffset() Obtain The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
- * @method float getEndTimeOffset() Obtain The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
- * @method integer getDefinition() Obtain Audio and video quality rebirth template number.
- * @method void setDefinition(integer $Definition) Set Audio and video quality rebirth template number.
- * @method RepairInfo getRepairInfo() Obtain The video quality remastering parameters.
- * @method void setRepairInfo(RepairInfo $RepairInfo) Set The video quality remastering parameters.
- * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain The smart frame interpolation parameters.
- * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set The smart frame interpolation parameters.
- * @method SuperResolutionInfo getSuperResolutionInfo() Obtain The super resolution parameters.
- * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set The super resolution parameters.
- * @method HDRInfo getHDRInfo() Obtain The high dynamic range (HDR) parameters.
- * @method void setHDRInfo(HDRInfo $HDRInfo) Set The high dynamic range (HDR) parameters.
- * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain The image noise removal parameters.
- * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set The image noise removal parameters.
- * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain The noise removal parameters.
- * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set The noise removal parameters.
- * @method ColorEnhanceInfo getColorInfo() Obtain The color enhancement parameters.
- * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set The color enhancement parameters.
- * @method SharpEnhanceInfo getSharpInfo() Obtain The detail enhancement parameters.
- * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set The detail enhancement parameters.
- * @method FaceEnhanceInfo getFaceInfo() Obtain The face enhancement parameters.
- * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set The face enhancement parameters.
- * @method LowLightEnhanceInfo getLowLightInfo() Obtain The low-light enhancement parameters.
- * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set The low-light enhancement parameters.
- * @method ScratchRepairInfo getScratchRepairInfo() Obtain The banding removal parameters.
- * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set The banding removal parameters.
- * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain The artifact removal (smoothing) parameters.
- * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set The artifact removal (smoothing) parameters.
- * @method RebuildMediaTargetInfo getTargetInfo() Obtain The output parameters of the file.
- * @method void setTargetInfo(RebuildMediaTargetInfo $TargetInfo) Set The output parameters of the file.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method RepairInfo getRepairInfo() Obtain 
+ * @method void setRepairInfo(RepairInfo $RepairInfo) Set 
+ * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain 
+ * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set 
+ * @method SuperResolutionInfo getSuperResolutionInfo() Obtain 
+ * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set 
+ * @method HDRInfo getHDRInfo() Obtain 
+ * @method void setHDRInfo(HDRInfo $HDRInfo) Set 
+ * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain 
+ * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set 
+ * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain 
+ * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set 
+ * @method ColorEnhanceInfo getColorInfo() Obtain 
+ * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set 
+ * @method SharpEnhanceInfo getSharpInfo() Obtain 
+ * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set 
+ * @method FaceEnhanceInfo getFaceInfo() Obtain 
+ * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set 
+ * @method LowLightEnhanceInfo getLowLightInfo() Obtain 
+ * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set 
+ * @method ScratchRepairInfo getScratchRepairInfo() Obtain 
+ * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set 
+ * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain 
+ * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set 
+ * @method RebuildMediaTargetInfo getTargetInfo() Obtain 
+ * @method void setTargetInfo(RebuildMediaTargetInfo $TargetInfo) Set 
  */
 class RebuildMediaTaskInput extends AbstractModel
 {
     /**
-     * @var string The file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var float The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var integer Audio and video quality rebirth template number.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var RepairInfo The video quality remastering parameters.
+     * @var RepairInfo 
      */
     public $RepairInfo;
 
     /**
-     * @var VideoFrameInterpolationInfo The smart frame interpolation parameters.
+     * @var VideoFrameInterpolationInfo 
      */
     public $VideoFrameInterpolationInfo;
 
     /**
-     * @var SuperResolutionInfo The super resolution parameters.
+     * @var SuperResolutionInfo 
      */
     public $SuperResolutionInfo;
 
     /**
-     * @var HDRInfo The high dynamic range (HDR) parameters.
+     * @var HDRInfo 
      */
     public $HDRInfo;
 
     /**
-     * @var VideoDenoiseInfo The image noise removal parameters.
+     * @var VideoDenoiseInfo 
      */
     public $VideoDenoiseInfo;
 
     /**
-     * @var AudioDenoiseInfo The noise removal parameters.
+     * @var AudioDenoiseInfo 
      */
     public $AudioDenoiseInfo;
 
     /**
-     * @var ColorEnhanceInfo The color enhancement parameters.
+     * @var ColorEnhanceInfo 
      */
     public $ColorInfo;
 
     /**
-     * @var SharpEnhanceInfo The detail enhancement parameters.
+     * @var SharpEnhanceInfo 
      */
     public $SharpInfo;
 
     /**
-     * @var FaceEnhanceInfo The face enhancement parameters.
+     * @var FaceEnhanceInfo 
      */
     public $FaceInfo;
 
     /**
-     * @var LowLightEnhanceInfo The low-light enhancement parameters.
+     * @var LowLightEnhanceInfo 
      */
     public $LowLightInfo;
 
     /**
-     * @var ScratchRepairInfo The banding removal parameters.
+     * @var ScratchRepairInfo 
      */
     public $ScratchRepairInfo;
 
     /**
-     * @var ArtifactRepairInfo The artifact removal (smoothing) parameters.
+     * @var ArtifactRepairInfo 
      */
     public $ArtifactRepairInfo;
 
     /**
-     * @var RebuildMediaTargetInfo The output parameters of the file.
+     * @var RebuildMediaTargetInfo 
      */
     public $TargetInfo;
 
     /**
-     * @param string $FileId The file ID.
-     * @param float $StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-     * @param float $EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     * @param integer $Definition Audio and video quality rebirth template number.
-     * @param RepairInfo $RepairInfo The video quality remastering parameters.
-     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo The smart frame interpolation parameters.
-     * @param SuperResolutionInfo $SuperResolutionInfo The super resolution parameters.
-     * @param HDRInfo $HDRInfo The high dynamic range (HDR) parameters.
-     * @param VideoDenoiseInfo $VideoDenoiseInfo The image noise removal parameters.
-     * @param AudioDenoiseInfo $AudioDenoiseInfo The noise removal parameters.
-     * @param ColorEnhanceInfo $ColorInfo The color enhancement parameters.
-     * @param SharpEnhanceInfo $SharpInfo The detail enhancement parameters.
-     * @param FaceEnhanceInfo $FaceInfo The face enhancement parameters.
-     * @param LowLightEnhanceInfo $LowLightInfo The low-light enhancement parameters.
-     * @param ScratchRepairInfo $ScratchRepairInfo The banding removal parameters.
-     * @param ArtifactRepairInfo $ArtifactRepairInfo The artifact removal (smoothing) parameters.
-     * @param RebuildMediaTargetInfo $TargetInfo The output parameters of the file.
+     * @param string $FileId 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param integer $Definition 
+     * @param RepairInfo $RepairInfo 
+     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo 
+     * @param SuperResolutionInfo $SuperResolutionInfo 
+     * @param HDRInfo $HDRInfo 
+     * @param VideoDenoiseInfo $VideoDenoiseInfo 
+     * @param AudioDenoiseInfo $AudioDenoiseInfo 
+     * @param ColorEnhanceInfo $ColorInfo 
+     * @param SharpEnhanceInfo $SharpInfo 
+     * @param FaceEnhanceInfo $FaceInfo 
+     * @param LowLightEnhanceInfo $LowLightInfo 
+     * @param ScratchRepairInfo $ScratchRepairInfo 
+     * @param ArtifactRepairInfo $ArtifactRepairInfo 
+     * @param RebuildMediaTargetInfo $TargetInfo 
      */
     function __construct()
     {

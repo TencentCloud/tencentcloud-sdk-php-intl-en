@@ -18,128 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task overview information
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
- * @method void setStatus(string $Status) Set Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
- * @method string getFileId() Obtain Video ID
- * @method void setFileId(string $FileId) Set Video ID
- * @method string getTaskType() Obtain The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`ReduceMediaBitrate`: Bitrate reduction</li>
-<li>`WechatDistribute`: Publishing to Weixin</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-Task types for v2017:
-<li>`Transcode`: Transcoding</li>
-<li>`SnapshotByTimeOffset`: Screencapturing</li>
-<li>`Concat`: Video splicing</li>
-<li>`Clip`: Video clipping</li>
-<li>`ImageSprites`: Image sprite generating</li>
- * @method void setTaskType(string $TaskType) Set The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`ReduceMediaBitrate`: Bitrate reduction</li>
-<li>`WechatDistribute`: Publishing to Weixin</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-Task types for v2017:
-<li>`Transcode`: Transcoding</li>
-<li>`SnapshotByTimeOffset`: Screencapturing</li>
-<li>`Concat`: Video splicing</li>
-<li>`Clip`: Video clipping</li>
-<li>`ImageSprites`: Image sprite generating</li>
- * @method string getCreateTime() Obtain Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getBeginProcessTime() Obtain Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
- * @method string getFinishTime() Obtain End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
- * @method void setFinishTime(string $FinishTime) Set End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
- * @method string getSessionId() Obtain ID used for deduplication if there was a request with the same ID in the last seven days.
- * @method void setSessionId(string $SessionId) Set ID used for deduplication if there was a request with the same ID in the last seven days.
- * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information.
- * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getTaskType() Obtain 
+ * @method void setTaskType(string $TaskType) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
  */
 class TaskSimpleInfo extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Video ID
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`ReduceMediaBitrate`: Bitrate reduction</li>
-<li>`WechatDistribute`: Publishing to Weixin</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-Task types for v2017:
-<li>`Transcode`: Transcoding</li>
-<li>`SnapshotByTimeOffset`: Screencapturing</li>
-<li>`Concat`: Video splicing</li>
-<li>`Clip`: Video clipping</li>
-<li>`ImageSprites`: Image sprite generating</li>
+     * @var string 
      */
     public $TaskType;
 
     /**
-     * @var string Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+     * @var string 
      */
     public $BeginProcessTime;
 
     /**
-     * @var string End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+     * @var string 
      */
     public $FinishTime;
 
     /**
-     * @var string ID used for deduplication if there was a request with the same ID in the last seven days.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, which is used to pass through the user request information.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
-     * @param string $FileId Video ID
-     * @param string $TaskType The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`ReduceMediaBitrate`: Bitrate reduction</li>
-<li>`WechatDistribute`: Publishing to Weixin</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-Task types for v2017:
-<li>`Transcode`: Transcoding</li>
-<li>`SnapshotByTimeOffset`: Screencapturing</li>
-<li>`Concat`: Video splicing</li>
-<li>`Clip`: Video clipping</li>
-<li>`ImageSprites`: Image sprite generating</li>
-     * @param string $CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
-     * @param string $FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
-     * @param string $SessionId ID used for deduplication if there was a request with the same ID in the last seven days.
-     * @param string $SessionContext Source context, which is used to pass through the user request information.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param string $FileId 
+     * @param string $TaskType 
+     * @param string $CreateTime 
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
+     * @param string $SessionId 
+     * @param string $SessionContext 
      */
     function __construct()
     {

@@ -18,68 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * 
  *
- * @method integer getDefinition() Obtain Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
- * @method void setDefinition(integer $Definition) Set Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
- * @method MediaMetaData getMetaData() Obtain Video metadata.
- * @method void setMetaData(MediaMetaData $MetaData) Set Video metadata.
- * @method string getUrl() Obtain Video playback address for WeChat Mini Program audit
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Video playback address for WeChat Mini Program audit
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReviewResult() Obtain Status of video release on WeChat Mini Program
-<li>Pass: succeeded.</li>
-<li>Rejected: rejected.</li>
- * @method void setReviewResult(string $ReviewResult) Set Status of video release on WeChat Mini Program
-<li>Pass: succeeded.</li>
-<li>Rejected: rejected.</li>
- * @method array getReviewSummary() Obtain WeChat Mini Program audit element.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReviewSummary(array $ReviewSummary) Set WeChat Mini Program audit element.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getReviewResult() Obtain 
+ * @method void setReviewResult(string $ReviewResult) Set 
+ * @method array getReviewSummary() Obtain 
+ * @method void setReviewSummary(array $ReviewSummary) Set 
  */
 class MediaMiniProgramReviewInfoItem extends AbstractModel
 {
     /**
-     * @var integer Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var MediaMetaData Video metadata.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var string Video playback address for WeChat Mini Program audit
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string Status of video release on WeChat Mini Program
-<li>Pass: succeeded.</li>
-<li>Rejected: rejected.</li>
+     * @var string 
      */
     public $ReviewResult;
 
     /**
-     * @var array WeChat Mini Program audit element.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $ReviewSummary;
 
     /**
-     * @param integer $Definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
-     * @param MediaMetaData $MetaData Video metadata.
-     * @param string $Url Video playback address for WeChat Mini Program audit
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ReviewResult Status of video release on WeChat Mini Program
-<li>Pass: succeeded.</li>
-<li>Rejected: rejected.</li>
-     * @param array $ReviewSummary WeChat Mini Program audit element.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition 
+     * @param MediaMetaData $MetaData 
+     * @param string $Url 
+     * @param string $ReviewResult 
+     * @param array $ReviewSummary 
      */
     function __construct()
     {

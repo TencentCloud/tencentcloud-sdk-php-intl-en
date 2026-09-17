@@ -18,28 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Path cache/no cache configuration.
+ * 
  *
- * @method string getSwitch() Obtain Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method string getRevalidate() Obtain Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setRevalidate(string $Revalidate) Set Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+ * @method string getSwitch() Obtain Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getRevalidate() Obtain Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setRevalidate(string $Revalidate) Set Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
  */
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var string Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Revalidate;
 
     /**
-     * @param string $Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param string $Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+     * @param string $Switch Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $Revalidate Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     function __construct()
     {

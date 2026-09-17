@@ -18,52 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin access authentication for S3 bucket.
+ * 
  *
- * @method string getSwitch() Obtain AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method string getAccessKey() Obtain Access ID.
- * @method void setAccessKey(string $AccessKey) Set Access ID.
- * @method string getSecretKey() Obtain Key.
- * @method void setSecretKey(string $SecretKey) Set Key.
- * @method string getRegion() Obtain Region.
- * @method void setRegion(string $Region) Set Region.
- * @method string getBucket() Obtain BucketName.
- * @method void setBucket(string $Bucket) Set BucketName.
+ * @method string getSwitch() Obtain Switch for Aws S3 origin-pull authentication configuration. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Switch for Aws S3 origin-pull authentication configuration. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getAccessKey() Obtain 
+ * @method void setAccessKey(string $AccessKey) Set 
+ * @method string getSecretKey() Obtain 
+ * @method void setSecretKey(string $SecretKey) Set 
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
+ * @method string getBucket() Obtain 
+ * @method void setBucket(string $Bucket) Set 
  */
 class AwsPrivateAccess extends AbstractModel
 {
     /**
-     * @var string AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Switch for Aws S3 origin-pull authentication configuration. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var string Access ID.
+     * @var string 
      */
     public $AccessKey;
 
     /**
-     * @var string Key.
+     * @var string 
      */
     public $SecretKey;
 
     /**
-     * @var string Region.
+     * @var string 
      */
     public $Region;
 
     /**
-     * @var string BucketName.
+     * @var string 
      */
     public $Bucket;
 
     /**
-     * @param string $Switch AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param string $AccessKey Access ID.
-     * @param string $SecretKey Key.
-     * @param string $Region Region.
-     * @param string $Bucket BucketName.
+     * @param string $Switch Switch for Aws S3 origin-pull authentication configuration. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $AccessKey 
+     * @param string $SecretKey 
+     * @param string $Region 
+     * @param string $Bucket 
      */
     function __construct()
     {

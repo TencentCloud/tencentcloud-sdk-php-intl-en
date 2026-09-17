@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RefreshUrlCache request structure.
  *
- * @method array getUrls() Obtain Refreshed URL list. You can specify up to 20 URLs at a time.
- * @method void setUrls(array $Urls) Set Refreshed URL list. You can specify up to 20 URLs at a time.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getUrls() Obtain 
+ * @method void setUrls(array $Urls) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class RefreshUrlCacheRequest extends AbstractModel
 {
     /**
-     * @var array Refreshed URL list. You can specify up to 20 URLs at a time.
+     * @var array 
      */
     public $Urls;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param array $Urls Refreshed URL list. You can specify up to 20 URLs at a time.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $Urls 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

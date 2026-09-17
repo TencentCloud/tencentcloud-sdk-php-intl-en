@@ -18,80 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of source file for video splicing (v2017)
+ * 
  *
- * @method integer getErrCode() Obtain Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileId() Obtain ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileId(string $FileId) Set ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileUrl() Obtain Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileUrl(string $FileUrl) Set Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileType() Obtain Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileType(string $FileType) Set Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getFileUrl() Obtain 
+ * @method void setFileUrl(string $FileUrl) Set 
+ * @method string getFileType() Obtain 
+ * @method void setFileType(string $FileType) Set 
  */
 class ConcatFileInfo2017 extends AbstractModel
 {
     /**
-     * @var integer Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var string ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileUrl;
 
     /**
-     * @var string Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileType;
 
     /**
-     * @param integer $ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileId ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileUrl Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileType Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param string $FileId 
+     * @param string $FileUrl 
+     * @param string $FileType 
      */
     function __construct()
     {

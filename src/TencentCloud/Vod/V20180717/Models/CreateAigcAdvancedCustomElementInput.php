@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create custom input.
+ * 
  *
- * @method string getElementName() Obtain <p>Subject name.</p>
- * @method void setElementName(string $ElementName) Set <p>Subject name.</p>
- * @method string getElementDescription() Obtain <p>Subject description.</p>
- * @method void setElementDescription(string $ElementDescription) Set <p>Subject description.</p>
- * @method string getReferenceType() Obtain <p>Subject reference method.</p>
- * @method void setReferenceType(string $ReferenceType) Set <p>Subject reference method.</p>
- * @method string getElementVoiceId() Obtain <p>Main voice type.</p>
- * @method void setElementVoiceId(string $ElementVoiceId) Set <p>Main voice type.</p>
- * @method string getElementVideoList() Obtain <p>Reference video.</p>
- * @method void setElementVideoList(string $ElementVideoList) Set <p>Reference video.</p>
- * @method string getElementImageList() Obtain <p>Subject reference diagram.</p>
- * @method void setElementImageList(string $ElementImageList) Set <p>Subject reference diagram.</p>
- * @method string getTagList() Obtain <p>Subject configuration tag.</p>
- * @method void setTagList(string $TagList) Set <p>Subject configuration tag.</p>
+ * @method string getElementName() Obtain 
+ * @method void setElementName(string $ElementName) Set 
+ * @method string getElementDescription() Obtain 
+ * @method void setElementDescription(string $ElementDescription) Set 
+ * @method string getReferenceType() Obtain 
+ * @method void setReferenceType(string $ReferenceType) Set 
+ * @method string getElementVoiceId() Obtain 
+ * @method void setElementVoiceId(string $ElementVoiceId) Set 
+ * @method string getElementVideoList() Obtain 
+ * @method void setElementVideoList(string $ElementVideoList) Set 
+ * @method string getElementImageList() Obtain 
+ * @method void setElementImageList(string $ElementImageList) Set 
+ * @method string getTagList() Obtain 
+ * @method void setTagList(string $TagList) Set 
  */
 class CreateAigcAdvancedCustomElementInput extends AbstractModel
 {
     /**
-     * @var string <p>Subject name.</p>
+     * @var string 
      */
     public $ElementName;
 
     /**
-     * @var string <p>Subject description.</p>
+     * @var string 
      */
     public $ElementDescription;
 
     /**
-     * @var string <p>Subject reference method.</p>
+     * @var string 
      */
     public $ReferenceType;
 
     /**
-     * @var string <p>Main voice type.</p>
+     * @var string 
      */
     public $ElementVoiceId;
 
     /**
-     * @var string <p>Reference video.</p>
+     * @var string 
      */
     public $ElementVideoList;
 
     /**
-     * @var string <p>Subject reference diagram.</p>
+     * @var string 
      */
     public $ElementImageList;
 
     /**
-     * @var string <p>Subject configuration tag.</p>
+     * @var string 
      */
     public $TagList;
 
     /**
-     * @param string $ElementName <p>Subject name.</p>
-     * @param string $ElementDescription <p>Subject description.</p>
-     * @param string $ReferenceType <p>Subject reference method.</p>
-     * @param string $ElementVoiceId <p>Main voice type.</p>
-     * @param string $ElementVideoList <p>Reference video.</p>
-     * @param string $ElementImageList <p>Subject reference diagram.</p>
-     * @param string $TagList <p>Subject configuration tag.</p>
+     * @param string $ElementName 
+     * @param string $ElementDescription 
+     * @param string $ReferenceType 
+     * @param string $ElementVoiceId 
+     * @param string $ElementVideoList 
+     * @param string $ElementImageList 
+     * @param string $TagList 
      */
     function __construct()
     {

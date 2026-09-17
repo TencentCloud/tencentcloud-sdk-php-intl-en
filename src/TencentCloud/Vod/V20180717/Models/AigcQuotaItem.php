@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC quota
+ * 
  *
- * @method string getQuotaType() Obtain <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
- * @method void setQuotaType(string $QuotaType) Set <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
- * @method string getApiToken() Obtain <p>Valid only when QuotaLimit=Text, used to select the ApiToken that needs quota limit</p>
- * @method void setApiToken(string $ApiToken) Set <p>Valid only when QuotaLimit=Text, used to select the ApiToken that needs quota limit</p>
- * @method integer getQuotaLimit() Obtain <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
- * @method void setQuotaLimit(integer $QuotaLimit) Set <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
- * @method integer getUsage() Obtain <p>Amount already used</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
- * @method void setUsage(integer $Usage) Set <p>Amount already used</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
+ * @method string getQuotaType() Obtain 
+ * @method void setQuotaType(string $QuotaType) Set 
+ * @method string getApiToken() Obtain 
+ * @method void setApiToken(string $ApiToken) Set 
+ * @method integer getQuotaLimit() Obtain 
+ * @method void setQuotaLimit(integer $QuotaLimit) Set 
+ * @method integer getUsage() Obtain 
+ * @method void setUsage(integer $Usage) Set 
  */
 class AigcQuotaItem extends AbstractModel
 {
     /**
-     * @var string <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
+     * @var string 
      */
     public $QuotaType;
 
     /**
-     * @var string <p>Valid only when QuotaLimit=Text, used to select the ApiToken that needs quota limit</p>
+     * @var string 
      */
     public $ApiToken;
 
     /**
-     * @var integer <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
+     * @var integer 
      */
     public $QuotaLimit;
 
     /**
-     * @var integer <p>Amount already used</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
+     * @var integer 
      */
     public $Usage;
 
     /**
-     * @param string $QuotaType <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
-     * @param string $ApiToken <p>Valid only when QuotaLimit=Text, used to select the ApiToken that needs quota limit</p>
-     * @param integer $QuotaLimit <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
-     * @param integer $Usage <p>Amount already used</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
+     * @param string $QuotaType 
+     * @param string $ApiToken 
+     * @param integer $QuotaLimit 
+     * @param integer $Usage 
      */
     function __construct()
     {

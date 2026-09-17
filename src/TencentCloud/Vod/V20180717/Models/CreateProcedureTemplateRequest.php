@@ -20,87 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProcedureTemplate request structure.
  *
- * @method string getName() Obtain Task flow name (support Chinese, up to 20 characters).
- * @method void setName(string $Name) Set Task flow name (support Chinese, up to 20 characters).
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getComment() Obtain Template description, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameters for the video processing type task.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameters for the video processing type task.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameters for the AI content review task.
-<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Parameters for the AI content review task.
-<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameters for the AI content analysis task.
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameters for the AI content analysis task.
- * @method array getAiRecognitionTaskSet() Obtain Parameters for the AI content recognition task.
- * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set Parameters for the AI content recognition task.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain This is not recommended. Recommend using AiRecognitionTaskSet.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set This is not recommended. Recommend using AiRecognitionTaskSet.
- * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain Parameters for the audio and video moderation task.
- * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set Parameters for the audio and video moderation task.
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain 
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set 
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain 
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set 
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method array getAiRecognitionTaskSet() Obtain 
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set 
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
+ * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain 
+ * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set 
+ * @method array getImportMediaKnowledgeTaskSet() Obtain 
+ * @method void setImportMediaKnowledgeTaskSet(array $ImportMediaKnowledgeTaskSet) Set 
  */
 class CreateProcedureTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Task flow name (support Chinese, up to 20 characters).
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Template description, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var MediaProcessTaskInput Parameters for the video processing type task.
+     * @var MediaProcessTaskInput 
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Parameters for the AI content review task.
-<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
+     * @var AiContentReviewTaskInput 
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput Parameters for the AI content analysis task.
+     * @var AiAnalysisTaskInput 
      */
     public $AiAnalysisTask;
 
     /**
-     * @var array Parameters for the AI content recognition task.
+     * @var array 
      */
     public $AiRecognitionTaskSet;
 
     /**
-     * @var AiRecognitionTaskInput This is not recommended. Recommend using AiRecognitionTaskSet.
+     * @var AiRecognitionTaskInput 
      * @deprecated
      */
     public $AiRecognitionTask;
 
     /**
-     * @var ProcedureReviewAudioVideoTaskInput Parameters for the audio and video moderation task.
+     * @var ProcedureReviewAudioVideoTaskInput 
      */
     public $ReviewAudioVideoTask;
 
     /**
-     * @param string $Name Task flow name (support Chinese, up to 20 characters).
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Comment Template description, with a length limit of 256 characters.
-     * @param MediaProcessTaskInput $MediaProcessTask Parameters for the video processing type task.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Parameters for the AI content review task.
-<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
-     * @param AiAnalysisTaskInput $AiAnalysisTask Parameters for the AI content analysis task.
-     * @param array $AiRecognitionTaskSet Parameters for the AI content recognition task.
-     * @param AiRecognitionTaskInput $AiRecognitionTask This is not recommended. Recommend using AiRecognitionTaskSet.
-     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask Parameters for the audio and video moderation task.
+     * @var array 
+     */
+    public $ImportMediaKnowledgeTaskSet;
+
+    /**
+     * @param string $Name 
+     * @param integer $SubAppId 
+     * @param string $Comment 
+     * @param MediaProcessTaskInput $MediaProcessTask 
+     * @param AiContentReviewTaskInput $AiContentReviewTask 
+     * @param AiAnalysisTaskInput $AiAnalysisTask 
+     * @param array $AiRecognitionTaskSet 
+     * @param AiRecognitionTaskInput $AiRecognitionTask 
+     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask 
+     * @param array $ImportMediaKnowledgeTaskSet 
      */
     function __construct()
     {
@@ -159,6 +163,15 @@ class CreateProcedureTemplateRequest extends AbstractModel
         if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
             $this->ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput();
             $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
+        }
+
+        if (array_key_exists("ImportMediaKnowledgeTaskSet",$param) and $param["ImportMediaKnowledgeTaskSet"] !== null) {
+            $this->ImportMediaKnowledgeTaskSet = [];
+            foreach ($param["ImportMediaKnowledgeTaskSet"] as $key => $value){
+                $obj = new ImportMediaKnowledgeTaskInput();
+                $obj->deserialize($value);
+                array_push($this->ImportMediaKnowledgeTaskSet, $obj);
+            }
         }
     }
 }

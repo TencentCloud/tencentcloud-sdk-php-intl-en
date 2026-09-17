@@ -18,28 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of intelligent cover generating task
+ * 
  *
- * @method string getSwitch() Obtain Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
- * @method void setSwitch(string $Switch) Set Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  */
 class CoverConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+     * @param string $Switch 
      */
     function __construct()
     {

@@ -43,6 +43,7 @@ Note: When calling this API via SSE streaming, ensure the request domain name is
 2. Advanced mode: On the basis of easy mode, it supports setting rules, setting notification channels for different types of alarms, and escalating alarms. The following parameters are required:
 - NoticeRules
  * @method Models\CreateAlarmShieldResponse CreateAlarmShield(Models\CreateAlarmShieldRequest $req) This API is used to create an alarm blocking rule.
+ * @method Models\CreateCLSDeliverTaskResponse CreateCLSDeliverTask(Models\CreateCLSDeliverTaskRequest $req) Create a CLS shipping task
  * @method Models\CreateCloudProductLogCollectionResponse CreateCloudProductLogCollection(Models\CreateCloudProductLogCollectionRequest $req) Cloud product integration uses internal APIs
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) This API is used to create collection rule configuration.
  * @method Models\CreateConsoleResponse CreateConsole(Models\CreateConsoleRequest $req) This API is used to create the DataSight Console
@@ -84,6 +85,7 @@ Note:
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) This API is used to delete an alarm policy.
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) This API is used to delete a notification group.
  * @method Models\DeleteAlarmShieldResponse DeleteAlarmShield(Models\DeleteAlarmShieldRequest $req) This API is used to delete an alarm blocking rule. When the alarm blocking rule is active or invalid, it cannot be deleted.
+ * @method Models\DeleteCLSDeliverTaskResponse DeleteCLSDeliverTask(Models\DeleteCLSDeliverTaskRequest $req) Delete a CLS shipping task
  * @method Models\DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollection(Models\DeleteCloudProductLogCollectionRequest $req) Cloud product integration uses internal APIs
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) This API is used to delete collection rule configuration.
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) This API is used to delete the collection configuration applied to a machine group.
@@ -120,6 +122,7 @@ Note:
  * @method Models\DescribeAlarmShieldsResponse DescribeAlarmShields(Models\DescribeAlarmShieldsRequest $req) This API is used to access alarm blocking configuration rules.
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) This API is used to get the alarm policy list.
  * @method Models\DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(Models\DescribeAlertRecordHistoryRequest $req) This API is used to get alarm records, such as today's uncleared alarms.
+ * @method Models\DescribeCLSDeliverTasksResponse DescribeCLSDeliverTasks(Models\DescribeCLSDeliverTasksRequest $req) This API is used to get the CLS delivery task list.
  * @method Models\DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasks(Models\DescribeCloudProductLogTasksRequest $req) Cloud product integration uses relevant APIs
  * @method Models\DescribeClusterBaseMetricConfigsResponse DescribeClusterBaseMetricConfigs(Models\DescribeClusterBaseMetricConfigsRequest $req) This API is used to obtain metric subscription configurations.
  * @method Models\DescribeClusterMetricConfigsResponse DescribeClusterMetricConfigs(Models\DescribeClusterMetricConfigsRequest $req) This API is used to obtain metric subscription configurations.
@@ -183,6 +186,7 @@ This API is used to fill in any region for Region, recommend using Guangzhou (ap
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) This API is used to modify an alarm policy. At least one valid configuration item needs to be modified.
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) This API is used to modify a notification group.
  * @method Models\ModifyAlarmShieldResponse ModifyAlarmShield(Models\ModifyAlarmShieldRequest $req) This API is used to modify alarm blocking rules. When the alarm blocking rule is invalid, it cannot be modified.
+ * @method Models\ModifyCLSDeliverTaskResponse ModifyCLSDeliverTask(Models\ModifyCLSDeliverTaskRequest $req) Modify a CLS shipping task
  * @method Models\ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollection(Models\ModifyCloudProductLogCollectionRequest $req) Cloud product integration uses internal APIs
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) This API is used to modify collection rule configuration.
  * @method Models\ModifyConsoleResponse ModifyConsole(Models\ModifyConsoleRequest $req) This API is used to edit the DataSight Console

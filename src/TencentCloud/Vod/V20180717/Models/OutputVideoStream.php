@@ -18,40 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of output video stream
+ * 
  *
- * @method string getCodec() Obtain Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
- * @method void setCodec(string $Codec) Set Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
- * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
- * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+ * @method string getCodec() Obtain 
+ * @method void setCodec(string $Codec) Set 
+ * @method integer getFps() Obtain 
+ * @method void setFps(integer $Fps) Set 
  */
 class OutputVideoStream extends AbstractModel
 {
     /**
-     * @var string Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
+     * @var string 
      */
     public $Codec;
 
     /**
-     * @var integer Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+     * @var integer 
      */
     public $Fps;
 
     /**
-     * @param string $Codec Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
-     * @param integer $Fps Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+     * @param string $Codec 
+     * @param integer $Fps 
      */
     function __construct()
     {

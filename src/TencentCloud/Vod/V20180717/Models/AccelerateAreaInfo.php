@@ -18,52 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Acceleration region information of the domain name
+ * 
  *
- * @method string getArea() Obtain Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
- * @method void setArea(string $Area) Set Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
- * @method string getTencentDisableReason() Obtain Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
- * @method void setTencentDisableReason(string $TencentDisableReason) Set Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
- * @method string getTencentEdgeDomain() Obtain CNAME of the acceleration domain name
- * @method void setTencentEdgeDomain(string $TencentEdgeDomain) Set CNAME of the acceleration domain name
+ * @method string getArea() Obtain 
+ * @method void setArea(string $Area) Set 
+ * @method string getTencentDisableReason() Obtain 
+ * @method void setTencentDisableReason(string $TencentDisableReason) Set 
+ * @method string getTencentEdgeDomain() Obtain 
+ * @method void setTencentEdgeDomain(string $TencentEdgeDomain) Set 
  */
 class AccelerateAreaInfo extends AbstractModel
 {
     /**
-     * @var string Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * @var string 
      */
     public $Area;
 
     /**
-     * @var string Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
+     * @var string 
      */
     public $TencentDisableReason;
 
     /**
-     * @var string CNAME of the acceleration domain name
+     * @var string 
      */
     public $TencentEdgeDomain;
 
     /**
-     * @param string $Area Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-     * @param string $TencentDisableReason Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
-     * @param string $TencentEdgeDomain CNAME of the acceleration domain name
+     * @param string $Area 
+     * @param string $TencentDisableReason 
+     * @param string $TencentEdgeDomain 
      */
     function __construct()
     {

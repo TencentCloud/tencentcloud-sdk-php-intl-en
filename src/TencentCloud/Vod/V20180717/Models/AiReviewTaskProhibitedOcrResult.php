@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result for OCR-based recognition of banned content
+ * 
  *
- * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewProhibitedOcrTaskInput getInput() Obtain Input for OCR-based recognition of banned content
- * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set Input for OCR-based recognition of banned content
- * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain Video moderation Ocr text prohibited information recognition task output.
- * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set Video moderation Ocr text prohibited information recognition task output.
- * @method integer getProgress() Obtain The progress of an OCR-based moderation task (banned content). Value range: 0-100.
- * @method void setProgress(integer $Progress) Set The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method AiReviewProhibitedOcrTaskInput getInput() Obtain 
+ * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set 
+ * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain 
+ * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
  */
 class AiReviewTaskProhibitedOcrResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var AiReviewProhibitedOcrTaskInput Input for OCR-based recognition of banned content
+     * @var AiReviewProhibitedOcrTaskInput 
      */
     public $Input;
 
     /**
-     * @var AiReviewProhibitedOcrTaskOutput Video moderation Ocr text prohibited information recognition task output.
+     * @var AiReviewProhibitedOcrTaskOutput 
      */
     public $Output;
 
     /**
-     * @var integer The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-     * @param string $Message Error message.
-     * @param AiReviewProhibitedOcrTaskInput $Input Input for OCR-based recognition of banned content
-     * @param AiReviewProhibitedOcrTaskOutput $Output Video moderation Ocr text prohibited information recognition task output.
-     * @param integer $Progress The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param AiReviewProhibitedOcrTaskInput $Input 
+     * @param AiReviewProhibitedOcrTaskOutput $Output 
+     * @param integer $Progress 
      */
     function __construct()
     {

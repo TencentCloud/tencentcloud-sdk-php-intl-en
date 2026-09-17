@@ -18,204 +18,132 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of an image sprite generating template
+ * 
  *
- * @method integer getDefinition() Obtain Unique ID of an image sprite generating template.
- * @method void setDefinition(integer $Definition) Set Unique ID of an image sprite generating template.
- * @method string getType() Obtain Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method void setType(string $Type) Set Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method string getName() Obtain Name of an image sprite generating template.
- * @method void setName(string $Name) Set Name of an image sprite generating template.
- * @method integer getWidth() Obtain Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method void setWidth(integer $Width) Set Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method integer getHeight() Obtain Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method void setHeight(integer $Height) Set Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
- * @method string getSampleType() Obtain Sampling type.
- * @method void setSampleType(string $SampleType) Set Sampling type.
- * @method integer getSampleInterval() Obtain Sampling interval.
- * @method void setSampleInterval(integer $SampleInterval) Set Sampling interval.
- * @method integer getRowCount() Obtain Subimage row count of an image sprite.
- * @method void setRowCount(integer $RowCount) Set Subimage row count of an image sprite.
- * @method integer getColumnCount() Obtain Subimage column count of an image sprite.
- * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
- * @method void setFillType(string $FillType) Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
- * @method string getComment() Obtain Template description.
- * @method void setComment(string $Comment) Set Template description.
- * @method string getFormat() Obtain The image format.
- * @method void setFormat(string $Format) Set The image format.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
+ * @method string getSampleType() Obtain 
+ * @method void setSampleType(string $SampleType) Set 
+ * @method integer getSampleInterval() Obtain 
+ * @method void setSampleInterval(integer $SampleInterval) Set 
+ * @method integer getRowCount() Obtain 
+ * @method void setRowCount(integer $RowCount) Set 
+ * @method integer getColumnCount() Obtain 
+ * @method void setColumnCount(integer $ColumnCount) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
  */
 class ImageSpriteTemplate extends AbstractModel
 {
     /**
-     * @var integer Unique ID of an image sprite generating template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Name of an image sprite generating template.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var integer Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @var integer Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var string Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
+     * @var string 
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string Sampling type.
+     * @var string 
      */
     public $SampleType;
 
     /**
-     * @var integer Sampling interval.
+     * @var integer 
      */
     public $SampleInterval;
 
     /**
-     * @var integer Subimage row count of an image sprite.
+     * @var integer 
      */
     public $RowCount;
 
     /**
-     * @var integer Subimage column count of an image sprite.
+     * @var integer 
      */
     public $ColumnCount;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+     * @var string 
      */
     public $FillType;
 
     /**
-     * @var string Template description.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string The image format.
+     * @var string 
      */
     public $Format;
 
     /**
-     * @param integer $Definition Unique ID of an image sprite generating template.
-     * @param string $Type Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-     * @param string $Name Name of an image sprite generating template.
-     * @param integer $Width Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param integer $Height Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param string $ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
-     * @param string $SampleType Sampling type.
-     * @param integer $SampleInterval Sampling interval.
-     * @param integer $RowCount Subimage row count of an image sprite.
-     * @param integer $ColumnCount Subimage column count of an image sprite.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-     * @param string $Comment Template description.
-     * @param string $Format The image format.
+     * @param integer $Definition 
+     * @param string $Type 
+     * @param string $Name 
+     * @param integer $Width 
+     * @param integer $Height 
+     * @param string $ResolutionAdaptive 
+     * @param string $SampleType 
+     * @param integer $SampleInterval 
+     * @param integer $RowCount 
+     * @param integer $ColumnCount 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
+     * @param string $FillType 
+     * @param string $Comment 
+     * @param string $Format 
      */
     function __construct()
     {

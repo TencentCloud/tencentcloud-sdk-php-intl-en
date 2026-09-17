@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Temporary credential
+ * 
  *
- * @method string getSecretId() Obtain Temporary security certificate ID.
- * @method void setSecretId(string $SecretId) Set Temporary security certificate ID.
- * @method string getSecretKey() Obtain Temporary security certificate `Key`.
- * @method void setSecretKey(string $SecretKey) Set Temporary security certificate `Key`.
- * @method string getToken() Obtain Token value.
- * @method void setToken(string $Token) Set Token value.
- * @method integer getExpiredTime() Obtain Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
- * @method void setExpiredTime(integer $ExpiredTime) Set Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+ * @method string getSecretId() Obtain 
+ * @method void setSecretId(string $SecretId) Set 
+ * @method string getSecretKey() Obtain 
+ * @method void setSecretKey(string $SecretKey) Set 
+ * @method string getToken() Obtain 
+ * @method void setToken(string $Token) Set 
+ * @method integer getExpiredTime() Obtain 
+ * @method void setExpiredTime(integer $ExpiredTime) Set 
  */
 class TempCertificate extends AbstractModel
 {
     /**
-     * @var string Temporary security certificate ID.
+     * @var string 
      */
     public $SecretId;
 
     /**
-     * @var string Temporary security certificate `Key`.
+     * @var string 
      */
     public $SecretKey;
 
     /**
-     * @var string Token value.
+     * @var string 
      */
     public $Token;
 
     /**
-     * @var integer Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+     * @var integer 
      */
     public $ExpiredTime;
 
     /**
-     * @param string $SecretId Temporary security certificate ID.
-     * @param string $SecretKey Temporary security certificate `Key`.
-     * @param string $Token Token value.
-     * @param integer $ExpiredTime Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+     * @param string $SecretId 
+     * @param string $SecretKey 
+     * @param string $Token 
+     * @param integer $ExpiredTime 
      */
     function __construct()
     {

@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImageProcessingTemplate request structure.
  *
- * @method array getOperations() Obtain Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
- * @method void setOperations(array $Operations) Set Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Image processing template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Image processing template name. The length cannot exceed 64 characters.
- * @method string getComment() Obtain Template description, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
+ * @method array getOperations() Obtain 
+ * @method void setOperations(array $Operations) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  */
 class CreateImageProcessingTemplateRequest extends AbstractModel
 {
     /**
-     * @var array Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
+     * @var array 
      */
     public $Operations;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Image processing template name. The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Template description, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @param array $Operations Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Image processing template name. The length cannot exceed 64 characters.
-     * @param string $Comment Template description, with a length limit of 256 characters.
+     * @param array $Operations 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
      */
     function __construct()
     {

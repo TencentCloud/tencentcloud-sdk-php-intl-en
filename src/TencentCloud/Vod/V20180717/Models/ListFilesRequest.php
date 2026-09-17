@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListFiles request structure.
  *
- * @method integer getSubAppId() Obtain VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
- * @method void setSubAppId(integer $SubAppId) Set VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
- * @method string getPrefix() Obtain Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
- * @method void setPrefix(string $Prefix) Set Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
- * @method string getDelimiter() Obtain A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
- * @method void setDelimiter(string $Delimiter) Set A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
- * @method integer getMaxKeys() Obtain ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
- * @method void setMaxKeys(integer $MaxKeys) Set ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
- * @method string getMarker() Obtain Starting object key marker
- * @method void setMarker(string $Marker) Set Starting object key marker
- * @method array getCategories() Obtain File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
- * @method void setCategories(array $Categories) Set File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getPrefix() Obtain 
+ * @method void setPrefix(string $Prefix) Set 
+ * @method string getDelimiter() Obtain 
+ * @method void setDelimiter(string $Delimiter) Set 
+ * @method integer getMaxKeys() Obtain 
+ * @method void setMaxKeys(integer $MaxKeys) Set 
+ * @method string getMarker() Obtain 
+ * @method void setMarker(string $Marker) Set 
+ * @method array getCategories() Obtain 
+ * @method void setCategories(array $Categories) Set 
  */
 class ListFilesRequest extends AbstractModel
 {
     /**
-     * @var integer VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+     * @var string 
      */
     public $Prefix;
 
     /**
-     * @var string A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
+     * @var string 
      */
     public $Delimiter;
 
     /**
-     * @var integer ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
+     * @var integer 
      */
     public $MaxKeys;
 
     /**
-     * @var string Starting object key marker
+     * @var string 
      */
     public $Marker;
 
     /**
-     * @var array File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+     * @var array 
      */
     public $Categories;
 
     /**
-     * @param integer $SubAppId VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
-     * @param string $Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
-     * @param string $Delimiter A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
-     * @param integer $MaxKeys ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
-     * @param string $Marker Starting object key marker
-     * @param array $Categories File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+     * @param integer $SubAppId 
+     * @param string $Prefix 
+     * @param string $Delimiter 
+     * @param integer $MaxKeys 
+     * @param string $Marker 
+     * @param array $Categories 
      */
     function __construct()
     {

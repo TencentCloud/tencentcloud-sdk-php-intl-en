@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image beauty effect item.
+ * 
  *
- * @method string getSwitch() Obtain <p>Whether to enable beauty effects.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
- * @method void setSwitch(string $Switch) Set <p>Whether to enable beauty effects.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
- * @method string getType() Obtain <p>Beauty option.</p>
- * @method void setType(string $Type) Set <p>Beauty option.</p>
- * @method integer getValue() Obtain <p>Intensity of beauty effects.</p>
- * @method void setValue(integer $Value) Set <p>Intensity of beauty effects.</p>
- * @method string getResourcePath() Obtain <p>Attach the resource path.</p>
- * @method void setResourcePath(string $ResourcePath) Set <p>Attach the resource path.</p>
- * @method string getExtInfo() Obtain <p>Additional information.</p>
- * @method void setExtInfo(string $ExtInfo) Set <p>Additional information.</p>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getValue() Obtain 
+ * @method void setValue(integer $Value) Set 
+ * @method string getResourcePath() Obtain 
+ * @method void setResourcePath(string $ResourcePath) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class BeautyEffectItem extends AbstractModel
 {
     /**
-     * @var string <p>Whether to enable beauty effects.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string <p>Beauty option.</p>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer <p>Intensity of beauty effects.</p>
+     * @var integer 
      */
     public $Value;
 
     /**
-     * @var string <p>Attach the resource path.</p>
+     * @var string 
      */
     public $ResourcePath;
 
     /**
-     * @var string <p>Additional information.</p>
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param string $Switch <p>Whether to enable beauty effects.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
-     * @param string $Type <p>Beauty option.</p>
-     * @param integer $Value <p>Intensity of beauty effects.</p>
-     * @param string $ResourcePath <p>Attach the resource path.</p>
-     * @param string $ExtInfo <p>Additional information.</p>
+     * @param string $Switch 
+     * @param string $Type 
+     * @param integer $Value 
+     * @param string $ResourcePath 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

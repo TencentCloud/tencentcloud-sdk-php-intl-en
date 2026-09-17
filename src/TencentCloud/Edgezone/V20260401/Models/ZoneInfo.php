@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneNameEn(string $ZoneNameEn) Set Availability zone English name.
  * @method string getRegion() Obtain Region code.
  * @method void setRegion(string $Region) Set Region code.
- * @method string getLocation() Obtain Area code
- * @method void setLocation(string $Location) Set Area code
- * @method string getLocationName() Obtain Zone Name
- * @method void setLocationName(string $LocationName) Set Zone Name
+ * @method string getLocation() Obtain Area code.
+ * @method void setLocation(string $Location) Set Area code.
+ * @method string getLocationName() Obtain Region name.
+ * @method void setLocationName(string $LocationName) Set Region name.
  */
 class ZoneInfo extends AbstractModel
 {
@@ -63,12 +63,12 @@ class ZoneInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string Area code
+     * @var string Area code.
      */
     public $Location;
 
     /**
-     * @var string Zone Name
+     * @var string Region name.
      */
     public $LocationName;
 
@@ -78,8 +78,8 @@ class ZoneInfo extends AbstractModel
      * @param string $ZoneName Chinese Name of Availability Zone.
      * @param string $ZoneNameEn Availability zone English name.
      * @param string $Region Region code.
-     * @param string $Location Area code
-     * @param string $LocationName Zone Name
+     * @param string $Location Area code.
+     * @param string $LocationName Region name.
      */
     function __construct()
     {

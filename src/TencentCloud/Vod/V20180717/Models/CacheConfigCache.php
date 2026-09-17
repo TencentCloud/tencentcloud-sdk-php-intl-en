@@ -18,52 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Path cache configuration
+ * 
  *
- * @method string getSwitch() Obtain Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method integer getCacheTime() Obtain Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
- * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
- * @method string getCompareMaxAge() Obtain Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
- * @method void setCompareMaxAge(string $CompareMaxAge) Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
- * @method string getIgnoreCacheControl() Obtain Force caching, values: <li>on: on; </li> <li>off: off. </li>
- * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Force caching, values: <li>on: on; </li> <li>off: off. </li>
- * @method string getIgnoreSetCookie() Obtain When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
- * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+ * @method string getSwitch() Obtain Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method integer getCacheTime() Obtain 
+ * @method void setCacheTime(integer $CacheTime) Set 
+ * @method string getCompareMaxAge() Obtain Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setCompareMaxAge(string $CompareMaxAge) Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getIgnoreCacheControl() Obtain Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getIgnoreSetCookie() Obtain Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
+ * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
  */
 class CacheConfigCache extends AbstractModel
 {
     /**
-     * @var string Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+     * @var integer 
      */
     public $CacheTime;
 
     /**
-     * @var string Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+     * @var string Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $CompareMaxAge;
 
     /**
-     * @var string Force caching, values: <li>on: on; </li> <li>off: off. </li>
+     * @var string Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $IgnoreCacheControl;
 
     /**
-     * @var string When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+     * @var string Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
      */
     public $IgnoreSetCookie;
 
     /**
-     * @param string $Switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param integer $CacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
-     * @param string $CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
-     * @param string $IgnoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
-     * @param string $IgnoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+     * @param string $Switch Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param integer $CacheTime 
+     * @param string $CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $IgnoreCacheControl Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $IgnoreSetCookie Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
      */
     function __construct()
     {

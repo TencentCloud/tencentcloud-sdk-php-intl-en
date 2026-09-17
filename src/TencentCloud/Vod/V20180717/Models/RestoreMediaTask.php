@@ -18,82 +18,70 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video retrieval task information
+ * 
  *
- * @method string getFileId() Obtain File ID
- * @method void setFileId(string $FileId) Set File ID
- * @method string getOriginalStorageClass() Obtain Original storage class
- * @method void setOriginalStorageClass(string $OriginalStorageClass) Set Original storage class
- * @method string getTargetStorageClass() Obtain Target storage class. For temporary retrieval, the target storage class is the same as the original.
- * @method void setTargetStorageClass(string $TargetStorageClass) Set Target storage class. For temporary retrieval, the target storage class is the same as the original.
- * @method string getRestoreTier() Obtain Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
- * @method void setRestoreTier(string $RestoreTier) Set Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
- * @method integer getRestoreDay() Obtain Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
- * @method void setRestoreDay(integer $RestoreDay) Set Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
- * @method integer getStatus() Obtain This field has been disused.
- * @method void setStatus(integer $Status) Set This field has been disused.
- * @method string getMessage() Obtain This field has been disused.
- * @method void setMessage(string $Message) Set This field has been disused.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getOriginalStorageClass() Obtain 
+ * @method void setOriginalStorageClass(string $OriginalStorageClass) Set 
+ * @method string getTargetStorageClass() Obtain 
+ * @method void setTargetStorageClass(string $TargetStorageClass) Set 
+ * @method string getRestoreTier() Obtain 
+ * @method void setRestoreTier(string $RestoreTier) Set 
+ * @method integer getRestoreDay() Obtain 
+ * @method void setRestoreDay(integer $RestoreDay) Set 
+ * @method integer getStatus() Obtain 
+ * @method void setStatus(integer $Status) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
  */
 class RestoreMediaTask extends AbstractModel
 {
     /**
-     * @var string File ID
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Original storage class
+     * @var string 
      */
     public $OriginalStorageClass;
 
     /**
-     * @var string Target storage class. For temporary retrieval, the target storage class is the same as the original.
+     * @var string 
      */
     public $TargetStorageClass;
 
     /**
-     * @var string Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
+     * @var string 
      */
     public $RestoreTier;
 
     /**
-     * @var integer Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+     * @var integer 
      */
     public $RestoreDay;
 
     /**
-     * @var integer This field has been disused.
+     * @var integer 
      * @deprecated
      */
     public $Status;
 
     /**
-     * @var string This field has been disused.
+     * @var string 
      * @deprecated
      */
     public $Message;
 
     /**
-     * @param string $FileId File ID
-     * @param string $OriginalStorageClass Original storage class
-     * @param string $TargetStorageClass Target storage class. For temporary retrieval, the target storage class is the same as the original.
-     * @param string $RestoreTier Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-     * @param integer $RestoreDay Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
-     * @param integer $Status This field has been disused.
-     * @param string $Message This field has been disused.
+     * @param string $FileId 
+     * @param string $OriginalStorageClass 
+     * @param string $TargetStorageClass 
+     * @param string $RestoreTier 
+     * @param integer $RestoreDay 
+     * @param integer $Status 
+     * @param string $Message 
      */
     function __construct()
     {

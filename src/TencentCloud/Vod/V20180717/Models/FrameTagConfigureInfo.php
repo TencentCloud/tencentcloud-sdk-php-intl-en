@@ -18,36 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of intelligent frame-specific tagging task
+ * 
  *
- * @method string getSwitch() Obtain Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
- * @method void setSwitch(string $Switch) Set Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
- * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method float getScreenshotInterval() Obtain 
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
  */
 class FrameTagConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var float Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * @var float 
      */
     public $ScreenshotInterval;
 
     /**
-     * @param string $Switch Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
-     * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * @param string $Switch 
+     * @param float $ScreenshotInterval 
      */
     function __construct()
     {

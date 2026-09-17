@@ -96,6 +96,7 @@ This API is completed asynchronously. If you need to query the execution result 
 * Check whether the secondary CIDR block overlaps with the primary/secondary CIDR block of the current VPC.
 * Check whether the secondary CIDR block overlaps with the routing destination of the current VPC.
 * If the current VPC is used in a peering connection, check whether the secondary CIDR block overlaps with the primary/secondary CIDR block of the peer VPC.
+ * @method Models\CheckGatewayFlowMonitorResponse CheckGatewayFlowMonitor(Models\CheckGatewayFlowMonitorRequest $req) This API is used to query whether the gateway traffic monitoring is enabled.
  * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) This API is used to verify the network detection status.
  * @method Models\CheckTrafficMirrorResponse CheckTrafficMirror(Models\CheckTrafficMirrorRequest $req) This API is used to check the collector and receiver for traffic mirroring (public IP address type).
  * @method Models\CloneSecurityGroupResponse CloneSecurityGroup(Models\CloneSecurityGroupRequest $req) This API is used to create a security group with the same rule configurations as an existing security group. The cloning only copies the security group and its rules, but not the security group tags.
@@ -237,7 +238,7 @@ This API is completed asynchronously. If you need to query the async job executi
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
  * @method Models\DeleteLocalGatewayResponse DeleteLocalGateway(Models\DeleteLocalGatewayRequest $req) This API is used to delete the local gateway of a CDC instance.
  * @method Models\DeleteNatGatewayResponse DeleteNatGateway(Models\DeleteNatGatewayRequest $req) This API is used to delete a NAT gateway.
-When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
+When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and associated EIPs are unbound.When deleting a NAT gateway, you need to unbind the associated EIPs. Therefore, the caller must have CAM permissions for vpc:DisassociateAddress and vpc:ModifyAddressesBandwidth.
  * @method Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse DeleteNatGatewayDestinationIpPortTranslationNatRule(Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest $req) This API is used to delete the port forwarding rule of a NAT gateway.
  * @method Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRule(Models\DeleteNatGatewaySourceIpTranslationNatRuleRequest $req) This API is used to delete a SNAT forwarding rule of a NAT gateway.
  * @method Models\DeleteNetDetectResponse DeleteNetDetect(Models\DeleteNetDetectRequest $req) This API is used to delete a network probe.
@@ -324,7 +325,11 @@ This API is used to check the jumbo frame status before and after instance migra
  * @method Models\DescribeLocalGatewayResponse DescribeLocalGateway(Models\DescribeLocalGatewayRequest $req) This API is used to query local gateways of a CDC instance.
  * @method Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse DescribeNatGatewayDestinationIpPortTranslationNatRules(Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest $req) This API is used to query the array of objects of a NAT gateway's port forwarding rules.
  * @method Models\DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRoute(Models\DescribeNatGatewayDirectConnectGatewayRouteRequest $req) This API is used to query the routes between a NAT gateway and Direct Connect.
+ * @method Models\DescribeNatGatewayFlowMonitorDetailResponse DescribeNatGatewayFlowMonitorDetail(Models\DescribeNatGatewayFlowMonitorDetailRequest $req) This API is used to query the traffic monitoring details of a NAT gateway.
+
+- You can only use this API to query a single gateway instance. The input parameter `NatGatewayId` supports at most one value, and it must be passed.- If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring is enabled in the corresponding gateway details page in the console.
  * @method Models\DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRules(Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest $req) This API is used to query the NAT gateway's SNAT forwarding rules.
+ * @method Models\DescribeNatGatewayZonesResponse DescribeNatGatewayZones(Models\DescribeNatGatewayZonesRequest $req) This API is used to query the information of saleable availability zones (AZs) for NAT gateways.
  * @method Models\DescribeNatGatewaysResponse DescribeNatGateways(Models\DescribeNatGatewaysRequest $req) This API is used to query NAT gateways.
  * @method Models\DescribeNetDetectStatesResponse DescribeNetDetectStates(Models\DescribeNetDetectStatesRequest $req) This API (DescribeNetDetectStates) is used to query the list of network detection verification results.
  * @method Models\DescribeNetDetectsResponse DescribeNetDetects(Models\DescribeNetDetectsRequest $req) This API (DescribeNetDetects) is used to query the list of network detection instances.
@@ -501,7 +506,7 @@ Note: Only the name and description can be modified.
  * @method Models\ModifyVpnGatewayCcnRoutesResponse ModifyVpnGatewayCcnRoutes(Models\ModifyVpnGatewayCcnRoutesRequest $req) This API is used to modify VPN gateway-based CCN routes.
  * @method Models\ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutes(Models\ModifyVpnGatewayRoutesRequest $req) This API is used to modify VPN gateway routes.
  * @method Models\NotifyRoutesResponse NotifyRoutes(Models\NotifyRoutesRequest $req) This API is used to publish a route to CCN. This can also be done by clicking "Publish to CCN" in the operation column on the page of route table list.
- * @method Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGateway(Models\RefreshDirectConnectGatewayRouteToNatGatewayRequest $req) This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+ * @method Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGateway(Models\RefreshDirectConnectGatewayRouteToNatGatewayRequest $req) This API is used to refresh the route between a NAT gateway and Direct Connect and update the associated route table.
  * @method Models\RejectAttachCcnInstancesResponse RejectAttachCcnInstances(Models\RejectAttachCcnInstancesRequest $req) This API (RejectAttachCcnInstances) is used to reject association operations when instances are associated across accounts for the CCN owner.
 
  * @method Models\ReleaseAddressesResponse ReleaseAddresses(Models\ReleaseAddressesRequest $req) This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).

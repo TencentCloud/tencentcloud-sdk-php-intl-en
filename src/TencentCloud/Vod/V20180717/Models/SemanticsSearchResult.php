@@ -18,44 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Semantic search result.
+ * 
  *
- * @method string getFileId() Obtain Specifies the unique identifier of the media file.
- * @method void setFileId(string $FileId) Set Specifies the unique identifier of the media file.
- * @method float getScore() Obtain Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
- * @method void setScore(float $Score) Set Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
- * @method float getStartTimeOffset() Obtain Specifies the start time of the video clip, in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Specifies the start time of the video clip, in seconds.
- * @method float getEndTimeOffset() Obtain Segment end time of the video, in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Segment end time of the video, in seconds.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getTitle() Obtain 
+ * @method void setTitle(string $Title) Set 
+ * @method float getScore() Obtain 
+ * @method void setScore(float $Score) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
  */
 class SemanticsSearchResult extends AbstractModel
 {
     /**
-     * @var string Specifies the unique identifier of the media file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var float Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
+     * @var string 
+     */
+    public $Title;
+
+    /**
+     * @var float 
      */
     public $Score;
 
     /**
-     * @var float Specifies the start time of the video clip, in seconds.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Segment end time of the video, in seconds.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $FileId Specifies the unique identifier of the media file.
-     * @param float $Score Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
-     * @param float $StartTimeOffset Specifies the start time of the video clip, in seconds.
-     * @param float $EndTimeOffset Segment end time of the video, in seconds.
+     * @param string $FileId 
+     * @param string $Title 
+     * @param float $Score 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SemanticsSearchResult extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
         }
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {

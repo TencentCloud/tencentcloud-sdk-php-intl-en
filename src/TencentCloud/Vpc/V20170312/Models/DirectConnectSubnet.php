@@ -18,28 +18,28 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IDC subnet information
+ * IDC subnet information.
  *
- * @method string getDirectConnectGatewayId() Obtain The direct connect gateway ID.
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The direct connect gateway ID.
- * @method string getCidrBlock() Obtain IDC subnet IP range
- * @method void setCidrBlock(string $CidrBlock) Set IDC subnet IP range
+ * @method string getDirectConnectGatewayId() Obtain Direct Connect gateway ID.
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set Direct Connect gateway ID.
+ * @method string getCidrBlock() Obtain IDC subnet CIDR block.
+ * @method void setCidrBlock(string $CidrBlock) Set IDC subnet CIDR block.
  */
 class DirectConnectSubnet extends AbstractModel
 {
     /**
-     * @var string The direct connect gateway ID.
+     * @var string Direct Connect gateway ID.
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @var string IDC subnet IP range
+     * @var string IDC subnet CIDR block.
      */
     public $CidrBlock;
 
     /**
-     * @param string $DirectConnectGatewayId The direct connect gateway ID.
-     * @param string $CidrBlock IDC subnet IP range
+     * @param string $DirectConnectGatewayId Direct Connect gateway ID.
+     * @param string $CidrBlock IDC subnet CIDR block.
      */
     function __construct()
     {

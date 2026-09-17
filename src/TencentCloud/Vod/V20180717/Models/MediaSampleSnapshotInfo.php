@@ -18,24 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of sampled screenshot of VOD file
+ * 
  *
- * @method array getSampleSnapshotSet() Obtain Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSampleSnapshotSet(array $SampleSnapshotSet) Set Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getSampleSnapshotSet() Obtain 
+ * @method void setSampleSnapshotSet(array $SampleSnapshotSet) Set 
  */
 class MediaSampleSnapshotInfo extends AbstractModel
 {
     /**
-     * @var array Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $SampleSnapshotSet;
 
     /**
-     * @param array $SampleSnapshotSet Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $SampleSnapshotSet 
      */
     function __construct()
     {

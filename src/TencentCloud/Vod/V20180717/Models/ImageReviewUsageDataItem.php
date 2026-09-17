@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The usage statistics for the image recognition feature.
+ * 
  *
- * @method string getTime() Obtain The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
- * @method void setTime(string $Time) Set The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
- * @method integer getCount() Obtain The number of times the image recognition feature is used.
- * @method void setCount(integer $Count) Set The number of times the image recognition feature is used.
+ * @method string getTime() Obtain 
+ * @method void setTime(string $Time) Set 
+ * @method integer getCount() Obtain 
+ * @method void setCount(integer $Count) Set 
  */
 class ImageReviewUsageDataItem extends AbstractModel
 {
     /**
-     * @var string The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
+     * @var string 
      */
     public $Time;
 
     /**
-     * @var integer The number of times the image recognition feature is used.
+     * @var integer 
      */
     public $Count;
 
     /**
-     * @param string $Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
-     * @param integer $Count The number of times the image recognition feature is used.
+     * @param string $Time 
+     * @param integer $Count 
      */
     function __construct()
     {

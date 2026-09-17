@@ -18,44 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Domain https acceleration configuration, the default is off
+ * 
  *
- * @method string getCertId() Obtain The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
- * @method void setCertId(string $CertId) Set The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
- * @method string getCertificate() Obtain Server certificate information.
- * @method void setCertificate(string $Certificate) Set Server certificate information.
- * @method string getPrivateKey() Obtain Server key information.
- * @method void setPrivateKey(string $PrivateKey) Set Server key information.
- * @method string getExpireTime() Obtain Certificate expiration time; no need to fill in when configured as an input parameter.
- * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time; no need to fill in when configured as an input parameter.
+ * @method string getCertId() Obtain Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
+ * @method void setCertId(string $CertId) Set Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
+ * @method string getCertificate() Obtain 
+ * @method void setCertificate(string $Certificate) Set 
+ * @method string getPrivateKey() Obtain 
+ * @method void setPrivateKey(string $PrivateKey) Set 
+ * @method string getExpireTime() Obtain Certificate expiration time;
+No need to fill when used as an input parameter configuration.
+ * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time;
+No need to fill when used as an input parameter configuration.
  */
 class CDNCertInfo extends AbstractModel
 {
     /**
-     * @var string The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+     * @var string Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
      */
     public $CertId;
 
     /**
-     * @var string Server certificate information.
+     * @var string 
      */
     public $Certificate;
 
     /**
-     * @var string Server key information.
+     * @var string 
      */
     public $PrivateKey;
 
     /**
-     * @var string Certificate expiration time; no need to fill in when configured as an input parameter.
+     * @var string Certificate expiration time;
+No need to fill when used as an input parameter configuration.
      */
     public $ExpireTime;
 
     /**
-     * @param string $CertId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
-     * @param string $Certificate Server certificate information.
-     * @param string $PrivateKey Server key information.
-     * @param string $ExpireTime Certificate expiration time; no need to fill in when configured as an input parameter.
+     * @param string $CertId Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
+     * @param string $Certificate 
+     * @param string $PrivateKey 
+     * @param string $ExpireTime Certificate expiration time;
+No need to fill when used as an input parameter configuration.
      */
     function __construct()
     {

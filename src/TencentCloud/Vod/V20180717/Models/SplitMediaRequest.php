@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SplitMedia request structure.
  *
- * @method string getFileId() Obtain Video ID.
- * @method void setFileId(string $FileId) Set Video ID.
- * @method array getSegments() Obtain Video split task information list, simultaneously support up to 100 split information.
- * @method void setSegments(array $Segments) Set Video split task information list, simultaneously support up to 100 split information.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getSessionContext() Obtain Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
- * @method void setSessionContext(string $SessionContext) Set Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
- * @method string getSessionId() Obtain Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method void setSessionId(string $SessionId) Set Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method array getSegments() Obtain 
+ * @method void setSegments(array $Segments) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
  */
 class SplitMediaRequest extends AbstractModel
 {
     /**
-     * @var string Video ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var array Video split task information list, simultaneously support up to 100 split information.
+     * @var array 
      */
     public $Segments;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var string Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @param string $FileId Video ID.
-     * @param array $Segments Video split task information list, simultaneously support up to 100 split information.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $SessionContext Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
-     * @param string $SessionId Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
+     * @param string $FileId 
+     * @param array $Segments 
+     * @param integer $SubAppId 
+     * @param string $SessionContext 
+     * @param string $SessionId 
+     * @param integer $TasksPriority 
      */
     function __construct()
     {

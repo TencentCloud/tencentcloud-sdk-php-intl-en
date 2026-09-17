@@ -18,32 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EditMediaT TSC Transcoding Config.
+ * 
  *
- * @method string getType() Obtain TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
- * @method void setType(string $Type) Set TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
- * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getMaxVideoBitrate() Obtain 
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set 
  */
 class EditMediaTEHDConfig extends AbstractModel
 {
     /**
-     * @var string TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     * @var integer 
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
-     * @param integer $MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     * @param string $Type 
+     * @param integer $MaxVideoBitrate 
      */
     function __construct()
     {

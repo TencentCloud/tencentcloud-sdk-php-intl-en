@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech keyword recognition result.
+ * 
  *
- * @method string getWord() Obtain Speech keyword.
- * @method void setWord(string $Word) Set Speech keyword.
- * @method array getSegmentSet() Obtain List of time segments that contain the speech keyword.
- * @method void setSegmentSet(array $SegmentSet) Set List of time segments that contain the speech keyword.
+ * @method string getWord() Obtain 
+ * @method void setWord(string $Word) Set 
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
  */
 class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
 {
     /**
-     * @var string Speech keyword.
+     * @var string 
      */
     public $Word;
 
     /**
-     * @var array List of time segments that contain the speech keyword.
+     * @var array 
      */
     public $SegmentSet;
 
     /**
-     * @param string $Word Speech keyword.
-     * @param array $SegmentSet List of time segments that contain the speech keyword.
+     * @param string $Word 
+     * @param array $SegmentSet 
      */
     function __construct()
     {

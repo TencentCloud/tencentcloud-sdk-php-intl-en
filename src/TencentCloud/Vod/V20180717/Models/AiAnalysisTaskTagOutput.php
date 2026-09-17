@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of intelligent tagging
+ * 
  *
- * @method array getTagSet() Obtain List of intelligently generated video tags
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
- * @method void setTagSet(array $TagSet) Set List of intelligently generated video tags
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
- * @method string getTagSetFileUrl() Obtain URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
- * @method void setTagSetFileUrl(string $TagSetFileUrl) Set URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
- * @method string getTagSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
- * @method void setTagSetFileUrlExpireTime(string $TagSetFileUrlExpireTime) Set Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method array getTagSet() Obtain 
+ * @method void setTagSet(array $TagSet) Set 
+ * @method string getTagSetFileUrl() Obtain 
+ * @method void setTagSetFileUrl(string $TagSetFileUrl) Set 
+ * @method string getTagSetFileUrlExpireTime() Obtain 
+ * @method void setTagSetFileUrlExpireTime(string $TagSetFileUrlExpireTime) Set 
  */
 class AiAnalysisTaskTagOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated video tags
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+     * @var array 
      */
     public $TagSet;
 
     /**
-     * @var string URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+     * @var string 
      */
     public $TagSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @var string 
      */
     public $TagSetFileUrlExpireTime;
 
     /**
-     * @param array $TagSet List of intelligently generated video tags
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
-     * @param string $TagSetFileUrl URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
-     * @param string $TagSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param array $TagSet 
+     * @param string $TagSetFileUrl 
+     * @param string $TagSetFileUrlExpireTime 
      */
     function __construct()
     {

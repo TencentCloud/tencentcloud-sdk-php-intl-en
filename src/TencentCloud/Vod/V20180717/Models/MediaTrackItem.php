@@ -18,104 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Segment information of media track
+ * 
  *
- * @method string getType() Obtain Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
- * @method void setType(string $Type) Set Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
- * @method VideoTrackItem getVideoItem() Obtain Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVideoItem(VideoTrackItem $VideoItem) Set Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AudioTrackItem getAudioItem() Obtain Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAudioItem(AudioTrackItem $AudioItem) Set Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method StickerTrackItem getStickerItem() Obtain Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStickerItem(StickerTrackItem $StickerItem) Set Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method MediaTransitionItem getTransitionItem() Obtain Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTransitionItem(MediaTransitionItem $TransitionItem) Set Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method EmptyTrackItem getEmptyItem() Obtain Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEmptyItem(EmptyTrackItem $EmptyItem) Set Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method VideoTrackItem getVideoItem() Obtain 
+ * @method void setVideoItem(VideoTrackItem $VideoItem) Set 
+ * @method AudioTrackItem getAudioItem() Obtain 
+ * @method void setAudioItem(AudioTrackItem $AudioItem) Set 
+ * @method StickerTrackItem getStickerItem() Obtain 
+ * @method void setStickerItem(StickerTrackItem $StickerItem) Set 
+ * @method MediaTransitionItem getTransitionItem() Obtain 
+ * @method void setTransitionItem(MediaTransitionItem $TransitionItem) Set 
+ * @method EmptyTrackItem getEmptyItem() Obtain 
+ * @method void setEmptyItem(EmptyTrackItem $EmptyItem) Set 
  */
 class MediaTrackItem extends AbstractModel
 {
     /**
-     * @var string Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var VideoTrackItem Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var VideoTrackItem 
      */
     public $VideoItem;
 
     /**
-     * @var AudioTrackItem Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AudioTrackItem 
      */
     public $AudioItem;
 
     /**
-     * @var StickerTrackItem Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var StickerTrackItem 
      */
     public $StickerItem;
 
     /**
-     * @var MediaTransitionItem Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var MediaTransitionItem 
      */
     public $TransitionItem;
 
     /**
-     * @var EmptyTrackItem Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var EmptyTrackItem 
      */
     public $EmptyItem;
 
     /**
-     * @param string $Type Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
-     * @param VideoTrackItem $VideoItem Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioTrackItem $AudioItem Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StickerTrackItem $StickerItem Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaTransitionItem $TransitionItem Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EmptyTrackItem $EmptyItem Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Type 
+     * @param VideoTrackItem $VideoItem 
+     * @param AudioTrackItem $AudioItem 
+     * @param StickerTrackItem $StickerItem 
+     * @param MediaTransitionItem $TransitionItem 
+     * @param EmptyTrackItem $EmptyItem 
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters for recognition of pornographic content
+ * 
  *
- * @method PornImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Parameters for recognition of pornographic content in images
- * @method void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Parameters for recognition of pornographic content in images
- * @method PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Parameters for ASR-based recognition of pornographic content
- * @method void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Parameters for ASR-based recognition of pornographic content
- * @method PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Parameters for OCR-based recognition of pornographic content
- * @method void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Parameters for OCR-based recognition of pornographic content
+ * @method PornImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain 
+ * @method void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set 
+ * @method PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain 
+ * @method void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set 
+ * @method PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
  */
 class PornConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var PornImgReviewTemplateInfoForUpdate Parameters for recognition of pornographic content in images
+     * @var PornImgReviewTemplateInfoForUpdate 
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PornAsrReviewTemplateInfoForUpdate Parameters for ASR-based recognition of pornographic content
+     * @var PornAsrReviewTemplateInfoForUpdate 
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PornOcrReviewTemplateInfoForUpdate Parameters for OCR-based recognition of pornographic content
+     * @var PornOcrReviewTemplateInfoForUpdate 
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PornImgReviewTemplateInfoForUpdate $ImgReviewInfo Parameters for recognition of pornographic content in images
-     * @param PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo Parameters for ASR-based recognition of pornographic content
-     * @param PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+     * @param PornImgReviewTemplateInfoForUpdate $ImgReviewInfo 
+     * @param PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo 
+     * @param PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
      */
     function __construct()
     {

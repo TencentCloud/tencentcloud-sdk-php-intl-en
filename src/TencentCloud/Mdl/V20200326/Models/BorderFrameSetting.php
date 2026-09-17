@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BorderFrameSetting
  *
- * @method SourceLayout getLiveSourceLayout() Obtain 
- * @method void setLiveSourceLayout(SourceLayout $LiveSourceLayout) Set 
- * @method string getBackgroundImgUrl() Obtain 
- * @method void setBackgroundImgUrl(string $BackgroundImgUrl) Set 
+ * @method SourceLayout getLiveSourceLayout() Obtain Live streaming source layout configuration
+ * @method void setLiveSourceLayout(SourceLayout $LiveSourceLayout) Set Live streaming source layout configuration
+ * @method string getBackgroundImgUrl() Obtain Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
+ * @method void setBackgroundImgUrl(string $BackgroundImgUrl) Set Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
  */
 class BorderFrameSetting extends AbstractModel
 {
     /**
-     * @var SourceLayout 
+     * @var SourceLayout Live streaming source layout configuration
      */
     public $LiveSourceLayout;
 
     /**
-     * @var string 
+     * @var string Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
      */
     public $BackgroundImgUrl;
 
     /**
-     * @param SourceLayout $LiveSourceLayout 
-     * @param string $BackgroundImgUrl 
+     * @param SourceLayout $LiveSourceLayout Live streaming source layout configuration
+     * @param string $BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
      */
     function __construct()
     {

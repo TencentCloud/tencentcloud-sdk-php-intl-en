@@ -18,64 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of media file composing task.
+ * 
  *
- * @method string getFileType() Obtain File type, such as mp4 and mp3.
- * @method void setFileType(string $FileType) Set File type, such as mp4 and mp3.
- * @method string getFileId() Obtain Media file ID.
- * @method void setFileId(string $FileId) Set Media file ID.
- * @method string getFileUrl() Obtain Media file playback address.
- * @method void setFileUrl(string $FileUrl) Set Media file playback address.
- * @method string getMediaName() Obtain Filename of up to 64 characters.
- * @method void setMediaName(string $MediaName) Set Filename of up to 64 characters.
- * @method integer getClassId() Obtain Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
- * @method void setClassId(integer $ClassId) Set Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
- * @method string getExpireTime() Obtain Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setExpireTime(string $ExpireTime) Set Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFileType() Obtain 
+ * @method void setFileType(string $FileType) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getFileUrl() Obtain 
+ * @method void setFileUrl(string $FileUrl) Set 
+ * @method string getMediaName() Obtain 
+ * @method void setMediaName(string $MediaName) Set 
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
  */
 class ComposeMediaTaskOutput extends AbstractModel
 {
     /**
-     * @var string File type, such as mp4 and mp3.
+     * @var string 
      */
     public $FileType;
 
     /**
-     * @var string Media file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Media file playback address.
+     * @var string 
      */
     public $FileUrl;
 
     /**
-     * @var string Filename of up to 64 characters.
+     * @var string 
      */
     public $MediaName;
 
     /**
-     * @var integer Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var string Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $ExpireTime;
 
     /**
-     * @param string $FileType File type, such as mp4 and mp3.
-     * @param string $FileId Media file ID.
-     * @param string $FileUrl Media file playback address.
-     * @param string $MediaName Filename of up to 64 characters.
-     * @param integer $ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
-     * @param string $ExpireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FileType 
+     * @param string $FileId 
+     * @param string $FileUrl 
+     * @param string $MediaName 
+     * @param integer $ClassId 
+     * @param string $ExpireTime 
      */
     function __construct()
     {

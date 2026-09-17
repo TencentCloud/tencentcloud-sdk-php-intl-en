@@ -18,76 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive bitrate streaming parameter template
+ * 
  *
- * @method VideoTemplateInfo getVideo() Obtain <p>Video parameter information.</p>
- * @method void setVideo(VideoTemplateInfo $Video) Set <p>Video parameter information.</p>
- * @method AudioTemplateInfo getAudio() Obtain <p>Audio parameter info.</p>
- * @method void setAudio(AudioTemplateInfo $Audio) Set <p>Audio parameter info.</p>
- * @method integer getRemoveAudio() Obtain <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
- * @method void setRemoveAudio(integer $RemoveAudio) Set <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
- * @method integer getRemoveVideo() Obtain <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
- * @method void setRemoveVideo(integer $RemoveVideo) Set <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
- * @method TEHDConfig getTEHDConfig() Obtain <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method EnhanceConfig getEnhanceConfig() Obtain <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStdExtInfo() Obtain <p>Extended parameter.</p>
- * @method void setStdExtInfo(string $StdExtInfo) Set <p>Extended parameter.</p>
+ * @method VideoTemplateInfo getVideo() Obtain 
+ * @method void setVideo(VideoTemplateInfo $Video) Set 
+ * @method AudioTemplateInfo getAudio() Obtain 
+ * @method void setAudio(AudioTemplateInfo $Audio) Set 
+ * @method integer getRemoveAudio() Obtain 
+ * @method void setRemoveAudio(integer $RemoveAudio) Set 
+ * @method integer getRemoveVideo() Obtain 
+ * @method void setRemoveVideo(integer $RemoveVideo) Set 
+ * @method TEHDConfig getTEHDConfig() Obtain 
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set 
+ * @method EnhanceConfig getEnhanceConfig() Obtain 
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set 
+ * @method string getStdExtInfo() Obtain 
+ * @method void setStdExtInfo(string $StdExtInfo) Set 
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
     /**
-     * @var VideoTemplateInfo <p>Video parameter information.</p>
+     * @var VideoTemplateInfo 
      */
     public $Video;
 
     /**
-     * @var AudioTemplateInfo <p>Audio parameter info.</p>
+     * @var AudioTemplateInfo 
      */
     public $Audio;
 
     /**
-     * @var integer <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+     * @var integer 
      */
     public $RemoveAudio;
 
     /**
-     * @var integer <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+     * @var integer 
      */
     public $RemoveVideo;
 
     /**
-     * @var TEHDConfig <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TEHDConfig 
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var EnhanceConfig 
      */
     public $EnhanceConfig;
 
     /**
-     * @var string <p>Extended parameter.</p>
+     * @var string 
      */
     public $StdExtInfo;
 
     /**
-     * @param VideoTemplateInfo $Video <p>Video parameter information.</p>
-     * @param AudioTemplateInfo $Audio <p>Audio parameter info.</p>
-     * @param integer $RemoveAudio <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-     * @param integer $RemoveVideo <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-     * @param TEHDConfig $TEHDConfig <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnhanceConfig $EnhanceConfig <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StdExtInfo <p>Extended parameter.</p>
+     * @param VideoTemplateInfo $Video 
+     * @param AudioTemplateInfo $Audio 
+     * @param integer $RemoveAudio 
+     * @param integer $RemoveVideo 
+     * @param TEHDConfig $TEHDConfig 
+     * @param EnhanceConfig $EnhanceConfig 
+     * @param string $StdExtInfo 
      */
     function __construct()
     {

@@ -18,96 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Head Tail Template Details
+ * 
  *
- * @method integer getDefinition() Obtain Head Tail Template Number.
- * @method void setDefinition(integer $Definition) Set Head Tail Template Number.
- * @method string getName() Obtain Template name, supports up to 64 characters.
- * @method void setName(string $Name) Set Template name, supports up to 64 characters.
- * @method string getComment() Obtain Template description, up to 256 characters.
- * @method void setComment(string $Comment) Set Template description, up to 256 characters.
- * @method array getHeadCandidateSet() Obtain Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
- * @method void setHeadCandidateSet(array $HeadCandidateSet) Set Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
- * @method array getTailCandidateSet() Obtain Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
- * @method void setTailCandidateSet(array $TailCandidateSet) Set Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
- * @method string getFillType() Obtain Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
- * @method void setFillType(string $FillType) Set Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
- * @method string getCreateTime() Obtain Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setCreateTime(string $CreateTime) Set Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method string getUpdateTime() Obtain The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setUpdateTime(string $UpdateTime) Set The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method array getHeadCandidateSet() Obtain 
+ * @method void setHeadCandidateSet(array $HeadCandidateSet) Set 
+ * @method array getTailCandidateSet() Obtain 
+ * @method void setTailCandidateSet(array $TailCandidateSet) Set 
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class HeadTailTemplate extends AbstractModel
 {
     /**
-     * @var integer Head Tail Template Number.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Template name, supports up to 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Template description, up to 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var array Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+     * @var array 
      */
     public $HeadCandidateSet;
 
     /**
-     * @var array Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+     * @var array 
      */
     public $TailCandidateSet;
 
     /**
-     * @var string Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
+     * @var string 
      */
     public $FillType;
 
     /**
-     * @var string Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition Head Tail Template Number.
-     * @param string $Name Template name, supports up to 64 characters.
-     * @param string $Comment Template description, up to 256 characters.
-     * @param array $HeadCandidateSet Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
-     * @param array $TailCandidateSet Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
-     * @param string $FillType Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
-     * @param string $CreateTime Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param string $UpdateTime The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param integer $Definition 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param array $HeadCandidateSet 
+     * @param array $TailCandidateSet 
+     * @param string $FillType 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

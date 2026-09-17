@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCLSTopic request structure.
  *
- * @method string getCLSRegion() Obtain The region to which the log set belongs, the values are: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> < li>ap-chongqing: Chongqing; </li> <li>ap-nanjing: Nanjing; </li> <li>ap-shanghai: Shanghai; </li> <li>ap-singapore: Singapore. </li>
- * @method void setCLSRegion(string $CLSRegion) Set The region to which the log set belongs, the values are: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> < li>ap-chongqing: Chongqing; </li> <li>ap-nanjing: Nanjing; </li> <li>ap-shanghai: Shanghai; </li> <li>ap-singapore: Singapore. </li>
- * @method string getTopicId() Obtain Log topic ID.
- * @method void setTopicId(string $TopicId) Set Log topic ID.
+ * @method string getCLSRegion() Obtain 
+ * @method void setCLSRegion(string $CLSRegion) Set 
+ * @method string getTopicId() Obtain 
+ * @method void setTopicId(string $TopicId) Set 
  */
 class DeleteCLSTopicRequest extends AbstractModel
 {
     /**
-     * @var string The region to which the log set belongs, the values are: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> < li>ap-chongqing: Chongqing; </li> <li>ap-nanjing: Nanjing; </li> <li>ap-shanghai: Shanghai; </li> <li>ap-singapore: Singapore. </li>
+     * @var string 
      */
     public $CLSRegion;
 
     /**
-     * @var string Log topic ID.
+     * @var string 
      */
     public $TopicId;
 
     /**
-     * @param string $CLSRegion The region to which the log set belongs, the values are: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> < li>ap-chongqing: Chongqing; </li> <li>ap-nanjing: Nanjing; </li> <li>ap-shanghai: Shanghai; </li> <li>ap-singapore: Singapore. </li>
-     * @param string $TopicId Log topic ID.
+     * @param string $CLSRegion 
+     * @param string $TopicId 
      */
     function __construct()
     {

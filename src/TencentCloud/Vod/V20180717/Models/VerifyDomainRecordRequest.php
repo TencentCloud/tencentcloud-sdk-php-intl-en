@@ -20,50 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyDomainRecord request structure.
  *
- * @method string getDomain() Obtain Need to access the VOD acceleration domain name.
- * @method void setDomain(string $Domain) Set Need to access the VOD acceleration domain name.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
- * @method string getVerifyType() Obtain VerifyType:
-<li>dns: DNS Parse verification; </li>
-<li>fIle: Document verification.</li>
-
-Default value: dns.
- * @method void setVerifyType(string $VerifyType) Set VerifyType:
-<li>dns: DNS Parse verification; </li>
-<li>fIle: Document verification.</li>
-
-Default value: dns.
+ * @method string getDomain() Obtain 
+ * @method void setDomain(string $Domain) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getVerifyType() Obtain 
+ * @method void setVerifyType(string $VerifyType) Set 
  */
 class VerifyDomainRecordRequest extends AbstractModel
 {
     /**
-     * @var string Need to access the VOD acceleration domain name.
+     * @var string 
      */
     public $Domain;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string VerifyType:
-<li>dns: DNS Parse verification; </li>
-<li>fIle: Document verification.</li>
-
-Default value: dns.
+     * @var string 
      */
     public $VerifyType;
 
     /**
-     * @param string $Domain Need to access the VOD acceleration domain name.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
-     * @param string $VerifyType VerifyType:
-<li>dns: DNS Parse verification; </li>
-<li>fIle: Document verification.</li>
-
-Default value: dns.
+     * @param string $Domain 
+     * @param integer $SubAppId 
+     * @param string $VerifyType 
      */
     function __construct()
     {

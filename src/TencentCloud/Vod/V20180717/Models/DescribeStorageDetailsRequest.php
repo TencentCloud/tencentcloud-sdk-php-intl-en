@@ -20,142 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStorageDetails request structure.
  *
- * @method string getStartTime() Obtain Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method void setStartTime(string $StartTime) Set Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method string getEndTime() Obtain End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method void setEndTime(string $EndTime) Set End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getInterval() Obtain Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
- * @method void setInterval(string $Interval) Set Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
- * @method string getStorageType() Obtain Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
- * @method void setStorageType(string $StorageType) Set Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
- * @method string getArea() Obtain Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
- * @method void setArea(string $Area) Set Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getInterval() Obtain 
+ * @method void setInterval(string $Interval) Set 
+ * @method string getStorageType() Obtain 
+ * @method void setStorageType(string $StorageType) Set 
+ * @method string getArea() Obtain 
+ * @method void setArea(string $Area) Set 
  */
 class DescribeStorageDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @var string 
      */
     public $StartTime;
 
     /**
-     * @var string End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @var string 
      */
     public $EndTime;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
+     * @var string 
      */
     public $Interval;
 
     /**
-     * @var string Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
+     * @var string 
      */
     public $StorageType;
 
     /**
-     * @var string Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
+     * @var string 
      */
     public $Area;
 
     /**
-     * @param string $StartTime Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param string $EndTime End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Interval Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
-     * @param string $StorageType Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
-     * @param string $Area Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
+     * @param string $StartTime 
+     * @param string $EndTime 
+     * @param integer $SubAppId 
+     * @param string $Interval 
+     * @param string $StorageType 
+     * @param string $Area 
      */
     function __construct()
     {

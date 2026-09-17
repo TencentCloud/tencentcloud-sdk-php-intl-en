@@ -18,36 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Large model parsing segment summary parse configuration
+ * 
  *
- * @method string getSwitch() Obtain Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
- * @method void setSwitch(string $Switch) Set Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
- * @method string getExtendedParameter() Obtain Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
- * @method void setExtendedParameter(string $ExtendedParameter) Set Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getExtendedParameter() Obtain 
+ * @method void setExtendedParameter(string $ExtendedParameter) Set 
  */
 class LLMComprehendSummaryForUpdate extends AbstractModel
 {
     /**
-     * @var string Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+     * @var string 
      */
     public $ExtendedParameter;
 
     /**
-     * @param string $Switch Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
-     * @param string $ExtendedParameter Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+     * @param string $Switch 
+     * @param string $ExtendedParameter 
      */
     function __construct()
     {

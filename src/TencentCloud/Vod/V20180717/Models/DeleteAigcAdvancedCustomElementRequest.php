@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAigcAdvancedCustomElement request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
- * @method string getElementId() Obtain <p>ID of the AIGC advanced custom subject</p>
- * @method void setElementId(string $ElementId) Set <p>ID of the AIGC advanced custom subject</p>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getElementId() Obtain 
+ * @method void setElementId(string $ElementId) Set 
  */
 class DeleteAigcAdvancedCustomElementRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>ID of the AIGC advanced custom subject</p>
+     * @var string 
      */
     public $ElementId;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
-     * @param string $ElementId <p>ID of the AIGC advanced custom subject</p>
+     * @param integer $SubAppId 
+     * @param string $ElementId 
      */
     function __construct()
     {

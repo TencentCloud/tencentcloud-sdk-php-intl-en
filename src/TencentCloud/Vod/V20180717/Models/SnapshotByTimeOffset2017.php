@@ -18,56 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Screencapturing output information (v2017)
+ * 
  *
- * @method integer getErrCode() Obtain Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTimeOffset() Obtain Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTimeOffset(integer $TimeOffset) Set Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUrl() Obtain Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method integer getTimeOffset() Obtain 
+ * @method void setTimeOffset(integer $TimeOffset) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class SnapshotByTimeOffset2017 extends AbstractModel
 {
     /**
-     * @var integer Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var integer Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $TimeOffset;
 
     /**
-     * @var string Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param integer $ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TimeOffset Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Url Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ErrCode 
+     * @param integer $TimeOffset 
+     * @param string $Url 
      */
     function __construct()
     {

@@ -18,168 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of an animated image generating template.
+ * 
  *
- * @method integer getDefinition() Obtain Unique ID of an animated image generating template.
- * @method void setDefinition(integer $Definition) Set Unique ID of an animated image generating template.
- * @method string getType() Obtain Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method void setType(string $Type) Set Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method string getName() Obtain Name of an animated image generating template.
- * @method void setName(string $Name) Set Name of an animated image generating template.
- * @method string getComment() Obtain Description of an animated image generating template.
- * @method void setComment(string $Comment) Set Description of an animated image generating template.
- * @method integer getWidth() Obtain Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method void setWidth(integer $Width) Set Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method integer getHeight() Obtain Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method void setHeight(integer $Height) Set Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
- * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
- * @method string getFormat() Obtain Animated image format.
- * @method void setFormat(string $Format) Set Animated image format.
- * @method integer getFps() Obtain Frame rate.
- * @method void setFps(integer $Fps) Set Frame rate.
- * @method float getQuality() Obtain Image quality.
- * @method void setQuality(float $Quality) Set Image quality.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method integer getFps() Obtain 
+ * @method void setFps(integer $Fps) Set 
+ * @method float getQuality() Obtain 
+ * @method void setQuality(float $Quality) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class AnimatedGraphicsTemplate extends AbstractModel
 {
     /**
-     * @var integer Unique ID of an animated image generating template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Name of an animated image generating template.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Description of an animated image generating template.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var integer Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @var integer Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var string Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
+     * @var string 
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string Animated image format.
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var integer Frame rate.
+     * @var integer 
      */
     public $Fps;
 
     /**
-     * @var float Image quality.
+     * @var float 
      */
     public $Quality;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition Unique ID of an animated image generating template.
-     * @param string $Type Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-     * @param string $Name Name of an animated image generating template.
-     * @param string $Comment Description of an animated image generating template.
-     * @param integer $Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param integer $Height Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param string $ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
-     * @param string $Format Animated image format.
-     * @param integer $Fps Frame rate.
-     * @param float $Quality Image quality.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Definition 
+     * @param string $Type 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param integer $Width 
+     * @param integer $Height 
+     * @param string $ResolutionAdaptive 
+     * @param string $Format 
+     * @param integer $Fps 
+     * @param float $Quality 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

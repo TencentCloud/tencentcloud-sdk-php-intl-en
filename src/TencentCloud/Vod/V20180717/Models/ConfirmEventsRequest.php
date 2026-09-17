@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfirmEvents request structure.
  *
- * @method array getEventHandles() Obtain Event handler, i.e., the EventSet.EventHandle field in the output parameter of the [event notification pull](https://www.tencentcloud.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
- * @method void setEventHandles(array $EventHandles) Set Event handler, i.e., the EventSet.EventHandle field in the output parameter of the [event notification pull](https://www.tencentcloud.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
- * @method string getExtInfo() Obtain Reserved field, used when special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used when special purpose.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getEventHandles() Obtain 
+ * @method void setEventHandles(array $EventHandles) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class ConfirmEventsRequest extends AbstractModel
 {
     /**
-     * @var array Event handler, i.e., the EventSet.EventHandle field in the output parameter of the [event notification pull](https://www.tencentcloud.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
+     * @var array 
      */
     public $EventHandles;
 
     /**
-     * @var string Reserved field, used when special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param array $EventHandles Event handler, i.e., the EventSet.EventHandle field in the output parameter of the [event notification pull](https://www.tencentcloud.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
-     * @param string $ExtInfo Reserved field, used when special purpose.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $EventHandles 
+     * @param string $ExtInfo 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

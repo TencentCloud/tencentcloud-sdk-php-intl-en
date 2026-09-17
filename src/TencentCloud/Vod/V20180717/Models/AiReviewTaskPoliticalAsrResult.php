@@ -18,72 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result for ASR-based recognition of politically sensitive content
+ * 
  *
- * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewPoliticalAsrTaskInput getInput() Obtain Input for ASR-based recognition of politically sensitive content
- * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) Set Input for ASR-based recognition of politically sensitive content
- * @method AiReviewPoliticalAsrTaskOutput getOutput() Obtain Output for ASR-based recognition of politically sensitive content
- * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) Set Output for ASR-based recognition of politically sensitive content
- * @method integer getProgress() Obtain The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
- * @method void setProgress(integer $Progress) Set The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method AiReviewPoliticalAsrTaskInput getInput() Obtain 
+ * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) Set 
+ * @method AiReviewPoliticalAsrTaskOutput getOutput() Obtain 
+ * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
  */
 class AiReviewTaskPoliticalAsrResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var AiReviewPoliticalAsrTaskInput Input for ASR-based recognition of politically sensitive content
+     * @var AiReviewPoliticalAsrTaskInput 
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalAsrTaskOutput Output for ASR-based recognition of politically sensitive content
+     * @var AiReviewPoliticalAsrTaskOutput 
      */
     public $Output;
 
     /**
-     * @var integer The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewPoliticalAsrTaskInput $Input Input for ASR-based recognition of politically sensitive content
-     * @param AiReviewPoliticalAsrTaskOutput $Output Output for ASR-based recognition of politically sensitive content
-     * @param integer $Progress The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param AiReviewPoliticalAsrTaskInput $Input 
+     * @param AiReviewPoliticalAsrTaskOutput $Output 
+     * @param integer $Progress 
      */
     function __construct()
     {

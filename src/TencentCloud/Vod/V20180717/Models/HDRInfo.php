@@ -18,64 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * High dynamic range (HDR) configuration.
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
- * @method void setSwitch(string $Switch) Set Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
- * @method string getType() Obtain High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
- * @method void setType(string $Type) Set High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class HDRInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-     * @param string $Type High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+     * @param string $Switch 
+     * @param string $Type 
      */
     function __construct()
     {

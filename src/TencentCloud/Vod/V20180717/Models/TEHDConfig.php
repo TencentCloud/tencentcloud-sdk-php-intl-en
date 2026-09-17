@@ -18,32 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TESHD parameter configuration.
+ * 
  *
- * @method string getType() Obtain TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
- * @method void setType(string $Type) Set TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
- * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getMaxVideoBitrate() Obtain 
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set 
  */
 class TEHDConfig extends AbstractModel
 {
     /**
-     * @var string TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+     * @var integer 
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
-     * @param integer $MaxVideoBitrate Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+     * @param string $Type 
+     * @param integer $MaxVideoBitrate 
      */
     function __construct()
     {

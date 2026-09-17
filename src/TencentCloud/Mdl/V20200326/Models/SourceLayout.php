@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SourceLayout
  *
- * @method integer getLeftOffset() Obtain 
- * @method void setLeftOffset(integer $LeftOffset) Set 
- * @method integer getRightOffset() Obtain 
- * @method void setRightOffset(integer $RightOffset) Set 
- * @method integer getBottomOffset() Obtain 
- * @method void setBottomOffset(integer $BottomOffset) Set 
+ * @method integer getLeftOffset() Obtain Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+ * @method void setLeftOffset(integer $LeftOffset) Set Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+ * @method integer getRightOffset() Obtain The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+ * @method void setRightOffset(integer $RightOffset) Set The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+ * @method integer getBottomOffset() Obtain Offset percentage of bottom margin, range 0-50
+ * @method void setBottomOffset(integer $BottomOffset) Set Offset percentage of bottom margin, range 0-50
  */
 class SourceLayout extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
      */
     public $LeftOffset;
 
     /**
-     * @var integer 
+     * @var integer The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
      */
     public $RightOffset;
 
     /**
-     * @var integer 
+     * @var integer Offset percentage of bottom margin, range 0-50
      */
     public $BottomOffset;
 
     /**
-     * @param integer $LeftOffset 
-     * @param integer $RightOffset 
-     * @param integer $BottomOffset 
+     * @param integer $LeftOffset Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+     * @param integer $RightOffset The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+     * @param integer $BottomOffset Offset percentage of bottom margin, range 0-50
      */
     function __construct()
     {

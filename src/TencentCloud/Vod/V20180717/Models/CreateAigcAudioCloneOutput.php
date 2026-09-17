@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create AIGC voice clone output information.
+ * 
  *
- * @method string getTaskId() Obtain <p>Task ID.</p>
- * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
- * @method string getState() Obtain <p>Processing status.</p>
- * @method void setState(string $State) Set <p>Processing status.</p>
- * @method string getVoiceId() Obtain <p>voice_id customized by users. Do not return if the task fails.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>voice_id customized by users. Do not return if the task fails.</p>
- * @method string getDemoAudio() Obtain <p>If the audition text is passed in the request body, this parameter returns the audio audition in link format, otherwise this parameter is empty.</p>
- * @method void setDemoAudio(string $DemoAudio) Set <p>If the audition text is passed in the request body, this parameter returns the audio audition in link format, otherwise this parameter is empty.</p>
- * @method string getPayload() Obtain <p>Pass-through parameter passed in this call.</p>
- * @method void setPayload(string $Payload) Set <p>Pass-through parameter passed in this call.</p>
- * @method string getCreatedAt() Obtain <p>Task creation time.</p>
- * @method void setCreatedAt(string $CreatedAt) Set <p>Task creation time.</p>
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getState() Obtain 
+ * @method void setState(string $State) Set 
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
+ * @method string getDemoAudio() Obtain 
+ * @method void setDemoAudio(string $DemoAudio) Set 
+ * @method string getPayload() Obtain 
+ * @method void setPayload(string $Payload) Set 
+ * @method string getCreatedAt() Obtain 
+ * @method void setCreatedAt(string $CreatedAt) Set 
  */
 class CreateAigcAudioCloneOutput extends AbstractModel
 {
     /**
-     * @var string <p>Task ID.</p>
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string <p>Processing status.</p>
+     * @var string 
      */
     public $State;
 
     /**
-     * @var string <p>voice_id customized by users. Do not return if the task fails.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @var string <p>If the audition text is passed in the request body, this parameter returns the audio audition in link format, otherwise this parameter is empty.</p>
+     * @var string 
      */
     public $DemoAudio;
 
     /**
-     * @var string <p>Pass-through parameter passed in this call.</p>
+     * @var string 
      */
     public $Payload;
 
     /**
-     * @var string <p>Task creation time.</p>
+     * @var string 
      */
     public $CreatedAt;
 
     /**
-     * @param string $TaskId <p>Task ID.</p>
-     * @param string $State <p>Processing status.</p>
-     * @param string $VoiceId <p>voice_id customized by users. Do not return if the task fails.</p>
-     * @param string $DemoAudio <p>If the audition text is passed in the request body, this parameter returns the audio audition in link format, otherwise this parameter is empty.</p>
-     * @param string $Payload <p>Pass-through parameter passed in this call.</p>
-     * @param string $CreatedAt <p>Task creation time.</p>
+     * @param string $TaskId 
+     * @param string $State 
+     * @param string $VoiceId 
+     * @param string $DemoAudio 
+     * @param string $Payload 
+     * @param string $CreatedAt 
      */
     function __construct()
     {

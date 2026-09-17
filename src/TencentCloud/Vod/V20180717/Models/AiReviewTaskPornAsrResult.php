@@ -18,72 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result for ASR-based recognition of pornographic content
+ * 
  *
- * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewPornAsrTaskInput getInput() Obtain Input for ASR-based recognition of pornographic content
- * @method void setInput(AiReviewPornAsrTaskInput $Input) Set Input for ASR-based recognition of pornographic content
- * @method AiReviewPornAsrTaskOutput getOutput() Obtain Video moderation involves offensive content in Asr text task output.
- * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set Video moderation involves offensive content in Asr text task output.
- * @method integer getProgress() Obtain The progress of an ASR-based moderation task (pornographic content). Value range: 0-100.
- * @method void setProgress(integer $Progress) Set The progress of an ASR-based moderation task (pornographic content). Value range: 0-100.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method AiReviewPornAsrTaskInput getInput() Obtain 
+ * @method void setInput(AiReviewPornAsrTaskInput $Input) Set 
+ * @method AiReviewPornAsrTaskOutput getOutput() Obtain 
+ * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
  */
 class AiReviewTaskPornAsrResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var AiReviewPornAsrTaskInput Input for ASR-based recognition of pornographic content
+     * @var AiReviewPornAsrTaskInput 
      */
     public $Input;
 
     /**
-     * @var AiReviewPornAsrTaskOutput Video moderation involves offensive content in Asr text task output.
+     * @var AiReviewPornAsrTaskOutput 
      */
     public $Output;
 
     /**
-     * @var integer The progress of an ASR-based moderation task (pornographic content). Value range: 0-100.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewPornAsrTaskInput $Input Input for ASR-based recognition of pornographic content
-     * @param AiReviewPornAsrTaskOutput $Output Video moderation involves offensive content in Asr text task output.
-     * @param integer $Progress The progress of an ASR-based moderation task (pornographic content). Value range: 0-100.
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param AiReviewPornAsrTaskInput $Input 
+     * @param AiReviewPornAsrTaskOutput $Output 
+     * @param integer $Progress 
      */
     function __construct()
     {

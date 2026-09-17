@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MPS task template description.
+ * MPS task template detail.
  *
  * @method string getTaskType() Obtain MPS template type. Valid values:
 <li>Transcode: transcoding template.</li>

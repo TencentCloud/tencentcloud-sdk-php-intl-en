@@ -18,80 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video segment containing ASR-detected suspicious content
+ * 
  *
- * @method float getStartTimeOffset() Obtain Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getEndTimeOffset() Obtain End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getConfidence() Obtain Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConfidence(float $Confidence) Set Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSuggestion() Obtain Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method array getKeywordSet() Obtain List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKeywordSet(array $KeywordSet) Set List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method array getKeywordSet() Obtain 
+ * @method void setKeywordSet(array $KeywordSet) Set 
  */
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var array List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $KeywordSet;
 
     /**
-     * @param float $StartTimeOffset Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $EndTimeOffset End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $Confidence Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Suggestion Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param array $KeywordSet List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param array $KeywordSet 
      */
     function __construct()
     {

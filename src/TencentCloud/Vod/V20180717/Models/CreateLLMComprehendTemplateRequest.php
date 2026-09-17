@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLLMComprehendTemplate request structure.
  *
- * @method string getLevel() Obtain <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
- * @method void setLevel(string $Level) Set <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
- * @method string getName() Obtain <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
- * @method void setName(string $Name) Set <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
- * @method string getComment() Obtain <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
- * @method void setComment(string $Comment) Set <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
- * @method LLMComprehendSummary getSummary() Obtain <p>Segment summary parsing configuration</p>
- * @method void setSummary(LLMComprehendSummary $Summary) Set <p>Segment summary parsing configuration</p>
- * @method LLMComprehendAsr getAsr() Obtain <p>Text transcription parsing configuration</p>
- * @method void setAsr(LLMComprehendAsr $Asr) Set <p>Text transcription parsing configuration</p>
- * @method LLMComprehendFaceRecognition getFaceRecognition() Obtain <p>Face identification configuration</p>
- * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) Set <p>Face identification configuration</p>
+ * @method string getLevel() Obtain 
+ * @method void setLevel(string $Level) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method LLMComprehendSummary getSummary() Obtain 
+ * @method void setSummary(LLMComprehendSummary $Summary) Set 
+ * @method LLMComprehendAsr getAsr() Obtain 
+ * @method void setAsr(LLMComprehendAsr $Asr) Set 
+ * @method LLMComprehendFaceRecognition getFaceRecognition() Obtain 
+ * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) Set 
  */
 class CreateLLMComprehendTemplateRequest extends AbstractModel
 {
     /**
-     * @var string <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+     * @var string 
      */
     public $Level;
 
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var LLMComprehendSummary <p>Segment summary parsing configuration</p>
+     * @var LLMComprehendSummary 
      */
     public $Summary;
 
     /**
-     * @var LLMComprehendAsr <p>Text transcription parsing configuration</p>
+     * @var LLMComprehendAsr 
      */
     public $Asr;
 
     /**
-     * @var LLMComprehendFaceRecognition <p>Face identification configuration</p>
+     * @var LLMComprehendFaceRecognition 
      */
     public $FaceRecognition;
 
     /**
-     * @param string $Level <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
-     * @param string $Name <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
-     * @param string $Comment <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
-     * @param LLMComprehendSummary $Summary <p>Segment summary parsing configuration</p>
-     * @param LLMComprehendAsr $Asr <p>Text transcription parsing configuration</p>
-     * @param LLMComprehendFaceRecognition $FaceRecognition <p>Face identification configuration</p>
+     * @param string $Level 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param LLMComprehendSummary $Summary 
+     * @param LLMComprehendAsr $Asr 
+     * @param LLMComprehendFaceRecognition $FaceRecognition 
      */
     function __construct()
     {

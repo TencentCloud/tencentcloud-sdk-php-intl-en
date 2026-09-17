@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextToSpeechAsync request structure.
  *
- * @method string getText() Obtain <p>Text to convert to speech.</p>
- * @method void setText(string $Text) Set <p>Text to convert to speech.</p>
- * @method string getVoiceId() Obtain <p>Voice ID.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
- * @method string getSubAppId() Obtain <p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
- * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
- * @method string getLanguageBoost() Obtain <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
- * @method void setLanguageBoost(string $LanguageBoost) Set <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
- * @method string getExtParam() Obtain <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from the voice_setting of the synchronous API. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silent segments.</li></ul></li></ul>
- * @method void setExtParam(string $ExtParam) Set <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from the voice_setting of the synchronous API. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silent segments.</li></ul></li></ul>
- * @method TextToSpeechAsyncOutputOption getOutput() Obtain <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio url.</p>
- * @method void setOutput(TextToSpeechAsyncOutputOption $Output) Set <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio url.</p>
- * @method string getSessionContext() Obtain <p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
- * @method string getSessionId() Obtain <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
- * @method void setSessionId(string $SessionId) Set <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+ * @method string getText() Obtain 
+ * @method void setText(string $Text) Set 
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
+ * @method string getSubAppId() Obtain 
+ * @method void setSubAppId(string $SubAppId) Set 
+ * @method string getLanguageBoost() Obtain 
+ * @method void setLanguageBoost(string $LanguageBoost) Set 
+ * @method string getExtParam() Obtain 
+ * @method void setExtParam(string $ExtParam) Set 
+ * @method TextToSpeechAsyncOutputOption getOutput() Obtain 
+ * @method void setOutput(TextToSpeechAsyncOutputOption $Output) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
  */
 class TextToSpeechAsyncRequest extends AbstractModel
 {
     /**
-     * @var string <p>Text to convert to speech.</p>
+     * @var string 
      */
     public $Text;
 
     /**
-     * @var string <p>Voice ID.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @var string <p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * @var string 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+     * @var string 
      */
     public $LanguageBoost;
 
     /**
-     * @var string <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from the voice_setting of the synchronous API. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silent segments.</li></ul></li></ul>
+     * @var string 
      */
     public $ExtParam;
 
     /**
-     * @var TextToSpeechAsyncOutputOption <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio url.</p>
+     * @var TextToSpeechAsyncOutputOption 
      */
     public $Output;
 
     /**
-     * @var string <p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var string <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @param string $Text <p>Text to convert to speech.</p>
-     * @param string $VoiceId <p>Voice ID.</p>
-     * @param string $SubAppId <p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
-     * @param string $LanguageBoost <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
-     * @param string $ExtParam <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from the voice_setting of the synchronous API. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silent segments.</li></ul></li></ul>
-     * @param TextToSpeechAsyncOutputOption $Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio url.</p>
-     * @param string $SessionContext <p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
-     * @param string $SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+     * @param string $Text 
+     * @param string $VoiceId 
+     * @param string $SubAppId 
+     * @param string $LanguageBoost 
+     * @param string $ExtParam 
+     * @param TextToSpeechAsyncOutputOption $Output 
+     * @param string $SessionContext 
+     * @param string $SessionId 
      */
     function __construct()
     {

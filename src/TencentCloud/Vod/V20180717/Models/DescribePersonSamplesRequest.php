@@ -20,86 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getType() Obtain Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
- * @method void setType(string $Type) Set Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
- * @method array getPersonIds() Obtain Material ID, with an array length limit of 100.
- * @method void setPersonIds(array $PersonIds) Set Material ID, with an array length limit of 100.
- * @method array getNames() Obtain Material name. Array length limit: 20.
- * @method void setNames(array $Names) Set Material name. Array length limit: 20.
- * @method array getTags() Obtain Material tag. Array length limit: 20.
- * @method void setTags(array $Tags) Set Material tag. Array length limit: 20.
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. Default value: 100. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 100. Maximum value: 100.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method array getPersonIds() Obtain 
+ * @method void setPersonIds(array $PersonIds) Set 
+ * @method array getNames() Obtain 
+ * @method void setNames(array $Names) Set 
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var array Material ID, with an array length limit of 100.
+     * @var array 
      */
     public $PersonIds;
 
     /**
-     * @var array Material name. Array length limit: 20.
+     * @var array 
      */
     public $Names;
 
     /**
-     * @var array Material tag. Array length limit: 20.
+     * @var array 
      */
     public $Tags;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. Default value: 100. Maximum value: 100.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Type Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
-     * @param array $PersonIds Material ID, with an array length limit of 100.
-     * @param array $Names Material name. Array length limit: 20.
-     * @param array $Tags Material tag. Array length limit: 20.
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. Default value: 100. Maximum value: 100.
+     * @param integer $SubAppId 
+     * @param string $Type 
+     * @param array $PersonIds 
+     * @param array $Names 
+     * @param array $Tags 
+     * @param integer $Offset 
+     * @param integer $Limit 
      */
     function __construct()
     {

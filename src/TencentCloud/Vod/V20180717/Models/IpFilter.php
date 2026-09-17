@@ -18,44 +18,64 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP blocklist/allowlist configuration. This is disabled by default.
+ * 
  *
- * @method string getSwitch() Obtain IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method string getFilterType() Obtain IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
- * @method void setFilterType(string $FilterType) Set IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
- * @method array getFilters() Obtain IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
- * @method void setFilters(array $Filters) Set IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
- * @method array getFilterRules() Obtain IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
- * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+ * @method string getSwitch() Obtain IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getFilterType() Obtain IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
+ * @method void setFilterType(string $FilterType) Set IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
+ * @method array getFilters() Obtain IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
+ * @method void setFilters(array $Filters) Set IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
+ * @method array getFilterRules() Obtain 
+ * @method void setFilterRules(array $FilterRules) Set 
  */
 class IpFilter extends AbstractModel
 {
     /**
-     * @var string IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var string IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+     * @var string IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
      */
     public $FilterType;
 
     /**
-     * @var array IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+     * @var array IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public $Filters;
 
     /**
-     * @var array IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+     * @var array 
      */
     public $FilterRules;
 
     /**
-     * @param string $Switch IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param string $FilterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
-     * @param array $Filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
-     * @param array $FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+     * @param string $Switch IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $FilterType IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
+     * @param array $Filters IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
+     * @param array $FilterRules 
      */
     function __construct()
     {

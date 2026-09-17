@@ -18,64 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output for media quality enhance task
+ * 
  *
- * @method string getFileType() Obtain File types such as mp4, flv, etc.
- * @method void setFileType(string $FileType) Set File types such as mp4, flv, etc.
- * @method string getFileUrl() Obtain Media file playback address.
- * @method void setFileUrl(string $FileUrl) Set Media file playback address.
- * @method string getFileId() Obtain Media file ID.
- * @method void setFileId(string $FileId) Set Media file ID.
- * @method string getMediaName() Obtain Output file name, up to 64 characters. By default, the generated file name is specified by the system.
- * @method void setMediaName(string $MediaName) Set Output file name, up to 64 characters. By default, the generated file name is specified by the system.
- * @method integer getClassId() Obtain Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
- * @method void setClassId(integer $ClassId) Set Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
- * @method string getExpireTime() Obtain The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setExpireTime(string $ExpireTime) Set The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getFileType() Obtain 
+ * @method void setFileType(string $FileType) Set 
+ * @method string getFileUrl() Obtain 
+ * @method void setFileUrl(string $FileUrl) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getMediaName() Obtain 
+ * @method void setMediaName(string $MediaName) Set 
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
  */
 class QualityEnhanceTaskOutput extends AbstractModel
 {
     /**
-     * @var string File types such as mp4, flv, etc.
+     * @var string 
      */
     public $FileType;
 
     /**
-     * @var string Media file playback address.
+     * @var string 
      */
     public $FileUrl;
 
     /**
-     * @var string Media file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Output file name, up to 64 characters. By default, the generated file name is specified by the system.
+     * @var string 
      */
     public $MediaName;
 
     /**
-     * @var integer Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var string The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $ExpireTime;
 
     /**
-     * @param string $FileType File types such as mp4, flv, etc.
-     * @param string $FileUrl Media file playback address.
-     * @param string $FileId Media file ID.
-     * @param string $MediaName Output file name, up to 64 characters. By default, the generated file name is specified by the system.
-     * @param integer $ClassId Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
-     * @param string $ExpireTime The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $FileType 
+     * @param string $FileUrl 
+     * @param string $FileId 
+     * @param string $MediaName 
+     * @param integer $ClassId 
+     * @param string $ExpireTime 
      */
     function __construct()
     {

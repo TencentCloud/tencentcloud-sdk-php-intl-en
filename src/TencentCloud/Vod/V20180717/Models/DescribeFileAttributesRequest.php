@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileAttributes request structure.
  *
- * @method string getFileId() Obtain media file ID
- * @method void setFileId(string $FileId) Set media file ID
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
- * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
- * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
- * @method string getExtInfo() Obtain Reserved field, used for special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purpose.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class DescribeFileAttributesRequest extends AbstractModel
 {
     /**
-     * @var string media file ID
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string Reserved field, used for special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param string $FileId media file ID
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
-     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
-     * @param string $ExtInfo Reserved field, used for special purpose.
+     * @param string $FileId 
+     * @param integer $SubAppId 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

@@ -18,88 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of cover generating task
+ * 
  *
- * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
- * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method CoverBySnapshotTaskInput getInput() Obtain Input of cover generating task.
- * @method void setInput(CoverBySnapshotTaskInput $Input) Set Input of cover generating task.
- * @method CoverBySnapshotTaskOutput getOutput() Obtain Output of cover generating task.
- * @method void setOutput(CoverBySnapshotTaskOutput $Output) Set Output of cover generating task.
- * @method integer getProgress() Obtain The progress of a video screenshot (thumbnail) task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set The progress of a video screenshot (thumbnail) task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method string getFinishTime() Obtain Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setFinishTime(string $FinishTime) Set Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method CoverBySnapshotTaskInput getInput() Obtain 
+ * @method void setInput(CoverBySnapshotTaskInput $Input) Set 
+ * @method CoverBySnapshotTaskOutput getOutput() Obtain 
+ * @method void setOutput(CoverBySnapshotTaskOutput $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
  */
 class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var CoverBySnapshotTaskInput Input of cover generating task.
+     * @var CoverBySnapshotTaskInput 
      */
     public $Input;
 
     /**
-     * @var CoverBySnapshotTaskOutput Output of cover generating task.
+     * @var CoverBySnapshotTaskOutput 
      */
     public $Output;
 
     /**
-     * @var integer The progress of a video screenshot (thumbnail) task. Value range: 0-100.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var string The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $FinishTime;
 
     /**
-     * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverBySnapshotTaskInput $Input Input of cover generating task.
-     * @param CoverBySnapshotTaskOutput $Output Output of cover generating task.
-     * @param integer $Progress The progress of a video screenshot (thumbnail) task. Value range: 0-100.
-     * @param string $BeginProcessTime The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param string $FinishTime Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param CoverBySnapshotTaskInput $Input 
+     * @param CoverBySnapshotTaskOutput $Output 
+     * @param integer $Progress 
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
      */
     function __construct()
     {

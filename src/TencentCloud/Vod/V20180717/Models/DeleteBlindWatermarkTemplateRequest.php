@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteBlindWatermarkTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique identifier of the digital watermark template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of the digital watermark template.
- * @method integer getSubAppId() Obtain VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
- * @method void setSubAppId(integer $SubAppId) Set VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class DeleteBlindWatermarkTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of the digital watermark template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param integer $Definition Unique identifier of the digital watermark template.
-     * @param integer $SubAppId VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
+     * @param integer $Definition 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

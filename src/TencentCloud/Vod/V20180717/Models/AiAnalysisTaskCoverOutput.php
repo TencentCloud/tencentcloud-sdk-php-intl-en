@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of intelligent cover generating
+ * 
  *
- * @method array getCoverSet() Obtain List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
- * @method void setCoverSet(array $CoverSet) Set List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
- * @method string getCoverSetFileUrl() Obtain URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
- * @method void setCoverSetFileUrl(string $CoverSetFileUrl) Set URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
- * @method string getCoverSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
- * @method void setCoverSetFileUrlExpireTime(string $CoverSetFileUrlExpireTime) Set Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method array getCoverSet() Obtain 
+ * @method void setCoverSet(array $CoverSet) Set 
+ * @method string getCoverSetFileUrl() Obtain 
+ * @method void setCoverSetFileUrl(string $CoverSetFileUrl) Set 
+ * @method string getCoverSetFileUrlExpireTime() Obtain 
+ * @method void setCoverSetFileUrlExpireTime(string $CoverSetFileUrlExpireTime) Set 
  */
 class AiAnalysisTaskCoverOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+     * @var array 
      */
     public $CoverSet;
 
     /**
-     * @var string URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+     * @var string 
      */
     public $CoverSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @var string 
      */
     public $CoverSetFileUrlExpireTime;
 
     /**
-     * @param array $CoverSet List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
-     * @param string $CoverSetFileUrl URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
-     * @param string $CoverSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param array $CoverSet 
+     * @param string $CoverSetFileUrl 
+     * @param string $CoverSetFileUrlExpireTime 
      */
     function __construct()
     {

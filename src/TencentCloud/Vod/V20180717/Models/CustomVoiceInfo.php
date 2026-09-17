@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom tone information.
+ * 
  *
- * @method string getVoiceId() Obtain <p>Voice ID.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
- * @method string getVoiceInfo() Obtain <p>Tone information.</p>
- * @method void setVoiceInfo(string $VoiceInfo) Set <p>Tone information.</p>
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
+ * @method string getVoiceInfo() Obtain 
+ * @method void setVoiceInfo(string $VoiceInfo) Set 
  */
 class CustomVoiceInfo extends AbstractModel
 {
     /**
-     * @var string <p>Voice ID.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @var string <p>Tone information.</p>
+     * @var string 
      */
     public $VoiceInfo;
 
     /**
-     * @param string $VoiceId <p>Voice ID.</p>
-     * @param string $VoiceInfo <p>Tone information.</p>
+     * @param string $VoiceId 
+     * @param string $VoiceInfo 
      */
     function __construct()
     {

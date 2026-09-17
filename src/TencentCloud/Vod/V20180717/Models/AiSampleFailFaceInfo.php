@@ -18,44 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based sample management - face information failed to be processed.
+ * 
  *
- * @method integer getIndex() Obtain It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
- * @method void setIndex(integer $Index) Set It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
- * @method integer getErrCode() Obtain Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
- * @method void setErrCode(integer $ErrCode) Set Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
+ * @method integer getIndex() Obtain 
+ * @method void setIndex(integer $Index) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
  */
 class AiSampleFailFaceInfo extends AbstractModel
 {
     /**
-     * @var integer It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+     * @var integer 
      */
     public $Index;
 
     /**
-     * @var integer Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @param integer $Index It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
-     * @param integer $ErrCode Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
-     * @param string $Message Error message.
+     * @param integer $Index 
+     * @param integer $ErrCode 
+     * @param string $Message 
      */
     function __construct()
     {

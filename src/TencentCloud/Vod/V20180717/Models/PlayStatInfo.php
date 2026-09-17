@@ -18,52 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The playback statistics.
+ * 
  *
- * @method string getTime() Obtain The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
- * @method void setTime(string $Time) Set The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
- * @method string getFileId() Obtain The ID of the media file.
- * @method void setFileId(string $FileId) Set The ID of the media file.
- * @method integer getPlayTimes() Obtain The playback times.
- * @method void setPlayTimes(integer $PlayTimes) Set The playback times.
- * @method integer getTraffic() Obtain The traffic (in bytes) consumed for playback.
- * @method void setTraffic(integer $Traffic) Set The traffic (in bytes) consumed for playback.
+ * @method string getTime() Obtain 
+ * @method void setTime(string $Time) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getPlayTimes() Obtain 
+ * @method void setPlayTimes(integer $PlayTimes) Set 
+ * @method integer getTraffic() Obtain 
+ * @method void setTraffic(integer $Traffic) Set 
  */
 class PlayStatInfo extends AbstractModel
 {
     /**
-     * @var string The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+     * @var string 
      */
     public $Time;
 
     /**
-     * @var string The ID of the media file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer The playback times.
+     * @var integer 
      */
     public $PlayTimes;
 
     /**
-     * @var integer The traffic (in bytes) consumed for playback.
+     * @var integer 
      */
     public $Traffic;
 
     /**
-     * @param string $Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
-     * @param string $FileId The ID of the media file.
-     * @param integer $PlayTimes The playback times.
-     * @param integer $Traffic The traffic (in bytes) consumed for playback.
+     * @param string $Time 
+     * @param string $FileId 
+     * @param integer $PlayTimes 
+     * @param integer $Traffic 
      */
     function __construct()
     {

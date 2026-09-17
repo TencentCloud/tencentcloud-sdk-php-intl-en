@@ -18,124 +18,132 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a transcoding to adaptive bitrate streaming template
+ * 
  *
- * @method integer getDefinition() Obtain <p>Unique ID of the adaptive bitrate streaming template.</p>
- * @method void setDefinition(integer $Definition) Set <p>Unique ID of the adaptive bitrate streaming template.</p>
- * @method string getType() Obtain <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
- * @method void setType(string $Type) Set <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
- * @method string getName() Obtain <p>Adaptive bitrate streaming template name.</p>
- * @method void setName(string $Name) Set <p>Adaptive bitrate streaming template name.</p>
- * @method string getComment() Obtain <p>Adaptive bitrate streaming template description.</p>
- * @method void setComment(string $Comment) Set <p>Adaptive bitrate streaming template description.</p>
- * @method string getFormat() Obtain <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
- * @method void setFormat(string $Format) Set <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
- * @method string getDrmType() Obtain <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
- * @method void setDrmType(string $DrmType) Set <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
- * @method string getDrmKeyProvider() Obtain <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
- * @method void setDrmKeyProvider(string $DrmKeyProvider) Set <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
- * @method string getDrmEncryptType() Obtain <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
- * @method void setDrmEncryptType(string $DrmEncryptType) Set <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
- * @method array getStreamInfos() Obtain <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
- * @method void setStreamInfos(array $StreamInfos) Set <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
- * @method integer getDisableHigherVideoBitrate() Obtain <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
- * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
- * @method integer getDisableHigherVideoResolution() Obtain <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
- * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
- * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method string getUpdateTime() Obtain <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method void setUpdateTime(string $UpdateTime) Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method string getSegmentType() Obtain <p>Segment type. Valid only when Format is HLS.</p>
- * @method void setSegmentType(string $SegmentType) Set <p>Segment type. Valid only when Format is HLS.</p>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method string getDrmType() Obtain 
+ * @method void setDrmType(string $DrmType) Set 
+ * @method string getDrmKeyProvider() Obtain 
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) Set 
+ * @method string getDrmEncryptType() Obtain 
+ * @method void setDrmEncryptType(string $DrmEncryptType) Set 
+ * @method array getStreamInfos() Obtain 
+ * @method void setStreamInfos(array $StreamInfos) Set 
+ * @method integer getDisableHigherVideoBitrate() Obtain 
+ * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set 
+ * @method integer getDisableHigherVideoResolution() Obtain 
+ * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method string getSegmentType() Obtain 
+ * @method void setSegmentType(string $SegmentType) Set 
+ * @method integer getSegmentDuration() Obtain 
+ * @method void setSegmentDuration(integer $SegmentDuration) Set 
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
     /**
-     * @var integer <p>Unique ID of the adaptive bitrate streaming template.</p>
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string <p>Adaptive bitrate streaming template name.</p>
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string <p>Adaptive bitrate streaming template description.</p>
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var string <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
+     * @var string 
      */
     public $DrmType;
 
     /**
-     * @var string <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+     * @var string 
      */
     public $DrmKeyProvider;
 
     /**
-     * @var string <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
+     * @var string 
      */
     public $DrmEncryptType;
 
     /**
-     * @var array <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
+     * @var array 
      */
     public $StreamInfos;
 
     /**
-     * @var integer <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+     * @var integer 
      */
     public $DisableHigherVideoBitrate;
 
     /**
-     * @var integer <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+     * @var integer 
      */
     public $DisableHigherVideoResolution;
 
     /**
-     * @var string <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @var string <p>Segment type. Valid only when Format is HLS.</p>
+     * @var string 
      */
     public $SegmentType;
 
     /**
-     * @param integer $Definition <p>Unique ID of the adaptive bitrate streaming template.</p>
-     * @param string $Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
-     * @param string $Name <p>Adaptive bitrate streaming template name.</p>
-     * @param string $Comment <p>Adaptive bitrate streaming template description.</p>
-     * @param string $Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
-     * @param string $DrmType <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
-     * @param string $DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
-     * @param string $DrmEncryptType <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
-     * @param array $StreamInfos <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
-     * @param integer $DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-     * @param integer $DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-     * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param string $UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param string $SegmentType <p>Segment type. Valid only when Format is HLS.</p>
+     * @var integer 
+     */
+    public $SegmentDuration;
+
+    /**
+     * @param integer $Definition 
+     * @param string $Type 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param string $Format 
+     * @param string $DrmType 
+     * @param string $DrmKeyProvider 
+     * @param string $DrmEncryptType 
+     * @param array $StreamInfos 
+     * @param integer $DisableHigherVideoBitrate 
+     * @param integer $DisableHigherVideoResolution 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
+     * @param string $SegmentType 
+     * @param integer $SegmentDuration 
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
             $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("SegmentDuration",$param) and $param["SegmentDuration"] !== null) {
+            $this->SegmentDuration = $param["SegmentDuration"];
         }
     }
 }

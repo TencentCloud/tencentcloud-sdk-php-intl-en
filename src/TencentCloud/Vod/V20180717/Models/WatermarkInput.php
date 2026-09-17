@@ -18,84 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Watermark parameter type of video processing task
+ * 
  *
- * @method integer getDefinition() Obtain Watermarking template ID.
- * @method void setDefinition(integer $Definition) Set Watermarking template ID.
- * @method string getTextContent() Obtain Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
- * @method void setTextContent(string $TextContent) Set Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
- * @method string getSvgContent() Obtain SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
- * @method void setSvgContent(string $SvgContent) Set SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
- * @method float getStartTimeOffset() Obtain Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
- * @method float getEndTimeOffset() Obtain End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getTextContent() Obtain 
+ * @method void setTextContent(string $TextContent) Set 
+ * @method string getSvgContent() Obtain 
+ * @method void setSvgContent(string $SvgContent) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
  */
 class WatermarkInput extends AbstractModel
 {
     /**
-     * @var integer Watermarking template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
+     * @var string 
      */
     public $TextContent;
 
     /**
-     * @var string SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
+     * @var string 
      */
     public $SvgContent;
 
     /**
-     * @var float Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @param integer $Definition Watermarking template ID.
-     * @param string $TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
-     * @param string $SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
-     * @param float $StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
-     * @param float $EndTimeOffset End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+     * @param integer $Definition 
+     * @param string $TextContent 
+     * @param string $SvgContent 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
      */
     function __construct()
     {

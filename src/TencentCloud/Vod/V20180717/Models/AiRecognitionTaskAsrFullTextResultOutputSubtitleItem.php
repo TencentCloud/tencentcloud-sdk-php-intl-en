@@ -18,68 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subtitle information.
+ * 
  *
- * @method string getId() Obtain Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
- * @method void setId(string $Id) Set Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
- * @method string getName() Obtain Media Asset Subtitle Name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
- * @method void setName(string $Name) Set Media Asset Subtitle Name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
- * @method string getLanguage() Obtain Subtitle language.
- * @method void setLanguage(string $Language) Set Subtitle language.
- * @method string getFormat() Obtain The format of the subtitle files. Valid values:
-<li>vtt</li>
-<li>srt</li>
- * @method void setFormat(string $Format) Set The format of the subtitle files. Valid values:
-<li>vtt</li>
-<li>srt</li>
- * @method string getUrl() Obtain The URL of a subtitle file.
- * @method void setUrl(string $Url) Set The URL of a subtitle file.
+ * @method string getId() Obtain 
+ * @method void setId(string $Id) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getLanguage() Obtain 
+ * @method void setLanguage(string $Language) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
 {
     /**
-     * @var string Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+     * @var string 
      */
     public $Id;
 
     /**
-     * @var string Media Asset Subtitle Name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Subtitle language.
+     * @var string 
      */
     public $Language;
 
     /**
-     * @var string The format of the subtitle files. Valid values:
-<li>vtt</li>
-<li>srt</li>
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var string The URL of a subtitle file.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param string $Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
-     * @param string $Name Media Asset Subtitle Name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
-     * @param string $Language Subtitle language.
-     * @param string $Format The format of the subtitle files. Valid values:
-<li>vtt</li>
-<li>srt</li>
-     * @param string $Url The URL of a subtitle file.
+     * @param string $Id 
+     * @param string $Name 
+     * @param string $Language 
+     * @param string $Format 
+     * @param string $Url 
      */
     function __construct()
     {

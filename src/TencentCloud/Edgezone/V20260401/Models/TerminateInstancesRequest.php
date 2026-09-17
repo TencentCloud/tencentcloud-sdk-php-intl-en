@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateInstances request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID list. Maximum number of IDs: 100.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. Maximum number of IDs: 100.
+ * @method array getInstanceIds() Obtain <p>Instance ID list. Maximum number of IDs: 100.</p>
+ * @method void setInstanceIds(array $InstanceIds) Set <p>Instance ID list. Maximum number of IDs: 100.</p>
  */
 class TerminateInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID list. Maximum number of IDs: 100.
+     * @var array <p>Instance ID list. Maximum number of IDs: 100.</p>
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds Instance ID list. Maximum number of IDs: 100.
+     * @param array $InstanceIds <p>Instance ID list. Maximum number of IDs: 100.</p>
      */
     function __construct()
     {

@@ -18,36 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Domain name HTTPS acceleration configuration. This is disabled by default.
+ * 
  *
- * @method string getSwitch() Obtain https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method string getHttp2() Obtain http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setHttp2(string $Http2) Set http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method CDNCertInfo getCertInfo() Obtain Cert configuration message.
- * @method void setCertInfo(CDNCertInfo $CertInfo) Set Cert configuration message.
+ * @method string getSwitch() Obtain https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getHttp2() Obtain http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setHttp2(string $Http2) Set http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method CDNCertInfo getCertInfo() Obtain 
+ * @method void setCertInfo(CDNCertInfo $CertInfo) Set 
  */
 class Https extends AbstractModel
 {
     /**
-     * @var string https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var string http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Http2;
 
     /**
-     * @var CDNCertInfo Cert configuration message.
+     * @var CDNCertInfo 
      */
     public $CertInfo;
 
     /**
-     * @param string $Switch https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param string $Http2 http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param CDNCertInfo $CertInfo Cert configuration message.
+     * @param string $Switch https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $Http2 http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param CDNCertInfo $CertInfo 
      */
     function __construct()
     {

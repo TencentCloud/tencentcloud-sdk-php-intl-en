@@ -20,82 +20,100 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances request structure.
  *
- * @method string getZone() Obtain Availability zone code, such as ap-guangzhou-1.
- * @method void setZone(string $Zone) Set Availability zone code, such as ap-guangzhou-1.
- * @method string getInstanceType() Obtain Model specifications, such as BMS5.MEDIUM8.
- * @method void setInstanceType(string $InstanceType) Set Model specifications, such as BMS5.MEDIUM8.
- * @method string getInstanceName() Obtain Instance name.
- * @method void setInstanceName(string $InstanceName) Set Instance name.
- * @method string getPrivateNetworkId() Obtain Private network instance ID in the format of net-xxx.
- * @method void setPrivateNetworkId(string $PrivateNetworkId) Set Private network instance ID in the format of net-xxx.
- * @method string getPublicNetworkId() Obtain Public network instance ID, in the format of net-xxx.
- * @method void setPublicNetworkId(string $PublicNetworkId) Set Public network instance ID, in the format of net-xxx.
- * @method string getImageId() Obtain Image ID, for example img-centos-7.9.
- * @method void setImageId(string $ImageId) Set Image ID, for example img-centos-7.9.
- * @method integer getInstanceCount() Obtain Specify the quantity. Default is 1. Maximum is 50.
- * @method void setInstanceCount(integer $InstanceCount) Set Specify the quantity. Default is 1. Maximum is 50.
- * @method string getVersionNumber() Obtain Image version number. Only public images have the concept of version.
- * @method void setVersionNumber(string $VersionNumber) Set Image version number. Only public images have the concept of version.
- * @method boolean getEnableIpv6() Obtain Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.
- * @method void setEnableIpv6(boolean $EnableIpv6) Set Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.
+ * @method string getZone() Obtain <p>Availability zone code, such as ap-guangzhou-1.</p>
+ * @method void setZone(string $Zone) Set <p>Availability zone code, such as ap-guangzhou-1.</p>
+ * @method string getInstanceType() Obtain <p>Model specifications, such as BMS5.MEDIUM8.</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Model specifications, such as BMS5.MEDIUM8.</p>
+ * @method string getPrivateNetworkId() Obtain <p>Private network instance ID in the format of net-xxx.</p>
+ * @method void setPrivateNetworkId(string $PrivateNetworkId) Set <p>Private network instance ID in the format of net-xxx.</p>
+ * @method string getPublicNetworkId() Obtain <p>Public network instance ID, in the format of net-xxx.</p>
+ * @method void setPublicNetworkId(string $PublicNetworkId) Set <p>Public network instance ID, in the format of net-xxx.</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method string getImageId() Obtain <p>Image ID, for example img-centos-7.9.</p>
+ * @method void setImageId(string $ImageId) Set <p>Image ID, for example img-centos-7.9.</p>
+ * @method integer getInstanceCount() Obtain <p>Specify the quantity. Default is 1. Maximum is 50.</p>
+ * @method void setInstanceCount(integer $InstanceCount) Set <p>Specify the quantity. Default is 1. Maximum is 50.</p>
+ * @method string getPassword() Obtain <p>Login password. Either it or SSHKey is required.</p>
+ * @method void setPassword(string $Password) Set <p>Login password. Either it or SSHKey is required.</p>
+ * @method string getSSHKey() Obtain <p>Public key string of the SSH key. Either this parameter or Password must be specified.</p>
+ * @method void setSSHKey(string $SSHKey) Set <p>Public key string of the SSH key. Either this parameter or Password must be specified.</p>
+ * @method string getVersionNumber() Obtain <p>Image version number. Only public images have the concept of version.</p>
+ * @method void setVersionNumber(string $VersionNumber) Set <p>Image version number. Only public images have the concept of version.</p>
+ * @method boolean getEnableIpv6() Obtain <p>Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.</p>
+ * @method void setEnableIpv6(boolean $EnableIpv6) Set <p>Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.</p>
  */
 class CreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Availability zone code, such as ap-guangzhou-1.
+     * @var string <p>Availability zone code, such as ap-guangzhou-1.</p>
      */
     public $Zone;
 
     /**
-     * @var string Model specifications, such as BMS5.MEDIUM8.
+     * @var string <p>Model specifications, such as BMS5.MEDIUM8.</p>
      */
     public $InstanceType;
 
     /**
-     * @var string Instance name.
-     */
-    public $InstanceName;
-
-    /**
-     * @var string Private network instance ID in the format of net-xxx.
+     * @var string <p>Private network instance ID in the format of net-xxx.</p>
      */
     public $PrivateNetworkId;
 
     /**
-     * @var string Public network instance ID, in the format of net-xxx.
+     * @var string <p>Public network instance ID, in the format of net-xxx.</p>
      */
     public $PublicNetworkId;
 
     /**
-     * @var string Image ID, for example img-centos-7.9.
+     * @var string <p>Instance name.</p>
+     */
+    public $InstanceName;
+
+    /**
+     * @var string <p>Image ID, for example img-centos-7.9.</p>
      */
     public $ImageId;
 
     /**
-     * @var integer Specify the quantity. Default is 1. Maximum is 50.
+     * @var integer <p>Specify the quantity. Default is 1. Maximum is 50.</p>
      */
     public $InstanceCount;
 
     /**
-     * @var string Image version number. Only public images have the concept of version.
+     * @var string <p>Login password. Either it or SSHKey is required.</p>
+     */
+    public $Password;
+
+    /**
+     * @var string <p>Public key string of the SSH key. Either this parameter or Password must be specified.</p>
+     */
+    public $SSHKey;
+
+    /**
+     * @var string <p>Image version number. Only public images have the concept of version.</p>
+     * @deprecated
      */
     public $VersionNumber;
 
     /**
-     * @var boolean Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.
+     * @var boolean <p>Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.</p>
+     * @deprecated
      */
     public $EnableIpv6;
 
     /**
-     * @param string $Zone Availability zone code, such as ap-guangzhou-1.
-     * @param string $InstanceType Model specifications, such as BMS5.MEDIUM8.
-     * @param string $InstanceName Instance name.
-     * @param string $PrivateNetworkId Private network instance ID in the format of net-xxx.
-     * @param string $PublicNetworkId Public network instance ID, in the format of net-xxx.
-     * @param string $ImageId Image ID, for example img-centos-7.9.
-     * @param integer $InstanceCount Specify the quantity. Default is 1. Maximum is 50.
-     * @param string $VersionNumber Image version number. Only public images have the concept of version.
-     * @param boolean $EnableIpv6 Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.
+     * @param string $Zone <p>Availability zone code, such as ap-guangzhou-1.</p>
+     * @param string $InstanceType <p>Model specifications, such as BMS5.MEDIUM8.</p>
+     * @param string $PrivateNetworkId <p>Private network instance ID in the format of net-xxx.</p>
+     * @param string $PublicNetworkId <p>Public network instance ID, in the format of net-xxx.</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param string $ImageId <p>Image ID, for example img-centos-7.9.</p>
+     * @param integer $InstanceCount <p>Specify the quantity. Default is 1. Maximum is 50.</p>
+     * @param string $Password <p>Login password. Either it or SSHKey is required.</p>
+     * @param string $SSHKey <p>Public key string of the SSH key. Either this parameter or Password must be specified.</p>
+     * @param string $VersionNumber <p>Image version number. Only public images have the concept of version.</p>
+     * @param boolean $EnableIpv6 <p>Whether to enable public IPv6, default false. Enabled, the system will allocate an additional IPv6 address after assigning an IPv4 address.</p>
      */
     function __construct()
     {
@@ -118,10 +136,6 @@ class CreateInstancesRequest extends AbstractModel
             $this->InstanceType = $param["InstanceType"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
-        }
-
         if (array_key_exists("PrivateNetworkId",$param) and $param["PrivateNetworkId"] !== null) {
             $this->PrivateNetworkId = $param["PrivateNetworkId"];
         }
@@ -130,12 +144,24 @@ class CreateInstancesRequest extends AbstractModel
             $this->PublicNetworkId = $param["PublicNetworkId"];
         }
 
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
         }
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
             $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("SSHKey",$param) and $param["SSHKey"] !== null) {
+            $this->SSHKey = $param["SSHKey"];
         }
 
         if (array_key_exists("VersionNumber",$param) and $param["VersionNumber"] !== null) {

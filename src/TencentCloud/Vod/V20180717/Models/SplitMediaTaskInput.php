@@ -18,76 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input information of a video splitting task.
+ * 
  *
- * @method string getFileId() Obtain Video ID.
- * @method void setFileId(string $FileId) Set Video ID.
- * @method float getStartTimeOffset() Obtain Offset of the video splitting start time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset of the video splitting start time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
- * @method float getEndTimeOffset() Obtain Offset of the video splitting end time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Offset of the video splitting end time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
- * @method string getProcedureName() Obtain [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
- * @method void setProcedureName(string $ProcedureName) Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
- * @method SplitMediaOutputConfig getOutputConfig() Obtain Output information of a video splitting task.
- * @method void setOutputConfig(SplitMediaOutputConfig $OutputConfig) Set Output information of a video splitting task.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method string getProcedureName() Obtain 
+ * @method void setProcedureName(string $ProcedureName) Set 
+ * @method SplitMediaOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(SplitMediaOutputConfig $OutputConfig) Set 
  */
 class SplitMediaTaskInput extends AbstractModel
 {
     /**
-     * @var string Video ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var float Offset of the video splitting start time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Offset of the video splitting end time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var string [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
+     * @var string 
      */
     public $ProcedureName;
 
     /**
-     * @var SplitMediaOutputConfig Output information of a video splitting task.
+     * @var SplitMediaOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @param string $FileId Video ID.
-     * @param float $StartTimeOffset Offset of the video splitting start time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
-     * @param float $EndTimeOffset Offset of the video splitting end time in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
-     * @param string $ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
-     * @param SplitMediaOutputConfig $OutputConfig Output information of a video splitting task.
+     * @param string $FileId 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param string $ProcedureName 
+     * @param SplitMediaOutputConfig $OutputConfig 
      */
     function __construct()
     {

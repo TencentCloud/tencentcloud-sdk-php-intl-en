@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetDrmKeyProviderInfo request structure.
  *
- * @method SDMCDrmKeyProviderInfo getSDMCInfo() Obtain <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
- * @method void setSDMCInfo(SDMCDrmKeyProviderInfo $SDMCInfo) Set <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
- * @method integer getSubAppId() Obtain <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method SDMCDrmKeyProviderInfo getSDMCInfo() Obtain 
+ * @method void setSDMCInfo(SDMCDrmKeyProviderInfo $SDMCInfo) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class SetDrmKeyProviderInfoRequest extends AbstractModel
 {
     /**
-     * @var SDMCDrmKeyProviderInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
+     * @var SDMCDrmKeyProviderInfo 
      */
     public $SDMCInfo;
 
     /**
-     * @var integer <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param SDMCDrmKeyProviderInfo $SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
-     * @param integer $SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SDMCDrmKeyProviderInfo $SDMCInfo 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

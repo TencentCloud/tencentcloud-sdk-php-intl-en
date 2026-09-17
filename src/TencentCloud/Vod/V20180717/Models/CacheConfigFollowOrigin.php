@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Path cache configuration follows the origin server configuration.
+ * 
  *
- * @method string getSwitch() Obtain The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method HeuristicCache getHeuristicCache() Obtain Heuristic cache configuration.
- * @method void setHeuristicCache(HeuristicCache $HeuristicCache) Set Heuristic cache configuration.
+ * @method string getSwitch() Obtain Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method HeuristicCache getHeuristicCache() Obtain 
+ * @method void setHeuristicCache(HeuristicCache $HeuristicCache) Set 
  */
 class CacheConfigFollowOrigin extends AbstractModel
 {
     /**
-     * @var string The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var HeuristicCache Heuristic cache configuration.
+     * @var HeuristicCache 
      */
     public $HeuristicCache;
 
     /**
-     * @param string $Switch The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param HeuristicCache $HeuristicCache Heuristic cache configuration.
+     * @param string $Switch Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param HeuristicCache $HeuristicCache 
      */
     function __construct()
     {

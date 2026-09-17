@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Area configurations for the subtitle OCR extraction box.
+ * 
  *
- * @method array getAutoAreas() Obtain <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
- * @method void setAutoAreas(array $AutoAreas) Set <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
- * @method integer getSampleWidth() Obtain <p>Width of the sample video or image, in pixels.</p>
- * @method void setSampleWidth(integer $SampleWidth) Set <p>Width of the sample video or image, in pixels.</p>
- * @method integer getSampleHeight() Obtain <p>Height of the sample video or image, in pixels.</p>
- * @method void setSampleHeight(integer $SampleHeight) Set <p>Height of the sample video or image, in pixels.</p>
+ * @method array getAutoAreas() Obtain 
+ * @method void setAutoAreas(array $AutoAreas) Set 
+ * @method integer getSampleWidth() Obtain 
+ * @method void setSampleWidth(integer $SampleWidth) Set 
+ * @method integer getSampleHeight() Obtain 
+ * @method void setSampleHeight(integer $SampleHeight) Set 
  */
 class MPSSelectingSubtitleAreasConfig extends AbstractModel
 {
     /**
-     * @var array <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
+     * @var array 
      */
     public $AutoAreas;
 
     /**
-     * @var integer <p>Width of the sample video or image, in pixels.</p>
+     * @var integer 
      */
     public $SampleWidth;
 
     /**
-     * @var integer <p>Height of the sample video or image, in pixels.</p>
+     * @var integer 
      */
     public $SampleHeight;
 
     /**
-     * @param array $AutoAreas <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
-     * @param integer $SampleWidth <p>Width of the sample video or image, in pixels.</p>
-     * @param integer $SampleHeight <p>Height of the sample video or image, in pixels.</p>
+     * @param array $AutoAreas 
+     * @param integer $SampleWidth 
+     * @param integer $SampleHeight 
      */
     function __construct()
     {

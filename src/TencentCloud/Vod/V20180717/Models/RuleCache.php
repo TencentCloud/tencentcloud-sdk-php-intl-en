@@ -18,36 +18,69 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Branch path cache configuration. The default cache expiration for all files is 30 days.
+ * Path cache configuration.
+By default, the cache expiration time for all files is 30 days.
  *
- * @method string getRuleType() Obtain Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
- * @method void setRuleType(string $RuleType) Set Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
- * @method array getRulePaths() Obtain Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
- * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
- * @method RuleCacheConfig getCacheConfig() Obtain Cache configuration.
- * @method void setCacheConfig(RuleCacheConfig $CacheConfig) Set Cache configuration.
+ * @method string getRuleType() Obtain Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+ * @method void setRuleType(string $RuleType) Set Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+ * @method array getRulePaths() Obtain Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+ * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+ * @method RuleCacheConfig getCacheConfig() Obtain 
+ * @method void setCacheConfig(RuleCacheConfig $CacheConfig) Set 
  */
 class RuleCache extends AbstractModel
 {
     /**
-     * @var string Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+     * @var string Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
      */
     public $RuleType;
 
     /**
-     * @var array Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+     * @var array Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
      */
     public $RulePaths;
 
     /**
-     * @var RuleCacheConfig Cache configuration.
+     * @var RuleCacheConfig 
      */
     public $CacheConfig;
 
     /**
-     * @param string $RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-     * @param array $RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-     * @param RuleCacheConfig $CacheConfig Cache configuration.
+     * @param string $RuleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+     * @param array $RulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+     * @param RuleCacheConfig $CacheConfig 
      */
     function __construct()
     {

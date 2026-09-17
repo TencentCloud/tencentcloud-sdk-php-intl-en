@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the intelligent highlight generating result
+ * 
  *
- * @method array getHighlightSet() Obtain List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
- * @method void setHighlightSet(array $HighlightSet) Set List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
- * @method string getHighlightSetFileUrl() Obtain URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
- * @method void setHighlightSetFileUrl(string $HighlightSetFileUrl) Set URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
- * @method string getHighlightSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
- * @method void setHighlightSetFileUrlExpireTime(string $HighlightSetFileUrlExpireTime) Set Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method array getHighlightSet() Obtain 
+ * @method void setHighlightSet(array $HighlightSet) Set 
+ * @method string getHighlightSetFileUrl() Obtain 
+ * @method void setHighlightSetFileUrl(string $HighlightSetFileUrl) Set 
+ * @method string getHighlightSetFileUrlExpireTime() Obtain 
+ * @method void setHighlightSetFileUrlExpireTime(string $HighlightSetFileUrlExpireTime) Set 
  */
 class AiAnalysisTaskHighlightOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
+     * @var array 
      */
     public $HighlightSet;
 
     /**
-     * @var string URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
+     * @var string 
      */
     public $HighlightSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @var string 
      */
     public $HighlightSetFileUrlExpireTime;
 
     /**
-     * @param array $HighlightSet List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
-     * @param string $HighlightSetFileUrl URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
-     * @param string $HighlightSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param array $HighlightSet 
+     * @param string $HighlightSetFileUrl 
+     * @param string $HighlightSetFileUrlExpireTime 
      */
     function __construct()
     {

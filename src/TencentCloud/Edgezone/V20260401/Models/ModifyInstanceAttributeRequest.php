@@ -43,11 +43,13 @@ class ModifyInstanceAttributeRequest extends AbstractModel
 
     /**
      * @var string New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
+     * @deprecated
      */
     public $NewPublicIp;
 
     /**
      * @var string IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
+     * @deprecated
      */
     public $IpType;
 

@@ -20,86 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSceneAigcImageTask request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method AigcImageSceneInfo getSceneInfo() Obtain Scenario-Based image generation parameter configuration.
- * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) Set Scenario-Based image generation parameter configuration.
- * @method array getFileInfos() Obtain Input image list. supported image formats: jpg, jpeg, png, webp. different scenarios require different input data.
-
-- AI clothing change scenario: input only 1 model image.
-- AI product image scenario: manually input 1-10 images of different angles per product.
- * @method void setFileInfos(array $FileInfos) Set Input image list. supported image formats: jpg, jpeg, png, webp. different scenarios require different input data.
-
-- AI clothing change scenario: input only 1 model image.
-- AI product image scenario: manually input 1-10 images of different angles per product.
- * @method SceneAigcImageOutputConfig getOutputConfig() Obtain Specifies the output media file configuration for the scenario-based image task.
- * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set Specifies the output media file configuration for the scenario-based image task.
- * @method string getSessionId() Obtain An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
- * @method string getSessionContext() Obtain Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
- * @method integer getTasksPriority() Obtain Task priority. the higher the value, the higher the priority. the value range is from -10 to 10. if left blank, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. the higher the value, the higher the priority. the value range is from -10 to 10. if left blank, the default value is 0.
- * @method string getExtInfo() Obtain Reserved field, used for special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purpose.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method AigcImageSceneInfo getSceneInfo() Obtain 
+ * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) Set 
+ * @method array getFileInfos() Obtain 
+ * @method void setFileInfos(array $FileInfos) Set 
+ * @method SceneAigcImageOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class CreateSceneAigcImageTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var AigcImageSceneInfo Scenario-Based image generation parameter configuration.
+     * @var AigcImageSceneInfo 
      */
     public $SceneInfo;
 
     /**
-     * @var array Input image list. supported image formats: jpg, jpeg, png, webp. different scenarios require different input data.
-
-- AI clothing change scenario: input only 1 model image.
-- AI product image scenario: manually input 1-10 images of different angles per product.
+     * @var array 
      */
     public $FileInfos;
 
     /**
-     * @var SceneAigcImageOutputConfig Specifies the output media file configuration for the scenario-based image task.
+     * @var SceneAigcImageOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @var string An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer Task priority. the higher the value, the higher the priority. the value range is from -10 to 10. if left blank, the default value is 0.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string Reserved field, used for special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param AigcImageSceneInfo $SceneInfo Scenario-Based image generation parameter configuration.
-     * @param array $FileInfos Input image list. supported image formats: jpg, jpeg, png, webp. different scenarios require different input data.
-
-- AI clothing change scenario: input only 1 model image.
-- AI product image scenario: manually input 1-10 images of different angles per product.
-     * @param SceneAigcImageOutputConfig $OutputConfig Specifies the output media file configuration for the scenario-based image task.
-     * @param string $SessionId An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
-     * @param string $SessionContext Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
-     * @param integer $TasksPriority Task priority. the higher the value, the higher the priority. the value range is from -10 to 10. if left blank, the default value is 0.
-     * @param string $ExtInfo Reserved field, used for special purpose.
+     * @param integer $SubAppId 
+     * @param AigcImageSceneInfo $SceneInfo 
+     * @param array $FileInfos 
+     * @param SceneAigcImageOutputConfig $OutputConfig 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

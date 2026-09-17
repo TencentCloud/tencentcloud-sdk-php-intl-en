@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySubAppIdInfo request structure.
  *
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Application name, length limited to 40 characters.
- * @method void setName(string $Name) Set Application name, length limited to 40 characters.
- * @method string getDescription() Obtain Application description, length limited to 300 characters.
- * @method void setDescription(string $Description) Set Application description, length limited to 300 characters.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
  */
 class ModifySubAppIdInfoRequest extends AbstractModel
 {
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Application name, length limited to 40 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Application description, length limited to 300 characters.
+     * @var string 
      */
     public $Description;
 
     /**
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Application name, length limited to 40 characters.
-     * @param string $Description Application description, length limited to 300 characters.
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Description 
      */
     function __construct()
     {

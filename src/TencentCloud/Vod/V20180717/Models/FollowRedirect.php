@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Back to the source 301/302 status code automatically follows the configuration, the default is off
+ * 
  *
- * @method string getSwitch() Obtain Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+ * @method string getSwitch() Obtain Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
  */
 class FollowRedirect extends AbstractModel
 {
     /**
-     * @var string Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @param string $Switch Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     function __construct()
     {

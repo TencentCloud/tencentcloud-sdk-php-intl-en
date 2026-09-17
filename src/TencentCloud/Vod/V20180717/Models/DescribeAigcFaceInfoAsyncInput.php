@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asynchronously fetch AIGC face information input.
+ * 
  *
- * @method array getFileInfos() Obtain <p>Input video information that needs to get face information.</p>
- * @method void setFileInfos(array $FileInfos) Set <p>Input video information that needs to get face information.</p>
+ * @method array getFileInfos() Obtain 
+ * @method void setFileInfos(array $FileInfos) Set 
  */
 class DescribeAigcFaceInfoAsyncInput extends AbstractModel
 {
     /**
-     * @var array <p>Input video information that needs to get face information.</p>
+     * @var array 
      */
     public $FileInfos;
 
     /**
-     * @param array $FileInfos <p>Input video information that needs to get face information.</p>
+     * @param array $FileInfos 
      */
     function __construct()
     {

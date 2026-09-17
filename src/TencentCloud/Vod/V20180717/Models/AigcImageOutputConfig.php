@@ -18,108 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output media file configuration for the AIGC image generation task.
+ * 
  *
- * @method string getStorageMode() Obtain <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
- * @method void setStorageMode(string $StorageMode) Set <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
- * @method string getMediaName() Obtain <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
- * @method void setMediaName(string $MediaName) Set <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
- * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
- * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
- * @method string getExpireTime() Obtain <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method string getResolution() Obtain <p>Image generation resolution. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K, default 1K;</li><li>GG 2.5: 1K, 2K, 4K, default 1K;</li><li>GG 3.0: 1K, 2K, 4K, default 1K;</li><li>GG 3.1: 720P, 1K, 2K, 4K, default 1K;</li><li>Kling 2.1: 1k, 2k, default 1k;</li><li>Kling 3.0: 1k, 2k, default 1k;</li><li>Kling 3.0-Omni: 1k, 2k, 4k, default 1k;</li><li>Kling O1: 1k, 2k, 4k, default 1k;</li><li>SI 4.0: 1K, 2K, 4K, default 1K;</li><li>SI 4.5: 2K, 4K, default 2K;</li><li>SI 5.0-lite: 2K, 3K, default 2K;</li><li>Vidu q2: 1080p, 2K, 4K, default 1080p;</li><li>Hunyuan 3.0: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li><li>Qwen 0925: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li></ul>
- * @method void setResolution(string $Resolution) Set <p>Image generation resolution. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K, default 1K;</li><li>GG 2.5: 1K, 2K, 4K, default 1K;</li><li>GG 3.0: 1K, 2K, 4K, default 1K;</li><li>GG 3.1: 720P, 1K, 2K, 4K, default 1K;</li><li>Kling 2.1: 1k, 2k, default 1k;</li><li>Kling 3.0: 1k, 2k, default 1k;</li><li>Kling 3.0-Omni: 1k, 2k, 4k, default 1k;</li><li>Kling O1: 1k, 2k, 4k, default 1k;</li><li>SI 4.0: 1K, 2K, 4K, default 1K;</li><li>SI 4.5: 2K, 4K, default 2K;</li><li>SI 5.0-lite: 2K, 3K, default 2K;</li><li>Vidu q2: 1080p, 2K, 4K, default 1080p;</li><li>Hunyuan 3.0: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li><li>Qwen 0925: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li></ul>
- * @method string getAspectRatio() Obtain <p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 4.5: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 5.0-lite: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Hunyuan 3.0: unsupported;</li><li>Qwen 2.0: unsupported;</li><li>Qwen 0925: unsupported;</li></ul>
- * @method void setAspectRatio(string $AspectRatio) Set <p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 4.5: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 5.0-lite: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Hunyuan 3.0: unsupported;</li><li>Qwen 2.0: unsupported;</li><li>Qwen 0925: unsupported;</li></ul>
- * @method string getPersonGeneration() Obtain <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
- * @method void setPersonGeneration(string $PersonGeneration) Set <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
- * @method string getInputComplianceCheck() Obtain <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method void setInputComplianceCheck(string $InputComplianceCheck) Set <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method string getOutputComplianceCheck() Obtain <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method void setOutputComplianceCheck(string $OutputComplianceCheck) Set <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method integer getOutputImageCount() Obtain <p>Number of images generated. Available values for each model:</p><ul><li>Kling: value range 1-9;</li><li>OG: value range 1-8;</li></ul><p><strong>Other models are disabled.</strong></p>
- * @method void setOutputImageCount(integer $OutputImageCount) Set <p>Number of images generated. Available values for each model:</p><ul><li>Kling: value range 1-9;</li><li>OG: value range 1-8;</li></ul><p><strong>Other models are disabled.</strong></p>
- * @method string getOutputFormat() Obtain <p>Specify the image format of the model output. If not specified, it follows the default value of the model. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
- * @method void setOutputFormat(string $OutputFormat) Set <p>Specify the image format of the model output. If not specified, it follows the default value of the model. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
- * @method string getLogoAdd() Obtain <p>Indicates whether to enable the icon watermark. Default is Disabled. Valid values:</p><ul><li>Enabled: Enable;</li><li>Disabled: Disable;</li></ul>
- * @method void setLogoAdd(string $LogoAdd) Set <p>Indicates whether to enable the icon watermark. Default is Disabled. Valid values:</p><ul><li>Enabled: Enable;</li><li>Disabled: Disable;</li></ul>
+ * @method string getStorageMode() Obtain 
+ * @method void setStorageMode(string $StorageMode) Set 
+ * @method string getMediaName() Obtain 
+ * @method void setMediaName(string $MediaName) Set 
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
+ * @method string getResolution() Obtain 
+ * @method void setResolution(string $Resolution) Set 
+ * @method string getAspectRatio() Obtain 
+ * @method void setAspectRatio(string $AspectRatio) Set 
+ * @method string getPersonGeneration() Obtain 
+ * @method void setPersonGeneration(string $PersonGeneration) Set 
+ * @method string getInputComplianceCheck() Obtain 
+ * @method void setInputComplianceCheck(string $InputComplianceCheck) Set 
+ * @method string getOutputComplianceCheck() Obtain 
+ * @method void setOutputComplianceCheck(string $OutputComplianceCheck) Set 
+ * @method integer getOutputImageCount() Obtain 
+ * @method void setOutputImageCount(integer $OutputImageCount) Set 
+ * @method string getOutputFormat() Obtain 
+ * @method void setOutputFormat(string $OutputFormat) Set 
+ * @method string getLogoAdd() Obtain 
+ * @method void setLogoAdd(string $LogoAdd) Set 
  */
 class AigcImageOutputConfig extends AbstractModel
 {
     /**
-     * @var string <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
+     * @var string 
      */
     public $StorageMode;
 
     /**
-     * @var string <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
+     * @var string 
      */
     public $MediaName;
 
     /**
-     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var string <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @var string 
      */
     public $ExpireTime;
 
     /**
-     * @var string <p>Image generation resolution. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K, default 1K;</li><li>GG 2.5: 1K, 2K, 4K, default 1K;</li><li>GG 3.0: 1K, 2K, 4K, default 1K;</li><li>GG 3.1: 720P, 1K, 2K, 4K, default 1K;</li><li>Kling 2.1: 1k, 2k, default 1k;</li><li>Kling 3.0: 1k, 2k, default 1k;</li><li>Kling 3.0-Omni: 1k, 2k, 4k, default 1k;</li><li>Kling O1: 1k, 2k, 4k, default 1k;</li><li>SI 4.0: 1K, 2K, 4K, default 1K;</li><li>SI 4.5: 2K, 4K, default 2K;</li><li>SI 5.0-lite: 2K, 3K, default 2K;</li><li>Vidu q2: 1080p, 2K, 4K, default 1080p;</li><li>Hunyuan 3.0: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li><li>Qwen 0925: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li></ul>
+     * @var string 
      */
     public $Resolution;
 
     /**
-     * @var string <p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 4.5: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 5.0-lite: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Hunyuan 3.0: unsupported;</li><li>Qwen 2.0: unsupported;</li><li>Qwen 0925: unsupported;</li></ul>
+     * @var string 
      */
     public $AspectRatio;
 
     /**
-     * @var string <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
+     * @var string 
      */
     public $PersonGeneration;
 
     /**
-     * @var string <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @var string 
      */
     public $InputComplianceCheck;
 
     /**
-     * @var string <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @var string 
      */
     public $OutputComplianceCheck;
 
     /**
-     * @var integer <p>Number of images generated. Available values for each model:</p><ul><li>Kling: value range 1-9;</li><li>OG: value range 1-8;</li></ul><p><strong>Other models are disabled.</strong></p>
+     * @var integer 
      */
     public $OutputImageCount;
 
     /**
-     * @var string <p>Specify the image format of the model output. If not specified, it follows the default value of the model. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
+     * @var string 
      */
     public $OutputFormat;
 
     /**
-     * @var string <p>Indicates whether to enable the icon watermark. Default is Disabled. Valid values:</p><ul><li>Enabled: Enable;</li><li>Disabled: Disable;</li></ul>
+     * @var string 
      */
     public $LogoAdd;
 
     /**
-     * @param string $StorageMode <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
-     * @param string $MediaName <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
-     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
-     * @param string $ExpireTime <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param string $Resolution <p>Image generation resolution. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K, default 1K;</li><li>GG 2.5: 1K, 2K, 4K, default 1K;</li><li>GG 3.0: 1K, 2K, 4K, default 1K;</li><li>GG 3.1: 720P, 1K, 2K, 4K, default 1K;</li><li>Kling 2.1: 1k, 2k, default 1k;</li><li>Kling 3.0: 1k, 2k, default 1k;</li><li>Kling 3.0-Omni: 1k, 2k, 4k, default 1k;</li><li>Kling O1: 1k, 2k, 4k, default 1k;</li><li>SI 4.0: 1K, 2K, 4K, default 1K;</li><li>SI 4.5: 2K, 4K, default 2K;</li><li>SI 5.0-lite: 2K, 3K, default 2K;</li><li>Vidu q2: 1080p, 2K, 4K, default 1080p;</li><li>Hunyuan 3.0: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li><li>Qwen 0925: This field is not currently supported. Use the <code>ExtInfo</code> field to set resolution;</li></ul>
-     * @param string $AspectRatio <p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 4.5: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>SI 5.0-lite: <strong>unsupported</strong>. Use prompt to specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Hunyuan 3.0: unsupported;</li><li>Qwen 2.0: unsupported;</li><li>Qwen 0925: unsupported;</li></ul>
-     * @param string $PersonGeneration <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
-     * @param string $InputComplianceCheck <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-     * @param string $OutputComplianceCheck <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-     * @param integer $OutputImageCount <p>Number of images generated. Available values for each model:</p><ul><li>Kling: value range 1-9;</li><li>OG: value range 1-8;</li></ul><p><strong>Other models are disabled.</strong></p>
-     * @param string $OutputFormat <p>Specify the image format of the model output. If not specified, it follows the default value of the model. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
-     * @param string $LogoAdd <p>Indicates whether to enable the icon watermark. Default is Disabled. Valid values:</p><ul><li>Enabled: Enable;</li><li>Disabled: Disable;</li></ul>
+     * @param string $StorageMode 
+     * @param string $MediaName 
+     * @param integer $ClassId 
+     * @param string $ExpireTime 
+     * @param string $Resolution 
+     * @param string $AspectRatio 
+     * @param string $PersonGeneration 
+     * @param string $InputComplianceCheck 
+     * @param string $OutputComplianceCheck 
+     * @param integer $OutputImageCount 
+     * @param string $OutputFormat 
+     * @param string $LogoAdd 
      */
     function __construct()
     {

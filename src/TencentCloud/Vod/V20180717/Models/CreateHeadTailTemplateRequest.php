@@ -20,78 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHeadTailTemplate request structure.
  *
- * @method string getName() Obtain Template name, length limited to 64 characters.
- * @method void setName(string $Name) Set Template name, length limited to 64 characters.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
- * @method string getComment() Obtain Template description information. The length cannot exceed 256 characters.
- * @method void setComment(string $Comment) Set Template description information. The length cannot exceed 256 characters.
- * @method array getHeadCandidateSet() Obtain Opening Credits Candidate List. Fill in the FileId of the video. During transcoding, a title candidate with the aspect ratio closest to the main content will be automatically selected (when identical, precedence is given to candidates positioned towards the front). Supports up to 5 title candidates.
- * @method void setHeadCandidateSet(array $HeadCandidateSet) Set Opening Credits Candidate List. Fill in the FileId of the video. During transcoding, a title candidate with the aspect ratio closest to the main content will be automatically selected (when identical, precedence is given to candidates positioned towards the front). Supports up to 5 title candidates.
- * @method array getTailCandidateSet() Obtain Ending candidate list. Fill in the FileId of the video. During transcoding, the system will automatically select the ending with the closest aspect ratio to the main content (if identical, the candidate positioned towards the front takes precedence). Supports up to 5 ending candidates.
- * @method void setTailCandidateSet(array $TailCandidateSet) Set Ending candidate list. Fill in the FileId of the video. During transcoding, the system will automatically select the ending with the closest aspect ratio to the main content (if identical, the candidate positioned towards the front takes precedence). Supports up to 5 ending candidates.
- * @method string getFillType() Obtain Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
-<li> gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part;</li>
-<li>White: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
-<li> black: Keep black edges to maintain video aspect ratio, with edges filled with black.</li>
-Default value: stretch.
- * @method void setFillType(string $FillType) Set Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
-<li> gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part;</li>
-<li>White: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
-<li> black: Keep black edges to maintain video aspect ratio, with edges filled with black.</li>
-Default value: stretch.
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method array getHeadCandidateSet() Obtain 
+ * @method void setHeadCandidateSet(array $HeadCandidateSet) Set 
+ * @method array getTailCandidateSet() Obtain 
+ * @method void setTailCandidateSet(array $TailCandidateSet) Set 
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
  */
 class CreateHeadTailTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Template name, length limited to 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Template description information. The length cannot exceed 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var array Opening Credits Candidate List. Fill in the FileId of the video. During transcoding, a title candidate with the aspect ratio closest to the main content will be automatically selected (when identical, precedence is given to candidates positioned towards the front). Supports up to 5 title candidates.
+     * @var array 
      */
     public $HeadCandidateSet;
 
     /**
-     * @var array Ending candidate list. Fill in the FileId of the video. During transcoding, the system will automatically select the ending with the closest aspect ratio to the main content (if identical, the candidate positioned towards the front takes precedence). Supports up to 5 ending candidates.
+     * @var array 
      */
     public $TailCandidateSet;
 
     /**
-     * @var string Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
-<li> gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part;</li>
-<li>White: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
-<li> black: Keep black edges to maintain video aspect ratio, with edges filled with black.</li>
-Default value: stretch.
+     * @var string 
      */
     public $FillType;
 
     /**
-     * @param string $Name Template name, length limited to 64 characters.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
-     * @param string $Comment Template description information. The length cannot exceed 256 characters.
-     * @param array $HeadCandidateSet Opening Credits Candidate List. Fill in the FileId of the video. During transcoding, a title candidate with the aspect ratio closest to the main content will be automatically selected (when identical, precedence is given to candidates positioned towards the front). Supports up to 5 title candidates.
-     * @param array $TailCandidateSet Ending candidate list. Fill in the FileId of the video. During transcoding, the system will automatically select the ending with the closest aspect ratio to the main content (if identical, the candidate positioned towards the front takes precedence). Supports up to 5 ending candidates.
-     * @param string $FillType Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
-<li> gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part;</li>
-<li>White: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
-<li> black: Keep black edges to maintain video aspect ratio, with edges filled with black.</li>
-Default value: stretch.
+     * @param string $Name 
+     * @param integer $SubAppId 
+     * @param string $Comment 
+     * @param array $HeadCandidateSet 
+     * @param array $TailCandidateSet 
+     * @param string $FillType 
      */
     function __construct()
     {

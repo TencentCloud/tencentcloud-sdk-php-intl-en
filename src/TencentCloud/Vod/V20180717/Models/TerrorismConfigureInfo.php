@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters for recognition of terrorism content
+ * 
  *
- * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Image recognition involves task control parameters for unsafe information.
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Image recognition involves task control parameters for unsafe information.
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Text identification involves task control parameters for unsafe information.
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Text identification involves task control parameters for unsafe information.
+ * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain 
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set 
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set 
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfo Image recognition involves task control parameters for unsafe information.
+     * @var TerrorismImgReviewTemplateInfo 
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfo Text identification involves task control parameters for unsafe information.
+     * @var TerrorismOcrReviewTemplateInfo 
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Image recognition involves task control parameters for unsafe information.
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Text identification involves task control parameters for unsafe information.
+     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo 
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo 
      */
     function __construct()
     {

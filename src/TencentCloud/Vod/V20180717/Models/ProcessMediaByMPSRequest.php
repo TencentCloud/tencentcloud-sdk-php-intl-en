@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByMPS request structure.
  *
- * @method string getFileId() Obtain <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
- * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
- * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
- * @method string getMPSProcessMediaParams() Obtain <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
- * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) Set <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
- * @method MPSAiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
- * @method void setAiAnalysisTask(MPSAiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
- * @method MPSSmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
- * @method void setSmartSubtitlesTask(MPSSmartSubtitlesTaskInput $SmartSubtitlesTask) Set <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
- * @method MPSSmartEraseTaskInput getSmartEraseTask() Obtain <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
- * @method void setSmartEraseTask(MPSSmartEraseTaskInput $SmartEraseTask) Set <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
- * @method string getExtInfo() Obtain <p>Reserved field. Used for special purpose.</p>
- * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field. Used for special purpose.</p>
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getMPSProcessMediaParams() Obtain 
+ * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) Set 
+ * @method MPSAiAnalysisTaskInput getAiAnalysisTask() Obtain 
+ * @method void setAiAnalysisTask(MPSAiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method MPSSmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain 
+ * @method void setSmartSubtitlesTask(MPSSmartSubtitlesTaskInput $SmartSubtitlesTask) Set 
+ * @method MPSSmartEraseTaskInput getSmartEraseTask() Obtain 
+ * @method void setSmartEraseTask(MPSSmartEraseTaskInput $SmartEraseTask) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class ProcessMediaByMPSRequest extends AbstractModel
 {
     /**
-     * @var string <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
+     * @var string 
      */
     public $MPSProcessMediaParams;
 
     /**
-     * @var MPSAiAnalysisTaskInput <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+     * @var MPSAiAnalysisTaskInput 
      */
     public $AiAnalysisTask;
 
     /**
-     * @var MPSSmartSubtitlesTaskInput <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+     * @var MPSSmartSubtitlesTaskInput 
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var MPSSmartEraseTaskInput <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+     * @var MPSSmartEraseTaskInput 
      */
     public $SmartEraseTask;
 
     /**
-     * @var string <p>Reserved field. Used for special purpose.</p>
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param string $FileId <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
-     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
-     * @param string $MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
-     * @param MPSAiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
-     * @param MPSSmartSubtitlesTaskInput $SmartSubtitlesTask <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
-     * @param MPSSmartEraseTaskInput $SmartEraseTask <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
-     * @param string $ExtInfo <p>Reserved field. Used for special purpose.</p>
+     * @param string $FileId 
+     * @param integer $SubAppId 
+     * @param string $MPSProcessMediaParams 
+     * @param MPSAiAnalysisTaskInput $AiAnalysisTask 
+     * @param MPSSmartSubtitlesTaskInput $SmartSubtitlesTask 
+     * @param MPSSmartEraseTaskInput $SmartEraseTask 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

@@ -18,132 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of animated image generating task
+ * 
  *
- * @method string getUrl() Obtain Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDefinition() Obtain Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContainer() Obtain Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContainer(string $Container) Set Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getHeight() Obtain Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHeight(integer $Height) Set Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getWidth() Obtain Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWidth(integer $Width) Set Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getBitrate() Obtain Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSize() Obtain Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSize(integer $Size) Set Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMd5() Obtain MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMd5(string $Md5) Set MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getStartTimeOffset() Obtain Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getEndTimeOffset() Obtain End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getContainer() Obtain 
+ * @method void setContainer(string $Container) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
+ * @method integer getBitrate() Obtain 
+ * @method void setBitrate(integer $Bitrate) Set 
+ * @method integer getSize() Obtain 
+ * @method void setSize(integer $Size) Set 
+ * @method string getMd5() Obtain 
+ * @method void setMd5(string $Md5) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
  */
 class MediaAnimatedGraphicsItem extends AbstractModel
 {
     /**
-     * @var string Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var integer Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Container;
 
     /**
-     * @var integer Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var integer Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @var integer Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Bitrate;
 
     /**
-     * @var integer Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Size;
 
     /**
-     * @var string MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Md5;
 
     /**
-     * @var float Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $Url Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Definition Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Container Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Height Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Width Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Bitrate Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Size Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Md5 MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $StartTimeOffset Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $EndTimeOffset End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Url 
+     * @param integer $Definition 
+     * @param string $Container 
+     * @param integer $Height 
+     * @param integer $Width 
+     * @param integer $Bitrate 
+     * @param integer $Size 
+     * @param string $Md5 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
      */
     function __construct()
     {

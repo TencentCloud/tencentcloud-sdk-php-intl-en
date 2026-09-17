@@ -18,88 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Source file information.
+ * 
  *
- * @method string getSourceType() Obtain Media file source category:
-<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
-<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
-<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
-<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
-<li>WebPageRecord: comes from panoramic recording.</li>
-<li>Unknown: Unknown source.</li>
- * @method void setSourceType(string $SourceType) Set Media file source category:
-<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
-<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
-<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
-<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
-<li>WebPageRecord: comes from panoramic recording.</li>
-<li>Unknown: Unknown source.</li>
- * @method string getSourceContext() Obtain Field passed through when the user creates a file.
- * @method void setSourceContext(string $SourceContext) Set Field passed through when the user creates a file.
- * @method LiveRecordInfo getLiveRecordInfo() Obtain Live recording information is valid when file source is Record.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLiveRecordInfo(LiveRecordInfo $LiveRecordInfo) Set Live recording information is valid when file source is Record.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TrtcRecordInfo getTrtcRecordInfo() Obtain TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTrtcRecordInfo(TrtcRecordInfo $TrtcRecordInfo) Set TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method WebPageRecordInfo getWebPageRecordInfo() Obtain Panoramic recording information. Valid when the file source is WebPageRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWebPageRecordInfo(WebPageRecordInfo $WebPageRecordInfo) Set Panoramic recording information. Valid when the file source is WebPageRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSourceType() Obtain 
+ * @method void setSourceType(string $SourceType) Set 
+ * @method string getSourceContext() Obtain 
+ * @method void setSourceContext(string $SourceContext) Set 
+ * @method LiveRecordInfo getLiveRecordInfo() Obtain 
+ * @method void setLiveRecordInfo(LiveRecordInfo $LiveRecordInfo) Set 
+ * @method TrtcRecordInfo getTrtcRecordInfo() Obtain 
+ * @method void setTrtcRecordInfo(TrtcRecordInfo $TrtcRecordInfo) Set 
+ * @method WebPageRecordInfo getWebPageRecordInfo() Obtain 
+ * @method void setWebPageRecordInfo(WebPageRecordInfo $WebPageRecordInfo) Set 
  */
 class MediaSourceData extends AbstractModel
 {
     /**
-     * @var string Media file source category:
-<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
-<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
-<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
-<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
-<li>WebPageRecord: comes from panoramic recording.</li>
-<li>Unknown: Unknown source.</li>
+     * @var string 
      */
     public $SourceType;
 
     /**
-     * @var string Field passed through when the user creates a file.
+     * @var string 
      */
     public $SourceContext;
 
     /**
-     * @var LiveRecordInfo Live recording information is valid when file source is Record.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var LiveRecordInfo 
      */
     public $LiveRecordInfo;
 
     /**
-     * @var TrtcRecordInfo TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TrtcRecordInfo 
      */
     public $TrtcRecordInfo;
 
     /**
-     * @var WebPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var WebPageRecordInfo 
      */
     public $WebPageRecordInfo;
 
     /**
-     * @param string $SourceType Media file source category:
-<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
-<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
-<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
-<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
-<li>WebPageRecord: comes from panoramic recording.</li>
-<li>Unknown: Unknown source.</li>
-     * @param string $SourceContext Field passed through when the user creates a file.
-     * @param LiveRecordInfo $LiveRecordInfo Live recording information is valid when file source is Record.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TrtcRecordInfo $TrtcRecordInfo TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebPageRecordInfo $WebPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SourceType 
+     * @param string $SourceContext 
+     * @param LiveRecordInfo $LiveRecordInfo 
+     * @param TrtcRecordInfo $TrtcRecordInfo 
+     * @param WebPageRecordInfo $WebPageRecordInfo 
      */
     function __construct()
     {

@@ -18,128 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Files stored in VOD.
+ * 
  *
- * @method string getKey() Obtain Object key.
- * @method void setKey(string $Key) Set Object key.
- * @method string getLastModified() Obtain Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
- * @method void setLastModified(string $LastModified) Set Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
- * @method string getETag() Obtain The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
- * @method void setETag(string $ETag) Set The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
- * @method integer getSize() Obtain Object size in bytes.
- * @method void setSize(integer $Size) Set Object size in bytes.
- * @method string getStorageClass() Obtain For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
- * @method void setStorageClass(string $StorageClass) Set For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
- * @method string getFileId() Obtain Unique identifier of the media file for this file.
- * @method void setFileId(string $FileId) Set Unique identifier of the media file for this file.
- * @method string getCategory() Obtain File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
- * @method void setCategory(string $Category) Set File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
- * @method string getFileType() Obtain Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
- * @method void setFileType(string $FileType) Set Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
- * @method integer getDefinition() Obtain Video template ID. For template definition, please refer to transcoding template.
- * @method void setDefinition(integer $Definition) Set Video template ID. For template definition, please refer to transcoding template.
- * @method string getSubtitleID() Obtain Subtitle ID.
-Only valid when FileType=SubtitleFiles.
- * @method void setSubtitleID(string $SubtitleID) Set Subtitle ID.
-Only valid when FileType=SubtitleFiles.
+ * @method string getKey() Obtain 
+ * @method void setKey(string $Key) Set 
+ * @method string getLastModified() Obtain 
+ * @method void setLastModified(string $LastModified) Set 
+ * @method string getETag() Obtain 
+ * @method void setETag(string $ETag) Set 
+ * @method integer getSize() Obtain 
+ * @method void setSize(integer $Size) Set 
+ * @method string getStorageClass() Obtain 
+ * @method void setStorageClass(string $StorageClass) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getCategory() Obtain 
+ * @method void setCategory(string $Category) Set 
+ * @method string getFileType() Obtain 
+ * @method void setFileType(string $FileType) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getSubtitleID() Obtain 
+ * @method void setSubtitleID(string $SubtitleID) Set 
  */
 class FileContent extends AbstractModel
 {
     /**
-     * @var string Object key.
+     * @var string 
      */
     public $Key;
 
     /**
-     * @var string Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
+     * @var string 
      */
     public $LastModified;
 
     /**
-     * @var string The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+     * @var string 
      */
     public $ETag;
 
     /**
-     * @var integer Object size in bytes.
+     * @var integer 
      */
     public $Size;
 
     /**
-     * @var string For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
+     * @var string 
      */
     public $StorageClass;
 
     /**
-     * @var string Unique identifier of the media file for this file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
+     * @var string 
      */
     public $Category;
 
     /**
-     * @var string Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
+     * @var string 
      */
     public $FileType;
 
     /**
-     * @var integer Video template ID. For template definition, please refer to transcoding template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Subtitle ID.
-Only valid when FileType=SubtitleFiles.
+     * @var string 
      */
     public $SubtitleID;
 
     /**
-     * @param string $Key Object key.
-     * @param string $LastModified Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
-     * @param string $ETag The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
-     * @param integer $Size Object size in bytes.
-     * @param string $StorageClass For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
-     * @param string $FileId Unique identifier of the media file for this file.
-     * @param string $Category File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
-     * @param string $FileType Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
-     * @param integer $Definition Video template ID. For template definition, please refer to transcoding template.
-     * @param string $SubtitleID Subtitle ID.
-Only valid when FileType=SubtitleFiles.
+     * @param string $Key 
+     * @param string $LastModified 
+     * @param string $ETag 
+     * @param integer $Size 
+     * @param string $StorageClass 
+     * @param string $FileId 
+     * @param string $Category 
+     * @param string $FileType 
+     * @param integer $Definition 
+     * @param string $SubtitleID 
      */
     function __construct()
     {

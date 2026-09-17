@@ -18,40 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key hotlink protection information for generating the signature
+ * 
  *
- * @method string getStatus() Obtain Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
- * @method void setStatus(string $Status) Set Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
- * @method string getEncryptedKey() Obtain The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
- * @method void setEncryptedKey(string $EncryptedKey) Set The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getEncryptedKey() Obtain 
+ * @method void setEncryptedKey(string $EncryptedKey) Set 
  */
 class UrlSignatureAuthPolicy extends AbstractModel
 {
     /**
-     * @var string Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+     * @var string 
      */
     public $EncryptedKey;
 
     /**
-     * @param string $Status Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
-     * @param string $EncryptedKey The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+     * @param string $Status 
+     * @param string $EncryptedKey 
      */
     function __construct()
     {

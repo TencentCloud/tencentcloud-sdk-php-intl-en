@@ -18,84 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output media file configuration for the scenario-based AIGC image generation task.
+ * 
  *
- * @method string getStorageMode() Obtain <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
- * @method void setStorageMode(string $StorageMode) Set <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
- * @method string getMediaName() Obtain <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
- * @method void setMediaName(string $MediaName) Set <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
- * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
- * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
- * @method string getExpireTime() Obtain <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method string getAspectRatio() Obtain <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
- * @method void setAspectRatio(string $AspectRatio) Set <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
- * @method ImageSceneAigcEncodeConfig getEncodeConfig() Obtain <p>Output image encoding format parameters.</p>
- * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) Set <p>Output image encoding format parameters.</p>
- * @method integer getImageWidth() Obtain <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
- * @method void setImageWidth(integer $ImageWidth) Set <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
- * @method integer getImageHeight() Obtain <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
- * @method void setImageHeight(integer $ImageHeight) Set <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
- * @method string getResolution() Obtain <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
- * @method void setResolution(string $Resolution) Set <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
+ * @method string getStorageMode() Obtain 
+ * @method void setStorageMode(string $StorageMode) Set 
+ * @method string getMediaName() Obtain 
+ * @method void setMediaName(string $MediaName) Set 
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
+ * @method string getAspectRatio() Obtain 
+ * @method void setAspectRatio(string $AspectRatio) Set 
+ * @method ImageSceneAigcEncodeConfig getEncodeConfig() Obtain 
+ * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) Set 
+ * @method integer getImageWidth() Obtain 
+ * @method void setImageWidth(integer $ImageWidth) Set 
+ * @method integer getImageHeight() Obtain 
+ * @method void setImageHeight(integer $ImageHeight) Set 
+ * @method string getResolution() Obtain 
+ * @method void setResolution(string $Resolution) Set 
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
     /**
-     * @var string <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
+     * @var string 
      */
     public $StorageMode;
 
     /**
-     * @var string <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
+     * @var string 
      */
     public $MediaName;
 
     /**
-     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var string <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @var string 
      */
     public $ExpireTime;
 
     /**
-     * @var string <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
+     * @var string 
      */
     public $AspectRatio;
 
     /**
-     * @var ImageSceneAigcEncodeConfig <p>Output image encoding format parameters.</p>
+     * @var ImageSceneAigcEncodeConfig 
      */
     public $EncodeConfig;
 
     /**
-     * @var integer <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
+     * @var integer 
      */
     public $ImageWidth;
 
     /**
-     * @var integer <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
+     * @var integer 
      */
     public $ImageHeight;
 
     /**
-     * @var string <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
+     * @var string 
      */
     public $Resolution;
 
     /**
-     * @param string $StorageMode <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
-     * @param string $MediaName <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
-     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
-     * @param string $ExpireTime <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param string $AspectRatio <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
-     * @param ImageSceneAigcEncodeConfig $EncodeConfig <p>Output image encoding format parameters.</p>
-     * @param integer $ImageWidth <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
-     * @param integer $ImageHeight <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
-     * @param string $Resolution <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
+     * @param string $StorageMode 
+     * @param string $MediaName 
+     * @param integer $ClassId 
+     * @param string $ExpireTime 
+     * @param string $AspectRatio 
+     * @param ImageSceneAigcEncodeConfig $EncodeConfig 
+     * @param integer $ImageWidth 
+     * @param integer $ImageHeight 
+     * @param string $Resolution 
      */
     function __construct()
     {

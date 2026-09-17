@@ -18,28 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for detecting video noise.
+ * 
  *
- * @method string getSwitch() Obtain Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
- * @method void setSwitch(string $Switch) Set Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  */
 class NoiseConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @param string $Switch Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * @param string $Switch 
      */
     function __construct()
     {

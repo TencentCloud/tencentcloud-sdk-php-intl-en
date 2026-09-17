@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of video splitting.
+ * 
  *
- * @method array getSegmentSet() Obtain List of split video segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
- * @method void setSegmentSet(array $SegmentSet) Set List of split video segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
- * @method string getSegmentSetFileUrl() Obtain URL to the file of the list for split video segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file of the list for split video segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL to the file of the list for split video segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL to the file of the list for split video segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method string getSegmentSetFileUrl() Obtain 
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
+ * @method string getSegmentSetFileUrlExpireTime() Obtain 
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
  */
 class AiRecognitionTaskSegmentResultOutput extends AbstractModel
 {
     /**
-     * @var array List of split video segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * @var array 
      */
     public $SegmentSet;
 
     /**
-     * @var string URL to the file of the list for split video segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * @var string 
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file of the list for split video segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @var string 
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param array $SegmentSet List of split video segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
-     * @param string $SegmentSetFileUrl URL to the file of the list for split video segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL to the file of the list for split video segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @param array $SegmentSet 
+     * @param string $SegmentSetFileUrl 
+     * @param string $SegmentSetFileUrlExpireTime 
      */
     function __construct()
     {

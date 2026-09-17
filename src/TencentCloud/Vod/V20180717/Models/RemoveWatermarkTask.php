@@ -18,108 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+ * 
  *
- * @method string getTaskId() Obtain The task ID.
- * @method void setTaskId(string $TaskId) Set The task ID.
- * @method string getStatus() Obtain The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
- * @method void setStatus(string $Status) Set The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
- * @method integer getErrCode() Obtain Error code. 0: Successful; other values: Failed.
-<li>40000: Invalid input parameter.</li>
-<li>60000: Source file error (e.g., video data is corrupted).</li>
-<li>70000: Internal server error. Please try again.</li>
- * @method void setErrCode(integer $ErrCode) Set Error code. 0: Successful; other values: Failed.
-<li>40000: Invalid input parameter.</li>
-<li>60000: Source file error (e.g., video data is corrupted).</li>
-<li>70000: Internal server error. Please try again.</li>
- * @method string getMessage() Obtain The error message.
- * @method void setMessage(string $Message) Set The error message.
- * @method RemoveWaterMarkTaskInput getInput() Obtain Input of the intelligent watermark removal task.
- * @method void setInput(RemoveWaterMarkTaskInput $Input) Set Input of the intelligent watermark removal task.
- * @method RemoveWaterMarkTaskOutput getOutput() Obtain The output of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(RemoveWaterMarkTaskOutput $Output) Set The output of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
- * @method void setSessionId(string $SessionId) Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
- * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method RemoveWaterMarkTaskInput getInput() Obtain 
+ * @method void setInput(RemoveWaterMarkTaskInput $Input) Set 
+ * @method RemoveWaterMarkTaskOutput getOutput() Obtain 
+ * @method void setOutput(RemoveWaterMarkTaskOutput $Output) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
  */
 class RemoveWatermarkTask extends AbstractModel
 {
     /**
-     * @var string The task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0: Successful; other values: Failed.
-<li>40000: Invalid input parameter.</li>
-<li>60000: Source file error (e.g., video data is corrupted).</li>
-<li>70000: Internal server error. Please try again.</li>
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string The error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var RemoveWaterMarkTaskInput Input of the intelligent watermark removal task.
+     * @var RemoveWaterMarkTaskInput 
      */
     public $Input;
 
     /**
-     * @var RemoveWaterMarkTaskOutput The output of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RemoveWaterMarkTaskOutput 
      */
     public $Output;
 
     /**
-     * @var string The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId The task ID.
-     * @param string $Status The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
-     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
-     * @param integer $ErrCode Error code. 0: Successful; other values: Failed.
-<li>40000: Invalid input parameter.</li>
-<li>60000: Source file error (e.g., video data is corrupted).</li>
-<li>70000: Internal server error. Please try again.</li>
-     * @param string $Message The error message.
-     * @param RemoveWaterMarkTaskInput $Input Input of the intelligent watermark removal task.
-     * @param RemoveWaterMarkTaskOutput $Output The output of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
-     * @param string $SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param RemoveWaterMarkTaskInput $Input 
+     * @param RemoveWaterMarkTaskOutput $Output 
+     * @param string $SessionId 
+     * @param string $SessionContext 
      */
     function __construct()
     {

@@ -18,52 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * LLM enhancement configuration.
+ * 
  *
- * @method string getSwitch() Obtain Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
- * @method void setSwitch(string $Switch) Set Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
- * @method string getType() Obtain Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
- * @method void setType(string $Type) Set Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class DiffusionEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-     * @param string $Type Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+     * @param string $Switch 
+     * @param string $Type 
      */
     function __construct()
     {

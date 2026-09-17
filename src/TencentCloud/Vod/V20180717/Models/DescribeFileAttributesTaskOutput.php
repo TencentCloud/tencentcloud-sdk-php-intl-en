@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The output of a task to get file attributes.
+ * 
  *
- * @method string getMd5() Obtain The MD5 hash of the file.
- * @method void setMd5(string $Md5) Set The MD5 hash of the file.
- * @method string getSha1() Obtain The Sha1 value of the media file.
- * @method void setSha1(string $Sha1) Set The Sha1 value of the media file.
+ * @method string getMd5() Obtain 
+ * @method void setMd5(string $Md5) Set 
+ * @method string getSha1() Obtain 
+ * @method void setSha1(string $Sha1) Set 
  */
 class DescribeFileAttributesTaskOutput extends AbstractModel
 {
     /**
-     * @var string The MD5 hash of the file.
+     * @var string 
      */
     public $Md5;
 
     /**
-     * @var string The Sha1 value of the media file.
+     * @var string 
      */
     public $Sha1;
 
     /**
-     * @param string $Md5 The MD5 hash of the file.
-     * @param string $Sha1 The Sha1 value of the media file.
+     * @param string $Md5 
+     * @param string $Sha1 
      */
     function __construct()
     {

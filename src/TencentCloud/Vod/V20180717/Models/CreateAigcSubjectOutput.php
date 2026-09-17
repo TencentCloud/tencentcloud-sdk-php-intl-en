@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create subject output message.
+ * 
  *
- * @method string getSubjectId() Obtain <p>Subject ID.</p>
- * @method void setSubjectId(string $SubjectId) Set <p>Subject ID.</p>
- * @method string getSubjectInfo() Obtain <p>Entity information.</p>
- * @method void setSubjectInfo(string $SubjectInfo) Set <p>Entity information.</p>
+ * @method string getSubjectId() Obtain 
+ * @method void setSubjectId(string $SubjectId) Set 
+ * @method string getSubjectInfo() Obtain 
+ * @method void setSubjectInfo(string $SubjectInfo) Set 
  */
 class CreateAigcSubjectOutput extends AbstractModel
 {
     /**
-     * @var string <p>Subject ID.</p>
+     * @var string 
      */
     public $SubjectId;
 
     /**
-     * @var string <p>Entity information.</p>
+     * @var string 
      */
     public $SubjectInfo;
 
     /**
-     * @param string $SubjectId <p>Subject ID.</p>
-     * @param string $SubjectInfo <p>Entity information.</p>
+     * @param string $SubjectId 
+     * @param string $SubjectInfo 
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNDomains request structure.
  *
- * @method array getDomains() Obtain List of domain. If this field is left blank, all domain information will be listed by default.
- * @method void setDomains(array $Domains) Set List of domain. If this field is left blank, all domain information will be listed by default.
- * @method integer getLimit() Obtain The maximum number of returned results for pagination fetching. Default value: 20.
- * @method void setLimit(integer $Limit) Set The maximum number of returned results for pagination fetching. Default value: 20.
- * @method integer getOffset() Obtain The starting offset of paged pull. Default value: 0.
- * @method void setOffset(integer $Offset) Set The starting offset of paged pull. Default value: 0.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method array getDomains() Obtain 
+ * @method void setDomains(array $Domains) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method integer getOffset() Obtain Starting offset for pagination pull. Default value: 0.	
+ * @method void setOffset(integer $Offset) Set Starting offset for pagination pull. Default value: 0.	
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
  */
 class DescribeCDNDomainsRequest extends AbstractModel
 {
     /**
-     * @var array List of domain. If this field is left blank, all domain information will be listed by default.
+     * @var array 
      */
     public $Domains;
 
     /**
-     * @var integer The maximum number of returned results for pagination fetching. Default value: 20.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @var integer The starting offset of paged pull. Default value: 0.
+     * @var integer Starting offset for pagination pull. Default value: 0.	
      */
     public $Offset;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param array $Domains List of domain. If this field is left blank, all domain information will be listed by default.
-     * @param integer $Limit The maximum number of returned results for pagination fetching. Default value: 20.
-     * @param integer $Offset The starting offset of paged pull. Default value: 0.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param array $Domains 
+     * @param integer $Limit 
+     * @param integer $Offset Starting offset for pagination pull. Default value: 0.	
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Just In Time transcoding template details.
+ * 
  *
- * @method string getType() Obtain Template type.
- * @method void setType(string $Type) Set Template type.
- * @method string getName() Obtain Template name.
- * @method void setName(string $Name) Set Template name.
- * @method string getComment() Obtain Template description.
- * @method void setComment(string $Comment) Set Template description.
- * @method VideoConfigureInfo getVideoConfigure() Obtain Video parameter configuration.
- * @method void setVideoConfigure(VideoConfigureInfo $VideoConfigure) Set Video parameter configuration.
- * @method WatermarkConfigureData getWatermarkConfigure() Obtain Watermark parameter configuration.
- * @method void setWatermarkConfigure(WatermarkConfigureData $WatermarkConfigure) Set Watermark parameter configuration.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method VideoConfigureInfo getVideoConfigure() Obtain 
+ * @method void setVideoConfigure(VideoConfigureInfo $VideoConfigure) Set 
+ * @method WatermarkConfigureData getWatermarkConfigure() Obtain 
+ * @method void setWatermarkConfigure(WatermarkConfigureData $WatermarkConfigure) Set 
  */
 class JustInTimeTranscodeTemplate extends AbstractModel
 {
     /**
-     * @var string Template type.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Template name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Template description.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var VideoConfigureInfo Video parameter configuration.
+     * @var VideoConfigureInfo 
      */
     public $VideoConfigure;
 
     /**
-     * @var WatermarkConfigureData Watermark parameter configuration.
+     * @var WatermarkConfigureData 
      */
     public $WatermarkConfigure;
 
     /**
-     * @param string $Type Template type.
-     * @param string $Name Template name.
-     * @param string $Comment Template description.
-     * @param VideoConfigureInfo $VideoConfigure Video parameter configuration.
-     * @param WatermarkConfigureData $WatermarkConfigure Watermark parameter configuration.
+     * @param string $Type 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param VideoConfigureInfo $VideoConfigure 
+     * @param WatermarkConfigureData $WatermarkConfigure 
      */
     function __construct()
     {

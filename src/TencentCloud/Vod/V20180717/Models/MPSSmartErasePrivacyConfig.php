@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Privacy protection configuration for the smart erasing template.
+ * 
  *
- * @method string getPrivacyModel() Obtain <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
- * @method void setPrivacyModel(string $PrivacyModel) Set <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
- * @method array getPrivacyTargets() Obtain <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
- * @method void setPrivacyTargets(array $PrivacyTargets) Set <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+ * @method string getPrivacyModel() Obtain 
+ * @method void setPrivacyModel(string $PrivacyModel) Set 
+ * @method array getPrivacyTargets() Obtain 
+ * @method void setPrivacyTargets(array $PrivacyTargets) Set 
  */
 class MPSSmartErasePrivacyConfig extends AbstractModel
 {
     /**
-     * @var string <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
+     * @var string 
      */
     public $PrivacyModel;
 
     /**
-     * @var array <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+     * @var array 
      */
     public $PrivacyTargets;
 
     /**
-     * @param string $PrivacyModel <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
-     * @param array $PrivacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+     * @param string $PrivacyModel 
+     * @param array $PrivacyTargets 
      */
     function __construct()
     {

@@ -20,138 +20,187 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describe physical machine instance information
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getInstanceName() Obtain Instance name.
- * @method void setInstanceName(string $InstanceName) Set Instance name.
- * @method string getMachineId() Obtain Bound Physical Machine ID
- * @method void setMachineId(string $MachineId) Set Bound Physical Machine ID
- * @method string getInstanceType() Obtain Model specifications
- * @method void setInstanceType(string $InstanceType) Set Model specifications
- * @method string getZone() Obtain Availability zone code
- * @method void setZone(string $Zone) Set Availability zone code
- * @method string getImageId() Obtain Image ID
- * @method void setImageId(string $ImageId) Set Image ID
- * @method string getVersionNumber() Obtain Image version number
- * @method void setVersionNumber(string $VersionNumber) Set Image version number
- * @method string getInstanceStatus() Obtain Instance status, value range: allocating, running, isolating, isolated, terminating, error.
- * @method void setInstanceStatus(string $InstanceStatus) Set Instance status, value range: allocating, running, isolating, isolated, terminating, error.
- * @method string getOperateStatus() Obtain Operation status: normal, starting, stopping, stopped, rebooting.
- * @method void setOperateStatus(string $OperateStatus) Set Operation status: normal, starting, stopping, stopped, rebooting.
- * @method string getPrivateNetworkId() Obtain VPC ID
- * @method void setPrivateNetworkId(string $PrivateNetworkId) Set VPC ID
- * @method string getPrivateIp() Obtain private IPv4 address
- * @method void setPrivateIp(string $PrivateIp) Set private IPv4 address
- * @method string getPrivateIpV6() Obtain private IPv6 address
- * @method void setPrivateIpV6(string $PrivateIpV6) Set private IPv6 address
- * @method string getPublicNetworkId() Obtain Public network ID
- * @method void setPublicNetworkId(string $PublicNetworkId) Set Public network ID
- * @method string getPublicIp() Obtain Public IPv4 address
- * @method void setPublicIp(string $PublicIp) Set Public IPv4 address
- * @method string getPublicIpV6() Obtain Public IPv6 address
- * @method void setPublicIpV6(string $PublicIpV6) Set Public IPv6 address
- * @method string getCreatedTime() Obtain Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method string getMachineId() Obtain <p>Bound Physical Machine ID</p>
+ * @method void setMachineId(string $MachineId) Set <p>Bound Physical Machine ID</p>
+ * @method string getInstanceType() Obtain <p>Model specifications</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Model specifications</p>
+ * @method string getZone() Obtain <p>Availability zone code</p>
+ * @method void setZone(string $Zone) Set <p>Availability zone code</p>
+ * @method string getImageId() Obtain <p>Image ID.</p>
+ * @method void setImageId(string $ImageId) Set <p>Image ID.</p>
+ * @method string getVersionNumber() Obtain <p>Image version number</p>
+ * @method void setVersionNumber(string $VersionNumber) Set <p>Image version number</p>
+ * @method string getInstanceStatus() Obtain <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
+ * @method void setInstanceStatus(string $InstanceStatus) Set <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
+ * @method string getOperateStatus() Obtain <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
+ * @method void setOperateStatus(string $OperateStatus) Set <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
+ * @method string getPrivateNetworkId() Obtain <p>VPC ID.</p>
+ * @method void setPrivateNetworkId(string $PrivateNetworkId) Set <p>VPC ID.</p>
+ * @method string getPrivateIp() Obtain <p>Private IPv4 address</p>
+ * @method void setPrivateIp(string $PrivateIp) Set <p>Private IPv4 address</p>
+ * @method string getPrivateIpV6() Obtain <p>Private IPv6 address</p>
+ * @method void setPrivateIpV6(string $PrivateIpV6) Set <p>Private IPv6 address</p>
+ * @method string getPublicNetworkId() Obtain <p>Public network ID.</p>
+ * @method void setPublicNetworkId(string $PublicNetworkId) Set <p>Public network ID.</p>
+ * @method string getPublicIp() Obtain <p>Public IPv4 address</p>
+ * @method void setPublicIp(string $PublicIp) Set <p>Public IPv4 address</p>
+ * @method string getPublicIpV6() Obtain <p>Public IPv6 address</p>
+ * @method void setPublicIpV6(string $PublicIpV6) Set <p>Public IPv6 address</p>
+ * @method string getFileSystemType() Obtain <p>File System Type</p>
+ * @method void setFileSystemType(string $FileSystemType) Set <p>File System Type</p>
+ * @method string getCreatedTime() Obtain <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+ * @method void setCreatedTime(string $CreatedTime) Set <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+ * @method string getInstanceFamily() Obtain <p>Instance family flag</p>
+ * @method void setInstanceFamily(string $InstanceFamily) Set <p>Instance family flag</p>
+ * @method string getInstanceFamilyName() Obtain <p>Model Family Name</p>
+ * @method void setInstanceFamilyName(string $InstanceFamilyName) Set <p>Model Family Name</p>
+ * @method string getCpuType() Obtain <p>CPU Model</p>
+ * @method void setCpuType(string $CpuType) Set <p>CPU Model</p>
+ * @method integer getCpu() Obtain <p>CPU cores.</p>
+ * @method void setCpu(integer $Cpu) Set <p>CPU cores.</p>
+ * @method integer getMemory() Obtain <p>Memory size.</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory size.</p>
  */
 class Instance extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name.
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var string Bound Physical Machine ID
+     * @var string <p>Bound Physical Machine ID</p>
      */
     public $MachineId;
 
     /**
-     * @var string Model specifications
+     * @var string <p>Model specifications</p>
      */
     public $InstanceType;
 
     /**
-     * @var string Availability zone code
+     * @var string <p>Availability zone code</p>
      */
     public $Zone;
 
     /**
-     * @var string Image ID
+     * @var string <p>Image ID.</p>
      */
     public $ImageId;
 
     /**
-     * @var string Image version number
+     * @var string <p>Image version number</p>
+     * @deprecated
      */
     public $VersionNumber;
 
     /**
-     * @var string Instance status, value range: allocating, running, isolating, isolated, terminating, error.
+     * @var string <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string Operation status: normal, starting, stopping, stopped, rebooting.
+     * @var string <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
      */
     public $OperateStatus;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID.</p>
      */
     public $PrivateNetworkId;
 
     /**
-     * @var string private IPv4 address
+     * @var string <p>Private IPv4 address</p>
      */
     public $PrivateIp;
 
     /**
-     * @var string private IPv6 address
+     * @var string <p>Private IPv6 address</p>
      */
     public $PrivateIpV6;
 
     /**
-     * @var string Public network ID
+     * @var string <p>Public network ID.</p>
      */
     public $PublicNetworkId;
 
     /**
-     * @var string Public IPv4 address
+     * @var string <p>Public IPv4 address</p>
      */
     public $PublicIp;
 
     /**
-     * @var string Public IPv6 address
+     * @var string <p>Public IPv6 address</p>
      */
     public $PublicIpV6;
 
     /**
-     * @var string Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
+     * @var string <p>File System Type</p>
+     */
+    public $FileSystemType;
+
+    /**
+     * @var string <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
      */
     public $CreatedTime;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $InstanceName Instance name.
-     * @param string $MachineId Bound Physical Machine ID
-     * @param string $InstanceType Model specifications
-     * @param string $Zone Availability zone code
-     * @param string $ImageId Image ID
-     * @param string $VersionNumber Image version number
-     * @param string $InstanceStatus Instance status, value range: allocating, running, isolating, isolated, terminating, error.
-     * @param string $OperateStatus Operation status: normal, starting, stopping, stopped, rebooting.
-     * @param string $PrivateNetworkId VPC ID
-     * @param string $PrivateIp private IPv4 address
-     * @param string $PrivateIpV6 private IPv6 address
-     * @param string $PublicNetworkId Public network ID
-     * @param string $PublicIp Public IPv4 address
-     * @param string $PublicIpV6 Public IPv6 address
-     * @param string $CreatedTime Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
+     * @var string <p>Instance family flag</p>
+     */
+    public $InstanceFamily;
+
+    /**
+     * @var string <p>Model Family Name</p>
+     */
+    public $InstanceFamilyName;
+
+    /**
+     * @var string <p>CPU Model</p>
+     */
+    public $CpuType;
+
+    /**
+     * @var integer <p>CPU cores.</p>
+     */
+    public $Cpu;
+
+    /**
+     * @var integer <p>Memory size.</p>
+     */
+    public $Memory;
+
+    /**
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param string $MachineId <p>Bound Physical Machine ID</p>
+     * @param string $InstanceType <p>Model specifications</p>
+     * @param string $Zone <p>Availability zone code</p>
+     * @param string $ImageId <p>Image ID.</p>
+     * @param string $VersionNumber <p>Image version number</p>
+     * @param string $InstanceStatus <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
+     * @param string $OperateStatus <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
+     * @param string $PrivateNetworkId <p>VPC ID.</p>
+     * @param string $PrivateIp <p>Private IPv4 address</p>
+     * @param string $PrivateIpV6 <p>Private IPv6 address</p>
+     * @param string $PublicNetworkId <p>Public network ID.</p>
+     * @param string $PublicIp <p>Public IPv4 address</p>
+     * @param string $PublicIpV6 <p>Public IPv6 address</p>
+     * @param string $FileSystemType <p>File System Type</p>
+     * @param string $CreatedTime <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * @param string $InstanceFamily <p>Instance family flag</p>
+     * @param string $InstanceFamilyName <p>Model Family Name</p>
+     * @param string $CpuType <p>CPU Model</p>
+     * @param integer $Cpu <p>CPU cores.</p>
+     * @param integer $Memory <p>Memory size.</p>
      */
     function __construct()
     {
@@ -226,8 +275,32 @@ class Instance extends AbstractModel
             $this->PublicIpV6 = $param["PublicIpV6"];
         }
 
+        if (array_key_exists("FileSystemType",$param) and $param["FileSystemType"] !== null) {
+            $this->FileSystemType = $param["FileSystemType"];
+        }
+
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
+            $this->InstanceFamily = $param["InstanceFamily"];
+        }
+
+        if (array_key_exists("InstanceFamilyName",$param) and $param["InstanceFamilyName"] !== null) {
+            $this->InstanceFamilyName = $param["InstanceFamilyName"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
         }
     }
 }

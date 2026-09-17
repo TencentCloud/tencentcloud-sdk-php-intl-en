@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a transcoding (bitrate reduction) task.
+ * 
  *
- * @method string getStatus() Obtain The task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set The task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
- * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
- * @method string getMessage() Obtain The error message.
- * @method void setMessage(string $Message) Set The error message.
- * @method TranscodeTaskInput getInput() Obtain The input of a transcoding task.
- * @method void setInput(TranscodeTaskInput $Input) Set The input of a transcoding task.
- * @method MediaTranscodeItem getOutput() Obtain Transcoding task output.
- * @method void setOutput(MediaTranscodeItem $Output) Set Transcoding task output.
- * @method integer getProgress() Obtain The transcoding progress. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set The transcoding progress. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain The start time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set The start time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method string getFinishTime() Obtain The end time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setFinishTime(string $FinishTime) Set The end time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method TranscodeTaskInput getInput() Obtain 
+ * @method void setInput(TranscodeTaskInput $Input) Set 
+ * @method MediaTranscodeItem getOutput() Obtain 
+ * @method void setOutput(MediaTranscodeItem $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
  */
 class ReduceMediaBitrateTranscodeResult extends AbstractModel
 {
     /**
-     * @var string The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var string The error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var TranscodeTaskInput The input of a transcoding task.
+     * @var TranscodeTaskInput 
      */
     public $Input;
 
     /**
-     * @var MediaTranscodeItem Transcoding task output.
+     * @var MediaTranscodeItem 
      */
     public $Output;
 
     /**
-     * @var integer The transcoding progress. Value range: 0-100.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var string The start time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $BeginProcessTime;
 
     /**
-     * @var string The end time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $FinishTime;
 
     /**
-     * @param string $Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
-     * @param string $Message The error message.
-     * @param TranscodeTaskInput $Input The input of a transcoding task.
-     * @param MediaTranscodeItem $Output Transcoding task output.
-     * @param integer $Progress The transcoding progress. Value range: 0-100.
-     * @param string $BeginProcessTime The start time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param string $FinishTime The end time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param string $Message 
+     * @param TranscodeTaskInput $Input 
+     * @param MediaTranscodeItem $Output 
+     * @param integer $Progress 
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
      */
     function __construct()
     {

@@ -18,48 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image noise removal configuration.
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method void setSwitch(string $Switch) Set Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method string getType() Obtain The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
- * @method void setType(string $Type) Set The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class VideoDenoiseInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param string $Type The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * @param string $Switch 
+     * @param string $Type 
      */
     function __construct()
     {

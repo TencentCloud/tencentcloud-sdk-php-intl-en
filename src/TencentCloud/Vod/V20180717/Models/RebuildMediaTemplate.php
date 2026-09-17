@@ -18,148 +18,116 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of a remaster template.
+ * 
  *
- * @method integer getDefinition() Obtain The remaster template ID.
- * @method void setDefinition(integer $Definition) Set The remaster template ID.
- * @method string getType() Obtain The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
- * @method void setType(string $Type) Set The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
- * @method string getName() Obtain The remaster template name.
- * @method void setName(string $Name) Set The remaster template name.
- * @method string getComment() Obtain The template description.
- * @method void setComment(string $Comment) Set The template description.
- * @method RebuildVideoInfo getRebuildVideoInfo() Obtain Audio-visual quality revival video control info.
- * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set Audio-visual quality revival video control info.
- * @method RebuildAudioInfo getRebuildAudioInfo() Obtain Audio-visual quality revival audio control info.
- * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set Audio-visual quality revival audio control info.
- * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain Output video control information.
- * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set Output video control information.
- * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain Output audio control information.
- * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set Output audio control information.
- * @method string getContainer() Obtain The output file format. Valid values: `mp4` (default), `hls`.
- * @method void setContainer(string $Container) Set The output file format. Valid values: `mp4` (default), `hls`.
- * @method integer getRemoveVideo() Obtain Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
- * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
- * @method integer getRemoveAudio() Obtain Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
- * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
- * @method string getCreateTime() Obtain The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method RebuildVideoInfo getRebuildVideoInfo() Obtain 
+ * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set 
+ * @method RebuildAudioInfo getRebuildAudioInfo() Obtain 
+ * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set 
+ * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain 
+ * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set 
+ * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain 
+ * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set 
+ * @method string getContainer() Obtain 
+ * @method void setContainer(string $Container) Set 
+ * @method integer getRemoveVideo() Obtain 
+ * @method void setRemoveVideo(integer $RemoveVideo) Set 
+ * @method integer getRemoveAudio() Obtain 
+ * @method void setRemoveAudio(integer $RemoveAudio) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class RebuildMediaTemplate extends AbstractModel
 {
     /**
-     * @var integer The remaster template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string The remaster template name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string The template description.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var RebuildVideoInfo Audio-visual quality revival video control info.
+     * @var RebuildVideoInfo 
      */
     public $RebuildVideoInfo;
 
     /**
-     * @var RebuildAudioInfo Audio-visual quality revival audio control info.
+     * @var RebuildAudioInfo 
      */
     public $RebuildAudioInfo;
 
     /**
-     * @var RebuildMediaTargetVideoStream Output video control information.
+     * @var RebuildMediaTargetVideoStream 
      */
     public $TargetVideoInfo;
 
     /**
-     * @var RebuildMediaTargetAudioStream Output audio control information.
+     * @var RebuildMediaTargetAudioStream 
      */
     public $TargetAudioInfo;
 
     /**
-     * @var string The output file format. Valid values: `mp4` (default), `hls`.
+     * @var string 
      */
     public $Container;
 
     /**
-     * @var integer Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
+     * @var integer 
      */
     public $RemoveVideo;
 
     /**
-     * @var integer Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
+     * @var integer 
      */
     public $RemoveAudio;
 
     /**
-     * @var string The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition The remaster template ID.
-     * @param string $Type The template type. Valid values:
-<li>`Preset`</li>
-<li>`Custom`</li>
-     * @param string $Name The remaster template name.
-     * @param string $Comment The template description.
-     * @param RebuildVideoInfo $RebuildVideoInfo Audio-visual quality revival video control info.
-     * @param RebuildAudioInfo $RebuildAudioInfo Audio-visual quality revival audio control info.
-     * @param RebuildMediaTargetVideoStream $TargetVideoInfo Output video control information.
-     * @param RebuildMediaTargetAudioStream $TargetAudioInfo Output audio control information.
-     * @param string $Container The output file format. Valid values: `mp4` (default), `hls`.
-     * @param integer $RemoveVideo Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
-     * @param integer $RemoveAudio Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-Default value: 0.
-     * @param string $CreateTime The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Definition 
+     * @param string $Type 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param RebuildVideoInfo $RebuildVideoInfo 
+     * @param RebuildAudioInfo $RebuildAudioInfo 
+     * @param RebuildMediaTargetVideoStream $TargetVideoInfo 
+     * @param RebuildMediaTargetAudioStream $TargetAudioInfo 
+     * @param string $Container 
+     * @param integer $RemoveVideo 
+     * @param integer $RemoveAudio 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

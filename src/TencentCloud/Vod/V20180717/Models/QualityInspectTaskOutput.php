@@ -18,60 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Media quality inspection task generates.
+ * 
  *
- * @method integer getNoAudio() Obtain Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
- * @method void setNoAudio(integer $NoAudio) Set Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
- * @method integer getNoVideo() Obtain Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
- * @method void setNoVideo(integer $NoVideo) Set Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
- * @method integer getQualityEvaluationScore() Obtain Video picture quality score, value ranges from 0 to 100.
- * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set Video picture quality score, value ranges from 0 to 100.
- * @method array getQualityInspectResultSet() Obtain List of abnormalities detected in audio and video quality.
- * @method void setQualityInspectResultSet(array $QualityInspectResultSet) Set List of abnormalities detected in audio and video quality.
+ * @method integer getNoAudio() Obtain 
+ * @method void setNoAudio(integer $NoAudio) Set 
+ * @method integer getNoVideo() Obtain 
+ * @method void setNoVideo(integer $NoVideo) Set 
+ * @method integer getQualityEvaluationScore() Obtain 
+ * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set 
+ * @method array getQualityInspectResultSet() Obtain 
+ * @method void setQualityInspectResultSet(array $QualityInspectResultSet) Set 
+ * @method float getQualityEvaluationMeanOpinionScore() Obtain 
+ * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) Set 
+ * @method integer getAestheticEvaluationScore() Obtain 
+ * @method void setAestheticEvaluationScore(integer $AestheticEvaluationScore) Set 
+ * @method array getContainerDiagnoseResultSet() Obtain 
+ * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set 
+ * @method QualityInspectLLMDetectionReport getLLMDetectionReport() Obtain 
+ * @method void setLLMDetectionReport(QualityInspectLLMDetectionReport $LLMDetectionReport) Set 
  */
 class QualityInspectTaskOutput extends AbstractModel
 {
     /**
-     * @var integer Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
+     * @var integer 
      */
     public $NoAudio;
 
     /**
-     * @var integer Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
+     * @var integer 
      */
     public $NoVideo;
 
     /**
-     * @var integer Video picture quality score, value ranges from 0 to 100.
+     * @var integer 
      */
     public $QualityEvaluationScore;
 
     /**
-     * @var array List of abnormalities detected in audio and video quality.
+     * @var array 
      */
     public $QualityInspectResultSet;
 
     /**
-     * @param integer $NoAudio Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
-     * @param integer $NoVideo Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
-     * @param integer $QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
-     * @param array $QualityInspectResultSet List of abnormalities detected in audio and video quality.
+     * @var float 
+     */
+    public $QualityEvaluationMeanOpinionScore;
+
+    /**
+     * @var integer 
+     */
+    public $AestheticEvaluationScore;
+
+    /**
+     * @var array 
+     */
+    public $ContainerDiagnoseResultSet;
+
+    /**
+     * @var QualityInspectLLMDetectionReport 
+     */
+    public $LLMDetectionReport;
+
+    /**
+     * @param integer $NoAudio 
+     * @param integer $NoVideo 
+     * @param integer $QualityEvaluationScore 
+     * @param array $QualityInspectResultSet 
+     * @param float $QualityEvaluationMeanOpinionScore 
+     * @param integer $AestheticEvaluationScore 
+     * @param array $ContainerDiagnoseResultSet 
+     * @param QualityInspectLLMDetectionReport $LLMDetectionReport 
      */
     function __construct()
     {
@@ -105,6 +121,28 @@ class QualityInspectTaskOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->QualityInspectResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("QualityEvaluationMeanOpinionScore",$param) and $param["QualityEvaluationMeanOpinionScore"] !== null) {
+            $this->QualityEvaluationMeanOpinionScore = $param["QualityEvaluationMeanOpinionScore"];
+        }
+
+        if (array_key_exists("AestheticEvaluationScore",$param) and $param["AestheticEvaluationScore"] !== null) {
+            $this->AestheticEvaluationScore = $param["AestheticEvaluationScore"];
+        }
+
+        if (array_key_exists("ContainerDiagnoseResultSet",$param) and $param["ContainerDiagnoseResultSet"] !== null) {
+            $this->ContainerDiagnoseResultSet = [];
+            foreach ($param["ContainerDiagnoseResultSet"] as $key => $value){
+                $obj = new QualityInspectContainerDiagnoseResultItem();
+                $obj->deserialize($value);
+                array_push($this->ContainerDiagnoseResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("LLMDetectionReport",$param) and $param["LLMDetectionReport"] !== null) {
+            $this->LLMDetectionReport = new QualityInspectLLMDetectionReport();
+            $this->LLMDetectionReport->deserialize($param["LLMDetectionReport"]);
         }
     }
 }

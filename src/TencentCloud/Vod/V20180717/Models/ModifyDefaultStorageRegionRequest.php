@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDefaultStorageRegion request structure.
  *
- * @method string getStorageRegion() Obtain The default storage region must be an opened region (query via the DescribeStorageRegions API).
- * @method void setStorageRegion(string $StorageRegion) Set The default storage region must be an opened region (query via the DescribeStorageRegions API).
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getStorageRegion() Obtain 
+ * @method void setStorageRegion(string $StorageRegion) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class ModifyDefaultStorageRegionRequest extends AbstractModel
 {
     /**
-     * @var string The default storage region must be an opened region (query via the DescribeStorageRegions API).
+     * @var string 
      */
     public $StorageRegion;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $StorageRegion The default storage region must be an opened region (query via the DescribeStorageRegions API).
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $StorageRegion 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

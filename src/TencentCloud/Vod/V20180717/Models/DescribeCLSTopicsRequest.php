@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCLSTopics request structure.
  *
- * @method string getCLSRegion() Obtain Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
- * @method void setCLSRegion(string $CLSRegion) Set Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
- * @method string getLogsetId() Obtain Log Set ID of Log Topic.
- * @method void setLogsetId(string $LogsetId) Set Log Set ID of Log Topic.
- * @method array getTopicIds() Obtain Log topic ID list. If left empty, means query all log topics.
- * @method void setTopicIds(array $TopicIds) Set Log topic ID list. If left empty, means query all log topics.
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 20. Maximum value: 100.
+ * @method string getCLSRegion() Obtain 
+ * @method void setCLSRegion(string $CLSRegion) Set 
+ * @method string getLogsetId() Obtain 
+ * @method void setLogsetId(string $LogsetId) Set 
+ * @method array getTopicIds() Obtain 
+ * @method void setTopicIds(array $TopicIds) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeCLSTopicsRequest extends AbstractModel
 {
     /**
-     * @var string Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * @var string 
      */
     public $CLSRegion;
 
     /**
-     * @var string Log Set ID of Log Topic.
+     * @var string 
      */
     public $LogsetId;
 
     /**
-     * @var array Log topic ID list. If left empty, means query all log topics.
+     * @var array 
      */
     public $TopicIds;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. Default value: 20. Maximum value: 100.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param string $CLSRegion Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
-     * @param string $LogsetId Log Set ID of Log Topic.
-     * @param array $TopicIds Log topic ID list. If left empty, means query all log topics.
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. Default value: 20. Maximum value: 100.
+     * @param string $CLSRegion 
+     * @param string $LogsetId 
+     * @param array $TopicIds 
+     * @param integer $Offset 
+     * @param integer $Limit 
      */
     function __construct()
     {

@@ -18,37 +18,29 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a digital watermark.
+ * 
  *
- * @method string getSwitch() Obtain Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
- * @method void setSwitch(string $Switch) Set Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
- * @method integer getDefinition() Obtain This parameter has been deprecated.
- * @method void setDefinition(integer $Definition) Set This parameter has been deprecated.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class TraceWatermarkInput extends AbstractModel
 {
     /**
-     * @var string Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var integer This parameter has been deprecated.
+     * @var integer 
      * @deprecated
      */
     public $Definition;
 
     /**
-     * @param string $Switch Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
-     * @param integer $Definition This parameter has been deprecated.
+     * @param string $Switch 
+     * @param integer $Definition 
      */
     function __construct()
     {

@@ -18,24 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Transcoding information of VOD file
+ * 
  *
- * @method array getTranscodeSet() Obtain Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTranscodeSet(array $TranscodeSet) Set Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTranscodeSet() Obtain 
+ * @method void setTranscodeSet(array $TranscodeSet) Set 
  */
 class MediaTranscodeInfo extends AbstractModel
 {
     /**
-     * @var array Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $TranscodeSet;
 
     /**
-     * @param array $TranscodeSet Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TranscodeSet 
      */
     function __construct()
     {

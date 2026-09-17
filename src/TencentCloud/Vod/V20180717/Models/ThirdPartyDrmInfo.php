@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Third-party Drm encrypted information.
+ * 
  *
- * @method array getDrmTypes() Obtain <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
- * @method void setDrmTypes(array $DrmTypes) Set <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
- * @method SPEKEDrm getSPEKEDrm() Obtain <p>External DRM vendor information.</p>
- * @method void setSPEKEDrm(SPEKEDrm $SPEKEDrm) Set <p>External DRM vendor information.</p>
+ * @method array getDrmTypes() Obtain 
+ * @method void setDrmTypes(array $DrmTypes) Set 
+ * @method SPEKEDrm getSPEKEDrm() Obtain 
+ * @method void setSPEKEDrm(SPEKEDrm $SPEKEDrm) Set 
  */
 class ThirdPartyDrmInfo extends AbstractModel
 {
     /**
-     * @var array <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
+     * @var array 
      */
     public $DrmTypes;
 
     /**
-     * @var SPEKEDrm <p>External DRM vendor information.</p>
+     * @var SPEKEDrm 
      */
     public $SPEKEDrm;
 
     /**
-     * @param array $DrmTypes <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
-     * @param SPEKEDrm $SPEKEDrm <p>External DRM vendor information.</p>
+     * @param array $DrmTypes 
+     * @param SPEKEDrm $SPEKEDrm 
      */
     function __construct()
     {

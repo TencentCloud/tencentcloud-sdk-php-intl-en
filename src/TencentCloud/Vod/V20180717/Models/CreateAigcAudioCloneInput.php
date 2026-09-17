@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create AIGC voice clone input.
+ * 
  *
- * @method AigcAudioCloneInputFileInfo getAudioFileInfo() Obtain <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
- * @method void setAudioFileInfo(AigcAudioCloneInputFileInfo $AudioFileInfo) Set <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
- * @method string getVoiceId() Obtain <p>Custom voice ID.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Custom voice ID.</p>
- * @method string getText() Obtain <p>Clone audition parameters.</p>
- * @method void setText(string $Text) Set <p>Clone audition parameters.</p>
- * @method AigcAudioCloneInputFileInfo getPromptAudioFileInfo() Obtain <p>Example audio for voice replication.</p>
- * @method void setPromptAudioFileInfo(AigcAudioCloneInputFileInfo $PromptAudioFileInfo) Set <p>Example audio for voice replication.</p>
- * @method string getPromptText() Obtain <p>Text content of the sample audio.</p>
- * @method void setPromptText(string $PromptText) Set <p>Text content of the sample audio.</p>
- * @method string getPayload() Obtain <p>Pass-through parameter.</p>
- * @method void setPayload(string $Payload) Set <p>Pass-through parameter.</p>
+ * @method AigcAudioCloneInputFileInfo getAudioFileInfo() Obtain 
+ * @method void setAudioFileInfo(AigcAudioCloneInputFileInfo $AudioFileInfo) Set 
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
+ * @method string getText() Obtain 
+ * @method void setText(string $Text) Set 
+ * @method AigcAudioCloneInputFileInfo getPromptAudioFileInfo() Obtain 
+ * @method void setPromptAudioFileInfo(AigcAudioCloneInputFileInfo $PromptAudioFileInfo) Set 
+ * @method string getPromptText() Obtain 
+ * @method void setPromptText(string $PromptText) Set 
+ * @method string getPayload() Obtain 
+ * @method void setPayload(string $Payload) Set 
  */
 class CreateAigcAudioCloneInput extends AbstractModel
 {
     /**
-     * @var AigcAudioCloneInputFileInfo <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
+     * @var AigcAudioCloneInputFileInfo 
      */
     public $AudioFileInfo;
 
     /**
-     * @var string <p>Custom voice ID.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @var string <p>Clone audition parameters.</p>
+     * @var string 
      */
     public $Text;
 
     /**
-     * @var AigcAudioCloneInputFileInfo <p>Example audio for voice replication.</p>
+     * @var AigcAudioCloneInputFileInfo 
      */
     public $PromptAudioFileInfo;
 
     /**
-     * @var string <p>Text content of the sample audio.</p>
+     * @var string 
      */
     public $PromptText;
 
     /**
-     * @var string <p>Pass-through parameter.</p>
+     * @var string 
      */
     public $Payload;
 
     /**
-     * @param AigcAudioCloneInputFileInfo $AudioFileInfo <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
-     * @param string $VoiceId <p>Custom voice ID.</p>
-     * @param string $Text <p>Clone audition parameters.</p>
-     * @param AigcAudioCloneInputFileInfo $PromptAudioFileInfo <p>Example audio for voice replication.</p>
-     * @param string $PromptText <p>Text content of the sample audio.</p>
-     * @param string $Payload <p>Pass-through parameter.</p>
+     * @param AigcAudioCloneInputFileInfo $AudioFileInfo 
+     * @param string $VoiceId 
+     * @param string $Text 
+     * @param AigcAudioCloneInputFileInfo $PromptAudioFileInfo 
+     * @param string $PromptText 
+     * @param string $Payload 
      */
     function __construct()
     {

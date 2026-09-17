@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video transcoding playback information (v2017)
+ * 
  *
- * @method string getUrl() Obtain Playback address.
- * @method void setUrl(string $Url) Set Playback address.
- * @method integer getDefinition() Obtain Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
- * @method integer getBitrate() Obtain Sum of the average bitrate of a video stream and that of an audio stream in bps.
- * @method void setBitrate(integer $Bitrate) Set Sum of the average bitrate of a video stream and that of an audio stream in bps.
- * @method integer getHeight() Obtain Maximum value of the height of a video stream in px.
- * @method void setHeight(integer $Height) Set Maximum value of the height of a video stream in px.
- * @method integer getWidth() Obtain Maximum value of the width of a video stream in px.
- * @method void setWidth(integer $Width) Set Maximum value of the width of a video stream in px.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getBitrate() Obtain 
+ * @method void setBitrate(integer $Bitrate) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
  */
 class TranscodePlayInfo2017 extends AbstractModel
 {
     /**
-     * @var string Playback address.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var integer Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer Sum of the average bitrate of a video stream and that of an audio stream in bps.
+     * @var integer 
      */
     public $Bitrate;
 
     /**
-     * @var integer Maximum value of the height of a video stream in px.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var integer Maximum value of the width of a video stream in px.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @param string $Url Playback address.
-     * @param integer $Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-     * @param integer $Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-     * @param integer $Height Maximum value of the height of a video stream in px.
-     * @param integer $Width Maximum value of the width of a video stream in px.
+     * @param string $Url 
+     * @param integer $Definition 
+     * @param integer $Bitrate 
+     * @param integer $Height 
+     * @param integer $Width 
      */
     function __construct()
     {

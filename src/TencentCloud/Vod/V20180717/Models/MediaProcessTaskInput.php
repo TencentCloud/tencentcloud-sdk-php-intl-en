@@ -18,96 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video processing task type
+ * 
  *
- * @method array getTranscodeTaskSet() Obtain List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAnimatedGraphicTaskSet() Obtain List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) Set List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getSnapshotByTimeOffsetTaskSet() Obtain List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getSampleSnapshotTaskSet() Obtain List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getImageSpriteTaskSet() Obtain List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getCoverBySnapshotTaskSet() Obtain List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCoverBySnapshotTaskSet(array $CoverBySnapshotTaskSet) Set List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAdaptiveDynamicStreamingTaskSet() Obtain List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) Set List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTranscodeTaskSet() Obtain 
+ * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set 
+ * @method array getAnimatedGraphicTaskSet() Obtain 
+ * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) Set 
+ * @method array getSnapshotByTimeOffsetTaskSet() Obtain 
+ * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set 
+ * @method array getSampleSnapshotTaskSet() Obtain 
+ * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set 
+ * @method array getImageSpriteTaskSet() Obtain 
+ * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set 
+ * @method array getCoverBySnapshotTaskSet() Obtain 
+ * @method void setCoverBySnapshotTaskSet(array $CoverBySnapshotTaskSet) Set 
+ * @method array getAdaptiveDynamicStreamingTaskSet() Obtain 
+ * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) Set 
  */
 class MediaProcessTaskInput extends AbstractModel
 {
     /**
-     * @var array List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $TranscodeTaskSet;
 
     /**
-     * @var array List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $AnimatedGraphicTaskSet;
 
     /**
-     * @var array List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $SnapshotByTimeOffsetTaskSet;
 
     /**
-     * @var array List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $SampleSnapshotTaskSet;
 
     /**
-     * @var array List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $ImageSpriteTaskSet;
 
     /**
-     * @var array List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $CoverBySnapshotTaskSet;
 
     /**
-     * @var array List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * @param array $TranscodeTaskSet List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AnimatedGraphicTaskSet List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $SampleSnapshotTaskSet List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ImageSpriteTaskSet List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $CoverBySnapshotTaskSet List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TranscodeTaskSet 
+     * @param array $AnimatedGraphicTaskSet 
+     * @param array $SnapshotByTimeOffsetTaskSet 
+     * @param array $SampleSnapshotTaskSet 
+     * @param array $ImageSpriteTaskSet 
+     * @param array $CoverBySnapshotTaskSet 
+     * @param array $AdaptiveDynamicStreamingTaskSet 
      */
     function __construct()
     {

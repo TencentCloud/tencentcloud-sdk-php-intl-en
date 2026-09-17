@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of media file composing task.
+ * 
  *
- * @method array getTracks() Obtain List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
- * @method void setTracks(array $Tracks) Set List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
- * @method Canvas getCanvas() Obtain Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCanvas(Canvas $Canvas) Set Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ComposeMediaOutput getOutput() Obtain Information of output media file.
- * @method void setOutput(ComposeMediaOutput $Output) Set Information of output media file.
+ * @method array getTracks() Obtain 
+ * @method void setTracks(array $Tracks) Set 
+ * @method Canvas getCanvas() Obtain 
+ * @method void setCanvas(Canvas $Canvas) Set 
+ * @method ComposeMediaOutput getOutput() Obtain 
+ * @method void setOutput(ComposeMediaOutput $Output) Set 
  */
 class ComposeMediaTaskInput extends AbstractModel
 {
     /**
-     * @var array List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+     * @var array 
      */
     public $Tracks;
 
     /**
-     * @var Canvas Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var Canvas 
      */
     public $Canvas;
 
     /**
-     * @var ComposeMediaOutput Information of output media file.
+     * @var ComposeMediaOutput 
      */
     public $Output;
 
     /**
-     * @param array $Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
-     * @param Canvas $Canvas Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ComposeMediaOutput $Output Information of output media file.
+     * @param array $Tracks 
+     * @param Canvas $Canvas 
+     * @param ComposeMediaOutput $Output 
      */
     function __construct()
     {

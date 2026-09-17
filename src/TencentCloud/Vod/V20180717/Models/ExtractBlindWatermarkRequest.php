@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExtractBlindWatermark request structure.
  *
- * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: trace the source ab sequence watermark.</li>
- * @method void setType(string $Type) Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: trace the source ab sequence watermark.</li>
- * @method ExtractBlindWatermarkInputInfo getInputInfo() Obtain File input information for the Media Processing Service (MPS) task.
- * @method void setInputInfo(ExtractBlindWatermarkInputInfo $InputInfo) Set File input information for the Media Processing Service (MPS) task.
- * @method integer getSubAppId() Obtain VOD application ID for watermarking. Note that the SubAppId must be in line with the one used during watermarking to extract the watermark, whether importing FILEID or URL.
- * @method void setSubAppId(integer $SubAppId) Set VOD application ID for watermarking. Note that the SubAppId must be in line with the one used during watermarking to extract the watermark, whether importing FILEID or URL.
- * @method ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() Obtain Configuration of the digital watermark extraction task.
- * @method void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig) Set Configuration of the digital watermark extraction task.
- * @method string getSessionContext() Obtain Identify source context, used for passing through user request information. The value of this field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Identify source context, used for passing through user request information. The value of this field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
- * @method string getSessionId() Obtain An identification code for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with an empty string indicates no deduplication.
- * @method void setSessionId(string $SessionId) Set An identification code for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with an empty string indicates no deduplication.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method ExtractBlindWatermarkInputInfo getInputInfo() Obtain 
+ * @method void setInputInfo(ExtractBlindWatermarkInputInfo $InputInfo) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() Obtain 
+ * @method void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
  */
 class ExtractBlindWatermarkRequest extends AbstractModel
 {
     /**
-     * @var string Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: trace the source ab sequence watermark.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var ExtractBlindWatermarkInputInfo File input information for the Media Processing Service (MPS) task.
+     * @var ExtractBlindWatermarkInputInfo 
      */
     public $InputInfo;
 
     /**
-     * @var integer VOD application ID for watermarking. Note that the SubAppId must be in line with the one used during watermarking to extract the watermark, whether importing FILEID or URL.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var ExtractBlindWatermarkTaskConfig Configuration of the digital watermark extraction task.
+     * @var ExtractBlindWatermarkTaskConfig 
      */
     public $ExtractBlindWatermarkConfig;
 
     /**
-     * @var string Identify source context, used for passing through user request information. The value of this field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var string An identification code for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with an empty string indicates no deduplication.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: trace the source ab sequence watermark.</li>
-     * @param ExtractBlindWatermarkInputInfo $InputInfo File input information for the Media Processing Service (MPS) task.
-     * @param integer $SubAppId VOD application ID for watermarking. Note that the SubAppId must be in line with the one used during watermarking to extract the watermark, whether importing FILEID or URL.
-     * @param ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig Configuration of the digital watermark extraction task.
-     * @param string $SessionContext Identify source context, used for passing through user request information. The value of this field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
-     * @param string $SessionId An identification code for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with an empty string indicates no deduplication.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @param string $Type 
+     * @param ExtractBlindWatermarkInputInfo $InputInfo 
+     * @param integer $SubAppId 
+     * @param ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig 
+     * @param string $SessionContext 
+     * @param string $SessionId 
+     * @param integer $TasksPriority 
      */
     function __construct()
     {

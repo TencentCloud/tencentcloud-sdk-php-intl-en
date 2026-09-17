@@ -18,32 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scenario-based AIGC image generation configuration.
+ * 
  *
- * @method string getType() Obtain AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
- * @method void setType(string $Type) Set AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
- * @method ProductShowcaseConfig getProductShowcaseConfig() Obtain Product display parameter
- * @method void setProductShowcaseConfig(ProductShowcaseConfig $ProductShowcaseConfig) Set Product display parameter
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method ProductShowcaseConfig getProductShowcaseConfig() Obtain 
+ * @method void setProductShowcaseConfig(ProductShowcaseConfig $ProductShowcaseConfig) Set 
  */
 class AigcVideoSceneInfo extends AbstractModel
 {
     /**
-     * @var string AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var ProductShowcaseConfig Product display parameter
+     * @var ProductShowcaseConfig 
      */
     public $ProductShowcaseConfig;
 
     /**
-     * @param string $Type AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
-     * @param ProductShowcaseConfig $ProductShowcaseConfig Product display parameter
+     * @param string $Type 
+     * @param ProductShowcaseConfig $ProductShowcaseConfig 
      */
     function __construct()
     {

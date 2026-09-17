@@ -18,40 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Clipping solidification task information.
+ * 
  *
- * @method string getFileId() Obtain Consolidate the generated Media ID.
- * @method void setFileId(string $FileId) Set Consolidate the generated Media ID.
- * @method string getPersistenceSource() Obtain The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
- * @method void setPersistenceSource(string $PersistenceSource) Set The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getPersistenceSource() Obtain 
+ * @method void setPersistenceSource(string $PersistenceSource) Set 
  */
 class PersistenceCompleteTask extends AbstractModel
 {
     /**
-     * @var string Consolidate the generated Media ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
+     * @var string 
      */
     public $PersistenceSource;
 
     /**
-     * @param string $FileId Consolidate the generated Media ID.
-     * @param string $PersistenceSource The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
+     * @param string $FileId 
+     * @param string $PersistenceSource 
      */
     function __construct()
     {

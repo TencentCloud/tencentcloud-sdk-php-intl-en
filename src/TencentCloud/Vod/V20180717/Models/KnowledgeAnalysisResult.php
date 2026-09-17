@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Knowledge base media analysis result.
+ * 
  *
- * @method string getTaskType() Obtain <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
- * @method void setTaskType(string $TaskType) Set <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
- * @method MPSOutputFileInfo getFile() Obtain <p>Task output file collection</p>
- * @method void setFile(MPSOutputFileInfo $File) Set <p>Task output file collection</p>
+ * @method string getTaskType() Obtain 
+ * @method void setTaskType(string $TaskType) Set 
+ * @method MPSOutputFileInfo getFile() Obtain 
+ * @method void setFile(MPSOutputFileInfo $File) Set 
  */
 class KnowledgeAnalysisResult extends AbstractModel
 {
     /**
-     * @var string <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
+     * @var string 
      */
     public $TaskType;
 
     /**
-     * @var MPSOutputFileInfo <p>Task output file collection</p>
+     * @var MPSOutputFileInfo 
      */
     public $File;
 
     /**
-     * @param string $TaskType <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
-     * @param MPSOutputFileInfo $File <p>Task output file collection</p>
+     * @param string $TaskType 
+     * @param MPSOutputFileInfo $File 
      */
     function __construct()
     {

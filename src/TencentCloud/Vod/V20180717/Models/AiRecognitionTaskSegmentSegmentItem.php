@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Split video segment.
+ * 
  *
- * @method string getFileId() Obtain File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
- * @method void setFileId(string $FileId) Set File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
- * @method string getSegmentUrl() Obtain Split video segment URL.
- * @method void setSegmentUrl(string $SegmentUrl) Set Split video segment URL.
- * @method float getConfidence() Obtain Confidence of split segment. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set Confidence of split segment. Value range: 0-100.
- * @method float getStartTimeOffset() Obtain Start time offset of split segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of split segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of split segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of split segment in seconds.
- * @method string getCovImgUrl() Obtain Split cover image URL.
- * @method void setCovImgUrl(string $CovImgUrl) Set Split cover image URL.
- * @method string getSpecialInfo() Obtain Special field, which should be ignored.
- * @method void setSpecialInfo(string $SpecialInfo) Set Special field, which should be ignored.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getSegmentUrl() Obtain 
+ * @method void setSegmentUrl(string $SegmentUrl) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method string getCovImgUrl() Obtain 
+ * @method void setCovImgUrl(string $CovImgUrl) Set 
+ * @method string getSpecialInfo() Obtain 
+ * @method void setSpecialInfo(string $SpecialInfo) Set 
  */
 class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
 {
     /**
-     * @var string File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Split video segment URL.
+     * @var string 
      */
     public $SegmentUrl;
 
     /**
-     * @var float Confidence of split segment. Value range: 0-100.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var float Start time offset of split segment in seconds.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of split segment in seconds.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var string Split cover image URL.
+     * @var string 
      */
     public $CovImgUrl;
 
     /**
-     * @var string Special field, which should be ignored.
+     * @var string 
      */
     public $SpecialInfo;
 
     /**
-     * @param string $FileId File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
-     * @param string $SegmentUrl Split video segment URL.
-     * @param float $Confidence Confidence of split segment. Value range: 0-100.
-     * @param float $StartTimeOffset Start time offset of split segment in seconds.
-     * @param float $EndTimeOffset End time offset of split segment in seconds.
-     * @param string $CovImgUrl Split cover image URL.
-     * @param string $SpecialInfo Special field, which should be ignored.
+     * @param string $FileId 
+     * @param string $SegmentUrl 
+     * @param float $Confidence 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param string $CovImgUrl 
+     * @param string $SpecialInfo 
      */
     function __construct()
     {

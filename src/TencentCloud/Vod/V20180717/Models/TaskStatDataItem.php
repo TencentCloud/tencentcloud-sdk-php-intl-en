@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task statistics, including number of tasks and usage.
+ * 
  *
- * @method string getTime() Obtain Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
- * @method void setTime(string $Time) Set Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
- * @method integer getCount() Obtain Number of tasks.
- * @method void setCount(integer $Count) Set Number of tasks.
- * @method integer getUsage() Obtain Task usage.
- * @method void setUsage(integer $Usage) Set Task usage.
+ * @method string getTime() Obtain 
+ * @method void setTime(string $Time) Set 
+ * @method integer getCount() Obtain 
+ * @method void setCount(integer $Count) Set 
+ * @method integer getUsage() Obtain 
+ * @method void setUsage(integer $Usage) Set 
  */
 class TaskStatDataItem extends AbstractModel
 {
     /**
-     * @var string Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
+     * @var string 
      */
     public $Time;
 
     /**
-     * @var integer Number of tasks.
+     * @var integer 
      */
     public $Count;
 
     /**
-     * @var integer Task usage.
+     * @var integer 
      */
     public $Usage;
 
     /**
-     * @param string $Time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-     * @param integer $Count Number of tasks.
-     * @param integer $Usage Task usage.
+     * @param string $Time 
+     * @param integer $Count 
+     * @param integer $Usage 
      */
     function __construct()
     {

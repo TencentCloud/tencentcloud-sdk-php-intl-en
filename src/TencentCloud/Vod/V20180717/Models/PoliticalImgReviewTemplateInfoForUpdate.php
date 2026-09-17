@@ -18,84 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters for recognition of politically sensitive content in images
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable recognition of politically sensitive content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
- * @method void setSwitch(string $Switch) Set Whether to enable recognition of politically sensitive content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
- * @method array getLabelSet() Obtain Filter labels for recognition of politically sensitive content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`violation_photo`: banned images</li>
-<li>`politician`: politically sensitive people</li>
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sportspeople</li>
-<li>`entrepreneur`: businesspeople</li>
-<li>`scholar`: scholars</li>
-<li>`celebrity`: celebrities</li>
-<li>`military`: people in military</li>
- * @method void setLabelSet(array $LabelSet) Set Filter labels for recognition of politically sensitive content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`violation_photo`: banned images</li>
-<li>`politician`: politically sensitive people</li>
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sportspeople</li>
-<li>`entrepreneur`: businesspeople</li>
-<li>`scholar`: scholars</li>
-<li>`celebrity`: celebrities</li>
-<li>`military`: people in military</li>
- * @method integer getBlockConfidence() Obtain Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
- * @method void setBlockConfidence(integer $BlockConfidence) Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
- * @method integer getReviewConfidence() Obtain Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method array getLabelSet() Obtain 
+ * @method void setLabelSet(array $LabelSet) Set 
+ * @method integer getBlockConfidence() Obtain 
+ * @method void setBlockConfidence(integer $BlockConfidence) Set 
+ * @method integer getReviewConfidence() Obtain 
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set 
  */
 class PoliticalImgReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Whether to enable recognition of politically sensitive content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var array Filter labels for recognition of politically sensitive content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`violation_photo`: banned images</li>
-<li>`politician`: politically sensitive people</li>
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sportspeople</li>
-<li>`entrepreneur`: businesspeople</li>
-<li>`scholar`: scholars</li>
-<li>`celebrity`: celebrities</li>
-<li>`military`: people in military</li>
+     * @var array 
      */
     public $LabelSet;
 
     /**
-     * @var integer Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+     * @var integer 
      */
     public $BlockConfidence;
 
     /**
-     * @var integer Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+     * @var integer 
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Whether to enable recognition of politically sensitive content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
-     * @param array $LabelSet Filter labels for recognition of politically sensitive content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`violation_photo`: banned images</li>
-<li>`politician`: politically sensitive people</li>
-<li>`entertainment`: people in the entertainment industry</li>
-<li>`sport`: sportspeople</li>
-<li>`entrepreneur`: businesspeople</li>
-<li>`scholar`: scholars</li>
-<li>`celebrity`: celebrities</li>
-<li>`military`: people in military</li>
-     * @param integer $BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
-     * @param integer $ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+     * @param string $Switch 
+     * @param array $LabelSet 
+     * @param integer $BlockConfidence 
+     * @param integer $ReviewConfidence 
      */
     function __construct()
     {

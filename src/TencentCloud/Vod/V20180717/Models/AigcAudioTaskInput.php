@@ -18,76 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of the AIGC sound effect generation task.
+ * 
  *
- * @method string getModelName() Obtain <p>Model name.</p>
- * @method void setModelName(string $ModelName) Set <p>Model name.</p>
- * @method string getModelVersion() Obtain <p>Model version.</p>
- * @method void setModelVersion(string $ModelVersion) Set <p>Model version.</p>
- * @method string getSceneType() Obtain <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
- * @method void setSceneType(string $SceneType) Set <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
- * @method string getPrompt() Obtain <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
- * @method void setPrompt(string $Prompt) Set <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
- * @method string getNegativePrompt() Obtain <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
- * @method void setNegativePrompt(string $NegativePrompt) Set <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
- * @method boolean getEnhancePrompt() Obtain <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
- * @method void setEnhancePrompt(boolean $EnhancePrompt) Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
- * @method AigcAudioOutputConfig getOutputConfig() Obtain <p>Output file of the AIGC image generation result.</p>
- * @method void setOutputConfig(AigcAudioOutputConfig $OutputConfig) Set <p>Output file of the AIGC image generation result.</p>
- * @method string getAdditionalParameters() Obtain <p>Additional parameter</p>
- * @method void setAdditionalParameters(string $AdditionalParameters) Set <p>Additional parameter</p>
+ * @method string getModelName() Obtain 
+ * @method void setModelName(string $ModelName) Set 
+ * @method string getModelVersion() Obtain 
+ * @method void setModelVersion(string $ModelVersion) Set 
+ * @method string getSceneType() Obtain 
+ * @method void setSceneType(string $SceneType) Set 
+ * @method string getPrompt() Obtain 
+ * @method void setPrompt(string $Prompt) Set 
+ * @method string getNegativePrompt() Obtain 
+ * @method void setNegativePrompt(string $NegativePrompt) Set 
+ * @method array getAudioInfos() Obtain 
+ * @method void setAudioInfos(array $AudioInfos) Set 
+ * @method array getVideoInfos() Obtain 
+ * @method void setVideoInfos(array $VideoInfos) Set 
+ * @method boolean getEnhancePrompt() Obtain 
+ * @method void setEnhancePrompt(boolean $EnhancePrompt) Set 
+ * @method AigcAudioOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(AigcAudioOutputConfig $OutputConfig) Set 
+ * @method string getAdditionalParameters() Obtain 
+ * @method void setAdditionalParameters(string $AdditionalParameters) Set 
  */
 class AigcAudioTaskInput extends AbstractModel
 {
     /**
-     * @var string <p>Model name.</p>
+     * @var string 
      */
     public $ModelName;
 
     /**
-     * @var string <p>Model version.</p>
+     * @var string 
      */
     public $ModelVersion;
 
     /**
-     * @var string <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
+     * @var string 
      */
     public $SceneType;
 
     /**
-     * @var string <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * @var string 
      */
     public $Prompt;
 
     /**
-     * @var string <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
+     * @var string 
      */
     public $NegativePrompt;
 
     /**
-     * @var boolean <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
+     * @var array 
+     */
+    public $AudioInfos;
+
+    /**
+     * @var array 
+     */
+    public $VideoInfos;
+
+    /**
+     * @var boolean 
      */
     public $EnhancePrompt;
 
     /**
-     * @var AigcAudioOutputConfig <p>Output file of the AIGC image generation result.</p>
+     * @var AigcAudioOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @var string <p>Additional parameter</p>
+     * @var string 
      */
     public $AdditionalParameters;
 
     /**
-     * @param string $ModelName <p>Model name.</p>
-     * @param string $ModelVersion <p>Model version.</p>
-     * @param string $SceneType <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
-     * @param string $Prompt <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
-     * @param string $NegativePrompt <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
-     * @param boolean $EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
-     * @param AigcAudioOutputConfig $OutputConfig <p>Output file of the AIGC image generation result.</p>
-     * @param string $AdditionalParameters <p>Additional parameter</p>
+     * @param string $ModelName 
+     * @param string $ModelVersion 
+     * @param string $SceneType 
+     * @param string $Prompt 
+     * @param string $NegativePrompt 
+     * @param array $AudioInfos 
+     * @param array $VideoInfos 
+     * @param boolean $EnhancePrompt 
+     * @param AigcAudioOutputConfig $OutputConfig 
+     * @param string $AdditionalParameters 
      */
     function __construct()
     {
@@ -120,6 +136,24 @@ class AigcAudioTaskInput extends AbstractModel
 
         if (array_key_exists("NegativePrompt",$param) and $param["NegativePrompt"] !== null) {
             $this->NegativePrompt = $param["NegativePrompt"];
+        }
+
+        if (array_key_exists("AudioInfos",$param) and $param["AudioInfos"] !== null) {
+            $this->AudioInfos = [];
+            foreach ($param["AudioInfos"] as $key => $value){
+                $obj = new AigcAudioReferenceAudioInfo();
+                $obj->deserialize($value);
+                array_push($this->AudioInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("VideoInfos",$param) and $param["VideoInfos"] !== null) {
+            $this->VideoInfos = [];
+            foreach ($param["VideoInfos"] as $key => $value){
+                $obj = new AigcAudioReferenceVideoInfo();
+                $obj->deserialize($value);
+                array_push($this->VideoInfos, $obj);
+            }
         }
 
         if (array_key_exists("EnhancePrompt",$param) and $param["EnhancePrompt"] !== null) {

@@ -18,106 +18,53 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of the speech full-text recognition task.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item matches full text recognition).</font>
+ * 
  *
- * @method string getSwitch() Obtain Voice full-text recognition task switch. Available values:
-<li>ON: Enable intelligent voice full-text recognition task.</li>
-<li>OFF: Disable the intelligent voice full-text recognition task.</li>
- * @method void setSwitch(string $Switch) Set Voice full-text recognition task switch. Available values:
-<li>ON: Enable intelligent voice full-text recognition task.</li>
-<li>OFF: Disable the intelligent voice full-text recognition task.</li>
- * @method array getSubtitleFormats() Obtain Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
- * @method void setSubtitleFormats(array $SubtitleFormats) Set Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
- * @method string getSubtitleFormat() Obtain Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li>
-<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li>
-<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
- * @method string getSrcLanguage() Obtain Media source language. Valid values:
-<li>zh: Mandarin;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>zh-ca: Cantonese.</li>
-<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
- * @method void setSrcLanguage(string $SrcLanguage) Set Media source language. Valid values:
-<li>zh: Mandarin;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>zh-ca: Cantonese.</li>
-<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
- * @method string getSubtitleName() Obtain Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
- * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method array getSubtitleFormats() Obtain 
+ * @method void setSubtitleFormats(array $SubtitleFormats) Set 
+ * @method string getSubtitleFormat() Obtain 
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set 
+ * @method string getSrcLanguage() Obtain 
+ * @method void setSrcLanguage(string $SrcLanguage) Set 
+ * @method string getSubtitleName() Obtain 
+ * @method void setSubtitleName(string $SubtitleName) Set 
  */
 class AsrFullTextConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Voice full-text recognition task switch. Available values:
-<li>ON: Enable intelligent voice full-text recognition task.</li>
-<li>OFF: Disable the intelligent voice full-text recognition task.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var array Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
+     * @var array 
      */
     public $SubtitleFormats;
 
     /**
-     * @var string Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li>
-<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
+     * @var string 
      * @deprecated
      */
     public $SubtitleFormat;
 
     /**
-     * @var string Media source language. Valid values:
-<li>zh: Mandarin;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>zh-ca: Cantonese.</li>
-<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
+     * @var string 
      */
     public $SrcLanguage;
 
     /**
-     * @var string Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
+     * @var string 
      */
     public $SubtitleName;
 
     /**
-     * @param string $Switch Voice full-text recognition task switch. Available values:
-<li>ON: Enable intelligent voice full-text recognition task.</li>
-<li>OFF: Disable the intelligent voice full-text recognition task.</li>
-     * @param array $SubtitleFormats Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
-     * @param string $SubtitleFormat Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-<li>srt: Generate SRT subtitle file.</li>
-<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
-     * @param string $SrcLanguage Media source language. Valid values:
-<li>zh: Mandarin;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>zh-ca: Cantonese.</li>
-<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
-     * @param string $SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
+     * @param string $Switch 
+     * @param array $SubtitleFormats 
+     * @param string $SubtitleFormat 
+     * @param string $SrcLanguage 
+     * @param string $SubtitleName 
      */
     function __construct()
     {

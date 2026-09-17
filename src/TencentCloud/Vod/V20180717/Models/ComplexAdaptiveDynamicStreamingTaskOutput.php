@@ -18,68 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output result of adaptive bitrate streaming.
+ * 
  *
- * @method integer getDefinition() Obtain Adaptive bitrate template ID.
- * @method void setDefinition(integer $Definition) Set Adaptive bitrate template ID.
- * @method string getFormat() Obtain Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
- * @method void setFormat(string $Format) Set Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
- * @method string getDrmType() Obtain DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
- * @method void setDrmType(string $DrmType) Set DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
- * @method string getUrl() Obtain Playback address of the adaptive bitrate stream.
- * @method void setUrl(string $Url) Set Playback address of the adaptive bitrate stream.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method string getDrmType() Obtain 
+ * @method void setDrmType(string $DrmType) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel
 {
     /**
-     * @var integer Adaptive bitrate template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var string DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
+     * @var string 
      */
     public $DrmType;
 
     /**
-     * @var string Playback address of the adaptive bitrate stream.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param integer $Definition Adaptive bitrate template ID.
-     * @param string $Format Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
-     * @param string $DrmType DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
-     * @param string $Url Playback address of the adaptive bitrate stream.
+     * @param integer $Definition 
+     * @param string $Format 
+     * @param string $DrmType 
+     * @param string $Url 
      */
     function __construct()
     {

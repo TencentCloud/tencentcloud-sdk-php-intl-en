@@ -18,120 +18,100 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Quality Enhance Task
+ * 
  *
- * @method string getTaskId() Obtain Task Id.
- * @method void setTaskId(string $TaskId) Set Task Id.
- * @method string getStatus() Obtain Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
- * @method void setStatus(string $Status) Set Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
- * @method integer getErrCode() Obtain Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
- * @method void setErrCode(integer $ErrCode) Set Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
- * @method integer getProgress() Obtain Media quality enhance task progress, value range [0-100].
- * @method void setProgress(integer $Progress) Set Media quality enhance task progress, value range [0-100].
- * @method QualityEnhanceTaskInput getInput() Obtain Input of the audio and video quality regeneration task.
- * @method void setInput(QualityEnhanceTaskInput $Input) Set Input of the audio and video quality regeneration task.
- * @method QualityEnhanceTaskOutput getOutput() Obtain Output of the audio and video quality regeneration task.
- * @method void setOutput(QualityEnhanceTaskOutput $Output) Set Output of the audio and video quality regeneration task.
- * @method MediaMetaData getMetaData() Obtain Metadata of the output video after audio and video quality revival.
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the output video after audio and video quality revival.
- * @method string getSessionId() Obtain Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
- * @method void setSessionId(string $SessionId) Set Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
- * @method string getSessionContext() Obtain Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method QualityEnhanceTaskInput getInput() Obtain 
+ * @method void setInput(QualityEnhanceTaskInput $Input) Set 
+ * @method QualityEnhanceTaskOutput getOutput() Obtain 
+ * @method void setOutput(QualityEnhanceTaskOutput $Output) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
  */
 class QualityEnhanceTask extends AbstractModel
 {
     /**
-     * @var string Task Id.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var string Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Media quality enhance task progress, value range [0-100].
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var QualityEnhanceTaskInput Input of the audio and video quality regeneration task.
+     * @var QualityEnhanceTaskInput 
      */
     public $Input;
 
     /**
-     * @var QualityEnhanceTaskOutput Output of the audio and video quality regeneration task.
+     * @var QualityEnhanceTaskOutput 
      */
     public $Output;
 
     /**
-     * @var MediaMetaData Metadata of the output video after audio and video quality revival.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var string Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId Task Id.
-     * @param string $Status Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
-     * @param integer $ErrCode Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
-     * @param string $Message Error message.
-     * @param string $ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
-     * @param integer $Progress Media quality enhance task progress, value range [0-100].
-     * @param QualityEnhanceTaskInput $Input Input of the audio and video quality regeneration task.
-     * @param QualityEnhanceTaskOutput $Output Output of the audio and video quality regeneration task.
-     * @param MediaMetaData $MetaData Metadata of the output video after audio and video quality revival.
-     * @param string $SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
-     * @param string $SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param string $ErrCodeExt 
+     * @param integer $Progress 
+     * @param QualityEnhanceTaskInput $Input 
+     * @param QualityEnhanceTaskOutput $Output 
+     * @param MediaMetaData $MetaData 
+     * @param string $SessionId 
+     * @param string $SessionContext 
      */
     function __construct()
     {

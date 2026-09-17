@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The output of a watermark removal task.
+ * 
  *
- * @method string getFileId() Obtain The file ID.
- * @method void setFileId(string $FileId) Set The file ID.
- * @method string getFileType() Obtain The file type, such as MP4 or MP3.
- * @method void setFileType(string $FileType) Set The file type, such as MP4 or MP3.
- * @method string getFileUrl() Obtain The playback URL of the output file.
- * @method void setFileUrl(string $FileUrl) Set The playback URL of the output file.
- * @method string getMediaName() Obtain The filename, which can be up to 64 characters long.
- * @method void setMediaName(string $MediaName) Set The filename, which can be up to 64 characters long.
- * @method MediaMetaData getMetaData() Obtain The metadata of the video, including size, duration, video stream information, and audio stream information.
- * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the video, including size, duration, video stream information, and audio stream information.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getFileType() Obtain 
+ * @method void setFileType(string $FileType) Set 
+ * @method string getFileUrl() Obtain 
+ * @method void setFileUrl(string $FileUrl) Set 
+ * @method string getMediaName() Obtain 
+ * @method void setMediaName(string $MediaName) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
  */
 class RemoveWaterMarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string The file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string The file type, such as MP4 or MP3.
+     * @var string 
      */
     public $FileType;
 
     /**
-     * @var string The playback URL of the output file.
+     * @var string 
      */
     public $FileUrl;
 
     /**
-     * @var string The filename, which can be up to 64 characters long.
+     * @var string 
      */
     public $MediaName;
 
     /**
-     * @var MediaMetaData The metadata of the video, including size, duration, video stream information, and audio stream information.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @param string $FileId The file ID.
-     * @param string $FileType The file type, such as MP4 or MP3.
-     * @param string $FileUrl The playback URL of the output file.
-     * @param string $MediaName The filename, which can be up to 64 characters long.
-     * @param MediaMetaData $MetaData The metadata of the video, including size, duration, video stream information, and audio stream information.
+     * @param string $FileId 
+     * @param string $FileType 
+     * @param string $FileUrl 
+     * @param string $MediaName 
+     * @param MediaMetaData $MetaData 
      */
     function __construct()
     {

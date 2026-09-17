@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC Text Detail
+ * 
  *
- * @method integer getPageSize() Obtain <p>Entries per page</p>
- * @method void setPageSize(integer $PageSize) Set <p>Entries per page</p>
- * @method string getScrollToken() Obtain <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
- * @method void setScrollToken(string $ScrollToken) Set <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
- * @method array getData() Obtain <p>Raw data details</p>
- * @method void setData(array $Data) Set <p>Raw data details</p>
+ * @method integer getPageSize() Obtain 
+ * @method void setPageSize(integer $PageSize) Set 
+ * @method string getScrollToken() Obtain 
+ * @method void setScrollToken(string $ScrollToken) Set 
+ * @method array getData() Obtain 
+ * @method void setData(array $Data) Set 
  */
 class AigcTextDetail extends AbstractModel
 {
     /**
-     * @var integer <p>Entries per page</p>
+     * @var integer 
      */
     public $PageSize;
 
     /**
-     * @var string <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
+     * @var string 
      */
     public $ScrollToken;
 
     /**
-     * @var array <p>Raw data details</p>
+     * @var array 
      */
     public $Data;
 
     /**
-     * @param integer $PageSize <p>Entries per page</p>
-     * @param string $ScrollToken <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
-     * @param array $Data <p>Raw data details</p>
+     * @param integer $PageSize 
+     * @param string $ScrollToken 
+     * @param array $Data 
      */
     function __construct()
     {

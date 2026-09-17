@@ -20,146 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWatermarkTemplate request structure.
  *
- * @method string getType() Obtain Watermark type. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
- * @method void setType(string $Type) Set Watermark type. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Watermark template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Watermark template name. The length cannot exceed 64 characters.
- * @method string getComment() Obtain Template description, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
- * @method string getCoordinateOrigin() Obtain Origin position. Valid values:
-<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
-<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
-<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
-Default value: TopLeft.
- * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Origin position. Valid values:
-<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
-<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
-<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
-Default value: TopLeft.
- * @method string getXPos() Obtain The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
-<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means XPos is 100 pixels.</li>
-Default value: 0px.
- * @method void setXPos(string $XPos) Set The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
-<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means XPos is 100 pixels.</li>
-Default value: 0px.
- * @method string getYPos() Obtain The vertical position of the watermark origin from the origin of coordinates of the video image. Supports two formats: % and px.
-<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
-Default value: 0px.
- * @method void setYPos(string $YPos) Set The vertical position of the watermark origin from the origin of coordinates of the video image. Supports two formats: % and px.
-<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
-Default value: 0px.
- * @method ImageWatermarkInput getImageTemplate() Obtain Image watermark template. This field is required when Type is image. Invalid field when Type is text.
- * @method void setImageTemplate(ImageWatermarkInput $ImageTemplate) Set Image watermark template. This field is required when Type is image. Invalid field when Type is text.
- * @method TextWatermarkTemplateInput getTextTemplate() Obtain Text watermarking template. This field is required when Type is text. Invalid field when Type is image.
- * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set Text watermarking template. This field is required when Type is text. Invalid field when Type is image.
- * @method SvgWatermarkInput getSvgTemplate() Obtain SVG Watermark Template. This field is required when Type is svg. Invalid field when Type is image or text.
- * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set SVG Watermark Template. This field is required when Type is svg. Invalid field when Type is image or text.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getCoordinateOrigin() Obtain 
+ * @method void setCoordinateOrigin(string $CoordinateOrigin) Set 
+ * @method string getXPos() Obtain 
+ * @method void setXPos(string $XPos) Set 
+ * @method string getYPos() Obtain 
+ * @method void setYPos(string $YPos) Set 
+ * @method ImageWatermarkInput getImageTemplate() Obtain 
+ * @method void setImageTemplate(ImageWatermarkInput $ImageTemplate) Set 
+ * @method TextWatermarkTemplateInput getTextTemplate() Obtain 
+ * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set 
+ * @method SvgWatermarkInput getSvgTemplate() Obtain 
+ * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set 
  */
 class CreateWatermarkTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Watermark type. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Watermark template name. The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Template description, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string Origin position. Valid values:
-<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
-<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
-<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
-Default value: TopLeft.
+     * @var string 
      */
     public $CoordinateOrigin;
 
     /**
-     * @var string The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
-<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means XPos is 100 pixels.</li>
-Default value: 0px.
+     * @var string 
      */
     public $XPos;
 
     /**
-     * @var string The vertical position of the watermark origin from the origin of coordinates of the video image. Supports two formats: % and px.
-<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
-Default value: 0px.
+     * @var string 
      */
     public $YPos;
 
     /**
-     * @var ImageWatermarkInput Image watermark template. This field is required when Type is image. Invalid field when Type is text.
+     * @var ImageWatermarkInput 
      */
     public $ImageTemplate;
 
     /**
-     * @var TextWatermarkTemplateInput Text watermarking template. This field is required when Type is text. Invalid field when Type is image.
+     * @var TextWatermarkTemplateInput 
      */
     public $TextTemplate;
 
     /**
-     * @var SvgWatermarkInput SVG Watermark Template. This field is required when Type is svg. Invalid field when Type is image or text.
+     * @var SvgWatermarkInput 
      */
     public $SvgTemplate;
 
     /**
-     * @param string $Type Watermark type. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Watermark template name. The length cannot exceed 64 characters.
-     * @param string $Comment Template description, with a length limit of 256 characters.
-     * @param string $CoordinateOrigin Origin position. Valid values:
-<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
-<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
-<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
-Default value: TopLeft.
-     * @param string $XPos The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
-<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means XPos is 100 pixels.</li>
-Default value: 0px.
-     * @param string $YPos The vertical position of the watermark origin from the origin of coordinates of the video image. Supports two formats: % and px.
-<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
-Default value: 0px.
-     * @param ImageWatermarkInput $ImageTemplate Image watermark template. This field is required when Type is image. Invalid field when Type is text.
-     * @param TextWatermarkTemplateInput $TextTemplate Text watermarking template. This field is required when Type is text. Invalid field when Type is image.
-     * @param SvgWatermarkInput $SvgTemplate SVG Watermark Template. This field is required when Type is svg. Invalid field when Type is image or text.
+     * @param string $Type 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param string $CoordinateOrigin 
+     * @param string $XPos 
+     * @param string $YPos 
+     * @param ImageWatermarkInput $ImageTemplate 
+     * @param TextWatermarkTemplateInput $TextTemplate 
+     * @param SvgWatermarkInput $SvgTemplate 
      */
     function __construct()
     {

@@ -18,116 +18,100 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a bitrate reduction task.
+ * 
  *
- * @method string getTaskId() Obtain The task ID.
- * @method void setTaskId(string $TaskId) Set The task ID.
- * @method string getStatus() Obtain The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
- * @method void setStatus(string $Status) Set The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
- * @method string getFileId() Obtain The ID of the media file.
- * @method void setFileId(string $FileId) Set The ID of the media file.
- * @method string getFileName() Obtain The name of the media file.
- * @method void setFileName(string $FileName) Set The name of the media file.
- * @method string getFileUrl() Obtain The address of the media file.
- * @method void setFileUrl(string $FileUrl) Set The address of the media file.
- * @method MediaMetaData getMetaData() Obtain Metadata of the original video.
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the original video.
- * @method array getMediaProcessResultSet() Obtain The execution status and result of the bitrate reduction task.
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set The execution status and result of the bitrate reduction task.
- * @method integer getTasksPriority() Obtain The task priority, which can be a value from -10 to 10.
- * @method void setTasksPriority(integer $TasksPriority) Set The task priority, which can be a value from -10 to 10.
- * @method string getTasksNotifyMode() Obtain The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
- * @method void setTasksNotifyMode(string $TasksNotifyMode) Set The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
- * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
- * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
- * @method void setSessionId(string $SessionId) Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getFileName() Obtain 
+ * @method void setFileName(string $FileName) Set 
+ * @method string getFileUrl() Obtain 
+ * @method void setFileUrl(string $FileUrl) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method array getMediaProcessResultSet() Obtain 
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getTasksNotifyMode() Obtain 
+ * @method void setTasksNotifyMode(string $TasksNotifyMode) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
  */
 class ReduceMediaBitrateTask extends AbstractModel
 {
     /**
-     * @var string The task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string The ID of the media file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string The name of the media file.
+     * @var string 
      */
     public $FileName;
 
     /**
-     * @var string The address of the media file.
+     * @var string 
      */
     public $FileUrl;
 
     /**
-     * @var MediaMetaData Metadata of the original video.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var array The execution status and result of the bitrate reduction task.
+     * @var array 
      */
     public $MediaProcessResultSet;
 
     /**
-     * @var integer The task priority, which can be a value from -10 to 10.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
+     * @var string 
      */
     public $TasksNotifyMode;
 
     /**
-     * @var string The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var string The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @param string $TaskId The task ID.
-     * @param string $Status The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
-     * @param string $FileId The ID of the media file.
-     * @param string $FileName The name of the media file.
-     * @param string $FileUrl The address of the media file.
-     * @param MediaMetaData $MetaData Metadata of the original video.
-     * @param array $MediaProcessResultSet The execution status and result of the bitrate reduction task.
-     * @param integer $TasksPriority The task priority, which can be a value from -10 to 10.
-     * @param string $TasksNotifyMode The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
-     * @param string $SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-     * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param string $FileId 
+     * @param string $FileName 
+     * @param string $FileUrl 
+     * @param MediaMetaData $MetaData 
+     * @param array $MediaProcessResultSet 
+     * @param integer $TasksPriority 
+     * @param string $TasksNotifyMode 
+     * @param string $SessionContext 
+     * @param string $SessionId 
      */
     function __construct()
     {

@@ -20,28 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PullEvents request structure.
  *
- * @method string getExtInfo() Obtain Reserved field, used for special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purpose.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
-
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class PullEventsRequest extends AbstractModel
 {
     /**
-     * @var string Reserved field, used for special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
-
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $ExtInfo Reserved field, used for special purpose.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
+     * @param string $ExtInfo 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

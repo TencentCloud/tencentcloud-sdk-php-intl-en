@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DesignVoiceAsync request structure.
  *
- * @method string getPrompt() Obtain <p>Voice description.</p>
- * @method void setPrompt(string $Prompt) Set <p>Voice description.</p>
- * @method string getSubAppId() Obtain <p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
- * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
- * @method VoiceSettings getVoiceSettings() Obtain <p>Voice settings</p>
- * @method void setVoiceSettings(VoiceSettings $VoiceSettings) Set <p>Voice settings</p>
- * @method string getPreviewText() Obtain <p>Audition synthesis text. Maximum 500 characters.</p>
- * @method void setPreviewText(string $PreviewText) Set <p>Audition synthesis text. Maximum 500 characters.</p>
- * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
- * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
- * @method string getSessionContext() Obtain <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
- * @method string getSessionId() Obtain <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
- * @method void setSessionId(string $SessionId) Set <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
+ * @method string getPrompt() Obtain 
+ * @method void setPrompt(string $Prompt) Set 
+ * @method string getSubAppId() Obtain 
+ * @method void setSubAppId(string $SubAppId) Set 
+ * @method VoiceSettings getVoiceSettings() Obtain 
+ * @method void setVoiceSettings(VoiceSettings $VoiceSettings) Set 
+ * @method string getPreviewText() Obtain 
+ * @method void setPreviewText(string $PreviewText) Set 
+ * @method string getExtParam() Obtain 
+ * @method void setExtParam(string $ExtParam) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
  */
 class DesignVoiceAsyncRequest extends AbstractModel
 {
     /**
-     * @var string <p>Voice description.</p>
+     * @var string 
      */
     public $Prompt;
 
     /**
-     * @var string <p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @var string 
      */
     public $SubAppId;
 
     /**
-     * @var VoiceSettings <p>Voice settings</p>
+     * @var VoiceSettings 
      */
     public $VoiceSettings;
 
     /**
-     * @var string <p>Audition synthesis text. Maximum 500 characters.</p>
+     * @var string 
      */
     public $PreviewText;
 
     /**
-     * @var string <p>Extended parameters in the format of a JSON string.</p>
+     * @var string 
      */
     public $ExtParam;
 
     /**
-     * @var string <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var string <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @param string $Prompt <p>Voice description.</p>
-     * @param string $SubAppId <p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
-     * @param VoiceSettings $VoiceSettings <p>Voice settings</p>
-     * @param string $PreviewText <p>Audition synthesis text. Maximum 500 characters.</p>
-     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
-     * @param string $SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
-     * @param string $SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
+     * @param string $Prompt 
+     * @param string $SubAppId 
+     * @param VoiceSettings $VoiceSettings 
+     * @param string $PreviewText 
+     * @param string $ExtParam 
+     * @param string $SessionContext 
+     * @param string $SessionId 
      */
     function __construct()
     {

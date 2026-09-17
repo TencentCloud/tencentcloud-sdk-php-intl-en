@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateComplexAdaptiveDynamicStreamingTask request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
- * @method string getFileId() Obtain Media ID of the main media file.
- * @method void setFileId(string $FileId) Set Media ID of the main media file.
- * @method array getStreamParaSet() Obtain Adaptive Bitrate Parameters support a maximum of 8.
- * @method void setStreamParaSet(array $StreamParaSet) Set Adaptive Bitrate Parameters support a maximum of 8.
- * @method array getHeadTailSet() Obtain Credits list, supports multiple opening and ending sequences, with a maximum of 4 supported. If this field is filled, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
- * @method void setHeadTailSet(array $HeadTailSet) Set Credits list, supports multiple opening and ending sequences, with a maximum of 4 supported. If this field is filled, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
- * @method array getAudioSet() Obtain Multilingual audio stream parameters, supports a maximum of 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you need to add the audio stream from the main media file to the output adaptive bitrate stream, you must specify it here. The order of elements in an array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
- * @method void setAudioSet(array $AudioSet) Set Multilingual audio stream parameters, supports a maximum of 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you need to add the audio stream from the main media file to the output adaptive bitrate stream, you must specify it here. The order of elements in an array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
- * @method array getSubtitleSet() Obtain Multilingual subtitle parameters, with a maximum of 16 supported. Each element in an array corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in an array determines the order of subtitle streams in the adaptive bitrate stream.
- * @method void setSubtitleSet(array $SubtitleSet) Set Multilingual subtitle parameters, with a maximum of 16 supported. Each element in an array corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in an array determines the order of subtitle streams in the adaptive bitrate stream.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method array getStreamParaSet() Obtain 
+ * @method void setStreamParaSet(array $StreamParaSet) Set 
+ * @method array getHeadTailSet() Obtain 
+ * @method void setHeadTailSet(array $HeadTailSet) Set 
+ * @method array getAudioSet() Obtain 
+ * @method void setAudioSet(array $AudioSet) Set 
+ * @method array getSubtitleSet() Obtain 
+ * @method void setSubtitleSet(array $SubtitleSet) Set 
  */
 class CreateComplexAdaptiveDynamicStreamingTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Media ID of the main media file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var array Adaptive Bitrate Parameters support a maximum of 8.
+     * @var array 
      */
     public $StreamParaSet;
 
     /**
-     * @var array Credits list, supports multiple opening and ending sequences, with a maximum of 4 supported. If this field is filled, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
+     * @var array 
      */
     public $HeadTailSet;
 
     /**
-     * @var array Multilingual audio stream parameters, supports a maximum of 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you need to add the audio stream from the main media file to the output adaptive bitrate stream, you must specify it here. The order of elements in an array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+     * @var array 
      */
     public $AudioSet;
 
     /**
-     * @var array Multilingual subtitle parameters, with a maximum of 16 supported. Each element in an array corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in an array determines the order of subtitle streams in the adaptive bitrate stream.
+     * @var array 
      */
     public $SubtitleSet;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
-     * @param string $FileId Media ID of the main media file.
-     * @param array $StreamParaSet Adaptive Bitrate Parameters support a maximum of 8.
-     * @param array $HeadTailSet Credits list, supports multiple opening and ending sequences, with a maximum of 4 supported. If this field is filled, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
-     * @param array $AudioSet Multilingual audio stream parameters, supports a maximum of 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you need to add the audio stream from the main media file to the output adaptive bitrate stream, you must specify it here. The order of elements in an array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
-     * @param array $SubtitleSet Multilingual subtitle parameters, with a maximum of 16 supported. Each element in an array corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in an array determines the order of subtitle streams in the adaptive bitrate stream.
+     * @param integer $SubAppId 
+     * @param string $FileId 
+     * @param array $StreamParaSet 
+     * @param array $HeadTailSet 
+     * @param array $AudioSet 
+     * @param array $SubtitleSet 
      */
     function __construct()
     {

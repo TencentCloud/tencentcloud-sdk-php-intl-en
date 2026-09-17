@@ -18,64 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Text watermarking template
+ * 
  *
- * @method string getFontType() Obtain Font type. Currently, two types are supported:
-<li>simkai.ttf: both Chinese and English are supported;</li>
-<li>arial.ttf: only English is supported.</li>
- * @method void setFontType(string $FontType) Set Font type. Currently, two types are supported:
-<li>simkai.ttf: both Chinese and English are supported;</li>
-<li>arial.ttf: only English is supported.</li>
- * @method string getFontSize() Obtain Font size in Npx format where N is a numeric value.
- * @method void setFontSize(string $FontSize) Set Font size in Npx format where N is a numeric value.
- * @method string getFontColor() Obtain Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
- * @method void setFontColor(string $FontColor) Set Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
- * @method float getFontAlpha() Obtain Text transparency. Value range: (0, 1]
-<li>0: completely transparent</li>
-<li>1: completely opaque</li>
-Default value: 1.
- * @method void setFontAlpha(float $FontAlpha) Set Text transparency. Value range: (0, 1]
-<li>0: completely transparent</li>
-<li>1: completely opaque</li>
-Default value: 1.
+ * @method string getFontType() Obtain 
+ * @method void setFontType(string $FontType) Set 
+ * @method string getFontSize() Obtain 
+ * @method void setFontSize(string $FontSize) Set 
+ * @method string getFontColor() Obtain 
+ * @method void setFontColor(string $FontColor) Set 
+ * @method float getFontAlpha() Obtain 
+ * @method void setFontAlpha(float $FontAlpha) Set 
  */
 class TextWatermarkTemplateInput extends AbstractModel
 {
     /**
-     * @var string Font type. Currently, two types are supported:
-<li>simkai.ttf: both Chinese and English are supported;</li>
-<li>arial.ttf: only English is supported.</li>
+     * @var string 
      */
     public $FontType;
 
     /**
-     * @var string Font size in Npx format where N is a numeric value.
+     * @var string 
      */
     public $FontSize;
 
     /**
-     * @var string Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
+     * @var string 
      */
     public $FontColor;
 
     /**
-     * @var float Text transparency. Value range: (0, 1]
-<li>0: completely transparent</li>
-<li>1: completely opaque</li>
-Default value: 1.
+     * @var float 
      */
     public $FontAlpha;
 
     /**
-     * @param string $FontType Font type. Currently, two types are supported:
-<li>simkai.ttf: both Chinese and English are supported;</li>
-<li>arial.ttf: only English is supported.</li>
-     * @param string $FontSize Font size in Npx format where N is a numeric value.
-     * @param string $FontColor Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-     * @param float $FontAlpha Text transparency. Value range: (0, 1]
-<li>0: completely transparent</li>
-<li>1: completely opaque</li>
-Default value: 1.
+     * @param string $FontType 
+     * @param string $FontSize 
+     * @param string $FontColor 
+     * @param float $FontAlpha 
      */
     function __construct()
     {

@@ -18,52 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Color enhancement configuration.
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method void setSwitch(string $Switch) Set Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method string getType() Obtain The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
- * @method void setType(string $Type) Set The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class ColorEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param string $Type The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * @param string $Switch 
+     * @param string $Type 
      */
     function __construct()
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create custom callback output
+ * 
  *
- * @method array getInfoList() Obtain <p>Custom subject list.</p>
- * @method void setInfoList(array $InfoList) Set <p>Custom subject list.</p>
+ * @method array getInfoList() Obtain 
+ * @method void setInfoList(array $InfoList) Set 
  */
 class CreateAigcAdvancedCustomElementOutput extends AbstractModel
 {
     /**
-     * @var array <p>Custom subject list.</p>
+     * @var array 
      */
     public $InfoList;
 
     /**
-     * @param array $InfoList <p>Custom subject list.</p>
+     * @param array $InfoList 
      */
     function __construct()
     {

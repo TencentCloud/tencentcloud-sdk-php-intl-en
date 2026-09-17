@@ -18,116 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The result for intelligent image moderation.
+ * 
  *
- * @method string getType() Obtain The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
- * @method void setType(string $Type) Set The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
- * @method PornImageResult getPornImageResult() Obtain The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setPornImageResult(PornImageResult $PornImageResult) Set The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method TerrorismImageResult getTerrorismImageResult() Obtain The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setTerrorismImageResult(TerrorismImageResult $TerrorismImageResult) Set The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method PoliticalImageResult getPoliticalImageResult() Obtain The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setPoliticalImageResult(PoliticalImageResult $PoliticalImageResult) Set The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method ContentReviewOcrResult getPornOcrResult() Obtain The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setPornOcrResult(ContentReviewOcrResult $PornOcrResult) Set The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method ContentReviewOcrResult getTerrorismOcrResult() Obtain The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setTerrorismOcrResult(ContentReviewOcrResult $TerrorismOcrResult) Set The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method ContentReviewOcrResult getPoliticalOcrResult() Obtain The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setPoliticalOcrResult(ContentReviewOcrResult $PoliticalOcrResult) Set The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method PornImageResult getPornImageResult() Obtain 
+ * @method void setPornImageResult(PornImageResult $PornImageResult) Set 
+ * @method TerrorismImageResult getTerrorismImageResult() Obtain 
+ * @method void setTerrorismImageResult(TerrorismImageResult $TerrorismImageResult) Set 
+ * @method PoliticalImageResult getPoliticalImageResult() Obtain 
+ * @method void setPoliticalImageResult(PoliticalImageResult $PoliticalImageResult) Set 
+ * @method ContentReviewOcrResult getPornOcrResult() Obtain 
+ * @method void setPornOcrResult(ContentReviewOcrResult $PornOcrResult) Set 
+ * @method ContentReviewOcrResult getTerrorismOcrResult() Obtain 
+ * @method void setTerrorismOcrResult(ContentReviewOcrResult $TerrorismOcrResult) Set 
+ * @method ContentReviewOcrResult getPoliticalOcrResult() Obtain 
+ * @method void setPoliticalOcrResult(ContentReviewOcrResult $PoliticalOcrResult) Set 
  */
 class ContentReviewResult extends AbstractModel
 {
     /**
-     * @var string The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var PornImageResult The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var PornImageResult 
      */
     public $PornImageResult;
 
     /**
-     * @var TerrorismImageResult The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var TerrorismImageResult 
      */
     public $TerrorismImageResult;
 
     /**
-     * @var PoliticalImageResult The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var PoliticalImageResult 
      */
     public $PoliticalImageResult;
 
     /**
-     * @var ContentReviewOcrResult The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var ContentReviewOcrResult 
      */
     public $PornOcrResult;
 
     /**
-     * @var ContentReviewOcrResult The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var ContentReviewOcrResult 
      */
     public $TerrorismOcrResult;
 
     /**
-     * @var ContentReviewOcrResult The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var ContentReviewOcrResult 
      */
     public $PoliticalOcrResult;
 
     /**
-     * @param string $Type The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
-     * @param PornImageResult $PornImageResult The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param TerrorismImageResult $TerrorismImageResult The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param PoliticalImageResult $PoliticalImageResult The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ContentReviewOcrResult $PornOcrResult The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ContentReviewOcrResult $TerrorismOcrResult The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ContentReviewOcrResult $PoliticalOcrResult The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $Type 
+     * @param PornImageResult $PornImageResult 
+     * @param TerrorismImageResult $TerrorismImageResult 
+     * @param PoliticalImageResult $PoliticalImageResult 
+     * @param ContentReviewOcrResult $PornOcrResult 
+     * @param ContentReviewOcrResult $TerrorismOcrResult 
+     * @param ContentReviewOcrResult $PoliticalOcrResult 
      */
     function __construct()
     {

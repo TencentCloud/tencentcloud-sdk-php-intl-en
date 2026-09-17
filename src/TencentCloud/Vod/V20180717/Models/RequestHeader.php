@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom request header configuration. This is disabled by default.
+ * 
  *
- * @method string getSwitch() Obtain Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method array getHeaderRules() Obtain Custom request header configuration rules
- * @method void setHeaderRules(array $HeaderRules) Set Custom request header configuration rules
+ * @method string getSwitch() Obtain Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method array getHeaderRules() Obtain 
+ * @method void setHeaderRules(array $HeaderRules) Set 
  */
 class RequestHeader extends AbstractModel
 {
     /**
-     * @var string Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var array Custom request header configuration rules
+     * @var array 
      */
     public $HeaderRules;
 
     /**
-     * @param string $Switch Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param array $HeaderRules Custom request header configuration rules
+     * @param string $Switch Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param array $HeaderRules 
      */
     function __construct()
     {

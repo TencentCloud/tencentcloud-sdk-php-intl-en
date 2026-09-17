@@ -18,56 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * File upload task information
+ * 
  *
- * @method string getFileId() Obtain Unique file ID.
- * @method void setFileId(string $FileId) Set Unique file ID.
- * @method MediaBasicInfo getMediaBasicInfo() Obtain Basic information of media file generated after upload is completed.
- * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set Basic information of media file generated after upload is completed.
- * @method string getProcedureTaskId() Obtain The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
- * @method void setProcedureTaskId(string $ProcedureTaskId) Set The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
- * @method string getReviewAudioVideoTaskId() Obtain The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
- * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
- * @method MediaMetaData getMetaData() Obtain Metadata, such as size, duration, video stream information, audio stream information, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata, such as size, duration, video stream information, audio stream information, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method MediaBasicInfo getMediaBasicInfo() Obtain 
+ * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set 
+ * @method string getProcedureTaskId() Obtain 
+ * @method void setProcedureTaskId(string $ProcedureTaskId) Set 
+ * @method string getReviewAudioVideoTaskId() Obtain 
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
  */
 class FileUploadTask extends AbstractModel
 {
     /**
-     * @var string Unique file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var MediaBasicInfo Basic information of media file generated after upload is completed.
+     * @var MediaBasicInfo 
      */
     public $MediaBasicInfo;
 
     /**
-     * @var string The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * @var string 
      */
     public $ProcedureTaskId;
 
     /**
-     * @var string The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * @var string 
      */
     public $ReviewAudioVideoTaskId;
 
     /**
-     * @var MediaMetaData Metadata, such as size, duration, video stream information, audio stream information, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @param string $FileId Unique file ID.
-     * @param MediaBasicInfo $MediaBasicInfo Basic information of media file generated after upload is completed.
-     * @param string $ProcedureTaskId The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
-     * @param string $ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
-     * @param MediaMetaData $MetaData Metadata, such as size, duration, video stream information, audio stream information, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $FileId 
+     * @param MediaBasicInfo $MediaBasicInfo 
+     * @param string $ProcedureTaskId 
+     * @param string $ReviewAudioVideoTaskId 
+     * @param MediaMetaData $MetaData 
      */
     function __construct()
     {

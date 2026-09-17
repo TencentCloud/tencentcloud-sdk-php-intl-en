@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of speech keyword recognition.
+ * 
  *
- * @method integer getDefinition() Obtain Speech keyword recognition template ID.
- * @method void setDefinition(integer $Definition) Set Speech keyword recognition template ID.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiRecognitionTaskAsrWordsResultInput extends AbstractModel
 {
     /**
-     * @var integer Speech keyword recognition template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Speech keyword recognition template ID.
+     * @param integer $Definition 
      */
     function __construct()
     {

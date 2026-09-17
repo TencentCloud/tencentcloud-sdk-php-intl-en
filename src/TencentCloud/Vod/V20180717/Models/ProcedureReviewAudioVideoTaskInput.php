@@ -18,40 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The moderation task details of a task flow template.
+ * 
  *
- * @method integer getDefinition() Obtain The moderation template ID.
- * @method void setDefinition(integer $Definition) Set The moderation template ID.
- * @method array getReviewContents() Obtain The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
- * @method void setReviewContents(array $ReviewContents) Set The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method array getReviewContents() Obtain 
+ * @method void setReviewContents(array $ReviewContents) Set 
  */
 class ProcedureReviewAudioVideoTaskInput extends AbstractModel
 {
     /**
-     * @var integer The moderation template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var array The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     * @var array 
      */
     public $ReviewContents;
 
     /**
-     * @param integer $Definition The moderation template ID.
-     * @param array $ReviewContents The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     * @param integer $Definition 
+     * @param array $ReviewContents 
      */
     function __construct()
     {

@@ -18,92 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC video generation task info
+ * 
  *
- * @method string getTaskId() Obtain <p>Task ID.</p>
- * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
- * @method string getStatus() Obtain <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
- * @method void setStatus(string $Status) Set <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
- * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
- * @method string getErrCodeExt() Obtain <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
- * @method string getMessage() Obtain <p>Error message.</p>
- * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method integer getProgress() Obtain <p>Task progress, with a value range of [0-100].</p>
- * @method void setProgress(integer $Progress) Set <p>Task progress, with a value range of [0-100].</p>
- * @method AigcVideoTaskInput getInput() Obtain <p>Input of the AIGC video generation task.</p>
- * @method void setInput(AigcVideoTaskInput $Input) Set <p>Input of the AIGC video generation task.</p>
- * @method AigcVideoTaskOutput getOutput() Obtain <p>Output information of the AIGC video task.</p>
- * @method void setOutput(AigcVideoTaskOutput $Output) Set <p>Output information of the AIGC video task.</p>
- * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method AigcVideoTaskInput getInput() Obtain 
+ * @method void setInput(AigcVideoTaskInput $Input) Set 
+ * @method AigcVideoTaskOutput getOutput() Obtain 
+ * @method void setOutput(AigcVideoTaskOutput $Output) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
  */
 class AigcVideoTask extends AbstractModel
 {
     /**
-     * @var string <p>Task ID.</p>
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var string <p>Error message.</p>
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var integer <p>Task progress, with a value range of [0-100].</p>
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var AigcVideoTaskInput <p>Input of the AIGC video generation task.</p>
+     * @var AigcVideoTaskInput 
      */
     public $Input;
 
     /**
-     * @var AigcVideoTaskOutput <p>Output information of the AIGC video task.</p>
+     * @var AigcVideoTaskOutput 
      */
     public $Output;
 
     /**
-     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId <p>Task ID.</p>
-     * @param string $Status <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
-     * @param integer $ErrCode <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
-     * @param string $ErrCodeExt <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
-     * @param string $Message <p>Error message.</p>
-     * @param integer $Progress <p>Task progress, with a value range of [0-100].</p>
-     * @param AigcVideoTaskInput $Input <p>Input of the AIGC video generation task.</p>
-     * @param AigcVideoTaskOutput $Output <p>Output information of the AIGC video task.</p>
-     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-     * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $ErrCodeExt 
+     * @param string $Message 
+     * @param integer $Progress 
+     * @param AigcVideoTaskInput $Input 
+     * @param AigcVideoTaskOutput $Output 
+     * @param string $SessionId 
+     * @param string $SessionContext 
      */
     function __construct()
     {

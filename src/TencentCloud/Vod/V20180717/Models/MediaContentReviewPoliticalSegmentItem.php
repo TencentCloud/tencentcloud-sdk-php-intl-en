@@ -18,201 +18,93 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video segment containing detected politically sensitive content
+ * 
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment in seconds.
- * @method float getConfidence() Obtain Confidence score for the detected politically sensitive content
- * @method void setConfidence(float $Confidence) Set Confidence score for the detected politically sensitive content
- * @method string getSuggestion() Obtain Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method string getName() Obtain Name of the politically sensitive content or banned images
- * @method void setName(string $Name) Set Name of the politically sensitive content or banned images
- * @method string getLabel() Obtain Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
- * @method void setLabel(string $Label) Set Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
- * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
- * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
- * @method array getAreaCoordSet() Obtain Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method integer getPicUrlExpireTimeStamp() Obtain This field has been disused. Please use `PicUrlExpireTime`.
- * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set This field has been disused. Please use `PicUrlExpireTime`.
- * @method string getPicUrlExpireTime() Obtain Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getLabel() Obtain 
+ * @method void setLabel(string $Label) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method array getAreaCoordSet() Obtain 
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set 
+ * @method integer getPicUrlExpireTimeStamp() Obtain 
+ * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set 
+ * @method string getPicUrlExpireTime() Obtain 
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set 
  */
 class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a suspected segment in seconds.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a suspected segment in seconds.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence score for the detected politically sensitive content
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var string Name of the politically sensitive content or banned images
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
+     * @var string 
      */
     public $Label;
 
     /**
-     * @var string URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var array Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * @var array 
      */
     public $AreaCoordSet;
 
     /**
-     * @var integer This field has been disused. Please use `PicUrlExpireTime`.
+     * @var integer 
      * @deprecated
      */
     public $PicUrlExpireTimeStamp;
 
     /**
-     * @var string Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
-     * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
-     * @param float $Confidence Confidence score for the detected politically sensitive content
-     * @param string $Suggestion Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param string $Name Name of the politically sensitive content or banned images
-     * @param string $Label Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
-     * @param string $Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-     * @param array $AreaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-     * @param integer $PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
-     * @param string $PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param string $Name 
+     * @param string $Label 
+     * @param string $Url 
+     * @param array $AreaCoordSet 
+     * @param integer $PicUrlExpireTimeStamp 
+     * @param string $PicUrlExpireTime 
      */
     function __construct()
     {

@@ -18,68 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video stripping task configuration information.
+ * 
  *
- * @method float getStartTimeOffset() Obtain The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
- * @method void setStartTimeOffset(float $StartTimeOffset) Set The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
- * @method float getEndTimeOffset() Obtain Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
- * @method string getProcedureName() Obtain [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
- * @method void setProcedureName(string $ProcedureName) Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
- * @method SplitMediaOutputConfig getOutputConfig() Obtain The video is split into strips to output information.
- * @method void setOutputConfig(SplitMediaOutputConfig $OutputConfig) Set The video is split into strips to output information.
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method string getProcedureName() Obtain 
+ * @method void setProcedureName(string $ProcedureName) Set 
+ * @method SplitMediaOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(SplitMediaOutputConfig $OutputConfig) Set 
  */
 class SplitMediaTaskConfig extends AbstractModel
 {
     /**
-     * @var float The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var string [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
+     * @var string 
      */
     public $ProcedureName;
 
     /**
-     * @var SplitMediaOutputConfig The video is split into strips to output information.
+     * @var SplitMediaOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @param float $StartTimeOffset The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
-     * @param float $EndTimeOffset Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
-     * @param string $ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
-     * @param SplitMediaOutputConfig $OutputConfig The video is split into strips to output information.
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param string $ProcedureName 
+     * @param SplitMediaOutputConfig $OutputConfig 
      */
     function __construct()
     {

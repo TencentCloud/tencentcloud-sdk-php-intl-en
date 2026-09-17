@@ -18,92 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of output audio stream
+ * 
  *
- * @method string getCodec() Obtain Audio stream encoder. Valid values:
-<li>libfdk_aac: suitable for mp4 files.</li>
-Default value: libfdk_aac.
- * @method void setCodec(string $Codec) Set Audio stream encoder. Valid values:
-<li>libfdk_aac: suitable for mp4 files.</li>
-Default value: libfdk_aac.
- * @method integer getSampleRate() Obtain Audio stream sample rate. Valid values:
-<li>16,000</li>
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-Default value: 16,000.
- * @method void setSampleRate(integer $SampleRate) Set Audio stream sample rate. Valid values:
-<li>16,000</li>
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-Default value: 16,000.
- * @method integer getAudioChannel() Obtain Number of sound channels. Valid values:
-<li>1: mono.</li>
-<li>2: dual</li>
-Default value: 2.
- * @method void setAudioChannel(integer $AudioChannel) Set Number of sound channels. Valid values:
-<li>1: mono.</li>
-<li>2: dual</li>
-Default value: 2.
- * @method integer getBitrate() Obtain The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
-When the value is 0, the audio bitrate will be automatically set.
- * @method void setBitrate(integer $Bitrate) Set The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
-When the value is 0, the audio bitrate will be automatically set.
+ * @method string getCodec() Obtain 
+ * @method void setCodec(string $Codec) Set 
+ * @method integer getSampleRate() Obtain 
+ * @method void setSampleRate(integer $SampleRate) Set 
+ * @method integer getAudioChannel() Obtain 
+ * @method void setAudioChannel(integer $AudioChannel) Set 
+ * @method integer getBitrate() Obtain 
+ * @method void setBitrate(integer $Bitrate) Set 
  */
 class OutputAudioStream extends AbstractModel
 {
     /**
-     * @var string Audio stream encoder. Valid values:
-<li>libfdk_aac: suitable for mp4 files.</li>
-Default value: libfdk_aac.
+     * @var string 
      */
     public $Codec;
 
     /**
-     * @var integer Audio stream sample rate. Valid values:
-<li>16,000</li>
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-Default value: 16,000.
+     * @var integer 
      */
     public $SampleRate;
 
     /**
-     * @var integer Number of sound channels. Valid values:
-<li>1: mono.</li>
-<li>2: dual</li>
-Default value: 2.
+     * @var integer 
      */
     public $AudioChannel;
 
     /**
-     * @var integer The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
-When the value is 0, the audio bitrate will be automatically set.
+     * @var integer 
      */
     public $Bitrate;
 
     /**
-     * @param string $Codec Audio stream encoder. Valid values:
-<li>libfdk_aac: suitable for mp4 files.</li>
-Default value: libfdk_aac.
-     * @param integer $SampleRate Audio stream sample rate. Valid values:
-<li>16,000</li>
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-Default value: 16,000.
-     * @param integer $AudioChannel Number of sound channels. Valid values:
-<li>1: mono.</li>
-<li>2: dual</li>
-Default value: 2.
-     * @param integer $Bitrate The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
-When the value is 0, the audio bitrate will be automatically set.
+     * @param string $Codec 
+     * @param integer $SampleRate 
+     * @param integer $AudioChannel 
+     * @param integer $Bitrate 
      */
     function __construct()
     {

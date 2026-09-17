@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCurrentPlaylist request structure.
  *
- * @method integer getSubAppId() Obtain <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
- * @method void setSubAppId(integer $SubAppId) Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
- * @method string getRoundPlayId() Obtain The unique identifier of the playlist.
- * @method void setRoundPlayId(string $RoundPlayId) Set The unique identifier of the playlist.
- * @method integer getLimit() Obtain The length of the returned playlist. maximum is 10, default value is 5.
- * @method void setLimit(integer $Limit) Set The length of the returned playlist. maximum is 10, default value is 5.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getRoundPlayId() Obtain 
+ * @method void setRoundPlayId(string $RoundPlayId) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeCurrentPlaylistRequest extends AbstractModel
 {
     /**
-     * @var integer <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string The unique identifier of the playlist.
+     * @var string 
      */
     public $RoundPlayId;
 
     /**
-     * @var integer The length of the returned playlist. maximum is 10, default value is 5.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
-     * @param string $RoundPlayId The unique identifier of the playlist.
-     * @param integer $Limit The length of the returned playlist. maximum is 10, default value is 5.
+     * @param integer $SubAppId 
+     * @param string $RoundPlayId 
+     * @param integer $Limit 
      */
     function __construct()
     {

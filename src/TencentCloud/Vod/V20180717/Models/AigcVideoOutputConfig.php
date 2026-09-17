@@ -18,140 +18,140 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output media file configuration for AIGC video task.
+ * 
  *
- * @method string getStorageMode() Obtain <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
- * @method void setStorageMode(string $StorageMode) Set <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
- * @method string getMediaName() Obtain <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
- * @method void setMediaName(string $MediaName) Set <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
- * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
- * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
- * @method string getExpireTime() Obtain <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method float getDuration() Obtain <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, optional values are 3-15, default is 5.</li><li>When ModelName is Hailuo, optional values are 6 and 10, default is 6.</li><li>When ModelName is Vidu, specify 1-10.</li><li>When ModelName is GV, optional value is 8, default is 8.</li><li>When ModelName is OS, optional values are 4, 8, and 12, default is 8.</li><li>When ModelName is PixVerse, specify 1-15, default is 5.</li>
- * @method void setDuration(float $Duration) Set <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, optional values are 3-15, default is 5.</li><li>When ModelName is Hailuo, optional values are 6 and 10, default is 6.</li><li>When ModelName is Vidu, specify 1-10.</li><li>When ModelName is GV, optional value is 8, default is 8.</li><li>When ModelName is OS, optional values are 4, 8, and 12, default is 8.</li><li>When ModelName is PixVerse, specify 1-15, default is 5.</li>
- * @method string getResolution() Obtain <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
- * @method void setResolution(string $Resolution) Set <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
- * @method string getAspectRatio() Obtain <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
- * @method void setAspectRatio(string $AspectRatio) Set <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
- * @method string getAudioGeneration() Obtain <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
- * @method void setAudioGeneration(string $AudioGeneration) Set <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
- * @method string getPersonGeneration() Obtain <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
- * @method void setPersonGeneration(string $PersonGeneration) Set <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
- * @method string getInputComplianceCheck() Obtain <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method void setInputComplianceCheck(string $InputComplianceCheck) Set <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method string getOutputComplianceCheck() Obtain <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method void setOutputComplianceCheck(string $OutputComplianceCheck) Set <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method string getEnhanceSwitch() Obtain <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
- * @method void setEnhanceSwitch(string $EnhanceSwitch) Set <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
- * @method string getOffPeak() Obtain <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method void setOffPeak(string $OffPeak) Set <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method string getFrameInterpolate() Obtain <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method void setFrameInterpolate(string $FrameInterpolate) Set <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
- * @method string getLogoAdd() Obtain <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
- * @method void setLogoAdd(string $LogoAdd) Set <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
- * @method string getEnableBGM() Obtain <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
- * @method void setEnableBGM(string $EnableBGM) Set <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+ * @method string getStorageMode() Obtain 
+ * @method void setStorageMode(string $StorageMode) Set 
+ * @method string getMediaName() Obtain 
+ * @method void setMediaName(string $MediaName) Set 
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
+ * @method float getDuration() Obtain 
+ * @method void setDuration(float $Duration) Set 
+ * @method string getResolution() Obtain 
+ * @method void setResolution(string $Resolution) Set 
+ * @method string getAspectRatio() Obtain 
+ * @method void setAspectRatio(string $AspectRatio) Set 
+ * @method string getAudioGeneration() Obtain 
+ * @method void setAudioGeneration(string $AudioGeneration) Set 
+ * @method string getPersonGeneration() Obtain 
+ * @method void setPersonGeneration(string $PersonGeneration) Set 
+ * @method string getInputComplianceCheck() Obtain 
+ * @method void setInputComplianceCheck(string $InputComplianceCheck) Set 
+ * @method string getOutputComplianceCheck() Obtain 
+ * @method void setOutputComplianceCheck(string $OutputComplianceCheck) Set 
+ * @method string getEnhanceSwitch() Obtain 
+ * @method void setEnhanceSwitch(string $EnhanceSwitch) Set 
+ * @method string getOffPeak() Obtain 
+ * @method void setOffPeak(string $OffPeak) Set 
+ * @method string getFrameInterpolate() Obtain 
+ * @method void setFrameInterpolate(string $FrameInterpolate) Set 
+ * @method string getLogoAdd() Obtain 
+ * @method void setLogoAdd(string $LogoAdd) Set 
+ * @method string getEnableBGM() Obtain 
+ * @method void setEnableBGM(string $EnableBGM) Set 
  */
 class AigcVideoOutputConfig extends AbstractModel
 {
     /**
-     * @var string <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
+     * @var string 
      */
     public $StorageMode;
 
     /**
-     * @var string <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
+     * @var string 
      */
     public $MediaName;
 
     /**
-     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var string <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @var string 
      */
     public $ExpireTime;
 
     /**
-     * @var float <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, optional values are 3-15, default is 5.</li><li>When ModelName is Hailuo, optional values are 6 and 10, default is 6.</li><li>When ModelName is Vidu, specify 1-10.</li><li>When ModelName is GV, optional value is 8, default is 8.</li><li>When ModelName is OS, optional values are 4, 8, and 12, default is 8.</li><li>When ModelName is PixVerse, specify 1-15, default is 5.</li>
+     * @var float 
      */
     public $Duration;
 
     /**
-     * @var string <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
+     * @var string 
      */
     public $Resolution;
 
     /**
-     * @var string <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
+     * @var string 
      */
     public $AspectRatio;
 
     /**
-     * @var string <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
+     * @var string 
      */
     public $AudioGeneration;
 
     /**
-     * @var string <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
+     * @var string 
      */
     public $PersonGeneration;
 
     /**
-     * @var string <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @var string 
      */
     public $InputComplianceCheck;
 
     /**
-     * @var string <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @var string 
      */
     public $OutputComplianceCheck;
 
     /**
-     * @var string <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
+     * @var string 
      */
     public $EnhanceSwitch;
 
     /**
-     * @var string <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @var string 
      */
     public $OffPeak;
 
     /**
-     * @var string <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @var string 
      */
     public $FrameInterpolate;
 
     /**
-     * @var string <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
+     * @var string 
      */
     public $LogoAdd;
 
     /**
-     * @var string <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+     * @var string 
      */
     public $EnableBGM;
 
     /**
-     * @param string $StorageMode <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
-     * @param string $MediaName <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
-     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
-     * @param string $ExpireTime <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param float $Duration <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, optional values are 3-15, default is 5.</li><li>When ModelName is Hailuo, optional values are 6 and 10, default is 6.</li><li>When ModelName is Vidu, specify 1-10.</li><li>When ModelName is GV, optional value is 8, default is 8.</li><li>When ModelName is OS, optional values are 4, 8, and 12, default is 8.</li><li>When ModelName is PixVerse, specify 1-15, default is 5.</li>
-     * @param string $Resolution <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
-     * @param string $AspectRatio <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
-     * @param string $AudioGeneration <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
-     * @param string $PersonGeneration <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
-     * @param string $InputComplianceCheck <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-     * @param string $OutputComplianceCheck <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-     * @param string $EnhanceSwitch <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
-     * @param string $OffPeak <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-     * @param string $FrameInterpolate <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-     * @param string $LogoAdd <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
-     * @param string $EnableBGM <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+     * @param string $StorageMode 
+     * @param string $MediaName 
+     * @param integer $ClassId 
+     * @param string $ExpireTime 
+     * @param float $Duration 
+     * @param string $Resolution 
+     * @param string $AspectRatio 
+     * @param string $AudioGeneration 
+     * @param string $PersonGeneration 
+     * @param string $InputComplianceCheck 
+     * @param string $OutputComplianceCheck 
+     * @param string $EnhanceSwitch 
+     * @param string $OffPeak 
+     * @param string $FrameInterpolate 
+     * @param string $LogoAdd 
+     * @param string $EnableBGM 
      */
     function __construct()
     {

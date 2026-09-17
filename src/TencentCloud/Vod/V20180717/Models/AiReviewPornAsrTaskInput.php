@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameters for ASR-based recognition of pornographic content
+ * 
  *
- * @method integer getDefinition() Obtain ID of the template for recognition of pornographic content
- * @method void setDefinition(integer $Definition) Set ID of the template for recognition of pornographic content
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiReviewPornAsrTaskInput extends AbstractModel
 {
     /**
-     * @var integer ID of the template for recognition of pornographic content
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition ID of the template for recognition of pornographic content
+     * @param integer $Definition 
      */
     function __construct()
     {

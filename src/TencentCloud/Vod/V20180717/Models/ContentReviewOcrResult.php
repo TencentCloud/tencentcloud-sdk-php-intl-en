@@ -18,56 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The result for OCR-based image moderation.
+ * 
  *
- * @method float getConfidence() Obtain The confidence score for the OCR-based moderation result. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for the OCR-based moderation result. Value range: 0-100.
- * @method string getSuggestion() Obtain The suggestion for handling the suspicious content detected based on OCR. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the suspicious content detected based on OCR. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
- * @method array getKeywordSet() Obtain The list of suspicious keywords detected based on OCR.
- * @method void setKeywordSet(array $KeywordSet) Set The list of suspicious keywords detected based on OCR.
- * @method array getAreaCoordSet() Obtain The coordinates (pixel) of the top-left and bottom-right corners of the frame where a suspicious keyword appears. Format: [x1, y1, x2, y2].
- * @method void setAreaCoordSet(array $AreaCoordSet) Set The coordinates (pixel) of the top-left and bottom-right corners of the frame where a suspicious keyword appears. Format: [x1, y1, x2, y2].
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method array getKeywordSet() Obtain 
+ * @method void setKeywordSet(array $KeywordSet) Set 
+ * @method array getAreaCoordSet() Obtain 
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set 
  */
 class ContentReviewOcrResult extends AbstractModel
 {
     /**
-     * @var float The confidence score for the OCR-based moderation result. Value range: 0-100.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion for handling the suspicious content detected based on OCR. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var array The list of suspicious keywords detected based on OCR.
+     * @var array 
      */
     public $KeywordSet;
 
     /**
-     * @var array The coordinates (pixel) of the top-left and bottom-right corners of the frame where a suspicious keyword appears. Format: [x1, y1, x2, y2].
+     * @var array 
      */
     public $AreaCoordSet;
 
     /**
-     * @param float $Confidence The confidence score for the OCR-based moderation result. Value range: 0-100.
-     * @param string $Suggestion The suggestion for handling the suspicious content detected based on OCR. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
-     * @param array $KeywordSet The list of suspicious keywords detected based on OCR.
-     * @param array $AreaCoordSet The coordinates (pixel) of the top-left and bottom-right corners of the frame where a suspicious keyword appears. Format: [x1, y1, x2, y2].
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param array $KeywordSet 
+     * @param array $AreaCoordSet 
      */
     function __construct()
     {

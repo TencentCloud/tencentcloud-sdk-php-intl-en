@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create subject input message.
+ * 
  *
- * @method string getSubjectName() Obtain <p>Subject name.</p>
- * @method void setSubjectName(string $SubjectName) Set <p>Subject name.</p>
- * @method array getSubjectImages() Obtain <p>Subject image.</p>
- * @method void setSubjectImages(array $SubjectImages) Set <p>Subject image.</p>
- * @method array getSubjectVideos() Obtain <p>Main video.</p>
- * @method void setSubjectVideos(array $SubjectVideos) Set <p>Main video.</p>
- * @method string getVoiceId() Obtain <p>Primary voice ID.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Primary voice ID.</p>
+ * @method string getSubjectName() Obtain 
+ * @method void setSubjectName(string $SubjectName) Set 
+ * @method array getSubjectImages() Obtain 
+ * @method void setSubjectImages(array $SubjectImages) Set 
+ * @method array getSubjectVideos() Obtain 
+ * @method void setSubjectVideos(array $SubjectVideos) Set 
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
  */
 class CreateAigcSubjectInput extends AbstractModel
 {
     /**
-     * @var string <p>Subject name.</p>
+     * @var string 
      */
     public $SubjectName;
 
     /**
-     * @var array <p>Subject image.</p>
+     * @var array 
      */
     public $SubjectImages;
 
     /**
-     * @var array <p>Main video.</p>
+     * @var array 
      */
     public $SubjectVideos;
 
     /**
-     * @var string <p>Primary voice ID.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @param string $SubjectName <p>Subject name.</p>
-     * @param array $SubjectImages <p>Subject image.</p>
-     * @param array $SubjectVideos <p>Main video.</p>
-     * @param string $VoiceId <p>Primary voice ID.</p>
+     * @param string $SubjectName 
+     * @param array $SubjectImages 
+     * @param array $SubjectVideos 
+     * @param string $VoiceId 
      */
     function __construct()
     {

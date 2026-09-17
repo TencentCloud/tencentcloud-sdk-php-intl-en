@@ -18,92 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based intelligent analysis template details
+ * 
  *
- * @method integer getDefinition() Obtain Unique ID of intelligent analysis template.
- * @method void setDefinition(integer $Definition) Set Unique ID of intelligent analysis template.
- * @method string getName() Obtain Intelligent analysis template name.
- * @method void setName(string $Name) Set Intelligent analysis template name.
- * @method string getComment() Obtain Intelligent analysis template description.
- * @method void setComment(string $Comment) Set Intelligent analysis template description.
- * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Intelligent Classification Task Control Parameters.
- * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Intelligent Classification Task Control Parameters.
- * @method TagConfigureInfo getTagConfigure() Obtain Intelligent tag task control parameter.
- * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Intelligent tag task control parameter.
- * @method CoverConfigureInfo getCoverConfigure() Obtain Intelligent Cover Task Control Parameters.
- * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Intelligent Cover Task Control Parameters.
- * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Intelligent frame tagging task control parameter.
- * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Intelligent frame tagging task control parameter.
- * @method HighlightsConfigureInfo getHighlightConfigure() Obtain Control parameter of an intelligent highlight generating task.
- * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set Control parameter of an intelligent highlight generating task.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method ClassificationConfigureInfo getClassificationConfigure() Obtain 
+ * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set 
+ * @method TagConfigureInfo getTagConfigure() Obtain 
+ * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set 
+ * @method CoverConfigureInfo getCoverConfigure() Obtain 
+ * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set 
+ * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain 
+ * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set 
+ * @method HighlightsConfigureInfo getHighlightConfigure() Obtain 
+ * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
  */
 class AIAnalysisTemplateItem extends AbstractModel
 {
     /**
-     * @var integer Unique ID of intelligent analysis template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Intelligent analysis template name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Intelligent analysis template description.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var ClassificationConfigureInfo Intelligent Classification Task Control Parameters.
+     * @var ClassificationConfigureInfo 
      */
     public $ClassificationConfigure;
 
     /**
-     * @var TagConfigureInfo Intelligent tag task control parameter.
+     * @var TagConfigureInfo 
      */
     public $TagConfigure;
 
     /**
-     * @var CoverConfigureInfo Intelligent Cover Task Control Parameters.
+     * @var CoverConfigureInfo 
      */
     public $CoverConfigure;
 
     /**
-     * @var FrameTagConfigureInfo Intelligent frame tagging task control parameter.
+     * @var FrameTagConfigureInfo 
      */
     public $FrameTagConfigure;
 
     /**
-     * @var HighlightsConfigureInfo Control parameter of an intelligent highlight generating task.
+     * @var HighlightsConfigureInfo 
      */
     public $HighlightConfigure;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition Unique ID of intelligent analysis template.
-     * @param string $Name Intelligent analysis template name.
-     * @param string $Comment Intelligent analysis template description.
-     * @param ClassificationConfigureInfo $ClassificationConfigure Intelligent Classification Task Control Parameters.
-     * @param TagConfigureInfo $TagConfigure Intelligent tag task control parameter.
-     * @param CoverConfigureInfo $CoverConfigure Intelligent Cover Task Control Parameters.
-     * @param FrameTagConfigureInfo $FrameTagConfigure Intelligent frame tagging task control parameter.
-     * @param HighlightsConfigureInfo $HighlightConfigure Control parameter of an intelligent highlight generating task.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Definition 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param ClassificationConfigureInfo $ClassificationConfigure 
+     * @param TagConfigureInfo $TagConfigure 
+     * @param CoverConfigureInfo $CoverConfigure 
+     * @param FrameTagConfigureInfo $FrameTagConfigure 
+     * @param HighlightsConfigureInfo $HighlightConfigure 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
      */
     function __construct()
     {

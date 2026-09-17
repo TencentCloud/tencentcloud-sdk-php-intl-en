@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reference video asset for AIGC video generation.
+ * 
  *
- * @method string getType() Obtain <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li></p>
- * @method void setType(string $Type) Set <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li></p>
- * @method string getFileId() Obtain <p>The media file ID of the video file, which is the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
- * @method void setFileId(string $FileId) Set <p>The media file ID of the video file, which is the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
- * @method string getUrl() Obtain <p>Reference video URL must be external network accessible. This parameter is valid when Type value is Url.</p>
- * @method void setUrl(string $Url) Set <p>Reference video URL must be external network accessible. This parameter is valid when Type value is Url.</p>
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class AigcAudioReferenceVideoInfo extends AbstractModel
 {
     /**
-     * @var string <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li></p>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string <p>The media file ID of the video file, which is the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string <p>Reference video URL must be external network accessible. This parameter is valid when Type value is Url.</p>
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param string $Type <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li></p>
-     * @param string $FileId <p>The media file ID of the video file, which is the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
-     * @param string $Url <p>Reference video URL must be external network accessible. This parameter is valid when Type value is Url.</p>
+     * @param string $Type 
+     * @param string $FileId 
+     * @param string $Url 
      */
     function __construct()
     {

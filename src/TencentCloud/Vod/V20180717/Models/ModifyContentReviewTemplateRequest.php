@@ -20,114 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyContentReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique identifier of a content review template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of a content review template.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Content review template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Content review template name. The length cannot exceed 64 characters.
- * @method string getComment() Obtain Content review template description information, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Content review template description information, with a length limit of 256 characters.
- * @method TerrorismConfigureInfoForUpdate getTerrorismConfigure() Obtain Control parameters for unsafe information.
- * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) Set Control parameters for unsafe information.
- * @method PornConfigureInfoForUpdate getPornConfigure() Obtain Control parameters for offensive information.
- * @method void setPornConfigure(PornConfigureInfoForUpdate $PornConfigure) Set Control parameters for offensive information.
- * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() Obtain Control parameter for inappropriate information.
- * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set Control parameter for inappropriate information.
- * @method ProhibitedConfigureInfoForUpdate getProhibitedConfigure() Obtain Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
- * @method void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate $ProhibitedConfigure) Set Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
- * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain User-defined content review control parameters.
- * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set User-defined content review control parameters.
- * @method float getScreenshotInterval() Obtain Frame interception interval, unit: seconds, minimum value 0.5.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval, unit: seconds, minimum value 0.5.
- * @method string getReviewWallSwitch() Obtain Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method TerrorismConfigureInfoForUpdate getTerrorismConfigure() Obtain 
+ * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) Set 
+ * @method PornConfigureInfoForUpdate getPornConfigure() Obtain 
+ * @method void setPornConfigure(PornConfigureInfoForUpdate $PornConfigure) Set 
+ * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() Obtain 
+ * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set 
+ * @method ProhibitedConfigureInfoForUpdate getProhibitedConfigure() Obtain 
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate $ProhibitedConfigure) Set 
+ * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain 
+ * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set 
+ * @method float getScreenshotInterval() Obtain 
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
+ * @method string getReviewWallSwitch() Obtain 
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set 
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of a content review template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Content review template name. The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Content review template description information, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var TerrorismConfigureInfoForUpdate Control parameters for unsafe information.
+     * @var TerrorismConfigureInfoForUpdate 
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PornConfigureInfoForUpdate Control parameters for offensive information.
+     * @var PornConfigureInfoForUpdate 
      */
     public $PornConfigure;
 
     /**
-     * @var PoliticalConfigureInfoForUpdate Control parameter for inappropriate information.
+     * @var PoliticalConfigureInfoForUpdate 
      */
     public $PoliticalConfigure;
 
     /**
-     * @var ProhibitedConfigureInfoForUpdate Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
+     * @var ProhibitedConfigureInfoForUpdate 
      */
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfoForUpdate User-defined content review control parameters.
+     * @var UserDefineConfigureInfoForUpdate 
      */
     public $UserDefineConfigure;
 
     /**
-     * @var float Frame interception interval, unit: seconds, minimum value 0.5.
+     * @var float 
      */
     public $ScreenshotInterval;
 
     /**
-     * @var string Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+     * @var string 
      */
     public $ReviewWallSwitch;
 
     /**
-     * @param integer $Definition Unique identifier of a content review template.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Content review template name. The length cannot exceed 64 characters.
-     * @param string $Comment Content review template description information, with a length limit of 256 characters.
-     * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Control parameters for unsafe information.
-     * @param PornConfigureInfoForUpdate $PornConfigure Control parameters for offensive information.
-     * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure Control parameter for inappropriate information.
-     * @param ProhibitedConfigureInfoForUpdate $ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
-     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure User-defined content review control parameters.
-     * @param float $ScreenshotInterval Frame interception interval, unit: seconds, minimum value 0.5.
-     * @param string $ReviewWallSwitch Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+     * @param integer $Definition 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure 
+     * @param PornConfigureInfoForUpdate $PornConfigure 
+     * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure 
+     * @param ProhibitedConfigureInfoForUpdate $ProhibitedConfigure 
+     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure 
+     * @param float $ScreenshotInterval 
+     * @param string $ReviewWallSwitch 
      */
     function __construct()
     {

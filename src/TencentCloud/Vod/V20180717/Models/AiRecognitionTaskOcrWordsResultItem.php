@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Text keyword recognition result.
+ * 
  *
- * @method string getWord() Obtain Text keyword.
- * @method void setWord(string $Word) Set Text keyword.
- * @method array getSegmentSet() Obtain List of segments that contain a text keyword.
- * @method void setSegmentSet(array $SegmentSet) Set List of segments that contain a text keyword.
+ * @method string getWord() Obtain 
+ * @method void setWord(string $Word) Set 
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
  */
 class AiRecognitionTaskOcrWordsResultItem extends AbstractModel
 {
     /**
-     * @var string Text keyword.
+     * @var string 
      */
     public $Word;
 
     /**
-     * @var array List of segments that contain a text keyword.
+     * @var array 
      */
     public $SegmentSet;
 
     /**
-     * @param string $Word Text keyword.
-     * @param array $SegmentSet List of segments that contain a text keyword.
+     * @param string $Word 
+     * @param array $SegmentSet 
      */
     function __construct()
     {

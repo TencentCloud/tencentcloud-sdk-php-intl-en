@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetVodDomainCertificate request structure.
  *
- * @method string getDomain() Obtain Domain name.
- * @method void setDomain(string $Domain) Set Domain name.
- * @method string getOperation() Obtain Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
- * @method void setOperation(string $Operation) Set Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getCertID() Obtain [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
- * @method void setCertID(string $CertID) Set [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+ * @method string getDomain() Obtain 
+ * @method void setDomain(string $Domain) Set 
+ * @method string getOperation() Obtain 
+ * @method void setOperation(string $Operation) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getCertID() Obtain 
+ * @method void setCertID(string $CertID) Set 
  */
 class SetVodDomainCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Domain name.
+     * @var string 
      */
     public $Domain;
 
     /**
-     * @var string Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+     * @var string 
      */
     public $Operation;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+     * @var string 
      */
     public $CertID;
 
     /**
-     * @param string $Domain Domain name.
-     * @param string $Operation Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $CertID [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+     * @param string $Domain 
+     * @param string $Operation 
+     * @param integer $SubAppId 
+     * @param string $CertID 
      */
     function __construct()
     {

@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeQualityInspectTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method array getDefinitions() Obtain Audio and video quality detection template list. Length limit: 100.
- * @method void setDefinitions(array $Definitions) Set Audio and video quality detection template list. Length limit: 100.
- * @method string getType() Obtain Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
- * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getDefinitions() Obtain 
+ * @method void setDefinitions(array $Definitions) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeQualityInspectTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var array Audio and video quality detection template list. Length limit: 100.
+     * @var array 
      */
     public $Definitions;
 
     /**
-     * @var string Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param array $Definitions Audio and video quality detection template list. Length limit: 100.
-     * @param string $Type Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param integer $SubAppId 
+     * @param array $Definitions 
+     * @param string $Type 
+     * @param integer $Offset 
+     * @param integer $Limit 
      */
     function __construct()
     {

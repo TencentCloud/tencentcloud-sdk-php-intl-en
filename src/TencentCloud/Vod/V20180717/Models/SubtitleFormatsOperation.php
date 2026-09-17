@@ -18,48 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The modification of the subtitle format list.
+ * 
  *
- * @method string getType() Obtain The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
- * @method void setType(string $Type) Set The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
- * @method array getFormats() Obtain The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
- * @method void setFormats(array $Formats) Set The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method array getFormats() Obtain 
+ * @method void setFormats(array $Formats) Set 
  */
 class SubtitleFormatsOperation extends AbstractModel
 {
     /**
-     * @var string The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var array The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
+     * @var array 
      */
     public $Formats;
 
     /**
-     * @param string $Type The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
-     * @param array $Formats The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
+     * @param string $Type 
+     * @param array $Formats 
      */
     function __construct()
     {

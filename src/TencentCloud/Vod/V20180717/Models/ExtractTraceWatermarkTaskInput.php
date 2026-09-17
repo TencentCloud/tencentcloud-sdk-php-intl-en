@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The input of digital watermark extraction.
+ * 
  *
- * @method string getUrl() Obtain The URL of the media on which digital watermark extraction is to be performed.
- * @method void setUrl(string $Url) Set The URL of the media on which digital watermark extraction is to be performed.
- * @method string getFileId() Obtain Media file ID. The original media file ID corresponding to the URL.
- * @method void setFileId(string $FileId) Set Media file ID. The original media file ID corresponding to the URL.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
  */
 class ExtractTraceWatermarkTaskInput extends AbstractModel
 {
     /**
-     * @var string The URL of the media on which digital watermark extraction is to be performed.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string Media file ID. The original media file ID corresponding to the URL.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @param string $Url The URL of the media on which digital watermark extraction is to be performed.
-     * @param string $FileId Media file ID. The original media file ID corresponding to the URL.
+     * @param string $Url 
+     * @param string $FileId 
      */
     function __construct()
     {

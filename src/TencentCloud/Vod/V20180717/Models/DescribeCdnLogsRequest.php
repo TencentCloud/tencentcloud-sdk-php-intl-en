@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnLogs request structure.
  *
- * @method string getDomainName() Obtain <p>Domain name.</p>
- * @method void setDomainName(string $DomainName) Set <p>Domain name.</p>
- * @method string getStartTime() Obtain <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method void setStartTime(string $StartTime) Set <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method string getEndTime() Obtain <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
- * @method void setEndTime(string $EndTime) Set <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
- * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
- * @method integer getLimit() Obtain <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
- * @method void setLimit(integer $Limit) Set <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
- * @method integer getOffset() Obtain <p>Starting offset for pagination pull. Default value: 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Starting offset for pagination pull. Default value: 0.</p>
+ * @method string getDomainName() Obtain 
+ * @method void setDomainName(string $DomainName) Set 
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
  */
 class DescribeCdnLogsRequest extends AbstractModel
 {
     /**
-     * @var string <p>Domain name.</p>
+     * @var string 
      */
     public $DomainName;
 
     /**
-     * @var string <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @var string 
      */
     public $StartTime;
 
     /**
-     * @var string <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * @var string 
      */
     public $EndTime;
 
     /**
-     * @var integer <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var integer <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @var integer <p>Starting offset for pagination pull. Default value: 0.</p>
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @param string $DomainName <p>Domain name.</p>
-     * @param string $StartTime <p>Get log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param string $EndTime <p>End time must be greater than start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
-     * @param integer $Limit <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
-     * @param integer $Offset <p>Starting offset for pagination pull. Default value: 0.</p>
+     * @param string $DomainName 
+     * @param string $StartTime 
+     * @param string $EndTime 
+     * @param integer $SubAppId 
+     * @param integer $Limit 
+     * @param integer $Offset 
      */
     function __construct()
     {

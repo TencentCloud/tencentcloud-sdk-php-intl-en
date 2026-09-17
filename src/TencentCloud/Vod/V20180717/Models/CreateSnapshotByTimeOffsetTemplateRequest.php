@@ -20,146 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSnapshotByTimeOffsetTemplate request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Screenshot template name at specified time point. Length limit: 64 characters.
- * @method void setName(string $Name) Set Screenshot template name at specified time point. Length limit: 64 characters.
- * @method integer getWidth() Obtain Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
- * @method void setWidth(integer $Width) Set Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
- * @method integer getHeight() Obtain The maximum value of screenshot height (or short side), value ranges from 0 to [128, 4096], measurement unit: px.
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
- * @method void setHeight(integer $Height) Set The maximum value of screenshot height (or short side), value ranges from 0 to [128, 4096], measurement unit: px.
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
- * @method string getResolutionAdaptive() Obtain Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
- * @method string getFormat() Obtain Image format. Value can be jpg and png. Default is jpg.
- * @method void setFormat(string $Format) Set Image format. Value can be jpg and png. Default is jpg.
- * @method string getComment() Obtain Template description, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
- * @method string getFillType() Obtain Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
- * @method void setFillType(string $FillType) Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method string getResolutionAdaptive() Obtain 
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getFillType() Obtain 
+ * @method void setFillType(string $FillType) Set 
  */
 class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Screenshot template name at specified time point. Length limit: 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var integer Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @var integer The maximum value of screenshot height (or short side), value ranges from 0 to [128, 4096], measurement unit: px.
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var string Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
+     * @var string 
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string Image format. Value can be jpg and png. Default is jpg.
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var string Template description, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
+     * @var string 
      */
     public $FillType;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Screenshot template name at specified time point. Length limit: 64 characters.
-     * @param integer $Width Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
-     * @param integer $Height The maximum value of screenshot height (or short side), value ranges from 0 to [128, 4096], measurement unit: px.
-<li>If both Width and Height are 0, the resolution is the same as the source.</li>
-<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-The default value is 0.
-     * @param string $ResolutionAdaptive Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
-     * @param string $Format Image format. Value can be jpg and png. Default is jpg.
-     * @param string $Comment Template description, with a length limit of 256 characters.
-     * @param string $FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param integer $Width 
+     * @param integer $Height 
+     * @param string $ResolutionAdaptive 
+     * @param string $Format 
+     * @param string $Comment 
+     * @param string $FillType 
      */
     function __construct()
     {

@@ -18,140 +18,140 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Aigc Text Detail Data
+ * 
  *
- * @method string getTimestamp() Obtain <p>Request start time (RFC3339)</p>
- * @method void setTimestamp(string $Timestamp) Set <p>Request start time (RFC3339)</p>
- * @method string getReqId() Obtain <p>Gateway layer request ID</p>
- * @method void setReqId(string $ReqId) Set <p>Gateway layer request ID</p>
- * @method string getChatId() Obtain <p>Dialogue ID returned by the backend model</p>
- * @method void setChatId(string $ChatId) Set <p>Dialogue ID returned by the backend model</p>
- * @method integer getStatusCode() Obtain <p>HTTP status code returned to client</p>
- * @method void setStatusCode(integer $StatusCode) Set <p>HTTP status code returned to client</p>
- * @method string getModel() Obtain <p>Model name</p>
- * @method void setModel(string $Model) Set <p>Model name</p>
- * @method integer getSubAppId() Obtain <p>Application ID</p>
- * @method void setSubAppId(integer $SubAppId) Set <p>Application ID</p>
- * @method string getApiKey() Obtain <p>api_key after masking: first 8 digits + **** (return without modification when length ≤ 8)</p>
- * @method void setApiKey(string $ApiKey) Set <p>api_key after masking: first 8 digits + **** (return without modification when length ≤ 8)</p>
- * @method boolean getStream() Obtain <p>Whether to return in streaming mode</p>
- * @method void setStream(boolean $Stream) Set <p>Whether to return in streaming mode</p>
- * @method integer getInputTokens() Obtain <p>Number of input tokens</p>
- * @method void setInputTokens(integer $InputTokens) Set <p>Number of input tokens</p>
- * @method integer getOutputTokens() Obtain <p>Number of output tokens</p>
- * @method void setOutputTokens(integer $OutputTokens) Set <p>Number of output tokens</p>
- * @method integer getCacheInputTokens() Obtain <p>Number of tokens with prompt cache hit</p>
- * @method void setCacheInputTokens(integer $CacheInputTokens) Set <p>Number of tokens with prompt cache hit</p>
- * @method integer getTotalTokens() Obtain <p>Total tokens</p>
- * @method void setTotalTokens(integer $TotalTokens) Set <p>Total tokens</p>
- * @method float getTPS() Obtain <p>tokens per second in the generation stage</p>
- * @method void setTPS(float $TPS) Set <p>tokens per second in the generation stage</p>
- * @method float getTTFT() Obtain <p>Time To First Token</p><p>Measurement unit: seconds</p>
- * @method void setTTFT(float $TTFT) Set <p>Time To First Token</p><p>Measurement unit: seconds</p>
- * @method float getTotal() Obtain <p>End-to-end total time</p><p>Unit: seconds</p>
- * @method void setTotal(float $Total) Set <p>End-to-end total time</p><p>Unit: seconds</p>
- * @method string getApiType() Obtain <p>Entry protocol:completions / responses / anthropic</p>
- * @method void setApiType(string $ApiType) Set <p>Entry protocol:completions / responses / anthropic</p>
+ * @method string getTimestamp() Obtain 
+ * @method void setTimestamp(string $Timestamp) Set 
+ * @method string getReqId() Obtain 
+ * @method void setReqId(string $ReqId) Set 
+ * @method string getChatId() Obtain 
+ * @method void setChatId(string $ChatId) Set 
+ * @method integer getStatusCode() Obtain 
+ * @method void setStatusCode(integer $StatusCode) Set 
+ * @method string getModel() Obtain 
+ * @method void setModel(string $Model) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getApiKey() Obtain 
+ * @method void setApiKey(string $ApiKey) Set 
+ * @method boolean getStream() Obtain 
+ * @method void setStream(boolean $Stream) Set 
+ * @method integer getInputTokens() Obtain 
+ * @method void setInputTokens(integer $InputTokens) Set 
+ * @method integer getOutputTokens() Obtain 
+ * @method void setOutputTokens(integer $OutputTokens) Set 
+ * @method integer getCacheInputTokens() Obtain 
+ * @method void setCacheInputTokens(integer $CacheInputTokens) Set 
+ * @method integer getTotalTokens() Obtain 
+ * @method void setTotalTokens(integer $TotalTokens) Set 
+ * @method float getTPS() Obtain 
+ * @method void setTPS(float $TPS) Set 
+ * @method float getTTFT() Obtain 
+ * @method void setTTFT(float $TTFT) Set 
+ * @method float getTotal() Obtain 
+ * @method void setTotal(float $Total) Set 
+ * @method string getApiType() Obtain 
+ * @method void setApiType(string $ApiType) Set 
  */
 class AigcTextDetailData extends AbstractModel
 {
     /**
-     * @var string <p>Request start time (RFC3339)</p>
+     * @var string 
      */
     public $Timestamp;
 
     /**
-     * @var string <p>Gateway layer request ID</p>
+     * @var string 
      */
     public $ReqId;
 
     /**
-     * @var string <p>Dialogue ID returned by the backend model</p>
+     * @var string 
      */
     public $ChatId;
 
     /**
-     * @var integer <p>HTTP status code returned to client</p>
+     * @var integer 
      */
     public $StatusCode;
 
     /**
-     * @var string <p>Model name</p>
+     * @var string 
      */
     public $Model;
 
     /**
-     * @var integer <p>Application ID</p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>api_key after masking: first 8 digits + **** (return without modification when length ≤ 8)</p>
+     * @var string 
      */
     public $ApiKey;
 
     /**
-     * @var boolean <p>Whether to return in streaming mode</p>
+     * @var boolean 
      */
     public $Stream;
 
     /**
-     * @var integer <p>Number of input tokens</p>
+     * @var integer 
      */
     public $InputTokens;
 
     /**
-     * @var integer <p>Number of output tokens</p>
+     * @var integer 
      */
     public $OutputTokens;
 
     /**
-     * @var integer <p>Number of tokens with prompt cache hit</p>
+     * @var integer 
      */
     public $CacheInputTokens;
 
     /**
-     * @var integer <p>Total tokens</p>
+     * @var integer 
      */
     public $TotalTokens;
 
     /**
-     * @var float <p>tokens per second in the generation stage</p>
+     * @var float 
      */
     public $TPS;
 
     /**
-     * @var float <p>Time To First Token</p><p>Measurement unit: seconds</p>
+     * @var float 
      */
     public $TTFT;
 
     /**
-     * @var float <p>End-to-end total time</p><p>Unit: seconds</p>
+     * @var float 
      */
     public $Total;
 
     /**
-     * @var string <p>Entry protocol:completions / responses / anthropic</p>
+     * @var string 
      */
     public $ApiType;
 
     /**
-     * @param string $Timestamp <p>Request start time (RFC3339)</p>
-     * @param string $ReqId <p>Gateway layer request ID</p>
-     * @param string $ChatId <p>Dialogue ID returned by the backend model</p>
-     * @param integer $StatusCode <p>HTTP status code returned to client</p>
-     * @param string $Model <p>Model name</p>
-     * @param integer $SubAppId <p>Application ID</p>
-     * @param string $ApiKey <p>api_key after masking: first 8 digits + **** (return without modification when length ≤ 8)</p>
-     * @param boolean $Stream <p>Whether to return in streaming mode</p>
-     * @param integer $InputTokens <p>Number of input tokens</p>
-     * @param integer $OutputTokens <p>Number of output tokens</p>
-     * @param integer $CacheInputTokens <p>Number of tokens with prompt cache hit</p>
-     * @param integer $TotalTokens <p>Total tokens</p>
-     * @param float $TPS <p>tokens per second in the generation stage</p>
-     * @param float $TTFT <p>Time To First Token</p><p>Measurement unit: seconds</p>
-     * @param float $Total <p>End-to-end total time</p><p>Unit: seconds</p>
-     * @param string $ApiType <p>Entry protocol:completions / responses / anthropic</p>
+     * @param string $Timestamp 
+     * @param string $ReqId 
+     * @param string $ChatId 
+     * @param integer $StatusCode 
+     * @param string $Model 
+     * @param integer $SubAppId 
+     * @param string $ApiKey 
+     * @param boolean $Stream 
+     * @param integer $InputTokens 
+     * @param integer $OutputTokens 
+     * @param integer $CacheInputTokens 
+     * @param integer $TotalTokens 
+     * @param float $TPS 
+     * @param float $TTFT 
+     * @param float $Total 
+     * @param string $ApiType 
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image encoding format parameters.
+ * 
  *
- * @method string getFormat() Obtain Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
- * @method void setFormat(string $Format) Set Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
- * @method integer getQuality() Obtain Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
- * @method void setQuality(integer $Quality) Set Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method integer getQuality() Obtain 
+ * @method void setQuality(integer $Quality) Set 
  */
 class ImageSceneAigcEncodeConfig extends AbstractModel
 {
     /**
-     * @var string Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var integer Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
+     * @var integer 
      */
     public $Quality;
 
     /**
-     * @param string $Format Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
-     * @param integer $Quality Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
+     * @param string $Format 
+     * @param integer $Quality 
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of a video editing task. This parameter is only valid for tasks initiated by the v2017 video editing API.
+ * 
  *
- * @method string getTaskId() Obtain Video clipping task ID.
- * @method void setTaskId(string $TaskId) Set Video clipping task ID.
- * @method string getSrcFileId() Obtain ID of source file for video clipping task.
- * @method void setSrcFileId(string $SrcFileId) Set ID of source file for video clipping task.
- * @method ClipFileInfo2017 getFileInfo() Obtain Information of file output by video clipping.
- * @method void setFileInfo(ClipFileInfo2017 $FileInfo) Set Information of file output by video clipping.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getSrcFileId() Obtain 
+ * @method void setSrcFileId(string $SrcFileId) Set 
+ * @method ClipFileInfo2017 getFileInfo() Obtain 
+ * @method void setFileInfo(ClipFileInfo2017 $FileInfo) Set 
  */
 class ClipTask2017 extends AbstractModel
 {
     /**
-     * @var string Video clipping task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string ID of source file for video clipping task.
+     * @var string 
      */
     public $SrcFileId;
 
     /**
-     * @var ClipFileInfo2017 Information of file output by video clipping.
+     * @var ClipFileInfo2017 
      */
     public $FileInfo;
 
     /**
-     * @param string $TaskId Video clipping task ID.
-     * @param string $SrcFileId ID of source file for video clipping task.
-     * @param ClipFileInfo2017 $FileInfo Information of file output by video clipping.
+     * @param string $TaskId 
+     * @param string $SrcFileId 
+     * @param ClipFileInfo2017 $FileInfo 
      */
     function __construct()
     {

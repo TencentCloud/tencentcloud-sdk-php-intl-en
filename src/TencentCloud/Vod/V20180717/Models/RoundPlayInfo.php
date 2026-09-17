@@ -18,124 +18,100 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a playlist.
+ * 
  *
- * @method string getRoundPlayId() Obtain The playlist ID.
- * @method void setRoundPlayId(string $RoundPlayId) Set The playlist ID.
- * @method string getStartTime() Obtain The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
- * @method void setStartTime(string $StartTime) Set The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
- * @method array getRoundPlaylist() Obtain The files on the list.
- * @method void setRoundPlaylist(array $RoundPlaylist) Set The files on the list.
- * @method string getName() Obtain The playlist name (not longer than 64 characters).
- * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
- * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
- * @method void setDesc(string $Desc) Set The playlist description (not longer than 256 characters).
- * @method string getStatus() Obtain Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
- * @method void setStatus(string $Status) Set Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
- * @method string getPlayBackMode() Obtain Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
- * @method void setPlayBackMode(string $PlayBackMode) Set Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
- * @method string getUrl() Obtain Carousel playback address.
- * @method void setUrl(string $Url) Set Carousel playback address.
- * @method string getCreateTime() Obtain Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method void setCreateTime(string $CreateTime) Set Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method string getUpdateTime() Obtain Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method void setUpdateTime(string $UpdateTime) Set Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method string getExpiredTime() Obtain Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
- * @method void setExpiredTime(string $ExpiredTime) Set Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+ * @method string getRoundPlayId() Obtain 
+ * @method void setRoundPlayId(string $RoundPlayId) Set 
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method array getRoundPlaylist() Obtain 
+ * @method void setRoundPlaylist(array $RoundPlaylist) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getDesc() Obtain 
+ * @method void setDesc(string $Desc) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getPlayBackMode() Obtain 
+ * @method void setPlayBackMode(string $PlayBackMode) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method string getExpiredTime() Obtain 
+ * @method void setExpiredTime(string $ExpiredTime) Set 
  */
 class RoundPlayInfo extends AbstractModel
 {
     /**
-     * @var string The playlist ID.
+     * @var string 
      */
     public $RoundPlayId;
 
     /**
-     * @var string The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @var string 
      */
     public $StartTime;
 
     /**
-     * @var array The files on the list.
+     * @var array 
      */
     public $RoundPlaylist;
 
     /**
-     * @var string The playlist name (not longer than 64 characters).
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string The playlist description (not longer than 256 characters).
+     * @var string 
      */
     public $Desc;
 
     /**
-     * @var string Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
+     * @var string 
      */
     public $PlayBackMode;
 
     /**
-     * @var string Carousel playback address.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @var string Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+     * @var string 
      */
     public $ExpiredTime;
 
     /**
-     * @param string $RoundPlayId The playlist ID.
-     * @param string $StartTime The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
-     * @param array $RoundPlaylist The files on the list.
-     * @param string $Name The playlist name (not longer than 64 characters).
-     * @param string $Desc The playlist description (not longer than 256 characters).
-     * @param string $Status Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
-     * @param string $PlayBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
-     * @param string $Url Carousel playback address.
-     * @param string $CreateTime Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param string $UpdateTime Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param string $ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+     * @param string $RoundPlayId 
+     * @param string $StartTime 
+     * @param array $RoundPlaylist 
+     * @param string $Name 
+     * @param string $Desc 
+     * @param string $Status 
+     * @param string $PlayBackMode 
+     * @param string $Url 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
+     * @param string $ExpiredTime 
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information parameter of file output by video processing
+ * 
  *
- * @method string getRegion() Obtain Region of the bucket where an output file is stored, such as ap-guangzhou.
- * @method void setRegion(string $Region) Set Region of the bucket where an output file is stored, such as ap-guangzhou.
- * @method string getBucket() Obtain Bucket of output file.
- * @method void setBucket(string $Bucket) Set Bucket of output file.
- * @method string getDir() Obtain Path to output file, which must end in "/".
- * @method void setDir(string $Dir) Set Path to output file, which must end in "/".
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
+ * @method string getBucket() Obtain 
+ * @method void setBucket(string $Bucket) Set 
+ * @method string getDir() Obtain 
+ * @method void setDir(string $Dir) Set 
  */
 class MediaOutputInfo extends AbstractModel
 {
     /**
-     * @var string Region of the bucket where an output file is stored, such as ap-guangzhou.
+     * @var string 
      */
     public $Region;
 
     /**
-     * @var string Bucket of output file.
+     * @var string 
      */
     public $Bucket;
 
     /**
-     * @var string Path to output file, which must end in "/".
+     * @var string 
      */
     public $Dir;
 
     /**
-     * @param string $Region Region of the bucket where an output file is stored, such as ap-guangzhou.
-     * @param string $Bucket Bucket of output file.
-     * @param string $Dir Path to output file, which must end in "/".
+     * @param string $Region 
+     * @param string $Bucket 
+     * @param string $Dir 
      */
     function __construct()
     {

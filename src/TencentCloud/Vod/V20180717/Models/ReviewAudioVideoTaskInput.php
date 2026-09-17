@@ -18,44 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The input of a moderation task.
+ * 
  *
- * @method string getFileId() Obtain The ID of the media file.
- * @method void setFileId(string $FileId) Set The ID of the media file.
- * @method integer getDefinition() Obtain The moderation template ID.
- * @method void setDefinition(integer $Definition) Set The moderation template ID.
- * @method array getReviewContents() Obtain The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
- * @method void setReviewContents(array $ReviewContents) Set The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method array getReviewContents() Obtain 
+ * @method void setReviewContents(array $ReviewContents) Set 
  */
 class ReviewAudioVideoTaskInput extends AbstractModel
 {
     /**
-     * @var string The ID of the media file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer The moderation template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var array The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
+     * @var array 
      */
     public $ReviewContents;
 
     /**
-     * @param string $FileId The ID of the media file.
-     * @param integer $Definition The moderation template ID.
-     * @param array $ReviewContents The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
+     * @param string $FileId 
+     * @param integer $Definition 
+     * @param array $ReviewContents 
      */
     function __construct()
     {

@@ -18,24 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Extract digital watermark from video transcoding task configuration
+ * 
  *
- * @method integer getSegmentDuration() Obtain Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
- * @method void setSegmentDuration(integer $SegmentDuration) Set Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
+ * @method integer getSegmentDuration() Obtain 
+ * @method void setSegmentDuration(integer $SegmentDuration) Set 
  */
 class ExtractBlindWatermarkTaskConfig extends AbstractModel
 {
     /**
-     * @var integer Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
+     * @var integer 
      */
     public $SegmentDuration;
 
     /**
-     * @param integer $SegmentDuration Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
+     * @param integer $SegmentDuration 
      */
     function __construct()
     {

@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of intelligent categorization
+ * 
  *
- * @method array getClassificationSet() Obtain List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
- * @method void setClassificationSet(array $ClassificationSet) Set List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
- * @method string getClassificationSetFileUrl() Obtain URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
- * @method void setClassificationSetFileUrl(string $ClassificationSetFileUrl) Set URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
- * @method string getClassificationSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
- * @method void setClassificationSetFileUrlExpireTime(string $ClassificationSetFileUrlExpireTime) Set Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method array getClassificationSet() Obtain 
+ * @method void setClassificationSet(array $ClassificationSet) Set 
+ * @method string getClassificationSetFileUrl() Obtain 
+ * @method void setClassificationSetFileUrl(string $ClassificationSetFileUrl) Set 
+ * @method string getClassificationSetFileUrlExpireTime() Obtain 
+ * @method void setClassificationSetFileUrlExpireTime(string $ClassificationSetFileUrlExpireTime) Set 
  */
 class AiAnalysisTaskClassificationOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
+     * @var array 
      */
     public $ClassificationSet;
 
     /**
-     * @var string URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+     * @var string 
      */
     public $ClassificationSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @var string 
      */
     public $ClassificationSetFileUrlExpireTime;
 
     /**
-     * @param array $ClassificationSet List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
-     * @param string $ClassificationSetFileUrl URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
-     * @param string $ClassificationSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param array $ClassificationSet 
+     * @param string $ClassificationSetFileUrl 
+     * @param string $ClassificationSetFileUrlExpireTime 
      */
     function __construct()
     {

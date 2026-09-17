@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VOD video file editing information
+ * 
  *
- * @method string getFileId() Obtain Video ID.
- * @method void setFileId(string $FileId) Set Video ID.
- * @method float getStartTimeOffset() Obtain Offset time of the start of the video clip, unit: seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of the start of the video clip, unit: seconds.
- * @method float getEndTimeOffset() Obtain Offset time at the end of the video clip, unit: seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Offset time at the end of the video clip, unit: seconds.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
  */
 class EditMediaFileInfo extends AbstractModel
 {
     /**
-     * @var string Video ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var float Offset time of the start of the video clip, unit: seconds.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Offset time at the end of the video clip, unit: seconds.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $FileId Video ID.
-     * @param float $StartTimeOffset Offset time of the start of the video clip, unit: seconds.
-     * @param float $EndTimeOffset Offset time at the end of the video clip, unit: seconds.
+     * @param string $FileId 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
      */
     function __construct()
     {

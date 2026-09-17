@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIAnalysisTemplate request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Audio and video content analysis template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Audio and video content analysis template name. Length limit: 64 characters.
- * @method string getComment() Obtain Audio/video content analysis template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Audio/video content analysis template description. Length limit: 256 characters.
- * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Intelligent classification task control parameters.
- * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Intelligent classification task control parameters.
- * @method TagConfigureInfo getTagConfigure() Obtain Intelligent tag task control parameter.
- * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Intelligent tag task control parameter.
- * @method CoverConfigureInfo getCoverConfigure() Obtain Intelligent Cover Task Control Parameters.
- * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Intelligent Cover Task Control Parameters.
- * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Intelligent frame tagging task control parameter.
- * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Intelligent frame tagging task control parameter.
- * @method HighlightsConfigureInfo getHighlightConfigure() Obtain Intelligent Highlights Compilation Task Control Parameters.
- * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set Intelligent Highlights Compilation Task Control Parameters.
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method ClassificationConfigureInfo getClassificationConfigure() Obtain 
+ * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set 
+ * @method TagConfigureInfo getTagConfigure() Obtain 
+ * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set 
+ * @method CoverConfigureInfo getCoverConfigure() Obtain 
+ * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set 
+ * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain 
+ * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set 
+ * @method HighlightsConfigureInfo getHighlightConfigure() Obtain 
+ * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set 
  */
 class CreateAIAnalysisTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Audio and video content analysis template name. Length limit: 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Audio/video content analysis template description. Length limit: 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var ClassificationConfigureInfo Intelligent classification task control parameters.
+     * @var ClassificationConfigureInfo 
      */
     public $ClassificationConfigure;
 
     /**
-     * @var TagConfigureInfo Intelligent tag task control parameter.
+     * @var TagConfigureInfo 
      */
     public $TagConfigure;
 
     /**
-     * @var CoverConfigureInfo Intelligent Cover Task Control Parameters.
+     * @var CoverConfigureInfo 
      */
     public $CoverConfigure;
 
     /**
-     * @var FrameTagConfigureInfo Intelligent frame tagging task control parameter.
+     * @var FrameTagConfigureInfo 
      */
     public $FrameTagConfigure;
 
     /**
-     * @var HighlightsConfigureInfo Intelligent Highlights Compilation Task Control Parameters.
+     * @var HighlightsConfigureInfo 
      */
     public $HighlightConfigure;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Audio and video content analysis template name. Length limit: 64 characters.
-     * @param string $Comment Audio/video content analysis template description. Length limit: 256 characters.
-     * @param ClassificationConfigureInfo $ClassificationConfigure Intelligent classification task control parameters.
-     * @param TagConfigureInfo $TagConfigure Intelligent tag task control parameter.
-     * @param CoverConfigureInfo $CoverConfigure Intelligent Cover Task Control Parameters.
-     * @param FrameTagConfigureInfo $FrameTagConfigure Intelligent frame tagging task control parameter.
-     * @param HighlightsConfigureInfo $HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param ClassificationConfigureInfo $ClassificationConfigure 
+     * @param TagConfigureInfo $TagConfigure 
+     * @param CoverConfigureInfo $CoverConfigure 
+     * @param FrameTagConfigureInfo $FrameTagConfigure 
+     * @param HighlightsConfigureInfo $HighlightConfigure 
      */
     function __construct()
     {

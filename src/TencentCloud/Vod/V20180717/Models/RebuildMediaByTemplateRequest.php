@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RebuildMediaByTemplate request structure.
  *
- * @method string getFileId() Obtain Media file ID.
- * @method void setFileId(string $FileId) Set Media file ID.
- * @method integer getDefinition() Obtain Video rebirth template ID.
- * @method void setDefinition(integer $Definition) Set Video rebirth template ID.
- * @method string getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(string $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method float getStartTimeOffset() Obtain Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
- * @method float getEndTimeOffset() Obtain End offset time, in seconds. Not filled indicates cutting to the end of the video.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End offset time, in seconds. Not filled indicates cutting to the end of the video.
- * @method RebuildMediaOutputConfig getOutputConfig() Obtain File configuration after video rebirth.
- * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) Set File configuration after video rebirth.
- * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
- * @method string getExtInfo() Obtain Reserved field, used when special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used when special purpose.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getSubAppId() Obtain 
+ * @method void setSubAppId(string $SubAppId) Set 
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method RebuildMediaOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class RebuildMediaByTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Media file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer Video rebirth template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var string 
      */
     public $SubAppId;
 
     /**
-     * @var float Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End offset time, in seconds. Not filled indicates cutting to the end of the video.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var RebuildMediaOutputConfig File configuration after video rebirth.
+     * @var RebuildMediaOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string Reserved field, used when special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param string $FileId Media file ID.
-     * @param integer $Definition Video rebirth template ID.
-     * @param string $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param float $StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
-     * @param float $EndTimeOffset End offset time, in seconds. Not filled indicates cutting to the end of the video.
-     * @param RebuildMediaOutputConfig $OutputConfig File configuration after video rebirth.
-     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
-     * @param string $ExtInfo Reserved field, used when special purpose.
+     * @param string $FileId 
+     * @param integer $Definition 
+     * @param string $SubAppId 
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param RebuildMediaOutputConfig $OutputConfig 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

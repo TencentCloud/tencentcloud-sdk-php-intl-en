@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReviewTemplate request structure.
  *
- * @method array getLabels() Obtain The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
- * @method void setLabels(array $Labels) Set The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
- * @method string getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(string $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Review template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Review template name. The length cannot exceed 64 characters.
- * @method string getComment() Obtain Review template description information, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Review template description information, with a length limit of 256 characters.
+ * @method array getLabels() Obtain 
+ * @method void setLabels(array $Labels) Set 
+ * @method string getSubAppId() Obtain 
+ * @method void setSubAppId(string $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
  */
 class CreateReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var array The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+     * @var array 
      */
     public $Labels;
 
     /**
-     * @var string <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var string 
      */
     public $SubAppId;
 
     /**
-     * @var string Review template name. The length cannot exceed 64 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Review template description information, with a length limit of 256 characters.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @param array $Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
-     * @param string $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Review template name. The length cannot exceed 64 characters.
-     * @param string $Comment Review template description information, with a length limit of 256 characters.
+     * @param array $Labels 
+     * @param string $SubAppId 
+     * @param string $Name 
+     * @param string $Comment 
      */
     function __construct()
     {

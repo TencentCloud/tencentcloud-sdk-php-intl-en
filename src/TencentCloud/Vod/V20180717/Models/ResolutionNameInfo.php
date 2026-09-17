@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Player substream name information
+ * 
  *
- * @method integer getMinEdgeLength() Obtain Length of video short side in px.
- * @method void setMinEdgeLength(integer $MinEdgeLength) Set Length of video short side in px.
- * @method string getName() Obtain Display name.
- * @method void setName(string $Name) Set Display name.
+ * @method integer getMinEdgeLength() Obtain 
+ * @method void setMinEdgeLength(integer $MinEdgeLength) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
  */
 class ResolutionNameInfo extends AbstractModel
 {
     /**
-     * @var integer Length of video short side in px.
+     * @var integer 
      */
     public $MinEdgeLength;
 
     /**
-     * @var string Display name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @param integer $MinEdgeLength Length of video short side in px.
-     * @param string $Name Display name.
+     * @param integer $MinEdgeLength 
+     * @param string $Name 
      */
     function __construct()
     {

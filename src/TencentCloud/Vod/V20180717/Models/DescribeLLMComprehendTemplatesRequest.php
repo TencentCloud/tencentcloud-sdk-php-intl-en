@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLLMComprehendTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
- * @method array getDefinitions() Obtain <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
- * @method void setDefinitions(array $Definitions) Set <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
- * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
- * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
- * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getDefinitions() Obtain 
+ * @method void setDefinitions(array $Definitions) Set 
+ * @method SortBy getSort() Obtain 
+ * @method void setSort(SortBy $Sort) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeLLMComprehendTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var array <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+     * @var array 
      */
     public $Definitions;
 
     /**
-     * @var integer <p>Paging offset. Default value: 0.</p>
+     * @var SortBy 
+     */
+    public $Sort;
+
+    /**
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var integer <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
-     * @param array $Definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
-     * @param integer $Offset <p>Paging offset. Default value: 0.</p>
-     * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param integer $SubAppId 
+     * @param array $Definitions 
+     * @param SortBy $Sort 
+     * @param integer $Offset 
+     * @param integer $Limit 
      */
     function __construct()
     {
@@ -76,6 +84,11 @@ class DescribeLLMComprehendTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
             $this->Definitions = $param["Definitions"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new SortBy();
+            $this->Sort->deserialize($param["Sort"]);
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

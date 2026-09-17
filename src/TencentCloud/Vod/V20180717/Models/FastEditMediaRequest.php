@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FastEditMedia request structure.
  *
- * @method array getFileInfos() Obtain Input media file information. Supports up to 100 incoming media.
- * @method void setFileInfos(array $FileInfos) Set Input media file information. Supports up to 100 incoming media.
- * @method string getClipMode() Obtain ClipMode indicates whether to include a shard when the editing time point falls in the middle of a TS segment. There are two parameter values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard will be included;</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard will be included; when the end time point falls in the middle of a shard, the shard will not be included.</li> Default value: StartInclusiveEndInclusive.
- * @method void setClipMode(string $ClipMode) Set ClipMode indicates whether to include a shard when the editing time point falls in the middle of a TS segment. There are two parameter values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard will be included;</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard will be included; when the end time point falls in the middle of a shard, the shard will not be included.</li> Default value: StartInclusiveEndInclusive.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getFileInfos() Obtain 
+ * @method void setFileInfos(array $FileInfos) Set 
+ * @method string getClipMode() Obtain 
+ * @method void setClipMode(string $ClipMode) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class FastEditMediaRequest extends AbstractModel
 {
     /**
-     * @var array Input media file information. Supports up to 100 incoming media.
+     * @var array 
      */
     public $FileInfos;
 
     /**
-     * @var string ClipMode indicates whether to include a shard when the editing time point falls in the middle of a TS segment. There are two parameter values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard will be included;</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard will be included; when the end time point falls in the middle of a shard, the shard will not be included.</li> Default value: StartInclusiveEndInclusive.
+     * @var string 
      */
     public $ClipMode;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param array $FileInfos Input media file information. Supports up to 100 incoming media.
-     * @param string $ClipMode ClipMode indicates whether to include a shard when the editing time point falls in the middle of a TS segment. There are two parameter values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard will be included;</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard will be included; when the end time point falls in the middle of a shard, the shard will not be included.</li> Default value: StartInclusiveEndInclusive.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $FileInfos 
+     * @param string $ClipMode 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

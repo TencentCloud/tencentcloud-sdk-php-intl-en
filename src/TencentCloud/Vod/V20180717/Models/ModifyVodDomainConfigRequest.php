@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVodDomainConfig request structure.
  *
- * @method string getDomain() Obtain Domain name.
- * @method void setDomain(string $Domain) Set Domain name.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method RefererAuthPolicy getRefererAuthPolicy() Obtain [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
- * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) Set [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
- * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() Obtain [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
- * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) Set [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
- * @method DomainQUICConfig getQUICConfig() Obtain QUIC configuration.
- * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set QUIC configuration.
- * @method IPFilterPolicy getIPFilterPolicy() Obtain IP access restriction rule.
- * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set IP access restriction rule.
+ * @method string getDomain() Obtain 
+ * @method void setDomain(string $Domain) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method RefererAuthPolicy getRefererAuthPolicy() Obtain 
+ * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) Set 
+ * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() Obtain 
+ * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) Set 
+ * @method DomainQUICConfig getQUICConfig() Obtain 
+ * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set 
+ * @method IPFilterPolicy getIPFilterPolicy() Obtain 
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set 
  */
 class ModifyVodDomainConfigRequest extends AbstractModel
 {
     /**
-     * @var string Domain name.
+     * @var string 
      */
     public $Domain;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var RefererAuthPolicy [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
+     * @var RefererAuthPolicy 
      */
     public $RefererAuthPolicy;
 
     /**
-     * @var UrlSignatureAuthPolicy [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
+     * @var UrlSignatureAuthPolicy 
      */
     public $UrlSignatureAuthPolicy;
 
     /**
-     * @var DomainQUICConfig QUIC configuration.
+     * @var DomainQUICConfig 
      */
     public $QUICConfig;
 
     /**
-     * @var IPFilterPolicy IP access restriction rule.
+     * @var IPFilterPolicy 
      */
     public $IPFilterPolicy;
 
     /**
-     * @param string $Domain Domain name.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param RefererAuthPolicy $RefererAuthPolicy [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
-     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
-     * @param DomainQUICConfig $QUICConfig QUIC configuration.
-     * @param IPFilterPolicy $IPFilterPolicy IP access restriction rule.
+     * @param string $Domain 
+     * @param integer $SubAppId 
+     * @param RefererAuthPolicy $RefererAuthPolicy 
+     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy 
+     * @param DomainQUICConfig $QUICConfig 
+     * @param IPFilterPolicy $IPFilterPolicy 
      */
     function __construct()
     {

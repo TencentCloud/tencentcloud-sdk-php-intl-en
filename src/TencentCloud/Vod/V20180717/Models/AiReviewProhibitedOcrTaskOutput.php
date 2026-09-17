@@ -18,68 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OCR-detected prohibited information in text
+ * 
  *
- * @method float getConfidence() Obtain Score of OCR-detected prohibited information in text between 0 and 100.
- * @method void setConfidence(float $Confidence) Set Score of OCR-detected prohibited information in text between 0 and 100.
- * @method string getSuggestion() Obtain Suggestion for OCR-detected prohibited information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for OCR-detected prohibited information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method array getSegmentSet() Obtain List of video segments that contain OCR-detected prohibited information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain OCR-detected prohibited information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
- * @method string getSegmentSetFileUrl() Obtain URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method string getSegmentSetFileUrl() Obtain 
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
+ * @method string getSegmentSetFileUrlExpireTime() Obtain 
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
  */
 class AiReviewProhibitedOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Score of OCR-detected prohibited information in text between 0 and 100.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for OCR-detected prohibited information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var array List of video segments that contain OCR-detected prohibited information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+     * @var array 
      */
     public $SegmentSet;
 
     /**
-     * @var string URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @var string 
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @var string 
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence Score of OCR-detected prohibited information in text between 0 and 100.
-     * @param string $Suggestion Suggestion for OCR-detected prohibited information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param array $SegmentSet List of video segments that contain OCR-detected prohibited information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-     * @param string $SegmentSetFileUrl URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param array $SegmentSet 
+     * @param string $SegmentSetFileUrl 
+     * @param string $SegmentSetFileUrlExpireTime 
      */
     function __construct()
     {

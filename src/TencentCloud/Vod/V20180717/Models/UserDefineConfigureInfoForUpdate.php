@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters for custom recognition
+ * 
  *
- * @method UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() Obtain Parameters for custom facial recognition
- * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo) Set Parameters for custom facial recognition
- * @method UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Parameters for custom ASR-based recognition
- * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo) Set Parameters for custom ASR-based recognition
- * @method UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Parameters for custom OCR-based recognition
- * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo) Set Parameters for custom OCR-based recognition
+ * @method UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() Obtain 
+ * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo) Set 
+ * @method UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain 
+ * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo) Set 
+ * @method UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
  */
 class UserDefineConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var UserDefineFaceReviewTemplateInfoForUpdate Parameters for custom facial recognition
+     * @var UserDefineFaceReviewTemplateInfoForUpdate 
      */
     public $FaceReviewInfo;
 
     /**
-     * @var UserDefineAsrTextReviewTemplateInfoForUpdate Parameters for custom ASR-based recognition
+     * @var UserDefineAsrTextReviewTemplateInfoForUpdate 
      */
     public $AsrReviewInfo;
 
     /**
-     * @var UserDefineOcrTextReviewTemplateInfoForUpdate Parameters for custom OCR-based recognition
+     * @var UserDefineOcrTextReviewTemplateInfoForUpdate 
      */
     public $OcrReviewInfo;
 
     /**
-     * @param UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo Parameters for custom facial recognition
-     * @param UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo Parameters for custom ASR-based recognition
-     * @param UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo Parameters for custom OCR-based recognition
+     * @param UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo 
+     * @param UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo 
+     * @param UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo 
      */
     function __construct()
     {

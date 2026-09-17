@@ -18,64 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of cover generating task
+ * 
  *
- * @method integer getDefinition() Obtain Time point screencapturing template ID.
- * @method void setDefinition(integer $Definition) Set Time point screencapturing template ID.
- * @method string getPositionType() Obtain Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
- * @method void setPositionType(string $PositionType) Set Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
- * @method float getPositionValue() Obtain Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
- * @method void setPositionValue(float $PositionValue) Set Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
- * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getPositionType() Obtain 
+ * @method void setPositionType(string $PositionType) Set 
+ * @method float getPositionValue() Obtain 
+ * @method void setPositionValue(float $PositionValue) Set 
+ * @method array getWatermarkSet() Obtain 
+ * @method void setWatermarkSet(array $WatermarkSet) Set 
  */
 class CoverBySnapshotTaskInput extends AbstractModel
 {
     /**
-     * @var integer Time point screencapturing template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
+     * @var string 
      */
     public $PositionType;
 
     /**
-     * @var float Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
+     * @var float 
      */
     public $PositionValue;
 
     /**
-     * @var array List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $WatermarkSet;
 
     /**
-     * @param integer $Definition Time point screencapturing template ID.
-     * @param string $PositionType Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
-     * @param float $PositionValue Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
-     * @param array $WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition 
+     * @param string $PositionType 
+     * @param float $PositionValue 
+     * @param array $WatermarkSet 
      */
     function __construct()
     {

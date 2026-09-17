@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Panoramic recording information
+ * 
  *
- * @method string getRecordUrl() Obtain Panoramic recording Url.
- * @method void setRecordUrl(string $RecordUrl) Set Panoramic recording Url.
- * @method string getRecordTaskId() Obtain Panoramic recording task ID.
- * @method void setRecordTaskId(string $RecordTaskId) Set Panoramic recording task ID.
+ * @method string getRecordUrl() Obtain 
+ * @method void setRecordUrl(string $RecordUrl) Set 
+ * @method string getRecordTaskId() Obtain 
+ * @method void setRecordTaskId(string $RecordTaskId) Set 
  */
 class WebPageRecordInfo extends AbstractModel
 {
     /**
-     * @var string Panoramic recording Url.
+     * @var string 
      */
     public $RecordUrl;
 
     /**
-     * @var string Panoramic recording task ID.
+     * @var string 
      */
     public $RecordTaskId;
 
     /**
-     * @param string $RecordUrl Panoramic recording Url.
-     * @param string $RecordTaskId Panoramic recording task ID.
+     * @param string $RecordUrl 
+     * @param string $RecordTaskId 
      */
     function __construct()
     {

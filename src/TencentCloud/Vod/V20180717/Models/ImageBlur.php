@@ -18,40 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image blurring parameters.
+ * 
  *
- * @method string getType() Obtain The blur type. Valid values:
-<li>`Gaussian`</li>
- * @method void setType(string $Type) Set The blur type. Valid values:
-<li>`Gaussian`</li>
- * @method integer getRadius() Obtain The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
- * @method void setRadius(integer $Radius) Set The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
- * @method integer getSigma() Obtain The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
- * @method void setSigma(integer $Sigma) Set The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getRadius() Obtain 
+ * @method void setRadius(integer $Radius) Set 
+ * @method integer getSigma() Obtain 
+ * @method void setSigma(integer $Sigma) Set 
  */
 class ImageBlur extends AbstractModel
 {
     /**
-     * @var string The blur type. Valid values:
-<li>`Gaussian`</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+     * @var integer 
      */
     public $Radius;
 
     /**
-     * @var integer The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+     * @var integer 
      */
     public $Sigma;
 
     /**
-     * @param string $Type The blur type. Valid values:
-<li>`Gaussian`</li>
-     * @param integer $Radius The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
-     * @param integer $Sigma The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+     * @param string $Type 
+     * @param integer $Radius 
+     * @param integer $Sigma 
      */
     function __construct()
     {

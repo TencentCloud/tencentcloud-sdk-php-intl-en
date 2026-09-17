@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Heuristic cache configuration
+ * 
  *
- * @method string getHeuristicCacheTimeSwitch() Obtain Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method integer getHeuristicCacheTime() Obtain Unit: seconds.
- * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set Unit: seconds.
+ * @method string getHeuristicCacheTimeSwitch() Obtain Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method integer getHeuristicCacheTime() Obtain 
+ * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set 
  */
 class HeuristicCacheConfig extends AbstractModel
 {
     /**
-     * @var string Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $HeuristicCacheTimeSwitch;
 
     /**
-     * @var integer Unit: seconds.
+     * @var integer 
      */
     public $HeuristicCacheTime;
 
     /**
-     * @param string $HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param integer $HeuristicCacheTime Unit: seconds.
+     * @param string $HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param integer $HeuristicCacheTime 
      */
     function __construct()
     {

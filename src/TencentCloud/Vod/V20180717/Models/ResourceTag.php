@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag key value. For details, see [Tags](https://intl.cloud.tencent.com/document/product/651?from_cn_redirect=1).
+ * 
  *
- * @method string getTagKey() Obtain Tag key.
- * @method void setTagKey(string $TagKey) Set Tag key.
- * @method string getTagValue() Obtain Tag value.
- * @method void setTagValue(string $TagValue) Set Tag value.
+ * @method string getTagKey() Obtain 
+ * @method void setTagKey(string $TagKey) Set 
+ * @method string getTagValue() Obtain 
+ * @method void setTagValue(string $TagValue) Set 
  */
 class ResourceTag extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var string 
      */
     public $TagKey;
 
     /**
-     * @var string Tag value.
+     * @var string 
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey Tag key.
-     * @param string $TagValue Tag value.
+     * @param string $TagKey 
+     * @param string $TagValue 
      */
     function __construct()
     {

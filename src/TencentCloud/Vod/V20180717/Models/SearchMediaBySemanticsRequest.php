@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMediaBySemantics request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
- * @method string getText() Obtain <p>Search content</p>
- * @method void setText(string $Text) Set <p>Search content</p>
- * @method integer getLimit() Obtain <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
- * @method void setLimit(integer $Limit) Set <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
- * @method array getCategories() Obtain <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
- * @method void setCategories(array $Categories) Set <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
- * @method array getTags() Obtain <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
- * @method void setTags(array $Tags) Set <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
- * @method array getPersons() Obtain <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
- * @method void setPersons(array $Persons) Set <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
- * @method array getTaskTypes() Obtain <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
- * @method void setTaskTypes(array $TaskTypes) Set <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getText() Obtain 
+ * @method void setText(string $Text) Set 
+ * @method string getKnowledgeBaseId() Obtain 
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method array getCategories() Obtain 
+ * @method void setCategories(array $Categories) Set 
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
+ * @method array getPersons() Obtain 
+ * @method void setPersons(array $Persons) Set 
+ * @method array getTaskTypes() Obtain 
+ * @method void setTaskTypes(array $TaskTypes) Set 
  */
 class SearchMediaBySemanticsRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Search content</p>
+     * @var string 
      */
     public $Text;
 
     /**
-     * @var integer <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
+     * @var string 
+     */
+    public $KnowledgeBaseId;
+
+    /**
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @var array <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+     * @var array 
      */
     public $Categories;
 
     /**
-     * @var array <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
+     * @var array 
      */
     public $Tags;
 
     /**
-     * @var array <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+     * @var array 
      */
     public $Persons;
 
     /**
-     * @var array <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @var array 
      */
     public $TaskTypes;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
-     * @param string $Text <p>Search content</p>
-     * @param integer $Limit <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
-     * @param array $Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
-     * @param array $Tags <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
-     * @param array $Persons <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
-     * @param array $TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @param integer $SubAppId 
+     * @param string $Text 
+     * @param string $KnowledgeBaseId 
+     * @param integer $Limit 
+     * @param array $Categories 
+     * @param array $Tags 
+     * @param array $Persons 
+     * @param array $TaskTypes 
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class SearchMediaBySemanticsRequest extends AbstractModel
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

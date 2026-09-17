@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVodDomainAccelerateConfig request structure.
  *
- * @method string getDomain() Obtain Domains requiring acceleration configuration.
- * @method void setDomain(string $Domain) Set Domains requiring acceleration configuration.
- * @method string getArea() Obtain Region, optional value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-<li>Global: global.</li>
- * @method void setArea(string $Area) Set Region, optional value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-<li>Global: global.</li>
- * @method string getStatus() Obtain Whether to enable or disable domain name acceleration for the selected region. Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
- * @method void setStatus(string $Status) Set Whether to enable or disable domain name acceleration for the selected region. Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method string getDomain() Obtain <p>Domains requiring acceleration configuration.</p>
+ * @method void setDomain(string $Domain) Set <p>Domains requiring acceleration configuration.</p>
+ * @method string getArea() Obtain <p>Region. Available values:</p><li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li><li>Outside Chinese Mainland: outside the Chinese mainland.</li><li>Global: around the world.</li>
+ * @method void setArea(string $Area) Set <p>Region. Available values:</p><li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li><li>Outside Chinese Mainland: outside the Chinese mainland.</li><li>Global: around the world.</li>
+ * @method string getStatus() Obtain <p>Enable or disable domain name acceleration for the selected region. Available values:</p><li>Enabled: Enable.</li><li>Disabled: Disable.</li>To enable acceleration for domains within the Chinese mainland, you need to [register the domain name](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
+ * @method void setStatus(string $Status) Set <p>Enable or disable domain name acceleration for the selected region. Available values:</p><li>Enabled: Enable.</li><li>Disabled: Disable.</li>To enable acceleration for domains within the Chinese mainland, you need to [register the domain name](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in as the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in as the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
  */
 class ModifyVodDomainAccelerateConfigRequest extends AbstractModel
 {
     /**
-     * @var string Domains requiring acceleration configuration.
+     * @var string <p>Domains requiring acceleration configuration.</p>
      */
     public $Domain;
 
     /**
-     * @var string Region, optional value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-<li>Global: global.</li>
+     * @var string <p>Region. Available values:</p><li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li><li>Outside Chinese Mainland: outside the Chinese mainland.</li><li>Global: around the world.</li>
      */
     public $Area;
 
     /**
-     * @var string Whether to enable or disable domain name acceleration for the selected region. Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
+     * @var string <p>Enable or disable domain name acceleration for the selected region. Available values:</p><li>Enabled: Enable.</li><li>Disabled: Disable.</li>To enable acceleration for domains within the Chinese mainland, you need to [register the domain name](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
      */
     public $Status;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in as the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain Domains requiring acceleration configuration.
-     * @param string $Area Region, optional value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-<li>Global: global.</li>
-     * @param string $Status Whether to enable or disable domain name acceleration for the selected region. Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param string $Domain <p>Domains requiring acceleration configuration.</p>
+     * @param string $Area <p>Region. Available values:</p><li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li><li>Outside Chinese Mainland: outside the Chinese mainland.</li><li>Global: around the world.</li>
+     * @param string $Status <p>Enable or disable domain name acceleration for the selected region. Available values:</p><li>Enabled: Enable.</li><li>Disabled: Disable.</li>To enable acceleration for domains within the Chinese mainland, you need to [register the domain name](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in as the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     function __construct()
     {

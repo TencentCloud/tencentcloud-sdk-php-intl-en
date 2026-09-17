@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI outfit change parameter configuration.
+ * 
  *
- * @method array getClothesFileInfos() Obtain <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
- * @method void setClothesFileInfos(array $ClothesFileInfos) Set <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
- * @method string getPrompt() Obtain <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
- * @method void setPrompt(string $Prompt) Set <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+ * @method array getClothesFileInfos() Obtain 
+ * @method void setClothesFileInfos(array $ClothesFileInfos) Set 
+ * @method string getPrompt() Obtain 
+ * @method void setPrompt(string $Prompt) Set 
  */
 class ChangeClothesConfig extends AbstractModel
 {
     /**
-     * @var array <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * @var array 
      */
     public $ClothesFileInfos;
 
     /**
-     * @var string <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+     * @var string 
      */
     public $Prompt;
 
     /**
-     * @param array $ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
-     * @param string $Prompt <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+     * @param array $ClothesFileInfos 
+     * @param string $Prompt 
      */
     function __construct()
     {

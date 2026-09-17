@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input type of intelligent categorization task
+ * 
  *
- * @method integer getDefinition() Obtain Intelligent video categorization template ID.
- * @method void setDefinition(integer $Definition) Set Intelligent video categorization template ID.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiAnalysisTaskClassificationInput extends AbstractModel
 {
     /**
-     * @var integer Intelligent video categorization template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Intelligent video categorization template ID.
+     * @param integer $Definition 
      */
     function __construct()
     {

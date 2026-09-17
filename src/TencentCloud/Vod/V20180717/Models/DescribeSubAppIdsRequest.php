@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds request structure.
  *
- * @method string getName() Obtain Subapplication name.
- * @method void setName(string $Name) Set Subapplication name.
- * @method array getTags() Obtain Tag information. You can query the list of subapplications with specified tags.
- * @method void setTags(array $Tags) Set Tag information. You can query the list of subapplications with specified tags.
- * @method integer getOffset() Obtain Page number offset from the beginning of paginated queries. Default value: 0.
- * @method void setOffset(integer $Offset) Set Page number offset from the beginning of paginated queries. Default value: 0.
- * @method integer getLimit() Obtain Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
- * @method void setLimit(integer $Limit) Set Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
  */
 class DescribeSubAppIdsRequest extends AbstractModel
 {
     /**
-     * @var string Subapplication name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var array Tag information. You can query the list of subapplications with specified tags.
+     * @var array 
      */
     public $Tags;
 
     /**
-     * @var integer Page number offset from the beginning of paginated queries. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var integer Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @param string $Name Subapplication name.
-     * @param array $Tags Tag information. You can query the list of subapplications with specified tags.
-     * @param integer $Offset Page number offset from the beginning of paginated queries. Default value: 0.
-     * @param integer $Limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+     * @param string $Name 
+     * @param array $Tags 
+     * @param integer $Offset 
+     * @param integer $Limit 
      */
     function __construct()
     {

@@ -18,24 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of animated image generating in VOD file
+ * 
  *
- * @method array getAnimatedGraphicsSet() Obtain Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAnimatedGraphicsSet(array $AnimatedGraphicsSet) Set Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAnimatedGraphicsSet() Obtain 
+ * @method void setAnimatedGraphicsSet(array $AnimatedGraphicsSet) Set 
  */
 class MediaAnimatedGraphicsInfo extends AbstractModel
 {
     /**
-     * @var array Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $AnimatedGraphicsSet;
 
     /**
-     * @param array $AnimatedGraphicsSet Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AnimatedGraphicsSet 
      */
     function __construct()
     {

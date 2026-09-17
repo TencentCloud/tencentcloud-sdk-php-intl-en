@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TESHD parameter configuration.
+ * 
  *
- * @method string getType() Obtain TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
- * @method void setType(string $Type) Set TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
- * @method integer getMaxVideoBitrate() Obtain Maximum bitrate. If this parameter is left blank, no modification will be made.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum bitrate. If this parameter is left blank, no modification will be made.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getMaxVideoBitrate() Obtain 
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set 
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
     /**
-     * @var string TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Maximum bitrate. If this parameter is left blank, no modification will be made.
+     * @var integer 
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
-     * @param integer $MaxVideoBitrate Maximum bitrate. If this parameter is left blank, no modification will be made.
+     * @param string $Type 
+     * @param integer $MaxVideoBitrate 
      */
     function __construct()
     {

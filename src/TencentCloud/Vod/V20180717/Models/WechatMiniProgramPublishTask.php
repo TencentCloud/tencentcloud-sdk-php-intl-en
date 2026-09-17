@@ -18,100 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Release on WeChat Mini Program task information
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
- * @method void setStatus(string $Status) Set Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
- * @method integer getErrCode() Obtain Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
- * @method void setErrCode(integer $ErrCode) Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method string getFileId() Obtain ID of published video file.
- * @method void setFileId(string $FileId) Set ID of published video file.
- * @method integer getSourceDefinition() Obtain ID of the transcoding template corresponding to the published video. 0 represents the source video.
- * @method void setSourceDefinition(integer $SourceDefinition) Set ID of the transcoding template corresponding to the published video. 0 represents the source video.
- * @method string getPublishResult() Obtain Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
- * @method void setPublishResult(string $PublishResult) Set Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getSourceDefinition() Obtain 
+ * @method void setSourceDefinition(integer $SourceDefinition) Set 
+ * @method string getPublishResult() Obtain 
+ * @method void setPublishResult(string $PublishResult) Set 
  */
 class WechatMiniProgramPublishTask extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var string ID of published video file.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer ID of the transcoding template corresponding to the published video. 0 represents the source video.
+     * @var integer 
      */
     public $SourceDefinition;
 
     /**
-     * @var string Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
+     * @var string 
      */
     public $PublishResult;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
-     * @param integer $ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-     * @param string $Message Error message.
-     * @param string $FileId ID of published video file.
-     * @param integer $SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
-     * @param string $PublishResult Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param string $FileId 
+     * @param integer $SourceDefinition 
+     * @param string $PublishResult 
      */
     function __construct()
     {

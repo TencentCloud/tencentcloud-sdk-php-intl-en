@@ -18,84 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scenario-based AIGC image generation task info
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method void setStatus(string $Status) Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
- * @method void setErrCode(integer $ErrCode) Set Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method integer getProgress() Obtain Task progress, with a value range of [0-100].
- * @method void setProgress(integer $Progress) Set Task progress, with a value range of [0-100].
- * @method SceneAigcImageTaskInput getInput() Obtain Input of the AIGC image generation task.
- * @method void setInput(SceneAigcImageTaskInput $Input) Set Input of the AIGC image generation task.
- * @method SceneAigcImageTaskOutput getOutput() Obtain Output information of the AIGC image generation task.
- * @method void setOutput(SceneAigcImageTaskOutput $Output) Set Output information of the AIGC image generation task.
- * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method SceneAigcImageTaskInput getInput() Obtain 
+ * @method void setInput(SceneAigcImageTaskInput $Input) Set 
+ * @method SceneAigcImageTaskOutput getOutput() Obtain 
+ * @method void setOutput(SceneAigcImageTaskOutput $Output) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
  */
 class SceneAigcImageTask extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var integer Task progress, with a value range of [0-100].
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var SceneAigcImageTaskInput Input of the AIGC image generation task.
+     * @var SceneAigcImageTaskInput 
      */
     public $Input;
 
     /**
-     * @var SceneAigcImageTaskOutput Output information of the AIGC image generation task.
+     * @var SceneAigcImageTaskOutput 
      */
     public $Output;
 
     /**
-     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
-     * @param string $Message Error message.
-     * @param integer $Progress Task progress, with a value range of [0-100].
-     * @param SceneAigcImageTaskInput $Input Input of the AIGC image generation task.
-     * @param SceneAigcImageTaskOutput $Output Output information of the AIGC image generation task.
-     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param integer $Progress 
+     * @param SceneAigcImageTaskInput $Input 
+     * @param SceneAigcImageTaskOutput $Output 
+     * @param string $SessionId 
+     * @param string $SessionContext 
      */
     function __construct()
     {

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdSource(string $AdSource) Set AdSource type, supports UPLOAD_CREATIVES
  * @method LSqueezeSetting getLSqueezeSetting() Obtain L-type compression recovery configuration
  * @method void setLSqueezeSetting(LSqueezeSetting $LSqueezeSetting) Set L-type compression recovery configuration
- * @method PipSetting getPipSetting() Obtain 
- * @method void setPipSetting(PipSetting $PipSetting) Set 
- * @method BorderFrameSetting getBorderFrameSetting() Obtain 
- * @method void setBorderFrameSetting(BorderFrameSetting $BorderFrameSetting) Set 
+ * @method PipSetting getPipSetting() Obtain Picture in picture configuration
+ * @method void setPipSetting(PipSetting $PipSetting) Set Picture in picture configuration
+ * @method BorderFrameSetting getBorderFrameSetting() Obtain Circular setting
+ * @method void setBorderFrameSetting(BorderFrameSetting $BorderFrameSetting) Set Circular setting
  */
 class AdBreakSetting extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AdBreakSetting extends AbstractModel
     public $LSqueezeSetting;
 
     /**
-     * @var PipSetting 
+     * @var PipSetting Picture in picture configuration
      */
     public $PipSetting;
 
     /**
-     * @var BorderFrameSetting 
+     * @var BorderFrameSetting Circular setting
      */
     public $BorderFrameSetting;
 
@@ -70,8 +70,8 @@ class AdBreakSetting extends AbstractModel
      * @param integer $Duration Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
      * @param string $AdSource AdSource type, supports UPLOAD_CREATIVES
      * @param LSqueezeSetting $LSqueezeSetting L-type compression recovery configuration
-     * @param PipSetting $PipSetting 
-     * @param BorderFrameSetting $BorderFrameSetting 
+     * @param PipSetting $PipSetting Picture in picture configuration
+     * @param BorderFrameSetting $BorderFrameSetting Circular setting
      */
     function __construct()
     {

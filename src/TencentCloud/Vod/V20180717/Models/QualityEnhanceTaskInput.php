@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input for media quality enhance task.
+ * 
  *
- * @method string getFileId() Obtain Media file ID.
- * @method void setFileId(string $FileId) Set Media file ID.
- * @method integer getDefinition() Obtain Media quality enhance template ID.
- * @method void setDefinition(integer $Definition) Set Media quality enhance template ID.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class QualityEnhanceTaskInput extends AbstractModel
 {
     /**
-     * @var string Media file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var integer Media quality enhance template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param string $FileId Media file ID.
-     * @param integer $Definition Media quality enhance template ID.
+     * @param string $FileId 
+     * @param integer $Definition 
      */
     function __construct()
     {

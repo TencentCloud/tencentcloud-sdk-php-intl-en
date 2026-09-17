@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC image generation task input file information.
+ * 
  *
- * @method string getType() Obtain <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
- * @method void setType(string $Type) Set <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
- * @method string getFileId() Obtain <p>The media file ID of the image file, which is the globally unique identifier of this file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.<br>Note:</p><ol><li>Images less than 7M are recommended;</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
- * @method void setFileId(string $FileId) Set <p>The media file ID of the image file, which is the globally unique identifier of this file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.<br>Note:</p><ol><li>Images less than 7M are recommended;</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
- * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when the Type value is URL.</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
- * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when the Type value is URL.</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
- * @method string getBase64() Obtain <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>Total size of all files must not exceed 7 MB to avoid exceeding the 10 MB size limit of the cloud API after converting to Base64;</li><li>Format should be jpeg, jpg, png, or webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
- * @method void setBase64(string $Base64) Set <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>Total size of all files must not exceed 7 MB to avoid exceeding the 10 MB size limit of the cloud API after converting to Base64;</li><li>Format should be jpeg, jpg, png, or webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
- * @method string getText() Obtain <p>Description of the input image, used to help the model understand the image. Only valid for GEM 2.5 and GEM 3.0.</p>
- * @method void setText(string $Text) Set <p>Description of the input image, used to help the model understand the image. Only valid for GEM 2.5 and GEM 3.0.</p>
- * @method string getReferenceType() Obtain <p><strong>Valid only when ModelName is OG</strong>. Image type.</p><p>Enumeration value:</p><ul><li>mask: Image mask.</li></ul>
- * @method void setReferenceType(string $ReferenceType) Set <p><strong>Valid only when ModelName is OG</strong>. Image type.</p><p>Enumeration value:</p><ul><li>mask: Image mask.</li></ul>
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getBase64() Obtain 
+ * @method void setBase64(string $Base64) Set 
+ * @method string getText() Obtain 
+ * @method void setText(string $Text) Set 
+ * @method string getReferenceType() Obtain 
+ * @method void setReferenceType(string $ReferenceType) Set 
  */
 class AigcImageTaskInputFileInfo extends AbstractModel
 {
     /**
-     * @var string <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string <p>The media file ID of the image file, which is the globally unique identifier of this file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.<br>Note:</p><ol><li>Images less than 7M are recommended;</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string <p>Accessible file URL. This parameter is valid when the Type value is URL.</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>Total size of all files must not exceed 7 MB to avoid exceeding the 10 MB size limit of the cloud API after converting to Base64;</li><li>Format should be jpeg, jpg, png, or webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+     * @var string 
      */
     public $Base64;
 
     /**
-     * @var string <p>Description of the input image, used to help the model understand the image. Only valid for GEM 2.5 and GEM 3.0.</p>
+     * @var string 
      */
     public $Text;
 
     /**
-     * @var string <p><strong>Valid only when ModelName is OG</strong>. Image type.</p><p>Enumeration value:</p><ul><li>mask: Image mask.</li></ul>
+     * @var string 
      */
     public $ReferenceType;
 
     /**
-     * @param string $Type <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
-     * @param string $FileId <p>The media file ID of the image file, which is the globally unique identifier of this file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.<br>Note:</p><ol><li>Images less than 7M are recommended;</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
-     * @param string $Url <p>Accessible file URL. This parameter is valid when the Type value is URL.</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
-     * @param string $Base64 <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>Total size of all files must not exceed 7 MB to avoid exceeding the 10 MB size limit of the cloud API after converting to Base64;</li><li>Format should be jpeg, jpg, png, or webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
-     * @param string $Text <p>Description of the input image, used to help the model understand the image. Only valid for GEM 2.5 and GEM 3.0.</p>
-     * @param string $ReferenceType <p><strong>Valid only when ModelName is OG</strong>. Image type.</p><p>Enumeration value:</p><ul><li>mask: Image mask.</li></ul>
+     * @param string $Type 
+     * @param string $FileId 
+     * @param string $Url 
+     * @param string $Base64 
+     * @param string $Text 
+     * @param string $ReferenceType 
      */
     function __construct()
     {

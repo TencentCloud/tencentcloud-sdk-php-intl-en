@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Heuristic cache configuration
  *
- * @method string getSwitch() Obtain Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+ * @method string getSwitch() Obtain Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
  * @method HeuristicCacheConfig getCacheConfig() Obtain Custom heuristic cache time configuration.
  * @method void setCacheConfig(HeuristicCacheConfig $CacheConfig) Set Custom heuristic cache time configuration.
  */
 class HeuristicCache extends AbstractModel
 {
     /**
-     * @var string Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+     * @var string Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
@@ -44,9 +44,9 @@ class HeuristicCache extends AbstractModel
     public $CacheConfig;
 
     /**
-     * @param string $Switch Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+     * @param string $Switch Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      * @param HeuristicCacheConfig $CacheConfig Custom heuristic cache time configuration.
      */
     function __construct()

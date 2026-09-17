@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sort by criterion
+ * 
  *
- * @method string getField() Obtain Sort by field
- * @method void setField(string $Field) Set Sort by field
- * @method string getOrder() Obtain Sorting order. Valid values: Asc (ascending), Desc (descending)
- * @method void setOrder(string $Order) Set Sorting order. Valid values: Asc (ascending), Desc (descending)
+ * @method string getField() Obtain 
+ * @method void setField(string $Field) Set 
+ * @method string getOrder() Obtain 
+ * @method void setOrder(string $Order) Set 
  */
 class SortBy extends AbstractModel
 {
     /**
-     * @var string Sort by field
+     * @var string 
      */
     public $Field;
 
     /**
-     * @var string Sorting order. Valid values: Asc (ascending), Desc (descending)
+     * @var string 
      */
     public $Order;
 
     /**
-     * @param string $Field Sort by field
-     * @param string $Order Sorting order. Valid values: Asc (ascending), Desc (descending)
+     * @param string $Field 
+     * @param string $Order 
      */
     function __construct()
     {

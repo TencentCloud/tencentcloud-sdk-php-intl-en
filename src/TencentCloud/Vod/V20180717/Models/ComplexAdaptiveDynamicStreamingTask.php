@@ -18,48 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive bitrate task information.
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
-
- * @method void setStatus(string $Status) Set Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
-
- * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() Obtain Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
- * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) Set Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() Obtain 
+ * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) Set 
  */
 class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
-
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var array Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
+     * @var array 
      */
     public $ComplexAdaptiveDynamicStreamingTaskResultSet;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
-
-     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet 
      */
     function __construct()
     {

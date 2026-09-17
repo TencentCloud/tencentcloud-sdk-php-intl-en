@@ -18,48 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Noise removal configuration.
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
- * @method void setSwitch(string $Switch) Set Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
- * @method string getType() Obtain Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
- * @method void setType(string $Type) Set Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class AudioDenoiseInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-     * @param string $Type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
+     * @param string $Switch 
+     * @param string $Type 
      */
     function __construct()
     {

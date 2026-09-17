@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters for recognition of politically sensitive content
+ * 
  *
- * @method PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Parameters for recognition of politically sensitive content in images
- * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Parameters for recognition of politically sensitive content in images
- * @method PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Parameters for ASR-based recognition of politically sensitive content
- * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Parameters for ASR-based recognition of politically sensitive content
- * @method PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Parameters for OCR-based recognition of politically sensitive content
- * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Parameters for OCR-based recognition of politically sensitive content
+ * @method PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain 
+ * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set 
+ * @method PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain 
+ * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set 
+ * @method PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
  */
 class PoliticalConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var PoliticalImgReviewTemplateInfoForUpdate Parameters for recognition of politically sensitive content in images
+     * @var PoliticalImgReviewTemplateInfoForUpdate 
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PoliticalAsrReviewTemplateInfoForUpdate Parameters for ASR-based recognition of politically sensitive content
+     * @var PoliticalAsrReviewTemplateInfoForUpdate 
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PoliticalOcrReviewTemplateInfoForUpdate Parameters for OCR-based recognition of politically sensitive content
+     * @var PoliticalOcrReviewTemplateInfoForUpdate 
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo Parameters for recognition of politically sensitive content in images
-     * @param PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
-     * @param PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+     * @param PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo 
+     * @param PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo 
+     * @param PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
      */
     function __construct()
     {

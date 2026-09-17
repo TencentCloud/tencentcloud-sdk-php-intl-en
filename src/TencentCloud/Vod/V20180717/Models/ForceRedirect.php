@@ -18,44 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access protocol forced redirect configuration. This is disabled by default.
+ * 
  *
- * @method string getSwitch() Obtain Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method string getRedirectType() Obtain Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
- * @method void setRedirectType(string $RedirectType) Set Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
- * @method integer getRedirectStatusCode() Obtain Status code returned for forced redirect Supports 301, 302.
- * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirect Supports 301, 302.
- * @method string getCarryHeaders() Obtain Whether to return the newly added header during force redirection.
- * @method void setCarryHeaders(string $CarryHeaders) Set Whether to return the newly added header during force redirection.
+ * @method string getSwitch() Obtain Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method string getRedirectType() Obtain Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
+ * @method void setRedirectType(string $RedirectType) Set Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
+ * @method integer getRedirectStatusCode() Obtain 
+ * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set 
+ * @method string getCarryHeaders() Obtain 
+ * @method void setCarryHeaders(string $CarryHeaders) Set 
  */
 class ForceRedirect extends AbstractModel
 {
     /**
-     * @var string Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var string Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+     * @var string Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
      */
     public $RedirectType;
 
     /**
-     * @var integer Status code returned for forced redirect Supports 301, 302.
+     * @var integer 
      */
     public $RedirectStatusCode;
 
     /**
-     * @var string Whether to return the newly added header during force redirection.
+     * @var string 
      */
     public $CarryHeaders;
 
     /**
-     * @param string $Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param string $RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
-     * @param integer $RedirectStatusCode Status code returned for forced redirect Supports 301, 302.
-     * @param string $CarryHeaders Whether to return the newly added header during force redirection.
+     * @param string $Switch Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param string $RedirectType Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
+     * @param integer $RedirectStatusCode 
+     * @param string $CarryHeaders 
      */
     function __construct()
     {

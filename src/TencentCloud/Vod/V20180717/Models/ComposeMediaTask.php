@@ -18,124 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Media file composing task information
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getErrCode() Obtain Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Progress of a media file composing task. Value range: [0, 100]
- * @method void setProgress(integer $Progress) Set Progress of a media file composing task. Value range: [0, 100]
- * @method ComposeMediaTaskInput getInput() Obtain Input of the media file creation task.
- * @method void setInput(ComposeMediaTaskInput $Input) Set Input of the media file creation task.
- * @method ComposeMediaTaskOutput getOutput() Obtain Output of the media file creation task.
- * @method void setOutput(ComposeMediaTaskOutput $Output) Set Output of the media file creation task.
- * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getSessionId() Obtain ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
- * @method void setSessionId(string $SessionId) Set ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
- * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method ComposeMediaTaskInput getInput() Obtain 
+ * @method void setInput(ComposeMediaTaskInput $Input) Set 
+ * @method ComposeMediaTaskOutput getOutput() Obtain 
+ * @method void setOutput(ComposeMediaTaskOutput $Output) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
  */
 class ComposeMediaTask extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var integer Progress of a media file composing task. Value range: [0, 100]
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var ComposeMediaTaskInput Input of the media file creation task.
+     * @var ComposeMediaTaskInput 
      */
     public $Input;
 
     /**
-     * @var ComposeMediaTaskOutput Output of the media file creation task.
+     * @var ComposeMediaTaskOutput 
      */
     public $Output;
 
     /**
-     * @var MediaMetaData The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var string ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Progress of a media file composing task. Value range: [0, 100]
-     * @param ComposeMediaTaskInput $Input Input of the media file creation task.
-     * @param ComposeMediaTaskOutput $Output Output of the media file creation task.
-     * @param MediaMetaData $MetaData The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
-     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param integer $Progress 
+     * @param ComposeMediaTaskInput $Input 
+     * @param ComposeMediaTaskOutput $Output 
+     * @param MediaMetaData $MetaData 
+     * @param string $SessionId 
+     * @param string $SessionContext 
      */
     function __construct()
     {

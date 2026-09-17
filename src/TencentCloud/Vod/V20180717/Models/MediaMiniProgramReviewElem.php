@@ -18,76 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  
+ * 
  *
- * @method string getType() Obtain Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
- * @method void setType(string $Type) Set Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
- * @method string getSuggestion() Obtain Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
- * @method void setSuggestion(string $Suggestion) Set Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
- * @method float getConfidence() Obtain Confidence of audit result between 0 and 100.
- * @method void setConfidence(float $Confidence) Set Confidence of audit result between 0 and 100.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
  */
 class MediaMiniProgramReviewElem extends AbstractModel
 {
     /**
-     * @var string Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var float Confidence of audit result between 0 and 100.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @param string $Type Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
-     * @param string $Suggestion Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
-     * @param float $Confidence Confidence of audit result between 0 and 100.
+     * @param string $Type 
+     * @param string $Suggestion 
+     * @param float $Confidence 
      */
     function __construct()
     {

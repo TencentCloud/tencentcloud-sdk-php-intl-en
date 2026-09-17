@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcCustomElement request structure.
  *
- * @method string getElementName() Obtain Subject name cannot exceed 20 characters.
- * @method void setElementName(string $ElementName) Set Subject name cannot exceed 20 characters.
- * @method string getElementDescription() Obtain Subject description.
-
-Up to 100 characters.
- * @method void setElementDescription(string $ElementDescription) Set Subject description.
-
-Up to 100 characters.
- * @method string getElementFrontalImage() Obtain Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
- * @method void setElementFrontalImage(string $ElementFrontalImage) Set Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
- * @method array getElementReferList() Obtain Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
- * @method void setElementReferList(array $ElementReferList) Set Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
+ * @method string getElementName() Obtain 
+ * @method void setElementName(string $ElementName) Set 
+ * @method string getElementDescription() Obtain 
+ * @method void setElementDescription(string $ElementDescription) Set 
+ * @method string getElementFrontalImage() Obtain 
+ * @method void setElementFrontalImage(string $ElementFrontalImage) Set 
+ * @method array getElementReferList() Obtain 
+ * @method void setElementReferList(array $ElementReferList) Set 
  */
 class CreateAigcCustomElementRequest extends AbstractModel
 {
     /**
-     * @var string Subject name cannot exceed 20 characters.
+     * @var string 
      */
     public $ElementName;
 
     /**
-     * @var string Subject description.
-
-Up to 100 characters.
+     * @var string 
      */
     public $ElementDescription;
 
     /**
-     * @var string Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+     * @var string 
      */
     public $ElementFrontalImage;
 
     /**
-     * @var array Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
+     * @var array 
      */
     public $ElementReferList;
 
     /**
-     * @param string $ElementName Subject name cannot exceed 20 characters.
-     * @param string $ElementDescription Subject description.
-
-Up to 100 characters.
-     * @param string $ElementFrontalImage Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
-     * @param array $ElementReferList Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
+     * @param string $ElementName 
+     * @param string $ElementDescription 
+     * @param string $ElementFrontalImage 
+     * @param array $ElementReferList 
      */
     function __construct()
     {

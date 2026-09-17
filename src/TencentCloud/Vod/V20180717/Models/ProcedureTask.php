@@ -18,254 +18,158 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video processing task information
+ * 
  *
- * @method string getTaskId() Obtain Video processing task ID.
- * @method void setTaskId(string $TaskId) Set Video processing task ID.
- * @method string getStatus() Obtain Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
- * @method void setStatus(string $Status) Set Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
- * @method integer getErrCode() Obtain Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileId() Obtain Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileId(string $FileId) Set Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileName() Obtain Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileName(string $FileName) Set Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileUrl() Obtain Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
- * @method void setFileUrl(string $FileUrl) Set Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
- * @method MediaMetaData getMetaData() Obtain Source video metadata.
- * @method void setMetaData(MediaMetaData $MetaData) Set Source video metadata.
- * @method array getMediaProcessResultSet() Obtain Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAiContentReviewResultSet() Obtain Status and result of an intelligent recognition task
- * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Status and result of an intelligent recognition task
- * @method array getAiAnalysisResultSet() Obtain Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAiRecognitionResultSet() Obtain Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTasksPriority() Obtain Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTasksPriority(integer $TasksPriority) Set Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getTasksNotifyMode() Obtain Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOperator() Obtain The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
- * @method void setOperator(string $Operator) Set The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
- * @method string getOperationType() Obtain The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
- * @method void setOperationType(string $OperationType) Set The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getFileName() Obtain 
+ * @method void setFileName(string $FileName) Set 
+ * @method string getFileUrl() Obtain 
+ * @method void setFileUrl(string $FileUrl) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method array getMediaProcessResultSet() Obtain 
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set 
+ * @method array getAiContentReviewResultSet() Obtain 
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set 
+ * @method array getAiAnalysisResultSet() Obtain 
+ * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set 
+ * @method array getAiRecognitionResultSet() Obtain 
+ * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getTasksNotifyMode() Obtain 
+ * @method void setTasksNotifyMode(string $TasksNotifyMode) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getOperator() Obtain 
+ * @method void setOperator(string $Operator) Set 
+ * @method string getOperationType() Obtain 
+ * @method void setOperationType(string $OperationType) Set 
  */
 class ProcedureTask extends AbstractModel
 {
     /**
-     * @var string Video processing task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      * @deprecated
      */
     public $ErrCode;
 
     /**
-     * @var string Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      * @deprecated
      */
     public $Message;
 
     /**
-     * @var string Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileName;
 
     /**
-     * @var string Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
+     * @var string 
      */
     public $FileUrl;
 
     /**
-     * @var MediaMetaData Source video metadata.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var array Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $MediaProcessResultSet;
 
     /**
-     * @var array Status and result of an intelligent recognition task
+     * @var array 
      */
     public $AiContentReviewResultSet;
 
     /**
-     * @var array Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $AiAnalysisResultSet;
 
     /**
-     * @var array Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $AiRecognitionResultSet;
 
     /**
-     * @var integer Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $TasksNotifyMode;
 
     /**
-     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var string The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
+     * @var string 
      */
     public $Operator;
 
     /**
-     * @var string The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
+     * @var string 
      */
     public $OperationType;
 
     /**
-     * @param string $TaskId Video processing task ID.
-     * @param string $Status Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-     * @param integer $ErrCode Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Message Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileId Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileName Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileUrl Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-     * @param MediaMetaData $MetaData Source video metadata.
-     * @param array $MediaProcessResultSet Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AiContentReviewResultSet Status and result of an intelligent recognition task
-     * @param array $AiAnalysisResultSet Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AiRecognitionResultSet Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TasksPriority Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $TasksNotifyMode Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Operator The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
-     * @param string $OperationType The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param string $FileId 
+     * @param string $FileName 
+     * @param string $FileUrl 
+     * @param MediaMetaData $MetaData 
+     * @param array $MediaProcessResultSet 
+     * @param array $AiContentReviewResultSet 
+     * @param array $AiAnalysisResultSet 
+     * @param array $AiRecognitionResultSet 
+     * @param integer $TasksPriority 
+     * @param string $TasksNotifyMode 
+     * @param string $SessionContext 
+     * @param string $SessionId 
+     * @param string $Operator 
+     * @param string $OperationType 
      */
     function __construct()
     {

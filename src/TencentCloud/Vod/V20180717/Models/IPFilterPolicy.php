@@ -18,48 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP access restriction rules currently support configuring IP blocklist and allowlist.
+ * 
  *
- * @method string getStatus() Obtain IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
- * @method void setStatus(string $Status) Set IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
- * @method string getFilterType() Obtain IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
- * @method void setFilterType(string $FilterType) Set IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
- * @method array getIPList() Obtain IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
- * @method void setIPList(array $IPList) Set IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getFilterType() Obtain 
+ * @method void setFilterType(string $FilterType) Set 
+ * @method array getIPList() Obtain 
+ * @method void setIPList(array $IPList) Set 
  */
 class IPFilterPolicy extends AbstractModel
 {
     /**
-     * @var string IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
+     * @var string 
      */
     public $FilterType;
 
     /**
-     * @var array IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
+     * @var array 
      */
     public $IPList;
 
     /**
-     * @param string $Status IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
-     * @param string $FilterType IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
-     * @param array $IPList IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
+     * @param string $Status 
+     * @param string $FilterType 
+     * @param array $IPList 
      */
     function __construct()
     {

@@ -18,56 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Full speech recognition result.
+ * 
  *
- * @method array getSegmentSet() Obtain List of full-text speech recognition segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
- * @method void setSegmentSet(array $SegmentSet) Set List of full-text speech recognition segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
- * @method string getSegmentSetFileUrl() Obtain URL to the file of the list for full-text speech recognition segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file of the list for full-text speech recognition segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
- * @method string getSegmentSetFileUrlExpireTime() Obtain The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
- * @method array getSubtitleSet() Obtain The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
- * @method void setSubtitleSet(array $SubtitleSet) Set The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
- * @method string getSubtitleUrl() Obtain The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
- * @method void setSubtitleUrl(string $SubtitleUrl) Set The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method string getSegmentSetFileUrl() Obtain 
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
+ * @method string getSegmentSetFileUrlExpireTime() Obtain 
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
+ * @method array getSubtitleSet() Obtain 
+ * @method void setSubtitleSet(array $SubtitleSet) Set 
+ * @method string getSubtitleUrl() Obtain 
+ * @method void setSubtitleUrl(string $SubtitleUrl) Set 
  */
 class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 {
     /**
-     * @var array List of full-text speech recognition segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * @var array 
      */
     public $SegmentSet;
 
     /**
-     * @var string URL to the file of the list for full-text speech recognition segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * @var string 
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+     * @var string 
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @var array The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @var array 
      */
     public $SubtitleSet;
 
     /**
-     * @var string The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @var string 
      */
     public $SubtitleUrl;
 
     /**
-     * @param array $SegmentSet List of full-text speech recognition segments
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
-     * @param string $SegmentSetFileUrl URL to the file of the list for full-text speech recognition segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
-     * @param string $SegmentSetFileUrlExpireTime The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
-     * @param array $SubtitleSet The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
-     * @param string $SubtitleUrl The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @param array $SegmentSet 
+     * @param string $SegmentSetFileUrl 
+     * @param string $SegmentSetFileUrlExpireTime 
+     * @param array $SubtitleSet 
+     * @param string $SubtitleUrl 
      */
     function __construct()
     {

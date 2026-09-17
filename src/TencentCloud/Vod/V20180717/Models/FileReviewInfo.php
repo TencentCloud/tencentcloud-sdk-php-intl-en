@@ -18,52 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * File moderation information.
+ * 
  *
- * @method ReviewInfo getMediaReviewInfo() Obtain Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMediaReviewInfo(ReviewInfo $MediaReviewInfo) Set Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ReviewInfo getCoverReviewInfo() Obtain Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCoverReviewInfo(ReviewInfo $CoverReviewInfo) Set Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ReviewInfo getMediaReviewInfo() Obtain 
+ * @method void setMediaReviewInfo(ReviewInfo $MediaReviewInfo) Set 
+ * @method ReviewInfo getCoverReviewInfo() Obtain 
+ * @method void setCoverReviewInfo(ReviewInfo $CoverReviewInfo) Set 
  */
 class FileReviewInfo extends AbstractModel
 {
     /**
-     * @var ReviewInfo Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ReviewInfo 
      */
     public $MediaReviewInfo;
 
     /**
-     * @var ReviewInfo Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ReviewInfo 
      */
     public $CoverReviewInfo;
 
     /**
-     * @param ReviewInfo $MediaReviewInfo Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReviewInfo $CoverReviewInfo Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewInfo $MediaReviewInfo 
+     * @param ReviewInfo $CoverReviewInfo 
      */
     function __construct()
     {

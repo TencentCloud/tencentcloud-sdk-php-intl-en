@@ -18,164 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Watermarking template details
+ * 
  *
- * @method integer getDefinition() Obtain Unique ID of watermarking template.
- * @method void setDefinition(integer $Definition) Set Unique ID of watermarking template.
- * @method string getType() Obtain Watermark type. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
- * @method void setType(string $Type) Set Watermark type. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
- * @method string getName() Obtain Watermarking template name.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Watermarking template name.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getComment() Obtain Template description.
- * @method void setComment(string $Comment) Set Template description.
- * @method string getXPos() Obtain Horizontal position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Left` edge of the watermark will be at the position of the specified percentage of the video width; for example, `10%` means that the `Left` edge is at 10% of the video width;</li>
-<li>If the string ends in px, the `Left` edge of the watermark will be at the position of the specified px of the video width; for example, `100px` means that the `Left` edge is at the position of 100 px.</li>
- * @method void setXPos(string $XPos) Set Horizontal position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Left` edge of the watermark will be at the position of the specified percentage of the video width; for example, `10%` means that the `Left` edge is at 10% of the video width;</li>
-<li>If the string ends in px, the `Left` edge of the watermark will be at the position of the specified px of the video width; for example, `100px` means that the `Left` edge is at the position of 100 px.</li>
- * @method string getYPos() Obtain Vertical position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Top` edge of the watermark will beat the position of the specified percentage of the video height; for example, `10%` means that the `Top` edge is at 10% of the video height;</li>
-<li>If the string ends in px, the `Top` edge of the watermark will be at the position of the specified px of the video height; for example, `100px` means that the `Top` edge is at the position of 100 px.</li>
- * @method void setYPos(string $YPos) Set Vertical position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Top` edge of the watermark will beat the position of the specified percentage of the video height; for example, `10%` means that the `Top` edge is at 10% of the video height;</li>
-<li>If the string ends in px, the `Top` edge of the watermark will be at the position of the specified px of the video height; for example, `100px` means that the `Top` edge is at the position of 100 px.</li>
- * @method ImageWatermarkTemplate getImageTemplate() Obtain Image watermarking template. This field is valid only when `Type` is `image`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImageTemplate(ImageWatermarkTemplate $ImageTemplate) Set Image watermarking template. This field is valid only when `Type` is `image`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method TextWatermarkTemplateInput getTextTemplate() Obtain Text watermarking template. This field is valid only when `Type` is `text`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set Text watermarking template. This field is valid only when `Type` is `text`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method SvgWatermarkInput getSvgTemplate() Obtain SVG watermarking template. This field is valid when `Type` is `svg`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set SVG watermarking template. This field is valid when `Type` is `svg`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getCoordinateOrigin() Obtain Origin position. Valid values:
-<li>topLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>topRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>bottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>bottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
- * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Origin position. Valid values:
-<li>topLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>topRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>bottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>bottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getXPos() Obtain 
+ * @method void setXPos(string $XPos) Set 
+ * @method string getYPos() Obtain 
+ * @method void setYPos(string $YPos) Set 
+ * @method ImageWatermarkTemplate getImageTemplate() Obtain 
+ * @method void setImageTemplate(ImageWatermarkTemplate $ImageTemplate) Set 
+ * @method TextWatermarkTemplateInput getTextTemplate() Obtain 
+ * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set 
+ * @method SvgWatermarkInput getSvgTemplate() Obtain 
+ * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method string getCoordinateOrigin() Obtain 
+ * @method void setCoordinateOrigin(string $CoordinateOrigin) Set 
  */
 class WatermarkTemplate extends AbstractModel
 {
     /**
-     * @var integer Unique ID of watermarking template.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string Watermark type. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Watermarking template name.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Template description.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string Horizontal position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Left` edge of the watermark will be at the position of the specified percentage of the video width; for example, `10%` means that the `Left` edge is at 10% of the video width;</li>
-<li>If the string ends in px, the `Left` edge of the watermark will be at the position of the specified px of the video width; for example, `100px` means that the `Left` edge is at the position of 100 px.</li>
+     * @var string 
      */
     public $XPos;
 
     /**
-     * @var string Vertical position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Top` edge of the watermark will beat the position of the specified percentage of the video height; for example, `10%` means that the `Top` edge is at 10% of the video height;</li>
-<li>If the string ends in px, the `Top` edge of the watermark will be at the position of the specified px of the video height; for example, `100px` means that the `Top` edge is at the position of 100 px.</li>
+     * @var string 
      */
     public $YPos;
 
     /**
-     * @var ImageWatermarkTemplate Image watermarking template. This field is valid only when `Type` is `image`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ImageWatermarkTemplate 
      */
     public $ImageTemplate;
 
     /**
-     * @var TextWatermarkTemplateInput Text watermarking template. This field is valid only when `Type` is `text`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var TextWatermarkTemplateInput 
      */
     public $TextTemplate;
 
     /**
-     * @var SvgWatermarkInput SVG watermarking template. This field is valid when `Type` is `svg`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var SvgWatermarkInput 
      */
     public $SvgTemplate;
 
     /**
-     * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @var string Origin position. Valid values:
-<li>topLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>topRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>bottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>bottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+     * @var string 
      */
     public $CoordinateOrigin;
 
     /**
-     * @param integer $Definition Unique ID of watermarking template.
-     * @param string $Type Watermark type. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
-     * @param string $Name Watermarking template name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Comment Template description.
-     * @param string $XPos Horizontal position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Left` edge of the watermark will be at the position of the specified percentage of the video width; for example, `10%` means that the `Left` edge is at 10% of the video width;</li>
-<li>If the string ends in px, the `Left` edge of the watermark will be at the position of the specified px of the video width; for example, `100px` means that the `Left` edge is at the position of 100 px.</li>
-     * @param string $YPos Vertical position of the origin of the watermark image relative to the origin of the video.
-<li>If the string ends in %, the `Top` edge of the watermark will beat the position of the specified percentage of the video height; for example, `10%` means that the `Top` edge is at 10% of the video height;</li>
-<li>If the string ends in px, the `Top` edge of the watermark will be at the position of the specified px of the video height; for example, `100px` means that the `Top` edge is at the position of 100 px.</li>
-     * @param ImageWatermarkTemplate $ImageTemplate Image watermarking template. This field is valid only when `Type` is `image`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TextWatermarkTemplateInput $TextTemplate Text watermarking template. This field is valid only when `Type` is `text`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SvgWatermarkInput $SvgTemplate SVG watermarking template. This field is valid when `Type` is `svg`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $CoordinateOrigin Origin position. Valid values:
-<li>topLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>topRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>bottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>bottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+     * @param integer $Definition 
+     * @param string $Type 
+     * @param string $Name 
+     * @param string $Comment 
+     * @param string $XPos 
+     * @param string $YPos 
+     * @param ImageWatermarkTemplate $ImageTemplate 
+     * @param TextWatermarkTemplateInput $TextTemplate 
+     * @param SvgWatermarkInput $SvgTemplate 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
+     * @param string $CoordinateOrigin 
      */
     function __construct()
     {

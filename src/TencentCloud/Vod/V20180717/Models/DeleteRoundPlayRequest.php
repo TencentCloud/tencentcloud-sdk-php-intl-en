@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoundPlay request structure.
  *
- * @method string getRoundPlayId() Obtain The unique identifier of the playlist.
- * @method void setRoundPlayId(string $RoundPlayId) Set The unique identifier of the playlist.
- * @method integer getSubAppId() Obtain <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
- * @method void setSubAppId(integer $SubAppId) Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+ * @method string getRoundPlayId() Obtain 
+ * @method void setRoundPlayId(string $RoundPlayId) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class DeleteRoundPlayRequest extends AbstractModel
 {
     /**
-     * @var string The unique identifier of the playlist.
+     * @var string 
      */
     public $RoundPlayId;
 
     /**
-     * @var integer <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $RoundPlayId The unique identifier of the playlist.
-     * @param integer $SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * @param string $RoundPlayId 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

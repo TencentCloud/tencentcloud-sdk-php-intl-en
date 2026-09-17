@@ -18,62 +18,38 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image watermarking template
+ * 
  *
- * @method string getImageUrl() Obtain Watermark image address.
- * @method void setImageUrl(string $ImageUrl) Set Watermark image address.
- * @method string getWidth() Obtain Watermark width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
-<li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
- * @method void setWidth(string $Width) Set Watermark width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
-<li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
- * @method string getHeight() Obtain Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
-`0px` means that `Height` will be proportionally scaled according to the video width.
- * @method void setHeight(string $Height) Set Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
-`0px` means that `Height` will be proportionally scaled according to the video width.
- * @method string getRepeatType() Obtain Repeat type of an animated watermark. Valid values:
-<li>once: no longer appears after watermark playback ends.</li>
-<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
-<li>repeat (default): repeats the playback until the video ends.</li>
- * @method void setRepeatType(string $RepeatType) Set Repeat type of an animated watermark. Valid values:
-<li>once: no longer appears after watermark playback ends.</li>
-<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
-<li>repeat (default): repeats the playback until the video ends.</li>
+ * @method string getImageUrl() Obtain 
+ * @method void setImageUrl(string $ImageUrl) Set 
+ * @method string getWidth() Obtain 
+ * @method void setWidth(string $Width) Set 
+ * @method string getHeight() Obtain 
+ * @method void setHeight(string $Height) Set 
+ * @method string getRepeatType() Obtain 
+ * @method void setRepeatType(string $RepeatType) Set 
  * @method integer getTransparency() Obtain 
  * @method void setTransparency(integer $Transparency) Set 
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
     /**
-     * @var string Watermark image address.
+     * @var string 
      */
     public $ImageUrl;
 
     /**
-     * @var string Watermark width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
-<li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
+     * @var string 
      */
     public $Width;
 
     /**
-     * @var string Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
-`0px` means that `Height` will be proportionally scaled according to the video width.
+     * @var string 
      */
     public $Height;
 
     /**
-     * @var string Repeat type of an animated watermark. Valid values:
-<li>once: no longer appears after watermark playback ends.</li>
-<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
-<li>repeat (default): repeats the playback until the video ends.</li>
+     * @var string 
      */
     public $RepeatType;
 
@@ -83,18 +59,10 @@ class ImageWatermarkTemplate extends AbstractModel
     public $Transparency;
 
     /**
-     * @param string $ImageUrl Watermark image address.
-     * @param string $Width Watermark width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
-<li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
-     * @param string $Height Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
-`0px` means that `Height` will be proportionally scaled according to the video width.
-     * @param string $RepeatType Repeat type of an animated watermark. Valid values:
-<li>once: no longer appears after watermark playback ends.</li>
-<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
-<li>repeat (default): repeats the playback until the video ends.</li>
+     * @param string $ImageUrl 
+     * @param string $Width 
+     * @param string $Height 
+     * @param string $RepeatType 
      * @param integer $Transparency 
      */
     function __construct()

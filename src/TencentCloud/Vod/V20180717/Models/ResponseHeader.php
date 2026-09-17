@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom response header configuration. This is disabled by default.
+ * 
  *
- * @method string getSwitch() Obtain Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
- * @method array getHeaderRules() Obtain Custom response header rules
- * @method void setHeaderRules(array $HeaderRules) Set Custom response header rules
+ * @method string getSwitch() Obtain Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method array getHeaderRules() Obtain 
+ * @method void setHeaderRules(array $HeaderRules) Set 
  */
 class ResponseHeader extends AbstractModel
 {
     /**
-     * @var string Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @var string Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var array Custom response header rules
+     * @var array 
      */
     public $HeaderRules;
 
     /**
-     * @param string $Switch Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param array $HeaderRules Custom response header rules
+     * @param string $Switch Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param array $HeaderRules 
      */
     function __construct()
     {

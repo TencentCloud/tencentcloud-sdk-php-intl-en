@@ -18,112 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of a video transcoding task. This parameter is only valid for tasks initiated by the v2017 video transcoding API.
+ * 
  *
- * @method string getTaskId() Obtain Transcoding task ID.
- * @method void setTaskId(string $TaskId) Set Transcoding task ID.
- * @method integer getErrCode() Obtain Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileId() Obtain ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileId(string $FileId) Set ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFileName() Obtain Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileName(string $FileName) Set Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDuration() Obtain Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDuration(integer $Duration) Set Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCoverUrl() Obtain Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCoverUrl(string $CoverUrl) Set Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getPlayInfoSet() Obtain Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPlayInfoSet(array $PlayInfoSet) Set Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getFileName() Obtain 
+ * @method void setFileName(string $FileName) Set 
+ * @method integer getDuration() Obtain 
+ * @method void setDuration(integer $Duration) Set 
+ * @method string getCoverUrl() Obtain 
+ * @method void setCoverUrl(string $CoverUrl) Set 
+ * @method array getPlayInfoSet() Obtain 
+ * @method void setPlayInfoSet(array $PlayInfoSet) Set 
  */
 class TranscodeTask2017 extends AbstractModel
 {
     /**
-     * @var string Transcoding task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var integer Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var string ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FileName;
 
     /**
-     * @var integer Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Duration;
 
     /**
-     * @var string Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $CoverUrl;
 
     /**
-     * @var array Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $PlayInfoSet;
 
     /**
-     * @param string $TaskId Transcoding task ID.
-     * @param integer $ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileId ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FileName Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CoverUrl Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $PlayInfoSet Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param string $FileId 
+     * @param string $FileName 
+     * @param integer $Duration 
+     * @param string $CoverUrl 
+     * @param array $PlayInfoSet 
      */
     function __construct()
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Playlist Program Playback Information
+ * 
  *
- * @method string getItemId() Obtain Playlist program id, assigned by the system.
- * @method void setItemId(string $ItemId) Set Playlist program id, assigned by the system.
- * @method string getFileId() Obtain The media file id.
- * @method void setFileId(string $FileId) Set The media file id.
- * @method string getStartPlayTime() Obtain The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
- * @method void setStartPlayTime(string $StartPlayTime) Set The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
- * @method float getDuration() Obtain Playback duration, in seconds.
- * @method void setDuration(float $Duration) Set Playback duration, in seconds.
- * @method float getProgress() Obtain Playback progress, in seconds.
- * @method void setProgress(float $Progress) Set Playback progress, in seconds.
+ * @method string getItemId() Obtain 
+ * @method void setItemId(string $ItemId) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getStartPlayTime() Obtain 
+ * @method void setStartPlayTime(string $StartPlayTime) Set 
+ * @method float getDuration() Obtain 
+ * @method void setDuration(float $Duration) Set 
+ * @method float getProgress() Obtain 
+ * @method void setProgress(float $Progress) Set 
  */
 class RoundPlayFilePlayInfo extends AbstractModel
 {
     /**
-     * @var string Playlist program id, assigned by the system.
+     * @var string 
      */
     public $ItemId;
 
     /**
-     * @var string The media file id.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @var string 
      */
     public $StartPlayTime;
 
     /**
-     * @var float Playback duration, in seconds.
+     * @var float 
      */
     public $Duration;
 
     /**
-     * @var float Playback progress, in seconds.
+     * @var float 
      */
     public $Progress;
 
     /**
-     * @param string $ItemId Playlist program id, assigned by the system.
-     * @param string $FileId The media file id.
-     * @param string $StartPlayTime The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
-     * @param float $Duration Playback duration, in seconds.
-     * @param float $Progress Playback progress, in seconds.
+     * @param string $ItemId 
+     * @param string $FileId 
+     * @param string $StartPlayTime 
+     * @param float $Duration 
+     * @param float $Progress 
      */
     function __construct()
     {

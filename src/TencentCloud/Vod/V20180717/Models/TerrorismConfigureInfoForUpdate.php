@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters for recognition of terrorism content
+ * 
  *
- * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Parameters for recognition of terrorism content in images
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Parameters for recognition of terrorism content in images
- * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Parameters for OCR-based recognition of terrorism content
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Parameters for OCR-based recognition of terrorism content
+ * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain 
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set 
+ * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
  */
 class TerrorismConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfoForUpdate Parameters for recognition of terrorism content in images
+     * @var TerrorismImgReviewTemplateInfoForUpdate 
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfoForUpdate Parameters for OCR-based recognition of terrorism content
+     * @var TerrorismOcrReviewTemplateInfoForUpdate 
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo Parameters for recognition of terrorism content in images
-     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+     * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo 
+     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
      */
     function __construct()
     {

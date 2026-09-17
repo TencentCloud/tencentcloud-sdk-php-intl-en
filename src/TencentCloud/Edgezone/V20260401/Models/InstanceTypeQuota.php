@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) Set Model specifications.
  * @method string getInstanceFamily() Obtain Model family.
  * @method void setInstanceFamily(string $InstanceFamily) Set Model family.
+ * @method string getInstanceFamilyName() Obtain Model family name
+ * @method void setInstanceFamilyName(string $InstanceFamilyName) Set Model family name
  * @method integer getCpuCores() Obtain Number of CPU cores.
  * @method void setCpuCores(integer $CpuCores) Set Number of CPU cores.
  * @method string getCpuType() Obtain CPU type.
@@ -44,14 +46,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskSize(integer $DataDiskSize) Set Data disk size (GB).
  * @method integer getDataDiskCount() Obtain Number of data disks.
  * @method void setDataDiskCount(integer $DataDiskCount) Set Number of data disks.
+ * @method string getSecondaryDataDiskType() Obtain Second set of data disk types
+ * @method void setSecondaryDataDiskType(string $SecondaryDataDiskType) Set Second set of data disk types
+ * @method integer getSecondaryDataDiskSize() Obtain Data disk size of the second group (GB)
+ * @method void setSecondaryDataDiskSize(integer $SecondaryDataDiskSize) Set Data disk size of the second group (GB)
+ * @method integer getSecondaryDataDiskCount() Obtain Number of data disks in the second set
+ * @method void setSecondaryDataDiskCount(integer $SecondaryDataDiskCount) Set Number of data disks in the second set
  * @method string getDiskType() Obtain Disk description string (backward compatibility).
  * @method void setDiskType(string $DiskType) Set Disk description string (backward compatibility).
  * @method string getNetworkInterfaceType() Obtain Network interface type.
  * @method void setNetworkInterfaceType(string $NetworkInterfaceType) Set Network interface type.
  * @method string getGpuType() Obtain GPU type. Empty string if no GPU is available.
  * @method void setGpuType(string $GpuType) Set GPU type. Empty string if no GPU is available.
- * @method integer getQuota() Obtain Quota quantity. 0 indicates no restriction.
- * @method void setQuota(integer $Quota) Set Quota quantity. 0 indicates no restriction.
+ * @method integer getQuota() Obtain Quota quantity
+ * @method void setQuota(integer $Quota) Set Quota quantity
  */
 class InstanceTypeQuota extends AbstractModel
 {
@@ -69,6 +77,11 @@ class InstanceTypeQuota extends AbstractModel
      * @var string Model family.
      */
     public $InstanceFamily;
+
+    /**
+     * @var string Model family name
+     */
+    public $InstanceFamilyName;
 
     /**
      * @var integer Number of CPU cores.
@@ -116,6 +129,21 @@ class InstanceTypeQuota extends AbstractModel
     public $DataDiskCount;
 
     /**
+     * @var string Second set of data disk types
+     */
+    public $SecondaryDataDiskType;
+
+    /**
+     * @var integer Data disk size of the second group (GB)
+     */
+    public $SecondaryDataDiskSize;
+
+    /**
+     * @var integer Number of data disks in the second set
+     */
+    public $SecondaryDataDiskCount;
+
+    /**
      * @var string Disk description string (backward compatibility).
      */
     public $DiskType;
@@ -131,7 +159,7 @@ class InstanceTypeQuota extends AbstractModel
     public $GpuType;
 
     /**
-     * @var integer Quota quantity. 0 indicates no restriction.
+     * @var integer Quota quantity
      */
     public $Quota;
 
@@ -139,6 +167,7 @@ class InstanceTypeQuota extends AbstractModel
      * @param string $Zone Availability zone code.
      * @param string $InstanceType Model specifications.
      * @param string $InstanceFamily Model family.
+     * @param string $InstanceFamilyName Model family name
      * @param integer $CpuCores Number of CPU cores.
      * @param string $CpuType CPU type.
      * @param integer $MemoryGb Memory size (GB).
@@ -148,10 +177,13 @@ class InstanceTypeQuota extends AbstractModel
      * @param string $DataDiskType Data disk type.
      * @param integer $DataDiskSize Data disk size (GB).
      * @param integer $DataDiskCount Number of data disks.
+     * @param string $SecondaryDataDiskType Second set of data disk types
+     * @param integer $SecondaryDataDiskSize Data disk size of the second group (GB)
+     * @param integer $SecondaryDataDiskCount Number of data disks in the second set
      * @param string $DiskType Disk description string (backward compatibility).
      * @param string $NetworkInterfaceType Network interface type.
      * @param string $GpuType GPU type. Empty string if no GPU is available.
-     * @param integer $Quota Quota quantity. 0 indicates no restriction.
+     * @param integer $Quota Quota quantity
      */
     function __construct()
     {
@@ -176,6 +208,10 @@ class InstanceTypeQuota extends AbstractModel
 
         if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
             $this->InstanceFamily = $param["InstanceFamily"];
+        }
+
+        if (array_key_exists("InstanceFamilyName",$param) and $param["InstanceFamilyName"] !== null) {
+            $this->InstanceFamilyName = $param["InstanceFamilyName"];
         }
 
         if (array_key_exists("CpuCores",$param) and $param["CpuCores"] !== null) {
@@ -212,6 +248,18 @@ class InstanceTypeQuota extends AbstractModel
 
         if (array_key_exists("DataDiskCount",$param) and $param["DataDiskCount"] !== null) {
             $this->DataDiskCount = $param["DataDiskCount"];
+        }
+
+        if (array_key_exists("SecondaryDataDiskType",$param) and $param["SecondaryDataDiskType"] !== null) {
+            $this->SecondaryDataDiskType = $param["SecondaryDataDiskType"];
+        }
+
+        if (array_key_exists("SecondaryDataDiskSize",$param) and $param["SecondaryDataDiskSize"] !== null) {
+            $this->SecondaryDataDiskSize = $param["SecondaryDataDiskSize"];
+        }
+
+        if (array_key_exists("SecondaryDataDiskCount",$param) and $param["SecondaryDataDiskCount"] !== null) {
+            $this->SecondaryDataDiskCount = $param["SecondaryDataDiskCount"];
         }
 
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {

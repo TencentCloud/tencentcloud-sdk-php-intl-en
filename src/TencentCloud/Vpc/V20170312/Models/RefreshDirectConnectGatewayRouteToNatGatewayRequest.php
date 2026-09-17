@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RefreshDirectConnectGatewayRouteToNatGateway request structure.
  *
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getNatGatewayId() Obtain The NAT gateway ID.
- * @method void setNatGatewayId(string $NatGatewayId) Set The NAT gateway ID.
- * @method boolean getDryRun() Obtain Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
- * @method void setDryRun(boolean $DryRun) Set Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+ * @method string getVpcId() Obtain VPC ID.
+ * @method void setVpcId(string $VpcId) Set VPC ID.
+ * @method string getNatGatewayId() Obtain NAT gateway ID.
+ * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID.
+ * @method boolean getDryRun() Obtain Whether it is pre-refresh. Valid values: true (yes) and false (no).
+ * @method void setDryRun(boolean $DryRun) Set Whether it is pre-refresh. Valid values: true (yes) and false (no).
  */
 class RefreshDirectConnectGatewayRouteToNatGatewayRequest extends AbstractModel
 {
     /**
-     * @var string VPC ID
+     * @var string VPC ID.
      */
     public $VpcId;
 
     /**
-     * @var string The NAT gateway ID.
+     * @var string NAT gateway ID.
      */
     public $NatGatewayId;
 
     /**
-     * @var boolean Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+     * @var boolean Whether it is pre-refresh. Valid values: true (yes) and false (no).
      */
     public $DryRun;
 
     /**
-     * @param string $VpcId VPC ID
-     * @param string $NatGatewayId The NAT gateway ID.
-     * @param boolean $DryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+     * @param string $VpcId VPC ID.
+     * @param string $NatGatewayId NAT gateway ID.
+     * @param boolean $DryRun Whether it is pre-refresh. Valid values: true (yes) and false (no).
      */
     function __construct()
     {

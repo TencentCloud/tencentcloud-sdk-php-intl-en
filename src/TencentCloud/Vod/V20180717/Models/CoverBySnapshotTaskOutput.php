@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output type of cover generating task
+ * 
  *
- * @method string getCoverUrl() Obtain Cover URL.
- * @method void setCoverUrl(string $CoverUrl) Set Cover URL.
+ * @method string getCoverUrl() Obtain 
+ * @method void setCoverUrl(string $CoverUrl) Set 
  */
 class CoverBySnapshotTaskOutput extends AbstractModel
 {
     /**
-     * @var string Cover URL.
+     * @var string 
      */
     public $CoverUrl;
 
     /**
-     * @param string $CoverUrl Cover URL.
+     * @param string $CoverUrl 
      */
     function __construct()
     {

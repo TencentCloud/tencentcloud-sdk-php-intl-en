@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSceneAigcVideoTask request structure.
  *
- * @method integer getSubAppId() Obtain **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
- * @method void setSubAppId(integer $SubAppId) Set **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
- * @method AigcVideoSceneInfo getSceneInfo() Obtain Scenario-based video parameter configuration.
- * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set Scenario-based video parameter configuration.
- * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain Scenario-based output media file configuration for video tasks.
- * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set Scenario-based output media file configuration for video tasks.
- * @method array getFileInfos() Obtain Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
- * @method void setFileInfos(array $FileInfos) Set Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
- * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
- * @method string getSessionContext() Obtain Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
- * @method string getExtInfo() Obtain Reserved field, used for special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purpose.
- * @method string getPrompt() Obtain Customize prompt
- * @method void setPrompt(string $Prompt) Set Customize prompt
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method AigcVideoSceneInfo getSceneInfo() Obtain 
+ * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set 
+ * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set 
+ * @method array getFileInfos() Obtain 
+ * @method void setFileInfos(array $FileInfos) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getPrompt() Obtain 
+ * @method void setPrompt(string $Prompt) Set 
  */
 class CreateSceneAigcVideoTaskRequest extends AbstractModel
 {
     /**
-     * @var integer **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var AigcVideoSceneInfo Scenario-based video parameter configuration.
+     * @var AigcVideoSceneInfo 
      */
     public $SceneInfo;
 
     /**
-     * @var SceneAigcVideoOutputConfig Scenario-based output media file configuration for video tasks.
+     * @var SceneAigcVideoOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @var array Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
+     * @var array 
      */
     public $FileInfos;
 
     /**
-     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @var string Reserved field, used for special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @var string Customize prompt
+     * @var string 
      */
     public $Prompt;
 
     /**
-     * @param integer $SubAppId **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
-     * @param AigcVideoSceneInfo $SceneInfo Scenario-based video parameter configuration.
-     * @param SceneAigcVideoOutputConfig $OutputConfig Scenario-based output media file configuration for video tasks.
-     * @param array $FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
-     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-     * @param string $SessionContext Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
-     * @param string $ExtInfo Reserved field, used for special purpose.
-     * @param string $Prompt Customize prompt
+     * @param integer $SubAppId 
+     * @param AigcVideoSceneInfo $SceneInfo 
+     * @param SceneAigcVideoOutputConfig $OutputConfig 
+     * @param array $FileInfos 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
+     * @param string $ExtInfo 
+     * @param string $Prompt 
      */
     function __construct()
     {

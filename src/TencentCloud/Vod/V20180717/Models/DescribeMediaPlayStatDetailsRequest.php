@@ -20,62 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaPlayStatDetails request structure.
  *
- * @method string getFileId() Obtain Media file ID.
- * @method void setFileId(string $FileId) Set Media file ID.
- * @method string getStartTime() Obtain Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setStartTime(string $StartTime) Set Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getEndTime() Obtain End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setEndTime(string $EndTime) Set End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getInterval() Obtain Statistical time granularity. Valid values:
-<li>Hour: hourly granularity.</li>
-<li>Day: By day.</li>
-The default granularity is determined by the duration. If the duration is less than 1 day, the granularity is hour. If the duration is equal to or greater than 1 day, the granularity is day.
- * @method void setInterval(string $Interval) Set Statistical time granularity. Valid values:
-<li>Hour: hourly granularity.</li>
-<li>Day: By day.</li>
-The default granularity is determined by the duration. If the duration is less than 1 day, the granularity is hour. If the duration is equal to or greater than 1 day, the granularity is day.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getInterval() Obtain 
+ * @method void setInterval(string $Interval) Set 
  */
 class DescribeMediaPlayStatDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Media file ID.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var string Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $StartTime;
 
     /**
-     * @var string End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $EndTime;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Statistical time granularity. Valid values:
-<li>Hour: hourly granularity.</li>
-<li>Day: By day.</li>
-The default granularity is determined by the duration. If the duration is less than 1 day, the granularity is hour. If the duration is equal to or greater than 1 day, the granularity is day.
+     * @var string 
      */
     public $Interval;
 
     /**
-     * @param string $FileId Media file ID.
-     * @param string $StartTime Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $EndTime End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Interval Statistical time granularity. Valid values:
-<li>Hour: hourly granularity.</li>
-<li>Day: By day.</li>
-The default granularity is determined by the duration. If the duration is less than 1 day, the granularity is hour. If the duration is equal to or greater than 1 day, the granularity is day.
+     * @param string $FileId 
+     * @param string $StartTime 
+     * @param string $EndTime 
+     * @param integer $SubAppId 
+     * @param string $Interval 
      */
     function __construct()
     {

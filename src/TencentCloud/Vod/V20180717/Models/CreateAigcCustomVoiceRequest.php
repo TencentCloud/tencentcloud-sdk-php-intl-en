@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcCustomVoice request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
- * @method string getVoiceName() Obtain <p>Timbre name. The maximum length of the text content is 20 characters.</p>
- * @method void setVoiceName(string $VoiceName) Set <p>Timbre name. The maximum length of the text content is 20 characters.</p>
- * @method string getVoiceUrl() Obtain <p>Access link for the timbre data file. Supports audio/video files in .mp3 / .wav / .mp4 / .mov format. The voice in the audio should be clean and noiseless, with only one voice type. The duration should be no shorter than 5 seconds and no longer than 30 seconds.</p>
- * @method void setVoiceUrl(string $VoiceUrl) Set <p>Access link for the timbre data file. Supports audio/video files in .mp3 / .wav / .mp4 / .mov format. The voice in the audio should be clean and noiseless, with only one voice type. The duration should be no shorter than 5 seconds and no longer than 30 seconds.</p>
- * @method string getVideoId() Obtain <p>History works ID. Audio material can be provided by referring to history works.</p>
- * @method void setVideoId(string $VideoId) Set <p>History works ID. Audio material can be provided by referring to history works.</p>
- * @method string getDisableModeration() Obtain <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
- * @method void setDisableModeration(string $DisableModeration) Set <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
- * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method string getSessionContext() Obtain <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method integer getTasksPriority() Obtain <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.</p>
- * @method void setTasksPriority(integer $TasksPriority) Set <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.</p>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getVoiceName() Obtain 
+ * @method void setVoiceName(string $VoiceName) Set 
+ * @method string getVoiceUrl() Obtain 
+ * @method void setVoiceUrl(string $VoiceUrl) Set 
+ * @method string getVideoId() Obtain 
+ * @method void setVideoId(string $VideoId) Set 
+ * @method string getDisableModeration() Obtain 
+ * @method void setDisableModeration(string $DisableModeration) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method integer getTasksPriority() Obtain 
+ * @method void setTasksPriority(integer $TasksPriority) Set 
  */
 class CreateAigcCustomVoiceRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Timbre name. The maximum length of the text content is 20 characters.</p>
+     * @var string 
      */
     public $VoiceName;
 
     /**
-     * @var string <p>Access link for the timbre data file. Supports audio/video files in .mp3 / .wav / .mp4 / .mov format. The voice in the audio should be clean and noiseless, with only one voice type. The duration should be no shorter than 5 seconds and no longer than 30 seconds.</p>
+     * @var string 
      */
     public $VoiceUrl;
 
     /**
-     * @var string <p>History works ID. Audio material can be provided by referring to history works.</p>
+     * @var string 
      */
     public $VideoId;
 
     /**
-     * @var string <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+     * @var string 
      */
     public $DisableModeration;
 
     /**
-     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var integer <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.</p>
+     * @var integer 
      */
     public $TasksPriority;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
-     * @param string $VoiceName <p>Timbre name. The maximum length of the text content is 20 characters.</p>
-     * @param string $VoiceUrl <p>Access link for the timbre data file. Supports audio/video files in .mp3 / .wav / .mp4 / .mov format. The voice in the audio should be clean and noiseless, with only one voice type. The duration should be no shorter than 5 seconds and no longer than 30 seconds.</p>
-     * @param string $VideoId <p>History works ID. Audio material can be provided by referring to history works.</p>
-     * @param string $DisableModeration <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
-     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-     * @param string $SessionContext <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.</p>
+     * @param integer $SubAppId 
+     * @param string $VoiceName 
+     * @param string $VoiceUrl 
+     * @param string $VideoId 
+     * @param string $DisableModeration 
+     * @param string $SessionId 
+     * @param string $SessionContext 
+     * @param integer $TasksPriority 
      */
     function __construct()
     {

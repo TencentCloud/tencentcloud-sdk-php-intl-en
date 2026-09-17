@@ -18,44 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of prohibited information detection in speech task
+ * 
  *
- * @method string getSwitch() Obtain Switch of prohibited information detection in speech task. Valid values:
-<li>ON: enables prohibited information detection in speech task;</li>
-<li>OFF: disables prohibited information detection in speech task.</li>
- * @method void setSwitch(string $Switch) Set Switch of prohibited information detection in speech task. Valid values:
-<li>ON: enables prohibited information detection in speech task;</li>
-<li>OFF: disables prohibited information detection in speech task.</li>
- * @method integer getBlockConfidence() Obtain Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
- * @method void setBlockConfidence(integer $BlockConfidence) Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
- * @method integer getReviewConfidence() Obtain Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method integer getBlockConfidence() Obtain 
+ * @method void setBlockConfidence(integer $BlockConfidence) Set 
+ * @method integer getReviewConfidence() Obtain 
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set 
  */
 class ProhibitedAsrReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch of prohibited information detection in speech task. Valid values:
-<li>ON: enables prohibited information detection in speech task;</li>
-<li>OFF: disables prohibited information detection in speech task.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var integer Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+     * @var integer 
      */
     public $BlockConfidence;
 
     /**
-     * @var integer Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+     * @var integer 
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Switch of prohibited information detection in speech task. Valid values:
-<li>ON: enables prohibited information detection in speech task;</li>
-<li>OFF: disables prohibited information detection in speech task.</li>
-     * @param integer $BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
-     * @param integer $ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+     * @param string $Switch 
+     * @param integer $BlockConfidence 
+     * @param integer $ReviewConfidence 
      */
     function __construct()
     {

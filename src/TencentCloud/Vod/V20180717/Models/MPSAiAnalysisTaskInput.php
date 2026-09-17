@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI smart video analysis input parameter type
+ * 
  *
- * @method integer getDefinition() Obtain <p>ID of the video analysis template.</p>
- * @method void setDefinition(integer $Definition) Set <p>ID of the video analysis template.</p>
- * @method string getExtendedParameter() Obtain <p>Additional parameters, whose value is a serialized json string. Note: This parameter is for customization requirements. See the following: <a href="https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1">Intelligent Erasure</a><a href="https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1">Intelligent Splitting</a><a href="https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1">Highlight</a><a href="https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1">Intelligent Landscape-to-Portrait</a></p>
- * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Additional parameters, whose value is a serialized json string. Note: This parameter is for customization requirements. See the following: <a href="https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1">Intelligent Erasure</a><a href="https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1">Intelligent Splitting</a><a href="https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1">Highlight</a><a href="https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1">Intelligent Landscape-to-Portrait</a></p>
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getExtendedParameter() Obtain 
+ * @method void setExtendedParameter(string $ExtendedParameter) Set 
  */
 class MPSAiAnalysisTaskInput extends AbstractModel
 {
     /**
-     * @var integer <p>ID of the video analysis template.</p>
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string <p>Additional parameters, whose value is a serialized json string. Note: This parameter is for customization requirements. See the following: <a href="https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1">Intelligent Erasure</a><a href="https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1">Intelligent Splitting</a><a href="https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1">Highlight</a><a href="https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1">Intelligent Landscape-to-Portrait</a></p>
+     * @var string 
      */
     public $ExtendedParameter;
 
     /**
-     * @param integer $Definition <p>ID of the video analysis template.</p>
-     * @param string $ExtendedParameter <p>Additional parameters, whose value is a serialized json string. Note: This parameter is for customization requirements. See the following: <a href="https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1">Intelligent Erasure</a><a href="https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1">Intelligent Splitting</a><a href="https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1">Highlight</a><a href="https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1">Intelligent Landscape-to-Portrait</a></p>
+     * @param integer $Definition 
+     * @param string $ExtendedParameter 
      */
     function __construct()
     {

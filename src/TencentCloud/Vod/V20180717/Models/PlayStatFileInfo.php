@@ -18,68 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a playback statistics file
+ * 
  *
- * @method string getDate() Obtain Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method void setDate(string $Date) Set Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method string getUrl() Obtain URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
- * @method void setUrl(string $Url) Set URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
+ * @method string getDate() Obtain 
+ * @method void setDate(string $Date) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class PlayStatFileInfo extends AbstractModel
 {
     /**
-     * @var string Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @var string 
      */
     public $Date;
 
     /**
-     * @var string URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param string $Date Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param string $Url URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
+     * @param string $Date 
+     * @param string $Url 
      */
     function __construct()
     {

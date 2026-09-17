@@ -18,44 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Low-light enhancement configuration.
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method void setSwitch(string $Switch) Set Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
- * @method string getType() Obtain The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
- * @method void setType(string $Type) Set The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class LowLightEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param string $Type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+     * @param string $Switch 
+     * @param string $Type 
      */
     function __construct()
     {

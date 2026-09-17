@@ -18,72 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive bitrate task information.
+ * 
  *
- * @method string getStatus() Obtain Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
- * @method void setStatus(string $Status) Set Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method integer getProgress() Obtain Transcoding progress, with a value range of [0-100].
- * @method void setProgress(integer $Progress) Set Transcoding progress, with a value range of [0-100].
- * @method ComplexAdaptiveDynamicStreamingTaskInput getInput() Obtain Input of adaptive bitrate streaming.
- * @method void setInput(ComplexAdaptiveDynamicStreamingTaskInput $Input) Set Input of adaptive bitrate streaming.
- * @method ComplexAdaptiveDynamicStreamingTaskOutput getOutput() Obtain Output of adaptive bitrate streaming.
- * @method void setOutput(ComplexAdaptiveDynamicStreamingTaskOutput $Output) Set Output of adaptive bitrate streaming.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method ComplexAdaptiveDynamicStreamingTaskInput getInput() Obtain 
+ * @method void setInput(ComplexAdaptiveDynamicStreamingTaskInput $Input) Set 
+ * @method ComplexAdaptiveDynamicStreamingTaskOutput getOutput() Obtain 
+ * @method void setOutput(ComplexAdaptiveDynamicStreamingTaskOutput $Output) Set 
  */
 class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var integer Transcoding progress, with a value range of [0-100].
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var ComplexAdaptiveDynamicStreamingTaskInput Input of adaptive bitrate streaming.
+     * @var ComplexAdaptiveDynamicStreamingTaskInput 
      */
     public $Input;
 
     /**
-     * @var ComplexAdaptiveDynamicStreamingTaskOutput Output of adaptive bitrate streaming.
+     * @var ComplexAdaptiveDynamicStreamingTaskOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
-     * @param string $ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param string $Message Error message.
-     * @param integer $Progress Transcoding progress, with a value range of [0-100].
-     * @param ComplexAdaptiveDynamicStreamingTaskInput $Input Input of adaptive bitrate streaming.
-     * @param ComplexAdaptiveDynamicStreamingTaskOutput $Output Output of adaptive bitrate streaming.
+     * @param string $Status 
+     * @param string $ErrCodeExt 
+     * @param string $Message 
+     * @param integer $Progress 
+     * @param ComplexAdaptiveDynamicStreamingTaskInput $Input 
+     * @param ComplexAdaptiveDynamicStreamingTaskOutput $Output 
      */
     function __construct()
     {

@@ -20,74 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWordSample request structure.
  *
- * @method string getKeyword() Obtain Keyword, length limit: 128 characters.
- * @method void setKeyword(string $Keyword) Set Keyword, length limit: 128 characters.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method array getUsages() Obtain <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
- * @method void setUsages(array $Usages) Set <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
- * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
- * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
+ * @method string getKeyword() Obtain 
+ * @method void setKeyword(string $Keyword) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getUsages() Obtain 
+ * @method void setUsages(array $Usages) Set 
+ * @method AiSampleTagOperation getTagOperationInfo() Obtain 
+ * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set 
  */
 class ModifyWordSampleRequest extends AbstractModel
 {
     /**
-     * @var string Keyword, length limit: 128 characters.
+     * @var string 
      */
     public $Keyword;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var array <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
+     * @var array 
      */
     public $Usages;
 
     /**
-     * @var AiSampleTagOperation Tag operation information.
+     * @var AiSampleTagOperation 
      */
     public $TagOperationInfo;
 
     /**
-     * @param string $Keyword Keyword, length limit: 128 characters.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param array $Usages <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
-     * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
+     * @param string $Keyword 
+     * @param integer $SubAppId 
+     * @param array $Usages 
+     * @param AiSampleTagOperation $TagOperationInfo 
      */
     function __construct()
     {

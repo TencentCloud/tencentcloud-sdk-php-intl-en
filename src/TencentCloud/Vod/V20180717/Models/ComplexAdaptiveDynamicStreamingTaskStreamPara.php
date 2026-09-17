@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Stream parameters of the adaptive bitrate streaming task.
+ * 
  *
- * @method integer getDefinition() Obtain Adaptive bitrate template ID.
- * @method void setDefinition(integer $Definition) Set Adaptive bitrate template ID.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class ComplexAdaptiveDynamicStreamingTaskStreamPara extends AbstractModel
 {
     /**
-     * @var integer Adaptive bitrate template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Adaptive bitrate template ID.
+     * @param integer $Definition 
      */
     function __construct()
     {

@@ -18,244 +18,164 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Basic information of VOD media file
+ * 
  *
- * @method string getName() Obtain Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDescription() Obtain Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDescription(string $Description) Set Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getClassId() Obtain Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClassId(integer $ClassId) Set Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getClassName() Obtain Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClassName(string $ClassName) Set Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getClassPath() Obtain Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClassPath(string $ClassPath) Set Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCoverUrl() Obtain Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCoverUrl(string $CoverUrl) Set Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMediaUrl() Obtain URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMediaUrl(string $MediaUrl) Set URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method MediaSourceData getSourceInfo() Obtain Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSourceInfo(MediaSourceData $SourceInfo) Set Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStorageRegion() Obtain Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
- * @method void setStorageRegion(string $StorageRegion) Set Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
- * @method string getStoragePath() Obtain Media storage path.
- * @method void setStoragePath(string $StoragePath) Set Media storage path.
- * @method array getTagSet() Obtain Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTagSet(array $TagSet) Set Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVid() Obtain Unique ID of an LVB recording file.
- * @method void setVid(string $Vid) Set Unique ID of an LVB recording file.
- * @method string getCategory() Obtain File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
- * @method void setCategory(string $Category) Set File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
- * @method string getStatus() Obtain File status: Normal: normal, Forbidden: banned.
- * @method void setStatus(string $Status) Set File status: Normal: normal, Forbidden: banned.
- * @method string getStorageClass() Obtain Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
- * @method void setStorageClass(string $StorageClass) Set Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method string getClassName() Obtain 
+ * @method void setClassName(string $ClassName) Set 
+ * @method string getClassPath() Obtain 
+ * @method void setClassPath(string $ClassPath) Set 
+ * @method string getCoverUrl() Obtain 
+ * @method void setCoverUrl(string $CoverUrl) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getMediaUrl() Obtain 
+ * @method void setMediaUrl(string $MediaUrl) Set 
+ * @method MediaSourceData getSourceInfo() Obtain 
+ * @method void setSourceInfo(MediaSourceData $SourceInfo) Set 
+ * @method string getStorageRegion() Obtain 
+ * @method void setStorageRegion(string $StorageRegion) Set 
+ * @method string getStoragePath() Obtain 
+ * @method void setStoragePath(string $StoragePath) Set 
+ * @method array getTagSet() Obtain 
+ * @method void setTagSet(array $TagSet) Set 
+ * @method string getVid() Obtain 
+ * @method void setVid(string $Vid) Set 
+ * @method string getCategory() Obtain 
+ * @method void setCategory(string $Category) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getStorageClass() Obtain 
+ * @method void setStorageClass(string $StorageClass) Set 
  */
 class MediaBasicInfo extends AbstractModel
 {
     /**
-     * @var string Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Description;
 
     /**
-     * @var string Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @var string Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $ExpireTime;
 
     /**
-     * @var integer Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var string Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $ClassName;
 
     /**
-     * @var string Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $ClassPath;
 
     /**
-     * @var string Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $CoverUrl;
 
     /**
-     * @var string Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $MediaUrl;
 
     /**
-     * @var MediaSourceData Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var MediaSourceData 
      */
     public $SourceInfo;
 
     /**
-     * @var string Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+     * @var string 
      */
     public $StorageRegion;
 
     /**
-     * @var string Media storage path.
+     * @var string 
      */
     public $StoragePath;
 
     /**
-     * @var array Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $TagSet;
 
     /**
-     * @var string Unique ID of an LVB recording file.
+     * @var string 
      */
     public $Vid;
 
     /**
-     * @var string File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
+     * @var string 
      */
     public $Category;
 
     /**
-     * @var string File status: Normal: normal, Forbidden: banned.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+     * @var string 
      */
     public $StorageClass;
 
     /**
-     * @param string $Name Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Description Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ClassId Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ClassName Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ClassPath Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CoverUrl Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MediaUrl URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaSourceData $SourceInfo Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
-     * @param string $StoragePath Media storage path.
-     * @param array $TagSet Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Vid Unique ID of an LVB recording file.
-     * @param string $Category File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-     * @param string $Status File status: Normal: normal, Forbidden: banned.
-     * @param string $StorageClass Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+     * @param string $Name 
+     * @param string $Description 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
+     * @param string $ExpireTime 
+     * @param integer $ClassId 
+     * @param string $ClassName 
+     * @param string $ClassPath 
+     * @param string $CoverUrl 
+     * @param string $Type 
+     * @param string $MediaUrl 
+     * @param MediaSourceData $SourceInfo 
+     * @param string $StorageRegion 
+     * @param string $StoragePath 
+     * @param array $TagSet 
+     * @param string $Vid 
+     * @param string $Category 
+     * @param string $Status 
+     * @param string $StorageClass 
      */
     function __construct()
     {

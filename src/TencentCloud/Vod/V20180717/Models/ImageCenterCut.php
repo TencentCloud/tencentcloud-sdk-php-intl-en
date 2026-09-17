@@ -18,52 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image cropping details.
+ * 
  *
- * @method string getType() Obtain The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
- * @method void setType(string $Type) Set The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
- * @method integer getWidth() Obtain The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
- * @method void setWidth(integer $Width) Set The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
- * @method integer getHeight() Obtain The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
- * @method void setHeight(integer $Height) Set The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
- * @method integer getRadius() Obtain The radius of the output image. This parameter is valid if `Type` is `Circle`.
- * @method void setRadius(integer $Radius) Set The radius of the output image. This parameter is valid if `Type` is `Circle`.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getWidth() Obtain 
+ * @method void setWidth(integer $Width) Set 
+ * @method integer getHeight() Obtain 
+ * @method void setHeight(integer $Height) Set 
+ * @method integer getRadius() Obtain 
+ * @method void setRadius(integer $Radius) Set 
  */
 class ImageCenterCut extends AbstractModel
 {
     /**
-     * @var string The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+     * @var integer 
      */
     public $Width;
 
     /**
-     * @var integer The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+     * @var integer 
      */
     public $Height;
 
     /**
-     * @var integer The radius of the output image. This parameter is valid if `Type` is `Circle`.
+     * @var integer 
      */
     public $Radius;
 
     /**
-     * @param string $Type The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
-     * @param integer $Width The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
-     * @param integer $Height The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
-     * @param integer $Radius The radius of the output image. This parameter is valid if `Type` is `Circle`.
+     * @param string $Type 
+     * @param integer $Width 
+     * @param integer $Height 
+     * @param integer $Radius 
      */
     function __construct()
     {

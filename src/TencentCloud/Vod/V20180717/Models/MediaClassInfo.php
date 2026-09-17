@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Category information description
+ * 
  *
- * @method integer getClassId() Obtain The category ID.
- * @method void setClassId(integer $ClassId) Set The category ID.
- * @method integer getParentId() Obtain Parent category ID, which is -1 for a first-level category.
- * @method void setParentId(integer $ParentId) Set Parent category ID, which is -1 for a first-level category.
- * @method string getName() Obtain The category name.
- * @method void setName(string $Name) Set The category name.
- * @method integer getLevel() Obtain Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
- * @method void setLevel(integer $Level) Set Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
- * @method array getSubClassIdSet() Obtain The IDs of the immediate subcategories of the current category.
- * @method void setSubClassIdSet(array $SubClassIdSet) Set The IDs of the immediate subcategories of the current category.
- * @method string getClassName() Obtain The category name. This parameter is not recommended. Please use `Name` instead.
- * @method void setClassName(string $ClassName) Set The category name. This parameter is not recommended. Please use `Name` instead.
+ * @method integer getClassId() Obtain 
+ * @method void setClassId(integer $ClassId) Set 
+ * @method integer getParentId() Obtain 
+ * @method void setParentId(integer $ParentId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method integer getLevel() Obtain 
+ * @method void setLevel(integer $Level) Set 
+ * @method array getSubClassIdSet() Obtain 
+ * @method void setSubClassIdSet(array $SubClassIdSet) Set 
+ * @method string getClassName() Obtain 
+ * @method void setClassName(string $ClassName) Set 
  */
 class MediaClassInfo extends AbstractModel
 {
     /**
-     * @var integer The category ID.
+     * @var integer 
      */
     public $ClassId;
 
     /**
-     * @var integer Parent category ID, which is -1 for a first-level category.
+     * @var integer 
      */
     public $ParentId;
 
     /**
-     * @var string The category name.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var integer Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
+     * @var integer 
      */
     public $Level;
 
     /**
-     * @var array The IDs of the immediate subcategories of the current category.
+     * @var array 
      */
     public $SubClassIdSet;
 
     /**
-     * @var string The category name. This parameter is not recommended. Please use `Name` instead.
+     * @var string 
      */
     public $ClassName;
 
     /**
-     * @param integer $ClassId The category ID.
-     * @param integer $ParentId Parent category ID, which is -1 for a first-level category.
-     * @param string $Name The category name.
-     * @param integer $Level Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
-     * @param array $SubClassIdSet The IDs of the immediate subcategories of the current category.
-     * @param string $ClassName The category name. This parameter is not recommended. Please use `Name` instead.
+     * @param integer $ClassId 
+     * @param integer $ParentId 
+     * @param string $Name 
+     * @param integer $Level 
+     * @param array $SubClassIdSet 
+     * @param string $ClassName 
      */
     function __construct()
     {

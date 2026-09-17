@@ -18,48 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Time point screenshot information
+ * 
  *
- * @method float getTimeOffset() Obtain Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTimeOffset(float $TimeOffset) Set Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUrl() Obtain Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getWaterMarkDefinition() Obtain List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getTimeOffset() Obtain 
+ * @method void setTimeOffset(float $TimeOffset) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method array getWaterMarkDefinition() Obtain 
+ * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set 
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
     /**
-     * @var float Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $TimeOffset;
 
     /**
-     * @var string Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var array List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $WaterMarkDefinition;
 
     /**
-     * @param float $TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Url Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $TimeOffset 
+     * @param string $Url 
+     * @param array $WaterMarkDefinition 
      */
     function __construct()
     {

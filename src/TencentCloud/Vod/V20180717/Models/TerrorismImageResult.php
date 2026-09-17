@@ -18,76 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The moderation result for terrorist content in an image.
+ * 
  *
- * @method float getConfidence() Obtain The confidence score for the moderation result. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for the moderation result. Value range: 0-100.
- * @method string getSuggestion() Obtain The suggestion for handling the detected terrorist content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the detected terrorist content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
- * @method string getLabel() Obtain The label for the detected terrorist content. Valid values:
-<li>`guns`</li>
-<li>`crowd`</li>
-<li>`police`</li>
-<li>`bloody`</li>
-<li>`banners`</li>
-<li>`explosion`</li>
-<li>`scenario` (terrorist scenes) </li>
- * @method void setLabel(string $Label) Set The label for the detected terrorist content. Valid values:
-<li>`guns`</li>
-<li>`crowd`</li>
-<li>`police`</li>
-<li>`bloody`</li>
-<li>`banners`</li>
-<li>`explosion`</li>
-<li>`scenario` (terrorist scenes) </li>
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getLabel() Obtain 
+ * @method void setLabel(string $Label) Set 
  */
 class TerrorismImageResult extends AbstractModel
 {
     /**
-     * @var float The confidence score for the moderation result. Value range: 0-100.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion for handling the detected terrorist content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var string The label for the detected terrorist content. Valid values:
-<li>`guns`</li>
-<li>`crowd`</li>
-<li>`police`</li>
-<li>`bloody`</li>
-<li>`banners`</li>
-<li>`explosion`</li>
-<li>`scenario` (terrorist scenes) </li>
+     * @var string 
      */
     public $Label;
 
     /**
-     * @param float $Confidence The confidence score for the moderation result. Value range: 0-100.
-     * @param string $Suggestion The suggestion for handling the detected terrorist content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
-     * @param string $Label The label for the detected terrorist content. Valid values:
-<li>`guns`</li>
-<li>`crowd`</li>
-<li>`police`</li>
-<li>`bloody`</li>
-<li>`banners`</li>
-<li>`explosion`</li>
-<li>`scenario` (terrorist scenes) </li>
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param string $Label 
      */
     function __construct()
     {

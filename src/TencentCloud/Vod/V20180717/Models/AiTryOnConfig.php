@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI dress up configuration message.
+ * 
  *
- * @method string getModel() Obtain <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
- * @method void setModel(string $Model) Set <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
- * @method array getClothesFileInfos() Obtain <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
- * @method void setClothesFileInfos(array $ClothesFileInfos) Set <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
- * @method string getPrompt() Obtain <p>Dress up command Prompt.</p>
- * @method void setPrompt(string $Prompt) Set <p>Dress up command Prompt.</p>
+ * @method string getModel() Obtain 
+ * @method void setModel(string $Model) Set 
+ * @method array getClothesFileInfos() Obtain 
+ * @method void setClothesFileInfos(array $ClothesFileInfos) Set 
+ * @method string getPrompt() Obtain 
+ * @method void setPrompt(string $Prompt) Set 
  */
 class AiTryOnConfig extends AbstractModel
 {
     /**
-     * @var string <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+     * @var string 
      */
     public $Model;
 
     /**
-     * @var array <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+     * @var array 
      */
     public $ClothesFileInfos;
 
     /**
-     * @var string <p>Dress up command Prompt.</p>
+     * @var string 
      */
     public $Prompt;
 
     /**
-     * @param string $Model <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
-     * @param array $ClothesFileInfos <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
-     * @param string $Prompt <p>Dress up command Prompt.</p>
+     * @param string $Model 
+     * @param array $ClothesFileInfos 
+     * @param string $Prompt 
      */
     function __construct()
     {

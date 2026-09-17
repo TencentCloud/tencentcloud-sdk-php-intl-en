@@ -18,52 +18,64 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Timestamp hotlink protection configuration
+ * 
  *
- * @method string getSwitch() Obtain Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method AuthenticationTypeA getTypeA() Obtain Configure timestamp hotlink protection mode A.
- * @method void setTypeA(AuthenticationTypeA $TypeA) Set Configure timestamp hotlink protection mode A.
- * @method AuthenticationTypeB getTypeB() Obtain Timestamp hotlink protection mode B configuration.
- * @method void setTypeB(AuthenticationTypeB $TypeB) Set Timestamp hotlink protection mode B configuration.
- * @method AuthenticationTypeC getTypeC() Obtain Timestamp hotlink protection mode C configuration.
- * @method void setTypeC(AuthenticationTypeC $TypeC) Set Timestamp hotlink protection mode C configuration.
- * @method AuthenticationTypeD getTypeD() Obtain Timestamp hotlink protection mode D configuration.
- * @method void setTypeD(AuthenticationTypeD $TypeD) Set Timestamp hotlink protection mode D configuration.
+ * @method string getSwitch() Obtain Hotlink protection configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+
+ * @method void setSwitch(string $Switch) Set Hotlink protection configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+
+ * @method AuthenticationTypeA getTypeA() Obtain 
+ * @method void setTypeA(AuthenticationTypeA $TypeA) Set 
+ * @method AuthenticationTypeB getTypeB() Obtain 
+ * @method void setTypeB(AuthenticationTypeB $TypeB) Set 
+ * @method AuthenticationTypeC getTypeC() Obtain 
+ * @method void setTypeC(AuthenticationTypeC $TypeC) Set 
+ * @method AuthenticationTypeD getTypeD() Obtain 
+ * @method void setTypeD(AuthenticationTypeD $TypeD) Set 
  */
 class Authentication extends AbstractModel
 {
     /**
-     * @var string Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string Hotlink protection configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+
      */
     public $Switch;
 
     /**
-     * @var AuthenticationTypeA Configure timestamp hotlink protection mode A.
+     * @var AuthenticationTypeA 
      */
     public $TypeA;
 
     /**
-     * @var AuthenticationTypeB Timestamp hotlink protection mode B configuration.
+     * @var AuthenticationTypeB 
      */
     public $TypeB;
 
     /**
-     * @var AuthenticationTypeC Timestamp hotlink protection mode C configuration.
+     * @var AuthenticationTypeC 
      */
     public $TypeC;
 
     /**
-     * @var AuthenticationTypeD Timestamp hotlink protection mode D configuration.
+     * @var AuthenticationTypeD 
      */
     public $TypeD;
 
     /**
-     * @param string $Switch Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param AuthenticationTypeA $TypeA Configure timestamp hotlink protection mode A.
-     * @param AuthenticationTypeB $TypeB Timestamp hotlink protection mode B configuration.
-     * @param AuthenticationTypeC $TypeC Timestamp hotlink protection mode C configuration.
-     * @param AuthenticationTypeD $TypeD Timestamp hotlink protection mode D configuration.
+     * @param string $Switch Hotlink protection configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+
+     * @param AuthenticationTypeA $TypeA 
+     * @param AuthenticationTypeB $TypeB 
+     * @param AuthenticationTypeC $TypeC 
+     * @param AuthenticationTypeD $TypeD 
      */
     function __construct()
     {

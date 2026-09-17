@@ -18,44 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Import knowledge base task for media
+ * 
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method void setStatus(string $Status) Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Error code. 0 indicates success, other values indicate failure.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success, other values indicate failure.
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method ImportMediaKnowledgeTaskInput getInput() Obtain 
+ * @method void setInput(ImportMediaKnowledgeTaskInput $Input) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
  */
 class ImportMediaKnowledgeTask extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @var string 
+     */
+    public $FileId;
+
+    /**
+     * @var ImportMediaKnowledgeTaskInput 
+     */
+    public $Input;
+
+    /**
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code. 0 indicates success, other values indicate failure.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode Error code. 0 indicates success, other values indicate failure.
-     * @param string $Message Error message.
+     * @param string $TaskId 
+     * @param string $FileId 
+     * @param ImportMediaKnowledgeTaskInput $Input 
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
      */
     function __construct()
     {
@@ -72,6 +88,15 @@ class ImportMediaKnowledgeTask extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Input",$param) and $param["Input"] !== null) {
+            $this->Input = new ImportMediaKnowledgeTaskInput();
+            $this->Input->deserialize($param["Input"]);
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

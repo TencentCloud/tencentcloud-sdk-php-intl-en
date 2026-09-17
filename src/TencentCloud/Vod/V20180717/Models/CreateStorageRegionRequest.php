@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStorageRegion request structure.
  *
- * @method string getStorageRegion() Obtain <p>The pending storage region must be a supported region.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
- * @method void setStorageRegion(string $StorageRegion) Set <p>The pending storage region must be a supported region.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+ * @method string getStorageRegion() Obtain 
+ * @method void setStorageRegion(string $StorageRegion) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class CreateStorageRegionRequest extends AbstractModel
 {
     /**
-     * @var string <p>The pending storage region must be a supported region.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+     * @var string 
      */
     public $StorageRegion;
 
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $StorageRegion <p>The pending storage region must be a supported region.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @param string $StorageRegion 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

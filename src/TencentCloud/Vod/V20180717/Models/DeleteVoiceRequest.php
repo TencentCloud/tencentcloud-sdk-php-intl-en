@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteVoice request structure.
  *
- * @method string getVoiceId() Obtain <p>Voice ID.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
- * @method string getSubAppId() Obtain <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether the default application or a newly created application.</p>
- * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether the default application or a newly created application.</p>
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
+ * @method string getSubAppId() Obtain 
+ * @method void setSubAppId(string $SubAppId) Set 
  */
 class DeleteVoiceRequest extends AbstractModel
 {
     /**
-     * @var string <p>Voice ID.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @var string <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether the default application or a newly created application.</p>
+     * @var string 
      */
     public $SubAppId;
 
     /**
-     * @param string $VoiceId <p>Voice ID.</p>
-     * @param string $SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether the default application or a newly created application.</p>
+     * @param string $VoiceId 
+     * @param string $SubAppId 
      */
     function __construct()
     {

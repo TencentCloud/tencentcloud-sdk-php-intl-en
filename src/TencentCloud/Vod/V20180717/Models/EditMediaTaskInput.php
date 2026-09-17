@@ -18,44 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of video editing task.
+ * 
  *
- * @method string getInputType() Obtain Input video source type. Valid values: File, Stream.
- * @method void setInputType(string $InputType) Set Input video source type. Valid values: File, Stream.
- * @method array getFileInfoSet() Obtain Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileInfoSet(array $FileInfoSet) Set Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getStreamInfoSet() Obtain Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStreamInfoSet(array $StreamInfoSet) Set Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInputType() Obtain 
+ * @method void setInputType(string $InputType) Set 
+ * @method array getFileInfoSet() Obtain 
+ * @method void setFileInfoSet(array $FileInfoSet) Set 
+ * @method array getStreamInfoSet() Obtain 
+ * @method void setStreamInfoSet(array $StreamInfoSet) Set 
  */
 class EditMediaTaskInput extends AbstractModel
 {
     /**
-     * @var string Input video source type. Valid values: File, Stream.
+     * @var string 
      */
     public $InputType;
 
     /**
-     * @var array Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $FileInfoSet;
 
     /**
-     * @var array Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $StreamInfoSet;
 
     /**
-     * @param string $InputType Input video source type. Valid values: File, Stream.
-     * @param array $FileInfoSet Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $StreamInfoSet Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InputType 
+     * @param array $FileInfoSet 
+     * @param array $StreamInfoSet 
      */
     function __construct()
     {

@@ -20,78 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonSample request structure.
  *
- * @method string getPersonId() Obtain Material ID.
- * @method void setPersonId(string $PersonId) Set Material ID.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getName() Obtain Name. Length limit: 128 characters.
- * @method void setName(string $Name) Set Name. Length limit: 128 characters.
- * @method string getDescription() Obtain Description. Length limit: 1024 characters.
- * @method void setDescription(string $Description) Set Description. Length limit: 1024 characters.
- * @method array getUsages() Obtain Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
- * @method void setUsages(array $Usages) Set Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
- * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Facial operation information.
- * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Facial operation information.
- * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
- * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
+ * @method string getPersonId() Obtain 
+ * @method void setPersonId(string $PersonId) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
+ * @method array getUsages() Obtain 
+ * @method void setUsages(array $Usages) Set 
+ * @method AiSampleFaceOperation getFaceOperationInfo() Obtain 
+ * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set 
+ * @method AiSampleTagOperation getTagOperationInfo() Obtain 
+ * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set 
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Material ID.
+     * @var string 
      */
     public $PersonId;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Name. Length limit: 128 characters.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Description. Length limit: 1024 characters.
+     * @var string 
      */
     public $Description;
 
     /**
-     * @var array Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+     * @var array 
      */
     public $Usages;
 
     /**
-     * @var AiSampleFaceOperation Facial operation information.
+     * @var AiSampleFaceOperation 
      */
     public $FaceOperationInfo;
 
     /**
-     * @var AiSampleTagOperation Tag operation information.
+     * @var AiSampleTagOperation 
      */
     public $TagOperationInfo;
 
     /**
-     * @param string $PersonId Material ID.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $Name Name. Length limit: 128 characters.
-     * @param string $Description Description. Length limit: 1024 characters.
-     * @param array $Usages Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
-     * @param AiSampleFaceOperation $FaceOperationInfo Facial operation information.
-     * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
+     * @param string $PersonId 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $Description 
+     * @param array $Usages 
+     * @param AiSampleFaceOperation $FaceOperationInfo 
+     * @param AiSampleTagOperation $TagOperationInfo 
      */
     function __construct()
     {

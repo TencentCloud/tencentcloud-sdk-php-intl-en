@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneCDNDomain request structure.
  *
- * @method string getDomain() Obtain Domain
- * @method void setDomain(string $Domain) Set Domain
- * @method string getReferenceDomain() Obtain The cloned domain.
- * @method void setReferenceDomain(string $ReferenceDomain) Set The cloned domain.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method string getDomain() Obtain 
+ * @method void setDomain(string $Domain) Set 
+ * @method string getReferenceDomain() Obtain 
+ * @method void setReferenceDomain(string $ReferenceDomain) Set 
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
  */
 class CloneCDNDomainRequest extends AbstractModel
 {
     /**
-     * @var string Domain
+     * @var string 
      */
     public $Domain;
 
     /**
-     * @var string The cloned domain.
+     * @var string 
      */
     public $ReferenceDomain;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain Domain
-     * @param string $ReferenceDomain The cloned domain.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param string $Domain 
+     * @param string $ReferenceDomain 
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     function __construct()
     {

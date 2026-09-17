@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Referer blacklist/whitelist configuration. This is disabled by default.
+ * 
  *
- * @method string getSwitch() Obtain referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method void setSwitch(string $Switch) Set referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
- * @method array getRefererRules() Obtain Referer blacklist/whitelist configuration rule
- * @method void setRefererRules(array $RefererRules) Set Referer blacklist/whitelist configuration rule
+ * @method string getSwitch() Obtain Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method void setSwitch(string $Switch) Set Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+ * @method array getRefererRules() Obtain 
+ * @method void setRefererRules(array $RefererRules) Set 
  */
 class Referer extends AbstractModel
 {
     /**
-     * @var string referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @var string Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var array Referer blacklist/whitelist configuration rule
+     * @var array 
      */
     public $RefererRules;
 
     /**
-     * @param string $Switch referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param array $RefererRules Referer blacklist/whitelist configuration rule
+     * @param string $Switch Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param array $RefererRules 
      */
     function __construct()
     {

@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Human face identity information.
+ * 
  *
- * @method string getFaceId() Obtain Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
- * @method void setFaceId(string $FaceId) Set Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
- * @method string getFaceImage() Obtain Schematic diagram of human face extracted from the video.
- * @method void setFaceImage(string $FaceImage) Set Schematic diagram of human face extracted from the video.
- * @method integer getStartTime() Obtain The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
- * @method void setStartTime(integer $StartTime) Set The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
- * @method integer getEndTime() Obtain The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
- * @method void setEndTime(integer $EndTime) Set The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
+ * @method string getFaceId() Obtain 
+ * @method void setFaceId(string $FaceId) Set 
+ * @method string getFaceImage() Obtain 
+ * @method void setFaceImage(string $FaceImage) Set 
+ * @method integer getStartTime() Obtain 
+ * @method void setStartTime(integer $StartTime) Set 
+ * @method integer getEndTime() Obtain 
+ * @method void setEndTime(integer $EndTime) Set 
  */
 class AigcFaceIdentityInfo extends AbstractModel
 {
     /**
-     * @var string Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
+     * @var string 
      */
     public $FaceId;
 
     /**
-     * @var string Schematic diagram of human face extracted from the video.
+     * @var string 
      */
     public $FaceImage;
 
     /**
-     * @var integer The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
+     * @var integer 
      */
     public $StartTime;
 
     /**
-     * @var integer The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
+     * @var integer 
      */
     public $EndTime;
 
     /**
-     * @param string $FaceId Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
-     * @param string $FaceImage Schematic diagram of human face extracted from the video.
-     * @param integer $StartTime The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
-     * @param integer $EndTime The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
+     * @param string $FaceId 
+     * @param string $FaceImage 
+     * @param integer $StartTime 
+     * @param integer $EndTime 
      */
     function __construct()
     {

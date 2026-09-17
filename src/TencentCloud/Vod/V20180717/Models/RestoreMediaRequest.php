@@ -20,66 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreMedia request structure.
  *
- * @method array getFileIds() Obtain Unique identifier list of media files. Maximum length: 100.
- * @method void setFileIds(array $FileIds) Set Unique identifier list of media files. Maximum length: 100.
- * @method integer getRestoreDay() Obtain Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
- * @method void setRestoreDay(integer $RestoreDay) Set Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getRestoreTier() Obtain Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
- * @method void setRestoreTier(string $RestoreTier) Set Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+ * @method array getFileIds() Obtain 
+ * @method void setFileIds(array $FileIds) Set 
+ * @method integer getRestoreDay() Obtain 
+ * @method void setRestoreDay(integer $RestoreDay) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getRestoreTier() Obtain 
+ * @method void setRestoreTier(string $RestoreTier) Set 
  */
 class RestoreMediaRequest extends AbstractModel
 {
     /**
-     * @var array Unique identifier list of media files. Maximum length: 100.
+     * @var array 
      */
     public $FileIds;
 
     /**
-     * @var integer Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
+     * @var integer 
      */
     public $RestoreDay;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+     * @var string 
      */
     public $RestoreTier;
 
     /**
-     * @param array $FileIds Unique identifier list of media files. Maximum length: 100.
-     * @param integer $RestoreDay Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $RestoreTier Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+     * @param array $FileIds 
+     * @param integer $RestoreDay 
+     * @param integer $SubAppId 
+     * @param string $RestoreTier 
      */
     function __construct()
     {

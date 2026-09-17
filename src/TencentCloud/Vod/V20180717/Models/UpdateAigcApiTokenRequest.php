@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAigcApiToken request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether it is the default application or a newly created application), you must fill in this field with the application ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether it is the default application or a newly created application), you must fill in this field with the application ID.</b></p>
- * @method string getApiToken() Obtain <p>To refresh the Api Key</p>
- * @method void setApiToken(string $ApiToken) Set <p>To refresh the Api Key</p>
- * @method string getActionType() Obtain <p>Merge (default, merges ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
- * @method void setActionType(string $ActionType) Set <p>Merge (default, merges ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
- * @method string getExtInfo() Obtain <p>Extended information of the token</p>
- * @method void setExtInfo(string $ExtInfo) Set <p>Extended information of the token</p>
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getApiToken() Obtain 
+ * @method void setApiToken(string $ApiToken) Set 
+ * @method string getActionType() Obtain 
+ * @method void setActionType(string $ActionType) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class UpdateAigcApiTokenRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether it is the default application or a newly created application), you must fill in this field with the application ID.</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>To refresh the Api Key</p>
+     * @var string 
      */
     public $ApiToken;
 
     /**
-     * @var string <p>Merge (default, merges ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+     * @var string 
      */
     public $ActionType;
 
     /**
-     * @var string <p>Extended information of the token</p>
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether it is the default application or a newly created application), you must fill in this field with the application ID.</b></p>
-     * @param string $ApiToken <p>To refresh the Api Key</p>
-     * @param string $ActionType <p>Merge (default, merges ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
-     * @param string $ExtInfo <p>Extended information of the token</p>
+     * @param integer $SubAppId 
+     * @param string $ApiToken 
+     * @param string $ActionType 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

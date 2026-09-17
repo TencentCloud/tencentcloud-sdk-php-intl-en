@@ -18,108 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Moderation details.
+ * 
  *
- * @method integer getDefinition() Obtain The moderation template ID.
- * @method void setDefinition(integer $Definition) Set The moderation template ID.
- * @method string getSuggestion() Obtain The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method array getTypeSet() Obtain The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
-`Form` indicates the type of inappropriate content detected. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-<li>`ASR` (speech)</li>
-<li>`Voice`</li>
-`Label` indicates the violation label. Valid values:
-<li>`Porn` (pornographic content)</li>
-<li>`Terror` (terrorist content)</li>
-<li>`Polity` (politically sensitive content)</li>
-<li>`Ad` (advertisement)</li>
-<li>`Illegal` (illegal content)</li>
-<li>`Abuse`</li>
-<li>`Moan`</li>
- * @method void setTypeSet(array $TypeSet) Set The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
-`Form` indicates the type of inappropriate content detected. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-<li>`ASR` (speech)</li>
-<li>`Voice`</li>
-`Label` indicates the violation label. Valid values:
-<li>`Porn` (pornographic content)</li>
-<li>`Terror` (terrorist content)</li>
-<li>`Polity` (politically sensitive content)</li>
-<li>`Ad` (advertisement)</li>
-<li>`Illegal` (illegal content)</li>
-<li>`Abuse`</li>
-<li>`Moan`</li>
- * @method string getReviewTime() Obtain The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setReviewTime(string $ReviewTime) Set The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method array getTypeSet() Obtain 
+ * @method void setTypeSet(array $TypeSet) Set 
+ * @method string getReviewTime() Obtain 
+ * @method void setReviewTime(string $ReviewTime) Set 
  */
 class ReviewInfo extends AbstractModel
 {
     /**
-     * @var integer The moderation template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var array The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
-`Form` indicates the type of inappropriate content detected. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-<li>`ASR` (speech)</li>
-<li>`Voice`</li>
-`Label` indicates the violation label. Valid values:
-<li>`Porn` (pornographic content)</li>
-<li>`Terror` (terrorist content)</li>
-<li>`Polity` (politically sensitive content)</li>
-<li>`Ad` (advertisement)</li>
-<li>`Illegal` (illegal content)</li>
-<li>`Abuse`</li>
-<li>`Moan`</li>
+     * @var array 
      */
     public $TypeSet;
 
     /**
-     * @var string The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $ReviewTime;
 
     /**
-     * @param integer $Definition The moderation template ID.
-     * @param string $Suggestion The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param array $TypeSet The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
-`Form` indicates the type of inappropriate content detected. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-<li>`ASR` (speech)</li>
-<li>`Voice`</li>
-`Label` indicates the violation label. Valid values:
-<li>`Porn` (pornographic content)</li>
-<li>`Terror` (terrorist content)</li>
-<li>`Polity` (politically sensitive content)</li>
-<li>`Ad` (advertisement)</li>
-<li>`Illegal` (illegal content)</li>
-<li>`Abuse`</li>
-<li>`Moan`</li>
-     * @param string $ReviewTime The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Definition 
+     * @param string $Suggestion 
+     * @param array $TypeSet 
+     * @param string $ReviewTime 
      */
     function __construct()
     {

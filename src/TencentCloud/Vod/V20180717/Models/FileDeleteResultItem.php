@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The result of file deletion.
+ * 
  *
- * @method string getFileId() Obtain The ID of the file deleted.
- * @method void setFileId(string $FileId) Set The ID of the file deleted.
- * @method array getDeleteParts() Obtain Part of the file deleted this time.
- * @method void setDeleteParts(array $DeleteParts) Set Part of the file deleted this time.
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
+ * @method array getDeleteParts() Obtain 
+ * @method void setDeleteParts(array $DeleteParts) Set 
  */
 class FileDeleteResultItem extends AbstractModel
 {
     /**
-     * @var string The ID of the file deleted.
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @var array Part of the file deleted this time.
+     * @var array 
      */
     public $DeleteParts;
 
     /**
-     * @param string $FileId The ID of the file deleted.
-     * @param array $DeleteParts Part of the file deleted this time.
+     * @param string $FileId 
+     * @param array $DeleteParts 
      */
     function __construct()
     {

@@ -18,68 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a storage region.
+ * 
  *
- * @method string getRegion() Obtain The storage region.
- * @method void setRegion(string $Region) Set The storage region.
- * @method string getDescription() Obtain The description of the storage region.
- * @method void setDescription(string $Description) Set The description of the storage region.
- * @method string getStatus() Obtain Whether storage is enabled in the region. Valid values:
-<li>opened: Enabled</li>
-<li>unopened: Not enabled</li>
- * @method void setStatus(string $Status) Set Whether storage is enabled in the region. Valid values:
-<li>opened: Enabled</li>
-<li>unopened: Not enabled</li>
- * @method boolean getIsDefault() Obtain Whether the region is the default storage region. Valid values: true, false.
- * @method void setIsDefault(boolean $IsDefault) Set Whether the region is the default storage region. Valid values: true, false.
- * @method string getArea() Obtain Whether the storage region is inside or outside the Chinese mainland. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
- * @method void setArea(string $Area) Set Whether the storage region is inside or outside the Chinese mainland. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
+ * @method string getDescription() Obtain 
+ * @method void setDescription(string $Description) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method boolean getIsDefault() Obtain 
+ * @method void setIsDefault(boolean $IsDefault) Set 
+ * @method string getArea() Obtain 
+ * @method void setArea(string $Area) Set 
  */
 class StorageRegionInfo extends AbstractModel
 {
     /**
-     * @var string The storage region.
+     * @var string 
      */
     public $Region;
 
     /**
-     * @var string The description of the storage region.
+     * @var string 
      */
     public $Description;
 
     /**
-     * @var string Whether storage is enabled in the region. Valid values:
-<li>opened: Enabled</li>
-<li>unopened: Not enabled</li>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var boolean Whether the region is the default storage region. Valid values: true, false.
+     * @var boolean 
      */
     public $IsDefault;
 
     /**
-     * @var string Whether the storage region is inside or outside the Chinese mainland. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * @var string 
      */
     public $Area;
 
     /**
-     * @param string $Region The storage region.
-     * @param string $Description The description of the storage region.
-     * @param string $Status Whether storage is enabled in the region. Valid values:
-<li>opened: Enabled</li>
-<li>unopened: Not enabled</li>
-     * @param boolean $IsDefault Whether the region is the default storage region. Valid values: true, false.
-     * @param string $Area Whether the storage region is inside or outside the Chinese mainland. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * @param string $Region 
+     * @param string $Description 
+     * @param string $Status 
+     * @param boolean $IsDefault 
+     * @param string $Area 
      */
     function __construct()
     {

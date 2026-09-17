@@ -18,112 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameters of subtile information
+ * 
  *
- * @method string getName() Obtain Subtitle name. Length limit: 64 characters
- * @method void setName(string $Name) Set Subtitle name. Length limit: 64 characters
- * @method string getLanguage() Obtain Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
- * @method void setLanguage(string $Language) Set Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
- * @method string getFormat() Obtain Subtitle format. Valid value:
-<li>vtt</li>
- * @method void setFormat(string $Format) Set Subtitle format. Valid value:
-<li>vtt</li>
- * @method string getContent() Obtain Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
- * @method void setContent(string $Content) Set Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
- * @method string getId() Obtain The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
- * @method void setId(string $Id) Set The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getLanguage() Obtain 
+ * @method void setLanguage(string $Language) Set 
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method string getContent() Obtain 
+ * @method void setContent(string $Content) Set 
+ * @method string getId() Obtain 
+ * @method void setId(string $Id) Set 
  */
 class MediaSubtitleInput extends AbstractModel
 {
     /**
-     * @var string Subtitle name. Length limit: 64 characters
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+     * @var string 
      */
     public $Language;
 
     /**
-     * @var string Subtitle format. Valid value:
-<li>vtt</li>
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var string Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
+     * @var string 
      */
     public $Content;
 
     /**
-     * @var string The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+     * @var string 
      */
     public $Id;
 
     /**
-     * @param string $Name Subtitle name. Length limit: 64 characters
-     * @param string $Language Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
-     * @param string $Format Subtitle format. Valid value:
-<li>vtt</li>
-     * @param string $Content Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
-     * @param string $Id The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+     * @param string $Name 
+     * @param string $Language 
+     * @param string $Format 
+     * @param string $Content 
+     * @param string $Id 
      */
     function __construct()
     {

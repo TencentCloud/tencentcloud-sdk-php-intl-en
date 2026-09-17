@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scenario-based AIGC video generation task info
+ * 
  *
- * @method AigcVideoSceneInfo getSceneInfo() Obtain Scenario-based image generation parameter configuration.
- * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set Scenario-based image generation parameter configuration.
- * @method array getFileInfos() Obtain Input image list.
- * @method void setFileInfos(array $FileInfos) Set Input image list.
- * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain Output media file configuration for scenario-based image generation tasks.
- * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set Output media file configuration for scenario-based image generation tasks.
+ * @method AigcVideoSceneInfo getSceneInfo() Obtain 
+ * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set 
+ * @method array getFileInfos() Obtain 
+ * @method void setFileInfos(array $FileInfos) Set 
+ * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set 
  */
 class SceneAigcVideoTaskInput extends AbstractModel
 {
     /**
-     * @var AigcVideoSceneInfo Scenario-based image generation parameter configuration.
+     * @var AigcVideoSceneInfo 
      */
     public $SceneInfo;
 
     /**
-     * @var array Input image list.
+     * @var array 
      */
     public $FileInfos;
 
     /**
-     * @var SceneAigcVideoOutputConfig Output media file configuration for scenario-based image generation tasks.
+     * @var SceneAigcVideoOutputConfig 
      */
     public $OutputConfig;
 
     /**
-     * @param AigcVideoSceneInfo $SceneInfo Scenario-based image generation parameter configuration.
-     * @param array $FileInfos Input image list.
-     * @param SceneAigcVideoOutputConfig $OutputConfig Output media file configuration for scenario-based image generation tasks.
+     * @param AigcVideoSceneInfo $SceneInfo 
+     * @param array $FileInfos 
+     * @param SceneAigcVideoOutputConfig $OutputConfig 
      */
     function __construct()
     {

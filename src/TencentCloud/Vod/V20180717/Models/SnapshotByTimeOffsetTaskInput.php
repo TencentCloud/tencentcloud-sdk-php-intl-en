@@ -18,60 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of time point screencapturing task
+ * 
  *
- * @method integer getDefinition() Obtain Time point screencapturing template ID.
- * @method void setDefinition(integer $Definition) Set Time point screencapturing template ID.
- * @method array getExtTimeOffsetSet() Obtain The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
- * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
- * @method array getTimeOffsetSet() Obtain List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTimeOffsetSet(array $TimeOffsetSet) Set List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method array getExtTimeOffsetSet() Obtain 
+ * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set 
+ * @method array getTimeOffsetSet() Obtain 
+ * @method void setTimeOffsetSet(array $TimeOffsetSet) Set 
+ * @method array getWatermarkSet() Obtain 
+ * @method void setWatermarkSet(array $WatermarkSet) Set 
  */
 class SnapshotByTimeOffsetTaskInput extends AbstractModel
 {
     /**
-     * @var integer Time point screencapturing template ID.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var array The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
+     * @var array 
      */
     public $ExtTimeOffsetSet;
 
     /**
-     * @var array List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $TimeOffsetSet;
 
     /**
-     * @var array List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $WatermarkSet;
 
     /**
-     * @param integer $Definition Time point screencapturing template ID.
-     * @param array $ExtTimeOffsetSet The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
-     * @param array $TimeOffsetSet List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition 
+     * @param array $ExtTimeOffsetSet 
+     * @param array $TimeOffsetSet 
+     * @param array $WatermarkSet 
      */
     function __construct()
     {

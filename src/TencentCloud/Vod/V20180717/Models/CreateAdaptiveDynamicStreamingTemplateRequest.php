@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAdaptiveDynamicStreamingTemplate request structure.
  *
- * @method string getFormat() Obtain <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
- * @method void setFormat(string $Format) Set <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
- * @method array getStreamInfos() Obtain <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
- * @method void setStreamInfos(array $StreamInfos) Set <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
- * @method string getName() Obtain <p>Template name. The length cannot exceed 64 characters.</p>
- * @method void setName(string $Name) Set <p>Template name. The length cannot exceed 64 characters.</p>
- * @method string getDrmType() Obtain <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
- * @method void setDrmType(string $DrmType) Set <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
- * @method string getDrmKeyProvider() Obtain <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
- * @method void setDrmKeyProvider(string $DrmKeyProvider) Set <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
- * @method string getDrmEncryptType() Obtain <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
- * @method void setDrmEncryptType(string $DrmEncryptType) Set <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
- * @method integer getDisableHigherVideoBitrate() Obtain <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
- * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
- * @method integer getDisableHigherVideoResolution() Obtain <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
- * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
- * @method string getComment() Obtain <p>Template description, with a length limit of 256 characters.</p>
- * @method void setComment(string $Comment) Set <p>Template description, with a length limit of 256 characters.</p>
- * @method string getSegmentType() Obtain <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
- * @method void setSegmentType(string $SegmentType) Set <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+ * @method string getFormat() Obtain 
+ * @method void setFormat(string $Format) Set 
+ * @method array getStreamInfos() Obtain 
+ * @method void setStreamInfos(array $StreamInfos) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getDrmType() Obtain 
+ * @method void setDrmType(string $DrmType) Set 
+ * @method string getDrmKeyProvider() Obtain 
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) Set 
+ * @method string getDrmEncryptType() Obtain 
+ * @method void setDrmEncryptType(string $DrmEncryptType) Set 
+ * @method integer getDisableHigherVideoBitrate() Obtain 
+ * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set 
+ * @method integer getDisableHigherVideoResolution() Obtain 
+ * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getSegmentType() Obtain 
+ * @method void setSegmentType(string $SegmentType) Set 
+ * @method integer getSegmentDuration() Obtain 
+ * @method void setSegmentDuration(integer $SegmentDuration) Set 
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
-     * @var string <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
+     * @var string 
      */
     public $Format;
 
     /**
-     * @var array <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
+     * @var array 
      */
     public $StreamInfos;
 
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Template name. The length cannot exceed 64 characters.</p>
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
+     * @var string 
      */
     public $DrmType;
 
     /**
-     * @var string <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+     * @var string 
      */
     public $DrmKeyProvider;
 
     /**
-     * @var string <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
+     * @var string 
      */
     public $DrmEncryptType;
 
     /**
-     * @var integer <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+     * @var integer 
      */
     public $DisableHigherVideoBitrate;
 
     /**
-     * @var integer <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+     * @var integer 
      */
     public $DisableHigherVideoResolution;
 
     /**
-     * @var string <p>Template description, with a length limit of 256 characters.</p>
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+     * @var string 
      */
     public $SegmentType;
 
     /**
-     * @param string $Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
-     * @param array $StreamInfos <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
-     * @param string $Name <p>Template name. The length cannot exceed 64 characters.</p>
-     * @param string $DrmType <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
-     * @param string $DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
-     * @param string $DrmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
-     * @param integer $DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
-     * @param integer $DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
-     * @param string $Comment <p>Template description, with a length limit of 256 characters.</p>
-     * @param string $SegmentType <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+     * @var integer 
+     */
+    public $SegmentDuration;
+
+    /**
+     * @param string $Format 
+     * @param array $StreamInfos 
+     * @param integer $SubAppId 
+     * @param string $Name 
+     * @param string $DrmType 
+     * @param string $DrmKeyProvider 
+     * @param string $DrmEncryptType 
+     * @param integer $DisableHigherVideoBitrate 
+     * @param integer $DisableHigherVideoResolution 
+     * @param string $Comment 
+     * @param string $SegmentType 
+     * @param integer $SegmentDuration 
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
             $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("SegmentDuration",$param) and $param["SegmentDuration"] !== null) {
+            $this->SegmentDuration = $param["SegmentDuration"];
         }
     }
 }

@@ -18,37 +18,37 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Single-object recognition result.
+ * 
  *
- * @method string getName() Obtain Name of recognized object.
- * @method void setName(string $Name) Set Name of recognized object.
- * @method array getSegmentSet() Obtain List of segments that contain an object.
- * @method void setSegmentSet(array $SegmentSet) Set List of segments that contain an object.
- * @method array getRecognitionSegmentSet() Obtain List of fragments in which the object appears.
- * @method void setRecognitionSegmentSet(array $RecognitionSegmentSet) Set List of fragments in which the object appears.
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method array getRecognitionSegmentSet() Obtain 
+ * @method void setRecognitionSegmentSet(array $RecognitionSegmentSet) Set 
  */
 class AiRecognitionTaskObjectResultItem extends AbstractModel
 {
     /**
-     * @var string Name of recognized object.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var array List of segments that contain an object.
+     * @var array 
      * @deprecated
      */
     public $SegmentSet;
 
     /**
-     * @var array List of fragments in which the object appears.
+     * @var array 
      */
     public $RecognitionSegmentSet;
 
     /**
-     * @param string $Name Name of recognized object.
-     * @param array $SegmentSet List of segments that contain an object.
-     * @param array $RecognitionSegmentSet List of fragments in which the object appears.
+     * @param string $Name 
+     * @param array $SegmentSet 
+     * @param array $RecognitionSegmentSet 
      */
     function __construct()
     {

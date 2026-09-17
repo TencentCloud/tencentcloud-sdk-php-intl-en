@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteFunction request structure.
  *
- * @method string getFunctionName() Obtain Backend interface name invoked.
- * @method void setFunctionName(string $FunctionName) Set Backend interface name invoked.
- * @method string getFunctionArg() Obtain API parameter. Coordinate with the backend for specific parameter format during invocation.
- * @method void setFunctionArg(string $FunctionArg) Set API parameter. Coordinate with the backend for specific parameter format during invocation.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
- * @method string getExtInfo() Obtain Reserved field, used when special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used when special purpose.
+ * @method string getFunctionName() Obtain 
+ * @method void setFunctionName(string $FunctionName) Set 
+ * @method string getFunctionArg() Obtain 
+ * @method void setFunctionArg(string $FunctionArg) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class ExecuteFunctionRequest extends AbstractModel
 {
     /**
-     * @var string Backend interface name invoked.
+     * @var string 
      */
     public $FunctionName;
 
     /**
-     * @var string API parameter. Coordinate with the backend for specific parameter format during invocation.
+     * @var string 
      */
     public $FunctionArg;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @var string 
      */
     public $SessionContext;
 
     /**
-     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @var string 
      */
     public $SessionId;
 
     /**
-     * @var string Reserved field, used when special purpose.
+     * @var string 
      */
     public $ExtInfo;
 
     /**
-     * @param string $FunctionName Backend interface name invoked.
-     * @param string $FunctionArg API parameter. Coordinate with the backend for specific parameter format during invocation.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-     * @param string $ExtInfo Reserved field, used when special purpose.
+     * @param string $FunctionName 
+     * @param string $FunctionArg 
+     * @param integer $SubAppId 
+     * @param string $SessionContext 
+     * @param string $SessionId 
+     * @param string $ExtInfo 
      */
     function __construct()
     {

@@ -18,112 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video segment containing OCR-detected suspicious content
+ * 
  *
- * @method float getStartTimeOffset() Obtain Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getEndTimeOffset() Obtain End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getConfidence() Obtain Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConfidence(float $Confidence) Set Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSuggestion() Obtain Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method array getKeywordSet() Obtain List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKeywordSet(array $KeywordSet) Set List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAreaCoordSet() Obtain Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
- * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
- * @method string getPicUrlExpireTime() Obtain Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
+ * @method string getSuggestion() Obtain 
+ * @method void setSuggestion(string $Suggestion) Set 
+ * @method array getKeywordSet() Obtain 
+ * @method void setKeywordSet(array $KeywordSet) Set 
+ * @method array getAreaCoordSet() Obtain 
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method string getPicUrlExpireTime() Obtain 
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set 
  */
 class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @var string Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string 
      */
     public $Suggestion;
 
     /**
-     * @var array List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $KeywordSet;
 
     /**
-     * @var array Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $AreaCoordSet;
 
     /**
-     * @var string URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var string Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string 
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $EndTimeOffset End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $Confidence Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Suggestion Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param array $KeywordSet List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AreaCoordSet Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Url URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
-     * @param string $PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
+     * @param float $Confidence 
+     * @param string $Suggestion 
+     * @param array $KeywordSet 
+     * @param array $AreaCoordSet 
+     * @param string $Url 
+     * @param string $PicUrlExpireTime 
      */
     function __construct()
     {

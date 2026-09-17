@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based sample management - face information.
+ * 
  *
- * @method string getFaceId() Obtain Face image ID.
- * @method void setFaceId(string $FaceId) Set Face image ID.
- * @method string getUrl() Obtain Face image address.
- * @method void setUrl(string $Url) Set Face image address.
+ * @method string getFaceId() Obtain 
+ * @method void setFaceId(string $FaceId) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class AiSampleFaceInfo extends AbstractModel
 {
     /**
-     * @var string Face image ID.
+     * @var string 
      */
     public $FaceId;
 
     /**
-     * @var string Face image address.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param string $FaceId Face image ID.
-     * @param string $Url Face image address.
+     * @param string $FaceId 
+     * @param string $Url 
      */
     function __construct()
     {

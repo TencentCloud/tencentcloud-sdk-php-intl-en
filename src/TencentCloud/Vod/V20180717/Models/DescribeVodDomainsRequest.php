@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVodDomains request structure.
  *
- * @method array getDomains() Obtain Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
- * @method void setDomains(array $Domains) Set Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
- * @method integer getLimit() Obtain Maximum number of results returned for pagination pull. Default value: 20.
- * @method void setLimit(integer $Limit) Set Maximum number of results returned for pagination pull. Default value: 20.
- * @method integer getOffset() Obtain Starting offset for pagination pull. Default value: 0.
- * @method void setOffset(integer $Offset) Set Starting offset for pagination pull. Default value: 0.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+ * @method array getDomains() Obtain 
+ * @method void setDomains(array $Domains) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class DescribeVodDomainsRequest extends AbstractModel
 {
     /**
-     * @var array Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
+     * @var array 
      */
     public $Domains;
 
     /**
-     * @var integer Maximum number of results returned for pagination pull. Default value: 20.
+     * @var integer 
      */
     public $Limit;
 
     /**
-     * @var integer Starting offset for pagination pull. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param array $Domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
-     * @param integer $Limit Maximum number of results returned for pagination pull. Default value: 20.
-     * @param integer $Offset Starting offset for pagination pull. Default value: 0.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param array $Domains 
+     * @param integer $Limit 
+     * @param integer $Offset 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

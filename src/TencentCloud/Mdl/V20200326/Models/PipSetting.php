@@ -18,52 +18,52 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Picture in Picture Settings
  *
- * @method string getAudioSelection() Obtain 
- * @method void setAudioSelection(string $AudioSelection) Set 
- * @method SourceLayout getLiveSourceLayout() Obtain 
- * @method void setLiveSourceLayout(SourceLayout $LiveSourceLayout) Set 
- * @method SourceLayout getAdSourceLayout() Obtain 
- * @method void setAdSourceLayout(SourceLayout $AdSourceLayout) Set 
- * @method string getBackgroundImgUrl() Obtain 
- * @method void setBackgroundImgUrl(string $BackgroundImgUrl) Set 
- * @method string getAdSourceUrl() Obtain 
- * @method void setAdSourceUrl(string $AdSourceUrl) Set 
+ * @method string getAudioSelection() Obtain Audio selection: LIVE_SOURCE or AD_SOURCE
+ * @method void setAudioSelection(string $AudioSelection) Set Audio selection: LIVE_SOURCE or AD_SOURCE
+ * @method SourceLayout getLiveSourceLayout() Obtain Live streaming source layout configuration
+ * @method void setLiveSourceLayout(SourceLayout $LiveSourceLayout) Set Live streaming source layout configuration
+ * @method SourceLayout getAdSourceLayout() Obtain Advertisement source layout configuration
+ * @method void setAdSourceLayout(SourceLayout $AdSourceLayout) Set Advertisement source layout configuration
+ * @method string getBackgroundImgUrl() Obtain Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
+ * @method void setBackgroundImgUrl(string $BackgroundImgUrl) Set Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
+ * @method string getAdSourceUrl() Obtain Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
+ * @method void setAdSourceUrl(string $AdSourceUrl) Set Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
  */
 class PipSetting extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Audio selection: LIVE_SOURCE or AD_SOURCE
      */
     public $AudioSelection;
 
     /**
-     * @var SourceLayout 
+     * @var SourceLayout Live streaming source layout configuration
      */
     public $LiveSourceLayout;
 
     /**
-     * @var SourceLayout 
+     * @var SourceLayout Advertisement source layout configuration
      */
     public $AdSourceLayout;
 
     /**
-     * @var string 
+     * @var string Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
      */
     public $BackgroundImgUrl;
 
     /**
-     * @var string 
+     * @var string Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
      */
     public $AdSourceUrl;
 
     /**
-     * @param string $AudioSelection 
-     * @param SourceLayout $LiveSourceLayout 
-     * @param SourceLayout $AdSourceLayout 
-     * @param string $BackgroundImgUrl 
-     * @param string $AdSourceUrl 
+     * @param string $AudioSelection Audio selection: LIVE_SOURCE or AD_SOURCE
+     * @param SourceLayout $LiveSourceLayout Live streaming source layout configuration
+     * @param SourceLayout $AdSourceLayout Advertisement source layout configuration
+     * @param string $BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
+     * @param string $AdSourceUrl Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
      */
     function __construct()
     {
