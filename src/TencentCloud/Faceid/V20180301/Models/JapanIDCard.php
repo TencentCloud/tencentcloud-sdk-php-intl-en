@@ -18,84 +18,60 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Japan ID card.
+ * Japan identity card
  *
- * @method string getFullName() Obtain Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullName(string $FullName) Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFullName() Obtain Name.
+ * @method void setFullName(string $FullName) Set Name.
+ * @method string getLicenseNumber() Obtain Identity card
+ * @method void setLicenseNumber(string $LicenseNumber) Set Identity card
  * @method string getAge() Obtain Age
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAge(string $Age) Set Age
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpirationDate() Obtain Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpirationDate(string $ExpirationDate) Set Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormattedAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormattedAddress(string $FormattedAddress) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExpirationDate() Obtain Expiration time.
+ * @method void setExpirationDate(string $ExpirationDate) Set Expiration time.
+ * @method string getFormattedAddress() Obtain Address.
+ * @method void setFormattedAddress(string $FormattedAddress) Set Address.
  */
 class JapanIDCard extends AbstractModel
 {
     /**
-     * @var string Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name.
      */
     public $FullName;
 
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity card
      */
     public $LicenseNumber;
 
     /**
      * @var string Age
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Age;
 
     /**
      * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Birthday;
 
     /**
-     * @var string Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Expiration time.
      */
     public $ExpirationDate;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $FormattedAddress;
 
     /**
-     * @param string $FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FullName Name.
+     * @param string $LicenseNumber Identity card
      * @param string $Age Age
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpirationDate Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExpirationDate Expiration time.
+     * @param string $FormattedAddress Address.
      */
     function __construct()
     {

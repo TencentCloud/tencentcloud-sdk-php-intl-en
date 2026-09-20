@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyUpload request structure.
  *
- * @method string getMediaType() Obtain 
- * @method void setMediaType(string $MediaType) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method string getCoverType() Obtain 
- * @method void setCoverType(string $CoverType) Set 
- * @method string getProcedure() Obtain 
- * @method void setProcedure(string $Procedure) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
- * @method string getStorageRegion() Obtain 
- * @method void setStorageRegion(string $StorageRegion) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getSourceContext() Obtain 
- * @method void setSourceContext(string $SourceContext) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
- * @method string getMediaStoragePath() Obtain 
- * @method void setMediaStoragePath(string $MediaStoragePath) Set 
+ * @method string getMediaType() Obtain <p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
+ * @method void setMediaType(string $MediaType) Set <p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method string getMediaName() Obtain <p>Media name.</p>
+ * @method void setMediaName(string $MediaName) Set <p>Media name.</p>
+ * @method string getCoverType() Obtain <p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
+ * @method void setCoverType(string $CoverType) Set <p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
+ * @method string getProcedure() Obtain <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
+ * @method void setProcedure(string $Procedure) Set <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
+ * @method string getExpireTime() Obtain <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
+ * @method string getStorageRegion() Obtain <p>Designated upload park, applicable only to users with special requirements for upload region.</p>
+ * @method void setStorageRegion(string $StorageRegion) Set <p>Designated upload park, applicable only to users with special requirements for upload region.</p>
+ * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+ * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+ * @method string getSourceContext() Obtain <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+ * @method void setSourceContext(string $SourceContext) Set <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+ * @method string getSessionContext() Obtain <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used when special usage.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used when special usage.</p>
+ * @method string getMediaStoragePath() Obtain <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
  */
 class ApplyUploadRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
      */
     public $MediaType;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Media name.</p>
      */
     public $MediaName;
 
     /**
-     * @var string 
+     * @var string <p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
      */
     public $CoverType;
 
     /**
-     * @var string 
+     * @var string <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
      */
     public $Procedure;
 
     /**
-     * @var string 
+     * @var string <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 
+     * @var string <p>Designated upload park, applicable only to users with special requirements for upload region.</p>
      */
     public $StorageRegion;
 
     /**
-     * @var integer 
+     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
      */
     public $SourceContext;
 
     /**
-     * @var string 
+     * @var string <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string <p>Reserved field, used when special usage.</p>
      */
     public $ExtInfo;
 
     /**
-     * @var string 
+     * @var string <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
      */
     public $MediaStoragePath;
 
     /**
-     * @param string $MediaType 
-     * @param integer $SubAppId 
-     * @param string $MediaName 
-     * @param string $CoverType 
-     * @param string $Procedure 
-     * @param string $ExpireTime 
-     * @param string $StorageRegion 
-     * @param integer $ClassId 
-     * @param string $SourceContext 
-     * @param string $SessionContext 
-     * @param string $ExtInfo 
-     * @param string $MediaStoragePath 
+     * @param string $MediaType <p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * @param string $MediaName <p>Media name.</p>
+     * @param string $CoverType <p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
+     * @param string $Procedure <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
+     * @param string $ExpireTime <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
+     * @param string $StorageRegion <p>Designated upload park, applicable only to users with special requirements for upload region.</p>
+     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+     * @param string $SourceContext <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+     * @param string $SessionContext <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $ExtInfo <p>Reserved field, used when special usage.</p>
+     * @param string $MediaStoragePath <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
      */
     function __construct()
     {

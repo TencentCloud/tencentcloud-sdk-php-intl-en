@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJustInTimeTranscodeTemplates request structure.
  *
- * @method array getNames() Obtain 
- * @method void setNames(array $Names) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method array getNames() Obtain Template name filter condition. The array can contain up to 100 template names.
+ * @method void setNames(array $Names) Set Template name filter condition. The array can contain up to 100 template names.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+ * @method string getType() Obtain Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
+ * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  */
 class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Template name filter condition. The array can contain up to 100 template names.
      */
     public $Names;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param array $Names 
-     * @param integer $SubAppId 
-     * @param string $Type 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param array $Names Template name filter condition. The array can contain up to 100 template names.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+     * @param string $Type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {

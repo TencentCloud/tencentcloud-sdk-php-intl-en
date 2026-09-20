@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageProcessingTemplates request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getDefinitions() Obtain 
- * @method void setDefinitions(array $Definitions) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+ * @method array getDefinitions() Obtain List of image processing template IDs. The length cannot exceed 100.
+ * @method void setDefinitions(array $Definitions) Set List of image processing template IDs. The length cannot exceed 100.
+ * @method string getType() Obtain Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+ * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  */
 class DescribeImageProcessingTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array List of image processing template IDs. The length cannot exceed 100.
      */
     public $Definitions;
 
     /**
-     * @var string 
+     * @var string Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId 
-     * @param array $Definitions 
-     * @param string $Type 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+     * @param array $Definitions List of image processing template IDs. The length cannot exceed 100.
+     * @param string $Type Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {

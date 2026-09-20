@@ -18,44 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Playback statistical information.
  *
- * @method string getTime() Obtain 
- * @method void setTime(string $Time) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method integer getPlayTimes() Obtain 
- * @method void setPlayTimes(integer $PlayTimes) Set 
- * @method integer getTraffic() Obtain 
- * @method void setTraffic(integer $Traffic) Set 
+ * @method string getTime() Obtain Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+ * @method void setTime(string $Time) Set Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method integer getPlayTimes() Obtain Number of plays.
+ * @method void setPlayTimes(integer $PlayTimes) Set Number of plays.
+ * @method integer getTraffic() Obtain Playback traffic volume. Measurement unit: byte.
+ * @method void setTraffic(integer $Traffic) Set Playback traffic volume. Measurement unit: byte.
  */
 class PlayStatInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
      */
     public $Time;
 
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var integer 
+     * @var integer Number of plays.
      */
     public $PlayTimes;
 
     /**
-     * @var integer 
+     * @var integer Playback traffic volume. Measurement unit: byte.
      */
     public $Traffic;
 
     /**
-     * @param string $Time 
-     * @param string $FileId 
-     * @param integer $PlayTimes 
-     * @param integer $Traffic 
+     * @param string $Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+     * @param string $FileId Media file ID.
+     * @param integer $PlayTimes Number of plays.
+     * @param integer $Traffic Playback traffic volume. Measurement unit: byte.
      */
     function __construct()
     {

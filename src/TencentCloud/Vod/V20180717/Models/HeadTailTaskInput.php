@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Ending task input type.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Opening and ending template ID.
+ * @method void setDefinition(integer $Definition) Set Opening and ending template ID.
  */
 class HeadTailTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Opening and ending template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Opening and ending template ID.
      */
     function __construct()
     {

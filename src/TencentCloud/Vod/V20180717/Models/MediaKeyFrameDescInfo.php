@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video timestamp information
  *
- * @method array getKeyFrameDescSet() Obtain 
- * @method void setKeyFrameDescSet(array $KeyFrameDescSet) Set 
+ * @method array getKeyFrameDescSet() Obtain Array of video timestamp information.
+ * @method void setKeyFrameDescSet(array $KeyFrameDescSet) Set Array of video timestamp information.
  */
 class MediaKeyFrameDescInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Array of video timestamp information.
      */
     public $KeyFrameDescSet;
 
     /**
-     * @param array $KeyFrameDescSet 
+     * @param array $KeyFrameDescSet Array of video timestamp information.
      */
     function __construct()
     {

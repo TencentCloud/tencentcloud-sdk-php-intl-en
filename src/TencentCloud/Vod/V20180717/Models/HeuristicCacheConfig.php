@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Heuristic custom time cache configuration
  *
  * @method string getHeuristicCacheTimeSwitch() Obtain Heuristic custom time cache configuration switch. Valid values:
 <li>`on`: Enable;</li>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set Heuristic custom time cache configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method integer getHeuristicCacheTime() Obtain 
- * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set 
+ * @method integer getHeuristicCacheTime() Obtain Unit: seconds.
+ * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set Unit: seconds.
  */
 class HeuristicCacheConfig extends AbstractModel
 {
@@ -39,7 +39,7 @@ class HeuristicCacheConfig extends AbstractModel
     public $HeuristicCacheTimeSwitch;
 
     /**
-     * @var integer 
+     * @var integer Unit: seconds.
      */
     public $HeuristicCacheTime;
 
@@ -47,7 +47,7 @@ class HeuristicCacheConfig extends AbstractModel
      * @param string $HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param integer $HeuristicCacheTime 
+     * @param integer $HeuristicCacheTime Unit: seconds.
      */
     function __construct()
     {

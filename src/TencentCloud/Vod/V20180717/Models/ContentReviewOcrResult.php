@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task result type of the Image Ocr text identification information.
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method array getKeywordSet() Obtain 
- * @method void setKeywordSet(array $KeywordSet) Set 
- * @method array getAreaCoordSet() Obtain 
- * @method void setAreaCoordSet(array $AreaCoordSet) Set 
+ * @method float getConfidence() Obtain <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+ * @method void setConfidence(float $Confidence) Set <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+ * @method string getSuggestion() Obtain <p>Result suggestions for Ocr text identification. Value range:</p><li>pass;</li><li>review;</li><li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set <p>Result suggestions for Ocr text identification. Value range:</p><li>pass;</li><li>review;</li><li>block.</li>
+ * @method array getKeywordSet() Obtain <p>List of suspicious keywords for Ocr text identification.</p>
+ * @method void setKeywordSet(array $KeywordSet) Set <p>List of suspicious keywords for Ocr text identification.</p>
+ * @method array getAreaCoordSet() Obtain <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
  */
 class ContentReviewOcrResult extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string <p>Result suggestions for Ocr text identification. Value range:</p><li>pass;</li><li>review;</li><li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array 
+     * @var array <p>List of suspicious keywords for Ocr text identification.</p>
      */
     public $KeywordSet;
 
     /**
-     * @var array 
+     * @var array <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
      */
     public $AreaCoordSet;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param array $KeywordSet 
-     * @param array $AreaCoordSet 
+     * @param float $Confidence <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+     * @param string $Suggestion <p>Result suggestions for Ocr text identification. Value range:</p><li>pass;</li><li>review;</li><li>block.</li>
+     * @param array $KeywordSet <p>List of suspicious keywords for Ocr text identification.</p>
+     * @param array $AreaCoordSet <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
      */
     function __construct()
     {

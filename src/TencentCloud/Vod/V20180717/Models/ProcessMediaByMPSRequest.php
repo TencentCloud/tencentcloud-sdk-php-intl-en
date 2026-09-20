@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByMPS request structure.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getMPSProcessMediaParams() Obtain 
- * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) Set 
- * @method MPSAiAnalysisTaskInput getAiAnalysisTask() Obtain 
- * @method void setAiAnalysisTask(MPSAiAnalysisTaskInput $AiAnalysisTask) Set 
- * @method MPSSmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain 
- * @method void setSmartSubtitlesTask(MPSSmartSubtitlesTaskInput $SmartSubtitlesTask) Set 
- * @method MPSSmartEraseTaskInput getSmartEraseTask() Obtain 
- * @method void setSmartEraseTask(MPSSmartEraseTaskInput $SmartEraseTask) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+ * @method string getMPSProcessMediaParams() Obtain <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
+ * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) Set <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
+ * @method MPSAiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+ * @method void setAiAnalysisTask(MPSAiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+ * @method MPSSmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
+ * @method void setSmartSubtitlesTask(MPSSmartSubtitlesTaskInput $SmartSubtitlesTask) Set <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
+ * @method MPSSmartEraseTaskInput getSmartEraseTask() Obtain <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
+ * @method void setSmartEraseTask(MPSSmartEraseTaskInput $SmartEraseTask) Set <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used for special purposes.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purposes.</p>
  */
 class ProcessMediaByMPSRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public $FileId;
 
     /**
-     * @var integer 
+     * @var integer <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
      */
     public $MPSProcessMediaParams;
 
     /**
-     * @var MPSAiAnalysisTaskInput 
+     * @var MPSAiAnalysisTaskInput <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
      */
     public $AiAnalysisTask;
 
     /**
-     * @var MPSSmartSubtitlesTaskInput 
+     * @var MPSSmartSubtitlesTaskInput <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var MPSSmartEraseTaskInput 
+     * @var MPSSmartEraseTaskInput <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
      */
     public $SmartEraseTask;
 
     /**
-     * @var string 
+     * @var string <p>Reserved field, used for special purposes.</p>
      */
     public $ExtInfo;
 
     /**
-     * @param string $FileId 
-     * @param integer $SubAppId 
-     * @param string $MPSProcessMediaParams 
-     * @param MPSAiAnalysisTaskInput $AiAnalysisTask 
-     * @param MPSSmartSubtitlesTaskInput $SmartSubtitlesTask 
-     * @param MPSSmartEraseTaskInput $SmartEraseTask 
-     * @param string $ExtInfo 
+     * @param string $FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param string $MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
+     * @param MPSAiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+     * @param MPSSmartSubtitlesTaskInput $SmartSubtitlesTask <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
+     * @param MPSSmartEraseTaskInput $SmartEraseTask <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
+     * @param string $ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     function __construct()
     {

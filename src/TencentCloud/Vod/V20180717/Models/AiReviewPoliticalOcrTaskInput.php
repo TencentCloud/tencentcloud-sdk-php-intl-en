@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task input parameter type for audio/video moderation where Ocr text involves inappropriate information
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Template ID for authentication involving inappropriate information.
+ * @method void setDefinition(integer $Definition) Set Template ID for authentication involving inappropriate information.
  */
 class AiReviewPoliticalOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Template ID for authentication involving inappropriate information.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Template ID for authentication involving inappropriate information.
      */
     function __construct()
     {

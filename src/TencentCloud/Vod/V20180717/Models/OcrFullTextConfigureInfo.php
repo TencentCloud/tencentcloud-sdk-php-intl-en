@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task control parameters for full text recognition
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Switch for the full text recognition task. Available values:
+<li>ON: enables the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Switch for the full text recognition task. Available values:
+<li>ON: enables the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
  */
 class OcrFullTextConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Switch for the full text recognition task. Available values:
+<li>ON: enables the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Switch for the full text recognition task. Available values:
+<li>ON: enables the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
      */
     function __construct()
     {

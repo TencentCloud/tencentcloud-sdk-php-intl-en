@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Scenario-based AIGC image generation task info
  *
- * @method AigcImageSceneInfo getSceneInfo() Obtain 
- * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) Set 
- * @method array getFileInfos() Obtain 
- * @method void setFileInfos(array $FileInfos) Set 
- * @method SceneAigcImageOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set 
+ * @method AigcImageSceneInfo getSceneInfo() Obtain Scenario-based image generation parameter configuration.
+ * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) Set Scenario-based image generation parameter configuration.
+ * @method array getFileInfos() Obtain List of input images.
+ * @method void setFileInfos(array $FileInfos) Set List of input images.
+ * @method SceneAigcImageOutputConfig getOutputConfig() Obtain Output media file configuration for scenario-based image generation tasks.
+ * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set Output media file configuration for scenario-based image generation tasks.
  */
 class SceneAigcImageTaskInput extends AbstractModel
 {
     /**
-     * @var AigcImageSceneInfo 
+     * @var AigcImageSceneInfo Scenario-based image generation parameter configuration.
      */
     public $SceneInfo;
 
     /**
-     * @var array 
+     * @var array List of input images.
      */
     public $FileInfos;
 
     /**
-     * @var SceneAigcImageOutputConfig 
+     * @var SceneAigcImageOutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     public $OutputConfig;
 
     /**
-     * @param AigcImageSceneInfo $SceneInfo 
-     * @param array $FileInfos 
-     * @param SceneAigcImageOutputConfig $OutputConfig 
+     * @param AigcImageSceneInfo $SceneInfo Scenario-based image generation parameter configuration.
+     * @param array $FileInfos List of input images.
+     * @param SceneAigcImageOutputConfig $OutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     function __construct()
     {

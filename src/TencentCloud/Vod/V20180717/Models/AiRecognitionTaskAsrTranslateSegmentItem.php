@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Voice translation recognition segment.
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
- * @method string getTranslation() Obtain 
- * @method void setTranslation(string $Translation) Set 
+ * @method float getConfidence() Obtain Confidence of a recognized segment in speech translation. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment in speech translation. Value range: 0-100.
+ * @method float getStartTimeOffset() Obtain Start time offset of a speech translation recognized segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a speech translation recognized segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a voice translation recognized segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a voice translation recognized segment, in seconds.
+ * @method string getText() Obtain Recognized text.
+ * @method void setText(string $Text) Set Recognized text.
+ * @method string getTranslation() Obtain Translated text.
+ * @method void setTranslation(string $Translation) Set Translated text.
  */
 class AiRecognitionTaskAsrTranslateSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Confidence of a recognized segment in speech translation. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var float 
+     * @var float Start time offset of a speech translation recognized segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of a voice translation recognized segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var string 
+     * @var string Recognized text.
      */
     public $Text;
 
     /**
-     * @var string 
+     * @var string Translated text.
      */
     public $Translation;
 
     /**
-     * @param float $Confidence 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param string $Text 
-     * @param string $Translation 
+     * @param float $Confidence Confidence of a recognized segment in speech translation. Value range: 0-100.
+     * @param float $StartTimeOffset Start time offset of a speech translation recognized segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a voice translation recognized segment, in seconds.
+     * @param string $Text Recognized text.
+     * @param string $Translation Translated text.
      */
     function __construct()
     {

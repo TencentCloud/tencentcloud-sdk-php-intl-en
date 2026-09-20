@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * TRTC simultaneous recording information.
  *
- * @method integer getSdkAppId() Obtain 
- * @method void setSdkAppId(integer $SdkAppId) Set 
- * @method string getRoomId() Obtain 
- * @method void setRoomId(string $RoomId) Set 
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method array getUserIds() Obtain 
- * @method void setUserIds(array $UserIds) Set 
+ * @method integer getSdkAppId() Obtain TRTC application ID.
+ * @method void setSdkAppId(integer $SdkAppId) Set TRTC application ID.
+ * @method string getRoomId() Obtain TRTC room ID.
+ * @method void setRoomId(string $RoomId) Set TRTC room ID.
+ * @method string getTaskId() Obtain Recording task ID.
+ * @method void setTaskId(string $TaskId) Set Recording task ID.
+ * @method array getUserIds() Obtain List of user IDs participating in recording.
+ * @method void setUserIds(array $UserIds) Set List of user IDs participating in recording.
  */
 class TrtcRecordInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer TRTC application ID.
      */
     public $SdkAppId;
 
     /**
-     * @var string 
+     * @var string TRTC room ID.
      */
     public $RoomId;
 
     /**
-     * @var string 
+     * @var string Recording task ID.
      */
     public $TaskId;
 
     /**
-     * @var array 
+     * @var array List of user IDs participating in recording.
      */
     public $UserIds;
 
     /**
-     * @param integer $SdkAppId 
-     * @param string $RoomId 
-     * @param string $TaskId 
-     * @param array $UserIds 
+     * @param integer $SdkAppId TRTC application ID.
+     * @param string $RoomId TRTC room ID.
+     * @param string $TaskId Recording task ID.
+     * @param array $UserIds List of user IDs participating in recording.
      */
     function __construct()
     {

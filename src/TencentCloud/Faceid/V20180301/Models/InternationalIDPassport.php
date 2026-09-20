@@ -18,144 +18,100 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+ * Hong Kong, Macao, and Taiwan region as well as overseas passport
  *
  * @method string getLicenseNumber() Obtain Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLicenseNumber(string $LicenseNumber) Set Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFullName() Obtain Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullName(string $FullName) Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFullName() Obtain Name
+ * @method void setFullName(string $FullName) Set Name
  * @method string getSurname() Obtain Last name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSurname(string $Surname) Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGivenName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGivenName(string $GivenName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDateOfExpiration() Obtain Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDateOfExpiration(string $DateOfExpiration) Set Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGivenName() Obtain Name
+ * @method void setGivenName(string $GivenName) Set Name
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
+ * @method string getSex() Obtain Gender (F: female, M: male).
+ * @method void setSex(string $Sex) Set Gender (F: female, M: male).
+ * @method string getDateOfExpiration() Obtain Validity period.
+ * @method void setDateOfExpiration(string $DateOfExpiration) Set Validity period.
  * @method string getIssuingCountry() Obtain Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIssuingCountry(string $IssuingCountry) Set Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNationalityCode() Obtain Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNationalityCode(string $NationalityCode) Set Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPassportCodeFirst() Obtain The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassportCodeFirst(string $PassportCodeFirst) Set The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPassportCodeSecond() Obtain The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassportCodeSecond(string $PassportCodeSecond) Set The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNationalityCode() Obtain Country region code
+ * @method void setNationalityCode(string $NationalityCode) Set Country region code
+ * @method string getPassportCodeFirst() Obtain MRZ Code sequence in the first row at the bottom
+ * @method void setPassportCodeFirst(string $PassportCodeFirst) Set MRZ Code sequence in the first row at the bottom
+ * @method string getPassportCodeSecond() Obtain MRZ Code sequence in the second line from the bottom
+ * @method void setPassportCodeSecond(string $PassportCodeSecond) Set MRZ Code sequence in the second line from the bottom
  */
 class InternationalIDPassport extends AbstractModel
 {
     /**
      * @var string Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LicenseNumber;
 
     /**
-     * @var string Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $FullName;
 
     /**
      * @var string Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Surname;
 
     /**
-     * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $GivenName;
 
     /**
-     * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
-     * @var string Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Gender (F: female, M: male).
      */
     public $Sex;
 
     /**
-     * @var string Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Validity period.
      */
     public $DateOfExpiration;
 
     /**
      * @var string Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IssuingCountry;
 
     /**
-     * @var string Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Country region code
      */
     public $NationalityCode;
 
     /**
-     * @var string The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string MRZ Code sequence in the first row at the bottom
      */
     public $PassportCodeFirst;
 
     /**
-     * @var string The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string MRZ Code sequence in the second line from the bottom
      */
     public $PassportCodeSecond;
 
     /**
      * @param string $LicenseNumber Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FullName Name
      * @param string $Surname Last name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GivenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DateOfExpiration Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GivenName Name
+     * @param string $Birthday Date of birth
+     * @param string $Sex Gender (F: female, M: male).
+     * @param string $DateOfExpiration Validity period.
      * @param string $IssuingCountry Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NationalityCode Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PassportCodeFirst The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PassportCodeSecond The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NationalityCode Country region code
+     * @param string $PassportCodeFirst MRZ Code sequence in the first row at the bottom
+     * @param string $PassportCodeSecond MRZ Code sequence in the second line from the bottom
      */
     function __construct()
     {

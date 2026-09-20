@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Text keyword recognition input.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Text keyword recognition template ID.
+ * @method void setDefinition(integer $Definition) Set Text keyword recognition template ID.
  */
 class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Text keyword recognition template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Text keyword recognition template ID.
      */
     function __construct()
     {

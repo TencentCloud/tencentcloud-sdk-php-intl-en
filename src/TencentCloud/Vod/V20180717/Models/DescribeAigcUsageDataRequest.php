@@ -20,44 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcUsageData request structure.
  *
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method string getAigcType() Obtain 
- * @method void setAigcType(string $AigcType) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getStartTime() Obtain <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method string getEndTime() Obtain <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+ * @method string getAigcType() Obtain <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+ * @method void setAigcType(string $AigcType) Set <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
  * @method string getAPIKey() Obtain <p>API Key</p>
  * @method void setAPIKey(string $APIKey) Set <p>API Key</p>
  * @method array getAPIKeys() Obtain <p>API Key</p>
  * @method void setAPIKeys(array $APIKeys) Set <p>API Key</p>
- * @method string getScrollToken() Obtain 
- * @method void setScrollToken(string $ScrollToken) Set 
- * @method integer getPageSize() Obtain 
- * @method void setPageSize(integer $PageSize) Set 
- * @method string getReqId() Obtain 
- * @method void setReqId(string $ReqId) Set 
+ * @method string getScrollToken() Obtain <p>Query cursor</p>
+ * @method void setScrollToken(string $ScrollToken) Set <p>Query cursor</p>
+ * @method integer getPageSize() Obtain <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
+ * @method void setPageSize(integer $PageSize) Set <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
+ * @method string getReqId() Obtain <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
+ * @method void setReqId(string $ReqId) Set <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
  */
 class DescribeAigcUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public $EndTime;
 
     /**
-     * @var string 
+     * @var string <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
      */
     public $AigcType;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
@@ -72,30 +72,30 @@ class DescribeAigcUsageDataRequest extends AbstractModel
     public $APIKeys;
 
     /**
-     * @var string 
+     * @var string <p>Query cursor</p>
      */
     public $ScrollToken;
 
     /**
-     * @var integer 
+     * @var integer <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
      */
     public $PageSize;
 
     /**
-     * @var string 
+     * @var string <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
      */
     public $ReqId;
 
     /**
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param string $AigcType 
-     * @param integer $SubAppId 
+     * @param string $StartTime <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param string $EndTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param string $AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      * @param string $APIKey <p>API Key</p>
      * @param array $APIKeys <p>API Key</p>
-     * @param string $ScrollToken 
-     * @param integer $PageSize 
-     * @param string $ReqId 
+     * @param string $ScrollToken <p>Query cursor</p>
+     * @param integer $PageSize <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
+     * @param string $ReqId <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
      */
     function __construct()
     {

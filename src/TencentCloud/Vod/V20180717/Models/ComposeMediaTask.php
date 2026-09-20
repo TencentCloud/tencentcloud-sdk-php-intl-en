@@ -18,92 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Media file production task information
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method ComposeMediaTaskInput getInput() Obtain 
- * @method void setInput(ComposeMediaTaskInput $Input) Set 
- * @method ComposeMediaTaskOutput getOutput() Obtain 
- * @method void setOutput(ComposeMediaTaskOutput $Output) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method integer getErrCode() Obtain Error code.
+<li>0: success;</li>
+<li>Other value: Failed.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code.
+<li>0: success;</li>
+<li>Other value: Failed.</li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method integer getProgress() Obtain Progress of the media file creation task, with a value range of [0-100].
+ * @method void setProgress(integer $Progress) Set Progress of the media file creation task, with a value range of [0-100].
+ * @method ComposeMediaTaskInput getInput() Obtain Input of a media file creation task.
+ * @method void setInput(ComposeMediaTaskInput $Input) Set Input of a media file creation task.
+ * @method ComposeMediaTaskOutput getOutput() Obtain Output of the media file creation task.
+ * @method void setOutput(ComposeMediaTaskOutput $Output) Set Output of the media file creation task.
+ * @method MediaMetaData getMetaData() Obtain Meta information of the output video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Meta information of the output video.
+ * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  */
 class ComposeMediaTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code.
+<li>0: success;</li>
+<li>Other value: Failed.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var integer 
+     * @var integer Progress of the media file creation task, with a value range of [0-100].
      */
     public $Progress;
 
     /**
-     * @var ComposeMediaTaskInput 
+     * @var ComposeMediaTaskInput Input of a media file creation task.
      */
     public $Input;
 
     /**
-     * @var ComposeMediaTaskOutput 
+     * @var ComposeMediaTaskOutput Output of the media file creation task.
      */
     public $Output;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Meta information of the output video.
      */
     public $MetaData;
 
     /**
-     * @var string 
+     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param integer $Progress 
-     * @param ComposeMediaTaskInput $Input 
-     * @param ComposeMediaTaskOutput $Output 
-     * @param MediaMetaData $MetaData 
-     * @param string $SessionId 
-     * @param string $SessionContext 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param integer $ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: Failed.</li>
+     * @param string $Message Error message.
+     * @param integer $Progress Progress of the media file creation task, with a value range of [0-100].
+     * @param ComposeMediaTaskInput $Input Input of a media file creation task.
+     * @param ComposeMediaTaskOutput $Output Output of the media file creation task.
+     * @param MediaMetaData $MetaData Meta information of the output video.
+     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     function __construct()
     {

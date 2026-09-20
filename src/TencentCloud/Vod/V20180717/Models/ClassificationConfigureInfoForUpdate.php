@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent Classification Task Control Parameters
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Intelligent categorization task switch. Available values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: disables the intelligent categorization task.</li>
+ * @method void setSwitch(string $Switch) Set Intelligent categorization task switch. Available values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: disables the intelligent categorization task.</li>
  */
 class ClassificationConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Intelligent categorization task switch. Available values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: disables the intelligent categorization task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Intelligent categorization task switch. Available values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: disables the intelligent categorization task.</li>
      */
     function __construct()
     {

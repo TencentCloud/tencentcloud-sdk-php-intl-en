@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteFunction request structure.
  *
- * @method string getFunctionName() Obtain 
- * @method void setFunctionName(string $FunctionName) Set 
- * @method string getFunctionArg() Obtain 
- * @method void setFunctionArg(string $FunctionArg) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getFunctionName() Obtain <p>Backend interface name invoked.</p>
+ * @method void setFunctionName(string $FunctionName) Set <p>Backend interface name invoked.</p>
+ * @method string getFunctionArg() Obtain <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
+ * @method void setFunctionArg(string $FunctionArg) Set <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used for special purposes.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purposes.</p>
  */
 class ExecuteFunctionRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Backend interface name invoked.</p>
      */
     public $FunctionName;
 
     /**
-     * @var string 
+     * @var string <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
      */
     public $FunctionArg;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string <p>Reserved field, used for special purposes.</p>
      */
     public $ExtInfo;
 
     /**
-     * @param string $FunctionName 
-     * @param string $FunctionArg 
-     * @param integer $SubAppId 
-     * @param string $SessionContext 
-     * @param string $SessionId 
-     * @param string $ExtInfo 
+     * @param string $FunctionName <p>Backend interface name invoked.</p>
+     * @param string $FunctionArg <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param string $ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     function __construct()
     {

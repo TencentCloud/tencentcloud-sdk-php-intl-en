@@ -18,29 +18,37 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Watermark parameters for tracing the source
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method string getSwitch() Obtain Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
+ * @method void setSwitch(string $Switch) Set Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
+ * @method integer getDefinition() Obtain Deprecated. Do not use.
+ * @method void setDefinition(integer $Definition) Set Deprecated. Do not use.
  */
 class TraceWatermarkInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
      */
     public $Switch;
 
     /**
-     * @var integer 
+     * @var integer Deprecated. Do not use.
      * @deprecated
      */
     public $Definition;
 
     /**
-     * @param string $Switch 
-     * @param integer $Definition 
+     * @param string $Switch Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
+     * @param integer $Definition Deprecated. Do not use.
      */
     function __construct()
     {

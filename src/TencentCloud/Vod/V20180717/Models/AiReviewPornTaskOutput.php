@@ -18,60 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Authentication result info involving offensive content
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
- * @method string getSegmentSetFileUrl() Obtain 
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
- * @method string getSegmentSetFileUrlExpireTime() Obtain 
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
+ * @method float getConfidence() Obtain Video identification involves scoring offensive content, with a score from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Video identification involves scoring offensive content, with a score from 0 to 100.
+ * @method string getSuggestion() Obtain Result suggestions for authentication involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestions for authentication involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method string getLabel() Obtain Result tag of video identification involving offensive content. Value range:
+<li>porn: Pornography.</li>
+<li>sexy: Sexy.</li>
+<li>vulgar: Vulgar.</li>
+<li>intimacy: intimate behavior.</li>
+ * @method void setLabel(string $Label) Set Result tag of video identification involving offensive content. Value range:
+<li>porn: Pornography.</li>
+<li>sexy: Sexy.</li>
+<li>vulgar: Vulgar.</li>
+<li>intimacy: intimate behavior.</li>
+ * @method array getSegmentSet() Obtain List of video segments suspected of involving offensive content.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of involving offensive content.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiReviewPornTaskOutput extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Video identification involves scoring offensive content, with a score from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Result suggestions for authentication involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Result tag of video identification involving offensive content. Value range:
+<li>porn: Pornography.</li>
+<li>sexy: Sexy.</li>
+<li>vulgar: Vulgar.</li>
+<li>intimacy: intimate behavior.</li>
      */
     public $Label;
 
     /**
-     * @var array 
+     * @var array List of video segments suspected of involving offensive content.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string 
+     * @var string URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param string $Label 
-     * @param array $SegmentSet 
-     * @param string $SegmentSetFileUrl 
-     * @param string $SegmentSetFileUrlExpireTime 
+     * @param float $Confidence Video identification involves scoring offensive content, with a score from 0 to 100.
+     * @param string $Suggestion Result suggestions for authentication involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param string $Label Result tag of video identification involving offensive content. Value range:
+<li>porn: Pornography.</li>
+<li>sexy: Sexy.</li>
+<li>vulgar: Vulgar.</li>
+<li>intimacy: intimate behavior.</li>
+     * @param array $SegmentSet List of video segments suspected of involving offensive content.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -18,76 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information of an audio/video moderation task.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method ReviewAudioVideoTaskInput getInput() Obtain 
- * @method void setInput(ReviewAudioVideoTaskInput $Input) Set 
- * @method ReviewAudioVideoTaskOutput getOutput() Obtain 
- * @method void setOutput(ReviewAudioVideoTaskOutput $Output) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method ReviewAudioVideoTaskInput getInput() Obtain Input of an audio/video moderation task.
+ * @method void setInput(ReviewAudioVideoTaskInput $Input) Set Input of an audio/video moderation task.
+ * @method ReviewAudioVideoTaskOutput getOutput() Obtain Output of the audio/video moderation task.
+ * @method void setOutput(ReviewAudioVideoTaskOutput $Output) Set Output of the audio/video moderation task.
+ * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method string getSessionContext() Obtain Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
  */
 class ReviewAudioVideoTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var ReviewAudioVideoTaskInput 
+     * @var ReviewAudioVideoTaskInput Input of an audio/video moderation task.
      */
     public $Input;
 
     /**
-     * @var ReviewAudioVideoTaskOutput 
+     * @var ReviewAudioVideoTaskOutput Output of the audio/video moderation task.
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param string $ErrCodeExt 
-     * @param string $Message 
-     * @param ReviewAudioVideoTaskInput $Input 
-     * @param ReviewAudioVideoTaskOutput $Output 
-     * @param string $SessionId 
-     * @param string $SessionContext 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $Message Error message.
+     * @param ReviewAudioVideoTaskInput $Input Input of an audio/video moderation task.
+     * @param ReviewAudioVideoTaskOutput $Output Output of the audio/video moderation task.
+     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param string $SessionContext Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
      */
     function __construct()
     {

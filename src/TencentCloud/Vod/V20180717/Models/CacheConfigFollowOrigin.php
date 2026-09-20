@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Path cache follows the origin site configuration.
  *
  * @method string getSwitch() Obtain Path cache follows the origin site configuration switch. Valid values:
 <li>`on`: Enable;</li>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Path cache follows the origin site configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method HeuristicCache getHeuristicCache() Obtain 
- * @method void setHeuristicCache(HeuristicCache $HeuristicCache) Set 
+ * @method HeuristicCache getHeuristicCache() Obtain Heuristic cache configuration.
+ * @method void setHeuristicCache(HeuristicCache $HeuristicCache) Set Heuristic cache configuration.
  */
 class CacheConfigFollowOrigin extends AbstractModel
 {
@@ -39,7 +39,7 @@ class CacheConfigFollowOrigin extends AbstractModel
     public $Switch;
 
     /**
-     * @var HeuristicCache 
+     * @var HeuristicCache Heuristic cache configuration.
      */
     public $HeuristicCache;
 
@@ -47,7 +47,7 @@ class CacheConfigFollowOrigin extends AbstractModel
      * @param string $Switch Path cache follows the origin site configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param HeuristicCache $HeuristicCache 
+     * @param HeuristicCache $HeuristicCache Heuristic cache configuration.
      */
     function __construct()
     {

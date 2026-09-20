@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Result type of Asr text moderation prohibited task for audio/video moderation.
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method AiReviewProhibitedAsrTaskInput getInput() Obtain 
- * @method void setInput(AiReviewProhibitedAsrTaskInput $Input) Set 
- * @method AiReviewProhibitedAsrTaskOutput getOutput() Obtain 
- * @method void setOutput(AiReviewProhibitedAsrTaskOutput $Output) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method AiReviewProhibitedAsrTaskInput getInput() Obtain Input for Asr text moderation tasks in audio/video moderation.
+ * @method void setInput(AiReviewProhibitedAsrTaskInput $Input) Set Input for Asr text moderation tasks in audio/video moderation.
+ * @method AiReviewProhibitedAsrTaskOutput getOutput() Obtain Asr text moderation prohibited task output for audio/video moderation.
+ * @method void setOutput(AiReviewProhibitedAsrTaskOutput $Output) Set Asr text moderation prohibited task output for audio/video moderation.
+ * @method integer getProgress() Obtain Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
  */
 class AiReviewTaskProhibitedAsrResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer 
+     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var AiReviewProhibitedAsrTaskInput 
+     * @var AiReviewProhibitedAsrTaskInput Input for Asr text moderation tasks in audio/video moderation.
      */
     public $Input;
 
     /**
-     * @var AiReviewProhibitedAsrTaskOutput 
+     * @var AiReviewProhibitedAsrTaskOutput Asr text moderation prohibited task output for audio/video moderation.
      */
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
      */
     public $Progress;
 
     /**
-     * @param string $Status 
-     * @param string $ErrCodeExt 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param AiReviewProhibitedAsrTaskInput $Input 
-     * @param AiReviewProhibitedAsrTaskOutput $Output 
-     * @param integer $Progress 
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param string $Message Error message.
+     * @param AiReviewProhibitedAsrTaskInput $Input Input for Asr text moderation tasks in audio/video moderation.
+     * @param AiReviewProhibitedAsrTaskOutput $Output Asr text moderation prohibited task output for audio/video moderation.
+     * @param integer $Progress Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
      */
     function __construct()
     {

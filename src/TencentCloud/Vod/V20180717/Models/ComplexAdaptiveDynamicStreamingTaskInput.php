@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input parameter of an adaptive bitrate streaming task.
  *
- * @method ComplexAdaptiveDynamicStreamingTaskStreamPara getStreamPara() Obtain 
- * @method void setStreamPara(ComplexAdaptiveDynamicStreamingTaskStreamPara $StreamPara) Set 
+ * @method ComplexAdaptiveDynamicStreamingTaskStreamPara getStreamPara() Obtain Adaptive bitrate parameters.
+ * @method void setStreamPara(ComplexAdaptiveDynamicStreamingTaskStreamPara $StreamPara) Set Adaptive bitrate parameters.
  */
 class ComplexAdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
     /**
-     * @var ComplexAdaptiveDynamicStreamingTaskStreamPara 
+     * @var ComplexAdaptiveDynamicStreamingTaskStreamPara Adaptive bitrate parameters.
      */
     public $StreamPara;
 
     /**
-     * @param ComplexAdaptiveDynamicStreamingTaskStreamPara $StreamPara 
+     * @param ComplexAdaptiveDynamicStreamingTaskStreamPara $StreamPara Adaptive bitrate parameters.
      */
     function __construct()
     {

@@ -20,146 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Philippines driving license
  *
- * @method string getName() Obtain Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Name
+ * @method void setName(string $Name) Set Name
  * @method string getLastName() Obtain Last name
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastName(string $LastName) Set Last name
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFirstName(string $FirstName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMiddleName() Obtain Middle name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMiddleName(string $MiddleName) Set Middle name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNationality() Obtain Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNationality(string $Nationality) Set Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNo() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNo(string $LicenseNo) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpiresDate() Obtain Date of expiry
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpiresDate(string $ExpiresDate) Set Date of expiry
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAgencyCode() Obtain Agency code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAgencyCode(string $AgencyCode) Set Agency code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSex() Obtain Sex
+ * @method void setSex(string $Sex) Set Sex
+ * @method string getAddress() Obtain Address.
+ * @method void setAddress(string $Address) Set Address.
+ * @method string getLicenseNo() Obtain ID number
+ * @method void setLicenseNo(string $LicenseNo) Set ID number
+ * @method string getExpiresDate() Obtain Validity period.
+ * @method void setExpiresDate(string $ExpiresDate) Set Validity period.
+ * @method string getAgencyCode() Obtain Organization code
+ * @method void setAgencyCode(string $AgencyCode) Set Organization code
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
  */
 class PhilippinesDrivingLicense extends AbstractModel
 {
     /**
-     * @var string Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $Name;
 
     /**
      * @var string Last name
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastName;
 
     /**
      * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstName;
 
     /**
      * @var string Middle name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MiddleName;
 
     /**
      * @var string Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nationality;
 
     /**
-     * @var string Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sex
      */
     public $Sex;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $Address;
 
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID number
      */
     public $LicenseNo;
 
     /**
-     * @var string Date of expiry
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Validity period.
      */
     public $ExpiresDate;
 
     /**
-     * @var string Agency code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Organization code
      */
     public $AgencyCode;
 
     /**
-     * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
-     * @param string $Name Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Name
      * @param string $LastName Last name
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MiddleName Middle name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Nationality Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNo License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpiresDate Date of expiry
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AgencyCode Agency code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Sex Sex
+     * @param string $Address Address.
+     * @param string $LicenseNo ID number
+     * @param string $ExpiresDate Validity period.
+     * @param string $AgencyCode Organization code
+     * @param string $Birthday Date of birth
      */
     function __construct()
     {

@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle suppression module column configuration in MPS
  *
- * @method integer getSubtitleLayoutConfigSwitch() Obtain 
- * @method void setSubtitleLayoutConfigSwitch(integer $SubtitleLayoutConfigSwitch) Set 
- * @method integer getLineSpacing() Obtain 
- * @method void setLineSpacing(integer $LineSpacing) Set 
- * @method integer getLineSpacingUnit() Obtain 
- * @method void setLineSpacingUnit(integer $LineSpacingUnit) Set 
- * @method string getAlignment() Obtain 
- * @method void setAlignment(string $Alignment) Set 
+ * @method integer getSubtitleLayoutConfigSwitch() Obtain <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
+ * @method void setSubtitleLayoutConfigSwitch(integer $SubtitleLayoutConfigSwitch) Set <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
+ * @method integer getLineSpacing() Obtain <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
+ * @method void setLineSpacing(integer $LineSpacing) Set <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
+ * @method integer getLineSpacingUnit() Obtain <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method void setLineSpacingUnit(integer $LineSpacingUnit) Set <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method string getAlignment() Obtain <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
+ * @method void setAlignment(string $Alignment) Set <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
  */
 class MPSSubtitleLayoutConfig extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public $SubtitleLayoutConfigSwitch;
 
     /**
-     * @var integer 
+     * @var integer <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
      */
     public $LineSpacing;
 
     /**
-     * @var integer 
+     * @var integer <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public $LineSpacingUnit;
 
     /**
-     * @var string 
+     * @var string <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
      */
     public $Alignment;
 
     /**
-     * @param integer $SubtitleLayoutConfigSwitch 
-     * @param integer $LineSpacing 
-     * @param integer $LineSpacingUnit 
-     * @param string $Alignment 
+     * @param integer $SubtitleLayoutConfigSwitch <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
+     * @param integer $LineSpacing <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
+     * @param integer $LineSpacingUnit <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param string $Alignment <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
      */
     function __construct()
     {

@@ -20,91 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProcedureTemplate request structure.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain 
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set 
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain 
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set 
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
- * @method array getAiRecognitionTaskSet() Obtain 
- * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set 
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
- * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain 
- * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set 
- * @method array getImportMediaKnowledgeTaskSet() Obtain 
- * @method void setImportMediaKnowledgeTaskSet(array $ImportMediaKnowledgeTaskSet) Set 
+ * @method string getName() Obtain <p>Task flow name (supports Chinese, up to 20 characters).</p>
+ * @method void setName(string $Name) Set <p>Task flow name (supports Chinese, up to 20 characters).</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method string getComment() Obtain <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain <p>Video processing type task parameters.</p>
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set <p>Video processing type task parameters.</p>
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the AI content analysis task.</p>
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the AI content analysis task.</p>
+ * @method array getAiRecognitionTaskSet() Obtain <p>Parameters for the AI content recognition task.</p>
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set <p>Parameters for the AI content recognition task.</p>
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
+ * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain <p>Parameters for the audio and video moderation task.</p>
+ * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set <p>Parameters for the audio and video moderation task.</p>
+ * @method array getImportMediaKnowledgeTaskSet() Obtain <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
+ * @method void setImportMediaKnowledgeTaskSet(array $ImportMediaKnowledgeTaskSet) Set <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
  */
 class CreateProcedureTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Task flow name (supports Chinese, up to 20 characters).</p>
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var MediaProcessTaskInput 
+     * @var MediaProcessTaskInput <p>Video processing type task parameters.</p>
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput 
+     * @var AiContentReviewTaskInput <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput 
+     * @var AiAnalysisTaskInput <p>Parameters for the AI content analysis task.</p>
      */
     public $AiAnalysisTask;
 
     /**
-     * @var array 
+     * @var array <p>Parameters for the AI content recognition task.</p>
      */
     public $AiRecognitionTaskSet;
 
     /**
-     * @var AiRecognitionTaskInput 
+     * @var AiRecognitionTaskInput <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
      * @deprecated
      */
     public $AiRecognitionTask;
 
     /**
-     * @var ProcedureReviewAudioVideoTaskInput 
+     * @var ProcedureReviewAudioVideoTaskInput <p>Parameters for the audio and video moderation task.</p>
      */
     public $ReviewAudioVideoTask;
 
     /**
-     * @var array 
+     * @var array <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
      */
     public $ImportMediaKnowledgeTaskSet;
 
     /**
-     * @param string $Name 
-     * @param integer $SubAppId 
-     * @param string $Comment 
-     * @param MediaProcessTaskInput $MediaProcessTask 
-     * @param AiContentReviewTaskInput $AiContentReviewTask 
-     * @param AiAnalysisTaskInput $AiAnalysisTask 
-     * @param array $AiRecognitionTaskSet 
-     * @param AiRecognitionTaskInput $AiRecognitionTask 
-     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask 
-     * @param array $ImportMediaKnowledgeTaskSet 
+     * @param string $Name <p>Task flow name (supports Chinese, up to 20 characters).</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param MediaProcessTaskInput $MediaProcessTask <p>Video processing type task parameters.</p>
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * @param AiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the AI content analysis task.</p>
+     * @param array $AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
+     * @param AiRecognitionTaskInput $AiRecognitionTask <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
+     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask <p>Parameters for the audio and video moderation task.</p>
+     * @param array $ImportMediaKnowledgeTaskSet <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
      */
     function __construct()
     {

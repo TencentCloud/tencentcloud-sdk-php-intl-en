@@ -18,44 +18,148 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio content of the remastering output
  *
- * @method string getCodec() Obtain 
- * @method void setCodec(string $Codec) Set 
- * @method integer getBitrate() Obtain 
- * @method void setBitrate(integer $Bitrate) Set 
- * @method integer getSampleRate() Obtain 
- * @method void setSampleRate(integer $SampleRate) Set 
- * @method integer getAudioChannel() Obtain 
- * @method void setAudioChannel(integer $AudioChannel) Set 
+ * @method string getCodec() Obtain Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+ * @method void setCodec(string $Codec) Set Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+ * @method integer getBitrate() Obtain Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+ * @method integer getSampleRate() Obtain Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
+ * @method void setSampleRate(integer $SampleRate) Set Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
+ * @method integer getAudioChannel() Obtain Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
+ * @method void setAudioChannel(integer $AudioChannel) Set Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
  */
 class RebuildMediaTargetAudioStream extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
      */
     public $Codec;
 
     /**
-     * @var integer 
+     * @var integer Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     public $Bitrate;
 
     /**
-     * @var integer 
+     * @var integer Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
      */
     public $SampleRate;
 
     /**
-     * @var integer 
+     * @var integer Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
      */
     public $AudioChannel;
 
     /**
-     * @param string $Codec 
-     * @param integer $Bitrate 
-     * @param integer $SampleRate 
-     * @param integer $AudioChannel 
+     * @param string $Codec Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+     * @param integer $Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+     * @param integer $SampleRate Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
+     * @param integer $AudioChannel Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
      */
     function __construct()
     {

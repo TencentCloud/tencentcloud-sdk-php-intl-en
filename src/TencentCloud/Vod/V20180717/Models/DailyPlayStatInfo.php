@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Playback statistics.
  *
- * @method string getDate() Obtain 
- * @method void setDate(string $Date) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method integer getPlayTimes() Obtain 
- * @method void setPlayTimes(integer $PlayTimes) Set 
- * @method integer getTraffic() Obtain 
- * @method void setTraffic(integer $Traffic) Set 
+ * @method string getDate() Obtain <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setDate(string $Date) Set <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getFileId() Obtain <p>Media file ID.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID.</p>
+ * @method integer getPlayTimes() Obtain <p>Number of plays.</p>
+ * @method void setPlayTimes(integer $PlayTimes) Set <p>Number of plays.</p>
+ * @method integer getTraffic() Obtain <p>Playback traffic volume, unit: byte.</p>
+ * @method void setTraffic(integer $Traffic) Set <p>Playback traffic volume, unit: byte.</p>
  */
 class DailyPlayStatInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $Date;
 
     /**
-     * @var string 
+     * @var string <p>Media file ID.</p>
      */
     public $FileId;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of plays.</p>
      */
     public $PlayTimes;
 
     /**
-     * @var integer 
+     * @var integer <p>Playback traffic volume, unit: byte.</p>
      */
     public $Traffic;
 
     /**
-     * @param string $Date 
-     * @param string $FileId 
-     * @param integer $PlayTimes 
-     * @param integer $Traffic 
+     * @param string $Date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $FileId <p>Media file ID.</p>
+     * @param integer $PlayTimes <p>Number of plays.</p>
+     * @param integer $Traffic <p>Playback traffic volume, unit: byte.</p>
      */
     function __construct()
     {

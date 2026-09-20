@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task control parameters for image recognition involving unsafe information.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method array getLabelSet() Obtain 
- * @method void setLabelSet(array $LabelSet) Set 
- * @method integer getBlockConfidence() Obtain 
- * @method void setBlockConfidence(integer $BlockConfidence) Set 
- * @method integer getReviewConfidence() Obtain 
- * @method void setReviewConfidence(integer $ReviewConfidence) Set 
+ * @method string getSwitch() Obtain <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
+ * @method void setSwitch(string $Switch) Set <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
+ * @method array getLabelSet() Obtain <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
+ * @method void setLabelSet(array $LabelSet) Set <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
+ * @method integer getBlockConfidence() Obtain <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
+ * @method void setBlockConfidence(integer $BlockConfidence) Set <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
+ * @method integer getReviewConfidence() Obtain <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
  */
 class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
      */
     public $Switch;
 
     /**
-     * @var array 
+     * @var array <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
      */
     public $LabelSet;
 
     /**
-     * @var integer 
+     * @var integer <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 
+     * @var integer <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 
-     * @param array $LabelSet 
-     * @param integer $BlockConfidence 
-     * @param integer $ReviewConfidence 
+     * @param string $Switch <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
+     * @param array $LabelSet <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
+     * @param integer $BlockConfidence <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
+     * @param integer $ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
      */
     function __construct()
     {

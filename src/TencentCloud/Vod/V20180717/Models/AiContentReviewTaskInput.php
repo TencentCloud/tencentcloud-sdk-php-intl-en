@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio/video moderation task type
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Audio/video moderation template ID.
+ * @method void setDefinition(integer $Definition) Set Audio/video moderation template ID.
  */
 class AiContentReviewTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Audio/video moderation template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Audio/video moderation template ID.
      */
     function __construct()
     {

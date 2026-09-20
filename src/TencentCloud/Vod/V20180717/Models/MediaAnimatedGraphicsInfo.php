@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Animated image result information of a VOD file
  *
- * @method array getAnimatedGraphicsSet() Obtain 
- * @method void setAnimatedGraphicsSet(array $AnimatedGraphicsSet) Set 
+ * @method array getAnimatedGraphicsSet() Obtain Video motion graphic result information
+ * @method void setAnimatedGraphicsSet(array $AnimatedGraphicsSet) Set Video motion graphic result information
  */
 class MediaAnimatedGraphicsInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Video motion graphic result information
      */
     public $AnimatedGraphicsSet;
 
     /**
-     * @param array $AnimatedGraphicsSet 
+     * @param array $AnimatedGraphicsSet Video motion graphic result information
      */
     function __construct()
     {

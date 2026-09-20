@@ -18,96 +18,68 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Philippines UMID Card
+ * Philippines UMID
  *
- * @method string getSurname() Obtain Surname
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSurname(string $Surname) Set Surname
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMiddleName() Obtain Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMiddleName(string $MiddleName) Set Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGivenName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGivenName(string $GivenName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSurname() Obtain Last name
+ * @method void setSurname(string $Surname) Set Last name
+ * @method string getMiddleName() Obtain Middle name
+ * @method void setMiddleName(string $MiddleName) Set Middle name
+ * @method string getGivenName() Obtain Name
+ * @method void setGivenName(string $GivenName) Set Name
+ * @method string getSex() Obtain Address.
+ * @method void setSex(string $Sex) Set Address.
  * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCRN() Obtain CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCRN(string $CRN) Set CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAddress() Obtain Address.
+ * @method void setAddress(string $Address) Set Address.
+ * @method string getCRN() Obtain crn code
+ * @method void setCRN(string $CRN) Set crn code
  */
 class PhilippinesUMID extends AbstractModel
 {
     /**
-     * @var string Surname
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last name
      */
     public $Surname;
 
     /**
-     * @var string Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Middle name
      */
     public $MiddleName;
 
     /**
-     * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $GivenName;
 
     /**
-     * @var string Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $Sex;
 
     /**
      * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Birthday;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $Address;
 
     /**
-     * @var string CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string crn code
      */
     public $CRN;
 
     /**
-     * @param string $Surname Surname
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MiddleName Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GivenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Surname Last name
+     * @param string $MiddleName Middle name
+     * @param string $GivenName Name
+     * @param string $Sex Address.
      * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CRN CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Address Address.
+     * @param string $CRN crn code
      */
     function __construct()
     {

@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sprite image information
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getTotalCount() Obtain 
- * @method void setTotalCount(integer $TotalCount) Set 
- * @method array getImageUrlSet() Obtain 
- * @method void setImageUrlSet(array $ImageUrlSet) Set 
- * @method string getWebVttUrl() Obtain 
- * @method void setWebVttUrl(string $WebVttUrl) Set 
+ * @method integer getDefinition() Obtain <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+ * @method integer getHeight() Obtain <p>Height of the small image in the sprite sheet.</p>
+ * @method void setHeight(integer $Height) Set <p>Height of the small image in the sprite sheet.</p>
+ * @method integer getWidth() Obtain <p>Width of the small image in the sprite sheet.</p>
+ * @method void setWidth(integer $Width) Set <p>Width of the small image in the sprite sheet.</p>
+ * @method integer getTotalCount() Obtain <p>The number of small images in each large sprite sheet.</p>
+ * @method void setTotalCount(integer $TotalCount) Set <p>The number of small images in each large sprite sheet.</p>
+ * @method array getImageUrlSet() Obtain <p>Domain names or IP addresses of each sprite sheet.</p>
+ * @method void setImageUrlSet(array $ImageUrlSet) Set <p>Domain names or IP addresses of each sprite sheet.</p>
+ * @method string getWebVttUrl() Obtain <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+ * @method void setWebVttUrl(string $WebVttUrl) Set <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
  */
 class MediaImageSpriteItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <p>Height of the small image in the sprite sheet.</p>
      */
     public $Height;
 
     /**
-     * @var integer 
+     * @var integer <p>Width of the small image in the sprite sheet.</p>
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer <p>The number of small images in each large sprite sheet.</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 
+     * @var array <p>Domain names or IP addresses of each sprite sheet.</p>
      */
     public $ImageUrlSet;
 
     /**
-     * @var string 
+     * @var string <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
      */
     public $WebVttUrl;
 
     /**
-     * @param integer $Definition 
-     * @param integer $Height 
-     * @param integer $Width 
-     * @param integer $TotalCount 
-     * @param array $ImageUrlSet 
-     * @param string $WebVttUrl 
+     * @param integer $Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+     * @param integer $Height <p>Height of the small image in the sprite sheet.</p>
+     * @param integer $Width <p>Width of the small image in the sprite sheet.</p>
+     * @param integer $TotalCount <p>The number of small images in each large sprite sheet.</p>
+     * @param array $ImageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
+     * @param string $WebVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
      */
     function __construct()
     {

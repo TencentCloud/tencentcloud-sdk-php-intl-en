@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaInfos request structure.
  *
- * @method array getFileIds() Obtain 
- * @method void setFileIds(array $FileIds) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getFilters() Obtain 
- * @method void setFilters(array $Filters) Set 
+ * @method array getFileIds() Obtain <p>Media file ID list. N starts from 0, with a maximum of 19.</p>
+ * @method void setFileIds(array $FileIds) Set <p>Media file ID list. N starts from 0, with a maximum of 19.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method array getFilters() Obtain <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (mps intelligent media asset information).</li><li>knowledgeBasesInfo (intelligent media asset knowledge base information).</li>
+ * @method void setFilters(array $Filters) Set <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (mps intelligent media asset information).</li><li>knowledgeBasesInfo (intelligent media asset knowledge base information).</li>
  */
 class DescribeMediaInfosRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>Media file ID list. N starts from 0, with a maximum of 19.</p>
      */
     public $FileIds;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (mps intelligent media asset information).</li><li>knowledgeBasesInfo (intelligent media asset knowledge base information).</li>
      */
     public $Filters;
 
     /**
-     * @param array $FileIds 
-     * @param integer $SubAppId 
-     * @param array $Filters 
+     * @param array $FileIds <p>Media file ID list. N starts from 0, with a maximum of 19.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * @param array $Filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (mps intelligent media asset information).</li><li>knowledgeBasesInfo (intelligent media asset knowledge base information).</li>
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCurrentPlaylist request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getRoundPlayId() Obtain 
- * @method void setRoundPlayId(string $RoundPlayId) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+ * @method string getRoundPlayId() Obtain <p>Carousel playlist unique identifier.</p>
+ * @method void setRoundPlayId(string $RoundPlayId) Set <p>Carousel playlist unique identifier.</p>
+ * @method integer getLimit() Obtain <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
+ * @method void setLimit(integer $Limit) Set <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
  */
 class DescribeCurrentPlaylistRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Carousel playlist unique identifier.</p>
      */
     public $RoundPlayId;
 
     /**
-     * @var integer 
+     * @var integer <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $RoundPlayId 
-     * @param integer $Limit 
+     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param string $RoundPlayId <p>Carousel playlist unique identifier.</p>
+     * @param integer $Limit <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
      */
     function __construct()
     {

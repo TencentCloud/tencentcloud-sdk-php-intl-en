@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AI sample management, keyword input.
  *
- * @method string getKeyword() Obtain 
- * @method void setKeyword(string $Keyword) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method string getKeyword() Obtain <p>Keyword. Length limit: 20 characters.</p>
+ * @method void setKeyword(string $Keyword) Set <p>Keyword. Length limit: 20 characters.</p>
+ * @method array getTags() Obtain <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+ * @method void setTags(array $Tags) Set <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
  */
 class AiSampleWordInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Keyword. Length limit: 20 characters.</p>
      */
     public $Keyword;
 
     /**
-     * @var array 
+     * @var array <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
      */
     public $Tags;
 
     /**
-     * @param string $Keyword 
-     * @param array $Tags 
+     * @param string $Keyword <p>Keyword. Length limit: 20 characters.</p>
+     * @param array $Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
      */
     function __construct()
     {

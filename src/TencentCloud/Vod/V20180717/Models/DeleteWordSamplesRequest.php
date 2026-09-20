@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWordSamples request structure.
  *
- * @method array getKeywords() Obtain 
- * @method void setKeywords(array $Keywords) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getKeywords() Obtain <p>Keywords. Array length limit: 100 words.</p>
+ * @method void setKeywords(array $Keywords) Set <p>Keywords. Array length limit: 100 words.</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
  */
 class DeleteWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>Keywords. Array length limit: 100 words.</p>
      */
     public $Keywords;
 
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param array $Keywords 
-     * @param integer $SubAppId 
+     * @param array $Keywords <p>Keywords. Array length limit: 100 words.</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     function __construct()
     {

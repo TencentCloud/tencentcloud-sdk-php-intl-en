@@ -18,28 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio gain adjustment parameter
  *
- * @method integer getMute() Obtain 
- * @method void setMute(integer $Mute) Set 
- * @method float getGain() Obtain 
- * @method void setGain(float $Gain) Set 
+ * @method integer getMute() Obtain Whether to mute. Value range: 0 or 1.
+<li>0 means unmuted.</li>
+<li>1 means mute.</li>
+The default value is 0.
+ * @method void setMute(integer $Mute) Set Whether to mute. Value range: 0 or 1.
+<li>0 means unmuted.</li>
+<li>1 means mute.</li>
+The default value is 0.
+ * @method float getGain() Obtain Audio gain. Value range: 0-10.
+<li>A value greater than 1 means increasing the volume.</li>
+<li>Less than 1 means low volume.</li>
+<li>0 and 1: means do not change.</li>
+The default value is 0.
+ * @method void setGain(float $Gain) Set Audio gain. Value range: 0-10.
+<li>A value greater than 1 means increasing the volume.</li>
+<li>Less than 1 means low volume.</li>
+<li>0 and 1: means do not change.</li>
+The default value is 0.
  */
 class AudioVolumeParam extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Whether to mute. Value range: 0 or 1.
+<li>0 means unmuted.</li>
+<li>1 means mute.</li>
+The default value is 0.
      */
     public $Mute;
 
     /**
-     * @var float 
+     * @var float Audio gain. Value range: 0-10.
+<li>A value greater than 1 means increasing the volume.</li>
+<li>Less than 1 means low volume.</li>
+<li>0 and 1: means do not change.</li>
+The default value is 0.
      */
     public $Gain;
 
     /**
-     * @param integer $Mute 
-     * @param float $Gain 
+     * @param integer $Mute Whether to mute. Value range: 0 or 1.
+<li>0 means unmuted.</li>
+<li>1 means mute.</li>
+The default value is 0.
+     * @param float $Gain Audio gain. Value range: 0-10.
+<li>A value greater than 1 means increasing the volume.</li>
+<li>Less than 1 means low volume.</li>
+<li>0 and 1: means do not change.</li>
+The default value is 0.
      */
     function __construct()
     {

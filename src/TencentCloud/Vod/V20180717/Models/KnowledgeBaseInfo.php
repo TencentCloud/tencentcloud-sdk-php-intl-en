@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Knowledge base information.
  *
- * @method string getKnowledgeBaseId() Obtain 
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getKnowledgeBaseId() Obtain <p>Knowledge base ID.</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set <p>Knowledge base ID.</p>
+ * @method string getName() Obtain <p>Knowledge base name.</p>
+ * @method void setName(string $Name) Set <p>Knowledge base name.</p>
+ * @method string getDescription() Obtain <p>Repository description.</p>
+ * @method void setDescription(string $Description) Set <p>Repository description.</p>
+ * @method string getStatus() Obtain <p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
+ * @method void setStatus(string $Status) Set <p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
+ * @method string getCreateTime() Obtain <p>Creation time of the knowledge base.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time of the knowledge base.</p>
  */
 class KnowledgeBaseInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Knowledge base ID.</p>
      */
     public $KnowledgeBaseId;
 
     /**
-     * @var string 
+     * @var string <p>Knowledge base name.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Repository description.</p>
      */
     public $Description;
 
     /**
-     * @var string 
+     * @var string <p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string <p>Creation time of the knowledge base.</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $KnowledgeBaseId 
-     * @param string $Name 
-     * @param string $Description 
-     * @param string $Status 
-     * @param string $CreateTime 
+     * @param string $KnowledgeBaseId <p>Knowledge base ID.</p>
+     * @param string $Name <p>Knowledge base name.</p>
+     * @param string $Description <p>Repository description.</p>
+     * @param string $Status <p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
+     * @param string $CreateTime <p>Creation time of the knowledge base.</p>
      */
     function __construct()
     {

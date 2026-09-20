@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLLMComprehendTemplates request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getDefinitions() Obtain 
- * @method void setDefinitions(array $Definitions) Set 
- * @method SortBy getSort() Obtain 
- * @method void setSort(SortBy $Sort) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method array getDefinitions() Obtain <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
+ * @method void setDefinitions(array $Definitions) Set <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
+ * @method SortBy getSort() Obtain <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
+ * @method void setSort(SortBy $Sort) Set <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
+ * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
  */
 class DescribeLLMComprehendTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
      */
     public $Definitions;
 
     /**
-     * @var SortBy 
+     * @var SortBy <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
      */
     public $Sort;
 
     /**
-     * @var integer 
+     * @var integer <p>Paging offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId 
-     * @param array $Definitions 
-     * @param SortBy $Sort 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param array $Definitions <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
+     * @param SortBy $Sort <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
+     * @param integer $Offset <p>Paging offset. Default value: 0.</p>
+     * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     function __construct()
     {

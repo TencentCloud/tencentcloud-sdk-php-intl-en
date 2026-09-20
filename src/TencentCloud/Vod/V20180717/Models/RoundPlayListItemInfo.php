@@ -18,44 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Program information for carousel playback
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getAudioVideoType() Obtain 
- * @method void setAudioVideoType(string $AudioVideoType) Set 
- * @method string getItemId() Obtain 
- * @method void setItemId(string $ItemId) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method string getFileId() Obtain Media file identifier.
+ * @method void setFileId(string $FileId) Set Media file identifier.
+ * @method string getAudioVideoType() Obtain Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
+ * @method void setAudioVideoType(string $AudioVideoType) Set Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
+ * @method string getItemId() Obtain Program ID assigned by the system.
+ * @method void setItemId(string $ItemId) Set Program ID assigned by the system.
+ * @method integer getDefinition() Obtain Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
+ * @method void setDefinition(integer $Definition) Set Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
  */
 class RoundPlayListItemInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file identifier.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
      */
     public $AudioVideoType;
 
     /**
-     * @var string 
+     * @var string Program ID assigned by the system.
      */
     public $ItemId;
 
     /**
-     * @var integer 
+     * @var integer Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
      */
     public $Definition;
 
     /**
-     * @param string $FileId 
-     * @param string $AudioVideoType 
-     * @param string $ItemId 
-     * @param integer $Definition 
+     * @param string $FileId Media file identifier.
+     * @param string $AudioVideoType Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
+     * @param string $ItemId Program ID assigned by the system.
+     * @param integer $Definition Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
      */
     function __construct()
     {

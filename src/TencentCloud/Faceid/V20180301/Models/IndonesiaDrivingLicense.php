@@ -18,108 +18,76 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Indonesia driving license.
+ * Indonesian driving license
  *
  * @method string getLastName() Obtain Last name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastName(string $LastName) Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFirstName(string $FirstName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain No.
+ * @method void setLicenseNumber(string $LicenseNumber) Set No.
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
+ * @method string getAddress() Obtain Address.
+ * @method void setAddress(string $Address) Set Address.
  * @method string getExpirationDate() Obtain Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpirationDate(string $ExpirationDate) Set Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedDate() Obtain Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedDate(string $IssuedDate) Set Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIssuedDate() Obtain Issue date
+ * @method void setIssuedDate(string $IssuedDate) Set Issue date
  * @method string getIssuedCountry() Obtain Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIssuedCountry(string $IssuedCountry) Set Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class IndonesiaDrivingLicense extends AbstractModel
 {
     /**
      * @var string Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastName;
 
     /**
      * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstName;
 
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string No.
      */
     public $LicenseNumber;
 
     /**
-     * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $Address;
 
     /**
      * @var string Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpirationDate;
 
     /**
-     * @var string Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Issue date
      */
     public $IssuedDate;
 
     /**
      * @var string Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IssuedCountry;
 
     /**
      * @param string $LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber No.
+     * @param string $Birthday Date of birth
+     * @param string $Address Address.
      * @param string $ExpirationDate Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IssuedDate Issue date
      * @param string $IssuedCountry Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

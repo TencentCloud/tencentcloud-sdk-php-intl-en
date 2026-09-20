@@ -18,60 +18,64 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of the audio and video quality regeneration task
  *
- * @method string getFileType() Obtain 
- * @method void setFileType(string $FileType) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
+ * @method string getFileType() Obtain File type, for example, mp4, flv.
+ * @method void setFileType(string $FileType) Set File type, for example, mp4, flv.
+ * @method string getFileUrl() Obtain Media file playback address.
+ * @method void setFileUrl(string $FileUrl) Set Media file playback address.
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system assigns the generated filename.
+ * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system assigns the generated filename.
+ * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+ * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+ * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class RebuildMediaTaskOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string File type, for example, mp4, flv.
      */
     public $FileType;
 
     /**
-     * @var string 
+     * @var string Media file playback address.
      */
     public $FileUrl;
 
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Output filename, up to 64 characters. By default, the system assigns the generated filename.
      */
     public $MediaName;
 
     /**
-     * @var integer 
+     * @var integer Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ExpireTime;
 
     /**
-     * @param string $FileType 
-     * @param string $FileUrl 
-     * @param string $FileId 
-     * @param string $MediaName 
-     * @param integer $ClassId 
-     * @param string $ExpireTime 
+     * @param string $FileType File type, for example, mp4, flv.
+     * @param string $FileUrl Media file playback address.
+     * @param string $FileId Media file ID.
+     * @param string $MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
+     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBlindWatermarkTemplate request structure.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getTextContent() Obtain 
- * @method void setTextContent(string $TextContent) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA watermark.</li>
+ * @method void setType(string $Type) Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA watermark.</li>
+ * @method string getTextContent() Obtain Text content of the digital watermark. The length cannot exceed 64 characters. After NAGRA watermark templates are created, the text content cannot be modified.
+ * @method void setTextContent(string $TextContent) Set Text content of the digital watermark. The length cannot exceed 64 characters. After NAGRA watermark templates are created, the text content cannot be modified.
+ * @method integer getSubAppId() Obtain VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
+ * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
+ * @method string getName() Obtain Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
+ * @method void setName(string $Name) Set Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
+ * @method string getComment() Obtain Description information of the digital watermark template. The length cannot exceed 256 characters.
+ * @method void setComment(string $Comment) Set Description information of the digital watermark template. The length cannot exceed 256 characters.
  */
 class CreateBlindWatermarkTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA watermark.</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Text content of the digital watermark. The length cannot exceed 64 characters. After NAGRA watermark templates are created, the text content cannot be modified.
      */
     public $TextContent;
 
     /**
-     * @var integer 
+     * @var integer VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Description information of the digital watermark template. The length cannot exceed 256 characters.
      */
     public $Comment;
 
     /**
-     * @param string $Type 
-     * @param string $TextContent 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Comment 
+     * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA watermark.</li>
+     * @param string $TextContent Text content of the digital watermark. The length cannot exceed 64 characters. After NAGRA watermark templates are created, the text content cannot be modified.
+     * @param integer $SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
+     * @param string $Name Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
+     * @param string $Comment Description information of the digital watermark template. The length cannot exceed 256 characters.
      */
     function __construct()
     {

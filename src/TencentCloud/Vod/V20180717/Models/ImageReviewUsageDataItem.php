@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image moderation stats.
  *
- * @method string getTime() Obtain 
- * @method void setTime(string $Time) Set 
- * @method integer getCount() Obtain 
- * @method void setCount(integer $Count) Set 
+ * @method string getTime() Obtain Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+ * @method void setTime(string $Time) Set Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+ * @method integer getCount() Obtain Count.
+ * @method void setCount(integer $Count) Set Count.
  */
 class ImageReviewUsageDataItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
      */
     public $Time;
 
     /**
-     * @var integer 
+     * @var integer Count.
      */
     public $Count;
 
     /**
-     * @param string $Time 
-     * @param integer $Count 
+     * @param string $Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+     * @param integer $Count Count.
      */
     function __construct()
     {

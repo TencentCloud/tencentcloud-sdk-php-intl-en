@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneVoiceAsync request structure.
  *
- * @method string getSubAppId() Obtain 
- * @method void setSubAppId(string $SubAppId) Set 
- * @method string getAudioData() Obtain 
- * @method void setAudioData(string $AudioData) Set 
- * @method string getAudioUrl() Obtain 
- * @method void setAudioUrl(string $AudioUrl) Set 
- * @method string getAudioFileId() Obtain 
- * @method void setAudioFileId(string $AudioFileId) Set 
- * @method string getLanguageBoost() Obtain 
- * @method void setLanguageBoost(string $LanguageBoost) Set 
- * @method string getExtParam() Obtain <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
- * @method void setExtParam(string $ExtParam) Set <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
+ * @method string getSubAppId() Obtain <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+ * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+ * @method string getAudioData() Obtain <p>Base64-encoded audio for cloning.</p>
+ * @method void setAudioData(string $AudioData) Set <p>Base64-encoded audio for cloning.</p>
+ * @method string getAudioUrl() Obtain <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method void setAudioUrl(string $AudioUrl) Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method string getAudioFileId() Obtain <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+ * @method void setAudioFileId(string $AudioFileId) Set <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+ * @method string getLanguageBoost() Obtain <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+ * @method void setLanguageBoost(string $LanguageBoost) Set <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+ * @method string getExtParam() Obtain <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters; when non-empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model, default <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>; required when <code>text</code> is non-empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
+ * @method void setExtParam(string $ExtParam) Set <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters; when non-empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model, default <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>; required when <code>text</code> is non-empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
+ * @method string getSessionContext() Obtain <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getSessionId() Obtain <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  */
 class CloneVoiceAsyncRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Base64-encoded audio for cloning.</p>
      */
     public $AudioData;
 
     /**
-     * @var string 
+     * @var string <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public $AudioUrl;
 
     /**
-     * @var string 
+     * @var string <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
      */
     public $AudioFileId;
 
     /**
-     * @var string 
+     * @var string <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
      */
     public $LanguageBoost;
 
     /**
-     * @var string <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
+     * @var string <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters; when non-empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model, default <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>; required when <code>text</code> is non-empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
      */
     public $ExtParam;
 
     /**
-     * @var string 
+     * @var string <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
 
     /**
-     * @param string $SubAppId 
-     * @param string $AudioData 
-     * @param string $AudioUrl 
-     * @param string $AudioFileId 
-     * @param string $LanguageBoost 
-     * @param string $ExtParam <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
-     * @param string $SessionContext 
-     * @param string $SessionId 
+     * @param string $SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * @param string $AudioData <p>Base64-encoded audio for cloning.</p>
+     * @param string $AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * @param string $AudioFileId <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+     * @param string $LanguageBoost <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+     * @param string $ExtParam <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters; when non-empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model, default <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>; required when <code>text</code> is non-empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
+     * @param string $SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     function __construct()
     {

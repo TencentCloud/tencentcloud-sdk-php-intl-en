@@ -18,28 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio noise reduction control information
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
+ * @method void setSwitch(string $Switch) Set Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
+ * @method string getType() Obtain Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
+ * @method void setType(string $Type) Set Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
  */
 class AudioDenoiseInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
+     * @param string $Type Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
      */
     function __construct()
     {

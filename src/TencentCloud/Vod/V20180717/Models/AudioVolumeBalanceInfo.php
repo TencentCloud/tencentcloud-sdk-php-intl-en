@@ -18,28 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Volume equalization configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
+ * @method void setSwitch(string $Switch) Set Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
+ * @method string getType() Obtain Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
+ * @method void setType(string $Type) Set Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
  */
 class AudioVolumeBalanceInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
+     * @param string $Type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
      */
     function __construct()
     {

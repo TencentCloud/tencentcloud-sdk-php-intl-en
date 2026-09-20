@@ -18,44 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameters of the custom voice moderation task
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method array getLabelSet() Obtain 
- * @method void setLabelSet(array $LabelSet) Set 
- * @method integer getBlockConfidence() Obtain 
- * @method void setBlockConfidence(integer $BlockConfidence) Set 
- * @method integer getReviewConfidence() Obtain 
- * @method void setReviewConfidence(integer $ReviewConfidence) Set 
+ * @method string getSwitch() Obtain User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
+ * @method void setSwitch(string $Switch) Set User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
+ * @method array getLabelSet() Obtain User-defined custom voice filter tags. Auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+ * @method void setLabelSet(array $LabelSet) Set User-defined custom voice filter tags. Auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+ * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, it is considered a suspected violation. Default value: 100. Value range: 0-100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, it is considered a suspected violation. Default value: 100. Value range: 0-100.
+ * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. If not specified, the default is 75. Value range: 0–100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. If not specified, the default is 75. Value range: 0–100.
  */
 class UserDefineAsrTextReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
      */
     public $Switch;
 
     /**
-     * @var array 
+     * @var array User-defined custom voice filter tags. Auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public $LabelSet;
 
     /**
-     * @var integer 
+     * @var integer Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, it is considered a suspected violation. Default value: 100. Value range: 0-100.
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 
+     * @var integer Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. If not specified, the default is 75. Value range: 0–100.
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 
-     * @param array $LabelSet 
-     * @param integer $BlockConfidence 
-     * @param integer $ReviewConfidence 
+     * @param string $Switch User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
+     * @param array $LabelSet User-defined custom voice filter tags. Auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, it is considered a suspected violation. Default value: 100. Value range: 0-100.
+     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. If not specified, the default is 75. Value range: 0–100.
      */
     function __construct()
     {

@@ -18,28 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image quality restoration control parameters
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
+ * @method void setSwitch(string $Switch) Set Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
+ * @method string getType() Obtain Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
+ * @method void setType(string $Type) Set Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
  */
 class RepairInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
+     * @param string $Type Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
      */
     function __construct()
     {

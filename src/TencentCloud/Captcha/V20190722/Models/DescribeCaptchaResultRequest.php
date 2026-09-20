@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaptchaResult request structure.
  *
- * @method integer getCaptchaType() Obtain Fill with fixed value: 9.
- * @method void setCaptchaType(integer $CaptchaType) Set Fill with fixed value: 9.
- * @method string getTicket() Obtain The user verification ticket returned by the frontend callback function.
- * @method void setTicket(string $Ticket) Set The user verification ticket returned by the frontend callback function.
- * @method string getUserIp() Obtain The user public IP obtained from the customer backend server.
- * @method void setUserIp(string $UserIp) Set The user public IP obtained from the customer backend server.
- * @method string getRandstr() Obtain A random string returned by the frontend callback function
- * @method void setRandstr(string $Randstr) Set A random string returned by the frontend callback function
- * @method integer getCaptchaAppId() Obtain CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
- * @method void setCaptchaAppId(integer $CaptchaAppId) Set CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
- * @method string getAppSecretKey() Obtain CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
- * @method void setAppSecretKey(string $AppSecretKey) Set CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
- * @method integer getBusinessId() Obtain Reserved field.
- * @method void setBusinessId(integer $BusinessId) Set Reserved field.
- * @method integer getSceneId() Obtain Reserved field.
- * @method void setSceneId(integer $SceneId) Set Reserved field.
- * @method string getMacAddress() Obtain MAC address or unique identifier of a device
- * @method void setMacAddress(string $MacAddress) Set MAC address or unique identifier of a device
- * @method string getImei() Obtain Mobile equipment identity number
- * @method void setImei(string $Imei) Set Mobile equipment identity number
- * @method integer getNeedGetCaptchaTime() Obtain Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
- * @method void setNeedGetCaptchaTime(integer $NeedGetCaptchaTime) Set Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+ * @method integer getCaptchaType() Obtain <p>Fixed value: 9.</p>
+ * @method void setCaptchaType(integer $CaptchaType) Set <p>Fixed value: 9.</p>
+ * @method string getTicket() Obtain <p>User verification ticket returned by the frontend callback function</p>
+ * @method void setTicket(string $Ticket) Set <p>User verification ticket returned by the frontend callback function</p>
+ * @method string getUserIp() Obtain <p>Public network IP of the verification</p>
+ * @method void setUserIp(string $UserIp) Set <p>Public network IP of the verification</p>
+ * @method string getRandstr() Obtain <p>Random string returned by the frontend callback function</p>
+ * @method void setRandstr(string $Randstr) Set <p>Random string returned by the frontend callback function</p>
+ * @method integer getCaptchaAppId() Obtain <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
+ * @method void setCaptchaAppId(integer $CaptchaAppId) Set <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
+ * @method string getAppSecretKey() Obtain <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
+ * @method void setAppSecretKey(string $AppSecretKey) Set <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
+ * @method integer getBusinessId() Obtain <p>Reserved field</p>
+ * @method void setBusinessId(integer $BusinessId) Set <p>Reserved field</p>
+ * @method integer getSceneId() Obtain <p>Reserved field</p>
+ * @method void setSceneId(integer $SceneId) Set <p>Reserved field</p>
+ * @method string getMacAddress() Obtain <p>mac address or unique device identifier</p>
+ * @method void setMacAddress(string $MacAddress) Set <p>mac address or unique device identifier</p>
+ * @method string getImei() Obtain <p>Mobile device number</p>
+ * @method void setImei(string $Imei) Set <p>Mobile device number</p>
+ * @method integer getNeedGetCaptchaTime() Obtain <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
+ * @method void setNeedGetCaptchaTime(integer $NeedGetCaptchaTime) Set <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
  */
 class DescribeCaptchaResultRequest extends AbstractModel
 {
     /**
-     * @var integer Fill with fixed value: 9.
+     * @var integer <p>Fixed value: 9.</p>
      */
     public $CaptchaType;
 
     /**
-     * @var string The user verification ticket returned by the frontend callback function.
+     * @var string <p>User verification ticket returned by the frontend callback function</p>
      */
     public $Ticket;
 
     /**
-     * @var string The user public IP obtained from the customer backend server.
+     * @var string <p>Public network IP of the verification</p>
      */
     public $UserIp;
 
     /**
-     * @var string A random string returned by the frontend callback function
+     * @var string <p>Random string returned by the frontend callback function</p>
      */
     public $Randstr;
 
     /**
-     * @var integer CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
+     * @var integer <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
      */
     public $CaptchaAppId;
 
     /**
-     * @var string CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
+     * @var string <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
      */
     public $AppSecretKey;
 
     /**
-     * @var integer Reserved field.
+     * @var integer <p>Reserved field</p>
      */
     public $BusinessId;
 
     /**
-     * @var integer Reserved field.
+     * @var integer <p>Reserved field</p>
      */
     public $SceneId;
 
     /**
-     * @var string MAC address or unique identifier of a device
+     * @var string <p>mac address or unique device identifier</p>
      */
     public $MacAddress;
 
     /**
-     * @var string Mobile equipment identity number
+     * @var string <p>Mobile device number</p>
      */
     public $Imei;
 
     /**
-     * @var integer Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+     * @var integer <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
      */
     public $NeedGetCaptchaTime;
 
     /**
-     * @param integer $CaptchaType Fill with fixed value: 9.
-     * @param string $Ticket The user verification ticket returned by the frontend callback function.
-     * @param string $UserIp The user public IP obtained from the customer backend server.
-     * @param string $Randstr A random string returned by the frontend callback function
-     * @param integer $CaptchaAppId CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
-     * @param string $AppSecretKey CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
-     * @param integer $BusinessId Reserved field.
-     * @param integer $SceneId Reserved field.
-     * @param string $MacAddress MAC address or unique identifier of a device
-     * @param string $Imei Mobile equipment identity number
-     * @param integer $NeedGetCaptchaTime Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+     * @param integer $CaptchaType <p>Fixed value: 9.</p>
+     * @param string $Ticket <p>User verification ticket returned by the frontend callback function</p>
+     * @param string $UserIp <p>Public network IP of the verification</p>
+     * @param string $Randstr <p>Random string returned by the frontend callback function</p>
+     * @param integer $CaptchaAppId <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
+     * @param string $AppSecretKey <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
+     * @param integer $BusinessId <p>Reserved field</p>
+     * @param integer $SceneId <p>Reserved field</p>
+     * @param string $MacAddress <p>mac address or unique device identifier</p>
+     * @param string $Imei <p>Mobile device number</p>
+     * @param integer $NeedGetCaptchaTime <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
      */
     function __construct()
     {

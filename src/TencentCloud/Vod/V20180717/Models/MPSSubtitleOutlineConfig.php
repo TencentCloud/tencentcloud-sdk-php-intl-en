@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle suppression module text stroke configuration for MPS
  *
- * @method integer getSubtitleOutlineConfigSwitch() Obtain 
- * @method void setSubtitleOutlineConfigSwitch(integer $SubtitleOutlineConfigSwitch) Set 
- * @method float getOutlineWidth() Obtain 
- * @method void setOutlineWidth(float $OutlineWidth) Set 
- * @method integer getOutlineWidthUnit() Obtain 
- * @method void setOutlineWidthUnit(integer $OutlineWidthUnit) Set 
- * @method string getOutlineColor() Obtain 
- * @method void setOutlineColor(string $OutlineColor) Set 
- * @method float getOutlineAlpha() Obtain 
- * @method void setOutlineAlpha(float $OutlineAlpha) Set 
+ * @method integer getSubtitleOutlineConfigSwitch() Obtain <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
+ * @method void setSubtitleOutlineConfigSwitch(integer $SubtitleOutlineConfigSwitch) Set <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
+ * @method float getOutlineWidth() Obtain <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
+ * @method void setOutlineWidth(float $OutlineWidth) Set <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
+ * @method integer getOutlineWidthUnit() Obtain <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method void setOutlineWidthUnit(integer $OutlineWidthUnit) Set <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method string getOutlineColor() Obtain <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
+ * @method void setOutlineColor(string $OutlineColor) Set <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
+ * @method float getOutlineAlpha() Obtain <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
+ * @method void setOutlineAlpha(float $OutlineAlpha) Set <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
  */
 class MPSSubtitleOutlineConfig extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public $SubtitleOutlineConfigSwitch;
 
     /**
-     * @var float 
+     * @var float <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
      */
     public $OutlineWidth;
 
     /**
-     * @var integer 
+     * @var integer <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public $OutlineWidthUnit;
 
     /**
-     * @var string 
+     * @var string <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
      */
     public $OutlineColor;
 
     /**
-     * @var float 
+     * @var float <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
      */
     public $OutlineAlpha;
 
     /**
-     * @param integer $SubtitleOutlineConfigSwitch 
-     * @param float $OutlineWidth 
-     * @param integer $OutlineWidthUnit 
-     * @param string $OutlineColor 
-     * @param float $OutlineAlpha 
+     * @param integer $SubtitleOutlineConfigSwitch <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
+     * @param float $OutlineWidth <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
+     * @param integer $OutlineWidthUnit <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param string $OutlineColor <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
+     * @param float $OutlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
      */
     function __construct()
     {

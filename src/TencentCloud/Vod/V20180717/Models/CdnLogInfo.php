@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * CDN log information
  *
- * @method string getDate() Obtain 
- * @method void setDate(string $Date) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
+ * @method string getDate() Obtain <p>Date of the log, format: yyyy-MM-dd, for example, 2018-03-01.</p>
+ * @method void setDate(string $Date) Set <p>Date of the log, format: yyyy-MM-dd, for example, 2018-03-01.</p>
+ * @method string getName() Obtain <p>Log name, format: date-hour-domain name<br>for example, example.com.</p>
+ * @method void setName(string $Name) Set <p>Log name, format: date-hour-domain name<br>for example, example.com.</p>
+ * @method string getUrl() Obtain <p>Log download link, valid for download within 24 hours.</p>
+ * @method void setUrl(string $Url) Set <p>Log download link, valid for download within 24 hours.</p>
+ * @method string getStartTime() Obtain <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getEndTime() Obtain <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setEndTime(string $EndTime) Set <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  */
 class CdnLogInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Date of the log, format: yyyy-MM-dd, for example, 2018-03-01.</p>
      */
     public $Date;
 
     /**
-     * @var string 
+     * @var string <p>Log name, format: date-hour-domain name<br>for example, example.com.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Log download link, valid for download within 24 hours.</p>
      */
     public $Url;
 
     /**
-     * @var string 
+     * @var string <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $EndTime;
 
     /**
-     * @param string $Date 
-     * @param string $Name 
-     * @param string $Url 
-     * @param string $StartTime 
-     * @param string $EndTime 
+     * @param string $Date <p>Date of the log, format: yyyy-MM-dd, for example, 2018-03-01.</p>
+     * @param string $Name <p>Log name, format: date-hour-domain name<br>for example, example.com.</p>
+     * @param string $Url <p>Log download link, valid for download within 24 hours.</p>
+     * @param string $StartTime <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $EndTime <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     function __construct()
     {

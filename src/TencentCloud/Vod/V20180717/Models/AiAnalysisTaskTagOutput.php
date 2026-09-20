@@ -18,36 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent tag result information.
  *
- * @method array getTagSet() Obtain 
- * @method void setTagSet(array $TagSet) Set 
- * @method string getTagSetFileUrl() Obtain 
- * @method void setTagSetFileUrl(string $TagSetFileUrl) Set 
- * @method string getTagSetFileUrlExpireTime() Obtain 
- * @method void setTagSetFileUrlExpireTime(string $TagSetFileUrlExpireTime) Set 
+ * @method array getTagSet() Obtain Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
+ * @method void setTagSet(array $TagSet) Set Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
+ * @method string getTagSetFileUrl() Obtain URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
+ * @method void setTagSetFileUrl(string $TagSetFileUrl) Set URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
+ * @method string getTagSetFileUrlExpireTime() Obtain Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setTagSetFileUrlExpireTime(string $TagSetFileUrlExpireTime) Set Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiAnalysisTaskTagOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
      */
     public $TagSet;
 
     /**
-     * @var string 
+     * @var string URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
      */
     public $TagSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $TagSetFileUrlExpireTime;
 
     /**
-     * @param array $TagSet 
-     * @param string $TagSetFileUrl 
-     * @param string $TagSetFileUrlExpireTime 
+     * @param array $TagSet Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
+     * @param string $TagSetFileUrl URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
+     * @param string $TagSetFileUrlExpireTime Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

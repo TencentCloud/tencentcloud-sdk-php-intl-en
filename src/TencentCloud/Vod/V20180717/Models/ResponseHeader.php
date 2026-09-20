@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom response header configuration, disabled by default
  *
  * @method string getSwitch() Obtain Custom response header configuration switch. Valid values:
 <li>`on`: Enable;</li>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Custom response header configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method array getHeaderRules() Obtain 
- * @method void setHeaderRules(array $HeaderRules) Set 
+ * @method array getHeaderRules() Obtain Custom response header rule.
+ * @method void setHeaderRules(array $HeaderRules) Set Custom response header rule.
  */
 class ResponseHeader extends AbstractModel
 {
@@ -39,7 +39,7 @@ class ResponseHeader extends AbstractModel
     public $Switch;
 
     /**
-     * @var array 
+     * @var array Custom response header rule.
      */
     public $HeaderRules;
 
@@ -47,7 +47,7 @@ class ResponseHeader extends AbstractModel
      * @param string $Switch Custom response header configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param array $HeaderRules 
+     * @param array $HeaderRules Custom response header rule.
      */
     function __construct()
     {

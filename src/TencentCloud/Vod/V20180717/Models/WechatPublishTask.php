@@ -18,92 +18,128 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * WeChat publishing task information
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSourceDefinition() Obtain 
- * @method void setSourceDefinition(integer $SourceDefinition) Set 
- * @method string getWechatStatus() Obtain 
- * @method void setWechatStatus(string $WechatStatus) Set 
- * @method string getWechatVid() Obtain 
- * @method void setWechatVid(string $WechatVid) Set 
- * @method string getWechatUrl() Obtain 
- * @method void setWechatUrl(string $WechatUrl) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task status. Valid values:
+WAITING: waiting.
+PROCESSING: Processing;
+FINISH: completed.
+ * @method void setStatus(string $Status) Set Task status. Valid values:
+WAITING: waiting.
+PROCESSING: Processing;
+FINISH: completed.
+ * @method integer getErrCode() Obtain Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method string getFileId() Obtain Video file ID for publishing.
+ * @method void setFileId(string $FileId) Set Video file ID for publishing.
+ * @method integer getDefinition() Obtain Template ID for publishing on WeChat.
+ * @method void setDefinition(integer $Definition) Set Template ID for publishing on WeChat.
+ * @method integer getSourceDefinition() Obtain Transcoding template ID of the published video. 0 represents the original video.
+ * @method void setSourceDefinition(integer $SourceDefinition) Set Transcoding template ID of the published video. 0 represents the original video.
+ * @method string getWechatStatus() Obtain WeChat publishing status. Valid values:
+<li>FAIL: Failed;</li>
+<li>SUCCESS: successful;</li>
+<li>AUDITNOTPASS: failed to pass moderation;</li>
+<li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
+ * @method void setWechatStatus(string $WechatStatus) Set WeChat publishing status. Valid values:
+<li>FAIL: Failed;</li>
+<li>SUCCESS: successful;</li>
+<li>AUDITNOTPASS: failed to pass moderation;</li>
+<li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
+ * @method string getWechatVid() Obtain WeChat Vid.
+ * @method void setWechatVid(string $WechatVid) Set WeChat Vid.
+ * @method string getWechatUrl() Obtain WeChat address.
+ * @method void setWechatUrl(string $WechatUrl) Set WeChat address.
  */
 class WechatPublishTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task status. Valid values:
+WAITING: waiting.
+PROCESSING: Processing;
+FINISH: completed.
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var string 
+     * @var string Video file ID for publishing.
      */
     public $FileId;
 
     /**
-     * @var integer 
+     * @var integer Template ID for publishing on WeChat.
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer Transcoding template ID of the published video. 0 represents the original video.
      */
     public $SourceDefinition;
 
     /**
-     * @var string 
+     * @var string WeChat publishing status. Valid values:
+<li>FAIL: Failed;</li>
+<li>SUCCESS: successful;</li>
+<li>AUDITNOTPASS: failed to pass moderation;</li>
+<li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
      */
     public $WechatStatus;
 
     /**
-     * @var string 
+     * @var string WeChat Vid.
      */
     public $WechatVid;
 
     /**
-     * @var string 
+     * @var string WeChat address.
      */
     public $WechatUrl;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param string $FileId 
-     * @param integer $Definition 
-     * @param integer $SourceDefinition 
-     * @param string $WechatStatus 
-     * @param string $WechatVid 
-     * @param string $WechatUrl 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task status. Valid values:
+WAITING: waiting.
+PROCESSING: Processing;
+FINISH: completed.
+     * @param integer $ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+     * @param string $Message Error message.
+     * @param string $FileId Video file ID for publishing.
+     * @param integer $Definition Template ID for publishing on WeChat.
+     * @param integer $SourceDefinition Transcoding template ID of the published video. 0 represents the original video.
+     * @param string $WechatStatus WeChat publishing status. Valid values:
+<li>FAIL: Failed;</li>
+<li>SUCCESS: successful;</li>
+<li>AUDITNOTPASS: failed to pass moderation;</li>
+<li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
+     * @param string $WechatVid WeChat Vid.
+     * @param string $WechatUrl WeChat address.
      */
     function __construct()
     {

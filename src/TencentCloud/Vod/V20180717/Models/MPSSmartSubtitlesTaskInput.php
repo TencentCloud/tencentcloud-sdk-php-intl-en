@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Smart subtitle input struct.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method MPSRawSmartSubtitleParameter getRawParameter() Obtain 
- * @method void setRawParameter(MPSRawSmartSubtitleParameter $RawParameter) Set 
+ * @method integer getDefinition() Obtain <p>Smart subtitle template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Smart subtitle template ID.</p>
+ * @method MPSRawSmartSubtitleParameter getRawParameter() Obtain <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
+ * @method void setRawParameter(MPSRawSmartSubtitleParameter $RawParameter) Set <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
  */
 class MPSSmartSubtitlesTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Smart subtitle template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var MPSRawSmartSubtitleParameter 
+     * @var MPSRawSmartSubtitleParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
      */
     public $RawParameter;
 
     /**
-     * @param integer $Definition 
-     * @param MPSRawSmartSubtitleParameter $RawParameter 
+     * @param integer $Definition <p>Smart subtitle template ID.</p>
+     * @param MPSRawSmartSubtitleParameter $RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
      */
     function __construct()
     {

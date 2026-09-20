@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEventConfig request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getMode() Obtain 
- * @method void setMode(string $Mode) Set 
- * @method string getNotificationUrl() Obtain 
- * @method void setNotificationUrl(string $NotificationUrl) Set 
- * @method string getUploadMediaCompleteEventSwitch() Obtain 
- * @method void setUploadMediaCompleteEventSwitch(string $UploadMediaCompleteEventSwitch) Set 
- * @method string getDeleteMediaCompleteEventSwitch() Obtain 
- * @method void setDeleteMediaCompleteEventSwitch(string $DeleteMediaCompleteEventSwitch) Set 
- * @method string getPersistenceCompleteEventSwitch() Obtain 
- * @method void setPersistenceCompleteEventSwitch(string $PersistenceCompleteEventSwitch) Set 
- * @method string getSignKey() Obtain 
- * @method void setSignKey(string $SignKey) Set 
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+ * @method string getMode() Obtain <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable notification based on message queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
+ * @method void setMode(string $Mode) Set <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable notification based on message queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
+ * @method string getNotificationUrl() Obtain <p>When using <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> as the receiving channel, this is the address for receiving 3.0 format callbacks.<br>Note: If the NotificationUrl parameter is included and its value is an empty string, the 3.0 format callback address will be cleared.</p>
+ * @method void setNotificationUrl(string $NotificationUrl) Set <p>When using <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> as the receiving channel, this is the address for receiving 3.0 format callbacks.<br>Note: If the NotificationUrl parameter is included and its value is an empty string, the 3.0 format callback address will be cleared.</p>
+ * @method string getUploadMediaCompleteEventSwitch() Obtain <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+ * @method void setUploadMediaCompleteEventSwitch(string $UploadMediaCompleteEventSwitch) Set <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+ * @method string getDeleteMediaCompleteEventSwitch() Obtain <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completed</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+ * @method void setDeleteMediaCompleteEventSwitch(string $DeleteMediaCompleteEventSwitch) Set <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completed</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+ * @method string getPersistenceCompleteEventSwitch() Obtain <p>Whether to receive event notifications for clip solidification completion. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+ * @method void setPersistenceCompleteEventSwitch(string $PersistenceCompleteEventSwitch) Set <p>Whether to receive event notifications for clip solidification completion. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+ * @method string getSignKey() Obtain <p>Callback key, consisting of upper- and lower-case letters and digits, up to 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string. Event notification security signature Sign = MD5 (SignKey + T). Description: Tencent Cloud concatenates the encrypted SignKey and T, calculates the Sign value through MD5, and places it in the notification message. Upon receiving the notification message, your backend server can verify whether Sign is correct based on the same algorithm, and furthermore confirm whether the message indeed comes from Tencent Cloud Backend.</li><li><code>T</code>: int64. Expiration time, the UNIX timestamp when the event notification signature expires. The default expiration time for notifications from Tencent Cloud is 10 minutes. If the time specified by the T value in a message notification has expired, deem this notification invalid, and furthermore prevent network replay attacks. T is in decimal UNIX timestamp format, that is, the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
+ * @method void setSignKey(string $SignKey) Set <p>Callback key, consisting of upper- and lower-case letters and digits, up to 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string. Event notification security signature Sign = MD5 (SignKey + T). Description: Tencent Cloud concatenates the encrypted SignKey and T, calculates the Sign value through MD5, and places it in the notification message. Upon receiving the notification message, your backend server can verify whether Sign is correct based on the same algorithm, and furthermore confirm whether the message indeed comes from Tencent Cloud Backend.</li><li><code>T</code>: int64. Expiration time, the UNIX timestamp when the event notification signature expires. The default expiration time for notifications from Tencent Cloud is 10 minutes. If the time specified by the T value in a message notification has expired, deem this notification invalid, and furthermore prevent network replay attacks. T is in decimal UNIX timestamp format, that is, the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
  */
 class ModifyEventConfigRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable notification based on message queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
      */
     public $Mode;
 
     /**
-     * @var string 
+     * @var string <p>When using <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> as the receiving channel, this is the address for receiving 3.0 format callbacks.<br>Note: If the NotificationUrl parameter is included and its value is an empty string, the 3.0 format callback address will be cleared.</p>
      */
     public $NotificationUrl;
 
     /**
-     * @var string 
+     * @var string <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
      */
     public $UploadMediaCompleteEventSwitch;
 
     /**
-     * @var string 
+     * @var string <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completed</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
      */
     public $DeleteMediaCompleteEventSwitch;
 
     /**
-     * @var string 
+     * @var string <p>Whether to receive event notifications for clip solidification completion. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
      */
     public $PersistenceCompleteEventSwitch;
 
     /**
-     * @var string 
+     * @var string <p>Callback key, consisting of upper- and lower-case letters and digits, up to 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string. Event notification security signature Sign = MD5 (SignKey + T). Description: Tencent Cloud concatenates the encrypted SignKey and T, calculates the Sign value through MD5, and places it in the notification message. Upon receiving the notification message, your backend server can verify whether Sign is correct based on the same algorithm, and furthermore confirm whether the message indeed comes from Tencent Cloud Backend.</li><li><code>T</code>: int64. Expiration time, the UNIX timestamp when the event notification signature expires. The default expiration time for notifications from Tencent Cloud is 10 minutes. If the time specified by the T value in a message notification has expired, deem this notification invalid, and furthermore prevent network replay attacks. T is in decimal UNIX timestamp format, that is, the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
      */
     public $SignKey;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Mode 
-     * @param string $NotificationUrl 
-     * @param string $UploadMediaCompleteEventSwitch 
-     * @param string $DeleteMediaCompleteEventSwitch 
-     * @param string $PersistenceCompleteEventSwitch 
-     * @param string $SignKey 
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+     * @param string $Mode <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable notification based on message queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
+     * @param string $NotificationUrl <p>When using <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> as the receiving channel, this is the address for receiving 3.0 format callbacks.<br>Note: If the NotificationUrl parameter is included and its value is an empty string, the 3.0 format callback address will be cleared.</p>
+     * @param string $UploadMediaCompleteEventSwitch <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+     * @param string $DeleteMediaCompleteEventSwitch <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completed</a> event notifications. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+     * @param string $PersistenceCompleteEventSwitch <p>Whether to receive event notifications for clip solidification completion. Default &quot;OFF&quot; ignores the event notification, and &quot;ON&quot; receives event notifications.</p>
+     * @param string $SignKey <p>Callback key, consisting of upper- and lower-case letters and digits, up to 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string. Event notification security signature Sign = MD5 (SignKey + T). Description: Tencent Cloud concatenates the encrypted SignKey and T, calculates the Sign value through MD5, and places it in the notification message. Upon receiving the notification message, your backend server can verify whether Sign is correct based on the same algorithm, and furthermore confirm whether the message indeed comes from Tencent Cloud Backend.</li><li><code>T</code>: int64. Expiration time, the UNIX timestamp when the event notification signature expires. The default expiration time for notifications from Tencent Cloud is 10 minutes. If the time specified by the T value in a message notification has expired, deem this notification invalid, and furthermore prevent network replay attacks. T is in decimal UNIX timestamp format, that is, the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
      */
     function __construct()
     {

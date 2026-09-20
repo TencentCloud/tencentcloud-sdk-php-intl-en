@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Screenshot information of a VOD file at the specified time point
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getPicInfoSet() Obtain 
- * @method void setPicInfoSet(array $PicInfoSet) Set 
+ * @method integer getDefinition() Obtain SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method array getPicInfoSet() Obtain Screenshot information set of the same specification. Each element represents a screenshot.
+ * @method void setPicInfoSet(array $PicInfoSet) Set Screenshot information set of the same specification. Each element represents a screenshot.
  */
 class MediaSnapshotByTimeOffsetItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array Screenshot information set of the same specification. Each element represents a screenshot.
      */
     public $PicInfoSet;
 
     /**
-     * @param integer $Definition 
-     * @param array $PicInfoSet 
+     * @param integer $Definition SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param array $PicInfoSet Screenshot information set of the same specification. Each element represents a screenshot.
      */
     function __construct()
     {

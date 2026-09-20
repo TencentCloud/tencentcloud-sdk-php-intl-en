@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle suppression template for MPS
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method MPSSubtitleEmbedConfig getSubtitleEmbedConfig() Obtain 
- * @method void setSubtitleEmbedConfig(MPSSubtitleEmbedConfig $SubtitleEmbedConfig) Set 
+ * @method integer getDefinition() Obtain <p>Unique identifier of the subtitle suppression template</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the subtitle suppression template</p>
+ * @method string getName() Obtain <p>Subtitle suppression name<br>Length limit: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Subtitle suppression name<br>Length limit: 64 characters.</p>
+ * @method string getComment() Obtain <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
+ * @method MPSSubtitleEmbedConfig getSubtitleEmbedConfig() Obtain <p>Subtitle suppression configuration</p>
+ * @method void setSubtitleEmbedConfig(MPSSubtitleEmbedConfig $SubtitleEmbedConfig) Set <p>Subtitle suppression configuration</p>
  */
 class MPSEmbedSubtitleTemplateForUpdate extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Unique identifier of the subtitle suppression template</p>
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string <p>Subtitle suppression name<br>Length limit: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var MPSSubtitleEmbedConfig 
+     * @var MPSSubtitleEmbedConfig <p>Subtitle suppression configuration</p>
      */
     public $SubtitleEmbedConfig;
 
     /**
-     * @param integer $Definition 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param MPSSubtitleEmbedConfig $SubtitleEmbedConfig 
+     * @param integer $Definition <p>Unique identifier of the subtitle suppression template</p>
+     * @param string $Name <p>Subtitle suppression name<br>Length limit: 64 characters.</p>
+     * @param string $Comment <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
+     * @param MPSSubtitleEmbedConfig $SubtitleEmbedConfig <p>Subtitle suppression configuration</p>
      */
     function __construct()
     {

@@ -18,132 +18,132 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Transcoding information
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getBitrate() Obtain 
- * @method void setBitrate(integer $Bitrate) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getSize() Obtain 
- * @method void setSize(integer $Size) Set 
- * @method float getDuration() Obtain 
- * @method void setDuration(float $Duration) Set 
- * @method string getMd5() Obtain 
- * @method void setMd5(string $Md5) Set 
- * @method string getContainer() Obtain 
- * @method void setContainer(string $Container) Set 
- * @method array getVideoStreamSet() Obtain 
- * @method void setVideoStreamSet(array $VideoStreamSet) Set 
- * @method array getAudioStreamSet() Obtain 
- * @method void setAudioStreamSet(array $AudioStreamSet) Set 
- * @method string getDigitalWatermarkType() Obtain 
- * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set 
- * @method string getCopyRightWatermarkText() Obtain 
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set 
- * @method integer getBlindWatermarkDefinition() Obtain 
- * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
+ * @method string getUrl() Obtain <p>File address of the transcoded video.</p>
+ * @method void setUrl(string $Url) Set <p>File address of the transcoded video.</p>
+ * @method integer getDefinition() Obtain <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
+ * @method void setDefinition(integer $Definition) Set <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
+ * @method integer getBitrate() Obtain <p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
+ * @method void setBitrate(integer $Bitrate) Set <p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
+ * @method integer getHeight() Obtain <p>Maximum video stream height. Unit: px.</p>
+ * @method void setHeight(integer $Height) Set <p>Maximum video stream height. Unit: px.</p>
+ * @method integer getWidth() Obtain <p>Maximum value of the video stream width. Unit: px.</p>
+ * @method void setWidth(integer $Width) Set <p>Maximum value of the video stream width. Unit: px.</p>
+ * @method integer getSize() Obtain <p>Total size of media files, unit: byte.</p><li>If the media file is HLS, the size is the sum of the m3u8 and ts file sizes.</li>
+ * @method void setSize(integer $Size) Set <p>Total size of media files, unit: byte.</p><li>If the media file is HLS, the size is the sum of the m3u8 and ts file sizes.</li>
+ * @method float getDuration() Obtain <p>Video duration, unit: seconds.</p>
+ * @method void setDuration(float $Duration) Set <p>Video duration, unit: seconds.</p>
+ * @method string getMd5() Obtain <p>md5 value of the video.</p>
+ * @method void setMd5(string $Md5) Set <p>md5 value of the video.</p>
+ * @method string getContainer() Obtain <p>Container type, for example, m4a, mp4.</p>
+ * @method void setContainer(string $Container) Set <p>Container type, for example, m4a, mp4.</p>
+ * @method array getVideoStreamSet() Obtain <p>Video stream information.</p>
+ * @method void setVideoStreamSet(array $VideoStreamSet) Set <p>Video stream information.</p>
+ * @method array getAudioStreamSet() Obtain <p>Audio stream information.</p>
+ * @method void setAudioStreamSet(array $AudioStreamSet) Set <p>Audio stream information.</p>
+ * @method string getDigitalWatermarkType() Obtain <p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set <p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+ * @method string getCopyRightWatermarkText() Obtain <p>Copyright information.</p>
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set <p>Copyright information.</p>
+ * @method integer getBlindWatermarkDefinition() Obtain <p>Digit watermark template id.</p>
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) Set <p>Digit watermark template id.</p>
+ * @method string getFileId() Obtain <p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
+ * @method void setFileId(string $FileId) Set <p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
  */
 class MediaTranscodeItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>File address of the transcoded video.</p>
      */
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer 
+     * @var integer <p>Maximum video stream height. Unit: px.</p>
      */
     public $Height;
 
     /**
-     * @var integer 
+     * @var integer <p>Maximum value of the video stream width. Unit: px.</p>
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer <p>Total size of media files, unit: byte.</p><li>If the media file is HLS, the size is the sum of the m3u8 and ts file sizes.</li>
      */
     public $Size;
 
     /**
-     * @var float 
+     * @var float <p>Video duration, unit: seconds.</p>
      */
     public $Duration;
 
     /**
-     * @var string 
+     * @var string <p>md5 value of the video.</p>
      */
     public $Md5;
 
     /**
-     * @var string 
+     * @var string <p>Container type, for example, m4a, mp4.</p>
      */
     public $Container;
 
     /**
-     * @var array 
+     * @var array <p>Video stream information.</p>
      */
     public $VideoStreamSet;
 
     /**
-     * @var array 
+     * @var array <p>Audio stream information.</p>
      */
     public $AudioStreamSet;
 
     /**
-     * @var string 
+     * @var string <p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
      */
     public $DigitalWatermarkType;
 
     /**
-     * @var string 
+     * @var string <p>Copyright information.</p>
      */
     public $CopyRightWatermarkText;
 
     /**
-     * @var integer 
+     * @var integer <p>Digit watermark template id.</p>
      */
     public $BlindWatermarkDefinition;
 
     /**
-     * @var string 
+     * @var string <p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
      */
     public $FileId;
 
     /**
-     * @param string $Url 
-     * @param integer $Definition 
-     * @param integer $Bitrate 
-     * @param integer $Height 
-     * @param integer $Width 
-     * @param integer $Size 
-     * @param float $Duration 
-     * @param string $Md5 
-     * @param string $Container 
-     * @param array $VideoStreamSet 
-     * @param array $AudioStreamSet 
-     * @param string $DigitalWatermarkType 
-     * @param string $CopyRightWatermarkText 
-     * @param integer $BlindWatermarkDefinition 
-     * @param string $FileId 
+     * @param string $Url <p>File address of the transcoded video.</p>
+     * @param integer $Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
+     * @param integer $Bitrate <p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
+     * @param integer $Height <p>Maximum video stream height. Unit: px.</p>
+     * @param integer $Width <p>Maximum value of the video stream width. Unit: px.</p>
+     * @param integer $Size <p>Total size of media files, unit: byte.</p><li>If the media file is HLS, the size is the sum of the m3u8 and ts file sizes.</li>
+     * @param float $Duration <p>Video duration, unit: seconds.</p>
+     * @param string $Md5 <p>md5 value of the video.</p>
+     * @param string $Container <p>Container type, for example, m4a, mp4.</p>
+     * @param array $VideoStreamSet <p>Video stream information.</p>
+     * @param array $AudioStreamSet <p>Audio stream information.</p>
+     * @param string $DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+     * @param string $CopyRightWatermarkText <p>Copyright information.</p>
+     * @param integer $BlindWatermarkDefinition <p>Digit watermark template id.</p>
+     * @param string $FileId <p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
      */
     function __construct()
     {

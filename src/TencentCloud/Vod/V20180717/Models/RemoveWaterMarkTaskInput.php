@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input of the intelligent watermark removal task.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
  */
 class RemoveWaterMarkTaskInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @param string $FileId 
+     * @param string $FileId Media file ID.
      */
     function __construct()
     {

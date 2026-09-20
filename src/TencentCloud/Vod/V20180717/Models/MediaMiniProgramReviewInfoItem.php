@@ -18,52 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Mini Program Audio and Video moderation information unit
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method string getReviewResult() Obtain 
- * @method void setReviewResult(string $ReviewResult) Set 
- * @method array getReviewSummary() Obtain 
- * @method void setReviewSummary(array $ReviewSummary) Set 
+ * @method integer getDefinition() Obtain Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
+ * @method void setDefinition(integer $Definition) Set Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
+ * @method MediaMetaData getMetaData() Obtain Video metadata.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Video metadata.
+ * @method string getUrl() Obtain Video playback address for Mini Program Audio and Video review.
+ * @method void setUrl(string $Url) Set Video playback address for Mini Program Audio and Video review.
+ * @method string getReviewResult() Obtain Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
+ * @method void setReviewResult(string $ReviewResult) Set Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
+ * @method array getReviewSummary() Obtain Mini Program Audio and Video moderation element.
+ * @method void setReviewSummary(array $ReviewSummary) Set Mini Program Audio and Video moderation element.
  */
 class MediaMiniProgramReviewInfoItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
      */
     public $Definition;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Video metadata.
      */
     public $MetaData;
 
     /**
-     * @var string 
+     * @var string Video playback address for Mini Program Audio and Video review.
      */
     public $Url;
 
     /**
-     * @var string 
+     * @var string Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
      */
     public $ReviewResult;
 
     /**
-     * @var array 
+     * @var array Mini Program Audio and Video moderation element.
      */
     public $ReviewSummary;
 
     /**
-     * @param integer $Definition 
-     * @param MediaMetaData $MetaData 
-     * @param string $Url 
-     * @param string $ReviewResult 
-     * @param array $ReviewSummary 
+     * @param integer $Definition Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
+     * @param MediaMetaData $MetaData Video metadata.
+     * @param string $Url Video playback address for Mini Program Audio and Video review.
+     * @param string $ReviewResult Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
+     * @param array $ReviewSummary Mini Program Audio and Video moderation element.
      */
     function __construct()
     {

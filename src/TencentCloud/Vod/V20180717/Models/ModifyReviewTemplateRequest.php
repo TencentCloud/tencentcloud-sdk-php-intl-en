@@ -20,50 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method array getLabels() Obtain 
- * @method void setLabels(array $Labels) Set 
+ * @method integer getDefinition() Obtain Unique identifier of the review template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the review template.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method string getName() Obtain Review template name, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Review template name, with a length limit of 64 characters.
+ * @method string getComment() Obtain Review template description information, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Review template description information, with a length limit of 256 characters.
+ * @method array getLabels() Obtain List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
+ * @method void setLabels(array $Labels) Set List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
  */
 class ModifyReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique identifier of the review template.
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Review template name, with a length limit of 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Review template description information, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var array 
+     * @var array List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
      */
     public $Labels;
 
     /**
-     * @param integer $Definition 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param array $Labels 
+     * @param integer $Definition Unique identifier of the review template.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param string $Name Review template name, with a length limit of 64 characters.
+     * @param string $Comment Review template description information, with a length limit of 256 characters.
+     * @param array $Labels List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
      */
     function __construct()
     {

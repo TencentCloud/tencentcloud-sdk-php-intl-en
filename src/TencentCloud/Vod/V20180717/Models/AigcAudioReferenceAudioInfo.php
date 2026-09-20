@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Reference audio information.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getType() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
+ * @method void setType(string $Type) Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
+ * @method string getFileId() Obtain <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
+ * @method void setFileId(string $FileId) Set <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
+ * @method string getUrl() Obtain <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
+ * @method void setUrl(string $Url) Set <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
  */
 class AigcAudioReferenceAudioInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
      */
     public $Url;
 
     /**
-     * @param string $Type 
-     * @param string $FileId 
-     * @param string $Url 
+     * @param string $Type <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
+     * @param string $FileId <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
+     * @param string $Url <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
      */
     function __construct()
     {

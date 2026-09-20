@@ -18,84 +18,112 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sub-application information.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getSubAppIdName() Obtain 
- * @method void setSubAppIdName(string $SubAppIdName) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getMode() Obtain 
- * @method void setMode(string $Mode) Set 
- * @method array getStorageRegions() Obtain 
- * @method void setStorageRegions(array $StorageRegions) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method integer getSubAppId() Obtain Subapplication ID.
+ * @method void setSubAppId(integer $SubAppId) Set Subapplication ID.
+ * @method string getSubAppIdName() Obtain Subapplication name.
+ * @method void setSubAppIdName(string $SubAppIdName) Set Subapplication name.
+ * @method string getDescription() Obtain Sub-application description.
+ * @method void setDescription(string $Description) Set Sub-application description.
+ * @method string getCreateTime() Obtain Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getStatus() Obtain Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
+ * @method void setStatus(string $Status) Set Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
+ * @method string getName() Obtain Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+ * @method void setName(string $Name) Set Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+ * @method string getMode() Obtain Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
+ * @method void setMode(string $Mode) Set Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
+ * @method array getStorageRegions() Obtain Storage region where the sub-application is enabled.
+ * @method void setStorageRegions(array $StorageRegions) Set Storage region where the sub-application is enabled.
+ * @method array getTags() Obtain tag bound to the sub-application.
+ * @method void setTags(array $Tags) Set tag bound to the sub-application.
  */
 class SubAppIdInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Subapplication ID.
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Subapplication name.
      */
     public $SubAppIdName;
 
     /**
-     * @var string 
+     * @var string Sub-application description.
      */
     public $Description;
 
     /**
-     * @var string 
+     * @var string Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
      */
     public $Mode;
 
     /**
-     * @var array 
+     * @var array Storage region where the sub-application is enabled.
      */
     public $StorageRegions;
 
     /**
-     * @var array 
+     * @var array tag bound to the sub-application.
      */
     public $Tags;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $SubAppIdName 
-     * @param string $Description 
-     * @param string $CreateTime 
-     * @param string $Status 
-     * @param string $Name 
-     * @param string $Mode 
-     * @param array $StorageRegions 
-     * @param array $Tags 
+     * @param integer $SubAppId Subapplication ID.
+     * @param string $SubAppIdName Subapplication name.
+     * @param string $Description Sub-application description.
+     * @param string $CreateTime Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $Status Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
+     * @param string $Name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+     * @param string $Mode Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
+     * @param array $StorageRegions Storage region where the sub-application is enabled.
+     * @param array $Tags tag bound to the sub-application.
      */
     function __construct()
     {

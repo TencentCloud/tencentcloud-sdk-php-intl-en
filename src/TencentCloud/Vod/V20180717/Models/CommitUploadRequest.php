@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CommitUpload request structure.
  *
- * @method string getVodSessionKey() Obtain 
- * @method void setVodSessionKey(string $VodSessionKey) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getVodSessionKey() Obtain <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
+ * @method void setVodSessionKey(string $VodSessionKey) Set <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
  */
 class CommitUploadRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
      */
     public $VodSessionKey;
 
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param string $VodSessionKey 
-     * @param integer $SubAppId 
+     * @param string $VodSessionKey <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
      */
     function __construct()
     {

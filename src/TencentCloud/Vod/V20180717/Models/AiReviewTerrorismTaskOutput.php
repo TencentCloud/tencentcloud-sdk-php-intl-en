@@ -18,60 +18,112 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Terrorism information
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
- * @method string getSegmentSetFileUrl() Obtain 
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
- * @method string getSegmentSetFileUrlExpireTime() Obtain 
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
+ * @method float getConfidence() Obtain Video terrorism score. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Video terrorism score. Value range: 0-100.
+ * @method string getSuggestion() Obtain Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method string getLabel() Obtain Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
+ * @method void setLabel(string $Label) Set Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
+ * @method array getSegmentSet() Obtain List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiReviewTerrorismTaskOutput extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Video terrorism score. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
      */
     public $Label;
 
     /**
-     * @var array 
+     * @var array List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string 
+     * @var string URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string 
+     * @var string File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param string $Label 
-     * @param array $SegmentSet 
-     * @param string $SegmentSetFileUrl 
-     * @param string $SegmentSetFileUrlExpireTime 
+     * @param float $Confidence Video terrorism score. Value range: 0-100.
+     * @param string $Suggestion Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param string $Label Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
+     * @param array $SegmentSet List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param string $SegmentSetFileUrlExpireTime File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

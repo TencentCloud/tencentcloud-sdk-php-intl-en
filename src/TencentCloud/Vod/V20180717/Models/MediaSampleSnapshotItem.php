@@ -18,52 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sampling screenshot information
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getSampleType() Obtain 
- * @method void setSampleType(string $SampleType) Set 
- * @method integer getInterval() Obtain 
- * @method void setInterval(integer $Interval) Set 
- * @method array getImageUrlSet() Obtain 
- * @method void setImageUrlSet(array $ImageUrlSet) Set 
- * @method array getWaterMarkDefinition() Obtain 
- * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set 
+ * @method integer getDefinition() Obtain Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method string getSampleType() Obtain Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+ * @method void setSampleType(string $SampleType) Set Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+ * @method integer getInterval() Obtain Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+ * @method void setInterval(integer $Interval) Set Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+ * @method array getImageUrlSet() Obtain List of generated screenshot URLs.
+ * @method void setImageUrlSet(array $ImageUrlSet) Set List of generated screenshot URLs.
+ * @method array getWaterMarkDefinition() Obtain List of template IDs if the screenshot is watermarked.
+ * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of template IDs if the screenshot is watermarked.
  */
 class MediaSampleSnapshotItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
      */
     public $SampleType;
 
     /**
-     * @var integer 
+     * @var integer Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
      */
     public $Interval;
 
     /**
-     * @var array 
+     * @var array List of generated screenshot URLs.
      */
     public $ImageUrlSet;
 
     /**
-     * @var array 
+     * @var array List of template IDs if the screenshot is watermarked.
      */
     public $WaterMarkDefinition;
 
     /**
-     * @param integer $Definition 
-     * @param string $SampleType 
-     * @param integer $Interval 
-     * @param array $ImageUrlSet 
-     * @param array $WaterMarkDefinition 
+     * @param integer $Definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param string $SampleType Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+     * @param integer $Interval Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+     * @param array $ImageUrlSet List of generated screenshot URLs.
+     * @param array $WaterMarkDefinition List of template IDs if the screenshot is watermarked.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Prohibition task control parameter
  *
- * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain 
- * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set 
- * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain 
- * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set 
+ * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain Speech prohibition control parameter.
+ * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set Speech prohibition control parameter.
+ * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain Text prohibited control parameters.
+ * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set Text prohibited control parameters.
  */
 class ProhibitedConfigureInfo extends AbstractModel
 {
     /**
-     * @var ProhibitedAsrReviewTemplateInfo 
+     * @var ProhibitedAsrReviewTemplateInfo Speech prohibition control parameter.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var ProhibitedOcrReviewTemplateInfo 
+     * @var ProhibitedOcrReviewTemplateInfo Text prohibited control parameters.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo 
-     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo 
+     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo Speech prohibition control parameter.
+     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo Text prohibited control parameters.
      */
     function __construct()
     {

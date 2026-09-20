@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Additional parameters for asynchronous image processing.
  *
- * @method array getPrompts() Obtain 
- * @method void setPrompts(array $Prompts) Set 
+ * @method array getPrompts() Obtain Prompt input to the model.
+ * @method void setPrompts(array $Prompts) Set Prompt input to the model.
  */
 class ProcessImageAsyncInputExtendedParameter extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Prompt input to the model.
      */
     public $Prompts;
 
     /**
-     * @param array $Prompts 
+     * @param array $Prompts Prompt input to the model.
      */
     function __construct()
     {

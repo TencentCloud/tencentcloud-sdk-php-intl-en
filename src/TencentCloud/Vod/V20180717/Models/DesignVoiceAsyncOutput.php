@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Timbre design task output.
  *
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
- * @method string getTrialAudio() Obtain 
- * @method void setTrialAudio(string $TrialAudio) Set 
+ * @method string getVoiceId() Obtain <p>Voice ID.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
+ * @method string getTrialAudio() Obtain <p>Audition audio.</p>
+ * @method void setTrialAudio(string $TrialAudio) Set <p>Audition audio.</p>
  */
 class DesignVoiceAsyncOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Voice ID.</p>
      */
     public $VoiceId;
 
     /**
-     * @var string 
+     * @var string <p>Audition audio.</p>
      */
     public $TrialAudio;
 
     /**
-     * @param string $VoiceId 
-     * @param string $TrialAudio 
+     * @param string $VoiceId <p>Voice ID.</p>
+     * @param string $TrialAudio <p>Audition audio.</p>
      */
     function __construct()
     {

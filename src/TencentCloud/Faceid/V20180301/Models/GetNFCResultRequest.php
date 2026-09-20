@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNFCToken() Obtain Unique ID returned by the frontend NFC SDK
  * @method void setNFCToken(string $NFCToken) Set Unique ID returned by the frontend NFC SDK
- * @method string getIdNum() Obtain Identity card number / passport number / Hong Kong, China and Macao, China travel permit
- * @method void setIdNum(string $IdNum) Set Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+ * @method string getIdNum() Obtain Identity card number / passport number / Hong Kong and Macao travel permit
+ * @method void setIdNum(string $IdNum) Set Identity card number / passport number / Hong Kong and Macao travel permit
  * @method string getName() Obtain Name
  * @method void setName(string $Name) Set Name
  * @method string getPicture() Obtain Base64 value of the portrait photo
@@ -59,7 +59,7 @@ class GetNFCResultRequest extends AbstractModel
     public $NFCToken;
 
     /**
-     * @var string Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+     * @var string Identity card number / passport number / Hong Kong and Macao travel permit
      */
     public $IdNum;
 
@@ -130,7 +130,7 @@ class GetNFCResultRequest extends AbstractModel
 
     /**
      * @param string $NFCToken Unique ID returned by the frontend NFC SDK
-     * @param string $IdNum Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+     * @param string $IdNum Identity card number / passport number / Hong Kong and Macao travel permit
      * @param string $Name Name
      * @param string $Picture Base64 value of the portrait photo
      * @param string $BirthDate Date of birth (format: YYYYMMDD)

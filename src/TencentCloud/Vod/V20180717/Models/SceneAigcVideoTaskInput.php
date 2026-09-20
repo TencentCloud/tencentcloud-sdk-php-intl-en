@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Scenario-based information of an AIGC video task.
  *
- * @method AigcVideoSceneInfo getSceneInfo() Obtain 
- * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set 
- * @method array getFileInfos() Obtain 
- * @method void setFileInfos(array $FileInfos) Set 
- * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set 
+ * @method AigcVideoSceneInfo getSceneInfo() Obtain Scenario-based image generation parameter configuration.
+ * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set Scenario-based image generation parameter configuration.
+ * @method array getFileInfos() Obtain List of input images.
+ * @method void setFileInfos(array $FileInfos) Set List of input images.
+ * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain Configuration of the output media file for the scenario-based image generation task.
+ * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set Configuration of the output media file for the scenario-based image generation task.
  */
 class SceneAigcVideoTaskInput extends AbstractModel
 {
     /**
-     * @var AigcVideoSceneInfo 
+     * @var AigcVideoSceneInfo Scenario-based image generation parameter configuration.
      */
     public $SceneInfo;
 
     /**
-     * @var array 
+     * @var array List of input images.
      */
     public $FileInfos;
 
     /**
-     * @var SceneAigcVideoOutputConfig 
+     * @var SceneAigcVideoOutputConfig Configuration of the output media file for the scenario-based image generation task.
      */
     public $OutputConfig;
 
     /**
-     * @param AigcVideoSceneInfo $SceneInfo 
-     * @param array $FileInfos 
-     * @param SceneAigcVideoOutputConfig $OutputConfig 
+     * @param AigcVideoSceneInfo $SceneInfo Scenario-based image generation parameter configuration.
+     * @param array $FileInfos List of input images.
+     * @param SceneAigcVideoOutputConfig $OutputConfig Configuration of the output media file for the scenario-based image generation task.
      */
     function __construct()
     {

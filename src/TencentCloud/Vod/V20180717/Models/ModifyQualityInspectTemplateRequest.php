@@ -20,146 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyQualityInspectTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method array getConfigs() Obtain 
- * @method void setConfigs(array $Configs) Set 
- * @method QualityInspectStrategy getStrategy() Obtain 
- * @method void setStrategy(QualityInspectStrategy $Strategy) Set 
- * @method float getScreenshotInterval() Obtain 
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
- * @method JitterConfigureInfoForUpdate getJitterConfigure() Obtain 
- * @method void setJitterConfigure(JitterConfigureInfoForUpdate $JitterConfigure) Set 
- * @method BlurConfigureInfoForUpdate getBlurConfigure() Obtain 
- * @method void setBlurConfigure(BlurConfigureInfoForUpdate $BlurConfigure) Set 
- * @method AbnormalLightingConfigureInfoForUpdate getAbnormalLightingConfigure() Obtain 
- * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure) Set 
- * @method CrashScreenConfigureInfoForUpdate getCrashScreenConfigure() Obtain 
- * @method void setCrashScreenConfigure(CrashScreenConfigureInfoForUpdate $CrashScreenConfigure) Set 
- * @method BlackWhiteEdgeConfigureInfoForUpdate getBlackWhiteEdgeConfigure() Obtain 
- * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure) Set 
- * @method NoiseConfigureInfoForUpdate getNoiseConfigure() Obtain 
- * @method void setNoiseConfigure(NoiseConfigureInfoForUpdate $NoiseConfigure) Set 
- * @method MosaicConfigureInfoForUpdate getMosaicConfigure() Obtain 
- * @method void setMosaicConfigure(MosaicConfigureInfoForUpdate $MosaicConfigure) Set 
- * @method QRCodeConfigureInfoForUpdate getQRCodeConfigure() Obtain 
- * @method void setQRCodeConfigure(QRCodeConfigureInfoForUpdate $QRCodeConfigure) Set 
- * @method VoiceConfigureInfoForUpdate getVoiceConfigure() Obtain 
- * @method void setVoiceConfigure(VoiceConfigureInfoForUpdate $VoiceConfigure) Set 
- * @method QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() Obtain 
- * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure) Set 
+ * @method integer getDefinition() Obtain <p>Template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Template ID.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+ * @method string getName() Obtain <p>Template name. Length limit: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Template name. Length limit: 64 characters.</p>
+ * @method string getComment() Obtain <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method array getConfigs() Obtain <p>Configuration parameters for audio and video quality detection.</p>
+ * @method void setConfigs(array $Configs) Set <p>Configuration parameters for audio and video quality detection.</p>
+ * @method QualityInspectStrategy getStrategy() Obtain <p>Spot check policy for audio and video quality inspection.</p>
+ * @method void setStrategy(QualityInspectStrategy $Strategy) Set <p>Spot check policy for audio and video quality inspection.</p>
+ * @method float getScreenshotInterval() Obtain <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
+ * @method JitterConfigureInfoForUpdate getJitterConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
+ * @method void setJitterConfigure(JitterConfigureInfoForUpdate $JitterConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
+ * @method BlurConfigureInfoForUpdate getBlurConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+ * @method void setBlurConfigure(BlurConfigureInfoForUpdate $BlurConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+ * @method AbnormalLightingConfigureInfoForUpdate getAbnormalLightingConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+ * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+ * @method CrashScreenConfigureInfoForUpdate getCrashScreenConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
+ * @method void setCrashScreenConfigure(CrashScreenConfigureInfoForUpdate $CrashScreenConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
+ * @method BlackWhiteEdgeConfigureInfoForUpdate getBlackWhiteEdgeConfigure() Obtain <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+ * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure) Set <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+ * @method NoiseConfigureInfoForUpdate getNoiseConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+ * @method void setNoiseConfigure(NoiseConfigureInfoForUpdate $NoiseConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+ * @method MosaicConfigureInfoForUpdate getMosaicConfigure() Obtain <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+ * @method void setMosaicConfigure(MosaicConfigureInfoForUpdate $MosaicConfigure) Set <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+ * @method QRCodeConfigureInfoForUpdate getQRCodeConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+ * @method void setQRCodeConfigure(QRCodeConfigureInfoForUpdate $QRCodeConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+ * @method VoiceConfigureInfoForUpdate getVoiceConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+ * @method void setVoiceConfigure(VoiceConfigureInfoForUpdate $VoiceConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+ * @method QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
+ * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
  */
 class ModifyQualityInspectTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Template name. Length limit: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var array 
+     * @var array <p>Configuration parameters for audio and video quality detection.</p>
      */
     public $Configs;
 
     /**
-     * @var QualityInspectStrategy 
+     * @var QualityInspectStrategy <p>Spot check policy for audio and video quality inspection.</p>
      */
     public $Strategy;
 
     /**
-     * @var float 
+     * @var float <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
      */
     public $ScreenshotInterval;
 
     /**
-     * @var JitterConfigureInfoForUpdate 
+     * @var JitterConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
      */
     public $JitterConfigure;
 
     /**
-     * @var BlurConfigureInfoForUpdate 
+     * @var BlurConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
      */
     public $BlurConfigure;
 
     /**
-     * @var AbnormalLightingConfigureInfoForUpdate 
+     * @var AbnormalLightingConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
      */
     public $AbnormalLightingConfigure;
 
     /**
-     * @var CrashScreenConfigureInfoForUpdate 
+     * @var CrashScreenConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
      */
     public $CrashScreenConfigure;
 
     /**
-     * @var BlackWhiteEdgeConfigureInfoForUpdate 
+     * @var BlackWhiteEdgeConfigureInfoForUpdate <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
      */
     public $BlackWhiteEdgeConfigure;
 
     /**
-     * @var NoiseConfigureInfoForUpdate 
+     * @var NoiseConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
      */
     public $NoiseConfigure;
 
     /**
-     * @var MosaicConfigureInfoForUpdate 
+     * @var MosaicConfigureInfoForUpdate <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
      */
     public $MosaicConfigure;
 
     /**
-     * @var QRCodeConfigureInfoForUpdate 
+     * @var QRCodeConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
      */
     public $QRCodeConfigure;
 
     /**
-     * @var VoiceConfigureInfoForUpdate 
+     * @var VoiceConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     public $VoiceConfigure;
 
     /**
-     * @var QualityEvaluationConfigureInfoForUpdate 
+     * @var QualityEvaluationConfigureInfoForUpdate <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
      */
     public $QualityEvaluationConfigure;
 
     /**
-     * @param integer $Definition 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param array $Configs 
-     * @param QualityInspectStrategy $Strategy 
-     * @param float $ScreenshotInterval 
-     * @param JitterConfigureInfoForUpdate $JitterConfigure 
-     * @param BlurConfigureInfoForUpdate $BlurConfigure 
-     * @param AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure 
-     * @param CrashScreenConfigureInfoForUpdate $CrashScreenConfigure 
-     * @param BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure 
-     * @param NoiseConfigureInfoForUpdate $NoiseConfigure 
-     * @param MosaicConfigureInfoForUpdate $MosaicConfigure 
-     * @param QRCodeConfigureInfoForUpdate $QRCodeConfigure 
-     * @param VoiceConfigureInfoForUpdate $VoiceConfigure 
-     * @param QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure 
+     * @param integer $Definition <p>Template ID.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * @param string $Name <p>Template name. Length limit: 64 characters.</p>
+     * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param array $Configs <p>Configuration parameters for audio and video quality detection.</p>
+     * @param QualityInspectStrategy $Strategy <p>Spot check policy for audio and video quality inspection.</p>
+     * @param float $ScreenshotInterval <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
+     * @param JitterConfigureInfoForUpdate $JitterConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
+     * @param BlurConfigureInfoForUpdate $BlurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+     * @param AbnormalLightingConfigureInfoForUpdate $AbnormalLightingConfigure <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+     * @param CrashScreenConfigureInfoForUpdate $CrashScreenConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
+     * @param BlackWhiteEdgeConfigureInfoForUpdate $BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+     * @param NoiseConfigureInfoForUpdate $NoiseConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+     * @param MosaicConfigureInfoForUpdate $MosaicConfigure <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+     * @param QRCodeConfigureInfoForUpdate $QRCodeConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+     * @param VoiceConfigureInfoForUpdate $VoiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+     * @param QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
      */
     function __construct()
     {

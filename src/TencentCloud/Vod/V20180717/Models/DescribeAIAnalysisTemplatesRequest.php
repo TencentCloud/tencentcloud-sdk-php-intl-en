@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAIAnalysisTemplates request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getDefinitions() Obtain 
- * @method void setDefinitions(array $Definitions) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+ * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  */
 class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
      */
     public $Definitions;
 
     /**
-     * @var integer 
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId 
-     * @param array $Definitions 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param array $Definitions Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {

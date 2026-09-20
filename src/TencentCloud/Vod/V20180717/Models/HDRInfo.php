@@ -18,28 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * High dynamic range type control parameter.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
+ * @method void setSwitch(string $Switch) Set High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
+ * @method string getType() Obtain High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
+ * @method void setType(string $Type) Set High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
  */
 class HDRInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
+     * @param string $Type High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
      */
     function __construct()
     {

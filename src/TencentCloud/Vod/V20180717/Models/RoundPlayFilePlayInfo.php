@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Playback information of the carousel program
  *
- * @method string getItemId() Obtain 
- * @method void setItemId(string $ItemId) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getStartPlayTime() Obtain 
- * @method void setStartPlayTime(string $StartPlayTime) Set 
- * @method float getDuration() Obtain 
- * @method void setDuration(float $Duration) Set 
- * @method float getProgress() Obtain 
- * @method void setProgress(float $Progress) Set 
+ * @method string getItemId() Obtain Playlist program ID assigned by the system.
+ * @method void setItemId(string $ItemId) Set Playlist program ID assigned by the system.
+ * @method string getFileId() Obtain Media file identifier.
+ * @method void setFileId(string $FileId) Set Media file identifier.
+ * @method string getStartPlayTime() Obtain Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setStartPlayTime(string $StartPlayTime) Set Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method float getDuration() Obtain Playback duration, in seconds.
+ * @method void setDuration(float $Duration) Set Playback duration, in seconds.
+ * @method float getProgress() Obtain Playback progress, in seconds.
+ * @method void setProgress(float $Progress) Set Playback progress, in seconds.
  */
 class RoundPlayFilePlayInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Playlist program ID assigned by the system.
      */
     public $ItemId;
 
     /**
-     * @var string 
+     * @var string Media file identifier.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $StartPlayTime;
 
     /**
-     * @var float 
+     * @var float Playback duration, in seconds.
      */
     public $Duration;
 
     /**
-     * @var float 
+     * @var float Playback progress, in seconds.
      */
     public $Progress;
 
     /**
-     * @param string $ItemId 
-     * @param string $FileId 
-     * @param string $StartPlayTime 
-     * @param float $Duration 
-     * @param float $Progress 
+     * @param string $ItemId Playlist program ID assigned by the system.
+     * @param string $FileId Media file identifier.
+     * @param string $StartPlayTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param float $Duration Playback duration, in seconds.
+     * @param float $Progress Playback progress, in seconds.
      */
     function __construct()
     {

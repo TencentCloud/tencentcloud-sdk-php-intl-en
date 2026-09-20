@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Temporary credentials
  *
- * @method string getSecretId() Obtain 
- * @method void setSecretId(string $SecretId) Set 
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method string getToken() Obtain 
- * @method void setToken(string $Token) Set 
- * @method integer getExpiredTime() Obtain 
- * @method void setExpiredTime(integer $ExpiredTime) Set 
+ * @method string getSecretId() Obtain Temporary security credential Id.
+ * @method void setSecretId(string $SecretId) Set Temporary security credential Id.
+ * @method string getSecretKey() Obtain Temporary security credential Key.
+ * @method void setSecretKey(string $SecretKey) Set Temporary security credential Key.
+ * @method string getToken() Obtain Token value.
+ * @method void setToken(string $Token) Set Token value.
+ * @method integer getExpiredTime() Obtain The time when the certificate is invalid. Return a Unix timestamp accurate to the second.
+ * @method void setExpiredTime(integer $ExpiredTime) Set The time when the certificate is invalid. Return a Unix timestamp accurate to the second.
  */
 class TempCertificate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Temporary security credential Id.
      */
     public $SecretId;
 
     /**
-     * @var string 
+     * @var string Temporary security credential Key.
      */
     public $SecretKey;
 
     /**
-     * @var string 
+     * @var string Token value.
      */
     public $Token;
 
     /**
-     * @var integer 
+     * @var integer The time when the certificate is invalid. Return a Unix timestamp accurate to the second.
      */
     public $ExpiredTime;
 
     /**
-     * @param string $SecretId 
-     * @param string $SecretKey 
-     * @param string $Token 
-     * @param integer $ExpiredTime 
+     * @param string $SecretId Temporary security credential Id.
+     * @param string $SecretKey Temporary security credential Key.
+     * @param string $Token Token value.
+     * @param integer $ExpiredTime The time when the certificate is invalid. Return a Unix timestamp accurate to the second.
      */
     function __construct()
     {

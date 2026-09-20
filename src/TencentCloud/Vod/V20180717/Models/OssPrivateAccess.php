@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Authentication for origin-pull from Alibaba Cloud OSS
  *
- * @method string getSwitch() Obtain Aliyun OSS origin-pull authentication configuration switch. Valid values:
+ * @method string getSwitch() Obtain Switch for authentication configuration for origin-pull from Alibaba Cloud OSS. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Aliyun OSS origin-pull authentication configuration switch. Valid values:
+ * @method void setSwitch(string $Switch) Set Switch for authentication configuration for origin-pull from Alibaba Cloud OSS. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method string getAccessKey() Obtain 
- * @method void setAccessKey(string $AccessKey) Set 
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getBucket() Obtain 
- * @method void setBucket(string $Bucket) Set 
+ * @method string getAccessKey() Obtain Access ID.
+ * @method void setAccessKey(string $AccessKey) Set Access ID.
+ * @method string getSecretKey() Obtain Key.
+ * @method void setSecretKey(string $SecretKey) Set Key.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getBucket() Obtain Bucket Name.
+ * @method void setBucket(string $Bucket) Set Bucket Name.
  */
 class OssPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Aliyun OSS origin-pull authentication configuration switch. Valid values:
+     * @var string Switch for authentication configuration for origin-pull from Alibaba Cloud OSS. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Access ID.
      */
     public $AccessKey;
 
     /**
-     * @var string 
+     * @var string Key.
      */
     public $SecretKey;
 
     /**
-     * @var string 
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string Bucket Name.
      */
     public $Bucket;
 
     /**
-     * @param string $Switch Aliyun OSS origin-pull authentication configuration switch. Valid values:
+     * @param string $Switch Switch for authentication configuration for origin-pull from Alibaba Cloud OSS. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param string $AccessKey 
-     * @param string $SecretKey 
-     * @param string $Region 
-     * @param string $Bucket 
+     * @param string $AccessKey Access ID.
+     * @param string $SecretKey Key.
+     * @param string $Region Region.
+     * @param string $Bucket Bucket Name.
      */
     function __construct()
     {

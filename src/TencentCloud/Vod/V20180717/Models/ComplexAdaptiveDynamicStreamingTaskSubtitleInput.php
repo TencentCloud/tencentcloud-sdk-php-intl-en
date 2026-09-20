@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input parameter of adaptive bitrate task multilingual subtitles.
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method string getDefault() Obtain 
- * @method void setDefault(string $Default) Set 
+ * @method string getId() Obtain Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+ * @method void setId(string $Id) Set Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+ * @method string getDefault() Obtain Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
+ * @method void setDefault(string $Default) Set Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
  */
 class ComplexAdaptiveDynamicStreamingTaskSubtitleInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
      */
     public $Default;
 
     /**
-     * @param string $Id 
-     * @param string $Default 
+     * @param string $Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+     * @param string $Default Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
      */
     function __construct()
     {

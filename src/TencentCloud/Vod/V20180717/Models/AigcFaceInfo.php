@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AIGC face information
  *
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method array getFaceInfoList() Obtain 
- * @method void setFaceInfoList(array $FaceInfoList) Set 
+ * @method string getSessionId() Obtain Principal ID. Record the returned principal ID.
+ * @method void setSessionId(string $SessionId) Set Principal ID. Record the returned principal ID.
+ * @method array getFaceInfoList() Obtain Face information list.
+ * @method void setFaceInfoList(array $FaceInfoList) Set Face information list.
  */
 class AigcFaceInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Principal ID. Record the returned principal ID.
      */
     public $SessionId;
 
     /**
-     * @var array 
+     * @var array Face information list.
      */
     public $FaceInfoList;
 
     /**
-     * @param string $SessionId 
-     * @param array $FaceInfoList 
+     * @param string $SessionId Principal ID. Record the returned principal ID.
+     * @param array $FaceInfoList Face information list.
      */
     function __construct()
     {

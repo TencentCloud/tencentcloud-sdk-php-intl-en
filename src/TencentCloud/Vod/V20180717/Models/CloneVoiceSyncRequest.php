@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneVoiceSync request structure.
  *
- * @method string getSubAppId() Obtain 
- * @method void setSubAppId(string $SubAppId) Set 
- * @method string getAudioData() Obtain 
- * @method void setAudioData(string $AudioData) Set 
- * @method string getAudioUrl() Obtain 
- * @method void setAudioUrl(string $AudioUrl) Set 
- * @method string getAudioFileId() Obtain 
- * @method void setAudioFileId(string $AudioFileId) Set 
- * @method string getLanguageBoost() Obtain 
- * @method void setLanguageBoost(string $LanguageBoost) Set 
- * @method string getExtParam() Obtain 
- * @method void setExtParam(string $ExtParam) Set 
+ * @method string getSubAppId() Obtain <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+ * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+ * @method string getAudioData() Obtain <p>Base64-encoded audio for cloning.</p>
+ * @method void setAudioData(string $AudioData) Set <p>Base64-encoded audio for cloning.</p>
+ * @method string getAudioUrl() Obtain <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method void setAudioUrl(string $AudioUrl) Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method string getAudioFileId() Obtain <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+ * @method void setAudioFileId(string $AudioFileId) Set <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+ * @method string getLanguageBoost() Obtain <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+ * @method void setLanguageBoost(string $LanguageBoost) Set <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+ * @method string getExtParam() Obtain <p>Extended parameters for synchronous timbre clone. Supported fields of <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Text for audition synthesis, up to <code>1000</code> characters. If not empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required if <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Timbre profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, for example <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, for example <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, for example <code>["commentary"]</code>.</li>    </ul>  </li></ul>
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters for synchronous timbre clone. Supported fields of <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Text for audition synthesis, up to <code>1000</code> characters. If not empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required if <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Timbre profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, for example <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, for example <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, for example <code>["commentary"]</code>.</li>    </ul>  </li></ul>
  */
 class CloneVoiceSyncRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Base64-encoded audio for cloning.</p>
      */
     public $AudioData;
 
     /**
-     * @var string 
+     * @var string <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public $AudioUrl;
 
     /**
-     * @var string 
+     * @var string <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
      */
     public $AudioFileId;
 
     /**
-     * @var string 
+     * @var string <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
      */
     public $LanguageBoost;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameters for synchronous timbre clone. Supported fields of <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Text for audition synthesis, up to <code>1000</code> characters. If not empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required if <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Timbre profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, for example <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, for example <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, for example <code>["commentary"]</code>.</li>    </ul>  </li></ul>
      */
     public $ExtParam;
 
     /**
-     * @param string $SubAppId 
-     * @param string $AudioData 
-     * @param string $AudioUrl 
-     * @param string $AudioFileId 
-     * @param string $LanguageBoost 
-     * @param string $ExtParam 
+     * @param string $SubAppId <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * @param string $AudioData <p>Base64-encoded audio for cloning.</p>
+     * @param string $AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * @param string $AudioFileId <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+     * @param string $LanguageBoost <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+     * @param string $ExtParam <p>Extended parameters for synchronous timbre clone. Supported fields of <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Text for audition synthesis, up to <code>1000</code> characters. If not empty, <code>tts_model</code> must be passed simultaneously. Upon successful clone, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required if <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Timbre profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, for example <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, for example <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, for example <code>["commentary"]</code>.</li>    </ul>  </li></ul>
      */
     function __construct()
     {

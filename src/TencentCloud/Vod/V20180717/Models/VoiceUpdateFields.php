@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Fields of the updated voice.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method string getGender() Obtain 
- * @method void setGender(string $Gender) Set 
- * @method string getAge() Obtain 
- * @method void setAge(string $Age) Set 
- * @method array getLanguages() Obtain 
- * @method void setLanguages(array $Languages) Set 
- * @method array getLabels() Obtain 
- * @method void setLabels(array $Labels) Set 
- * @method array getScenes() Obtain 
- * @method void setScenes(array $Scenes) Set 
- * @method string getAudioUrl() Obtain 
- * @method void setAudioUrl(string $AudioUrl) Set 
+ * @method string getName() Obtain <p>Voice name.</p>
+ * @method void setName(string $Name) Set <p>Voice name.</p>
+ * @method string getDescription() Obtain <p>Voice description.</p>
+ * @method void setDescription(string $Description) Set <p>Voice description.</p>
+ * @method string getGender() Obtain <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+ * @method void setGender(string $Gender) Set <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+ * @method string getAge() Obtain <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+ * @method void setAge(string $Age) Set <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+ * @method array getLanguages() Obtain <p>Language.</p>
+ * @method void setLanguages(array $Languages) Set <p>Language.</p>
+ * @method array getLabels() Obtain <p>Tag.</p>
+ * @method void setLabels(array $Labels) Set <p>Tag.</p>
+ * @method array getScenes() Obtain <p>Scenario.</p>
+ * @method void setScenes(array $Scenes) Set <p>Scenario.</p>
+ * @method string getAudioUrl() Obtain <p>Audition audio.</p>
+ * @method void setAudioUrl(string $AudioUrl) Set <p>Audition audio.</p>
  */
 class VoiceUpdateFields extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Voice name.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Voice description.</p>
      */
     public $Description;
 
     /**
-     * @var string 
+     * @var string <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
      */
     public $Gender;
 
     /**
-     * @var string 
+     * @var string <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
      */
     public $Age;
 
     /**
-     * @var array 
+     * @var array <p>Language.</p>
      */
     public $Languages;
 
     /**
-     * @var array 
+     * @var array <p>Tag.</p>
      */
     public $Labels;
 
     /**
-     * @var array 
+     * @var array <p>Scenario.</p>
      */
     public $Scenes;
 
     /**
-     * @var string 
+     * @var string <p>Audition audio.</p>
      */
     public $AudioUrl;
 
     /**
-     * @param string $Name 
-     * @param string $Description 
-     * @param string $Gender 
-     * @param string $Age 
-     * @param array $Languages 
-     * @param array $Labels 
-     * @param array $Scenes 
-     * @param string $AudioUrl 
+     * @param string $Name <p>Voice name.</p>
+     * @param string $Description <p>Voice description.</p>
+     * @param string $Gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+     * @param string $Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * @param array $Languages <p>Language.</p>
+     * @param array $Labels <p>Tag.</p>
+     * @param array $Scenes <p>Scenario.</p>
+     * @param string $AudioUrl <p>Audition audio.</p>
      */
     function __construct()
     {

@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ManageTask request structure.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getOperationType() Obtain 
- * @method void setOperationType(string $OperationType) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getTaskId() Obtain Video processing task ID.
+ * @method void setTaskId(string $TaskId) Set Video processing task ID.
+ * @method string getOperationType() Obtain Operation type. Value range:
+<li>Abort: Abort task. Only initiated and pending (WAITING) tasks can be aborted.</li>
+ * @method void setOperationType(string $OperationType) Set Operation type. Value range:
+<li>Abort: Abort task. Only initiated and pending (WAITING) tasks can be aborted.</li>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class ManageTaskRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video processing task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Operation type. Value range:
+<li>Abort: Abort task. Only initiated and pending (WAITING) tasks can be aborted.</li>
      */
     public $OperationType;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $TaskId 
-     * @param string $OperationType 
-     * @param integer $SubAppId 
+     * @param string $TaskId Video processing task ID.
+     * @param string $OperationType Operation type. Value range:
+<li>Abort: Abort task. Only initiated and pending (WAITING) tasks can be aborted.</li>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

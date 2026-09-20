@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Speech synthesis task output.
  *
- * @method string getAudioUrl() Obtain 
- * @method void setAudioUrl(string $AudioUrl) Set 
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
+ * @method string getAudioUrl() Obtain <p>URL of the synthetic audio result</p>
+ * @method void setAudioUrl(string $AudioUrl) Set <p>URL of the synthetic audio result</p>
+ * @method string getVoiceId() Obtain <p>Used voice ID.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Used voice ID.</p>
+ * @method string getExtInfo() Obtain <p>Extended information.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Extended information.</p>
+ * @method string getFileId() Obtain <p>FileId of the synthetic audio result</p>
+ * @method void setFileId(string $FileId) Set <p>FileId of the synthetic audio result</p>
  */
 class TextToSpeechAsyncOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>URL of the synthetic audio result</p>
      */
     public $AudioUrl;
 
     /**
-     * @var string 
+     * @var string <p>Used voice ID.</p>
      */
     public $VoiceId;
 
     /**
-     * @var string 
+     * @var string <p>Extended information.</p>
      */
     public $ExtInfo;
 
     /**
-     * @var string 
+     * @var string <p>FileId of the synthetic audio result</p>
      */
     public $FileId;
 
     /**
-     * @param string $AudioUrl 
-     * @param string $VoiceId 
-     * @param string $ExtInfo 
-     * @param string $FileId 
+     * @param string $AudioUrl <p>URL of the synthetic audio result</p>
+     * @param string $VoiceId <p>Used voice ID.</p>
+     * @param string $ExtInfo <p>Extended information.</p>
+     * @param string $FileId <p>FileId of the synthetic audio result</p>
      */
     function __construct()
     {

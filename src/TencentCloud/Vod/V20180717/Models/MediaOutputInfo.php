@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output file information parameters for video processing.
  *
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getBucket() Obtain 
- * @method void setBucket(string $Bucket) Set 
- * @method string getDir() Obtain 
- * @method void setDir(string $Dir) Set 
+ * @method string getRegion() Obtain Region of the output file Bucket, for example, ap-guangzhou.
+ * @method void setRegion(string $Region) Set Region of the output file Bucket, for example, ap-guangzhou.
+ * @method string getBucket() Obtain Output file Bucket.
+ * @method void setBucket(string $Bucket) Set Output file Bucket.
+ * @method string getDir() Obtain Output file directory. The directory name must end with "/".
+ * @method void setDir(string $Dir) Set Output file directory. The directory name must end with "/".
  */
 class MediaOutputInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Region of the output file Bucket, for example, ap-guangzhou.
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string Output file Bucket.
      */
     public $Bucket;
 
     /**
-     * @var string 
+     * @var string Output file directory. The directory name must end with "/".
      */
     public $Dir;
 
     /**
-     * @param string $Region 
-     * @param string $Bucket 
-     * @param string $Dir 
+     * @param string $Region Region of the output file Bucket, for example, ap-guangzhou.
+     * @param string $Bucket Output file Bucket.
+     * @param string $Dir Output file directory. The directory name must end with "/".
      */
     function __construct()
     {

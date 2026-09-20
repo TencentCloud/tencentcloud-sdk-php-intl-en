@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Full text recognition input.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Full text recognition template ID.
+ * @method void setDefinition(integer $Definition) Set Full text recognition template ID.
  */
 class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Full text recognition template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Full text recognition template ID.
      */
     function __construct()
     {

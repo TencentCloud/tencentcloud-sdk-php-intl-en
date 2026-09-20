@@ -90,6 +90,10 @@ Default true.
 When set to en, the added key is english.
  * @method void setOutputLanguage(string $OutputLanguage) Set When cn, the added key is chinese.  
 When set to en, the added key is english.
+ * @method array getNewItemNames() Obtain Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+ * @method void setNewItemNames(array $NewItemNames) Set Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+ * @method string getMultiModelVersion() Obtain The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+ * @method void setMultiModelVersion(string $MultiModelVersion) Set The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
  */
 class ExtractDocMultiRequest extends AbstractModel
 {
@@ -173,6 +177,16 @@ When set to en, the added key is english.
     public $OutputLanguage;
 
     /**
+     * @var array Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+     */
+    public $NewItemNames;
+
+    /**
+     * @var string The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+     */
+    public $MultiModelVersion;
+
+    /**
      * @param string $ImageUrl The Url address of the image. supported image formats: PNG, JPG, JPEG, WORD, EXCEL. GIF format is not currently supported. supported image size: no more than 10M after Base64 encoding. image download time should not exceed 3 seconds. supported image pixels: between 20-10000px. images stored in tencent cloud's Url ensure higher download speed and stability. it is recommended to store images in tencent cloud. the speed and stability of non-tencent cloud storage urls may be impacted.
      * @param string $ImageBase64 The Base64 value of the image. supported image formats: PNG, JPG, JPEG, WORD, EXCEL. GIF format is not currently supported. supported image size: no more than 10M after encoding the downloaded image with Base64. image download time: no more than 3 seconds. supported image pixels: between 20-10000px. either ImageUrl or ImageBase64 must be provided. if both are provided, only use ImageUrl.
      * @param integer $PdfPageNumber Specifies the page number of the PDF to be recognized. only single page recognition is supported. valid when uploading a PDF file with the IsPdf parameter set to true. default value is the first 3 pages.
@@ -208,6 +222,8 @@ Default true.
      * @param ConfigAdvanced $ConfigAdvanced Single attribute configuration of a template.
      * @param string $OutputLanguage When cn, the added key is chinese.  
 When set to en, the added key is english.
+     * @param array $NewItemNames Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+     * @param string $MultiModelVersion The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
      */
     function __construct()
     {
@@ -265,6 +281,19 @@ When set to en, the added key is english.
 
         if (array_key_exists("OutputLanguage",$param) and $param["OutputLanguage"] !== null) {
             $this->OutputLanguage = $param["OutputLanguage"];
+        }
+
+        if (array_key_exists("NewItemNames",$param) and $param["NewItemNames"] !== null) {
+            $this->NewItemNames = [];
+            foreach ($param["NewItemNames"] as $key => $value){
+                $obj = new ItemNames();
+                $obj->deserialize($value);
+                array_push($this->NewItemNames, $obj);
+            }
+        }
+
+        if (array_key_exists("MultiModelVersion",$param) and $param["MultiModelVersion"] !== null) {
+            $this->MultiModelVersion = $param["MultiModelVersion"];
         }
     }
 }

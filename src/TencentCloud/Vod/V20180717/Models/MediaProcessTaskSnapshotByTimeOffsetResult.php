@@ -18,84 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Screenshot taking at specified time points task result type
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method SnapshotByTimeOffsetTaskInput getInput() Obtain 
- * @method void setInput(SnapshotByTimeOffsetTaskInput $Input) Set 
- * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain 
- * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method SnapshotByTimeOffsetTaskInput getInput() Obtain Task input of the time point screenshot task for videos.
+ * @method void setInput(SnapshotByTimeOffsetTaskInput $Input) Set Task input of the time point screenshot task for videos.
+ * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain Output of the time point screenshot task for videos.
+ * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set Output of the time point screenshot task for videos.
+ * @method integer getProgress() Obtain Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+ * @method string getBeginProcessTime() Obtain Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer 
+     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var SnapshotByTimeOffsetTaskInput 
+     * @var SnapshotByTimeOffsetTaskInput Task input of the time point screenshot task for videos.
      */
     public $Input;
 
     /**
-     * @var MediaSnapshotByTimeOffsetItem 
+     * @var MediaSnapshotByTimeOffsetItem Output of the time point screenshot task for videos.
      */
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Task progress of screenshot taking at specified time points for video, in the range of [0,100].
      */
     public $Progress;
 
     /**
-     * @var string 
+     * @var string Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
     /**
-     * @param string $Status 
-     * @param string $ErrCodeExt 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param SnapshotByTimeOffsetTaskInput $Input 
-     * @param MediaSnapshotByTimeOffsetItem $Output 
-     * @param integer $Progress 
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param string $Message Error message.
+     * @param SnapshotByTimeOffsetTaskInput $Input Task input of the time point screenshot task for videos.
+     * @param MediaSnapshotByTimeOffsetItem $Output Output of the time point screenshot task for videos.
+     * @param integer $Progress Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+     * @param string $BeginProcessTime Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -18,52 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Storage region information
  *
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method boolean getIsDefault() Obtain 
- * @method void setIsDefault(boolean $IsDefault) Set 
- * @method string getArea() Obtain 
- * @method void setArea(string $Area) Set 
+ * @method string getRegion() Obtain Storage region.
+ * @method void setRegion(string $Region) Set Storage region.
+ * @method string getDescription() Obtain Store region description information.
+ * @method void setDescription(string $Description) Set Store region description information.
+ * @method string getStatus() Obtain Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
+ * @method void setStatus(string $Status) Set Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
+ * @method boolean getIsDefault() Obtain Whether it is the default storage region. true: yes; false: no.
+ * @method void setIsDefault(boolean $IsDefault) Set Whether it is the default storage region. true: yes; false: no.
+ * @method string getArea() Obtain Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+ * @method void setArea(string $Area) Set Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
  */
 class StorageRegionInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Storage region.
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string Store region description information.
      */
     public $Description;
 
     /**
-     * @var string 
+     * @var string Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
      */
     public $Status;
 
     /**
-     * @var boolean 
+     * @var boolean Whether it is the default storage region. true: yes; false: no.
      */
     public $IsDefault;
 
     /**
-     * @var string 
+     * @var string Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
      */
     public $Area;
 
     /**
-     * @param string $Region 
-     * @param string $Description 
-     * @param string $Status 
-     * @param boolean $IsDefault 
-     * @param string $Area 
+     * @param string $Region Storage region.
+     * @param string $Description Store region description information.
+     * @param string $Status Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
+     * @param boolean $IsDefault Whether it is the default storage region. true: yes; false: no.
+     * @param string $Area Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
      */
     function __construct()
     {

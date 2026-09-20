@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Beauty filter item.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getValue() Obtain 
- * @method void setValue(integer $Value) Set 
+ * @method string getSwitch() Obtain <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+ * @method void setSwitch(string $Switch) Set <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+ * @method string getType() Obtain <p>Filter item.</p>
+ * @method void setType(string $Type) Set <p>Filter item.</p>
+ * @method integer getValue() Obtain <p>Filter strength.</p>
+ * @method void setValue(integer $Value) Set <p>Filter strength.</p>
  */
 class BeautyFilterItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string <p>Filter item.</p>
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer <p>Filter strength.</p>
      */
     public $Value;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
-     * @param integer $Value 
+     * @param string $Switch <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+     * @param string $Type <p>Filter item.</p>
+     * @param integer $Value <p>Filter strength.</p>
      */
     function __construct()
     {

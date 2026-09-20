@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Screenshot taking at specified time points task input parameter type
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getExtTimeOffsetSet() Obtain 
- * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set 
- * @method array getTimeOffsetSet() Obtain 
- * @method void setTimeOffsetSet(array $TimeOffsetSet) Set 
- * @method array getWatermarkSet() Obtain 
- * @method void setWatermarkSet(array $WatermarkSet) Set 
+ * @method integer getDefinition() Obtain <p>Time point screenshot template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Time point screenshot template ID.</p>
+ * @method array getExtTimeOffsetSet() Obtain <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+ * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) Set <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+ * @method array getTimeOffsetSet() Obtain <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+ * @method void setTimeOffsetSet(array $TimeOffsetSet) Set <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+ * @method array getWatermarkSet() Obtain <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+ * @method void setWatermarkSet(array $WatermarkSet) Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
  */
 class SnapshotByTimeOffsetTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Time point screenshot template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
      */
     public $ExtTimeOffsetSet;
 
     /**
-     * @var array 
+     * @var array <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
      */
     public $TimeOffsetSet;
 
     /**
-     * @var array 
+     * @var array <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public $WatermarkSet;
 
     /**
-     * @param integer $Definition 
-     * @param array $ExtTimeOffsetSet 
-     * @param array $TimeOffsetSet 
-     * @param array $WatermarkSet 
+     * @param integer $Definition <p>Time point screenshot template ID.</p>
+     * @param array $ExtTimeOffsetSet <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+     * @param array $TimeOffsetSet <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+     * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     function __construct()
     {

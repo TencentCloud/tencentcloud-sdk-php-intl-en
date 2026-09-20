@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Segment undergone full text recognition.
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method array getAreaCoordSet() Obtain 
- * @method void setAreaCoordSet(array $AreaCoordSet) Set 
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
+ * @method array getAreaCoordSet() Obtain Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+ * @method string getText() Obtain Recognized text.
+ * @method void setText(string $Text) Set Recognized text.
  */
 class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var array 
+     * @var array Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string 
+     * @var string Recognized text.
      */
     public $Text;
 
     /**
-     * @param float $Confidence 
-     * @param array $AreaCoordSet 
-     * @param string $Text 
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
+     * @param array $AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+     * @param string $Text Recognized text.
      */
     function __construct()
     {

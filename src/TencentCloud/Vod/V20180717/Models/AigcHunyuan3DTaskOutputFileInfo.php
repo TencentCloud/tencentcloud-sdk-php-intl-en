@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information of the output file of an AIGC Hunyuan 3D task.
  *
- * @method string getStorageMode() Obtain 
- * @method void setStorageMode(string $StorageMode) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
- * @method string getFileType() Obtain 
- * @method void setFileType(string $FileType) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method string getPreviewFileUrl() Obtain 
- * @method void setPreviewFileUrl(string $PreviewFileUrl) Set 
+ * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+ * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+ * @method string getExpireTime() Obtain <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method string getFileType() Obtain <p>File type, for example, OBJ, GLB, or FBX.</p>
+ * @method void setFileType(string $FileType) Set <p>File type, for example, OBJ, GLB, or FBX.</p>
+ * @method string getFileUrl() Obtain <p>Output file address.</p>
+ * @method void setFileUrl(string $FileUrl) Set <p>Output file address.</p>
+ * @method string getPreviewFileUrl() Obtain <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
+ * @method void setPreviewFileUrl(string $PreviewFileUrl) Set <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
  */
 class AigcHunyuan3DTaskOutputFileInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @var string 
+     * @var string <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 
+     * @var string <p>File type, for example, OBJ, GLB, or FBX.</p>
      */
     public $FileType;
 
     /**
-     * @var string 
+     * @var string <p>Output file address.</p>
      */
     public $FileUrl;
 
     /**
-     * @var string 
+     * @var string <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
      */
     public $PreviewFileUrl;
 
     /**
-     * @param string $StorageMode 
-     * @param string $ExpireTime 
-     * @param string $FileType 
-     * @param string $FileUrl 
-     * @param string $PreviewFileUrl 
+     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+     * @param string $ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param string $FileType <p>File type, for example, OBJ, GLB, or FBX.</p>
+     * @param string $FileUrl <p>Output file address.</p>
+     * @param string $PreviewFileUrl <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
      */
     function __construct()
     {

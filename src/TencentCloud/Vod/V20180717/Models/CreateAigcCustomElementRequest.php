@@ -20,42 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcCustomElement request structure.
  *
- * @method string getElementName() Obtain 
- * @method void setElementName(string $ElementName) Set 
- * @method string getElementDescription() Obtain 
- * @method void setElementDescription(string $ElementDescription) Set 
- * @method string getElementFrontalImage() Obtain 
- * @method void setElementFrontalImage(string $ElementFrontalImage) Set 
- * @method array getElementReferList() Obtain 
- * @method void setElementReferList(array $ElementReferList) Set 
+ * @method string getElementName() Obtain Subject name. It cannot exceed 20 characters.
+ * @method void setElementName(string $ElementName) Set Subject name. It cannot exceed 20 characters.
+ * @method string getElementDescription() Obtain Subject description.
+
+Up to 100 characters.
+ * @method void setElementDescription(string $ElementDescription) Set Subject description.
+
+Up to 100 characters.
+ * @method string getElementFrontalImage() Obtain Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
+ * @method void setElementFrontalImage(string $ElementFrontalImage) Set Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
+ * @method array getElementReferList() Obtain Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
+ * @method void setElementReferList(array $ElementReferList) Set Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
  */
 class CreateAigcCustomElementRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Subject name. It cannot exceed 20 characters.
      */
     public $ElementName;
 
     /**
-     * @var string 
+     * @var string Subject description.
+
+Up to 100 characters.
      */
     public $ElementDescription;
 
     /**
-     * @var string 
+     * @var string Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
      */
     public $ElementFrontalImage;
 
     /**
-     * @var array 
+     * @var array Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
      */
     public $ElementReferList;
 
     /**
-     * @param string $ElementName 
-     * @param string $ElementDescription 
-     * @param string $ElementFrontalImage 
-     * @param array $ElementReferList 
+     * @param string $ElementName Subject name. It cannot exceed 20 characters.
+     * @param string $ElementDescription Subject description.
+
+Up to 100 characters.
+     * @param string $ElementFrontalImage Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
+     * @param array $ElementReferList Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
      */
     function __construct()
     {

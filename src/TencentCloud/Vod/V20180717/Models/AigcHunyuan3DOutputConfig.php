@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Configuration of the output media file for an AIGC Hunyuan 3D task.
  *
- * @method string getStorageMode() Obtain 
- * @method void setStorageMode(string $StorageMode) Set 
+ * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
+ * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
  */
 class AigcHunyuan3DOutputConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @param string $StorageMode 
+     * @param string $StorageMode <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
      */
     function __construct()
     {

@@ -18,132 +18,92 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Macao (China) IDCard
+ * Macao identity card
  *
  * @method string getFirstName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFirstName(string $FirstName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLastName() Obtain Last name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastName(string $LastName) Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExpirationDate() Obtain Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpirationDate(string $ExpirationDate) Set Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain Identity number
+ * @method void setLicenseNumber(string $LicenseNumber) Set Identity number
  * @method string getSex() Obtain Sex
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSex(string $Sex) Set Sex
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAge() Obtain Age
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAge(string $Age) Set Age
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedCountry() Obtain Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedCountry(string $IssuedCountry) Set Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getField1() Obtain MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
- * @method void setField1(string $Field1) Set MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
- * @method string getField2() Obtain MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setField2(string $Field2) Set MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIssuedCountry() Obtain Issuing country
+ * @method void setIssuedCountry(string $IssuedCountry) Set Issuing country
+ * @method string getField1() Obtain mrz field 1
+ * @method void setField1(string $Field1) Set mrz field 1
+ * @method string getField2() Obtain mrz field 2
+ * @method void setField2(string $Field2) Set mrz field 2
  */
 class MacaoIDCard extends AbstractModel
 {
     /**
      * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstName;
 
     /**
      * @var string Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastName;
 
     /**
      * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Birthday;
 
     /**
      * @var string Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpirationDate;
 
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity number
      */
     public $LicenseNumber;
 
     /**
      * @var string Sex
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Sex;
 
     /**
      * @var string Age
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Age;
 
     /**
-     * @var string Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Issuing country
      */
     public $IssuedCountry;
 
     /**
-     * @var string MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * @var string mrz field 1
      */
     public $Field1;
 
     /**
-     * @var string MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string mrz field 2
      */
     public $Field2;
 
     /**
      * @param string $FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExpirationDate Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber Identity number
      * @param string $Sex Sex
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Age Age
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Field1 MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @param string $Field2 MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IssuedCountry Issuing country
+     * @param string $Field1 mrz field 1
+     * @param string $Field2 mrz field 2
      */
     function __construct()
     {

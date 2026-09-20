@@ -18,36 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rotation image task type
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method integer getDefinition() Obtain Video-to-GIF conversion template ID.
+ * @method void setDefinition(integer $Definition) Set Video-to-GIF conversion template ID.
+ * @method float getStartTimeOffset() Obtain Start time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
+ * @method float getEndTimeOffset() Obtain Termination time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it will last until the end of a video.</li>
+<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set Termination time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it will last until the end of a video.</li>
+<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Video-to-GIF conversion template ID.
      */
     public $Definition;
 
     /**
-     * @var float 
+     * @var float Start time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float Termination time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it will last until the end of a video.</li>
+<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
      */
     public $EndTimeOffset;
 
     /**
-     * @param integer $Definition 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param integer $Definition Video-to-GIF conversion template ID.
+     * @param float $StartTimeOffset Start time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
+     * @param float $EndTimeOffset Termination time offset of the GIF in the video, in seconds.
+<li>If not set or set to 0, it will last until the end of a video.</li>
+<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
      */
     function __construct()
     {

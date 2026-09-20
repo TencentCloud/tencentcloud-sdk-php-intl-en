@@ -18,28 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * File moderation information.
  *
- * @method ReviewInfo getMediaReviewInfo() Obtain 
- * @method void setMediaReviewInfo(ReviewInfo $MediaReviewInfo) Set 
- * @method ReviewInfo getCoverReviewInfo() Obtain 
- * @method void setCoverReviewInfo(ReviewInfo $CoverReviewInfo) Set 
+ * @method ReviewInfo getMediaReviewInfo() Obtain Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+ * @method void setMediaReviewInfo(ReviewInfo $MediaReviewInfo) Set Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+ * @method ReviewInfo getCoverReviewInfo() Obtain Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+ * @method void setCoverReviewInfo(ReviewInfo $CoverReviewInfo) Set Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
  */
 class FileReviewInfo extends AbstractModel
 {
     /**
-     * @var ReviewInfo 
+     * @var ReviewInfo Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
      */
     public $MediaReviewInfo;
 
     /**
-     * @var ReviewInfo 
+     * @var ReviewInfo Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
      */
     public $CoverReviewInfo;
 
     /**
-     * @param ReviewInfo $MediaReviewInfo 
-     * @param ReviewInfo $CoverReviewInfo 
+     * @param ReviewInfo $MediaReviewInfo Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+     * @param ReviewInfo $CoverReviewInfo Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
      */
     function __construct()
     {

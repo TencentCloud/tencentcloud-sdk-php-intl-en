@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * IP allowlist/blocklist path-specific configuration
  *
  * @method string getFilterType() Obtain IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
@@ -26,19 +26,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterType(string $FilterType) Set IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
 <li>blacklist: blocklist.</li>
- * @method array getFilters() Obtain IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+ * @method array getFilters() Obtain IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
- * @method void setFilters(array $Filters) Set IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+ * @method void setFilters(array $Filters) Set IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
  * @method string getRuleType() Obtain Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
  * @method void setRuleType(string $RuleType) Set Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
  * @method array getRulePaths() Obtain Matching content under the corresponding type of RuleType:
 <li>Fill with * when set to all;</li>
@@ -61,7 +61,7 @@ class IpFilterPathRule extends AbstractModel
     public $FilterType;
 
     /**
-     * @var array IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+     * @var array IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public $Filters;
@@ -70,7 +70,7 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
      * @var string Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
      */
     public $RuleType;
@@ -88,12 +88,12 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
      * @param string $FilterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
 <li>blacklist: blocklist.</li>
-     * @param array $Filters IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+     * @param array $Filters IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
      * @param string $RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
      * @param array $RulePaths Matching content under the corresponding type of RuleType:
 <li>Fill with * when set to all;</li>

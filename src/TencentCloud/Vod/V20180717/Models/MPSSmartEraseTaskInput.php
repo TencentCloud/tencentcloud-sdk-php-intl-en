@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent erasure task
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method MPSRawSmartEraseParameter getRawParameter() Obtain 
- * @method void setRawParameter(MPSRawSmartEraseParameter $RawParameter) Set 
- * @method MPSOverrideEraseParameter getOverrideParameter() Obtain 
- * @method void setOverrideParameter(MPSOverrideEraseParameter $OverrideParameter) Set 
+ * @method integer getDefinition() Obtain <p>id of the intelligent erasure template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>id of the intelligent erasure template.</p>
+ * @method MPSRawSmartEraseParameter getRawParameter() Obtain <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
+ * @method void setRawParameter(MPSRawSmartEraseParameter $RawParameter) Set <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
+ * @method MPSOverrideEraseParameter getOverrideParameter() Obtain <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+ * @method void setOverrideParameter(MPSOverrideEraseParameter $OverrideParameter) Set <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
  */
 class MPSSmartEraseTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>id of the intelligent erasure template.</p>
      */
     public $Definition;
 
     /**
-     * @var MPSRawSmartEraseParameter 
+     * @var MPSRawSmartEraseParameter <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
      */
     public $RawParameter;
 
     /**
-     * @var MPSOverrideEraseParameter 
+     * @var MPSOverrideEraseParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
      */
     public $OverrideParameter;
 
     /**
-     * @param integer $Definition 
-     * @param MPSRawSmartEraseParameter $RawParameter 
-     * @param MPSOverrideEraseParameter $OverrideParameter 
+     * @param integer $Definition <p>id of the intelligent erasure template.</p>
+     * @param MPSRawSmartEraseParameter $RawParameter <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
+     * @param MPSOverrideEraseParameter $OverrideParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
      */
     function __construct()
     {

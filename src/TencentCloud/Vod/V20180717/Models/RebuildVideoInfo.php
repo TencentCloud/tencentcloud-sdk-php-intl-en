@@ -18,100 +18,100 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio-visual quality revival video control info.
  *
- * @method RepairInfo getRepairInfo() Obtain 
- * @method void setRepairInfo(RepairInfo $RepairInfo) Set 
- * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain 
- * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set 
- * @method SuperResolutionInfo getSuperResolutionInfo() Obtain 
- * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set 
- * @method HDRInfo getHDRInfo() Obtain 
- * @method void setHDRInfo(HDRInfo $HDRInfo) Set 
- * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain 
- * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set 
- * @method ColorEnhanceInfo getColorInfo() Obtain 
- * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set 
- * @method SharpEnhanceInfo getSharpInfo() Obtain 
- * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set 
- * @method FaceEnhanceInfo getFaceInfo() Obtain 
- * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set 
- * @method LowLightEnhanceInfo getLowLightInfo() Obtain 
- * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set 
- * @method ScratchRepairInfo getScratchRepairInfo() Obtain 
- * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set 
- * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain 
- * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set 
+ * @method RepairInfo getRepairInfo() Obtain Image quality restoration control parameters.
+ * @method void setRepairInfo(RepairInfo $RepairInfo) Set Image quality restoration control parameters.
+ * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain Intelligent frame interpolation control parameters.
+ * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set Intelligent frame interpolation control parameters.
+ * @method SuperResolutionInfo getSuperResolutionInfo() Obtain Image super-resolution control parameters.
+ * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set Image super-resolution control parameters.
+ * @method HDRInfo getHDRInfo() Obtain High dynamic range type control parameter.
+ * @method void setHDRInfo(HDRInfo $HDRInfo) Set High dynamic range type control parameter.
+ * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain Video noise reduction control parameters.
+ * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set Video noise reduction control parameters.
+ * @method ColorEnhanceInfo getColorInfo() Obtain Color enhancement control parameters.
+ * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set Color enhancement control parameters.
+ * @method SharpEnhanceInfo getSharpInfo() Obtain Detail enhancement control parameters.
+ * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set Detail enhancement control parameters.
+ * @method FaceEnhanceInfo getFaceInfo() Obtain Face enhancement control parameters.
+ * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set Face enhancement control parameters.
+ * @method LowLightEnhanceInfo getLowLightInfo() Obtain Low-light control parameters.
+ * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set Low-light control parameters.
+ * @method ScratchRepairInfo getScratchRepairInfo() Obtain Scratch removal control parameter.
+ * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set Scratch removal control parameter.
+ * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain Artifact removal control parameter.
+ * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set Artifact removal control parameter.
  */
 class RebuildVideoInfo extends AbstractModel
 {
     /**
-     * @var RepairInfo 
+     * @var RepairInfo Image quality restoration control parameters.
      */
     public $RepairInfo;
 
     /**
-     * @var VideoFrameInterpolationInfo 
+     * @var VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
      */
     public $VideoFrameInterpolationInfo;
 
     /**
-     * @var SuperResolutionInfo 
+     * @var SuperResolutionInfo Image super-resolution control parameters.
      */
     public $SuperResolutionInfo;
 
     /**
-     * @var HDRInfo 
+     * @var HDRInfo High dynamic range type control parameter.
      */
     public $HDRInfo;
 
     /**
-     * @var VideoDenoiseInfo 
+     * @var VideoDenoiseInfo Video noise reduction control parameters.
      */
     public $VideoDenoiseInfo;
 
     /**
-     * @var ColorEnhanceInfo 
+     * @var ColorEnhanceInfo Color enhancement control parameters.
      */
     public $ColorInfo;
 
     /**
-     * @var SharpEnhanceInfo 
+     * @var SharpEnhanceInfo Detail enhancement control parameters.
      */
     public $SharpInfo;
 
     /**
-     * @var FaceEnhanceInfo 
+     * @var FaceEnhanceInfo Face enhancement control parameters.
      */
     public $FaceInfo;
 
     /**
-     * @var LowLightEnhanceInfo 
+     * @var LowLightEnhanceInfo Low-light control parameters.
      */
     public $LowLightInfo;
 
     /**
-     * @var ScratchRepairInfo 
+     * @var ScratchRepairInfo Scratch removal control parameter.
      */
     public $ScratchRepairInfo;
 
     /**
-     * @var ArtifactRepairInfo 
+     * @var ArtifactRepairInfo Artifact removal control parameter.
      */
     public $ArtifactRepairInfo;
 
     /**
-     * @param RepairInfo $RepairInfo 
-     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo 
-     * @param SuperResolutionInfo $SuperResolutionInfo 
-     * @param HDRInfo $HDRInfo 
-     * @param VideoDenoiseInfo $VideoDenoiseInfo 
-     * @param ColorEnhanceInfo $ColorInfo 
-     * @param SharpEnhanceInfo $SharpInfo 
-     * @param FaceEnhanceInfo $FaceInfo 
-     * @param LowLightEnhanceInfo $LowLightInfo 
-     * @param ScratchRepairInfo $ScratchRepairInfo 
-     * @param ArtifactRepairInfo $ArtifactRepairInfo 
+     * @param RepairInfo $RepairInfo Image quality restoration control parameters.
+     * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
+     * @param SuperResolutionInfo $SuperResolutionInfo Image super-resolution control parameters.
+     * @param HDRInfo $HDRInfo High dynamic range type control parameter.
+     * @param VideoDenoiseInfo $VideoDenoiseInfo Video noise reduction control parameters.
+     * @param ColorEnhanceInfo $ColorInfo Color enhancement control parameters.
+     * @param SharpEnhanceInfo $SharpInfo Detail enhancement control parameters.
+     * @param FaceEnhanceInfo $FaceInfo Face enhancement control parameters.
+     * @param LowLightEnhanceInfo $LowLightInfo Low-light control parameters.
+     * @param ScratchRepairInfo $ScratchRepairInfo Scratch removal control parameter.
+     * @param ArtifactRepairInfo $ArtifactRepairInfo Artifact removal control parameter.
      */
     function __construct()
     {

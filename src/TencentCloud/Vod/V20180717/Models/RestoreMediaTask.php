@@ -18,70 +18,82 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Retrieve video task information
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getOriginalStorageClass() Obtain 
- * @method void setOriginalStorageClass(string $OriginalStorageClass) Set 
- * @method string getTargetStorageClass() Obtain 
- * @method void setTargetStorageClass(string $TargetStorageClass) Set 
- * @method string getRestoreTier() Obtain 
- * @method void setRestoreTier(string $RestoreTier) Set 
- * @method integer getRestoreDay() Obtain 
- * @method void setRestoreDay(integer $RestoreDay) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
+ * @method string getFileId() Obtain File ID.
+ * @method void setFileId(string $FileId) Set File ID.
+ * @method string getOriginalStorageClass() Obtain Original storage type of the file.
+ * @method void setOriginalStorageClass(string $OriginalStorageClass) Set Original storage type of the file.
+ * @method string getTargetStorageClass() Obtain Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+ * @method void setTargetStorageClass(string $TargetStorageClass) Set Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+ * @method string getRestoreTier() Obtain Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
+ * @method void setRestoreTier(string $RestoreTier) Set Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
+ * @method integer getRestoreDay() Obtain Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
+ * @method void setRestoreDay(integer $RestoreDay) Set Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
+ * @method integer getStatus() Obtain Deprecated.
+ * @method void setStatus(integer $Status) Set Deprecated.
+ * @method string getMessage() Obtain Deprecated.
+ * @method void setMessage(string $Message) Set Deprecated.
  */
 class RestoreMediaTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string File ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Original storage type of the file.
      */
     public $OriginalStorageClass;
 
     /**
-     * @var string 
+     * @var string Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
      */
     public $TargetStorageClass;
 
     /**
-     * @var string 
+     * @var string Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
      */
     public $RestoreTier;
 
     /**
-     * @var integer 
+     * @var integer Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
      */
     public $RestoreDay;
 
     /**
-     * @var integer 
+     * @var integer Deprecated.
      * @deprecated
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Deprecated.
      * @deprecated
      */
     public $Message;
 
     /**
-     * @param string $FileId 
-     * @param string $OriginalStorageClass 
-     * @param string $TargetStorageClass 
-     * @param string $RestoreTier 
-     * @param integer $RestoreDay 
-     * @param integer $Status 
-     * @param string $Message 
+     * @param string $FileId File ID.
+     * @param string $OriginalStorageClass Original storage type of the file.
+     * @param string $TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+     * @param string $RestoreTier Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
+     * @param integer $RestoreDay Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
+     * @param integer $Status Deprecated.
+     * @param string $Message Deprecated.
      */
     function __construct()
     {

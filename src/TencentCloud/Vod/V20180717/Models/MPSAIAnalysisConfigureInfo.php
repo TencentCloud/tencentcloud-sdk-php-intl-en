@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Configuration options for MPS intelligent analysis templates
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
+ * @method void setSwitch(string $Switch) Set <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
  */
 class MPSAIAnalysisConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
      */
     function __construct()
     {

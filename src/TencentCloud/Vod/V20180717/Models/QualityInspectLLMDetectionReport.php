@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AIGC quality detection result of the large language model for audio and video quality inspection.
  *
- * @method integer getResultCount() Obtain 
- * @method void setResultCount(integer $ResultCount) Set 
- * @method array getResultSet() Obtain 
- * @method void setResultSet(array $ResultSet) Set 
+ * @method integer getResultCount() Obtain <p>Number of detection results.</p>
+ * @method void setResultCount(integer $ResultCount) Set <p>Number of detection results.</p>
+ * @method array getResultSet() Obtain <p>Detection item result list.</p>
+ * @method void setResultSet(array $ResultSet) Set <p>Detection item result list.</p>
  */
 class QualityInspectLLMDetectionReport extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Number of detection results.</p>
      */
     public $ResultCount;
 
     /**
-     * @var array 
+     * @var array <p>Detection item result list.</p>
      */
     public $ResultSet;
 
     /**
-     * @param integer $ResultCount 
-     * @param array $ResultSet 
+     * @param integer $ResultCount <p>Number of detection results.</p>
+     * @param array $ResultSet <p>Detection item result list.</p>
      */
     function __construct()
     {

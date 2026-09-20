@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Path cache configuration (select one of the three cache modes)
  *
- * @method CacheConfigCache getCache() Obtain 
- * @method void setCache(CacheConfigCache $Cache) Set 
- * @method CacheConfigNoCache getNoCache() Obtain 
- * @method void setNoCache(CacheConfigNoCache $NoCache) Set 
- * @method CacheConfigFollowOrigin getFollowOrigin() Obtain 
- * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) Set 
+ * @method CacheConfigCache getCache() Obtain Cache configuration.
+ * @method void setCache(CacheConfigCache $Cache) Set Cache configuration.
+ * @method CacheConfigNoCache getNoCache() Obtain No cache configuration.
+ * @method void setNoCache(CacheConfigNoCache $NoCache) Set No cache configuration.
+ * @method CacheConfigFollowOrigin getFollowOrigin() Obtain Follow the origin server configuration.
+ * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) Set Follow the origin server configuration.
  */
 class RuleCacheConfig extends AbstractModel
 {
     /**
-     * @var CacheConfigCache 
+     * @var CacheConfigCache Cache configuration.
      */
     public $Cache;
 
     /**
-     * @var CacheConfigNoCache 
+     * @var CacheConfigNoCache No cache configuration.
      */
     public $NoCache;
 
     /**
-     * @var CacheConfigFollowOrigin 
+     * @var CacheConfigFollowOrigin Follow the origin server configuration.
      */
     public $FollowOrigin;
 
     /**
-     * @param CacheConfigCache $Cache 
-     * @param CacheConfigNoCache $NoCache 
-     * @param CacheConfigFollowOrigin $FollowOrigin 
+     * @param CacheConfigCache $Cache Cache configuration.
+     * @param CacheConfigNoCache $NoCache No cache configuration.
+     * @param CacheConfigFollowOrigin $FollowOrigin Follow the origin server configuration.
      */
     function __construct()
     {

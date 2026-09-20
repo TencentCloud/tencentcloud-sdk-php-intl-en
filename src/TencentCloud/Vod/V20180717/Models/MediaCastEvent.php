@@ -18,28 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Media forwarding event notification message.
  *
- * @method string getCastId() Obtain 
- * @method void setCastId(string $CastId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
+ * @method string getCastId() Obtain Media forwarding ID.
+ * @method void setCastId(string $CastId) Set Media forwarding ID.
+ * @method string getStatus() Obtain Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
+ * @method void setStatus(string $Status) Set Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
  */
 class MediaCastEvent extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media forwarding ID.
      */
     public $CastId;
 
     /**
-     * @var string 
+     * @var string Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
      */
     public $Status;
 
     /**
-     * @param string $CastId 
-     * @param string $Status 
+     * @param string $CastId Media forwarding ID.
+     * @param string $Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
      */
     function __construct()
     {

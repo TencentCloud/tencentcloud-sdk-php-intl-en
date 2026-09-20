@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClass request structure.
  *
- * @method integer getParentId() Obtain 
- * @method void setParentId(integer $ParentId) Set 
- * @method string getClassName() Obtain 
- * @method void setClassName(string $ClassName) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method integer getParentId() Obtain Parent category ID. Enter -1 for the first-level category.
+ * @method void setParentId(integer $ParentId) Set Parent category ID. Enter -1 for the first-level category.
+ * @method string getClassName() Obtain Category name, with a length limit of 1-64 characters.
+ * @method void setClassName(string $ClassName) Set Category name, with a length limit of 1-64 characters.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
  */
 class CreateClassRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Parent category ID. Enter -1 for the first-level category.
      */
     public $ParentId;
 
     /**
-     * @var string 
+     * @var string Category name, with a length limit of 1-64 characters.
      */
     public $ClassName;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @param integer $ParentId 
-     * @param string $ClassName 
-     * @param integer $SubAppId 
+     * @param integer $ParentId Parent category ID. Enter -1 for the first-level category.
+     * @param string $ClassName Category name, with a length limit of 1-64 characters.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     function __construct()
     {

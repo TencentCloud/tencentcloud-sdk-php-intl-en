@@ -18,72 +18,52 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Philippines TinID Card
+ * Philippines TinID
  *
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFullName() Obtain Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullName(string $FullName) Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain Code
+ * @method void setLicenseNumber(string $LicenseNumber) Set Code
+ * @method string getFullName() Obtain Name
+ * @method void setFullName(string $FullName) Set Name
+ * @method string getAddress() Obtain Address.
+ * @method void setAddress(string $Address) Set Address.
  * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssueDate() Obtain Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssueDate(string $IssueDate) Set Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIssueDate() Obtain Issue date
+ * @method void setIssueDate(string $IssueDate) Set Issue date
  */
 class PhilippinesTinID extends AbstractModel
 {
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Code
      */
     public $LicenseNumber;
 
     /**
-     * @var string Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $FullName;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $Address;
 
     /**
      * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Birthday;
 
     /**
-     * @var string Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Issue date
      */
     public $IssueDate;
 
     /**
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber Code
+     * @param string $FullName Name
+     * @param string $Address Address.
      * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssueDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IssueDate Issue date
      */
     function __construct()
     {

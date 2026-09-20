@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlindWatermarkTemplates request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getDefinitions() Obtain 
- * @method void setDefinitions(array $Definitions) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getSubAppId() Obtain VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
+ * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
+ * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
+ * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
+ * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+ * @method void setType(string $Type) Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
+ * @method void setLimit(integer $Limit) Set Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
  */
 class DescribeBlindWatermarkTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
      */
     public $Definitions;
 
     /**
-     * @var string 
+     * @var string Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId 
-     * @param array $Definitions 
-     * @param string $Type 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param integer $SubAppId VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
+     * @param array $Definitions Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
+     * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
      */
     function __construct()
     {

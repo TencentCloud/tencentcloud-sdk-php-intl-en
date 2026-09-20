@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * MagAge rule configuration
  *
- * @method string getMaxAgeType() Obtain <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
- * @method void setMaxAgeType(string $MaxAgeType) Set <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
- * @method array getMaxAgeContents() Obtain <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
- * @method void setMaxAgeContents(array $MaxAgeContents) Set <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
- * @method integer getMaxAgeTime() Obtain <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
- * @method void setMaxAgeTime(integer $MaxAgeTime) Set <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
- * @method string getFollowOrigin() Obtain <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
- * @method void setFollowOrigin(string $FollowOrigin) Set <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+ * @method string getMaxAgeType() Obtain <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+ * @method void setMaxAgeType(string $MaxAgeType) Set <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+ * @method array getMaxAgeContents() Obtain <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+ * @method void setMaxAgeContents(array $MaxAgeContents) Set <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+ * @method integer getMaxAgeTime() Obtain <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
+ * @method void setMaxAgeTime(integer $MaxAgeTime) Set <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
+ * @method string getFollowOrigin() Obtain <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
+ * @method void setFollowOrigin(string $FollowOrigin) Set <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
  */
 class MaxAgeRule extends AbstractModel
 {
     /**
-     * @var string <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+     * @var string <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
      */
     public $MaxAgeType;
 
     /**
-     * @var array <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+     * @var array <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
      */
     public $MaxAgeContents;
 
     /**
-     * @var integer <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
+     * @var integer <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
      */
     public $MaxAgeTime;
 
     /**
-     * @var string <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+     * @var string <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
      */
     public $FollowOrigin;
 
     /**
-     * @param string $MaxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
-     * @param array $MaxAgeContents <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
-     * @param integer $MaxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
-     * @param string $FollowOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+     * @param string $MaxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+     * @param array $MaxAgeContents <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+     * @param integer $MaxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
+     * @param string $FollowOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
      */
     function __construct()
     {

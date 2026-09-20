@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method TimeRange getCreateTime() Obtain 
- * @method void setCreateTime(TimeRange $CreateTime) Set 
- * @method TimeRange getFinishTime() Obtain 
- * @method void setFinishTime(TimeRange $FinishTime) Set 
- * @method SortBy getSort() Obtain 
- * @method void setSort(SortBy $Sort) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getScrollToken() Obtain 
- * @method void setScrollToken(string $ScrollToken) Set 
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+ * @method string getStatus() Obtain <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
+ * @method void setStatus(string $Status) Set <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
+ * @method string getFileId() Obtain <p>Filter criteria: file ID.</p>
+ * @method void setFileId(string $FileId) Set <p>Filter criteria: file ID.</p>
+ * @method TimeRange getCreateTime() Obtain <p>Filter condition: task creation time.</p>
+ * @method void setCreateTime(TimeRange $CreateTime) Set <p>Filter condition: task creation time.</p>
+ * @method TimeRange getFinishTime() Obtain <p>Filter condition: task end time.</p>
+ * @method void setFinishTime(TimeRange $FinishTime) Set <p>Filter condition: task end time.</p>
+ * @method SortBy getSort() Obtain <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+ * @method void setSort(SortBy $Sort) Set <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+ * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+ * @method string getScrollToken() Obtain <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+ * @method void setScrollToken(string $ScrollToken) Set <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
  */
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string <p>Filter criteria: file ID.</p>
      */
     public $FileId;
 
     /**
-     * @var TimeRange 
+     * @var TimeRange <p>Filter condition: task creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var TimeRange 
+     * @var TimeRange <p>Filter condition: task end time.</p>
      */
     public $FinishTime;
 
     /**
-     * @var SortBy 
+     * @var SortBy <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
      */
     public $Sort;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     public $ScrollToken;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Status 
-     * @param string $FileId 
-     * @param TimeRange $CreateTime 
-     * @param TimeRange $FinishTime 
-     * @param SortBy $Sort 
-     * @param integer $Limit 
-     * @param string $ScrollToken 
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+     * @param string $Status <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
+     * @param string $FileId <p>Filter criteria: file ID.</p>
+     * @param TimeRange $CreateTime <p>Filter condition: task creation time.</p>
+     * @param TimeRange $FinishTime <p>Filter condition: task end time.</p>
+     * @param SortBy $Sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+     * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param string $ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     function __construct()
     {

@@ -20,82 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAnimatedGraphicsTemplate request structure.
  *
- * @method integer getFps() Obtain 
- * @method void setFps(integer $Fps) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method float getQuality() Obtain 
- * @method void setQuality(float $Quality) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method integer getFps() Obtain Frame rate. Value range: [1, 30]. Unit: Hz.
+ * @method void setFps(integer $Fps) Set Frame rate. Value range: [1, 30]. Unit: Hz.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getWidth() Obtain Maximum value of the animated gif width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method void setWidth(integer $Width) Set Maximum value of the animated gif width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method integer getHeight() Obtain Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method void setHeight(integer $Height) Set Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
+ * @method string getFormat() Obtain Animated image file format. Valid values: gif and webp. Default value: gif.
+ * @method void setFormat(string $Format) Set Animated image file format. Valid values: gif and webp. Default value: gif.
+ * @method float getQuality() Obtain Image quality. Value range: [1, 100]. Default value: 75.
+ * @method void setQuality(float $Quality) Set Image quality. Value range: [1, 100]. Default value: 75.
+ * @method string getName() Obtain Rotating image template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Rotating image template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
  */
 class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Frame rate. Value range: [1, 30]. Unit: Hz.
      */
     public $Fps;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var integer 
+     * @var integer Maximum value of the animated gif width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string 
+     * @var string Animated image file format. Valid values: gif and webp. Default value: gif.
      */
     public $Format;
 
     /**
-     * @var float 
+     * @var float Image quality. Value range: [1, 100]. Default value: 75.
      */
     public $Quality;
 
     /**
-     * @var string 
+     * @var string Rotating image template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @param integer $Fps 
-     * @param integer $SubAppId 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param string $ResolutionAdaptive 
-     * @param string $Format 
-     * @param float $Quality 
-     * @param string $Name 
-     * @param string $Comment 
+     * @param integer $Fps Frame rate. Value range: [1, 30]. Unit: Hz.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $Width Maximum value of the animated gif width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+     * @param integer $Height Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+     * @param string $ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
+     * @param string $Format Animated image file format. Valid values: gif and webp. Default value: gif.
+     * @param float $Quality Image quality. Value range: [1, 100]. Default value: 75.
+     * @param string $Name Rotating image template name. Length limit: 64 characters.
+     * @param string $Comment Template description, with a length limit of 256 characters.
      */
     function __construct()
     {

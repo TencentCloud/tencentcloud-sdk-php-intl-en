@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSceneAigcVideoTask request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method AigcVideoSceneInfo getSceneInfo() Obtain 
- * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set 
- * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set 
- * @method array getFileInfos() Obtain 
- * @method void setFileInfos(array $FileInfos) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
- * @method string getPrompt() Obtain 
- * @method void setPrompt(string $Prompt) Set 
+ * @method integer getSubAppId() Obtain **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+ * @method void setSubAppId(integer $SubAppId) Set **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+ * @method AigcVideoSceneInfo getSceneInfo() Obtain Scenario-based video generation parameter configuration.
+ * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set Scenario-based video generation parameter configuration.
+ * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain Output media file configuration for scenario-based video tasks.
+ * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set Output media file configuration for scenario-based video tasks.
+ * @method array getFileInfos() Obtain Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
+ * @method void setFileInfos(array $FileInfos) Set Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
+ * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method string getSessionContext() Obtain Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+ * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method string getExtInfo() Obtain Reserved field, used for special purposes.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
+ * @method string getPrompt() Obtain User-customized prompt
+ * @method void setPrompt(string $Prompt) Set User-customized prompt
  */
 class CreateSceneAigcVideoTaskRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
      */
     public $SubAppId;
 
     /**
-     * @var AigcVideoSceneInfo 
+     * @var AigcVideoSceneInfo Scenario-based video generation parameter configuration.
      */
     public $SceneInfo;
 
     /**
-     * @var SceneAigcVideoOutputConfig 
+     * @var SceneAigcVideoOutputConfig Output media file configuration for scenario-based video tasks.
      */
     public $OutputConfig;
 
     /**
-     * @var array 
+     * @var array Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
      */
     public $FileInfos;
 
     /**
-     * @var string 
+     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var integer 
+     * @var integer Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TasksPriority;
 
     /**
-     * @var string 
+     * @var string Reserved field, used for special purposes.
      */
     public $ExtInfo;
 
     /**
-     * @var string 
+     * @var string User-customized prompt
      */
     public $Prompt;
 
     /**
-     * @param integer $SubAppId 
-     * @param AigcVideoSceneInfo $SceneInfo 
-     * @param SceneAigcVideoOutputConfig $OutputConfig 
-     * @param array $FileInfos 
-     * @param string $SessionId 
-     * @param string $SessionContext 
-     * @param integer $TasksPriority 
-     * @param string $ExtInfo 
-     * @param string $Prompt 
+     * @param integer $SubAppId **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+     * @param AigcVideoSceneInfo $SceneInfo Scenario-based video generation parameter configuration.
+     * @param SceneAigcVideoOutputConfig $OutputConfig Output media file configuration for scenario-based video tasks.
+     * @param array $FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
+     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param string $SessionContext Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param string $ExtInfo Reserved field, used for special purposes.
+     * @param string $Prompt User-customized prompt
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDefaultStorageRegion request structure.
  *
- * @method string getStorageRegion() Obtain 
- * @method void setStorageRegion(string $StorageRegion) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getStorageRegion() Obtain Default storage region. It must be an opened region (query via the DescribeStorageRegions API).
+ * @method void setStorageRegion(string $StorageRegion) Set Default storage region. It must be an opened region (query via the DescribeStorageRegions API).
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class ModifyDefaultStorageRegionRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Default storage region. It must be an opened region (query via the DescribeStorageRegions API).
      */
     public $StorageRegion;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $StorageRegion 
-     * @param integer $SubAppId 
+     * @param string $StorageRegion Default storage region. It must be an opened region (query via the DescribeStorageRegions API).
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

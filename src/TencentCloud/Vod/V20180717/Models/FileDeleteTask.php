@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * File deletion task
  *
- * @method array getFileIdSet() Obtain 
- * @method void setFileIdSet(array $FileIdSet) Set 
- * @method array getFileDeleteResultInfo() Obtain 
- * @method void setFileDeleteResultInfo(array $FileDeleteResultInfo) Set 
+ * @method array getFileIdSet() Obtain <p>List of IDs of files to delete.</p>
+ * @method void setFileIdSet(array $FileIdSet) Set <p>List of IDs of files to delete.</p>
+ * @method array getFileDeleteResultInfo() Obtain <p>List of result information for deleting files.</p>
+ * @method void setFileDeleteResultInfo(array $FileDeleteResultInfo) Set <p>List of result information for deleting files.</p>
  */
 class FileDeleteTask extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>List of IDs of files to delete.</p>
      */
     public $FileIdSet;
 
     /**
-     * @var array 
+     * @var array <p>List of result information for deleting files.</p>
      */
     public $FileDeleteResultInfo;
 
     /**
-     * @param array $FileIdSet 
-     * @param array $FileDeleteResultInfo 
+     * @param array $FileIdSet <p>List of IDs of files to delete.</p>
+     * @param array $FileDeleteResultInfo <p>List of result information for deleting files.</p>
      */
     function __construct()
     {

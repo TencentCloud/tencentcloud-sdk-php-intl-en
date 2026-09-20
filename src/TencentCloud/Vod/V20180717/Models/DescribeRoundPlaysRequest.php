@@ -20,75 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoundPlays request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getRoundPlayIds() Obtain 
- * @method void setRoundPlayIds(array $RoundPlayIds) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method TimeRange getCreateTime() Obtain 
- * @method void setCreateTime(TimeRange $CreateTime) Set 
- * @method TimeRange getUpdateTime() Obtain 
- * @method void setUpdateTime(TimeRange $UpdateTime) Set 
- * @method string getScrollToken() Obtain 
- * @method void setScrollToken(string $ScrollToken) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+ * @method array getRoundPlayIds() Obtain <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+ * @method void setRoundPlayIds(array $RoundPlayIds) Set <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+ * @method string getStatus() Obtain <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+ * @method void setStatus(string $Status) Set <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+ * @method TimeRange getCreateTime() Obtain <p>Filter criteria: Carousel Playlist Creation Time.</p>
+ * @method void setCreateTime(TimeRange $CreateTime) Set <p>Filter criteria: Carousel Playlist Creation Time.</p>
+ * @method TimeRange getUpdateTime() Obtain <p>Filter criteria: carousel playlist update time.</p>
+ * @method void setUpdateTime(TimeRange $UpdateTime) Set <p>Filter criteria: carousel playlist update time.</p>
+ * @method string getScrollToken() Obtain <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+ * @method void setScrollToken(string $ScrollToken) Set <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+ * @method integer getOffset() Obtain <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
+ * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
  */
 class DescribeRoundPlaysRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
      */
     public $RoundPlayIds;
 
     /**
-     * @var string 
+     * @var string <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
      */
     public $Status;
 
     /**
-     * @var TimeRange 
+     * @var TimeRange <p>Filter criteria: Carousel Playlist Creation Time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var TimeRange 
+     * @var TimeRange <p>Filter criteria: carousel playlist update time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     public $ScrollToken;
 
     /**
-     * @var integer 
+     * @var integer <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
      * @deprecated
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId 
-     * @param array $RoundPlayIds 
-     * @param string $Status 
-     * @param TimeRange $CreateTime 
-     * @param TimeRange $UpdateTime 
-     * @param string $ScrollToken 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * @param array $RoundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+     * @param string $Status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+     * @param TimeRange $CreateTime <p>Filter criteria: Carousel Playlist Creation Time.</p>
+     * @param TimeRange $UpdateTime <p>Filter criteria: carousel playlist update time.</p>
+     * @param string $ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+     * @param integer $Offset <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
+     * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     function __construct()
     {

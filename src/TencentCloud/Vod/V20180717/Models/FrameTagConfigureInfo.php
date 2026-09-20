@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent frame tagging task control parameter
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method float getScreenshotInterval() Obtain 
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
+ * @method string getSwitch() Obtain Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
+ * @method void setSwitch(string $Switch) Set Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
+ * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
  */
 class FrameTagConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
      */
     public $Switch;
 
     /**
-     * @var float 
+     * @var float Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
      */
     public $ScreenshotInterval;
 
     /**
-     * @param string $Switch 
-     * @param float $ScreenshotInterval 
+     * @param string $Switch Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
+     * @param float $ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
      */
     function __construct()
     {

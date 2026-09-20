@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIAnalysisTemplate request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method ClassificationConfigureInfo getClassificationConfigure() Obtain 
- * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set 
- * @method TagConfigureInfo getTagConfigure() Obtain 
- * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set 
- * @method CoverConfigureInfo getCoverConfigure() Obtain 
- * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set 
- * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain 
- * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set 
- * @method HighlightsConfigureInfo getHighlightConfigure() Obtain 
- * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set 
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method string getName() Obtain Audio and video content analysis template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Audio and video content analysis template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Description of the audio and video content analysis template, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Description of the audio and video content analysis template, with a length limit of 256 characters.
+ * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Intelligent classification task control parameters.
+ * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Intelligent classification task control parameters.
+ * @method TagConfigureInfo getTagConfigure() Obtain Control parameter of an intelligent tag task.
+ * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Control parameter of an intelligent tag task.
+ * @method CoverConfigureInfo getCoverConfigure() Obtain Intelligent cover task control parameters.
+ * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Intelligent cover task control parameters.
+ * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Control parameter of the intelligent frame-specific tagging task.
+ * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Control parameter of the intelligent frame-specific tagging task.
+ * @method HighlightsConfigureInfo getHighlightConfigure() Obtain Control parameters for the intelligent highlights compilation task.
+ * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set Control parameters for the intelligent highlights compilation task.
  */
 class CreateAIAnalysisTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Audio and video content analysis template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Description of the audio and video content analysis template, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var ClassificationConfigureInfo 
+     * @var ClassificationConfigureInfo Intelligent classification task control parameters.
      */
     public $ClassificationConfigure;
 
     /**
-     * @var TagConfigureInfo 
+     * @var TagConfigureInfo Control parameter of an intelligent tag task.
      */
     public $TagConfigure;
 
     /**
-     * @var CoverConfigureInfo 
+     * @var CoverConfigureInfo Intelligent cover task control parameters.
      */
     public $CoverConfigure;
 
     /**
-     * @var FrameTagConfigureInfo 
+     * @var FrameTagConfigureInfo Control parameter of the intelligent frame-specific tagging task.
      */
     public $FrameTagConfigure;
 
     /**
-     * @var HighlightsConfigureInfo 
+     * @var HighlightsConfigureInfo Control parameters for the intelligent highlights compilation task.
      */
     public $HighlightConfigure;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param ClassificationConfigureInfo $ClassificationConfigure 
-     * @param TagConfigureInfo $TagConfigure 
-     * @param CoverConfigureInfo $CoverConfigure 
-     * @param FrameTagConfigureInfo $FrameTagConfigure 
-     * @param HighlightsConfigureInfo $HighlightConfigure 
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param string $Name Audio and video content analysis template name. Length limit: 64 characters.
+     * @param string $Comment Description of the audio and video content analysis template, with a length limit of 256 characters.
+     * @param ClassificationConfigureInfo $ClassificationConfigure Intelligent classification task control parameters.
+     * @param TagConfigureInfo $TagConfigure Control parameter of an intelligent tag task.
+     * @param CoverConfigureInfo $CoverConfigure Intelligent cover task control parameters.
+     * @param FrameTagConfigureInfo $FrameTagConfigure Control parameter of the intelligent frame-specific tagging task.
+     * @param HighlightsConfigureInfo $HighlightConfigure Control parameters for the intelligent highlights compilation task.
      */
     function __construct()
     {

@@ -18,77 +18,93 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Segments suspected of involving offensive or unsafe content in audio/video moderation.
  *
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method integer getPicUrlExpireTimeStamp() Obtain 
- * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set 
- * @method string getPicUrlExpireTime() Obtain 
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set 
+ * @method float getStartTimeOffset() Obtain Time offset of the start of the suspected segment. Unit: second.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Time offset of the start of the suspected segment. Unit: second.
+ * @method float getEndTimeOffset() Obtain End time offset of the suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the suspected segment, in seconds.
+ * @method float getConfidence() Obtain Score of offensive information involved in suspected clips.
+ * @method void setConfidence(float $Confidence) Set Score of offensive information involved in suspected clips.
+ * @method string getLabel() Obtain Tag of the result that the suspected segment involves offensive content.
+ * @method void setLabel(string $Label) Set Tag of the result that the suspected segment involves offensive content.
+ * @method string getSuggestion() Obtain Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method integer getPicUrlExpireTimeStamp() Obtain This field is deprecated. Please use PicUrlExpireTime.
+ * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set This field is deprecated. Please use PicUrlExpireTime.
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class MediaContentReviewSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Time offset of the start of the suspected segment. Unit: second.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of the suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float 
+     * @var float Score of offensive information involved in suspected clips.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Tag of the result that the suspected segment involves offensive content.
      */
     public $Label;
 
     /**
-     * @var string 
+     * @var string Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer This field is deprecated. Please use PicUrlExpireTime.
      * @deprecated
      */
     public $PicUrlExpireTimeStamp;
 
     /**
-     * @var string 
+     * @var string Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param float $Confidence 
-     * @param string $Label 
-     * @param string $Suggestion 
-     * @param string $Url 
-     * @param integer $PicUrlExpireTimeStamp 
-     * @param string $PicUrlExpireTime 
+     * @param float $StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
+     * @param float $EndTimeOffset End time offset of the suspected segment, in seconds.
+     * @param float $Confidence Score of offensive information involved in suspected clips.
+     * @param string $Label Tag of the result that the suspected segment involves offensive content.
+     * @param string $Suggestion Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param string $Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param integer $PicUrlExpireTimeStamp This field is deprecated. Please use PicUrlExpireTime.
+     * @param string $PicUrlExpireTime Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -18,28 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Low-light enhancement control
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
+ * @method void setSwitch(string $Switch) Set Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
+ * @method string getType() Obtain Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
+ * @method void setType(string $Type) Set Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
  */
 class LowLightEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
+     * @param string $Type Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
      */
     function __construct()
     {

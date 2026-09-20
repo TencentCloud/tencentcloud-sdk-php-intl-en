@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom video transcoding parameters.
  *
- * @method string getContainer() Obtain 
- * @method void setContainer(string $Container) Set 
- * @method integer getRemoveVideo() Obtain 
- * @method void setRemoveVideo(integer $RemoveVideo) Set 
- * @method integer getRemoveAudio() Obtain 
- * @method void setRemoveAudio(integer $RemoveAudio) Set 
- * @method VideoTemplateInfoForUpdate getVideoTemplate() Obtain 
- * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set 
- * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain 
- * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set 
- * @method TEHDConfigForUpdate getTEHDConfig() Obtain 
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set 
- * @method string getStdExtInfo() Obtain 
- * @method void setStdExtInfo(string $StdExtInfo) Set 
+ * @method string getContainer() Obtain <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+ * @method void setContainer(string $Container) Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+ * @method integer getRemoveVideo() Obtain <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+ * @method integer getRemoveAudio() Obtain <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+ * @method void setRemoveAudio(integer $RemoveAudio) Set <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+ * @method VideoTemplateInfoForUpdate getVideoTemplate() Obtain <p>Video stream configuration parameters.</p>
+ * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set <p>Video stream configuration parameters.</p>
+ * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain <p>Audio stream configuration parameters.</p>
+ * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set <p>Audio stream configuration parameters.</p>
+ * @method TEHDConfigForUpdate getTEHDConfig() Obtain <p>TSC transcoding configuration parameters.</p>
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set <p>TSC transcoding configuration parameters.</p>
+ * @method string getStdExtInfo() Obtain <p>Standard extended fields for special usage.</p>
+ * @method void setStdExtInfo(string $StdExtInfo) Set <p>Standard extended fields for special usage.</p>
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public $Container;
 
     /**
-     * @var integer 
+     * @var integer <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public $RemoveVideo;
 
     /**
-     * @var integer 
+     * @var integer <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfoForUpdate 
+     * @var VideoTemplateInfoForUpdate <p>Video stream configuration parameters.</p>
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfoForUpdate 
+     * @var AudioTemplateInfoForUpdate <p>Audio stream configuration parameters.</p>
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate 
+     * @var TEHDConfigForUpdate <p>TSC transcoding configuration parameters.</p>
      */
     public $TEHDConfig;
 
     /**
-     * @var string 
+     * @var string <p>Standard extended fields for special usage.</p>
      */
     public $StdExtInfo;
 
     /**
-     * @param string $Container 
-     * @param integer $RemoveVideo 
-     * @param integer $RemoveAudio 
-     * @param VideoTemplateInfoForUpdate $VideoTemplate 
-     * @param AudioTemplateInfoForUpdate $AudioTemplate 
-     * @param TEHDConfigForUpdate $TEHDConfig 
-     * @param string $StdExtInfo 
+     * @param string $Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+     * @param integer $RemoveVideo <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+     * @param integer $RemoveAudio <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+     * @param VideoTemplateInfoForUpdate $VideoTemplate <p>Video stream configuration parameters.</p>
+     * @param AudioTemplateInfoForUpdate $AudioTemplate <p>Audio stream configuration parameters.</p>
+     * @param TEHDConfigForUpdate $TEHDConfig <p>TSC transcoding configuration parameters.</p>
+     * @param string $StdExtInfo <p>Standard extended fields for special usage.</p>
      */
     function __construct()
     {

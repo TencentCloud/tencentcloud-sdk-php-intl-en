@@ -20,26 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PullEvents request structure.
  *
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getExtInfo() Obtain Reserved field, used for special purposes.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
  */
 class PullEventsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Reserved field, used for special purposes.
      */
     public $ExtInfo;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+
      */
     public $SubAppId;
 
     /**
-     * @param string $ExtInfo 
-     * @param integer $SubAppId 
+     * @param string $ExtInfo Reserved field, used for special purposes.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     function __construct()
     {

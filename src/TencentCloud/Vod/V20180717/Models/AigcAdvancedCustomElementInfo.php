@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AIGC advanced custom entity information
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getId() Obtain <p>Principal ID.</p>
+ * @method void setId(string $Id) Set <p>Principal ID.</p>
+ * @method string getName() Obtain <p>Subject name.</p>
+ * @method void setName(string $Name) Set <p>Subject name.</p>
+ * @method string getVoiceId() Obtain <p>Main voice ID.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Main voice ID.</p>
+ * @method string getDescription() Obtain <p>Subject description.</p>
+ * @method void setDescription(string $Description) Set <p>Subject description.</p>
+ * @method string getCreateTime() Obtain <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
  */
 class AigcAdvancedCustomElementInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Principal ID.</p>
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string <p>Subject name.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Main voice ID.</p>
      */
     public $VoiceId;
 
     /**
-     * @var string 
+     * @var string <p>Subject description.</p>
      */
     public $Description;
 
     /**
-     * @var string 
+     * @var string <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $Id 
-     * @param string $Name 
-     * @param string $VoiceId 
-     * @param string $Description 
-     * @param string $CreateTime 
+     * @param string $Id <p>Principal ID.</p>
+     * @param string $Name <p>Subject name.</p>
+     * @param string $VoiceId <p>Main voice ID.</p>
+     * @param string $Description <p>Subject description.</p>
+     * @param string $CreateTime <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     function __construct()
     {

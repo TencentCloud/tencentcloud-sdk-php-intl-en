@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Asynchronously fetch AIGC face information output
  *
- * @method array getFaceInfoSet() Obtain 
- * @method void setFaceInfoSet(array $FaceInfoSet) Set 
+ * @method array getFaceInfoSet() Obtain <p>Face information.</p>
+ * @method void setFaceInfoSet(array $FaceInfoSet) Set <p>Face information.</p>
  */
 class DescribeAigcFaceInfoAsyncOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>Face information.</p>
      */
     public $FaceInfoSet;
 
     /**
-     * @param array $FaceInfoSet 
+     * @param array $FaceInfoSet <p>Face information.</p>
      */
     function __construct()
     {

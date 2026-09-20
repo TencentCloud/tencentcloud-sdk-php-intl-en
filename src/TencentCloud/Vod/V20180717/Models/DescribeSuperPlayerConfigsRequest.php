@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSuperPlayerConfigs request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getNames() Obtain 
- * @method void setNames(array $Names) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method array getNames() Obtain Player configuration name filter conditions, with an array length limit of 100.
+ * @method void setNames(array $Names) Set Player configuration name filter conditions, with an array length limit of 100.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method string getType() Obtain Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
+ * @method void setType(string $Type) Set Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
  */
 class DescribeSuperPlayerConfigsRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array Player configuration name filter conditions, with an array length limit of 100.
      */
     public $Names;
 
     /**
-     * @var integer 
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
      */
     public $Type;
 
     /**
-     * @param integer $SubAppId 
-     * @param array $Names 
-     * @param integer $Offset 
-     * @param integer $Limit 
-     * @param string $Type 
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param array $Names Player configuration name filter conditions, with an array length limit of 100.
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param string $Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
      */
     function __construct()
     {

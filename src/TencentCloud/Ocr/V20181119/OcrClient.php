@@ -25,7 +25,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 /**
  * @method Models\ApplyCardVerificationExternalResponse ApplyCardVerificationExternal(Models\ApplyCardVerificationExternalRequest $req) This API provides general OCR recognition for [overseas identity documents.](https://www.tencentcloud.com/document/product/1061/82424)
  * @method Models\ExtractDocMultiResponse ExtractDocMulti(Models\ExtractDocMultiRequest $req) This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
-
 This API is used to set the alias SmartStructuralPro.
 
 The default API request rate limit is 5 requests per second.

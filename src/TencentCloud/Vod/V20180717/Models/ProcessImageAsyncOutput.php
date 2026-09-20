@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of an image asynchronous processing task.
  *
- * @method ProcessImageAsyncOutputFileInfo getFileInfo() Obtain 
- * @method void setFileInfo(ProcessImageAsyncOutputFileInfo $FileInfo) Set 
- * @method string getOutputText() Obtain 
- * @method void setOutputText(string $OutputText) Set 
+ * @method ProcessImageAsyncOutputFileInfo getFileInfo() Obtain Output file information for an image asynchronous processing task.
+ * @method void setFileInfo(ProcessImageAsyncOutputFileInfo $FileInfo) Set Output file information for an image asynchronous processing task.
+ * @method string getOutputText() Obtain Image understanding result.
+ * @method void setOutputText(string $OutputText) Set Image understanding result.
  */
 class ProcessImageAsyncOutput extends AbstractModel
 {
     /**
-     * @var ProcessImageAsyncOutputFileInfo 
+     * @var ProcessImageAsyncOutputFileInfo Output file information for an image asynchronous processing task.
      */
     public $FileInfo;
 
     /**
-     * @var string 
+     * @var string Image understanding result.
      */
     public $OutputText;
 
     /**
-     * @param ProcessImageAsyncOutputFileInfo $FileInfo 
-     * @param string $OutputText 
+     * @param ProcessImageAsyncOutputFileInfo $FileInfo Output file information for an image asynchronous processing task.
+     * @param string $OutputText Image understanding result.
      */
     function __construct()
     {

@@ -18,60 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Watermark template configuration for JIT transcoding.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getImageContent() Obtain 
- * @method void setImageContent(string $ImageContent) Set 
- * @method string getWidth() Obtain 
- * @method void setWidth(string $Width) Set 
- * @method string getHeight() Obtain 
- * @method void setHeight(string $Height) Set 
- * @method string getXPos() Obtain 
- * @method void setXPos(string $XPos) Set 
- * @method string getYPos() Obtain 
- * @method void setYPos(string $YPos) Set 
+ * @method string getSwitch() Obtain Whether to enable watermark. Valid values:
+<li>ON: Enable watermark;</li>
+<li>OFF: Turn off watermark.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable watermark. Valid values:
+<li>ON: Enable watermark;</li>
+<li>OFF: Turn off watermark.</li>
+ * @method string getImageContent() Obtain Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+ * @method void setImageContent(string $ImageContent) Set Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+ * @method string getWidth() Obtain Width of a watermark.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+ * @method void setWidth(string $Width) Set Width of a watermark.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+ * @method string getHeight() Obtain Height of the watermark.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+ * @method void setHeight(string $Height) Set Height of the watermark.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+ * @method string getXPos() Obtain Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+ * @method void setXPos(string $XPos) Set Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+ * @method string getYPos() Obtain Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+ * @method void setYPos(string $YPos) Set Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
  */
 class WatermarkConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether to enable watermark. Valid values:
+<li>ON: Enable watermark;</li>
+<li>OFF: Turn off watermark.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Base64-encoded string of the watermark image. Supports jpeg and png image formats.
      */
     public $ImageContent;
 
     /**
-     * @var string 
+     * @var string Width of a watermark.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
      */
     public $Width;
 
     /**
-     * @var string 
+     * @var string Height of the watermark.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
      */
     public $Height;
 
     /**
-     * @var string 
+     * @var string Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
      */
     public $XPos;
 
     /**
-     * @var string 
+     * @var string Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
      */
     public $YPos;
 
     /**
-     * @param string $Switch 
-     * @param string $ImageContent 
-     * @param string $Width 
-     * @param string $Height 
-     * @param string $XPos 
-     * @param string $YPos 
+     * @param string $Switch Whether to enable watermark. Valid values:
+<li>ON: Enable watermark;</li>
+<li>OFF: Turn off watermark.</li>
+     * @param string $ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * @param string $Width Width of a watermark.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+     * @param string $Height Height of the watermark.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+     * @param string $XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+     * @param string $YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
      */
     function __construct()
     {

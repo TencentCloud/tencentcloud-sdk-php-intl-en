@@ -18,28 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Object recognition task control parameters
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getObjectLibrary() Obtain 
- * @method void setObjectLibrary(string $ObjectLibrary) Set 
+ * @method string getSwitch() Obtain Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
+ * @method string getObjectLibrary() Obtain Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
+Default value: All. The default object library and user-defined object library are used simultaneously.
+ * @method void setObjectLibrary(string $ObjectLibrary) Set Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
+Default value: All. The default object library and user-defined object library are used simultaneously.
  */
 class ObjectConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
+Default value: All. The default object library and user-defined object library are used simultaneously.
      */
     public $ObjectLibrary;
 
     /**
-     * @param string $Switch 
-     * @param string $ObjectLibrary 
+     * @param string $Switch Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
+     * @param string $ObjectLibrary Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
+Default value: All. The default object library and user-defined object library are used simultaneously.
      */
     function __construct()
     {

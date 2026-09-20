@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FastEditMedia request structure.
  *
- * @method array getFileInfos() Obtain 
- * @method void setFileInfos(array $FileInfos) Set 
- * @method string getClipMode() Obtain 
- * @method void setClipMode(string $ClipMode) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getFileInfos() Obtain Information of the input media files. You can pass in up to 100 media files.
+ * @method void setFileInfos(array $FileInfos) Set Information of the input media files. You can pass in up to 100 media files.
+ * @method string getClipMode() Obtain ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
+ * @method void setClipMode(string $ClipMode) Set ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class FastEditMediaRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Information of the input media files. You can pass in up to 100 media files.
      */
     public $FileInfos;
 
     /**
-     * @var string 
+     * @var string ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
      */
     public $ClipMode;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param array $FileInfos 
-     * @param string $ClipMode 
-     * @param integer $SubAppId 
+     * @param array $FileInfos Information of the input media files. You can pass in up to 100 media files.
+     * @param string $ClipMode ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

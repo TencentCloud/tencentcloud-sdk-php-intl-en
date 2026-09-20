@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAdaptiveDynamicStreamingTemplate request structure.
  *
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method array getStreamInfos() Obtain 
- * @method void setStreamInfos(array $StreamInfos) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDrmType() Obtain 
- * @method void setDrmType(string $DrmType) Set 
- * @method string getDrmKeyProvider() Obtain 
- * @method void setDrmKeyProvider(string $DrmKeyProvider) Set 
- * @method string getDrmEncryptType() Obtain 
- * @method void setDrmEncryptType(string $DrmEncryptType) Set 
- * @method integer getDisableHigherVideoBitrate() Obtain 
- * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set 
- * @method integer getDisableHigherVideoResolution() Obtain 
- * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getSegmentType() Obtain 
- * @method void setSegmentType(string $SegmentType) Set 
- * @method integer getSegmentDuration() Obtain 
- * @method void setSegmentDuration(integer $SegmentDuration) Set 
+ * @method string getFormat() Obtain <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
+ * @method void setFormat(string $Format) Set <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
+ * @method array getStreamInfos() Obtain <p>Adaptive transcoding output substream parameter information. Up to 10 substreams can be output.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, the frame rate of the first substream is used as the output frame rate.</p>
+ * @method void setStreamInfos(array $StreamInfos) Set <p>Adaptive transcoding output substream parameter information. Up to 10 substreams can be output.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, the frame rate of the first substream is used as the output frame rate.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the application ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the application ID.</b></p>
+ * @method string getName() Obtain <p>Template name. Length limit: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Template name. Length limit: 64 characters.</p>
+ * @method string getDrmType() Obtain <p>DRM solution type. Value range:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it means no DRM protection is applied to the video.
+ * @method void setDrmType(string $DrmType) Set <p>DRM solution type. Value range:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it means no DRM protection is applied to the video.
+ * @method string getDrmKeyProvider() Obtain <p>Key provider for DRM. Valid values:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will be gradually phased out. Please use VOD DRM encryption service.</p>
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) Set <p>Key provider for DRM. Valid values:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will be gradually phased out. Please use VOD DRM encryption service.</p>
+ * @method string getDrmEncryptType() Obtain <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine;   </p><p>If left blank<br>FairPlay: cbcs by default;<br>Widevine: cenc by default;<br>WideVine+FairPlay: cbcs by default;</p>
+ * @method void setDrmEncryptType(string $DrmEncryptType) Set <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine;   </p><p>If left blank<br>FairPlay: cbcs by default;<br>Widevine: cenc by default;<br>WideVine+FairPlay: cbcs by default;</p>
+ * @method integer getDisableHigherVideoBitrate() Obtain <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>Default: No.
+ * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>Default: No.
+ * @method integer getDisableHigherVideoResolution() Obtain <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>No by default.
+ * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>No by default.
+ * @method string getComment() Obtain <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method string getSegmentType() Obtain <p>Segment type. Valid values:<br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The segment format for adaptive bitrate streams is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange.<br>Widevine+FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</p>
+ * @method void setSegmentType(string $SegmentType) Set <p>Segment type. Valid values:<br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The segment format for adaptive bitrate streams is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange.<br>Widevine+FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</p>
+ * @method integer getSegmentDuration() Obtain <p>Segment duration.</p><p>Value range: [1, 10]</p><p>Unit: seconds</p><p>Default value: 6</p>
+ * @method void setSegmentDuration(integer $SegmentDuration) Set <p>Segment duration.</p><p>Value range: [1, 10]</p><p>Unit: seconds</p><p>Default value: 6</p>
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
      */
     public $Format;
 
     /**
-     * @var array 
+     * @var array <p>Adaptive transcoding output substream parameter information. Up to 10 substreams can be output.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, the frame rate of the first substream is used as the output frame rate.</p>
      */
     public $StreamInfos;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the application ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Template name. Length limit: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>DRM solution type. Value range:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it means no DRM protection is applied to the video.
      */
     public $DrmType;
 
     /**
-     * @var string 
+     * @var string <p>Key provider for DRM. Valid values:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will be gradually phased out. Please use VOD DRM encryption service.</p>
      */
     public $DrmKeyProvider;
 
     /**
-     * @var string 
+     * @var string <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine;   </p><p>If left blank<br>FairPlay: cbcs by default;<br>Widevine: cenc by default;<br>WideVine+FairPlay: cbcs by default;</p>
      */
     public $DrmEncryptType;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>Default: No.
      */
     public $DisableHigherVideoBitrate;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>No by default.
      */
     public $DisableHigherVideoResolution;
 
     /**
-     * @var string 
+     * @var string <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string <p>Segment type. Valid values:<br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The segment format for adaptive bitrate streams is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange.<br>Widevine+FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</p>
      */
     public $SegmentType;
 
     /**
-     * @var integer 
+     * @var integer <p>Segment duration.</p><p>Value range: [1, 10]</p><p>Unit: seconds</p><p>Default value: 6</p>
      */
     public $SegmentDuration;
 
     /**
-     * @param string $Format 
-     * @param array $StreamInfos 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $DrmType 
-     * @param string $DrmKeyProvider 
-     * @param string $DrmEncryptType 
-     * @param integer $DisableHigherVideoBitrate 
-     * @param integer $DisableHigherVideoResolution 
-     * @param string $Comment 
-     * @param string $SegmentType 
-     * @param integer $SegmentDuration 
+     * @param string $Format <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
+     * @param array $StreamInfos <p>Adaptive transcoding output substream parameter information. Up to 10 substreams can be output.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, the frame rate of the first substream is used as the output frame rate.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the application ID.</b></p>
+     * @param string $Name <p>Template name. Length limit: 64 characters.</p>
+     * @param string $DrmType <p>DRM solution type. Value range:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it means no DRM protection is applied to the video.
+     * @param string $DrmKeyProvider <p>Key provider for DRM. Valid values:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will be gradually phased out. Please use VOD DRM encryption service.</p>
+     * @param string $DrmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine;   </p><p>If left blank<br>FairPlay: cbcs by default;<br>Widevine: cenc by default;<br>WideVine+FairPlay: cbcs by default;</p>
+     * @param integer $DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>Default: No.
+     * @param integer $DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>No by default.
+     * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param string $SegmentType <p>Segment type. Valid values:<br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The segment format for adaptive bitrate streams is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange.<br>Widevine+FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</p>
+     * @param integer $SegmentDuration <p>Segment duration.</p><p>Value range: [1, 10]</p><p>Unit: seconds</p><p>Default value: 6</p>
      */
     function __construct()
     {

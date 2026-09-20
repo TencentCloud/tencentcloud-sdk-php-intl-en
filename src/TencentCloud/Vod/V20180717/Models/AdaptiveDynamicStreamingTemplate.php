@@ -18,132 +18,132 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Adaptive bitrate streaming template details
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method string getDrmType() Obtain 
- * @method void setDrmType(string $DrmType) Set 
- * @method string getDrmKeyProvider() Obtain 
- * @method void setDrmKeyProvider(string $DrmKeyProvider) Set 
- * @method string getDrmEncryptType() Obtain 
- * @method void setDrmEncryptType(string $DrmEncryptType) Set 
- * @method array getStreamInfos() Obtain 
- * @method void setStreamInfos(array $StreamInfos) Set 
- * @method integer getDisableHigherVideoBitrate() Obtain 
- * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set 
- * @method integer getDisableHigherVideoResolution() Obtain 
- * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
- * @method string getSegmentType() Obtain 
- * @method void setSegmentType(string $SegmentType) Set 
- * @method integer getSegmentDuration() Obtain 
- * @method void setSegmentDuration(integer $SegmentDuration) Set 
+ * @method integer getDefinition() Obtain <p>Adaptive bitrate streaming template unique ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Adaptive bitrate streaming template unique ID.</p>
+ * @method string getType() Obtain <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+ * @method void setType(string $Type) Set <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+ * @method string getName() Obtain <p>Adaptive bitrate streaming template name.</p>
+ * @method void setName(string $Name) Set <p>Adaptive bitrate streaming template name.</p>
+ * @method string getComment() Obtain <p>Adaptive bitrate streaming template description.</p>
+ * @method void setComment(string $Comment) Set <p>Adaptive bitrate streaming template description.</p>
+ * @method string getFormat() Obtain <p>Adaptive Transcoding Format. Value range:</p><li>HLS.</li>
+ * @method void setFormat(string $Format) Set <p>Adaptive Transcoding Format. Value range:</p><li>HLS.</li>
+ * @method string getDrmType() Obtain <p>DRM type. Value range: </p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it means no DRM protection is applied to the video.
+ * @method void setDrmType(string $DrmType) Set <p>DRM type. Value range: </p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it means no DRM protection is applied to the video.
+ * @method string getDrmKeyProvider() Obtain <p>Key provider for DRM. Value range:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will gradually phase out subsequently. Please use the VOD DRM encryption service.</p>
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) Set <p>Key provider for DRM. Value range:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will gradually phase out subsequently. Please use the VOD DRM encryption service.</p>
+ * @method string getDrmEncryptType() Obtain <p>Encryption type of DRM. Value range: {&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+ * @method void setDrmEncryptType(string $DrmEncryptType) Set <p>Encryption type of DRM. Value range: {&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+ * @method array getStreamInfos() Obtain <p>Adaptive Transcoding Input Stream Parameter Information, up to 10 streams.</p>
+ * @method void setStreamInfos(array $StreamInfos) Set <p>Adaptive Transcoding Input Stream Parameter Information, up to 10 streams.</p>
+ * @method integer getDisableHigherVideoBitrate() Obtain <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range: </p><li>0: No, </li><li>1: Yes.</li>
+ * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range: </p><li>0: No, </li><li>1: Yes.</li>
+ * @method integer getDisableHigherVideoResolution() Obtain <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getSegmentType() Obtain <p>Segment type.</p><p>ts: HLS, internally mapped to ts-segment</p><p>fmp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p>
+ * @method void setSegmentType(string $SegmentType) Set <p>Segment type.</p><p>ts: HLS, internally mapped to ts-segment</p><p>fmp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p>
+ * @method integer getSegmentDuration() Obtain <p>Average segmentation duration</p><p>Unit: seconds</p><p>Default value: 6</p><p>Adaptive bitrate streaming uses SegmentDuration to set the segment duration instead of the HlsTime field.</p>
+ * @method void setSegmentDuration(integer $SegmentDuration) Set <p>Average segmentation duration</p><p>Unit: seconds</p><p>Default value: 6</p><p>Adaptive bitrate streaming uses SegmentDuration to set the segment duration instead of the HlsTime field.</p>
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Adaptive bitrate streaming template unique ID.</p>
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>Adaptive bitrate streaming template name.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Adaptive bitrate streaming template description.</p>
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string <p>Adaptive Transcoding Format. Value range:</p><li>HLS.</li>
      */
     public $Format;
 
     /**
-     * @var string 
+     * @var string <p>DRM type. Value range: </p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it means no DRM protection is applied to the video.
      */
     public $DrmType;
 
     /**
-     * @var string 
+     * @var string <p>Key provider for DRM. Value range:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will gradually phase out subsequently. Please use the VOD DRM encryption service.</p>
      */
     public $DrmKeyProvider;
 
     /**
-     * @var string 
+     * @var string <p>Encryption type of DRM. Value range: {&quot;cbcs&quot;, &quot;cenc&quot;}</p>
      */
     public $DrmEncryptType;
 
     /**
-     * @var array 
+     * @var array <p>Adaptive Transcoding Input Stream Parameter Information, up to 10 streams.</p>
      */
     public $StreamInfos;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range: </p><li>0: No, </li><li>1: Yes.</li>
      */
     public $DisableHigherVideoBitrate;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
      */
     public $DisableHigherVideoResolution;
 
     /**
-     * @var string 
+     * @var string <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string <p>Segment type.</p><p>ts: HLS, internally mapped to ts-segment</p><p>fmp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p>
      */
     public $SegmentType;
 
     /**
-     * @var integer 
+     * @var integer <p>Average segmentation duration</p><p>Unit: seconds</p><p>Default value: 6</p><p>Adaptive bitrate streaming uses SegmentDuration to set the segment duration instead of the HlsTime field.</p>
      */
     public $SegmentDuration;
 
     /**
-     * @param integer $Definition 
-     * @param string $Type 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param string $Format 
-     * @param string $DrmType 
-     * @param string $DrmKeyProvider 
-     * @param string $DrmEncryptType 
-     * @param array $StreamInfos 
-     * @param integer $DisableHigherVideoBitrate 
-     * @param integer $DisableHigherVideoResolution 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
-     * @param string $SegmentType 
-     * @param integer $SegmentDuration 
+     * @param integer $Definition <p>Adaptive bitrate streaming template unique ID.</p>
+     * @param string $Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+     * @param string $Name <p>Adaptive bitrate streaming template name.</p>
+     * @param string $Comment <p>Adaptive bitrate streaming template description.</p>
+     * @param string $Format <p>Adaptive Transcoding Format. Value range:</p><li>HLS.</li>
+     * @param string $DrmType <p>DRM type. Value range: </p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it means no DRM protection is applied to the video.
+     * @param string $DrmKeyProvider <p>Key provider for DRM. Value range:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will gradually phase out subsequently. Please use the VOD DRM encryption service.</p>
+     * @param string $DrmEncryptType <p>Encryption type of DRM. Value range: {&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+     * @param array $StreamInfos <p>Adaptive Transcoding Input Stream Parameter Information, up to 10 streams.</p>
+     * @param integer $DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range: </p><li>0: No, </li><li>1: Yes.</li>
+     * @param integer $DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+     * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $SegmentType <p>Segment type.</p><p>ts: HLS, internally mapped to ts-segment</p><p>fmp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment. Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p>
+     * @param integer $SegmentDuration <p>Average segmentation duration</p><p>Unit: seconds</p><p>Default value: 6</p><p>Adaptive bitrate streaming uses SegmentDuration to set the segment duration instead of the HlsTime field.</p>
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * List of intelligent highlight segments.
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getConfidence() Obtain <p>Confidence degree.</p>
+ * @method void setConfidence(float $Confidence) Set <p>Confidence degree.</p>
+ * @method float getStartTimeOffset() Obtain <p>Segment start time offset.</p><p>Unit: seconds</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Segment start time offset.</p><p>Unit: seconds</p>
+ * @method float getEndTimeOffset() Obtain <p>Segment end time offset.</p><p>Unit: seconds</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>Segment end time offset.</p><p>Unit: seconds</p>
  */
 class HighlightSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float <p>Confidence degree.</p>
      */
     public $Confidence;
 
     /**
-     * @var float 
+     * @var float <p>Segment start time offset.</p><p>Unit: seconds</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float <p>Segment end time offset.</p><p>Unit: seconds</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @param float $Confidence 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param float $Confidence <p>Confidence degree.</p>
+     * @param float $StartTimeOffset <p>Segment start time offset.</p><p>Unit: seconds</p>
+     * @param float $EndTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
      */
     function __construct()
     {

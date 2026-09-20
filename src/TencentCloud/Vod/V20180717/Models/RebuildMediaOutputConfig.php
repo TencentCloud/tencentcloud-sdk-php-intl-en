@@ -18,36 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of the remastered media file.
  *
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
+ * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system specifies the generated filename.
+ * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system specifies the generated filename.
+ * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+<li>Default value: 0, indicate other categories.</li>
+ * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+<li>Default value: 0, indicate other categories.</li>
+ * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class RebuildMediaOutputConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Output filename, up to 64 characters. By default, the system specifies the generated filename.
      */
     public $MediaName;
 
     /**
-     * @var integer 
+     * @var integer Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+<li>Default value: 0, indicate other categories.</li>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ExpireTime;
 
     /**
-     * @param string $MediaName 
-     * @param integer $ClassId 
-     * @param string $ExpireTime 
+     * @param string $MediaName Output filename, up to 64 characters. By default, the system specifies the generated filename.
+     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+<li>Default value: 0, indicate other categories.</li>
+     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

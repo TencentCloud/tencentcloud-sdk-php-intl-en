@@ -18,158 +18,210 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information of an audio/video processing task.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getFileName() Obtain 
- * @method void setFileName(string $FileName) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
- * @method array getMediaProcessResultSet() Obtain 
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set 
- * @method array getAiContentReviewResultSet() Obtain 
- * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set 
- * @method array getAiAnalysisResultSet() Obtain 
- * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set 
- * @method array getAiRecognitionResultSet() Obtain 
- * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
- * @method string getTasksNotifyMode() Obtain 
- * @method void setTasksNotifyMode(string $TasksNotifyMode) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getOperator() Obtain 
- * @method void setOperator(string $Operator) Set 
- * @method string getOperationType() Obtain 
- * @method void setOperationType(string $OperationType) Set 
+ * @method string getTaskId() Obtain Media processing task ID.
+ * @method void setTaskId(string $TaskId) Set Media processing task ID.
+ * @method string getStatus() Obtain Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method integer getErrCode() Obtain Deprecated. Please use the ErrCode of each specific task.
+ * @method void setErrCode(integer $ErrCode) Set Deprecated. Please use the ErrCode of each specific task.
+ * @method string getMessage() Obtain Deprecated. Please use the Message of each specific task.
+ * @method void setMessage(string $Message) Set Deprecated. Please use the Message of each specific task.
+ * @method string getFileId() Obtain Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+ * @method void setFileId(string $FileId) Set Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+ * @method string getFileName() Obtain Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+ * @method void setFileName(string $FileName) Set Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+ * @method string getFileUrl() Obtain Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+ * @method void setFileUrl(string $FileUrl) Set Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+ * @method MediaMetaData getMetaData() Obtain Metadata of the original audio/video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the original audio/video.
+ * @method array getMediaProcessResultSet() Obtain Execution status and results of the audio/video processing task.
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Execution status and results of the audio/video processing task.
+ * @method array getAiContentReviewResultSet() Obtain Execution status and results of an audio/video moderation task.
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Execution status and results of an audio/video moderation task.
+ * @method array getAiAnalysisResultSet() Obtain Execution status and results of an audio/video content analysis task.
+ * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and results of an audio/video content analysis task.
+ * @method array getAiRecognitionResultSet() Obtain Execution status and results of an audio/video content recognition task.
+ * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Execution status and results of an audio/video content recognition task.
+ * @method integer getTasksPriority() Obtain Priority of the task flow, with a value range of [-10, 10].
+ * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task flow, with a value range of [-10, 10].
+ * @method string getTasksNotifyMode() Obtain Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
+ * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
+ * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method string getOperator() Obtain Operator. Valid values:
+<li>System: indicates a system trigger.</li>
+ * @method void setOperator(string $Operator) Set Operator. Valid values:
+<li>System: indicates a system trigger.</li>
+ * @method string getOperationType() Obtain Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
+ * @method void setOperationType(string $OperationType) Set Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
  */
 class ProcedureTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media processing task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Deprecated. Please use the ErrCode of each specific task.
      * @deprecated
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Deprecated. Please use the Message of each specific task.
      * @deprecated
      */
     public $Message;
 
     /**
-     * @var string 
+     * @var string Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public $FileName;
 
     /**
-     * @var string 
+     * @var string Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public $FileUrl;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Metadata of the original audio/video.
      */
     public $MetaData;
 
     /**
-     * @var array 
+     * @var array Execution status and results of the audio/video processing task.
      */
     public $MediaProcessResultSet;
 
     /**
-     * @var array 
+     * @var array Execution status and results of an audio/video moderation task.
      */
     public $AiContentReviewResultSet;
 
     /**
-     * @var array 
+     * @var array Execution status and results of an audio/video content analysis task.
      */
     public $AiAnalysisResultSet;
 
     /**
-     * @var array 
+     * @var array Execution status and results of an audio/video content recognition task.
      */
     public $AiRecognitionResultSet;
 
     /**
-     * @var integer 
+     * @var integer Priority of the task flow, with a value range of [-10, 10].
      */
     public $TasksPriority;
 
     /**
-     * @var string 
+     * @var string Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
      */
     public $TasksNotifyMode;
 
     /**
-     * @var string 
+     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Operator. Valid values:
+<li>System: indicates a system trigger.</li>
      */
     public $Operator;
 
     /**
-     * @var string 
+     * @var string Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
      */
     public $OperationType;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param string $FileId 
-     * @param string $FileName 
-     * @param string $FileUrl 
-     * @param MediaMetaData $MetaData 
-     * @param array $MediaProcessResultSet 
-     * @param array $AiContentReviewResultSet 
-     * @param array $AiAnalysisResultSet 
-     * @param array $AiRecognitionResultSet 
-     * @param integer $TasksPriority 
-     * @param string $TasksNotifyMode 
-     * @param string $SessionContext 
-     * @param string $SessionId 
-     * @param string $Operator 
-     * @param string $OperationType 
+     * @param string $TaskId Media processing task ID.
+     * @param string $Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param integer $ErrCode Deprecated. Please use the ErrCode of each specific task.
+     * @param string $Message Deprecated. Please use the Message of each specific task.
+     * @param string $FileId Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+     * @param string $FileName Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+     * @param string $FileUrl Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+     * @param MediaMetaData $MetaData Metadata of the original audio/video.
+     * @param array $MediaProcessResultSet Execution status and results of the audio/video processing task.
+     * @param array $AiContentReviewResultSet Execution status and results of an audio/video moderation task.
+     * @param array $AiAnalysisResultSet Execution status and results of an audio/video content analysis task.
+     * @param array $AiRecognitionResultSet Execution status and results of an audio/video content recognition task.
+     * @param integer $TasksPriority Priority of the task flow, with a value range of [-10, 10].
+     * @param string $TasksNotifyMode Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
+     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param string $Operator Operator. Valid values:
+<li>System: indicates a system trigger.</li>
+     * @param string $OperationType Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
      */
     function __construct()
     {

@@ -18,52 +18,64 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Suspected segment of Asr text in audio/video moderation
  *
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method array getKeywordSet() Obtain 
- * @method void setKeywordSet(array $KeywordSet) Set 
+ * @method float getStartTimeOffset() Obtain Offset time of the start of the suspected segment. Unit: seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of the start of the suspected segment. Unit: seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
+ * @method float getConfidence() Obtain Confidence degree of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Confidence degree of the suspected segment.
+ * @method string getSuggestion() Obtain Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method array getKeywordSet() Obtain List of suspicious keywords.
+ * @method void setKeywordSet(array $KeywordSet) Set List of suspicious keywords.
  */
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Offset time of the start of the suspected segment. Unit: seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of a suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float 
+     * @var float Confidence degree of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array 
+     * @var array List of suspicious keywords.
      */
     public $KeywordSet;
 
     /**
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param array $KeywordSet 
+     * @param float $StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+     * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
+     * @param float $Confidence Confidence degree of the suspected segment.
+     * @param string $Suggestion Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param array $KeywordSet List of suspicious keywords.
      */
     function __construct()
     {

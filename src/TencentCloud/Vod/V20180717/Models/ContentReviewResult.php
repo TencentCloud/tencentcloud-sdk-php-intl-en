@@ -18,68 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Result of the image intelligent content identification task.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method PornImageResult getPornImageResult() Obtain 
- * @method void setPornImageResult(PornImageResult $PornImageResult) Set 
- * @method TerrorismImageResult getTerrorismImageResult() Obtain 
- * @method void setTerrorismImageResult(TerrorismImageResult $TerrorismImageResult) Set 
- * @method PoliticalImageResult getPoliticalImageResult() Obtain 
- * @method void setPoliticalImageResult(PoliticalImageResult $PoliticalImageResult) Set 
- * @method ContentReviewOcrResult getPornOcrResult() Obtain 
- * @method void setPornOcrResult(ContentReviewOcrResult $PornOcrResult) Set 
- * @method ContentReviewOcrResult getTerrorismOcrResult() Obtain 
- * @method void setTerrorismOcrResult(ContentReviewOcrResult $TerrorismOcrResult) Set 
- * @method ContentReviewOcrResult getPoliticalOcrResult() Obtain 
- * @method void setPoliticalOcrResult(ContentReviewOcrResult $PoliticalOcrResult) Set 
+ * @method string getType() Obtain Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+ * @method void setType(string $Type) Set Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+ * @method PornImageResult getPornImageResult() Obtain Authentication result for offensive content in the image. Valid when Type is Porn.Image.
+ * @method void setPornImageResult(PornImageResult $PornImageResult) Set Authentication result for offensive content in the image. Valid when Type is Porn.Image.
+ * @method TerrorismImageResult getTerrorismImageResult() Obtain Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+ * @method void setTerrorismImageResult(TerrorismImageResult $TerrorismImageResult) Set Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+ * @method PoliticalImageResult getPoliticalImageResult() Obtain Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+ * @method void setPoliticalImageResult(PoliticalImageResult $PoliticalImageResult) Set Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+ * @method ContentReviewOcrResult getPornOcrResult() Obtain Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
+ * @method void setPornOcrResult(ContentReviewOcrResult $PornOcrResult) Set Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
+ * @method ContentReviewOcrResult getTerrorismOcrResult() Obtain Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
+ * @method void setTerrorismOcrResult(ContentReviewOcrResult $TerrorismOcrResult) Set Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
+ * @method ContentReviewOcrResult getPoliticalOcrResult() Obtain The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+ * @method void setPoliticalOcrResult(ContentReviewOcrResult $PoliticalOcrResult) Set The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
  */
 class ContentReviewResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
      */
     public $Type;
 
     /**
-     * @var PornImageResult 
+     * @var PornImageResult Authentication result for offensive content in the image. Valid when Type is Porn.Image.
      */
     public $PornImageResult;
 
     /**
-     * @var TerrorismImageResult 
+     * @var TerrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
      */
     public $TerrorismImageResult;
 
     /**
-     * @var PoliticalImageResult 
+     * @var PoliticalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
      */
     public $PoliticalImageResult;
 
     /**
-     * @var ContentReviewOcrResult 
+     * @var ContentReviewOcrResult Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
      */
     public $PornOcrResult;
 
     /**
-     * @var ContentReviewOcrResult 
+     * @var ContentReviewOcrResult Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
      */
     public $TerrorismOcrResult;
 
     /**
-     * @var ContentReviewOcrResult 
+     * @var ContentReviewOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
      */
     public $PoliticalOcrResult;
 
     /**
-     * @param string $Type 
-     * @param PornImageResult $PornImageResult 
-     * @param TerrorismImageResult $TerrorismImageResult 
-     * @param PoliticalImageResult $PoliticalImageResult 
-     * @param ContentReviewOcrResult $PornOcrResult 
-     * @param ContentReviewOcrResult $TerrorismOcrResult 
-     * @param ContentReviewOcrResult $PoliticalOcrResult 
+     * @param string $Type Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+     * @param PornImageResult $PornImageResult Authentication result for offensive content in the image. Valid when Type is Porn.Image.
+     * @param TerrorismImageResult $TerrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+     * @param PoliticalImageResult $PoliticalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+     * @param ContentReviewOcrResult $PornOcrResult Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
+     * @param ContentReviewOcrResult $TerrorismOcrResult Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
+     * @param ContentReviewOcrResult $PoliticalOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
      */
     function __construct()
     {

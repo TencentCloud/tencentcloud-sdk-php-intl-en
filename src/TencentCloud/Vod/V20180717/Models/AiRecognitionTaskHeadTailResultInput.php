@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input for video start and end recognition.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Video start and end recognition template ID.
+ * @method void setDefinition(integer $Definition) Set Video start and end recognition template ID.
  */
 class AiRecognitionTaskHeadTailResultInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Video start and end recognition template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Video start and end recognition template ID.
      */
     function __construct()
     {

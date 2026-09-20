@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of the intelligent watermark removal task.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getFileType() Obtain 
- * @method void setFileType(string $FileType) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method string getFileType() Obtain File type, for example, mp4 or mp3.
+ * @method void setFileType(string $FileType) Set File type, for example, mp4 or mp3.
+ * @method string getFileUrl() Obtain Media file playback address.
+ * @method void setFileUrl(string $FileUrl) Set Media file playback address.
+ * @method string getMediaName() Obtain Filename, which contains up to 64 characters.
+ * @method void setMediaName(string $MediaName) Set Filename, which contains up to 64 characters.
+ * @method MediaMetaData getMetaData() Obtain Meta information, including size, duration, video stream information, and audio stream information.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Meta information, including size, duration, video stream information, and audio stream information.
  */
 class RemoveWaterMarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string File type, for example, mp4 or mp3.
      */
     public $FileType;
 
     /**
-     * @var string 
+     * @var string Media file playback address.
      */
     public $FileUrl;
 
     /**
-     * @var string 
+     * @var string Filename, which contains up to 64 characters.
      */
     public $MediaName;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Meta information, including size, duration, video stream information, and audio stream information.
      */
     public $MetaData;
 
     /**
-     * @param string $FileId 
-     * @param string $FileType 
-     * @param string $FileUrl 
-     * @param string $MediaName 
-     * @param MediaMetaData $MetaData 
+     * @param string $FileId Media file ID.
+     * @param string $FileType File type, for example, mp4 or mp3.
+     * @param string $FileUrl Media file playback address.
+     * @param string $MediaName Filename, which contains up to 64 characters.
+     * @param MediaMetaData $MetaData Meta information, including size, duration, video stream information, and audio stream information.
      */
     function __construct()
     {

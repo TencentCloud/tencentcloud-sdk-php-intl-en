@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Authentication task control parameters that involve unsafe information.
  *
- * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain 
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set 
- * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
+ * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Task control parameter for image recognition involving unsafe information.
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Task control parameter for image recognition involving unsafe information.
+ * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Task control parameter for text recognition involving unsafe information.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Task control parameter for text recognition involving unsafe information.
  */
 class TerrorismConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfoForUpdate 
+     * @var TerrorismImgReviewTemplateInfoForUpdate Task control parameter for image recognition involving unsafe information.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfoForUpdate 
+     * @var TerrorismOcrReviewTemplateInfoForUpdate Task control parameter for text recognition involving unsafe information.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo 
-     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
+     * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo Task control parameter for image recognition involving unsafe information.
+     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo Task control parameter for text recognition involving unsafe information.
      */
     function __construct()
     {

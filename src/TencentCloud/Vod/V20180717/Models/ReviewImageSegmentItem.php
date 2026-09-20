@@ -18,76 +18,116 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image moderation clip.
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method string getSubLabel() Obtain 
- * @method void setSubLabel(string $SubLabel) Set 
- * @method string getForm() Obtain 
- * @method void setForm(string $Form) Set 
- * @method array getAreaCoordSet() Obtain 
- * @method void setAreaCoordSet(array $AreaCoordSet) Set 
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
- * @method array getKeywordSet() Obtain 
- * @method void setKeywordSet(array $KeywordSet) Set 
+ * @method float getConfidence() Obtain Score of offensive information involved in suspected clips.
+ * @method void setConfidence(float $Confidence) Set Score of offensive information involved in suspected clips.
+ * @method string getSuggestion() Obtain Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+ * @method string getLabel() Obtain Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
+ * @method void setLabel(string $Label) Set Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
+ * @method string getSubLabel() Obtain Rule violation subtag.
+ * @method void setSubLabel(string $SubLabel) Set Rule violation subtag.
+ * @method string getForm() Obtain Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
+ * @method void setForm(string $Form) Set Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
+ * @method array getAreaCoordSet() Obtain Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+ * @method string getText() Obtain Valid when Form is OCR. It indicates the recognized OCR text content.
+ * @method void setText(string $Text) Set Valid when Form is OCR. It indicates the recognized OCR text content.
+ * @method array getKeywordSet() Obtain Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
+ * @method void setKeywordSet(array $KeywordSet) Set Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
  */
 class ReviewImageSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Score of offensive information involved in suspected clips.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
      */
     public $Label;
 
     /**
-     * @var string 
+     * @var string Rule violation subtag.
      */
     public $SubLabel;
 
     /**
-     * @var string 
+     * @var string Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
      */
     public $Form;
 
     /**
-     * @var array 
+     * @var array Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string 
+     * @var string Valid when Form is OCR. It indicates the recognized OCR text content.
      */
     public $Text;
 
     /**
-     * @var array 
+     * @var array Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
      */
     public $KeywordSet;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param string $Label 
-     * @param string $SubLabel 
-     * @param string $Form 
-     * @param array $AreaCoordSet 
-     * @param string $Text 
-     * @param array $KeywordSet 
+     * @param float $Confidence Score of offensive information involved in suspected clips.
+     * @param string $Suggestion Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+     * @param string $Label Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
+     * @param string $SubLabel Rule violation subtag.
+     * @param string $Form Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
+     * @param array $AreaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * @param string $Text Valid when Form is OCR. It indicates the recognized OCR text content.
+     * @param array $KeywordSet Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
      */
     function __construct()
     {

@@ -18,26 +18,26 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Ipv6 access configuration
  *
- * @method string getSwitch() Obtain Switch for enabling ipv6 access configuration for the domain. Valid values:
+ * @method string getSwitch() Obtain Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Switch for enabling ipv6 access configuration for the domain. Valid values:
+ * @method void setSwitch(string $Switch) Set Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  */
 class Ipv6Access extends AbstractModel
 {
     /**
-     * @var string Switch for enabling ipv6 access configuration for the domain. Valid values:
+     * @var string Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+     * @param string $Switch Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

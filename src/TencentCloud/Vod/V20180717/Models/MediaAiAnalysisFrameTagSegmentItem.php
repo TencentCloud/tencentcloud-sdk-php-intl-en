@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Segments for frame tagging
  *
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method array getTagSet() Obtain 
- * @method void setTagSet(array $TagSet) Set 
+ * @method float getStartTimeOffset() Obtain <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+ * @method float getEndTimeOffset() Obtain <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
+ * @method array getTagSet() Obtain <p>Tag list in the time segment.</p>
+ * @method void setTagSet(array $TagSet) Set <p>Tag list in the time segment.</p>
  */
 class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @var array 
+     * @var array <p>Tag list in the time segment.</p>
      */
     public $TagSet;
 
     /**
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param array $TagSet 
+     * @param float $StartTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+     * @param float $EndTimeOffset <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
+     * @param array $TagSet <p>Tag list in the time segment.</p>
      */
     function __construct()
     {

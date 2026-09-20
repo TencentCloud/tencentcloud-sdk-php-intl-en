@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Speech synthesis task input.
  *
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
- * @method string getLanguageBoost() Obtain 
- * @method void setLanguageBoost(string $LanguageBoost) Set 
- * @method string getExtParam() Obtain 
- * @method void setExtParam(string $ExtParam) Set 
+ * @method string getVoiceId() Obtain <p>Voice ID.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
+ * @method string getText() Obtain <p>Text to convert to speech.</p>
+ * @method void setText(string $Text) Set <p>Text to convert to speech.</p>
+ * @method string getLanguageBoost() Obtain <p>Text to speech language.</p>
+ * @method void setLanguageBoost(string $LanguageBoost) Set <p>Text to speech language.</p>
+ * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
  */
 class TextToSpeechAsyncInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Voice ID.</p>
      */
     public $VoiceId;
 
     /**
-     * @var string 
+     * @var string <p>Text to convert to speech.</p>
      */
     public $Text;
 
     /**
-     * @var string 
+     * @var string <p>Text to speech language.</p>
      */
     public $LanguageBoost;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameters in the format of a JSON string.</p>
      */
     public $ExtParam;
 
     /**
-     * @param string $VoiceId 
-     * @param string $Text 
-     * @param string $LanguageBoost 
-     * @param string $ExtParam 
+     * @param string $VoiceId <p>Voice ID.</p>
+     * @param string $Text <p>Text to convert to speech.</p>
+     * @param string $LanguageBoost <p>Text to speech language.</p>
+     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     function __construct()
     {

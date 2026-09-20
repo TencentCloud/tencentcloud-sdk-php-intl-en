@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Media information for face recognition
  *
- * @method array getFaceRecognitionTasks() Obtain 
- * @method void setFaceRecognitionTasks(array $FaceRecognitionTasks) Set 
+ * @method array getFaceRecognitionTasks() Obtain <p>Face recognition task list</p>
+ * @method void setFaceRecognitionTasks(array $FaceRecognitionTasks) Set <p>Face recognition task list</p>
  */
 class FaceRecognitionInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>Face recognition task list</p>
      */
     public $FaceRecognitionTasks;
 
     /**
-     * @param array $FaceRecognitionTasks 
+     * @param array $FaceRecognitionTasks <p>Face recognition task list</p>
      */
     function __construct()
     {

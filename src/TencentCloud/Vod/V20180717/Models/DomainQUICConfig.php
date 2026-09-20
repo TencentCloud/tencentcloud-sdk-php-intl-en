@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * QUIC configuration information of the domain name
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
+ * @method string getStatus() Obtain QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
+ * @method void setStatus(string $Status) Set QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
  */
 class DomainQUICConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
      */
     public $Status;
 
     /**
-     * @param string $Status 
+     * @param string $Status QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
      */
     function __construct()
     {

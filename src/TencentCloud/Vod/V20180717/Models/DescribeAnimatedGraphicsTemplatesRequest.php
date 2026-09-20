@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAnimatedGraphicsTemplates request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getDefinitions() Obtain 
- * @method void setDefinitions(array $Definitions) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the rotation diagram template. The array length cannot exceed 100.
+ * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the rotation diagram template. The array length cannot exceed 100.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method string getType() Obtain Condition for filtering templates by type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
+ * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
  */
 class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array Filtering condition for the unique identifier of the rotation diagram template. The array length cannot exceed 100.
      */
     public $Definitions;
 
     /**
-     * @var integer 
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string Condition for filtering templates by type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @param integer $SubAppId 
-     * @param array $Definitions 
-     * @param integer $Offset 
-     * @param integer $Limit 
-     * @param string $Type 
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param array $Definitions Filtering condition for the unique identifier of the rotation diagram template. The array length cannot exceed 100.
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param string $Type Condition for filtering templates by type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
      */
     function __construct()
     {

@@ -18,84 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio and video quality detection task information.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
- * @method QualityInspectTaskInput getInput() Obtain 
- * @method void setInput(QualityInspectTaskInput $Input) Set 
- * @method QualityInspectTaskOutput getOutput() Obtain 
- * @method void setOutput(QualityInspectTaskOutput $Output) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method MediaMetaData getMetaData() Obtain Metadata of audio and video for quality inspection input.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of audio and video for quality inspection input.
+ * @method QualityInspectTaskInput getInput() Obtain Audio and video quality inspection task input.
+ * @method void setInput(QualityInspectTaskInput $Input) Set Audio and video quality inspection task input.
+ * @method QualityInspectTaskOutput getOutput() Obtain Output of the audio and video quality inspection task.
+ * @method void setOutput(QualityInspectTaskOutput $Output) Set Output of the audio and video quality inspection task.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method string getSessionContext() Obtain Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
  */
 class QualityInspectTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public $ErrCodeExt;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Metadata of audio and video for quality inspection input.
      */
     public $MetaData;
 
     /**
-     * @var QualityInspectTaskInput 
+     * @var QualityInspectTaskInput Audio and video quality inspection task input.
      */
     public $Input;
 
     /**
-     * @var QualityInspectTaskOutput 
+     * @var QualityInspectTaskOutput Output of the audio and video quality inspection task.
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param string $ErrCodeExt 
-     * @param string $Message 
-     * @param MediaMetaData $MetaData 
-     * @param QualityInspectTaskInput $Input 
-     * @param QualityInspectTaskOutput $Output 
-     * @param string $SessionId 
-     * @param string $SessionContext 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * @param string $Message Error message.
+     * @param MediaMetaData $MetaData Metadata of audio and video for quality inspection input.
+     * @param QualityInspectTaskInput $Input Audio and video quality inspection task input.
+     * @param QualityInspectTaskOutput $Output Output of the audio and video quality inspection task.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param string $SessionContext Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
      */
     function __construct()
     {

@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent image masking configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method PatternConfig getPatternConfig() Obtain 
- * @method void setPatternConfig(PatternConfig $PatternConfig) Set 
- * @method string getModel() Obtain 
- * @method void setModel(string $Model) Set 
+ * @method string getSwitch() Obtain <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method void setSwitch(string $Switch) Set <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method string getType() Obtain <p>Matting target type: "foreground" / "pattern"</p>
+ * @method void setType(string $Type) Set <p>Matting target type: "foreground" / "pattern"</p>
+ * @method PatternConfig getPatternConfig() Obtain <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+ * @method void setPatternConfig(PatternConfig $PatternConfig) Set <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+ * @method string getModel() Obtain <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
+ * @method void setModel(string $Model) Set <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
  */
 class AiCutOutConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string <p>Matting target type: "foreground" / "pattern"</p>
      */
     public $Type;
 
     /**
-     * @var PatternConfig 
+     * @var PatternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
      */
     public $PatternConfig;
 
     /**
-     * @var string 
+     * @var string <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
      */
     public $Model;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
-     * @param PatternConfig $PatternConfig 
-     * @param string $Model 
+     * @param string $Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @param string $Type <p>Matting target type: "foreground" / "pattern"</p>
+     * @param PatternConfig $PatternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+     * @param string $Model <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
      */
     function __construct()
     {

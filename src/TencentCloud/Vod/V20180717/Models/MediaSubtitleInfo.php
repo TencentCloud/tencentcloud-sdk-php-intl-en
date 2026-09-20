@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle information.
  *
- * @method array getSubtitleSet() Obtain 
- * @method void setSubtitleSet(array $SubtitleSet) Set 
+ * @method array getSubtitleSet() Obtain Subtitle information list.
+ * @method void setSubtitleSet(array $SubtitleSet) Set Subtitle information list.
  */
 class MediaSubtitleInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Subtitle information list.
      */
     public $SubtitleSet;
 
     /**
-     * @param array $SubtitleSet 
+     * @param array $SubtitleSet Subtitle information list.
      */
     function __construct()
     {

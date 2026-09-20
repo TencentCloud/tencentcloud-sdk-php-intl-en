@@ -18,200 +18,160 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of the verification process.
+ * Detailed process information for verification
  *
- * @method integer getErrorCode() Obtain The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrorCode(integer $ErrorCode) Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getErrorMsg() Obtain The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrorMsg(string $ErrorMsg) Set The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getLivenessErrorCode() Obtain The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLivenessErrorCode(integer $LivenessErrorCode) Set The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLivenessErrorMsg() Obtain The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLivenessErrorMsg(string $LivenessErrorMsg) Set The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCompareErrorCode() Obtain The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompareErrorCode(integer $CompareErrorCode) Set The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCompareErrorMsg() Obtain The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompareErrorMsg(string $CompareErrorMsg) Set The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReqTimestamp() Obtain The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReqTimestamp(integer $ReqTimestamp) Set The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getSimilarity() Obtain The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSimilarity(float $Similarity) Set The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSeq() Obtain Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSeq(string $Seq) Set Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getLivenessInfoTag() Obtain Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+ * @method integer getErrorCode() Obtain Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
+ * @method void setErrorCode(integer $ErrorCode) Set Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
+ * @method string getErrorMsg() Obtain Final result description of this verification
+ * @method void setErrorMsg(string $ErrorMsg) Set Final result description of this verification
+ * @method integer getLivenessErrorCode() Obtain Liveness detection result of this verification. 0 indicates success.
+ * @method void setLivenessErrorCode(integer $LivenessErrorCode) Set Liveness detection result of this verification. 0 indicates success.
+ * @method string getLivenessErrorMsg() Obtain Description of the liveness detection result for this verification
+ * @method void setLivenessErrorMsg(string $LivenessErrorMsg) Set Description of the liveness detection result for this verification
+ * @method integer getCompareErrorCode() Obtain Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
+ * @method void setCompareErrorCode(integer $CompareErrorCode) Set Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
+ * @method string getCompareErrorMsg() Obtain Result description of this verification comparison
+ * @method void setCompareErrorMsg(string $CompareErrorMsg) Set Result description of this verification comparison
+ * @method integer getReqTimestamp() Obtain Verification timestamp (ms) this time
+ * @method void setReqTimestamp(integer $ReqTimestamp) Set Verification timestamp (ms) this time
+ * @method float getSimilarity() Obtain Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
+ * @method void setSimilarity(float $Similarity) Set Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
+ * @method string getSeq() Obtain Unique identifier for this verification
+ * @method void setSeq(string $Seq) Set Unique identifier for this verification
+ * @method array getLivenessInfoTag() Obtain Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLivenessInfoTag(array $LivenessInfoTag) Set Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+ * @method void setLivenessInfoTag(array $LivenessInfoTag) Set Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VerificationDetail extends AbstractModel
 {
     /**
-     * @var integer The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
      */
     public $ErrorCode;
 
     /**
-     * @var string The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Final result description of this verification
      */
     public $ErrorMsg;
 
     /**
-     * @var integer The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Liveness detection result of this verification. 0 indicates success.
      */
     public $LivenessErrorCode;
 
     /**
-     * @var string The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Description of the liveness detection result for this verification
      */
     public $LivenessErrorMsg;
 
     /**
-     * @var integer The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
      */
     public $CompareErrorCode;
 
     /**
-     * @var string The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Result description of this verification comparison
      */
     public $CompareErrorMsg;
 
     /**
-     * @var integer The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Verification timestamp (ms) this time
      */
     public $ReqTimestamp;
 
     /**
-     * @var float The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
      */
     public $Similarity;
 
     /**
-     * @var string Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Unique identifier for this verification
      */
     public $Seq;
 
     /**
-     * @var array Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+     * @var array Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LivenessInfoTag;
 
     /**
-     * @param integer $ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LivenessErrorMsg The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CompareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReqTimestamp The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Seq Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $LivenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+     * @param integer $ErrorCode Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
+     * @param string $ErrorMsg Final result description of this verification
+     * @param integer $LivenessErrorCode Liveness detection result of this verification. 0 indicates success.
+     * @param string $LivenessErrorMsg Description of the liveness detection result for this verification
+     * @param integer $CompareErrorCode Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
+     * @param string $CompareErrorMsg Result description of this verification comparison
+     * @param integer $ReqTimestamp Verification timestamp (ms) this time
+     * @param float $Similarity Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
+     * @param string $Seq Unique identifier for this verification
+     * @param array $LivenessInfoTag Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

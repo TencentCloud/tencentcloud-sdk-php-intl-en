@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task input parameter type for offensive content in Asr text during audio and video moderation
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Template ID for authentication involving offensive content.
+ * @method void setDefinition(integer $Definition) Set Template ID for authentication involving offensive content.
  */
 class AiReviewPornAsrTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Template ID for authentication involving offensive content.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Template ID for authentication involving offensive content.
      */
     function __construct()
     {

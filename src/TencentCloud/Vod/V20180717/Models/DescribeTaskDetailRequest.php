@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskDetail request structure.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getTaskId() Obtain <p>Video processing task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Video processing task ID.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Video processing task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param string $TaskId 
-     * @param integer $SubAppId 
+     * @param string $TaskId <p>Video processing task ID.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds request structure.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method string getName() Obtain Application name
+ * @method void setName(string $Name) Set Application name
+ * @method array getTags() Obtain Tag information. Query the application list with a specified tag.
+ * @method void setTags(array $Tags) Set Tag information. Query the application list with a specified tag.
+ * @method integer getOffset() Obtain Starting offset for pagination pull. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Starting offset for pagination pull. Default value: 0.
+ * @method integer getLimit() Obtain Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
+ * @method void setLimit(integer $Limit) Set Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
  */
 class DescribeSubAppIdsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Application name
      */
     public $Name;
 
     /**
-     * @var array 
+     * @var array Tag information. Query the application list with a specified tag.
      */
     public $Tags;
 
     /**
-     * @var integer 
+     * @var integer Starting offset for pagination pull. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
      */
     public $Limit;
 
     /**
-     * @param string $Name 
-     * @param array $Tags 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param string $Name Application name
+     * @param array $Tags Tag information. Query the application list with a specified tag.
+     * @param integer $Offset Starting offset for pagination pull. Default value: 0.
+     * @param integer $Limit Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
      */
     function __construct()
     {

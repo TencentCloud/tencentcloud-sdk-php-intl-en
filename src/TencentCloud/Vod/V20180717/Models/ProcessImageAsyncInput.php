@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information of asynchronous image processing tasks.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method ProcessImageAsyncTaskInput getImageTaskInput() Obtain 
- * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) Set 
- * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set 
+ * @method string getFileId() Obtain <p>FileId for image processing.</p>
+ * @method void setFileId(string $FileId) Set <p>FileId for image processing.</p>
+ * @method string getUrl() Obtain <p>Image URL.</p>
+ * @method void setUrl(string $Url) Set <p>Image URL.</p>
+ * @method ProcessImageAsyncTaskInput getImageTaskInput() Obtain <p>Image processing parameter.</p>
+ * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) Set <p>Image processing parameter.</p>
+ * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain <p>Output media file configuration for image processing tasks.</p>
+ * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set <p>Output media file configuration for image processing tasks.</p>
  */
 class ProcessImageAsyncInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>FileId for image processing.</p>
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string <p>Image URL.</p>
      */
     public $Url;
 
     /**
-     * @var ProcessImageAsyncTaskInput 
+     * @var ProcessImageAsyncTaskInput <p>Image processing parameter.</p>
      */
     public $ImageTaskInput;
 
     /**
-     * @var ProcessImageAsyncOutputConfig 
+     * @var ProcessImageAsyncOutputConfig <p>Output media file configuration for image processing tasks.</p>
      */
     public $OutputConfig;
 
     /**
-     * @param string $FileId 
-     * @param string $Url 
-     * @param ProcessImageAsyncTaskInput $ImageTaskInput 
-     * @param ProcessImageAsyncOutputConfig $OutputConfig 
+     * @param string $FileId <p>FileId for image processing.</p>
+     * @param string $Url <p>Image URL.</p>
+     * @param ProcessImageAsyncTaskInput $ImageTaskInput <p>Image processing parameter.</p>
+     * @param ProcessImageAsyncOutputConfig $OutputConfig <p>Output media file configuration for image processing tasks.</p>
      */
     function __construct()
     {

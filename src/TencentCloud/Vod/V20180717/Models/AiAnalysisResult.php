@@ -18,60 +18,80 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent analysis result
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain 
- * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set 
- * @method AiAnalysisTaskCoverResult getCoverTask() Obtain 
- * @method void setCoverTask(AiAnalysisTaskCoverResult $CoverTask) Set 
- * @method AiAnalysisTaskTagResult getTagTask() Obtain 
- * @method void setTagTask(AiAnalysisTaskTagResult $TagTask) Set 
- * @method AiAnalysisTaskFrameTagResult getFrameTagTask() Obtain 
- * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) Set 
- * @method AiAnalysisTaskHighlightResult getHighlightTask() Obtain 
- * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) Set 
+ * @method string getType() Obtain Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tag.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights</li>
+ * @method void setType(string $Type) Set Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tag.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights</li>
+ * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
+ * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
+ * @method AiAnalysisTaskCoverResult getCoverTask() Obtain Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
+ * @method void setCoverTask(AiAnalysisTaskCoverResult $CoverTask) Set Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
+ * @method AiAnalysisTaskTagResult getTagTask() Obtain Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
+ * @method void setTagTask(AiAnalysisTaskTagResult $TagTask) Set Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
+ * @method AiAnalysisTaskFrameTagResult getFrameTagTask() Obtain Query result of the intelligent frame-specific tagging task for video content analysis. Valid when TaskType is `FrameTag`.
+ * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) Set Query result of the intelligent frame-specific tagging task for video content analysis. Valid when TaskType is `FrameTag`.
+ * @method AiAnalysisTaskHighlightResult getHighlightTask() Obtain Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
+ * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) Set Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
  */
 class AiAnalysisResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tag.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights</li>
      */
     public $Type;
 
     /**
-     * @var AiAnalysisTaskClassificationResult 
+     * @var AiAnalysisTaskClassificationResult Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
      */
     public $ClassificationTask;
 
     /**
-     * @var AiAnalysisTaskCoverResult 
+     * @var AiAnalysisTaskCoverResult Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
      */
     public $CoverTask;
 
     /**
-     * @var AiAnalysisTaskTagResult 
+     * @var AiAnalysisTaskTagResult Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
      */
     public $TagTask;
 
     /**
-     * @var AiAnalysisTaskFrameTagResult 
+     * @var AiAnalysisTaskFrameTagResult Query result of the intelligent frame-specific tagging task for video content analysis. Valid when TaskType is `FrameTag`.
      */
     public $FrameTagTask;
 
     /**
-     * @var AiAnalysisTaskHighlightResult 
+     * @var AiAnalysisTaskHighlightResult Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
      */
     public $HighlightTask;
 
     /**
-     * @param string $Type 
-     * @param AiAnalysisTaskClassificationResult $ClassificationTask 
-     * @param AiAnalysisTaskCoverResult $CoverTask 
-     * @param AiAnalysisTaskTagResult $TagTask 
-     * @param AiAnalysisTaskFrameTagResult $FrameTagTask 
-     * @param AiAnalysisTaskHighlightResult $HighlightTask 
+     * @param string $Type Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tag.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights</li>
+     * @param AiAnalysisTaskClassificationResult $ClassificationTask Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
+     * @param AiAnalysisTaskCoverResult $CoverTask Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
+     * @param AiAnalysisTaskTagResult $TagTask Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
+     * @param AiAnalysisTaskFrameTagResult $FrameTagTask Query result of the intelligent frame-specific tagging task for video content analysis. Valid when TaskType is `FrameTag`.
+     * @param AiAnalysisTaskHighlightResult $HighlightTask Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
      */
     function __construct()
     {

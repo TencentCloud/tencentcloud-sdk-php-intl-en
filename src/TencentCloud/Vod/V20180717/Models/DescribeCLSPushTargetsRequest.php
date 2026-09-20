@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCLSPushTargets request structure.
  *
- * @method array getDomains() Obtain 
- * @method void setDomains(array $Domains) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getDomains() Obtain VOD domain.
+ * @method void setDomains(array $Domains) Set VOD domain.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether default or newly created), this field must be filled with the app ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether default or newly created), this field must be filled with the app ID.</b>
  */
 class DescribeCLSPushTargetsRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array VOD domain.
      */
     public $Domains;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether default or newly created), this field must be filled with the app ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @param array $Domains 
-     * @param integer $SubAppId 
+     * @param array $Domains VOD domain.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether default or newly created), this field must be filled with the app ID.</b>
      */
     function __construct()
     {

@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySubAppIdStatus request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getStatus() Obtain Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+ * @method void setStatus(string $Status) Set Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
  */
 class ModifySubAppIdStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
      */
     public $Status;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Status 
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Status Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
      */
     function __construct()
     {

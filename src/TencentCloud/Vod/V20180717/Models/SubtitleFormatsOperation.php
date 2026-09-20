@@ -18,28 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle format list operations.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method array getFormats() Obtain 
- * @method void setFormats(array $Formats) Set 
+ * @method string getType() Obtain Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
+ * @method void setType(string $Type) Set Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
+ * @method array getFormats() Obtain Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
+ * @method void setFormats(array $Formats) Set Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
  */
 class SubtitleFormatsOperation extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
      */
     public $Type;
 
     /**
-     * @var array 
+     * @var array Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
      */
     public $Formats;
 
     /**
-     * @param string $Type 
-     * @param array $Formats 
+     * @param string $Type Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
+     * @param array $Formats Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
      */
     function __construct()
     {

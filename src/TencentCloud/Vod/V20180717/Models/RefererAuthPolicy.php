@@ -18,44 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Referer anti-leech configuration
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getAuthType() Obtain 
- * @method void setAuthType(string $AuthType) Set 
- * @method array getReferers() Obtain 
- * @method void setReferers(array $Referers) Set 
- * @method string getBlankRefererAllowed() Obtain 
- * @method void setBlankRefererAllowed(string $BlankRefererAllowed) Set 
+ * @method string getStatus() Obtain [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enable;</li>
+<li>Disabled: disabled.</li>
+ * @method void setStatus(string $Status) Set [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enable;</li>
+<li>Disabled: disabled.</li>
+ * @method string getAuthType() Obtain Referer verification type. Available values:
+<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
+When Status is Enabled, AuthType must be assigned a value.
+ * @method void setAuthType(string $AuthType) Set Referer verification type. Available values:
+<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
+When Status is Enabled, AuthType must be assigned a value.
+ * @method array getReferers() Obtain List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+ * @method void setReferers(array $Referers) Set List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+ * @method string getBlankRefererAllowed() Obtain Whether to allow access to this domain name with a null Referer. Available values:
+<li>Yes: yes.</li>
+<li>No: no</li>
+When Status is Enabled, BlankRefererAllowed must be assigned a value.
+ * @method void setBlankRefererAllowed(string $BlankRefererAllowed) Set Whether to allow access to this domain name with a null Referer. Available values:
+<li>Yes: yes.</li>
+<li>No: no</li>
+When Status is Enabled, BlankRefererAllowed must be assigned a value.
  */
 class RefererAuthPolicy extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enable;</li>
+<li>Disabled: disabled.</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Referer verification type. Available values:
+<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
+When Status is Enabled, AuthType must be assigned a value.
      */
     public $AuthType;
 
     /**
-     * @var array 
+     * @var array List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
      */
     public $Referers;
 
     /**
-     * @var string 
+     * @var string Whether to allow access to this domain name with a null Referer. Available values:
+<li>Yes: yes.</li>
+<li>No: no</li>
+When Status is Enabled, BlankRefererAllowed must be assigned a value.
      */
     public $BlankRefererAllowed;
 
     /**
-     * @param string $Status 
-     * @param string $AuthType 
-     * @param array $Referers 
-     * @param string $BlankRefererAllowed 
+     * @param string $Status [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enable;</li>
+<li>Disabled: disabled.</li>
+     * @param string $AuthType Referer verification type. Available values:
+<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
+When Status is Enabled, AuthType must be assigned a value.
+     * @param array $Referers List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+     * @param string $BlankRefererAllowed Whether to allow access to this domain name with a null Referer. Available values:
+<li>Yes: yes.</li>
+<li>No: no</li>
+When Status is Enabled, BlankRefererAllowed must be assigned a value.
      */
     function __construct()
     {

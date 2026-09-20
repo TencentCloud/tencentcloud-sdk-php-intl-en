@@ -31,15 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIdType() Obtain Document type. Value range: 
 
 01: ID card. 
-02: Chinese passport. 
-03: Hong Kong, China and Macao, China travel permit. 
+02: Passport. 
+03: Hong Kong and Macao travel permit. 
 99: Other document. 
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setIdType(string $IdType) Set Document type. Value range: 
 
 01: ID card. 
-02: Chinese passport. 
-03: Hong Kong, China and Macao, China travel permit. 
+02: Passport. 
+03: Hong Kong and Macao travel permit. 
 99: Other document. 
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getCheckMRTD() Obtain Document verification result. The items for NFC verification are as follows:
@@ -199,8 +199,8 @@ class GetNFCResultResponse extends AbstractModel
      * @var string Document type. Value range: 
 
 01: ID card. 
-02: Chinese passport. 
-03: Hong Kong, China and Macao, China travel permit. 
+02: Passport. 
+03: Hong Kong and Macao travel permit. 
 99: Other document. 
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -353,8 +353,8 @@ When all four verification results are 0, the document is genuine.
      * @param string $IdType Document type. Value range: 
 
 01: ID card. 
-02: Chinese passport. 
-03: Hong Kong, China and Macao, China travel permit. 
+02: Passport. 
+03: Hong Kong and Macao travel permit. 
 99: Other document. 
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $CheckMRTD Document verification result. The items for NFC verification are as follows:

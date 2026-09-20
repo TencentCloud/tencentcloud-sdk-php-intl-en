@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Screenshot information at the specified time point
  *
- * @method float getTimeOffset() Obtain 
- * @method void setTimeOffset(float $TimeOffset) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method array getWaterMarkDefinition() Obtain 
- * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set 
+ * @method float getTimeOffset() Obtain The time offset of this screenshot in the video file, in <font color=red>ms</font>.
+ * @method void setTimeOffset(float $TimeOffset) Set The time offset of this screenshot in the video file, in <font color=red>ms</font>.
+ * @method string getUrl() Obtain URL address of the screenshot.
+ * @method void setUrl(string $Url) Set URL address of the screenshot.
+ * @method array getWaterMarkDefinition() Obtain List of template IDs used for watermarking if the screenshot is watermarked.
+ * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of template IDs used for watermarking if the screenshot is watermarked.
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float The time offset of this screenshot in the video file, in <font color=red>ms</font>.
      */
     public $TimeOffset;
 
     /**
-     * @var string 
+     * @var string URL address of the screenshot.
      */
     public $Url;
 
     /**
-     * @var array 
+     * @var array List of template IDs used for watermarking if the screenshot is watermarked.
      */
     public $WaterMarkDefinition;
 
     /**
-     * @param float $TimeOffset 
-     * @param string $Url 
-     * @param array $WaterMarkDefinition 
+     * @param float $TimeOffset The time offset of this screenshot in the video file, in <font color=red>ms</font>.
+     * @param string $Url URL address of the screenshot.
+     * @param array $WaterMarkDefinition List of template IDs used for watermarking if the screenshot is watermarked.
      */
     function __construct()
     {

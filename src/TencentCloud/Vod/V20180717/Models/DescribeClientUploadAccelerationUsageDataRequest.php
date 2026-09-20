@@ -20,42 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClientUploadAccelerationUsageData request structure.
  *
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getStartTime() Obtain Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setStartTime(string $StartTime) Set Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method string getEndTime() Obtain End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setEndTime(string $EndTime) Set End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method string getType() Obtain Client upload acceleration type. Valid values:
+<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+Default query for the amount of all acceleration types.
+ * @method void setType(string $Type) Set Client upload acceleration type. Valid values:
+<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+Default query for the amount of all acceleration types.
  */
 class DescribeClientUploadAccelerationUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $EndTime;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Client upload acceleration type. Valid values:
+<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+Default query for the amount of all acceleration types.
      */
     public $Type;
 
     /**
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param integer $SubAppId 
-     * @param string $Type 
+     * @param string $StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param string $EndTime End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param string $Type Client upload acceleration type. Valid values:
+<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+Default query for the amount of all acceleration types.
      */
     function __construct()
     {

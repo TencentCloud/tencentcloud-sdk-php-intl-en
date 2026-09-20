@@ -18,44 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face recognition result
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method string getId() Obtain Unique identification ID of a person.
+ * @method void setId(string $Id) Set Unique identification ID of a person.
+ * @method string getType() Obtain Library type of the figure, which indicates which figure library the recognized figure comes from:
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+ * @method void setType(string $Type) Set Library type of the figure, which indicates which figure library the recognized figure comes from:
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+ * @method string getName() Obtain Figure name.
+ * @method void setName(string $Name) Set Figure name.
+ * @method array getSegmentSet() Obtain Result set of segments where the person appears.
+ * @method void setSegmentSet(array $SegmentSet) Set Result set of segments where the person appears.
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Unique identification ID of a person.
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string Library type of the figure, which indicates which figure library the recognized figure comes from:
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Figure name.
      */
     public $Name;
 
     /**
-     * @var array 
+     * @var array Result set of segments where the person appears.
      */
     public $SegmentSet;
 
     /**
-     * @param string $Id 
-     * @param string $Type 
-     * @param string $Name 
-     * @param array $SegmentSet 
+     * @param string $Id Unique identification ID of a person.
+     * @param string $Type Library type of the figure, which indicates which figure library the recognized figure comes from:
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+     * @param string $Name Figure name.
+     * @param array $SegmentSet Result set of segments where the person appears.
      */
     function __construct()
     {

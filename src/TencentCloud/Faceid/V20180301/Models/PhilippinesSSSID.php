@@ -18,48 +18,36 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Philippines SSSID Card
+ * Philippines SSSID
  *
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFullName() Obtain Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullName(string $FullName) Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain No.
+ * @method void setLicenseNumber(string $LicenseNumber) Set No.
+ * @method string getFullName() Obtain Name
+ * @method void setFullName(string $FullName) Set Name
  * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PhilippinesSSSID extends AbstractModel
 {
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string No.
      */
     public $LicenseNumber;
 
     /**
-     * @var string Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $FullName;
 
     /**
      * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Birthday;
 
     /**
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber No.
+     * @param string $FullName Name
      * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

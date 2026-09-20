@@ -18,52 +18,462 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Speech translation recognition task control parameter
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getSrcLanguage() Obtain 
- * @method void setSrcLanguage(string $SrcLanguage) Set 
- * @method string getDstLanguage() Obtain 
- * @method void setDstLanguage(string $DstLanguage) Set 
- * @method array getSubtitleFormats() Obtain 
- * @method void setSubtitleFormats(array $SubtitleFormats) Set 
- * @method string getSubtitleName() Obtain 
- * @method void setSubtitleName(string $SubtitleName) Set 
+ * @method string getSwitch() Obtain Voice translation recognition task switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+
+ * @method void setSwitch(string $Switch) Set Voice translation recognition task switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+
+ * @method string getSrcLanguage() Obtain Media source language. This parameter is required when Switch is ON. Value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+ * @method void setSrcLanguage(string $SrcLanguage) Set Media source language. This parameter is required when Switch is ON. Value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+ * @method string getDstLanguage() Obtain Translation target language. This parameter is valid when Switch is ON.
+If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en, value range:
+<li>zh: Chinese;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When `SrcLanguage` is `ja` (Japanese), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ko: Korean.</li>
+When SrcLanguage is ko (Korean), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+<li>zh: Chinese;</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
+<li>en: English.</li>
+When SrcLanguage is fr (French), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+ * @method void setDstLanguage(string $DstLanguage) Set Translation target language. This parameter is valid when Switch is ON.
+If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en, value range:
+<li>zh: Chinese;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When `SrcLanguage` is `ja` (Japanese), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ko: Korean.</li>
+When SrcLanguage is ko (Korean), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+<li>zh: Chinese;</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
+<li>en: English.</li>
+When SrcLanguage is fr (French), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+ * @method array getSubtitleFormats() Obtain Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
+ * @method void setSubtitleFormats(array $SubtitleFormats) Set Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
+ * @method string getSubtitleName() Obtain Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
+ * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
  */
 class AsrTranslateConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Voice translation recognition task switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Media source language. This parameter is required when Switch is ON. Value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
      */
     public $SrcLanguage;
 
     /**
-     * @var string 
+     * @var string Translation target language. This parameter is valid when Switch is ON.
+If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en, value range:
+<li>zh: Chinese;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When `SrcLanguage` is `ja` (Japanese), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ko: Korean.</li>
+When SrcLanguage is ko (Korean), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+<li>zh: Chinese;</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
+<li>en: English.</li>
+When SrcLanguage is fr (French), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
      */
     public $DstLanguage;
 
     /**
-     * @var array 
+     * @var array Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
      */
     public $SubtitleFormats;
 
     /**
-     * @var string 
+     * @var string Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
      */
     public $SubtitleName;
 
     /**
-     * @param string $Switch 
-     * @param string $SrcLanguage 
-     * @param string $DstLanguage 
-     * @param array $SubtitleFormats 
-     * @param string $SubtitleName 
+     * @param string $Switch Voice translation recognition task switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+
+     * @param string $SrcLanguage Media source language. This parameter is required when Switch is ON. Value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+     * @param string $DstLanguage Translation target language. This parameter is valid when Switch is ON.
+If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en, value range:
+<li>zh: Chinese;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When `SrcLanguage` is `ja` (Japanese), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ko: Korean.</li>
+When SrcLanguage is ko (Korean), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+<li>zh: Chinese;</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), value ranges from...to...
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
+<li>en: English.</li>
+When SrcLanguage is fr (French), value range:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian;</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+     * @param array $SubtitleFormats Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
+     * @param string $SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
      */
     function __construct()
     {

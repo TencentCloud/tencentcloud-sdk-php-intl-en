@@ -18,44 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Substream information for adaptive bitrate streaming.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method integer getSize() Obtain 
- * @method void setSize(integer $Size) Set 
+ * @method string getType() Obtain Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
+ * @method void setType(string $Type) Set Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
+ * @method integer getWidth() Obtain Video image width when the substream is a video stream. Unit: px.
+ * @method void setWidth(integer $Width) Set Video image width when the substream is a video stream. Unit: px.
+ * @method integer getHeight() Obtain Substream video screen height in px.
+ * @method void setHeight(integer $Height) Set Substream video screen height in px.
+ * @method integer getSize() Obtain Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
+ * @method void setSize(integer $Size) Set Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
  */
 class MediaSubStreamInfoItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Video image width when the substream is a video stream. Unit: px.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Substream video screen height in px.
      */
     public $Height;
 
     /**
-     * @var integer 
+     * @var integer Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
      */
     public $Size;
 
     /**
-     * @param string $Type 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param integer $Size 
+     * @param string $Type Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
+     * @param integer $Width Video image width when the substream is a video stream. Unit: px.
+     * @param integer $Height Substream video screen height in px.
+     * @param integer $Size Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
      */
     function __construct()
     {

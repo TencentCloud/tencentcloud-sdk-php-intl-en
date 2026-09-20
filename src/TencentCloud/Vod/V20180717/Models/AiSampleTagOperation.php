@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AI sample management, tag operations.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method string getType() Obtain <p>Operation type. Available values: add, delete, reset.</p>
+ * @method void setType(string $Type) Set <p>Operation type. Available values: add, delete, reset.</p>
+ * @method array getTags() Obtain <p>Tag. Length limit: 128 characters.</p>
+ * @method void setTags(array $Tags) Set <p>Tag. Length limit: 128 characters.</p>
  */
 class AiSampleTagOperation extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Operation type. Available values: add, delete, reset.</p>
      */
     public $Type;
 
     /**
-     * @var array 
+     * @var array <p>Tag. Length limit: 128 characters.</p>
      */
     public $Tags;
 
     /**
-     * @param string $Type 
-     * @param array $Tags 
+     * @param string $Type <p>Operation type. Available values: add, delete, reset.</p>
+     * @param array $Tags <p>Tag. Length limit: 128 characters.</p>
      */
     function __construct()
     {

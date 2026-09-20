@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Full text recognition fragment.
  *
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method array getTextSet() Obtain 
- * @method void setTextSet(array $TextSet) Set 
+ * @method float getStartTimeOffset() Obtain Start time offset of a recognized segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognized segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a recognized segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognized segment, in seconds.
+ * @method array getTextSet() Obtain Recognition segment result set.
+ * @method void setTextSet(array $TextSet) Set Recognition segment result set.
  */
 class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Start time offset of a recognized segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of a recognized segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var array 
+     * @var array Recognition segment result set.
      */
     public $TextSet;
 
     /**
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param array $TextSet 
+     * @param float $StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a recognized segment, in seconds.
+     * @param array $TextSet Recognition segment result set.
      */
     function __construct()
     {

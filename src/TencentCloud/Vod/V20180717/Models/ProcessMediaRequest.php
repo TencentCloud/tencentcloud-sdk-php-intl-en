@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMedia request structure.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getMediaStoragePath() Obtain 
- * @method void setMediaStoragePath(string $MediaStoragePath) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain 
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set 
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain 
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set 
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
- * @method string getTasksNotifyMode() Obtain 
- * @method void setTasksNotifyMode(string $TasksNotifyMode) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method string getOutputAsIndependentMedia() Obtain 
- * @method void setOutputAsIndependentMedia(string $OutputAsIndependentMedia) Set 
+ * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
+ * @method string getMediaStoragePath() Obtain <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain <p>Video processing type task parameters.</p>
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set <p>Video processing type task parameters.</p>
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the audio and video content analysis task.</p>
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the audio and video content analysis task.</p>
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain <p>Audio/video content recognition type task parameter.</p>
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set <p>Audio/video content recognition type task parameter.</p>
+ * @method integer getTasksPriority() Obtain <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method void setTasksPriority(integer $TasksPriority) Set <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method string getTasksNotifyMode() Obtain <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
+ * @method void setTasksNotifyMode(string $TasksNotifyMode) Set <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used for special purposes.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purposes.</p>
+ * @method string getUrl() Obtain <p>Valid when FileID is empty. Pull the Url to generate a new media asset and a new FileID. Media processing products will be affiliated products of the new media asset.</p><p>Note: Storage fees will occur for the new media asset.</p>
+ * @method void setUrl(string $Url) Set <p>Valid when FileID is empty. Pull the Url to generate a new media asset and a new FileID. Media processing products will be affiliated products of the new media asset.</p><p>Note: Storage fees will occur for the new media asset.</p>
+ * @method string getOutputAsIndependentMedia() Obtain <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
+ * @method void setOutputAsIndependentMedia(string $OutputAsIndependentMedia) Set <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
  */
 class ProcessMediaRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
      */
     public $MediaStoragePath;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var MediaProcessTaskInput 
+     * @var MediaProcessTaskInput <p>Video processing type task parameters.</p>
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput 
+     * @var AiContentReviewTaskInput <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput 
+     * @var AiAnalysisTaskInput <p>Parameters for the audio and video content analysis task.</p>
      */
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput 
+     * @var AiRecognitionTaskInput <p>Audio/video content recognition type task parameter.</p>
      */
     public $AiRecognitionTask;
 
     /**
-     * @var integer 
+     * @var integer <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public $TasksPriority;
 
     /**
-     * @var string 
+     * @var string <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
      */
     public $TasksNotifyMode;
 
     /**
-     * @var string 
+     * @var string <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string <p>Reserved field, used for special purposes.</p>
      */
     public $ExtInfo;
 
     /**
-     * @var string 
+     * @var string <p>Valid when FileID is empty. Pull the Url to generate a new media asset and a new FileID. Media processing products will be affiliated products of the new media asset.</p><p>Note: Storage fees will occur for the new media asset.</p>
      */
     public $Url;
 
     /**
-     * @var string 
+     * @var string <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
      */
     public $OutputAsIndependentMedia;
 
     /**
-     * @param string $FileId 
-     * @param string $MediaStoragePath 
-     * @param integer $SubAppId 
-     * @param MediaProcessTaskInput $MediaProcessTask 
-     * @param AiContentReviewTaskInput $AiContentReviewTask 
-     * @param AiAnalysisTaskInput $AiAnalysisTask 
-     * @param AiRecognitionTaskInput $AiRecognitionTask 
-     * @param integer $TasksPriority 
-     * @param string $TasksNotifyMode 
-     * @param string $SessionContext 
-     * @param string $SessionId 
-     * @param string $ExtInfo 
-     * @param string $Url 
-     * @param string $OutputAsIndependentMedia 
+     * @param string $FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
+     * @param string $MediaStoragePath <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+     * @param MediaProcessTaskInput $MediaProcessTask <p>Video processing type task parameters.</p>
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
+     * @param AiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the audio and video content analysis task.</p>
+     * @param AiRecognitionTaskInput $AiRecognitionTask <p>Audio/video content recognition type task parameter.</p>
+     * @param integer $TasksPriority <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param string $TasksNotifyMode <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
+     * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param string $ExtInfo <p>Reserved field, used for special purposes.</p>
+     * @param string $Url <p>Valid when FileID is empty. Pull the Url to generate a new media asset and a new FileID. Media processing products will be affiliated products of the new media asset.</p><p>Note: Storage fees will occur for the new media asset.</p>
+     * @param string $OutputAsIndependentMedia <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
      */
     function __construct()
     {

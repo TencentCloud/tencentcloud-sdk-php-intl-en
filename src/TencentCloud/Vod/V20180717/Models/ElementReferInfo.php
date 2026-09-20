@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subject reference information.
  *
- * @method string getImageUrl() Obtain 
- * @method void setImageUrl(string $ImageUrl) Set 
+ * @method string getImageUrl() Obtain Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
+ * @method void setImageUrl(string $ImageUrl) Set Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
  */
 class ElementReferInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
      */
     public $ImageUrl;
 
     /**
-     * @param string $ImageUrl 
+     * @param string $ImageUrl Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
      */
     function __construct()
     {

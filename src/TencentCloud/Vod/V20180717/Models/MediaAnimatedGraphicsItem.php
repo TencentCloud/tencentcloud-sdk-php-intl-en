@@ -18,92 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video motion graphic result information
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getContainer() Obtain 
- * @method void setContainer(string $Container) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getBitrate() Obtain 
- * @method void setBitrate(integer $Bitrate) Set 
- * @method integer getSize() Obtain 
- * @method void setSize(integer $Size) Set 
- * @method string getMd5() Obtain 
- * @method void setMd5(string $Md5) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method string getUrl() Obtain File address of the animated image.
+ * @method void setUrl(string $Url) Set File address of the animated image.
+ * @method integer getDefinition() Obtain Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method string getContainer() Obtain Animated image file format, for example, gif.
+ * @method void setContainer(string $Container) Set Animated image file format, for example, gif.
+ * @method integer getHeight() Obtain Height of the animated image. Measurement unit: px.
+ * @method void setHeight(integer $Height) Set Height of the animated image. Measurement unit: px.
+ * @method integer getWidth() Obtain Width of the animated image in px.
+ * @method void setWidth(integer $Width) Set Width of the animated image in px.
+ * @method integer getBitrate() Obtain Animated image bitrate. Measurement unit: bps.
+ * @method void setBitrate(integer $Bitrate) Set Animated image bitrate. Measurement unit: bps.
+ * @method integer getSize() Obtain Animated image size. Unit: byte.
+ * @method void setSize(integer $Size) Set Animated image size. Unit: byte.
+ * @method string getMd5() Obtain md5 value of the animated image.
+ * @method void setMd5(string $Md5) Set md5 value of the animated image.
+ * @method float getStartTimeOffset() Obtain Start time offset of the GIF in the video, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of the GIF in the video, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of the GIF in the video, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the GIF in the video, in seconds.
  */
 class MediaAnimatedGraphicsItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string File address of the animated image.
      */
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Animated image file format, for example, gif.
      */
     public $Container;
 
     /**
-     * @var integer 
+     * @var integer Height of the animated image. Measurement unit: px.
      */
     public $Height;
 
     /**
-     * @var integer 
+     * @var integer Width of the animated image in px.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Animated image bitrate. Measurement unit: bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer 
+     * @var integer Animated image size. Unit: byte.
      */
     public $Size;
 
     /**
-     * @var string 
+     * @var string md5 value of the animated image.
      */
     public $Md5;
 
     /**
-     * @var float 
+     * @var float Start time offset of the GIF in the video, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of the GIF in the video, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $Url 
-     * @param integer $Definition 
-     * @param string $Container 
-     * @param integer $Height 
-     * @param integer $Width 
-     * @param integer $Bitrate 
-     * @param integer $Size 
-     * @param string $Md5 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param string $Url File address of the animated image.
+     * @param integer $Definition Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param string $Container Animated image file format, for example, gif.
+     * @param integer $Height Height of the animated image. Measurement unit: px.
+     * @param integer $Width Width of the animated image in px.
+     * @param integer $Bitrate Animated image bitrate. Measurement unit: bps.
+     * @param integer $Size Animated image size. Unit: byte.
+     * @param string $Md5 md5 value of the animated image.
+     * @param float $StartTimeOffset Start time offset of the GIF in the video, in seconds.
+     * @param float $EndTimeOffset End time offset of the GIF in the video, in seconds.
      */
     function __construct()
     {

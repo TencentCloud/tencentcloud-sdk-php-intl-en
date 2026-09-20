@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Edit video file information of on-demand video
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method string getFileId() Obtain Video ID.
+ * @method void setFileId(string $FileId) Set Video ID.
+ * @method float getStartTimeOffset() Obtain Start time offset of video editing, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of video editing, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of video editing, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of video editing, in seconds.
  */
 class EditMediaFileInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video ID.
      */
     public $FileId;
 
     /**
-     * @var float 
+     * @var float Start time offset of video editing, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of video editing, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $FileId 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param string $FileId Video ID.
+     * @param float $StartTimeOffset Start time offset of video editing, in seconds.
+     * @param float $EndTimeOffset End time offset of video editing, in seconds.
      */
     function __construct()
     {

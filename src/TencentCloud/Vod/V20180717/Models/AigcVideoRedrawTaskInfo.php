@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Character parameter information for AIGC video conversion.
  *
- * @method string getStyle() Obtain 
- * @method void setStyle(string $Style) Set 
+ * @method string getStyle() Obtain <p>For description of the style. Limited to 50 characters.</p>
+ * @method void setStyle(string $Style) Set <p>For description of the style. Limited to 50 characters.</p>
  */
 class AigcVideoRedrawTaskInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>For description of the style. Limited to 50 characters.</p>
      */
     public $Style;
 
     /**
-     * @param string $Style 
+     * @param string $Style <p>For description of the style. Limited to 50 characters.</p>
      */
     function __construct()
     {

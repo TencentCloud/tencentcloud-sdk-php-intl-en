@@ -20,106 +20,158 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImageSpriteTemplate request structure.
  *
- * @method string getSampleType() Obtain 
- * @method void setSampleType(string $SampleType) Set 
- * @method integer getSampleInterval() Obtain 
- * @method void setSampleInterval(integer $SampleInterval) Set 
- * @method integer getRowCount() Obtain 
- * @method void setRowCount(integer $RowCount) Set 
- * @method integer getColumnCount() Obtain 
- * @method void setColumnCount(integer $ColumnCount) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getFillType() Obtain 
- * @method void setFillType(string $FillType) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
+ * @method string getSampleType() Obtain Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
+ * @method void setSampleType(string $SampleType) Set Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
+ * @method integer getSampleInterval() Obtain Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>The time when the sampling interval is specified if SampleType is Time, in seconds.</li>
+ * @method void setSampleInterval(integer $SampleInterval) Set Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>The time when the sampling interval is specified if SampleType is Time, in seconds.</li>
+ * @method integer getRowCount() Obtain Number of rows of small images in the sprite image.
+Note: The number of subimage rows impacts the final height of the large image. The maximum height of the large image is 15,000 pixels, where the height of the large image is the product of the number of subimage rows and the subimage height.
+ * @method void setRowCount(integer $RowCount) Set Number of rows of small images in the sprite image.
+Note: The number of subimage rows impacts the final height of the large image. The maximum height of the large image is 15,000 pixels, where the height of the large image is the product of the number of subimage rows and the subimage height.
+ * @method integer getColumnCount() Obtain Number of columns of small images in the sprite image.
+Note: The columns of thumbnails impact the final width of the large image. The maximum width of the large image is 15,000 pixels, where the width of the large image is the product of the columns and the width of the thumbnails.
+ * @method void setColumnCount(integer $ColumnCount) Set Number of columns of small images in the sprite image.
+Note: The columns of thumbnails impact the final width of the large image. The maximum width of the large image is 15,000 pixels, where the width of the large image is the product of the columns and the width of the thumbnails.
+ * @method integer getSubAppId() Obtain <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getName() Obtain Sprite image template name, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Sprite image template name, with a length limit of 64 characters.
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
+ * @method string getFillType() Obtain Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep black edges, maintain the video aspect ratio, and fill the remaining edges with black.</li>Default value: black.
+ * @method void setFillType(string $FillType) Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep black edges, maintain the video aspect ratio, and fill the remaining edges with black.</li>Default value: black.
+ * @method integer getWidth() Obtain Maximum value of the width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, Same Resolution Source is used.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution specified by user is used.</li>Default value: 0. Note: The width of small images impacts the width of the final large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the columns and the width of small images.
+ * @method void setWidth(integer $Width) Set Maximum value of the width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, Same Resolution Source is used.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution specified by user is used.</li>Default value: 0. Note: The width of small images impacts the width of the final large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the columns and the width of small images.
+ * @method integer getHeight() Obtain Maximum value of the height (or short side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by the user.</li>Default value: 0. Note: The height of small images impacts the height of the final large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of the subimage rows and the height of small images.
+ * @method void setHeight(integer $Height) Set Maximum value of the height (or short side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by the user.</li>Default value: 0. Note: The height of small images impacts the height of the final large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of the subimage rows and the height of small images.
+ * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+Default value: open.
+ * @method string getFormat() Obtain Image format. Value:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
+Default value: jpg.
+ * @method void setFormat(string $Format) Set Image format. Value:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
+Default value: jpg.
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
      */
     public $SampleType;
 
     /**
-     * @var integer 
+     * @var integer Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>The time when the sampling interval is specified if SampleType is Time, in seconds.</li>
      */
     public $SampleInterval;
 
     /**
-     * @var integer 
+     * @var integer Number of rows of small images in the sprite image.
+Note: The number of subimage rows impacts the final height of the large image. The maximum height of the large image is 15,000 pixels, where the height of the large image is the product of the number of subimage rows and the subimage height.
      */
     public $RowCount;
 
     /**
-     * @var integer 
+     * @var integer Number of columns of small images in the sprite image.
+Note: The columns of thumbnails impact the final width of the large image. The maximum width of the large image is 15,000 pixels, where the width of the large image is the product of the columns and the width of the thumbnails.
      */
     public $ColumnCount;
 
     /**
-     * @var integer 
+     * @var integer <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Sprite image template name, with a length limit of 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep black edges, maintain the video aspect ratio, and fill the remaining edges with black.</li>Default value: black.
      */
     public $FillType;
 
     /**
-     * @var integer 
+     * @var integer Maximum value of the width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, Same Resolution Source is used.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution specified by user is used.</li>Default value: 0. Note: The width of small images impacts the width of the final large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the columns and the width of small images.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Maximum value of the height (or short side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by the user.</li>Default value: 0. Note: The height of small images impacts the height of the final large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of the subimage rows and the height of small images.
      */
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string 
+     * @var string Image format. Value:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
+Default value: jpg.
      */
     public $Format;
 
     /**
-     * @param string $SampleType 
-     * @param integer $SampleInterval 
-     * @param integer $RowCount 
-     * @param integer $ColumnCount 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param string $FillType 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param string $ResolutionAdaptive 
-     * @param string $Format 
+     * @param string $SampleType Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
+     * @param integer $SampleInterval Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>The time when the sampling interval is specified if SampleType is Time, in seconds.</li>
+     * @param integer $RowCount Number of rows of small images in the sprite image.
+Note: The number of subimage rows impacts the final height of the large image. The maximum height of the large image is 15,000 pixels, where the height of the large image is the product of the number of subimage rows and the subimage height.
+     * @param integer $ColumnCount Number of columns of small images in the sprite image.
+Note: The columns of thumbnails impact the final width of the large image. The maximum width of the large image is 15,000 pixels, where the width of the large image is the product of the columns and the width of the thumbnails.
+     * @param integer $SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Name Sprite image template name, with a length limit of 64 characters.
+     * @param string $Comment Template description, with a length limit of 256 characters.
+     * @param string $FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep black edges, maintain the video aspect ratio, and fill the remaining edges with black.</li>Default value: black.
+     * @param integer $Width Maximum value of the width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, Same Resolution Source is used.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution specified by user is used.</li>Default value: 0. Note: The width of small images impacts the width of the final large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the columns and the width of small images.
+     * @param integer $Height Maximum value of the height (or short side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by the user.</li>Default value: 0. Note: The height of small images impacts the height of the final large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of the subimage rows and the height of small images.
+     * @param string $ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+Default value: open.
+     * @param string $Format Image format. Value:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
+Default value: jpg.
      */
     function __construct()
     {

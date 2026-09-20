@@ -18,36 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Bitrate reduction task result
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method ReduceMediaBitrateTranscodeResult getTranscodeTask() Obtain 
- * @method void setTranscodeTask(ReduceMediaBitrateTranscodeResult $TranscodeTask) Set 
- * @method ReduceMediaBitrateAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain 
- * @method void setAdaptiveDynamicStreamingTask(ReduceMediaBitrateAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set 
+ * @method string getType() Obtain Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+ * @method void setType(string $Type) Set Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+ * @method ReduceMediaBitrateTranscodeResult getTranscodeTask() Obtain Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
+ * @method void setTranscodeTask(ReduceMediaBitrateTranscodeResult $TranscodeTask) Set Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
+ * @method ReduceMediaBitrateAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+ * @method void setAdaptiveDynamicStreamingTask(ReduceMediaBitrateAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
  */
 class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
      */
     public $Type;
 
     /**
-     * @var ReduceMediaBitrateTranscodeResult 
+     * @var ReduceMediaBitrateTranscodeResult Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
      */
     public $TranscodeTask;
 
     /**
-     * @var ReduceMediaBitrateAdaptiveDynamicStreamingResult 
+     * @var ReduceMediaBitrateAdaptiveDynamicStreamingResult Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     public $AdaptiveDynamicStreamingTask;
 
     /**
-     * @param string $Type 
-     * @param ReduceMediaBitrateTranscodeResult $TranscodeTask 
-     * @param ReduceMediaBitrateAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask 
+     * @param string $Type Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+     * @param ReduceMediaBitrateTranscodeResult $TranscodeTask Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
+     * @param ReduceMediaBitrateAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     function __construct()
     {

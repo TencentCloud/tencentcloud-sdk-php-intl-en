@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent cover information.
  *
- * @method string getCoverUrl() Obtain 
- * @method void setCoverUrl(string $CoverUrl) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method string getCoverUrl() Obtain Intelligent cover address.
+ * @method void setCoverUrl(string $CoverUrl) Set Intelligent cover address.
+ * @method float getConfidence() Obtain Confidence of the intelligent cover, with a value range from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Confidence of the intelligent cover, with a value range from 0 to 100.
  */
 class MediaAiAnalysisCoverItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Intelligent cover address.
      */
     public $CoverUrl;
 
     /**
-     * @var float 
+     * @var float Confidence of the intelligent cover, with a value range from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @param string $CoverUrl 
-     * @param float $Confidence 
+     * @param string $CoverUrl Intelligent cover address.
+     * @param float $Confidence Confidence of the intelligent cover, with a value range from 0 to 100.
      */
     function __construct()
     {

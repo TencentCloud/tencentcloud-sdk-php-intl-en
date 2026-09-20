@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input for the audio and video quality inspection task.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method integer getDefinition() Obtain Audio and video quality inspection template ID.
+ * @method void setDefinition(integer $Definition) Set Audio and video quality inspection template ID.
  */
 class QualityInspectTaskInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var integer 
+     * @var integer Audio and video quality inspection template ID.
      */
     public $Definition;
 
     /**
-     * @param string $FileId 
-     * @param integer $Definition 
+     * @param string $FileId Media file ID.
+     * @param integer $Definition Audio and video quality inspection template ID.
      */
     function __construct()
     {

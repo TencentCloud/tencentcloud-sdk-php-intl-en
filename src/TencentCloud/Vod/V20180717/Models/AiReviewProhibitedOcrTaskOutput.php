@@ -18,52 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Ocr text contains prohibited information
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
- * @method string getSegmentSetFileUrl() Obtain 
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
- * @method string getSegmentSetFileUrlExpireTime() Obtain 
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
+ * @method float getConfidence() Obtain Score of Ocr text involving prohibited content. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Score of Ocr text involving prohibited content. Value range: 0-100.
+ * @method string getSuggestion() Obtain Ocr text violation result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Ocr text violation result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method array getSegmentSet() Obtain List of video segments whose Ocr text is suspected of prohibition violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments whose Ocr text is suspected of prohibition violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of the Segment List File for video segments whose Ocr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the Segment List File for video segments whose Ocr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL of the Segment List File for videos with Ocr text suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL of the Segment List File for videos with Ocr text suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiReviewProhibitedOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Score of Ocr text involving prohibited content. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Ocr text violation result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array 
+     * @var array List of video segments whose Ocr text is suspected of prohibition violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string 
+     * @var string URL of the Segment List File for video segments whose Ocr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the URL of the Segment List File for videos with Ocr text suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param array $SegmentSet 
-     * @param string $SegmentSetFileUrl 
-     * @param string $SegmentSetFileUrlExpireTime 
+     * @param float $Confidence Score of Ocr text involving prohibited content. Value range: 0-100.
+     * @param string $Suggestion Ocr text violation result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param array $SegmentSet List of video segments whose Ocr text is suspected of prohibition violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of the Segment List File for video segments whose Ocr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File for videos with Ocr text suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

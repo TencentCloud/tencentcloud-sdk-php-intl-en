@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVodDomains request structure.
  *
- * @method array getDomains() Obtain 
- * @method void setDomains(array $Domains) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getDomains() Obtain Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
+ * @method void setDomains(array $Domains) Set Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
+ * @method integer getLimit() Obtain Maximum number of results returned for pagination pull. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Maximum number of results returned for pagination pull. Default value: 20.
+ * @method integer getOffset() Obtain Starting offset for pagination pull. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Starting offset for pagination pull. Default value: 0.
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
  */
 class DescribeVodDomainsRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
      */
     public $Domains;
 
     /**
-     * @var integer 
+     * @var integer Maximum number of results returned for pagination pull. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @var integer 
+     * @var integer Starting offset for pagination pull. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @param array $Domains 
-     * @param integer $Limit 
-     * @param integer $Offset 
-     * @param integer $SubAppId 
+     * @param array $Domains Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
+     * @param integer $Limit Maximum number of results returned for pagination pull. Default value: 20.
+     * @param integer $Offset Starting offset for pagination pull. Default value: 0.
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     function __construct()
     {

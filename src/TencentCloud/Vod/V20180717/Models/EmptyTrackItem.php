@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Empty track segment used as a placeholder on the timeline. If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.
  *
- * @method float getDuration() Obtain 
- * @method void setDuration(float $Duration) Set 
+ * @method float getDuration() Obtain Duration in seconds.
+ * @method void setDuration(float $Duration) Set Duration in seconds.
  */
 class EmptyTrackItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Duration in seconds.
      */
     public $Duration;
 
     /**
-     * @param float $Duration 
+     * @param float $Duration Duration in seconds.
      */
     function __construct()
     {

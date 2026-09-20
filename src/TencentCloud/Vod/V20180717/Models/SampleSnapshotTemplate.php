@@ -18,116 +18,196 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Description of the sampled screenshot template
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method string getSampleType() Obtain 
- * @method void setSampleType(string $SampleType) Set 
- * @method integer getSampleInterval() Obtain 
- * @method void setSampleInterval(integer $SampleInterval) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
- * @method string getFillType() Obtain 
- * @method void setFillType(string $FillType) Set 
+ * @method integer getDefinition() Obtain Unique identifier of the sampling screenshot template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the sampling screenshot template.
+ * @method string getType() Obtain Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+ * @method void setType(string $Type) Set Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+ * @method string getName() Obtain Sample screenshot template name.
+ * @method void setName(string $Name) Set Sample screenshot template name.
+ * @method string getComment() Obtain Template description information.
+ * @method void setComment(string $Comment) Set Template description information.
+ * @method integer getWidth() Obtain Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method void setWidth(integer $Width) Set Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method integer getHeight() Obtain Maximum value of the screenshot height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method void setHeight(integer $Height) Set Maximum value of the screenshot height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+ * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
+ * @method string getFormat() Obtain Image format.
+ * @method void setFormat(string $Format) Set Image format.
+ * @method string getSampleType() Obtain Sampling screenshot type.
+ * @method void setSampleType(string $SampleType) Set Sampling screenshot type.
+ * @method integer getSampleInterval() Obtain Sampling interval.
+ * @method void setSampleInterval(integer $SampleInterval) Set Sampling interval.
+ * @method string getCreateTime() Obtain Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFillType() Obtain Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+Default value: black.
+ * @method void setFillType(string $FillType) Set Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+Default value: black.
  */
 class SampleSnapshotTemplate extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique identifier of the sampling screenshot template.
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Sample screenshot template name.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Template description information.
      */
     public $Comment;
 
     /**
-     * @var integer 
+     * @var integer Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Maximum value of the screenshot height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string 
+     * @var string Image format.
      */
     public $Format;
 
     /**
-     * @var string 
+     * @var string Sampling screenshot type.
      */
     public $SampleType;
 
     /**
-     * @var integer 
+     * @var integer Sampling interval.
      */
     public $SampleInterval;
 
     /**
-     * @var string 
+     * @var string Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+Default value: black.
      */
     public $FillType;
 
     /**
-     * @param integer $Definition 
-     * @param string $Type 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param string $ResolutionAdaptive 
-     * @param string $Format 
-     * @param string $SampleType 
-     * @param integer $SampleInterval 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
-     * @param string $FillType 
+     * @param integer $Definition Unique identifier of the sampling screenshot template.
+     * @param string $Type Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+     * @param string $Name Sample screenshot template name.
+     * @param string $Comment Template description information.
+     * @param integer $Width Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+     * @param integer $Height Maximum value of the screenshot height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+     * @param string $ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
+     * @param string $Format Image format.
+     * @param string $SampleType Sampling screenshot type.
+     * @param integer $SampleInterval Sampling interval.
+     * @param string $CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+Default value: black.
      */
     function __construct()
     {

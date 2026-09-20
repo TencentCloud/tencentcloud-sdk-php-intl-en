@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Stamp extraction configuration.
  *
- * @method integer getTransparencyThreshold() Obtain 
- * @method void setTransparencyThreshold(integer $TransparencyThreshold) Set 
- * @method integer getOpaqueThreshold() Obtain 
- * @method void setOpaqueThreshold(integer $OpaqueThreshold) Set 
- * @method integer getEdgeSamplingStep() Obtain 
- * @method void setEdgeSamplingStep(integer $EdgeSamplingStep) Set 
- * @method integer getEdgeExpansionStep() Obtain 
- * @method void setEdgeExpansionStep(integer $EdgeExpansionStep) Set 
- * @method float getEdgeBlendingIntensity() Obtain 
- * @method void setEdgeBlendingIntensity(float $EdgeBlendingIntensity) Set 
+ * @method integer getTransparencyThreshold() Obtain <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
+ * @method void setTransparencyThreshold(integer $TransparencyThreshold) Set <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
+ * @method integer getOpaqueThreshold() Obtain <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
+ * @method void setOpaqueThreshold(integer $OpaqueThreshold) Set <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
+ * @method integer getEdgeSamplingStep() Obtain <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
+ * @method void setEdgeSamplingStep(integer $EdgeSamplingStep) Set <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
+ * @method integer getEdgeExpansionStep() Obtain <p>Edge expansion steps</p><p>Default value: 5</p>
+ * @method void setEdgeExpansionStep(integer $EdgeExpansionStep) Set <p>Edge expansion steps</p><p>Default value: 5</p>
+ * @method float getEdgeBlendingIntensity() Obtain <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
+ * @method void setEdgeBlendingIntensity(float $EdgeBlendingIntensity) Set <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
  */
 class PatternConfig extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
      */
     public $TransparencyThreshold;
 
     /**
-     * @var integer 
+     * @var integer <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
      */
     public $OpaqueThreshold;
 
     /**
-     * @var integer 
+     * @var integer <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
      */
     public $EdgeSamplingStep;
 
     /**
-     * @var integer 
+     * @var integer <p>Edge expansion steps</p><p>Default value: 5</p>
      */
     public $EdgeExpansionStep;
 
     /**
-     * @var float 
+     * @var float <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
      */
     public $EdgeBlendingIntensity;
 
     /**
-     * @param integer $TransparencyThreshold 
-     * @param integer $OpaqueThreshold 
-     * @param integer $EdgeSamplingStep 
-     * @param integer $EdgeExpansionStep 
-     * @param float $EdgeBlendingIntensity 
+     * @param integer $TransparencyThreshold <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
+     * @param integer $OpaqueThreshold <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
+     * @param integer $EdgeSamplingStep <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
+     * @param integer $EdgeExpansionStep <p>Edge expansion steps</p><p>Default value: 5</p>
+     * @param float $EdgeBlendingIntensity <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
      */
     function __construct()
     {

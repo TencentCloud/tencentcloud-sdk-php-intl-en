@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent highlight task control parameter
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
+ * @method void setSwitch(string $Switch) Set Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
  */
 class HighlightsConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
      */
     function __construct()
     {

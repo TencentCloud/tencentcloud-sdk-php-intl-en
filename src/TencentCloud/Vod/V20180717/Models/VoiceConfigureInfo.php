@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameters for audio (mute, bass, pop) detection.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
  */
 class VoiceConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
      */
     function __construct()
     {

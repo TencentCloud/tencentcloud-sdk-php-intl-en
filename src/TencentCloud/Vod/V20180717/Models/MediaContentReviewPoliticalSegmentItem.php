@@ -18,93 +18,201 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Suspected segments involving inappropriate information in audio/video moderation
  *
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method array getAreaCoordSet() Obtain 
- * @method void setAreaCoordSet(array $AreaCoordSet) Set 
- * @method integer getPicUrlExpireTimeStamp() Obtain 
- * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set 
- * @method string getPicUrlExpireTime() Obtain 
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set 
+ * @method float getStartTimeOffset() Obtain Offset time of the start of the suspected segment. Unit: seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of the start of the suspected segment. Unit: seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
+ * @method float getConfidence() Obtain Score of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Score of the suspected segment.
+ * @method string getSuggestion() Obtain Result suggestions for suspected segments involving inappropriate information. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestions for suspected segments involving inappropriate information. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method string getName() Obtain Involves inappropriate information and violative icon names.
+ * @method void setName(string $Name) Set Involves inappropriate information and violative icon names.
+ * @method string getLabel() Obtain Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+violation_photo:
+<li>violation_photo: Violation icon.</li>
+politician:
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: relevant people involved in rule violations;</li>
+<li>foreign_politician: state leaders of other countries.</li>
+entertainment:
+<li>sensitive_entertainment: banned people in the entertainment industry.</li>
+sport:
+<li>sensitive_sport: sports celebrity involved in rule violations.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
+scholar:
+<li>sensitive_scholar: Educational scholar in rule violation.</li>
+celebrity:
+<li>sensitive_celebrity: rule-violating celebrity;</li>
+<li>historical_celebrity: Historical celebrity.</li>
+military:
+<li>sensitive_military: relevant people involved in rule violations.</li>
+ * @method void setLabel(string $Label) Set Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+violation_photo:
+<li>violation_photo: Violation icon.</li>
+politician:
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: relevant people involved in rule violations;</li>
+<li>foreign_politician: state leaders of other countries.</li>
+entertainment:
+<li>sensitive_entertainment: banned people in the entertainment industry.</li>
+sport:
+<li>sensitive_sport: sports celebrity involved in rule violations.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
+scholar:
+<li>sensitive_scholar: Educational scholar in rule violation.</li>
+celebrity:
+<li>sensitive_celebrity: rule-violating celebrity;</li>
+<li>historical_celebrity: Historical celebrity.</li>
+military:
+<li>sensitive_military: relevant people involved in rule violations.</li>
+ * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method array getAreaCoordSet() Obtain Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+ * @method integer getPicUrlExpireTimeStamp() Obtain Deprecated. Please use `PicUrlExpireTime`.
+ * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) Set Deprecated. Please use `PicUrlExpireTime`.
+ * @method string getPicUrlExpireTime() Obtain URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Offset time of the start of the suspected segment. Unit: seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of a suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float 
+     * @var float Score of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Result suggestions for suspected segments involving inappropriate information. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Involves inappropriate information and violative icon names.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+violation_photo:
+<li>violation_photo: Violation icon.</li>
+politician:
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: relevant people involved in rule violations;</li>
+<li>foreign_politician: state leaders of other countries.</li>
+entertainment:
+<li>sensitive_entertainment: banned people in the entertainment industry.</li>
+sport:
+<li>sensitive_sport: sports celebrity involved in rule violations.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
+scholar:
+<li>sensitive_scholar: Educational scholar in rule violation.</li>
+celebrity:
+<li>sensitive_celebrity: rule-violating celebrity;</li>
+<li>historical_celebrity: Historical celebrity.</li>
+military:
+<li>sensitive_military: relevant people involved in rule violations.</li>
      */
     public $Label;
 
     /**
-     * @var string 
+     * @var string Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public $Url;
 
     /**
-     * @var array 
+     * @var array Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var integer 
+     * @var integer Deprecated. Please use `PicUrlExpireTime`.
      * @deprecated
      */
     public $PicUrlExpireTimeStamp;
 
     /**
-     * @var string 
+     * @var string URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param string $Name 
-     * @param string $Label 
-     * @param string $Url 
-     * @param array $AreaCoordSet 
-     * @param integer $PicUrlExpireTimeStamp 
-     * @param string $PicUrlExpireTime 
+     * @param float $StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+     * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
+     * @param float $Confidence Score of the suspected segment.
+     * @param string $Suggestion Result suggestions for suspected segments involving inappropriate information. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param string $Name Involves inappropriate information and violative icon names.
+     * @param string $Label Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+violation_photo:
+<li>violation_photo: Violation icon.</li>
+politician:
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: relevant people involved in rule violations;</li>
+<li>foreign_politician: state leaders of other countries.</li>
+entertainment:
+<li>sensitive_entertainment: banned people in the entertainment industry.</li>
+sport:
+<li>sensitive_sport: sports celebrity involved in rule violations.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
+scholar:
+<li>sensitive_scholar: Educational scholar in rule violation.</li>
+celebrity:
+<li>sensitive_celebrity: rule-violating celebrity;</li>
+<li>historical_celebrity: Historical celebrity.</li>
+military:
+<li>sensitive_military: relevant people involved in rule violations.</li>
+     * @param string $Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param array $AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * @param integer $PicUrlExpireTimeStamp Deprecated. Please use `PicUrlExpireTime`.
+     * @param string $PicUrlExpireTime URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

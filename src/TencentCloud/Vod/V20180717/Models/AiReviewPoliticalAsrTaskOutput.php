@@ -18,52 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Asr text involves inappropriate information
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
- * @method string getSegmentSetFileUrl() Obtain 
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
- * @method string getSegmentSetFileUrlExpireTime() Obtain 
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
+ * @method float getConfidence() Obtain Asr text involving inappropriate information and rule violation score. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Asr text involving inappropriate information and rule violation score. Value range: 0-100.
+ * @method string getSuggestion() Obtain Asr text involving inappropriate information and rule violation result suggestions, with a permissible range of:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Asr text involving inappropriate information and rule violation result suggestions, with a permissible range of:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method array getSegmentSet() Obtain List of video segments where the Asr text involves inappropriate information or is suspected of rule violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments where the Asr text involves inappropriate information or is suspected of rule violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of the segment list file for videos with Asr text that may involve inappropriate information or rule violations. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the segment list file for videos with Asr text that may involve inappropriate information or rule violations. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the file URL of the video segment list where the Asr text involves inappropriate information or suspected rule violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the file URL of the video segment list where the Asr text involves inappropriate information or suspected rule violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Asr text involving inappropriate information and rule violation score. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Asr text involving inappropriate information and rule violation result suggestions, with a permissible range of:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array 
+     * @var array List of video segments where the Asr text involves inappropriate information or is suspected of rule violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string 
+     * @var string URL of the segment list file for videos with Asr text that may involve inappropriate information or rule violations. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the file URL of the video segment list where the Asr text involves inappropriate information or suspected rule violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param array $SegmentSet 
-     * @param string $SegmentSetFileUrl 
-     * @param string $SegmentSetFileUrlExpireTime 
+     * @param float $Confidence Asr text involving inappropriate information and rule violation score. Value range: 0-100.
+     * @param string $Suggestion Asr text involving inappropriate information and rule violation result suggestions, with a permissible range of:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param array $SegmentSet List of video segments where the Asr text involves inappropriate information or is suspected of rule violations.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of the segment list file for videos with Asr text that may involve inappropriate information or rule violations. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the file URL of the video segment list where the Asr text involves inappropriate information or suspected rule violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

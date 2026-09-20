@@ -18,124 +18,124 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Player configuration details.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getAudioVideoType() Obtain 
- * @method void setAudioVideoType(string $AudioVideoType) Set 
- * @method string getDrmSwitch() Obtain 
- * @method void setDrmSwitch(string $DrmSwitch) Set 
- * @method integer getAdaptiveDynamicStreamingDefinition() Obtain 
- * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set 
- * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain 
- * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) Set 
- * @method integer getTranscodeDefinition() Obtain 
- * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set 
- * @method integer getImageSpriteDefinition() Obtain 
- * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set 
- * @method array getResolutionNameSet() Obtain 
- * @method void setResolutionNameSet(array $ResolutionNameSet) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getScheme() Obtain 
- * @method void setScheme(string $Scheme) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getName() Obtain <p>Player configuration name.</p>
+ * @method void setName(string $Name) Set <p>Player configuration name.</p>
+ * @method string getType() Obtain <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
+ * @method void setType(string $Type) Set <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
+ * @method string getAudioVideoType() Obtain <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+ * @method void setAudioVideoType(string $AudioVideoType) Set <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+ * @method string getDrmSwitch() Obtain <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+ * @method void setDrmSwitch(string $DrmSwitch) Set <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+ * @method integer getAdaptiveDynamicStreamingDefinition() Obtain <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
+ * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
+ * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain <p>Allowed output of DRM adaptive bitstream template content.</p>
+ * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) Set <p>Allowed output of DRM adaptive bitstream template content.</p>
+ * @method integer getTranscodeDefinition() Obtain <p>Allowed output transcoding template ID.</p>
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set <p>Allowed output transcoding template ID.</p>
+ * @method integer getImageSpriteDefinition() Obtain <p>Allowed output sprite template ID.</p>
+ * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set <p>Allowed output sprite template ID.</p>
+ * @method array getResolutionNameSet() Obtain <p>The player displays names for substreams of different resolutions.</p>
+ * @method void setResolutionNameSet(array $ResolutionNameSet) Set <p>The player displays names for substreams of different resolutions.</p>
+ * @method string getCreateTime() Obtain <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getDomain() Obtain <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
+ * @method void setDomain(string $Domain) Set <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
+ * @method string getScheme() Obtain <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
+ * @method void setScheme(string $Scheme) Set <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
+ * @method string getComment() Obtain <p>Template description information.</p>
+ * @method void setComment(string $Comment) Set <p>Template description information.</p>
  */
 class PlayerConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Player configuration name.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
      */
     public $AudioVideoType;
 
     /**
-     * @var string 
+     * @var string <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public $DrmSwitch;
 
     /**
-     * @var integer 
+     * @var integer <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
      */
     public $AdaptiveDynamicStreamingDefinition;
 
     /**
-     * @var DrmStreamingsInfo 
+     * @var DrmStreamingsInfo <p>Allowed output of DRM adaptive bitstream template content.</p>
      */
     public $DrmStreamingsInfo;
 
     /**
-     * @var integer 
+     * @var integer <p>Allowed output transcoding template ID.</p>
      */
     public $TranscodeDefinition;
 
     /**
-     * @var integer 
+     * @var integer <p>Allowed output sprite template ID.</p>
      */
     public $ImageSpriteDefinition;
 
     /**
-     * @var array 
+     * @var array <p>The player displays names for substreams of different resolutions.</p>
      */
     public $ResolutionNameSet;
 
     /**
-     * @var string 
+     * @var string <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
      */
     public $Scheme;
 
     /**
-     * @var string 
+     * @var string <p>Template description information.</p>
      */
     public $Comment;
 
     /**
-     * @param string $Name 
-     * @param string $Type 
-     * @param string $AudioVideoType 
-     * @param string $DrmSwitch 
-     * @param integer $AdaptiveDynamicStreamingDefinition 
-     * @param DrmStreamingsInfo $DrmStreamingsInfo 
-     * @param integer $TranscodeDefinition 
-     * @param integer $ImageSpriteDefinition 
-     * @param array $ResolutionNameSet 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
-     * @param string $Domain 
-     * @param string $Scheme 
-     * @param string $Comment 
+     * @param string $Name <p>Player configuration name.</p>
+     * @param string $Type <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
+     * @param string $AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+     * @param string $DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * @param integer $AdaptiveDynamicStreamingDefinition <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
+     * @param DrmStreamingsInfo $DrmStreamingsInfo <p>Allowed output of DRM adaptive bitstream template content.</p>
+     * @param integer $TranscodeDefinition <p>Allowed output transcoding template ID.</p>
+     * @param integer $ImageSpriteDefinition <p>Allowed output sprite template ID.</p>
+     * @param array $ResolutionNameSet <p>The player displays names for substreams of different resolutions.</p>
+     * @param string $CreateTime <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $Domain <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
+     * @param string $Scheme <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
+     * @param string $Comment <p>Template description information.</p>
      */
     function __construct()
     {

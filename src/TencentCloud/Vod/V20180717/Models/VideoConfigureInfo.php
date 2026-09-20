@@ -18,44 +18,112 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instant transcoding video template configuration.
  *
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
- * @method integer getBitrate() Obtain 
- * @method void setBitrate(integer $Bitrate) Set 
+ * @method integer getWidth() Obtain Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+ * @method void setWidth(integer $Width) Set Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+ * @method integer getHeight() Obtain Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+ * @method void setHeight(integer $Height) Set Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+ * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
+ * @method integer getBitrate() Obtain Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
  */
 class VideoConfigureInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
      */
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var integer 
+     * @var integer Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
      */
     public $Bitrate;
 
     /**
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param string $ResolutionAdaptive 
-     * @param integer $Bitrate 
+     * @param integer $Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+     * @param integer $Height Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+     * @param string $ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
+     * @param integer $Bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
      */
     function __construct()
     {

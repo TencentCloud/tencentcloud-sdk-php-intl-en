@@ -18,140 +18,152 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Description of the video content recognition template
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method HeadTailConfigureInfo getHeadTailConfigure() Obtain 
- * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) Set 
- * @method SegmentConfigureInfo getSegmentConfigure() Obtain 
- * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) Set 
- * @method FaceConfigureInfo getFaceConfigure() Obtain 
- * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) Set 
- * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain 
- * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set 
- * @method OcrWordsConfigureInfo getOcrWordsConfigure() Obtain 
- * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) Set 
- * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain 
- * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set 
- * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain 
- * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set 
- * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain 
- * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set 
- * @method ObjectConfigureInfo getObjectConfigure() Obtain 
- * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set 
- * @method float getScreenshotInterval() Obtain 
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method integer getDefinition() Obtain Unique ID of a video content recognition template.
+ * @method void setDefinition(integer $Definition) Set Unique ID of a video content recognition template.
+ * @method string getName() Obtain Video content recognition template name.
+ * @method void setName(string $Name) Set Video content recognition template name.
+ * @method string getComment() Obtain Description of the video content recognition template.
+ * @method void setComment(string $Comment) Set Description of the video content recognition template.
+ * @method string getType() Obtain Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
+ * @method void setType(string $Type) Set Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
+ * @method HeadTailConfigureInfo getHeadTailConfigure() Obtain Head and tail recognition control parameter.
+ * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) Set Head and tail recognition control parameter.
+ * @method SegmentConfigureInfo getSegmentConfigure() Obtain Segmentation recognition control parameter.
+ * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) Set Segmentation recognition control parameter.
+ * @method FaceConfigureInfo getFaceConfigure() Obtain Face recognition control parameter.
+ * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) Set Face recognition control parameter.
+ * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain Text Full-text Recognition Control Parameters.
+ * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set Text Full-text Recognition Control Parameters.
+ * @method OcrWordsConfigureInfo getOcrWordsConfigure() Obtain Text keyword recognition control parameters.
+ * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) Set Text keyword recognition control parameters.
+ * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+ * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+ * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Voice keyword recognition control parameters.
+ * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Voice keyword recognition control parameters.
+ * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain Voice translation recognition control parameters.
+ * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set Voice translation recognition control parameters.
+ * @method ObjectConfigureInfo getObjectConfigure() Obtain Object recognition control parameter.
+ * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Object recognition control parameter.
+ * @method float getScreenshotInterval() Obtain Screenshot interval. Measurement unit: second.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Screenshot interval. Measurement unit: second.
+ * @method string getCreateTime() Obtain Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AIRecognitionTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique ID of a video content recognition template.
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Video content recognition template name.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Description of the video content recognition template.
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @var HeadTailConfigureInfo 
+     * @var HeadTailConfigureInfo Head and tail recognition control parameter.
      */
     public $HeadTailConfigure;
 
     /**
-     * @var SegmentConfigureInfo 
+     * @var SegmentConfigureInfo Segmentation recognition control parameter.
      */
     public $SegmentConfigure;
 
     /**
-     * @var FaceConfigureInfo 
+     * @var FaceConfigureInfo Face recognition control parameter.
      */
     public $FaceConfigure;
 
     /**
-     * @var OcrFullTextConfigureInfo 
+     * @var OcrFullTextConfigureInfo Text Full-text Recognition Control Parameters.
      */
     public $OcrFullTextConfigure;
 
     /**
-     * @var OcrWordsConfigureInfo 
+     * @var OcrWordsConfigureInfo Text keyword recognition control parameters.
      */
     public $OcrWordsConfigure;
 
     /**
-     * @var AsrFullTextConfigureInfo 
+     * @var AsrFullTextConfigureInfo Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public $AsrFullTextConfigure;
 
     /**
-     * @var AsrWordsConfigureInfo 
+     * @var AsrWordsConfigureInfo Voice keyword recognition control parameters.
      */
     public $AsrWordsConfigure;
 
     /**
-     * @var AsrTranslateConfigureInfo 
+     * @var AsrTranslateConfigureInfo Voice translation recognition control parameters.
      */
     public $AsrTranslateConfigure;
 
     /**
-     * @var ObjectConfigureInfo 
+     * @var ObjectConfigureInfo Object recognition control parameter.
      */
     public $ObjectConfigure;
 
     /**
-     * @var float 
+     * @var float Screenshot interval. Measurement unit: second.
      */
     public $ScreenshotInterval;
 
     /**
-     * @var string 
+     * @var string Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param string $Type 
-     * @param HeadTailConfigureInfo $HeadTailConfigure 
-     * @param SegmentConfigureInfo $SegmentConfigure 
-     * @param FaceConfigureInfo $FaceConfigure 
-     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure 
-     * @param OcrWordsConfigureInfo $OcrWordsConfigure 
-     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure 
-     * @param AsrWordsConfigureInfo $AsrWordsConfigure 
-     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure 
-     * @param ObjectConfigureInfo $ObjectConfigure 
-     * @param float $ScreenshotInterval 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
+     * @param integer $Definition Unique ID of a video content recognition template.
+     * @param string $Name Video content recognition template name.
+     * @param string $Comment Description of the video content recognition template.
+     * @param string $Type Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
+     * @param HeadTailConfigureInfo $HeadTailConfigure Head and tail recognition control parameter.
+     * @param SegmentConfigureInfo $SegmentConfigure Segmentation recognition control parameter.
+     * @param FaceConfigureInfo $FaceConfigure Face recognition control parameter.
+     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure Text Full-text Recognition Control Parameters.
+     * @param OcrWordsConfigureInfo $OcrWordsConfigure Text keyword recognition control parameters.
+     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+     * @param AsrWordsConfigureInfo $AsrWordsConfigure Voice keyword recognition control parameters.
+     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure Voice translation recognition control parameters.
+     * @param ObjectConfigureInfo $ObjectConfigure Object recognition control parameter.
+     * @param float $ScreenshotInterval Screenshot interval. Measurement unit: second.
+     * @param string $CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -20,106 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySuperPlayerConfig request structure.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getAudioVideoType() Obtain 
- * @method void setAudioVideoType(string $AudioVideoType) Set 
- * @method string getDrmSwitch() Obtain 
- * @method void setDrmSwitch(string $DrmSwitch) Set 
- * @method integer getAdaptiveDynamicStreamingDefinition() Obtain 
- * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set 
- * @method DrmStreamingsInfoForUpdate getDrmStreamingsInfo() Obtain 
- * @method void setDrmStreamingsInfo(DrmStreamingsInfoForUpdate $DrmStreamingsInfo) Set 
- * @method integer getTranscodeDefinition() Obtain 
- * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set 
- * @method integer getImageSpriteDefinition() Obtain 
- * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set 
- * @method array getResolutionNames() Obtain 
- * @method void setResolutionNames(array $ResolutionNames) Set 
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getScheme() Obtain 
- * @method void setScheme(string $Scheme) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getName() Obtain Player configuration name.
+ * @method void setName(string $Name) Set Player configuration name.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getAudioVideoType() Obtain Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+ * @method void setAudioVideoType(string $AudioVideoType) Set Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+ * @method string getDrmSwitch() Obtain Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+ * @method void setDrmSwitch(string $DrmSwitch) Set Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+ * @method integer getAdaptiveDynamicStreamingDefinition() Obtain Allowed output of unencrypted adaptive bitstream template ID.
+ * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set Allowed output of unencrypted adaptive bitstream template ID.
+ * @method DrmStreamingsInfoForUpdate getDrmStreamingsInfo() Obtain Allowed output of DRM adaptive bitstream template content.
+ * @method void setDrmStreamingsInfo(DrmStreamingsInfoForUpdate $DrmStreamingsInfo) Set Allowed output of DRM adaptive bitstream template content.
+ * @method integer getTranscodeDefinition() Obtain Allowed output transcoding template ID.
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set Allowed output transcoding template ID.
+ * @method integer getImageSpriteDefinition() Obtain Allowed output sprite template ID.
+ * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set Allowed output sprite template ID.
+ * @method array getResolutionNames() Obtain Player's display name for substreams of different resolutions.
+ * @method void setResolutionNames(array $ResolutionNames) Set Player's display name for substreams of different resolutions.
+ * @method string getDomain() Obtain Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+ * @method void setDomain(string $Domain) Set Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+ * @method string getScheme() Obtain Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
+ * @method void setScheme(string $Scheme) Set Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
  */
 class ModifySuperPlayerConfigRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Player configuration name.
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
      */
     public $AudioVideoType;
 
     /**
-     * @var string 
+     * @var string Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public $DrmSwitch;
 
     /**
-     * @var integer 
+     * @var integer Allowed output of unencrypted adaptive bitstream template ID.
      */
     public $AdaptiveDynamicStreamingDefinition;
 
     /**
-     * @var DrmStreamingsInfoForUpdate 
+     * @var DrmStreamingsInfoForUpdate Allowed output of DRM adaptive bitstream template content.
      */
     public $DrmStreamingsInfo;
 
     /**
-     * @var integer 
+     * @var integer Allowed output transcoding template ID.
      */
     public $TranscodeDefinition;
 
     /**
-     * @var integer 
+     * @var integer Allowed output sprite template ID.
      */
     public $ImageSpriteDefinition;
 
     /**
-     * @var array 
+     * @var array Player's display name for substreams of different resolutions.
      */
     public $ResolutionNames;
 
     /**
-     * @var string 
+     * @var string Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public $Scheme;
 
     /**
-     * @var string 
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @param string $Name 
-     * @param integer $SubAppId 
-     * @param string $AudioVideoType 
-     * @param string $DrmSwitch 
-     * @param integer $AdaptiveDynamicStreamingDefinition 
-     * @param DrmStreamingsInfoForUpdate $DrmStreamingsInfo 
-     * @param integer $TranscodeDefinition 
-     * @param integer $ImageSpriteDefinition 
-     * @param array $ResolutionNames 
-     * @param string $Domain 
-     * @param string $Scheme 
-     * @param string $Comment 
+     * @param string $Name Player configuration name.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+     * @param string $DrmSwitch Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * @param integer $AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
+     * @param DrmStreamingsInfoForUpdate $DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
+     * @param integer $TranscodeDefinition Allowed output transcoding template ID.
+     * @param integer $ImageSpriteDefinition Allowed output sprite template ID.
+     * @param array $ResolutionNames Player's display name for substreams of different resolutions.
+     * @param string $Domain Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+     * @param string $Scheme Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
+     * @param string $Comment Template description, with a length limit of 256 characters.
      */
     function __construct()
     {

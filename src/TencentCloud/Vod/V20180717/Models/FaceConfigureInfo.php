@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face recognition task control parameter
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method float getScore() Obtain 
- * @method void setScore(float $Score) Set 
- * @method array getDefaultLibraryLabelSet() Obtain 
- * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set 
- * @method array getUserDefineLibraryLabelSet() Obtain 
- * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set 
- * @method string getFaceLibrary() Obtain 
- * @method void setFaceLibrary(string $FaceLibrary) Set 
+ * @method string getSwitch() Obtain <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+ * @method void setSwitch(string $Switch) Set <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+ * @method float getScore() Obtain <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
+ * @method void setScore(float $Score) Set <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
+ * @method array getDefaultLibraryLabelSet() Obtain <p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+ * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set <p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+ * @method array getUserDefineLibraryLabelSet() Obtain <p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
+ * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set <p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
+ * @method string getFaceLibrary() Obtain <p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
+ * @method void setFaceLibrary(string $FaceLibrary) Set <p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
  */
 class FaceConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @var float 
+     * @var float <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
      */
     public $Score;
 
     /**
-     * @var array 
+     * @var array <p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
      */
     public $DefaultLibraryLabelSet;
 
     /**
-     * @var array 
+     * @var array <p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
      */
     public $UserDefineLibraryLabelSet;
 
     /**
-     * @var string 
+     * @var string <p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
      */
     public $FaceLibrary;
 
     /**
-     * @param string $Switch 
-     * @param float $Score 
-     * @param array $DefaultLibraryLabelSet 
-     * @param array $UserDefineLibraryLabelSet 
-     * @param string $FaceLibrary 
+     * @param string $Switch <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+     * @param float $Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
+     * @param array $DefaultLibraryLabelSet <p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+     * @param array $UserDefineLibraryLabelSet <p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
+     * @param string $FaceLibrary <p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
      */
     function __construct()
     {

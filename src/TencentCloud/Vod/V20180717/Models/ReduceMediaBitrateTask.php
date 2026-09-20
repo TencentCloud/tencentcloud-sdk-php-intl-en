@@ -18,100 +18,116 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Bitrate reduction task information
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getFileName() Obtain 
- * @method void setFileName(string $FileName) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
- * @method array getMediaProcessResultSet() Obtain 
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
- * @method string getTasksNotifyMode() Obtain 
- * @method void setTasksNotifyMode(string $TasksNotifyMode) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
+ * @method string getTaskId() Obtain Video processing task ID.
+ * @method void setTaskId(string $TaskId) Set Video processing task ID.
+ * @method string getStatus() Obtain Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method string getFileName() Obtain Media filename.
+ * @method void setFileName(string $FileName) Set Media filename.
+ * @method string getFileUrl() Obtain Media file address.
+ * @method void setFileUrl(string $FileUrl) Set Media file address.
+ * @method MediaMetaData getMetaData() Obtain Metadata of the original video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the original video.
+ * @method array getMediaProcessResultSet() Obtain Bitrate reduction task execution status and results.
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Bitrate reduction task execution status and results.
+ * @method integer getTasksPriority() Obtain Priority of the task flow, with a value range of [-10, 10].
+ * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task flow, with a value range of [-10, 10].
+ * @method string getTasksNotifyMode() Obtain Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
+ * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
+ * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  */
 class ReduceMediaBitrateTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video processing task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Media filename.
      */
     public $FileName;
 
     /**
-     * @var string 
+     * @var string Media file address.
      */
     public $FileUrl;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Metadata of the original video.
      */
     public $MetaData;
 
     /**
-     * @var array 
+     * @var array Bitrate reduction task execution status and results.
      */
     public $MediaProcessResultSet;
 
     /**
-     * @var integer 
+     * @var integer Priority of the task flow, with a value range of [-10, 10].
      */
     public $TasksPriority;
 
     /**
-     * @var string 
+     * @var string Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
      */
     public $TasksNotifyMode;
 
     /**
-     * @var string 
+     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param string $FileId 
-     * @param string $FileName 
-     * @param string $FileUrl 
-     * @param MediaMetaData $MetaData 
-     * @param array $MediaProcessResultSet 
-     * @param integer $TasksPriority 
-     * @param string $TasksNotifyMode 
-     * @param string $SessionContext 
-     * @param string $SessionId 
+     * @param string $TaskId Video processing task ID.
+     * @param string $Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param string $FileId Media file ID.
+     * @param string $FileName Media filename.
+     * @param string $FileUrl Media file address.
+     * @param MediaMetaData $MetaData Metadata of the original video.
+     * @param array $MediaProcessResultSet Bitrate reduction task execution status and results.
+     * @param integer $TasksPriority Priority of the task flow, with a value range of [-10, 10].
+     * @param string $TasksNotifyMode Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
+     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     function __construct()
     {

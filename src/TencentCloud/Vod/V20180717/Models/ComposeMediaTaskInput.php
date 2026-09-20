@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input of a media file creation task.
  *
- * @method array getTracks() Obtain 
- * @method void setTracks(array $Tracks) Set 
- * @method Canvas getCanvas() Obtain 
- * @method void setCanvas(Canvas $Canvas) Set 
- * @method ComposeMediaOutput getOutput() Obtain 
- * @method void setOutput(ComposeMediaOutput $Output) Set 
+ * @method array getTracks() Obtain Input media track list, including multiple track information composed of materials such as video, audio, and images.
+ * @method void setTracks(array $Tracks) Set Input media track list, including multiple track information composed of materials such as video, audio, and images.
+ * @method Canvas getCanvas() Obtain Canvas used when making video files.
+ * @method void setCanvas(Canvas $Canvas) Set Canvas used when making video files.
+ * @method ComposeMediaOutput getOutput() Obtain Output media file information.
+ * @method void setOutput(ComposeMediaOutput $Output) Set Output media file information.
  */
 class ComposeMediaTaskInput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Input media track list, including multiple track information composed of materials such as video, audio, and images.
      */
     public $Tracks;
 
     /**
-     * @var Canvas 
+     * @var Canvas Canvas used when making video files.
      */
     public $Canvas;
 
     /**
-     * @var ComposeMediaOutput 
+     * @var ComposeMediaOutput Output media file information.
      */
     public $Output;
 
     /**
-     * @param array $Tracks 
-     * @param Canvas $Canvas 
-     * @param ComposeMediaOutput $Output 
+     * @param array $Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
+     * @param Canvas $Canvas Canvas used when making video files.
+     * @param ComposeMediaOutput $Output Output media file information.
      */
     function __construct()
     {

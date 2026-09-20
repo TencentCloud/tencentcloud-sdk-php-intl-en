@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateVoice request structure.
  *
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
- * @method VoiceUpdateFields getVoiceFields() Obtain 
- * @method void setVoiceFields(VoiceUpdateFields $VoiceFields) Set 
- * @method string getSubAppId() Obtain 
- * @method void setSubAppId(string $SubAppId) Set 
- * @method string getExtParam() Obtain 
- * @method void setExtParam(string $ExtParam) Set 
+ * @method string getVoiceId() Obtain <p>Voice ID.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
+ * @method VoiceUpdateFields getVoiceFields() Obtain <p>Fields of the updated voice.</p>
+ * @method void setVoiceFields(VoiceUpdateFields $VoiceFields) Set <p>Fields of the updated voice.</p>
+ * @method string getSubAppId() Obtain <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+ * @method void setSubAppId(string $SubAppId) Set <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+ * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
  */
 class UpdateVoiceRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Voice ID.</p>
      */
     public $VoiceId;
 
     /**
-     * @var VoiceUpdateFields 
+     * @var VoiceUpdateFields <p>Fields of the updated voice.</p>
      */
     public $VoiceFields;
 
     /**
-     * @var string 
+     * @var string <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameters in the format of a JSON string.</p>
      */
     public $ExtParam;
 
     /**
-     * @param string $VoiceId 
-     * @param VoiceUpdateFields $VoiceFields 
-     * @param string $SubAppId 
-     * @param string $ExtParam 
+     * @param string $VoiceId <p>Voice ID.</p>
+     * @param VoiceUpdateFields $VoiceFields <p>Fields of the updated voice.</p>
+     * @param string $SubAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     function __construct()
     {

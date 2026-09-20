@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSubAppId request structure.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getMode() Obtain 
- * @method void setMode(string $Mode) Set 
- * @method string getStorageRegion() Obtain 
- * @method void setStorageRegion(string $StorageRegion) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method string getName() Obtain <p>Application name. Length limit: 40 characters.</p>
+ * @method void setName(string $Name) Set <p>Application name. Length limit: 40 characters.</p>
+ * @method string getDescription() Obtain <p>Application description. Length limit: 300 characters. If not specified, the application description is empty by default.</p>
+ * @method void setDescription(string $Description) Set <p>Application description. Length limit: 300 characters. If not specified, the application description is empty by default.</p>
+ * @method string getType() Obtain <p>Application type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+ * @method void setType(string $Type) Set <p>Application type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+ * @method string getMode() Obtain <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+ * @method void setMode(string $Mode) Set <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+ * @method string getStorageRegion() Obtain <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+ * @method void setStorageRegion(string $StorageRegion) Set <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+ * @method array getTags() Obtain <p>tag that this application should be bound to</p>
+ * @method void setTags(array $Tags) Set <p>tag that this application should be bound to</p>
  */
 class CreateSubAppIdRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Application name. Length limit: 40 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Application description. Length limit: 300 characters. If not specified, the application description is empty by default.</p>
      */
     public $Description;
 
     /**
-     * @var string 
+     * @var string <p>Application type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
      */
     public $Mode;
 
     /**
-     * @var string 
+     * @var string <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
      */
     public $StorageRegion;
 
     /**
-     * @var array 
+     * @var array <p>tag that this application should be bound to</p>
      */
     public $Tags;
 
     /**
-     * @param string $Name 
-     * @param string $Description 
-     * @param string $Type 
-     * @param string $Mode 
-     * @param string $StorageRegion 
-     * @param array $Tags 
+     * @param string $Name <p>Application name. Length limit: 40 characters.</p>
+     * @param string $Description <p>Application description. Length limit: 300 characters. If not specified, the application description is empty by default.</p>
+     * @param string $Type <p>Application type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+     * @param string $Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+     * @param string $StorageRegion <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+     * @param array $Tags <p>tag that this application should be bound to</p>
      */
     function __construct()
     {

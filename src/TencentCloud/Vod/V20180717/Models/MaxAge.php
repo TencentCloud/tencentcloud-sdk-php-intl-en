@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Browser cache rule configuration, used to set the default MaxAge value. Disabled by default.
  *
  * @method array getMaxAgeRules() Obtain MaxAge rule.
  * @method void setMaxAgeRules(array $MaxAgeRules) Set MaxAge rule.

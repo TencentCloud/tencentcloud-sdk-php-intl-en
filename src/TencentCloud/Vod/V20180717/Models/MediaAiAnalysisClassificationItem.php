@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent classification result
  *
- * @method string getClassification() Obtain 
- * @method void setClassification(string $Classification) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method string getClassification() Obtain Category name for intelligent categorization.
+ * @method void setClassification(string $Classification) Set Category name for intelligent categorization.
+ * @method float getConfidence() Obtain Confidence of the intelligent classification, with a value range from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Confidence of the intelligent classification, with a value range from 0 to 100.
  */
 class MediaAiAnalysisClassificationItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Category name for intelligent categorization.
      */
     public $Classification;
 
     /**
-     * @var float 
+     * @var float Confidence of the intelligent classification, with a value range from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @param string $Classification 
-     * @param float $Confidence 
+     * @param string $Classification Category name for intelligent categorization.
+     * @param float $Confidence Confidence of the intelligent classification, with a value range from 0 to 100.
      */
     function __construct()
     {

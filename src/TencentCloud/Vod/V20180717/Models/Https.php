@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * https acceleration configuration for the domain name. Disabled by default.
  *
  * @method string getSwitch() Obtain https configuration switch. Value:
 <li>`on`: Enable;</li>
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(string $Http2) Set http/2 configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method CDNCertInfo getCertInfo() Obtain 
- * @method void setCertInfo(CDNCertInfo $CertInfo) Set 
+ * @method CDNCertInfo getCertInfo() Obtain Certificate configuration information.
+ * @method void setCertInfo(CDNCertInfo $CertInfo) Set Certificate configuration information.
  */
 class Https extends AbstractModel
 {
@@ -52,7 +52,7 @@ class Https extends AbstractModel
     public $Http2;
 
     /**
-     * @var CDNCertInfo 
+     * @var CDNCertInfo Certificate configuration information.
      */
     public $CertInfo;
 
@@ -63,7 +63,7 @@ class Https extends AbstractModel
      * @param string $Http2 http/2 configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param CDNCertInfo $CertInfo 
+     * @param CDNCertInfo $CertInfo Certificate configuration information.
      */
     function __construct()
     {

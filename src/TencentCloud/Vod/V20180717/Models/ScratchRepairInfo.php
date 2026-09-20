@@ -18,36 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Scratch removal control information
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method float getIntensity() Obtain 
- * @method void setIntensity(float $Intensity) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
+ * @method void setSwitch(string $Switch) Set Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
+ * @method float getIntensity() Obtain Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
+ * @method void setIntensity(float $Intensity) Set Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
+ * @method string getType() Obtain Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
+ * @method void setType(string $Type) Set Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
  */
 class ScratchRepairInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
      */
     public $Switch;
 
     /**
-     * @var float 
+     * @var float Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     public $Intensity;
 
     /**
-     * @var string 
+     * @var string Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param float $Intensity 
-     * @param string $Type 
+     * @param string $Switch Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
+     * @param float $Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
+     * @param string $Type Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
      */
     function __construct()
     {

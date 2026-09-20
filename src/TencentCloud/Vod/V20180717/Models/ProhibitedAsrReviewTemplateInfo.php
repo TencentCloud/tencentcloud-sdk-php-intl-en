@@ -18,36 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Speech prohibition task control parameter
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method integer getBlockConfidence() Obtain 
- * @method void setBlockConfidence(integer $BlockConfidence) Set 
- * @method integer getReviewConfidence() Obtain 
- * @method void setReviewConfidence(integer $ReviewConfidence) Set 
+ * @method string getSwitch() Obtain Speech prohibition task switch. Available values:
+<li>ON: Turn on the speech prohibition task;</li>
+<li>OFF: disables the speech prohibition task.</li>
+ * @method void setSwitch(string $Switch) Set Speech prohibition task switch. Available values:
+<li>ON: Turn on the speech prohibition task;</li>
+<li>OFF: disables the speech prohibition task.</li>
+ * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+ * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
  */
 class ProhibitedAsrReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Speech prohibition task switch. Available values:
+<li>ON: Turn on the speech prohibition task;</li>
+<li>OFF: disables the speech prohibition task.</li>
      */
     public $Switch;
 
     /**
-     * @var integer 
+     * @var integer Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Default value: 100. Value range: 0–100.
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 
+     * @var integer Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 
-     * @param integer $BlockConfidence 
-     * @param integer $ReviewConfidence 
+     * @param string $Switch Speech prohibition task switch. Available values:
+<li>ON: Turn on the speech prohibition task;</li>
+<li>OFF: disables the speech prohibition task.</li>
+     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
      */
     function __construct()
     {

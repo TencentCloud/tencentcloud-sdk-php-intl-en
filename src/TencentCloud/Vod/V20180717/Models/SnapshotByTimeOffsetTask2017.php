@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video screenshot at specified time point task information. This structure is only used for tasks initiated by the 2017 version [SnapshotByTimeOffset](https://www.tencentcloud.com/document/product/266/8102?from_cn_redirect=1) API.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getSnapshotInfoSet() Obtain 
- * @method void setSnapshotInfoSet(array $SnapshotInfoSet) Set 
+ * @method string getTaskId() Obtain Screenshot job ID.
+ * @method void setTaskId(string $TaskId) Set Screenshot job ID.
+ * @method string getFileId() Obtain Screenshot file ID.
+ * @method void setFileId(string $FileId) Set Screenshot file ID.
+ * @method integer getDefinition() Obtain Screenshot specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set Screenshot specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method array getSnapshotInfoSet() Obtain Screenshot result info.
+ * @method void setSnapshotInfoSet(array $SnapshotInfoSet) Set Screenshot result info.
  */
 class SnapshotByTimeOffsetTask2017 extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Screenshot job ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Screenshot file ID.
      */
     public $FileId;
 
     /**
-     * @var integer 
+     * @var integer Screenshot specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array Screenshot result info.
      */
     public $SnapshotInfoSet;
 
     /**
-     * @param string $TaskId 
-     * @param string $FileId 
-     * @param integer $Definition 
-     * @param array $SnapshotInfoSet 
+     * @param string $TaskId Screenshot job ID.
+     * @param string $FileId Screenshot file ID.
+     * @param integer $Definition Screenshot specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param array $SnapshotInfoSet Screenshot result info.
      */
     function __construct()
     {

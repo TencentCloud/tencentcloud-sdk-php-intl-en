@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Huawei Cloud object storage origin-pull authentication
  *
  * @method string getSwitch() Obtain Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
 <li>`on`: Enable;</li>
@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method string getAccessKey() Obtain 
- * @method void setAccessKey(string $AccessKey) Set 
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method string getBucket() Obtain 
- * @method void setBucket(string $Bucket) Set 
+ * @method string getAccessKey() Obtain Access ID.
+ * @method void setAccessKey(string $AccessKey) Set Access ID.
+ * @method string getSecretKey() Obtain Key.
+ * @method void setSecretKey(string $SecretKey) Set Key.
+ * @method string getBucket() Obtain Bucket Name.
+ * @method void setBucket(string $Bucket) Set Bucket Name.
  */
 class HwPrivateAccess extends AbstractModel
 {
@@ -43,17 +43,17 @@ class HwPrivateAccess extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Access ID.
      */
     public $AccessKey;
 
     /**
-     * @var string 
+     * @var string Key.
      */
     public $SecretKey;
 
     /**
-     * @var string 
+     * @var string Bucket Name.
      */
     public $Bucket;
 
@@ -61,9 +61,9 @@ class HwPrivateAccess extends AbstractModel
      * @param string $Switch Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param string $AccessKey 
-     * @param string $SecretKey 
-     * @param string $Bucket 
+     * @param string $AccessKey Access ID.
+     * @param string $SecretKey Key.
+     * @param string $Bucket Bucket Name.
      */
     function __construct()
     {

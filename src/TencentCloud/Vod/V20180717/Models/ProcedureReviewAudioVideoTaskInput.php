@@ -18,28 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input parameter type for audio/video moderation in a task flow template.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getReviewContents() Obtain 
- * @method void setReviewContents(array $ReviewContents) Set 
+ * @method integer getDefinition() Obtain Moderation template.
+ * @method void setDefinition(integer $Definition) Set Moderation template.
+ * @method array getReviewContents() Obtain Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+ * @method void setReviewContents(array $ReviewContents) Set Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
  */
 class ProcedureReviewAudioVideoTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Moderation template.
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
      */
     public $ReviewContents;
 
     /**
-     * @param integer $Definition 
-     * @param array $ReviewContents 
+     * @param integer $Definition Moderation template.
+     * @param array $ReviewContents Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
      */
     function __construct()
     {

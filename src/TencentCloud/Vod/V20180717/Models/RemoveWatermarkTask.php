@@ -18,84 +18,104 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method RemoveWaterMarkTaskInput getInput() Obtain 
- * @method void setInput(RemoveWaterMarkTaskInput $Input) Set 
- * @method RemoveWaterMarkTaskOutput getOutput() Obtain 
- * @method void setOutput(RemoveWaterMarkTaskOutput $Output) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>70000: internal service error. Retry is recommended.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>70000: internal service error. Retry is recommended.</li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method RemoveWaterMarkTaskInput getInput() Obtain Input of the intelligent watermark removal task.
+ * @method void setInput(RemoveWaterMarkTaskInput $Input) Set Input of the intelligent watermark removal task.
+ * @method RemoveWaterMarkTaskOutput getOutput() Obtain Output of the intelligent watermark removal task.
+ * @method void setOutput(RemoveWaterMarkTaskOutput $Output) Set Output of the intelligent watermark removal task.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  */
 class RemoveWatermarkTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer 
+     * @var integer Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>70000: internal service error. Retry is recommended.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var RemoveWaterMarkTaskInput 
+     * @var RemoveWaterMarkTaskInput Input of the intelligent watermark removal task.
      */
     public $Input;
 
     /**
-     * @var RemoveWaterMarkTaskOutput 
+     * @var RemoveWaterMarkTaskOutput Output of the intelligent watermark removal task.
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param string $ErrCodeExt 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param RemoveWaterMarkTaskInput $Input 
-     * @param RemoveWaterMarkTaskOutput $Output 
-     * @param string $SessionId 
-     * @param string $SessionContext 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>70000: internal service error. Retry is recommended.</li>
+     * @param string $Message Error message.
+     * @param RemoveWaterMarkTaskInput $Input Input of the intelligent watermark removal task.
+     * @param RemoveWaterMarkTaskOutput $Output Output of the intelligent watermark removal task.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     function __construct()
     {

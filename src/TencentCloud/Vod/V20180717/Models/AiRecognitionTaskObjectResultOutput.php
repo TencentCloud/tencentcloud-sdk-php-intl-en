@@ -18,36 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent object recognition output.
  *
- * @method array getResultSet() Obtain 
- * @method void setResultSet(array $ResultSet) Set 
- * @method string getResultSetFileUrl() Obtain 
- * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set 
- * @method string getResultSetFileUrlExpireTime() Obtain 
- * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set 
+ * @method array getResultSet() Obtain Intelligent object recognition result set.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+ * @method void setResultSet(array $ResultSet) Set Intelligent object recognition result set.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+ * @method string getResultSetFileUrl() Obtain URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
+ * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
+ * @method string getResultSetFileUrlExpireTime() Obtain Expiration time of the intelligent object recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set Expiration time of the intelligent object recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiRecognitionTaskObjectResultOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Intelligent object recognition result set.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
      */
     public $ResultSet;
 
     /**
-     * @var string 
+     * @var string URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
      */
     public $ResultSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the intelligent object recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ResultSetFileUrlExpireTime;
 
     /**
-     * @param array $ResultSet 
-     * @param string $ResultSetFileUrl 
-     * @param string $ResultSetFileUrlExpireTime 
+     * @param array $ResultSet Intelligent object recognition result set.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+     * @param string $ResultSetFileUrl URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
+     * @param string $ResultSetFileUrlExpireTime Expiration time of the intelligent object recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

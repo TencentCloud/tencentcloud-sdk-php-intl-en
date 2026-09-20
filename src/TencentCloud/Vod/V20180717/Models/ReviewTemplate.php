@@ -18,68 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Moderation template details
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method array getLabels() Obtain 
- * @method void setLabels(array $Labels) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method integer getDefinition() Obtain Unique tag of the moderation template.
+ * @method void setDefinition(integer $Definition) Set Unique tag of the moderation template.
+ * @method string getName() Obtain Template Name
+ * @method void setName(string $Name) Set Template Name
+ * @method string getComment() Obtain Template description information.
+ * @method void setComment(string $Comment) Set Template description information.
+ * @method string getType() Obtain Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+ * @method void setType(string $Type) Set Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+ * @method array getLabels() Obtain List of violation labels that need to return.
+ * @method void setLabels(array $Labels) Set List of violation labels that need to return.
+ * @method string getCreateTime() Obtain Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class ReviewTemplate extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique tag of the moderation template.
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Template Name
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Template description information.
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @var array 
+     * @var array List of violation labels that need to return.
      */
     public $Labels;
 
     /**
-     * @var string 
+     * @var string Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param string $Type 
-     * @param array $Labels 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
+     * @param integer $Definition Unique tag of the moderation template.
+     * @param string $Name Template Name
+     * @param string $Comment Template description information.
+     * @param string $Type Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+     * @param array $Labels List of violation labels that need to return.
+     * @param string $CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -20,82 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRoundPlay request structure.
  *
- * @method string getRoundPlayId() Obtain 
- * @method void setRoundPlayId(string $RoundPlayId) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method array getRoundPlaylist() Obtain 
- * @method void setRoundPlaylist(array $RoundPlaylist) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDesc() Obtain 
- * @method void setDesc(string $Desc) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getPlayBackMode() Obtain 
- * @method void setPlayBackMode(string $PlayBackMode) Set 
- * @method string getExpiredTime() Obtain 
- * @method void setExpiredTime(string $ExpiredTime) Set 
+ * @method string getRoundPlayId() Obtain Unique identifier of the carousel playlist.
+ * @method void setRoundPlayId(string $RoundPlayId) Set Unique identifier of the carousel playlist.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getStartTime() Obtain Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setStartTime(string $StartTime) Set Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method array getRoundPlaylist() Obtain Carousel list.
+<li>Array length limit: 100.</li>
+ * @method void setRoundPlaylist(array $RoundPlaylist) Set Carousel list.
+<li>Array length limit: 100.</li>
+ * @method string getName() Obtain Carousel playbill name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Carousel playbill name. Length limit: 64 characters.
+ * @method string getDesc() Obtain Carousel playlist description, with a length limit of 256 characters.
+ * @method void setDesc(string $Desc) Set Carousel playlist description, with a length limit of 256 characters.
+ * @method string getStatus() Obtain Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
+ * @method void setStatus(string $Status) Set Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
+ * @method string getPlayBackMode() Obtain Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
+ * @method void setPlayBackMode(string $PlayBackMode) Set Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
+ * @method string getExpiredTime() Obtain Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
  */
 class ModifyRoundPlayRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Unique identifier of the carousel playlist.
      */
     public $RoundPlayId;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $StartTime;
 
     /**
-     * @var array 
+     * @var array Carousel list.
+<li>Array length limit: 100.</li>
      */
     public $RoundPlaylist;
 
     /**
-     * @var string 
+     * @var string Carousel playbill name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Carousel playlist description, with a length limit of 256 characters.
      */
     public $Desc;
 
     /**
-     * @var string 
+     * @var string Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
      */
     public $PlayBackMode;
 
     /**
-     * @var string 
+     * @var string Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
      */
     public $ExpiredTime;
 
     /**
-     * @param string $RoundPlayId 
-     * @param integer $SubAppId 
-     * @param string $StartTime 
-     * @param array $RoundPlaylist 
-     * @param string $Name 
-     * @param string $Desc 
-     * @param string $Status 
-     * @param string $PlayBackMode 
-     * @param string $ExpiredTime 
+     * @param string $RoundPlayId Unique identifier of the carousel playlist.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $StartTime Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param array $RoundPlaylist Carousel list.
+<li>Array length limit: 100.</li>
+     * @param string $Name Carousel playbill name. Length limit: 64 characters.
+     * @param string $Desc Carousel playlist description, with a length limit of 256 characters.
+     * @param string $Status Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
+     * @param string $PlayBackMode Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
+     * @param string $ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
      */
     function __construct()
     {

@@ -18,28 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face enhancement control
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method float getIntensity() Obtain 
- * @method void setIntensity(float $Intensity) Set 
+ * @method string getSwitch() Obtain Face enhancement control switch. Available values:
+<li>ON: enable face enhancement</li>
+<li>OFF: disables face enhancement</li>
+ * @method void setSwitch(string $Switch) Set Face enhancement control switch. Available values:
+<li>ON: enable face enhancement</li>
+<li>OFF: disables face enhancement</li>
+ * @method float getIntensity() Obtain Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
+ * @method void setIntensity(float $Intensity) Set Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
  */
 class FaceEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Face enhancement control switch. Available values:
+<li>ON: enable face enhancement</li>
+<li>OFF: disables face enhancement</li>
      */
     public $Switch;
 
     /**
-     * @var float 
+     * @var float Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     public $Intensity;
 
     /**
-     * @param string $Switch 
-     * @param float $Intensity 
+     * @param string $Switch Face enhancement control switch. Available values:
+<li>ON: enable face enhancement</li>
+<li>OFF: disables face enhancement</li>
+     * @param float $Intensity Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     function __construct()
     {

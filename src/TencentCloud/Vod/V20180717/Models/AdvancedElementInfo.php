@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom entity information
  *
- * @method string getElementId() Obtain 
- * @method void setElementId(string $ElementId) Set 
- * @method string getElementInfo() Obtain 
- * @method void setElementInfo(string $ElementInfo) Set 
+ * @method string getElementId() Obtain <p>Entity ID.</p>
+ * @method void setElementId(string $ElementId) Set <p>Entity ID.</p>
+ * @method string getElementInfo() Obtain <p>Entity information.</p>
+ * @method void setElementInfo(string $ElementInfo) Set <p>Entity information.</p>
  */
 class AdvancedElementInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Entity ID.</p>
      */
     public $ElementId;
 
     /**
-     * @var string 
+     * @var string <p>Entity information.</p>
      */
     public $ElementInfo;
 
     /**
-     * @param string $ElementId 
-     * @param string $ElementInfo 
+     * @param string $ElementId <p>Entity ID.</p>
+     * @param string $ElementInfo <p>Entity information.</p>
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
  * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
- * @method string getTemplateType() Obtain <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
- * @method void setTemplateType(string $TemplateType) Set <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
+ * @method string getTemplateType() Obtain <p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
+ * @method void setTemplateType(string $TemplateType) Set <p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
  * @method integer getDefinition() Obtain <p>Unique identifier of the MPS task template.</p>
  * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the MPS task template.</p>
  */
@@ -35,7 +35,7 @@ class DeleteMPSTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
+     * @var string <p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
      */
     public $TemplateType;
 
@@ -46,7 +46,7 @@ class DeleteMPSTemplateRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
-     * @param string $TemplateType <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
+     * @param string $TemplateType <p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
      * @param integer $Definition <p>Unique identifier of the MPS task template.</p>
      */
     function __construct()

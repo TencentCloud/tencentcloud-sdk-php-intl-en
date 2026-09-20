@@ -18,288 +18,200 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * General liscense information.
+ * General card certificate information
  *
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPersonalNumber() Obtain Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPersonalNumber(string $PersonalNumber) Set Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPassportCodeFirst() Obtain The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassportCodeFirst(string $PassportCodeFirst) Set The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPassportCodeSecond() Obtain The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassportCodeSecond(string $PassportCodeSecond) Set The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpirationDate() Obtain Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpirationDate(string $ExpirationDate) Set Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDueDate() Obtain Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDueDate(string $DueDate) Set Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedDate() Obtain Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedDate(string $IssuedDate) Set Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain ID number
+ * @method void setLicenseNumber(string $LicenseNumber) Set ID number
+ * @method string getPersonalNumber() Obtain Personal number. It is returned when the identity document type is a passport.
+ * @method void setPersonalNumber(string $PersonalNumber) Set Personal number. It is returned when the identity document type is a passport.
+ * @method string getPassportCodeFirst() Obtain MRZ line 1 of the passport
+ * @method void setPassportCodeFirst(string $PassportCodeFirst) Set MRZ line 1 of the passport
+ * @method string getPassportCodeSecond() Obtain MRZ line 2 of the passport
+ * @method void setPassportCodeSecond(string $PassportCodeSecond) Set MRZ line 2 of the passport
+ * @method string getExpirationDate() Obtain Expiration date in YYYY-MM-DD format
+ * @method void setExpirationDate(string $ExpirationDate) Set Expiration date in YYYY-MM-DD format
+ * @method string getDueDate() Obtain Expiration date in YYYY-MM-DD format
+ * @method void setDueDate(string $DueDate) Set Expiration date in YYYY-MM-DD format
+ * @method string getIssuedDate() Obtain Issue date in YYYY-MM-DD format
+ * @method void setIssuedDate(string $IssuedDate) Set Issue date in YYYY-MM-DD format
  * @method string getIssuedAuthority() Obtain Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIssuedAuthority(string $IssuedAuthority) Set Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedCountry() Obtain Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
- * @method void setIssuedCountry(string $IssuedCountry) Set Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
- * @method string getFullName() Obtain Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullName(string $FullName) Set Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstName(string $FirstName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIssuedCountry() Obtain Issuing country. Return following the ISO 3166 country coding specification.
+ * @method void setIssuedCountry(string $IssuedCountry) Set Issuing country. Return following the ISO 3166 country coding specification.
+ * @method string getFullName() Obtain Name
+ * @method void setFullName(string $FullName) Set Name
+ * @method string getFirstName() Obtain Name
+ * @method void setFirstName(string $FirstName) Set Name
  * @method string getLastName() Obtain Last name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastName(string $LastName) Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
- * @method void setSex(string $Sex) Set Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
- * @method string getAge() Obtain Age. 0 indicates that no valid information is obtained.
-Example: 0
- * @method void setAge(string $Age) Set Age. 0 indicates that no valid information is obtained.
-Example: 0
- * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSex() Obtain Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
+ * @method void setSex(string $Sex) Set Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
+ * @method string getAge() Obtain Age. 0 indicates no valid info is obtained.
+ * @method void setAge(string $Age) Set Age. 0 indicates no valid info is obtained.
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
  * @method string getBirthPlace() Obtain Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthPlace(string $BirthPlace) Set Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNationality() Obtain Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
- * @method void setNationality(string $Nationality) Set Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+ * @method string getNationality() Obtain Document nationality. Return following the ISO 3166 country coding specification.
+ * @method void setNationality(string $Nationality) Set Document nationality. Return following the ISO 3166 country coding specification.
  * @method string getRegistrationNumber() Obtain Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegistrationNumber(string $RegistrationNumber) Set Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method Address getAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(Address $Address) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFullNameLocal() Obtain Localized name.
- * @method void setFullNameLocal(string $FullNameLocal) Set Localized name.
- * @method string getFirstNameLocal() Obtain Localization.
- * @method void setFirstNameLocal(string $FirstNameLocal) Set Localization.
- * @method string getLastNameLocal() Obtain Localized surname.
- * @method void setLastNameLocal(string $LastNameLocal) Set Localized surname.
+ * @method Address getAddress() Obtain Document address information
+ * @method void setAddress(Address $Address) Set Document address information
+ * @method string getFullNameLocal() Obtain Localized name
+ * @method void setFullNameLocal(string $FullNameLocal) Set Localized name
+ * @method string getFirstNameLocal() Obtain Localized name
+ * @method void setFirstNameLocal(string $FirstNameLocal) Set Localized name
+ * @method string getLastNameLocal() Obtain Localized last name
+ * @method void setLastNameLocal(string $LastNameLocal) Set Localized last name
  */
 class GeneralCard extends AbstractModel
 {
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID number
      */
     public $LicenseNumber;
 
     /**
-     * @var string Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Personal number. It is returned when the identity document type is a passport.
      */
     public $PersonalNumber;
 
     /**
-     * @var string The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string MRZ line 1 of the passport
      */
     public $PassportCodeFirst;
 
     /**
-     * @var string The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string MRZ line 2 of the passport
      */
     public $PassportCodeSecond;
 
     /**
-     * @var string Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Expiration date in YYYY-MM-DD format
      */
     public $ExpirationDate;
 
     /**
-     * @var string Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Expiration date in YYYY-MM-DD format
      */
     public $DueDate;
 
     /**
-     * @var string Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Issue date in YYYY-MM-DD format
      */
     public $IssuedDate;
 
     /**
      * @var string Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IssuedAuthority;
 
     /**
-     * @var string Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
+     * @var string Issuing country. Return following the ISO 3166 country coding specification.
      */
     public $IssuedCountry;
 
     /**
-     * @var string Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $FullName;
 
     /**
-     * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $FirstName;
 
     /**
      * @var string Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastName;
 
     /**
-     * @var string Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
+     * @var string Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
      */
     public $Sex;
 
     /**
-     * @var string Age. 0 indicates that no valid information is obtained.
-Example: 0
+     * @var string Age. 0 indicates no valid info is obtained.
      */
     public $Age;
 
     /**
-     * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
      * @var string Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BirthPlace;
 
     /**
-     * @var string Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+     * @var string Document nationality. Return following the ISO 3166 country coding specification.
      */
     public $Nationality;
 
     /**
      * @var string Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegistrationNumber;
 
     /**
-     * @var Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Address Document address information
      */
     public $Address;
 
     /**
-     * @var string Localized name.
+     * @var string Localized name
      */
     public $FullNameLocal;
 
     /**
-     * @var string Localization.
+     * @var string Localized name
      */
     public $FirstNameLocal;
 
     /**
-     * @var string Localized surname.
+     * @var string Localized last name
      */
     public $LastNameLocal;
 
     /**
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PersonalNumber Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PassportCodeFirst The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PassportCodeSecond The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpirationDate Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DueDate Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedDate Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber ID number
+     * @param string $PersonalNumber Personal number. It is returned when the identity document type is a passport.
+     * @param string $PassportCodeFirst MRZ line 1 of the passport
+     * @param string $PassportCodeSecond MRZ line 2 of the passport
+     * @param string $ExpirationDate Expiration date in YYYY-MM-DD format
+     * @param string $DueDate Expiration date in YYYY-MM-DD format
+     * @param string $IssuedDate Issue date in YYYY-MM-DD format
      * @param string $IssuedAuthority Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedCountry Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
-     * @param string $FullName Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IssuedCountry Issuing country. Return following the ISO 3166 country coding specification.
+     * @param string $FullName Name
+     * @param string $FirstName Name
      * @param string $LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
-     * @param string $Age Age. 0 indicates that no valid information is obtained.
-Example: 0
-     * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Sex Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
+     * @param string $Age Age. 0 indicates no valid info is obtained.
+     * @param string $Birthday Date of birth
      * @param string $BirthPlace Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Nationality Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+     * @param string $Nationality Document nationality. Return following the ISO 3166 country coding specification.
      * @param string $RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address $Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FullNameLocal Localized name.
-     * @param string $FirstNameLocal Localization.
-     * @param string $LastNameLocal Localized surname.
+     * @param Address $Address Document address information
+     * @param string $FullNameLocal Localized name
+     * @param string $FirstNameLocal Localized name
+     * @param string $LastNameLocal Localized last name
      */
     function __construct()
     {

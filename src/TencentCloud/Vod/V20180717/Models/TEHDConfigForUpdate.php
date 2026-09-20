@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Top Speed Codec parameter configuration.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getMaxVideoBitrate() Obtain 
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set 
+ * @method string getType() Obtain Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+ * @method void setType(string $Type) Set Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+ * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. If not specified, no modification is made.
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. If not specified, no modification is made.
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Maximum video bitrate. If not specified, no modification is made.
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type 
-     * @param integer $MaxVideoBitrate 
+     * @param string $Type Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+     * @param integer $MaxVideoBitrate Maximum video bitrate. If not specified, no modification is made.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoundPlay request structure.
  *
- * @method string getRoundPlayId() Obtain 
- * @method void setRoundPlayId(string $RoundPlayId) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getRoundPlayId() Obtain Carousel playlist unique identifier.
+ * @method void setRoundPlayId(string $RoundPlayId) Set Carousel playlist unique identifier.
+ * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
  */
 class DeleteRoundPlayRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Carousel playlist unique identifier.
      */
     public $RoundPlayId;
 
     /**
-     * @var integer 
+     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $RoundPlayId 
-     * @param integer $SubAppId 
+     * @param string $RoundPlayId Carousel playlist unique identifier.
+     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

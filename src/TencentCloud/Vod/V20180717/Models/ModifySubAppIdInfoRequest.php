@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySubAppIdInfo request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getName() Obtain Application name, which contains up to 40 characters.
+ * @method void setName(string $Name) Set Application name, which contains up to 40 characters.
+ * @method string getDescription() Obtain Application description. Length limited to 300 characters.
+ * @method void setDescription(string $Description) Set Application description. Length limited to 300 characters.
  */
 class ModifySubAppIdInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Application name, which contains up to 40 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Application description. Length limited to 300 characters.
      */
     public $Description;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Description 
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Name Application name, which contains up to 40 characters.
+     * @param string $Description Application description. Length limited to 300 characters.
      */
     function __construct()
     {

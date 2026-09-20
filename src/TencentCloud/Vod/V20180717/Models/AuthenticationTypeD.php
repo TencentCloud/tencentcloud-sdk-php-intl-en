@@ -27,21 +27,21 @@ md5hash: MD5 (custom key + file path + timestamp).
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
  * @method void setSecretKey(string $SecretKey) Set Key used for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
- * @method integer getExpireTime() Obtain Signature expiration time settings;
+ * @method integer getExpireTime() Obtain Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
- * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time settings;
+ * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
  * @method array getFileExtensions() Obtain List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
  * @method void setFileExtensions(array $FileExtensions) Set List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
  * @method string getFilterType() Obtain whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
  * @method void setFilterType(string $FilterType) Set whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
- * @method string getSignParam() Obtain Signature parameter name settings;
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+ * @method string getSignParam() Obtain Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
- * @method void setSignParam(string $SignParam) Set Signature parameter name settings;
+ * @method void setSignParam(string $SignParam) Set Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
  * @method string getTimeParam() Obtain Timestamp parameter name settings;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
@@ -67,25 +67,25 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     public $SecretKey;
 
     /**
-     * @var integer Signature expiration time settings;
+     * @var integer Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
      */
     public $ExpireTime;
 
     /**
      * @var array List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      */
     public $FileExtensions;
 
     /**
      * @var string whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
      */
     public $FilterType;
 
     /**
-     * @var string Signature parameter name settings;
+     * @var string Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
      */
     public $SignParam;
@@ -112,13 +112,13 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     /**
      * @param string $SecretKey Key used for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
-     * @param integer $ExpireTime Signature expiration time settings;
+     * @param integer $ExpireTime Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
      * @param array $FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      * @param string $FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
-     * @param string $SignParam Signature parameter name settings;
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+     * @param string $SignParam Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
      * @param string $TimeParam Timestamp parameter name settings;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.

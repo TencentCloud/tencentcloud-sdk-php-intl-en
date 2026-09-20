@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Origin server configuration
  *
  * @method array getOrigins() Obtain Primary origin server list.
 When modifying the primary origin server, fill in the corresponding OriginType at the same time.
  * @method void setOrigins(array $Origins) Set Primary origin server list.
 When modifying the primary origin server, fill in the corresponding OriginType at the same time.
- * @method string getOriginType() Obtain Primary origin server type. The input parameter supports the following types:
+ * @method string getOriginType() Obtain Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
- * @method void setOriginType(string $OriginType) Set Primary origin server type. The input parameter supports the following types:
+ * @method void setOriginType(string $OriginType) Set Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
- * @method string getServerName() Obtain Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+ * @method string getServerName() Obtain Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
- * @method void setServerName(string $ServerName) Set Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+ * @method void setServerName(string $ServerName) Set Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
- * @method string getOriginPullProtocol() Obtain Origin-pull protocol configuration:
+ * @method string getOriginPullProtocol() Obtain Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
- * @method void setOriginPullProtocol(string $OriginPullProtocol) Set Origin-pull protocol configuration:
+ * @method void setOriginPullProtocol(string $OriginPullProtocol) Set Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
  * @method array getBackupOrigins() Obtain Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
  * @method void setBackupOrigins(array $BackupOrigins) Set Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
  * @method string getBackupOriginType() Obtain Secondary origin type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
@@ -56,14 +56,14 @@ When modifying the standby origin server, fill in the corresponding OriginType a
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
- * @method string getBackupServerName() Obtain 
- * @method void setBackupServerName(string $BackupServerName) Set 
- * @method string getOriginCompany() Obtain Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+ * @method string getBackupServerName() Obtain Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+ * @method void setBackupServerName(string $BackupServerName) Set Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+ * @method string getOriginCompany() Obtain Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
 <li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
- * @method void setOriginCompany(string $OriginCompany) Set Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+ * @method void setOriginCompany(string $OriginCompany) Set Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
@@ -78,7 +78,7 @@ When modifying the primary origin server, fill in the corresponding OriginType a
     public $Origins;
 
     /**
-     * @var string Primary origin server type. The input parameter supports the following types:
+     * @var string Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -86,13 +86,13 @@ When modifying the primary origin server, fill in the corresponding OriginType a
     public $OriginType;
 
     /**
-     * @var string Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+     * @var string Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
      */
     public $ServerName;
 
     /**
-     * @var string Origin-pull protocol configuration:
+     * @var string Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -101,7 +101,7 @@ When the origin server type is COS, the ServerName field is required.
 
     /**
      * @var array Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
      */
     public $BackupOrigins;
 
@@ -114,12 +114,12 @@ When modifying the standby origin server, fill in the corresponding OriginType a
     public $BackupOriginType;
 
     /**
-     * @var string 
+     * @var string Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
      */
     public $BackupServerName;
 
     /**
-     * @var string Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+     * @var string Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
@@ -130,24 +130,24 @@ When modifying the standby origin server, fill in the corresponding OriginType a
     /**
      * @param array $Origins Primary origin server list.
 When modifying the primary origin server, fill in the corresponding OriginType at the same time.
-     * @param string $OriginType Primary origin server type. The input parameter supports the following types:
+     * @param string $OriginType Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
-     * @param string $ServerName Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+     * @param string $ServerName Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
-     * @param string $OriginPullProtocol Origin-pull protocol configuration:
+     * @param string $OriginPullProtocol Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
      * @param array $BackupOrigins Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
      * @param string $BackupOriginType Secondary origin type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
-     * @param string $BackupServerName 
-     * @param string $OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+     * @param string $BackupServerName Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+     * @param string $OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>

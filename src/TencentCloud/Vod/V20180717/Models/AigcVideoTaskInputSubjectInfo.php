@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AIGC subject input information.
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
- * @method array getImageUrls() Obtain 
- * @method void setImageUrls(array $ImageUrls) Set 
- * @method array getVideoUrls() Obtain 
- * @method void setVideoUrls(array $VideoUrls) Set 
+ * @method string getId() Obtain <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
+ * @method void setId(string $Id) Set <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
+ * @method string getName() Obtain <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
+ * @method void setName(string $Name) Set <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
+ * @method string getVoiceId() Obtain <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
+ * @method array getImageUrls() Obtain <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
+ * @method void setImageUrls(array $ImageUrls) Set <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
+ * @method array getVideoUrls() Obtain <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
+ * @method void setVideoUrls(array $VideoUrls) Set <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
  */
 class AigcVideoTaskInputSubjectInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
      */
     public $VoiceId;
 
     /**
-     * @var array 
+     * @var array <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
      */
     public $ImageUrls;
 
     /**
-     * @var array 
+     * @var array <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
      */
     public $VideoUrls;
 
     /**
-     * @param string $Id 
-     * @param string $Name 
-     * @param string $VoiceId 
-     * @param array $ImageUrls 
-     * @param array $VideoUrls 
+     * @param string $Id <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
+     * @param string $Name <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
+     * @param string $VoiceId <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
+     * @param array $ImageUrls <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
+     * @param array $VideoUrls <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
      */
     function __construct()
     {

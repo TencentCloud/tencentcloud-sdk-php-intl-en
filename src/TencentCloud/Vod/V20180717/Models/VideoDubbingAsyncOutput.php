@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of the video dubbing task.
  *
- * @method string getResultUrl() Obtain 
- * @method void setResultUrl(string $ResultUrl) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
+ * @method string getResultUrl() Obtain <p>Dubbing result Url</p>
+ * @method void setResultUrl(string $ResultUrl) Set <p>Dubbing result Url</p>
+ * @method string getFileId() Obtain <p>Dubbing result FileId</p>
+ * @method void setFileId(string $FileId) Set <p>Dubbing result FileId</p>
  */
 class VideoDubbingAsyncOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Dubbing result Url</p>
      */
     public $ResultUrl;
 
     /**
-     * @var string 
+     * @var string <p>Dubbing result FileId</p>
      */
     public $FileId;
 
     /**
-     * @param string $ResultUrl 
-     * @param string $FileId 
+     * @param string $ResultUrl <p>Dubbing result Url</p>
+     * @param string $FileId <p>Dubbing result FileId</p>
      */
     function __construct()
     {

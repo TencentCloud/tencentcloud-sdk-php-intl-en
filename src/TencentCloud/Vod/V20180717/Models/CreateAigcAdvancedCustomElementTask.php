@@ -18,92 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Create custom subject task information.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method CreateAigcAdvancedCustomElementInput getInput() Obtain 
- * @method void setInput(CreateAigcAdvancedCustomElementInput $Input) Set 
- * @method CreateAigcAdvancedCustomElementOutput getOutput() Obtain 
- * @method void setOutput(CreateAigcAdvancedCustomElementOutput $Output) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getTaskId() Obtain <p>Task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
+ * @method string getStatus() Obtain <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
+ * @method void setStatus(string $Status) Set <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
+ * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+ * @method string getErrCodeExt() Obtain <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+ * @method string getMessage() Obtain <p>Error message.</p>
+ * @method void setMessage(string $Message) Set <p>Error message.</p>
+ * @method integer getProgress() Obtain <p>Task progress. Value range: 0–100.</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress. Value range: 0–100.</p>
+ * @method CreateAigcAdvancedCustomElementInput getInput() Obtain <p>Create input information for the AIGC custom subject task.</p>
+ * @method void setInput(CreateAigcAdvancedCustomElementInput $Input) Set <p>Create input information for the AIGC custom subject task.</p>
+ * @method CreateAigcAdvancedCustomElementOutput getOutput() Obtain <p>Create AIGC custom subject task output information.</p>
+ * @method void setOutput(CreateAigcAdvancedCustomElementOutput $Output) Set <p>Create AIGC custom subject task output information.</p>
+ * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
  */
 class CreateAigcAdvancedCustomElementTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var string 
+     * @var string <p>Error message.</p>
      */
     public $Message;
 
     /**
-     * @var integer 
+     * @var integer <p>Task progress. Value range: 0–100.</p>
      */
     public $Progress;
 
     /**
-     * @var CreateAigcAdvancedCustomElementInput 
+     * @var CreateAigcAdvancedCustomElementInput <p>Create input information for the AIGC custom subject task.</p>
      */
     public $Input;
 
     /**
-     * @var CreateAigcAdvancedCustomElementOutput 
+     * @var CreateAigcAdvancedCustomElementOutput <p>Create AIGC custom subject task output information.</p>
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $ErrCodeExt 
-     * @param string $Message 
-     * @param integer $Progress 
-     * @param CreateAigcAdvancedCustomElementInput $Input 
-     * @param CreateAigcAdvancedCustomElementOutput $Output 
-     * @param string $SessionId 
-     * @param string $SessionContext 
+     * @param string $TaskId <p>Task ID.</p>
+     * @param string $Status <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
+     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * @param string $ErrCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+     * @param string $Message <p>Error message.</p>
+     * @param integer $Progress <p>Task progress. Value range: 0–100.</p>
+     * @param CreateAigcAdvancedCustomElementInput $Input <p>Create input information for the AIGC custom subject task.</p>
+     * @param CreateAigcAdvancedCustomElementOutput $Output <p>Create AIGC custom subject task output information.</p>
+     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     function __construct()
     {

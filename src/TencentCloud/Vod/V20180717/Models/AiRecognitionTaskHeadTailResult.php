@@ -18,84 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video start and end recognition result.
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method AiRecognitionTaskHeadTailResultInput getInput() Obtain 
- * @method void setInput(AiRecognitionTaskHeadTailResultInput $Input) Set 
- * @method AiRecognitionTaskHeadTailResultOutput getOutput() Obtain 
- * @method void setOutput(AiRecognitionTaskHeadTailResultOutput $Output) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method AiRecognitionTaskHeadTailResultInput getInput() Obtain Input information for the video start and end recognition task.
+ * @method void setInput(AiRecognitionTaskHeadTailResultInput $Input) Set Input information for the video start and end recognition task.
+ * @method AiRecognitionTaskHeadTailResultOutput getOutput() Obtain Output information of the video opening and closing credits recognition task.
+ * @method void setOutput(AiRecognitionTaskHeadTailResultOutput $Output) Set Output information of the video opening and closing credits recognition task.
+ * @method integer getProgress() Obtain Video start and end recognition task progress, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Video start and end recognition task progress, in the range of [0,100].
+ * @method string getBeginProcessTime() Obtain Start execution time of the video opening and closing credits recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Start execution time of the video opening and closing credits recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiRecognitionTaskHeadTailResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer 
+     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var AiRecognitionTaskHeadTailResultInput 
+     * @var AiRecognitionTaskHeadTailResultInput Input information for the video start and end recognition task.
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskHeadTailResultOutput 
+     * @var AiRecognitionTaskHeadTailResultOutput Output information of the video opening and closing credits recognition task.
      */
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Video start and end recognition task progress, in the range of [0,100].
      */
     public $Progress;
 
     /**
-     * @var string 
+     * @var string Start execution time of the video opening and closing credits recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
     /**
-     * @param string $Status 
-     * @param string $ErrCodeExt 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param AiRecognitionTaskHeadTailResultInput $Input 
-     * @param AiRecognitionTaskHeadTailResultOutput $Output 
-     * @param integer $Progress 
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param string $Message Error message.
+     * @param AiRecognitionTaskHeadTailResultInput $Input Input information for the video start and end recognition task.
+     * @param AiRecognitionTaskHeadTailResultOutput $Output Output information of the video opening and closing credits recognition task.
+     * @param integer $Progress Video start and end recognition task progress, in the range of [0,100].
+     * @param string $BeginProcessTime Start execution time of the video opening and closing credits recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

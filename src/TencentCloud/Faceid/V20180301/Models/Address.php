@@ -18,92 +18,92 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Overseas Document Address
+ * Overseas document address
  *
- * @method string getCountry() Obtain Nationality.
- * @method void setCountry(string $Country) Set Nationality.
- * @method string getPostalCode() Obtain Post code.
- * @method void setPostalCode(string $PostalCode) Set Post code.
- * @method string getSubdivision() Obtain Subregion.
- * @method void setSubdivision(string $Subdivision) Set Subregion.
- * @method string getCity() Obtain City.
- * @method void setCity(string $City) Set City.
- * @method string getFormattedAddress() Obtain Complete address.
- * @method void setFormattedAddress(string $FormattedAddress) Set Complete address.
- * @method string getLineOne() Obtain The first line of address.
- * @method void setLineOne(string $LineOne) Set The first line of address.
- * @method string getLineTwo() Obtain The second line of address.
- * @method void setLineTwo(string $LineTwo) Set The second line of address.
- * @method string getLineThree() Obtain The third line of address.
- * @method void setLineThree(string $LineThree) Set The third line of address.
- * @method string getLineFour() Obtain The fourth line of address.
- * @method void setLineFour(string $LineFour) Set The fourth line of address.
- * @method string getLineFive() Obtain The fifth line of address.
- * @method void setLineFive(string $LineFive) Set The fifth line of address.
+ * @method string getCountry() Obtain Country
+ * @method void setCountry(string $Country) Set Country
+ * @method string getPostalCode() Obtain Postal code
+ * @method void setPostalCode(string $PostalCode) Set Postal code
+ * @method string getSubdivision() Obtain Sub-region
+ * @method void setSubdivision(string $Subdivision) Set Sub-region
+ * @method string getCity() Obtain city
+ * @method void setCity(string $City) Set city
+ * @method string getFormattedAddress() Obtain Complete address
+ * @method void setFormattedAddress(string $FormattedAddress) Set Complete address
+ * @method string getLineOne() Obtain First line of the address bar
+ * @method void setLineOne(string $LineOne) Set First line of the address bar
+ * @method string getLineTwo() Obtain Second line of the address bar
+ * @method void setLineTwo(string $LineTwo) Set Second line of the address bar
+ * @method string getLineThree() Obtain Third line of the address bar
+ * @method void setLineThree(string $LineThree) Set Third line of the address bar
+ * @method string getLineFour() Obtain Fourth line of the address bar
+ * @method void setLineFour(string $LineFour) Set Fourth line of the address bar
+ * @method string getLineFive() Obtain Fifth line of the address bar
+ * @method void setLineFive(string $LineFive) Set Fifth line of the address bar
  */
 class Address extends AbstractModel
 {
     /**
-     * @var string Nationality.
+     * @var string Country
      */
     public $Country;
 
     /**
-     * @var string Post code.
+     * @var string Postal code
      */
     public $PostalCode;
 
     /**
-     * @var string Subregion.
+     * @var string Sub-region
      */
     public $Subdivision;
 
     /**
-     * @var string City.
+     * @var string city
      */
     public $City;
 
     /**
-     * @var string Complete address.
+     * @var string Complete address
      */
     public $FormattedAddress;
 
     /**
-     * @var string The first line of address.
+     * @var string First line of the address bar
      */
     public $LineOne;
 
     /**
-     * @var string The second line of address.
+     * @var string Second line of the address bar
      */
     public $LineTwo;
 
     /**
-     * @var string The third line of address.
+     * @var string Third line of the address bar
      */
     public $LineThree;
 
     /**
-     * @var string The fourth line of address.
+     * @var string Fourth line of the address bar
      */
     public $LineFour;
 
     /**
-     * @var string The fifth line of address.
+     * @var string Fifth line of the address bar
      */
     public $LineFive;
 
     /**
-     * @param string $Country Nationality.
-     * @param string $PostalCode Post code.
-     * @param string $Subdivision Subregion.
-     * @param string $City City.
-     * @param string $FormattedAddress Complete address.
-     * @param string $LineOne The first line of address.
-     * @param string $LineTwo The second line of address.
-     * @param string $LineThree The third line of address.
-     * @param string $LineFour The fourth line of address.
-     * @param string $LineFive The fifth line of address.
+     * @param string $Country Country
+     * @param string $PostalCode Postal code
+     * @param string $Subdivision Sub-region
+     * @param string $City city
+     * @param string $FormattedAddress Complete address
+     * @param string $LineOne First line of the address bar
+     * @param string $LineTwo Second line of the address bar
+     * @param string $LineThree Third line of the address bar
+     * @param string $LineFour Fourth line of the address bar
+     * @param string $LineFive Fifth line of the address bar
      */
     function __construct()
     {

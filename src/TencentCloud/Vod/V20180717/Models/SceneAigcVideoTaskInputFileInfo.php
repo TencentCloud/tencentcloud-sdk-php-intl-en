@@ -18,36 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input file info of a scenario-based AIGC image generation task
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getType() Obtain Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+ * @method void setType(string $Type) Set Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+ * @method string getFileId() Obtain Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
+ * @method void setFileId(string $FileId) Set Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
+ * @method string getUrl() Obtain Accessible file URL. This parameter is valid when Type is Url.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
+ * @method void setUrl(string $Url) Set Accessible file URL. This parameter is valid when Type is Url.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
  */
 class SceneAigcVideoTaskInputFileInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Accessible file URL. This parameter is valid when Type is Url.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
      */
     public $Url;
 
     /**
-     * @param string $Type 
-     * @param string $FileId 
-     * @param string $Url 
+     * @param string $Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+     * @param string $FileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
+     * @param string $Url Accessible file URL. This parameter is valid when Type is Url.
+Description:
+1. An image less than 7 MB is recommended;
+2. Image format. Valid values: jpeg, jpg, png, and webp.
      */
     function __construct()
     {

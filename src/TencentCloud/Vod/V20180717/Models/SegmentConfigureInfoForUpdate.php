@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameter of the video splitting recognition task
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Video splitting recognition task switch. Value range:
+<li>ON: enable the intelligent video splitting recognition task;</li>
+<li>OFF: Disable the intelligent video splitting recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Video splitting recognition task switch. Value range:
+<li>ON: enable the intelligent video splitting recognition task;</li>
+<li>OFF: Disable the intelligent video splitting recognition task.</li>
  */
 class SegmentConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video splitting recognition task switch. Value range:
+<li>ON: enable the intelligent video splitting recognition task;</li>
+<li>OFF: Disable the intelligent video splitting recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Video splitting recognition task switch. Value range:
+<li>ON: enable the intelligent video splitting recognition task;</li>
+<li>OFF: Disable the intelligent video splitting recognition task.</li>
      */
     function __construct()
     {

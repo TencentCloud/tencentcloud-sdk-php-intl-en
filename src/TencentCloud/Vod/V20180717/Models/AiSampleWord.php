@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AI sample management, keyword output information.
  *
- * @method string getKeyword() Obtain 
- * @method void setKeyword(string $Keyword) Set 
- * @method array getTagSet() Obtain 
- * @method void setTagSet(array $TagSet) Set 
- * @method array getUsageSet() Obtain 
- * @method void setUsageSet(array $UsageSet) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method string getKeyword() Obtain <p>Keyword.</p>
+ * @method void setKeyword(string $Keyword) Set <p>Keyword.</p>
+ * @method array getTagSet() Obtain <p>Keyword tag.</p>
+ * @method void setTagSet(array $TagSet) Set <p>Keyword tag.</p>
+ * @method array getUsageSet() Obtain <p>Keyword application scenario.</p>
+ * @method void setUsageSet(array $UsageSet) Set <p>Keyword application scenario.</p>
+ * @method string getCreateTime() Obtain <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  */
 class AiSampleWord extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Keyword.</p>
      */
     public $Keyword;
 
     /**
-     * @var array 
+     * @var array <p>Keyword tag.</p>
      */
     public $TagSet;
 
     /**
-     * @var array 
+     * @var array <p>Keyword application scenario.</p>
      */
     public $UsageSet;
 
     /**
-     * @var string 
+     * @var string <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $Keyword 
-     * @param array $TagSet 
-     * @param array $UsageSet 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
+     * @param string $Keyword <p>Keyword.</p>
+     * @param array $TagSet <p>Keyword tag.</p>
+     * @param array $UsageSet <p>Keyword application scenario.</p>
+     * @param string $CreateTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     function __construct()
     {

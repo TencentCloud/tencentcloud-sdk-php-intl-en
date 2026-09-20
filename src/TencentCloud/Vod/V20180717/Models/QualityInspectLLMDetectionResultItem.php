@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Aggregation results of one detection item for the LLM large model in audio and video quality detection.
  *
- * @method string getCategory() Obtain 
- * @method void setCategory(string $Category) Set 
- * @method string getGroup() Obtain 
- * @method void setGroup(string $Group) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method float getScore() Obtain 
- * @method void setScore(float $Score) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method array getIssueSet() Obtain 
- * @method void setIssueSet(array $IssueSet) Set 
+ * @method string getCategory() Obtain <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
+ * @method void setCategory(string $Category) Set <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
+ * @method string getGroup() Obtain <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
+ * @method void setGroup(string $Group) Set <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
+ * @method string getType() Obtain <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
+ * @method void setType(string $Type) Set <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
+ * @method float getScore() Obtain <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
+ * @method void setScore(float $Score) Set <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
+ * @method float getConfidence() Obtain <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
+ * @method void setConfidence(float $Confidence) Set <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
+ * @method array getIssueSet() Obtain <p>List of issues detected. This is empty if no issue is detected.</p>
+ * @method void setIssueSet(array $IssueSet) Set <p>List of issues detected. This is empty if no issue is detected.</p>
  */
 class QualityInspectLLMDetectionResultItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
      */
     public $Category;
 
     /**
-     * @var string 
+     * @var string <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
      */
     public $Group;
 
     /**
-     * @var string 
+     * @var string <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
      */
     public $Type;
 
     /**
-     * @var float 
+     * @var float <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
      */
     public $Score;
 
     /**
-     * @var float 
+     * @var float <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
      */
     public $Confidence;
 
     /**
-     * @var array 
+     * @var array <p>List of issues detected. This is empty if no issue is detected.</p>
      */
     public $IssueSet;
 
     /**
-     * @param string $Category 
-     * @param string $Group 
-     * @param string $Type 
-     * @param float $Score 
-     * @param float $Confidence 
-     * @param array $IssueSet 
+     * @param string $Category <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
+     * @param string $Group <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
+     * @param string $Type <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
+     * @param float $Score <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
+     * @param float $Confidence <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
+     * @param array $IssueSet <p>List of issues detected. This is empty if no issue is detected.</p>
      */
     function __construct()
     {

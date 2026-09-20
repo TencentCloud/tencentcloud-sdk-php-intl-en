@@ -18,28 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Artifact (burr) removal control information
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
+ * @method void setSwitch(string $Switch) Set Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
+ * @method string getType() Obtain Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
+ * @method void setType(string $Type) Set Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
  */
 class ArtifactRepairInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
+     * @param string $Type Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
      */
     function __construct()
     {

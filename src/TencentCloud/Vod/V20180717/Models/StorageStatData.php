@@ -18,60 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Partition stats of VOD storage usage
  *
- * @method string getArea() Obtain 
- * @method void setArea(string $Area) Set 
- * @method integer getTotalStorage() Obtain 
- * @method void setTotalStorage(integer $TotalStorage) Set 
- * @method integer getInfrequentStorage() Obtain 
- * @method void setInfrequentStorage(integer $InfrequentStorage) Set 
- * @method integer getStandardStorage() Obtain 
- * @method void setStandardStorage(integer $StandardStorage) Set 
- * @method integer getArchiveStorage() Obtain 
- * @method void setArchiveStorage(integer $ArchiveStorage) Set 
- * @method integer getDeepArchiveStorage() Obtain 
- * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) Set 
+ * @method string getArea() Obtain Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+ * @method void setArea(string $Area) Set Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+ * @method integer getTotalStorage() Obtain Current total storage capacity, in bytes.
+ * @method void setTotalStorage(integer $TotalStorage) Set Current total storage capacity, in bytes.
+ * @method integer getInfrequentStorage() Obtain Current infrequent access storage capacity, in bytes.
+ * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current infrequent access storage capacity, in bytes.
+ * @method integer getStandardStorage() Obtain Current standard storage capacity, in bytes.
+ * @method void setStandardStorage(integer $StandardStorage) Set Current standard storage capacity, in bytes.
+ * @method integer getArchiveStorage() Obtain Current archive storage capacity, in bytes.
+ * @method void setArchiveStorage(integer $ArchiveStorage) Set Current archive storage capacity, in bytes.
+ * @method integer getDeepArchiveStorage() Obtain Current deep archive storage capacity, in bytes.
+ * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) Set Current deep archive storage capacity, in bytes.
  */
 class StorageStatData extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
      */
     public $Area;
 
     /**
-     * @var integer 
+     * @var integer Current total storage capacity, in bytes.
      */
     public $TotalStorage;
 
     /**
-     * @var integer 
+     * @var integer Current infrequent access storage capacity, in bytes.
      */
     public $InfrequentStorage;
 
     /**
-     * @var integer 
+     * @var integer Current standard storage capacity, in bytes.
      */
     public $StandardStorage;
 
     /**
-     * @var integer 
+     * @var integer Current archive storage capacity, in bytes.
      */
     public $ArchiveStorage;
 
     /**
-     * @var integer 
+     * @var integer Current deep archive storage capacity, in bytes.
      */
     public $DeepArchiveStorage;
 
     /**
-     * @param string $Area 
-     * @param integer $TotalStorage 
-     * @param integer $InfrequentStorage 
-     * @param integer $StandardStorage 
-     * @param integer $ArchiveStorage 
-     * @param integer $DeepArchiveStorage 
+     * @param string $Area Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+     * @param integer $TotalStorage Current total storage capacity, in bytes.
+     * @param integer $InfrequentStorage Current infrequent access storage capacity, in bytes.
+     * @param integer $StandardStorage Current standard storage capacity, in bytes.
+     * @param integer $ArchiveStorage Current archive storage capacity, in bytes.
+     * @param integer $DeepArchiveStorage Current deep archive storage capacity, in bytes.
      */
     function __construct()
     {

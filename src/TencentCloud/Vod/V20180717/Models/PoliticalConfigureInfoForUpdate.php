@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameters for authentication involving inappropriate information.
  *
- * @method PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain 
- * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set 
- * @method PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain 
- * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set 
- * @method PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain 
- * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set 
+ * @method PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameters for image recognition involving inappropriate information.
+ * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameters for image recognition involving inappropriate information.
+ * @method PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameters for ASR-based recognition involving inappropriate information.
+ * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameters for ASR-based recognition involving inappropriate information.
+ * @method PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameters for text recognition involving inappropriate information.
+ * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameters for text recognition involving inappropriate information.
  */
 class PoliticalConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var PoliticalImgReviewTemplateInfoForUpdate 
+     * @var PoliticalImgReviewTemplateInfoForUpdate Control parameters for image recognition involving inappropriate information.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PoliticalAsrReviewTemplateInfoForUpdate 
+     * @var PoliticalAsrReviewTemplateInfoForUpdate Control parameters for ASR-based recognition involving inappropriate information.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PoliticalOcrReviewTemplateInfoForUpdate 
+     * @var PoliticalOcrReviewTemplateInfoForUpdate Control parameters for text recognition involving inappropriate information.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo 
-     * @param PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo 
-     * @param PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo 
+     * @param PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameters for image recognition involving inappropriate information.
+     * @param PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+     * @param PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo Control parameters for text recognition involving inappropriate information.
      */
     function __construct()
     {

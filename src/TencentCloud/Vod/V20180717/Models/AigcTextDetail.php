@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AIGC-generated text detail
  *
- * @method integer getPageSize() Obtain 
- * @method void setPageSize(integer $PageSize) Set 
- * @method string getScrollToken() Obtain 
- * @method void setScrollToken(string $ScrollToken) Set 
- * @method array getData() Obtain 
- * @method void setData(array $Data) Set 
+ * @method integer getPageSize() Obtain <p>Entries per page</p>
+ * @method void setPageSize(integer $PageSize) Set <p>Entries per page</p>
+ * @method string getScrollToken() Obtain <p>scroll_token returned in the previous page response, used for turning to the next page</p>
+ * @method void setScrollToken(string $ScrollToken) Set <p>scroll_token returned in the previous page response, used for turning to the next page</p>
+ * @method array getData() Obtain <p>Text generation details</p>
+ * @method void setData(array $Data) Set <p>Text generation details</p>
  */
 class AigcTextDetail extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Entries per page</p>
      */
     public $PageSize;
 
     /**
-     * @var string 
+     * @var string <p>scroll_token returned in the previous page response, used for turning to the next page</p>
      */
     public $ScrollToken;
 
     /**
-     * @var array 
+     * @var array <p>Text generation details</p>
      */
     public $Data;
 
     /**
-     * @param integer $PageSize 
-     * @param string $ScrollToken 
-     * @param array $Data 
+     * @param integer $PageSize <p>Entries per page</p>
+     * @param string $ScrollToken <p>scroll_token returned in the previous page response, used for turning to the next page</p>
+     * @param array $Data <p>Text generation details</p>
      */
     function __construct()
     {

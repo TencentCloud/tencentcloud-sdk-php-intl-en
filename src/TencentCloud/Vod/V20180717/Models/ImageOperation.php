@@ -18,44 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * One image processing operation.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method ImageScale getScale() Obtain 
- * @method void setScale(ImageScale $Scale) Set 
- * @method ImageCenterCut getCenterCut() Obtain 
- * @method void setCenterCut(ImageCenterCut $CenterCut) Set 
- * @method ImageBlur getBlur() Obtain 
- * @method void setBlur(ImageBlur $Blur) Set 
+ * @method string getType() Obtain Image processing type. Optional types:
+<li>Scale: Image thumbnail processing;</li>
+<li>CenterCut: image cropping;</li>
+<li>Blur: fuzzily process an image.</li>
+ * @method void setType(string $Type) Set Image processing type. Optional types:
+<li>Scale: Image thumbnail processing;</li>
+<li>CenterCut: image cropping;</li>
+<li>Blur: fuzzily process an image.</li>
+ * @method ImageScale getScale() Obtain Image thumbnail processing. This parameter is valid only when Type is Scale.
+ * @method void setScale(ImageScale $Scale) Set Image thumbnail processing. This parameter is valid only when Type is Scale.
+ * @method ImageCenterCut getCenterCut() Obtain Image cropping. Valid only when Type is CenterCut.
+ * @method void setCenterCut(ImageCenterCut $CenterCut) Set Image cropping. Valid only when Type is CenterCut.
+ * @method ImageBlur getBlur() Obtain Blur the image. This parameter is valid only when Type is Blur.
+ * @method void setBlur(ImageBlur $Blur) Set Blur the image. This parameter is valid only when Type is Blur.
  */
 class ImageOperation extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Image processing type. Optional types:
+<li>Scale: Image thumbnail processing;</li>
+<li>CenterCut: image cropping;</li>
+<li>Blur: fuzzily process an image.</li>
      */
     public $Type;
 
     /**
-     * @var ImageScale 
+     * @var ImageScale Image thumbnail processing. This parameter is valid only when Type is Scale.
      */
     public $Scale;
 
     /**
-     * @var ImageCenterCut 
+     * @var ImageCenterCut Image cropping. Valid only when Type is CenterCut.
      */
     public $CenterCut;
 
     /**
-     * @var ImageBlur 
+     * @var ImageBlur Blur the image. This parameter is valid only when Type is Blur.
      */
     public $Blur;
 
     /**
-     * @param string $Type 
-     * @param ImageScale $Scale 
-     * @param ImageCenterCut $CenterCut 
-     * @param ImageBlur $Blur 
+     * @param string $Type Image processing type. Optional types:
+<li>Scale: Image thumbnail processing;</li>
+<li>CenterCut: image cropping;</li>
+<li>Blur: fuzzily process an image.</li>
+     * @param ImageScale $Scale Image thumbnail processing. This parameter is valid only when Type is Scale.
+     * @param ImageCenterCut $CenterCut Image cropping. Valid only when Type is CenterCut.
+     * @param ImageBlur $Blur Blur the image. This parameter is valid only when Type is Blur.
      */
     function __construct()
     {

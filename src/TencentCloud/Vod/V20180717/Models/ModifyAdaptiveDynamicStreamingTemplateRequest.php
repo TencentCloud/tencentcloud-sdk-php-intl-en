@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAdaptiveDynamicStreamingTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method integer getDisableHigherVideoBitrate() Obtain 
- * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set 
- * @method integer getDisableHigherVideoResolution() Obtain 
- * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set 
- * @method array getStreamInfos() Obtain 
- * @method void setStreamInfos(array $StreamInfos) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getSegmentType() Obtain 
- * @method void setSegmentType(string $SegmentType) Set 
- * @method integer getSegmentDuration() Obtain 
- * @method void setSegmentDuration(integer $SegmentDuration) Set 
+ * @method integer getDefinition() Obtain <p>Unique identifier of the adaptive transcoding template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the adaptive transcoding template.</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method string getName() Obtain <p>Template name. Length limit: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Template name. Length limit: 64 characters.</p>
+ * @method string getFormat() Obtain <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
+ * @method void setFormat(string $Format) Set <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
+ * @method integer getDisableHigherVideoBitrate() Obtain <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) Set <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method integer getDisableHigherVideoResolution() Obtain <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) Set <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method array getStreamInfos() Obtain <p>Adaptive transcoding input stream parameter information. Up to 10 streams can be input.<br>Note: The frame rate of each stream must remain consistent. If inconsistent, the frame rate of the first stream is used as the output frame rate.</p>
+ * @method void setStreamInfos(array $StreamInfos) Set <p>Adaptive transcoding input stream parameter information. Up to 10 streams can be input.<br>Note: The frame rate of each stream must remain consistent. If inconsistent, the frame rate of the first stream is used as the output frame rate.</p>
+ * @method string getComment() Obtain <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method string getSegmentType() Obtain <p>Shard type. Available values: <br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the shard format can only be mp4 or mp4-mp4-segment. For DASH, the shard format can only be mp4 or mp4-mp4-byterange. Widevine+FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment.</p>
+ * @method void setSegmentType(string $SegmentType) Set <p>Shard type. Available values: <br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the shard format can only be mp4 or mp4-mp4-segment. For DASH, the shard format can only be mp4 or mp4-mp4-byterange. Widevine+FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment.</p>
+ * @method integer getSegmentDuration() Obtain <p>Average segmentation duration.</p><p>Value range: [1, 10]</p><p>Unit: second</p>
+ * @method void setSegmentDuration(integer $SegmentDuration) Set <p>Average segmentation duration.</p><p>Value range: [1, 10]</p><p>Unit: second</p>
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Unique identifier of the adaptive transcoding template.</p>
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Template name. Length limit: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
      */
     public $Format;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
      */
     public $DisableHigherVideoBitrate;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
      */
     public $DisableHigherVideoResolution;
 
     /**
-     * @var array 
+     * @var array <p>Adaptive transcoding input stream parameter information. Up to 10 streams can be input.<br>Note: The frame rate of each stream must remain consistent. If inconsistent, the frame rate of the first stream is used as the output frame rate.</p>
      */
     public $StreamInfos;
 
     /**
-     * @var string 
+     * @var string <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string <p>Shard type. Available values: <br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the shard format can only be mp4 or mp4-mp4-segment. For DASH, the shard format can only be mp4 or mp4-mp4-byterange. Widevine+FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment.</p>
      */
     public $SegmentType;
 
     /**
-     * @var integer 
+     * @var integer <p>Average segmentation duration.</p><p>Value range: [1, 10]</p><p>Unit: second</p>
      */
     public $SegmentDuration;
 
     /**
-     * @param integer $Definition 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Format 
-     * @param integer $DisableHigherVideoBitrate 
-     * @param integer $DisableHigherVideoResolution 
-     * @param array $StreamInfos 
-     * @param string $Comment 
-     * @param string $SegmentType 
-     * @param integer $SegmentDuration 
+     * @param integer $Definition <p>Unique identifier of the adaptive transcoding template.</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param string $Name <p>Template name. Length limit: 64 characters.</p>
+     * @param string $Format <p>Adaptive Transcoding Format. Value range:</p><li>HLS;</li><li>MPEG-DASH.</li>
+     * @param integer $DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+     * @param integer $DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+     * @param array $StreamInfos <p>Adaptive transcoding input stream parameter information. Up to 10 streams can be input.<br>Note: The frame rate of each stream must remain consistent. If inconsistent, the frame rate of the first stream is used as the output frame rate.</p>
+     * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param string $SegmentType <p>Shard type. Available values: <br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the shard format can only be mp4 or mp4-mp4-segment. For DASH, the shard format can only be mp4 or mp4-mp4-byterange. Widevine+FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment.</p>
+     * @param integer $SegmentDuration <p>Average segmentation duration.</p><p>Value range: [1, 10]</p><p>Unit: second</p>
      */
     function __construct()
     {

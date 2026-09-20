@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Push a domain name to a CLS destination.
  *
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method AreaCLSTargetInfo getChineseMainlandCLSTargetInfo() Obtain 
- * @method void setChineseMainlandCLSTargetInfo(AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo) Set 
- * @method AreaCLSTargetInfo getOutsideChineseMainlandCLSTargetInfo() Obtain 
- * @method void setOutsideChineseMainlandCLSTargetInfo(AreaCLSTargetInfo $OutsideChineseMainlandCLSTargetInfo) Set 
+ * @method string getDomain() Obtain Domain name.
+ * @method void setDomain(string $Domain) Set Domain name.
+ * @method AreaCLSTargetInfo getChineseMainlandCLSTargetInfo() Obtain Log push target in the Chinese mainland.
+ * @method void setChineseMainlandCLSTargetInfo(AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo) Set Log push target in the Chinese mainland.
+ * @method AreaCLSTargetInfo getOutsideChineseMainlandCLSTargetInfo() Obtain Log push targets outside the Chinese mainland.
+ * @method void setOutsideChineseMainlandCLSTargetInfo(AreaCLSTargetInfo $OutsideChineseMainlandCLSTargetInfo) Set Log push targets outside the Chinese mainland.
  */
 class DomainCLSTargetInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Domain name.
      */
     public $Domain;
 
     /**
-     * @var AreaCLSTargetInfo 
+     * @var AreaCLSTargetInfo Log push target in the Chinese mainland.
      */
     public $ChineseMainlandCLSTargetInfo;
 
     /**
-     * @var AreaCLSTargetInfo 
+     * @var AreaCLSTargetInfo Log push targets outside the Chinese mainland.
      */
     public $OutsideChineseMainlandCLSTargetInfo;
 
     /**
-     * @param string $Domain 
-     * @param AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo 
-     * @param AreaCLSTargetInfo $OutsideChineseMainlandCLSTargetInfo 
+     * @param string $Domain Domain name.
+     * @param AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo Log push target in the Chinese mainland.
+     * @param AreaCLSTargetInfo $OutsideChineseMainlandCLSTargetInfo Log push targets outside the Chinese mainland.
      */
     function __construct()
     {

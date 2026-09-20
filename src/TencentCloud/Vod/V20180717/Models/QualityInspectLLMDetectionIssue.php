@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * An issue detected by the LLM large model for audio and video quality detection.
  *
- * @method string getTag() Obtain 
- * @method void setTag(string $Tag) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method float getScore() Obtain 
- * @method void setScore(float $Score) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method integer getStartTimeMs() Obtain 
- * @method void setStartTimeMs(integer $StartTimeMs) Set 
- * @method integer getEndTimeMs() Obtain 
- * @method void setEndTimeMs(integer $EndTimeMs) Set 
- * @method string getExtraData() Obtain 
- * @method void setExtraData(string $ExtraData) Set 
+ * @method string getTag() Obtain <p>Issue category tag.</p>
+ * @method void setTag(string $Tag) Set <p>Issue category tag.</p>
+ * @method string getDescription() Obtain <p>Issue description.</p>
+ * @method void setDescription(string $Description) Set <p>Issue description.</p>
+ * @method float getScore() Obtain <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
+ * @method void setScore(float $Score) Set <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
+ * @method float getConfidence() Obtain <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
+ * @method void setConfidence(float $Confidence) Set <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
+ * @method integer getStartTimeMs() Obtain <p>Issue start time.</p><p>Unit: ms.</p>
+ * @method void setStartTimeMs(integer $StartTimeMs) Set <p>Issue start time.</p><p>Unit: ms.</p>
+ * @method integer getEndTimeMs() Obtain <p>Issue end time.</p><p>Unit: ms.</p>
+ * @method void setEndTimeMs(integer $EndTimeMs) Set <p>Issue end time.</p><p>Unit: ms.</p>
+ * @method string getExtraData() Obtain <p>Additional data (JSON format), such as severity and other supplementary information.</p>
+ * @method void setExtraData(string $ExtraData) Set <p>Additional data (JSON format), such as severity and other supplementary information.</p>
  */
 class QualityInspectLLMDetectionIssue extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Issue category tag.</p>
      */
     public $Tag;
 
     /**
-     * @var string 
+     * @var string <p>Issue description.</p>
      */
     public $Description;
 
     /**
-     * @var float 
+     * @var float <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
      */
     public $Score;
 
     /**
-     * @var float 
+     * @var float <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
      */
     public $Confidence;
 
     /**
-     * @var integer 
+     * @var integer <p>Issue start time.</p><p>Unit: ms.</p>
      */
     public $StartTimeMs;
 
     /**
-     * @var integer 
+     * @var integer <p>Issue end time.</p><p>Unit: ms.</p>
      */
     public $EndTimeMs;
 
     /**
-     * @var string 
+     * @var string <p>Additional data (JSON format), such as severity and other supplementary information.</p>
      */
     public $ExtraData;
 
     /**
-     * @param string $Tag 
-     * @param string $Description 
-     * @param float $Score 
-     * @param float $Confidence 
-     * @param integer $StartTimeMs 
-     * @param integer $EndTimeMs 
-     * @param string $ExtraData 
+     * @param string $Tag <p>Issue category tag.</p>
+     * @param string $Description <p>Issue description.</p>
+     * @param float $Score <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
+     * @param float $Confidence <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
+     * @param integer $StartTimeMs <p>Issue start time.</p><p>Unit: ms.</p>
+     * @param integer $EndTimeMs <p>Issue end time.</p><p>Unit: ms.</p>
+     * @param string $ExtraData <p>Additional data (JSON format), such as severity and other supplementary information.</p>
      */
     function __construct()
     {

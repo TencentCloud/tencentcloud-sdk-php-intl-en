@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Adaptive transcoding stream parameter template
  *
- * @method VideoTemplateInfo getVideo() Obtain 
- * @method void setVideo(VideoTemplateInfo $Video) Set 
- * @method AudioTemplateInfo getAudio() Obtain 
- * @method void setAudio(AudioTemplateInfo $Audio) Set 
- * @method integer getRemoveAudio() Obtain 
- * @method void setRemoveAudio(integer $RemoveAudio) Set 
- * @method integer getRemoveVideo() Obtain 
- * @method void setRemoveVideo(integer $RemoveVideo) Set 
- * @method TEHDConfig getTEHDConfig() Obtain 
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set 
- * @method EnhanceConfig getEnhanceConfig() Obtain 
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set 
- * @method string getStdExtInfo() Obtain 
- * @method void setStdExtInfo(string $StdExtInfo) Set 
+ * @method VideoTemplateInfo getVideo() Obtain <p>Video parameter information.</p>
+ * @method void setVideo(VideoTemplateInfo $Video) Set <p>Video parameter information.</p>
+ * @method AudioTemplateInfo getAudio() Obtain <p>Audio parameter information.</p>
+ * @method void setAudio(AudioTemplateInfo $Audio) Set <p>Audio parameter information.</p>
+ * @method integer getRemoveAudio() Obtain <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method void setRemoveAudio(integer $RemoveAudio) Set <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+ * @method integer getRemoveVideo() Obtain <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+ * @method TEHDConfig getTEHDConfig() Obtain <p>Top Speed Codec transcoding parameters.</p>
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set <p>Top Speed Codec transcoding parameters.</p>
+ * @method EnhanceConfig getEnhanceConfig() Obtain <p>Audio/video enhancement configurations.</p>
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set <p>Audio/video enhancement configurations.</p>
+ * @method string getStdExtInfo() Obtain <p>Extended parameter.</p>
+ * @method void setStdExtInfo(string $StdExtInfo) Set <p>Extended parameter.</p>
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
     /**
-     * @var VideoTemplateInfo 
+     * @var VideoTemplateInfo <p>Video parameter information.</p>
      */
     public $Video;
 
     /**
-     * @var AudioTemplateInfo 
+     * @var AudioTemplateInfo <p>Audio parameter information.</p>
      */
     public $Audio;
 
     /**
-     * @var integer 
+     * @var integer <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
      */
     public $RemoveAudio;
 
     /**
-     * @var integer 
+     * @var integer <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
      */
     public $RemoveVideo;
 
     /**
-     * @var TEHDConfig 
+     * @var TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig 
+     * @var EnhanceConfig <p>Audio/video enhancement configurations.</p>
      */
     public $EnhanceConfig;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameter.</p>
      */
     public $StdExtInfo;
 
     /**
-     * @param VideoTemplateInfo $Video 
-     * @param AudioTemplateInfo $Audio 
-     * @param integer $RemoveAudio 
-     * @param integer $RemoveVideo 
-     * @param TEHDConfig $TEHDConfig 
-     * @param EnhanceConfig $EnhanceConfig 
-     * @param string $StdExtInfo 
+     * @param VideoTemplateInfo $Video <p>Video parameter information.</p>
+     * @param AudioTemplateInfo $Audio <p>Audio parameter information.</p>
+     * @param integer $RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+     * @param integer $RemoveVideo <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+     * @param TEHDConfig $TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
+     * @param EnhanceConfig $EnhanceConfig <p>Audio/video enhancement configurations.</p>
+     * @param string $StdExtInfo <p>Extended parameter.</p>
      */
     function __construct()
     {

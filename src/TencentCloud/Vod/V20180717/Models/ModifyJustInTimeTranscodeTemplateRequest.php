@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyJustInTimeTranscodeTemplate request structure.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method VideoConfigureInfoForUpdate getVideoConfigure() Obtain 
- * @method void setVideoConfigure(VideoConfigureInfoForUpdate $VideoConfigure) Set 
- * @method WatermarkConfigureInfoForUpdate getWatermarkConfigure() Obtain 
- * @method void setWatermarkConfigure(WatermarkConfigureInfoForUpdate $WatermarkConfigure) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
+ * @method string getName() Obtain Template name.
+ * @method void setName(string $Name) Set Template name.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method VideoConfigureInfoForUpdate getVideoConfigure() Obtain Video parameter configuration.
+ * @method void setVideoConfigure(VideoConfigureInfoForUpdate $VideoConfigure) Set Video parameter configuration.
+ * @method WatermarkConfigureInfoForUpdate getWatermarkConfigure() Obtain Watermark parameter configuration.
+ * @method void setWatermarkConfigure(WatermarkConfigureInfoForUpdate $WatermarkConfigure) Set Watermark parameter configuration.
+ * @method string getComment() Obtain Template description. The length cannot exceed 256 characters.
+ * @method void setComment(string $Comment) Set Template description. The length cannot exceed 256 characters.
  */
 class ModifyJustInTimeTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Template name.
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var VideoConfigureInfoForUpdate 
+     * @var VideoConfigureInfoForUpdate Video parameter configuration.
      */
     public $VideoConfigure;
 
     /**
-     * @var WatermarkConfigureInfoForUpdate 
+     * @var WatermarkConfigureInfoForUpdate Watermark parameter configuration.
      */
     public $WatermarkConfigure;
 
     /**
-     * @var string 
+     * @var string Template description. The length cannot exceed 256 characters.
      */
     public $Comment;
 
     /**
-     * @param string $Name 
-     * @param integer $SubAppId 
-     * @param VideoConfigureInfoForUpdate $VideoConfigure 
-     * @param WatermarkConfigureInfoForUpdate $WatermarkConfigure 
-     * @param string $Comment 
+     * @param string $Name Template name.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param VideoConfigureInfoForUpdate $VideoConfigure Video parameter configuration.
+     * @param WatermarkConfigureInfoForUpdate $WatermarkConfigure Watermark parameter configuration.
+     * @param string $Comment Template description. The length cannot exceed 256 characters.
      */
     function __construct()
     {

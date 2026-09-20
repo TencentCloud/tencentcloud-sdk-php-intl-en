@@ -18,36 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Adaptive bitrate task information.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() Obtain 
- * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
+ * @method void setStatus(string $Status) Set Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
+ * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() Obtain Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+ * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) Set Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
  */
 class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
      */
     public $Status;
 
     /**
-     * @var array 
+     * @var array Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
      */
     public $ComplexAdaptiveDynamicStreamingTaskResultSet;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
+     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
      */
     function __construct()
     {

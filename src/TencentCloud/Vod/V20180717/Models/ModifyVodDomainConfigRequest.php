@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVodDomainConfig request structure.
  *
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method RefererAuthPolicy getRefererAuthPolicy() Obtain 
- * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) Set 
- * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() Obtain 
- * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) Set 
- * @method DomainQUICConfig getQUICConfig() Obtain 
- * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set 
- * @method IPFilterPolicy getIPFilterPolicy() Obtain 
- * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set 
+ * @method string getDomain() Obtain <p>Domain name.</p>
+ * @method void setDomain(string $Domain) Set <p>Domain name.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+ * @method RefererAuthPolicy getRefererAuthPolicy() Obtain <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+ * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) Set <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+ * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() Obtain <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+ * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) Set <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+ * @method DomainQUICConfig getQUICConfig() Obtain <p>QUIC configuration.</p>
+ * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set <p>QUIC configuration.</p>
+ * @method IPFilterPolicy getIPFilterPolicy() Obtain <p>IP access restriction rule.</p>
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set <p>IP access restriction rule.</p>
  */
 class ModifyVodDomainConfigRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Domain name.</p>
      */
     public $Domain;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var RefererAuthPolicy 
+     * @var RefererAuthPolicy <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
      */
     public $RefererAuthPolicy;
 
     /**
-     * @var UrlSignatureAuthPolicy 
+     * @var UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
      */
     public $UrlSignatureAuthPolicy;
 
     /**
-     * @var DomainQUICConfig 
+     * @var DomainQUICConfig <p>QUIC configuration.</p>
      */
     public $QUICConfig;
 
     /**
-     * @var IPFilterPolicy 
+     * @var IPFilterPolicy <p>IP access restriction rule.</p>
      */
     public $IPFilterPolicy;
 
     /**
-     * @param string $Domain 
-     * @param integer $SubAppId 
-     * @param RefererAuthPolicy $RefererAuthPolicy 
-     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy 
-     * @param DomainQUICConfig $QUICConfig 
-     * @param IPFilterPolicy $IPFilterPolicy 
+     * @param string $Domain <p>Domain name.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param RefererAuthPolicy $RefererAuthPolicy <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+     * @param DomainQUICConfig $QUICConfig <p>QUIC configuration.</p>
+     * @param IPFilterPolicy $IPFilterPolicy <p>IP access restriction rule.</p>
      */
     function __construct()
     {

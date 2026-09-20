@@ -18,26 +18,26 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Automatic Follow Configuration for 301/302 status codes during origin-pull, disabled by default
  *
- * @method string getSwitch() Obtain Follow origin configuration switch. Valid values:
+ * @method string getSwitch() Obtain Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Follow origin configuration switch. Valid values:
+ * @method void setSwitch(string $Switch) Set Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  */
 class FollowRedirect extends AbstractModel
 {
     /**
-     * @var string Follow origin configuration switch. Valid values:
+     * @var string Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Follow origin configuration switch. Valid values:
+     * @param string $Switch Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

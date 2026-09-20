@@ -18,168 +18,116 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Thailand ID Card
+ * Thai Identity Card (mapped field result)
  *
- * @method string getLicenseNumber() Obtain LicenseNumber
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set LicenseNumber
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFullName() Obtain Thailand name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullName(string $FullName) Set Thailand name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLastName() Obtain Last name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastName(string $LastName) Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstName(string $FirstName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormattedAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormattedAddress(string $FormattedAddress) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain Identity number
+ * @method void setLicenseNumber(string $LicenseNumber) Set Identity number
+ * @method string getFullName() Obtain Thai name
+ * @method void setFullName(string $FullName) Set Thai name
+ * @method string getLastName() Obtain English name
+ * @method void setLastName(string $LastName) Set English name
+ * @method string getFirstName() Obtain English name
+ * @method void setFirstName(string $FirstName) Set English name
+ * @method string getBirthday() Obtain English birth date
+ * @method void setBirthday(string $Birthday) Set English birth date
+ * @method string getFormattedAddress() Obtain Address.
+ * @method void setFormattedAddress(string $FormattedAddress) Set Address.
  * @method string getExpirationDate() Obtain Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpirationDate(string $ExpirationDate) Set Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedDate() Obtain Issued date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedDate(string $IssuedDate) Set Issued date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegistrationNumber() Obtain Registration number 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegistrationNumber(string $RegistrationNumber) Set Registration number 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReligion() Obtain Religion
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReligion(string $Religion) Set Religion
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getThaiBirthday() Obtain Birthday in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setThaiBirthday(string $ThaiBirthday) Set Birthday in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIssuedDate() Obtain English birth date
+ * @method void setIssuedDate(string $IssuedDate) Set English birth date
+ * @method string getRegistrationNumber() Obtain Serial number
+ * @method void setRegistrationNumber(string $RegistrationNumber) Set Serial number
+ * @method string getReligion() Obtain Religious belief
+ * @method void setReligion(string $Religion) Set Religious belief
+ * @method string getThaiBirthday() Obtain Date of birth in Thai
+ * @method void setThaiBirthday(string $ThaiBirthday) Set Date of birth in Thai
  * @method string getThaiExpirationDate() Obtain Expiration date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setThaiExpirationDate(string $ThaiExpirationDate) Set Expiration date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getThaiIssueDate() Obtain Issued date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setThaiIssueDate(string $ThaiIssueDate) Set Issued date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getThaiIssueDate() Obtain Date of issue in Thai
+ * @method void setThaiIssueDate(string $ThaiIssueDate) Set Date of issue in Thai
  */
 class NormalThailandIDCard extends AbstractModel
 {
     /**
-     * @var string LicenseNumber
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity number
      */
     public $LicenseNumber;
 
     /**
-     * @var string Thailand name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Thai name
      */
     public $FullName;
 
     /**
-     * @var string Last name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string English name
      */
     public $LastName;
 
     /**
-     * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string English name
      */
     public $FirstName;
 
     /**
-     * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string English birth date
      */
     public $Birthday;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $FormattedAddress;
 
     /**
      * @var string Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpirationDate;
 
     /**
-     * @var string Issued date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string English birth date
      */
     public $IssuedDate;
 
     /**
-     * @var string Registration number 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Serial number
      */
     public $RegistrationNumber;
 
     /**
-     * @var string Religion
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Religious belief
      */
     public $Religion;
 
     /**
-     * @var string Birthday in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of birth in Thai
      */
     public $ThaiBirthday;
 
     /**
      * @var string Expiration date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ThaiExpirationDate;
 
     /**
-     * @var string Issued date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of issue in Thai
      */
     public $ThaiIssueDate;
 
     /**
-     * @param string $LicenseNumber LicenseNumber
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FullName Thailand name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber Identity number
+     * @param string $FullName Thai name
+     * @param string $LastName English name
+     * @param string $FirstName English name
+     * @param string $Birthday English birth date
+     * @param string $FormattedAddress Address.
      * @param string $ExpirationDate Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedDate Issued date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegistrationNumber Registration number 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Religion Religion
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ThaiBirthday Birthday in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IssuedDate English birth date
+     * @param string $RegistrationNumber Serial number
+     * @param string $Religion Religious belief
+     * @param string $ThaiBirthday Date of birth in Thai
      * @param string $ThaiExpirationDate Expiration date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ThaiIssueDate Issued date in Thai
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ThaiIssueDate Date of issue in Thai
      */
     function __construct()
     {

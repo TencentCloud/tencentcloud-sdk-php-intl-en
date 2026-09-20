@@ -18,60 +18,128 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle information.
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getLanguage() Obtain 
- * @method void setLanguage(string $Language) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method string getSource() Obtain 
- * @method void setSource(string $Source) Set 
+ * @method string getId() Obtain Unique identifier of the subtitle.
+ * @method void setId(string $Id) Set Unique identifier of the subtitle.
+ * @method string getName() Obtain Subtitle name.
+ * @method void setName(string $Name) Set Subtitle name.
+ * @method string getLanguage() Obtain Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
+ * @method void setLanguage(string $Language) Set Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
+ * @method string getFormat() Obtain Subtitle format. Valid values:
+<li>vtt</li>
+ * @method void setFormat(string $Format) Set Subtitle format. Valid values:
+<li>vtt</li>
+ * @method string getUrl() Obtain Subtitle URL.
+ * @method void setUrl(string $Url) Set Subtitle URL.
+ * @method string getSource() Obtain Subtitle source. Value range:
+<li>UserUploaded: user upload;</li>
+<li>AIRecognition: AI recognition through speech recognition or speech translation generation.</li>
+ * @method void setSource(string $Source) Set Subtitle source. Value range:
+<li>UserUploaded: user upload;</li>
+<li>AIRecognition: AI recognition through speech recognition or speech translation generation.</li>
  */
 class MediaSubtitleItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Unique identifier of the subtitle.
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string Subtitle name.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
      */
     public $Language;
 
     /**
-     * @var string 
+     * @var string Subtitle format. Valid values:
+<li>vtt</li>
      */
     public $Format;
 
     /**
-     * @var string 
+     * @var string Subtitle URL.
      */
     public $Url;
 
     /**
-     * @var string 
+     * @var string Subtitle source. Value range:
+<li>UserUploaded: user upload;</li>
+<li>AIRecognition: AI recognition through speech recognition or speech translation generation.</li>
      */
     public $Source;
 
     /**
-     * @param string $Id 
-     * @param string $Name 
-     * @param string $Language 
-     * @param string $Format 
-     * @param string $Url 
-     * @param string $Source 
+     * @param string $Id Unique identifier of the subtitle.
+     * @param string $Name Subtitle name.
+     * @param string $Language Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
+     * @param string $Format Subtitle format. Valid values:
+<li>vtt</li>
+     * @param string $Url Subtitle URL.
+     * @param string $Source Subtitle source. Value range:
+<li>UserUploaded: user upload;</li>
+<li>AIRecognition: AI recognition through speech recognition or speech translation generation.</li>
      */
     function __construct()
     {

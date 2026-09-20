@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseUsageData request structure.
  *
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method string getLicenseType() Obtain 
- * @method void setLicenseType(string $LicenseType) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getStartTime() Obtain Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setStartTime(string $StartTime) Set Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method string getEndTime() Obtain End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setEndTime(string $EndTime) Set End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method string getLicenseType() Obtain License type. Default value: CommercialDRMLicense. Currently supported license types include:
+<li> CommercialDRMLicense: enterprise-grade DRM License</li>
+ * @method void setLicenseType(string $LicenseType) Set License type. Default value: CommercialDRMLicense. Currently supported license types include:
+<li> CommercialDRMLicense: enterprise-grade DRM License</li>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
  */
 class DescribeLicenseUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $EndTime;
 
     /**
-     * @var string 
+     * @var string License type. Default value: CommercialDRMLicense. Currently supported license types include:
+<li> CommercialDRMLicense: enterprise-grade DRM License</li>
      */
     public $LicenseType;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param string $LicenseType 
-     * @param integer $SubAppId 
+     * @param string $StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param string $EndTime End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param string $LicenseType License type. Default value: CommercialDRMLicense. Currently supported license types include:
+<li> CommercialDRMLicense: enterprise-grade DRM License</li>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     function __construct()
     {

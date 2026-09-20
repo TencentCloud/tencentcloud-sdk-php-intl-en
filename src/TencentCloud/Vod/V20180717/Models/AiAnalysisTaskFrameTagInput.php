@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent frame tagging task input type.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain ID of the intelligent video frame-by-frame tagging template.
+ * @method void setDefinition(integer $Definition) Set ID of the intelligent video frame-by-frame tagging template.
  */
 class AiAnalysisTaskFrameTagInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer ID of the intelligent video frame-by-frame tagging template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition ID of the intelligent video frame-by-frame tagging template.
      */
     function __construct()
     {

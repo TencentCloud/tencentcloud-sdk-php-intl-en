@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDefaultDistributionConfig request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getScheme() Obtain 
- * @method void setScheme(string $Scheme) Set 
- * @method string getPlayKey() Obtain 
- * @method void setPlayKey(string $PlayKey) Set 
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getDomain() Obtain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+ * @method void setDomain(string $Domain) Set Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+ * @method string getScheme() Obtain Distribution protocol. Value: HTTP or HTTPS.
+ * @method void setScheme(string $Scheme) Set Distribution protocol. Value: HTTP or HTTPS.
+ * @method string getPlayKey() Obtain Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.
+ * @method void setPlayKey(string $PlayKey) Set Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.
  */
 class ModifyDefaultDistributionConfigRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string Distribution protocol. Value: HTTP or HTTPS.
      */
     public $Scheme;
 
     /**
-     * @var string 
+     * @var string Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.
      */
     public $PlayKey;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Domain 
-     * @param string $Scheme 
-     * @param string $PlayKey 
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Domain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+     * @param string $Scheme Distribution protocol. Value: HTTP or HTTPS.
+     * @param string $PlayKey Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.
      */
     function __construct()
     {

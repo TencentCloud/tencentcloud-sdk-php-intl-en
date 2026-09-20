@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input of the timbre design task.
  *
- * @method string getPrompt() Obtain 
- * @method void setPrompt(string $Prompt) Set 
- * @method VoiceSettings getVoiceSettings() Obtain 
- * @method void setVoiceSettings(VoiceSettings $VoiceSettings) Set 
- * @method string getPreviewText() Obtain 
- * @method void setPreviewText(string $PreviewText) Set 
- * @method string getExtParam() Obtain 
- * @method void setExtParam(string $ExtParam) Set 
+ * @method string getPrompt() Obtain <p>Voice description.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Voice description.</p>
+ * @method VoiceSettings getVoiceSettings() Obtain <p>Tone information</p>
+ * @method void setVoiceSettings(VoiceSettings $VoiceSettings) Set <p>Tone information</p>
+ * @method string getPreviewText() Obtain <p>Trial text.</p>
+ * @method void setPreviewText(string $PreviewText) Set <p>Trial text.</p>
+ * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
  */
 class DesignVoiceAsyncInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Voice description.</p>
      */
     public $Prompt;
 
     /**
-     * @var VoiceSettings 
+     * @var VoiceSettings <p>Tone information</p>
      */
     public $VoiceSettings;
 
     /**
-     * @var string 
+     * @var string <p>Trial text.</p>
      */
     public $PreviewText;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameters in the format of a JSON string.</p>
      */
     public $ExtParam;
 
     /**
-     * @param string $Prompt 
-     * @param VoiceSettings $VoiceSettings 
-     * @param string $PreviewText 
-     * @param string $ExtParam 
+     * @param string $Prompt <p>Voice description.</p>
+     * @param VoiceSettings $VoiceSettings <p>Tone information</p>
+     * @param string $PreviewText <p>Trial text.</p>
+     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     function __construct()
     {

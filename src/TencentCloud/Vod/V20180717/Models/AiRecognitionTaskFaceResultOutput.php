@@ -18,36 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent face recognition output.
  *
- * @method array getResultSet() Obtain 
- * @method void setResultSet(array $ResultSet) Set 
- * @method string getResultSetFileUrl() Obtain 
- * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set 
- * @method string getResultSetFileUrlExpireTime() Obtain 
- * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set 
+ * @method array getResultSet() Obtain Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+ * @method void setResultSet(array $ResultSet) Set Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+ * @method string getResultSetFileUrl() Obtain URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+ * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+ * @method string getResultSetFileUrlExpireTime() Obtain Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiRecognitionTaskFaceResultOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
      */
     public $ResultSet;
 
     /**
-     * @var string 
+     * @var string URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
      */
     public $ResultSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ResultSetFileUrlExpireTime;
 
     /**
-     * @param array $ResultSet 
-     * @param string $ResultSetFileUrl 
-     * @param string $ResultSetFileUrlExpireTime 
+     * @param array $ResultSet Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+     * @param string $ResultSetFileUrl URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+     * @param string $ResultSetFileUrlExpireTime Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

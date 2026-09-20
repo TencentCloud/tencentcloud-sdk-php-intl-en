@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKnowledgeBases request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
+ * @method integer getSubAppId() Obtain <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+ * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+ * @method string getName() Obtain <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+ * @method void setName(string $Name) Set <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
  */
 class DescribeKnowledgeBasesRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
      */
     public $SubAppId;
 
     /**
-     * @var integer 
+     * @var integer <p>Paging offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
      */
     public $Name;
 
     /**
-     * @param integer $SubAppId 
-     * @param integer $Offset 
-     * @param integer $Limit 
-     * @param string $Name 
+     * @param integer $SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+     * @param integer $Offset <p>Paging offset. Default value: 0.</p>
+     * @param integer $Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+     * @param string $Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
      */
     function __construct()
     {

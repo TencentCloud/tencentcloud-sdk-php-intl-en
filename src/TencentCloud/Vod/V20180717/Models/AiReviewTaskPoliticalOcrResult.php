@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task result type for audio/video moderation where Ocr text involves inappropriate information or rule violations
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method AiReviewPoliticalOcrTaskInput getInput() Obtain 
- * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) Set 
- * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain 
- * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method AiReviewPoliticalOcrTaskInput getInput() Obtain Task input for audio/video moderation where Ocr text involves inappropriate information.
+ * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) Set Task input for audio/video moderation where Ocr text involves inappropriate information.
+ * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain Task output of audio/video moderation Ocr text that involves inappropriate information.
+ * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set Task output of audio/video moderation Ocr text that involves inappropriate information.
+ * @method integer getProgress() Obtain Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
+ * @method void setProgress(integer $Progress) Set Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
  */
 class AiReviewTaskPoliticalOcrResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer 
+     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var AiReviewPoliticalOcrTaskInput 
+     * @var AiReviewPoliticalOcrTaskInput Task input for audio/video moderation where Ocr text involves inappropriate information.
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalOcrTaskOutput 
+     * @var AiReviewPoliticalOcrTaskOutput Task output of audio/video moderation Ocr text that involves inappropriate information.
      */
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
      */
     public $Progress;
 
     /**
-     * @param string $Status 
-     * @param string $ErrCodeExt 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param AiReviewPoliticalOcrTaskInput $Input 
-     * @param AiReviewPoliticalOcrTaskOutput $Output 
-     * @param integer $Progress 
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param string $Message Error message.
+     * @param AiReviewPoliticalOcrTaskInput $Input Task input for audio/video moderation where Ocr text involves inappropriate information.
+     * @param AiReviewPoliticalOcrTaskOutput $Output Task output of audio/video moderation Ocr text that involves inappropriate information.
+     * @param integer $Progress Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Forced redirect configuration for access protocols. Disabled by default.
  *
  * @method string getSwitch() Obtain Access the forced redirect configuration switch. Value:
 <li>`on`: Enable;</li>
@@ -27,15 +27,15 @@ use TencentCloud\Common\AbstractModel;
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  * @method string getRedirectType() Obtain Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
  * @method void setRedirectType(string $RedirectType) Set Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
- * @method integer getRedirectStatusCode() Obtain 
- * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set 
- * @method string getCarryHeaders() Obtain 
- * @method void setCarryHeaders(string $CarryHeaders) Set 
+ * @method integer getRedirectStatusCode() Obtain Status code returned for forced redirection. Supports 301 and 302.
+ * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirection. Supports 301 and 302.
+ * @method string getCarryHeaders() Obtain Whether to return the added header during forced redirection.
+ * @method void setCarryHeaders(string $CarryHeaders) Set Whether to return the added header during forced redirection.
  */
 class ForceRedirect extends AbstractModel
 {
@@ -48,18 +48,18 @@ class ForceRedirect extends AbstractModel
 
     /**
      * @var string Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
      */
     public $RedirectType;
 
     /**
-     * @var integer 
+     * @var integer Status code returned for forced redirection. Supports 301 and 302.
      */
     public $RedirectStatusCode;
 
     /**
-     * @var string 
+     * @var string Whether to return the added header during forced redirection.
      */
     public $CarryHeaders;
 
@@ -68,10 +68,10 @@ class ForceRedirect extends AbstractModel
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      * @param string $RedirectType Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
-     * @param integer $RedirectStatusCode 
-     * @param string $CarryHeaders 
+     * @param integer $RedirectStatusCode Status code returned for forced redirection. Supports 301 and 302.
+     * @param string $CarryHeaders Whether to return the added header during forced redirection.
      */
     function __construct()
     {

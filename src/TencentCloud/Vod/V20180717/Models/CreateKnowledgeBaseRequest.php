@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateKnowledgeBase request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
+ * @method integer getSubAppId() Obtain <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+ * @method string getName() Obtain <p>Knowledge base name. Length limit: 1-64 characters.</p>
+ * @method void setName(string $Name) Set <p>Knowledge base name. Length limit: 1-64 characters.</p>
+ * @method string getDescription() Obtain <p>Knowledge base description. Length limit: up to 256 characters.</p>
+ * @method void setDescription(string $Description) Set <p>Knowledge base description. Length limit: up to 256 characters.</p>
  */
 class CreateKnowledgeBaseRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Knowledge base name. Length limit: 1-64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Knowledge base description. Length limit: up to 256 characters.</p>
      */
     public $Description;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Description 
+     * @param integer $SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @param string $Name <p>Knowledge base name. Length limit: 1-64 characters.</p>
+     * @param string $Description <p>Knowledge base description. Length limit: up to 256 characters.</p>
      */
     function __construct()
     {

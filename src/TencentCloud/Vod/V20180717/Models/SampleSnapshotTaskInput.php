@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task input parameter type for sampling screenshot taking of a video
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getWatermarkSet() Obtain 
- * @method void setWatermarkSet(array $WatermarkSet) Set 
+ * @method integer getDefinition() Obtain Sampled screenshot template ID.
+ * @method void setDefinition(integer $Definition) Set Sampled screenshot template ID.
+ * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+ * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  */
 class SampleSnapshotTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Sampled screenshot template ID.
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public $WatermarkSet;
 
     /**
-     * @param integer $Definition 
-     * @param array $WatermarkSet 
+     * @param integer $Definition Sampled screenshot template ID.
+     * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     function __construct()
     {

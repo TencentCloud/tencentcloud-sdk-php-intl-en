@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Large model parse text transcription parsing configuration
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Text transcription task switch. Available values:
+- ON: Enable the text transcription task.
+-OFF: disables the transcription task.
+ * @method void setSwitch(string $Switch) Set Text transcription task switch. Available values:
+- ON: Enable the text transcription task.
+-OFF: disables the transcription task.
  */
 class LLMComprehendAsrForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Text transcription task switch. Available values:
+- ON: Enable the text transcription task.
+-OFF: disables the transcription task.
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Text transcription task switch. Available values:
+- ON: Enable the text transcription task.
+-OFF: disables the transcription task.
      */
     function __construct()
     {

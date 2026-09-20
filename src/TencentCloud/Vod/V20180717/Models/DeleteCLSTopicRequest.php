@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCLSTopic request structure.
  *
- * @method string getCLSRegion() Obtain 
- * @method void setCLSRegion(string $CLSRegion) Set 
- * @method string getTopicId() Obtain 
- * @method void setTopicId(string $TopicId) Set 
+ * @method string getCLSRegion() Obtain Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+ * @method void setCLSRegion(string $CLSRegion) Set Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+ * @method string getTopicId() Obtain Log topic ID.
+ * @method void setTopicId(string $TopicId) Set Log topic ID.
  */
 class DeleteCLSTopicRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public $CLSRegion;
 
     /**
-     * @var string 
+     * @var string Log topic ID.
      */
     public $TopicId;
 
     /**
-     * @param string $CLSRegion 
-     * @param string $TopicId 
+     * @param string $CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * @param string $TopicId Log topic ID.
      */
     function __construct()
     {

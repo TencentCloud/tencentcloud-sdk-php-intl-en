@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Path cache no cache configuration
  *
- * @method string getSwitch() Obtain Path cache no cache configuration switch. Value:
+ * @method string getSwitch() Obtain Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Path cache no cache configuration switch. Value:
+ * @method void setSwitch(string $Switch) Set Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  * @method string getRevalidate() Obtain Always validate against the origin server. Value:
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string Path cache no cache configuration switch. Value:
+     * @var string Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -50,7 +50,7 @@ class CacheConfigNoCache extends AbstractModel
     public $Revalidate;
 
     /**
-     * @param string $Switch Path cache no cache configuration switch. Value:
+     * @param string $Switch Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      * @param string $Revalidate Always validate against the origin server. Value:

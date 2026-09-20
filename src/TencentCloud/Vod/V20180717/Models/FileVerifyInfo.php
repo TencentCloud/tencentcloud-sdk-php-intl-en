@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * File validation information
  *
- * @method string getFileVerifyUrl() Obtain 
- * @method void setFileVerifyUrl(string $FileVerifyUrl) Set 
- * @method array getFileVerifyDomains() Obtain 
- * @method void setFileVerifyDomains(array $FileVerifyDomains) Set 
- * @method string getFileVerifyName() Obtain 
- * @method void setFileVerifyName(string $FileVerifyName) Set 
+ * @method string getFileVerifyUrl() Obtain File validation URL guide.
+ * @method void setFileVerifyUrl(string $FileVerifyUrl) Set File validation URL guide.
+ * @method array getFileVerifyDomains() Obtain File verification domain name list.
+ * @method void setFileVerifyDomains(array $FileVerifyDomains) Set File verification domain name list.
+ * @method string getFileVerifyName() Obtain File verification file name.
+ * @method void setFileVerifyName(string $FileVerifyName) Set File verification file name.
  */
 class FileVerifyInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string File validation URL guide.
      */
     public $FileVerifyUrl;
 
     /**
-     * @var array 
+     * @var array File verification domain name list.
      */
     public $FileVerifyDomains;
 
     /**
-     * @var string 
+     * @var string File verification file name.
      */
     public $FileVerifyName;
 
     /**
-     * @param string $FileVerifyUrl 
-     * @param array $FileVerifyDomains 
-     * @param string $FileVerifyName 
+     * @param string $FileVerifyUrl File validation URL guide.
+     * @param array $FileVerifyDomains File verification domain name list.
+     * @param string $FileVerifyName File verification file name.
      */
     function __construct()
     {

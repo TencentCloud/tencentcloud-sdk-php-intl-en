@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Screenshot information of a VOD file at the specified time point
  *
- * @method array getSnapshotByTimeOffsetSet() Obtain 
- * @method void setSnapshotByTimeOffsetSet(array $SnapshotByTimeOffsetSet) Set 
+ * @method array getSnapshotByTimeOffsetSet() Obtain Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
+ * @method void setSnapshotByTimeOffsetSet(array $SnapshotByTimeOffsetSet) Set Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
  */
 class MediaSnapshotByTimeOffsetInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
      */
     public $SnapshotByTimeOffsetSet;
 
     /**
-     * @param array $SnapshotByTimeOffsetSet 
+     * @param array $SnapshotByTimeOffsetSet Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
      */
     function __construct()
     {

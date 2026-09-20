@@ -18,28 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Track information
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method array getTrackItems() Obtain 
- * @method void setTrackItems(array $TrackItems) Set 
+ * @method string getType() Obtain Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
+ * @method void setType(string $Type) Set Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
+ * @method array getTrackItems() Obtain List of media segments on track.
+ * @method void setTrackItems(array $TrackItems) Set List of media segments on track.
  */
 class MediaTrack extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
      */
     public $Type;
 
     /**
-     * @var array 
+     * @var array List of media segments on track.
      */
     public $TrackItems;
 
     /**
-     * @param string $Type 
-     * @param array $TrackItems 
+     * @param string $Type Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
+     * @param array $TrackItems List of media segments on track.
      */
     function __construct()
     {

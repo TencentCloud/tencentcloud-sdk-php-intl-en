@@ -18,36 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Canvas information. In video production, if the source material (video or image) cannot fill the output video window, the set canvas is used to draw the background.
  *
- * @method string getColor() Obtain 
- * @method void setColor(string $Color) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
+ * @method string getColor() Obtain Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
+ * @method void setColor(string $Color) Set Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
+ * @method integer getWidth() Obtain Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
+ * @method void setWidth(integer $Width) Set Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
+ * @method integer getHeight() Obtain Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
+ * @method void setHeight(integer $Height) Set Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
  */
 class Canvas extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
      */
     public $Color;
 
     /**
-     * @var integer 
+     * @var integer Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
      */
     public $Height;
 
     /**
-     * @param string $Color 
-     * @param integer $Width 
-     * @param integer $Height 
+     * @param string $Color Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
+     * @param integer $Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
+     * @param integer $Height Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
      */
     function __construct()
     {

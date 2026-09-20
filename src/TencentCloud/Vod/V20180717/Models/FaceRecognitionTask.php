@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face recognition task
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getOutputFile() Obtain 
- * @method void setOutputFile(array $OutputFile) Set 
+ * @method integer getDefinition() Obtain <p>Face recognition template No.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Face recognition template No.</p>
+ * @method array getOutputFile() Obtain <p>Output file information</p>
+ * @method void setOutputFile(array $OutputFile) Set <p>Output file information</p>
  */
 class FaceRecognitionTask extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Face recognition template No.</p>
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array <p>Output file information</p>
      */
     public $OutputFile;
 
     /**
-     * @param integer $Definition 
-     * @param array $OutputFile 
+     * @param integer $Definition <p>Face recognition template No.</p>
+     * @param array $OutputFile <p>Output file information</p>
      */
     function __construct()
     {

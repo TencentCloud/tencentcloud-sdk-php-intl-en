@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMediaInfo request structure.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
- * @method string getCoverData() Obtain 
- * @method void setCoverData(string $CoverData) Set 
- * @method array getAddKeyFrameDescs() Obtain 
- * @method void setAddKeyFrameDescs(array $AddKeyFrameDescs) Set 
- * @method array getDeleteKeyFrameDescs() Obtain 
- * @method void setDeleteKeyFrameDescs(array $DeleteKeyFrameDescs) Set 
- * @method integer getClearKeyFrameDescs() Obtain 
- * @method void setClearKeyFrameDescs(integer $ClearKeyFrameDescs) Set 
- * @method array getAddTags() Obtain 
- * @method void setAddTags(array $AddTags) Set 
- * @method array getDeleteTags() Obtain 
- * @method void setDeleteTags(array $DeleteTags) Set 
- * @method integer getClearTags() Obtain 
- * @method void setClearTags(integer $ClearTags) Set 
- * @method array getAddSubtitles() Obtain 
- * @method void setAddSubtitles(array $AddSubtitles) Set 
- * @method array getDeleteSubtitleIds() Obtain 
- * @method void setDeleteSubtitleIds(array $DeleteSubtitleIds) Set 
- * @method integer getClearSubtitles() Obtain 
- * @method void setClearSubtitles(integer $ClearSubtitles) Set 
- * @method array getDeleteKnowledgeBases() Obtain 
- * @method void setDeleteKnowledgeBases(array $DeleteKnowledgeBases) Set 
- * @method integer getClearKnowledgeBases() Obtain 
- * @method void setClearKnowledgeBases(integer $ClearKnowledgeBases) Set 
+ * @method string getFileId() Obtain <p>Media file unique identifier.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file unique identifier.</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method string getName() Obtain <p>Media filename, up to 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Media filename, up to 64 characters.</p>
+ * @method string getDescription() Obtain <p>Media file description, up to 128 characters.</p>
+ * @method void setDescription(string $Description) Set <p>Media file description, up to 128 characters.</p>
+ * @method integer getClassId() Obtain <p>Media File Category ID.</p>
+ * @method void setClassId(integer $ClassId) Set <p>Media File Category ID.</p>
+ * @method string getExpireTime() Obtain <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
+ * @method string getCoverData() Obtain <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
+ * @method void setCoverData(string $CoverData) Set <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
+ * @method array getAddKeyFrameDescs() Obtain <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
+ * @method void setAddKeyFrameDescs(array $AddKeyFrameDescs) Set <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
+ * @method array getDeleteKeyFrameDescs() Obtain <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
+ * @method void setDeleteKeyFrameDescs(array $DeleteKeyFrameDescs) Set <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
+ * @method integer getClearKeyFrameDescs() Obtain <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
+ * @method void setClearKeyFrameDescs(integer $ClearKeyFrameDescs) Set <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
+ * @method array getAddTags() Obtain <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
+ * @method void setAddTags(array $AddTags) Set <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
+ * @method array getDeleteTags() Obtain <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
+ * @method void setDeleteTags(array $DeleteTags) Set <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
+ * @method integer getClearTags() Obtain <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
+ * @method void setClearTags(integer $ClearTags) Set <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
+ * @method array getAddSubtitles() Obtain <p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
+ * @method void setAddSubtitles(array $AddSubtitles) Set <p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
+ * @method array getDeleteSubtitleIds() Obtain <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
+ * @method void setDeleteSubtitleIds(array $DeleteSubtitleIds) Set <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
+ * @method integer getClearSubtitles() Obtain <p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
+ * @method void setClearSubtitles(integer $ClearSubtitles) Set <p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
+ * @method array getDeleteKnowledgeBases() Obtain <p>ID of the knowledge base to be outbound.</p>
+ * @method void setDeleteKnowledgeBases(array $DeleteKnowledgeBases) Set <p>ID of the knowledge base to be outbound.</p>
+ * @method integer getClearKnowledgeBases() Obtain <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
+ * @method void setClearKnowledgeBases(integer $ClearKnowledgeBases) Set <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
  */
 class ModifyMediaInfoRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Media file unique identifier.</p>
      */
     public $FileId;
 
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Media filename, up to 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Media file description, up to 128 characters.</p>
      */
     public $Description;
 
     /**
-     * @var integer 
+     * @var integer <p>Media File Category ID.</p>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 
+     * @var string <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
      */
     public $CoverData;
 
     /**
-     * @var array 
+     * @var array <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
      */
     public $AddKeyFrameDescs;
 
     /**
-     * @var array 
+     * @var array <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
      */
     public $DeleteKeyFrameDescs;
 
     /**
-     * @var integer 
+     * @var integer <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
      */
     public $ClearKeyFrameDescs;
 
     /**
-     * @var array 
+     * @var array <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
      */
     public $AddTags;
 
     /**
-     * @var array 
+     * @var array <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
      */
     public $DeleteTags;
 
     /**
-     * @var integer 
+     * @var integer <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
      */
     public $ClearTags;
 
     /**
-     * @var array 
+     * @var array <p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
      */
     public $AddSubtitles;
 
     /**
-     * @var array 
+     * @var array <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
      */
     public $DeleteSubtitleIds;
 
     /**
-     * @var integer 
+     * @var integer <p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
      */
     public $ClearSubtitles;
 
     /**
-     * @var array 
+     * @var array <p>ID of the knowledge base to be outbound.</p>
      */
     public $DeleteKnowledgeBases;
 
     /**
-     * @var integer 
+     * @var integer <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
      */
     public $ClearKnowledgeBases;
 
     /**
-     * @param string $FileId 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Description 
-     * @param integer $ClassId 
-     * @param string $ExpireTime 
-     * @param string $CoverData 
-     * @param array $AddKeyFrameDescs 
-     * @param array $DeleteKeyFrameDescs 
-     * @param integer $ClearKeyFrameDescs 
-     * @param array $AddTags 
-     * @param array $DeleteTags 
-     * @param integer $ClearTags 
-     * @param array $AddSubtitles 
-     * @param array $DeleteSubtitleIds 
-     * @param integer $ClearSubtitles 
-     * @param array $DeleteKnowledgeBases 
-     * @param integer $ClearKnowledgeBases 
+     * @param string $FileId <p>Media file unique identifier.</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param string $Name <p>Media filename, up to 64 characters.</p>
+     * @param string $Description <p>Media file description, up to 128 characters.</p>
+     * @param integer $ClassId <p>Media File Category ID.</p>
+     * @param string $ExpireTime <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
+     * @param string $CoverData <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
+     * @param array $AddKeyFrameDescs <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
+     * @param array $DeleteKeyFrameDescs <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
+     * @param integer $ClearKeyFrameDescs <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
+     * @param array $AddTags <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
+     * @param array $DeleteTags <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
+     * @param integer $ClearTags <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
+     * @param array $AddSubtitles <p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
+     * @param array $DeleteSubtitleIds <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
+     * @param integer $ClearSubtitles <p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
+     * @param array $DeleteKnowledgeBases <p>ID of the knowledge base to be outbound.</p>
+     * @param integer $ClearKnowledgeBases <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
      */
     function __construct()
     {

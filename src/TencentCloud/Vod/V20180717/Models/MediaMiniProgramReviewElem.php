@@ -18,36 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Mini Program Audio and Video review summary meta-information
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method string getType() Obtain Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
+ * @method void setType(string $Type) Set Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
+ * @method string getSuggestion() Obtain Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
+ * @method void setSuggestion(string $Suggestion) Set Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
+ * @method float getConfidence() Obtain Confidence of the audio/video moderation result. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of the audio/video moderation result. Value range: 0-100.
  */
 class MediaMiniProgramReviewElem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
      */
     public $Suggestion;
 
     /**
-     * @var float 
+     * @var float Confidence of the audio/video moderation result. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @param string $Type 
-     * @param string $Suggestion 
-     * @param float $Confidence 
+     * @param string $Type Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
+     * @param string $Suggestion Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
+     * @param float $Confidence Confidence of the audio/video moderation result. Value range: 0-100.
      */
     function __construct()
     {

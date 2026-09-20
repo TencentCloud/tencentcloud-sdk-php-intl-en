@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio-visual quality revival audio control information.
  *
- * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain 
- * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set 
+ * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain Audio noise reduction control parameters.
+ * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set Audio noise reduction control parameters.
  */
 class RebuildAudioInfo extends AbstractModel
 {
     /**
-     * @var AudioDenoiseInfo 
+     * @var AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public $AudioDenoiseInfo;
 
     /**
-     * @param AudioDenoiseInfo $AudioDenoiseInfo 
+     * @param AudioDenoiseInfo $AudioDenoiseInfo Audio noise reduction control parameters.
      */
     function __construct()
     {

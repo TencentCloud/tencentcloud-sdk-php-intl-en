@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PushUrlCache request structure.
  *
- * @method array getUrls() Obtain 
- * @method void setUrls(array $Urls) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getUrls() Obtain <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
+ * @method void setUrls(array $Urls) Set <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
  */
 class PushUrlCacheRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
      */
     public $Urls;
 
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param array $Urls 
-     * @param integer $SubAppId 
+     * @param array $Urls <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     function __construct()
     {

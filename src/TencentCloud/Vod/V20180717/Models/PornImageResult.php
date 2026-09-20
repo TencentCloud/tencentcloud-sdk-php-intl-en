@@ -18,36 +18,64 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task result type of image moderation involving offensive content
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
+ * @method float getConfidence() Obtain Score of authentication involving offensive content. Value range: 0–100.
+ * @method void setConfidence(float $Confidence) Set Score of authentication involving offensive content. Value range: 0–100.
+ * @method string getSuggestion() Obtain Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+ * @method string getLabel() Obtain Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
+ * @method void setLabel(string $Label) Set Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
  */
 class PornImageResult extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Score of authentication involving offensive content. Value range: 0–100.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
      */
     public $Label;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param string $Label 
+     * @param float $Confidence Score of authentication involving offensive content. Value range: 0–100.
+     * @param string $Suggestion Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+     * @param string $Label Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
      */
     function __construct()
     {

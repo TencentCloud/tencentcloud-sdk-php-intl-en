@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image encoding format parameters
  *
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method integer getQuality() Obtain 
- * @method void setQuality(integer $Quality) Set 
+ * @method string getFormat() Obtain Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
+ * @method void setFormat(string $Format) Set Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
+ * @method integer getQuality() Obtain Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
+ * @method void setQuality(integer $Quality) Set Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
  */
 class ImageEncodeConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
      */
     public $Format;
 
     /**
-     * @var integer 
+     * @var integer Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
      */
     public $Quality;
 
     /**
-     * @param string $Format 
-     * @param integer $Quality 
+     * @param string $Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
+     * @param integer $Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
      */
     function __construct()
     {

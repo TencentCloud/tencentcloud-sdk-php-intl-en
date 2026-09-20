@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Callback input information for creating a custom timbre.
  *
- * @method string getVoiceName() Obtain 
- * @method void setVoiceName(string $VoiceName) Set 
- * @method string getVoiceUrl() Obtain 
- * @method void setVoiceUrl(string $VoiceUrl) Set 
- * @method string getVideoId() Obtain 
- * @method void setVideoId(string $VideoId) Set 
+ * @method string getVoiceName() Obtain <p>Timbre name.</p>
+ * @method void setVoiceName(string $VoiceName) Set <p>Timbre name.</p>
+ * @method string getVoiceUrl() Obtain <p>Link to obtain the timbre data file.</p>
+ * @method void setVoiceUrl(string $VoiceUrl) Set <p>Link to obtain the timbre data file.</p>
+ * @method string getVideoId() Obtain <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+ * @method void setVideoId(string $VideoId) Set <p>Historic works ID, which can provide audio material by referring to historic works.</p>
  */
 class CreateAigcCustomVoiceInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Timbre name.</p>
      */
     public $VoiceName;
 
     /**
-     * @var string 
+     * @var string <p>Link to obtain the timbre data file.</p>
      */
     public $VoiceUrl;
 
     /**
-     * @var string 
+     * @var string <p>Historic works ID, which can provide audio material by referring to historic works.</p>
      */
     public $VideoId;
 
     /**
-     * @param string $VoiceName 
-     * @param string $VoiceUrl 
-     * @param string $VideoId 
+     * @param string $VoiceName <p>Timbre name.</p>
+     * @param string $VoiceUrl <p>Link to obtain the timbre data file.</p>
+     * @param string $VideoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
      */
     function __construct()
     {

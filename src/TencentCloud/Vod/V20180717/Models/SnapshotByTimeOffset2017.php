@@ -18,36 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Screenshot output information (2017 version)
  *
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method integer getTimeOffset() Obtain 
- * @method void setTimeOffset(integer $TimeOffset) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method integer getErrCode() Obtain Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+ * @method integer getTimeOffset() Obtain Screenshot time, in milliseconds.
+ * @method void setTimeOffset(integer $TimeOffset) Set Screenshot time, in milliseconds.
+ * @method string getUrl() Obtain Screenshot output file address.
+ * @method void setUrl(string $Url) Set Screenshot output file address.
  */
 class SnapshotByTimeOffset2017 extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
      */
     public $ErrCode;
 
     /**
-     * @var integer 
+     * @var integer Screenshot time, in milliseconds.
      */
     public $TimeOffset;
 
     /**
-     * @var string 
+     * @var string Screenshot output file address.
      */
     public $Url;
 
     /**
-     * @param integer $ErrCode 
-     * @param integer $TimeOffset 
-     * @param string $Url 
+     * @param integer $ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+     * @param integer $TimeOffset Screenshot time, in milliseconds.
+     * @param string $Url Screenshot output file address.
      */
     function __construct()
     {

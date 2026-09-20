@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video splicing task information. This structure is only used for tasks initiated by the 2017 version [video splicing](https://www.tencentcloud.com/document/product/266/7821?from_cn_redirect=1) API.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method array getFileInfoSet() Obtain 
- * @method void setFileInfoSet(array $FileInfoSet) Set 
+ * @method string getTaskId() Obtain Video splicing task ID.
+ * @method void setTaskId(string $TaskId) Set Video splicing task ID.
+ * @method array getFileInfoSet() Obtain Video splicing source file information.
+ * @method void setFileInfoSet(array $FileInfoSet) Set Video splicing source file information.
  */
 class ConcatTask2017 extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video splicing task ID.
      */
     public $TaskId;
 
     /**
-     * @var array 
+     * @var array Video splicing source file information.
      */
     public $FileInfoSet;
 
     /**
-     * @param string $TaskId 
-     * @param array $FileInfoSet 
+     * @param string $TaskId Video splicing task ID.
+     * @param array $FileInfoSet Video splicing source file information.
      */
     function __construct()
     {

@@ -18,216 +18,148 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Indonesia ID card.
+ * Indonesian Identity Card (mapped field result)
  *
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain ID number
+ * @method void setLicenseNumber(string $LicenseNumber) Set ID number
  * @method string getFullName() Obtain Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFullName(string $FullName) Set Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBirthday() Obtain Birthplace/Date of birth
+ * @method void setBirthday(string $Birthday) Set Birthplace/Date of birth
+ * @method string getSex() Obtain Sex
+ * @method void setSex(string $Sex) Set Sex
  * @method string getBloodType() Obtain Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBloodType(string $BloodType) Set Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormattedAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormattedAddress(string $FormattedAddress) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFormattedAddress() Obtain Address.
+ * @method void setFormattedAddress(string $FormattedAddress) Set Address.
  * @method string getStreet() Obtain Street
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStreet(string $Street) Set Street
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVillage() Obtain Village
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVillage(string $Village) Set Village
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getArea() Obtain Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setArea(string $Area) Set Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReligion() Obtain Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReligion(string $Religion) Set Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getArea() Obtain Region.
+ * @method void setArea(string $Area) Set Region.
+ * @method string getReligion() Obtain Religious belief
+ * @method void setReligion(string $Religion) Set Religious belief
  * @method string getMaritalStatus() Obtain Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaritalStatus(string $MaritalStatus) Set Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOccupation() Obtain Job
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOccupation(string $Occupation) Set Job
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOccupation() Obtain Occupation
+ * @method void setOccupation(string $Occupation) Set Occupation
  * @method string getNationality() Obtain Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNationality(string $Nationality) Set Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDueDate() Obtain ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDueDate(string $DueDate) Set ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedDate() Obtain Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedDate(string $IssuedDate) Set Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDueDate() Obtain Validity period of the ID card
+ * @method void setDueDate(string $DueDate) Set Validity period of the ID card
+ * @method string getIssuedDate() Obtain Issue date
+ * @method void setIssuedDate(string $IssuedDate) Set Issue date
  * @method string getProvince() Obtain Province
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProvince(string $Province) Set Province
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCity() Obtain City
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCity(string $City) Set City
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCity() Obtain city
+ * @method void setCity(string $City) Set city
  */
 class NormalIndonesiaIDCard extends AbstractModel
 {
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID number
      */
     public $LicenseNumber;
 
     /**
      * @var string Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FullName;
 
     /**
-     * @var string Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Birthplace/Date of birth
      */
     public $Birthday;
 
     /**
-     * @var string Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sex
      */
     public $Sex;
 
     /**
      * @var string Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BloodType;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $FormattedAddress;
 
     /**
      * @var string Street
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Street;
 
     /**
      * @var string Village
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Village;
 
     /**
-     * @var string Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Area;
 
     /**
-     * @var string Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Religious belief
      */
     public $Religion;
 
     /**
      * @var string Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaritalStatus;
 
     /**
-     * @var string Job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Occupation
      */
     public $Occupation;
 
     /**
      * @var string Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nationality;
 
     /**
-     * @var string ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Validity period of the ID card
      */
     public $DueDate;
 
     /**
-     * @var string Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Issue date
      */
     public $IssuedDate;
 
     /**
      * @var string Province
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Province;
 
     /**
-     * @var string City
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string city
      */
     public $City;
 
     /**
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber ID number
      * @param string $FullName Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Birthday Birthplace/Date of birth
+     * @param string $Sex Sex
      * @param string $BloodType Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FormattedAddress Address.
      * @param string $Street Street
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Village Village
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Area Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Religion Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Area Region.
+     * @param string $Religion Religious belief
      * @param string $MaritalStatus Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Occupation Job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Occupation Occupation
      * @param string $Nationality Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DueDate ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DueDate Validity period of the ID card
+     * @param string $IssuedDate Issue date
      * @param string $Province Province
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $City City
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $City city
      */
     function __construct()
     {

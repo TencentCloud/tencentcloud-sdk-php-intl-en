@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySampleSnapshotTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
- * @method string getSampleType() Obtain 
- * @method void setSampleType(string $SampleType) Set 
- * @method integer getSampleInterval() Obtain 
- * @method void setSampleInterval(integer $SampleInterval) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getFillType() Obtain 
- * @method void setFillType(string $FillType) Set 
+ * @method integer getDefinition() Obtain <p>Sampling screenshot template unique identifier.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Sampling screenshot template unique identifier.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method string getName() Obtain <p>Sample screenshot template name. Length limit: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Sample screenshot template name. Length limit: 64 characters.</p>
+ * @method integer getWidth() Obtain <p>The maximum value of the screenshot width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+ * @method void setWidth(integer $Width) Set <p>The maximum value of the screenshot width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+ * @method integer getHeight() Obtain <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+ * @method void setHeight(integer $Height) Set <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+ * @method string getResolutionAdaptive() Obtain <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+ * @method string getSampleType() Obtain <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+ * @method void setSampleType(string $SampleType) Set <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+ * @method integer getSampleInterval() Obtain <p>Sampling interval.</p><li>When SampleType is Percent, specify the percentage of the sampling interval.</li><li>When SampleType is Time, specify the sampling interval in seconds.</li>
+ * @method void setSampleInterval(integer $SampleInterval) Set <p>Sampling interval.</p><li>When SampleType is Percent, specify the percentage of the sampling interval.</li><li>When SampleType is Time, specify the sampling interval in seconds.</li>
+ * @method string getFormat() Obtain <p>Image format. Valid values: jpg, png, and webp. Default value: jpg.</p>
+ * @method void setFormat(string $Format) Set <p>Image format. Valid values: jpg, png, and webp. Default value: jpg.</p>
+ * @method string getComment() Obtain <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method string getFillType() Obtain <p>Filling method. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+ * @method void setFillType(string $FillType) Set <p>Filling method. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
  */
 class ModifySampleSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Sampling screenshot template unique identifier.</p>
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Sample screenshot template name. Length limit: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer <p>The maximum value of the screenshot width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
      */
     public $Height;
 
     /**
-     * @var string 
+     * @var string <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string 
+     * @var string <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
      */
     public $SampleType;
 
     /**
-     * @var integer 
+     * @var integer <p>Sampling interval.</p><li>When SampleType is Percent, specify the percentage of the sampling interval.</li><li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public $SampleInterval;
 
     /**
-     * @var string 
+     * @var string <p>Image format. Valid values: jpg, png, and webp. Default value: jpg.</p>
      */
     public $Format;
 
     /**
-     * @var string 
+     * @var string <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string <p>Filling method. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
      */
     public $FillType;
 
     /**
-     * @param integer $Definition 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param string $ResolutionAdaptive 
-     * @param string $SampleType 
-     * @param integer $SampleInterval 
-     * @param string $Format 
-     * @param string $Comment 
-     * @param string $FillType 
+     * @param integer $Definition <p>Sampling screenshot template unique identifier.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * @param string $Name <p>Sample screenshot template name. Length limit: 64 characters.</p>
+     * @param integer $Width <p>The maximum value of the screenshot width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+     * @param integer $Height <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+     * @param string $ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+     * @param string $SampleType <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+     * @param integer $SampleInterval <p>Sampling interval.</p><li>When SampleType is Percent, specify the percentage of the sampling interval.</li><li>When SampleType is Time, specify the sampling interval in seconds.</li>
+     * @param string $Format <p>Image format. Valid values: jpg, png, and webp. Default value: jpg.</p>
+     * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param string $FillType <p>Filling method. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
      */
     function __construct()
     {

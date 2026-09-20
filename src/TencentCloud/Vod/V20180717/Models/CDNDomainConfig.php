@@ -18,176 +18,176 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Cdn domain configuration information
  *
  * @method string getArea() Obtain Domain acceleration region:
 <li>mainland: domestic acceleration in China;</li>
-<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>overseas: acceleration outside China;</li>
 <li>global: global acceleration.</li>
  * @method void setArea(string $Area) Set Domain acceleration region:
 <li>mainland: domestic acceleration in China;</li>
-<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>overseas: acceleration outside China;</li>
 <li>global: global acceleration.</li>
- * @method Origin getOrigin() Obtain 
- * @method void setOrigin(Origin $Origin) Set 
- * @method IpFilter getIpFilter() Obtain 
- * @method void setIpFilter(IpFilter $IpFilter) Set 
- * @method UserAgentFilter getUserAgentFilter() Obtain 
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set 
- * @method FollowRedirect getFollowRedirect() Obtain 
- * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 
- * @method RequestHeader getRequestHeader() Obtain 
- * @method void setRequestHeader(RequestHeader $RequestHeader) Set 
- * @method ResponseHeader getResponseHeader() Obtain 
- * @method void setResponseHeader(ResponseHeader $ResponseHeader) Set 
- * @method Cache getCache() Obtain 
- * @method void setCache(Cache $Cache) Set 
- * @method Https getHttps() Obtain 
- * @method void setHttps(Https $Https) Set 
- * @method Authentication getAuthentication() Obtain 
- * @method void setAuthentication(Authentication $Authentication) Set 
- * @method ForceRedirect getForceRedirect() Obtain 
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set 
- * @method Referer getReferer() Obtain 
- * @method void setReferer(Referer $Referer) Set 
- * @method MaxAge getMaxAge() Obtain 
- * @method void setMaxAge(MaxAge $MaxAge) Set 
- * @method Ipv6Access getIpv6Access() Obtain 
- * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set 
- * @method Quic getQuic() Obtain 
- * @method void setQuic(Quic $Quic) Set 
- * @method AwsPrivateAccess getAwsPrivateAccess() Obtain 
- * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set 
- * @method OssPrivateAccess getOssPrivateAccess() Obtain 
- * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set 
- * @method HwPrivateAccess getHwPrivateAccess() Obtain 
- * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set 
- * @method OthersPrivateAccess getOthersPrivateAccess() Obtain 
- * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set 
+ * @method Origin getOrigin() Obtain Origin server configuration.
+ * @method void setOrigin(Origin $Origin) Set Origin server configuration.
+ * @method IpFilter getIpFilter() Obtain IP allowlist/blocklist configuration.
+ * @method void setIpFilter(IpFilter $IpFilter) Set IP allowlist/blocklist configuration.
+ * @method UserAgentFilter getUserAgentFilter() Obtain UA Blocklist/Allowlist Configuration.
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA Blocklist/Allowlist Configuration.
+ * @method FollowRedirect getFollowRedirect() Obtain 301/302 origin-pull follow configuration.
+ * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 301/302 origin-pull follow configuration.
+ * @method RequestHeader getRequestHeader() Obtain Request header configuration.
+ * @method void setRequestHeader(RequestHeader $RequestHeader) Set Request header configuration.
+ * @method ResponseHeader getResponseHeader() Obtain header configuration.
+ * @method void setResponseHeader(ResponseHeader $ResponseHeader) Set header configuration.
+ * @method Cache getCache() Obtain Cache expiration time configuration.
+ * @method void setCache(Cache $Cache) Set Cache expiration time configuration.
+ * @method Https getHttps() Obtain Https configuration.
+ * @method void setHttps(Https $Https) Set Https configuration.
+ * @method Authentication getAuthentication() Obtain Timestamp hotlink protection configuration.
+ * @method void setAuthentication(Authentication $Authentication) Set Timestamp hotlink protection configuration.
+ * @method ForceRedirect getForceRedirect() Obtain Forced redirect configuration for access protocols.
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Forced redirect configuration for access protocols.
+ * @method Referer getReferer() Obtain Referer anti-leech configuration.
+ * @method void setReferer(Referer $Referer) Set Referer anti-leech configuration.
+ * @method MaxAge getMaxAge() Obtain Browser cache configuration.
+ * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache configuration.
+ * @method Ipv6Access getIpv6Access() Obtain Ipv6 access configuration.
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set Ipv6 access configuration.
+ * @method Quic getQuic() Obtain Quic access configuration.
+ * @method void setQuic(Quic $Quic) Set Quic access configuration.
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Authentication configuration for AWS S3 origin-pull.
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Authentication configuration for AWS S3 origin-pull.
+ * @method OssPrivateAccess getOssPrivateAccess() Obtain Authentication configuration for origin-pull from Alibaba Cloud OSS.
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Authentication configuration for origin-pull from Alibaba Cloud OSS.
+ * @method HwPrivateAccess getHwPrivateAccess() Obtain Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+ * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+ * @method OthersPrivateAccess getOthersPrivateAccess() Obtain Authentication configuration for origin-pull from other vendors' object storage.
+ * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Authentication configuration for origin-pull from other vendors' object storage.
  */
 class CDNDomainConfig extends AbstractModel
 {
     /**
      * @var string Domain acceleration region:
 <li>mainland: domestic acceleration in China;</li>
-<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>overseas: acceleration outside China;</li>
 <li>global: global acceleration.</li>
      */
     public $Area;
 
     /**
-     * @var Origin 
+     * @var Origin Origin server configuration.
      */
     public $Origin;
 
     /**
-     * @var IpFilter 
+     * @var IpFilter IP allowlist/blocklist configuration.
      */
     public $IpFilter;
 
     /**
-     * @var UserAgentFilter 
+     * @var UserAgentFilter UA Blocklist/Allowlist Configuration.
      */
     public $UserAgentFilter;
 
     /**
-     * @var FollowRedirect 
+     * @var FollowRedirect 301/302 origin-pull follow configuration.
      */
     public $FollowRedirect;
 
     /**
-     * @var RequestHeader 
+     * @var RequestHeader Request header configuration.
      */
     public $RequestHeader;
 
     /**
-     * @var ResponseHeader 
+     * @var ResponseHeader header configuration.
      */
     public $ResponseHeader;
 
     /**
-     * @var Cache 
+     * @var Cache Cache expiration time configuration.
      */
     public $Cache;
 
     /**
-     * @var Https 
+     * @var Https Https configuration.
      */
     public $Https;
 
     /**
-     * @var Authentication 
+     * @var Authentication Timestamp hotlink protection configuration.
      */
     public $Authentication;
 
     /**
-     * @var ForceRedirect 
+     * @var ForceRedirect Forced redirect configuration for access protocols.
      */
     public $ForceRedirect;
 
     /**
-     * @var Referer 
+     * @var Referer Referer anti-leech configuration.
      */
     public $Referer;
 
     /**
-     * @var MaxAge 
+     * @var MaxAge Browser cache configuration.
      */
     public $MaxAge;
 
     /**
-     * @var Ipv6Access 
+     * @var Ipv6Access Ipv6 access configuration.
      */
     public $Ipv6Access;
 
     /**
-     * @var Quic 
+     * @var Quic Quic access configuration.
      */
     public $Quic;
 
     /**
-     * @var AwsPrivateAccess 
+     * @var AwsPrivateAccess Authentication configuration for AWS S3 origin-pull.
      */
     public $AwsPrivateAccess;
 
     /**
-     * @var OssPrivateAccess 
+     * @var OssPrivateAccess Authentication configuration for origin-pull from Alibaba Cloud OSS.
      */
     public $OssPrivateAccess;
 
     /**
-     * @var HwPrivateAccess 
+     * @var HwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
      */
     public $HwPrivateAccess;
 
     /**
-     * @var OthersPrivateAccess 
+     * @var OthersPrivateAccess Authentication configuration for origin-pull from other vendors' object storage.
      */
     public $OthersPrivateAccess;
 
     /**
      * @param string $Area Domain acceleration region:
 <li>mainland: domestic acceleration in China;</li>
-<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>overseas: acceleration outside China;</li>
 <li>global: global acceleration.</li>
-     * @param Origin $Origin 
-     * @param IpFilter $IpFilter 
-     * @param UserAgentFilter $UserAgentFilter 
-     * @param FollowRedirect $FollowRedirect 
-     * @param RequestHeader $RequestHeader 
-     * @param ResponseHeader $ResponseHeader 
-     * @param Cache $Cache 
-     * @param Https $Https 
-     * @param Authentication $Authentication 
-     * @param ForceRedirect $ForceRedirect 
-     * @param Referer $Referer 
-     * @param MaxAge $MaxAge 
-     * @param Ipv6Access $Ipv6Access 
-     * @param Quic $Quic 
-     * @param AwsPrivateAccess $AwsPrivateAccess 
-     * @param OssPrivateAccess $OssPrivateAccess 
-     * @param HwPrivateAccess $HwPrivateAccess 
-     * @param OthersPrivateAccess $OthersPrivateAccess 
+     * @param Origin $Origin Origin server configuration.
+     * @param IpFilter $IpFilter IP allowlist/blocklist configuration.
+     * @param UserAgentFilter $UserAgentFilter UA Blocklist/Allowlist Configuration.
+     * @param FollowRedirect $FollowRedirect 301/302 origin-pull follow configuration.
+     * @param RequestHeader $RequestHeader Request header configuration.
+     * @param ResponseHeader $ResponseHeader header configuration.
+     * @param Cache $Cache Cache expiration time configuration.
+     * @param Https $Https Https configuration.
+     * @param Authentication $Authentication Timestamp hotlink protection configuration.
+     * @param ForceRedirect $ForceRedirect Forced redirect configuration for access protocols.
+     * @param Referer $Referer Referer anti-leech configuration.
+     * @param MaxAge $MaxAge Browser cache configuration.
+     * @param Ipv6Access $Ipv6Access Ipv6 access configuration.
+     * @param Quic $Quic Quic access configuration.
+     * @param AwsPrivateAccess $AwsPrivateAccess Authentication configuration for AWS S3 origin-pull.
+     * @param OssPrivateAccess $OssPrivateAccess Authentication configuration for origin-pull from Alibaba Cloud OSS.
+     * @param HwPrivateAccess $HwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+     * @param OthersPrivateAccess $OthersPrivateAccess Authentication configuration for origin-pull from other vendors' object storage.
      */
     function __construct()
     {

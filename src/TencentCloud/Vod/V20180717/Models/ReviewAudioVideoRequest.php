@@ -20,82 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReviewAudioVideo request structure.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getMediaStoragePath() Obtain 
- * @method void setMediaStoragePath(string $MediaStoragePath) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getReviewContents() Obtain 
- * @method void setReviewContents(array $ReviewContents) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getFileId() Obtain Media file ID, the globally unique ID of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+ * @method void setFileId(string $FileId) Set Media file ID, the globally unique ID of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+ * @method string getMediaStoragePath() Obtain Media storage path.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set Media storage path.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method array getReviewContents() Obtain Content to review. Optional values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+ * @method void setReviewContents(array $ReviewContents) Set Content to review. Optional values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+ * @method integer getDefinition() Obtain Content Review Template ID. Default value: 10. Value range:
+<li>10: [Preset template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E9.9F.B3.E8.A7.86.E9.A2.91.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF.5B.5D(id.3Averify)), supports detection of violation labels including pornography (Porn), violence (Terror), inappropriate information (Polity), and panting (Moan).</li>
+ * @method void setDefinition(integer $Definition) Set Content Review Template ID. Default value: 10. Value range:
+<li>10: [Preset template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E9.9F.B3.E8.A7.86.E9.A2.91.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF.5B.5D(id.3Averify)), supports detection of violation labels including pornography (Porn), violence (Terror), inappropriate information (Polity), and panting (Moan).</li>
+ * @method integer getTasksPriority() Obtain Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method string getSessionContext() Obtain Source context, used to pass through user request information. The value of this field will be returned in the audio/video moderation completion callback. It can contain up to 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. The value of this field will be returned in the audio/video moderation completion callback. It can contain up to 1000 characters.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method string getExtInfo() Obtain Reserved field, used for special purposes.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
  */
 class ReviewAudioVideoRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file ID, the globally unique ID of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Media storage path.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
      */
     public $MediaStoragePath;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array Content to review. Optional values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
      */
     public $ReviewContents;
 
     /**
-     * @var integer 
+     * @var integer Content Review Template ID. Default value: 10. Value range:
+<li>10: [Preset template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E9.9F.B3.E8.A7.86.E9.A2.91.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF.5B.5D(id.3Averify)), supports detection of violation labels including pornography (Porn), violence (Terror), inappropriate information (Polity), and panting (Moan).</li>
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TasksPriority;
 
     /**
-     * @var string 
+     * @var string Source context, used to pass through user request information. The value of this field will be returned in the audio/video moderation completion callback. It can contain up to 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Reserved field, used for special purposes.
      */
     public $ExtInfo;
 
     /**
-     * @param string $FileId 
-     * @param string $MediaStoragePath 
-     * @param integer $SubAppId 
-     * @param array $ReviewContents 
-     * @param integer $Definition 
-     * @param integer $TasksPriority 
-     * @param string $SessionContext 
-     * @param string $SessionId 
-     * @param string $ExtInfo 
+     * @param string $FileId Media file ID, the globally unique ID of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * @param string $MediaStoragePath Media storage path.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param array $ReviewContents Content to review. Optional values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+     * @param integer $Definition Content Review Template ID. Default value: 10. Value range:
+<li>10: [Preset template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E9.9F.B3.E8.A7.86.E9.A2.91.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF.5B.5D(id.3Averify)), supports detection of violation labels including pornography (Porn), violence (Terror), inappropriate information (Polity), and panting (Moan).</li>
+     * @param integer $TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param string $SessionContext Source context, used to pass through user request information. The value of this field will be returned in the audio/video moderation completion callback. It can contain up to 1000 characters.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param string $ExtInfo Reserved field, used for special purposes.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input parameter type for importing a task flow template into the Intelligent Media Assets knowledge base.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getKnowledgeBaseIds() Obtain 
- * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) Set 
+ * @method integer getDefinition() Obtain <p>Large Model Understanding Template</p>
+ * @method void setDefinition(integer $Definition) Set <p>Large Model Understanding Template</p>
+ * @method array getKnowledgeBaseIds() Obtain <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+ * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) Set <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
  */
 class ImportMediaKnowledgeTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Large Model Understanding Template</p>
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
      */
     public $KnowledgeBaseIds;
 
     /**
-     * @param integer $Definition 
-     * @param array $KnowledgeBaseIds 
+     * @param integer $Definition <p>Large Model Understanding Template</p>
+     * @param array $KnowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
      */
     function __construct()
     {

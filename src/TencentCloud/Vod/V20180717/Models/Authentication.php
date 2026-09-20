@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Timestamp hotlink protection configuration
  *
  * @method string getSwitch() Obtain Hotlink protection configuration switch. Value:
 <li>`on`: Enable;</li>
@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
 
- * @method AuthenticationTypeA getTypeA() Obtain 
- * @method void setTypeA(AuthenticationTypeA $TypeA) Set 
- * @method AuthenticationTypeB getTypeB() Obtain 
- * @method void setTypeB(AuthenticationTypeB $TypeB) Set 
- * @method AuthenticationTypeC getTypeC() Obtain 
- * @method void setTypeC(AuthenticationTypeC $TypeC) Set 
- * @method AuthenticationTypeD getTypeD() Obtain 
- * @method void setTypeD(AuthenticationTypeD $TypeD) Set 
+ * @method AuthenticationTypeA getTypeA() Obtain Configuration of timestamp hotlink protection mode A.
+ * @method void setTypeA(AuthenticationTypeA $TypeA) Set Configuration of timestamp hotlink protection mode A.
+ * @method AuthenticationTypeB getTypeB() Obtain Configuration of timestamp hotlink protection mode B.
+ * @method void setTypeB(AuthenticationTypeB $TypeB) Set Configuration of timestamp hotlink protection mode B.
+ * @method AuthenticationTypeC getTypeC() Obtain Configuration of timestamp hotlink protection mode C.
+ * @method void setTypeC(AuthenticationTypeC $TypeC) Set Configuration of timestamp hotlink protection mode C.
+ * @method AuthenticationTypeD getTypeD() Obtain Configuration of timestamp hotlink protection mode D.
+ * @method void setTypeD(AuthenticationTypeD $TypeD) Set Configuration of timestamp hotlink protection mode D.
  */
 class Authentication extends AbstractModel
 {
@@ -48,22 +48,22 @@ class Authentication extends AbstractModel
     public $Switch;
 
     /**
-     * @var AuthenticationTypeA 
+     * @var AuthenticationTypeA Configuration of timestamp hotlink protection mode A.
      */
     public $TypeA;
 
     /**
-     * @var AuthenticationTypeB 
+     * @var AuthenticationTypeB Configuration of timestamp hotlink protection mode B.
      */
     public $TypeB;
 
     /**
-     * @var AuthenticationTypeC 
+     * @var AuthenticationTypeC Configuration of timestamp hotlink protection mode C.
      */
     public $TypeC;
 
     /**
-     * @var AuthenticationTypeD 
+     * @var AuthenticationTypeD Configuration of timestamp hotlink protection mode D.
      */
     public $TypeD;
 
@@ -72,10 +72,10 @@ class Authentication extends AbstractModel
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
 
-     * @param AuthenticationTypeA $TypeA 
-     * @param AuthenticationTypeB $TypeB 
-     * @param AuthenticationTypeC $TypeC 
-     * @param AuthenticationTypeD $TypeD 
+     * @param AuthenticationTypeA $TypeA Configuration of timestamp hotlink protection mode A.
+     * @param AuthenticationTypeB $TypeB Configuration of timestamp hotlink protection mode B.
+     * @param AuthenticationTypeC $TypeC Configuration of timestamp hotlink protection mode C.
+     * @param AuthenticationTypeD $TypeD Configuration of timestamp hotlink protection mode D.
      */
     function __construct()
     {

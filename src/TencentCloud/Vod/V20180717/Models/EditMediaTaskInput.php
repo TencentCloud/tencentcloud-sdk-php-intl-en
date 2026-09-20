@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input of the video editing task.
  *
- * @method string getInputType() Obtain 
- * @method void setInputType(string $InputType) Set 
- * @method array getFileInfoSet() Obtain 
- * @method void setFileInfoSet(array $FileInfoSet) Set 
- * @method array getStreamInfoSet() Obtain 
- * @method void setStreamInfoSet(array $StreamInfoSet) Set 
+ * @method string getInputType() Obtain Source type of the input video. Valid values: File and Stream.
+ * @method void setInputType(string $InputType) Set Source type of the input video. Valid values: File and Stream.
+ * @method array getFileInfoSet() Obtain Input video file information. This field has a value when InputType is File.
+ * @method void setFileInfoSet(array $FileInfoSet) Set Input video file information. This field has a value when InputType is File.
+ * @method array getStreamInfoSet() Obtain Input stream information. This field has a value when InputType is Stream.
+ * @method void setStreamInfoSet(array $StreamInfoSet) Set Input stream information. This field has a value when InputType is Stream.
  */
 class EditMediaTaskInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Source type of the input video. Valid values: File and Stream.
      */
     public $InputType;
 
     /**
-     * @var array 
+     * @var array Input video file information. This field has a value when InputType is File.
      */
     public $FileInfoSet;
 
     /**
-     * @var array 
+     * @var array Input stream information. This field has a value when InputType is Stream.
      */
     public $StreamInfoSet;
 
     /**
-     * @param string $InputType 
-     * @param array $FileInfoSet 
-     * @param array $StreamInfoSet 
+     * @param string $InputType Source type of the input video. Valid values: File and Stream.
+     * @param array $FileInfoSet Input video file information. This field has a value when InputType is File.
+     * @param array $StreamInfoSet Input stream information. This field has a value when InputType is Stream.
      */
     function __construct()
     {

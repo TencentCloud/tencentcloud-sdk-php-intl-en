@@ -18,36 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task result type for unsafe information involved in image moderation
  *
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
+ * @method float getConfidence() Obtain Authentication involves scoring unsafe information, with a score from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Authentication involves scoring unsafe information, with a score from 0 to 100.
+ * @method string getSuggestion() Obtain Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+ * @method string getLabel() Obtain Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
+ * @method void setLabel(string $Label) Set Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
  */
 class TerrorismImageResult extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Authentication involves scoring unsafe information, with a score from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
      */
     public $Label;
 
     /**
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param string $Label 
+     * @param float $Confidence Authentication involves scoring unsafe information, with a score from 0 to 100.
+     * @param string $Suggestion Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+     * @param string $Label Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
      */
     function __construct()
     {

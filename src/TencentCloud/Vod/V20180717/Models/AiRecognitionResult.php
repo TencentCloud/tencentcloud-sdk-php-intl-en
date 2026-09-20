@@ -18,92 +18,156 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent identification result.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method AiRecognitionTaskHeadTailResult getHeadTailTask() Obtain 
- * @method void setHeadTailTask(AiRecognitionTaskHeadTailResult $HeadTailTask) Set 
- * @method AiRecognitionTaskSegmentResult getSegmentTask() Obtain 
- * @method void setSegmentTask(AiRecognitionTaskSegmentResult $SegmentTask) Set 
- * @method AiRecognitionTaskFaceResult getFaceTask() Obtain 
- * @method void setFaceTask(AiRecognitionTaskFaceResult $FaceTask) Set 
- * @method AiRecognitionTaskAsrWordsResult getAsrWordsTask() Obtain 
- * @method void setAsrWordsTask(AiRecognitionTaskAsrWordsResult $AsrWordsTask) Set 
- * @method AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() Obtain 
- * @method void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult $AsrFullTextTask) Set 
- * @method AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() Obtain 
- * @method void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult $AsrTranslateTask) Set 
- * @method AiRecognitionTaskOcrWordsResult getOcrWordsTask() Obtain 
- * @method void setOcrWordsTask(AiRecognitionTaskOcrWordsResult $OcrWordsTask) Set 
- * @method AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() Obtain 
- * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) Set 
- * @method AiRecognitionTaskObjectResult getObjectTask() Obtain 
- * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) Set 
+ * @method string getType() Obtain Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
+ * @method void setType(string $Type) Set Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
+ * @method AiRecognitionTaskHeadTailResult getHeadTailTask() Obtain Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
+ * @method void setHeadTailTask(AiRecognitionTaskHeadTailResult $HeadTailTask) Set Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
+ * @method AiRecognitionTaskSegmentResult getSegmentTask() Obtain Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
+ * @method void setSegmentTask(AiRecognitionTaskSegmentResult $SegmentTask) Set Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
+ * @method AiRecognitionTaskFaceResult getFaceTask() Obtain Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
+ * @method void setFaceTask(AiRecognitionTaskFaceResult $FaceTask) Set Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
+ * @method AiRecognitionTaskAsrWordsResult getAsrWordsTask() Obtain Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
+ * @method void setAsrWordsTask(AiRecognitionTaskAsrWordsResult $AsrWordsTask) Set Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
+ * @method AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() Obtain Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
+ * @method void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult $AsrFullTextTask) Set Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
+ * @method AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() Obtain Voice translation result. Valid when Type is AsrTranslateRecognition.
+ * @method void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult $AsrTranslateTask) Set Voice translation result. Valid when Type is AsrTranslateRecognition.
+ * @method AiRecognitionTaskOcrWordsResult getOcrWordsTask() Obtain Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
+ * @method void setOcrWordsTask(AiRecognitionTaskOcrWordsResult $OcrWordsTask) Set Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
+ * @method AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() Obtain Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
+ * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) Set Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
+ * @method AiRecognitionTaskObjectResult getObjectTask() Obtain Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
+ * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) Set Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
  */
 class AiRecognitionResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
      */
     public $Type;
 
     /**
-     * @var AiRecognitionTaskHeadTailResult 
+     * @var AiRecognitionTaskHeadTailResult Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
      */
     public $HeadTailTask;
 
     /**
-     * @var AiRecognitionTaskSegmentResult 
+     * @var AiRecognitionTaskSegmentResult Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
      */
     public $SegmentTask;
 
     /**
-     * @var AiRecognitionTaskFaceResult 
+     * @var AiRecognitionTaskFaceResult Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
      */
     public $FaceTask;
 
     /**
-     * @var AiRecognitionTaskAsrWordsResult 
+     * @var AiRecognitionTaskAsrWordsResult Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
      */
     public $AsrWordsTask;
 
     /**
-     * @var AiRecognitionTaskAsrFullTextResult 
+     * @var AiRecognitionTaskAsrFullTextResult Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
      */
     public $AsrFullTextTask;
 
     /**
-     * @var AiRecognitionTaskAsrTranslateResult 
+     * @var AiRecognitionTaskAsrTranslateResult Voice translation result. Valid when Type is AsrTranslateRecognition.
      */
     public $AsrTranslateTask;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResult 
+     * @var AiRecognitionTaskOcrWordsResult Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
      */
     public $OcrWordsTask;
 
     /**
-     * @var AiRecognitionTaskOcrFullTextResult 
+     * @var AiRecognitionTaskOcrFullTextResult Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
      */
     public $OcrFullTextTask;
 
     /**
-     * @var AiRecognitionTaskObjectResult 
+     * @var AiRecognitionTaskObjectResult Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
      */
     public $ObjectTask;
 
     /**
-     * @param string $Type 
-     * @param AiRecognitionTaskHeadTailResult $HeadTailTask 
-     * @param AiRecognitionTaskSegmentResult $SegmentTask 
-     * @param AiRecognitionTaskFaceResult $FaceTask 
-     * @param AiRecognitionTaskAsrWordsResult $AsrWordsTask 
-     * @param AiRecognitionTaskAsrFullTextResult $AsrFullTextTask 
-     * @param AiRecognitionTaskAsrTranslateResult $AsrTranslateTask 
-     * @param AiRecognitionTaskOcrWordsResult $OcrWordsTask 
-     * @param AiRecognitionTaskOcrFullTextResult $OcrFullTextTask 
-     * @param AiRecognitionTaskObjectResult $ObjectTask 
+     * @param string $Type Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
+     * @param AiRecognitionTaskHeadTailResult $HeadTailTask Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
+     * @param AiRecognitionTaskSegmentResult $SegmentTask Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
+     * @param AiRecognitionTaskFaceResult $FaceTask Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
+     * @param AiRecognitionTaskAsrWordsResult $AsrWordsTask Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
+     * @param AiRecognitionTaskAsrFullTextResult $AsrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
+     * @param AiRecognitionTaskAsrTranslateResult $AsrTranslateTask Voice translation result. Valid when Type is AsrTranslateRecognition.
+     * @param AiRecognitionTaskOcrWordsResult $OcrWordsTask Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
+     * @param AiRecognitionTaskOcrFullTextResult $OcrFullTextTask Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
+     * @param AiRecognitionTaskObjectResult $ObjectTask Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
      */
     function __construct()
     {

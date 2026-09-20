@@ -18,52 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video clipping result file info (2017)
  *
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method string getFileType() Obtain 
- * @method void setFileType(string $FileType) Set 
+ * @method integer getErrCode() Obtain Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
+ * @method string getMessage() Obtain Error description.
+ * @method void setMessage(string $Message) Set Error description.
+ * @method string getFileId() Obtain Output the file ID of the target file.
+ * @method void setFileId(string $FileId) Set Output the file ID of the target file.
+ * @method string getFileUrl() Obtain File address of the output target file.
+ * @method void setFileUrl(string $FileUrl) Set File address of the output target file.
+ * @method string getFileType() Obtain Output file type of the target file.
+ * @method void setFileType(string $FileType) Set Output file type of the target file.
  */
 class ClipFileInfo2017 extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error description.
      */
     public $Message;
 
     /**
-     * @var string 
+     * @var string Output the file ID of the target file.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string File address of the output target file.
      */
     public $FileUrl;
 
     /**
-     * @var string 
+     * @var string Output file type of the target file.
      */
     public $FileType;
 
     /**
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param string $FileId 
-     * @param string $FileUrl 
-     * @param string $FileType 
+     * @param integer $ErrCode Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
+     * @param string $Message Error description.
+     * @param string $FileId Output the file ID of the target file.
+     * @param string $FileUrl File address of the output target file.
+     * @param string $FileType Output file type of the target file.
      */
     function __construct()
     {

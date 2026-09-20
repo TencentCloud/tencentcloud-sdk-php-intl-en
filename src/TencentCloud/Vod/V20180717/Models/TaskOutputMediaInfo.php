@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output media file information of the video processing task
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method MediaBasicInfo getMediaBasicInfo() Obtain 
- * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set 
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method MediaBasicInfo getMediaBasicInfo() Obtain Basic information of the generated media file after pull conversion is completed.
+ * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set Basic information of the generated media file after pull conversion is completed.
  */
 class TaskOutputMediaInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var MediaBasicInfo 
+     * @var MediaBasicInfo Basic information of the generated media file after pull conversion is completed.
      */
     public $MediaBasicInfo;
 
     /**
-     * @param string $FileId 
-     * @param MediaBasicInfo $MediaBasicInfo 
+     * @param string $FileId Media file ID.
+     * @param MediaBasicInfo $MediaBasicInfo Basic information of the generated media file after pull conversion is completed.
      */
     function __construct()
     {

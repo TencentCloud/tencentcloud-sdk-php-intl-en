@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Speech recognition segment.
  *
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method float getStartTimeOffset() Obtain Start time offset of a recognized segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognized segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a recognized segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
  */
 class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Start time offset of a recognized segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of a recognized segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float 
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param float $Confidence 
+     * @param float $StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     function __construct()
     {

@@ -18,84 +18,120 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Target parameter for video quality remastering
  *
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
- * @method string getContainer() Obtain 
- * @method void setContainer(string $Container) Set 
- * @method RebuildMediaTargetVideoStream getVideoStream() Obtain 
- * @method void setVideoStream(RebuildMediaTargetVideoStream $VideoStream) Set 
- * @method RebuildMediaTargetAudioStream getAudioStream() Obtain 
- * @method void setAudioStream(RebuildMediaTargetAudioStream $AudioStream) Set 
- * @method integer getRemoveVideo() Obtain 
- * @method void setRemoveVideo(integer $RemoveVideo) Set 
- * @method integer getRemoveAudio() Obtain 
- * @method void setRemoveAudio(integer $RemoveAudio) Set 
+ * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system specifies the generated file name.
+ * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system specifies the generated file name.
+ * @method string getDescription() Obtain Description. It can contain up to 128 characters. The default description is empty.
+ * @method void setDescription(string $Description) Set Description. It can contain up to 128 characters. The default description is empty.
+ * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
+ * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
+ * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getContainer() Obtain Output file container format. Available values: mp4, flv, hls. Default: mp4.
+ * @method void setContainer(string $Container) Set Output file container format. Available values: mp4, flv, hls. Default: mp4.
+ * @method RebuildMediaTargetVideoStream getVideoStream() Obtain Output video information.
+ * @method void setVideoStream(RebuildMediaTargetVideoStream $VideoStream) Set Output video information.
+ * @method RebuildMediaTargetAudioStream getAudioStream() Obtain Output audio information.
+ * @method void setAudioStream(RebuildMediaTargetAudioStream $AudioStream) Set Output audio information.
+ * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+ * @method void setRemoveVideo(integer $RemoveVideo) Set Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+ * @method integer getRemoveAudio() Obtain Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+ * @method void setRemoveAudio(integer $RemoveAudio) Set Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
  */
 class RebuildMediaTargetInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Output filename, up to 64 characters. By default, the system specifies the generated file name.
      */
     public $MediaName;
 
     /**
-     * @var string 
+     * @var string Description. It can contain up to 128 characters. The default description is empty.
      */
     public $Description;
 
     /**
-     * @var integer 
+     * @var integer Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ExpireTime;
 
     /**
-     * @var string 
+     * @var string Output file container format. Available values: mp4, flv, hls. Default: mp4.
      */
     public $Container;
 
     /**
-     * @var RebuildMediaTargetVideoStream 
+     * @var RebuildMediaTargetVideoStream Output video information.
      */
     public $VideoStream;
 
     /**
-     * @var RebuildMediaTargetAudioStream 
+     * @var RebuildMediaTargetAudioStream Output audio information.
      */
     public $AudioStream;
 
     /**
-     * @var integer 
+     * @var integer Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
      */
     public $RemoveVideo;
 
     /**
-     * @var integer 
+     * @var integer Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
      */
     public $RemoveAudio;
 
     /**
-     * @param string $MediaName 
-     * @param string $Description 
-     * @param integer $ClassId 
-     * @param string $ExpireTime 
-     * @param string $Container 
-     * @param RebuildMediaTargetVideoStream $VideoStream 
-     * @param RebuildMediaTargetAudioStream $AudioStream 
-     * @param integer $RemoveVideo 
-     * @param integer $RemoveAudio 
+     * @param string $MediaName Output filename, up to 64 characters. By default, the system specifies the generated file name.
+     * @param string $Description Description. It can contain up to 128 characters. The default description is empty.
+     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
+     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $Container Output file container format. Available values: mp4, flv, hls. Default: mp4.
+     * @param RebuildMediaTargetVideoStream $VideoStream Output video information.
+     * @param RebuildMediaTargetAudioStream $AudioStream Output audio information.
+     * @param integer $RemoveVideo Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+     * @param integer $RemoveAudio Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
      */
     function __construct()
     {

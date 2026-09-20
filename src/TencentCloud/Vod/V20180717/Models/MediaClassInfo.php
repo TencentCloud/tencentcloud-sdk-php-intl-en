@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Classification information description
  *
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method integer getParentId() Obtain 
- * @method void setParentId(integer $ParentId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getLevel() Obtain 
- * @method void setLevel(integer $Level) Set 
- * @method array getSubClassIdSet() Obtain 
- * @method void setSubClassIdSet(array $SubClassIdSet) Set 
- * @method string getClassName() Obtain 
- * @method void setClassName(string $ClassName) Set 
+ * @method integer getClassId() Obtain Category ID.
+ * @method void setClassId(integer $ClassId) Set Category ID.
+ * @method integer getParentId() Obtain Parent category ID. The parent category ID of a first-level category is -1.
+ * @method void setParentId(integer $ParentId) Set Parent category ID. The parent category ID of a first-level category is -1.
+ * @method string getName() Obtain Category name.
+ * @method void setName(string $Name) Set Category name.
+ * @method integer getLevel() Obtain Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+ * @method void setLevel(integer $Level) Set Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+ * @method array getSubClassIdSet() Obtain ID set of level-1 subcategories in the current category.
+ * @method void setSubClassIdSet(array $SubClassIdSet) Set ID set of level-1 subcategories in the current category.
+ * @method string getClassName() Obtain Category name (this field is not recommended. Use the new category name field Name instead).
+ * @method void setClassName(string $ClassName) Set Category name (this field is not recommended. Use the new category name field Name instead).
  */
 class MediaClassInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Category ID.
      */
     public $ClassId;
 
     /**
-     * @var integer 
+     * @var integer Parent category ID. The parent category ID of a first-level category is -1.
      */
     public $ParentId;
 
     /**
-     * @var string 
+     * @var string Category name.
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
      */
     public $Level;
 
     /**
-     * @var array 
+     * @var array ID set of level-1 subcategories in the current category.
      */
     public $SubClassIdSet;
 
     /**
-     * @var string 
+     * @var string Category name (this field is not recommended. Use the new category name field Name instead).
      */
     public $ClassName;
 
     /**
-     * @param integer $ClassId 
-     * @param integer $ParentId 
-     * @param string $Name 
-     * @param integer $Level 
-     * @param array $SubClassIdSet 
-     * @param string $ClassName 
+     * @param integer $ClassId Category ID.
+     * @param integer $ParentId Parent category ID. The parent category ID of a first-level category is -1.
+     * @param string $Name Category name.
+     * @param integer $Level Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+     * @param array $SubClassIdSet ID set of level-1 subcategories in the current category.
+     * @param string $ClassName Category name (this field is not recommended. Use the new category name field Name instead).
      */
     function __construct()
     {

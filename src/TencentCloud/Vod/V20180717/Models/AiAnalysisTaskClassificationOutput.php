@@ -18,36 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent classification result info
  *
- * @method array getClassificationSet() Obtain 
- * @method void setClassificationSet(array $ClassificationSet) Set 
- * @method string getClassificationSetFileUrl() Obtain 
- * @method void setClassificationSetFileUrl(string $ClassificationSetFileUrl) Set 
- * @method string getClassificationSetFileUrlExpireTime() Obtain 
- * @method void setClassificationSetFileUrlExpireTime(string $ClassificationSetFileUrlExpireTime) Set 
+ * @method array getClassificationSet() Obtain Video intelligent classification list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+ * @method void setClassificationSet(array $ClassificationSet) Set Video intelligent classification list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+ * @method string getClassificationSetFileUrl() Obtain URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+ * @method void setClassificationSetFileUrl(string $ClassificationSetFileUrl) Set URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+ * @method string getClassificationSetFileUrlExpireTime() Obtain Expiration time of the video intelligent classification list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setClassificationSetFileUrlExpireTime(string $ClassificationSetFileUrlExpireTime) Set Expiration time of the video intelligent classification list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiAnalysisTaskClassificationOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Video intelligent classification list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
      */
     public $ClassificationSet;
 
     /**
-     * @var string 
+     * @var string URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
      */
     public $ClassificationSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the video intelligent classification list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ClassificationSetFileUrlExpireTime;
 
     /**
-     * @param array $ClassificationSet 
-     * @param string $ClassificationSetFileUrl 
-     * @param string $ClassificationSetFileUrlExpireTime 
+     * @param array $ClassificationSet Video intelligent classification list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+     * @param string $ClassificationSetFileUrl URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+     * @param string $ClassificationSetFileUrlExpireTime Expiration time of the video intelligent classification list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

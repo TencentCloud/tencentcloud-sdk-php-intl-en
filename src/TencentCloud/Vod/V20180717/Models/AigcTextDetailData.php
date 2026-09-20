@@ -18,140 +18,140 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Aigc-generated text detailed data
  *
- * @method string getTimestamp() Obtain 
- * @method void setTimestamp(string $Timestamp) Set 
- * @method string getReqId() Obtain 
- * @method void setReqId(string $ReqId) Set 
- * @method string getChatId() Obtain 
- * @method void setChatId(string $ChatId) Set 
- * @method integer getStatusCode() Obtain 
- * @method void setStatusCode(integer $StatusCode) Set 
- * @method string getModel() Obtain 
- * @method void setModel(string $Model) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getApiKey() Obtain 
- * @method void setApiKey(string $ApiKey) Set 
- * @method boolean getStream() Obtain 
- * @method void setStream(boolean $Stream) Set 
- * @method integer getInputTokens() Obtain 
- * @method void setInputTokens(integer $InputTokens) Set 
- * @method integer getOutputTokens() Obtain 
- * @method void setOutputTokens(integer $OutputTokens) Set 
- * @method integer getCacheInputTokens() Obtain 
- * @method void setCacheInputTokens(integer $CacheInputTokens) Set 
- * @method integer getTotalTokens() Obtain 
- * @method void setTotalTokens(integer $TotalTokens) Set 
- * @method float getTPS() Obtain 
- * @method void setTPS(float $TPS) Set 
- * @method float getTTFT() Obtain 
- * @method void setTTFT(float $TTFT) Set 
- * @method float getTotal() Obtain 
- * @method void setTotal(float $Total) Set 
- * @method string getApiType() Obtain 
- * @method void setApiType(string $ApiType) Set 
+ * @method string getTimestamp() Obtain <p>Request start time (RFC3339)</p>
+ * @method void setTimestamp(string $Timestamp) Set <p>Request start time (RFC3339)</p>
+ * @method string getReqId() Obtain <p>Gateway layer request ID</p>
+ * @method void setReqId(string $ReqId) Set <p>Gateway layer request ID</p>
+ * @method string getChatId() Obtain <p>Dialogue ID returned by the backend model</p>
+ * @method void setChatId(string $ChatId) Set <p>Dialogue ID returned by the backend model</p>
+ * @method integer getStatusCode() Obtain <p>HTTP status code returned to client</p>
+ * @method void setStatusCode(integer $StatusCode) Set <p>HTTP status code returned to client</p>
+ * @method string getModel() Obtain <p>Model name</p>
+ * @method void setModel(string $Model) Set <p>Model name</p>
+ * @method integer getSubAppId() Obtain <p>Application ID.</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>Application ID.</p>
+ * @method string getApiKey() Obtain <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
+ * @method void setApiKey(string $ApiKey) Set <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
+ * @method boolean getStream() Obtain <p>Whether to return in streaming mode</p>
+ * @method void setStream(boolean $Stream) Set <p>Whether to return in streaming mode</p>
+ * @method integer getInputTokens() Obtain <p>Input token count</p>
+ * @method void setInputTokens(integer $InputTokens) Set <p>Input token count</p>
+ * @method integer getOutputTokens() Obtain <p>Output token count</p>
+ * @method void setOutputTokens(integer $OutputTokens) Set <p>Output token count</p>
+ * @method integer getCacheInputTokens() Obtain <p>Number of tokens that hit the prompt cache</p>
+ * @method void setCacheInputTokens(integer $CacheInputTokens) Set <p>Number of tokens that hit the prompt cache</p>
+ * @method integer getTotalTokens() Obtain <p>Total token count</p>
+ * @method void setTotalTokens(integer $TotalTokens) Set <p>Total token count</p>
+ * @method float getTPS() Obtain <p>tokens/second in the generation stage</p>
+ * @method void setTPS(float $TPS) Set <p>tokens/second in the generation stage</p>
+ * @method float getTTFT() Obtain <p>Time To First Token</p><p>Unit: seconds</p>
+ * @method void setTTFT(float $TTFT) Set <p>Time To First Token</p><p>Unit: seconds</p>
+ * @method float getTotal() Obtain <p>End-to-end total time</p><p>Unit: seconds</p>
+ * @method void setTotal(float $Total) Set <p>End-to-end total time</p><p>Unit: seconds</p>
+ * @method string getApiType() Obtain <p>Entry protocol: completions / responses / anthropic</p>
+ * @method void setApiType(string $ApiType) Set <p>Entry protocol: completions / responses / anthropic</p>
  */
 class AigcTextDetailData extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Request start time (RFC3339)</p>
      */
     public $Timestamp;
 
     /**
-     * @var string 
+     * @var string <p>Gateway layer request ID</p>
      */
     public $ReqId;
 
     /**
-     * @var string 
+     * @var string <p>Dialogue ID returned by the backend model</p>
      */
     public $ChatId;
 
     /**
-     * @var integer 
+     * @var integer <p>HTTP status code returned to client</p>
      */
     public $StatusCode;
 
     /**
-     * @var string 
+     * @var string <p>Model name</p>
      */
     public $Model;
 
     /**
-     * @var integer 
+     * @var integer <p>Application ID.</p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
      */
     public $ApiKey;
 
     /**
-     * @var boolean 
+     * @var boolean <p>Whether to return in streaming mode</p>
      */
     public $Stream;
 
     /**
-     * @var integer 
+     * @var integer <p>Input token count</p>
      */
     public $InputTokens;
 
     /**
-     * @var integer 
+     * @var integer <p>Output token count</p>
      */
     public $OutputTokens;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of tokens that hit the prompt cache</p>
      */
     public $CacheInputTokens;
 
     /**
-     * @var integer 
+     * @var integer <p>Total token count</p>
      */
     public $TotalTokens;
 
     /**
-     * @var float 
+     * @var float <p>tokens/second in the generation stage</p>
      */
     public $TPS;
 
     /**
-     * @var float 
+     * @var float <p>Time To First Token</p><p>Unit: seconds</p>
      */
     public $TTFT;
 
     /**
-     * @var float 
+     * @var float <p>End-to-end total time</p><p>Unit: seconds</p>
      */
     public $Total;
 
     /**
-     * @var string 
+     * @var string <p>Entry protocol: completions / responses / anthropic</p>
      */
     public $ApiType;
 
     /**
-     * @param string $Timestamp 
-     * @param string $ReqId 
-     * @param string $ChatId 
-     * @param integer $StatusCode 
-     * @param string $Model 
-     * @param integer $SubAppId 
-     * @param string $ApiKey 
-     * @param boolean $Stream 
-     * @param integer $InputTokens 
-     * @param integer $OutputTokens 
-     * @param integer $CacheInputTokens 
-     * @param integer $TotalTokens 
-     * @param float $TPS 
-     * @param float $TTFT 
-     * @param float $Total 
-     * @param string $ApiType 
+     * @param string $Timestamp <p>Request start time (RFC3339)</p>
+     * @param string $ReqId <p>Gateway layer request ID</p>
+     * @param string $ChatId <p>Dialogue ID returned by the backend model</p>
+     * @param integer $StatusCode <p>HTTP status code returned to client</p>
+     * @param string $Model <p>Model name</p>
+     * @param integer $SubAppId <p>Application ID.</p>
+     * @param string $ApiKey <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
+     * @param boolean $Stream <p>Whether to return in streaming mode</p>
+     * @param integer $InputTokens <p>Input token count</p>
+     * @param integer $OutputTokens <p>Output token count</p>
+     * @param integer $CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
+     * @param integer $TotalTokens <p>Total token count</p>
+     * @param float $TPS <p>tokens/second in the generation stage</p>
+     * @param float $TTFT <p>Time To First Token</p><p>Unit: seconds</p>
+     * @param float $Total <p>End-to-end total time</p><p>Unit: seconds</p>
+     * @param string $ApiType <p>Entry protocol: completions / responses / anthropic</p>
      */
     function __construct()
     {

@@ -18,92 +18,92 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Details of the large model parsing template.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getLevel() Obtain 
- * @method void setLevel(string $Level) Set 
- * @method LLMComprehendSummary getSummary() Obtain 
- * @method void setSummary(LLMComprehendSummary $Summary) Set 
- * @method LLMComprehendAsr getAsr() Obtain 
- * @method void setAsr(LLMComprehendAsr $Asr) Set 
- * @method LLMComprehendFaceRecognition getFaceRecognition() Obtain 
- * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method integer getDefinition() Obtain <p>Unique identifier of the image asynchronous processing template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the image asynchronous processing template.</p>
+ * @method string getName() Obtain <p>Image asynchronous processing template name.</p>
+ * @method void setName(string $Name) Set <p>Image asynchronous processing template name.</p>
+ * @method string getComment() Obtain <p>Description information of the image asynchronous processing template.</p>
+ * @method void setComment(string $Comment) Set <p>Description information of the image asynchronous processing template.</p>
+ * @method string getType() Obtain <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
+ * @method void setType(string $Type) Set <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
+ * @method string getLevel() Obtain <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
+ * @method void setLevel(string $Level) Set <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
+ * @method LLMComprehendSummary getSummary() Obtain <p>Segment summary parsing configuration</p>
+ * @method void setSummary(LLMComprehendSummary $Summary) Set <p>Segment summary parsing configuration</p>
+ * @method LLMComprehendAsr getAsr() Obtain <p>Text transcribing and parsing configuration</p>
+ * @method void setAsr(LLMComprehendAsr $Asr) Set <p>Text transcribing and parsing configuration</p>
+ * @method LLMComprehendFaceRecognition getFaceRecognition() Obtain <p>Face recognition parsing configuration</p>
+ * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) Set <p>Face recognition parsing configuration</p>
+ * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  */
 class LLMComprehendTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Unique identifier of the image asynchronous processing template.</p>
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string <p>Image asynchronous processing template name.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Description information of the image asynchronous processing template.</p>
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
      */
     public $Level;
 
     /**
-     * @var LLMComprehendSummary 
+     * @var LLMComprehendSummary <p>Segment summary parsing configuration</p>
      */
     public $Summary;
 
     /**
-     * @var LLMComprehendAsr 
+     * @var LLMComprehendAsr <p>Text transcribing and parsing configuration</p>
      */
     public $Asr;
 
     /**
-     * @var LLMComprehendFaceRecognition 
+     * @var LLMComprehendFaceRecognition <p>Face recognition parsing configuration</p>
      */
     public $FaceRecognition;
 
     /**
-     * @var string 
+     * @var string <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param string $Type 
-     * @param string $Level 
-     * @param LLMComprehendSummary $Summary 
-     * @param LLMComprehendAsr $Asr 
-     * @param LLMComprehendFaceRecognition $FaceRecognition 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
+     * @param integer $Definition <p>Unique identifier of the image asynchronous processing template.</p>
+     * @param string $Name <p>Image asynchronous processing template name.</p>
+     * @param string $Comment <p>Description information of the image asynchronous processing template.</p>
+     * @param string $Type <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
+     * @param string $Level <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
+     * @param LLMComprehendSummary $Summary <p>Segment summary parsing configuration</p>
+     * @param LLMComprehendAsr $Asr <p>Text transcribing and parsing configuration</p>
+     * @param LLMComprehendFaceRecognition $FaceRecognition <p>Face recognition parsing configuration</p>
+     * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     function __construct()
     {

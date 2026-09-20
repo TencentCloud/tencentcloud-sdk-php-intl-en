@@ -18,76 +18,120 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Super-resolution configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getMode() Obtain 
- * @method void setMode(string $Mode) Set 
- * @method float getPercent() Obtain 
- * @method void setPercent(float $Percent) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method integer getLongSide() Obtain 
- * @method void setLongSide(integer $LongSide) Set 
- * @method integer getShortSide() Obtain 
- * @method void setShortSide(integer $ShortSide) Set 
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
+ * @method string getType() Obtain Type. Valid values:
+<li>standard: common overclocking</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
+ * @method void setType(string $Type) Set Type. Valid values:
+<li>standard: common overclocking</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
+ * @method string getMode() Obtain Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
+ * @method void setMode(string $Mode) Set Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
+ * @method float getPercent() Obtain Overscaling multiplication rate, which can be a decimal.
+ * @method void setPercent(float $Percent) Set Overscaling multiplication rate, which can be a decimal.
+ * @method integer getWidth() Obtain Target image width. It cannot exceed 4096.
+ * @method void setWidth(integer $Width) Set Target image width. It cannot exceed 4096.
+ * @method integer getHeight() Obtain Target image height. Cannot exceed 4096.
+ * @method void setHeight(integer $Height) Set Target image height. Cannot exceed 4096.
+ * @method integer getLongSide() Obtain Target image long edge length. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+ * @method void setLongSide(integer $LongSide) Set Target image long edge length. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+ * @method integer getShortSide() Obtain Short side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+ * @method void setShortSide(integer $ShortSide) Set Short side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
  */
 class AdvancedSuperResolutionConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Type. Valid values:
+<li>standard: common overclocking</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
      */
     public $Mode;
 
     /**
-     * @var float 
+     * @var float Overscaling multiplication rate, which can be a decimal.
      */
     public $Percent;
 
     /**
-     * @var integer 
+     * @var integer Target image width. It cannot exceed 4096.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Target image height. Cannot exceed 4096.
      */
     public $Height;
 
     /**
-     * @var integer 
+     * @var integer Target image long edge length. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
      */
     public $LongSide;
 
     /**
-     * @var integer 
+     * @var integer Short side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
      */
     public $ShortSide;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
-     * @param string $Mode 
-     * @param float $Percent 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param integer $LongSide 
-     * @param integer $ShortSide 
+     * @param string $Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
+     * @param string $Type Type. Valid values:
+<li>standard: common overclocking</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
+     * @param string $Mode Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
+     * @param float $Percent Overscaling multiplication rate, which can be a decimal.
+     * @param integer $Width Target image width. It cannot exceed 4096.
+     * @param integer $Height Target image height. Cannot exceed 4096.
+     * @param integer $LongSide Target image long edge length. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+     * @param integer $ShortSide Short side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
      */
     function __construct()
     {

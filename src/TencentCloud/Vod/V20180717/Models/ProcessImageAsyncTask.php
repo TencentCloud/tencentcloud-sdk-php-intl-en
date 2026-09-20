@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image asynchronous processing configuration.
  *
- * @method ImageEncodeConfig getEncodeConfig() Obtain 
- * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set 
- * @method ImageEnhanceConfig getEnhanceConfig() Obtain 
- * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set 
- * @method ImageBeautyConfig getBeautyConfig() Obtain 
- * @method void setBeautyConfig(ImageBeautyConfig $BeautyConfig) Set 
- * @method AiCutOutConfig getAiCutOutConfig() Obtain 
- * @method void setAiCutOutConfig(AiCutOutConfig $AiCutOutConfig) Set 
+ * @method ImageEncodeConfig getEncodeConfig() Obtain <p>Image transcoding output configuration.</p>
+ * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set <p>Image transcoding output configuration.</p>
+ * @method ImageEnhanceConfig getEnhanceConfig() Obtain <p>Image enhancement configuration.</p>
+ * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set <p>Image enhancement configuration.</p>
+ * @method ImageBeautyConfig getBeautyConfig() Obtain <p>Image beauty effect configuration.</p>
+ * @method void setBeautyConfig(ImageBeautyConfig $BeautyConfig) Set <p>Image beauty effect configuration.</p>
+ * @method AiCutOutConfig getAiCutOutConfig() Obtain <p>Ai cutout configuration</p>
+ * @method void setAiCutOutConfig(AiCutOutConfig $AiCutOutConfig) Set <p>Ai cutout configuration</p>
  */
 class ProcessImageAsyncTask extends AbstractModel
 {
     /**
-     * @var ImageEncodeConfig 
+     * @var ImageEncodeConfig <p>Image transcoding output configuration.</p>
      */
     public $EncodeConfig;
 
     /**
-     * @var ImageEnhanceConfig 
+     * @var ImageEnhanceConfig <p>Image enhancement configuration.</p>
      */
     public $EnhanceConfig;
 
     /**
-     * @var ImageBeautyConfig 
+     * @var ImageBeautyConfig <p>Image beauty effect configuration.</p>
      */
     public $BeautyConfig;
 
     /**
-     * @var AiCutOutConfig 
+     * @var AiCutOutConfig <p>Ai cutout configuration</p>
      */
     public $AiCutOutConfig;
 
     /**
-     * @param ImageEncodeConfig $EncodeConfig 
-     * @param ImageEnhanceConfig $EnhanceConfig 
-     * @param ImageBeautyConfig $BeautyConfig 
-     * @param AiCutOutConfig $AiCutOutConfig 
+     * @param ImageEncodeConfig $EncodeConfig <p>Image transcoding output configuration.</p>
+     * @param ImageEnhanceConfig $EnhanceConfig <p>Image enhancement configuration.</p>
+     * @param ImageBeautyConfig $BeautyConfig <p>Image beauty effect configuration.</p>
+     * @param AiCutOutConfig $AiCutOutConfig <p>Ai cutout configuration</p>
      */
     function __construct()
     {

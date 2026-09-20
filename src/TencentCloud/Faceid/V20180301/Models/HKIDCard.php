@@ -18,148 +18,92 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Hong Kong (China) ID card.
+ * Hong Kong identity card
  *
  * @method string getCnName() Obtain Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example:  SAN, Nan
  * @method void setCnName(string $CnName) Set Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example:  SAN, Nan
  * @method string getEnName() Obtain English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
  * @method void setEnName(string $EnName) Set English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
- * @method string getTelexCode() Obtain Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTelexCode(string $TelexCode) Set Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
- * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
- * @method string getPermanent() Obtain Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPermanent(string $Permanent) Set Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIdNum() Obtain ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
- * @method void setIdNum(string $IdNum) Set ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
- * @method string getSymbol() Obtain Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSymbol(string $Symbol) Set Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstIssueDate() Obtain The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstIssueDate(string $FirstIssueDate) Set The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCurrentIssueDate() Obtain The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentIssueDate(string $CurrentIssueDate) Set The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTelexCode() Obtain Chinese name telegraph code
+ * @method void setTelexCode(string $TelexCode) Set Chinese name telegraph code
+ * @method string getSex() Obtain Gender: "M" (male) or "F" (female)
+ * @method void setSex(string $Sex) Set Gender: "M" (male) or "F" (female)
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
+ * @method string getPermanent() Obtain Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
+ * @method void setPermanent(string $Permanent) Set Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
+ * @method string getIdNum() Obtain Identity number
+ * @method void setIdNum(string $IdNum) Set Identity number
+ * @method string getSymbol() Obtain Document symbol, the symbol below the date of birth, for example, "***AZ"
+ * @method void setSymbol(string $Symbol) Set Document symbol, the symbol below the date of birth, for example, "***AZ"
+ * @method string getFirstIssueDate() Obtain Date of first issue
+ * @method void setFirstIssueDate(string $FirstIssueDate) Set Date of first issue
+ * @method string getCurrentIssueDate() Obtain Most recent date of issue
+ * @method void setCurrentIssueDate(string $CurrentIssueDate) Set Most recent date of issue
  */
 class HKIDCard extends AbstractModel
 {
     /**
      * @var string Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example:  SAN, Nan
      */
     public $CnName;
 
     /**
      * @var string English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
      */
     public $EnName;
 
     /**
-     * @var string Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Chinese name telegraph code
      */
     public $TelexCode;
 
     /**
-     * @var string Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Gender: "M" (male) or "F" (female)
      */
     public $Sex;
 
     /**
-     * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
-     * @var string Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
      */
     public $Permanent;
 
     /**
-     * @var string ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
+     * @var string Identity number
      */
     public $IdNum;
 
     /**
-     * @var string Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Document symbol, the symbol below the date of birth, for example, "***AZ"
      */
     public $Symbol;
 
     /**
-     * @var string The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of first issue
      */
     public $FirstIssueDate;
 
     /**
-     * @var string The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Most recent date of issue
      */
     public $CurrentIssueDate;
 
     /**
      * @param string $CnName Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example:  SAN, Nan
      * @param string $EnName English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
-     * @param string $TelexCode Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
-     * @param string $Permanent Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IdNum ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
-     * @param string $Symbol Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstIssueDate The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CurrentIssueDate The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TelexCode Chinese name telegraph code
+     * @param string $Sex Gender: "M" (male) or "F" (female)
+     * @param string $Birthday Date of birth
+     * @param string $Permanent Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
+     * @param string $IdNum Identity number
+     * @param string $Symbol Document symbol, the symbol below the date of birth, for example, "***AZ"
+     * @param string $FirstIssueDate Date of first issue
+     * @param string $CurrentIssueDate Most recent date of issue
      */
     function __construct()
     {

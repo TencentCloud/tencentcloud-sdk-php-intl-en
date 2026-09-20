@@ -20,58 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonSample request structure.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method array getUsages() Obtain 
- * @method void setUsages(array $Usages) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method array getFaceContents() Obtain 
- * @method void setFaceContents(array $FaceContents) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method string getName() Obtain Material name. Length limit: 20 characters.
+ * @method void setName(string $Name) Set Material name. Length limit: 20 characters.
+ * @method array getUsages() Obtain Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
+ * @method void setUsages(array $Usages) Set Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getDescription() Obtain Material description. Length limit: 1024 characters.
+ * @method void setDescription(string $Description) Set Material description. Length limit: 1024 characters.
+ * @method array getFaceContents() Obtain Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
+ * @method void setFaceContents(array $FaceContents) Set Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
+ * @method array getTags() Obtain Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
+ * @method void setTags(array $Tags) Set Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
  */
 class CreatePersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Material name. Length limit: 20 characters.
      */
     public $Name;
 
     /**
-     * @var array 
+     * @var array Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
      */
     public $Usages;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Material description. Length limit: 1024 characters.
      */
     public $Description;
 
     /**
-     * @var array 
+     * @var array Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
      */
     public $FaceContents;
 
     /**
-     * @var array 
+     * @var array Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
      */
     public $Tags;
 
     /**
-     * @param string $Name 
-     * @param array $Usages 
-     * @param integer $SubAppId 
-     * @param string $Description 
-     * @param array $FaceContents 
-     * @param array $Tags 
+     * @param string $Name Material name. Length limit: 20 characters.
+     * @param array $Usages Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Description Material description. Length limit: 1024 characters.
+     * @param array $FaceContents Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
+     * @param array $Tags Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
      */
     function __construct()
     {

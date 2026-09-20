@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Universal data type for description of a time period.
  *
- * @method string getAfter() Obtain 
- * @method void setAfter(string $After) Set 
- * @method string getBefore() Obtain 
- * @method void setBefore(string $Before) Set 
+ * @method string getAfter() Obtain <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method void setAfter(string $After) Set <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method string getBefore() Obtain <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method void setBefore(string $Before) Set <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
  */
 class TimeRange extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public $After;
 
     /**
-     * @var string 
+     * @var string <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public $Before;
 
     /**
-     * @param string $After 
-     * @param string $Before 
+     * @param string $After <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param string $Before <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     function __construct()
     {

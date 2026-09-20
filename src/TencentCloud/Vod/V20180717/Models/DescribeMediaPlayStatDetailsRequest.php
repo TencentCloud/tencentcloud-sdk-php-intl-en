@@ -20,50 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaPlayStatDetails request structure.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getInterval() Obtain 
- * @method void setInterval(string $Interval) Set 
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method string getStartTime() Obtain Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getEndTime() Obtain End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setEndTime(string $EndTime) Set End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getInterval() Obtain Statistical time granularity. Valid values:
+<li>Hour: in hours.</li>
+<li>Day: By day.</li>
+The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
+ * @method void setInterval(string $Interval) Set Statistical time granularity. Valid values:
+<li>Hour: in hours.</li>
+<li>Day: By day.</li>
+The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
  */
 class DescribeMediaPlayStatDetailsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $EndTime;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Statistical time granularity. Valid values:
+<li>Hour: in hours.</li>
+<li>Day: By day.</li>
+The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
      */
     public $Interval;
 
     /**
-     * @param string $FileId 
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param integer $SubAppId 
-     * @param string $Interval 
+     * @param string $FileId Media file ID.
+     * @param string $StartTime Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $EndTime End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Interval Statistical time granularity. Valid values:
+<li>Hour: in hours.</li>
+<li>Day: By day.</li>
+The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
      */
     function __construct()
     {

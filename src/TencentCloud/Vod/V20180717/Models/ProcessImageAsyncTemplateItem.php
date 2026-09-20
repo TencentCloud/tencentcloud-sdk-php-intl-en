@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Details of the async image processing template.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
- * @method ProcessImageAsyncTask getProcessImageConfigure() Obtain 
- * @method void setProcessImageConfigure(ProcessImageAsyncTask $ProcessImageConfigure) Set 
+ * @method integer getDefinition() Obtain Unique identifier of the image asynchronous processing template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the image asynchronous processing template.
+ * @method string getType() Obtain Template type.
+ * @method void setType(string $Type) Set Template type.
+ * @method string getName() Obtain Image async processing template name.
+ * @method void setName(string $Name) Set Image async processing template name.
+ * @method string getComment() Obtain Description information of the async image processing template.
+ * @method void setComment(string $Comment) Set Description information of the async image processing template.
+ * @method string getCreateTime() Obtain Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method ProcessImageAsyncTask getProcessImageConfigure() Obtain Image async processing template configuration.
+ * @method void setProcessImageConfigure(ProcessImageAsyncTask $ProcessImageConfigure) Set Image async processing template configuration.
  */
 class ProcessImageAsyncTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique identifier of the image asynchronous processing template.
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Template type.
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Image async processing template name.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Description information of the async image processing template.
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
-     * @var ProcessImageAsyncTask 
+     * @var ProcessImageAsyncTask Image async processing template configuration.
      */
     public $ProcessImageConfigure;
 
     /**
-     * @param integer $Definition 
-     * @param string $Type 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
-     * @param ProcessImageAsyncTask $ProcessImageConfigure 
+     * @param integer $Definition Unique identifier of the image asynchronous processing template.
+     * @param string $Type Template type.
+     * @param string $Name Image async processing template name.
+     * @param string $Comment Description information of the async image processing template.
+     * @param string $CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ProcessImageAsyncTask $ProcessImageConfigure Image async processing template configuration.
      */
     function __construct()
     {

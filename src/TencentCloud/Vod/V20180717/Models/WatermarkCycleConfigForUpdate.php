@@ -18,36 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Watermark period configuration.
  *
- * @method float getStartTime() Obtain 
- * @method void setStartTime(float $StartTime) Set 
- * @method float getDisplayDuration() Obtain 
- * @method void setDisplayDuration(float $DisplayDuration) Set 
- * @method float getCycleDuration() Obtain 
- * @method void setCycleDuration(float $CycleDuration) Set 
+ * @method float getStartTime() Obtain Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+ * @method void setStartTime(float $StartTime) Set Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+ * @method float getDisplayDuration() Obtain Duration of watermark display in a watermark cycle, in seconds.
+ * @method void setDisplayDuration(float $DisplayDuration) Set Duration of watermark display in a watermark cycle, in seconds.
+ * @method float getCycleDuration() Obtain Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+ * @method void setCycleDuration(float $CycleDuration) Set Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
  */
 class WatermarkCycleConfigForUpdate extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
      */
     public $StartTime;
 
     /**
-     * @var float 
+     * @var float Duration of watermark display in a watermark cycle, in seconds.
      */
     public $DisplayDuration;
 
     /**
-     * @var float 
+     * @var float Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     public $CycleDuration;
 
     /**
-     * @param float $StartTime 
-     * @param float $DisplayDuration 
-     * @param float $CycleDuration 
+     * @param float $StartTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+     * @param float $DisplayDuration Duration of watermark display in a watermark cycle, in seconds.
+     * @param float $CycleDuration Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     function __construct()
     {

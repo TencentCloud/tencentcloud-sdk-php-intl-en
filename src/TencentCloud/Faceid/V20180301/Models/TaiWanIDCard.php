@@ -18,72 +18,52 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Taiwan (China) ID card.
+ * Taiwan (China) ID card
  *
- * @method string getFullName() Obtain Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullName(string $FullName) Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedCountry() Obtain Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedCountry(string $IssuedCountry) Set Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFullName() Obtain Name.
+ * @method void setFullName(string $FullName) Set Name.
+ * @method string getLicenseNumber() Obtain Identity card
+ * @method void setLicenseNumber(string $LicenseNumber) Set Identity card
+ * @method string getSex() Obtain Sex
+ * @method void setSex(string $Sex) Set Sex
+ * @method string getIssuedCountry() Obtain City of issuance
+ * @method void setIssuedCountry(string $IssuedCountry) Set City of issuance
  * @method string getRegistrationNumber() Obtain Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegistrationNumber(string $RegistrationNumber) Set Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaiWanIDCard extends AbstractModel
 {
     /**
-     * @var string Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name.
      */
     public $FullName;
 
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity card
      */
     public $LicenseNumber;
 
     /**
-     * @var string Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sex
      */
     public $Sex;
 
     /**
-     * @var string Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string City of issuance
      */
     public $IssuedCountry;
 
     /**
      * @var string Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegistrationNumber;
 
     /**
-     * @param string $FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FullName Name.
+     * @param string $LicenseNumber Identity card
+     * @param string $Sex Sex
+     * @param string $IssuedCountry City of issuance
      * @param string $RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

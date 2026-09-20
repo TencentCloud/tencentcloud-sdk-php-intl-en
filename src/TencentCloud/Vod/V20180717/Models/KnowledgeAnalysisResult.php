@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Media analysis result of the knowledge base.
  *
- * @method string getTaskType() Obtain 
- * @method void setTaskType(string $TaskType) Set 
- * @method MPSOutputFileInfo getFile() Obtain 
- * @method void setFile(MPSOutputFileInfo $File) Set 
+ * @method string getTaskType() Obtain <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+ * @method void setTaskType(string $TaskType) Set <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+ * @method MPSOutputFileInfo getFile() Obtain <p>Task output file collection</p>
+ * @method void setFile(MPSOutputFileInfo $File) Set <p>Task output file collection</p>
  */
 class KnowledgeAnalysisResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
      */
     public $TaskType;
 
     /**
-     * @var MPSOutputFileInfo 
+     * @var MPSOutputFileInfo <p>Task output file collection</p>
      */
     public $File;
 
     /**
-     * @param string $TaskType 
-     * @param MPSOutputFileInfo $File 
+     * @param string $TaskType <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+     * @param MPSOutputFileInfo $File <p>Task output file collection</p>
      */
     function __construct()
     {

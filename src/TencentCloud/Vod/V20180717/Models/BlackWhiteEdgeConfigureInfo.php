@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameters for detecting black edges, white edges, black screen, and white screen in the video picture.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+ * @method void setSwitch(string $Switch) Set Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
  */
 class BlackWhiteEdgeConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     function __construct()
     {

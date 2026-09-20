@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * https acceleration configuration for the domain name. Disabled by default.
  *
  * @method string getCertId() Obtain Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
  * @method void setCertId(string $CertId) Set Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
- * @method string getCertificate() Obtain 
- * @method void setCertificate(string $Certificate) Set 
- * @method string getPrivateKey() Obtain 
- * @method void setPrivateKey(string $PrivateKey) Set 
+ * @method string getCertificate() Obtain Certificate information.
+ * @method void setCertificate(string $Certificate) Set Certificate information.
+ * @method string getPrivateKey() Obtain Key information.
+ * @method void setPrivateKey(string $PrivateKey) Set Key information.
  * @method string getExpireTime() Obtain Certificate expiration time;
 No need to fill when used as an input parameter configuration.
  * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time;
@@ -39,12 +39,12 @@ class CDNCertInfo extends AbstractModel
     public $CertId;
 
     /**
-     * @var string 
+     * @var string Certificate information.
      */
     public $Certificate;
 
     /**
-     * @var string 
+     * @var string Key information.
      */
     public $PrivateKey;
 
@@ -56,8 +56,8 @@ No need to fill when used as an input parameter configuration.
 
     /**
      * @param string $CertId Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
-     * @param string $Certificate 
-     * @param string $PrivateKey 
+     * @param string $Certificate Certificate information.
+     * @param string $PrivateKey Key information.
      * @param string $ExpireTime Certificate expiration time;
 No need to fill when used as an input parameter configuration.
      */

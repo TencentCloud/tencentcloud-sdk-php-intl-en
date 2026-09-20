@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input parameter type for video to adaptive bitrate stream
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getWatermarkSet() Obtain 
- * @method void setWatermarkSet(array $WatermarkSet) Set 
- * @method TraceWatermarkInput getTraceWatermark() Obtain 
- * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set 
- * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain 
- * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set 
- * @method BlindWatermarkInput getBlindWatermark() Obtain 
- * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set 
- * @method array getSubtitleSet() Obtain 
- * @method void setSubtitleSet(array $SubtitleSet) Set 
- * @method array getSubtitleInfoSet() Obtain 
- * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set 
- * @method ThirdPartyDrmInfo getDrmInfo() Obtain 
- * @method void setDrmInfo(ThirdPartyDrmInfo $DrmInfo) Set 
+ * @method integer getDefinition() Obtain <p>Adaptive bitrate streaming template ID.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Adaptive bitrate streaming template ID.</p>
+ * @method array getWatermarkSet() Obtain <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+ * @method void setWatermarkSet(array $WatermarkSet) Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+ * @method TraceWatermarkInput getTraceWatermark() Obtain <p>Traceable watermark.</p>
+ * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set <p>Traceable watermark.</p>
+ * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain <p>Copyright watermark.</p>
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set <p>Copyright watermark.</p>
+ * @method BlindWatermarkInput getBlindWatermark() Obtain <p>Digital watermark.</p>
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set <p>Digital watermark.</p>
+ * @method array getSubtitleSet() Obtain <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+ * @method void setSubtitleSet(array $SubtitleSet) Set <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+ * @method array getSubtitleInfoSet() Obtain <p>Subtitle suppression information list. Up to 2 supported.</p>
+ * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set <p>Subtitle suppression information list. Up to 2 supported.</p>
+ * @method ThirdPartyDrmInfo getDrmInfo() Obtain <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+ * @method void setDrmInfo(ThirdPartyDrmInfo $DrmInfo) Set <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Adaptive bitrate streaming template ID.</p>
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public $WatermarkSet;
 
     /**
-     * @var TraceWatermarkInput 
+     * @var TraceWatermarkInput <p>Traceable watermark.</p>
      */
     public $TraceWatermark;
 
     /**
-     * @var CopyRightWatermarkInput 
+     * @var CopyRightWatermarkInput <p>Copyright watermark.</p>
      */
     public $CopyRightWatermark;
 
     /**
-     * @var BlindWatermarkInput 
+     * @var BlindWatermarkInput <p>Digital watermark.</p>
      */
     public $BlindWatermark;
 
     /**
-     * @var array 
+     * @var array <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
      */
     public $SubtitleSet;
 
     /**
-     * @var array 
+     * @var array <p>Subtitle suppression information list. Up to 2 supported.</p>
      */
     public $SubtitleInfoSet;
 
     /**
-     * @var ThirdPartyDrmInfo 
+     * @var ThirdPartyDrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
      */
     public $DrmInfo;
 
     /**
-     * @param integer $Definition 
-     * @param array $WatermarkSet 
-     * @param TraceWatermarkInput $TraceWatermark 
-     * @param CopyRightWatermarkInput $CopyRightWatermark 
-     * @param BlindWatermarkInput $BlindWatermark 
-     * @param array $SubtitleSet 
-     * @param array $SubtitleInfoSet 
-     * @param ThirdPartyDrmInfo $DrmInfo 
+     * @param integer $Definition <p>Adaptive bitrate streaming template ID.</p>
+     * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * @param TraceWatermarkInput $TraceWatermark <p>Traceable watermark.</p>
+     * @param CopyRightWatermarkInput $CopyRightWatermark <p>Copyright watermark.</p>
+     * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark.</p>
+     * @param array $SubtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+     * @param array $SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
+     * @param ThirdPartyDrmInfo $DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
      */
     function __construct()
     {

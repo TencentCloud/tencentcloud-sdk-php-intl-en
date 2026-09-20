@@ -18,216 +18,148 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Indonesia ID card.
+ * Indonesian Identity Card
  *
- * @method string getNIK() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNIK(string $NIK) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNIK() Obtain ID number
+ * @method void setNIK(string $NIK) Set ID number
  * @method string getNama() Obtain Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNama(string $Nama) Set Name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTempatTglLahir() Obtain Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTempatTglLahir(string $TempatTglLahir) Set Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getJenisKelamin() Obtain Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJenisKelamin(string $JenisKelamin) Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTempatTglLahir() Obtain Birthplace/Date of birth
+ * @method void setTempatTglLahir(string $TempatTglLahir) Set Birthplace/Date of birth
+ * @method string getJenisKelamin() Obtain Sex
+ * @method void setJenisKelamin(string $JenisKelamin) Set Sex
  * @method string getGolDarah() Obtain Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGolDarah(string $GolDarah) Set Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAlamat() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlamat(string $Alamat) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAlamat() Obtain Address.
+ * @method void setAlamat(string $Alamat) Set Address.
  * @method string getRTRW() Obtain Street
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRTRW(string $RTRW) Set Street
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getKelDesa() Obtain Village
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKelDesa(string $KelDesa) Set Village
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKecamatan() Obtain Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKecamatan(string $Kecamatan) Set Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAgama() Obtain Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAgama(string $Agama) Set Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKecamatan() Obtain Region.
+ * @method void setKecamatan(string $Kecamatan) Set Region.
+ * @method string getAgama() Obtain Religious belief
+ * @method void setAgama(string $Agama) Set Religious belief
  * @method string getStatusPerkawinan() Obtain Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatusPerkawinan(string $StatusPerkawinan) Set Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPerkerjaan() Obtain Job
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPerkerjaan(string $Perkerjaan) Set Job
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPerkerjaan() Obtain Occupation
+ * @method void setPerkerjaan(string $Perkerjaan) Set Occupation
  * @method string getKewargaNegaraan() Obtain Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKewargaNegaraan(string $KewargaNegaraan) Set Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBerlakuHingga() Obtain ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBerlakuHingga(string $BerlakuHingga) Set ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedDate() Obtain Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedDate(string $IssuedDate) Set Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBerlakuHingga() Obtain Validity period of the ID card
+ * @method void setBerlakuHingga(string $BerlakuHingga) Set Validity period of the ID card
+ * @method string getIssuedDate() Obtain Issue date
+ * @method void setIssuedDate(string $IssuedDate) Set Issue date
  * @method string getProvinsi() Obtain Province
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProvinsi(string $Provinsi) Set Province
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKota() Obtain City
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKota(string $Kota) Set City
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKota() Obtain city
+ * @method void setKota(string $Kota) Set city
  */
 class IndonesiaIDCard extends AbstractModel
 {
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID number
      */
     public $NIK;
 
     /**
      * @var string Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nama;
 
     /**
-     * @var string Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Birthplace/Date of birth
      */
     public $TempatTglLahir;
 
     /**
-     * @var string Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sex
      */
     public $JenisKelamin;
 
     /**
      * @var string Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GolDarah;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $Alamat;
 
     /**
      * @var string Street
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RTRW;
 
     /**
      * @var string Village
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $KelDesa;
 
     /**
-     * @var string Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Kecamatan;
 
     /**
-     * @var string Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Religious belief
      */
     public $Agama;
 
     /**
      * @var string Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StatusPerkawinan;
 
     /**
-     * @var string Job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Occupation
      */
     public $Perkerjaan;
 
     /**
      * @var string Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $KewargaNegaraan;
 
     /**
-     * @var string ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Validity period of the ID card
      */
     public $BerlakuHingga;
 
     /**
-     * @var string Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Issue date
      */
     public $IssuedDate;
 
     /**
      * @var string Province
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Provinsi;
 
     /**
-     * @var string City
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string city
      */
     public $Kota;
 
     /**
-     * @param string $NIK License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NIK ID number
      * @param string $Nama Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TempatTglLahir Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $JenisKelamin Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TempatTglLahir Birthplace/Date of birth
+     * @param string $JenisKelamin Sex
      * @param string $GolDarah Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Alamat Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Alamat Address.
      * @param string $RTRW Street
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $KelDesa Village
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Kecamatan Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Agama Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Kecamatan Region.
+     * @param string $Agama Religious belief
      * @param string $StatusPerkawinan Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Perkerjaan Job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Perkerjaan Occupation
      * @param string $KewargaNegaraan Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BerlakuHingga ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BerlakuHingga Validity period of the ID card
+     * @param string $IssuedDate Issue date
      * @param string $Provinsi Province
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Kota City
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Kota city
      */
     function __construct()
     {

@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method array getPersonIds() Obtain 
- * @method void setPersonIds(array $PersonIds) Set 
- * @method array getNames() Obtain 
- * @method void setNames(array $Names) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method string getType() Obtain <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
+ * @method void setType(string $Type) Set <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
+ * @method array getPersonIds() Obtain <p>Material ID. Array length limit: 100.</p>
+ * @method void setPersonIds(array $PersonIds) Set <p>Material ID. Array length limit: 100.</p>
+ * @method array getNames() Obtain <p>Material name. Array length limit: 20.</p>
+ * @method void setNames(array $Names) Set <p>Material name. Array length limit: 20.</p>
+ * @method array getTags() Obtain <p>Material tag. Array length limit: 20.</p>
+ * @method void setTags(array $Tags) Set <p>Material tag. Array length limit: 20.</p>
+ * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
  */
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
      */
     public $Type;
 
     /**
-     * @var array 
+     * @var array <p>Material ID. Array length limit: 100.</p>
      */
     public $PersonIds;
 
     /**
-     * @var array 
+     * @var array <p>Material name. Array length limit: 20.</p>
      */
     public $Names;
 
     /**
-     * @var array 
+     * @var array <p>Material tag. Array length limit: 20.</p>
      */
     public $Tags;
 
     /**
-     * @var integer 
+     * @var integer <p>Paging offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Type 
-     * @param array $PersonIds 
-     * @param array $Names 
-     * @param array $Tags 
-     * @param integer $Offset 
-     * @param integer $Limit 
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param string $Type <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
+     * @param array $PersonIds <p>Material ID. Array length limit: 100.</p>
+     * @param array $Names <p>Material name. Array length limit: 20.</p>
+     * @param array $Tags <p>Material tag. Array length limit: 20.</p>
+     * @param integer $Offset <p>Paging offset. Default value: 0.</p>
+     * @param integer $Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
      */
     function __construct()
     {

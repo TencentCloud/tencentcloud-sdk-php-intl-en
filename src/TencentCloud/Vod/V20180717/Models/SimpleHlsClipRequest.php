@@ -20,115 +20,115 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SimpleHlsClip request structure.
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method integer getIsPersistence() Obtain 
- * @method void setIsPersistence(integer $IsPersistence) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
- * @method string getProcedure() Obtain 
- * @method void setProcedure(string $Procedure) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getSourceContext() Obtain 
- * @method void setSourceContext(string $SourceContext) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getPrecision() Obtain 
- * @method void setPrecision(string $Precision) Set 
- * @method string getOutputMediaType() Obtain 
- * @method void setOutputMediaType(string $OutputMediaType) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getUrl() Obtain <p>Tencent Cloud VOD HLS video URL that needs to be cropped.</p>
+ * @method void setUrl(string $Url) Set <p>Tencent Cloud VOD HLS video URL that needs to be cropped.</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method float getStartTimeOffset() Obtain <p>Crop start offset time, in seconds. Default: 0, crop from the beginning of the video. Negative numbers indicate how many seconds from the end of the video to start cropping. For example, -10 means to start trimming from the 10th second from the end.</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Crop start offset time, in seconds. Default: 0, crop from the beginning of the video. Negative numbers indicate how many seconds from the end of the video to start cropping. For example, -10 means to start trimming from the 10th second from the end.</p>
+ * @method float getEndTimeOffset() Obtain <p>Crop end offset time, in seconds. Default: 0, which means crop to the end of the video. Negative numbers indicate how many seconds from the end of the video to end cropping. For example, -10 means end cropping at the 10th second from the end.</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>Crop end offset time, in seconds. Default: 0, which means crop to the end of the video. Negative numbers indicate how many seconds from the end of the video to end cropping. For example, -10 means end cropping at the 10th second from the end.</p>
+ * @method integer getIsPersistence() Obtain <p>Whether solidified. 0: non-permanent, 1: solidified. Default: non-permanent.</p>
+ * @method void setIsPersistence(integer $IsPersistence) Set <p>Whether solidified. 0: non-permanent, 1: solidified. Default: non-permanent.</p>
+ * @method string getExpireTime() Obtain <p>Video storage expiry time after editing solidification. Format reference: <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. Enter "9999-12-31T23:59:59Z" to indicate the video never expires. After expiry, the media file and its related resources (transcoding result, sprites, etc.) will be permanently deleted. Valid only when IsPersistence is 1. By default, the video after editing solidification never expires.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Video storage expiry time after editing solidification. Format reference: <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. Enter "9999-12-31T23:59:59Z" to indicate the video never expires. After expiry, the media file and its related resources (transcoding result, sprites, etc.) will be permanently deleted. Valid only when IsPersistence is 1. By default, the video after editing solidification never expires.</p>
+ * @method string getProcedure() Obtain <p>Post-editing Solidified Video On-demand Task Flow Processing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1">upload specified task flow</a>. Valid only when IsPersistence is 1.</p>
+ * @method void setProcedure(string $Procedure) Set <p>Post-editing Solidified Video On-demand Task Flow Processing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1">upload specified task flow</a>. Valid only when IsPersistence is 1.</p>
+ * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/31772">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>Valid only when IsPersistence is 1.
+ * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/31772">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>Valid only when IsPersistence is 1.
+ * @method string getSourceContext() Obtain <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters. Valid only when IsPersistence is 1.</p>
+ * @method void setSourceContext(string $SourceContext) Set <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters. Valid only when IsPersistence is 1.</p>
+ * @method string getSessionContext() Obtain <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters. Valid only when IsPersistence is 1.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters. Valid only when IsPersistence is 1.</p>
+ * @method string getPrecision() Obtain <p>Deprecated field.</p>
+ * @method void setPrecision(string $Precision) Set <p>Deprecated field.</p>
+ * @method string getOutputMediaType() Obtain <p>Output video type. Valid values: <li>hls: output HLS file.</li>Default: hls.</p>
+ * @method void setOutputMediaType(string $OutputMediaType) Set <p>Output video type. Valid values: <li>hls: output HLS file.</li>Default: hls.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used when special usage. Example value: ""</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used when special usage. Example value: ""</p>
  */
 class SimpleHlsClipRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Tencent Cloud VOD HLS video URL that needs to be cropped.</p>
      */
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var float 
+     * @var float <p>Crop start offset time, in seconds. Default: 0, crop from the beginning of the video. Negative numbers indicate how many seconds from the end of the video to start cropping. For example, -10 means to start trimming from the 10th second from the end.</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float <p>Crop end offset time, in seconds. Default: 0, which means crop to the end of the video. Negative numbers indicate how many seconds from the end of the video to end cropping. For example, -10 means end cropping at the 10th second from the end.</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether solidified. 0: non-permanent, 1: solidified. Default: non-permanent.</p>
      */
     public $IsPersistence;
 
     /**
-     * @var string 
+     * @var string <p>Video storage expiry time after editing solidification. Format reference: <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. Enter "9999-12-31T23:59:59Z" to indicate the video never expires. After expiry, the media file and its related resources (transcoding result, sprites, etc.) will be permanently deleted. Valid only when IsPersistence is 1. By default, the video after editing solidification never expires.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 
+     * @var string <p>Post-editing Solidified Video On-demand Task Flow Processing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1">upload specified task flow</a>. Valid only when IsPersistence is 1.</p>
      */
     public $Procedure;
 
     /**
-     * @var integer 
+     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/31772">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>Valid only when IsPersistence is 1.
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters. Valid only when IsPersistence is 1.</p>
      */
     public $SourceContext;
 
     /**
-     * @var string 
+     * @var string <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters. Valid only when IsPersistence is 1.</p>
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string <p>Deprecated field.</p>
      * @deprecated
      */
     public $Precision;
 
     /**
-     * @var string 
+     * @var string <p>Output video type. Valid values: <li>hls: output HLS file.</li>Default: hls.</p>
      */
     public $OutputMediaType;
 
     /**
-     * @var string 
+     * @var string <p>Reserved field, used when special usage. Example value: ""</p>
      */
     public $ExtInfo;
 
     /**
-     * @param string $Url 
-     * @param integer $SubAppId 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param integer $IsPersistence 
-     * @param string $ExpireTime 
-     * @param string $Procedure 
-     * @param integer $ClassId 
-     * @param string $SourceContext 
-     * @param string $SessionContext 
-     * @param string $Precision 
-     * @param string $OutputMediaType 
-     * @param string $ExtInfo 
+     * @param string $Url <p>Tencent Cloud VOD HLS video URL that needs to be cropped.</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param float $StartTimeOffset <p>Crop start offset time, in seconds. Default: 0, crop from the beginning of the video. Negative numbers indicate how many seconds from the end of the video to start cropping. For example, -10 means to start trimming from the 10th second from the end.</p>
+     * @param float $EndTimeOffset <p>Crop end offset time, in seconds. Default: 0, which means crop to the end of the video. Negative numbers indicate how many seconds from the end of the video to end cropping. For example, -10 means end cropping at the 10th second from the end.</p>
+     * @param integer $IsPersistence <p>Whether solidified. 0: non-permanent, 1: solidified. Default: non-permanent.</p>
+     * @param string $ExpireTime <p>Video storage expiry time after editing solidification. Format reference: <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. Enter "9999-12-31T23:59:59Z" to indicate the video never expires. After expiry, the media file and its related resources (transcoding result, sprites, etc.) will be permanently deleted. Valid only when IsPersistence is 1. By default, the video after editing solidification never expires.</p>
+     * @param string $Procedure <p>Post-editing Solidified Video On-demand Task Flow Processing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1">upload specified task flow</a>. Valid only when IsPersistence is 1.</p>
+     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/31772">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>Valid only when IsPersistence is 1.
+     * @param string $SourceContext <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters. Valid only when IsPersistence is 1.</p>
+     * @param string $SessionContext <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters. Valid only when IsPersistence is 1.</p>
+     * @param string $Precision <p>Deprecated field.</p>
+     * @param string $OutputMediaType <p>Output video type. Valid values: <li>hls: output HLS file.</li>Default: hls.</p>
+     * @param string $ExtInfo <p>Reserved field, used when special usage. Example value: ""</p>
      */
     function __construct()
     {

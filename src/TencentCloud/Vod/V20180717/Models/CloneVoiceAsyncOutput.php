@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of the timbre cloning task.
  *
- * @method string getVoiceId() Obtain 
- * @method void setVoiceId(string $VoiceId) Set 
- * @method string getDemoAudio() Obtain 
- * @method void setDemoAudio(string $DemoAudio) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getVoiceId() Obtain <p>Voice ID.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
+ * @method string getDemoAudio() Obtain <p>Audition audio.</p>
+ * @method void setDemoAudio(string $DemoAudio) Set <p>Audition audio.</p>
+ * @method string getExtInfo() Obtain <p>Extended information.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Extended information.</p>
  */
 class CloneVoiceAsyncOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Voice ID.</p>
      */
     public $VoiceId;
 
     /**
-     * @var string 
+     * @var string <p>Audition audio.</p>
      */
     public $DemoAudio;
 
     /**
-     * @var string 
+     * @var string <p>Extended information.</p>
      */
     public $ExtInfo;
 
     /**
-     * @param string $VoiceId 
-     * @param string $DemoAudio 
-     * @param string $ExtInfo 
+     * @param string $VoiceId <p>Voice ID.</p>
+     * @param string $DemoAudio <p>Audition audio.</p>
+     * @param string $ExtInfo <p>Extended information.</p>
      */
     function __construct()
     {

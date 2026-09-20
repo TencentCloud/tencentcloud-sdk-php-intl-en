@@ -18,76 +18,84 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video transcoding task information. This structure is only used for tasks initiated via the 2017 [video transcoding](https://www.tencentcloud.com/document/product/266/7822?from_cn_redirect=1) API.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getFileName() Obtain 
- * @method void setFileName(string $FileName) Set 
- * @method integer getDuration() Obtain 
- * @method void setDuration(integer $Duration) Set 
- * @method string getCoverUrl() Obtain 
- * @method void setCoverUrl(string $CoverUrl) Set 
- * @method array getPlayInfoSet() Obtain 
- * @method void setPlayInfoSet(array $PlayInfoSet) Set 
+ * @method string getTaskId() Obtain Transcoding task ID.
+ * @method void setTaskId(string $TaskId) Set Transcoding task ID.
+ * @method integer getErrCode() Obtain Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method string getFileId() Obtain Transcoded file ID.
+ * @method void setFileId(string $FileId) Set Transcoded file ID.
+ * @method string getFileName() Obtain Name of the transcoded file.
+ * @method void setFileName(string $FileName) Set Name of the transcoded file.
+ * @method integer getDuration() Obtain Video duration, in seconds.
+ * @method void setDuration(integer $Duration) Set Video duration, in seconds.
+ * @method string getCoverUrl() Obtain Address of a cover.
+ * @method void setCoverUrl(string $CoverUrl) Set Address of a cover.
+ * @method array getPlayInfoSet() Obtain Playback information generated after video transcoding.
+ * @method void setPlayInfoSet(array $PlayInfoSet) Set Playback information generated after video transcoding.
  */
 class TranscodeTask2017 extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Transcoding task ID.
      */
     public $TaskId;
 
     /**
-     * @var integer 
+     * @var integer Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var string 
+     * @var string Transcoded file ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Name of the transcoded file.
      */
     public $FileName;
 
     /**
-     * @var integer 
+     * @var integer Video duration, in seconds.
      */
     public $Duration;
 
     /**
-     * @var string 
+     * @var string Address of a cover.
      */
     public $CoverUrl;
 
     /**
-     * @var array 
+     * @var array Playback information generated after video transcoding.
      */
     public $PlayInfoSet;
 
     /**
-     * @param string $TaskId 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param string $FileId 
-     * @param string $FileName 
-     * @param integer $Duration 
-     * @param string $CoverUrl 
-     * @param array $PlayInfoSet 
+     * @param string $TaskId Transcoding task ID.
+     * @param integer $ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+     * @param string $Message Error message.
+     * @param string $FileId Transcoded file ID.
+     * @param string $FileName Name of the transcoded file.
+     * @param integer $Duration Video duration, in seconds.
+     * @param string $CoverUrl Address of a cover.
+     * @param array $PlayInfoSet Playback information generated after video transcoding.
      */
     function __construct()
     {

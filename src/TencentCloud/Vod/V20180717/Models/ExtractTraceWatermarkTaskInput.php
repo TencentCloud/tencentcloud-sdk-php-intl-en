@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input for extracting traceability watermark
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
+ * @method string getUrl() Obtain URL of the media requiring watermark extraction.
+ * @method void setUrl(string $Url) Set URL of the media requiring watermark extraction.
+ * @method string getFileId() Obtain Media file ID. Original media file ID corresponding to the Url.
+ * @method void setFileId(string $FileId) Set Media file ID. Original media file ID corresponding to the Url.
  */
 class ExtractTraceWatermarkTaskInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string URL of the media requiring watermark extraction.
      */
     public $Url;
 
     /**
-     * @var string 
+     * @var string Media file ID. Original media file ID corresponding to the Url.
      */
     public $FileId;
 
     /**
-     * @param string $Url 
-     * @param string $FileId 
+     * @param string $Url URL of the media requiring watermark extraction.
+     * @param string $FileId Media file ID. Original media file ID corresponding to the Url.
      */
     function __construct()
     {

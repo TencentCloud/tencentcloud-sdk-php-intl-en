@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * CLS log topic information.
  *
- * @method string getTopicId() Obtain 
- * @method void setTopicId(string $TopicId) Set 
- * @method string getTopicName() Obtain 
- * @method void setTopicName(string $TopicName) Set 
- * @method string getLogsetId() Obtain 
- * @method void setLogsetId(string $LogsetId) Set 
+ * @method string getTopicId() Obtain Log topic ID.
+ * @method void setTopicId(string $TopicId) Set Log topic ID.
+ * @method string getTopicName() Obtain Log topic name.
+ * @method void setTopicName(string $TopicName) Set Log topic name.
+ * @method string getLogsetId() Obtain Logset ID.
+ * @method void setLogsetId(string $LogsetId) Set Logset ID.
  */
 class CLSTopicInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Log topic ID.
      */
     public $TopicId;
 
     /**
-     * @var string 
+     * @var string Log topic name.
      */
     public $TopicName;
 
     /**
-     * @var string 
+     * @var string Logset ID.
      */
     public $LogsetId;
 
     /**
-     * @param string $TopicId 
-     * @param string $TopicName 
-     * @param string $LogsetId 
+     * @param string $TopicId Log topic ID.
+     * @param string $TopicName Log topic name.
+     * @param string $LogsetId Logset ID.
      */
     function __construct()
     {

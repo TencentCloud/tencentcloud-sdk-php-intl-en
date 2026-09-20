@@ -18,208 +18,144 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Singapore ID Card
+ * Singapore ID card
  *
- * @method string getChName() Obtain Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setChName(string $ChName) Set Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getChineseName() Obtain Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setChineseName(string $ChineseName) Set Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getChName() Obtain Chinese Name
+ * @method void setChName(string $ChName) Set Chinese Name
+ * @method string getChineseName() Obtain Chinese Name
+ * @method void setChineseName(string $ChineseName) Set Chinese Name
  * @method string getEnName() Obtain English name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnName(string $EnName) Set English name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFullName() Obtain English name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFullName(string $FullName) Set English name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getID() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setID(string $ID) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNumber() Obtain License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSex() Obtain Gender
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getID() Obtain Identity card number
+ * @method void setID(string $ID) Set Identity card number
+ * @method string getLicenseNumber() Obtain Identity number
+ * @method void setLicenseNumber(string $LicenseNumber) Set Identity number
+ * @method string getSex() Obtain Sex
+ * @method void setSex(string $Sex) Set Sex
  * @method string getCountryOfBirth() Obtain Country of birth
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCountryOfBirth(string $CountryOfBirth) Set Country of birth
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNationality() Obtain Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNationality(string $Nationality) Set Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNationality() Obtain Country of birth
+ * @method void setNationality(string $Nationality) Set Country of birth
  * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Address (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Address (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRace() Obtain Race (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRace(string $Race) Set Race (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNRICCode() Obtain  NRIC number (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNRICCode(string $NRICCode) Set  NRIC number (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPostCode() Obtain Post number (on the front)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPostCode(string $PostCode) Set Post number (on the front)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDateOfExpiration() Obtain Date of expiry (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDateOfExpiration(string $DateOfExpiration) Set Date of expiry (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDateOfIssue() Obtain Date of issue (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDateOfIssue(string $DateOfIssue) Set Date of issue (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAddress() Obtain Address (back field)
+ * @method void setAddress(string $Address) Set Address (back field)
+ * @method string getRace() Obtain Nationality (back field)
+ * @method void setRace(string $Race) Set Nationality (back field)
+ * @method string getNRICCode() Obtain Nric number (back field)
+ * @method void setNRICCode(string $NRICCode) Set Nric number (back field)
+ * @method string getPostCode() Obtain Post number (back field)
+ * @method void setPostCode(string $PostCode) Set Post number (back field)
+ * @method string getDateOfExpiration() Obtain Expires on (back field)
+ * @method void setDateOfExpiration(string $DateOfExpiration) Set Expires on (back field)
+ * @method string getDateOfIssue() Obtain Issue date (field on the back)
+ * @method void setDateOfIssue(string $DateOfIssue) Set Issue date (field on the back)
  */
 class SingaporeIDCard extends AbstractModel
 {
     /**
-     * @var string Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Chinese Name
      * @deprecated
      */
     public $ChName;
 
     /**
-     * @var string Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Chinese Name
      */
     public $ChineseName;
 
     /**
      * @var string English name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     public $EnName;
 
     /**
      * @var string English name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FullName;
 
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity card number
      * @deprecated
      */
     public $ID;
 
     /**
-     * @var string License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity number
      */
     public $LicenseNumber;
 
     /**
-     * @var string Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sex
      */
     public $Sex;
 
     /**
      * @var string Country of birth
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     public $CountryOfBirth;
 
     /**
-     * @var string Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Country of birth
      */
     public $Nationality;
 
     /**
      * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Birthday;
 
     /**
-     * @var string Address (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address (back field)
      */
     public $Address;
 
     /**
-     * @var string Race (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Nationality (back field)
      */
     public $Race;
 
     /**
-     * @var string  NRIC number (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Nric number (back field)
      */
     public $NRICCode;
 
     /**
-     * @var string Post number (on the front)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Post number (back field)
      */
     public $PostCode;
 
     /**
-     * @var string Date of expiry (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Expires on (back field)
      */
     public $DateOfExpiration;
 
     /**
-     * @var string Date of issue (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Issue date (field on the back)
      */
     public $DateOfIssue;
 
     /**
-     * @param string $ChName Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ChineseName Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ChName Chinese Name
+     * @param string $ChineseName Chinese Name
      * @param string $EnName English name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FullName English name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ID License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ID Identity card number
+     * @param string $LicenseNumber Identity number
+     * @param string $Sex Sex
      * @param string $CountryOfBirth Country of birth
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Nationality Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Nationality Country of birth
      * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Address (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Race Race (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NRICCode  NRIC number (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PostCode Post number (on the front)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DateOfExpiration Date of expiry (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DateOfIssue Date of issue (on the back)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Address Address (back field)
+     * @param string $Race Nationality (back field)
+     * @param string $NRICCode Nric number (back field)
+     * @param string $PostCode Post number (back field)
+     * @param string $DateOfExpiration Expires on (back field)
+     * @param string $DateOfIssue Issue date (field on the back)
      */
     function __construct()
     {

@@ -18,20 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameters for video opening and closing credits recognition tasks.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Video opening and closing credits recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: disables the intelligent video opening and closing credits recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Video opening and closing credits recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: disables the intelligent video opening and closing credits recognition task.</li>
  */
 class HeadTailConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video opening and closing credits recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: disables the intelligent video opening and closing credits recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Video opening and closing credits recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: disables the intelligent video opening and closing credits recognition task.</li>
      */
     function __construct()
     {

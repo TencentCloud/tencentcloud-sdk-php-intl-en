@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input type of the intelligent highlight task.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Intelligent highlight template ID.
+ * @method void setDefinition(integer $Definition) Set Intelligent highlight template ID.
  */
 class AiAnalysisTaskHighlightInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Intelligent highlight template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Intelligent highlight template ID.
      */
     function __construct()
     {

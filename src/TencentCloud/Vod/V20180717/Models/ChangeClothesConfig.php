@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Parameter configuration for AI outfit change
  *
- * @method array getClothesFileInfos() Obtain 
- * @method void setClothesFileInfos(array $ClothesFileInfos) Set 
- * @method string getPrompt() Obtain 
- * @method void setPrompt(string $Prompt) Set 
+ * @method array getClothesFileInfos() Obtain <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+ * @method void setClothesFileInfos(array $ClothesFileInfos) Set <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+ * @method string getPrompt() Obtain <p>Prompt for AI clothes changing. <strong>Valid only when Type is change_clothes.</strong></p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt for AI clothes changing. <strong>Valid only when Type is change_clothes.</strong></p>
  */
 class ChangeClothesConfig extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
      */
     public $ClothesFileInfos;
 
     /**
-     * @var string 
+     * @var string <p>Prompt for AI clothes changing. <strong>Valid only when Type is change_clothes.</strong></p>
      */
     public $Prompt;
 
     /**
-     * @param array $ClothesFileInfos 
-     * @param string $Prompt 
+     * @param array $ClothesFileInfos <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * @param string $Prompt <p>Prompt for AI clothes changing. <strong>Valid only when Type is change_clothes.</strong></p>
      */
     function __construct()
     {

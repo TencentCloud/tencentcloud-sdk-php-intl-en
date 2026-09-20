@@ -18,44 +18,80 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Log push target.
  *
- * @method string getCLSRegion() Obtain 
- * @method void setCLSRegion(string $CLSRegion) Set 
- * @method string getTopicId() Obtain 
- * @method void setTopicId(string $TopicId) Set 
- * @method string getLogsetId() Obtain 
- * @method void setLogsetId(string $LogsetId) Set 
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getCLSRegion() Obtain Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
+ * @method void setCLSRegion(string $CLSRegion) Set Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
+ * @method string getTopicId() Obtain ID of the destination topic for delivery.
+ * @method void setTopicId(string $TopicId) Set ID of the destination topic for delivery.
+ * @method string getLogsetId() Obtain ID of the target set for submission.
+ * @method void setLogsetId(string $LogsetId) Set ID of the target set for submission.
+ * @method string getSwitch() Obtain Log delivery status.
+ON: enabled.
+OFF: disabled.
+ * @method void setSwitch(string $Switch) Set Log delivery status.
+ON: enabled.
+OFF: disabled.
  */
 class AreaCLSTargetInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
      */
     public $CLSRegion;
 
     /**
-     * @var string 
+     * @var string ID of the destination topic for delivery.
      */
     public $TopicId;
 
     /**
-     * @var string 
+     * @var string ID of the target set for submission.
      */
     public $LogsetId;
 
     /**
-     * @var string 
+     * @var string Log delivery status.
+ON: enabled.
+OFF: disabled.
      */
     public $Switch;
 
     /**
-     * @param string $CLSRegion 
-     * @param string $TopicId 
-     * @param string $LogsetId 
-     * @param string $Switch 
+     * @param string $CLSRegion Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
+     * @param string $TopicId ID of the destination topic for delivery.
+     * @param string $LogsetId ID of the target set for submission.
+     * @param string $Switch Log delivery status.
+ON: enabled.
+OFF: disabled.
      */
     function __construct()
     {

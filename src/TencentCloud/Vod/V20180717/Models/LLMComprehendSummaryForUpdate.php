@@ -18,28 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Large model parsing segment summary parsing configuration
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getExtendedParameter() Obtain 
- * @method void setExtendedParameter(string $ExtendedParameter) Set 
+ * @method string getSwitch() Obtain Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
+ * @method void setSwitch(string $Switch) Set Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
+ * @method string getExtendedParameter() Obtain Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+ * @method void setExtendedParameter(string $ExtendedParameter) Set Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
  */
 class LLMComprehendSummaryForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
      */
     public $ExtendedParameter;
 
     /**
-     * @param string $Switch 
-     * @param string $ExtendedParameter 
+     * @param string $Switch Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
+     * @param string $ExtendedParameter Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
      */
     function __construct()
     {

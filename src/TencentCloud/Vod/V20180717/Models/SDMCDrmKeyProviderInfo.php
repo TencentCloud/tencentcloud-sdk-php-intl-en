@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * DRM key provider information for SDMC.
  *
- * @method string getUid() Obtain 
- * @method void setUid(string $Uid) Set 
- * @method string getSecretId() Obtain 
- * @method void setSecretId(string $SecretId) Set 
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method string getFairPlayCertificateUrl() Obtain 
- * @method void setFairPlayCertificateUrl(string $FairPlayCertificateUrl) Set 
+ * @method string getUid() Obtain User ID assigned by Huaxida, which contains up to 128 characters.
+ * @method void setUid(string $Uid) Set User ID assigned by Huaxida, which contains up to 128 characters.
+ * @method string getSecretId() Obtain User secret key ID assigned by SDMC, which contains up to 128 characters.
+ * @method void setSecretId(string $SecretId) Set User secret key ID assigned by SDMC, which contains up to 128 characters.
+ * @method string getSecretKey() Obtain User key content assigned by Huaxida. Maximum length: 128 characters.
+ * @method void setSecretKey(string $SecretKey) Set User key content assigned by Huaxida. Maximum length: 128 characters.
+ * @method string getFairPlayCertificateUrl() Obtain FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
+ * @method void setFairPlayCertificateUrl(string $FairPlayCertificateUrl) Set FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
  */
 class SDMCDrmKeyProviderInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string User ID assigned by Huaxida, which contains up to 128 characters.
      */
     public $Uid;
 
     /**
-     * @var string 
+     * @var string User secret key ID assigned by SDMC, which contains up to 128 characters.
      */
     public $SecretId;
 
     /**
-     * @var string 
+     * @var string User key content assigned by Huaxida. Maximum length: 128 characters.
      */
     public $SecretKey;
 
     /**
-     * @var string 
+     * @var string FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
      */
     public $FairPlayCertificateUrl;
 
     /**
-     * @param string $Uid 
-     * @param string $SecretId 
-     * @param string $SecretKey 
-     * @param string $FairPlayCertificateUrl 
+     * @param string $Uid User ID assigned by Huaxida, which contains up to 128 characters.
+     * @param string $SecretId User secret key ID assigned by SDMC, which contains up to 128 characters.
+     * @param string $SecretKey User key content assigned by Huaxida. Maximum length: 128 characters.
+     * @param string $FairPlayCertificateUrl FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
      */
     function __construct()
     {

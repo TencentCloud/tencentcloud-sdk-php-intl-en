@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Image enhancement parameters
  *
- * @method SuperResolutionInfo getSuperResolution() Obtain 
- * @method void setSuperResolution(SuperResolutionInfo $SuperResolution) Set 
- * @method AdvancedSuperResolutionConfig getAdvancedSuperResolution() Obtain 
- * @method void setAdvancedSuperResolution(AdvancedSuperResolutionConfig $AdvancedSuperResolution) Set 
- * @method ImageDenoiseConfig getDenoise() Obtain 
- * @method void setDenoise(ImageDenoiseConfig $Denoise) Set 
- * @method ImageQualityEnhanceInfo getImageQualityEnhance() Obtain 
- * @method void setImageQualityEnhance(ImageQualityEnhanceInfo $ImageQualityEnhance) Set 
- * @method ColorEnhanceInfo getColorEnhance() Obtain 
- * @method void setColorEnhance(ColorEnhanceInfo $ColorEnhance) Set 
- * @method SharpEnhanceInfo getSharpEnhance() Obtain 
- * @method void setSharpEnhance(SharpEnhanceInfo $SharpEnhance) Set 
- * @method FaceEnhanceInfo getFaceEnhance() Obtain 
- * @method void setFaceEnhance(FaceEnhanceInfo $FaceEnhance) Set 
- * @method LowLightEnhanceInfo getLowLightEnhance() Obtain 
- * @method void setLowLightEnhance(LowLightEnhanceInfo $LowLightEnhance) Set 
+ * @method SuperResolutionInfo getSuperResolution() Obtain Super-resolution configuration.
+ * @method void setSuperResolution(SuperResolutionInfo $SuperResolution) Set Super-resolution configuration.
+ * @method AdvancedSuperResolutionConfig getAdvancedSuperResolution() Obtain Advanced super-resolution configuration.
+ * @method void setAdvancedSuperResolution(AdvancedSuperResolutionConfig $AdvancedSuperResolution) Set Advanced super-resolution configuration.
+ * @method ImageDenoiseConfig getDenoise() Obtain Denoising configuration.
+ * @method void setDenoise(ImageDenoiseConfig $Denoise) Set Denoising configuration.
+ * @method ImageQualityEnhanceInfo getImageQualityEnhance() Obtain Comprehensive enhancement configuration.
+ * @method void setImageQualityEnhance(ImageQualityEnhanceInfo $ImageQualityEnhance) Set Comprehensive enhancement configuration.
+ * @method ColorEnhanceInfo getColorEnhance() Obtain Color enhancement configuration.
+ * @method void setColorEnhance(ColorEnhanceInfo $ColorEnhance) Set Color enhancement configuration.
+ * @method SharpEnhanceInfo getSharpEnhance() Obtain Detail enhancement configuration.
+ * @method void setSharpEnhance(SharpEnhanceInfo $SharpEnhance) Set Detail enhancement configuration.
+ * @method FaceEnhanceInfo getFaceEnhance() Obtain Face enhancement configuration.
+ * @method void setFaceEnhance(FaceEnhanceInfo $FaceEnhance) Set Face enhancement configuration.
+ * @method LowLightEnhanceInfo getLowLightEnhance() Obtain Low-light enhancement configuration.
+ * @method void setLowLightEnhance(LowLightEnhanceInfo $LowLightEnhance) Set Low-light enhancement configuration.
  */
 class ImageEnhanceConfig extends AbstractModel
 {
     /**
-     * @var SuperResolutionInfo 
+     * @var SuperResolutionInfo Super-resolution configuration.
      */
     public $SuperResolution;
 
     /**
-     * @var AdvancedSuperResolutionConfig 
+     * @var AdvancedSuperResolutionConfig Advanced super-resolution configuration.
      */
     public $AdvancedSuperResolution;
 
     /**
-     * @var ImageDenoiseConfig 
+     * @var ImageDenoiseConfig Denoising configuration.
      */
     public $Denoise;
 
     /**
-     * @var ImageQualityEnhanceInfo 
+     * @var ImageQualityEnhanceInfo Comprehensive enhancement configuration.
      */
     public $ImageQualityEnhance;
 
     /**
-     * @var ColorEnhanceInfo 
+     * @var ColorEnhanceInfo Color enhancement configuration.
      */
     public $ColorEnhance;
 
     /**
-     * @var SharpEnhanceInfo 
+     * @var SharpEnhanceInfo Detail enhancement configuration.
      */
     public $SharpEnhance;
 
     /**
-     * @var FaceEnhanceInfo 
+     * @var FaceEnhanceInfo Face enhancement configuration.
      */
     public $FaceEnhance;
 
     /**
-     * @var LowLightEnhanceInfo 
+     * @var LowLightEnhanceInfo Low-light enhancement configuration.
      */
     public $LowLightEnhance;
 
     /**
-     * @param SuperResolutionInfo $SuperResolution 
-     * @param AdvancedSuperResolutionConfig $AdvancedSuperResolution 
-     * @param ImageDenoiseConfig $Denoise 
-     * @param ImageQualityEnhanceInfo $ImageQualityEnhance 
-     * @param ColorEnhanceInfo $ColorEnhance 
-     * @param SharpEnhanceInfo $SharpEnhance 
-     * @param FaceEnhanceInfo $FaceEnhance 
-     * @param LowLightEnhanceInfo $LowLightEnhance 
+     * @param SuperResolutionInfo $SuperResolution Super-resolution configuration.
+     * @param AdvancedSuperResolutionConfig $AdvancedSuperResolution Advanced super-resolution configuration.
+     * @param ImageDenoiseConfig $Denoise Denoising configuration.
+     * @param ImageQualityEnhanceInfo $ImageQualityEnhance Comprehensive enhancement configuration.
+     * @param ColorEnhanceInfo $ColorEnhance Color enhancement configuration.
+     * @param SharpEnhanceInfo $SharpEnhance Detail enhancement configuration.
+     * @param FaceEnhanceInfo $FaceEnhance Face enhancement configuration.
+     * @param LowLightEnhanceInfo $LowLightEnhance Low-light enhancement configuration.
      */
     function __construct()
     {

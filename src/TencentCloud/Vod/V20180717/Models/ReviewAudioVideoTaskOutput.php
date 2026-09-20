@@ -18,68 +18,128 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of the audio/video moderation task.
  *
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method string getForm() Obtain 
- * @method void setForm(string $Form) Set 
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
- * @method string getSegmentSetFileUrl() Obtain 
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set 
- * @method string getSegmentSetFileUrlExpireTime() Obtain 
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set 
- * @method ReviewImageResult getCoverReviewResult() Obtain 
- * @method void setCoverReviewResult(ReviewImageResult $CoverReviewResult) Set 
+ * @method string getSuggestion() Obtain Result suggestion for audio/video content moderation. Value range:
+<li>pass: It is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result suggestion for audio/video content moderation. Value range:
+<li>pass: It is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
+ * @method string getLabel() Obtain Valid when Suggestion is review or block. Indicates the most likely rule violation tag of the audio and video. Value range:
+<li>Porn: pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
+ * @method void setLabel(string $Label) Set Valid when Suggestion is review or block. Indicates the most likely rule violation tag of the audio and video. Value range:
+<li>Porn: pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
+ * @method string getForm() Obtain Valid when Suggestion is review or block. It indicates the most likely prohibited forms of audio and video. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+ * @method void setForm(string $Form) Set Valid when Suggestion is review or block. It indicates the most likely prohibited forms of audio and video. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+ * @method array getSegmentSet() Obtain List of video clips suspected of containing violation information.
+<font color=red>Note</font>: This list can only display up to the first 10 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video clips suspected of containing violation information.
+<font color=red>Note</font>: This list can only display up to the first 10 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of the video clip list file involved in suspicion of violation information. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the video clip list file involved in suspicion of violation information. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
+ * @method string getSegmentSetFileUrlExpireTime() Obtain URL expiry time of the list of video clips suspected of involving violation information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set URL expiry time of the list of video clips suspected of involving violation information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method ReviewImageResult getCoverReviewResult() Obtain Cover review result.
+ * @method void setCoverReviewResult(ReviewImageResult $CoverReviewResult) Set Cover review result.
  */
 class ReviewAudioVideoTaskOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Result suggestion for audio/video content moderation. Value range:
+<li>pass: It is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string 
+     * @var string Valid when Suggestion is review or block. Indicates the most likely rule violation tag of the audio and video. Value range:
+<li>Porn: pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
      */
     public $Label;
 
     /**
-     * @var string 
+     * @var string Valid when Suggestion is review or block. It indicates the most likely prohibited forms of audio and video. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
      */
     public $Form;
 
     /**
-     * @var array 
+     * @var array List of video clips suspected of containing violation information.
+<font color=red>Note</font>: This list can only display up to the first 10 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string 
+     * @var string URL of the video clip list file involved in suspicion of violation information. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string 
+     * @var string URL expiry time of the list of video clips suspected of involving violation information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @var ReviewImageResult 
+     * @var ReviewImageResult Cover review result.
      */
     public $CoverReviewResult;
 
     /**
-     * @param string $Suggestion 
-     * @param string $Label 
-     * @param string $Form 
-     * @param array $SegmentSet 
-     * @param string $SegmentSetFileUrl 
-     * @param string $SegmentSetFileUrlExpireTime 
-     * @param ReviewImageResult $CoverReviewResult 
+     * @param string $Suggestion Result suggestion for audio/video content moderation. Value range:
+<li>pass: It is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
+     * @param string $Label Valid when Suggestion is review or block. Indicates the most likely rule violation tag of the audio and video. Value range:
+<li>Porn: pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
+     * @param string $Form Valid when Suggestion is review or block. It indicates the most likely prohibited forms of audio and video. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+     * @param array $SegmentSet List of video clips suspected of containing violation information.
+<font color=red>Note</font>: This list can only display up to the first 10 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of the video clip list file involved in suspicion of violation information. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
+     * @param string $SegmentSetFileUrlExpireTime URL expiry time of the list of video clips suspected of involving violation information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ReviewImageResult $CoverReviewResult Cover review result.
      */
     function __construct()
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MPS task template detail.
+ * MPS task template details.
  *
  * @method string getTaskType() Obtain MPS template type. Valid values:
 <li>Transcode: transcoding template.</li>
  * @method void setTaskType(string $TaskType) Set MPS template type. Valid values:
 <li>Transcode: transcoding template.</li>
- * @method string getMPSTemplateInfo() Obtain MPS task template detail.
- * @method void setMPSTemplateInfo(string $MPSTemplateInfo) Set MPS task template detail.
+ * @method string getMPSTemplateInfo() Obtain MPS task template detail content.
+ * @method void setMPSTemplateInfo(string $MPSTemplateInfo) Set MPS task template detail content.
  */
 class MPSTemplate extends AbstractModel
 {
@@ -36,14 +36,14 @@ class MPSTemplate extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string MPS task template detail.
+     * @var string MPS task template detail content.
      */
     public $MPSTemplateInfo;
 
     /**
      * @param string $TaskType MPS template type. Valid values:
 <li>Transcode: transcoding template.</li>
-     * @param string $MPSTemplateInfo MPS task template detail.
+     * @param string $MPSTemplateInfo MPS task template detail content.
      */
     function __construct()
     {

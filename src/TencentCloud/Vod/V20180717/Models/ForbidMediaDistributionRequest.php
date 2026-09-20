@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ForbidMediaDistribution request structure.
  *
- * @method array getFileIds() Obtain 
- * @method void setFileIds(array $FileIds) Set 
- * @method string getOperation() Obtain 
- * @method void setOperation(string $Operation) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method array getFileIds() Obtain Media file list. A maximum of 20 entries can be submitted each time.
+ * @method void setFileIds(array $FileIds) Set Media file list. A maximum of 20 entries can be submitted each time.
+ * @method string getOperation() Obtain forbid: forbid. recover: unblock.
+ * @method void setOperation(string $Operation) Set forbid: forbid. recover: unblock.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class ForbidMediaDistributionRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Media file list. A maximum of 20 entries can be submitted each time.
      */
     public $FileIds;
 
     /**
-     * @var string 
+     * @var string forbid: forbid. recover: unblock.
      */
     public $Operation;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param array $FileIds 
-     * @param string $Operation 
-     * @param integer $SubAppId 
+     * @param array $FileIds Media file list. A maximum of 20 entries can be submitted each time.
+     * @param string $Operation forbid: forbid. recover: unblock.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

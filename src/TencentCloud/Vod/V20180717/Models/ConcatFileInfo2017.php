@@ -18,52 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Source file information for video stitching (2017 version)
  *
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method string getFileType() Obtain 
- * @method void setFileType(string $FileType) Set 
+ * @method integer getErrCode() Obtain Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method string getFileId() Obtain ID of the source file for video splicing.
+ * @method void setFileId(string $FileId) Set ID of the source file for video splicing.
+ * @method string getFileUrl() Obtain Domain names or IP addresses of source files for video splicing.
+ * @method void setFileUrl(string $FileUrl) Set Domain names or IP addresses of source files for video splicing.
+ * @method string getFileType() Obtain Format of the source file for video splicing.
+ * @method void setFileType(string $FileType) Set Format of the source file for video splicing.
  */
 class ConcatFileInfo2017 extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var string 
+     * @var string ID of the source file for video splicing.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Domain names or IP addresses of source files for video splicing.
      */
     public $FileUrl;
 
     /**
-     * @var string 
+     * @var string Format of the source file for video splicing.
      */
     public $FileType;
 
     /**
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param string $FileId 
-     * @param string $FileUrl 
-     * @param string $FileType 
+     * @param integer $ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+     * @param string $Message Error message.
+     * @param string $FileId ID of the source file for video splicing.
+     * @param string $FileUrl Domain names or IP addresses of source files for video splicing.
+     * @param string $FileType Format of the source file for video splicing.
      */
     function __construct()
     {

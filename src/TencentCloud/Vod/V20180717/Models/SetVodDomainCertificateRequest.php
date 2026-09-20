@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetVodDomainCertificate request structure.
  *
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getOperation() Obtain 
- * @method void setOperation(string $Operation) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getCertID() Obtain 
- * @method void setCertID(string $CertID) Set 
+ * @method string getDomain() Obtain <p>Domain name.</p>
+ * @method void setDomain(string $Domain) Set <p>Domain name.</p>
+ * @method string getOperation() Obtain <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+ * @method void setOperation(string $Operation) Set <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+ * @method string getCertID() Obtain <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
+ * @method void setCertID(string $CertID) Set <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
  */
 class SetVodDomainCertificateRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Domain name.</p>
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
      */
     public $Operation;
 
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
      */
     public $CertID;
 
     /**
-     * @param string $Domain 
-     * @param string $Operation 
-     * @param integer $SubAppId 
-     * @param string $CertID 
+     * @param string $Domain <p>Domain name.</p>
+     * @param string $Operation <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * @param string $CertID <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
      */
     function __construct()
     {

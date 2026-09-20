@@ -18,44 +18,88 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Abnormal fragment information for audio and video quality inspection.
  *
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method array getAreaCoordSet() Obtain 
- * @method void setAreaCoordSet(array $AreaCoordSet) Set 
- * @method integer getConfidence() Obtain 
- * @method void setConfidence(integer $Confidence) Set 
+ * @method float getStartTimeOffset() Obtain Offset time of abnormal segment start, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of abnormal segment start, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of an abnormal fragment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of an abnormal fragment, in seconds.
+ * @method array getAreaCoordSet() Obtain Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+ * @method integer getConfidence() Obtain Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+ * @method void setConfidence(integer $Confidence) Set Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
  */
 class QualityInspectItem extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Offset time of abnormal segment start, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of an abnormal fragment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var array 
+     * @var array Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
      */
     public $AreaCoordSet;
 
     /**
-     * @var integer 
+     * @var integer Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
      */
     public $Confidence;
 
     /**
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param array $AreaCoordSet 
-     * @param integer $Confidence 
+     * @param float $StartTimeOffset Offset time of abnormal segment start, in seconds.
+     * @param float $EndTimeOffset End time offset of an abnormal fragment, in seconds.
+     * @param array $AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+     * @param integer $Confidence Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
      */
     function __construct()
     {

@@ -20,90 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate request structure.
  *
- * @method string getReviewWallSwitch() Obtain 
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method PornConfigureInfo getPornConfigure() Obtain 
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set 
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain 
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set 
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain 
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set 
- * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain 
- * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set 
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain 
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set 
- * @method float getScreenshotInterval() Obtain 
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
+ * @method string getReviewWallSwitch() Obtain Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
+<li>ON: yes</li>
+<li>OFF: No.</li>
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
+<li>ON: yes</li>
+<li>OFF: No.</li>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method string getName() Obtain Content review template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Content review template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Content review template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Content review template description, with a length limit of 256 characters.
+ * @method PornConfigureInfo getPornConfigure() Obtain Control parameters for offensive information.
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Control parameters for offensive information.
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameters for unsafe information.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Control parameters for unsafe information.
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Uncomfortable Control Parameters.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Uncomfortable Control Parameters.
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain User-defined content review control parameters.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set User-defined content review control parameters.
+ * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
+<li>ON: yes</li>
+<li>OFF: No.</li>
      */
     public $ReviewWallSwitch;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Content review template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Content review template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfo 
+     * @var PornConfigureInfo Control parameters for offensive information.
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo 
+     * @var TerrorismConfigureInfo Control parameters for unsafe information.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo 
+     * @var PoliticalConfigureInfo Uncomfortable Control Parameters.
      */
     public $PoliticalConfigure;
 
     /**
-     * @var ProhibitedConfigureInfo 
+     * @var ProhibitedConfigureInfo Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
      */
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo 
+     * @var UserDefineConfigureInfo User-defined content review control parameters.
      */
     public $UserDefineConfigure;
 
     /**
-     * @var float 
+     * @var float Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
      */
     public $ScreenshotInterval;
 
     /**
-     * @param string $ReviewWallSwitch 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param PornConfigureInfo $PornConfigure 
-     * @param TerrorismConfigureInfo $TerrorismConfigure 
-     * @param PoliticalConfigureInfo $PoliticalConfigure 
-     * @param ProhibitedConfigureInfo $ProhibitedConfigure 
-     * @param UserDefineConfigureInfo $UserDefineConfigure 
-     * @param float $ScreenshotInterval 
+     * @param string $ReviewWallSwitch Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
+<li>ON: yes</li>
+<li>OFF: No.</li>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param string $Name Content review template name. Length limit: 64 characters.
+     * @param string $Comment Content review template description, with a length limit of 256 characters.
+     * @param PornConfigureInfo $PornConfigure Control parameters for offensive information.
+     * @param TerrorismConfigureInfo $TerrorismConfigure Control parameters for unsafe information.
+     * @param PoliticalConfigureInfo $PoliticalConfigure Uncomfortable Control Parameters.
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+     * @param UserDefineConfigureInfo $UserDefineConfigure User-defined content review control parameters.
+     * @param float $ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
      */
     function __construct()
     {

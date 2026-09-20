@@ -18,28 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio beautification configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method array getTypes() Obtain 
- * @method void setTypes(array $Types) Set 
+ * @method string getSwitch() Obtain Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
+ * @method void setSwitch(string $Switch) Set Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
+ * @method array getTypes() Obtain Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
+ * @method void setTypes(array $Types) Set Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
  */
 class AudioBeautifyInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
      */
     public $Switch;
 
     /**
-     * @var array 
+     * @var array Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
      */
     public $Types;
 
     /**
-     * @param string $Switch 
-     * @param array $Types 
+     * @param string $Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
+     * @param array $Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
      */
     function __construct()
     {

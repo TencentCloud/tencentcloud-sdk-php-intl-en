@@ -18,44 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Control parameter for user-customized text, audio, and video moderation tasks
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method array getLabelSet() Obtain 
- * @method void setLabelSet(array $LabelSet) Set 
- * @method integer getBlockConfidence() Obtain 
- * @method void setBlockConfidence(integer $BlockConfidence) Set 
- * @method integer getReviewConfidence() Obtain 
- * @method void setReviewConfidence(integer $ReviewConfidence) Set 
+ * @method string getSwitch() Obtain User custom text audio/video moderation task switch. Available values:
+<li>ON: enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
+ * @method void setSwitch(string $Switch) Set User custom text audio/video moderation task switch. Available values:
+<li>ON: enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
+ * @method array getLabelSet() Obtain User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+ * @method void setLabelSet(array $LabelSet) Set User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+ * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+ * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
  */
 class UserDefineOcrTextReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string User custom text audio/video moderation task switch. Available values:
+<li>ON: enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
      */
     public $Switch;
 
     /**
-     * @var array 
+     * @var array User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public $LabelSet;
 
     /**
-     * @var integer 
+     * @var integer Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 
+     * @var integer Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 
-     * @param array $LabelSet 
-     * @param integer $BlockConfidence 
-     * @param integer $ReviewConfidence 
+     * @param string $Switch User custom text audio/video moderation task switch. Available values:
+<li>ON: enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
+     * @param array $LabelSet User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
      */
     function __construct()
     {

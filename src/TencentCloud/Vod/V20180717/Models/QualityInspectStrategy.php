@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Policy information for audio and video quality inspection.
  *
- * @method string getStrategyType() Obtain 
- * @method void setStrategyType(string $StrategyType) Set 
- * @method QualityInspectTimeSpotCheck getTimeSpotCheck() Obtain 
- * @method void setTimeSpotCheck(QualityInspectTimeSpotCheck $TimeSpotCheck) Set 
+ * @method string getStrategyType() Obtain <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
+ * @method void setStrategyType(string $StrategyType) Set <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
+ * @method QualityInspectTimeSpotCheck getTimeSpotCheck() Obtain <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+ * @method void setTimeSpotCheck(QualityInspectTimeSpotCheck $TimeSpotCheck) Set <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
  */
 class QualityInspectStrategy extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
      */
     public $StrategyType;
 
     /**
-     * @var QualityInspectTimeSpotCheck 
+     * @var QualityInspectTimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
      */
     public $TimeSpotCheck;
 
     /**
-     * @param string $StrategyType 
-     * @param QualityInspectTimeSpotCheck $TimeSpotCheck 
+     * @param string $StrategyType <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
+     * @param QualityInspectTimeSpotCheck $TimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
      */
     function __construct()
     {

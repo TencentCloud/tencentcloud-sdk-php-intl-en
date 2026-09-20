@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNDomains request structure.
  *
- * @method array getDomains() Obtain 
- * @method void setDomains(array $Domains) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
+ * @method array getDomains() Obtain Domain name list. If this field is not specified, all domain information is listed by default.
+ * @method void setDomains(array $Domains) Set Domain name list. If this field is not specified, all domain information is listed by default.
+ * @method integer getLimit() Obtain Maximum number of results returned for pagination pull. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Maximum number of results returned for pagination pull. Default value: 20.
  * @method integer getOffset() Obtain Starting offset for pagination pull. Default value: 0.	
  * @method void setOffset(integer $Offset) Set Starting offset for pagination pull. Default value: 0.	
- * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class DescribeCDNDomainsRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Domain name list. If this field is not specified, all domain information is listed by default.
      */
     public $Domains;
 
     /**
-     * @var integer 
+     * @var integer Maximum number of results returned for pagination pull. Default value: 20.
      */
     public $Limit;
 
@@ -47,15 +47,15 @@ class DescribeCDNDomainsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param array $Domains 
-     * @param integer $Limit 
+     * @param array $Domains Domain name list. If this field is not specified, all domain information is listed by default.
+     * @param integer $Limit Maximum number of results returned for pagination pull. Default value: 20.
      * @param integer $Offset Starting offset for pagination pull. Default value: 0.	
-     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

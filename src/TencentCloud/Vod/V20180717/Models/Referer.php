@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Referer blocklist/allowlist configuration, disabled by default
  *
- * @method string getSwitch() Obtain Referrer blocklist configuration switch. Parameter value:
+ * @method string getSwitch() Obtain Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Referrer blocklist configuration switch. Parameter value:
+ * @method void setSwitch(string $Switch) Set Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method array getRefererRules() Obtain 
- * @method void setRefererRules(array $RefererRules) Set 
+ * @method array getRefererRules() Obtain referer blocklist/allowlist rule configuration
+ * @method void setRefererRules(array $RefererRules) Set referer blocklist/allowlist rule configuration
  */
 class Referer extends AbstractModel
 {
     /**
-     * @var string Referrer blocklist configuration switch. Parameter value:
+     * @var string Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @var array 
+     * @var array referer blocklist/allowlist rule configuration
      */
     public $RefererRules;
 
     /**
-     * @param string $Switch Referrer blocklist configuration switch. Parameter value:
+     * @param string $Switch Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param array $RefererRules 
+     * @param array $RefererRules referer blocklist/allowlist rule configuration
      */
     function __construct()
     {

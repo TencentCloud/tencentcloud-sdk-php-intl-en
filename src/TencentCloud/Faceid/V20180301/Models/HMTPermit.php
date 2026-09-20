@@ -18,24 +18,24 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China)
+ * Hong Kong, Macau and Taiwan Travel Permit
  *
  * @method string getName() Obtain Name
  * @method void setName(string $Name) Set Name
  * @method string getEnglishName() Obtain English name
  * @method void setEnglishName(string $EnglishName) Set English name
- * @method string getNumber() Obtain License number
- * @method void setNumber(string $Number) Set License number
- * @method string getSex() Obtain Gender
- * @method void setSex(string $Sex) Set Gender
- * @method string getValidDate() Obtain Valid date
- * @method void setValidDate(string $ValidDate) Set Valid date
- * @method string getIssueAuthority() Obtain Issued authority
- * @method void setIssueAuthority(string $IssueAuthority) Set Issued authority
- * @method string getIssueAddress() Obtain Issued address
- * @method void setIssueAddress(string $IssueAddress) Set Issued address
- * @method string getBirthday() Obtain Birthday
- * @method void setBirthday(string $Birthday) Set Birthday
+ * @method string getNumber() Obtain ID number
+ * @method void setNumber(string $Number) Set ID number
+ * @method string getSex() Obtain Sex
+ * @method void setSex(string $Sex) Set Sex
+ * @method string getValidDate() Obtain Validity period.
+ * @method void setValidDate(string $ValidDate) Set Validity period.
+ * @method string getIssueAuthority() Obtain Issuing authority
+ * @method void setIssueAuthority(string $IssueAuthority) Set Issuing authority
+ * @method string getIssueAddress() Obtain Issuing place
+ * @method void setIssueAddress(string $IssueAddress) Set Issuing place
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
  */
 class HMTPermit extends AbstractModel
 {
@@ -50,44 +50,44 @@ class HMTPermit extends AbstractModel
     public $EnglishName;
 
     /**
-     * @var string License number
+     * @var string ID number
      */
     public $Number;
 
     /**
-     * @var string Gender
+     * @var string Sex
      */
     public $Sex;
 
     /**
-     * @var string Valid date
+     * @var string Validity period.
      */
     public $ValidDate;
 
     /**
-     * @var string Issued authority
+     * @var string Issuing authority
      */
     public $IssueAuthority;
 
     /**
-     * @var string Issued address
+     * @var string Issuing place
      */
     public $IssueAddress;
 
     /**
-     * @var string Birthday
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
      * @param string $Name Name
      * @param string $EnglishName English name
-     * @param string $Number License number
-     * @param string $Sex Gender
-     * @param string $ValidDate Valid date
-     * @param string $IssueAuthority Issued authority
-     * @param string $IssueAddress Issued address
-     * @param string $Birthday Birthday
+     * @param string $Number ID number
+     * @param string $Sex Sex
+     * @param string $ValidDate Validity period.
+     * @param string $IssueAuthority Issuing authority
+     * @param string $IssueAddress Issuing place
+     * @param string $Birthday Date of birth
      */
     function __construct()
     {

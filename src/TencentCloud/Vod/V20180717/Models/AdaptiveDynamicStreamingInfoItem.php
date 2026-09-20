@@ -18,108 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Adaptive bitstreaming information
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getPackage() Obtain 
- * @method void setPackage(string $Package) Set 
- * @method string getDrmType() Obtain 
- * @method void setDrmType(string $DrmType) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method integer getSize() Obtain 
- * @method void setSize(integer $Size) Set 
- * @method string getDigitalWatermarkType() Obtain 
- * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set 
- * @method array getSubStreamSet() Obtain 
- * @method void setSubStreamSet(array $SubStreamSet) Set 
- * @method string getCopyRightWatermarkText() Obtain 
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set 
- * @method integer getBlindWatermarkDefinition() Obtain 
- * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) Set 
- * @method array getSubtitleSet() Obtain 
- * @method void setSubtitleSet(array $SubtitleSet) Set 
- * @method string getDefaultSubtitleId() Obtain 
- * @method void setDefaultSubtitleId(string $DefaultSubtitleId) Set 
- * @method string getDrmEncryptType() Obtain 
- * @method void setDrmEncryptType(string $DrmEncryptType) Set 
+ * @method integer getDefinition() Obtain <p>Adaptive bitrate streaming specification.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Adaptive bitrate streaming specification.</p>
+ * @method string getPackage() Obtain <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
+ * @method void setPackage(string $Package) Set <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
+ * @method string getDrmType() Obtain <p>Encryption type.</p>
+ * @method void setDrmType(string $DrmType) Set <p>Encryption type.</p>
+ * @method string getUrl() Obtain <p>Playback address.</p>
+ * @method void setUrl(string $Url) Set <p>Playback address.</p>
+ * @method integer getSize() Obtain <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
+ * @method void setSize(integer $Size) Set <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
+ * @method string getDigitalWatermarkType() Obtain <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+ * @method array getSubStreamSet() Obtain <p>Subflow information list.</p>
+ * @method void setSubStreamSet(array $SubStreamSet) Set <p>Subflow information list.</p>
+ * @method string getCopyRightWatermarkText() Obtain <p>Copyright information.</p>
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set <p>Copyright information.</p>
+ * @method integer getBlindWatermarkDefinition() Obtain <p>Digital watermark template id.</p>
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) Set <p>Digital watermark template id.</p>
+ * @method array getSubtitleSet() Obtain <p>Subtitle information list.</p>
+ * @method void setSubtitleSet(array $SubtitleSet) Set <p>Subtitle information list.</p>
+ * @method string getDefaultSubtitleId() Obtain <p>Unique identifier for default subtitle.</p>
+ * @method void setDefaultSubtitleId(string $DefaultSubtitleId) Set <p>Unique identifier for default subtitle.</p>
+ * @method string getDrmEncryptType() Obtain <p>DRM encryption method.</p>
+ * @method void setDrmEncryptType(string $DrmEncryptType) Set <p>DRM encryption method.</p>
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Adaptive bitrate streaming specification.</p>
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
      */
     public $Package;
 
     /**
-     * @var string 
+     * @var string <p>Encryption type.</p>
      */
     public $DrmType;
 
     /**
-     * @var string 
+     * @var string <p>Playback address.</p>
      */
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
      */
     public $Size;
 
     /**
-     * @var string 
+     * @var string <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
      */
     public $DigitalWatermarkType;
 
     /**
-     * @var array 
+     * @var array <p>Subflow information list.</p>
      */
     public $SubStreamSet;
 
     /**
-     * @var string 
+     * @var string <p>Copyright information.</p>
      */
     public $CopyRightWatermarkText;
 
     /**
-     * @var integer 
+     * @var integer <p>Digital watermark template id.</p>
      */
     public $BlindWatermarkDefinition;
 
     /**
-     * @var array 
+     * @var array <p>Subtitle information list.</p>
      */
     public $SubtitleSet;
 
     /**
-     * @var string 
+     * @var string <p>Unique identifier for default subtitle.</p>
      */
     public $DefaultSubtitleId;
 
     /**
-     * @var string 
+     * @var string <p>DRM encryption method.</p>
      */
     public $DrmEncryptType;
 
     /**
-     * @param integer $Definition 
-     * @param string $Package 
-     * @param string $DrmType 
-     * @param string $Url 
-     * @param integer $Size 
-     * @param string $DigitalWatermarkType 
-     * @param array $SubStreamSet 
-     * @param string $CopyRightWatermarkText 
-     * @param integer $BlindWatermarkDefinition 
-     * @param array $SubtitleSet 
-     * @param string $DefaultSubtitleId 
-     * @param string $DrmEncryptType 
+     * @param integer $Definition <p>Adaptive bitrate streaming specification.</p>
+     * @param string $Package <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
+     * @param string $DrmType <p>Encryption type.</p>
+     * @param string $Url <p>Playback address.</p>
+     * @param integer $Size <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
+     * @param string $DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+     * @param array $SubStreamSet <p>Subflow information list.</p>
+     * @param string $CopyRightWatermarkText <p>Copyright information.</p>
+     * @param integer $BlindWatermarkDefinition <p>Digital watermark template id.</p>
+     * @param array $SubtitleSet <p>Subtitle information list.</p>
+     * @param string $DefaultSubtitleId <p>Unique identifier for default subtitle.</p>
+     * @param string $DrmEncryptType <p>DRM encryption method.</p>
      */
     function __construct()
     {

@@ -18,28 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video noise reduction control parameters
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getSwitch() Obtain Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
+ * @method void setSwitch(string $Switch) Set Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
+ * @method string getType() Obtain Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
+ * @method void setType(string $Type) Set Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
  */
 class VideoDenoiseInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
      */
     public $Type;
 
     /**
-     * @param string $Switch 
-     * @param string $Type 
+     * @param string $Switch Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
+     * @param string $Type Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
      */
     function __construct()
     {

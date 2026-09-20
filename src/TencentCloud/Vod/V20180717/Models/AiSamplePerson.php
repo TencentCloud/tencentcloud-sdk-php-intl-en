@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AI sample management, figure information.
  *
- * @method string getPersonId() Obtain 
- * @method void setPersonId(string $PersonId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
- * @method array getFaceInfoSet() Obtain 
- * @method void setFaceInfoSet(array $FaceInfoSet) Set 
- * @method array getTagSet() Obtain 
- * @method void setTagSet(array $TagSet) Set 
- * @method array getUsageSet() Obtain 
- * @method void setUsageSet(array $UsageSet) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method string getPersonId() Obtain <p>Figure ID.</p>
+ * @method void setPersonId(string $PersonId) Set <p>Figure ID.</p>
+ * @method string getName() Obtain <p>Figure name.</p>
+ * @method void setName(string $Name) Set <p>Figure name.</p>
+ * @method string getDescription() Obtain <p>Character description.</p>
+ * @method void setDescription(string $Description) Set <p>Character description.</p>
+ * @method array getFaceInfoSet() Obtain <p>Face information.</p>
+ * @method void setFaceInfoSet(array $FaceInfoSet) Set <p>Face information.</p>
+ * @method array getTagSet() Obtain <p>Figure tag.</p>
+ * @method void setTagSet(array $TagSet) Set <p>Figure tag.</p>
+ * @method array getUsageSet() Obtain <p>Application scenarios.</p>
+ * @method void setUsageSet(array $UsageSet) Set <p>Application scenarios.</p>
+ * @method string getCreateTime() Obtain <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  */
 class AiSamplePerson extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Figure ID.</p>
      */
     public $PersonId;
 
     /**
-     * @var string 
+     * @var string <p>Figure name.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Character description.</p>
      */
     public $Description;
 
     /**
-     * @var array 
+     * @var array <p>Face information.</p>
      */
     public $FaceInfoSet;
 
     /**
-     * @var array 
+     * @var array <p>Figure tag.</p>
      */
     public $TagSet;
 
     /**
-     * @var array 
+     * @var array <p>Application scenarios.</p>
      */
     public $UsageSet;
 
     /**
-     * @var string 
+     * @var string <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $PersonId 
-     * @param string $Name 
-     * @param string $Description 
-     * @param array $FaceInfoSet 
-     * @param array $TagSet 
-     * @param array $UsageSet 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
+     * @param string $PersonId <p>Figure ID.</p>
+     * @param string $Name <p>Figure name.</p>
+     * @param string $Description <p>Character description.</p>
+     * @param array $FaceInfoSet <p>Face information.</p>
+     * @param array $TagSet <p>Figure tag.</p>
+     * @param array $UsageSet <p>Application scenarios.</p>
+     * @param string $CreateTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     function __construct()
     {

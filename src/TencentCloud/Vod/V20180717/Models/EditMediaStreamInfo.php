@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Edit video stream information.
  *
- * @method string getStreamId() Obtain 
- * @method void setStreamId(string $StreamId) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
+ * @method string getStreamId() Obtain Stream ID of the recording
+ * @method void setStreamId(string $StreamId) Set Stream ID of the recording
+ * @method string getStartTime() Obtain Start time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setStartTime(string $StartTime) Set Start time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getEndTime() Obtain End time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setEndTime(string $EndTime) Set End time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class EditMediaStreamInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Stream ID of the recording
      */
     public $StreamId;
 
     /**
-     * @var string 
+     * @var string Start time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $EndTime;
 
     /**
-     * @param string $StreamId 
-     * @param string $StartTime 
-     * @param string $EndTime 
+     * @param string $StreamId Stream ID of the recording
+     * @param string $StartTime Start time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $EndTime End time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

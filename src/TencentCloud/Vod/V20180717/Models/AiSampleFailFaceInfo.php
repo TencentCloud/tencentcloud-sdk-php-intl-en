@@ -18,36 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AI sample management, face information that failed processing
  *
- * @method integer getIndex() Obtain 
- * @method void setIndex(integer $Index) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
+ * @method integer getIndex() Obtain Incorrect image subscript in the input parameter FaceContents, starting from 0.
+ * @method void setIndex(integer $Index) Set Incorrect image subscript in the input parameter FaceContents, starting from 0.
+ * @method integer getErrCode() Obtain Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
+ * @method string getMessage() Obtain Error description.
+ * @method void setMessage(string $Message) Set Error description.
  */
 class AiSampleFailFaceInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Incorrect image subscript in the input parameter FaceContents, starting from 0.
      */
     public $Index;
 
     /**
-     * @var integer 
+     * @var integer Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error description.
      */
     public $Message;
 
     /**
-     * @param integer $Index 
-     * @param integer $ErrCode 
-     * @param string $Message 
+     * @param integer $Index Incorrect image subscript in the input parameter FaceContents, starting from 0.
+     * @param integer $ErrCode Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
+     * @param string $Message Error description.
      */
     function __construct()
     {

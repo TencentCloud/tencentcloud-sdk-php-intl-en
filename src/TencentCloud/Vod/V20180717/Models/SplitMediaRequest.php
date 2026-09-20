@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SplitMedia request structure.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method array getSegments() Obtain 
- * @method void setSegments(array $Segments) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
+ * @method string getFileId() Obtain Video ID.
+ * @method void setFileId(string $FileId) Set Video ID.
+ * @method array getSegments() Obtain List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
+ * @method void setSegments(array $Segments) Set List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getSessionContext() Obtain Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
+ * @method string getSessionId() Obtain Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+ * @method void setSessionId(string $SessionId) Set Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+ * @method integer getTasksPriority() Obtain Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  */
 class SplitMediaRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Video ID.
      */
     public $FileId;
 
     /**
-     * @var array 
+     * @var array List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
      */
     public $Segments;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
      */
     public $SessionId;
 
     /**
-     * @var integer 
+     * @var integer Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TasksPriority;
 
     /**
-     * @param string $FileId 
-     * @param array $Segments 
-     * @param integer $SubAppId 
-     * @param string $SessionContext 
-     * @param string $SessionId 
-     * @param integer $TasksPriority 
+     * @param string $FileId Video ID.
+     * @param array $Segments List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $SessionContext Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
+     * @param string $SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+     * @param integer $TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     function __construct()
     {

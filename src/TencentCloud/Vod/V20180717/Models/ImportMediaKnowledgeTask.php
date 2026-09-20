@@ -18,60 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Media import knowledge base task
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method ImportMediaKnowledgeTaskInput getInput() Obtain 
- * @method void setInput(ImportMediaKnowledgeTaskInput $Input) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
+ * @method string getTaskId() Obtain <p>Task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
+ * @method string getFileId() Obtain <p>Media file ID</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID</p>
+ * @method ImportMediaKnowledgeTaskInput getInput() Obtain <p>Input of the import knowledge base task.</p>
+ * @method void setInput(ImportMediaKnowledgeTaskInput $Input) Set <p>Input of the import knowledge base task.</p>
+ * @method string getStatus() Obtain <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+ * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure.</p>
+ * @method string getMessage() Obtain <p>Error message.</p>
+ * @method void setMessage(string $Message) Set <p>Error message.</p>
  */
 class ImportMediaKnowledgeTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string <p>Media file ID</p>
      */
     public $FileId;
 
     /**
-     * @var ImportMediaKnowledgeTaskInput 
+     * @var ImportMediaKnowledgeTaskInput <p>Input of the import knowledge base task.</p>
      */
     public $Input;
 
     /**
-     * @var string 
+     * @var string <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer <p>Error code. 0 indicates success, and other values indicate failure.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string <p>Error message.</p>
      */
     public $Message;
 
     /**
-     * @param string $TaskId 
-     * @param string $FileId 
-     * @param ImportMediaKnowledgeTaskInput $Input 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
+     * @param string $TaskId <p>Task ID.</p>
+     * @param string $FileId <p>Media file ID</p>
+     * @param ImportMediaKnowledgeTaskInput $Input <p>Input of the import knowledge base task.</p>
+     * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
+     * @param string $Message <p>Error message.</p>
      */
     function __construct()
     {

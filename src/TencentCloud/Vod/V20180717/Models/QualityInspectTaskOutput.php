@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output of the audio and video quality inspection task.
  *
- * @method integer getNoAudio() Obtain 
- * @method void setNoAudio(integer $NoAudio) Set 
- * @method integer getNoVideo() Obtain 
- * @method void setNoVideo(integer $NoVideo) Set 
- * @method integer getQualityEvaluationScore() Obtain 
- * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set 
- * @method array getQualityInspectResultSet() Obtain 
- * @method void setQualityInspectResultSet(array $QualityInspectResultSet) Set 
- * @method float getQualityEvaluationMeanOpinionScore() Obtain 
- * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) Set 
- * @method integer getAestheticEvaluationScore() Obtain 
- * @method void setAestheticEvaluationScore(integer $AestheticEvaluationScore) Set 
- * @method array getContainerDiagnoseResultSet() Obtain 
- * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set 
- * @method QualityInspectLLMDetectionReport getLLMDetectionReport() Obtain 
- * @method void setLLMDetectionReport(QualityInspectLLMDetectionReport $LLMDetectionReport) Set 
+ * @method integer getNoAudio() Obtain <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+ * @method void setNoAudio(integer $NoAudio) Set <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+ * @method integer getNoVideo() Obtain <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+ * @method void setNoVideo(integer $NoVideo) Set <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+ * @method integer getQualityEvaluationScore() Obtain <p>Video picture quality score. Value range: [0, 100].</p>
+ * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set <p>Video picture quality score. Value range: [0, 100].</p>
+ * @method array getQualityInspectResultSet() Obtain <p>List of abnormalities detected in audio and video quality.</p>
+ * @method void setQualityInspectResultSet(array $QualityInspectResultSet) Set <p>List of abnormalities detected in audio and video quality.</p>
+ * @method float getQualityEvaluationMeanOpinionScore() Obtain <p>No-reference quality score of the video (MOS).</p>
+ * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) Set <p>No-reference quality score of the video (MOS).</p>
+ * @method integer getAestheticEvaluationScore() Obtain <p>Video aesthetic score. Value range: [0, 100].</p>
+ * @method void setAestheticEvaluationScore(integer $AestheticEvaluationScore) Set <p>Video aesthetic score. Value range: [0, 100].</p>
+ * @method array getContainerDiagnoseResultSet() Obtain <p>Exception items detected in format diagnosis.</p>
+ * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set <p>Exception items detected in format diagnosis.</p>
+ * @method QualityInspectLLMDetectionReport getLLMDetectionReport() Obtain <p>LLM AIGC quality detection result.</p>
+ * @method void setLLMDetectionReport(QualityInspectLLMDetectionReport $LLMDetectionReport) Set <p>LLM AIGC quality detection result.</p>
  */
 class QualityInspectTaskOutput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
      */
     public $NoAudio;
 
     /**
-     * @var integer 
+     * @var integer <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
      */
     public $NoVideo;
 
     /**
-     * @var integer 
+     * @var integer <p>Video picture quality score. Value range: [0, 100].</p>
      */
     public $QualityEvaluationScore;
 
     /**
-     * @var array 
+     * @var array <p>List of abnormalities detected in audio and video quality.</p>
      */
     public $QualityInspectResultSet;
 
     /**
-     * @var float 
+     * @var float <p>No-reference quality score of the video (MOS).</p>
      */
     public $QualityEvaluationMeanOpinionScore;
 
     /**
-     * @var integer 
+     * @var integer <p>Video aesthetic score. Value range: [0, 100].</p>
      */
     public $AestheticEvaluationScore;
 
     /**
-     * @var array 
+     * @var array <p>Exception items detected in format diagnosis.</p>
      */
     public $ContainerDiagnoseResultSet;
 
     /**
-     * @var QualityInspectLLMDetectionReport 
+     * @var QualityInspectLLMDetectionReport <p>LLM AIGC quality detection result.</p>
      */
     public $LLMDetectionReport;
 
     /**
-     * @param integer $NoAudio 
-     * @param integer $NoVideo 
-     * @param integer $QualityEvaluationScore 
-     * @param array $QualityInspectResultSet 
-     * @param float $QualityEvaluationMeanOpinionScore 
-     * @param integer $AestheticEvaluationScore 
-     * @param array $ContainerDiagnoseResultSet 
-     * @param QualityInspectLLMDetectionReport $LLMDetectionReport 
+     * @param integer $NoAudio <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+     * @param integer $NoVideo <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+     * @param integer $QualityEvaluationScore <p>Video picture quality score. Value range: [0, 100].</p>
+     * @param array $QualityInspectResultSet <p>List of abnormalities detected in audio and video quality.</p>
+     * @param float $QualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
+     * @param integer $AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
+     * @param array $ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
+     * @param QualityInspectLLMDetectionReport $LLMDetectionReport <p>LLM AIGC quality detection result.</p>
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCLSTopic request structure.
  *
- * @method string getCLSRegion() Obtain 
- * @method void setCLSRegion(string $CLSRegion) Set 
- * @method string getTopicName() Obtain 
- * @method void setTopicName(string $TopicName) Set 
- * @method string getLogsetId() Obtain 
- * @method void setLogsetId(string $LogsetId) Set 
+ * @method string getCLSRegion() Obtain Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+ * @method void setCLSRegion(string $CLSRegion) Set Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+ * @method string getTopicName() Obtain Log topic name.
+ * @method void setTopicName(string $TopicName) Set Log topic name.
+ * @method string getLogsetId() Obtain Logset ID.
+ * @method void setLogsetId(string $LogsetId) Set Logset ID.
  */
 class CreateCLSTopicRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public $CLSRegion;
 
     /**
-     * @var string 
+     * @var string Log topic name.
      */
     public $TopicName;
 
     /**
-     * @var string 
+     * @var string Logset ID.
      */
     public $LogsetId;
 
     /**
-     * @param string $CLSRegion 
-     * @param string $TopicName 
-     * @param string $LogsetId 
+     * @param string $CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * @param string $TopicName Log topic name.
+     * @param string $LogsetId Logset ID.
      */
     function __construct()
     {

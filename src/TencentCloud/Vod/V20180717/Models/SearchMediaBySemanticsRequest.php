@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMediaBySemantics request structure.
  *
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
- * @method string getKnowledgeBaseId() Obtain 
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method array getCategories() Obtain 
- * @method void setCategories(array $Categories) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
- * @method array getPersons() Obtain 
- * @method void setPersons(array $Persons) Set 
- * @method array getTaskTypes() Obtain 
- * @method void setTaskTypes(array $TaskTypes) Set 
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method string getText() Obtain <p>Content to search</p>
+ * @method void setText(string $Text) Set <p>Content to search</p>
+ * @method string getKnowledgeBaseId() Obtain <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+ * @method integer getLimit() Obtain <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
+ * @method array getCategories() Obtain <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+ * @method void setCategories(array $Categories) Set <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+ * @method array getTags() Obtain <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+ * @method void setTags(array $Tags) Set <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+ * @method array getPersons() Obtain <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+ * @method void setPersons(array $Persons) Set <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+ * @method array getTaskTypes() Obtain <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+ * @method void setTaskTypes(array $TaskTypes) Set <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
  */
 class SearchMediaBySemanticsRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string <p>Content to search</p>
      */
     public $Text;
 
     /**
-     * @var string 
+     * @var string <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
      */
     public $KnowledgeBaseId;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
      */
     public $Limit;
 
     /**
-     * @var array 
+     * @var array <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
      */
     public $Categories;
 
     /**
-     * @var array 
+     * @var array <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
      */
     public $Tags;
 
     /**
-     * @var array 
+     * @var array <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
      */
     public $Persons;
 
     /**
-     * @var array 
+     * @var array <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     public $TaskTypes;
 
     /**
-     * @param integer $SubAppId 
-     * @param string $Text 
-     * @param string $KnowledgeBaseId 
-     * @param integer $Limit 
-     * @param array $Categories 
-     * @param array $Tags 
-     * @param array $Persons 
-     * @param array $TaskTypes 
+     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param string $Text <p>Content to search</p>
+     * @param string $KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+     * @param integer $Limit <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
+     * @param array $Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+     * @param array $Tags <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+     * @param array $Persons <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+     * @param array $TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     function __construct()
     {

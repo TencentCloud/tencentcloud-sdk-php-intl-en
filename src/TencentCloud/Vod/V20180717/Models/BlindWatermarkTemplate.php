@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Digital watermark template details.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getTextContent() Obtain 
- * @method void setTextContent(string $TextContent) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method integer getDefinition() Obtain Unique identifier of the digital watermark template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the digital watermark template.
+ * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+ * @method void setType(string $Type) Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+ * @method string getName() Obtain Digital watermark template name.
+ * @method void setName(string $Name) Set Digital watermark template name.
+ * @method string getTextContent() Obtain Text content of the digital watermark template. The length cannot exceed 64 characters.
+ * @method void setTextContent(string $TextContent) Set Text content of the digital watermark template. The length cannot exceed 64 characters.
+ * @method string getComment() Obtain Description information of the digital watermark template.
+ * @method void setComment(string $Comment) Set Description information of the digital watermark template.
+ * @method string getCreateTime() Obtain Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUpdateTime() Obtain Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class BlindWatermarkTemplate extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique identifier of the digital watermark template.
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Digital watermark template name.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Text content of the digital watermark template. The length cannot exceed 64 characters.
      */
     public $TextContent;
 
     /**
-     * @var string 
+     * @var string Description information of the digital watermark template.
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 
-     * @param string $Type 
-     * @param string $Name 
-     * @param string $TextContent 
-     * @param string $Comment 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
+     * @param integer $Definition Unique identifier of the digital watermark template.
+     * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+     * @param string $Name Digital watermark template name.
+     * @param string $TextContent Text content of the digital watermark template. The length cannot exceed 64 characters.
+     * @param string $Comment Description information of the digital watermark template.
+     * @param string $CreateTime Creation time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $UpdateTime Last modification time of the digital watermark template in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

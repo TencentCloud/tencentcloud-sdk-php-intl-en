@@ -18,36 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Text keyword recognition output.
  *
- * @method array getResultSet() Obtain 
- * @method void setResultSet(array $ResultSet) Set 
- * @method string getResultSetFileUrl() Obtain 
- * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set 
- * @method string getResultSetFileUrlExpireTime() Obtain 
- * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set 
+ * @method array getResultSet() Obtain Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
+ * @method void setResultSet(array $ResultSet) Set Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
+ * @method string getResultSetFileUrl() Obtain URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
+ * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
+ * @method string getResultSetFileUrlExpireTime() Obtain Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
      */
     public $ResultSet;
 
     /**
-     * @var string 
+     * @var string URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
      */
     public $ResultSetFileUrl;
 
     /**
-     * @var string 
+     * @var string Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ResultSetFileUrlExpireTime;
 
     /**
-     * @param array $ResultSet 
-     * @param string $ResultSetFileUrl 
-     * @param string $ResultSetFileUrlExpireTime 
+     * @param array $ResultSet Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
+     * @param string $ResultSetFileUrl URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
+     * @param string $ResultSetFileUrlExpireTime Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -18,108 +18,124 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio/Video Moderation Template Details
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method PornConfigureInfo getPornConfigure() Obtain 
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set 
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain 
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set 
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain 
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set 
- * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain 
- * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set 
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain 
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set 
- * @method string getReviewWallSwitch() Obtain 
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set 
- * @method float getScreenshotInterval() Obtain 
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method integer getDefinition() Obtain Unique identifier of an audio and video review template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of an audio and video review template.
+ * @method string getName() Obtain Audio/video moderation template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Audio/video moderation template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Description of the audio and video review template, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Description of the audio and video review template, with a length limit of 256 characters.
+ * @method PornConfigureInfo getPornConfigure() Obtain Authentication involves control parameters for offensive information.
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Authentication involves control parameters for offensive information.
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameters for authentication involving unsafe information.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Control parameters for authentication involving unsafe information.
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Control parameters for identifying inappropriate information.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Control parameters for identifying inappropriate information.
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) Set Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain User-customized control parameters for audio/video moderation.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set User-customized control parameters for audio/video moderation.
+ * @method string getReviewWallSwitch() Obtain Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
+ * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+ * @method string getCreateTime() Obtain Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class ContentReviewTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique identifier of an audio and video review template.
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Audio/video moderation template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Description of the audio and video review template, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfo 
+     * @var PornConfigureInfo Authentication involves control parameters for offensive information.
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo 
+     * @var TerrorismConfigureInfo Control parameters for authentication involving unsafe information.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo 
+     * @var PoliticalConfigureInfo Control parameters for identifying inappropriate information.
      */
     public $PoliticalConfigure;
 
     /**
-     * @var ProhibitedConfigureInfo 
+     * @var ProhibitedConfigureInfo Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
      */
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo 
+     * @var UserDefineConfigureInfo User-customized control parameters for audio/video moderation.
      */
     public $UserDefineConfigure;
 
     /**
-     * @var string 
+     * @var string Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
      */
     public $ReviewWallSwitch;
 
     /**
-     * @var float 
+     * @var float Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
      */
     public $ScreenshotInterval;
 
     /**
-     * @var string 
+     * @var string Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param PornConfigureInfo $PornConfigure 
-     * @param TerrorismConfigureInfo $TerrorismConfigure 
-     * @param PoliticalConfigureInfo $PoliticalConfigure 
-     * @param ProhibitedConfigureInfo $ProhibitedConfigure 
-     * @param UserDefineConfigureInfo $UserDefineConfigure 
-     * @param string $ReviewWallSwitch 
-     * @param float $ScreenshotInterval 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
+     * @param integer $Definition Unique identifier of an audio and video review template.
+     * @param string $Name Audio/video moderation template name. Length limit: 64 characters.
+     * @param string $Comment Description of the audio and video review template, with a length limit of 256 characters.
+     * @param PornConfigureInfo $PornConfigure Authentication involves control parameters for offensive information.
+     * @param TerrorismConfigureInfo $TerrorismConfigure Control parameters for authentication involving unsafe information.
+     * @param PoliticalConfigureInfo $PoliticalConfigure Control parameters for identifying inappropriate information.
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+     * @param UserDefineConfigureInfo $UserDefineConfigure User-customized control parameters for audio/video moderation.
+     * @param string $ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
+     * @param float $ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * @param string $CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProcessImageAsyncTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method ProcessImageAsyncTask getProcessImageConfigure() Obtain 
- * @method void setProcessImageConfigure(ProcessImageAsyncTask $ProcessImageConfigure) Set 
+ * @method integer getDefinition() Obtain Unique identifier of the image asynchronous processing template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the image asynchronous processing template.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method string getName() Obtain Image asynchronous processing template name. The length cannot exceed 64 characters.
+ * @method void setName(string $Name) Set Image asynchronous processing template name. The length cannot exceed 64 characters.
+ * @method string getComment() Obtain Description information of the image asynchronous processing template. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Description information of the image asynchronous processing template. Length limit: 256 characters.
+ * @method ProcessImageAsyncTask getProcessImageConfigure() Obtain Configuration for asynchronous image processing.
+ * @method void setProcessImageConfigure(ProcessImageAsyncTask $ProcessImageConfigure) Set Configuration for asynchronous image processing.
  */
 class ModifyProcessImageAsyncTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique identifier of the image asynchronous processing template.
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Image asynchronous processing template name. The length cannot exceed 64 characters.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Description information of the image asynchronous processing template. Length limit: 256 characters.
      */
     public $Comment;
 
     /**
-     * @var ProcessImageAsyncTask 
+     * @var ProcessImageAsyncTask Configuration for asynchronous image processing.
      */
     public $ProcessImageConfigure;
 
     /**
-     * @param integer $Definition 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param string $Comment 
-     * @param ProcessImageAsyncTask $ProcessImageConfigure 
+     * @param integer $Definition Unique identifier of the image asynchronous processing template.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param string $Name Image asynchronous processing template name. The length cannot exceed 64 characters.
+     * @param string $Comment Description information of the image asynchronous processing template. Length limit: 256 characters.
+     * @param ProcessImageAsyncTask $ProcessImageConfigure Configuration for asynchronous image processing.
      */
     function __construct()
     {

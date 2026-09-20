@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Detailed information such as the knowledge library list to import media assets into and the parsing template used
  *
- * @method string getKnowledgeBaseId() Obtain 
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getImportTime() Obtain 
- * @method void setImportTime(string $ImportTime) Set 
+ * @method string getKnowledgeBaseId() Obtain <p>Knowledge base ID</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set <p>Knowledge base ID</p>
+ * @method integer getDefinition() Obtain <p>Associated large model parsing template</p>
+ * @method void setDefinition(integer $Definition) Set <p>Associated large model parsing template</p>
+ * @method string getImportTime() Obtain <p>Storage time</p>
+ * @method void setImportTime(string $ImportTime) Set <p>Storage time</p>
  */
 class KnowledgeBaseDetail extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Knowledge base ID</p>
      */
     public $KnowledgeBaseId;
 
     /**
-     * @var integer 
+     * @var integer <p>Associated large model parsing template</p>
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string <p>Storage time</p>
      */
     public $ImportTime;
 
     /**
-     * @param string $KnowledgeBaseId 
-     * @param integer $Definition 
-     * @param string $ImportTime 
+     * @param string $KnowledgeBaseId <p>Knowledge base ID</p>
+     * @param integer $Definition <p>Associated large model parsing template</p>
+     * @param string $ImportTime <p>Storage time</p>
      */
     function __construct()
     {

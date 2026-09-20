@@ -18,60 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output media file configuration of scenario-based AIGC video generation tasks.
  *
- * @method string getStorageMode() Obtain 
- * @method void setStorageMode(string $StorageMode) Set 
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
- * @method string getAspectRatio() Obtain 
- * @method void setAspectRatio(string $AspectRatio) Set 
- * @method float getDuration() Obtain 
- * @method void setDuration(float $Duration) Set 
+ * @method string getStorageMode() Obtain Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
+Default value: Temporary.
+ * @method void setStorageMode(string $StorageMode) Set Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
+Default value: Temporary.
+ * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system generates the filename.
+ * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system generates the filename.
+ * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+ * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+ * @method string getExpireTime() Obtain Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getAspectRatio() Obtain Aspect ratio of the generated video. Input format: W:H. Only valid for product image scenarios. Options: 16:9, 9:16.
+ * @method void setAspectRatio(string $AspectRatio) Set Aspect ratio of the generated video. Input format: W:H. Only valid for product image scenarios. Options: 16:9, 9:16.
+ * @method float getDuration() Obtain Video generation duration. Available values: 4, 6, 8 seconds.
+ * @method void setDuration(float $Duration) Set Video generation duration. Available values: 4, 6, 8 seconds.
  */
 class SceneAigcVideoOutputConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
+Default value: Temporary.
      */
     public $StorageMode;
 
     /**
-     * @var string 
+     * @var string Output filename, up to 64 characters. By default, the system generates the filename.
      */
     public $MediaName;
 
     /**
-     * @var integer 
+     * @var integer Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ExpireTime;
 
     /**
-     * @var string 
+     * @var string Aspect ratio of the generated video. Input format: W:H. Only valid for product image scenarios. Options: 16:9, 9:16.
      */
     public $AspectRatio;
 
     /**
-     * @var float 
+     * @var float Video generation duration. Available values: 4, 6, 8 seconds.
      */
     public $Duration;
 
     /**
-     * @param string $StorageMode 
-     * @param string $MediaName 
-     * @param integer $ClassId 
-     * @param string $ExpireTime 
-     * @param string $AspectRatio 
-     * @param float $Duration 
+     * @param string $StorageMode Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
+Default value: Temporary.
+     * @param string $MediaName Output filename, up to 64 characters. By default, the system generates the filename.
+     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+     * @param string $ExpireTime Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $AspectRatio Aspect ratio of the generated video. Input format: W:H. Only valid for product image scenarios. Options: 16:9, 9:16.
+     * @param float $Duration Video generation duration. Available values: 4, 6, 8 seconds.
      */
     function __construct()
     {

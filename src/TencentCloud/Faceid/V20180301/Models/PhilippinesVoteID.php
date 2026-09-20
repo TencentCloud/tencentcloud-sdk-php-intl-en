@@ -18,108 +18,76 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Philippines VoteID Card
+ * Philippines voter card
  *
  * @method string getVIN() Obtain VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVIN(string $VIN) Set VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstName() Obtain First name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstName(string $FirstName) Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFirstName() Obtain Name
+ * @method void setFirstName(string $FirstName) Set Name
  * @method string getLastName() Obtain Last name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastName(string $LastName) Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCivilStatus() Obtain Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCivilStatus(string $CivilStatus) Set Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
+ * @method string getCivilStatus() Obtain Marital status
+ * @method void setCivilStatus(string $CivilStatus) Set Marital status
  * @method string getCitizenship() Obtain Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCitizenship(string $Citizenship) Set Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPrecinctNo() Obtain Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrecinctNo(string $PrecinctNo) Set Region
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAddress() Obtain Address.
+ * @method void setAddress(string $Address) Set Address.
+ * @method string getPrecinctNo() Obtain Region.
+ * @method void setPrecinctNo(string $PrecinctNo) Set Region.
  */
 class PhilippinesVoteID extends AbstractModel
 {
     /**
      * @var string VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VIN;
 
     /**
-     * @var string First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $FirstName;
 
     /**
      * @var string Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastName;
 
     /**
-     * @var string Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
-     * @var string Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Marital status
      */
     public $CivilStatus;
 
     /**
      * @var string Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Citizenship;
 
     /**
-     * @var string Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address.
      */
     public $Address;
 
     /**
-     * @var string Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $PrecinctNo;
 
     /**
      * @param string $VIN VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FirstName Name
      * @param string $LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CivilStatus Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Birthday Date of birth
+     * @param string $CivilStatus Marital status
      * @param string $Citizenship Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PrecinctNo Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Address Address.
+     * @param string $PrecinctNo Region.
      */
     function __construct()
     {

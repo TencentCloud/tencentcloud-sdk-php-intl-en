@@ -18,145 +18,101 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The content of a single license in the license information
+ * Content of a single document in the document information
  *
  * @method boolean getIsPass() Obtain <p>Whether the identity authentication or OCR process is successful.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsPass(boolean $IsPass) Set <p>Whether the identity authentication or OCR process is successful.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCardImageBase64() Obtain <p>Base64 of the front side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardImageBase64(string $CardImageBase64) Set <p>Base64 of the front side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method CardInfo getCardInfo() Obtain <p>ID card recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardInfo(CardInfo $CardInfo) Set <p>ID card recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method NormalCardInfo getNormalCardInfo() Obtain <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNormalCardInfo(NormalCardInfo $NormalCardInfo) Set <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCardImageBase64() Obtain <p>Base64 of the front image of the identity document</p>
+ * @method void setCardImageBase64(string $CardImageBase64) Set <p>Base64 of the front image of the identity document</p>
+ * @method CardInfo getCardInfo() Obtain <p>ID document recognition result</p>
+ * @method void setCardInfo(CardInfo $CardInfo) Set <p>ID document recognition result</p>
+ * @method NormalCardInfo getNormalCardInfo() Obtain <p>ID document recognition result (when CheckMode value is 4, the OriginalCardInfo field is returned; in other scenarios, the current field is returned)</p>
+ * @method void setNormalCardInfo(NormalCardInfo $NormalCardInfo) Set <p>ID document recognition result (when CheckMode value is 4, the OriginalCardInfo field is returned; in other scenarios, the current field is returned)</p>
  * @method string getRequestId() Obtain <p>Request id</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRequestId(string $RequestId) Set <p>Request id</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCardCutImageBase64() Obtain <p>Base64 of the cropped ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardCutImageBase64(string $CardCutImageBase64) Set <p>Base64 of the cropped ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCardBackCutImageBase64() Obtain <p>Base64 of the cropped image of the back side of the ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardBackCutImageBase64(string $CardBackCutImageBase64) Set <p>Base64 of the cropped image of the back side of the ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getWarnCardInfos() Obtain <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWarnCardInfos(array $WarnCardInfos) Set <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCardInfo() Obtain <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCardInfo(string $OriginalCardInfo) Set <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHeadImageBase64() Obtain <p>Document portrait matting</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeadImageBase64(string $HeadImageBase64) Set <p>Document portrait matting</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCardBackImageBase64() Obtain <p>Base64 of the back side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardBackImageBase64(string $CardBackImageBase64) Set <p>Base64 of the back side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCardCutImageBase64() Obtain <p>Base64 of the front cropped image of the identity document</p>
+ * @method void setCardCutImageBase64(string $CardCutImageBase64) Set <p>Base64 of the front cropped image of the identity document</p>
+ * @method string getCardBackCutImageBase64() Obtain <p>Base64 of the edge-cropped image of the back of an identity document</p>
+ * @method void setCardBackCutImageBase64(string $CardBackCutImageBase64) Set <p>Base64 of the edge-cropped image of the back of an identity document</p>
+ * @method array getWarnCardInfos() Obtain <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: alarm for incomplete document border</li><li>-9102: alarm for document photocopy</li><li>-9103: alarm for document rephotographing</li><li>-9104: document PS alarm</li><li>-9107: document reflective alarm</li><li>-9108: alarm for blurry document</li><li>-9109: alarm capability not enabled</li></ul>
+ * @method void setWarnCardInfos(array $WarnCardInfos) Set <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: alarm for incomplete document border</li><li>-9102: alarm for document photocopy</li><li>-9103: alarm for document rephotographing</li><li>-9104: document PS alarm</li><li>-9107: document reflective alarm</li><li>-9108: alarm for blurry document</li><li>-9109: alarm capability not enabled</li></ul>
+ * @method string getOriginalCardInfo() Obtain <p>Original document recognition information (when CheckMode value is 4, the current field will be returned)</p>
+ * @method void setOriginalCardInfo(string $OriginalCardInfo) Set <p>Original document recognition information (when CheckMode value is 4, the current field will be returned)</p>
+ * @method string getHeadImageBase64() Obtain <p>Portrait matting in the document</p>
+ * @method void setHeadImageBase64(string $HeadImageBase64) Set <p>Portrait matting in the document</p>
+ * @method string getCardBackImageBase64() Obtain <p>Base64 of the back image of the identity document</p>
+ * @method void setCardBackImageBase64(string $CardBackImageBase64) Set <p>Base64 of the back image of the identity document</p>
  */
 class OCRResult extends AbstractModel
 {
     /**
      * @var boolean <p>Whether the identity authentication or OCR process is successful.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsPass;
 
     /**
-     * @var string <p>Base64 of the front side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Base64 of the front image of the identity document</p>
      */
     public $CardImageBase64;
 
     /**
-     * @var CardInfo <p>ID card recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CardInfo <p>ID document recognition result</p>
      * @deprecated
      */
     public $CardInfo;
 
     /**
-     * @var NormalCardInfo <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var NormalCardInfo <p>ID document recognition result (when CheckMode value is 4, the OriginalCardInfo field is returned; in other scenarios, the current field is returned)</p>
      */
     public $NormalCardInfo;
 
     /**
      * @var string <p>Request id</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RequestId;
 
     /**
-     * @var string <p>Base64 of the cropped ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Base64 of the front cropped image of the identity document</p>
      */
     public $CardCutImageBase64;
 
     /**
-     * @var string <p>Base64 of the cropped image of the back side of the ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Base64 of the edge-cropped image of the back of an identity document</p>
      */
     public $CardBackCutImageBase64;
 
     /**
-     * @var array <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: alarm for incomplete document border</li><li>-9102: alarm for document photocopy</li><li>-9103: alarm for document rephotographing</li><li>-9104: document PS alarm</li><li>-9107: document reflective alarm</li><li>-9108: alarm for blurry document</li><li>-9109: alarm capability not enabled</li></ul>
      */
     public $WarnCardInfos;
 
     /**
-     * @var string <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Original document recognition information (when CheckMode value is 4, the current field will be returned)</p>
      */
     public $OriginalCardInfo;
 
     /**
-     * @var string <p>Document portrait matting</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Portrait matting in the document</p>
      */
     public $HeadImageBase64;
 
     /**
-     * @var string <p>Base64 of the back side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Base64 of the back image of the identity document</p>
      */
     public $CardBackImageBase64;
 
     /**
      * @param boolean $IsPass <p>Whether the identity authentication or OCR process is successful.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CardImageBase64 <p>Base64 of the front side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CardInfo $CardInfo <p>ID card recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NormalCardInfo $NormalCardInfo <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CardImageBase64 <p>Base64 of the front image of the identity document</p>
+     * @param CardInfo $CardInfo <p>ID document recognition result</p>
+     * @param NormalCardInfo $NormalCardInfo <p>ID document recognition result (when CheckMode value is 4, the OriginalCardInfo field is returned; in other scenarios, the current field is returned)</p>
      * @param string $RequestId <p>Request id</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CardCutImageBase64 <p>Base64 of the cropped ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CardBackCutImageBase64 <p>Base64 of the cropped image of the back side of the ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HeadImageBase64 <p>Document portrait matting</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CardBackImageBase64 <p>Base64 of the back side ID image</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CardCutImageBase64 <p>Base64 of the front cropped image of the identity document</p>
+     * @param string $CardBackCutImageBase64 <p>Base64 of the edge-cropped image of the back of an identity document</p>
+     * @param array $WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: alarm for incomplete document border</li><li>-9102: alarm for document photocopy</li><li>-9103: alarm for document rephotographing</li><li>-9104: document PS alarm</li><li>-9107: document reflective alarm</li><li>-9108: alarm for blurry document</li><li>-9109: alarm capability not enabled</li></ul>
+     * @param string $OriginalCardInfo <p>Original document recognition information (when CheckMode value is 4, the current field will be returned)</p>
+     * @param string $HeadImageBase64 <p>Portrait matting in the document</p>
+     * @param string $CardBackImageBase64 <p>Base64 of the back image of the identity document</p>
      */
     function __construct()
     {

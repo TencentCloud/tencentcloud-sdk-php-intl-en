@@ -20,114 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyImageSpriteTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
- * @method string getSampleType() Obtain 
- * @method void setSampleType(string $SampleType) Set 
- * @method integer getSampleInterval() Obtain 
- * @method void setSampleInterval(integer $SampleInterval) Set 
- * @method integer getRowCount() Obtain 
- * @method void setRowCount(integer $RowCount) Set 
- * @method integer getColumnCount() Obtain 
- * @method void setColumnCount(integer $ColumnCount) Set 
- * @method string getFillType() Obtain 
- * @method void setFillType(string $FillType) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
+ * @method integer getDefinition() Obtain Sprite template unique identifier.
+ * @method void setDefinition(integer $Definition) Set Sprite template unique identifier.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getName() Obtain Sprite image template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Sprite image template name. Length limit: 64 characters.
+ * @method integer getWidth() Obtain Width of small images in sprite image. Value range: [32, 4096]. Unit: px.
+ * @method void setWidth(integer $Width) Set Width of small images in sprite image. Value range: [32, 4096]. Unit: px.
+ * @method integer getHeight() Obtain Height of small images in sprite image. Value range: [32, 4096]. Unit: px.
+ * @method void setHeight(integer $Height) Set Height of small images in sprite image. Value range: [32, 4096]. Unit: px.
+ * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
+ * @method string getSampleType() Obtain Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
+ * @method void setSampleType(string $SampleType) Set Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
+ * @method integer getSampleInterval() Obtain Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+ * @method void setSampleInterval(integer $SampleInterval) Set Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+ * @method integer getRowCount() Obtain Number of rows of small images in the sprite image.
+ * @method void setRowCount(integer $RowCount) Set Number of rows of small images in the sprite image.
+ * @method integer getColumnCount() Obtain Number of columns of small images in the sprite image.
+ * @method void setColumnCount(integer $ColumnCount) Set Number of columns of small images in the sprite image.
+ * @method string getFillType() Obtain Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+ * @method void setFillType(string $FillType) Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+ * @method string getComment() Obtain Template description, with a length limit of 256 characters.
+ * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
+ * @method string getFormat() Obtain Image format. Valid values:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
+ * @method void setFormat(string $Format) Set Image format. Valid values:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Sprite template unique identifier.
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string 
+     * @var string Sprite image template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer Width of small images in sprite image. Value range: [32, 4096]. Unit: px.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer Height of small images in sprite image. Value range: [32, 4096]. Unit: px.
      */
     public $Height;
 
     /**
-     * @var string 
+     * @var string Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var string 
+     * @var string Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
      */
     public $SampleType;
 
     /**
-     * @var integer 
+     * @var integer Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
      */
     public $SampleInterval;
 
     /**
-     * @var integer 
+     * @var integer Number of rows of small images in the sprite image.
      */
     public $RowCount;
 
     /**
-     * @var integer 
+     * @var integer Number of columns of small images in the sprite image.
      */
     public $ColumnCount;
 
     /**
-     * @var string 
+     * @var string Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
      */
     public $FillType;
 
     /**
-     * @var string 
+     * @var string Template description, with a length limit of 256 characters.
      */
     public $Comment;
 
     /**
-     * @var string 
+     * @var string Image format. Valid values:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
      */
     public $Format;
 
     /**
-     * @param integer $Definition 
-     * @param integer $SubAppId 
-     * @param string $Name 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param string $ResolutionAdaptive 
-     * @param string $SampleType 
-     * @param integer $SampleInterval 
-     * @param integer $RowCount 
-     * @param integer $ColumnCount 
-     * @param string $FillType 
-     * @param string $Comment 
-     * @param string $Format 
+     * @param integer $Definition Sprite template unique identifier.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Name Sprite image template name. Length limit: 64 characters.
+     * @param integer $Width Width of small images in sprite image. Value range: [32, 4096]. Unit: px.
+     * @param integer $Height Height of small images in sprite image. Value range: [32, 4096]. Unit: px.
+     * @param string $ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
+     * @param string $SampleType Sampling type. Valid values:
+<li>Percent: by percent.</li>
+<li>Time: by time interval. </li>
+     * @param integer $SampleInterval Sampling interval.
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+     * @param integer $RowCount Number of rows of small images in the sprite image.
+     * @param integer $ColumnCount Number of columns of small images in the sprite image.
+     * @param string $FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+     * @param string $Comment Template description, with a length limit of 256 characters.
+     * @param string $Format Image format. Valid values:
+<li> jpg: jpg format;</li>
+<li> png: PNG format;</li>
+<li> webp: webp format.</li>
      */
     function __construct()
     {

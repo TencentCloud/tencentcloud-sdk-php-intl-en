@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EditMedia request structure.
  *
- * @method string getInputType() Obtain 
- * @method void setInputType(string $InputType) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getFileInfos() Obtain 
- * @method void setFileInfos(array $FileInfos) Set 
- * @method array getStreamInfos() Obtain 
- * @method void setStreamInfos(array $StreamInfos) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getProcedureName() Obtain 
- * @method void setProcedureName(string $ProcedureName) Set 
- * @method EditMediaOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getExtInfo() Obtain 
- * @method void setExtInfo(string $ExtInfo) Set 
+ * @method string getInputType() Obtain Type of input video. Valid values: `File` and `Stream`.
+ * @method void setInputType(string $InputType) Set Type of input video. Valid values: `File` and `Stream`.
+ * @method integer getSubAppId() Obtain <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method array getFileInfos() Obtain Input video file information. Required when InputType is File.
+ * @method void setFileInfos(array $FileInfos) Set Input video file information. Required when InputType is File.
+ * @method array getStreamInfos() Obtain Input stream information. Required when `InputType` is `Stream`.
+ * @method void setStreamInfos(array $StreamInfos) Set Input stream information. Required when `InputType` is `Stream`.
+ * @method integer getDefinition() Obtain Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
+ * @method void setDefinition(integer $Definition) Set Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
+ * @method string getProcedureName() Obtain [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
+ * @method void setProcedureName(string $ProcedureName) Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
+ * @method EditMediaOutputConfig getOutputConfig() Obtain File configuration generated after editing.
+ * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set File configuration generated after editing.
+ * @method string getSessionContext() Obtain Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+ * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method string getSessionId() Obtain Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method string getExtInfo() Obtain Reserved field, used for special purposes.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
  */
 class EditMediaRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Type of input video. Valid values: `File` and `Stream`.
      */
     public $InputType;
 
     /**
-     * @var integer 
+     * @var integer <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array Input video file information. Required when InputType is File.
      */
     public $FileInfos;
 
     /**
-     * @var array 
+     * @var array Input stream information. Required when `InputType` is `Stream`.
      */
     public $StreamInfos;
 
     /**
-     * @var integer 
+     * @var integer Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
      */
     public $ProcedureName;
 
     /**
-     * @var EditMediaOutputConfig 
+     * @var EditMediaOutputConfig File configuration generated after editing.
      */
     public $OutputConfig;
 
     /**
-     * @var string 
+     * @var string Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var integer 
+     * @var integer Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TasksPriority;
 
     /**
-     * @var string 
+     * @var string Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Reserved field, used for special purposes.
      */
     public $ExtInfo;
 
     /**
-     * @param string $InputType 
-     * @param integer $SubAppId 
-     * @param array $FileInfos 
-     * @param array $StreamInfos 
-     * @param integer $Definition 
-     * @param string $ProcedureName 
-     * @param EditMediaOutputConfig $OutputConfig 
-     * @param string $SessionContext 
-     * @param integer $TasksPriority 
-     * @param string $SessionId 
-     * @param string $ExtInfo 
+     * @param string $InputType Type of input video. Valid values: `File` and `Stream`.
+     * @param integer $SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param array $FileInfos Input video file information. Required when InputType is File.
+     * @param array $StreamInfos Input stream information. Required when `InputType` is `Stream`.
+     * @param integer $Definition Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
+     * @param string $ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
+     * @param EditMediaOutputConfig $OutputConfig File configuration generated after editing.
+     * @param string $SessionContext Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param string $SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param string $ExtInfo Reserved field, used for special purposes.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Create principal output information.
  *
- * @method string getSubjectId() Obtain 
- * @method void setSubjectId(string $SubjectId) Set 
- * @method string getSubjectInfo() Obtain 
- * @method void setSubjectInfo(string $SubjectInfo) Set 
+ * @method string getSubjectId() Obtain <p>Principal ID.</p>
+ * @method void setSubjectId(string $SubjectId) Set <p>Principal ID.</p>
+ * @method string getSubjectInfo() Obtain <p>Entity information.</p>
+ * @method void setSubjectInfo(string $SubjectInfo) Set <p>Entity information.</p>
  */
 class CreateAigcSubjectOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Principal ID.</p>
      */
     public $SubjectId;
 
     /**
-     * @var string 
+     * @var string <p>Entity information.</p>
      */
     public $SubjectInfo;
 
     /**
-     * @param string $SubjectId 
-     * @param string $SubjectInfo 
+     * @param string $SubjectId <p>Principal ID.</p>
+     * @param string $SubjectInfo <p>Entity information.</p>
      */
     function __construct()
     {

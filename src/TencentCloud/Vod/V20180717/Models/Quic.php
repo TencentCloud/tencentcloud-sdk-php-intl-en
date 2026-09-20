@@ -18,26 +18,26 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Quic configuration item
  *
- * @method string getSwitch() Obtain Quic configuration switch. Valid values:
+ * @method string getSwitch() Obtain Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Quic configuration switch. Valid values:
+ * @method void setSwitch(string $Switch) Set Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  */
 class Quic extends AbstractModel
 {
     /**
-     * @var string Quic configuration switch. Valid values:
+     * @var string Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Quic configuration switch. Valid values:
+     * @param string $Switch Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

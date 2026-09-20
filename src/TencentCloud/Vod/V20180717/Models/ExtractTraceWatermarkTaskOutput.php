@@ -18,29 +18,29 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Extract traceability watermark output information
  *
- * @method string getUv() Obtain 
- * @method void setUv(string $Uv) Set 
- * @method string getUid() Obtain 
- * @method void setUid(string $Uid) Set 
+ * @method string getUv() Obtain Player's ID in hexadecimal, 6 digits.
+ * @method void setUv(string $Uv) Set Player's ID in hexadecimal, 6 digits.
+ * @method string getUid() Obtain Deprecated.
+ * @method void setUid(string $Uid) Set Deprecated.
  */
 class ExtractTraceWatermarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Player's ID in hexadecimal, 6 digits.
      */
     public $Uv;
 
     /**
-     * @var string 
+     * @var string Deprecated.
      * @deprecated
      */
     public $Uid;
 
     /**
-     * @param string $Uv 
-     * @param string $Uid 
+     * @param string $Uv Player's ID in hexadecimal, 6 digits.
+     * @param string $Uid Deprecated.
      */
     function __construct()
     {

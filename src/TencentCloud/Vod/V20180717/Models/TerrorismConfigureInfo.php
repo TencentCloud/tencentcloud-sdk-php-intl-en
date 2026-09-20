@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task control parameter for authentication involving unsafe information
  *
- * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain 
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set 
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain 
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set 
+ * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Task control parameter for image recognition involving unsafe information.
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Task control parameter for image recognition involving unsafe information.
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Task control parameter for text identification involving unsafe information.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Task control parameter for text identification involving unsafe information.
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfo 
+     * @var TerrorismImgReviewTemplateInfo Task control parameter for image recognition involving unsafe information.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfo 
+     * @var TerrorismOcrReviewTemplateInfo Task control parameter for text identification involving unsafe information.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo 
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo 
+     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Task control parameter for image recognition involving unsafe information.
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Task control parameter for text identification involving unsafe information.
      */
     function __construct()
     {

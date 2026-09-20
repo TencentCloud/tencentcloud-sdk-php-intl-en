@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * File information of the AIGC human face input
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getType() Obtain Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+ * @method void setType(string $Type) Set Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+ * @method string getFileId() Obtain Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+ * @method void setFileId(string $FileId) Set Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+ * @method string getUrl() Obtain Accessible file URL. This parameter is valid when Type is Url.
+ * @method void setUrl(string $Url) Set Accessible file URL. This parameter is valid when Type is Url.
  */
 class AigcFaceInputFileInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Accessible file URL. This parameter is valid when Type is Url.
      */
     public $Url;
 
     /**
-     * @param string $Type 
-     * @param string $FileId 
-     * @param string $Url 
+     * @param string $Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+     * @param string $FileId Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+     * @param string $Url Accessible file URL. This parameter is valid when Type is Url.
      */
     function __construct()
     {

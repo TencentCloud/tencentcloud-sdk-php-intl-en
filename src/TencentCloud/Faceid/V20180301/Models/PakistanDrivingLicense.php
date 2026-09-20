@@ -18,84 +18,60 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pakistan driving license
+ * Pakistan driver's license
  *
- * @method string getLastName() Obtain Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastName(string $LastName) Set Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstName() Obtain First name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstName(string $FirstName) Set First name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNumber() Obtain License number.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLicenseNumber(string $LicenseNumber) Set License number.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAge() Obtain Age.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAge(string $Age) Set Age.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuedCountry() Obtain Gender.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuedCountry(string $IssuedCountry) Set Gender.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLastName() Obtain Last name
+ * @method void setLastName(string $LastName) Set Last name
+ * @method string getFirstName() Obtain Name
+ * @method void setFirstName(string $FirstName) Set Name
+ * @method string getLicenseNumber() Obtain Identity card
+ * @method void setLicenseNumber(string $LicenseNumber) Set Identity card
+ * @method string getAge() Obtain Age
+ * @method void setAge(string $Age) Set Age
+ * @method string getBirthday() Obtain Birthday
+ * @method void setBirthday(string $Birthday) Set Birthday
+ * @method string getIssuedCountry() Obtain City of issuance
+ * @method void setIssuedCountry(string $IssuedCountry) Set City of issuance
  */
 class PakistanDrivingLicense extends AbstractModel
 {
     /**
-     * @var string Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last name
      */
     public $LastName;
 
     /**
-     * @var string First name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
     public $FirstName;
 
     /**
-     * @var string License number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity card
      */
     public $LicenseNumber;
 
     /**
-     * @var string Age.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Age
      */
     public $Age;
 
     /**
-     * @var string Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Birthday
      */
     public $Birthday;
 
     /**
-     * @var string Gender.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string City of issuance
      */
     public $IssuedCountry;
 
     /**
-     * @param string $LastName Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstName First name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNumber License number.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Age Age.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuedCountry Gender.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LastName Last name
+     * @param string $FirstName Name
+     * @param string $LicenseNumber Identity card
+     * @param string $Age Age
+     * @param string $Birthday Birthday
+     * @param string $IssuedCountry City of issuance
      */
     function __construct()
     {

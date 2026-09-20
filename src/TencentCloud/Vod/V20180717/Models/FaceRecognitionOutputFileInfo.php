@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face recognition output file information
  *
- * @method string getFileType() Obtain 
- * @method void setFileType(string $FileType) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getFileType() Obtain <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+ * @method void setFileType(string $FileType) Set <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+ * @method string getUrl() Obtain <p>URL of the face recognition output file</p>
+ * @method void setUrl(string $Url) Set <p>URL of the face recognition output file</p>
  */
 class FaceRecognitionOutputFileInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
      */
     public $FileType;
 
     /**
-     * @var string 
+     * @var string <p>URL of the face recognition output file</p>
      */
     public $Url;
 
     /**
-     * @param string $FileType 
-     * @param string $Url 
+     * @param string $FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+     * @param string $Url <p>URL of the face recognition output file</p>
      */
     function __construct()
     {

@@ -18,27 +18,27 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Timestamp hotlink protection mode B configuration
  *
  * @method string getSecretKey() Obtain Key used for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
  * @method void setSecretKey(string $SecretKey) Set Key used for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
- * @method integer getExpireTime() Obtain Signature expiration time setting;
+ * @method integer getExpireTime() Obtain Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
- * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time setting;
+ * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
  * @method array getFileExtensions() Obtain List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
  * @method void setFileExtensions(array $FileExtensions) Set List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
  * @method string getFilterType() Obtain whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
  * @method void setFilterType(string $FilterType) Set whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
- * @method string getBackupSecretKey() Obtain Secondary key for signature calculation;
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+ * @method string getBackupSecretKey() Obtain Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
- * @method void setBackupSecretKey(string $BackupSecretKey) Set Secondary key for signature calculation;
+ * @method void setBackupSecretKey(string $BackupSecretKey) Set Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
  */
 class AuthenticationTypeB extends AbstractModel
@@ -50,25 +50,25 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     public $SecretKey;
 
     /**
-     * @var integer Signature expiration time setting;
+     * @var integer Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
      */
     public $ExpireTime;
 
     /**
      * @var array List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      */
     public $FileExtensions;
 
     /**
      * @var string whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
      */
     public $FilterType;
 
     /**
-     * @var string Secondary key for signature calculation;
+     * @var string Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
      */
     public $BackupSecretKey;
@@ -76,13 +76,13 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     /**
      * @param string $SecretKey Key used for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
-     * @param integer $ExpireTime Signature expiration time setting;
+     * @param integer $ExpireTime Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
      * @param array $FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      * @param string $FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
-     * @param string $BackupSecretKey Secondary key for signature calculation;
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+     * @param string $BackupSecretKey Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
      */
     function __construct()

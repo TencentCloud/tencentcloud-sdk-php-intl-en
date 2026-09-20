@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteBlindWatermarkTemplate request structure.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method integer getDefinition() Obtain Unique identifier of the digital watermark template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the digital watermark template.
+ * @method integer getSubAppId() Obtain VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+ * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
  */
 class DeleteBlindWatermarkTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Unique identifier of the digital watermark template.
      */
     public $Definition;
 
     /**
-     * @var integer 
+     * @var integer VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
      */
     public $SubAppId;
 
     /**
-     * @param integer $Definition 
-     * @param integer $SubAppId 
+     * @param integer $Definition Unique identifier of the digital watermark template.
+     * @param integer $SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
      */
     function __construct()
     {

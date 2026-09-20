@@ -18,28 +18,40 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Clipping solidification task information.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getPersistenceSource() Obtain 
- * @method void setPersistenceSource(string $PersistenceSource) Set 
+ * @method string getFileId() Obtain The generated media ID.
+ * @method void setFileId(string $FileId) Set The generated media ID.
+ * @method string getPersistenceSource() Obtain Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
+ * @method void setPersistenceSource(string $PersistenceSource) Set Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
  */
 class PersistenceCompleteTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The generated media ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
      */
     public $PersistenceSource;
 
     /**
-     * @param string $FileId 
-     * @param string $PersistenceSource 
+     * @param string $FileId The generated media ID.
+     * @param string $PersistenceSource Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
      */
     function __construct()
     {

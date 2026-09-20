@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input of the timbre clone task.
  *
- * @method string getAudioUrl() Obtain 
- * @method void setAudioUrl(string $AudioUrl) Set 
- * @method string getAudioFileId() Obtain 
- * @method void setAudioFileId(string $AudioFileId) Set 
- * @method string getLanguageBoost() Obtain 
- * @method void setLanguageBoost(string $LanguageBoost) Set 
- * @method string getExtParam() Obtain 
- * @method void setExtParam(string $ExtParam) Set 
+ * @method string getAudioUrl() Obtain <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method void setAudioUrl(string $AudioUrl) Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method string getAudioFileId() Obtain <p>Input audio fileId</p>
+ * @method void setAudioFileId(string $AudioFileId) Set <p>Input audio fileId</p>
+ * @method string getLanguageBoost() Obtain <p>Audio language</p>
+ * @method void setLanguageBoost(string $LanguageBoost) Set <p>Audio language</p>
+ * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
  */
 class CloneVoiceAsyncInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public $AudioUrl;
 
     /**
-     * @var string 
+     * @var string <p>Input audio fileId</p>
      */
     public $AudioFileId;
 
     /**
-     * @var string 
+     * @var string <p>Audio language</p>
      */
     public $LanguageBoost;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameters in the format of a JSON string.</p>
      */
     public $ExtParam;
 
     /**
-     * @param string $AudioUrl 
-     * @param string $AudioFileId 
-     * @param string $LanguageBoost 
-     * @param string $ExtParam 
+     * @param string $AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * @param string $AudioFileId <p>Input audio fileId</p>
+     * @param string $LanguageBoost <p>Audio language</p>
+     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     function __construct()
     {

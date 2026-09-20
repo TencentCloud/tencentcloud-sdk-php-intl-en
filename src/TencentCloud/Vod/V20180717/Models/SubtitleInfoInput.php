@@ -18,172 +18,172 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle suppression input information
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method integer getStreamIndex() Obtain 
- * @method void setStreamIndex(integer $StreamIndex) Set 
- * @method string getFontType() Obtain 
- * @method void setFontType(string $FontType) Set 
- * @method string getFontSize() Obtain 
- * @method void setFontSize(string $FontSize) Set 
- * @method string getFontColor() Obtain 
- * @method void setFontColor(string $FontColor) Set 
- * @method float getFontAlpha() Obtain 
- * @method void setFontAlpha(float $FontAlpha) Set 
- * @method string getYPos() Obtain 
- * @method void setYPos(string $YPos) Set 
- * @method string getBoardY() Obtain 
- * @method void setBoardY(string $BoardY) Set 
- * @method string getBoardWidth() Obtain 
- * @method void setBoardWidth(string $BoardWidth) Set 
- * @method string getBoardHeight() Obtain 
- * @method void setBoardHeight(string $BoardHeight) Set 
- * @method string getBoardColor() Obtain 
- * @method void setBoardColor(string $BoardColor) Set 
- * @method float getBoardAlpha() Obtain 
- * @method void setBoardAlpha(float $BoardAlpha) Set 
- * @method string getAlignment() Obtain 
- * @method void setAlignment(string $Alignment) Set 
- * @method string getOutlineWidth() Obtain 
- * @method void setOutlineWidth(string $OutlineWidth) Set 
- * @method string getOutlineColor() Obtain 
- * @method void setOutlineColor(string $OutlineColor) Set 
- * @method float getOutlineAlpha() Obtain 
- * @method void setOutlineAlpha(float $OutlineAlpha) Set 
- * @method string getShadowWidth() Obtain 
- * @method void setShadowWidth(string $ShadowWidth) Set 
- * @method string getShadowColor() Obtain 
- * @method void setShadowColor(string $ShadowColor) Set 
- * @method float getShadowAlpha() Obtain 
- * @method void setShadowAlpha(float $ShadowAlpha) Set 
- * @method string getLineSpacing() Obtain 
- * @method void setLineSpacing(string $LineSpacing) Set 
+ * @method string getId() Obtain <p>Subtitle ID.</p>
+ * @method void setId(string $Id) Set <p>Subtitle ID.</p>
+ * @method integer getStreamIndex() Obtain <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+ * @method void setStreamIndex(integer $StreamIndex) Set <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+ * @method string getFontType() Obtain <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
+ * @method void setFontType(string $FontType) Set <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
+ * @method string getFontSize() Obtain <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
+ * @method void setFontSize(string $FontSize) Set <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
+ * @method string getFontColor() Obtain <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
+ * @method void setFontColor(string $FontColor) Set <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
+ * @method float getFontAlpha() Obtain <p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
+ * @method void setFontAlpha(float $FontAlpha) Set <p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
+ * @method string getYPos() Obtain <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+ * @method void setYPos(string $YPos) Set <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+ * @method string getBoardY() Obtain <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+ * @method void setBoardY(string $BoardY) Set <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+ * @method string getBoardWidth() Obtain <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+ * @method void setBoardWidth(string $BoardWidth) Set <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+ * @method string getBoardHeight() Obtain <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+ * @method void setBoardHeight(string $BoardHeight) Set <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+ * @method string getBoardColor() Obtain <p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+ * @method void setBoardColor(string $BoardColor) Set <p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+ * @method float getBoardAlpha() Obtain <p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
+ * @method void setBoardAlpha(float $BoardAlpha) Set <p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
+ * @method string getAlignment() Obtain <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+ * @method void setAlignment(string $Alignment) Set <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+ * @method string getOutlineWidth() Obtain <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+ * @method void setOutlineWidth(string $OutlineWidth) Set <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+ * @method string getOutlineColor() Obtain <p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+ * @method void setOutlineColor(string $OutlineColor) Set <p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+ * @method float getOutlineAlpha() Obtain <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
+ * @method void setOutlineAlpha(float $OutlineAlpha) Set <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
+ * @method string getShadowWidth() Obtain <p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
+ * @method void setShadowWidth(string $ShadowWidth) Set <p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
+ * @method string getShadowColor() Obtain <p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
+ * @method void setShadowColor(string $ShadowColor) Set <p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
+ * @method float getShadowAlpha() Obtain <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
+ * @method void setShadowAlpha(float $ShadowAlpha) Set <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
+ * @method string getLineSpacing() Obtain <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
+ * @method void setLineSpacing(string $LineSpacing) Set <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
  */
 class SubtitleInfoInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Subtitle ID.</p>
      */
     public $Id;
 
     /**
-     * @var integer 
+     * @var integer <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
      */
     public $StreamIndex;
 
     /**
-     * @var string 
+     * @var string <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
      */
     public $FontType;
 
     /**
-     * @var string 
+     * @var string <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
      */
     public $FontSize;
 
     /**
-     * @var string 
+     * @var string <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
      */
     public $FontColor;
 
     /**
-     * @var float 
+     * @var float <p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
      */
     public $FontAlpha;
 
     /**
-     * @var string 
+     * @var string <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
      */
     public $YPos;
 
     /**
-     * @var string 
+     * @var string <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
      */
     public $BoardY;
 
     /**
-     * @var string 
+     * @var string <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
      */
     public $BoardWidth;
 
     /**
-     * @var string 
+     * @var string <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
      */
     public $BoardHeight;
 
     /**
-     * @var string 
+     * @var string <p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
      */
     public $BoardColor;
 
     /**
-     * @var float 
+     * @var float <p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
      */
     public $BoardAlpha;
 
     /**
-     * @var string 
+     * @var string <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
      */
     public $Alignment;
 
     /**
-     * @var string 
+     * @var string <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
      */
     public $OutlineWidth;
 
     /**
-     * @var string 
+     * @var string <p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
      */
     public $OutlineColor;
 
     /**
-     * @var float 
+     * @var float <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
      */
     public $OutlineAlpha;
 
     /**
-     * @var string 
+     * @var string <p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
      */
     public $ShadowWidth;
 
     /**
-     * @var string 
+     * @var string <p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
      */
     public $ShadowColor;
 
     /**
-     * @var float 
+     * @var float <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
      */
     public $ShadowAlpha;
 
     /**
-     * @var string 
+     * @var string <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
      */
     public $LineSpacing;
 
     /**
-     * @param string $Id 
-     * @param integer $StreamIndex 
-     * @param string $FontType 
-     * @param string $FontSize 
-     * @param string $FontColor 
-     * @param float $FontAlpha 
-     * @param string $YPos 
-     * @param string $BoardY 
-     * @param string $BoardWidth 
-     * @param string $BoardHeight 
-     * @param string $BoardColor 
-     * @param float $BoardAlpha 
-     * @param string $Alignment 
-     * @param string $OutlineWidth 
-     * @param string $OutlineColor 
-     * @param float $OutlineAlpha 
-     * @param string $ShadowWidth 
-     * @param string $ShadowColor 
-     * @param float $ShadowAlpha 
-     * @param string $LineSpacing 
+     * @param string $Id <p>Subtitle ID.</p>
+     * @param integer $StreamIndex <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+     * @param string $FontType <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
+     * @param string $FontSize <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
+     * @param string $FontColor <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
+     * @param float $FontAlpha <p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
+     * @param string $YPos <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+     * @param string $BoardY <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+     * @param string $BoardWidth <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+     * @param string $BoardHeight <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+     * @param string $BoardColor <p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+     * @param float $BoardAlpha <p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
+     * @param string $Alignment <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+     * @param string $OutlineWidth <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+     * @param string $OutlineColor <p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+     * @param float $OutlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
+     * @param string $ShadowWidth <p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
+     * @param string $ShadowColor <p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
+     * @param float $ShadowAlpha <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
+     * @param string $LineSpacing <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
      */
     function __construct()
     {

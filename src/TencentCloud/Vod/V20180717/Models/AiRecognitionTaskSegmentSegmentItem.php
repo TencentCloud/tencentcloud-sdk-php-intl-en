@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video splitting clip.
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getSegmentUrl() Obtain 
- * @method void setSegmentUrl(string $SegmentUrl) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
- * @method string getCovImgUrl() Obtain 
- * @method void setCovImgUrl(string $CovImgUrl) Set 
- * @method string getSpecialInfo() Obtain 
- * @method void setSpecialInfo(string $SpecialInfo) Set 
+ * @method string getFileId() Obtain File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
+ * @method void setFileId(string $FileId) Set File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
+ * @method string getSegmentUrl() Obtain Video splitting segment Url.
+ * @method void setSegmentUrl(string $SegmentUrl) Set Video splitting segment Url.
+ * @method float getConfidence() Obtain Confidence of a split segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a split segment. Value range: 0-100.
+ * @method float getStartTimeOffset() Obtain Start time offset of a split segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a split segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a split segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a split segment, in seconds.
+ * @method string getCovImgUrl() Obtain Segment cover image Url.
+ * @method void setCovImgUrl(string $CovImgUrl) Set Segment cover image Url.
+ * @method string getSpecialInfo() Obtain Special field. Ignore it.
+ * @method void setSpecialInfo(string $SpecialInfo) Set Special field. Ignore it.
  */
 class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string Video splitting segment Url.
      */
     public $SegmentUrl;
 
     /**
-     * @var float 
+     * @var float Confidence of a split segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var float 
+     * @var float Start time offset of a split segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time offset of a split segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var string 
+     * @var string Segment cover image Url.
      */
     public $CovImgUrl;
 
     /**
-     * @var string 
+     * @var string Special field. Ignore it.
      */
     public $SpecialInfo;
 
     /**
-     * @param string $FileId 
-     * @param string $SegmentUrl 
-     * @param float $Confidence 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
-     * @param string $CovImgUrl 
-     * @param string $SpecialInfo 
+     * @param string $FileId File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
+     * @param string $SegmentUrl Video splitting segment Url.
+     * @param float $Confidence Confidence of a split segment. Value range: 0-100.
+     * @param float $StartTimeOffset Start time offset of a split segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a split segment, in seconds.
+     * @param string $CovImgUrl Segment cover image Url.
+     * @param string $SpecialInfo Special field. Ignore it.
      */
     function __construct()
     {

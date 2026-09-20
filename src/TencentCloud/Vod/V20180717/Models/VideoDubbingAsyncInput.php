@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input file for the video dubbing task.
  *
- * @method string getInputUrl() Obtain 
- * @method void setInputUrl(string $InputUrl) Set 
- * @method string getInputFileId() Obtain 
- * @method void setInputFileId(string $InputFileId) Set 
- * @method string getSrcLanguage() Obtain 
- * @method void setSrcLanguage(string $SrcLanguage) Set 
- * @method string getDstLanguage() Obtain 
- * @method void setDstLanguage(string $DstLanguage) Set 
- * @method string getModel() Obtain 
- * @method void setModel(string $Model) Set 
+ * @method string getInputUrl() Obtain <p>Input video Url</p>
+ * @method void setInputUrl(string $InputUrl) Set <p>Input video Url</p>
+ * @method string getInputFileId() Obtain <p>FileId of the input video</p>
+ * @method void setInputFileId(string $InputFileId) Set <p>FileId of the input video</p>
+ * @method string getSrcLanguage() Obtain <p>Video source language. The default value is zh.</p>
+ * @method void setSrcLanguage(string $SrcLanguage) Set <p>Video source language. The default value is zh.</p>
+ * @method string getDstLanguage() Obtain <p>Target language of the video. Default: en.</p>
+ * @method void setDstLanguage(string $DstLanguage) Set <p>Target language of the video. Default: en.</p>
+ * @method string getModel() Obtain <p>Dubbing model</p>
+ * @method void setModel(string $Model) Set <p>Dubbing model</p>
  */
 class VideoDubbingAsyncInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Input video Url</p>
      */
     public $InputUrl;
 
     /**
-     * @var string 
+     * @var string <p>FileId of the input video</p>
      */
     public $InputFileId;
 
     /**
-     * @var string 
+     * @var string <p>Video source language. The default value is zh.</p>
      */
     public $SrcLanguage;
 
     /**
-     * @var string 
+     * @var string <p>Target language of the video. Default: en.</p>
      */
     public $DstLanguage;
 
     /**
-     * @var string 
+     * @var string <p>Dubbing model</p>
      */
     public $Model;
 
     /**
-     * @param string $InputUrl 
-     * @param string $InputFileId 
-     * @param string $SrcLanguage 
-     * @param string $DstLanguage 
-     * @param string $Model 
+     * @param string $InputUrl <p>Input video Url</p>
+     * @param string $InputFileId <p>FileId of the input video</p>
+     * @param string $SrcLanguage <p>Video source language. The default value is zh.</p>
+     * @param string $DstLanguage <p>Target language of the video. Default: en.</p>
+     * @param string $Model <p>Dubbing model</p>
      */
     function __construct()
     {

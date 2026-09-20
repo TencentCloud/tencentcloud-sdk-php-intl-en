@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Adaptive Bitrate Streaming information
  *
- * @method array getAdaptiveDynamicStreamingSet() Obtain 
- * @method void setAdaptiveDynamicStreamingSet(array $AdaptiveDynamicStreamingSet) Set 
+ * @method array getAdaptiveDynamicStreamingSet() Obtain Information array of adaptive bitrate streaming.
+ * @method void setAdaptiveDynamicStreamingSet(array $AdaptiveDynamicStreamingSet) Set Information array of adaptive bitrate streaming.
  */
 class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Information array of adaptive bitrate streaming.
      */
     public $AdaptiveDynamicStreamingSet;
 
     /**
-     * @param array $AdaptiveDynamicStreamingSet 
+     * @param array $AdaptiveDynamicStreamingSet Information array of adaptive bitrate streaming.
      */
     function __construct()
     {

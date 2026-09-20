@@ -18,140 +18,140 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle suppression module settings for MPS
  *
- * @method string getFontType() Obtain 
- * @method void setFontType(string $FontType) Set 
- * @method string getFontPath() Obtain 
- * @method void setFontPath(string $FontPath) Set 
- * @method integer getFontSize() Obtain 
- * @method void setFontSize(integer $FontSize) Set 
- * @method integer getFontSizeUnit() Obtain 
- * @method void setFontSizeUnit(integer $FontSizeUnit) Set 
- * @method string getFontColor() Obtain 
- * @method void setFontColor(string $FontColor) Set 
- * @method float getFontAlpha() Obtain 
- * @method void setFontAlpha(float $FontAlpha) Set 
- * @method integer getPosX() Obtain 
- * @method void setPosX(integer $PosX) Set 
- * @method integer getPosXUnit() Obtain 
- * @method void setPosXUnit(integer $PosXUnit) Set 
- * @method integer getPosY() Obtain 
- * @method void setPosY(integer $PosY) Set 
- * @method integer getPosYUnit() Obtain 
- * @method void setPosYUnit(integer $PosYUnit) Set 
- * @method MPSSubtitleBoardConfig getSubtitleBoardConfig() Obtain 
- * @method void setSubtitleBoardConfig(MPSSubtitleBoardConfig $SubtitleBoardConfig) Set 
- * @method MPSSubtitleLayoutConfig getSubtitleLayoutConfig() Obtain 
- * @method void setSubtitleLayoutConfig(MPSSubtitleLayoutConfig $SubtitleLayoutConfig) Set 
- * @method MPSSubtitleOutlineConfig getSubtitleOutlineConfig() Obtain 
- * @method void setSubtitleOutlineConfig(MPSSubtitleOutlineConfig $SubtitleOutlineConfig) Set 
- * @method MPSSubtitleShadowConfig getSubtitleShadowConfig() Obtain 
- * @method void setSubtitleShadowConfig(MPSSubtitleShadowConfig $SubtitleShadowConfig) Set 
- * @method integer getSampleWidth() Obtain 
- * @method void setSampleWidth(integer $SampleWidth) Set 
- * @method integer getSampleHeight() Obtain 
- * @method void setSampleHeight(integer $SampleHeight) Set 
+ * @method string getFontType() Obtain <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
+ * @method void setFontType(string $FontType) Set <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
+ * @method string getFontPath() Obtain <p>Custom font file url address</p>
+ * @method void setFontPath(string $FontPath) Set <p>Custom font file url address</p>
+ * @method integer getFontSize() Obtain <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
+ * @method void setFontSize(integer $FontSize) Set <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
+ * @method integer getFontSizeUnit() Obtain <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method void setFontSizeUnit(integer $FontSizeUnit) Set <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method string getFontColor() Obtain <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
+ * @method void setFontColor(string $FontColor) Set <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
+ * @method float getFontAlpha() Obtain <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
+ * @method void setFontAlpha(float $FontAlpha) Set <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
+ * @method integer getPosX() Obtain <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+ * @method void setPosX(integer $PosX) Set <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+ * @method integer getPosXUnit() Obtain <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method void setPosXUnit(integer $PosXUnit) Set <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method integer getPosY() Obtain <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+ * @method void setPosY(integer $PosY) Set <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+ * @method integer getPosYUnit() Obtain <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method void setPosYUnit(integer $PosYUnit) Set <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+ * @method MPSSubtitleBoardConfig getSubtitleBoardConfig() Obtain <p>Background configuration</p>
+ * @method void setSubtitleBoardConfig(MPSSubtitleBoardConfig $SubtitleBoardConfig) Set <p>Background configuration</p>
+ * @method MPSSubtitleLayoutConfig getSubtitleLayoutConfig() Obtain <p>Column configuration</p>
+ * @method void setSubtitleLayoutConfig(MPSSubtitleLayoutConfig $SubtitleLayoutConfig) Set <p>Column configuration</p>
+ * @method MPSSubtitleOutlineConfig getSubtitleOutlineConfig() Obtain <p>Text stroke configuration</p>
+ * @method void setSubtitleOutlineConfig(MPSSubtitleOutlineConfig $SubtitleOutlineConfig) Set <p>Text stroke configuration</p>
+ * @method MPSSubtitleShadowConfig getSubtitleShadowConfig() Obtain <p>Text shadow configuration</p>
+ * @method void setSubtitleShadowConfig(MPSSubtitleShadowConfig $SubtitleShadowConfig) Set <p>Text shadow configuration</p>
+ * @method integer getSampleWidth() Obtain <p>Width of the source video dimensions, in pixels</p>
+ * @method void setSampleWidth(integer $SampleWidth) Set <p>Width of the source video dimensions, in pixels</p>
+ * @method integer getSampleHeight() Obtain <p>Height of the source video dimensions, in unit pixel</p>
+ * @method void setSampleHeight(integer $SampleHeight) Set <p>Height of the source video dimensions, in unit pixel</p>
  */
 class MPSSubtitleEmbedConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
      */
     public $FontType;
 
     /**
-     * @var string 
+     * @var string <p>Custom font file url address</p>
      */
     public $FontPath;
 
     /**
-     * @var integer 
+     * @var integer <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
      */
     public $FontSize;
 
     /**
-     * @var integer 
+     * @var integer <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public $FontSizeUnit;
 
     /**
-     * @var string 
+     * @var string <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
      */
     public $FontColor;
 
     /**
-     * @var float 
+     * @var float <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
      */
     public $FontAlpha;
 
     /**
-     * @var integer 
+     * @var integer <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public $PosX;
 
     /**
-     * @var integer 
+     * @var integer <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public $PosXUnit;
 
     /**
-     * @var integer 
+     * @var integer <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public $PosY;
 
     /**
-     * @var integer 
+     * @var integer <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public $PosYUnit;
 
     /**
-     * @var MPSSubtitleBoardConfig 
+     * @var MPSSubtitleBoardConfig <p>Background configuration</p>
      */
     public $SubtitleBoardConfig;
 
     /**
-     * @var MPSSubtitleLayoutConfig 
+     * @var MPSSubtitleLayoutConfig <p>Column configuration</p>
      */
     public $SubtitleLayoutConfig;
 
     /**
-     * @var MPSSubtitleOutlineConfig 
+     * @var MPSSubtitleOutlineConfig <p>Text stroke configuration</p>
      */
     public $SubtitleOutlineConfig;
 
     /**
-     * @var MPSSubtitleShadowConfig 
+     * @var MPSSubtitleShadowConfig <p>Text shadow configuration</p>
      */
     public $SubtitleShadowConfig;
 
     /**
-     * @var integer 
+     * @var integer <p>Width of the source video dimensions, in pixels</p>
      */
     public $SampleWidth;
 
     /**
-     * @var integer 
+     * @var integer <p>Height of the source video dimensions, in unit pixel</p>
      */
     public $SampleHeight;
 
     /**
-     * @param string $FontType 
-     * @param string $FontPath 
-     * @param integer $FontSize 
-     * @param integer $FontSizeUnit 
-     * @param string $FontColor 
-     * @param float $FontAlpha 
-     * @param integer $PosX 
-     * @param integer $PosXUnit 
-     * @param integer $PosY 
-     * @param integer $PosYUnit 
-     * @param MPSSubtitleBoardConfig $SubtitleBoardConfig 
-     * @param MPSSubtitleLayoutConfig $SubtitleLayoutConfig 
-     * @param MPSSubtitleOutlineConfig $SubtitleOutlineConfig 
-     * @param MPSSubtitleShadowConfig $SubtitleShadowConfig 
-     * @param integer $SampleWidth 
-     * @param integer $SampleHeight 
+     * @param string $FontType <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
+     * @param string $FontPath <p>Custom font file url address</p>
+     * @param integer $FontSize <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
+     * @param integer $FontSizeUnit <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param string $FontColor <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
+     * @param float $FontAlpha <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
+     * @param integer $PosX <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+     * @param integer $PosXUnit <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param integer $PosY <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+     * @param integer $PosYUnit <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param MPSSubtitleBoardConfig $SubtitleBoardConfig <p>Background configuration</p>
+     * @param MPSSubtitleLayoutConfig $SubtitleLayoutConfig <p>Column configuration</p>
+     * @param MPSSubtitleOutlineConfig $SubtitleOutlineConfig <p>Text stroke configuration</p>
+     * @param MPSSubtitleShadowConfig $SubtitleShadowConfig <p>Text shadow configuration</p>
+     * @param integer $SampleWidth <p>Width of the source video dimensions, in pixels</p>
+     * @param integer $SampleHeight <p>Height of the source video dimensions, in unit pixel</p>
      */
     function __construct()
     {

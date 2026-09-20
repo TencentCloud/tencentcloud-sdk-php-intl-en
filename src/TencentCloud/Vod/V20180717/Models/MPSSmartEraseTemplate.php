@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent erasure template input for MPS
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getEraseType() Obtain 
- * @method void setEraseType(string $EraseType) Set 
- * @method string getComment() Obtain 
- * @method void setComment(string $Comment) Set 
- * @method MPSSmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain 
- * @method void setEraseSubtitleConfig(MPSSmartEraseSubtitleConfig $EraseSubtitleConfig) Set 
- * @method MPSSmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain 
- * @method void setEraseWatermarkConfig(MPSSmartEraseWatermarkConfig $EraseWatermarkConfig) Set 
- * @method MPSSmartErasePrivacyConfig getErasePrivacyConfig() Obtain 
- * @method void setErasePrivacyConfig(MPSSmartErasePrivacyConfig $ErasePrivacyConfig) Set 
- * @method integer getSampleWidth() Obtain 
- * @method void setSampleWidth(integer $SampleWidth) Set 
- * @method integer getSampleHeight() Obtain 
- * @method void setSampleHeight(integer $SampleHeight) Set 
+ * @method string getName() Obtain <p>Length limit for the smart erasing template name: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Length limit for the smart erasing template name: 64 characters.</p>
+ * @method string getEraseType() Obtain <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method void setEraseType(string $EraseType) Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method string getComment() Obtain <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+ * @method MPSSmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
+ * @method void setEraseSubtitleConfig(MPSSmartEraseSubtitleConfig $EraseSubtitleConfig) Set <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
+ * @method MPSSmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
+ * @method void setEraseWatermarkConfig(MPSSmartEraseWatermarkConfig $EraseWatermarkConfig) Set <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
+ * @method MPSSmartErasePrivacyConfig getErasePrivacyConfig() Obtain <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
+ * @method void setErasePrivacyConfig(MPSSmartErasePrivacyConfig $ErasePrivacyConfig) Set <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
+ * @method integer getSampleWidth() Obtain <p>Width of the sample video or image, in pixels.</p>
+ * @method void setSampleWidth(integer $SampleWidth) Set <p>Width of the sample video or image, in pixels.</p>
+ * @method integer getSampleHeight() Obtain <p>Height of the sample video or image, in pixels.</p>
+ * @method void setSampleHeight(integer $SampleHeight) Set <p>Height of the sample video or image, in pixels.</p>
  */
 class MPSSmartEraseTemplate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Length limit for the smart erasing template name: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public $EraseType;
 
     /**
-     * @var string 
+     * @var string <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var MPSSmartEraseSubtitleConfig 
+     * @var MPSSmartEraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
      */
     public $EraseSubtitleConfig;
 
     /**
-     * @var MPSSmartEraseWatermarkConfig 
+     * @var MPSSmartEraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
      */
     public $EraseWatermarkConfig;
 
     /**
-     * @var MPSSmartErasePrivacyConfig 
+     * @var MPSSmartErasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
      */
     public $ErasePrivacyConfig;
 
     /**
-     * @var integer 
+     * @var integer <p>Width of the sample video or image, in pixels.</p>
      */
     public $SampleWidth;
 
     /**
-     * @var integer 
+     * @var integer <p>Height of the sample video or image, in pixels.</p>
      */
     public $SampleHeight;
 
     /**
-     * @param string $Name 
-     * @param string $EraseType 
-     * @param string $Comment 
-     * @param MPSSmartEraseSubtitleConfig $EraseSubtitleConfig 
-     * @param MPSSmartEraseWatermarkConfig $EraseWatermarkConfig 
-     * @param MPSSmartErasePrivacyConfig $ErasePrivacyConfig 
-     * @param integer $SampleWidth 
-     * @param integer $SampleHeight 
+     * @param string $Name <p>Length limit for the smart erasing template name: 64 characters.</p>
+     * @param string $EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param string $Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+     * @param MPSSmartEraseSubtitleConfig $EraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
+     * @param MPSSmartEraseWatermarkConfig $EraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
+     * @param MPSSmartErasePrivacyConfig $ErasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
+     * @param integer $SampleWidth <p>Width of the sample video or image, in pixels.</p>
+     * @param integer $SampleHeight <p>Height of the sample video or image, in pixels.</p>
      */
     function __construct()
     {

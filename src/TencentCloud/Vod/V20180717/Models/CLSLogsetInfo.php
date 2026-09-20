@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * CLS logset information
  *
- * @method string getLogsetId() Obtain 
- * @method void setLogsetId(string $LogsetId) Set 
- * @method string getLogsetName() Obtain 
- * @method void setLogsetName(string $LogsetName) Set 
+ * @method string getLogsetId() Obtain Logset ID.
+ * @method void setLogsetId(string $LogsetId) Set Logset ID.
+ * @method string getLogsetName() Obtain Logset name.
+ * @method void setLogsetName(string $LogsetName) Set Logset name.
  */
 class CLSLogsetInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Logset ID.
      */
     public $LogsetId;
 
     /**
-     * @var string 
+     * @var string Logset name.
      */
     public $LogsetName;
 
     /**
-     * @param string $LogsetId 
-     * @param string $LogsetName 
+     * @param string $LogsetId Logset ID.
+     * @param string $LogsetName Logset name.
      */
     function __construct()
     {

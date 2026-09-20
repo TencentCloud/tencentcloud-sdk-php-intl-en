@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task input parameter type for generating a sprite sheet from a video
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain Sprite screenshot template ID.
+ * @method void setDefinition(integer $Definition) Set Sprite screenshot template ID.
  */
 class ImageSpriteTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Sprite screenshot template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 
+     * @param integer $Definition Sprite screenshot template ID.
      */
     function __construct()
     {
