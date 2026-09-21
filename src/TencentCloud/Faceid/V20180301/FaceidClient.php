@@ -70,7 +70,7 @@ This API on the legacy version will continue to serve existing users but will be
  * @method Models\PhoneVerificationResponse PhoneVerification(Models\PhoneVerificationRequest $req) This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1061/79689">carrier</a> document.
  * @method Models\RunAMLNameScreeningResponse RunAMLNameScreening(Models\RunAMLNameScreeningRequest $req) AML name list screening
  * @method Models\UpdateAMLCustomerProfileResponse UpdateAMLCustomerProfile(Models\UpdateAMLCustomerProfileRequest $req) AML name list screening
- * @method Models\UpdateAMLOngoingScreeningStatusResponse UpdateAMLOngoingScreeningStatus(Models\UpdateAMLOngoingScreeningStatusRequest $req) Changes the status of continuous name list screening.
+ * @method Models\UpdateAMLOngoingScreeningStatusResponse UpdateAMLOngoingScreeningStatus(Models\UpdateAMLOngoingScreeningStatusRequest $req) Continuous name list screening status change
  * @method Models\UpdateEKYCWebhookResponse UpdateEKYCWebhook(Models\UpdateEKYCWebhookRequest $req) This API updates the Webhook configuration.
  * @method Models\VideoLivenessCompareResponse VideoLivenessCompare(Models\VideoLivenessCompareRequest $req) This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
  */

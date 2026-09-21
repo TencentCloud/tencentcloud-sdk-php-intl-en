@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAMLOngoingScreeningStatus request structure.
  *
- * @method string getUniqueCustomerID() Obtain End user's unique identifier in the customer system, up to 256 characters.
- * @method void setUniqueCustomerID(string $UniqueCustomerID) Set End user's unique identifier in the customer system, up to 256 characters.
- * @method boolean getEnableOngoingScreening() Obtain Whether continuous monitoring screening is enabled. 
-Default value: false.
- * @method void setEnableOngoingScreening(boolean $EnableOngoingScreening) Set Whether continuous monitoring screening is enabled. 
-Default value: false.
+ * @method string getUniqueCustomerID() Obtain <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+ * @method void setUniqueCustomerID(string $UniqueCustomerID) Set <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+ * @method boolean getEnableOngoingScreening() Obtain <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
+ * @method void setEnableOngoingScreening(boolean $EnableOngoingScreening) Set <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
  */
 class UpdateAMLOngoingScreeningStatusRequest extends AbstractModel
 {
     /**
-     * @var string End user's unique identifier in the customer system, up to 256 characters.
+     * @var string <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
      */
     public $UniqueCustomerID;
 
     /**
-     * @var boolean Whether continuous monitoring screening is enabled. 
-Default value: false.
+     * @var boolean <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
      */
     public $EnableOngoingScreening;
 
     /**
-     * @param string $UniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
-     * @param boolean $EnableOngoingScreening Whether continuous monitoring screening is enabled. 
-Default value: false.
+     * @param string $UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+     * @param boolean $EnableOngoingScreening <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
      */
     function __construct()
     {
