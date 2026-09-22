@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`off`: Cache.</li>
  * @method string getRedirectType() Obtain Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
  * @method void setRedirectType(string $RedirectType) Set Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
  * @method integer getRedirectStatusCode() Obtain Status code returned for forced redirection. Supports 301 and 302.
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirection. Supports 301 and 302.
  * @method string getCarryHeaders() Obtain Whether to return the added header during forced redirection.
@@ -49,7 +49,7 @@ class ForceRedirect extends AbstractModel
     /**
      * @var string Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
      */
     public $RedirectType;
 
@@ -69,7 +69,7 @@ class ForceRedirect extends AbstractModel
 <li>`off`: Cache.</li>
      * @param string $RedirectType Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
      * @param integer $RedirectStatusCode Status code returned for forced redirection. Supports 301 and 302.
      * @param string $CarryHeaders Whether to return the added header during forced redirection.
      */

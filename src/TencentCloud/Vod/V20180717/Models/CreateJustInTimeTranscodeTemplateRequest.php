@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateJustInTimeTranscodeTemplate request structure.
  *
- * @method string getName() Obtain Template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Template name. The length cannot exceed 64 characters.
+ * @method string getName() Obtain Template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Template name. Length limit: 64 characters.
  * @method VideoConfigureInfo getVideoConfigure() Obtain Video parameter configuration.
  * @method void setVideoConfigure(VideoConfigureInfo $VideoConfigure) Set Video parameter configuration.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method WatermarkConfigureInfo getWatermarkConfigure() Obtain Watermark parameter configuration.
  * @method void setWatermarkConfigure(WatermarkConfigureInfo $WatermarkConfigure) Set Watermark parameter configuration.
  * @method string getComment() Obtain Template description. The length cannot exceed 256 characters.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Template name. The length cannot exceed 64 characters.
+     * @var string Template name. Length limit: 64 characters.
      */
     public $Name;
 
@@ -44,7 +44,7 @@ class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel
     public $VideoConfigure;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -59,9 +59,9 @@ class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param string $Name Template name. The length cannot exceed 64 characters.
+     * @param string $Name Template name. Length limit: 64 characters.
      * @param VideoConfigureInfo $VideoConfigure Video parameter configuration.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param WatermarkConfigureInfo $WatermarkConfigure Watermark parameter configuration.
      * @param string $Comment Template description. The length cannot exceed 256 characters.
      */

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter configuration for AI outfit change
  *
- * @method array getClothesFileInfos() Obtain <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
- * @method void setClothesFileInfos(array $ClothesFileInfos) Set <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+ * @method array getClothesFileInfos() Obtain <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+ * @method void setClothesFileInfos(array $ClothesFileInfos) Set <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
  * @method string getPrompt() Obtain <p>Prompt for AI clothes changing. <strong>Valid only when Type is change_clothes.</strong></p>
  * @method void setPrompt(string $Prompt) Set <p>Prompt for AI clothes changing. <strong>Valid only when Type is change_clothes.</strong></p>
  */
 class ChangeClothesConfig extends AbstractModel
 {
     /**
-     * @var array <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * @var array <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
      */
     public $ClothesFileInfos;
 
@@ -38,7 +38,7 @@ class ChangeClothesConfig extends AbstractModel
     public $Prompt;
 
     /**
-     * @param array $ClothesFileInfos <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * @param array $ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
      * @param string $Prompt <p>Prompt for AI clothes changing. <strong>Valid only when Type is change_clothes.</strong></p>
      */
     function __construct()

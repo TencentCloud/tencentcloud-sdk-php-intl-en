@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio and video moderation clip.
+ * Audio/video moderation clip.
  *
- * @method float getStartTimeOffset() Obtain Time offset of the start of the suspected segment. Unit: second.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Time offset of the start of the suspected segment. Unit: second.
- * @method float getEndTimeOffset() Obtain End time offset of the suspected segment, in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the suspected segment, in seconds.
+ * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
  * @method float getConfidence() Obtain Score of offensive information involved in suspected clips.
  * @method void setConfidence(float $Confidence) Set Score of offensive information involved in suspected clips.
  * @method string getSuggestion() Obtain Result suggestions for identifying violations in suspected clips. Value range:
@@ -32,56 +32,56 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestion(string $Suggestion) Set Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
 <li>block: Confirmed violation. Suggest banning.</li>
- * @method string getLabel() Obtain Label of the most likely rule violation in the suspected segment. Value range:
+ * @method string getLabel() Obtain Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
- * @method void setLabel(string $Label) Set Label of the most likely rule violation in the suspected segment. Value range:
+ * @method void setLabel(string $Label) Set Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
  * @method string getSubLabel() Obtain Rule-violating subtag.
  * @method void setSubLabel(string $SubLabel) Set Rule-violating subtag.
  * @method string getForm() Obtain Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
  * @method void setForm(string $Form) Set Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
- * @method array getAreaCoordSet() Obtain Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
- * @method string getText() Obtain Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
- * @method void setText(string $Text) Set Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+ * @method array getAreaCoordSet() Obtain Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+ * @method string getText() Obtain Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
+ * @method void setText(string $Text) Set Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
  * @method array getKeywordSet() Obtain Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments.
  * @method void setKeywordSet(array $KeywordSet) Set Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments.
- * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will reach
+ * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
- * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will reach
+ * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
- * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class ReviewAudioVideoSegmentItem extends AbstractModel
 {
     /**
-     * @var float Time offset of the start of the suspected segment. Unit: second.
+     * @var float Start time offset of a suspected segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of the suspected segment, in seconds.
+     * @var float End time offset of a suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
@@ -98,13 +98,13 @@ class ReviewAudioVideoSegmentItem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Label of the most likely rule violation in the suspected segment. Value range:
+     * @var string Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
      */
     public $Label;
@@ -116,7 +116,7 @@ class ReviewAudioVideoSegmentItem extends AbstractModel
 
     /**
      * @var string Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
@@ -124,12 +124,12 @@ class ReviewAudioVideoSegmentItem extends AbstractModel
     public $Form;
 
     /**
-     * @var array Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+     * @var array Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+     * @var string Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
      */
     public $Text;
 
@@ -139,43 +139,43 @@ class ReviewAudioVideoSegmentItem extends AbstractModel
     public $KeywordSet;
 
     /**
-     * @var string Suspected image URL (images are not retained permanently and will reach
+     * @var string Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public $Url;
 
     /**
-     * @var string Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
-     * @param float $EndTimeOffset End time offset of the suspected segment, in seconds.
+     * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
      * @param float $Confidence Score of offensive information involved in suspected clips.
      * @param string $Suggestion Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
 <li>block: Confirmed violation. Suggest banning.</li>
-     * @param string $Label Label of the most likely rule violation in the suspected segment. Value range:
+     * @param string $Label Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
      * @param string $SubLabel Rule-violating subtag.
      * @param string $Form Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-     * @param array $AreaCoordSet Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
-     * @param string $Text Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+     * @param array $AreaCoordSet Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+     * @param string $Text Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
      * @param array $KeywordSet Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments.
-     * @param string $Url Suspected image URL (images are not retained permanently and will reach
+     * @param string $Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
-     * @param string $PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

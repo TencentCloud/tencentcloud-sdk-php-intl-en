@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * File validation information
+ * File verification information
  *
  * @method string getFileVerifyUrl() Obtain File validation URL guide.
  * @method void setFileVerifyUrl(string $FileVerifyUrl) Set File validation URL guide.

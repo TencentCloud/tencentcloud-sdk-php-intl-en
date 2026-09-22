@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image encoding format parameters.
  *
- * @method string getFormat() Obtain Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
- * @method void setFormat(string $Format) Set Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+ * @method string getFormat() Obtain Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
+ * @method void setFormat(string $Format) Set Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
  * @method integer getQuality() Obtain Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
  * @method void setQuality(integer $Quality) Set Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
  */
 class ImageSceneAigcEncodeConfig extends AbstractModel
 {
     /**
-     * @var string Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+     * @var string Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
      */
     public $Format;
 
@@ -38,7 +38,7 @@ class ImageSceneAigcEncodeConfig extends AbstractModel
     public $Quality;
 
     /**
-     * @param string $Format Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+     * @param string $Format Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
      * @param integer $Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
      */
     function __construct()

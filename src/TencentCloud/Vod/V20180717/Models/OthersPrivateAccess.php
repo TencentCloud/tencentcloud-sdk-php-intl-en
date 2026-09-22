@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Authentication for origin-pull from other vendors' object storage
+ * Origin-pull authentication for object storage from other vendors
  *
- * @method string getSwitch() Obtain Authentication configuration switch for origin-pull from other vendors. Valid values:
+ * @method string getSwitch() Obtain Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Authentication configuration switch for origin-pull from other vendors. Valid values:
+ * @method void setSwitch(string $Switch) Set Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  * @method string getAccessKey() Obtain Access ID.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class OthersPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Authentication configuration switch for origin-pull from other vendors. Valid values:
+     * @var string Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -65,7 +65,7 @@ class OthersPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch Authentication configuration switch for origin-pull from other vendors. Valid values:
+     * @param string $Switch Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      * @param string $AccessKey Access ID.

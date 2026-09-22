@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter configuration for top speed Codec in video editing.
  *
- * @method string getType() Obtain Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
- * @method void setType(string $Type) Set Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
- * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+ * @method string getType() Obtain Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
+ * @method void setType(string $Type) Set Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
+ * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
  */
 class EditMediaTEHDConfig extends AbstractModel
 {
     /**
-     * @var string Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
+     * @var string Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
      */
     public $Type;
 
     /**
-     * @var integer Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+     * @var integer Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
-     * @param integer $MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+     * @param string $Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
+     * @param integer $MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
      */
     function __construct()
     {

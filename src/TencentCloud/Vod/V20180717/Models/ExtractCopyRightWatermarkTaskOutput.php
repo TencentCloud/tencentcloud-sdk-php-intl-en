@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output information of copyright watermark extraction
+ * Extract copyright watermark output information
  *
  * @method string getText() Obtain Copyright information.
  * @method void setText(string $Text) Set Copyright information.

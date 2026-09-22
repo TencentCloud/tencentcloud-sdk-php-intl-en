@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sprite image information of VOD files
  *
- * @method array getImageSpriteSet() Obtain Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
- * @method void setImageSpriteSet(array $ImageSpriteSet) Set Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+ * @method array getImageSpriteSet() Obtain Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
+ * @method void setImageSpriteSet(array $ImageSpriteSet) Set Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
  */
 class MediaImageSpriteInfo extends AbstractModel
 {
     /**
-     * @var array Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+     * @var array Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
      */
     public $ImageSpriteSet;
 
     /**
-     * @param array $ImageSpriteSet Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+     * @param array $ImageSpriteSet Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
      */
     function __construct()
     {

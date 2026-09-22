@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of the large model parsing template.
+ * Large model parsing template detail.
  *
  * @method integer getDefinition() Obtain <p>Unique identifier of the image asynchronous processing template.</p>
  * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the image asynchronous processing template.</p>
@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevel(string $Level) Set <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
  * @method LLMComprehendSummary getSummary() Obtain <p>Segment summary parsing configuration</p>
  * @method void setSummary(LLMComprehendSummary $Summary) Set <p>Segment summary parsing configuration</p>
- * @method LLMComprehendAsr getAsr() Obtain <p>Text transcribing and parsing configuration</p>
- * @method void setAsr(LLMComprehendAsr $Asr) Set <p>Text transcribing and parsing configuration</p>
+ * @method LLMComprehendAsr getAsr() Obtain <p>Text transcription parsing configuration</p>
+ * @method void setAsr(LLMComprehendAsr $Asr) Set <p>Text transcription parsing configuration</p>
  * @method LLMComprehendFaceRecognition getFaceRecognition() Obtain <p>Face recognition parsing configuration</p>
  * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) Set <p>Face recognition parsing configuration</p>
  * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method string getUpdateTime() Obtain <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method void setUpdateTime(string $UpdateTime) Set <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  */
 class LLMComprehendTemplateItem extends AbstractModel
 {
@@ -74,7 +74,7 @@ class LLMComprehendTemplateItem extends AbstractModel
     public $Summary;
 
     /**
-     * @var LLMComprehendAsr <p>Text transcribing and parsing configuration</p>
+     * @var LLMComprehendAsr <p>Text transcription parsing configuration</p>
      */
     public $Asr;
 
@@ -89,7 +89,7 @@ class LLMComprehendTemplateItem extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @var string <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
@@ -100,10 +100,10 @@ class LLMComprehendTemplateItem extends AbstractModel
      * @param string $Type <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
      * @param string $Level <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
      * @param LLMComprehendSummary $Summary <p>Segment summary parsing configuration</p>
-     * @param LLMComprehendAsr $Asr <p>Text transcribing and parsing configuration</p>
+     * @param LLMComprehendAsr $Asr <p>Text transcription parsing configuration</p>
      * @param LLMComprehendFaceRecognition $FaceRecognition <p>Face recognition parsing configuration</p>
      * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param string $UpdateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     function __construct()
     {

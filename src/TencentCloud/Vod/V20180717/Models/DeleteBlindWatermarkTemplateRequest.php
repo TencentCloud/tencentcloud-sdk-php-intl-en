@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Unique identifier of the digital watermark template.
  * @method void setDefinition(integer $Definition) Set Unique identifier of the digital watermark template.
- * @method integer getSubAppId() Obtain VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
- * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+ * @method integer getSubAppId() Obtain VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
+ * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
  */
 class DeleteBlindWatermarkTemplateRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteBlindWatermarkTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var integer VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+     * @var integer VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
      */
     public $SubAppId;
 
     /**
      * @param integer $Definition Unique identifier of the digital watermark template.
-     * @param integer $SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+     * @param integer $SubAppId VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech synthesis task output.
+ * Output of the speech synthesis task.
  *
  * @method string getAudioUrl() Obtain <p>URL of the synthetic audio result</p>
  * @method void setAudioUrl(string $AudioUrl) Set <p>URL of the synthetic audio result</p>

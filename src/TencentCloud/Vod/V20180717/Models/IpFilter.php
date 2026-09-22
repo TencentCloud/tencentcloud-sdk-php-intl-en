@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
 <li>`off`: Cache.</li>
  * @method string getFilterType() Obtain IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
  * @method void setFilterType(string $FilterType) Set IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
- * @method array getFilters() Obtain IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
- * @method void setFilters(array $Filters) Set IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
- * @method array getFilterRules() Obtain IP allowlist/blocklist path-specific configuration.
- * @method void setFilterRules(array $FilterRules) Set IP allowlist/blocklist path-specific configuration.
+<li>blocklist: Blocklist.</li>
+ * @method array getFilters() Obtain IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
+ * @method void setFilters(array $Filters) Set IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
+ * @method array getFilterRules() Obtain IP blocklist/allowlist path-specific configuration.
+ * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-specific configuration.
  */
 class IpFilter extends AbstractModel
 {
@@ -51,18 +51,18 @@ class IpFilter extends AbstractModel
     /**
      * @var string IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      */
     public $FilterType;
 
     /**
-     * @var array IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+     * @var array IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public $Filters;
 
     /**
-     * @var array IP allowlist/blocklist path-specific configuration.
+     * @var array IP blocklist/allowlist path-specific configuration.
      */
     public $FilterRules;
 
@@ -72,10 +72,10 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
 <li>`off`: Cache.</li>
      * @param string $FilterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
-     * @param array $Filters IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
-     * @param array $FilterRules IP allowlist/blocklist path-specific configuration.
+<li>blocklist: Blocklist.</li>
+     * @param array $Filters IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
+     * @param array $FilterRules IP blocklist/allowlist path-specific configuration.
      */
     function __construct()
     {

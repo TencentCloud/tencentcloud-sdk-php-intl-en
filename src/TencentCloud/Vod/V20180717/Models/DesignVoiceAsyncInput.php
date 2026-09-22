@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of the timbre design task.
+ * Timbre design task input.
  *
  * @method string getPrompt() Obtain <p>Voice description.</p>
  * @method void setPrompt(string $Prompt) Set <p>Voice description.</p>

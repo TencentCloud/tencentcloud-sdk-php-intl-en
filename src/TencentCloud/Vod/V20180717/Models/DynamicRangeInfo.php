@@ -18,42 +18,42 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Visual dynamic range info.
+ * Visual dynamic range information.
  *
- * @method string getType() Obtain Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+ * @method string getType() Obtain Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
- * @method void setType(string $Type) Set Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+ * @method void setType(string $Type) Set Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
- * @method string getHDRType() Obtain High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+ * @method string getHDRType() Obtain High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
- * @method void setHDRType(string $HDRType) Set High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+ * @method void setHDRType(string $HDRType) Set High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
  */
 class DynamicRangeInfo extends AbstractModel
 {
     /**
-     * @var string Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+     * @var string Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
      */
     public $Type;
 
     /**
-     * @var string High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+     * @var string High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
      */
     public $HDRType;
 
     /**
-     * @param string $Type Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+     * @param string $Type Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
-     * @param string $HDRType High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+     * @param string $HDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
      */

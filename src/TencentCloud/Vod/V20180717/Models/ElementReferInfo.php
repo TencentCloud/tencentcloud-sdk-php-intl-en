@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subject reference information.
+ * Principal reference information.
  *
  * @method string getImageUrl() Obtain Reference image URLs of the subject from different perspectives.
 Image format: .jpg, .jpeg, and .png are supported.

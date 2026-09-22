@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImageProcessingTemplate request structure.
  *
- * @method array getOperations() Obtain Array of image processing operations. Operations are performed in sequential order in the array.
+ * @method array getOperations() Obtain Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
- * @method void setOperations(array $Operations) Set Array of image processing operations. Operations are performed in sequential order in the array.
+ * @method void setOperations(array $Operations) Set Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method string getName() Obtain Image processing template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Image processing template name. Length limit: 64 characters.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getName() Obtain Image processing template name. The length cannot exceed 64 characters.
+ * @method void setName(string $Name) Set Image processing template name. The length cannot exceed 64 characters.
  * @method string getComment() Obtain Template description, with a length limit of 256 characters.
  * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
  */
 class CreateImageProcessingTemplateRequest extends AbstractModel
 {
     /**
-     * @var array Array of image processing operations. Operations are performed in sequential order in the array.
+     * @var array Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
      */
     public $Operations;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Image processing template name. Length limit: 64 characters.
+     * @var string Image processing template name. The length cannot exceed 64 characters.
      */
     public $Name;
 
@@ -55,10 +55,10 @@ class CreateImageProcessingTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param array $Operations Array of image processing operations. Operations are performed in sequential order in the array.
+     * @param array $Operations Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param string $Name Image processing template name. Length limit: 64 characters.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $Name Image processing template name. The length cannot exceed 64 characters.
      * @param string $Comment Template description, with a length limit of 256 characters.
      */
     function __construct()

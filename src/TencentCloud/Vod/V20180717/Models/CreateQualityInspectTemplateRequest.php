@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateQualityInspectTemplate request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
  * @method string getName() Obtain <p>Audio and video quality inspection template name.</p>
  * @method void setName(string $Name) Set <p>Audio and video quality inspection template name.</p>
  * @method string getComment() Obtain <p>Audio and video quality inspection template description.</p>
@@ -36,27 +36,27 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
  * @method BlurConfigureInfo getBlurConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
  * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
- * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
- * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
- * @method CrashScreenConfigureInfo getCrashScreenConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
- * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
- * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
- * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
+ * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+ * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+ * @method CrashScreenConfigureInfo getCrashScreenConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
+ * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
+ * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() Obtain <p>(Not recommended, use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+ * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) Set <p>(Not recommended, use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
  * @method NoiseConfigureInfo getNoiseConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
  * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
  * @method MosaicConfigureInfo getMosaicConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
  * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
- * @method QRCodeConfigureInfo getQRCodeConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
- * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
- * @method VoiceConfigureInfo getVoiceConfigure() Obtain <p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
- * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) Set <p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+ * @method QRCodeConfigureInfo getQRCodeConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+ * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+ * @method VoiceConfigureInfo getVoiceConfigure() Obtain <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+ * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) Set <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
  * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
  * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
  */
 class CreateQualityInspectTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * @var integer <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
@@ -96,17 +96,17 @@ class CreateQualityInspectTemplateRequest extends AbstractModel
     public $BlurConfigure;
 
     /**
-     * @var AbnormalLightingConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
+     * @var AbnormalLightingConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
      */
     public $AbnormalLightingConfigure;
 
     /**
-     * @var CrashScreenConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
+     * @var CrashScreenConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
      */
     public $CrashScreenConfigure;
 
     /**
-     * @var BlackWhiteEdgeConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
+     * @var BlackWhiteEdgeConfigureInfo <p>(Not recommended, use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
      */
     public $BlackWhiteEdgeConfigure;
 
@@ -121,12 +121,12 @@ class CreateQualityInspectTemplateRequest extends AbstractModel
     public $MosaicConfigure;
 
     /**
-     * @var QRCodeConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
+     * @var QRCodeConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
      */
     public $QRCodeConfigure;
 
     /**
-     * @var VoiceConfigureInfo <p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+     * @var VoiceConfigureInfo <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     public $VoiceConfigure;
 
@@ -136,7 +136,7 @@ class CreateQualityInspectTemplateRequest extends AbstractModel
     public $QualityEvaluationConfigure;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * @param integer $SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      * @param string $Name <p>Audio and video quality inspection template name.</p>
      * @param string $Comment <p>Audio and video quality inspection template description.</p>
      * @param array $Configs <p>Audio and video quality detection configuration parameters.</p>
@@ -144,13 +144,13 @@ class CreateQualityInspectTemplateRequest extends AbstractModel
      * @param float $ScreenshotInterval <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1. If not specified, the default frame interval is 1 second.</p>
      * @param JitterConfigureInfo $JitterConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
      * @param BlurConfigureInfo $BlurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
-     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
-     * @param CrashScreenConfigureInfo $CrashScreenConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
-     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
+     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+     * @param CrashScreenConfigureInfo $CrashScreenConfigure <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
+     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure <p>(Not recommended, use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
      * @param NoiseConfigureInfo $NoiseConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
      * @param MosaicConfigureInfo $MosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
-     * @param QRCodeConfigureInfo $QRCodeConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
-     * @param VoiceConfigureInfo $VoiceConfigure <p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+     * @param QRCodeConfigureInfo $QRCodeConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+     * @param VoiceConfigureInfo $VoiceConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
      * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
      */
     function __construct()

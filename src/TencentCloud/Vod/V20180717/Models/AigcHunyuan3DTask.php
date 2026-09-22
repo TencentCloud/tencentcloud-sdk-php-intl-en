@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  * @method string getStatus() Obtain <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
- * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Extension error code.</p>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extension error code.</p>
+ * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method string getErrCodeExt() Obtain <p>Expansion error code.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Expansion error code.</p>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
  * @method integer getProgress() Obtain <p>Task progress, value ranges from 0 to 100.</p>
@@ -54,12 +54,12 @@ class AigcHunyuan3DTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string <p>Extension error code.</p>
+     * @var string <p>Expansion error code.</p>
      */
     public $ErrCodeExt;
 
@@ -96,8 +96,8 @@ class AigcHunyuan3DTask extends AbstractModel
     /**
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
-     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Extension error code.</p>
+     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+     * @param string $ErrCodeExt <p>Expansion error code.</p>
      * @param string $Message <p>Error message.</p>
      * @param integer $Progress <p>Task progress, value ranges from 0 to 100.</p>
      * @param AigcHunyuan3DTaskInput $Input <p>Input information of the AIGC Hunyuan 3D task.</p>

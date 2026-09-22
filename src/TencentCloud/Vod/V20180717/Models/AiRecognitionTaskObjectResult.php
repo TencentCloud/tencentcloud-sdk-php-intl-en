@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiRecognitionTaskObjectResultInput $Input) Set Object recognition task input.
  * @method AiRecognitionTaskObjectResultOutput getOutput() Obtain Object recognition task output information.
  * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) Set Object recognition task output information.
- * @method integer getProgress() Obtain Object recognition task progress. Value range: [0-100].
- * @method void setProgress(integer $Progress) Set Object recognition task progress. Value range: [0-100].
- * @method string getBeginProcessTime() Obtain Object recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Object recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Object recognition task progress, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Object recognition task progress, in the range of [0,100].
+ * @method string getBeginProcessTime() Obtain Object identification task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Object identification task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Object recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Object recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -72,12 +72,12 @@ class AiRecognitionTaskObjectResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Object recognition task progress. Value range: [0-100].
+     * @var integer Object recognition task progress, in the range of [0,100].
      */
     public $Progress;
 
     /**
-     * @var string Object recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Object identification task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -93,8 +93,8 @@ class AiRecognitionTaskObjectResult extends AbstractModel
      * @param string $Message Error message.
      * @param AiRecognitionTaskObjectResultInput $Input Object recognition task input.
      * @param AiRecognitionTaskObjectResultOutput $Output Object recognition task output information.
-     * @param integer $Progress Object recognition task progress. Value range: [0-100].
-     * @param string $BeginProcessTime Object recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Object recognition task progress, in the range of [0,100].
+     * @param string $BeginProcessTime Object identification task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Object recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

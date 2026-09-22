@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InspectMediaQuality request structure.
  *
- * @method string getFileId() Obtain Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
- * @method void setFileId(string $FileId) Set Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+ * @method string getFileId() Obtain Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+ * @method void setFileId(string $FileId) Set Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
  * @method integer getDefinition() Obtain Audio and video quality inspection template ID.
  * @method void setDefinition(integer $Definition) Set Audio and video quality inspection template ID.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method integer getTasksPriority() Obtain Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  * @method void setTasksPriority(integer $TasksPriority) Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
- * @method string getSessionContext() Obtain Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
+ * @method string getSessionContext() Obtain Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
  * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  * @method string getExtInfo() Obtain Reserved field, used for special purposes.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class InspectMediaQualityRequest extends AbstractModel
 {
     /**
-     * @var string Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * @var string Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
      */
     public $FileId;
 
@@ -48,7 +48,7 @@ class InspectMediaQualityRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -58,7 +58,7 @@ class InspectMediaQualityRequest extends AbstractModel
     public $TasksPriority;
 
     /**
-     * @var string Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
+     * @var string Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
      */
     public $SessionContext;
 
@@ -73,11 +73,11 @@ class InspectMediaQualityRequest extends AbstractModel
     public $ExtInfo;
 
     /**
-     * @param string $FileId Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * @param string $FileId Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
      * @param integer $Definition Audio and video quality inspection template ID.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param integer $TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
-     * @param string $SessionContext Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
+     * @param string $SessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
      * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      * @param string $ExtInfo Reserved field, used for special purposes.
      */

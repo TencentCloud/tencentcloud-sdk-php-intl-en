@@ -34,20 +34,20 @@ use TencentCloud\Common\AbstractModel;
 <li> DEEP_ARCHIVE: deep archive storage.</li>
  * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method string getRestoreTier() Obtain Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of the media file is archive storage, the parameter values are as follows:
+ * @method string getRestoreTier() Obtain Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode of the retrieval (also known as unfreezing) operation. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
 <li>Expedited: speed mode.</li>
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
-When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+When the current storage type of the media file is DEEP_ARCHIVE, the parameter values are as follows:
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
- * @method void setRestoreTier(string $RestoreTier) Set Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of the media file is archive storage, the parameter values are as follows:
+ * @method void setRestoreTier(string $RestoreTier) Set Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode of the retrieval (also known as unfreezing) operation. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
 <li>Expedited: speed mode.</li>
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
-When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+When the current storage type of the media file is DEEP_ARCHIVE, the parameter values are as follows:
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
  */
@@ -73,12 +73,12 @@ class ModifyMediaStorageClassRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of the media file is archive storage, the parameter values are as follows:
+     * @var string Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode of the retrieval (also known as unfreezing) operation. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
 <li>Expedited: speed mode.</li>
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
-When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+When the current storage type of the media file is DEEP_ARCHIVE, the parameter values are as follows:
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
      */
@@ -92,12 +92,12 @@ When the current storage type of a media file is DEEP_ARCHIVE, the following val
 <li> ARCHIVE: Archive storage.</li>
 <li> DEEP_ARCHIVE: deep archive storage.</li>
      * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param string $RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of the media file is archive storage, the parameter values are as follows:
+     * @param string $RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode of the retrieval (also known as unfreezing) operation. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
 <li>Expedited: speed mode.</li>
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
-When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+When the current storage type of the media file is DEEP_ARCHIVE, the parameter values are as follows:
 <li>Standard: standard mode.</li>
 <li>Bulk: batch mode.</li>
      */

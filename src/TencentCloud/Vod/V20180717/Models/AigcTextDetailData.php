@@ -18,16 +18,16 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Aigc-generated text detailed data
+ * Aigc-generated detailed data
  *
  * @method string getTimestamp() Obtain <p>Request start time (RFC3339)</p>
  * @method void setTimestamp(string $Timestamp) Set <p>Request start time (RFC3339)</p>
- * @method string getReqId() Obtain <p>Gateway layer request ID</p>
- * @method void setReqId(string $ReqId) Set <p>Gateway layer request ID</p>
+ * @method string getReqId() Obtain <p>Gateway layer request ID.</p>
+ * @method void setReqId(string $ReqId) Set <p>Gateway layer request ID.</p>
  * @method string getChatId() Obtain <p>Dialogue ID returned by the backend model</p>
  * @method void setChatId(string $ChatId) Set <p>Dialogue ID returned by the backend model</p>
- * @method integer getStatusCode() Obtain <p>HTTP status code returned to client</p>
- * @method void setStatusCode(integer $StatusCode) Set <p>HTTP status code returned to client</p>
+ * @method integer getStatusCode() Obtain <p>HTTP status code returned to the client</p>
+ * @method void setStatusCode(integer $StatusCode) Set <p>HTTP status code returned to the client</p>
  * @method string getModel() Obtain <p>Model name</p>
  * @method void setModel(string $Model) Set <p>Model name</p>
  * @method integer getSubAppId() Obtain <p>Application ID.</p>
@@ -40,14 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputTokens(integer $InputTokens) Set <p>Input token count</p>
  * @method integer getOutputTokens() Obtain <p>Output token count</p>
  * @method void setOutputTokens(integer $OutputTokens) Set <p>Output token count</p>
- * @method integer getCacheInputTokens() Obtain <p>Number of tokens that hit the prompt cache</p>
- * @method void setCacheInputTokens(integer $CacheInputTokens) Set <p>Number of tokens that hit the prompt cache</p>
+ * @method integer getCacheInputTokens() Obtain <p>Number of tokens for cache hits in prompt cache</p>
+ * @method void setCacheInputTokens(integer $CacheInputTokens) Set <p>Number of tokens for cache hits in prompt cache</p>
  * @method integer getTotalTokens() Obtain <p>Total token count</p>
  * @method void setTotalTokens(integer $TotalTokens) Set <p>Total token count</p>
- * @method float getTPS() Obtain <p>tokens/second in the generation stage</p>
- * @method void setTPS(float $TPS) Set <p>tokens/second in the generation stage</p>
- * @method float getTTFT() Obtain <p>Time To First Token</p><p>Unit: seconds</p>
- * @method void setTTFT(float $TTFT) Set <p>Time To First Token</p><p>Unit: seconds</p>
+ * @method float getTPS() Obtain <p>tokens per second in the generation stage</p>
+ * @method void setTPS(float $TPS) Set <p>tokens per second in the generation stage</p>
+ * @method float getTTFT() Obtain <p>Time To First Token</p><p>Unit: second</p>
+ * @method void setTTFT(float $TTFT) Set <p>Time To First Token</p><p>Unit: second</p>
  * @method float getTotal() Obtain <p>End-to-end total time</p><p>Unit: seconds</p>
  * @method void setTotal(float $Total) Set <p>End-to-end total time</p><p>Unit: seconds</p>
  * @method string getApiType() Obtain <p>Entry protocol: completions / responses / anthropic</p>
@@ -61,7 +61,7 @@ class AigcTextDetailData extends AbstractModel
     public $Timestamp;
 
     /**
-     * @var string <p>Gateway layer request ID</p>
+     * @var string <p>Gateway layer request ID.</p>
      */
     public $ReqId;
 
@@ -71,7 +71,7 @@ class AigcTextDetailData extends AbstractModel
     public $ChatId;
 
     /**
-     * @var integer <p>HTTP status code returned to client</p>
+     * @var integer <p>HTTP status code returned to the client</p>
      */
     public $StatusCode;
 
@@ -106,7 +106,7 @@ class AigcTextDetailData extends AbstractModel
     public $OutputTokens;
 
     /**
-     * @var integer <p>Number of tokens that hit the prompt cache</p>
+     * @var integer <p>Number of tokens for cache hits in prompt cache</p>
      */
     public $CacheInputTokens;
 
@@ -116,12 +116,12 @@ class AigcTextDetailData extends AbstractModel
     public $TotalTokens;
 
     /**
-     * @var float <p>tokens/second in the generation stage</p>
+     * @var float <p>tokens per second in the generation stage</p>
      */
     public $TPS;
 
     /**
-     * @var float <p>Time To First Token</p><p>Unit: seconds</p>
+     * @var float <p>Time To First Token</p><p>Unit: second</p>
      */
     public $TTFT;
 
@@ -137,19 +137,19 @@ class AigcTextDetailData extends AbstractModel
 
     /**
      * @param string $Timestamp <p>Request start time (RFC3339)</p>
-     * @param string $ReqId <p>Gateway layer request ID</p>
+     * @param string $ReqId <p>Gateway layer request ID.</p>
      * @param string $ChatId <p>Dialogue ID returned by the backend model</p>
-     * @param integer $StatusCode <p>HTTP status code returned to client</p>
+     * @param integer $StatusCode <p>HTTP status code returned to the client</p>
      * @param string $Model <p>Model name</p>
      * @param integer $SubAppId <p>Application ID.</p>
      * @param string $ApiKey <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
      * @param boolean $Stream <p>Whether to return in streaming mode</p>
      * @param integer $InputTokens <p>Input token count</p>
      * @param integer $OutputTokens <p>Output token count</p>
-     * @param integer $CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
+     * @param integer $CacheInputTokens <p>Number of tokens for cache hits in prompt cache</p>
      * @param integer $TotalTokens <p>Total token count</p>
-     * @param float $TPS <p>tokens/second in the generation stage</p>
-     * @param float $TTFT <p>Time To First Token</p><p>Unit: seconds</p>
+     * @param float $TPS <p>tokens per second in the generation stage</p>
+     * @param float $TTFT <p>Time To First Token</p><p>Unit: second</p>
      * @param float $Total <p>End-to-end total time</p><p>Unit: seconds</p>
      * @param string $ApiType <p>Entry protocol: completions / responses / anthropic</p>
      */

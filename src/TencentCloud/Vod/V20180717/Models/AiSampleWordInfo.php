@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyword() Obtain <p>Keyword. Length limit: 20 characters.</p>
  * @method void setKeyword(string $Keyword) Set <p>Keyword. Length limit: 20 characters.</p>
- * @method array getTags() Obtain <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
- * @method void setTags(array $Tags) Set <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+ * @method array getTags() Obtain <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
+ * @method void setTags(array $Tags) Set <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
  */
 class AiSampleWordInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AiSampleWordInfo extends AbstractModel
     public $Keyword;
 
     /**
-     * @var array <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+     * @var array <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
      */
     public $Tags;
 
     /**
      * @param string $Keyword <p>Keyword. Length limit: 20 characters.</p>
-     * @param array $Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+     * @param array $Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
      */
     function __construct()
     {

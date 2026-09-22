@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create principal output information.
+ * Create subject output information.
  *
  * @method string getSubjectId() Obtain <p>Principal ID.</p>
  * @method void setSubjectId(string $SubjectId) Set <p>Principal ID.</p>

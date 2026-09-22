@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAnimatedGraphicsTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the rotation diagram template. The array length cannot exceed 100.
  * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the rotation diagram template. The array length cannot exceed 100.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
@@ -29,16 +29,16 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method string getType() Obtain Condition for filtering templates by type. Valid values:
-<li>Preset: preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
-<li>Preset: preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  */
 class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -59,18 +59,18 @@ class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 
     /**
      * @var string Condition for filtering templates by type. Valid values:
-<li>Preset: preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param array $Definitions Filtering condition for the unique identifier of the rotation diagram template. The array length cannot exceed 100.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type Condition for filtering templates by type. Valid values:
-<li>Preset: preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     function __construct()

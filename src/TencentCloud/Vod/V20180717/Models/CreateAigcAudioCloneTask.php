@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  * @method string getStatus() Obtain <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
- * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+ * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method string getErrCodeExt() Obtain <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
  * @method integer getProgress() Obtain <p>Task progress. Value range: [0-100].</p>
  * @method void setProgress(integer $Progress) Set <p>Task progress. Value range: [0-100].</p>
  * @method CreateAigcAudioCloneInput getInput() Obtain <p>Input information of the AIGC audio clone task.</p>
  * @method void setInput(CreateAigcAudioCloneInput $Input) Set <p>Input information of the AIGC audio clone task.</p>
- * @method CreateAigcAudioCloneOutput getOutput() Obtain <p>Output message of the AIGC audio clone task.</p>
- * @method void setOutput(CreateAigcAudioCloneOutput $Output) Set <p>Output message of the AIGC audio clone task.</p>
+ * @method CreateAigcAudioCloneOutput getOutput() Obtain <p>Output information of the AIGC audio clone task.</p>
+ * @method void setOutput(CreateAigcAudioCloneOutput $Output) Set <p>Output information of the AIGC audio clone task.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
@@ -54,12 +54,12 @@ class CreateAigcAudioCloneTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+     * @var string <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
      */
     public $ErrCodeExt;
 
@@ -79,7 +79,7 @@ class CreateAigcAudioCloneTask extends AbstractModel
     public $Input;
 
     /**
-     * @var CreateAigcAudioCloneOutput <p>Output message of the AIGC audio clone task.</p>
+     * @var CreateAigcAudioCloneOutput <p>Output information of the AIGC audio clone task.</p>
      */
     public $Output;
 
@@ -96,12 +96,12 @@ class CreateAigcAudioCloneTask extends AbstractModel
     /**
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
-     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+     * @param string $ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
      * @param string $Message <p>Error message.</p>
      * @param integer $Progress <p>Task progress. Value range: [0-100].</p>
      * @param CreateAigcAudioCloneInput $Input <p>Input information of the AIGC audio clone task.</p>
-     * @param CreateAigcAudioCloneOutput $Output <p>Output message of the AIGC audio clone task.</p>
+     * @param CreateAigcAudioCloneOutput $Output <p>Output information of the AIGC audio clone task.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */

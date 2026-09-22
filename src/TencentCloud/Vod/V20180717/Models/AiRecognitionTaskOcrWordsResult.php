@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Text keyword recognition result.
+ * Keyword recognition result of the text.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiRecognitionTaskOcrWordsResultInput getInput() Obtain Text keyword recognition task input information.
- * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) Set Text keyword recognition task input information.
+ * @method AiRecognitionTaskOcrWordsResultInput getInput() Obtain Text keyword recognition task input.
+ * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) Set Text keyword recognition task input.
  * @method AiRecognitionTaskOcrWordsResultOutput getOutput() Obtain Output message of the text keyword recognition task.
  * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) Set Output message of the text keyword recognition task.
- * @method integer getProgress() Obtain Progress of the text keyword recognition task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Progress of the text keyword recognition task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Progress of the text keyword recognition task. Value range: [0-100].
+ * @method void setProgress(integer $Progress) Set Progress of the text keyword recognition task. Value range: [0-100].
+ * @method string getBeginProcessTime() Obtain Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Completion time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Completion time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -62,7 +62,7 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResultInput Text keyword recognition task input information.
+     * @var AiRecognitionTaskOcrWordsResultInput Text keyword recognition task input.
      */
     public $Input;
 
@@ -72,12 +72,12 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Progress of the text keyword recognition task. Value range: 0-100.
+     * @var integer Progress of the text keyword recognition task. Value range: [0-100].
      */
     public $Progress;
 
     /**
-     * @var string Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -91,10 +91,10 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiRecognitionTaskOcrWordsResultInput $Input Text keyword recognition task input information.
+     * @param AiRecognitionTaskOcrWordsResultInput $Input Text keyword recognition task input.
      * @param AiRecognitionTaskOcrWordsResultOutput $Output Output message of the text keyword recognition task.
-     * @param integer $Progress Progress of the text keyword recognition task. Value range: 0-100.
-     * @param string $BeginProcessTime Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Progress of the text keyword recognition task. Value range: [0-100].
+     * @param string $BeginProcessTime Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Completion time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

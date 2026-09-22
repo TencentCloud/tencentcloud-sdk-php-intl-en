@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set <p>Video stream configuration parameters.</p>
  * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain <p>Audio stream configuration parameters.</p>
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set <p>Audio stream configuration parameters.</p>
- * @method TEHDConfigForUpdate getTEHDConfig() Obtain <p>TSC transcoding configuration parameters.</p>
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set <p>TSC transcoding configuration parameters.</p>
+ * @method TEHDConfigForUpdate getTEHDConfig() Obtain <p>Top Speed Codec transcoding configuration parameters.</p>
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set <p>Top Speed Codec transcoding configuration parameters.</p>
  * @method string getStdExtInfo() Obtain <p>Standard extended fields for special usage.</p>
  * @method void setStdExtInfo(string $StdExtInfo) Set <p>Standard extended fields for special usage.</p>
  */
@@ -63,7 +63,7 @@ class OverrideTranscodeParameter extends AbstractModel
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate <p>TSC transcoding configuration parameters.</p>
+     * @var TEHDConfigForUpdate <p>Top Speed Codec transcoding configuration parameters.</p>
      */
     public $TEHDConfig;
 
@@ -78,7 +78,7 @@ class OverrideTranscodeParameter extends AbstractModel
      * @param integer $RemoveAudio <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      * @param VideoTemplateInfoForUpdate $VideoTemplate <p>Video stream configuration parameters.</p>
      * @param AudioTemplateInfoForUpdate $AudioTemplate <p>Audio stream configuration parameters.</p>
-     * @param TEHDConfigForUpdate $TEHDConfig <p>TSC transcoding configuration parameters.</p>
+     * @param TEHDConfigForUpdate $TEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
      * @param string $StdExtInfo <p>Standard extended fields for special usage.</p>
      */
     function __construct()

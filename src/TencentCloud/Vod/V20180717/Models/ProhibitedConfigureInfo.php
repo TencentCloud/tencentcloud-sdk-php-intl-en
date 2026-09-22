@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Prohibition task control parameter
+ * Prohibited task control parameter
  *
- * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain Speech prohibition control parameter.
- * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set Speech prohibition control parameter.
- * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain Text prohibited control parameters.
- * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set Text prohibited control parameters.
+ * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() Obtain Voice prohibition control parameter.
+ * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) Set Voice prohibition control parameter.
+ * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() Obtain Prohibited control parameters for text.
+ * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) Set Prohibited control parameters for text.
  */
 class ProhibitedConfigureInfo extends AbstractModel
 {
     /**
-     * @var ProhibitedAsrReviewTemplateInfo Speech prohibition control parameter.
+     * @var ProhibitedAsrReviewTemplateInfo Voice prohibition control parameter.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var ProhibitedOcrReviewTemplateInfo Text prohibited control parameters.
+     * @var ProhibitedOcrReviewTemplateInfo Prohibited control parameters for text.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo Speech prohibition control parameter.
-     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo Text prohibited control parameters.
+     * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo Voice prohibition control parameter.
+     * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo Prohibited control parameters for text.
      */
     function __construct()
     {

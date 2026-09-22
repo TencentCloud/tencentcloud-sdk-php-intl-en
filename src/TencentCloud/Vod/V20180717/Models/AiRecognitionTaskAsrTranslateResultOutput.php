@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * Voice translation result.
  *
  * @method array getSegmentSet() Obtain Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
  * @method void setSegmentSet(array $SegmentSet) Set Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
- * @method string getSegmentSetFileUrl() Obtain URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method array getSubtitleSet() Obtain Generated subtitle list.
  * @method void setSubtitleSet(array $SubtitleSet) Set Generated subtitle list.
  */
@@ -35,17 +35,17 @@ class AiRecognitionTaskAsrTranslateResultOutput extends AbstractModel
 {
     /**
      * @var array Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @var string URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
@@ -56,9 +56,9 @@ class AiRecognitionTaskAsrTranslateResultOutput extends AbstractModel
 
     /**
      * @param array $SegmentSet Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
-     * @param string $SegmentSetFileUrl URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param array $SubtitleSet Generated subtitle list.
      */
     function __construct()

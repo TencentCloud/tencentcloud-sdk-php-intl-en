@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * Volume equalization configuration.
  *
  * @method string getSwitch() Obtain Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
  * @method void setSwitch(string $Switch) Set Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
  * @method string getType() Obtain Type. Valid values:
 <li>loudNorm: loudness normalization</li>
 <li>gainControl: reduce abrupt change</li>
@@ -39,8 +39,8 @@ class AudioVolumeBalanceInfo extends AbstractModel
 {
     /**
      * @var string Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
      */
     public $Switch;
 
@@ -54,8 +54,8 @@ Default value: loudNorm.
 
     /**
      * @param string $Switch Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
      * @param string $Type Type. Valid values:
 <li>loudNorm: loudness normalization</li>
 <li>gainControl: reduce abrupt change</li>

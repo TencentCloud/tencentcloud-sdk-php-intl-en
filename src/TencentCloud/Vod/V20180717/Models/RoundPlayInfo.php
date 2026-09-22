@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoundPlaylist(array $RoundPlaylist) Set Carousel list.
  * @method string getName() Obtain Carousel playbill name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Carousel playbill name. Length limit: 64 characters.
- * @method string getDesc() Obtain Carousel playlist description, with a length limit of 256 characters.
- * @method void setDesc(string $Desc) Set Carousel playlist description, with a length limit of 256 characters.
+ * @method string getDesc() Obtain Carousel playlist description. Length limit: 256 characters.
+ * @method void setDesc(string $Desc) Set Carousel playlist description. Length limit: 256 characters.
  * @method string getStatus() Obtain Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
  * @method void setStatus(string $Status) Set Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
  * @method string getPlayBackMode() Obtain Playback mode. Optional values:
@@ -50,10 +50,10 @@ Default value: Loop.
  * @method void setUrl(string $Url) Set Carousel playback address.
  * @method string getCreateTime() Obtain Creation time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
  * @method void setCreateTime(string $CreateTime) Set Creation time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method string getUpdateTime() Obtain Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method void setUpdateTime(string $UpdateTime) Set Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method string getExpiredTime() Obtain Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
- * @method void setExpiredTime(string $ExpiredTime) Set Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+ * @method string getUpdateTime() Obtain Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setUpdateTime(string $UpdateTime) Set Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method string getExpiredTime() Obtain Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
  */
 class RoundPlayInfo extends AbstractModel
 {
@@ -78,13 +78,13 @@ class RoundPlayInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string Carousel playlist description, with a length limit of 256 characters.
+     * @var string Carousel playlist description. Length limit: 256 characters.
      */
     public $Desc;
 
     /**
      * @var string Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
      */
@@ -109,12 +109,12 @@ Default value: Loop.
     public $CreateTime;
 
     /**
-     * @var string Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @var string Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $UpdateTime;
 
     /**
-     * @var string Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+     * @var string Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
      */
     public $ExpiredTime;
 
@@ -123,9 +123,9 @@ Default value: Loop.
      * @param string $StartTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      * @param array $RoundPlaylist Carousel list.
      * @param string $Name Carousel playbill name. Length limit: 64 characters.
-     * @param string $Desc Carousel playlist description, with a length limit of 256 characters.
+     * @param string $Desc Carousel playlist description. Length limit: 256 characters.
      * @param string $Status Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
      * @param string $PlayBackMode Playback mode. Optional values:
@@ -134,8 +134,8 @@ Default value: Enabled.
 Default value: Loop.
      * @param string $Url Carousel playback address.
      * @param string $CreateTime Creation time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param string $UpdateTime Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param string $ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+     * @param string $UpdateTime Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param string $ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
      */
     function __construct()
     {

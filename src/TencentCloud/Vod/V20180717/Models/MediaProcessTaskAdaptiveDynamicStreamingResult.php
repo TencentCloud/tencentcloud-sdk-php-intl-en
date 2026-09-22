@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method integer getProgress() Obtain Progress of the adaptive bitrate streaming task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Progress of the adaptive bitrate streaming task. Value range: 0-100.
- * @method AdaptiveDynamicStreamingTaskInput getInput() Obtain Input of the video to adaptive streaming task.
- * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set Input of the video to adaptive streaming task.
+ * @method integer getProgress() Obtain Adaptive bitrate streaming task progress, value ranges from 0 to 100.
+ * @method void setProgress(integer $Progress) Set Adaptive bitrate streaming task progress, value ranges from 0 to 100.
+ * @method AdaptiveDynamicStreamingTaskInput getInput() Obtain Input for a video to adaptive streaming task.
+ * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set Input for a video to adaptive streaming task.
  * @method AdaptiveDynamicStreamingInfoItem getOutput() Obtain Output of a video to adaptive streaming task.
  * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) Set Output of a video to adaptive streaming task.
- * @method string getBeginProcessTime() Obtain Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getBeginProcessTime() Obtain Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Task completion time of transcoding to adaptive bitstream in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Task completion time of transcoding to adaptive bitstream in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -62,12 +62,12 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
     public $Message;
 
     /**
-     * @var integer Progress of the adaptive bitrate streaming task. Value range: 0-100.
+     * @var integer Adaptive bitrate streaming task progress, value ranges from 0 to 100.
      */
     public $Progress;
 
     /**
-     * @var AdaptiveDynamicStreamingTaskInput Input of the video to adaptive streaming task.
+     * @var AdaptiveDynamicStreamingTaskInput Input for a video to adaptive streaming task.
      */
     public $Input;
 
@@ -77,7 +77,7 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
     public $Output;
 
     /**
-     * @var string Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -91,10 +91,10 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param integer $Progress Progress of the adaptive bitrate streaming task. Value range: 0-100.
-     * @param AdaptiveDynamicStreamingTaskInput $Input Input of the video to adaptive streaming task.
+     * @param integer $Progress Adaptive bitrate streaming task progress, value ranges from 0 to 100.
+     * @param AdaptiveDynamicStreamingTaskInput $Input Input for a video to adaptive streaming task.
      * @param AdaptiveDynamicStreamingInfoItem $Output Output of a video to adaptive streaming task.
-     * @param string $BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Task completion time of transcoding to adaptive bitstream in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

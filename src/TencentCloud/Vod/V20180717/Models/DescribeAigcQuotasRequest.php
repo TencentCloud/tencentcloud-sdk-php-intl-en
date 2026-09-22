@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcQuotas request structure.
  *
- * @method integer getSubAppId() Obtain <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
+ * @method integer getSubAppId() Obtain <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
  * @method string getQuotaType() Obtain <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
  * @method void setQuotaType(string $QuotaType) Set <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
- * @method string getApiToken() Obtain <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
- * @method void setApiToken(string $ApiToken) Set <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
- * @method integer getLimit() Obtain <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
- * @method void setLimit(integer $Limit) Set <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
- * @method integer getOffset() Obtain <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
- * @method void setOffset(integer $Offset) Set <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
+ * @method string getApiToken() Obtain <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
+ * @method void setApiToken(string $ApiToken) Set <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
+ * @method integer getLimit() Obtain <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+ * @method integer getOffset() Obtain <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
  */
 class DescribeAigcQuotasRequest extends AbstractModel
 {
     /**
-     * @var integer <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
+     * @var integer <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
      */
     public $SubAppId;
 
@@ -44,26 +44,26 @@ class DescribeAigcQuotasRequest extends AbstractModel
     public $QuotaType;
 
     /**
-     * @var string <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+     * @var string <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
      */
     public $ApiToken;
 
     /**
-     * @var integer <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+     * @var integer <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
      */
     public $Limit;
 
     /**
-     * @var integer <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
+     * @var integer <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
      */
     public $Offset;
 
     /**
-     * @param integer $SubAppId <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
+     * @param integer $SubAppId <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
      * @param string $QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
-     * @param string $ApiToken <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
-     * @param integer $Limit <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
-     * @param integer $Offset <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
+     * @param string $ApiToken <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
+     * @param integer $Limit <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+     * @param integer $Offset <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
      */
     function __construct()
     {

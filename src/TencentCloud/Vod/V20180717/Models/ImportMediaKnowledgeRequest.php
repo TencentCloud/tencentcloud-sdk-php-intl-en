@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportMediaKnowledge request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
- * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
- * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
- * @method integer getDefinition() Obtain <p>Unique identifier of the Large Model Understanding template.</p>
- * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the Large Model Understanding template.</p>
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+ * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+ * @method integer getDefinition() Obtain <p>Unique identifier of the large model understanding template</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the large model understanding template</p>
  * @method array getKnowledgeBaseIds() Obtain <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
  * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) Set <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
- * @method array getImportTasks() Obtain <p>Task type that requires importing a knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
- * @method void setImportTasks(array $ImportTasks) Set <p>Task type that requires importing a knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+ * @method array getImportTasks() Obtain <p>Task types that need to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+ * @method void setImportTasks(array $ImportTasks) Set <p>Task types that need to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
  */
 class ImportMediaKnowledgeRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @var integer <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @var string <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public $FileId;
 
     /**
-     * @var integer <p>Unique identifier of the Large Model Understanding template.</p>
+     * @var integer <p>Unique identifier of the large model understanding template</p>
      */
     public $Definition;
 
@@ -54,17 +54,17 @@ class ImportMediaKnowledgeRequest extends AbstractModel
     public $KnowledgeBaseIds;
 
     /**
-     * @var array <p>Task type that requires importing a knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @var array <p>Task types that need to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      * @deprecated
      */
     public $ImportTasks;
 
     /**
-     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
-     * @param string $FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
-     * @param integer $Definition <p>Unique identifier of the Large Model Understanding template.</p>
+     * @param integer $SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+     * @param string $FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @param integer $Definition <p>Unique identifier of the large model understanding template</p>
      * @param array $KnowledgeBaseIds <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
-     * @param array $ImportTasks <p>Task type that requires importing a knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @param array $ImportTasks <p>Task types that need to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     function __construct()
     {

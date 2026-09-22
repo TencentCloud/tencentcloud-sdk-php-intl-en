@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task result type of offensive content involved in audio/video moderation
+ * Task result type for offensive content involved in audio/video moderation
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewPornTaskInput getInput() Obtain Task input of offensive content involved in audio/video moderation.
- * @method void setInput(AiReviewPornTaskInput $Input) Set Task input of offensive content involved in audio/video moderation.
+ * @method AiReviewPornTaskInput getInput() Obtain Task input for offensive content involved in audio/video moderation.
+ * @method void setInput(AiReviewPornTaskInput $Input) Set Task input for offensive content involved in audio/video moderation.
  * @method AiReviewPornTaskOutput getOutput() Obtain Task output of audio/video moderation involving offensive content.
  * @method void setOutput(AiReviewPornTaskOutput $Output) Set Task output of audio/video moderation involving offensive content.
  * @method integer getProgress() Obtain Task progress of audio/video moderation involving offensive content, in the range of [0,100].
@@ -58,7 +58,7 @@ class AiReviewTaskPornResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPornTaskInput Task input of offensive content involved in audio/video moderation.
+     * @var AiReviewPornTaskInput Task input for offensive content involved in audio/video moderation.
      */
     public $Input;
 
@@ -77,7 +77,7 @@ class AiReviewTaskPornResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewPornTaskInput $Input Task input of offensive content involved in audio/video moderation.
+     * @param AiReviewPornTaskInput $Input Task input for offensive content involved in audio/video moderation.
      * @param AiReviewPornTaskOutput $Output Task output of audio/video moderation involving offensive content.
      * @param integer $Progress Task progress of audio/video moderation involving offensive content, in the range of [0,100].
      */

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of an AIGC image generation task.
+ * AIGC image generation task information.
  *
  * @method string getTaskId() Obtain <p>Task ID.</p>
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
  * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
  * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+ * @method string getErrCodeExt() Obtain <p>Extended error code. An empty string indicates success, while other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. An empty string indicates success, while other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method integer getProgress() Obtain <p>Task progress, in the range of [0,100].</p>
- * @method void setProgress(integer $Progress) Set <p>Task progress, in the range of [0,100].</p>
+ * @method integer getProgress() Obtain <p>Task progress, value ranges from 0 to 100.</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress, value ranges from 0 to 100.</p>
  * @method AigcImageTaskInput getInput() Obtain <p>Input information for the AIGC image generation task.</p>
  * @method void setInput(AigcImageTaskInput $Input) Set <p>Input information for the AIGC image generation task.</p>
  * @method AigcImageTaskOutput getOutput() Obtain <p>Output information of the AIGC image generation task.</p>
@@ -59,7 +59,7 @@ class AigcImageTask extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var string <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+     * @var string <p>Extended error code. An empty string indicates success, while other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
      */
     public $ErrCodeExt;
 
@@ -69,7 +69,7 @@ class AigcImageTask extends AbstractModel
     public $Message;
 
     /**
-     * @var integer <p>Task progress, in the range of [0,100].</p>
+     * @var integer <p>Task progress, value ranges from 0 to 100.</p>
      */
     public $Progress;
 
@@ -97,9 +97,9 @@ class AigcImageTask extends AbstractModel
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
      * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+     * @param string $ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
      * @param string $Message <p>Error message.</p>
-     * @param integer $Progress <p>Task progress, in the range of [0,100].</p>
+     * @param integer $Progress <p>Task progress, value ranges from 0 to 100.</p>
      * @param AigcImageTaskInput $Input <p>Input information for the AIGC image generation task.</p>
      * @param AigcImageTaskOutput $Output <p>Output information of the AIGC image generation task.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>

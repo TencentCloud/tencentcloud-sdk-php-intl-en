@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Application name
  * @method void setName(string $Name) Set Application name
- * @method array getTags() Obtain Tag information. Query the application list with a specified tag.
- * @method void setTags(array $Tags) Set Tag information. Query the application list with a specified tag.
+ * @method array getTags() Obtain Tag information. Query the application list of a specified tag.
+ * @method void setTags(array $Tags) Set Tag information. Query the application list of a specified tag.
  * @method integer getOffset() Obtain Starting offset for pagination pull. Default value: 0.
  * @method void setOffset(integer $Offset) Set Starting offset for pagination pull. Default value: 0.
  * @method integer getLimit() Obtain Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
@@ -37,7 +37,7 @@ class DescribeSubAppIdsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array Tag information. Query the application list with a specified tag.
+     * @var array Tag information. Query the application list of a specified tag.
      */
     public $Tags;
 
@@ -53,7 +53,7 @@ class DescribeSubAppIdsRequest extends AbstractModel
 
     /**
      * @param string $Name Application name
-     * @param array $Tags Tag information. Query the application list with a specified tag.
+     * @param array $Tags Tag information. Query the application list of a specified tag.
      * @param integer $Offset Starting offset for pagination pull. Default value: 0.
      * @param integer $Limit Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
      */

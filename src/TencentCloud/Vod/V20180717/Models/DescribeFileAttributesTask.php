@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method integer getErrCode() Obtain Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+ * @method integer getErrCode() Obtain Error code. 0 indicates success. Additional values indicate failure:
+<li>40000: Invalid input parameters. Check the input parameters;</li>
 <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success. Additional values indicate failure:
+<li>40000: Invalid input parameters. Check the input parameters;</li>
 <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
  * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
@@ -60,8 +60,8 @@ class DescribeFileAttributesTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+     * @var integer Error code. 0 indicates success. Additional values indicate failure:
+<li>40000: Invalid input parameters. Check the input parameters;</li>
 <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
@@ -105,8 +105,8 @@ class DescribeFileAttributesTask extends AbstractModel
     /**
      * @param string $TaskId Task ID.
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param integer $ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+     * @param integer $ErrCode Error code. 0 indicates success. Additional values indicate failure:
+<li>40000: Invalid input parameters. Check the input parameters;</li>
 <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).

@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
  * @method void setDomain(string $Domain) Set Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
  * @method string getAccelerateArea() Obtain Regions where CDN acceleration needs to be enabled:
 <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
 <li>Outside Chinese Mainland: outside the Chinese mainland.</li>
 <li>Global: around the world.</li>
-If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the regional information set by the user in Tencent Cloud Settings.
+If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the user's regional information in Tencent Cloud Settings. To enable CDN acceleration within the Chinese mainland, the domain must be [ICP filed](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
  * @method void setAccelerateArea(string $AccelerateArea) Set Regions where CDN acceleration needs to be enabled:
 <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
 <li>Outside Chinese Mainland: outside the Chinese mainland.</li>
 <li>Global: around the world.</li>
-If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the regional information set by the user in Tencent Cloud Settings.
- * @method string getType() Obtain Domain type. Valid values: <li>VOD: domain name that uses VOD for distribution;</li> <li>EdgeOne: domain name that uses EdgeOne for distribution.</li>Default value: VOD.
- * @method void setType(string $Type) Set Domain type. Valid values: <li>VOD: domain name that uses VOD for distribution;</li> <li>EdgeOne: domain name that uses EdgeOne for distribution.</li>Default value: VOD.
+If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the user's regional information in Tencent Cloud Settings. To enable CDN acceleration within the Chinese mainland, the domain must be [ICP filed](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
+ * @method string getType() Obtain Domain type. Valid values: <li>VOD: domain name used to distribute VOD products</li> <li>EdgeOne: domain name used to distribute EdgeOne products</li> If not specified, the default value is VOD.
+ * @method void setType(string $Type) Set Domain type. Valid values: <li>VOD: domain name used to distribute VOD products</li> <li>EdgeOne: domain name used to distribute EdgeOne products</li> If not specified, the default value is VOD.
  */
 class CreateVodDomainRequest extends AbstractModel
 {
@@ -45,7 +45,7 @@ class CreateVodDomainRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -54,24 +54,24 @@ class CreateVodDomainRequest extends AbstractModel
 <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
 <li>Outside Chinese Mainland: outside the Chinese mainland.</li>
 <li>Global: around the world.</li>
-If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the regional information set by the user in Tencent Cloud Settings.
+If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the user's regional information in Tencent Cloud Settings. To enable CDN acceleration within the Chinese mainland, the domain must be [ICP filed](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
      */
     public $AccelerateArea;
 
     /**
-     * @var string Domain type. Valid values: <li>VOD: domain name that uses VOD for distribution;</li> <li>EdgeOne: domain name that uses EdgeOne for distribution.</li>Default value: VOD.
+     * @var string Domain type. Valid values: <li>VOD: domain name used to distribute VOD products</li> <li>EdgeOne: domain name used to distribute EdgeOne products</li> If not specified, the default value is VOD.
      */
     public $Type;
 
     /**
      * @param string $Domain Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      * @param string $AccelerateArea Regions where CDN acceleration needs to be enabled:
 <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
 <li>Outside Chinese Mainland: outside the Chinese mainland.</li>
 <li>Global: around the world.</li>
-If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the regional information set by the user in Tencent Cloud Settings.
-     * @param string $Type Domain type. Valid values: <li>VOD: domain name that uses VOD for distribution;</li> <li>EdgeOne: domain name that uses EdgeOne for distribution.</li>Default value: VOD.
+If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the user's regional information in Tencent Cloud Settings. To enable CDN acceleration within the Chinese mainland, the domain must be [ICP filed](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
+     * @param string $Type Domain type. Valid values: <li>VOD: domain name used to distribute VOD products</li> <li>EdgeOne: domain name used to distribute EdgeOne products</li> If not specified, the default value is VOD.
      */
     function __construct()
     {

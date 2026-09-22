@@ -18,13 +18,13 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent control parameter for frame-specific tagging task
+ * Intelligent frame tagging task control parameter
  *
- * @method string getSwitch() Obtain Switch for the intelligent frame-by-frame tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+ * @method string getSwitch() Obtain Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable intelligent frame-specific tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
- * @method void setSwitch(string $Switch) Set Switch for the intelligent frame-by-frame tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+ * @method void setSwitch(string $Switch) Set Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable intelligent frame-specific tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
  * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. Minimum value: 0.5 seconds.
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. Minimum value: 0.5 seconds.
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class FrameTagConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch for the intelligent frame-by-frame tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+     * @var string Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable intelligent frame-specific tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
      */
     public $Switch;
@@ -44,8 +44,8 @@ class FrameTagConfigureInfoForUpdate extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @param string $Switch Switch for the intelligent frame-by-frame tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+     * @param string $Switch Switch for the intelligent frame-specific tagging task. Available values:
+<li>ON: enable intelligent frame-specific tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
      * @param float $ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
      */

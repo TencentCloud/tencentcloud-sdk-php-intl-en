@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLLMComprehendTemplate request structure.
  *
- * @method integer getDefinition() Obtain <p>Unique identifier of the Large Model Understanding template.</p>
- * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the Large Model Understanding template.</p>
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+ * @method integer getDefinition() Obtain <p>Unique identifier of the Large Model Understanding template</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the Large Model Understanding template</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
  * @method string getName() Obtain <p>Large model parsing template name. Length limit: 64 characters.</p>
  * @method void setName(string $Name) Set <p>Large model parsing template name. Length limit: 64 characters.</p>
  * @method string getComment() Obtain <p>Large model parsing template description. Length limit: 256 characters.</p>
  * @method void setComment(string $Comment) Set <p>Large model parsing template description. Length limit: 256 characters.</p>
- * @method string getModel() Obtain <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
- * @method void setModel(string $Model) Set <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+ * @method string getModel() Obtain <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
+ * @method void setModel(string $Model) Set <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
  * @method LLMComprehendSummaryForUpdate getSummary() Obtain <p>Segment summary parsing configuration</p>
  * @method void setSummary(LLMComprehendSummaryForUpdate $Summary) Set <p>Segment summary parsing configuration</p>
  * @method LLMComprehendAsrForUpdate getAsr() Obtain <p>Text transcription parsing configuration</p>
  * @method void setAsr(LLMComprehendAsrForUpdate $Asr) Set <p>Text transcription parsing configuration</p>
- * @method LLMComprehendFaceRecognitionForUpdate getFaceRecognition() Obtain <p>Facial recognition configuration</p>
- * @method void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate $FaceRecognition) Set <p>Facial recognition configuration</p>
+ * @method LLMComprehendFaceRecognitionForUpdate getFaceRecognition() Obtain <p>Face recognition configuration</p>
+ * @method void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate $FaceRecognition) Set <p>Face recognition configuration</p>
  */
 class ModifyLLMComprehendTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Unique identifier of the Large Model Understanding template.</p>
+     * @var integer <p>Unique identifier of the Large Model Understanding template</p>
      */
     public $Definition;
 
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
@@ -60,7 +60,7 @@ class ModifyLLMComprehendTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var string <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * @var string <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
      */
     public $Model;
 
@@ -75,19 +75,19 @@ class ModifyLLMComprehendTemplateRequest extends AbstractModel
     public $Asr;
 
     /**
-     * @var LLMComprehendFaceRecognitionForUpdate <p>Facial recognition configuration</p>
+     * @var LLMComprehendFaceRecognitionForUpdate <p>Face recognition configuration</p>
      */
     public $FaceRecognition;
 
     /**
-     * @param integer $Definition <p>Unique identifier of the Large Model Understanding template.</p>
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param integer $Definition <p>Unique identifier of the Large Model Understanding template</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      * @param string $Name <p>Large model parsing template name. Length limit: 64 characters.</p>
      * @param string $Comment <p>Large model parsing template description. Length limit: 256 characters.</p>
-     * @param string $Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * @param string $Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
      * @param LLMComprehendSummaryForUpdate $Summary <p>Segment summary parsing configuration</p>
      * @param LLMComprehendAsrForUpdate $Asr <p>Text transcription parsing configuration</p>
-     * @param LLMComprehendFaceRecognitionForUpdate $FaceRecognition <p>Facial recognition configuration</p>
+     * @param LLMComprehendFaceRecognitionForUpdate $FaceRecognition <p>Face recognition configuration</p>
      */
     function __construct()
     {

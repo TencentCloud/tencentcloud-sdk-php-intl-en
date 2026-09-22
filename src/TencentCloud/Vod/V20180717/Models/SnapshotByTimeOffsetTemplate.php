@@ -18,15 +18,15 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description of the specified time point screenshot template
+ * Specified time point screenshot template details.
  *
  * @method integer getDefinition() Obtain Unique identifier of the screenshot template at the specified time point.
  * @method void setDefinition(integer $Definition) Set Unique identifier of the screenshot template at the specified time point.
  * @method string getType() Obtain Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  * @method void setType(string $Type) Set Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  * @method string getName() Obtain Screenshot template name at specified time point.
  * @method void setName(string $Name) Set Screenshot template name at specified time point.
@@ -57,12 +57,12 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
  * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
  * @method string getFormat() Obtain Image format.
  * @method void setFormat(string $Format) Set Image format.
@@ -70,15 +70,15 @@ Default value: open.
  * @method void setCreateTime(string $CreateTime) Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFillType() Obtain Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+ * @method string getFillType() Obtain Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
- * @method void setFillType(string $FillType) Set Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+ * @method void setFillType(string $FillType) Set Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
@@ -92,7 +92,7 @@ class SnapshotByTimeOffsetTemplate extends AbstractModel
 
     /**
      * @var string Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public $Type;
@@ -129,8 +129,8 @@ Default value: 0.
 
     /**
      * @var string Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public $ResolutionAdaptive;
@@ -151,9 +151,9 @@ Default value: open.
     public $UpdateTime;
 
     /**
-     * @var string Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+     * @var string Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
@@ -163,7 +163,7 @@ Default value: black.
     /**
      * @param integer $Definition Unique identifier of the screenshot template at the specified time point.
      * @param string $Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      * @param string $Name Screenshot template name at specified time point.
      * @param string $Comment Template description information.
@@ -180,15 +180,15 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
      * @param string $ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      * @param string $Format Image format.
      * @param string $CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+     * @param string $FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.

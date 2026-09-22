@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI sample management, tag operations.
+ * AI sample management, tag manipulation.
  *
  * @method string getType() Obtain <p>Operation type. Available values: add, delete, reset.</p>
  * @method void setType(string $Type) Set <p>Operation type. Available values: add, delete, reset.</p>

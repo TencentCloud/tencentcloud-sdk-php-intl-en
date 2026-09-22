@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sampling screenshot information of VOD files
  *
- * @method array getSampleSnapshotSet() Obtain A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
- * @method void setSampleSnapshotSet(array $SampleSnapshotSet) Set A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+ * @method array getSampleSnapshotSet() Obtain A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
+ * @method void setSampleSnapshotSet(array $SampleSnapshotSet) Set A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
  */
 class MediaSampleSnapshotInfo extends AbstractModel
 {
     /**
-     * @var array A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+     * @var array A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
      */
     public $SampleSnapshotSet;
 
     /**
-     * @param array $SampleSnapshotSet A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+     * @param array $SampleSnapshotSet A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
      */
     function __construct()
     {

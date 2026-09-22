@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Gaussian: Gaussian blur.</li>
  * @method void setType(string $Type) Set Operation type for blurry images. Optional modes:
 <li>Gaussian: Gaussian blur.</li>
- * @method integer getRadius() Obtain Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
- * @method void setRadius(integer $Radius) Set Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
- * @method integer getSigma() Obtain Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
- * @method void setSigma(integer $Sigma) Set Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+ * @method integer getRadius() Obtain Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
+ * @method void setRadius(integer $Radius) Set Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
+ * @method integer getSigma() Obtain Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
+ * @method void setSigma(integer $Sigma) Set Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
  */
 class ImageBlur extends AbstractModel
 {
@@ -38,20 +38,20 @@ class ImageBlur extends AbstractModel
     public $Type;
 
     /**
-     * @var integer Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+     * @var integer Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
      */
     public $Radius;
 
     /**
-     * @var integer Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+     * @var integer Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
      */
     public $Sigma;
 
     /**
      * @param string $Type Operation type for blurry images. Optional modes:
 <li>Gaussian: Gaussian blur.</li>
-     * @param integer $Radius Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
-     * @param integer $Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+     * @param integer $Radius Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
+     * @param integer $Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
      */
     function __construct()
     {

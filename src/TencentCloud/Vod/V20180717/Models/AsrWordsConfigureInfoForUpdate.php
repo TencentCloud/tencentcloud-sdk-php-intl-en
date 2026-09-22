@@ -21,36 +21,36 @@ use TencentCloud\Common\AbstractModel;
  * Voice keyword recognition control parameters.
  *
  * @method string getSwitch() Obtain Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
  * @method void setSwitch(string $Switch) Set Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
- * @method array getLabelSet() Obtain Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+ * @method array getLabelSet() Obtain Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
- * @method void setLabelSet(array $LabelSet) Set Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+ * @method void setLabelSet(array $LabelSet) Set Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
  */
 class AsrWordsConfigureInfoForUpdate extends AbstractModel
 {
     /**
      * @var string Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @var array Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+     * @var array Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public $LabelSet;
 
     /**
      * @param string $Switch Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
-     * @param array $LabelSet Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+     * @param array $LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     function __construct()

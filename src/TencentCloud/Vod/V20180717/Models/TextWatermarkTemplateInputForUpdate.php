@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Text watermarking template
  *
- * @method string getFontType() Obtain Font type. Currently, two are supported:
+ * @method string getFontType() Obtain Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
- * @method void setFontType(string $FontType) Set Font type. Currently, two are supported:
+ * @method void setFontType(string $FontType) Set Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
  * @method string getFontSize() Obtain Font size. Format: Npx, where N is a numerical value.
  * @method void setFontSize(string $FontSize) Set Font size. Format: Npx, where N is a numerical value.
- * @method string getFontColor() Obtain Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
- * @method void setFontColor(string $FontColor) Set Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+ * @method string getFontColor() Obtain Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+ * @method void setFontColor(string $FontColor) Set Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
  * @method float getFontAlpha() Obtain Text opacity, value ranges from 0 to 1.
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class TextWatermarkTemplateInputForUpdate extends AbstractModel
 {
     /**
-     * @var string Font type. Currently, two are supported:
+     * @var string Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      */
@@ -52,7 +52,7 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     public $FontSize;
 
     /**
-     * @var string Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+     * @var string Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      */
     public $FontColor;
 
@@ -64,11 +64,11 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     public $FontAlpha;
 
     /**
-     * @param string $FontType Font type. Currently, two are supported:
+     * @param string $FontType Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      * @param string $FontSize Font size. Format: Npx, where N is a numerical value.
-     * @param string $FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+     * @param string $FontColor Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      * @param float $FontAlpha Text opacity, value ranges from 0 to 1.
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration of the output media file for an AIGC Hunyuan 3D task.
+ * Configuration of the output media file of an AIGC Hunyuan 3D task.
  *
  * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
  * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>

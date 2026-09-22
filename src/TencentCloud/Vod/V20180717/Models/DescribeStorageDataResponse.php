@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalStorage(integer $TotalStorage) Set Current total storage capacity, in bytes.
  * @method integer getStandardStorage() Obtain Current standard storage capacity, in bytes.
  * @method void setStandardStorage(integer $StandardStorage) Set Current standard storage capacity, in bytes.
- * @method integer getInfrequentStorage() Obtain Current infrequent access storage capacity in bytes.
- * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current infrequent access storage capacity in bytes.
+ * @method integer getInfrequentStorage() Obtain Current infrequent access storage capacity, in bytes.
+ * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current infrequent access storage capacity, in bytes.
  * @method integer getArchiveStorage() Obtain Current archive storage capacity, in bytes.
  * @method void setArchiveStorage(integer $ArchiveStorage) Set Current archive storage capacity, in bytes.
  * @method integer getDeepArchiveStorage() Obtain Current deep archive storage capacity, in bytes.
@@ -55,7 +55,7 @@ class DescribeStorageDataResponse extends AbstractModel
     public $StandardStorage;
 
     /**
-     * @var integer Current infrequent access storage capacity in bytes.
+     * @var integer Current infrequent access storage capacity, in bytes.
      */
     public $InfrequentStorage;
 
@@ -83,7 +83,7 @@ class DescribeStorageDataResponse extends AbstractModel
      * @param integer $MediaCount Total current media volume.
      * @param integer $TotalStorage Current total storage capacity, in bytes.
      * @param integer $StandardStorage Current standard storage capacity, in bytes.
-     * @param integer $InfrequentStorage Current infrequent access storage capacity in bytes.
+     * @param integer $InfrequentStorage Current infrequent access storage capacity, in bytes.
      * @param integer $ArchiveStorage Current archive storage capacity, in bytes.
      * @param integer $DeepArchiveStorage Current deep archive storage capacity, in bytes.
      * @param array $StorageStat Storage usage in each billing region.

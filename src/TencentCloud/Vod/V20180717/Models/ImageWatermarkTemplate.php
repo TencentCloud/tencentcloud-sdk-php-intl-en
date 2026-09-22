@@ -28,21 +28,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(string $Width) Set Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
- * @method string getHeight() Obtain Height of a watermark, supporting two formats: % and px.
+ * @method string getHeight() Obtain Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
- * @method void setHeight(string $Height) Set Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
+ * @method void setHeight(string $Height) Set Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
  * @method string getRepeatType() Obtain Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
  * @method void setRepeatType(string $RepeatType) Set Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
  * @method integer getTransparency() Obtain Image transparency. Value range: [0, 100].
 <li>0: completely opaque.</li>
@@ -66,17 +66,17 @@ class ImageWatermarkTemplate extends AbstractModel
     public $Width;
 
     /**
-     * @var string Height of a watermark, supporting two formats: % and px.
+     * @var string Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
      */
     public $Height;
 
     /**
      * @var string Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
      */
     public $RepeatType;
@@ -93,13 +93,13 @@ class ImageWatermarkTemplate extends AbstractModel
      * @param string $Width Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
-     * @param string $Height Height of a watermark, supporting two formats: % and px.
+     * @param string $Height Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
      * @param string $RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
      * @param integer $Transparency Image transparency. Value range: [0, 100].
 <li>0: completely opaque.</li>

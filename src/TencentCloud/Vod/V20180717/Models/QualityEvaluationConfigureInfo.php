@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Control parameters for video frame quality evaluation.
  *
  * @method string getSwitch() Obtain Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
  * @method void setSwitch(string $Switch) Set Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
- * @method integer getScore() Obtain Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
- * @method void setScore(integer $Score) Set Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+ * @method integer getScore() Obtain Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
+ * @method void setScore(integer $Score) Set Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
  */
 class QualityEvaluationConfigureInfo extends AbstractModel
 {
     /**
      * @var string Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
     /**
-     * @var integer Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+     * @var integer Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
      */
     public $Score;
 
     /**
      * @param string $Switch Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-     * @param integer $Score Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+     * @param integer $Score Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
      */
     function __construct()
     {

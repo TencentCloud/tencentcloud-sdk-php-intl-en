@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDailyMostPlayedStat request structure.
  *
- * @method string getDate() Obtain Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
- * @method void setDate(string $Date) Set Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
- * @method string getDomainName() Obtain Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
- * @method void setDomainName(string $DomainName) Set Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
+ * @method string getDate() Obtain Query date, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
+ * @method void setDate(string $Date) Set Query date, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
+ * @method string getDomainName() Obtain Domain name. Query playback stats of the Top 100 media files for that domain name. Query playback stats of all domain names by default.
+ * @method void setDomainName(string $DomainName) Set Domain name. Query playback stats of the Top 100 media files for that domain name. Query playback stats of all domain names by default.
  * @method string getMetric() Obtain Statistical metrics for Top data. Valid values:
 <li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
-<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 by playback count.</li>
 Default value: Traffic.
  * @method void setMetric(string $Metric) Set Statistical metrics for Top data. Valid values:
 <li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
-<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 by playback count.</li>
 Default value: Traffic.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
  */
 class DescribeDailyMostPlayedStatRequest extends AbstractModel
 {
     /**
-     * @var string Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
+     * @var string Query date, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
      */
     public $Date;
 
     /**
-     * @var string Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
+     * @var string Domain name. Query playback stats of the Top 100 media files for that domain name. Query playback stats of all domain names by default.
      */
     public $DomainName;
 
     /**
      * @var string Statistical metrics for Top data. Valid values:
 <li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
-<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 by playback count.</li>
 Default value: Traffic.
      */
     public $Metric;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @param string $Date Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
-     * @param string $DomainName Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
+     * @param string $Date Query date, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
+     * @param string $DomainName Domain name. Query playback stats of the Top 100 media files for that domain name. Query playback stats of all domain names by default.
      * @param string $Metric Statistical metrics for Top data. Valid values:
 <li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
-<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 by playback count.</li>
 Default value: Traffic.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

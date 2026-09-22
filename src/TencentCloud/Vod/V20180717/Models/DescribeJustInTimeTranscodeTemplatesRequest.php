@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJustInTimeTranscodeTemplates request structure.
  *
- * @method array getNames() Obtain Template name filter condition. The array can contain up to 100 template names.
- * @method void setNames(array $Names) Set Template name filter condition. The array can contain up to 100 template names.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+ * @method array getNames() Obtain Template name filter condition, with an array length limit of 100.
+ * @method void setNames(array $Names) Set Template name filter condition, with an array length limit of 100.
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
  * @method string getType() Obtain Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
 <li>Custom: user-defined task flow template.</li>
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Template name filter condition. The array can contain up to 100 template names.
+     * @var array Template name filter condition, with an array length limit of 100.
      */
     public $Names;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -65,8 +65,8 @@ class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Names Template name filter condition. The array can contain up to 100 template names.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+     * @param array $Names Template name filter condition, with an array length limit of 100.
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      * @param string $Type Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
 <li>Custom: user-defined task flow template.</li>

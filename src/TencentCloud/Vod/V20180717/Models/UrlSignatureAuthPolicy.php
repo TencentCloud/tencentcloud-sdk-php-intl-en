@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * Signature-based Key anti-leech information
  *
  * @method string getStatus() Obtain [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
  * @method void setStatus(string $Status) Set [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
  * @method string getEncryptedKey() Obtain Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
 The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters.
@@ -35,7 +35,7 @@ class UrlSignatureAuthPolicy extends AbstractModel
 {
     /**
      * @var string [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
      */
     public $Status;
@@ -48,7 +48,7 @@ The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisib
 
     /**
      * @param string $Status [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
      * @param string $EncryptedKey Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
 The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters.

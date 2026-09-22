@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Video rebirth template number.
  * @method void setDefinition(integer $Definition) Set Video rebirth template number.
- * @method string getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(string $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getSubAppId() Obtain <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(string $SubAppId) Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method string getName() Obtain Video rebirth template name.
  * @method void setName(string $Name) Set Video rebirth template name.
  * @method string getComment() Obtain Video rebirth template description.
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set Output target video control information.
  * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain Output target audio control information.
  * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) Set Output target audio control information.
- * @method string getContainer() Obtain Output file container format. Available values: mp4, flv, and hls.
- * @method void setContainer(string $Container) Set Output file container format. Available values: mp4, flv, and hls.
+ * @method string getContainer() Obtain Output file container format. Available values: mp4, flv, hls.
+ * @method void setContainer(string $Container) Set Output file container format. Available values: mp4, flv, hls.
  * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Available values:
 <li>`0`: reserved</li>
 <li>1: Remove</li>
@@ -59,7 +59,7 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var string <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var string <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -94,7 +94,7 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $TargetAudioInfo;
 
     /**
-     * @var string Output file container format. Available values: mp4, flv, and hls.
+     * @var string Output file container format. Available values: mp4, flv, hls.
      */
     public $Container;
 
@@ -114,14 +114,14 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
 
     /**
      * @param integer $Definition Video rebirth template number.
-     * @param string $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param string $Name Video rebirth template name.
      * @param string $Comment Video rebirth template description.
      * @param RebuildVideoInfo $RebuildVideoInfo Video Rebirth Video Control Information.
      * @param RebuildAudioInfo $RebuildAudioInfo Video Rebirth Audio Control Information.
      * @param RebuildMediaTargetVideoStream $TargetVideoInfo Output target video control information.
      * @param RebuildMediaTargetAudioStream $TargetAudioInfo Output target audio control information.
-     * @param string $Container Output file container format. Available values: mp4, flv, and hls.
+     * @param string $Container Output file container format. Available values: mp4, flv, hls.
      * @param integer $RemoveVideo Indicates whether to remove video data. Available values:
 <li>`0`: reserved</li>
 <li>1: Remove</li>

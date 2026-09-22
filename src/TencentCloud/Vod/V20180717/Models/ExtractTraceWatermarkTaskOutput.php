@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Extract traceability watermark output information
  *
- * @method string getUv() Obtain Player's ID in hexadecimal, 6 digits.
- * @method void setUv(string $Uv) Set Player's ID in hexadecimal, 6 digits.
+ * @method string getUv() Obtain Player's ID, represented in hexadecimal, 6 digits in total.
+ * @method void setUv(string $Uv) Set Player's ID, represented in hexadecimal, 6 digits in total.
  * @method string getUid() Obtain Deprecated.
  * @method void setUid(string $Uid) Set Deprecated.
  */
 class ExtractTraceWatermarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string Player's ID in hexadecimal, 6 digits.
+     * @var string Player's ID, represented in hexadecimal, 6 digits in total.
      */
     public $Uv;
 
@@ -39,7 +39,7 @@ class ExtractTraceWatermarkTaskOutput extends AbstractModel
     public $Uid;
 
     /**
-     * @param string $Uv Player's ID in hexadecimal, 6 digits.
+     * @param string $Uv Player's ID, represented in hexadecimal, 6 digits in total.
      * @param string $Uid Deprecated.
      */
     function __construct()

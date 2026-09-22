@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Knowledge base information.
+ * Knowledge base info.
  *
  * @method string getKnowledgeBaseId() Obtain <p>Knowledge base ID.</p>
  * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set <p>Knowledge base ID.</p>

@@ -18,25 +18,25 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for text prohibition tasks.
+ * Text prohibition task control parameter
  *
  * @method string getSwitch() Obtain Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
  * @method void setSwitch(string $Switch) Set Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
  * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
- * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+ * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
  */
 class ProhibitedOcrReviewTemplateInfo extends AbstractModel
 {
     /**
      * @var string Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
      */
     public $Switch;
 
@@ -46,16 +46,16 @@ class ProhibitedOcrReviewTemplateInfo extends AbstractModel
     public $BlockConfidence;
 
     /**
-     * @var integer Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * @var integer Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     public $ReviewConfidence;
 
     /**
      * @param string $Switch Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
      * @param integer $BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
-     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     function __construct()
     {

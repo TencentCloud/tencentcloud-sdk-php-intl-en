@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Detailed information such as the knowledge library list to import media assets into and the parsing template used
+ * Detailed information about the knowledge base list to which media assets are imported, as well as the parsing template used.
  *
  * @method string getKnowledgeBaseId() Obtain <p>Knowledge base ID</p>
  * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set <p>Knowledge base ID</p>

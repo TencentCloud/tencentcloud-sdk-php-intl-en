@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set Media file ID.
  * @method integer getDefinition() Obtain Video rebirth template ID.
  * @method void setDefinition(integer $Definition) Set Video rebirth template ID.
- * @method string getSubAppId() Obtain <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(string $SubAppId) Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method float getStartTimeOffset() Obtain Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+ * @method string getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(string $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method float getStartTimeOffset() Obtain Start offset time, in seconds. If not filled, the video is cut from the beginning.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. If not filled, the video is cut from the beginning.
  * @method float getEndTimeOffset() Obtain End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method RebuildMediaOutputConfig getOutputConfig() Obtain File configuration after video rebirth.
@@ -54,12 +54,12 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var string <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var string <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var float Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+     * @var float Start offset time, in seconds. If not filled, the video is cut from the beginning.
      */
     public $StartTimeOffset;
 
@@ -96,8 +96,8 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     /**
      * @param string $FileId Media file ID.
      * @param integer $Definition Video rebirth template ID.
-     * @param string $SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param float $StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+     * @param string $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param float $StartTimeOffset Start offset time, in seconds. If not filled, the video is cut from the beginning.
      * @param float $EndTimeOffset End offset time, in seconds. Not filled indicates cutting to the end of the video.
      * @param RebuildMediaOutputConfig $OutputConfig File configuration after video rebirth.
      * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.

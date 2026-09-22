@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteKnowledgeBase request structure.
  *
- * @method integer getSubAppId() Obtain <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
- * @method void setSubAppId(integer $SubAppId) Set <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
- * @method string getKnowledgeBaseId() Obtain <p>ID of the knowledge base to be deleted.</p>
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set <p>ID of the knowledge base to be deleted.</p>
+ * @method integer getSubAppId() Obtain <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+ * @method string getKnowledgeBaseId() Obtain <p>ID of the knowledge base to delete.</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) Set <p>ID of the knowledge base to delete.</p>
  */
 class DeleteKnowledgeBaseRequest extends AbstractModel
 {
     /**
-     * @var integer <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
+     * @var integer <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
      */
     public $SubAppId;
 
     /**
-     * @var string <p>ID of the knowledge base to be deleted.</p>
+     * @var string <p>ID of the knowledge base to delete.</p>
      */
     public $KnowledgeBaseId;
 
     /**
-     * @param integer $SubAppId <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
-     * @param string $KnowledgeBaseId <p>ID of the knowledge base to be deleted.</p>
+     * @param integer $SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+     * @param string $KnowledgeBaseId <p>ID of the knowledge base to delete.</p>
      */
     function __construct()
     {

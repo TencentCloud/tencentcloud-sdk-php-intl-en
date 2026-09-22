@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileIds(array $FileIds) Set Unique identifier list of media files. Maximum length: 100.
  * @method integer getRestoreDay() Obtain Accessible duration of thawed temporary media files. Must be greater than 0. Unit: day.
  * @method void setRestoreDay(integer $RestoreDay) Set Accessible duration of thawed temporary media files. Must be greater than 0. Unit: day.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method string getRestoreTier() Obtain Thawing mode. If the current storage type of the media file is archive storage, valid values:
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method string getRestoreTier() Obtain Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>
 When the storage type of a media file is DEEP_ARCHIVE, the parameter values are as follows:
 <li>Standard mode: Standard. The unfreeze task is completed after 24 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
- * @method void setRestoreTier(string $RestoreTier) Set Thawing mode. If the current storage type of the media file is archive storage, valid values:
+ * @method void setRestoreTier(string $RestoreTier) Set Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>
@@ -54,12 +54,12 @@ class RestoreMediaRequest extends AbstractModel
     public $RestoreDay;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Thawing mode. If the current storage type of the media file is archive storage, valid values:
+     * @var string Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>
@@ -72,8 +72,8 @@ When the storage type of a media file is DEEP_ARCHIVE, the parameter values are 
     /**
      * @param array $FileIds Unique identifier list of media files. Maximum length: 100.
      * @param integer $RestoreDay Accessible duration of thawed temporary media files. Must be greater than 0. Unit: day.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param string $RestoreTier Thawing mode. If the current storage type of the media file is archive storage, valid values:
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param string $RestoreTier Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>

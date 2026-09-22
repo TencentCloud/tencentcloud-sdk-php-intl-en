@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyword() Obtain Keyword. Length limited to 128 characters.
  * @method void setKeyword(string $Keyword) Set Keyword. Length limited to 128 characters.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method array getUsages() Obtain <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
 7. All: include all of the above, equivalent to 1+2+3+4.
  * @method void setUsages(array $Usages) Set <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -53,13 +53,13 @@ class ModifyWordSampleRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
      * @var array <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -77,9 +77,9 @@ class ModifyWordSampleRequest extends AbstractModel
 
     /**
      * @param string $Keyword Keyword. Length limited to 128 characters.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param array $Usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.

@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task control parameter for authentication involving offensive content
  *
- * @method PornImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameters for offensive information involved in image recognition.
- * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) Set Control parameters for offensive information involved in image recognition.
+ * @method PornImgReviewTemplateInfo getImgReviewInfo() Obtain Image recognition involves control parameters for offensive information.
+ * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) Set Image recognition involves control parameters for offensive information.
  * @method PornAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameters for offensive information involved in ASR-based recognition.
  * @method void setAsrReviewInfo(PornAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameters for offensive information involved in ASR-based recognition.
- * @method PornOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameters for offensive information involved in text recognition.
- * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameters for offensive information involved in text recognition.
+ * @method PornOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameters for text recognition involving offensive information.
+ * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameters for text recognition involving offensive information.
  */
 class PornConfigureInfo extends AbstractModel
 {
     /**
-     * @var PornImgReviewTemplateInfo Control parameters for offensive information involved in image recognition.
+     * @var PornImgReviewTemplateInfo Image recognition involves control parameters for offensive information.
      */
     public $ImgReviewInfo;
 
@@ -40,14 +40,14 @@ class PornConfigureInfo extends AbstractModel
     public $AsrReviewInfo;
 
     /**
-     * @var PornOcrReviewTemplateInfo Control parameters for offensive information involved in text recognition.
+     * @var PornOcrReviewTemplateInfo Control parameters for text recognition involving offensive information.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PornImgReviewTemplateInfo $ImgReviewInfo Control parameters for offensive information involved in image recognition.
+     * @param PornImgReviewTemplateInfo $ImgReviewInfo Image recognition involves control parameters for offensive information.
      * @param PornAsrReviewTemplateInfo $AsrReviewInfo Control parameters for offensive information involved in ASR-based recognition.
-     * @param PornOcrReviewTemplateInfo $OcrReviewInfo Control parameters for offensive information involved in text recognition.
+     * @param PornOcrReviewTemplateInfo $OcrReviewInfo Control parameters for text recognition involving offensive information.
      */
     function __construct()
     {

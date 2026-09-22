@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
  * @method void setType(string $Type) Set <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
- * @method string getFileId() Obtain <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
- * @method void setFileId(string $FileId) Set <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
- * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
- * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
+ * @method string getFileId() Obtain <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: Supported image formats: glb and obj.</p>
+ * @method void setFileId(string $FileId) Set <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: Supported image formats: glb and obj.</p>
+ * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb and obj.</p>
+ * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb and obj.</p>
  */
 class AigcHunyuan3DMeshInfo extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AigcHunyuan3DMeshInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
+     * @var string <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: Supported image formats: glb and obj.</p>
      */
     public $FileId;
 
     /**
-     * @var string <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
+     * @var string <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb and obj.</p>
      */
     public $Url;
 
     /**
      * @param string $Type <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
-     * @param string $FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
-     * @param string $Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
+     * @param string $FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: Supported image formats: glb and obj.</p>
+     * @param string $Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb and obj.</p>
      */
     function __construct()
     {

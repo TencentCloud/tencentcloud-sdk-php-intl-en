@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDefinition() Obtain <p>Unique identifier of the transcoding template.</p>
  * @method void setDefinition(string $Definition) Set <p>Unique identifier of the transcoding template.</p>
- * @method string getContainer() Obtain <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
- * @method void setContainer(string $Container) Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+ * @method string getContainer() Obtain <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
+ * @method void setContainer(string $Container) Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
  * @method string getName() Obtain <p>Transcoding template name.</p>
  * @method void setName(string $Name) Set <p>Transcoding template name.</p>
  * @method string getComment() Obtain <p>Template description information.</p>
  * @method void setComment(string $Comment) Set <p>Template description information.</p>
- * @method string getType() Obtain <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
- * @method void setType(string $Type) Set <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
- * @method integer getRemoveVideo() Obtain <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
- * @method void setRemoveVideo(integer $RemoveVideo) Set <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+ * @method string getType() Obtain <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+ * @method void setType(string $Type) Set <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+ * @method integer getRemoveVideo() Obtain <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
  * @method integer getRemoveAudio() Obtain <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
  * @method void setRemoveAudio(integer $RemoveAudio) Set <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
  * @method VideoTemplateInfo getVideoTemplate() Obtain <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
@@ -42,14 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set <p>Top Speed Codec transcoding parameters.</p>
  * @method EnhanceConfig getEnhanceConfig() Obtain <p>Audio/video enhancement configurations.</p>
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set <p>Audio/video enhancement configurations.</p>
- * @method string getContainerType() Obtain <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
- * @method void setContainerType(string $ContainerType) Set <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+ * @method string getContainerType() Obtain <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+ * @method void setContainerType(string $ContainerType) Set <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
  * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method string getUpdateTime() Obtain <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method void setUpdateTime(string $UpdateTime) Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method string getSegmentType() Obtain <p>Segment type. Valid only when Container is hls.</p>
- * @method void setSegmentType(string $SegmentType) Set <p>Segment type. Valid only when Container is hls.</p>
+ * @method string getSegmentType() Obtain <p>Segment type. It is valid only when Container is hls.</p>
+ * @method void setSegmentType(string $SegmentType) Set <p>Segment type. It is valid only when Container is hls.</p>
  * @method string getStdExtInfo() Obtain <p>Extended parameter.</p>
  * @method void setStdExtInfo(string $StdExtInfo) Set <p>Extended parameter.</p>
  */
@@ -61,7 +61,7 @@ class TranscodeTemplate extends AbstractModel
     public $Definition;
 
     /**
-     * @var string <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+     * @var string <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
      */
     public $Container;
 
@@ -76,12 +76,12 @@ class TranscodeTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var string <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+     * @var string <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @var integer <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+     * @var integer <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      */
     public $RemoveVideo;
 
@@ -111,7 +111,7 @@ class TranscodeTemplate extends AbstractModel
     public $EnhanceConfig;
 
     /**
-     * @var string <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+     * @var string <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
      */
     public $ContainerType;
 
@@ -126,7 +126,7 @@ class TranscodeTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string <p>Segment type. Valid only when Container is hls.</p>
+     * @var string <p>Segment type. It is valid only when Container is hls.</p>
      */
     public $SegmentType;
 
@@ -137,20 +137,20 @@ class TranscodeTemplate extends AbstractModel
 
     /**
      * @param string $Definition <p>Unique identifier of the transcoding template.</p>
-     * @param string $Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+     * @param string $Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
      * @param string $Name <p>Transcoding template name.</p>
      * @param string $Comment <p>Template description information.</p>
-     * @param string $Type <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
-     * @param integer $RemoveVideo <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+     * @param string $Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+     * @param integer $RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      * @param integer $RemoveAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
      * @param VideoTemplateInfo $VideoTemplate <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
      * @param AudioTemplateInfo $AudioTemplate <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
      * @param TEHDConfig $TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
      * @param EnhanceConfig $EnhanceConfig <p>Audio/video enhancement configurations.</p>
-     * @param string $ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+     * @param string $ContainerType <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
      * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      * @param string $UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param string $SegmentType <p>Segment type. Valid only when Container is hls.</p>
+     * @param string $SegmentType <p>Segment type. It is valid only when Container is hls.</p>
      * @param string $StdExtInfo <p>Extended parameter.</p>
      */
     function __construct()

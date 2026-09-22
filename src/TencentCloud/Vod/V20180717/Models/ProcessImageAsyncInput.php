@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of asynchronous image processing tasks.
+ * Information of an image asynchronous processing task.
  *
  * @method string getFileId() Obtain <p>FileId for image processing.</p>
  * @method void setFileId(string $FileId) Set <p>FileId for image processing.</p>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set <p>Image URL.</p>
  * @method ProcessImageAsyncTaskInput getImageTaskInput() Obtain <p>Image processing parameter.</p>
  * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) Set <p>Image processing parameter.</p>
- * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain <p>Output media file configuration for image processing tasks.</p>
- * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set <p>Output media file configuration for image processing tasks.</p>
+ * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain <p>Configuration of the output media file for an image processing task.</p>
+ * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set <p>Configuration of the output media file for an image processing task.</p>
  */
 class ProcessImageAsyncInput extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ProcessImageAsyncInput extends AbstractModel
     public $ImageTaskInput;
 
     /**
-     * @var ProcessImageAsyncOutputConfig <p>Output media file configuration for image processing tasks.</p>
+     * @var ProcessImageAsyncOutputConfig <p>Configuration of the output media file for an image processing task.</p>
      */
     public $OutputConfig;
 
@@ -55,7 +55,7 @@ class ProcessImageAsyncInput extends AbstractModel
      * @param string $FileId <p>FileId for image processing.</p>
      * @param string $Url <p>Image URL.</p>
      * @param ProcessImageAsyncTaskInput $ImageTaskInput <p>Image processing parameter.</p>
-     * @param ProcessImageAsyncOutputConfig $OutputConfig <p>Output media file configuration for image processing tasks.</p>
+     * @param ProcessImageAsyncOutputConfig $OutputConfig <p>Configuration of the output media file for an image processing task.</p>
      */
     function __construct()
     {

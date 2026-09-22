@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Text Full-text Recognition Task Control Parameters.
  *
- * @method string getSwitch() Obtain Switch for the full text recognition task. Available values:
-<li>ON: Turn on the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch for the full text recognition task. Available values:
-<li>ON: Turn on the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+ * @method string getSwitch() Obtain Full text recognition task switch. Available values:
+<li>ON: enable the intelligent full text recognition task;</li>
+<li>OFF: disables intelligent full text recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Full text recognition task switch. Available values:
+<li>ON: enable the intelligent full text recognition task;</li>
+<li>OFF: disables intelligent full text recognition task.</li>
  */
 class OcrFullTextConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch for the full text recognition task. Available values:
-<li>ON: Turn on the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+     * @var string Full text recognition task switch. Available values:
+<li>ON: enable the intelligent full text recognition task;</li>
+<li>OFF: disables intelligent full text recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch for the full text recognition task. Available values:
-<li>ON: Turn on the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+     * @param string $Switch Full text recognition task switch. Available values:
+<li>ON: enable the intelligent full text recognition task;</li>
+<li>OFF: disables intelligent full text recognition task.</li>
      */
     function __construct()
     {

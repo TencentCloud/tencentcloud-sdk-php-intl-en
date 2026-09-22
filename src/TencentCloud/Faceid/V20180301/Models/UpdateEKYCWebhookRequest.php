@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebhookId(integer $WebhookId) Set <p>ID of the Webhook configuration to be updated</p>
  * @method string getWebhookName() Obtain <p>New Webhook name</p>
  * @method void setWebhookName(string $WebhookName) Set <p>New Webhook name</p>
- * @method string getWebhookURL() Obtain New callback URL, which must use the HTTPS protocol.
- * @method void setWebhookURL(string $WebhookURL) Set New callback URL, which must use the HTTPS protocol.
+ * @method string getWebhookURL() Obtain <p>New callback URL, must be HTTPS protocol</p>
+ * @method void setWebhookURL(string $WebhookURL) Set <p>New callback URL, must be HTTPS protocol</p>
+ * @method string getSignatureKey() Obtain <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+ * @method void setSignatureKey(string $SignatureKey) Set <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
  */
 class UpdateEKYCWebhookRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class UpdateEKYCWebhookRequest extends AbstractModel
     public $WebhookName;
 
     /**
-     * @var string New callback URL, which must use the HTTPS protocol.
+     * @var string <p>New callback URL, must be HTTPS protocol</p>
      */
     public $WebhookURL;
 
     /**
+     * @var string <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+     */
+    public $SignatureKey;
+
+    /**
      * @param integer $WebhookId <p>ID of the Webhook configuration to be updated</p>
      * @param string $WebhookName <p>New Webhook name</p>
-     * @param string $WebhookURL New callback URL, which must use the HTTPS protocol.
+     * @param string $WebhookURL <p>New callback URL, must be HTTPS protocol</p>
+     * @param string $SignatureKey <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UpdateEKYCWebhookRequest extends AbstractModel
 
         if (array_key_exists("WebhookURL",$param) and $param["WebhookURL"] !== null) {
             $this->WebhookURL = $param["WebhookURL"];
+        }
+
+        if (array_key_exists("SignatureKey",$param) and $param["SignatureKey"] !== null) {
+            $this->SignatureKey = $param["SignatureKey"];
         }
     }
 }

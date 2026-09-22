@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVoiceId() Obtain <p>Voice ID.</p>
  * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
- * @method string getSubAppId() Obtain <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
- * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+ * @method string getSubAppId() Obtain <p>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled with the app ID.</p>
+ * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled with the app ID.</p>
  */
 class DeleteVoiceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteVoiceRequest extends AbstractModel
     public $VoiceId;
 
     /**
-     * @var string <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * @var string <p>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled with the app ID.</p>
      */
     public $SubAppId;
 
     /**
      * @param string $VoiceId <p>Voice ID.</p>
-     * @param string $SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * @param string $SubAppId <p>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled with the app ID.</p>
      */
     function __construct()
     {

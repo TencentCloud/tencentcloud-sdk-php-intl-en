@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Suspected segment of Ocr text in audio/video moderation
+ * Suspected segment of Ocr text in video moderation
  *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of the suspected segment, in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the suspected segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
  * @method float getConfidence() Obtain Confidence degree of the suspected segment.
  * @method void setConfidence(float $Confidence) Set Confidence degree of the suspected segment.
  * @method string getSuggestion() Obtain Result suggestion for video moderation of the suspected segment. Value range:
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getKeywordSet() Obtain List of suspicious keywords.
- * @method void setKeywordSet(array $KeywordSet) Set List of suspicious keywords.
- * @method array getAreaCoordSet() Obtain Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
- * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will be deleted upon reaching
+ * @method array getKeywordSet() Obtain List of suspect keywords.
+ * @method void setKeywordSet(array $KeywordSet) Set List of suspect keywords.
+ * @method array getAreaCoordSet() Obtain Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+ * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
- * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+ * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
  * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -53,7 +53,7 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of the suspected segment, in seconds.
+     * @var float End time offset of a suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
@@ -71,17 +71,17 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array List of suspicious keywords.
+     * @var array List of suspect keywords.
      */
     public $KeywordSet;
 
     /**
-     * @var array Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * @var array Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @var string Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public $Url;
@@ -93,15 +93,15 @@ Images will be deleted after the PicUrlExpireTime time point).
 
     /**
      * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
-     * @param float $EndTimeOffset End time offset of the suspected segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
      * @param float $Confidence Confidence degree of the suspected segment.
      * @param string $Suggestion Result suggestion for video moderation of the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $KeywordSet List of suspicious keywords.
-     * @param array $AreaCoordSet Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-     * @param string $Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @param array $KeywordSet List of suspect keywords.
+     * @param array $AreaCoordSet Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+     * @param string $Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
      * @param string $PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PullEvents request structure.
  *
- * @method string getExtInfo() Obtain Reserved field, used for special purposes.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
+ * @method string getExtInfo() Obtain Reserved field, used for special purpose.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purpose.
  * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
 
  * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
 class PullEventsRequest extends AbstractModel
 {
     /**
-     * @var string Reserved field, used for special purposes.
+     * @var string Reserved field, used for special purpose.
      */
     public $ExtInfo;
 
@@ -40,7 +40,7 @@ class PullEventsRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $ExtInfo Reserved field, used for special purposes.
+     * @param string $ExtInfo Reserved field, used for special purpose.
      * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     function __construct()

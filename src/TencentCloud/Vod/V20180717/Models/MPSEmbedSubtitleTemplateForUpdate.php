@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subtitle suppression template for MPS
+ * Subtitle suppression template in MPS
  *
  * @method integer getDefinition() Obtain <p>Unique identifier of the subtitle suppression template</p>
  * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the subtitle suppression template</p>

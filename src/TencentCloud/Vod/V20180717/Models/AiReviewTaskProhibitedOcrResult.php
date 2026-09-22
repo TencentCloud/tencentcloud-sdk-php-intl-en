@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ocr text prohibited task result type for audio/video moderation.
+ * Result type of prohibited task for Ocr text in audio/video moderation
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewProhibitedOcrTaskInput getInput() Obtain Input for Ocr text moderation tasks in audio/video moderation.
- * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set Input for Ocr text moderation tasks in audio/video moderation.
- * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain Output of Ocr text moderation for prohibited tasks in audio/video moderation.
- * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set Output of Ocr text moderation for prohibited tasks in audio/video moderation.
- * @method integer getProgress() Obtain Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+ * @method AiReviewProhibitedOcrTaskInput getInput() Obtain Input for prohibited task of Ocr text in audio/video moderation.
+ * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set Input for prohibited task of Ocr text in audio/video moderation.
+ * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain Output of the Ocr text moderation prohibited task in audio/video moderation.
+ * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set Output of the Ocr text moderation prohibited task in audio/video moderation.
+ * @method integer getProgress() Obtain Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
  */
 class AiReviewTaskProhibitedOcrResult extends AbstractModel
 {
@@ -58,17 +58,17 @@ class AiReviewTaskProhibitedOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewProhibitedOcrTaskInput Input for Ocr text moderation tasks in audio/video moderation.
+     * @var AiReviewProhibitedOcrTaskInput Input for prohibited task of Ocr text in audio/video moderation.
      */
     public $Input;
 
     /**
-     * @var AiReviewProhibitedOcrTaskOutput Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+     * @var AiReviewProhibitedOcrTaskOutput Output of the Ocr text moderation prohibited task in audio/video moderation.
      */
     public $Output;
 
     /**
-     * @var integer Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+     * @var integer Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
      */
     public $Progress;
 
@@ -77,9 +77,9 @@ class AiReviewTaskProhibitedOcrResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewProhibitedOcrTaskInput $Input Input for Ocr text moderation tasks in audio/video moderation.
-     * @param AiReviewProhibitedOcrTaskOutput $Output Output of Ocr text moderation for prohibited tasks in audio/video moderation.
-     * @param integer $Progress Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+     * @param AiReviewProhibitedOcrTaskInput $Input Input for prohibited task of Ocr text in audio/video moderation.
+     * @param AiReviewProhibitedOcrTaskOutput $Output Output of the Ocr text moderation prohibited task in audio/video moderation.
+     * @param integer $Progress Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
      */
     function __construct()
     {

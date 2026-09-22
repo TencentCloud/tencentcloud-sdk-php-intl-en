@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * Subtitle information.
  *
  * @method string getId() Obtain Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
  * @method void setId(string $Id) Set Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
  * @method string getName() Obtain Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
  * @method void setName(string $Name) Set Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
  * @method string getLanguage() Obtain Subtitle language.
  * @method void setLanguage(string $Language) Set Subtitle language.
  * @method string getFormat() Obtain Subtitle file format. Valid values:
@@ -43,13 +43,13 @@ class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
 {
     /**
      * @var string Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      */
     public $Id;
 
     /**
      * @var string Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      */
     public $Name;
 
@@ -72,9 +72,9 @@ class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
 
     /**
      * @param string $Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      * @param string $Name Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      * @param string $Language Subtitle language.
      * @param string $Format Subtitle file format. Valid values:
 <li>vtt: WebVTT subtitle file;</li>

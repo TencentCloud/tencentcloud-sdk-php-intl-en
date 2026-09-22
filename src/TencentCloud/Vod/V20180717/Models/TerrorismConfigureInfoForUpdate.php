@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Authentication task control parameters that involve unsafe information.
+ * Task control parameters for authentication involving unsafe information.
  *
  * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Task control parameter for image recognition involving unsafe information.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Task control parameter for image recognition involving unsafe information.

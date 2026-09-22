@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoundPlays request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
- * @method array getRoundPlayIds() Obtain <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
- * @method void setRoundPlayIds(array $RoundPlayIds) Set <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
- * @method string getStatus() Obtain <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
- * @method void setStatus(string $Status) Set <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+ * @method array getRoundPlayIds() Obtain <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
+ * @method void setRoundPlayIds(array $RoundPlayIds) Set <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
+ * @method string getStatus() Obtain <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
+ * @method void setStatus(string $Status) Set <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
  * @method TimeRange getCreateTime() Obtain <p>Filter criteria: Carousel Playlist Creation Time.</p>
  * @method void setCreateTime(TimeRange $CreateTime) Set <p>Filter criteria: Carousel Playlist Creation Time.</p>
  * @method TimeRange getUpdateTime() Obtain <p>Filter criteria: carousel playlist update time.</p>
@@ -40,17 +40,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRoundPlaysRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * @var integer <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+     * @var array <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
      */
     public $RoundPlayIds;
 
     /**
-     * @var string <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+     * @var string <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
      */
     public $Status;
 
@@ -81,9 +81,9 @@ class DescribeRoundPlaysRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
-     * @param array $RoundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
-     * @param string $Status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+     * @param integer $SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param array $RoundPlayIds <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
+     * @param string $Status <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
      * @param TimeRange $CreateTime <p>Filter criteria: Carousel Playlist Creation Time.</p>
      * @param TimeRange $UpdateTime <p>Filter criteria: carousel playlist update time.</p>
      * @param string $ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFilterType() Obtain UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
  * @method void setFilterType(string $FilterType) Set UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
- * @method array getUserAgents() Obtain User agent list.
- * @method void setUserAgents(array $UserAgents) Set User agent list.
+ * @method array getUserAgents() Obtain UserAgent list.
+ * @method void setUserAgents(array $UserAgents) Set UserAgent list.
  * @method string getRuleType() Obtain Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
@@ -53,7 +53,7 @@ class UserAgentFilterRule extends AbstractModel
     public $FilterType;
 
     /**
-     * @var array User agent list.
+     * @var array UserAgent list.
      */
     public $UserAgents;
 
@@ -77,7 +77,7 @@ class UserAgentFilterRule extends AbstractModel
 
     /**
      * @param string $FilterType UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
-     * @param array $UserAgents User agent list.
+     * @param array $UserAgents UserAgent list.
      * @param string $RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>

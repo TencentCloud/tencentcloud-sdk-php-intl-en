@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Referer blocklist/allowlist configuration, disabled by default
  *
- * @method string getSwitch() Obtain Referrer blocklist/allowlist configuration switch. Value:
+ * @method string getSwitch() Obtain Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Referrer blocklist/allowlist configuration switch. Value:
+ * @method void setSwitch(string $Switch) Set Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  * @method array getRefererRules() Obtain referer blocklist/allowlist rule configuration
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class Referer extends AbstractModel
 {
     /**
-     * @var string Referrer blocklist/allowlist configuration switch. Value:
+     * @var string Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -44,7 +44,7 @@ class Referer extends AbstractModel
     public $RefererRules;
 
     /**
-     * @param string $Switch Referrer blocklist/allowlist configuration switch. Value:
+     * @param string $Switch Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      * @param array $RefererRules referer blocklist/allowlist rule configuration

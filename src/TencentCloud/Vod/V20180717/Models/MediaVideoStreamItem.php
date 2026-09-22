@@ -18,34 +18,34 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video stream information of VOD files.
+ * Video stream information of VOD files
  *
- * @method integer getBitrate() Obtain Bitrate of video stream, unit: bps.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream, unit: bps.
- * @method integer getHeight() Obtain Video stream height. Unit: px.
- * @method void setHeight(integer $Height) Set Video stream height. Unit: px.
+ * @method integer getBitrate() Obtain Bitrate of the video stream. Unit: bps.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the video stream. Unit: bps.
+ * @method integer getHeight() Obtain Height of the video stream. Unit: px.
+ * @method void setHeight(integer $Height) Set Height of the video stream. Unit: px.
  * @method integer getWidth() Obtain Video stream width. Unit: px.
  * @method void setWidth(integer $Width) Set Video stream width. Unit: px.
- * @method string getCodec() Obtain Video stream encoding format, for example, h264.
- * @method void setCodec(string $Codec) Set Video stream encoding format, for example, h264.
+ * @method string getCodec() Obtain Video stream encoding format, for example h264.
+ * @method void setCodec(string $Codec) Set Video stream encoding format, for example h264.
  * @method integer getFps() Obtain Frame rate. Unit: hz.
  * @method void setFps(integer $Fps) Set Frame rate. Unit: hz.
- * @method string getCodecTag() Obtain Encoding tag. It is valid only when Codec is hevc.
- * @method void setCodecTag(string $CodecTag) Set Encoding tag. It is valid only when Codec is hevc.
+ * @method string getCodecTag() Obtain Encoding tag, valid only when Codec is hevc.
+ * @method void setCodecTag(string $CodecTag) Set Encoding tag, valid only when Codec is hevc.
  * @method DynamicRangeInfo getDynamicRangeInfo() Obtain Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
  * @method void setDynamicRangeInfo(DynamicRangeInfo $DynamicRangeInfo) Set Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
  */
 class MediaVideoStreamItem extends AbstractModel
 {
     /**
-     * @var integer Bitrate of video stream, unit: bps.
+     * @var integer Bitrate of the video stream. Unit: bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer Video stream height. Unit: px.
+     * @var integer Height of the video stream. Unit: px.
      */
     public $Height;
 
@@ -55,7 +55,7 @@ class MediaVideoStreamItem extends AbstractModel
     public $Width;
 
     /**
-     * @var string Video stream encoding format, for example, h264.
+     * @var string Video stream encoding format, for example h264.
      */
     public $Codec;
 
@@ -65,25 +65,25 @@ class MediaVideoStreamItem extends AbstractModel
     public $Fps;
 
     /**
-     * @var string Encoding tag. It is valid only when Codec is hevc.
+     * @var string Encoding tag, valid only when Codec is hevc.
      */
     public $CodecTag;
 
     /**
      * @var DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public $DynamicRangeInfo;
 
     /**
-     * @param integer $Bitrate Bitrate of video stream, unit: bps.
-     * @param integer $Height Video stream height. Unit: px.
+     * @param integer $Bitrate Bitrate of the video stream. Unit: bps.
+     * @param integer $Height Height of the video stream. Unit: px.
      * @param integer $Width Video stream width. Unit: px.
-     * @param string $Codec Video stream encoding format, for example, h264.
+     * @param string $Codec Video stream encoding format, for example h264.
      * @param integer $Fps Frame rate. Unit: hz.
-     * @param string $CodecTag Encoding tag. It is valid only when Codec is hevc.
+     * @param string $CodecTag Encoding tag, valid only when Codec is hevc.
      * @param DynamicRangeInfo $DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     function __construct()
     {

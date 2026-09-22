@@ -38,16 +38,16 @@ use TencentCloud\Common\AbstractModel;
 <li>Off: disabled</li>
 <li>Destroying: Being destroyed.</li>
 <li>Destroyed: completion of destruction.</li>
- * @method string getName() Obtain Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
- * @method void setName(string $Name) Set Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+ * @method string getName() Obtain Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
+ * @method void setName(string $Name) Set Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
  * @method string getMode() Obtain Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
  * @method void setMode(string $Mode) Set Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
  * @method array getStorageRegions() Obtain Storage region where the sub-application is enabled.
  * @method void setStorageRegions(array $StorageRegions) Set Storage region where the sub-application is enabled.
  * @method array getTags() Obtain tag bound to the sub-application.
@@ -85,7 +85,7 @@ class SubAppIdInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+     * @var string Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
      */
     public $Name;
 
@@ -93,7 +93,7 @@ class SubAppIdInfo extends AbstractModel
      * @var string Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
      */
     public $Mode;
 
@@ -117,11 +117,11 @@ Leave empty to select the FileID-only mode by default.
 <li>Off: disabled</li>
 <li>Destroying: Being destroyed.</li>
 <li>Destroyed: completion of destruction.</li>
-     * @param string $Name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+     * @param string $Name Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
      * @param string $Mode Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
      * @param array $StorageRegions Storage region where the sub-application is enabled.
      * @param array $Tags tag bound to the sub-application.
      */

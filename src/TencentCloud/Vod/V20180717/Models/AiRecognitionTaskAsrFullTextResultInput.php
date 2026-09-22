@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input for full speech recognition.
  *
- * @method integer getDefinition() Obtain Template ID for full text speech recognition.
- * @method void setDefinition(integer $Definition) Set Template ID for full text speech recognition.
+ * @method integer getDefinition() Obtain ID of the full speech identification template.
+ * @method void setDefinition(integer $Definition) Set ID of the full speech identification template.
  */
 class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel
 {
     /**
-     * @var integer Template ID for full text speech recognition.
+     * @var integer ID of the full speech identification template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Template ID for full text speech recognition.
+     * @param integer $Definition ID of the full speech identification template.
      */
     function __construct()
     {

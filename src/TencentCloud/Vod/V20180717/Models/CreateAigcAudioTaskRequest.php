@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcAudioTask request structure.
  *
- * @method integer getSubAppId() Obtain <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
- * @method void setSubAppId(integer $SubAppId) Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+ * @method integer getSubAppId() Obtain <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
  * @method string getModelName() Obtain <p>Model name.</p>
  * @method void setModelName(string $ModelName) Set <p>Model name.</p>
  * @method string getModelVersion() Obtain <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
  * @method void setModelVersion(string $ModelVersion) Set <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
- * @method string getSceneType() Obtain <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
- * @method void setSceneType(string $SceneType) Set <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+ * @method string getSceneType() Obtain <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
+ * @method void setSceneType(string $SceneType) Set <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
  * @method string getPrompt() Obtain <p>Description of the generated audio</p>
  * @method void setPrompt(string $Prompt) Set <p>Description of the generated audio</p>
- * @method array getVideoInfos() Obtain <p>Video information for reference.</p>
- * @method void setVideoInfos(array $VideoInfos) Set <p>Video information for reference.</p>
+ * @method array getVideoInfos() Obtain <p>Reference video information.</p>
+ * @method void setVideoInfos(array $VideoInfos) Set <p>Reference video information.</p>
  * @method array getAudioInfos() Obtain <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
  * @method void setAudioInfos(array $AudioInfos) Set <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
- * @method AigcAudioOutputConfig getOutputConfig() Obtain <p>Output parameter</p>
- * @method void setOutputConfig(AigcAudioOutputConfig $OutputConfig) Set <p>Output parameter</p>
+ * @method AigcAudioOutputConfig getOutputConfig() Obtain <p>Output parameters</p>
+ * @method void setOutputConfig(AigcAudioOutputConfig $OutputConfig) Set <p>Output parameters</p>
  * @method string getAdditionalParameters() Obtain <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
  * @method void setAdditionalParameters(string $AdditionalParameters) Set <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
  */
 class CreateAigcAudioTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * @var integer <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
      */
     public $SubAppId;
 
@@ -57,7 +57,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var string <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+     * @var string <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
      */
     public $SceneType;
 
@@ -67,7 +67,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $Prompt;
 
     /**
-     * @var array <p>Video information for reference.</p>
+     * @var array <p>Reference video information.</p>
      */
     public $VideoInfos;
 
@@ -77,7 +77,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $AudioInfos;
 
     /**
-     * @var AigcAudioOutputConfig <p>Output parameter</p>
+     * @var AigcAudioOutputConfig <p>Output parameters</p>
      */
     public $OutputConfig;
 
@@ -87,14 +87,14 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $AdditionalParameters;
 
     /**
-     * @param integer $SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * @param integer $SubAppId <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
      * @param string $ModelName <p>Model name.</p>
      * @param string $ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
-     * @param string $SceneType <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+     * @param string $SceneType <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
      * @param string $Prompt <p>Description of the generated audio</p>
-     * @param array $VideoInfos <p>Video information for reference.</p>
+     * @param array $VideoInfos <p>Reference video information.</p>
      * @param array $AudioInfos <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
-     * @param AigcAudioOutputConfig $OutputConfig <p>Output parameter</p>
+     * @param AigcAudioOutputConfig $OutputConfig <p>Output parameters</p>
      * @param string $AdditionalParameters <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
      */
     function __construct()

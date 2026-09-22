@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of the Audio and Video Quality Rebirth Template.
+ * Audio-visual quality rebirth template details.
  *
  * @method integer getDefinition() Obtain Audio and video quality rebirth template number.
  * @method void setDefinition(integer $Definition) Set Audio and video quality rebirth template number.
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Template type. Available values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
- * @method string getName() Obtain Audio and video quality rebirth template name.
- * @method void setName(string $Name) Set Audio and video quality rebirth template name.
- * @method string getComment() Obtain Description of the Audio and Video Quality Rebirth Template.
- * @method void setComment(string $Comment) Set Description of the Audio and Video Quality Rebirth Template.
+ * @method string getName() Obtain Audio-visual quality rebirth template name.
+ * @method void setName(string $Name) Set Audio-visual quality rebirth template name.
+ * @method string getComment() Obtain Audio and video quality rebirth template description.
+ * @method void setComment(string $Comment) Set Audio and video quality rebirth template description.
  * @method RebuildVideoInfo getRebuildVideoInfo() Obtain Audio-visual quality revival video control info.
  * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set Audio-visual quality revival video control info.
  * @method RebuildAudioInfo getRebuildAudioInfo() Obtain Audio-visual quality revival audio control info.
@@ -58,10 +58,10 @@ Default value: 0.
 <li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
- * @method string getCreateTime() Obtain Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getCreateTime() Obtain Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class RebuildMediaTemplate extends AbstractModel
 {
@@ -78,12 +78,12 @@ class RebuildMediaTemplate extends AbstractModel
     public $Type;
 
     /**
-     * @var string Audio and video quality rebirth template name.
+     * @var string Audio-visual quality rebirth template name.
      */
     public $Name;
 
     /**
-     * @var string Description of the Audio and Video Quality Rebirth Template.
+     * @var string Audio and video quality rebirth template description.
      */
     public $Comment;
 
@@ -129,12 +129,12 @@ Default value: 0.
     public $RemoveAudio;
 
     /**
-     * @var string Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
@@ -143,8 +143,8 @@ Default value: 0.
      * @param string $Type Template type. Available values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
-     * @param string $Name Audio and video quality rebirth template name.
-     * @param string $Comment Description of the Audio and Video Quality Rebirth Template.
+     * @param string $Name Audio-visual quality rebirth template name.
+     * @param string $Comment Audio and video quality rebirth template description.
      * @param RebuildVideoInfo $RebuildVideoInfo Audio-visual quality revival video control info.
      * @param RebuildAudioInfo $RebuildAudioInfo Audio-visual quality revival audio control info.
      * @param RebuildMediaTargetVideoStream $TargetVideoInfo Output video control information.
@@ -158,8 +158,8 @@ Default value: 0.
 <li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
-     * @param string $CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $CreateTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

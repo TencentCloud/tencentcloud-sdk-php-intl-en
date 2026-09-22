@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Aws S3 origin-pull authentication
+ * Authentication for Aws S3 origin-pull.
  *
- * @method string getSwitch() Obtain Switch for Aws S3 origin-pull authentication configuration. Valid values:
+ * @method string getSwitch() Obtain Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method void setSwitch(string $Switch) Set Switch for Aws S3 origin-pull authentication configuration. Valid values:
+ * @method void setSwitch(string $Switch) Set Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
  * @method string getAccessKey() Obtain Access ID.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class AwsPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Switch for Aws S3 origin-pull authentication configuration. Valid values:
+     * @var string Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -65,7 +65,7 @@ class AwsPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch Switch for Aws S3 origin-pull authentication configuration. Valid values:
+     * @param string $Switch Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      * @param string $AccessKey Access ID.

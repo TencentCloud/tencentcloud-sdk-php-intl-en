@@ -23,25 +23,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getStatus() Obtain Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
  * @method void setStatus(string $Status) Set Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
  * @method integer getErrCode() Obtain Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method string getFileId() Obtain Video file ID for publishing.
- * @method void setFileId(string $FileId) Set Video file ID for publishing.
- * @method integer getSourceDefinition() Obtain Transcoding template ID for the published video. 0 represents the original video.
- * @method void setSourceDefinition(integer $SourceDefinition) Set Transcoding template ID for the published video. 0 represents the original video.
+ * @method string getFileId() Obtain Publish the video file ID.
+ * @method void setFileId(string $FileId) Set Publish the video file ID.
+ * @method integer getSourceDefinition() Obtain Transcoding template ID of the published video. 0 represents the original video.
+ * @method void setSourceDefinition(integer $SourceDefinition) Set Transcoding template ID of the published video. 0 represents the original video.
  * @method string getPublishResult() Obtain WeChat Mini Program Video Publishing status. Parameter Value:
 <li>Pass: published successfully;</li>
 <li>Failed: Release failure;</li>
@@ -60,7 +60,7 @@ class WechatMiniProgramPublishTask extends AbstractModel
 
     /**
      * @var string Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
      */
@@ -69,7 +69,7 @@ FINISH: completed.
     /**
      * @var integer Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      */
     public $ErrCode;
 
@@ -79,12 +79,12 @@ FINISH: completed.
     public $Message;
 
     /**
-     * @var string Video file ID for publishing.
+     * @var string Publish the video file ID.
      */
     public $FileId;
 
     /**
-     * @var integer Transcoding template ID for the published video. 0 represents the original video.
+     * @var integer Transcoding template ID of the published video. 0 represents the original video.
      */
     public $SourceDefinition;
 
@@ -99,15 +99,15 @@ FINISH: completed.
     /**
      * @param string $TaskId Task ID.
      * @param string $Status Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
      * @param integer $ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      * @param string $Message Error message.
-     * @param string $FileId Video file ID for publishing.
-     * @param integer $SourceDefinition Transcoding template ID for the published video. 0 represents the original video.
+     * @param string $FileId Publish the video file ID.
+     * @param integer $SourceDefinition Transcoding template ID of the published video. 0 represents the original video.
      * @param string $PublishResult WeChat Mini Program Video Publishing status. Parameter Value:
 <li>Pass: published successfully;</li>
 <li>Failed: Release failure;</li>

@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Authentication configuration for AWS S3 origin-pull.
  * @method OssPrivateAccess getOssPrivateAccess() Obtain Authentication configuration for origin-pull from Alibaba Cloud OSS.
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Authentication configuration for origin-pull from Alibaba Cloud OSS.
- * @method HwPrivateAccess getHwPrivateAccess() Obtain Authentication configuration for origin-pull from Huawei Cloud Object Storage.
- * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+ * @method HwPrivateAccess getHwPrivateAccess() Obtain Huawei Cloud object storage origin-pull authentication configuration.
+ * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set Huawei Cloud object storage origin-pull authentication configuration.
  * @method OthersPrivateAccess getOthersPrivateAccess() Obtain Authentication configuration for origin-pull from other vendors' object storage.
  * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Authentication configuration for origin-pull from other vendors' object storage.
  */
@@ -156,7 +156,7 @@ class CDNDomainConfig extends AbstractModel
     public $OssPrivateAccess;
 
     /**
-     * @var HwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+     * @var HwPrivateAccess Huawei Cloud object storage origin-pull authentication configuration.
      */
     public $HwPrivateAccess;
 
@@ -186,7 +186,7 @@ class CDNDomainConfig extends AbstractModel
      * @param Quic $Quic Quic access configuration.
      * @param AwsPrivateAccess $AwsPrivateAccess Authentication configuration for AWS S3 origin-pull.
      * @param OssPrivateAccess $OssPrivateAccess Authentication configuration for origin-pull from Alibaba Cloud OSS.
-     * @param HwPrivateAccess $HwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+     * @param HwPrivateAccess $HwPrivateAccess Huawei Cloud object storage origin-pull authentication configuration.
      * @param OthersPrivateAccess $OthersPrivateAccess Authentication configuration for origin-pull from other vendors' object storage.
      */
     function __construct()

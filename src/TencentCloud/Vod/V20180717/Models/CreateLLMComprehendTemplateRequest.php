@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLevel() Obtain <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
  * @method void setLevel(string $Level) Set <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+ * @method integer getSubAppId() Obtain <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
  * @method string getName() Obtain <p>Large model parsing template name. Length limit: 64 characters.</p>
  * @method void setName(string $Name) Set <p>Large model parsing template name. Length limit: 64 characters.</p>
  * @method string getComment() Obtain <p>Large model parsing template description. Length limit: 256 characters.</p>
  * @method void setComment(string $Comment) Set <p>Large model parsing template description. Length limit: 256 characters.</p>
- * @method LLMComprehendSummary getSummary() Obtain <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
- * @method void setSummary(LLMComprehendSummary $Summary) Set <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
- * @method LLMComprehendAsr getAsr() Obtain <p>Text transcribing and parsing configuration</p>
- * @method void setAsr(LLMComprehendAsr $Asr) Set <p>Text transcribing and parsing configuration</p>
+ * @method LLMComprehendSummary getSummary() Obtain <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
+ * @method void setSummary(LLMComprehendSummary $Summary) Set <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
+ * @method LLMComprehendAsr getAsr() Obtain <p>Text transcription parsing configuration</p>
+ * @method void setAsr(LLMComprehendAsr $Asr) Set <p>Text transcription parsing configuration</p>
  * @method LLMComprehendFaceRecognition getFaceRecognition() Obtain <p>Face recognition configuration</p>
  * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) Set <p>Face recognition configuration</p>
  */
@@ -43,7 +43,7 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
     public $Level;
 
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+     * @var integer <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
@@ -58,12 +58,12 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var LLMComprehendSummary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+     * @var LLMComprehendSummary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
      */
     public $Summary;
 
     /**
-     * @var LLMComprehendAsr <p>Text transcribing and parsing configuration</p>
+     * @var LLMComprehendAsr <p>Text transcription parsing configuration</p>
      */
     public $Asr;
 
@@ -74,11 +74,11 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
 
     /**
      * @param string $Level <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+     * @param integer $SubAppId <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      * @param string $Name <p>Large model parsing template name. Length limit: 64 characters.</p>
      * @param string $Comment <p>Large model parsing template description. Length limit: 256 characters.</p>
-     * @param LLMComprehendSummary $Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
-     * @param LLMComprehendAsr $Asr <p>Text transcribing and parsing configuration</p>
+     * @param LLMComprehendSummary $Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
+     * @param LLMComprehendAsr $Asr <p>Text transcription parsing configuration</p>
      * @param LLMComprehendFaceRecognition $FaceRecognition <p>Face recognition configuration</p>
      */
     function __construct()

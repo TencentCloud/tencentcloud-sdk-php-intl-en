@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input of the video editing task.
  *
- * @method string getInputType() Obtain Source type of the input video. Valid values: File and Stream.
- * @method void setInputType(string $InputType) Set Source type of the input video. Valid values: File and Stream.
+ * @method string getInputType() Obtain Source type of the input video. Valid values: `File` and `Stream`.
+ * @method void setInputType(string $InputType) Set Source type of the input video. Valid values: `File` and `Stream`.
  * @method array getFileInfoSet() Obtain Input video file information. This field has a value when InputType is File.
  * @method void setFileInfoSet(array $FileInfoSet) Set Input video file information. This field has a value when InputType is File.
- * @method array getStreamInfoSet() Obtain Input stream information. This field has a value when InputType is Stream.
- * @method void setStreamInfoSet(array $StreamInfoSet) Set Input stream information. This field has a value when InputType is Stream.
+ * @method array getStreamInfoSet() Obtain Input stream information. This field has a value when `InputType` is `Stream`.
+ * @method void setStreamInfoSet(array $StreamInfoSet) Set Input stream information. This field has a value when `InputType` is `Stream`.
  */
 class EditMediaTaskInput extends AbstractModel
 {
     /**
-     * @var string Source type of the input video. Valid values: File and Stream.
+     * @var string Source type of the input video. Valid values: `File` and `Stream`.
      */
     public $InputType;
 
@@ -40,14 +40,14 @@ class EditMediaTaskInput extends AbstractModel
     public $FileInfoSet;
 
     /**
-     * @var array Input stream information. This field has a value when InputType is Stream.
+     * @var array Input stream information. This field has a value when `InputType` is `Stream`.
      */
     public $StreamInfoSet;
 
     /**
-     * @param string $InputType Source type of the input video. Valid values: File and Stream.
+     * @param string $InputType Source type of the input video. Valid values: `File` and `Stream`.
      * @param array $FileInfoSet Input video file information. This field has a value when InputType is File.
-     * @param array $StreamInfoSet Input stream information. This field has a value when InputType is Stream.
+     * @param array $StreamInfoSet Input stream information. This field has a value when `InputType` is `Stream`.
      */
     function __construct()
     {

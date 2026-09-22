@@ -20,51 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PullUpload request structure.
  *
- * @method string getMediaUrl() Obtain <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
- * @method void setMediaUrl(string $MediaUrl) Set <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
- * @method string getMediaType() Obtain <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
- * @method void setMediaType(string $MediaType) Set <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+ * @method string getMediaUrl() Obtain <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
+ * @method void setMediaUrl(string $MediaUrl) Set <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
+ * @method string getMediaType() Obtain <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+ * @method void setMediaType(string $MediaType) Set <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
  * @method string getMediaName() Obtain <p>Media name.</p>
  * @method void setMediaName(string $MediaName) Set <p>Media name.</p>
  * @method string getCoverUrl() Obtain <p>Video cover URL to fetch. Supported file formats: gif, jpeg (jpg), png.</p>
  * @method void setCoverUrl(string $CoverUrl) Set <p>Video cover URL to fetch. Supported file formats: gif, jpeg (jpg), png.</p>
  * @method string getProcedure() Obtain <p>For media subsequent task operation, see <a href="https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1">Upload specified task flow</a>.</p>
  * @method void setProcedure(string $Procedure) Set <p>For media subsequent task operation, see <a href="https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1">Upload specified task flow</a>.</p>
- * @method string getExpireTime() Obtain <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method string getStorageRegion() Obtain <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
- * @method void setStorageRegion(string $StorageRegion) Set <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
- * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
- * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
+ * @method string getExpireTime() Obtain <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method string getStorageRegion() Obtain <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+ * @method void setStorageRegion(string $StorageRegion) Set <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+ * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
+ * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
  * @method integer getTasksPriority() Obtain <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
  * @method void setTasksPriority(integer $TasksPriority) Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
- * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method string getExtInfo() Obtain <p>Reserved field, used for special purposes.</p>
- * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purposes.</p>
- * @method string getSourceContext() Obtain <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
- * @method void setSourceContext(string $SourceContext) Set <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used for special purpose.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purpose.</p>
+ * @method string getSourceContext() Obtain <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+ * @method void setSourceContext(string $SourceContext) Set <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
  * @method string getMediaStoragePath() Obtain <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
  * @method void setMediaStoragePath(string $MediaStoragePath) Set <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
  */
 class PullUploadRequest extends AbstractModel
 {
     /**
-     * @var string <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
+     * @var string <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
      */
     public $MediaUrl;
 
     /**
-     * @var string <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+     * @var string <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
      */
     public $MediaType;
 
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public $SubAppId;
 
@@ -84,17 +84,17 @@ class PullUploadRequest extends AbstractModel
     public $Procedure;
 
     /**
-     * @var string <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @var string <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+     * @var string <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
      */
     public $StorageRegion;
 
     /**
-     * @var integer <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
+     * @var integer <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
      */
     public $ClassId;
 
@@ -104,7 +104,7 @@ class PullUploadRequest extends AbstractModel
     public $TasksPriority;
 
     /**
-     * @var string <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @var string <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
@@ -114,12 +114,12 @@ class PullUploadRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string <p>Reserved field, used for special purposes.</p>
+     * @var string <p>Reserved field, used for special purpose.</p>
      */
     public $ExtInfo;
 
     /**
-     * @var string <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+     * @var string <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
      */
     public $SourceContext;
 
@@ -129,20 +129,20 @@ class PullUploadRequest extends AbstractModel
     public $MediaStoragePath;
 
     /**
-     * @param string $MediaUrl <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
-     * @param string $MediaType <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * @param string $MediaUrl <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
+     * @param string $MediaType <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      * @param string $MediaName <p>Media name.</p>
      * @param string $CoverUrl <p>Video cover URL to fetch. Supported file formats: gif, jpeg (jpg), png.</p>
      * @param string $Procedure <p>For media subsequent task operation, see <a href="https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1">Upload specified task flow</a>.</p>
-     * @param string $ExpireTime <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param string $StorageRegion <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
-     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
+     * @param string $ExpireTime <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param string $StorageRegion <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
      * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
-     * @param string $SessionContext <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $SessionContext <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-     * @param string $ExtInfo <p>Reserved field, used for special purposes.</p>
-     * @param string $SourceContext <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+     * @param string $ExtInfo <p>Reserved field, used for special purpose.</p>
+     * @param string $SourceContext <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
      * @param string $MediaStoragePath <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
      */
     function __construct()

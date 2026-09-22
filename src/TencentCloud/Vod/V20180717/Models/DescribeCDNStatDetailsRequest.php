@@ -32,18 +32,18 @@ use TencentCloud\Common\AbstractModel;
 <li>Requests: request count.</li>
 <li>QUICRequests: number of QUIC requests.</li>
 <li>IpVisit: number of IP visits.</li>
- * @method string getStartTime() Obtain Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getEndTime() Obtain End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setEndTime(string $EndTime) Set End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
- * @method array getDomainNames() Obtain Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
- * @method void setDomainNames(array $DomainNames) Set Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
+ * @method string getStartTime() Obtain Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setStartTime(string $StartTime) Set Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getEndTime() Obtain End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setEndTime(string $EndTime) Set End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method array getDomainNames() Obtain Domain name list. Up to 20 domain names can be queried for data at a time. By default, the combined usage data of all domain names is returned.
+ * @method void setDomainNames(array $DomainNames) Set Domain name list. Up to 20 domain names can be queried for data at a time. By default, the combined usage data of all domain names is returned.
  * @method string getArea() Obtain Service area. Valid values:
-<li>Chinese Mainland: Chinese mainland. </li>
+<li>Chinese Mainland: Chinese mainland.</li>
 <li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
-<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan (China), Japan, Malaysia, Indonesia, and South Korea. </li>
 <li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
 <li>Middle East: Middle East. </li>
 <li>Europe: Europe.</li>
@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 <li>Africa: Africa.</li>
 Default value: Chinese mainland.
  * @method void setArea(string $Area) Set Service area. Valid values:
-<li>Chinese Mainland: Chinese mainland. </li>
+<li>Chinese Mainland: Chinese mainland.</li>
 <li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
-<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan (China), Japan, Malaysia, Indonesia, and South Korea. </li>
 <li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
 <li>Middle East: Middle East. </li>
 <li>Europe: Europe.</li>
@@ -62,7 +62,7 @@ Default value: Chinese mainland.
 <li>South America: South America.</li>
 <li>Africa: Africa.</li>
 Default value: Chinese mainland.
- * @method array getDistricts() Obtain Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+ * @method array getDistricts() Obtain User's located region. When Area is Chinese Mainland, the value is the following region information. When Area is other values, the Districts parameter is ignored.
 <li>Beijing: Beijing.</li>
 <li>Inner Mongolia: Inner Mongolia.</li>
 <li>Shanxi: Shanxi.</li>
@@ -94,10 +94,10 @@ Default value: Chinese mainland.
 <li>Guangdong: Guangdong.</li>
 <li>Guangxi: Guangxi.</li>
 <li>Hainan: Hainan.</li>
-<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China), and Taiwan (China).</li>
 <li>Outside Chinese Mainland: overseas.</li>
 <li>Other: Other.</li>
- * @method void setDistricts(array $Districts) Set Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+ * @method void setDistricts(array $Districts) Set User's located region. When Area is Chinese Mainland, the value is the following region information. When Area is other values, the Districts parameter is ignored.
 <li>Beijing: Beijing.</li>
 <li>Inner Mongolia: Inner Mongolia.</li>
 <li>Shanxi: Shanxi.</li>
@@ -129,7 +129,7 @@ Default value: Chinese mainland.
 <li>Guangdong: Guangdong.</li>
 <li>Guangxi: Guangxi.</li>
 <li>Hainan: Hainan.</li>
-<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China), and Taiwan (China).</li>
 <li>Outside Chinese Mainland: overseas.</li>
 <li>Other: Other.</li>
  * @method array getIsps() Obtain User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
@@ -140,7 +140,7 @@ Default value: Chinese mainland.
 <li>China Mobile: China Mobile.</li>
 <li>China Mobile Tietong: China Tietong.</li>
 <li>ISPs outside Chinese Mainland: overseas carriers.</li>
-<li>Other ISPs: Other ISPs.</li>
+<li>Other ISPs: other ISPs.</li>
  * @method void setIsps(array $Isps) Set User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
 <li>China Telecom: China Telecom.</li>
 <li>China Unicom: China Unicom. </li>
@@ -149,14 +149,14 @@ Default value: Chinese mainland.
 <li>China Mobile: China Mobile.</li>
 <li>China Mobile Tietong: China Tietong.</li>
 <li>ISPs outside Chinese Mainland: overseas carriers.</li>
-<li>Other ISPs: Other ISPs.</li>
+<li>Other ISPs: other ISPs.</li>
  * @method integer getDataInterval() Obtain Time granularity of each data entry. Unit: minute. Valid values:
 <li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
-<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+<li>1440: day granularity, returns data at 1-day granularity within the specified query time. If the duration between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
 When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
  * @method void setDataInterval(integer $DataInterval) Set Time granularity of each data entry. Unit: minute. Valid values:
 <li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
-<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+<li>1440: day granularity, returns data at 1-day granularity within the specified query time. If the duration between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
 When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
  */
 class DescribeCDNStatDetailsRequest extends AbstractModel
@@ -172,30 +172,30 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
     public $Metric;
 
     /**
-     * @var string Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $StartTime;
 
     /**
-     * @var string End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $EndTime;
 
     /**
-     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
+     * @var array Domain name list. Up to 20 domain names can be queried for data at a time. By default, the combined usage data of all domain names is returned.
      */
     public $DomainNames;
 
     /**
      * @var string Service area. Valid values:
-<li>Chinese Mainland: Chinese mainland. </li>
+<li>Chinese Mainland: Chinese mainland.</li>
 <li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
-<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan (China), Japan, Malaysia, Indonesia, and South Korea. </li>
 <li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
 <li>Middle East: Middle East. </li>
 <li>Europe: Europe.</li>
@@ -207,7 +207,7 @@ Default value: Chinese mainland.
     public $Area;
 
     /**
-     * @var array Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+     * @var array User's located region. When Area is Chinese Mainland, the value is the following region information. When Area is other values, the Districts parameter is ignored.
 <li>Beijing: Beijing.</li>
 <li>Inner Mongolia: Inner Mongolia.</li>
 <li>Shanxi: Shanxi.</li>
@@ -239,7 +239,7 @@ Default value: Chinese mainland.
 <li>Guangdong: Guangdong.</li>
 <li>Guangxi: Guangxi.</li>
 <li>Hainan: Hainan.</li>
-<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China), and Taiwan (China).</li>
 <li>Outside Chinese Mainland: overseas.</li>
 <li>Other: Other.</li>
      */
@@ -254,14 +254,14 @@ Default value: Chinese mainland.
 <li>China Mobile: China Mobile.</li>
 <li>China Mobile Tietong: China Tietong.</li>
 <li>ISPs outside Chinese Mainland: overseas carriers.</li>
-<li>Other ISPs: Other ISPs.</li>
+<li>Other ISPs: other ISPs.</li>
      */
     public $Isps;
 
     /**
      * @var integer Time granularity of each data entry. Unit: minute. Valid values:
 <li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
-<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+<li>1440: day granularity, returns data at 1-day granularity within the specified query time. If the duration between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
 When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
      */
     public $DataInterval;
@@ -273,14 +273,14 @@ When the time span between StartTime and EndTime is more than 24 hours, DataInte
 <li>Requests: request count.</li>
 <li>QUICRequests: number of QUIC requests.</li>
 <li>IpVisit: number of IP visits.</li>
-     * @param string $StartTime Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $EndTime End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
-     * @param array $DomainNames Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
+     * @param string $StartTime Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $EndTime End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param array $DomainNames Domain name list. Up to 20 domain names can be queried for data at a time. By default, the combined usage data of all domain names is returned.
      * @param string $Area Service area. Valid values:
-<li>Chinese Mainland: Chinese mainland. </li>
+<li>Chinese Mainland: Chinese mainland.</li>
 <li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
-<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan (China), Japan, Malaysia, Indonesia, and South Korea. </li>
 <li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
 <li>Middle East: Middle East. </li>
 <li>Europe: Europe.</li>
@@ -288,7 +288,7 @@ When the time span between StartTime and EndTime is more than 24 hours, DataInte
 <li>South America: South America.</li>
 <li>Africa: Africa.</li>
 Default value: Chinese mainland.
-     * @param array $Districts Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+     * @param array $Districts User's located region. When Area is Chinese Mainland, the value is the following region information. When Area is other values, the Districts parameter is ignored.
 <li>Beijing: Beijing.</li>
 <li>Inner Mongolia: Inner Mongolia.</li>
 <li>Shanxi: Shanxi.</li>
@@ -320,7 +320,7 @@ Default value: Chinese mainland.
 <li>Guangdong: Guangdong.</li>
 <li>Guangxi: Guangxi.</li>
 <li>Hainan: Hainan.</li>
-<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China), and Taiwan (China).</li>
 <li>Outside Chinese Mainland: overseas.</li>
 <li>Other: Other.</li>
      * @param array $Isps User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
@@ -331,10 +331,10 @@ Default value: Chinese mainland.
 <li>China Mobile: China Mobile.</li>
 <li>China Mobile Tietong: China Tietong.</li>
 <li>ISPs outside Chinese Mainland: overseas carriers.</li>
-<li>Other ISPs: Other ISPs.</li>
+<li>Other ISPs: other ISPs.</li>
      * @param integer $DataInterval Time granularity of each data entry. Unit: minute. Valid values:
 <li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
-<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+<li>1440: day granularity, returns data at 1-day granularity within the specified query time. If the duration between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
 When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
      */
     function __construct()

@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output parameter setting for async dubbing.
+ * Output parameter settings for asynchronous dubbing.
  *
- * @method string getType() Obtain <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID</li><li>url: Audio URL, valid for 24 hours.</li></ul>
- * @method void setType(string $Type) Set <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID</li><li>url: Audio URL, valid for 24 hours.</li></ul>
+ * @method string getType() Obtain <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
+ * @method void setType(string $Type) Set <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
  */
 class TextToSpeechAsyncOutputOption extends AbstractModel
 {
     /**
-     * @var string <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID</li><li>url: Audio URL, valid for 24 hours.</li></ul>
+     * @var string <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
      */
     public $Type;
 
     /**
-     * @param string $Type <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID</li><li>url: Audio URL, valid for 24 hours.</li></ul>
+     * @param string $Type <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
      */
     function __construct()
     {

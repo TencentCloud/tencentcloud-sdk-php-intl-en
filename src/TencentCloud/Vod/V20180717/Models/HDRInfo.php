@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * High dynamic range type control parameter.
  *
- * @method string getSwitch() Obtain High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
- * @method void setSwitch(string $Switch) Set High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+ * @method string getSwitch() Obtain HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
+ * @method void setSwitch(string $Switch) Set HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
  * @method string getType() Obtain High dynamic range type. Valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
@@ -44,9 +44,9 @@ Note:
 class HDRInfo extends AbstractModel
 {
     /**
-     * @var string High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+     * @var string HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
      */
     public $Switch;
 
@@ -62,9 +62,9 @@ Note:
     public $Type;
 
     /**
-     * @param string $Switch High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+     * @param string $Switch HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
      * @param string $Type High dynamic range type. Valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>

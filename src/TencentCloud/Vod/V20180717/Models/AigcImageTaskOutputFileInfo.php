@@ -18,24 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output file information for an AIGC image task.
+ * Information of the output file of an AIGC image generation task.
  *
  * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li></p>
  * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li></p>
- * @method string getMediaName() Obtain <p>Output filename, up to 64 characters. By default, the system specifies the generated file name. Valid when StorageMode is Permanent.</p>
- * @method void setMediaName(string $MediaName) Set <p>Output filename, up to 64 characters. By default, the system specifies the generated file name. Valid when StorageMode is Permanent.</p>
- * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
- * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
- * @method string getExpireTime() Obtain <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method string getMediaName() Obtain <p>Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.</p>
+ * @method void setMediaName(string $MediaName) Set <p>Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.</p>
+ * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+ * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+ * @method string getExpireTime() Obtain <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
  * @method string getFileType() Obtain <p>File type, such as png or jpg.</p>
  * @method void setFileType(string $FileType) Set <p>File type, such as png or jpg.</p>
  * @method string getFileUrl() Obtain <p>Media file playback address.</p>
  * @method void setFileUrl(string $FileUrl) Set <p>Media file playback address.</p>
  * @method string getFileId() Obtain <p>Media file ID. Valid when StorageMode is Permanent.</p>
  * @method void setFileId(string $FileId) Set <p>Media file ID. Valid when StorageMode is Permanent.</p>
- * @method MediaMetaData getMetaData() Obtain <p>Meta information of the output image.</p>
- * @method void setMetaData(MediaMetaData $MetaData) Set <p>Meta information of the output image.</p>
+ * @method MediaMetaData getMetaData() Obtain <p>Meta-information of the output image.</p>
+ * @method void setMetaData(MediaMetaData $MetaData) Set <p>Meta-information of the output image.</p>
  */
 class AigcImageTaskOutputFileInfo extends AbstractModel
 {
@@ -45,17 +45,17 @@ class AigcImageTaskOutputFileInfo extends AbstractModel
     public $StorageMode;
 
     /**
-     * @var string <p>Output filename, up to 64 characters. By default, the system specifies the generated file name. Valid when StorageMode is Permanent.</p>
+     * @var string <p>Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.</p>
      */
     public $MediaName;
 
     /**
-     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
      */
     public $ClassId;
 
     /**
-     * @var string <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @var string <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public $ExpireTime;
 
@@ -75,19 +75,19 @@ class AigcImageTaskOutputFileInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var MediaMetaData <p>Meta information of the output image.</p>
+     * @var MediaMetaData <p>Meta-information of the output image.</p>
      */
     public $MetaData;
 
     /**
      * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li></p>
-     * @param string $MediaName <p>Output filename, up to 64 characters. By default, the system specifies the generated file name. Valid when StorageMode is Permanent.</p>
-     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
-     * @param string $ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param string $MediaName <p>Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.</p>
+     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+     * @param string $ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      * @param string $FileType <p>File type, such as png or jpg.</p>
      * @param string $FileUrl <p>Media file playback address.</p>
      * @param string $FileId <p>Media file ID. Valid when StorageMode is Permanent.</p>
-     * @param MediaMetaData $MetaData <p>Meta information of the output image.</p>
+     * @param MediaMetaData $MetaData <p>Meta-information of the output image.</p>
      */
     function __construct()
     {

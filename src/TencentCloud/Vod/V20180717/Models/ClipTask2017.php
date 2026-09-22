@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video editing task information. This structure is only used for tasks initiated by the 2017 version [video editing](https://www.tencentcloud.com/document/product/266/10156?from_cn_redirect=1) API.
+ * Video editing task information. This structure is only used for tasks initiated by the 2017 version of the video editing API.
  *
  * @method string getTaskId() Obtain Video clipping task ID.
  * @method void setTaskId(string $TaskId) Set Video clipping task ID.
  * @method string getSrcFileId() Obtain Video editing task source file ID.
  * @method void setSrcFileId(string $SrcFileId) Set Video editing task source file ID.
- * @method ClipFileInfo2017 getFileInfo() Obtain File information of the video editing output.
- * @method void setFileInfo(ClipFileInfo2017 $FileInfo) Set File information of the video editing output.
+ * @method ClipFileInfo2017 getFileInfo() Obtain Video editing output file information.
+ * @method void setFileInfo(ClipFileInfo2017 $FileInfo) Set Video editing output file information.
  */
 class ClipTask2017 extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ClipTask2017 extends AbstractModel
     public $SrcFileId;
 
     /**
-     * @var ClipFileInfo2017 File information of the video editing output.
+     * @var ClipFileInfo2017 Video editing output file information.
      */
     public $FileInfo;
 
     /**
      * @param string $TaskId Video clipping task ID.
      * @param string $SrcFileId Video editing task source file ID.
-     * @param ClipFileInfo2017 $FileInfo File information of the video editing output.
+     * @param ClipFileInfo2017 $FileInfo Video editing output file information.
      */
     function __construct()
     {

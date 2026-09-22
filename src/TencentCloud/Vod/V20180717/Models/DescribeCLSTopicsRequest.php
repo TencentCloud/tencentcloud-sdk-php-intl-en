@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCLSRegion(string $CLSRegion) Set Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
  * @method string getLogsetId() Obtain Logset ID of the log topic.
  * @method void setLogsetId(string $LogsetId) Set Logset ID of the log topic.
- * @method array getTopicIds() Obtain List of log topic IDs. If left empty, it means query all log topics.
- * @method void setTopicIds(array $TopicIds) Set List of log topic IDs. If left empty, it means query all log topics.
+ * @method array getTopicIds() Obtain List of log topic IDs. If left empty, it means to query all log topics.
+ * @method void setTopicIds(array $TopicIds) Set List of log topic IDs. If left empty, it means to query all log topics.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 20. Maximum value: 100.
@@ -44,7 +44,7 @@ class DescribeCLSTopicsRequest extends AbstractModel
     public $LogsetId;
 
     /**
-     * @var array List of log topic IDs. If left empty, it means query all log topics.
+     * @var array List of log topic IDs. If left empty, it means to query all log topics.
      */
     public $TopicIds;
 
@@ -61,7 +61,7 @@ class DescribeCLSTopicsRequest extends AbstractModel
     /**
      * @param string $CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      * @param string $LogsetId Logset ID of the log topic.
-     * @param array $TopicIds List of log topic IDs. If left empty, it means query all log topics.
+     * @param array $TopicIds List of log topic IDs. If left empty, it means to query all log topics.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 20. Maximum value: 100.
      */

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWebhookId() Obtain <p>Callback unique ID</p>
  * @method void setWebhookId(integer $WebhookId) Set <p>Callback unique ID</p>
- * @method string getWebhookName() Obtain <p>Callback URL name</p>
- * @method void setWebhookName(string $WebhookName) Set <p>Callback URL name</p>
+ * @method string getWebhookName() Obtain <p>Callback address name</p>
+ * @method void setWebhookName(string $WebhookName) Set <p>Callback address name</p>
  * @method string getScene() Obtain <p>Callback enumeration scenario.</p>
  * @method void setScene(string $Scene) Set <p>Callback enumeration scenario.</p>
  * @method string getWebhookURL() Obtain <p>Callback URL, must use HTTPS</p>
@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddTime(string $AddTime) Set <p>Addition Time</p><p>Parameter format: Format example: 2026-09-09 14:33:41</p>
  * @method string getModTime() Obtain <p>Update time</p><p>Parameter format: Format example: 2026-09-09 14:33:41</p>
  * @method void setModTime(string $ModTime) Set <p>Update time</p><p>Parameter format: Format example: 2026-09-09 14:33:41</p>
- * @method string getSignatureKey() Obtain <p>Callback request key</p>
- * @method void setSignatureKey(string $SignatureKey) Set <p>Callback request key</p>
- * @method boolean getHasSignatureKey() Obtain <p>Existence of callback API key</p>
- * @method void setHasSignatureKey(boolean $HasSignatureKey) Set <p>Existence of callback API key</p>
+ * @method string getSignatureKey() Obtain <p>Callback signature key, up to 128 characters.</p>
+ * @method void setSignatureKey(string $SignatureKey) Set <p>Callback signature key, up to 128 characters.</p>
+ * @method boolean getHasSignatureKey() Obtain <p>Existence of callback signature key</p>
+ * @method void setHasSignatureKey(boolean $HasSignatureKey) Set <p>Existence of callback signature key</p>
  */
 class WebhookList extends AbstractModel
 {
@@ -45,7 +45,7 @@ class WebhookList extends AbstractModel
     public $WebhookId;
 
     /**
-     * @var string <p>Callback URL name</p>
+     * @var string <p>Callback address name</p>
      */
     public $WebhookName;
 
@@ -70,24 +70,24 @@ class WebhookList extends AbstractModel
     public $ModTime;
 
     /**
-     * @var string <p>Callback request key</p>
+     * @var string <p>Callback signature key, up to 128 characters.</p>
      */
     public $SignatureKey;
 
     /**
-     * @var boolean <p>Existence of callback API key</p>
+     * @var boolean <p>Existence of callback signature key</p>
      */
     public $HasSignatureKey;
 
     /**
      * @param integer $WebhookId <p>Callback unique ID</p>
-     * @param string $WebhookName <p>Callback URL name</p>
+     * @param string $WebhookName <p>Callback address name</p>
      * @param string $Scene <p>Callback enumeration scenario.</p>
      * @param string $WebhookURL <p>Callback URL, must use HTTPS</p>
      * @param string $AddTime <p>Addition Time</p><p>Parameter format: Format example: 2026-09-09 14:33:41</p>
      * @param string $ModTime <p>Update time</p><p>Parameter format: Format example: 2026-09-09 14:33:41</p>
-     * @param string $SignatureKey <p>Callback request key</p>
-     * @param boolean $HasSignatureKey <p>Existence of callback API key</p>
+     * @param string $SignatureKey <p>Callback signature key, up to 128 characters.</p>
+     * @param boolean $HasSignatureKey <p>Existence of callback signature key</p>
      */
     function __construct()
     {

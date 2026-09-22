@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiRecognitionTaskAsrTranslateResultInput $Input) Set Voice translation task input information.
  * @method AiRecognitionTaskAsrTranslateResultOutput getOutput() Obtain Voice translation task output information.
  * @method void setOutput(AiRecognitionTaskAsrTranslateResultOutput $Output) Set Voice translation task output information.
- * @method integer getProgress() Obtain Voice translation task progress, in the range of [0,100].
- * @method void setProgress(integer $Progress) Set Voice translation task progress, in the range of [0,100].
- * @method string getBeginProcessTime() Obtain Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Voice translation task progress, value ranges from 0 to 100.
+ * @method void setProgress(integer $Progress) Set Voice translation task progress, value ranges from 0 to 100.
+ * @method string getBeginProcessTime() Obtain Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Time for voice translation task completion in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Time for voice translation task completion in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -72,12 +72,12 @@ class AiRecognitionTaskAsrTranslateResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Voice translation task progress, in the range of [0,100].
+     * @var integer Voice translation task progress, value ranges from 0 to 100.
      */
     public $Progress;
 
     /**
-     * @var string Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -93,8 +93,8 @@ class AiRecognitionTaskAsrTranslateResult extends AbstractModel
      * @param string $Message Error message.
      * @param AiRecognitionTaskAsrTranslateResultInput $Input Voice translation task input information.
      * @param AiRecognitionTaskAsrTranslateResultOutput $Output Voice translation task output information.
-     * @param integer $Progress Voice translation task progress, in the range of [0,100].
-     * @param string $BeginProcessTime Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Voice translation task progress, value ranges from 0 to 100.
+     * @param string $BeginProcessTime Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Time for voice translation task completion in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC voice clone input file information
+ * AIGC voice clone input file info
  *
  * @method string getType() Obtain <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
  * @method void setType(string $Type) Set <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
- * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field from the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. Images less than 10M are recommended; 2. Valid image formats: jpeg, jpg, png.</p>
- * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field from the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. Images less than 10M are recommended; 2. Valid image formats: jpeg, jpg, png.</p>
- * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended. 2. Supported image formats: jpeg, jpg, png.</p>
- * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended. 2. Supported image formats: jpeg, jpg, png.</p>
+ * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
+ * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
+ * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
  */
 class AigcAudioCloneInputFileInfo extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AigcAudioCloneInputFileInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field from the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. Images less than 10M are recommended; 2. Valid image formats: jpeg, jpg, png.</p>
+     * @var string <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
      */
     public $FileId;
 
     /**
-     * @var string <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended. 2. Supported image formats: jpeg, jpg, png.</p>
+     * @var string <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
      */
     public $Url;
 
     /**
      * @param string $Type <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
-     * @param string $FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field from the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. Images less than 10M are recommended; 2. Valid image formats: jpeg, jpg, png.</p>
-     * @param string $Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended. 2. Supported image formats: jpeg, jpg, png.</p>
+     * @param string $FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
+     * @param string $Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. An image less than 10M is recommended; 2. Image format values: jpeg, jpg, png.</p>
      */
     function __construct()
     {

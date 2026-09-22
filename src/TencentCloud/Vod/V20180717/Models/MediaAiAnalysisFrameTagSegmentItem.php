@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Segments for frame tagging
+ * Segments by frame tag
  *
- * @method float getStartTimeOffset() Obtain <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
- * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+ * @method float getStartTimeOffset() Obtain <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
  * @method float getEndTimeOffset() Obtain <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
  * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
  * @method array getTagSet() Obtain <p>Tag list in the time segment.</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
 {
     /**
-     * @var float <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+     * @var float <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
      */
     public $StartTimeOffset;
 
@@ -45,7 +45,7 @@ class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
     public $TagSet;
 
     /**
-     * @param float $StartTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+     * @param float $StartTimeOffset <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
      * @param float $EndTimeOffset <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
      * @param array $TagSet <p>Tag list in the time segment.</p>
      */

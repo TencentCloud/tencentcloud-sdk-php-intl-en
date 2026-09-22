@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image asynchronous processing configuration.
+ * Asynchronous image processing configuration.
  *
  * @method ImageEncodeConfig getEncodeConfig() Obtain <p>Image transcoding output configuration.</p>
  * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set <p>Image transcoding output configuration.</p>

@@ -18,42 +18,42 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video editing task info
+ * Edit video task information.
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getStatus() Obtain Task stream status. Valid values:
+ * @method string getStatus() Obtain Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
- * @method void setStatus(string $Status) Set Task stream status. Valid values:
+ * @method void setStatus(string $Status) Set Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
  * @method integer getErrCode() Obtain Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method integer getProgress() Obtain Video editing task progress, in the range of [0,100].
  * @method void setProgress(integer $Progress) Set Video editing task progress, in the range of [0,100].
- * @method EditMediaTaskInput getInput() Obtain Input of a video editing task.
- * @method void setInput(EditMediaTaskInput $Input) Set Input of a video editing task.
+ * @method EditMediaTaskInput getInput() Obtain Input for a video editing task.
+ * @method void setInput(EditMediaTaskInput $Input) Set Input for a video editing task.
  * @method EditMediaTaskOutput getOutput() Obtain Output of the video editing task.
  * @method void setOutput(EditMediaTaskOutput $Output) Set Output of the video editing task.
- * @method MediaMetaData getMetaData() Obtain Meta information of the output video.
- * @method void setMetaData(MediaMetaData $MetaData) Set Meta information of the output video.
- * @method string getProcedureTaskId() Obtain Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
- * @method void setProcedureTaskId(string $ProcedureTaskId) Set Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
- * @method string getReviewAudioVideoTaskId() Obtain Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
- * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
- * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method MediaMetaData getMetaData() Obtain Metadata of the output video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the output video.
+ * @method string getProcedureTaskId() Obtain Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
+ * @method void setProcedureTaskId(string $ProcedureTaskId) Set Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
+ * @method string getReviewAudioVideoTaskId() Obtain Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+ * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  */
@@ -65,7 +65,7 @@ class EditMediaTask extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Task stream status. Valid values:
+     * @var string Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -73,14 +73,14 @@ class EditMediaTask extends AbstractModel
 
     /**
      * @var integer Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
@@ -95,7 +95,7 @@ class EditMediaTask extends AbstractModel
     public $Progress;
 
     /**
-     * @var EditMediaTaskInput Input of a video editing task.
+     * @var EditMediaTaskInput Input for a video editing task.
      */
     public $Input;
 
@@ -105,22 +105,22 @@ class EditMediaTask extends AbstractModel
     public $Output;
 
     /**
-     * @var MediaMetaData Meta information of the output video.
+     * @var MediaMetaData Metadata of the output video.
      */
     public $MetaData;
 
     /**
-     * @var string Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+     * @var string Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
      */
     public $ProcedureTaskId;
 
     /**
-     * @var string Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
+     * @var string Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
      */
     public $ReviewAudioVideoTaskId;
 
     /**
-     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public $SessionId;
 
@@ -131,22 +131,22 @@ class EditMediaTask extends AbstractModel
 
     /**
      * @param string $TaskId Task ID.
-     * @param string $Status Task stream status. Valid values:
+     * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      * @param integer $ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
-     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param string $Message Error message.
      * @param integer $Progress Video editing task progress, in the range of [0,100].
-     * @param EditMediaTaskInput $Input Input of a video editing task.
+     * @param EditMediaTaskInput $Input Input for a video editing task.
      * @param EditMediaTaskOutput $Output Output of the video editing task.
-     * @param MediaMetaData $MetaData Meta information of the output video.
-     * @param string $ProcedureTaskId Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
-     * @param string $ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
-     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param MediaMetaData $MetaData Metadata of the output video.
+     * @param string $ProcedureTaskId Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
+     * @param string $ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     function __construct()

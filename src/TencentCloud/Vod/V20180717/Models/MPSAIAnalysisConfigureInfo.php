@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration options for MPS intelligent analysis templates
+ * Configuration options of MPS intelligent analysis templates
  *
- * @method string getSwitch() Obtain <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
- * @method void setSwitch(string $Switch) Set <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
+ * @method string getSwitch() Obtain <p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
+ * @method void setSwitch(string $Switch) Set <p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
  */
 class MPSAIAnalysisConfigureInfo extends AbstractModel
 {
     /**
-     * @var string <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
+     * @var string <p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
      */
     public $Switch;
 
     /**
-     * @param string $Switch <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
+     * @param string $Switch <p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
      */
     function __construct()
     {

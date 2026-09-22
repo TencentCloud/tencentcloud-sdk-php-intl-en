@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image super-resolution control parameters
+ * Image super-resolution control parameters.
  *
  * @method string getSwitch() Obtain Super resolution control switch. Optional values:
 <li>ON: Turn on super resolution;</li>
@@ -26,13 +26,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Super resolution control switch. Optional values:
 <li>ON: Turn on super resolution;</li>
 <li>OFF: Disable super resolution.</li>
- * @method string getType() Obtain Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+ * @method string getType() Obtain Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
- * @method void setType(string $Type) Set Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+ * @method void setType(string $Type) Set Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
  * @method integer getSize() Obtain Super resolution multiple. Available value: 2.
 Default value: 2.
@@ -49,9 +49,9 @@ class SuperResolutionInfo extends AbstractModel
     public $Switch;
 
     /**
-     * @var string Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+     * @var string Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
      */
     public $Type;
@@ -66,9 +66,9 @@ Default value: 2.
      * @param string $Switch Super resolution control switch. Optional values:
 <li>ON: Turn on super resolution;</li>
 <li>OFF: Disable super resolution.</li>
-     * @param string $Type Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+     * @param string $Type Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
      * @param integer $Size Super resolution multiple. Available value: 2.
 Default value: 2.

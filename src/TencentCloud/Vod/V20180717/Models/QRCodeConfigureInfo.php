@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
  * @method void setSwitch(string $Switch) Set QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
  */
 class QRCodeConfigureInfo extends AbstractModel
 {
     /**
      * @var string QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
     /**
      * @param string $Switch QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
      */
     function __construct()
     {

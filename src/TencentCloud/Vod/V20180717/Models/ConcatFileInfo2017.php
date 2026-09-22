@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Source file information for video stitching (2017 version)
+ * Source file information for video stitching (2017)
  *
  * @method integer getErrCode() Obtain Error code.
 <li>0: success;</li>
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method string getFileId() Obtain ID of the source file for video splicing.
  * @method void setFileId(string $FileId) Set ID of the source file for video splicing.
- * @method string getFileUrl() Obtain Domain names or IP addresses of source files for video splicing.
- * @method void setFileUrl(string $FileUrl) Set Domain names or IP addresses of source files for video splicing.
+ * @method string getFileUrl() Obtain Addresses of the source files for video stitching.
+ * @method void setFileUrl(string $FileUrl) Set Addresses of the source files for video stitching.
  * @method string getFileType() Obtain Format of the source file for video splicing.
  * @method void setFileType(string $FileType) Set Format of the source file for video splicing.
  */
@@ -55,7 +55,7 @@ class ConcatFileInfo2017 extends AbstractModel
     public $FileId;
 
     /**
-     * @var string Domain names or IP addresses of source files for video splicing.
+     * @var string Addresses of the source files for video stitching.
      */
     public $FileUrl;
 
@@ -70,7 +70,7 @@ class ConcatFileInfo2017 extends AbstractModel
 <li>Other value: failure.</li>
      * @param string $Message Error message.
      * @param string $FileId ID of the source file for video splicing.
-     * @param string $FileUrl Domain names or IP addresses of source files for video splicing.
+     * @param string $FileUrl Addresses of the source files for video stitching.
      * @param string $FileType Format of the source file for video splicing.
      */
     function __construct()

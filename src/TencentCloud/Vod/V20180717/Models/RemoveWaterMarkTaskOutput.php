@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method string getFileType() Obtain File type, for example, mp4 or mp3.
- * @method void setFileType(string $FileType) Set File type, for example, mp4 or mp3.
+ * @method string getFileType() Obtain File type, such as mp4 and mp3.
+ * @method void setFileType(string $FileType) Set File type, such as mp4 and mp3.
  * @method string getFileUrl() Obtain Media file playback address.
  * @method void setFileUrl(string $FileUrl) Set Media file playback address.
- * @method string getMediaName() Obtain Filename, which contains up to 64 characters.
- * @method void setMediaName(string $MediaName) Set Filename, which contains up to 64 characters.
+ * @method string getMediaName() Obtain Filename. It can contain up to 64 characters.
+ * @method void setMediaName(string $MediaName) Set Filename. It can contain up to 64 characters.
  * @method MediaMetaData getMetaData() Obtain Meta information, including size, duration, video stream information, and audio stream information.
  * @method void setMetaData(MediaMetaData $MetaData) Set Meta information, including size, duration, video stream information, and audio stream information.
  */
@@ -39,7 +39,7 @@ class RemoveWaterMarkTaskOutput extends AbstractModel
     public $FileId;
 
     /**
-     * @var string File type, for example, mp4 or mp3.
+     * @var string File type, such as mp4 and mp3.
      */
     public $FileType;
 
@@ -49,7 +49,7 @@ class RemoveWaterMarkTaskOutput extends AbstractModel
     public $FileUrl;
 
     /**
-     * @var string Filename, which contains up to 64 characters.
+     * @var string Filename. It can contain up to 64 characters.
      */
     public $MediaName;
 
@@ -60,9 +60,9 @@ class RemoveWaterMarkTaskOutput extends AbstractModel
 
     /**
      * @param string $FileId Media file ID.
-     * @param string $FileType File type, for example, mp4 or mp3.
+     * @param string $FileType File type, such as mp4 and mp3.
      * @param string $FileUrl Media file playback address.
-     * @param string $MediaName Filename, which contains up to 64 characters.
+     * @param string $MediaName Filename. It can contain up to 64 characters.
      * @param MediaMetaData $MetaData Meta information, including size, duration, video stream information, and audio stream information.
      */
     function __construct()

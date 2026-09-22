@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edit video file information of on-demand video
+ * Edit information of VOD video files
  *
  * @method string getFileId() Obtain Video ID.
  * @method void setFileId(string $FileId) Set Video ID.

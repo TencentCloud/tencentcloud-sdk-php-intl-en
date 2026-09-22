@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent media information processed by MPS
+ * Intelligent media information after MPS processing
  *
- * @method array getAiMediaList() Obtain Intelligent media information list processed by MPS
- * @method void setAiMediaList(array $AiMediaList) Set Intelligent media information list processed by MPS
+ * @method array getAiMediaList() Obtain Intelligent media information list after MPS processing
+ * @method void setAiMediaList(array $AiMediaList) Set Intelligent media information list after MPS processing
  */
 class MPSAiMediaInfo extends AbstractModel
 {
     /**
-     * @var array Intelligent media information list processed by MPS
+     * @var array Intelligent media information list after MPS processing
      */
     public $AiMediaList;
 
     /**
-     * @param array $AiMediaList Intelligent media information list processed by MPS
+     * @param array $AiMediaList Intelligent media information list after MPS processing
      */
     function __construct()
     {

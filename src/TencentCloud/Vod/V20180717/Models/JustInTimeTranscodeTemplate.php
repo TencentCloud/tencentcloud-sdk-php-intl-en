@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Just in time transcoding template details.
+ * Details of the just in time transcoding template.
  *
  * @method string getType() Obtain Template type.
  * @method void setType(string $Type) Set Template type.

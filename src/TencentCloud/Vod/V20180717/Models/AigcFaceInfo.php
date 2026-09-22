@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC face information
  *
- * @method string getSessionId() Obtain Principal ID. Record the returned principal ID.
- * @method void setSessionId(string $SessionId) Set Principal ID. Record the returned principal ID.
+ * @method string getSessionId() Obtain Principal ID. Note the returned principal ID.
+ * @method void setSessionId(string $SessionId) Set Principal ID. Note the returned principal ID.
  * @method array getFaceInfoList() Obtain Face information list.
  * @method void setFaceInfoList(array $FaceInfoList) Set Face information list.
  */
 class AigcFaceInfo extends AbstractModel
 {
     /**
-     * @var string Principal ID. Record the returned principal ID.
+     * @var string Principal ID. Note the returned principal ID.
      */
     public $SessionId;
 
@@ -38,7 +38,7 @@ class AigcFaceInfo extends AbstractModel
     public $FaceInfoList;
 
     /**
-     * @param string $SessionId Principal ID. Record the returned principal ID.
+     * @param string $SessionId Principal ID. Note the returned principal ID.
      * @param array $FaceInfoList Face information list.
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Source video information to process, including video name and custom video ID.
+ * Source video information to be processed, including video name and custom video ID.
  *
  * @method string getUrl() Obtain Video URL.
  * @method void setUrl(string $Url) Set Video URL.

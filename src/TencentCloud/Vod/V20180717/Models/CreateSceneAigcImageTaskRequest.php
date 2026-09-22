@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSceneAigcImageTask request structure.
  *
- * @method integer getSubAppId() Obtain **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
- * @method void setSubAppId(integer $SubAppId) Set **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+ * @method integer getSubAppId() Obtain **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
+ * @method void setSubAppId(integer $SubAppId) Set **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
  * @method AigcImageSceneInfo getSceneInfo() Obtain Scenario-based image generation parameter configuration.
  * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) Set Scenario-based image generation parameter configuration.
- * @method array getFileInfos() Obtain Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+ * @method array getFileInfos() Obtain Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
- * @method void setFileInfos(array $FileInfos) Set Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+ * @method void setFileInfos(array $FileInfos) Set Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
- * @method SceneAigcImageOutputConfig getOutputConfig() Obtain Output media file configuration for scenario-based image generation tasks.
- * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set Output media file configuration for scenario-based image generation tasks.
- * @method string getSessionId() Obtain An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
- * @method void setSessionId(string $SessionId) Set An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
- * @method string getSessionContext() Obtain Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+ * @method SceneAigcImageOutputConfig getOutputConfig() Obtain Configuration of the output media file for a scenario-based image generation task.
+ * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) Set Configuration of the output media file for a scenario-based image generation task.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method string getSessionContext() Obtain Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
  * @method integer getTasksPriority() Obtain Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  * @method void setTasksPriority(integer $TasksPriority) Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  * @method string getExtInfo() Obtain Reserved field, used for special purposes.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateSceneAigcImageTaskRequest extends AbstractModel
 {
     /**
-     * @var integer **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+     * @var integer **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
      */
     public $SubAppId;
 
@@ -56,25 +56,25 @@ class CreateSceneAigcImageTaskRequest extends AbstractModel
     public $SceneInfo;
 
     /**
-     * @var array Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+     * @var array Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
      */
     public $FileInfos;
 
     /**
-     * @var SceneAigcImageOutputConfig Output media file configuration for scenario-based image generation tasks.
+     * @var SceneAigcImageOutputConfig Configuration of the output media file for a scenario-based image generation task.
      */
     public $OutputConfig;
 
     /**
-     * @var string An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
     /**
-     * @var string Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+     * @var string Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
      */
     public $SessionContext;
 
@@ -89,15 +89,15 @@ class CreateSceneAigcImageTaskRequest extends AbstractModel
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+     * @param integer $SubAppId **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
      * @param AigcImageSceneInfo $SceneInfo Scenario-based image generation parameter configuration.
-     * @param array $FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+     * @param array $FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
-     * @param SceneAigcImageOutputConfig $OutputConfig Output media file configuration for scenario-based image generation tasks.
-     * @param string $SessionId An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-     * @param string $SessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+     * @param SceneAigcImageOutputConfig $OutputConfig Configuration of the output media file for a scenario-based image generation task.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param string $SessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
      * @param integer $TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      * @param string $ExtInfo Reserved field, used for special purposes.
      */

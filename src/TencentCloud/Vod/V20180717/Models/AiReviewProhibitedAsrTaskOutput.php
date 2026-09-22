@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asr text contains prohibited information
+ * Asr text involving prohibited information
  *
  * @method float getConfidence() Obtain Asr text violation score. Value range: 0-100.
  * @method void setConfidence(float $Confidence) Set Asr text violation score. Value range: 0-100.
@@ -31,13 +31,13 @@ use TencentCloud\Common\AbstractModel;
 <li>review.</li>
 <li>block.</li>
  * @method array getSegmentSet() Obtain List of video segments whose Asr text is suspected of prohibition violations.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments whose Asr text is suspected of prohibition violations.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
- * @method string getSegmentSetFileUrl() Obtain URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the file URL of the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the file URL of the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON, and the data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON, and the data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the file URL for the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the file URL for the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 {
@@ -56,17 +56,17 @@ class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 
     /**
      * @var array List of video segments whose Asr text is suspected of prohibition violations.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
+     * @var string URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON, and the data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the file URL of the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiration time of the file URL for the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
@@ -77,9 +77,9 @@ class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 <li>review.</li>
 <li>block.</li>
      * @param array $SegmentSet List of video segments whose Asr text is suspected of prohibition violations.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
-     * @param string $SegmentSetFileUrl URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the file URL of the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of the video segment list file where the Asr text is suspected of prohibition violations. The content of the file is in JSON, and the data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching SegmentSetFileUrlExpireTime.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the file URL for the video segment list where the Asr text is suspected of prohibition violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

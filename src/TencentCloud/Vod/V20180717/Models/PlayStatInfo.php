@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Playback statistical information.
  *
- * @method string getTime() Obtain Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+ * @method string getTime() Obtain Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
- * @method void setTime(string $Time) Set Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
+ * @method void setTime(string $Time) Set Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
  * @method integer getPlayTimes() Obtain Number of plays.
@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 class PlayStatInfo extends AbstractModel
 {
     /**
-     * @var string Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+     * @var string Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
      */
     public $Time;
 
@@ -58,9 +58,9 @@ class PlayStatInfo extends AbstractModel
     public $Traffic;
 
     /**
-     * @param string $Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+     * @param string $Time Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
      * @param string $FileId Media file ID.
      * @param integer $PlayTimes Number of plays.
      * @param integer $Traffic Playback traffic volume. Measurement unit: byte.

@@ -21,25 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Control parameters for video frame noise detection.
  *
  * @method string getSwitch() Obtain Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
  * @method void setSwitch(string $Switch) Set Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
  */
 class NoiseConfigureInfo extends AbstractModel
 {
     /**
      * @var string Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public $Switch;
 
     /**
      * @param string $Switch Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     function __construct()
     {

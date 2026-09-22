@@ -32,38 +32,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Watermark template name.
  * @method string getComment() Obtain Template description information.
  * @method void setComment(string $Comment) Set Template description information.
- * @method string getXPos() Obtain Horizontal position of the watermark image origin point from the video origin point.
+ * @method string getXPos() Obtain Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
- * @method void setXPos(string $XPos) Set Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
+ * @method void setXPos(string $XPos) Set Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
- * @method string getYPos() Obtain Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
- * @method void setYPos(string $YPos) Set Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
+ * @method string getYPos() Obtain Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
+ * @method void setYPos(string $YPos) Set Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
  * @method ImageWatermarkTemplate getImageTemplate() Obtain Image watermark template. This field is valid only when Type is image.
  * @method void setImageTemplate(ImageWatermarkTemplate $ImageTemplate) Set Image watermark template. This field is valid only when Type is image.
  * @method TextWatermarkTemplateInput getTextTemplate() Obtain Text watermarking template. This field is valid only when Type is text.
  * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set Text watermarking template. This field is valid only when Type is text.
  * @method SvgWatermarkInput getSvgTemplate() Obtain SVG watermark template. This field is valid when Type is `svg`.
  * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set SVG watermark template. This field is valid when Type is `svg`.
- * @method string getCreateTime() Obtain Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getCreateTime() Obtain Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getCoordinateOrigin() Obtain Origin position. Valid values:
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
  * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Origin position. Valid values:
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
  */
 class WatermarkTemplate extends AbstractModel
 {
@@ -90,16 +90,16 @@ class WatermarkTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var string Horizontal position of the watermark image origin point from the video origin point.
+     * @var string Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
      */
     public $XPos;
 
     /**
-     * @var string Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+     * @var string Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
      */
     public $YPos;
 
@@ -119,7 +119,7 @@ class WatermarkTemplate extends AbstractModel
     public $SvgTemplate;
 
     /**
-     * @var string Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
@@ -133,7 +133,7 @@ class WatermarkTemplate extends AbstractModel
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
      */
     public $CoordinateOrigin;
 
@@ -144,22 +144,22 @@ class WatermarkTemplate extends AbstractModel
 <li>text: text watermark.</li>
      * @param string $Name Watermark template name.
      * @param string $Comment Template description information.
-     * @param string $XPos Horizontal position of the watermark image origin point from the video origin point.
+     * @param string $XPos Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
-     * @param string $YPos Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
+     * @param string $YPos Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
      * @param ImageWatermarkTemplate $ImageTemplate Image watermark template. This field is valid only when Type is image.
      * @param TextWatermarkTemplateInput $TextTemplate Text watermarking template. This field is valid only when Type is text.
      * @param SvgWatermarkInput $SvgTemplate SVG watermark template. This field is valid when Type is `svg`.
-     * @param string $CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $CreateTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $CoordinateOrigin Origin position. Valid values:
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
      */
     function __construct()
     {

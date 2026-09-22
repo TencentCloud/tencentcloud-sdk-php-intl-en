@@ -18,16 +18,16 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task control parameter for ASR-based recognition involving inappropriate information
+ * Task control parameters for ASR-based recognition involving inappropriate information
  *
  * @method string getSwitch() Obtain Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
  * @method void setSwitch(string $Switch) Set Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
- * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
+ * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
  * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
  */
@@ -35,13 +35,13 @@ class PoliticalAsrReviewTemplateInfo extends AbstractModel
 {
     /**
      * @var string Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * @var integer Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     public $ReviewConfidence;
 
@@ -52,9 +52,9 @@ class PoliticalAsrReviewTemplateInfo extends AbstractModel
 
     /**
      * @param string $Switch Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
-     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
+     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      * @param integer $BlockConfidence Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
      */
     function __construct()

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSuperPlayerConfig request structure.
  *
- * @method string getName() Obtain Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
- * @method void setName(string $Name) Set Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+ * @method string getName() Obtain Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
+ * @method void setName(string $Name) Set Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method string getAudioVideoType() Obtain Played audio and video type. Available values:
 <li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
 <li>Transcode: transcode;</li>
@@ -38,12 +38,12 @@ AdaptiveDynamicStream by default.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
  * @method void setDrmSwitch(string $DrmSwitch) Set Switch for playing DRM-protected adaptive bitstream:
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
  * @method integer getAdaptiveDynamicStreamingDefinition() Obtain Allowed output of unencrypted adaptive bitstream template ID.
 
 Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
@@ -80,12 +80,12 @@ Required if `AudioVideoType` is `Transcode`.
 <li>MinEdgeLength:1440,Name:2K;</li>
 <li>MinEdgeLength:2160,Name:4K;</li>
 <li>MinEdgeLength:4320,Name:8K.</li>
- * @method string getDomain() Obtain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
- * @method void setDomain(string $Domain) Set Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
- * @method string getScheme() Obtain Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+ * @method string getDomain() Obtain Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+ * @method void setDomain(string $Domain) Set Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+ * @method string getScheme() Obtain Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
- * @method void setScheme(string $Scheme) Set Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+ * @method void setScheme(string $Scheme) Set Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
  * @method string getComment() Obtain Template description, with a length limit of 256 characters.
@@ -94,12 +94,12 @@ Required if `AudioVideoType` is `Transcode`.
 class CreateSuperPlayerConfigRequest extends AbstractModel
 {
     /**
-     * @var string Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+     * @var string Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
      */
     public $Name;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -117,7 +117,7 @@ AdaptiveDynamicStream by default.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      */
     public $DrmSwitch;
 
@@ -160,12 +160,12 @@ Required if `AudioVideoType` is `Transcode`.
     public $ResolutionNames;
 
     /**
-     * @var string Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+     * @var string Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public $Domain;
 
     /**
-     * @var string Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+     * @var string Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
      */
@@ -177,8 +177,8 @@ Required if `AudioVideoType` is `Transcode`.
     public $Comment;
 
     /**
-     * @param string $Name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @param string $Name Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param string $AudioVideoType Played audio and video type. Available values:
 <li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
 <li>Transcode: transcode;</li>
@@ -188,7 +188,7 @@ AdaptiveDynamicStream by default.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      * @param integer $AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
 
 Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
@@ -207,8 +207,8 @@ Required if `AudioVideoType` is `Transcode`.
 <li>MinEdgeLength:1440,Name:2K;</li>
 <li>MinEdgeLength:2160,Name:4K;</li>
 <li>MinEdgeLength:4320,Name:8K.</li>
-     * @param string $Domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
-     * @param string $Scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+     * @param string $Domain Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+     * @param string $Scheme Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
      * @param string $Comment Template description, with a length limit of 256 characters.

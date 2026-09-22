@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User-customized control parameters for audio/video moderation tasks
+ * Control parameters of the user-defined audio/video moderation task
  *
- * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() Obtain Control parameter for user-defined character audio/video moderation.
- * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) Set Control parameter for user-defined character audio/video moderation.
- * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() Obtain User-customized voice audio and video review control parameter.
- * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) Set User-customized voice audio and video review control parameter.
- * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() Obtain User-customized text, audio, and video moderation control parameters.
- * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) Set User-customized text, audio, and video moderation control parameters.
+ * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() Obtain Control parameter for video moderation of user-defined characters.
+ * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) Set Control parameter for video moderation of user-defined characters.
+ * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() Obtain User-customized control parameters for voice audio and video moderation.
+ * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) Set User-customized control parameters for voice audio and video moderation.
+ * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() Obtain User custom text audio/video moderation control parameter.
+ * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) Set User custom text audio/video moderation control parameter.
  */
 class UserDefineConfigureInfo extends AbstractModel
 {
     /**
-     * @var UserDefineFaceReviewTemplateInfo Control parameter for user-defined character audio/video moderation.
+     * @var UserDefineFaceReviewTemplateInfo Control parameter for video moderation of user-defined characters.
      */
     public $FaceReviewInfo;
 
     /**
-     * @var UserDefineAsrTextReviewTemplateInfo User-customized voice audio and video review control parameter.
+     * @var UserDefineAsrTextReviewTemplateInfo User-customized control parameters for voice audio and video moderation.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var UserDefineOcrTextReviewTemplateInfo User-customized text, audio, and video moderation control parameters.
+     * @var UserDefineOcrTextReviewTemplateInfo User custom text audio/video moderation control parameter.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo Control parameter for user-defined character audio/video moderation.
-     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo User-customized voice audio and video review control parameter.
-     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo User-customized text, audio, and video moderation control parameters.
+     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo Control parameter for video moderation of user-defined characters.
+     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo User-customized control parameters for voice audio and video moderation.
+     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo User custom text audio/video moderation control parameter.
      */
     function __construct()
     {

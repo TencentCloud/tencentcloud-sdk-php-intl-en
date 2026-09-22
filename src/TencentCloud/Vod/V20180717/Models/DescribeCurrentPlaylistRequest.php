@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCurrentPlaylist request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+ * @method integer getSubAppId() Obtain <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
  * @method string getRoundPlayId() Obtain <p>Carousel playlist unique identifier.</p>
  * @method void setRoundPlayId(string $RoundPlayId) Set <p>Carousel playlist unique identifier.</p>
  * @method integer getLimit() Obtain <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCurrentPlaylistRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @var integer <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
      */
     public $SubAppId;
 
@@ -45,7 +45,7 @@ class DescribeCurrentPlaylistRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param integer $SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
      * @param string $RoundPlayId <p>Carousel playlist unique identifier.</p>
      * @param integer $Limit <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
      */

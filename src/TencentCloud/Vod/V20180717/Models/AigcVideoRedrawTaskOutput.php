@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output information of the AIGC video conversion task.
+ * Output information of an AIGC video conversion task.
  *
- * @method AigcVideoRedrawOutputFileInfo getFileInfo() Obtain <p>Output file information of the AIGC video conversion task.</p>
- * @method void setFileInfo(AigcVideoRedrawOutputFileInfo $FileInfo) Set <p>Output file information of the AIGC video conversion task.</p>
+ * @method AigcVideoRedrawOutputFileInfo getFileInfo() Obtain <p>Output file information for the AIGC video conversion task.</p>
+ * @method void setFileInfo(AigcVideoRedrawOutputFileInfo $FileInfo) Set <p>Output file information for the AIGC video conversion task.</p>
  */
 class AigcVideoRedrawTaskOutput extends AbstractModel
 {
     /**
-     * @var AigcVideoRedrawOutputFileInfo <p>Output file information of the AIGC video conversion task.</p>
+     * @var AigcVideoRedrawOutputFileInfo <p>Output file information for the AIGC video conversion task.</p>
      */
     public $FileInfo;
 
     /**
-     * @param AigcVideoRedrawOutputFileInfo $FileInfo <p>Output file information of the AIGC video conversion task.</p>
+     * @param AigcVideoRedrawOutputFileInfo $FileInfo <p>Output file information for the AIGC video conversion task.</p>
      */
     function __construct()
     {

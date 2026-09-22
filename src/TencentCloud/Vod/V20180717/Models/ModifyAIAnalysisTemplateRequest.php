@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Audio and video content analysis template unique identifier.
  * @method void setDefinition(integer $Definition) Set Audio and video content analysis template unique identifier.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method string getName() Obtain Audio and video content analysis template name, with a length limit of 64 characters.
  * @method void setName(string $Name) Set Audio and video content analysis template name, with a length limit of 64 characters.
  * @method string getComment() Obtain Audio and video content analysis template description, with a length limit of 256 characters.
  * @method void setComment(string $Comment) Set Audio and video content analysis template description, with a length limit of 256 characters.
  * @method ClassificationConfigureInfoForUpdate getClassificationConfigure() Obtain Intelligent classification task control parameters.
  * @method void setClassificationConfigure(ClassificationConfigureInfoForUpdate $ClassificationConfigure) Set Intelligent classification task control parameters.
- * @method TagConfigureInfoForUpdate getTagConfigure() Obtain Intelligent tag task control parameter.
- * @method void setTagConfigure(TagConfigureInfoForUpdate $TagConfigure) Set Intelligent tag task control parameter.
+ * @method TagConfigureInfoForUpdate getTagConfigure() Obtain Control parameter of an intelligent tag task.
+ * @method void setTagConfigure(TagConfigureInfoForUpdate $TagConfigure) Set Control parameter of an intelligent tag task.
  * @method CoverConfigureInfoForUpdate getCoverConfigure() Obtain Intelligent cover task control parameters.
  * @method void setCoverConfigure(CoverConfigureInfoForUpdate $CoverConfigure) Set Intelligent cover task control parameters.
- * @method FrameTagConfigureInfoForUpdate getFrameTagConfigure() Obtain Control parameter for the intelligent frame-specific tagging task.
- * @method void setFrameTagConfigure(FrameTagConfigureInfoForUpdate $FrameTagConfigure) Set Control parameter for the intelligent frame-specific tagging task.
- * @method HighlightsConfigureInfoForUpdate getHighlightConfigure() Obtain Intelligent Highlights Compilation Task Control Parameters.
- * @method void setHighlightConfigure(HighlightsConfigureInfoForUpdate $HighlightConfigure) Set Intelligent Highlights Compilation Task Control Parameters.
+ * @method FrameTagConfigureInfoForUpdate getFrameTagConfigure() Obtain Task control parameter for intelligent frame tagging.
+ * @method void setFrameTagConfigure(FrameTagConfigureInfoForUpdate $FrameTagConfigure) Set Task control parameter for intelligent frame tagging.
+ * @method HighlightsConfigureInfoForUpdate getHighlightConfigure() Obtain Control parameters for the intelligent highlights compilation task.
+ * @method void setHighlightConfigure(HighlightsConfigureInfoForUpdate $HighlightConfigure) Set Control parameters for the intelligent highlights compilation task.
  */
 class ModifyAIAnalysisTemplateRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -67,7 +67,7 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     public $ClassificationConfigure;
 
     /**
-     * @var TagConfigureInfoForUpdate Intelligent tag task control parameter.
+     * @var TagConfigureInfoForUpdate Control parameter of an intelligent tag task.
      */
     public $TagConfigure;
 
@@ -77,25 +77,25 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     public $CoverConfigure;
 
     /**
-     * @var FrameTagConfigureInfoForUpdate Control parameter for the intelligent frame-specific tagging task.
+     * @var FrameTagConfigureInfoForUpdate Task control parameter for intelligent frame tagging.
      */
     public $FrameTagConfigure;
 
     /**
-     * @var HighlightsConfigureInfoForUpdate Intelligent Highlights Compilation Task Control Parameters.
+     * @var HighlightsConfigureInfoForUpdate Control parameters for the intelligent highlights compilation task.
      */
     public $HighlightConfigure;
 
     /**
      * @param integer $Definition Audio and video content analysis template unique identifier.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param string $Name Audio and video content analysis template name, with a length limit of 64 characters.
      * @param string $Comment Audio and video content analysis template description, with a length limit of 256 characters.
      * @param ClassificationConfigureInfoForUpdate $ClassificationConfigure Intelligent classification task control parameters.
-     * @param TagConfigureInfoForUpdate $TagConfigure Intelligent tag task control parameter.
+     * @param TagConfigureInfoForUpdate $TagConfigure Control parameter of an intelligent tag task.
      * @param CoverConfigureInfoForUpdate $CoverConfigure Intelligent cover task control parameters.
-     * @param FrameTagConfigureInfoForUpdate $FrameTagConfigure Control parameter for the intelligent frame-specific tagging task.
-     * @param HighlightsConfigureInfoForUpdate $HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+     * @param FrameTagConfigureInfoForUpdate $FrameTagConfigure Task control parameter for intelligent frame tagging.
+     * @param HighlightsConfigureInfoForUpdate $HighlightConfigure Control parameters for the intelligent highlights compilation task.
      */
     function __construct()
     {

@@ -71,7 +71,7 @@ This API on the legacy version will continue to serve existing users but will be
  * @method Models\RunAMLNameScreeningResponse RunAMLNameScreening(Models\RunAMLNameScreeningRequest $req) AML name list screening
  * @method Models\UpdateAMLCustomerProfileResponse UpdateAMLCustomerProfile(Models\UpdateAMLCustomerProfileRequest $req) AML name list screening
  * @method Models\UpdateAMLOngoingScreeningStatusResponse UpdateAMLOngoingScreeningStatus(Models\UpdateAMLOngoingScreeningStatusRequest $req) Continuous name list screening status change
- * @method Models\UpdateEKYCWebhookResponse UpdateEKYCWebhook(Models\UpdateEKYCWebhookRequest $req) This API updates the Webhook configuration.
+ * @method Models\UpdateEKYCWebhookResponse UpdateEKYCWebhook(Models\UpdateEKYCWebhookRequest $req) This API is used to update Webhook configurations.
  * @method Models\VideoLivenessCompareResponse VideoLivenessCompare(Models\VideoLivenessCompareRequest $req) This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
  */
 

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive bitstreaming information
+ * Adaptive bitrate streaming information.
  *
  * @method integer getDefinition() Obtain <p>Adaptive bitrate streaming specification.</p>
  * @method void setDefinition(integer $Definition) Set <p>Adaptive bitrate streaming specification.</p>
@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set <p>Playback address.</p>
  * @method integer getSize() Obtain <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
  * @method void setSize(integer $Size) Set <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
- * @method string getDigitalWatermarkType() Obtain <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
- * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
- * @method array getSubStreamSet() Obtain <p>Subflow information list.</p>
- * @method void setSubStreamSet(array $SubStreamSet) Set <p>Subflow information list.</p>
+ * @method string getDigitalWatermarkType() Obtain <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+ * @method array getSubStreamSet() Obtain <p>List of substream info.</p>
+ * @method void setSubStreamSet(array $SubStreamSet) Set <p>List of substream info.</p>
  * @method string getCopyRightWatermarkText() Obtain <p>Copyright information.</p>
  * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set <p>Copyright information.</p>
  * @method integer getBlindWatermarkDefinition() Obtain <p>Digital watermark template id.</p>
@@ -73,12 +73,12 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Size;
 
     /**
-     * @var string <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+     * @var string <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
      */
     public $DigitalWatermarkType;
 
     /**
-     * @var array <p>Subflow information list.</p>
+     * @var array <p>List of substream info.</p>
      */
     public $SubStreamSet;
 
@@ -113,8 +113,8 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
      * @param string $DrmType <p>Encryption type.</p>
      * @param string $Url <p>Playback address.</p>
      * @param integer $Size <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
-     * @param string $DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
-     * @param array $SubStreamSet <p>Subflow information list.</p>
+     * @param string $DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+     * @param array $SubStreamSet <p>List of substream info.</p>
      * @param string $CopyRightWatermarkText <p>Copyright information.</p>
      * @param integer $BlindWatermarkDefinition <p>Digital watermark template id.</p>
      * @param array $SubtitleSet <p>Subtitle information list.</p>

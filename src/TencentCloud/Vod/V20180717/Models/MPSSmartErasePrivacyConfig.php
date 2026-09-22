@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPrivacyModel() Obtain <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
  * @method void setPrivacyModel(string $PrivacyModel) Set <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
- * @method array getPrivacyTargets() Obtain <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
- * @method void setPrivacyTargets(array $PrivacyTargets) Set <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+ * @method array getPrivacyTargets() Obtain <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+ * @method void setPrivacyTargets(array $PrivacyTargets) Set <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
  */
 class MPSSmartErasePrivacyConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class MPSSmartErasePrivacyConfig extends AbstractModel
     public $PrivacyModel;
 
     /**
-     * @var array <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+     * @var array <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
      */
     public $PrivacyTargets;
 
     /**
      * @param string $PrivacyModel <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
-     * @param array $PrivacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+     * @param array $PrivacyTargets <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
      */
     function __construct()
     {

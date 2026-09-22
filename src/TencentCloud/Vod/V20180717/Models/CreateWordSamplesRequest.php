@@ -21,39 +21,39 @@ use TencentCloud\Common\AbstractModel;
  * CreateWordSamples request structure.
  *
  * @method array getUsages() Obtain <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
  * @method void setUsages(array $Usages) Set <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
  * @method array getWords() Obtain Keyword. Array length limit: 100.
  * @method void setWords(array $Words) Set Keyword. Array length limit: 100.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class CreateWordSamplesRequest extends AbstractModel
 {
     /**
      * @var array <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
      */
     public $Usages;
@@ -64,22 +64,22 @@ class CreateWordSamplesRequest extends AbstractModel
     public $Words;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
      * @param array $Usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
      * @param array $Words Keyword. Array length limit: 100.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

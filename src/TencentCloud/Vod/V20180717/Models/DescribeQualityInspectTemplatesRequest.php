@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeQualityInspectTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method array getDefinitions() Obtain List of audio and video quality detection templates. Length limited to 100.
- * @method void setDefinitions(array $Definitions) Set List of audio and video quality detection templates. Length limited to 100.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method array getDefinitions() Obtain List of audio and video quality detection templates. Length limit: 100.
+ * @method void setDefinitions(array $Definitions) Set List of audio and video quality detection templates. Length limit: 100.
  * @method string getType() Obtain Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  * @method void setType(string $Type) Set Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
@@ -38,18 +38,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeQualityInspectTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array List of audio and video quality detection templates. Length limited to 100.
+     * @var array List of audio and video quality detection templates. Length limit: 100.
      */
     public $Definitions;
 
     /**
      * @var string Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public $Type;
@@ -65,10 +65,10 @@ class DescribeQualityInspectTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param array $Definitions List of audio and video quality detection templates. Length limited to 100.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param array $Definitions List of audio and video quality detection templates. Length limit: 100.
      * @param string $Type Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.

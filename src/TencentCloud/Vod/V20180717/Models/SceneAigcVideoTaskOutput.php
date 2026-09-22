@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of the scenario-based AIGC video generation task.
+ * Output of scenario-based AIGC video generation tasks.
  *
- * @method array getFileInfos() Obtain Information of the output file for an AIGC video task.
- * @method void setFileInfos(array $FileInfos) Set Information of the output file for an AIGC video task.
+ * @method array getFileInfos() Obtain Output file information for AIGC video task.
+ * @method void setFileInfos(array $FileInfos) Set Output file information for AIGC video task.
  */
 class SceneAigcVideoTaskOutput extends AbstractModel
 {
     /**
-     * @var array Information of the output file for an AIGC video task.
+     * @var array Output file information for AIGC video task.
      */
     public $FileInfos;
 
     /**
-     * @param array $FileInfos Information of the output file for an AIGC video task.
+     * @param array $FileInfos Output file information for AIGC video task.
      */
     function __construct()
     {

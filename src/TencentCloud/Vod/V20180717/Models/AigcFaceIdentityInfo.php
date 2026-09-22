@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Human face identity information.
  *
- * @method string getFaceId() Obtain Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
- * @method void setFaceId(string $FaceId) Set Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+ * @method string getFaceId() Obtain Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
+ * @method void setFaceId(string $FaceId) Set Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
  * @method string getFaceImage() Obtain Schematic diagram of a human face captured from the video.
  * @method void setFaceImage(string $FaceImage) Set Schematic diagram of a human face captured from the video.
- * @method integer getStartTime() Obtain Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
- * @method void setStartTime(integer $StartTime) Set Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
- * @method integer getEndTime() Obtain End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
- * @method void setEndTime(integer $EndTime) Set End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+ * @method integer getStartTime() Obtain Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
+ * @method void setStartTime(integer $StartTime) Set Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
+ * @method integer getEndTime() Obtain End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
+ * @method void setEndTime(integer $EndTime) Set End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
  */
 class AigcFaceIdentityInfo extends AbstractModel
 {
     /**
-     * @var string Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+     * @var string Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
      */
     public $FaceId;
 
@@ -42,20 +42,20 @@ class AigcFaceIdentityInfo extends AbstractModel
     public $FaceImage;
 
     /**
-     * @var integer Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+     * @var integer Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
      */
     public $StartTime;
 
     /**
-     * @var integer End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+     * @var integer End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
      */
     public $EndTime;
 
     /**
-     * @param string $FaceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+     * @param string $FaceId Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
      * @param string $FaceImage Schematic diagram of a human face captured from the video.
-     * @param integer $StartTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
-     * @param integer $EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+     * @param integer $StartTime Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
+     * @param integer $EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
      */
     function __construct()
     {

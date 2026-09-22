@@ -18,22 +18,22 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of the AIGC sound effect task.
+ * Input of the AIGC sound effect generation task.
  *
  * @method string getModelName() Obtain <p>Model name.</p>
  * @method void setModelName(string $ModelName) Set <p>Model name.</p>
  * @method string getModelVersion() Obtain <p>Model version.</p>
  * @method void setModelVersion(string $ModelVersion) Set <p>Model version.</p>
- * @method string getSceneType() Obtain <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
- * @method void setSceneType(string $SceneType) Set <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
- * @method string getPrompt() Obtain <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
- * @method void setPrompt(string $Prompt) Set <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
- * @method string getNegativePrompt() Obtain <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
- * @method void setNegativePrompt(string $NegativePrompt) Set <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
- * @method array getAudioInfos() Obtain <p>Audio content for reference.</p>
- * @method void setAudioInfos(array $AudioInfos) Set <p>Audio content for reference.</p>
- * @method array getVideoInfos() Obtain <p>Reference video info.</p>
- * @method void setVideoInfos(array $VideoInfos) Set <p>Reference video info.</p>
+ * @method string getSceneType() Obtain <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
+ * @method void setSceneType(string $SceneType) Set <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
+ * @method string getPrompt() Obtain <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+ * @method string getNegativePrompt() Obtain <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
+ * @method void setNegativePrompt(string $NegativePrompt) Set <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
+ * @method array getAudioInfos() Obtain <p>Reference audio content</p>
+ * @method void setAudioInfos(array $AudioInfos) Set <p>Reference audio content</p>
+ * @method array getVideoInfos() Obtain <p>Reference video info</p>
+ * @method void setVideoInfos(array $VideoInfos) Set <p>Reference video info</p>
  * @method boolean getEnhancePrompt() Obtain <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
  * @method void setEnhancePrompt(boolean $EnhancePrompt) Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
  * @method AigcAudioOutputConfig getOutputConfig() Obtain <p>Output result file output of AIGC image generation.</p>
@@ -54,27 +54,27 @@ class AigcAudioTaskInput extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var string <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+     * @var string <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
      */
     public $SceneType;
 
     /**
-     * @var string <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * @var string <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public $Prompt;
 
     /**
-     * @var string <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+     * @var string <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
      */
     public $NegativePrompt;
 
     /**
-     * @var array <p>Audio content for reference.</p>
+     * @var array <p>Reference audio content</p>
      */
     public $AudioInfos;
 
     /**
-     * @var array <p>Reference video info.</p>
+     * @var array <p>Reference video info</p>
      */
     public $VideoInfos;
 
@@ -96,11 +96,11 @@ class AigcAudioTaskInput extends AbstractModel
     /**
      * @param string $ModelName <p>Model name.</p>
      * @param string $ModelVersion <p>Model version.</p>
-     * @param string $SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
-     * @param string $Prompt <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-     * @param string $NegativePrompt <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
-     * @param array $AudioInfos <p>Audio content for reference.</p>
-     * @param array $VideoInfos <p>Reference video info.</p>
+     * @param string $SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
+     * @param string $Prompt <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+     * @param string $NegativePrompt <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
+     * @param array $AudioInfos <p>Reference audio content</p>
+     * @param array $VideoInfos <p>Reference video info</p>
      * @param boolean $EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
      * @param AigcAudioOutputConfig $OutputConfig <p>Output result file output of AIGC image generation.</p>
      * @param string $AdditionalParameters <p>Additional parameter.</p>

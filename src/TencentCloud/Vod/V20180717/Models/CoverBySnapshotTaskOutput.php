@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task output type for screencapturing a video for cover image
+ * Task output type for screencapturing for cover image of a video
  *
- * @method string getCoverUrl() Obtain Cover URL.
- * @method void setCoverUrl(string $CoverUrl) Set Cover URL.
+ * @method string getCoverUrl() Obtain URL of a cover.
+ * @method void setCoverUrl(string $CoverUrl) Set URL of a cover.
  */
 class CoverBySnapshotTaskOutput extends AbstractModel
 {
     /**
-     * @var string Cover URL.
+     * @var string URL of a cover.
      */
     public $CoverUrl;
 
     /**
-     * @param string $CoverUrl Cover URL.
+     * @param string $CoverUrl URL of a cover.
      */
     function __construct()
     {

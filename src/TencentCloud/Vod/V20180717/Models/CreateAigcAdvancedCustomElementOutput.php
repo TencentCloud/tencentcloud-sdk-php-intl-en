@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Create custom subject callback output
  *
- * @method array getInfoList() Obtain <p>Custom subject list.</p>
- * @method void setInfoList(array $InfoList) Set <p>Custom subject list.</p>
+ * @method array getInfoList() Obtain <p>Custom entity list.</p>
+ * @method void setInfoList(array $InfoList) Set <p>Custom entity list.</p>
  */
 class CreateAigcAdvancedCustomElementOutput extends AbstractModel
 {
     /**
-     * @var array <p>Custom subject list.</p>
+     * @var array <p>Custom entity list.</p>
      */
     public $InfoList;
 
     /**
-     * @param array $InfoList <p>Custom subject list.</p>
+     * @param array $InfoList <p>Custom entity list.</p>
      */
     function __construct()
     {

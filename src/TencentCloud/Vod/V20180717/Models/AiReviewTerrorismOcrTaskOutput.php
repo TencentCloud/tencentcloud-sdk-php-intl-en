@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ocr text involves unsafe information
  *
- * @method float getConfidence() Obtain Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
- * @method string getSuggestion() Obtain Ocr text contains result suggestions involving unsafe information. Value range:
+ * @method float getConfidence() Obtain Score of unsafe information in Ocr text. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Score of unsafe information in Ocr text. Value range: 0-100.
+ * @method string getSuggestion() Obtain Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Ocr text contains result suggestions involving unsafe information. Value range:
+ * @method void setSuggestion(string $Suggestion) Set Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -34,20 +34,20 @@ use TencentCloud\Common\AbstractModel;
 <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments with Ocr text suspected of involving unsafe information.
 <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
- * @method string getSegmentSetFileUrl() Obtain URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getSegmentSetFileUrl() Obtain URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiReviewTerrorismOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+     * @var float Score of unsafe information in Ocr text. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string Ocr text contains result suggestions involving unsafe information. Value range:
+     * @var string Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -61,25 +61,25 @@ class AiReviewTerrorismOcrTaskOutput extends AbstractModel
     public $SegmentSet;
 
     /**
-     * @var string URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @var string URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
-     * @param string $Suggestion Ocr text contains result suggestions involving unsafe information. Value range:
+     * @param float $Confidence Score of unsafe information in Ocr text. Value range: 0-100.
+     * @param string $Suggestion Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
      * @param array $SegmentSet List of video segments with Ocr text suspected of involving unsafe information.
 <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
-     * @param string $SegmentSetFileUrl URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $SegmentSetFileUrl URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

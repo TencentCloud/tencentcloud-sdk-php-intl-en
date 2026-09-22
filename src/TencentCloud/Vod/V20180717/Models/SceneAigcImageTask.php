@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getStatus() Obtain Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
  * @method void setStatus(string $Status) Set Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
- * @method void setErrCode(integer $ErrCode) Set Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+ * @method integer getErrCode() Obtain Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+ * @method void setErrCode(integer $ErrCode) Set Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method integer getProgress() Obtain Task progress, with a value range of [0-100].
@@ -52,7 +52,7 @@ class SceneAigcImageTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * @var integer Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      */
     public $ErrCode;
 
@@ -89,7 +89,7 @@ class SceneAigcImageTask extends AbstractModel
     /**
      * @param string $TaskId Task ID.
      * @param string $Status Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * @param integer $ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      * @param string $Message Error message.
      * @param integer $Progress Task progress, with a value range of [0-100].
      * @param SceneAigcImageTaskInput $Input Input information of the AIGC image generation task.

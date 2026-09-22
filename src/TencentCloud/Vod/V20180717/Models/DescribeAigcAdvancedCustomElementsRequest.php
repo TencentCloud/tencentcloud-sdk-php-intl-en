@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcAdvancedCustomElements request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method integer getOffset() Obtain <p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
- * @method void setOffset(integer $Offset) Set <p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
- * @method integer getLimit() Obtain <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
- * @method void setLimit(integer $Limit) Set <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method integer getOffset() Obtain <p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+ * @method void setOffset(integer $Offset) Set <p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+ * @method integer getLimit() Obtain <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
  */
 class DescribeAigcAdvancedCustomElementsRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var integer <p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+     * @var integer <p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
      */
     public $Offset;
 
     /**
-     * @var integer <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
+     * @var integer <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param integer $Offset <p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
-     * @param integer $Limit <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * @param integer $Offset <p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+     * @param integer $Limit <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
      */
     function __construct()
     {

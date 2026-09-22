@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiRecognitionTaskAsrWordsResultInput $Input) Set Input information on the speech keyword recognition task.
  * @method AiRecognitionTaskAsrWordsResultOutput getOutput() Obtain Output information on the speech keyword recognition task.
  * @method void setOutput(AiRecognitionTaskAsrWordsResultOutput $Output) Set Output information on the speech keyword recognition task.
- * @method integer getProgress() Obtain Speech keyword recognition task progress. Value range: [0-100].
- * @method void setProgress(integer $Progress) Set Speech keyword recognition task progress. Value range: [0-100].
+ * @method integer getProgress() Obtain Speech keyword recognition task progress, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Speech keyword recognition task progress, in the range of [0,100].
  * @method string getBeginProcessTime() Obtain Speech keyword recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Speech keyword recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFinishTime() Obtain Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setFinishTime(string $FinishTime) Set Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiRecognitionTaskAsrWordsResult extends AbstractModel
 {
@@ -72,7 +72,7 @@ class AiRecognitionTaskAsrWordsResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Speech keyword recognition task progress. Value range: [0-100].
+     * @var integer Speech keyword recognition task progress, in the range of [0,100].
      */
     public $Progress;
 
@@ -82,7 +82,7 @@ class AiRecognitionTaskAsrWordsResult extends AbstractModel
     public $BeginProcessTime;
 
     /**
-     * @var string Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
@@ -93,9 +93,9 @@ class AiRecognitionTaskAsrWordsResult extends AbstractModel
      * @param string $Message Error message.
      * @param AiRecognitionTaskAsrWordsResultInput $Input Input information on the speech keyword recognition task.
      * @param AiRecognitionTaskAsrWordsResultOutput $Output Output information on the speech keyword recognition task.
-     * @param integer $Progress Speech keyword recognition task progress. Value range: [0-100].
+     * @param integer $Progress Speech keyword recognition task progress, in the range of [0,100].
      * @param string $BeginProcessTime Speech keyword recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FinishTime Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

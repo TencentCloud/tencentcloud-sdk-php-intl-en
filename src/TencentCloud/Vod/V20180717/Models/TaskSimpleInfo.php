@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task summary information
+ * Task summary information.
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
  * @method void setTaskType(string $TaskType) Set Task type. Value:
 <li>Procedure: video processing task;</li>
@@ -50,18 +50,18 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
- * @method string getCreateTime() Obtain Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getCreateTime() Obtain Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
  * @method string getFinishTime() Obtain Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
  * @method void setFinishTime(string $FinishTime) Set Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
- * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+ * @method string getSessionId() Obtain Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
+ * @method void setSessionId(string $SessionId) Set Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
  * @method string getSessionContext() Obtain Source context, used to pass through user request information.
  * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information.
  */
@@ -93,15 +93,15 @@ class TaskSimpleInfo extends AbstractModel
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
      */
     public $TaskType;
 
     /**
-     * @var string Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
@@ -116,7 +116,7 @@ Task types compatible with the 2017 version:
     public $FinishTime;
 
     /**
-     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+     * @var string Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
      */
     public $SessionId;
 
@@ -139,14 +139,14 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
-     * @param string $CreateTime Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $CreateTime Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $BeginProcessTime Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
      * @param string $FinishTime Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
-     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+     * @param string $SessionId Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
      * @param string $SessionContext Source context, used to pass through user request information.
      */
     function __construct()

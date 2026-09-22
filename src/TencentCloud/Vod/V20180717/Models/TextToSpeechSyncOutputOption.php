@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output parameter setting for synchronous text to speech
+ * Synchronous text to speech output parameter settings
  *
  * @method string getType() Obtain <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>hex: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
  * @method void setType(string $Type) Set <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>hex: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>

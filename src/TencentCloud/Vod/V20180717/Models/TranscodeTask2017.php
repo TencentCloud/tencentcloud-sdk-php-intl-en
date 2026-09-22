@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set Transcoding task ID.
  * @method integer getErrCode() Obtain Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method string getFileId() Obtain Transcoded file ID.
@@ -51,7 +51,7 @@ class TranscodeTask2017 extends AbstractModel
     /**
      * @var integer Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      */
     public $ErrCode;
 
@@ -89,7 +89,7 @@ class TranscodeTask2017 extends AbstractModel
      * @param string $TaskId Transcoding task ID.
      * @param integer $ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      * @param string $Message Error message.
      * @param string $FileId Transcoded file ID.
      * @param string $FileName Name of the transcoded file.

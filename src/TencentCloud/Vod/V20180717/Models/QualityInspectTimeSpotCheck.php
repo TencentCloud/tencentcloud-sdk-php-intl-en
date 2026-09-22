@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio and video quality detection time spot check policy.
+ * Audio and video quality inspection spot check policy.
  *
  * @method integer getCheckDuration() Obtain <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
  * @method void setCheckDuration(integer $CheckDuration) Set <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
- * @method integer getCheckInterval() Obtain <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
- * @method void setCheckInterval(integer $CheckInterval) Set <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+ * @method integer getCheckInterval() Obtain <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+ * @method void setCheckInterval(integer $CheckInterval) Set <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
  * @method integer getSkipDuration() Obtain <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
  * @method void setSkipDuration(integer $SkipDuration) Set <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
  * @method integer getCirclesNumber() Obtain <p>Number of loops.</p><p>Value range: [0, 1000]</p>
@@ -37,7 +37,7 @@ class QualityInspectTimeSpotCheck extends AbstractModel
     public $CheckDuration;
 
     /**
-     * @var integer <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+     * @var integer <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
      */
     public $CheckInterval;
 
@@ -53,7 +53,7 @@ class QualityInspectTimeSpotCheck extends AbstractModel
 
     /**
      * @param integer $CheckDuration <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
-     * @param integer $CheckInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+     * @param integer $CheckInterval <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
      * @param integer $SkipDuration <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
      * @param integer $CirclesNumber <p>Number of loops.</p><p>Value range: [0, 1000]</p>
      */

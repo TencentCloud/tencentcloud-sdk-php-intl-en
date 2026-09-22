@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * On-demand file transcoding information
+ * Transcoding information of a VOD file
  *
  * @method array getTranscodeSet() Obtain Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
  * @method void setTranscodeSet(array $TranscodeSet) Set Transcoding information collection for each specification. Each element represents the transcoding result of a specification.

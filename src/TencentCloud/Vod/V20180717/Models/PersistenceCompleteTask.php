@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Clipping solidification task information.
  *
- * @method string getFileId() Obtain The generated media ID.
- * @method void setFileId(string $FileId) Set The generated media ID.
- * @method string getPersistenceSource() Obtain Sources of clipping solidification include the following three types.
+ * @method string getFileId() Obtain Fixed generated media ID.
+ * @method void setFileId(string $FileId) Set Fixed generated media ID.
+ * @method string getPersistenceSource() Obtain Sources of clipping solidification are as follows.
 <li>SimpleHlsClip: comes from simple HLS edit;</li>
 <li>FastEditMedia: comes from rapid media editing;</li>
 <li>LiveRealTimeClip: comes from live stream clipping.</li>
- * @method void setPersistenceSource(string $PersistenceSource) Set Sources of clipping solidification include the following three types.
+ * @method void setPersistenceSource(string $PersistenceSource) Set Sources of clipping solidification are as follows.
 <li>SimpleHlsClip: comes from simple HLS edit;</li>
 <li>FastEditMedia: comes from rapid media editing;</li>
 <li>LiveRealTimeClip: comes from live stream clipping.</li>
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class PersistenceCompleteTask extends AbstractModel
 {
     /**
-     * @var string The generated media ID.
+     * @var string Fixed generated media ID.
      */
     public $FileId;
 
     /**
-     * @var string Sources of clipping solidification include the following three types.
+     * @var string Sources of clipping solidification are as follows.
 <li>SimpleHlsClip: comes from simple HLS edit;</li>
 <li>FastEditMedia: comes from rapid media editing;</li>
 <li>LiveRealTimeClip: comes from live stream clipping.</li>
@@ -47,8 +47,8 @@ class PersistenceCompleteTask extends AbstractModel
     public $PersistenceSource;
 
     /**
-     * @param string $FileId The generated media ID.
-     * @param string $PersistenceSource Sources of clipping solidification include the following three types.
+     * @param string $FileId Fixed generated media ID.
+     * @param string $PersistenceSource Sources of clipping solidification are as follows.
 <li>SimpleHlsClip: comes from simple HLS edit;</li>
 <li>FastEditMedia: comes from rapid media editing;</li>
 <li>LiveRealTimeClip: comes from live stream clipping.</li>

@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate request structure.
  *
- * @method string getReviewWallSwitch() Obtain Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+ * @method string getReviewWallSwitch() Obtain Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
- * @method string getName() Obtain Content review template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Content review template name. Length limit: 64 characters.
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+ * @method string getName() Obtain Content review template name, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Content review template name, with a length limit of 64 characters.
  * @method string getComment() Obtain Content review template description, with a length limit of 256 characters.
  * @method void setComment(string $Comment) Set Content review template description, with a length limit of 256 characters.
  * @method PornConfigureInfo getPornConfigure() Obtain Control parameters for offensive information.
@@ -46,25 +46,25 @@ use TencentCloud\Common\AbstractModel;
 <li>Drug-related violation.</li>
  * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain User-defined content review control parameters.
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set User-defined content review control parameters.
- * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
- * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+ * @method float getScreenshotInterval() Obtain Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
+ * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+     * @var string Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
      */
     public $ReviewWallSwitch;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Content review template name. Length limit: 64 characters.
+     * @var string Content review template name, with a length limit of 64 characters.
      */
     public $Name;
 
@@ -101,16 +101,16 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $UserDefineConfigure;
 
     /**
-     * @var float Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * @var float Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
      */
     public $ScreenshotInterval;
 
     /**
-     * @param string $ReviewWallSwitch Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+     * @param string $ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-     * @param string $Name Content review template name. Length limit: 64 characters.
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+     * @param string $Name Content review template name, with a length limit of 64 characters.
      * @param string $Comment Content review template description, with a length limit of 256 characters.
      * @param PornConfigureInfo $PornConfigure Control parameters for offensive information.
      * @param TerrorismConfigureInfo $TerrorismConfigure Control parameters for unsafe information.
@@ -119,7 +119,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
      * @param UserDefineConfigureInfo $UserDefineConfigure User-defined content review control parameters.
-     * @param float $ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * @param float $ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
      */
     function __construct()
     {

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
  * @method void setSwitch(string $Switch) Set Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
- * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+<li>OFF: disables the task involving offensive content in text recognition.</li>
+ * @method integer getBlockConfidence() Obtain Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the intelligent review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
  * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the intelligent review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
  */
@@ -36,12 +36,12 @@ class PornOcrReviewTemplateInfoForUpdate extends AbstractModel
     /**
      * @var string Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+     * @var integer Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
      */
     public $BlockConfidence;
 
@@ -53,8 +53,8 @@ class PornOcrReviewTemplateInfoForUpdate extends AbstractModel
     /**
      * @param string $Switch Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
-     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+<li>OFF: disables the task involving offensive content in text recognition.</li>
+     * @param integer $BlockConfidence Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
      * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the intelligent review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
      */
     function __construct()

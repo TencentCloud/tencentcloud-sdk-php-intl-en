@@ -18,72 +18,72 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image scaling.
+ * Image scaling processing.
  *
  * @method string getType() Obtain Operation type of image scaling. Optional modes:
-<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
-<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>WidthFirst: Set the image width to Width and proportionally scale the height.</li>
+<li>HeightFirst: specify the image height as Height, and the width will be proportionally scaled.</li>
 <li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
 <li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
-<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
+<li>Force: Ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause the target image to deform.</li>
  * @method void setType(string $Type) Set Operation type of image scaling. Optional modes:
-<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
-<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>WidthFirst: Set the image width to Width and proportionally scale the height.</li>
+<li>HeightFirst: specify the image height as Height, and the width will be proportionally scaled.</li>
 <li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
 <li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
-<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
- * @method integer getHeight() Obtain Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
- * @method void setHeight(integer $Height) Set Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
- * @method integer getWidth() Obtain Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
- * @method void setWidth(integer $Width) Set Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
- * @method integer getLongEdge() Obtain Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
- * @method void setLongEdge(integer $LongEdge) Set Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
- * @method integer getShortEdge() Obtain Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
- * @method void setShortEdge(integer $ShortEdge) Set Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
+<li>Force: Ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause the target image to deform.</li>
+ * @method integer getHeight() Obtain Height of the output image. Unit: pixel. This field is valid when Type is HeightFirst or Force.
+ * @method void setHeight(integer $Height) Set Height of the output image. Unit: pixel. This field is valid when Type is HeightFirst or Force.
+ * @method integer getWidth() Obtain Width of the output image in pixels. This field is valid when Type is WidthFirst or Force.
+ * @method void setWidth(integer $Width) Set Width of the output image in pixels. This field is valid when Type is WidthFirst or Force.
+ * @method integer getLongEdge() Obtain Long side length of the output image in pixels. This field is valid when Type is LongEdgeFirst.
+ * @method void setLongEdge(integer $LongEdge) Set Long side length of the output image in pixels. This field is valid when Type is LongEdgeFirst.
+ * @method integer getShortEdge() Obtain Short side length of the output image, unit: pixel. This field is valid when Type value is ShortEdgeFirst.
+ * @method void setShortEdge(integer $ShortEdge) Set Short side length of the output image, unit: pixel. This field is valid when Type value is ShortEdgeFirst.
  */
 class ImageScale extends AbstractModel
 {
     /**
      * @var string Operation type of image scaling. Optional modes:
-<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
-<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>WidthFirst: Set the image width to Width and proportionally scale the height.</li>
+<li>HeightFirst: specify the image height as Height, and the width will be proportionally scaled.</li>
 <li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
 <li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
-<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
+<li>Force: Ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause the target image to deform.</li>
      */
     public $Type;
 
     /**
-     * @var integer Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
+     * @var integer Height of the output image. Unit: pixel. This field is valid when Type is HeightFirst or Force.
      */
     public $Height;
 
     /**
-     * @var integer Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
+     * @var integer Width of the output image in pixels. This field is valid when Type is WidthFirst or Force.
      */
     public $Width;
 
     /**
-     * @var integer Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
+     * @var integer Long side length of the output image in pixels. This field is valid when Type is LongEdgeFirst.
      */
     public $LongEdge;
 
     /**
-     * @var integer Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
+     * @var integer Short side length of the output image, unit: pixel. This field is valid when Type value is ShortEdgeFirst.
      */
     public $ShortEdge;
 
     /**
      * @param string $Type Operation type of image scaling. Optional modes:
-<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
-<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>WidthFirst: Set the image width to Width and proportionally scale the height.</li>
+<li>HeightFirst: specify the image height as Height, and the width will be proportionally scaled.</li>
 <li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
 <li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
-<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
-     * @param integer $Height Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
-     * @param integer $Width Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
-     * @param integer $LongEdge Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
-     * @param integer $ShortEdge Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
+<li>Force: Ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause the target image to deform.</li>
+     * @param integer $Height Height of the output image. Unit: pixel. This field is valid when Type is HeightFirst or Force.
+     * @param integer $Width Width of the output image in pixels. This field is valid when Type is WidthFirst or Force.
+     * @param integer $LongEdge Long side length of the output image in pixels. This field is valid when Type is LongEdgeFirst.
+     * @param integer $ShortEdge Short side length of the output image, unit: pixel. This field is valid when Type value is ShortEdgeFirst.
      */
     function __construct()
     {

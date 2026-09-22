@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPrompt() Obtain <p>Voice description.</p>
  * @method void setPrompt(string $Prompt) Set <p>Voice description.</p>
- * @method string getSubAppId() Obtain <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
- * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+ * @method string getSubAppId() Obtain <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+ * @method void setSubAppId(string $SubAppId) Set <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
  * @method VoiceSettings getVoiceSettings() Obtain <p>Voice settings</p>
  * @method void setVoiceSettings(VoiceSettings $VoiceSettings) Set <p>Voice settings</p>
  * @method string getPreviewText() Obtain <p>Audition synthetic text, up to 500 characters</p>
  * @method void setPreviewText(string $PreviewText) Set <p>Audition synthetic text, up to 500 characters</p>
  * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
  * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
- * @method string getSessionContext() Obtain <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
- * @method string getSessionId() Obtain <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
- * @method void setSessionId(string $SessionId) Set <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+ * @method string getSessionContext() Obtain <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getSessionId() Obtain <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
  */
 class DesignVoiceAsyncRequest extends AbstractModel
 {
@@ -43,7 +43,7 @@ class DesignVoiceAsyncRequest extends AbstractModel
     public $Prompt;
 
     /**
-     * @var string <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @var string <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
      */
     public $SubAppId;
 
@@ -63,23 +63,23 @@ class DesignVoiceAsyncRequest extends AbstractModel
     public $ExtParam;
 
     /**
-     * @var string <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+     * @var string <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var string <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+     * @var string <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
      */
     public $SessionId;
 
     /**
      * @param string $Prompt <p>Voice description.</p>
-     * @param string $SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @param string $SubAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
      * @param VoiceSettings $VoiceSettings <p>Voice settings</p>
      * @param string $PreviewText <p>Audition synthetic text, up to 500 characters</p>
      * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
-     * @param string $SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
-     * @param string $SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+     * @param string $SessionContext <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
      */
     function __construct()
     {

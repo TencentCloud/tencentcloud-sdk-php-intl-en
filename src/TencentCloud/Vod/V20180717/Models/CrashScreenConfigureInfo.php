@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for distortion detection in video footage.
+ * Control parameters for video screen glitch detection.
  *
- * @method string getSwitch() Obtain Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
- * @method void setSwitch(string $Switch) Set Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+ * @method string getSwitch() Obtain Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
+ * @method void setSwitch(string $Switch) Set Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
  */
 class CrashScreenConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * @var string Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * @param string $Switch Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     function __construct()
     {

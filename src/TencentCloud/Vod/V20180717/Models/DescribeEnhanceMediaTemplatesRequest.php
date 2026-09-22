@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnhanceMediaTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method array getDefinitions() Obtain Audio and video quality rebirth template list. Length limit: 100.
- * @method void setDefinitions(array $Definitions) Set Audio and video quality rebirth template list. Length limit: 100.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method array getDefinitions() Obtain Audio-visual quality rebirth template list. Length limit: 100.
+ * @method void setDefinitions(array $Definitions) Set Audio-visual quality rebirth template list. Length limit: 100.
  * @method string getType() Obtain Condition for filtering templates by type. Valid values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeEnhanceMediaTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Audio and video quality rebirth template list. Length limit: 100.
+     * @var array Audio-visual quality rebirth template list. Length limit: 100.
      */
     public $Definitions;
 
@@ -65,8 +65,8 @@ class DescribeEnhanceMediaTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param array $Definitions Audio and video quality rebirth template list. Length limit: 100.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param array $Definitions Audio-visual quality rebirth template list. Length limit: 100.
      * @param string $Type Condition for filtering templates by type. Valid values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>

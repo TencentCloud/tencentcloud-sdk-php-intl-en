@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MPS smart subtitle template input
+ * Intelligent subtitle template input for MPS
  *
  * @method string getName() Obtain <p>Intelligent subtitle template name<br>Length limit: 64 characters.</p>
  * @method void setName(string $Name) Set <p>Intelligent subtitle template name<br>Length limit: 64 characters.</p>

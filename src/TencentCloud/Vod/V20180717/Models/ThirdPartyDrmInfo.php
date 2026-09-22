@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDrmTypes() Obtain <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
  * @method void setDrmTypes(array $DrmTypes) Set <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
- * @method SPEKEDrm getSPEKEDrm() Obtain <p>External DRM vendor information.</p>
- * @method void setSPEKEDrm(SPEKEDrm $SPEKEDrm) Set <p>External DRM vendor information.</p>
+ * @method SPEKEDrm getSPEKEDrm() Obtain <p>Third-party DRM vendor information.</p>
+ * @method void setSPEKEDrm(SPEKEDrm $SPEKEDrm) Set <p>Third-party DRM vendor information.</p>
  */
 class ThirdPartyDrmInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ThirdPartyDrmInfo extends AbstractModel
     public $DrmTypes;
 
     /**
-     * @var SPEKEDrm <p>External DRM vendor information.</p>
+     * @var SPEKEDrm <p>Third-party DRM vendor information.</p>
      */
     public $SPEKEDrm;
 
     /**
      * @param array $DrmTypes <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
-     * @param SPEKEDrm $SPEKEDrm <p>External DRM vendor information.</p>
+     * @param SPEKEDrm $SPEKEDrm <p>Third-party DRM vendor information.</p>
      */
     function __construct()
     {

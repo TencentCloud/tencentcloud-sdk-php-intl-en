@@ -18,16 +18,16 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task control parameters for ASR-based recognition involving offensive content.
+ * Task control parameter for ASR-based recognition involving offensive content
  *
  * @method string getSwitch() Obtain Task switch for ASR-based recognition involving offensive content. Available values:
-<li>ON: enable the task involving ASR-based recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in ASR-based recognition.</li>
+<li>ON: enable the ASR-based recognition task involving offensive content;</li>
+<li>OFF: disables the task involving offensive content in ASR-based recognition.</li>
  * @method void setSwitch(string $Switch) Set Task switch for ASR-based recognition involving offensive content. Available values:
-<li>ON: enable the task involving ASR-based recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in ASR-based recognition.</li>
- * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+<li>ON: enable the ASR-based recognition task involving offensive content;</li>
+<li>OFF: disables the task involving offensive content in ASR-based recognition.</li>
+ * @method integer getBlockConfidence() Obtain Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Default value: 100. Value range: 0–100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Default value: 100. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. If not specified, the default is 75 points. Value range: 0–100.
  * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. If not specified, the default is 75 points. Value range: 0–100.
  */
@@ -35,13 +35,13 @@ class PornAsrReviewTemplateInfo extends AbstractModel
 {
     /**
      * @var string Task switch for ASR-based recognition involving offensive content. Available values:
-<li>ON: enable the task involving ASR-based recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in ASR-based recognition.</li>
+<li>ON: enable the ASR-based recognition task involving offensive content;</li>
+<li>OFF: disables the task involving offensive content in ASR-based recognition.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+     * @var integer Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Default value: 100. Value range: 0–100.
      */
     public $BlockConfidence;
 
@@ -52,9 +52,9 @@ class PornAsrReviewTemplateInfo extends AbstractModel
 
     /**
      * @param string $Switch Task switch for ASR-based recognition involving offensive content. Available values:
-<li>ON: enable the task involving ASR-based recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in ASR-based recognition.</li>
-     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+<li>ON: enable the ASR-based recognition task involving offensive content;</li>
+<li>OFF: disables the task involving offensive content in ASR-based recognition.</li>
+     * @param integer $BlockConfidence Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Default value: 100. Value range: 0–100.
      * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. If not specified, the default is 75 points. Value range: 0–100.
      */
     function __construct()

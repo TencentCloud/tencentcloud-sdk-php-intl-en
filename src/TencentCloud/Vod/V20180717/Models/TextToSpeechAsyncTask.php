@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  * @method string getStatus() Obtain <p>Task status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+ * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method string getErrCodeExt() Obtain <p>Error code. An empty string indicates success, while other values indicate failure. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates success, while other values indicate failure. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
+ * @method string getErrCodeExt() Obtain <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
  * @method TextToSpeechAsyncInput getInput() Obtain <p>Text to speech task input information.</p>
  * @method void setInput(TextToSpeechAsyncInput $Input) Set <p>Text to speech task input information.</p>
  * @method TextToSpeechAsyncOutput getOutput() Obtain <p>Text to speech task output information.</p>
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
  * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method integer getProgress() Obtain <p>Pull upload progress, value range: [0-100].</p>
- * @method void setProgress(integer $Progress) Set <p>Pull upload progress, value range: [0-100].</p>
+ * @method integer getProgress() Obtain <p>Pull the upload progress, with a value range of [0-100].</p>
+ * @method void setProgress(integer $Progress) Set <p>Pull the upload progress, with a value range of [0-100].</p>
  */
 class TextToSpeechAsyncTask extends AbstractModel
 {
@@ -54,7 +54,7 @@ class TextToSpeechAsyncTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+     * @var integer <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public $ErrCode;
 
@@ -64,7 +64,7 @@ class TextToSpeechAsyncTask extends AbstractModel
     public $Message;
 
     /**
-     * @var string <p>Error code. An empty string indicates success, while other values indicate failure. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
+     * @var string <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
      */
     public $ErrCodeExt;
 
@@ -89,21 +89,21 @@ class TextToSpeechAsyncTask extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var integer <p>Pull upload progress, value range: [0-100].</p>
+     * @var integer <p>Pull the upload progress, with a value range of [0-100].</p>
      */
     public $Progress;
 
     /**
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      * @param string $Message <p>Error message.</p>
-     * @param string $ErrCodeExt <p>Error code. An empty string indicates success, while other values indicate failure. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
+     * @param string $ErrCodeExt <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
      * @param TextToSpeechAsyncInput $Input <p>Text to speech task input information.</p>
      * @param TextToSpeechAsyncOutput $Output <p>Text to speech task output information.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param integer $Progress <p>Pull upload progress, value range: [0-100].</p>
+     * @param integer $Progress <p>Pull the upload progress, with a value range of [0-100].</p>
      */
     function __construct()
     {

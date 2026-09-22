@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Store region description information.
  * @method string getStatus() Obtain Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
  * @method void setStatus(string $Status) Set Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
  * @method boolean getIsDefault() Obtain Whether it is the default storage region. true: yes; false: no.
  * @method void setIsDefault(boolean $IsDefault) Set Whether it is the default storage region. true: yes; false: no.
  * @method string getArea() Obtain Storage area. Valid values:
@@ -54,7 +54,7 @@ class StorageRegionInfo extends AbstractModel
     /**
      * @var string Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
      */
     public $Status;
 
@@ -75,7 +75,7 @@ class StorageRegionInfo extends AbstractModel
      * @param string $Description Store region description information.
      * @param string $Status Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
      * @param boolean $IsDefault Whether it is the default storage region. true: yes; false: no.
      * @param string $Area Storage area. Valid values:
 <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>

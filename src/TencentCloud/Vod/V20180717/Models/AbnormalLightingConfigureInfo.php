@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Control parameters for low-light and overexposure detection in video frames.
  *
- * @method string getSwitch() Obtain Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
- * @method void setSwitch(string $Switch) Set Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+ * @method string getSwitch() Obtain Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+ * @method void setSwitch(string $Switch) Set Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
  */
 class AbnormalLightingConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+     * @var string Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+     * @param string $Switch Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method string getType() Obtain <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
- * @method void setType(string $Type) Set <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+ * @method string getType() Obtain <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: default sample library.</li><p>Default value: UserDefine, which pulls materials from the user-customized material library.<br>Description: If pulling from the default sample library, you can only pull by material name or material ID + material name, and only one facial features image is returned.</p>
+ * @method void setType(string $Type) Set <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: default sample library.</li><p>Default value: UserDefine, which pulls materials from the user-customized material library.<br>Description: If pulling from the default sample library, you can only pull by material name or material ID + material name, and only one facial features image is returned.</p>
  * @method array getPersonIds() Obtain <p>Material ID. Array length limit: 100.</p>
  * @method void setPersonIds(array $PersonIds) Set <p>Material ID. Array length limit: 100.</p>
  * @method array getNames() Obtain <p>Material name. Array length limit: 20.</p>
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
+     * @var string <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: default sample library.</li><p>Default value: UserDefine, which pulls materials from the user-customized material library.<br>Description: If pulling from the default sample library, you can only pull by material name or material ID + material name, and only one facial features image is returned.</p>
      */
     public $Type;
 
@@ -73,8 +73,8 @@ class DescribePersonSamplesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param string $Type <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * @param string $Type <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: default sample library.</li><p>Default value: UserDefine, which pulls materials from the user-customized material library.<br>Description: If pulling from the default sample library, you can only pull by material name or material ID + material name, and only one facial features image is returned.</p>
      * @param array $PersonIds <p>Material ID. Array length limit: 100.</p>
      * @param array $Names <p>Material name. Array length limit: 20.</p>
      * @param array $Tags <p>Material tag. Array length limit: 20.</p>

@@ -18,24 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output file information of async image processing tasks.
+ * Output file information of an asynchronous image processing task.
  *
  * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system specifies the generated filename.
  * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system specifies the generated filename.
- * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+ * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
- * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+ * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
- * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFileType() Obtain File type, such as mp4 and flv.
- * @method void setFileType(string $FileType) Set File type, such as mp4 and flv.
+ * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFileType() Obtain File type, for example, mp4, flv.
+ * @method void setFileType(string $FileType) Set File type, for example, mp4, flv.
  * @method string getFileUrl() Obtain Media file playback address.
  * @method void setFileUrl(string $FileUrl) Set Media file playback address.
  * @method string getFileId() Obtain Media file ID. Valid when StorageMode is Permanent.
  * @method void setFileId(string $FileId) Set Media file ID. Valid when StorageMode is Permanent.
- * @method MediaMetaData getMetaData() Obtain Meta information of the output video. Valid only when StorageMode is Permanent.
- * @method void setMetaData(MediaMetaData $MetaData) Set Meta information of the output video. Valid only when StorageMode is Permanent.
+ * @method MediaMetaData getMetaData() Obtain Meta information of the output video. Valid when StorageMode is Permanent.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Meta information of the output video. Valid when StorageMode is Permanent.
  */
 class ProcessImageAsyncOutputFileInfo extends AbstractModel
 {
@@ -45,18 +45,18 @@ class ProcessImageAsyncOutputFileInfo extends AbstractModel
     public $MediaName;
 
     /**
-     * @var integer Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+     * @var integer Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
      */
     public $ClassId;
 
     /**
-     * @var string Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ExpireTime;
 
     /**
-     * @var string File type, such as mp4 and flv.
+     * @var string File type, for example, mp4, flv.
      */
     public $FileType;
 
@@ -71,19 +71,19 @@ class ProcessImageAsyncOutputFileInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var MediaMetaData Meta information of the output video. Valid only when StorageMode is Permanent.
+     * @var MediaMetaData Meta information of the output video. Valid when StorageMode is Permanent.
      */
     public $MetaData;
 
     /**
      * @param string $MediaName Output filename, up to 64 characters. By default, the system specifies the generated filename.
-     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
-     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FileType File type, such as mp4 and flv.
+     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FileType File type, for example, mp4, flv.
      * @param string $FileUrl Media file playback address.
      * @param string $FileId Media file ID. Valid when StorageMode is Permanent.
-     * @param MediaMetaData $MetaData Meta information of the output video. Valid only when StorageMode is Permanent.
+     * @param MediaMetaData $MetaData Meta information of the output video. Valid when StorageMode is Permanent.
      */
     function __construct()
     {

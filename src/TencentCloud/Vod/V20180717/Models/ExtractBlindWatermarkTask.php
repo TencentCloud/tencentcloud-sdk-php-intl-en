@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Extraction task info of digital watermarking on videos
+ * Extraction task information of video digital watermark
  *
  * @method string getTaskId() Obtain Media processing task ID.
  * @method void setTaskId(string $TaskId) Set Media processing task ID.
@@ -30,20 +30,20 @@ use TencentCloud\Common\AbstractModel;
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
- * @method integer getErrCode() Obtain Error code. `0` indicates success. Other values indicate failure.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0` indicates success. Other values indicate failure.
+ * @method integer getErrCode() Obtain Error code. `0`: Success. Other values: Failure.
+ * @method void setErrCode(integer $ErrCode) Set Error code. `0`: Success. Other values: Failure.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method ExtractBlindWatermarkInputInfo getInputInfo() Obtain Input information of the file for digital watermark extraction.
- * @method void setInputInfo(ExtractBlindWatermarkInputInfo $InputInfo) Set Input information of the file for digital watermark extraction.
- * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
- * @method void setType(string $Type) Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
- * @method boolean getIsDetected() Obtain Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
- * @method void setIsDetected(boolean $IsDetected) Set Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+ * @method ExtractBlindWatermarkInputInfo getInputInfo() Obtain File input information for digital watermark extraction.
+ * @method void setInputInfo(ExtractBlindWatermarkInputInfo $InputInfo) Set File input information for digital watermark extraction.
+ * @method string getType() Obtain Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+ * @method void setType(string $Type) Set Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+ * @method boolean getIsDetected() Obtain Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
+ * @method void setIsDetected(boolean $IsDetected) Set Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
  * @method string getResult() Obtain Extracted digital watermark content. This field will not be returned if no watermark is detected.
  * @method void setResult(string $Result) Set Extracted digital watermark content. This field will not be returned if no watermark is detected.
- * @method string getResultUV() Obtain Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
- * @method void setResultUV(string $ResultUV) Set Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+ * @method string getResultUV() Obtain Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
+ * @method void setResultUV(string $ResultUV) Set Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
  * @method ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() Obtain Configuration for digital watermark extraction.
  * @method void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig) Set Configuration for digital watermark extraction.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
@@ -67,7 +67,7 @@ class ExtractBlindWatermarkTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. `0` indicates success. Other values indicate failure.
+     * @var integer Error code. `0`: Success. Other values: Failure.
      */
     public $ErrCode;
 
@@ -77,17 +77,17 @@ class ExtractBlindWatermarkTask extends AbstractModel
     public $Message;
 
     /**
-     * @var ExtractBlindWatermarkInputInfo Input information of the file for digital watermark extraction.
+     * @var ExtractBlindWatermarkInputInfo File input information for digital watermark extraction.
      */
     public $InputInfo;
 
     /**
-     * @var string Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+     * @var string Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
      */
     public $Type;
 
     /**
-     * @var boolean Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+     * @var boolean Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
      */
     public $IsDetected;
 
@@ -97,7 +97,7 @@ class ExtractBlindWatermarkTask extends AbstractModel
     public $Result;
 
     /**
-     * @var string Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+     * @var string Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
      */
     public $ResultUV;
 
@@ -122,13 +122,13 @@ class ExtractBlindWatermarkTask extends AbstractModel
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param integer $ErrCode Error code. `0` indicates success. Other values indicate failure.
+     * @param integer $ErrCode Error code. `0`: Success. Other values: Failure.
      * @param string $Message Error message.
-     * @param ExtractBlindWatermarkInputInfo $InputInfo Input information of the file for digital watermark extraction.
-     * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
-     * @param boolean $IsDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+     * @param ExtractBlindWatermarkInputInfo $InputInfo File input information for digital watermark extraction.
+     * @param string $Type Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+     * @param boolean $IsDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
      * @param string $Result Extracted digital watermark content. This field will not be returned if no watermark is detected.
-     * @param string $ResultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+     * @param string $ResultUV Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
      * @param ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig Configuration for digital watermark extraction.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.

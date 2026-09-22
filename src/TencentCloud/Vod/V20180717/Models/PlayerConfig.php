@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set <p>Player configuration name.</p>
  * @method string getType() Obtain <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
  * @method void setType(string $Type) Set <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
- * @method string getAudioVideoType() Obtain <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
- * @method void setAudioVideoType(string $AudioVideoType) Set <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
- * @method string getDrmSwitch() Obtain <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
- * @method void setDrmSwitch(string $DrmSwitch) Set <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+ * @method string getAudioVideoType() Obtain <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
+ * @method void setAudioVideoType(string $AudioVideoType) Set <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
+ * @method string getDrmSwitch() Obtain <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
+ * @method void setDrmSwitch(string $DrmSwitch) Set <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
  * @method integer getAdaptiveDynamicStreamingDefinition() Obtain <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
  * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
  * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain <p>Allowed output of DRM adaptive bitstream template content.</p>
@@ -62,12 +62,12 @@ class PlayerConfig extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+     * @var string <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
      */
     public $AudioVideoType;
 
     /**
-     * @var string <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * @var string <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public $DrmSwitch;
 
@@ -124,8 +124,8 @@ class PlayerConfig extends AbstractModel
     /**
      * @param string $Name <p>Player configuration name.</p>
      * @param string $Type <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
-     * @param string $AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
-     * @param string $DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * @param string $AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
+     * @param string $DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
      * @param integer $AdaptiveDynamicStreamingDefinition <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
      * @param DrmStreamingsInfo $DrmStreamingsInfo <p>Allowed output of DRM adaptive bitstream template content.</p>
      * @param integer $TranscodeDefinition <p>Allowed output transcoding template ID.</p>

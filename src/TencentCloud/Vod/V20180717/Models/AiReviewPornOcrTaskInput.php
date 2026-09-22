@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task input parameter type of Ocr text involving offensive content in audio/video moderation
  *
- * @method integer getDefinition() Obtain Template ID for authenticating offensive content.
- * @method void setDefinition(integer $Definition) Set Template ID for authenticating offensive content.
+ * @method integer getDefinition() Obtain Template ID for authenticating templates that involve offensive content.
+ * @method void setDefinition(integer $Definition) Set Template ID for authenticating templates that involve offensive content.
  */
 class AiReviewPornOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer Template ID for authenticating offensive content.
+     * @var integer Template ID for authenticating templates that involve offensive content.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Template ID for authenticating offensive content.
+     * @param integer $Definition Template ID for authenticating templates that involve offensive content.
      */
     function __construct()
     {

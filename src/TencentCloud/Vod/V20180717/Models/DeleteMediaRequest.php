@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Unique identifier of the media file.
  * @method void setFileId(string $FileId) Set Unique identifier of the media file.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method array getDeleteParts() Obtain Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
- * @method void setDeleteParts(array $DeleteParts) Set Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method array getDeleteParts() Obtain Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
+ * @method void setDeleteParts(array $DeleteParts) Set Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
  */
 class DeleteMediaRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteMediaRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
+     * @var array Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
      */
     public $DeleteParts;
 
     /**
      * @param string $FileId Unique identifier of the media file.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param array $DeleteParts Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param array $DeleteParts Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
      */
     function __construct()
     {

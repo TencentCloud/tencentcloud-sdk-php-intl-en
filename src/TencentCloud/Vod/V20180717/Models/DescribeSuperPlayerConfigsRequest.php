@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSuperPlayerConfigs request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method array getNames() Obtain Player configuration name filter conditions, with an array length limit of 100.
- * @method void setNames(array $Names) Set Player configuration name filter conditions, with an array length limit of 100.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+ * @method array getNames() Obtain Player configuration name filter condition, with an array length limit of 100.
+ * @method void setNames(array $Names) Set Player configuration name filter condition, with an array length limit of 100.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSuperPlayerConfigsRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Player configuration name filter conditions, with an array length limit of 100.
+     * @var array Player configuration name filter condition, with an array length limit of 100.
      */
     public $Names;
 
@@ -65,8 +65,8 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param array $Names Player configuration name filter conditions, with an array length limit of 100.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+     * @param array $Names Player configuration name filter condition, with an array length limit of 100.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type Player configuration type filter condition. Available values:

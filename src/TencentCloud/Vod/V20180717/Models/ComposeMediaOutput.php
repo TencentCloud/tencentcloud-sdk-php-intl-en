@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output media file information.
  *
- * @method string getFileName() Obtain Filename, which contains up to 64 characters.
- * @method void setFileName(string $FileName) Set Filename, which contains up to 64 characters.
- * @method string getDescription() Obtain Description. Up to 128 characters.
- * @method void setDescription(string $Description) Set Description. Up to 128 characters.
+ * @method string getFileName() Obtain Filename, up to 64 characters.
+ * @method void setFileName(string $FileName) Set Filename, up to 64 characters.
+ * @method string getDescription() Obtain Description. The maximum length is 128 characters.
+ * @method void setDescription(string $Description) Set Description. The maximum length is 128 characters.
  * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
  * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
@@ -37,31 +37,31 @@ use TencentCloud\Common\AbstractModel;
  * @method OutputAudioStream getAudioStream() Obtain Output audio content.
  * @method void setAudioStream(OutputAudioStream $AudioStream) Set Output audio content.
  * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
  * @method void setRemoveVideo(integer $RemoveVideo) Set Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
  * @method integer getRemoveAudio() Obtain Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
  * @method void setRemoveAudio(integer $RemoveAudio) Set Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
  */
 class ComposeMediaOutput extends AbstractModel
 {
     /**
-     * @var string Filename, which contains up to 64 characters.
+     * @var string Filename, up to 64 characters.
      */
     public $FileName;
 
     /**
-     * @var string Description. Up to 128 characters.
+     * @var string Description. The maximum length is 128 characters.
      */
     public $Description;
 
@@ -93,7 +93,7 @@ class ComposeMediaOutput extends AbstractModel
 
     /**
      * @var integer Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -101,15 +101,15 @@ Default value: 0.
 
     /**
      * @var integer Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
     public $RemoveAudio;
 
     /**
-     * @param string $FileName Filename, which contains up to 64 characters.
-     * @param string $Description Description. Up to 128 characters.
+     * @param string $FileName Filename, up to 64 characters.
+     * @param string $Description Description. The maximum length is 128 characters.
      * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
      * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -117,11 +117,11 @@ Default value: 0.
      * @param OutputVideoStream $VideoStream Output video information.
      * @param OutputAudioStream $AudioStream Output audio content.
      * @param integer $RemoveVideo Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      * @param integer $RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */

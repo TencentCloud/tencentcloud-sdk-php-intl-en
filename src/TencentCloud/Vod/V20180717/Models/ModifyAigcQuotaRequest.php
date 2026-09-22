@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAigcQuota request structure.
  *
- * @method integer getSubAppId() Obtain <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
+ * @method integer getSubAppId() Obtain <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</strong></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</strong></p>
  * @method string getQuotaType() Obtain <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
  * @method void setQuotaType(string $QuotaType) Set <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
- * @method integer getQuotaLimit() Obtain <p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
- * @method void setQuotaLimit(integer $QuotaLimit) Set <p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+ * @method integer getQuotaLimit() Obtain <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+ * @method void setQuotaLimit(integer $QuotaLimit) Set <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
  * @method string getApiToken() Obtain <p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
  * @method void setApiToken(string $ApiToken) Set <p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
  */
 class ModifyAigcQuotaRequest extends AbstractModel
 {
     /**
-     * @var integer <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
+     * @var integer <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</strong></p>
      */
     public $SubAppId;
 
@@ -42,7 +42,7 @@ class ModifyAigcQuotaRequest extends AbstractModel
     public $QuotaType;
 
     /**
-     * @var integer <p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+     * @var integer <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
      */
     public $QuotaLimit;
 
@@ -52,9 +52,9 @@ class ModifyAigcQuotaRequest extends AbstractModel
     public $ApiToken;
 
     /**
-     * @param integer $SubAppId <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
+     * @param integer $SubAppId <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</strong></p>
      * @param string $QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
-     * @param integer $QuotaLimit <p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+     * @param integer $QuotaLimit <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
      * @param string $ApiToken <p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
      */
     function __construct()

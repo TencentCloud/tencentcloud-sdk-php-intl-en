@@ -18,17 +18,17 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Prohibited task control parameter
+ * Prohibited task control parameters.
  *
- * @method ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Voice prohibition control parameters.
- * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Voice prohibition control parameters.
+ * @method ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Voice prohibition control parameter.
+ * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Voice prohibition control parameter.
  * @method ProhibitedOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Prohibited control parameters for text.
  * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Prohibited control parameters for text.
  */
 class ProhibitedConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var ProhibitedAsrReviewTemplateInfoForUpdate Voice prohibition control parameters.
+     * @var ProhibitedAsrReviewTemplateInfoForUpdate Voice prohibition control parameter.
      */
     public $AsrReviewInfo;
 
@@ -38,7 +38,7 @@ class ProhibitedConfigureInfoForUpdate extends AbstractModel
     public $OcrReviewInfo;
 
     /**
-     * @param ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo Voice prohibition control parameters.
+     * @param ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo Voice prohibition control parameter.
      * @param ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo Prohibited control parameters for text.
      */
     function __construct()

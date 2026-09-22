@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF: Disable the intelligent object recognition task.</li>
  * @method string getObjectLibrary() Obtain Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
  * @method void setObjectLibrary(string $ObjectLibrary) Set Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
  */
 class ObjectConfigureInfo extends AbstractModel
 {
@@ -49,9 +49,9 @@ class ObjectConfigureInfo extends AbstractModel
     /**
      * @var string Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
      */
     public $ObjectLibrary;
 
@@ -61,9 +61,9 @@ Default value: All. The default object library and user-defined object library a
 <li>OFF: Disable the intelligent object recognition task.</li>
      * @param string $ObjectLibrary Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
      */
     function __construct()
     {

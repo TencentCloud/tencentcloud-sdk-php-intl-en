@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Large model parsing segment summary parsing configuration
  *
- * @method string getSwitch() Obtain Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
- * @method void setSwitch(string $Switch) Set Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
- * @method string getExtendedParameter() Obtain Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
- * @method void setExtendedParameter(string $ExtendedParameter) Set Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+ * @method string getSwitch() Obtain Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
+ * @method void setSwitch(string $Switch) Set Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
+ * @method string getExtendedParameter() Obtain Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+ * @method void setExtendedParameter(string $ExtendedParameter) Set Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
  */
 class LLMComprehendSummaryForUpdate extends AbstractModel
 {
     /**
-     * @var string Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
+     * @var string Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
      */
     public $Switch;
 
     /**
-     * @var string Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+     * @var string Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
      */
     public $ExtendedParameter;
 
     /**
-     * @param string $Switch Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
-     * @param string $ExtendedParameter Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+     * @param string $Switch Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
+     * @param string $ExtendedParameter Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
      */
     function __construct()
     {

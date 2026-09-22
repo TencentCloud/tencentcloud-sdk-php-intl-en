@@ -18,56 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for audio/video moderation tasks of user-defined characters
+ * Control parameters of a user-defined character audio/video moderation task
  *
- * @method string getSwitch() Obtain Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
- * @method void setSwitch(string $Switch) Set Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
- * @method array getLabelSet() Obtain User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+ * @method string getSwitch() Obtain Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
+ * @method void setSwitch(string $Switch) Set Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
+ * @method array getLabelSet() Obtain User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
- * @method void setLabelSet(array $LabelSet) Set User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+ * @method void setLabelSet(array $LabelSet) Set User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
- * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
- * @method integer getReviewConfidence() Obtain Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
+ * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
+ * @method integer getReviewConfidence() Obtain Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
  */
 class UserDefineFaceReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
+     * @var string Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
      */
     public $Switch;
 
     /**
-     * @var array User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+     * @var array User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public $LabelSet;
 
     /**
-     * @var integer Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
+     * @var integer Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
      */
     public $BlockConfidence;
 
     /**
-     * @var integer Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
+     * @var integer Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
-     * @param array $LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+     * @param string $Switch Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
+     * @param array $LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
-     * @param integer $ReviewConfidence Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
+     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
+     * @param integer $ReviewConfidence Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
      */
     function __construct()
     {

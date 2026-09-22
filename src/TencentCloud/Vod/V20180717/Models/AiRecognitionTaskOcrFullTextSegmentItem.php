@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Full text recognition fragment.
+ * Full text recognition segment.
  *
  * @method float getStartTimeOffset() Obtain Start time offset of a recognized segment, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognized segment, in seconds.

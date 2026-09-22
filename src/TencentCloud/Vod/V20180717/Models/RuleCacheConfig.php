@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCache(CacheConfigCache $Cache) Set Cache configuration.
  * @method CacheConfigNoCache getNoCache() Obtain No cache configuration.
  * @method void setNoCache(CacheConfigNoCache $NoCache) Set No cache configuration.
- * @method CacheConfigFollowOrigin getFollowOrigin() Obtain Follow the origin server configuration.
- * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) Set Follow the origin server configuration.
+ * @method CacheConfigFollowOrigin getFollowOrigin() Obtain Follow the origin site configuration.
+ * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) Set Follow the origin site configuration.
  */
 class RuleCacheConfig extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RuleCacheConfig extends AbstractModel
     public $NoCache;
 
     /**
-     * @var CacheConfigFollowOrigin Follow the origin server configuration.
+     * @var CacheConfigFollowOrigin Follow the origin site configuration.
      */
     public $FollowOrigin;
 
     /**
      * @param CacheConfigCache $Cache Cache configuration.
      * @param CacheConfigNoCache $NoCache No cache configuration.
-     * @param CacheConfigFollowOrigin $FollowOrigin Follow the origin server configuration.
+     * @param CacheConfigFollowOrigin $FollowOrigin Follow the origin site configuration.
      */
     function __construct()
     {

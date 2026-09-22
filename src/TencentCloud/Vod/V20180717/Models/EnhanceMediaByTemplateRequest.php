@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set Media file ID.
  * @method integer getDefinition() Obtain Audio-visual quality rebirth template ID.
  * @method void setDefinition(integer $Definition) Set Audio-visual quality rebirth template ID.
- * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method float getStartTimeOffset() Obtain Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
  * @method float getEndTimeOffset() Obtain End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method RebuildMediaOutputConfig getOutputConfig() Obtain File configuration after audio and video quality rebirth.
  * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) Set File configuration after audio and video quality rebirth.
- * @method string getSessionId() Obtain Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
- * @method void setSessionId(string $SessionId) Set Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method integer getTasksPriority() Obtain Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  * @method string getExtInfo() Obtain Reserved field, used for special purposes.
  * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
  */
@@ -54,7 +54,7 @@ class EnhanceMediaByTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -74,7 +74,7 @@ class EnhanceMediaByTemplateRequest extends AbstractModel
     public $OutputConfig;
 
     /**
-     * @var string Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
@@ -84,7 +84,7 @@ class EnhanceMediaByTemplateRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @var integer Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TasksPriority;
 
@@ -96,13 +96,13 @@ class EnhanceMediaByTemplateRequest extends AbstractModel
     /**
      * @param string $FileId Media file ID.
      * @param integer $Definition Audio-visual quality rebirth template ID.
-     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param float $StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
      * @param float $EndTimeOffset End offset time, in seconds. Not filled indicates cutting to the end of the video.
      * @param RebuildMediaOutputConfig $OutputConfig File configuration after audio and video quality rebirth.
-     * @param string $SessionId Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param integer $TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      * @param string $ExtInfo Reserved field, used for special purposes.
      */
     function __construct()

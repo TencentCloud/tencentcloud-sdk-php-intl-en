@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
- * @method string getLabel() Obtain Result tag for authentication involving unsafe information. Value range:
+ * @method string getLabel() Obtain Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 <li>banners: violent and terrorist flags;</li>
 <li>explosion: explosions and fires;</li>
 <li>scenario: Violent and terrorist visuals.</li>
- * @method void setLabel(string $Label) Set Result tag for authentication involving unsafe information. Value range:
+ * @method void setLabel(string $Label) Set Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -63,7 +63,7 @@ class TerrorismImageResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Result tag for authentication involving unsafe information. Value range:
+     * @var string Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -80,7 +80,7 @@ class TerrorismImageResult extends AbstractModel
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
-     * @param string $Label Result tag for authentication involving unsafe information. Value range:
+     * @param string $Label Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>

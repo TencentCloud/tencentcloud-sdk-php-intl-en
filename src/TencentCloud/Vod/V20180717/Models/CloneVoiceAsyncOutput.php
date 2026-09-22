@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of the timbre cloning task.
+ * Timbre clone task output.
  *
  * @method string getVoiceId() Obtain <p>Voice ID.</p>
  * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>

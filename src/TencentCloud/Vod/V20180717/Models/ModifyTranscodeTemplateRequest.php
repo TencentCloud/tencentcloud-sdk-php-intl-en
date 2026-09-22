@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain <p>Unique identifier of the transcoding template.</p>
  * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the transcoding template.</p>
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand video <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID to access resources in on-demand applications, whether default or newly created.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand video <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID to access resources in on-demand applications, whether default or newly created.</b></p>
  * @method string getContainer() Obtain <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
  * @method void setContainer(string $Container) Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
  * @method string getName() Obtain <p>Transcoding template name. Length limit: 64 characters.</p>
@@ -55,7 +55,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @var integer <p><b>On-demand video <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID to access resources in on-demand applications, whether default or newly created.</b></p>
      */
     public $SubAppId;
 
@@ -116,7 +116,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
 
     /**
      * @param integer $Definition <p>Unique identifier of the transcoding template.</p>
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param integer $SubAppId <p><b>On-demand video <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID to access resources in on-demand applications, whether default or newly created.</b></p>
      * @param string $Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      * @param string $Name <p>Transcoding template name. Length limit: 64 characters.</p>
      * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>

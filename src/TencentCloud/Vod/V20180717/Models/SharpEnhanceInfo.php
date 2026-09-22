@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * Detail enhancement control
  *
  * @method string getSwitch() Obtain Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
  * @method void setSwitch(string $Switch) Set Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
  * @method float getIntensity() Obtain Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
 Default: 0.0.
  * @method void setIntensity(float $Intensity) Set Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
@@ -35,8 +35,8 @@ class SharpEnhanceInfo extends AbstractModel
 {
     /**
      * @var string Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
      */
     public $Switch;
 
@@ -48,8 +48,8 @@ Default: 0.0.
 
     /**
      * @param string $Switch Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
      * @param float $Intensity Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
 Default: 0.0.
      */

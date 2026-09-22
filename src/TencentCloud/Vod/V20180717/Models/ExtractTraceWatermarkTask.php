@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Task status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
- * @method integer getErrCode() Obtain Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+ * @method integer getErrCode() Obtain Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(ExtractTraceWatermarkTaskInput $Input) Set Input information of the source watermark extraction task.
  * @method ExtractTraceWatermarkTaskOutput getOutput() Obtain Output information of the source watermark extraction task.
  * @method void setOutput(ExtractTraceWatermarkTaskOutput $Output) Set Output information of the source watermark extraction task.
- * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  */
@@ -64,9 +64,9 @@ class ExtractTraceWatermarkTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @var integer Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public $ErrCode;
@@ -92,7 +92,7 @@ class ExtractTraceWatermarkTask extends AbstractModel
     public $Output;
 
     /**
-     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public $SessionId;
 
@@ -106,15 +106,15 @@ class ExtractTraceWatermarkTask extends AbstractModel
      * @param string $Status Task status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param integer $ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @param integer $ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      * @param string $Message Error message.
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param ExtractTraceWatermarkTaskInput $Input Input information of the source watermark extraction task.
      * @param ExtractTraceWatermarkTaskOutput $Output Output information of the source watermark extraction task.
-     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     function __construct()

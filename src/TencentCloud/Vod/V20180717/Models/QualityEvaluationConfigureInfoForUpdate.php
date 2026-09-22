@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
  * @method void setSwitch(string $Switch) Set Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
  * @method integer getScore() Obtain Video quality rating filter threshold. Only time periods with values below this threshold are returned.
  * @method void setScore(integer $Score) Set Video quality rating filter threshold. Only time periods with values below this threshold are returned.
  */
@@ -34,7 +34,7 @@ class QualityEvaluationConfigureInfoForUpdate extends AbstractModel
     /**
      * @var string Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
@@ -46,7 +46,7 @@ class QualityEvaluationConfigureInfoForUpdate extends AbstractModel
     /**
      * @param string $Switch Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      * @param integer $Score Video quality rating filter threshold. Only time periods with values below this threshold are returned.
      */
     function __construct()

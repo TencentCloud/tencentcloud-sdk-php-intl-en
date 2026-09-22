@@ -30,20 +30,20 @@ use TencentCloud\Common\AbstractModel;
 <li>FINISH: completed</li>
  * @method integer getErrCode() Obtain Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method integer getProgress() Obtain Progress of the media file creation task, with a value range of [0-100].
- * @method void setProgress(integer $Progress) Set Progress of the media file creation task, with a value range of [0-100].
+ * @method integer getProgress() Obtain Progress of the media file creation task, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Progress of the media file creation task, in the range of [0,100].
  * @method ComposeMediaTaskInput getInput() Obtain Input of a media file creation task.
  * @method void setInput(ComposeMediaTaskInput $Input) Set Input of a media file creation task.
  * @method ComposeMediaTaskOutput getOutput() Obtain Output of the media file creation task.
  * @method void setOutput(ComposeMediaTaskOutput $Output) Set Output of the media file creation task.
- * @method MediaMetaData getMetaData() Obtain Meta information of the output video.
- * @method void setMetaData(MediaMetaData $MetaData) Set Meta information of the output video.
+ * @method MediaMetaData getMetaData() Obtain Metadata of the output video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the output video.
  * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
@@ -66,7 +66,7 @@ class ComposeMediaTask extends AbstractModel
     /**
      * @var integer Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      */
     public $ErrCode;
 
@@ -76,7 +76,7 @@ class ComposeMediaTask extends AbstractModel
     public $Message;
 
     /**
-     * @var integer Progress of the media file creation task, with a value range of [0-100].
+     * @var integer Progress of the media file creation task, in the range of [0,100].
      */
     public $Progress;
 
@@ -91,7 +91,7 @@ class ComposeMediaTask extends AbstractModel
     public $Output;
 
     /**
-     * @var MediaMetaData Meta information of the output video.
+     * @var MediaMetaData Metadata of the output video.
      */
     public $MetaData;
 
@@ -112,12 +112,12 @@ class ComposeMediaTask extends AbstractModel
 <li>FINISH: completed</li>
      * @param integer $ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      * @param string $Message Error message.
-     * @param integer $Progress Progress of the media file creation task, with a value range of [0-100].
+     * @param integer $Progress Progress of the media file creation task, in the range of [0,100].
      * @param ComposeMediaTaskInput $Input Input of a media file creation task.
      * @param ComposeMediaTaskOutput $Output Output of the media file creation task.
-     * @param MediaMetaData $MetaData Meta information of the output video.
+     * @param MediaMetaData $MetaData Metadata of the output video.
      * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */

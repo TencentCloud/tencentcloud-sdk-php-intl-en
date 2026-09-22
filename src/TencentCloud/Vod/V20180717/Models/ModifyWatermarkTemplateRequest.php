@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set Watermark template unique identifier.
  * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method string getName() Obtain Watermark template name, with a length limit of 64 characters.
- * @method void setName(string $Name) Set Watermark template name, with a length limit of 64 characters.
+ * @method string getName() Obtain Watermark template name. The length cannot exceed 64 characters.
+ * @method void setName(string $Name) Set Watermark template name. The length cannot exceed 64 characters.
  * @method string getComment() Obtain Template description, with a length limit of 256 characters.
  * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
  * @method string getCoordinateOrigin() Obtain Origin position. Valid values:
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
- * @method string getXPos() Obtain The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+ * @method string getXPos() Obtain Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
- * @method void setXPos(string $XPos) Set The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+ * @method void setXPos(string $XPos) Set Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
  * @method string getYPos() Obtain Vertical position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
@@ -70,7 +70,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string Watermark template name, with a length limit of 64 characters.
+     * @var string Watermark template name. The length cannot exceed 64 characters.
      */
     public $Name;
 
@@ -89,7 +89,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     public $CoordinateOrigin;
 
     /**
-     * @var string The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+     * @var string Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
      */
@@ -120,14 +120,14 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     /**
      * @param integer $Definition Watermark template unique identifier.
      * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param string $Name Watermark template name, with a length limit of 64 characters.
+     * @param string $Name Watermark template name. The length cannot exceed 64 characters.
      * @param string $Comment Template description, with a length limit of 256 characters.
      * @param string $CoordinateOrigin Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
-     * @param string $XPos The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+     * @param string $XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
      * @param string $YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.

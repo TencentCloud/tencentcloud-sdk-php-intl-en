@@ -28,26 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
- * @method integer getErrCode() Obtain Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+ * @method integer getErrCode() Obtain Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method integer getProgress() Obtain Progress of the audio and video quality regeneration task. Value range: [0-100].
- * @method void setProgress(integer $Progress) Set Progress of the audio and video quality regeneration task. Value range: [0-100].
+ * @method integer getProgress() Obtain Audio and video quality regeneration task progress. Value range: [0-100].
+ * @method void setProgress(integer $Progress) Set Audio and video quality regeneration task progress. Value range: [0-100].
  * @method QualityEnhanceTaskInput getInput() Obtain Input of the audio and video quality regeneration task.
  * @method void setInput(QualityEnhanceTaskInput $Input) Set Input of the audio and video quality regeneration task.
  * @method QualityEnhanceTaskOutput getOutput() Obtain Output of the audio and video quality regeneration task.
  * @method void setOutput(QualityEnhanceTaskOutput $Output) Set Output of the audio and video quality regeneration task.
- * @method MediaMetaData getMetaData() Obtain Meta information of the output video after audio and video quality revival.
- * @method void setMetaData(MediaMetaData $MetaData) Set Meta information of the output video after audio and video quality revival.
+ * @method MediaMetaData getMetaData() Obtain Meta-information of the output video after audio and video quality revival.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Meta-information of the output video after audio and video quality revival.
  * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
@@ -68,9 +68,9 @@ class QualityEnhanceTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @var integer Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public $ErrCode;
@@ -86,7 +86,7 @@ class QualityEnhanceTask extends AbstractModel
     public $ErrCodeExt;
 
     /**
-     * @var integer Progress of the audio and video quality regeneration task. Value range: [0-100].
+     * @var integer Audio and video quality regeneration task progress. Value range: [0-100].
      */
     public $Progress;
 
@@ -101,7 +101,7 @@ class QualityEnhanceTask extends AbstractModel
     public $Output;
 
     /**
-     * @var MediaMetaData Meta information of the output video after audio and video quality revival.
+     * @var MediaMetaData Meta-information of the output video after audio and video quality revival.
      */
     public $MetaData;
 
@@ -120,16 +120,16 @@ class QualityEnhanceTask extends AbstractModel
      * @param string $Status Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param integer $ErrCode Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @param integer $ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      * @param string $Message Error message.
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param integer $Progress Progress of the audio and video quality regeneration task. Value range: [0-100].
+     * @param integer $Progress Audio and video quality regeneration task progress. Value range: [0-100].
      * @param QualityEnhanceTaskInput $Input Input of the audio and video quality regeneration task.
      * @param QualityEnhanceTaskOutput $Output Output of the audio and video quality regeneration task.
-     * @param MediaMetaData $MetaData Meta information of the output video after audio and video quality revival.
+     * @param MediaMetaData $MetaData Meta-information of the output video after audio and video quality revival.
      * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */

@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
  * @method void setSwitch(string $Switch) Set Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
  */
 class JitterConfigureInfoForUpdate extends AbstractModel
 {
     /**
      * @var string Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
     /**
      * @param string $Switch Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     function __construct()
     {

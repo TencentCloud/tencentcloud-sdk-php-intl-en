@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Suspected segment of Asr text in audio/video moderation
  *
- * @method float getStartTimeOffset() Obtain Offset time of the start of the suspected segment. Unit: seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of the start of the suspected segment. Unit: seconds.
+ * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
  * @method float getConfidence() Obtain Confidence degree of the suspected segment.
  * @method void setConfidence(float $Confidence) Set Confidence degree of the suspected segment.
- * @method string getSuggestion() Obtain Result suggestion for video moderation of the suspected segment. Value range:
+ * @method string getSuggestion() Obtain Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Result suggestion for video moderation of the suspected segment. Value range:
+ * @method void setSuggestion(string $Suggestion) Set Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float Offset time of the start of the suspected segment. Unit: seconds.
+     * @var float Start time offset of a suspected segment, in seconds.
      */
     public $StartTimeOffset;
 
@@ -55,7 +55,7 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string Result suggestion for video moderation of the suspected segment. Value range:
+     * @var string Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -68,10 +68,10 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
     public $KeywordSet;
 
     /**
-     * @param float $StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+     * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
      * @param float $Confidence Confidence degree of the suspected segment.
-     * @param string $Suggestion Result suggestion for video moderation of the suspected segment. Value range:
+     * @param string $Suggestion Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>

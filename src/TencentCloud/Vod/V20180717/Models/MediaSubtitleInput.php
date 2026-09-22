@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Subtitle information input parameter.
  *
- * @method string getName() Obtain Subtitle name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Subtitle name. The length cannot exceed 64 characters.
+ * @method string getName() Obtain Subtitle name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Subtitle name. Length limit: 64 characters.
  * @method string getLanguage() Obtain Subtitle language. Common values are as follows:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
@@ -58,13 +58,13 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
 <li>vtt</li>
  * @method string getContent() Obtain Caption content as an encoded string after [Base64](https://tools.ietf.org/html/rfc4648) encoding.
  * @method void setContent(string $Content) Set Caption content as an encoded string after [Base64](https://tools.ietf.org/html/rfc4648) encoding.
- * @method string getId() Obtain Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
- * @method void setId(string $Id) Set Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+ * @method string getId() Obtain Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+ * @method void setId(string $Id) Set Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
  */
 class MediaSubtitleInput extends AbstractModel
 {
     /**
-     * @var string Subtitle name. The length cannot exceed 64 characters.
+     * @var string Subtitle name. Length limit: 64 characters.
      */
     public $Name;
 
@@ -99,12 +99,12 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
     public $Content;
 
     /**
-     * @var string Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+     * @var string Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
      */
     public $Id;
 
     /**
-     * @param string $Name Subtitle name. The length cannot exceed 64 characters.
+     * @param string $Name Subtitle name. Length limit: 64 characters.
      * @param string $Language Subtitle language. Common values are as follows:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
@@ -123,7 +123,7 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
      * @param string $Format Subtitle format. Valid values:
 <li>vtt</li>
      * @param string $Content Caption content as an encoded string after [Base64](https://tools.ietf.org/html/rfc4648) encoding.
-     * @param string $Id Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+     * @param string $Id Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input type of the intelligent highlight task.
+ * Intelligent highlight task input type.
  *
  * @method integer getDefinition() Obtain Intelligent highlight template ID.
  * @method void setDefinition(integer $Definition) Set Intelligent highlight template ID.

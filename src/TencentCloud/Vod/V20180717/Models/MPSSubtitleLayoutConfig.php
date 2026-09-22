@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subtitle suppression module column configuration in MPS
+ * Subtitle arrangement configuration for the MPS subtitle suppression module
  *
  * @method integer getSubtitleLayoutConfigSwitch() Obtain <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
  * @method void setSubtitleLayoutConfigSwitch(integer $SubtitleLayoutConfigSwitch) Set <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>

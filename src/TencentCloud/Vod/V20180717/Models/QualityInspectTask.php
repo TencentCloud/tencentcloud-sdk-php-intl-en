@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Task status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method MediaMetaData getMetaData() Obtain Metadata of audio and video for quality inspection input.
@@ -58,7 +58,7 @@ class QualityInspectTask extends AbstractModel
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
@@ -97,7 +97,7 @@ class QualityInspectTask extends AbstractModel
      * @param string $Status Task status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param string $ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param string $Message Error message.
      * @param MediaMetaData $MetaData Metadata of audio and video for quality inspection input.
      * @param QualityInspectTaskInput $Input Audio and video quality inspection task input.

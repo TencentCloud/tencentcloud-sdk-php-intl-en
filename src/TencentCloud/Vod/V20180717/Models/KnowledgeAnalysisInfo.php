@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Media analysis information in the knowledge base.
+ * Knowledge base media analysis information.
  *
  * @method integer getDefinition() Obtain <p>Large model parsing template number</p>
  * @method void setDefinition(integer $Definition) Set <p>Large model parsing template number</p>

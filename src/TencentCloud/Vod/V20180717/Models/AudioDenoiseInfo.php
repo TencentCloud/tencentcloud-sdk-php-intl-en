@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * Audio noise reduction control information
  *
  * @method string getSwitch() Obtain Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
  * @method void setSwitch(string $Switch) Set Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
  * @method string getType() Obtain Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
 <li>normal: Normal audio noise reduction;</li>
 Default value: normal.
@@ -37,8 +37,8 @@ class AudioDenoiseInfo extends AbstractModel
 {
     /**
      * @var string Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
      */
     public $Switch;
 
@@ -51,8 +51,8 @@ Default value: normal.
 
     /**
      * @param string $Switch Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
      * @param string $Type Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
 <li>normal: Normal audio noise reduction;</li>
 Default value: normal.

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UserAgent allowlist and blocklist configuration
+ * UserAgent blocklist and allowlist configuration
  *
  * @method string getSwitch() Obtain UserAgent allowlist/blocklist configuration switch. Valid values:
 <li>`on`: Enable;</li>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set UserAgent allowlist/blocklist configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
- * @method array getFilterRules() Obtain List of effective rules for the UserAgent blocklist and allowlist.
- * @method void setFilterRules(array $FilterRules) Set List of effective rules for the UserAgent blocklist and allowlist.
+ * @method array getFilterRules() Obtain List of effective UserAgent blocklist/allowlist rules.
+ * @method void setFilterRules(array $FilterRules) Set List of effective UserAgent blocklist/allowlist rules.
  */
 class UserAgentFilter extends AbstractModel
 {
@@ -39,7 +39,7 @@ class UserAgentFilter extends AbstractModel
     public $Switch;
 
     /**
-     * @var array List of effective rules for the UserAgent blocklist and allowlist.
+     * @var array List of effective UserAgent blocklist/allowlist rules.
      */
     public $FilterRules;
 
@@ -47,7 +47,7 @@ class UserAgentFilter extends AbstractModel
      * @param string $Switch UserAgent allowlist/blocklist configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param array $FilterRules List of effective rules for the UserAgent blocklist and allowlist.
+     * @param array $FilterRules List of effective UserAgent blocklist/allowlist rules.
      */
     function __construct()
     {

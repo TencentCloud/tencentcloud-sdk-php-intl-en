@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  * @method string getStatus() Obtain <p>Task status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+ * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
  * @method string getErrCodeExt() Obtain <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p>
  * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p>
- * @method VideoDubbingAsyncInput getInput() Obtain <p>Input information for a video dubbing task.</p>
- * @method void setInput(VideoDubbingAsyncInput $Input) Set <p>Input information for a video dubbing task.</p>
+ * @method VideoDubbingAsyncInput getInput() Obtain <p>Video dubbing task input information.</p>
+ * @method void setInput(VideoDubbingAsyncInput $Input) Set <p>Video dubbing task input information.</p>
  * @method VideoDubbingAsyncOutput getOutput() Obtain <p>Video dubbing task output information.</p>
  * @method void setOutput(VideoDubbingAsyncOutput $Output) Set <p>Video dubbing task output information.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
@@ -54,7 +54,7 @@ class VideoDubbingAsyncTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * @var integer <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public $ErrCode;
 
@@ -69,7 +69,7 @@ class VideoDubbingAsyncTask extends AbstractModel
     public $ErrCodeExt;
 
     /**
-     * @var VideoDubbingAsyncInput <p>Input information for a video dubbing task.</p>
+     * @var VideoDubbingAsyncInput <p>Video dubbing task input information.</p>
      */
     public $Input;
 
@@ -96,10 +96,10 @@ class VideoDubbingAsyncTask extends AbstractModel
     /**
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * @param integer $ErrCode <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      * @param string $Message <p>Error message.</p>
      * @param string $ErrCodeExt <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p>
-     * @param VideoDubbingAsyncInput $Input <p>Input information for a video dubbing task.</p>
+     * @param VideoDubbingAsyncInput $Input <p>Video dubbing task input information.</p>
      * @param VideoDubbingAsyncOutput $Output <p>Video dubbing task output information.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>

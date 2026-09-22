@@ -42,15 +42,15 @@ Unit: Hz.
 Default value: 16000.
  * @method integer getAudioChannel() Obtain Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
  * @method void setAudioChannel(integer $AudioChannel) Set Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
- * @method integer getBitrate() Obtain Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+ * @method integer getBitrate() Obtain Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
- * @method void setBitrate(integer $Bitrate) Set Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
  */
 class OutputAudioStream extends AbstractModel
@@ -76,13 +76,13 @@ Default value: 16000.
     /**
      * @var integer Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
      */
     public $AudioChannel;
 
     /**
-     * @var integer Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+     * @var integer Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
      */
     public $Bitrate;
@@ -100,9 +100,9 @@ Unit: Hz.
 Default value: 16000.
      * @param integer $AudioChannel Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
-     * @param integer $Bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+     * @param integer $Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
      */
     function __construct()

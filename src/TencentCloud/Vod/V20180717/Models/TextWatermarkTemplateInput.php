@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * Text watermarking template
  *
  * @method string getFontType() Obtain Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
  * @method void setFontType(string $FontType) Set Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
  * @method string getFontSize() Obtain Font size. Format: Npx, where N is a numerical value.
  * @method void setFontSize(string $FontSize) Set Font size. Format: Npx, where N is a numerical value.
@@ -43,7 +43,7 @@ class TextWatermarkTemplateInput extends AbstractModel
 {
     /**
      * @var string Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      */
     public $FontType;
@@ -68,7 +68,7 @@ Default value: 1.
 
     /**
      * @param string $FontType Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      * @param string $FontSize Font size. Format: Npx, where N is a numerical value.
      * @param string $FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).

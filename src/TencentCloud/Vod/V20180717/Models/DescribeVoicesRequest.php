@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVoices request structure.
  *
- * @method string getSubAppId() Obtain <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
- * @method void setSubAppId(string $SubAppId) Set <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+ * @method string getSubAppId() Obtain <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</p>
+ * @method void setSubAppId(string $SubAppId) Set <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</p>
  * @method string getVoiceId() Obtain <p>Voice ID.</p>
  * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>
  * @method string getVoiceType() Obtain <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
@@ -48,7 +48,7 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
 class DescribeVoicesRequest extends AbstractModel
 {
     /**
-     * @var string <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+     * @var string <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</p>
      */
     public $SubAppId;
 
@@ -104,7 +104,7 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
     public $ExtParam;
 
     /**
-     * @param string $SubAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+     * @param string $SubAppId <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</p>
      * @param string $VoiceId <p>Voice ID.</p>
      * @param string $VoiceType <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
      * @param string $VoiceName <p>Voice name.</p>

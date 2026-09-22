@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain File ID deleted.
  * @method void setFileId(string $FileId) Set File ID deleted.
- * @method array getDeleteParts() Obtain Files deleted this time.
- * @method void setDeleteParts(array $DeleteParts) Set Files deleted this time.
+ * @method array getDeleteParts() Obtain Part of the files deleted this time.
+ * @method void setDeleteParts(array $DeleteParts) Set Part of the files deleted this time.
  */
 class FileDeleteResultItem extends AbstractModel
 {
@@ -33,13 +33,13 @@ class FileDeleteResultItem extends AbstractModel
     public $FileId;
 
     /**
-     * @var array Files deleted this time.
+     * @var array Part of the files deleted this time.
      */
     public $DeleteParts;
 
     /**
      * @param string $FileId File ID deleted.
-     * @param array $DeleteParts Files deleted this time.
+     * @param array $DeleteParts Part of the files deleted this time.
      */
     function __construct()
     {

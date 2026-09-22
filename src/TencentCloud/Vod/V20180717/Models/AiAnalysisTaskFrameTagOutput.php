@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent frame tagging result information.
  *
- * @method array getSegmentSet() Obtain List of videos by frame tag.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
- * @method void setSegmentSet(array $SegmentSet) Set List of videos by frame tag.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
- * @method string getSegmentSetFileUrl() Obtain URL of the video frame tag list file. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the video frame tag list file. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the video frame tagging list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the video frame tagging list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method array getSegmentSet() Obtain List of frame-specific tags of a video.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method void setSegmentSet(array $SegmentSet) Set List of frame-specific tags of a video.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain Video frame tagging list file URL. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set Video frame tagging list file URL. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the video frame tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the video frame tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiAnalysisTaskFrameTagOutput extends AbstractModel
 {
     /**
-     * @var array List of videos by frame tag.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @var array List of frame-specific tags of a video.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string URL of the video frame tag list file. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
+     * @var string Video frame tagging list file URL. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the video frame tagging list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiration time of the video frame tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param array $SegmentSet List of videos by frame tag.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
-     * @param string $SegmentSetFileUrl URL of the video frame tag list file. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the video frame tagging list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param array $SegmentSet List of frame-specific tags of a video.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl Video frame tagging list file URL. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the video frame tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

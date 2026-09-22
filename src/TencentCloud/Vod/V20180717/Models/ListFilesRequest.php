@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() Obtain VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
  * @method void setSubAppId(integer $SubAppId) Set VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
- * @method string getPrefix() Obtain Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
- * @method void setPrefix(string $Prefix) Set Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+ * @method string getPrefix() Obtain Object key prefix matching, limited to object keys with the specified prefix in response.
+ * @method void setPrefix(string $Prefix) Set Object key prefix matching, limited to object keys with the specified prefix in response.
  * @method string getDelimiter() Obtain A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
  * @method void setDelimiter(string $Delimiter) Set A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
  * @method integer getMaxKeys() Obtain ys 	 Maximum number of entries returned at a time. Default value: 100. Minimum value: 1. Maximum value: 100.
@@ -41,7 +41,7 @@ class ListFilesRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+     * @var string Object key prefix matching, limited to object keys with the specified prefix in response.
      */
     public $Prefix;
 
@@ -67,7 +67,7 @@ class ListFilesRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
-     * @param string $Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+     * @param string $Prefix Object key prefix matching, limited to object keys with the specified prefix in response.
      * @param string $Delimiter A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
      * @param integer $MaxKeys ys 	 Maximum number of entries returned at a time. Default value: 100. Minimum value: 1. Maximum value: 100.
      * @param string $Marker Marker

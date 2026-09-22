@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
  * @method string getType() Obtain Type. Valid values:
 <li>weak</li>
@@ -42,7 +42,7 @@ class ImageDenoiseConfig extends AbstractModel
     /**
      * @var string Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public $Switch;
@@ -58,7 +58,7 @@ Default value: weak.
     /**
      * @param string $Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      * @param string $Type Type. Valid values:
 <li>weak</li>

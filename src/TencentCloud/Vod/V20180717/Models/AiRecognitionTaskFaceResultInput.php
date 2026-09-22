@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Face recognition input.
+ * User-submitted input for face recognition.
  *
  * @method integer getDefinition() Obtain Face recognition template ID.
  * @method void setDefinition(integer $Definition) Set Face recognition template ID.

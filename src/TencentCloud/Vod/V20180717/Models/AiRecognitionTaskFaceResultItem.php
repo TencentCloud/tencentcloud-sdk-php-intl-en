@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() Obtain Unique identification ID of a person.
  * @method void setId(string $Id) Set Unique identification ID of a person.
- * @method string getType() Obtain Library type of the figure, which indicates which figure library the recognized figure comes from:
+ * @method string getType() Obtain Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
- * @method void setType(string $Type) Set Library type of the figure, which indicates which figure library the recognized figure comes from:
+ * @method void setType(string $Type) Set Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
  * @method string getName() Obtain Figure name.
@@ -41,7 +41,7 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
     public $Id;
 
     /**
-     * @var string Library type of the figure, which indicates which figure library the recognized figure comes from:
+     * @var string Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      */
@@ -59,7 +59,7 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
 
     /**
      * @param string $Id Unique identification ID of a person.
-     * @param string $Type Library type of the figure, which indicates which figure library the recognized figure comes from:
+     * @param string $Type Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      * @param string $Name Figure name.

@@ -21,23 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * Crop the image center.
  *
  * @method string getType() Obtain Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
  * @method void setType(string $Type) Set Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
  * @method integer getWidth() Obtain Width of the output image in pixels. Valid when Type is Rectangle.
  * @method void setWidth(integer $Width) Set Width of the output image in pixels. Valid when Type is Rectangle.
- * @method integer getHeight() Obtain Height of the output image in pixels. Valid when Type is Rectangle.
- * @method void setHeight(integer $Height) Set Height of the output image in pixels. Valid when Type is Rectangle.
- * @method integer getRadius() Obtain Radius of the output image in pixels. Valid when Type is Circle.
- * @method void setRadius(integer $Radius) Set Radius of the output image in pixels. Valid when Type is Circle.
+ * @method integer getHeight() Obtain Height of the output image. Unit: pixel. Valid when Type is Rectangle.
+ * @method void setHeight(integer $Height) Set Height of the output image. Unit: pixel. Valid when Type is Rectangle.
+ * @method integer getRadius() Obtain Radius of the output image. Unit: pixel. Valid when Type is Circle.
+ * @method void setRadius(integer $Radius) Set Radius of the output image. Unit: pixel. Valid when Type is Circle.
  */
 class ImageCenterCut extends AbstractModel
 {
     /**
      * @var string Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
      */
     public $Type;
@@ -48,22 +48,22 @@ class ImageCenterCut extends AbstractModel
     public $Width;
 
     /**
-     * @var integer Height of the output image in pixels. Valid when Type is Rectangle.
+     * @var integer Height of the output image. Unit: pixel. Valid when Type is Rectangle.
      */
     public $Height;
 
     /**
-     * @var integer Radius of the output image in pixels. Valid when Type is Circle.
+     * @var integer Radius of the output image. Unit: pixel. Valid when Type is Circle.
      */
     public $Radius;
 
     /**
      * @param string $Type Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
      * @param integer $Width Width of the output image in pixels. Valid when Type is Rectangle.
-     * @param integer $Height Height of the output image in pixels. Valid when Type is Rectangle.
-     * @param integer $Radius Radius of the output image in pixels. Valid when Type is Circle.
+     * @param integer $Height Height of the output image. Unit: pixel. Valid when Type is Rectangle.
+     * @param integer $Radius Radius of the output image. Unit: pixel. Valid when Type is Circle.
      */
     function __construct()
     {

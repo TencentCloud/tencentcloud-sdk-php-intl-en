@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom response header configuration, disabled by default
+ * Custom response header configuration, disabled by default.
  *
  * @method string getSwitch() Obtain Custom response header configuration switch. Valid values:
 <li>`on`: Enable;</li>

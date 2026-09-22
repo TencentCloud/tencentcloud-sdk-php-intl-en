@@ -28,9 +28,9 @@ Default value: Black.
 <li>Black: black background</li>
 <li>White: white background</li>
 Default value: Black.
- * @method integer getWidth() Obtain Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+ * @method integer getWidth() Obtain Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
- * @method void setWidth(integer $Width) Set Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+ * @method void setWidth(integer $Width) Set Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
  * @method integer getHeight() Obtain Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
@@ -48,7 +48,7 @@ Default value: Black.
     public $Color;
 
     /**
-     * @var integer Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+     * @var integer Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
      */
     public $Width;
@@ -64,7 +64,7 @@ Default value: 0, which means the video height is the same as that of the first 
 <li>Black: black background</li>
 <li>White: white background</li>
 Default value: Black.
-     * @param integer $Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+     * @param integer $Width Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
      * @param integer $Height Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video height is the same as that of the first video clip on the first video track.

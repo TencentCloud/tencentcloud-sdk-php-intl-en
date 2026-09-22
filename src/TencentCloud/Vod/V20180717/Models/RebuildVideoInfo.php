@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio-visual quality revival video control info.
+ * Audio-visual quality revival video control information.
  *
  * @method RepairInfo getRepairInfo() Obtain Image quality restoration control parameters.
  * @method void setRepairInfo(RepairInfo $RepairInfo) Set Image quality restoration control parameters.

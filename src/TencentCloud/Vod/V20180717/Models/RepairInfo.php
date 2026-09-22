@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image quality restoration control parameters
+ * Image quality restoration control parameters.
  *
  * @method string getSwitch() Obtain Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
  * @method void setSwitch(string $Switch) Set Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
  * @method string getType() Obtain Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
 <li>weak: light image quality restoration;</li>
 <li>normal: normal image quality restoration;</li>
@@ -42,7 +42,7 @@ class RepairInfo extends AbstractModel
     /**
      * @var string Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
      */
     public $Switch;
 
@@ -58,7 +58,7 @@ Default value: weak.
     /**
      * @param string $Switch Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
      * @param string $Type Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
 <li>weak: light image quality restoration;</li>
 <li>normal: normal image quality restoration;</li>

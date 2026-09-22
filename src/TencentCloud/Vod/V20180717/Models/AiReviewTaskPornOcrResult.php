@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiReviewPornOcrTaskInput $Input) Set Task input of Ocr text involving offensive content in audio/video moderation.
  * @method AiReviewPornOcrTaskOutput getOutput() Obtain Task output of Ocr text, audio, and video moderation involving offensive content.
  * @method void setOutput(AiReviewPornOcrTaskOutput $Output) Set Task output of Ocr text, audio, and video moderation involving offensive content.
- * @method integer getProgress() Obtain Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
- * @method void setProgress(integer $Progress) Set Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+ * @method integer getProgress() Obtain Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
+ * @method void setProgress(integer $Progress) Set Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
  */
 class AiReviewTaskPornOcrResult extends AbstractModel
 {
@@ -68,7 +68,7 @@ class AiReviewTaskPornOcrResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+     * @var integer Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
      */
     public $Progress;
 
@@ -79,7 +79,7 @@ class AiReviewTaskPornOcrResult extends AbstractModel
      * @param string $Message Error message.
      * @param AiReviewPornOcrTaskInput $Input Task input of Ocr text involving offensive content in audio/video moderation.
      * @param AiReviewPornOcrTaskOutput $Output Task output of Ocr text, audio, and video moderation involving offensive content.
-     * @param integer $Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+     * @param integer $Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
      */
     function __construct()
     {

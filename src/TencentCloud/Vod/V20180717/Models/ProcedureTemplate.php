@@ -28,24 +28,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) Set <p>Transcoding template description. Length limit: 256 characters.</p>
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain <p>Video processing type task parameters.</p>
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set <p>Video processing type task parameters.</p>
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the AI intelligent content analysis task.</p>
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the AI intelligent content analysis task.</p>
- * @method array getAiRecognitionTaskSet() Obtain <p>Parameters for the AI content detect-type task.</p>
- * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set <p>Parameters for the AI content detect-type task.</p>
+ * @method array getAiRecognitionTaskSet() Obtain <p>Parameters for the AI content recognition task.</p>
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) Set <p>Parameters for the AI content recognition task.</p>
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
  * @method WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() Obtain <p>WeChat Mini Program publishing task parameter.</p>
  * @method void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput $MiniProgramPublishTask) Set <p>WeChat Mini Program publishing task parameter.</p>
  * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain <p>Parameters for the audio and video moderation task.</p>
  * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set <p>Parameters for the audio and video moderation task.</p>
- * @method array getImportMediaKnowledgeTaskSet() Obtain <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
- * @method void setImportMediaKnowledgeTaskSet(array $ImportMediaKnowledgeTaskSet) Set <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
- * @method string getCreateTime() Obtain <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method string getUpdateTime() Obtain <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method void setUpdateTime(string $UpdateTime) Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method array getImportMediaKnowledgeTaskSet() Obtain <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
+ * @method void setImportMediaKnowledgeTaskSet(array $ImportMediaKnowledgeTaskSet) Set <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
+ * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  */
 class ProcedureTemplate extends AbstractModel
 {
@@ -70,7 +70,7 @@ class ProcedureTemplate extends AbstractModel
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * @var AiContentReviewTaskInput <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
      */
     public $AiContentReviewTask;
 
@@ -80,7 +80,7 @@ class ProcedureTemplate extends AbstractModel
     public $AiAnalysisTask;
 
     /**
-     * @var array <p>Parameters for the AI content detect-type task.</p>
+     * @var array <p>Parameters for the AI content recognition task.</p>
      */
     public $AiRecognitionTaskSet;
 
@@ -101,17 +101,17 @@ class ProcedureTemplate extends AbstractModel
     public $ReviewAudioVideoTask;
 
     /**
-     * @var array <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+     * @var array <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
      */
     public $ImportMediaKnowledgeTaskSet;
 
     /**
-     * @var string <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @var string <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @var string <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
@@ -120,15 +120,15 @@ class ProcedureTemplate extends AbstractModel
      * @param string $Type <p>Task flow template type. Valid values:</p><li>Preset: system preset task flow template.</li><li>Custom: user-defined task flow template.</li>
      * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>
      * @param MediaProcessTaskInput $MediaProcessTask <p>Video processing type task parameters.</p>
-     * @param AiContentReviewTaskInput $AiContentReviewTask <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
      * @param AiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the AI intelligent content analysis task.</p>
-     * @param array $AiRecognitionTaskSet <p>Parameters for the AI content detect-type task.</p>
+     * @param array $AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
      * @param AiRecognitionTaskInput $AiRecognitionTask <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
      * @param WechatMiniProgramPublishTaskInput $MiniProgramPublishTask <p>WeChat Mini Program publishing task parameter.</p>
      * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask <p>Parameters for the audio and video moderation task.</p>
-     * @param array $ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
-     * @param string $CreateTime <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param string $UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param array $ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
+     * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     function __construct()
     {

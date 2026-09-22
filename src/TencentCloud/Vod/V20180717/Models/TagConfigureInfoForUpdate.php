@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Control parameters of intelligent tag tasks
  *
- * @method string getSwitch() Obtain Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task</li>
-<li>OFF: disables the intelligent tag task.</li>
- * @method void setSwitch(string $Switch) Set Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task</li>
-<li>OFF: disables the intelligent tag task.</li>
+ * @method string getSwitch() Obtain Intelligent tag task switch. Available values:
+<li>ON: enable the intelligent tag task;</li>
+<li>OFF: Disable the intelligent tag task.</li>
+ * @method void setSwitch(string $Switch) Set Intelligent tag task switch. Available values:
+<li>ON: enable the intelligent tag task;</li>
+<li>OFF: Disable the intelligent tag task.</li>
  */
 class TagConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task</li>
-<li>OFF: disables the intelligent tag task.</li>
+     * @var string Intelligent tag task switch. Available values:
+<li>ON: enable the intelligent tag task;</li>
+<li>OFF: Disable the intelligent tag task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task</li>
-<li>OFF: disables the intelligent tag task.</li>
+     * @param string $Switch Intelligent tag task switch. Available values:
+<li>ON: enable the intelligent tag task;</li>
+<li>OFF: Disable the intelligent tag task.</li>
      */
     function __construct()
     {

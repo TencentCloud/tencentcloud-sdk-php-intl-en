@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStorageDetails request structure.
  *
- * @method string getStartTime() Obtain Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method void setStartTime(string $StartTime) Set Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method string getStartTime() Obtain Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setStartTime(string $StartTime) Set Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
  * @method string getEndTime() Obtain End time, which should be greater than the start date. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
  * @method void setEndTime(string $EndTime) Set End time, which should be greater than the start date. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method string getInterval() Obtain Statistical time granularity. Valid values:
 <li>Minute: 5 minutes.</li>
 <li>Day: By day.</li>
@@ -38,7 +38,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -46,7 +46,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.
@@ -54,7 +54,7 @@ Default value: TotalStorage.
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -62,7 +62,7 @@ Default value: TotalStorage.
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.
@@ -78,7 +78,7 @@ Default value: Chinese Mainland.
 class DescribeStorageDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @var string Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $StartTime;
 
@@ -88,7 +88,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -105,7 +105,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -113,7 +113,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.
@@ -129,9 +129,9 @@ Default value: Chinese Mainland.
     public $Area;
 
     /**
-     * @param string $StartTime Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param string $StartTime Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      * @param string $EndTime End time, which should be greater than the start date. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param string $Interval Statistical time granularity. Valid values:
 <li>Minute: 5 minutes.</li>
 <li>Day: By day.</li>
@@ -140,7 +140,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -148,7 +148,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.

@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the output of an AIGC Hunyuan 3D task.
+ * Output information of the AIGC Hunyuan 3D task.
  *
- * @method array getFileInfos() Obtain <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
- * @method void setFileInfos(array $FileInfos) Set <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
+ * @method array getFileInfos() Obtain <p>Output file information for an AIGC Hunyuan 3D task.</p>
+ * @method void setFileInfos(array $FileInfos) Set <p>Output file information for an AIGC Hunyuan 3D task.</p>
  */
 class AigcHunyuan3DTaskOutput extends AbstractModel
 {
     /**
-     * @var array <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
+     * @var array <p>Output file information for an AIGC Hunyuan 3D task.</p>
      */
     public $FileInfos;
 
     /**
-     * @param array $FileInfos <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
+     * @param array $FileInfos <p>Output file information for an AIGC Hunyuan 3D task.</p>
      */
     function __construct()
     {

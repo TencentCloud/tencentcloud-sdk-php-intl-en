@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input for the audio and video quality inspection task.
+ * Input of the audio and video quality inspection task.
  *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.

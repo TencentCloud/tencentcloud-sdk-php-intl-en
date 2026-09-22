@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of an AIGC image task.
+ * Output of an AIGC image generation task.
  *
- * @method array getFileInfos() Obtain <p>Output file information for an AIGC image task.</p>
- * @method void setFileInfos(array $FileInfos) Set <p>Output file information for an AIGC image task.</p>
+ * @method array getFileInfos() Obtain <p>Information of the output file of an AIGC image generation task.</p>
+ * @method void setFileInfos(array $FileInfos) Set <p>Information of the output file of an AIGC image generation task.</p>
  */
 class AigcImageTaskOutput extends AbstractModel
 {
     /**
-     * @var array <p>Output file information for an AIGC image task.</p>
+     * @var array <p>Information of the output file of an AIGC image generation task.</p>
      */
     public $FileInfos;
 
     /**
-     * @param array $FileInfos <p>Output file information for an AIGC image task.</p>
+     * @param array $FileInfos <p>Information of the output file of an AIGC image generation task.</p>
      */
     function __construct()
     {

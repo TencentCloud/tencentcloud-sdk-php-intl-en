@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentId(integer $ParentId) Set Parent category ID. The parent category ID of a first-level category is -1.
  * @method string getName() Obtain Category name.
  * @method void setName(string $Name) Set Category name.
- * @method integer getLevel() Obtain Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
- * @method void setLevel(integer $Level) Set Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+ * @method integer getLevel() Obtain Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
+ * @method void setLevel(integer $Level) Set Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
  * @method array getSubClassIdSet() Obtain ID set of level-1 subcategories in the current category.
  * @method void setSubClassIdSet(array $SubClassIdSet) Set ID set of level-1 subcategories in the current category.
  * @method string getClassName() Obtain Category name (this field is not recommended. Use the new category name field Name instead).
@@ -51,7 +51,7 @@ class MediaClassInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+     * @var integer Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
      */
     public $Level;
 
@@ -69,7 +69,7 @@ class MediaClassInfo extends AbstractModel
      * @param integer $ClassId Category ID.
      * @param integer $ParentId Parent category ID. The parent category ID of a first-level category is -1.
      * @param string $Name Category name.
-     * @param integer $Level Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+     * @param integer $Level Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
      * @param array $SubClassIdSet ID set of level-1 subcategories in the current category.
      * @param string $ClassName Category name (this field is not recommended. Use the new category name field Name instead).
      */

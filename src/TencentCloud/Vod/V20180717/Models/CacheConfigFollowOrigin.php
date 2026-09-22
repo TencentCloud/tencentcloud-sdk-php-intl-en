@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Path cache follows the origin site configuration.
+ * Path cache follows the origin server configuration.
  *
  * @method string getSwitch() Obtain Path cache follows the origin site configuration switch. Valid values:
 <li>`on`: Enable;</li>

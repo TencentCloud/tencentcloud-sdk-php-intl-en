@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRebuildMediaTemplates request structure.
  *
- * @method array getDefinitions() Obtain List of video rebirth templates.
- * @method void setDefinitions(array $Definitions) Set List of video rebirth templates.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method array getDefinitions() Obtain Video rebirth template list.
+ * @method void setDefinitions(array $Definitions) Set Video rebirth template list.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
  * @method string getType() Obtain Condition for filtering templates by type. Valid values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRebuildMediaTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array List of video rebirth templates.
+     * @var array Video rebirth template list.
      */
     public $Definitions;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
      */
     public $SubAppId;
 
@@ -65,8 +65,8 @@ class DescribeRebuildMediaTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Definitions List of video rebirth templates.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param array $Definitions Video rebirth template list.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
      * @param string $Type Condition for filtering templates by type. Valid values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>

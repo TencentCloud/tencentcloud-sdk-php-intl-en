@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for video opening and closing credits recognition tasks
+ * Control parameter for the video opening and closing credits recognition task
  *
- * @method string getSwitch() Obtain Video start and end recognition task switch. Available values:
+ * @method string getSwitch() Obtain Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
- * @method void setSwitch(string $Switch) Set Video start and end recognition task switch. Available values:
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
  */
 class HeadTailConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Video start and end recognition task switch. Available values:
+     * @var string Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Video start and end recognition task switch. Available values:
+     * @param string $Switch Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
      */
     function __construct()
     {

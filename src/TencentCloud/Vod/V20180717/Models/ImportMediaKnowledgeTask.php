@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(ImportMediaKnowledgeTaskInput $Input) Set <p>Input of the import knowledge base task.</p>
  * @method string getStatus() Obtain <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
- * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure.</p>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure.</p>
+ * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure</p>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
  */
@@ -56,7 +56,7 @@ class ImportMediaKnowledgeTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <p>Error code. 0 indicates success, and other values indicate failure.</p>
+     * @var integer <p>Error code. 0 indicates success, and other values indicate failure</p>
      */
     public $ErrCode;
 
@@ -70,7 +70,7 @@ class ImportMediaKnowledgeTask extends AbstractModel
      * @param string $FileId <p>Media file ID</p>
      * @param ImportMediaKnowledgeTaskInput $Input <p>Input of the import knowledge base task.</p>
      * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
-     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
+     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure</p>
      * @param string $Message <p>Error message.</p>
      */
     function __construct()

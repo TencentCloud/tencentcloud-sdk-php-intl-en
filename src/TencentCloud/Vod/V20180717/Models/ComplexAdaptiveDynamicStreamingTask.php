@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
 
- * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() Obtain Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
- * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) Set Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+ * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() Obtain Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
+ * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) Set Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
  */
 class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
 {
@@ -49,7 +49,7 @@ class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
     public $Status;
 
     /**
-     * @var array Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+     * @var array Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
      */
     public $ComplexAdaptiveDynamicStreamingTaskResultSet;
 
@@ -59,7 +59,7 @@ class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
 
-     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sprite sheet template details
  *
- * @method integer getDefinition() Obtain Unique identifier of the sprite template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of the sprite template.
+ * @method integer getDefinition() Obtain Sprite template unique identifier.
+ * @method void setDefinition(integer $Definition) Set Sprite template unique identifier.
  * @method string getType() Obtain Template type. Valid values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 <li>Custom: custom template.</li>
  * @method string getName() Obtain Sprite sheet template name.
  * @method void setName(string $Name) Set Sprite sheet template name.
- * @method integer getWidth() Obtain Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+ * @method integer getWidth() Obtain Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
- * @method void setWidth(integer $Width) Set Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+ * @method void setWidth(integer $Width) Set Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -55,12 +55,12 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
  * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
  * @method string getSampleType() Obtain Sampling type.
  * @method void setSampleType(string $SampleType) Set Sampling type.
@@ -70,17 +70,17 @@ Default value: open.
  * @method void setRowCount(integer $RowCount) Set Number of rows of small images in the sprite image.
  * @method integer getColumnCount() Obtain Number of columns of small images in the sprite image.
  * @method void setColumnCount(integer $ColumnCount) Set Number of columns of small images in the sprite image.
- * @method string getCreateTime() Obtain Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFillType() Obtain Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+ * @method string getCreateTime() Obtain Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFillType() Obtain Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
- * @method void setFillType(string $FillType) Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+ * @method void setFillType(string $FillType) Set Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
  * @method string getComment() Obtain Template description information.
  * @method void setComment(string $Comment) Set Template description information.
@@ -90,7 +90,7 @@ Default value: black.
 class ImageSpriteTemplate extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of the sprite template.
+     * @var integer Sprite template unique identifier.
      */
     public $Definition;
 
@@ -107,7 +107,7 @@ class ImageSpriteTemplate extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+     * @var integer Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -128,8 +128,8 @@ Default value: 0.
 
     /**
      * @var string Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public $ResolutionAdaptive;
@@ -155,19 +155,19 @@ Default value: open.
     public $ColumnCount;
 
     /**
-     * @var string Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
-     * @var string Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+     * @var string Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
      */
     public $FillType;
@@ -183,12 +183,12 @@ Default value: black.
     public $Format;
 
     /**
-     * @param integer $Definition Unique identifier of the sprite template.
+     * @param integer $Definition Sprite template unique identifier.
      * @param string $Type Template type. Valid values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      * @param string $Name Sprite sheet template name.
-     * @param integer $Width Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+     * @param integer $Width Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -201,18 +201,18 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
      * @param string $ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      * @param string $SampleType Sampling type.
      * @param integer $SampleInterval Sampling interval.
      * @param integer $RowCount Number of rows of small images in the sprite image.
      * @param integer $ColumnCount Number of columns of small images in the sprite image.
-     * @param string $CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+     * @param string $CreateTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FillType Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
      * @param string $Comment Template description information.
      * @param string $Format Image format.

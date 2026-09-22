@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ComposeMedia request structure.
  *
- * @method array getTracks() Obtain Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
- * @method void setTracks(array $Tracks) Set Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+ * @method array getTracks() Obtain Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+ * @method void setTracks(array $Tracks) Set Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
  * @method ComposeMediaOutput getOutput() Obtain Output media file information.
  * @method void setOutput(ComposeMediaOutput $Output) Set Output media file information.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method Canvas getCanvas() Obtain Canvas used when making video files.
  * @method void setCanvas(Canvas $Canvas) Set Canvas used when making video files.
- * @method string getSessionContext() Obtain Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
- * @method string getSessionId() Obtain Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method void setSessionId(string $SessionId) Set Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method string getSessionContext() Obtain Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
+ * @method string getSessionId() Obtain Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method void setSessionId(string $SessionId) Set Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  */
 class ComposeMediaRequest extends AbstractModel
 {
     /**
-     * @var array Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+     * @var array Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
      */
     public $Tracks;
 
@@ -46,7 +46,7 @@ class ComposeMediaRequest extends AbstractModel
     public $Output;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -56,22 +56,22 @@ class ComposeMediaRequest extends AbstractModel
     public $Canvas;
 
     /**
-     * @var string Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
+     * @var string Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var string Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @var string Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public $SessionId;
 
     /**
-     * @param array $Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+     * @param array $Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
      * @param ComposeMediaOutput $Output Output media file information.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param Canvas $Canvas Canvas used when making video files.
-     * @param string $SessionContext Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
-     * @param string $SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param string $SessionContext Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
+     * @param string $SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     function __construct()
     {

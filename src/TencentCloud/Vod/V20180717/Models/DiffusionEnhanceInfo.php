@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
  * @method void setSwitch(string $Switch) Set Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
  * @method string getType() Obtain Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
 <li>weak: weak;</li>
 <li>normal: Normal;</li>
@@ -42,7 +42,7 @@ class DiffusionEnhanceInfo extends AbstractModel
     /**
      * @var string Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      */
     public $Switch;
 
@@ -58,7 +58,7 @@ Default value: normal.
     /**
      * @param string $Switch Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      * @param string $Type Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
 <li>weak: weak;</li>
 <li>normal: Normal;</li>

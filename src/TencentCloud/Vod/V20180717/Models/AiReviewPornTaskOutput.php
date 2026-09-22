@@ -41,13 +41,13 @@ use TencentCloud\Common\AbstractModel;
 <li>vulgar: Vulgar.</li>
 <li>intimacy: intimate behavior.</li>
  * @method array getSegmentSet() Obtain List of video segments suspected of involving offensive content.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of involving offensive content.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
- * @method string getSegmentSetFileUrl() Obtain URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+ * @method string getSegmentSetFileUrl() Obtain URL of the Segment List File that may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL of the Segment List File that may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the file URL for the video segment list where the video involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the file URL for the video segment list where the video involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiReviewPornTaskOutput extends AbstractModel
 {
@@ -75,17 +75,17 @@ class AiReviewPornTaskOutput extends AbstractModel
 
     /**
      * @var array List of video segments suspected of involving offensive content.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public $SegmentSet;
 
     /**
-     * @var string URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
+     * @var string URL of the Segment List File that may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiration time of the file URL for the video segment list where the video involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $SegmentSetFileUrlExpireTime;
 
@@ -101,9 +101,9 @@ class AiReviewPornTaskOutput extends AbstractModel
 <li>vulgar: Vulgar.</li>
 <li>intimacy: intimate behavior.</li>
      * @param array $SegmentSet List of video segments suspected of involving offensive content.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
-     * @param string $SegmentSetFileUrl URL of the video segment list file that contains suspected offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the file URL of the video segment list involving suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param string $SegmentSetFileUrl URL of the Segment List File that may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the file URL for the video segment list where the video involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

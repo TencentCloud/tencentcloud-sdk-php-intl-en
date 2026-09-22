@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiRecognitionTaskFaceResultInput $Input) Set Face recognition task input.
  * @method AiRecognitionTaskFaceResultOutput getOutput() Obtain Output information of the face recognition task.
  * @method void setOutput(AiRecognitionTaskFaceResultOutput $Output) Set Output information of the face recognition task.
- * @method integer getProgress() Obtain Progress of the face recognition task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Progress of the face recognition task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Face recognition task progress. Value range: [0-100].
+ * @method void setProgress(integer $Progress) Set Face recognition task progress. Value range: [0-100].
+ * @method string getBeginProcessTime() Obtain Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Face recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Face recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -72,12 +72,12 @@ class AiRecognitionTaskFaceResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Progress of the face recognition task. Value range: 0-100.
+     * @var integer Face recognition task progress. Value range: [0-100].
      */
     public $Progress;
 
     /**
-     * @var string Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -93,8 +93,8 @@ class AiRecognitionTaskFaceResult extends AbstractModel
      * @param string $Message Error message.
      * @param AiRecognitionTaskFaceResultInput $Input Face recognition task input.
      * @param AiRecognitionTaskFaceResultOutput $Output Output information of the face recognition task.
-     * @param integer $Progress Progress of the face recognition task. Value range: 0-100.
-     * @param string $BeginProcessTime Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Face recognition task progress. Value range: [0-100].
+     * @param string $BeginProcessTime Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Face recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

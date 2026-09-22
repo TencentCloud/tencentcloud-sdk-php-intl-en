@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set <p>Copyright watermark.</p>
  * @method BlindWatermarkInput getBlindWatermark() Obtain <p>Digital watermark.</p>
  * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set <p>Digital watermark.</p>
- * @method array getSubtitleSet() Obtain <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
- * @method void setSubtitleSet(array $SubtitleSet) Set <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+ * @method array getSubtitleSet() Obtain <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+ * @method void setSubtitleSet(array $SubtitleSet) Set <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
  * @method array getSubtitleInfoSet() Obtain <p>Subtitle suppression information list. Up to 2 supported.</p>
  * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set <p>Subtitle suppression information list. Up to 2 supported.</p>
- * @method ThirdPartyDrmInfo getDrmInfo() Obtain <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
- * @method void setDrmInfo(ThirdPartyDrmInfo $DrmInfo) Set <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+ * @method ThirdPartyDrmInfo getDrmInfo() Obtain <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
+ * @method void setDrmInfo(ThirdPartyDrmInfo $DrmInfo) Set <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -65,7 +65,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $BlindWatermark;
 
     /**
-     * @var array <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+     * @var array <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
      */
     public $SubtitleSet;
 
@@ -75,7 +75,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $SubtitleInfoSet;
 
     /**
-     * @var ThirdPartyDrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+     * @var ThirdPartyDrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
      */
     public $DrmInfo;
 
@@ -85,9 +85,9 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param TraceWatermarkInput $TraceWatermark <p>Traceable watermark.</p>
      * @param CopyRightWatermarkInput $CopyRightWatermark <p>Copyright watermark.</p>
      * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark.</p>
-     * @param array $SubtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+     * @param array $SubtitleSet <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
      * @param array $SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
-     * @param ThirdPartyDrmInfo $DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+     * @param ThirdPartyDrmInfo $DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
      */
     function __construct()
     {

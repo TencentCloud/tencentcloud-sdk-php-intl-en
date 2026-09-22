@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(SplitMediaTaskInput $Input) Set Input information of the video splitting task.
  * @method TaskOutputMediaInfo getOutput() Obtain Output information of the video splitting task.
  * @method void setOutput(TaskOutputMediaInfo $Output) Set Output information of the video splitting task.
- * @method string getProcedureTaskId() Obtain Task ID of the `Procedure` task type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
- * @method void setProcedureTaskId(string $ProcedureTaskId) Set Task ID of the `Procedure` task type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
- * @method string getReviewAudioVideoTaskId() Obtain Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a [video splitting](https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1) task, the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
- * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a [video splitting](https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1) task, the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
+ * @method string getProcedureTaskId() Obtain Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), initiate the task when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+ * @method void setProcedureTaskId(string $ProcedureTaskId) Set Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), initiate the task when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+ * @method string getReviewAudioVideoTaskId() Obtain Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
  */
 class SplitMediaTaskSegmentInfo extends AbstractModel
 {
@@ -42,20 +42,20 @@ class SplitMediaTaskSegmentInfo extends AbstractModel
     public $Output;
 
     /**
-     * @var string Task ID of the `Procedure` task type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+     * @var string Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), initiate the task when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
      */
     public $ProcedureTaskId;
 
     /**
-     * @var string Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a [video splitting](https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1) task, the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
+     * @var string Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
      */
     public $ReviewAudioVideoTaskId;
 
     /**
      * @param SplitMediaTaskInput $Input Input information of the video splitting task.
      * @param TaskOutputMediaInfo $Output Output information of the video splitting task.
-     * @param string $ProcedureTaskId Task ID of the `Procedure` task type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
-     * @param string $ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a [video splitting](https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1) task, the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
+     * @param string $ProcedureTaskId Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), initiate the task when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+     * @param string $ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
      */
     function __construct()
     {

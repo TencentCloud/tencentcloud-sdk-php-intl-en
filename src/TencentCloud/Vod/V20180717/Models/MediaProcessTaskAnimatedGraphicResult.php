@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AnimatedGraphicTaskInput getInput() Obtain Input of the animated image task.
- * @method void setInput(AnimatedGraphicTaskInput $Input) Set Input of the animated image task.
+ * @method AnimatedGraphicTaskInput getInput() Obtain Input of the rotating image task.
+ * @method void setInput(AnimatedGraphicTaskInput $Input) Set Input of the rotating image task.
  * @method MediaAnimatedGraphicsItem getOutput() Obtain Output of rotating image tasks.
  * @method void setOutput(MediaAnimatedGraphicsItem $Output) Set Output of rotating image tasks.
- * @method integer getProgress() Obtain Progress of the rotating image task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Progress of the rotating image task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Rotating image task progress, value ranges from 0 to 100.
+ * @method void setProgress(integer $Progress) Set Rotating image task progress, value ranges from 0 to 100.
+ * @method string getBeginProcessTime() Obtain Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Animated image task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Animated image task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -62,7 +62,7 @@ class MediaProcessTaskAnimatedGraphicResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AnimatedGraphicTaskInput Input of the animated image task.
+     * @var AnimatedGraphicTaskInput Input of the rotating image task.
      */
     public $Input;
 
@@ -72,12 +72,12 @@ class MediaProcessTaskAnimatedGraphicResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Progress of the rotating image task. Value range: 0-100.
+     * @var integer Rotating image task progress, value ranges from 0 to 100.
      */
     public $Progress;
 
     /**
-     * @var string Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -91,10 +91,10 @@ class MediaProcessTaskAnimatedGraphicResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AnimatedGraphicTaskInput $Input Input of the animated image task.
+     * @param AnimatedGraphicTaskInput $Input Input of the rotating image task.
      * @param MediaAnimatedGraphicsItem $Output Output of rotating image tasks.
-     * @param integer $Progress Progress of the rotating image task. Value range: 0-100.
-     * @param string $BeginProcessTime Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Rotating image task progress, value ranges from 0 to 100.
+     * @param string $BeginProcessTime Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Animated image task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * File stored in VOD.
+ * Stored file in VOD.
  *
  * @method string getKey() Obtain Object key.
  * @method void setKey(string $Key) Set Object key.
- * @method string getLastModified() Obtain Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
- * @method void setLastModified(string $LastModified) Set Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
- * @method string getETag() Obtain Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
- * @method void setETag(string $ETag) Set Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+ * @method string getLastModified() Obtain Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+ * @method void setLastModified(string $LastModified) Set Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+ * @method string getETag() Obtain Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
+ * @method void setETag(string $ETag) Set Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
  * @method integer getSize() Obtain Object size in bytes.
  * @method void setSize(integer $Size) Set Object size in bytes.
  * @method string getStorageClass() Obtain For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
@@ -37,18 +37,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileType() Obtain Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
  * @method void setFileType(string $FileType) Set Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
@@ -67,12 +67,12 @@ class FileContent extends AbstractModel
     public $Key;
 
     /**
-     * @var string Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+     * @var string Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
      */
     public $LastModified;
 
     /**
-     * @var string Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+     * @var string Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
      */
     public $ETag;
 
@@ -100,9 +100,9 @@ class FileContent extends AbstractModel
      * @var string Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
@@ -122,8 +122,8 @@ Value only when FileType is SubtitleFiles.
 
     /**
      * @param string $Key Object key.
-     * @param string $LastModified Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
-     * @param string $ETag Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+     * @param string $LastModified Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+     * @param string $ETag Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
      * @param integer $Size Object size in bytes.
      * @param string $StorageClass For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
      * @param string $FileId Unique identifier of the media file corresponding to this file.
@@ -131,9 +131,9 @@ Value only when FileType is SubtitleFiles.
      * @param string $FileType Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 

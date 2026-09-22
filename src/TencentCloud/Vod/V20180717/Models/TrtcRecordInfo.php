@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(string $RoomId) Set TRTC room ID.
  * @method string getTaskId() Obtain Recording task ID.
  * @method void setTaskId(string $TaskId) Set Recording task ID.
- * @method array getUserIds() Obtain List of user IDs participating in recording.
- * @method void setUserIds(array $UserIds) Set List of user IDs participating in recording.
+ * @method array getUserIds() Obtain User ID list of the recording participants.
+ * @method void setUserIds(array $UserIds) Set User ID list of the recording participants.
  */
 class TrtcRecordInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class TrtcRecordInfo extends AbstractModel
     public $TaskId;
 
     /**
-     * @var array List of user IDs participating in recording.
+     * @var array User ID list of the recording participants.
      */
     public $UserIds;
 
@@ -55,7 +55,7 @@ class TrtcRecordInfo extends AbstractModel
      * @param integer $SdkAppId TRTC application ID.
      * @param string $RoomId TRTC room ID.
      * @param string $TaskId Recording task ID.
-     * @param array $UserIds List of user IDs participating in recording.
+     * @param array $UserIds User ID list of the recording participants.
      */
     function __construct()
     {

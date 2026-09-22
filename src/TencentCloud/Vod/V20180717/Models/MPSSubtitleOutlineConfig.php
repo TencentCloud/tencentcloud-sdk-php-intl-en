@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subtitle suppression module text stroke configuration for MPS
+ * Text stroke configuration for the MPS subtitle suppression module
  *
  * @method integer getSubtitleOutlineConfigSwitch() Obtain <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
  * @method void setSubtitleOutlineConfigSwitch(integer $SubtitleOutlineConfigSwitch) Set <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>

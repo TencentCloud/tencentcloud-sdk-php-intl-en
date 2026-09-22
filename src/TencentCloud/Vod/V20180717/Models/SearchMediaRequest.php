@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMedia request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
- * @method array getFileIds() Obtain <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
- * @method void setFileIds(array $FileIds) Set <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+ * @method array getFileIds() Obtain <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+ * @method void setFileIds(array $FileIds) Set <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
  * @method array getNames() Obtain <p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
  * @method void setNames(array $Names) Set <p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
- * @method array getNamePrefixes() Obtain <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
- * @method void setNamePrefixes(array $NamePrefixes) Set <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
- * @method array getDescriptions() Obtain <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
- * @method void setDescriptions(array $Descriptions) Set <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
- * @method array getClassIds() Obtain <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
- * @method void setClassIds(array $ClassIds) Set <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
- * @method array getTags() Obtain <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
- * @method void setTags(array $Tags) Set <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+ * @method array getNamePrefixes() Obtain <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+ * @method void setNamePrefixes(array $NamePrefixes) Set <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+ * @method array getDescriptions() Obtain <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+ * @method void setDescriptions(array $Descriptions) Set <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+ * @method array getClassIds() Obtain <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+ * @method void setClassIds(array $ClassIds) Set <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+ * @method array getTags() Obtain <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+ * @method void setTags(array $Tags) Set <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
  * @method array getCategories() Obtain <p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
  * @method void setCategories(array $Categories) Set <p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
- * @method array getSourceTypes() Obtain <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
- * @method void setSourceTypes(array $SourceTypes) Set <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+ * @method array getSourceTypes() Obtain <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+ * @method void setSourceTypes(array $SourceTypes) Set <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
  * @method array getStreamIds() Obtain <p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
  * @method void setStreamIds(array $StreamIds) Set <p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
  * @method TimeRange getCreateTime() Obtain <p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
  * @method void setCreateTime(TimeRange $CreateTime) Set <p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
  * @method TimeRange getExpireTime() Obtain <p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
  * @method void setExpireTime(TimeRange $ExpireTime) Set <p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
- * @method array getStorageRegions() Obtain <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
- * @method void setStorageRegions(array $StorageRegions) Set <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+ * @method array getStorageRegions() Obtain <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+ * @method void setStorageRegions(array $StorageRegions) Set <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
  * @method array getStorageClasses() Obtain <p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
  * @method void setStorageClasses(array $StorageClasses) Set <p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
- * @method array getMediaTypes() Obtain <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
- * @method void setMediaTypes(array $MediaTypes) Set <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
- * @method array getStatus() Obtain <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
- * @method void setStatus(array $Status) Set <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+ * @method array getMediaTypes() Obtain <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
+ * @method void setMediaTypes(array $MediaTypes) Set <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
+ * @method array getStatus() Obtain <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
+ * @method void setStatus(array $Status) Set <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
  * @method array getReviewResults() Obtain <p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
  * @method void setReviewResults(array $ReviewResults) Set <p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
  * @method array getTrtcSdkAppIds() Obtain <p>TRTC application ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
@@ -60,28 +60,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrtcRoomIds(array $TrtcRoomIds) Set <p>TRTC room ID collection. Match any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
  * @method array getFilters() Obtain <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
  * @method void setFilters(array $Filters) Set <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
- * @method SortBy getSort() Obtain <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
- * @method void setSort(SortBy $Sort) Set <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
- * @method integer getOffset() Obtain <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
- * @method void setOffset(integer $Offset) Set <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+ * @method SortBy getSort() Obtain <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
+ * @method void setSort(SortBy $Sort) Set <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
+ * @method integer getOffset() Obtain <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+ * @method void setOffset(integer $Offset) Set <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
  * @method integer getLimit() Obtain <div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
  * @method void setLimit(integer $Limit) Set <div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
- * @method string getText() Obtain <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
- * @method void setText(string $Text) Set <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
- * @method string getSourceType() Obtain <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
- * @method void setSourceType(string $SourceType) Set <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+ * @method string getText() Obtain <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
+ * @method void setText(string $Text) Set <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
+ * @method string getSourceType() Obtain <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+ * @method void setSourceType(string $SourceType) Set <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
  * @method string getStreamId() Obtain <p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
  * @method void setStreamId(string $StreamId) Set <p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
- * @method string getStartTime() Obtain <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
- * @method void setStartTime(string $StartTime) Set <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
- * @method string getEndTime() Obtain <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
- * @method void setEndTime(string $EndTime) Set <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method string getStartTime() Obtain <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method void setStartTime(string $StartTime) Set <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method string getEndTime() Obtain <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method void setEndTime(string $EndTime) Set <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
  * @method array getVids() Obtain <p>This field is invalid.</p>
  * @method void setVids(array $Vids) Set <p>This field is invalid.</p>
  * @method string getVid() Obtain <p>This field is invalid.</p>
  * @method void setVid(string $Vid) Set <p>This field is invalid.</p>
- * @method array getStreamDomains() Obtain <p>Live push Domain, valid when the media asset source is live recording.</p>
- * @method void setStreamDomains(array $StreamDomains) Set <p>Live push Domain, valid when the media asset source is live recording.</p>
+ * @method array getStreamDomains() Obtain <p>Live push Domain, valid when the media asset source is live stream recording.</p>
+ * @method void setStreamDomains(array $StreamDomains) Set <p>Live push Domain, valid when the media asset source is live stream recording.</p>
  * @method array getStreamPaths() Obtain <p>Live push Path. Valid when the media asset source is live recording.</p>
  * @method void setStreamPaths(array $StreamPaths) Set <p>Live push Path. Valid when the media asset source is live recording.</p>
  * @method array getKnowledgeBases() Obtain <p>Knowledge base ID, match any element in the collection.</p>
@@ -90,12 +90,12 @@ use TencentCloud\Common\AbstractModel;
 class SearchMediaRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+     * @var array <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
      */
     public $FileIds;
 
@@ -105,22 +105,22 @@ class SearchMediaRequest extends AbstractModel
     public $Names;
 
     /**
-     * @var array <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * @var array <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
      */
     public $NamePrefixes;
 
     /**
-     * @var array <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * @var array <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
      */
     public $Descriptions;
 
     /**
-     * @var array <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+     * @var array <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
      */
     public $ClassIds;
 
     /**
-     * @var array <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+     * @var array <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
      */
     public $Tags;
 
@@ -130,7 +130,7 @@ class SearchMediaRequest extends AbstractModel
     public $Categories;
 
     /**
-     * @var array <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+     * @var array <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
      */
     public $SourceTypes;
 
@@ -150,7 +150,7 @@ class SearchMediaRequest extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var array <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+     * @var array <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
      */
     public $StorageRegions;
 
@@ -160,12 +160,12 @@ class SearchMediaRequest extends AbstractModel
     public $StorageClasses;
 
     /**
-     * @var array <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+     * @var array <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
      */
     public $MediaTypes;
 
     /**
-     * @var array <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+     * @var array <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
      */
     public $Status;
 
@@ -190,12 +190,12 @@ class SearchMediaRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var SortBy <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
+     * @var SortBy <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
      */
     public $Sort;
 
     /**
-     * @var integer <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+     * @var integer <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
      */
     public $Offset;
 
@@ -205,12 +205,12 @@ class SearchMediaRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
+     * @var string <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
      */
     public $Text;
 
     /**
-     * @var string <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+     * @var string <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
      */
     public $SourceType;
 
@@ -220,12 +220,12 @@ class SearchMediaRequest extends AbstractModel
     public $StreamId;
 
     /**
-     * @var string <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @var string <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public $StartTime;
 
     /**
-     * @var string <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @var string <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public $EndTime;
 
@@ -240,7 +240,7 @@ class SearchMediaRequest extends AbstractModel
     public $Vid;
 
     /**
-     * @var array <p>Live push Domain, valid when the media asset source is live recording.</p>
+     * @var array <p>Live push Domain, valid when the media asset source is live stream recording.</p>
      */
     public $StreamDomains;
 
@@ -255,37 +255,37 @@ class SearchMediaRequest extends AbstractModel
     public $KnowledgeBases;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
-     * @param array $FileIds <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+     * @param array $FileIds <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
      * @param array $Names <p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
-     * @param array $NamePrefixes <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
-     * @param array $Descriptions <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
-     * @param array $ClassIds <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
-     * @param array $Tags <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+     * @param array $NamePrefixes <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * @param array $Descriptions <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * @param array $ClassIds <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+     * @param array $Tags <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
      * @param array $Categories <p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
-     * @param array $SourceTypes <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+     * @param array $SourceTypes <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
      * @param array $StreamIds <p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
      * @param TimeRange $CreateTime <p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
      * @param TimeRange $ExpireTime <p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
-     * @param array $StorageRegions <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+     * @param array $StorageRegions <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
      * @param array $StorageClasses <p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
-     * @param array $MediaTypes <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
-     * @param array $Status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+     * @param array $MediaTypes <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
+     * @param array $Status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
      * @param array $ReviewResults <p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
      * @param array $TrtcSdkAppIds <p>TRTC application ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
      * @param array $TrtcRoomIds <p>TRTC room ID collection. Match any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
      * @param array $Filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
-     * @param SortBy $Sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
-     * @param integer $Offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+     * @param SortBy $Sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
+     * @param integer $Offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
      * @param integer $Limit <div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
-     * @param string $Text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
-     * @param string $SourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+     * @param string $Text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
+     * @param string $SourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
      * @param string $StreamId <p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
-     * @param string $StartTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-     * @param string $EndTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param string $StartTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param string $EndTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      * @param array $Vids <p>This field is invalid.</p>
      * @param string $Vid <p>This field is invalid.</p>
-     * @param array $StreamDomains <p>Live push Domain, valid when the media asset source is live recording.</p>
+     * @param array $StreamDomains <p>Live push Domain, valid when the media asset source is live stream recording.</p>
      * @param array $StreamPaths <p>Live push Path. Valid when the media asset source is live recording.</p>
      * @param array $KnowledgeBases <p>Knowledge base ID, match any element in the collection.</p>
      */

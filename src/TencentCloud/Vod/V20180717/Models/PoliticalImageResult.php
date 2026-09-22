@@ -18,32 +18,32 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task result type of image moderation involving inappropriate information
+ * Task result type of image moderation involving inappropriate information.
  *
- * @method float getConfidence() Obtain Score for authentication involving inappropriate information. The score ranges from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Score for authentication involving inappropriate information. The score ranges from 0 to 100.
- * @method string getSuggestion() Obtain Result suggestions for authentication involving inappropriate information. Value range:
+ * @method float getConfidence() Obtain Authentication involves scoring inappropriate information, with a score from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Authentication involves scoring inappropriate information, with a score from 0 to 100.
+ * @method string getSuggestion() Obtain Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Result suggestions for authentication involving inappropriate information. Value range:
+ * @method void setSuggestion(string $Suggestion) Set Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
  * @method string getName() Obtain Involves inappropriate information and violative icon names.
  * @method void setName(string $Name) Set Involves inappropriate information and violative icon names.
- * @method array getAreaCoordSet() Obtain Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+ * @method array getAreaCoordSet() Obtain Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
  */
 class PoliticalImageResult extends AbstractModel
 {
     /**
-     * @var float Score for authentication involving inappropriate information. The score ranges from 0 to 100.
+     * @var float Authentication involves scoring inappropriate information, with a score from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string Result suggestions for authentication involving inappropriate information. Value range:
+     * @var string Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
@@ -56,18 +56,18 @@ class PoliticalImageResult extends AbstractModel
     public $Name;
 
     /**
-     * @var array Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * @var array Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @param float $Confidence Score for authentication involving inappropriate information. The score ranges from 0 to 100.
-     * @param string $Suggestion Result suggestions for authentication involving inappropriate information. Value range:
+     * @param float $Confidence Authentication involves scoring inappropriate information, with a score from 0 to 100.
+     * @param string $Suggestion Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
      * @param string $Name Involves inappropriate information and violative icon names.
-     * @param array $AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * @param array $AreaCoordSet Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     function __construct()
     {

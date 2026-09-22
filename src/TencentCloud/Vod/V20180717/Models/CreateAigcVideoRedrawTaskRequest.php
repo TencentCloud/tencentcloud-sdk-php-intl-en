@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcVideoRedrawTask request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
- * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
- * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
- * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain <p>Task parameter information for AIGC video conversion.</p>
- * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set <p>Task parameter information for AIGC video conversion.</p>
- * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain <p>Output media file configuration for an AIGC video conversion task.</p>
- * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set <p>Output media file configuration for an AIGC video conversion task.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+ * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
+ * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
+ * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain <p>AIGC video redrawing task parameter information.</p>
+ * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set <p>AIGC video redrawing task parameter information.</p>
+ * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain <p>Configuration of the output media file for an AIGC video conversion task.</p>
+ * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set <p>Configuration of the output media file for an AIGC video conversion task.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
  * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
- * @method integer getTasksPriority() Obtain <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
- * @method void setTasksPriority(integer $TasksPriority) Set <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
- * @method string getExtInfo() Obtain <p>Reserved field, used for special purposes.</p>
- * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purposes.</p>
+ * @method integer getTasksPriority() Obtain <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method void setTasksPriority(integer $TasksPriority) Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method string getExtInfo() Obtain <p>Reserved field, used for special purpose.</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>Reserved field, used for special purpose.</p>
  */
 class CreateAigcVideoRedrawTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var AigcVideoRedrawTaskInputFileInfo <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+     * @var AigcVideoRedrawTaskInputFileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
      */
     public $FileInfo;
 
     /**
-     * @var AigcVideoRedrawTaskInfo <p>Task parameter information for AIGC video conversion.</p>
+     * @var AigcVideoRedrawTaskInfo <p>AIGC video redrawing task parameter information.</p>
      */
     public $TaskInfo;
 
     /**
-     * @var AigcVideoRedrawOutputConfig <p>Output media file configuration for an AIGC video conversion task.</p>
+     * @var AigcVideoRedrawOutputConfig <p>Configuration of the output media file for an AIGC video conversion task.</p>
      */
     public $OutputConfig;
 
@@ -70,24 +70,24 @@ class CreateAigcVideoRedrawTaskRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var integer <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * @var integer <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public $TasksPriority;
 
     /**
-     * @var string <p>Reserved field, used for special purposes.</p>
+     * @var string <p>Reserved field, used for special purpose.</p>
      */
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
-     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>Task parameter information for AIGC video conversion.</p>
-     * @param AigcVideoRedrawOutputConfig $OutputConfig <p>Output media file configuration for an AIGC video conversion task.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
+     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>AIGC video redrawing task parameter information.</p>
+     * @param AigcVideoRedrawOutputConfig $OutputConfig <p>Configuration of the output media file for an AIGC video conversion task.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param integer $TasksPriority <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
-     * @param string $ExtInfo <p>Reserved field, used for special purposes.</p>
+     * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param string $ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     function __construct()
     {

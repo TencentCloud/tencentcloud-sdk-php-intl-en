@@ -18,25 +18,25 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rotation image task type
+ * Type of rotating image tasks
  *
  * @method integer getDefinition() Obtain Video-to-GIF conversion template ID.
  * @method void setDefinition(integer $Definition) Set Video-to-GIF conversion template ID.
  * @method float getStartTimeOffset() Obtain Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
- * @method float getEndTimeOffset() Obtain Termination time offset of the GIF in the video, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Termination time offset of the GIF in the video, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
  */
 class AnimatedGraphicTaskInput extends AbstractModel
@@ -48,16 +48,16 @@ class AnimatedGraphicTaskInput extends AbstractModel
 
     /**
      * @var float Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Termination time offset of the GIF in the video, in seconds.
+     * @var float End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
      */
     public $EndTimeOffset;
@@ -65,12 +65,12 @@ class AnimatedGraphicTaskInput extends AbstractModel
     /**
      * @param integer $Definition Video-to-GIF conversion template ID.
      * @param float $StartTimeOffset Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
-     * @param float $EndTimeOffset Termination time offset of the GIF in the video, in seconds.
+     * @param float $EndTimeOffset End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
      */
     function __construct()

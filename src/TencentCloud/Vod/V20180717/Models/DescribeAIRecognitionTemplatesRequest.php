@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAIRecognitionTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method array getDefinitions() Obtain Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
  * @method void setDefinitions(array $Definitions) Set Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
- * @method string getType() Obtain Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
- * @method void setType(string $Type) Set Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+ * @method string getType() Obtain Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
+ * @method void setType(string $Type) Set Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAIRecognitionTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -44,7 +44,7 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
     public $Definitions;
 
     /**
-     * @var string Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+     * @var string Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
      */
     public $Type;
 
@@ -59,9 +59,9 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param array $Definitions Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
-     * @param string $Type Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+     * @param string $Type Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */

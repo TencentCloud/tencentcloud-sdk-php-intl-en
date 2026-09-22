@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asynchronously fetch AIGC face information tasks.
+ * Asynchronously fetch AIGC human face information tasks.
  *
  * @method string getTaskId() Obtain <p>Task ID.</p>
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
  * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
  * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+ * @method string getErrCodeExt() Obtain <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method integer getProgress() Obtain <p>Task progress. Value range: 0-100.</p>
- * @method void setProgress(integer $Progress) Set <p>Task progress. Value range: 0-100.</p>
+ * @method integer getProgress() Obtain <p>Task progress, value ranges from 0 to 100.</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress, value ranges from 0 to 100.</p>
  * @method DescribeAigcFaceInfoAsyncInput getInput() Obtain <p>Asynchronously fetch the input information of AIGC face information tasks.</p>
  * @method void setInput(DescribeAigcFaceInfoAsyncInput $Input) Set <p>Asynchronously fetch the input information of AIGC face information tasks.</p>
  * @method DescribeAigcFaceInfoAsyncOutput getOutput() Obtain <p>Asynchronously fetch the output information of the AIGC human face information task.</p>
@@ -59,7 +59,7 @@ class DescribeAigcFaceInfoAsyncTask extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var string <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+     * @var string <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
      */
     public $ErrCodeExt;
 
@@ -69,7 +69,7 @@ class DescribeAigcFaceInfoAsyncTask extends AbstractModel
     public $Message;
 
     /**
-     * @var integer <p>Task progress. Value range: 0-100.</p>
+     * @var integer <p>Task progress, value ranges from 0 to 100.</p>
      */
     public $Progress;
 
@@ -97,9 +97,9 @@ class DescribeAigcFaceInfoAsyncTask extends AbstractModel
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
      * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+     * @param string $ErrCodeExt <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
      * @param string $Message <p>Error message.</p>
-     * @param integer $Progress <p>Task progress. Value range: 0-100.</p>
+     * @param integer $Progress <p>Task progress, value ranges from 0 to 100.</p>
      * @param DescribeAigcFaceInfoAsyncInput $Input <p>Asynchronously fetch the input information of AIGC face information tasks.</p>
      * @param DescribeAigcFaceInfoAsyncOutput $Output <p>Asynchronously fetch the output information of the AIGC human face information task.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>

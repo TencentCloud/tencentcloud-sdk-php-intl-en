@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech synthesis task input.
+ * Input of the speech synthesis task.
  *
  * @method string getVoiceId() Obtain <p>Voice ID.</p>
  * @method void setVoiceId(string $VoiceId) Set <p>Voice ID.</p>

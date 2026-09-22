@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent knowledge library information for media assets
+ * Media asset intelligent knowledge base information
  *
- * @method array getBases() Obtain <p>List of knowledge bases currently importing media assets</p>
- * @method void setBases(array $Bases) Set <p>List of knowledge bases currently importing media assets</p>
- * @method array getKnowledgeAnalysisInfos() Obtain <p>Media analysis information in the knowledge base</p>
- * @method void setKnowledgeAnalysisInfos(array $KnowledgeAnalysisInfos) Set <p>Media analysis information in the knowledge base</p>
- * @method array getKnowledgeBaseDetails() Obtain <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
- * @method void setKnowledgeBaseDetails(array $KnowledgeBaseDetails) Set <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
+ * @method array getBases() Obtain <p>List of knowledge bases currently imported for the media asset</p>
+ * @method void setBases(array $Bases) Set <p>List of knowledge bases currently imported for the media asset</p>
+ * @method array getKnowledgeAnalysisInfos() Obtain <p>Media analysis info in the knowledge base</p>
+ * @method void setKnowledgeAnalysisInfos(array $KnowledgeAnalysisInfos) Set <p>Media analysis info in the knowledge base</p>
+ * @method array getKnowledgeBaseDetails() Obtain <p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
+ * @method void setKnowledgeBaseDetails(array $KnowledgeBaseDetails) Set <p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
  */
 class KnowledgeBasesInfo extends AbstractModel
 {
     /**
-     * @var array <p>List of knowledge bases currently importing media assets</p>
+     * @var array <p>List of knowledge bases currently imported for the media asset</p>
      */
     public $Bases;
 
     /**
-     * @var array <p>Media analysis information in the knowledge base</p>
+     * @var array <p>Media analysis info in the knowledge base</p>
      */
     public $KnowledgeAnalysisInfos;
 
     /**
-     * @var array <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
+     * @var array <p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
      */
     public $KnowledgeBaseDetails;
 
     /**
-     * @param array $Bases <p>List of knowledge bases currently importing media assets</p>
-     * @param array $KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
-     * @param array $KnowledgeBaseDetails <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
+     * @param array $Bases <p>List of knowledge bases currently imported for the media asset</p>
+     * @param array $KnowledgeAnalysisInfos <p>Media analysis info in the knowledge base</p>
+     * @param array $KnowledgeBaseDetails <p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
      */
     function __construct()
     {

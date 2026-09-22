@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set File ID.
  * @method string getOriginalStorageClass() Obtain Original storage type of the file.
  * @method void setOriginalStorageClass(string $OriginalStorageClass) Set Original storage type of the file.
- * @method string getTargetStorageClass() Obtain Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
- * @method void setTargetStorageClass(string $TargetStorageClass) Set Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+ * @method string getTargetStorageClass() Obtain Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
+ * @method void setTargetStorageClass(string $TargetStorageClass) Set Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
  * @method string getRestoreTier() Obtain Retrieval mode. Valid values:
 <li>Expedited: speed mode</li>
 <li>Standard: standard mode</li>
@@ -54,7 +54,7 @@ class RestoreMediaTask extends AbstractModel
     public $OriginalStorageClass;
 
     /**
-     * @var string Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+     * @var string Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
      */
     public $TargetStorageClass;
 
@@ -86,7 +86,7 @@ class RestoreMediaTask extends AbstractModel
     /**
      * @param string $FileId File ID.
      * @param string $OriginalStorageClass Original storage type of the file.
-     * @param string $TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+     * @param string $TargetStorageClass Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
      * @param string $RestoreTier Retrieval mode. Valid values:
 <li>Expedited: speed mode</li>
 <li>Standard: standard mode</li>

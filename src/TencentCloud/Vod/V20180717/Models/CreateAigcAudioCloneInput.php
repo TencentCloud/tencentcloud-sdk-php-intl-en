@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Create AIGC voice clone input information.
  *
- * @method AigcAudioCloneInputFileInfo getAudioFileInfo() Obtain <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
- * @method void setAudioFileInfo(AigcAudioCloneInputFileInfo $AudioFileInfo) Set <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
+ * @method AigcAudioCloneInputFileInfo getAudioFileInfo() Obtain <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
+ * @method void setAudioFileInfo(AigcAudioCloneInputFileInfo $AudioFileInfo) Set <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
  * @method string getVoiceId() Obtain <p>Custom Voice ID.</p>
  * @method void setVoiceId(string $VoiceId) Set <p>Custom Voice ID.</p>
- * @method string getText() Obtain <p>Clone audition parameter.</p>
- * @method void setText(string $Text) Set <p>Clone audition parameter.</p>
+ * @method string getText() Obtain <p>Clone the audition parameter.</p>
+ * @method void setText(string $Text) Set <p>Clone the audition parameter.</p>
  * @method AigcAudioCloneInputFileInfo getPromptAudioFileInfo() Obtain <p>Sample audio for voice replication.</p>
  * @method void setPromptAudioFileInfo(AigcAudioCloneInputFileInfo $PromptAudioFileInfo) Set <p>Sample audio for voice replication.</p>
  * @method string getPromptText() Obtain <p>Text content corresponding to the sample audio.</p>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAigcAudioCloneInput extends AbstractModel
 {
     /**
-     * @var AigcAudioCloneInputFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
+     * @var AigcAudioCloneInputFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
      */
     public $AudioFileInfo;
 
@@ -46,7 +46,7 @@ class CreateAigcAudioCloneInput extends AbstractModel
     public $VoiceId;
 
     /**
-     * @var string <p>Clone audition parameter.</p>
+     * @var string <p>Clone the audition parameter.</p>
      */
     public $Text;
 
@@ -66,9 +66,9 @@ class CreateAigcAudioCloneInput extends AbstractModel
     public $Payload;
 
     /**
-     * @param AigcAudioCloneInputFileInfo $AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
+     * @param AigcAudioCloneInputFileInfo $AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
      * @param string $VoiceId <p>Custom Voice ID.</p>
-     * @param string $Text <p>Clone audition parameter.</p>
+     * @param string $Text <p>Clone the audition parameter.</p>
      * @param AigcAudioCloneInputFileInfo $PromptAudioFileInfo <p>Sample audio for voice replication.</p>
      * @param string $PromptText <p>Text content corresponding to the sample audio.</p>
      * @param string $Payload <p>Pass-through parameter.</p>

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAIAnalysisTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
- * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
- * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method array getDefinitions() Obtain Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+ * @method void setDefinitions(array $Definitions) Set Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var array Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+     * @var array Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
      */
     public $Definitions;
 
@@ -52,8 +52,8 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-     * @param array $Definitions Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param array $Definitions Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */

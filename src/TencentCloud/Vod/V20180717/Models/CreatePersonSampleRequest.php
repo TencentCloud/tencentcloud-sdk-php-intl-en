@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonSample request structure.
  *
- * @method string getName() Obtain Material name. Length limit: 20 characters.
- * @method void setName(string $Name) Set Material name. Length limit: 20 characters.
+ * @method string getName() Obtain Material name. Length limited to 20 characters.
+ * @method void setName(string $Name) Set Material name. Length limited to 20 characters.
  * @method array getUsages() Obtain Material application scenario. Available values:
 1. Recognition: for content recognition, equivalent to Recognition.Face.
 2. Review: for inappropriate content, equivalent to Review.Face.
@@ -30,25 +30,25 @@ use TencentCloud\Common\AbstractModel;
 1. Recognition: for content recognition, equivalent to Recognition.Face.
 2. Review: for inappropriate content, equivalent to Review.Face.
 3. All: include all of the above, equivalent to 1+2.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method string getDescription() Obtain Material description. Length limit: 1024 characters.
- * @method void setDescription(string $Description) Set Material description. Length limit: 1024 characters.
- * @method array getFaceContents() Obtain Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+ * @method string getDescription() Obtain Material description, with a length limit of 1024 characters.
+ * @method void setDescription(string $Description) Set Material description, with a length limit of 1024 characters.
+ * @method array getFaceContents() Obtain String encoded from the material image in [Base64](https://tools.ietf.org/html/rfc4648). Only jpeg and png image formats are supported. Array length limit: 5 images.
 Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
- * @method void setFaceContents(array $FaceContents) Set Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+ * @method void setFaceContents(array $FaceContents) Set String encoded from the material image in [Base64](https://tools.ietf.org/html/rfc4648). Only jpeg and png image formats are supported. Array length limit: 5 images.
 Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
  * @method array getTags() Obtain Material tag
 <li>Array length limit: 20 tags;</li>
-<li>Single tag length limited to 128 characters.</li>
+<li>Single tag length limit: 128 characters.</li>
  * @method void setTags(array $Tags) Set Material tag
 <li>Array length limit: 20 tags;</li>
-<li>Single tag length limited to 128 characters.</li>
+<li>Single tag length limit: 128 characters.</li>
  */
 class CreatePersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Material name. Length limit: 20 characters.
+     * @var string Material name. Length limited to 20 characters.
      */
     public $Name;
 
@@ -61,17 +61,17 @@ class CreatePersonSampleRequest extends AbstractModel
     public $Usages;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Material description. Length limit: 1024 characters.
+     * @var string Material description, with a length limit of 1024 characters.
      */
     public $Description;
 
     /**
-     * @var array Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+     * @var array String encoded from the material image in [Base64](https://tools.ietf.org/html/rfc4648). Only jpeg and png image formats are supported. Array length limit: 5 images.
 Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
      */
     public $FaceContents;
@@ -79,23 +79,23 @@ Note: The image must be a single portrait with clear facial features, with pixel
     /**
      * @var array Material tag
 <li>Array length limit: 20 tags;</li>
-<li>Single tag length limited to 128 characters.</li>
+<li>Single tag length limit: 128 characters.</li>
      */
     public $Tags;
 
     /**
-     * @param string $Name Material name. Length limit: 20 characters.
+     * @param string $Name Material name. Length limited to 20 characters.
      * @param array $Usages Material application scenario. Available values:
 1. Recognition: for content recognition, equivalent to Recognition.Face.
 2. Review: for inappropriate content, equivalent to Review.Face.
 3. All: include all of the above, equivalent to 1+2.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param string $Description Material description. Length limit: 1024 characters.
-     * @param array $FaceContents Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+     * @param string $Description Material description, with a length limit of 1024 characters.
+     * @param array $FaceContents String encoded from the material image in [Base64](https://tools.ietf.org/html/rfc4648). Only jpeg and png image formats are supported. Array length limit: 5 images.
 Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
      * @param array $Tags Material tag
 <li>Array length limit: 20 tags;</li>
-<li>Single tag length limited to 128 characters.</li>
+<li>Single tag length limit: 128 characters.</li>
      */
     function __construct()
     {

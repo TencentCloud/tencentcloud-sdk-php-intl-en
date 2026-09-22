@@ -18,29 +18,29 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video sprite capture task. This structure is only used for tasks initiated by the 2017 version of the capture CSS sprites API (https://www.tencentcloud.com/document/product/266/8101?from_cn_redirect=1).
+ * Video image sprite task. This structure is only used for tasks initiated by the 2017 [capture CSS sprites](https://www.tencentcloud.com/document/product/266/8101?from_cn_redirect=1) API.
  *
- * @method string getTaskId() Obtain <p>Screenshot sprite task ID.</p>
- * @method void setTaskId(string $TaskId) Set <p>Screenshot sprite task ID.</p>
+ * @method string getTaskId() Obtain <p>Screenshot image sprite task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Screenshot image sprite task ID.</p>
  * @method integer getErrCode() Obtain <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
  * @method void setErrCode(integer $ErrCode) Set <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method string getFileId() Obtain <p>Capture the CSS sprite file ID.</p>
- * @method void setFileId(string $FileId) Set <p>Capture the CSS sprite file ID.</p>
- * @method integer getDefinition() Obtain <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
- * @method void setDefinition(integer $Definition) Set <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+ * @method string getFileId() Obtain <p>Capture the file ID of CSS sprites.</p>
+ * @method void setFileId(string $FileId) Set <p>Capture the file ID of CSS sprites.</p>
+ * @method integer getDefinition() Obtain <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
  * @method integer getTotalCount() Obtain <p>Total number of small images in the sprite sheet.</p>
  * @method void setTotalCount(integer $TotalCount) Set <p>Total number of small images in the sprite sheet.</p>
- * @method array getImageSpriteUrlSet() Obtain <p>Addresses for capturing CSS sprites output.</p>
- * @method void setImageSpriteUrlSet(array $ImageSpriteUrlSet) Set <p>Addresses for capturing CSS sprites output.</p>
+ * @method array getImageSpriteUrlSet() Obtain <p>Capture the domain names or IP addresses output by CSS sprites.</p>
+ * @method void setImageSpriteUrlSet(array $ImageSpriteUrlSet) Set <p>Capture the domain names or IP addresses output by CSS sprites.</p>
  * @method string getWebVttUrl() Obtain <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
  * @method void setWebVttUrl(string $WebVttUrl) Set <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
  */
 class CreateImageSpriteTask2017 extends AbstractModel
 {
     /**
-     * @var string <p>Screenshot sprite task ID.</p>
+     * @var string <p>Screenshot image sprite task ID.</p>
      */
     public $TaskId;
 
@@ -55,12 +55,12 @@ class CreateImageSpriteTask2017 extends AbstractModel
     public $Message;
 
     /**
-     * @var string <p>Capture the CSS sprite file ID.</p>
+     * @var string <p>Capture the file ID of CSS sprites.</p>
      */
     public $FileId;
 
     /**
-     * @var integer <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+     * @var integer <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
      */
     public $Definition;
 
@@ -70,7 +70,7 @@ class CreateImageSpriteTask2017 extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array <p>Addresses for capturing CSS sprites output.</p>
+     * @var array <p>Capture the domain names or IP addresses output by CSS sprites.</p>
      */
     public $ImageSpriteUrlSet;
 
@@ -80,13 +80,13 @@ class CreateImageSpriteTask2017 extends AbstractModel
     public $WebVttUrl;
 
     /**
-     * @param string $TaskId <p>Screenshot sprite task ID.</p>
+     * @param string $TaskId <p>Screenshot image sprite task ID.</p>
      * @param integer $ErrCode <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
      * @param string $Message <p>Error message.</p>
-     * @param string $FileId <p>Capture the CSS sprite file ID.</p>
-     * @param integer $Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+     * @param string $FileId <p>Capture the file ID of CSS sprites.</p>
+     * @param integer $Definition <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
      * @param integer $TotalCount <p>Total number of small images in the sprite sheet.</p>
-     * @param array $ImageSpriteUrlSet <p>Addresses for capturing CSS sprites output.</p>
+     * @param array $ImageSpriteUrlSet <p>Capture the domain names or IP addresses output by CSS sprites.</p>
      * @param string $WebVttUrl <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
      */
     function __construct()

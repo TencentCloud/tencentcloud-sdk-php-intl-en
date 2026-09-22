@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for video splitting task recognition
+ * Video splitting task recognition control parameters.
  *
  * @method string getSwitch() Obtain Video splitting recognition task switch. Available values:
 <li>ON: enable the intelligent video splitting recognition task;</li>

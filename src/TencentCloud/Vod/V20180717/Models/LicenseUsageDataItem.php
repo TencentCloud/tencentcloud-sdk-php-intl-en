@@ -18,17 +18,17 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * License request count stats.
+ * License request count statistics.
  *
- * @method string getTime() Obtain Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 represents the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
- * @method void setTime(string $Time) Set Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 represents the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+ * @method string getTime() Obtain Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, if the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+ * @method void setTime(string $Time) Set Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, if the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
  * @method integer getCount() Obtain License request count.
  * @method void setCount(integer $Count) Set License request count.
  */
 class LicenseUsageDataItem extends AbstractModel
 {
     /**
-     * @var string Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 represents the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+     * @var string Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, if the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
      */
     public $Time;
 
@@ -38,7 +38,7 @@ class LicenseUsageDataItem extends AbstractModel
     public $Count;
 
     /**
-     * @param string $Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 represents the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+     * @param string $Time Start time of the time interval where the data resides, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). For example, if the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
      * @param integer $Count License request count.
      */
     function __construct()

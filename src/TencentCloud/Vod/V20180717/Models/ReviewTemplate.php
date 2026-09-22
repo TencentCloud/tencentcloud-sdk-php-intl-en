@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Template type. Available values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
- * @method array getLabels() Obtain List of violation labels that need to return.
- * @method void setLabels(array $Labels) Set List of violation labels that need to return.
+ * @method array getLabels() Obtain List of violation labels to return.
+ * @method void setLabels(array $Labels) Set List of violation labels to return.
  * @method string getCreateTime() Obtain Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -64,7 +64,7 @@ class ReviewTemplate extends AbstractModel
     public $Type;
 
     /**
-     * @var array List of violation labels that need to return.
+     * @var array List of violation labels to return.
      */
     public $Labels;
 
@@ -85,7 +85,7 @@ class ReviewTemplate extends AbstractModel
      * @param string $Type Template type. Available values:
 <li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
-     * @param array $Labels List of violation labels that need to return.
+     * @param array $Labels List of violation labels to return.
      * @param string $CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */

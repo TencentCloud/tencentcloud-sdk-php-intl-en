@@ -24,24 +24,24 @@ use TencentCloud\Common\AbstractModel;
 For typical usage scenarios, VOD provides multiple preset templates (https://www.tencentcloud.com/document/product/266/102586?from_cn_redirect=1#50604b3f-0286-4a10-a3f7-18218116aff7).
  * @method void setDefinition(integer $Definition) Set Audio-visual quality rebirth template ID.
 For typical usage scenarios, VOD provides multiple preset templates (https://www.tencentcloud.com/document/product/266/102586?from_cn_redirect=1#50604b3f-0286-4a10-a3f7-18218116aff7).
- * @method string getFileId() Obtain Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
- * @method void setFileId(string $FileId) Set Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
- * @method string getMediaStoragePath() Obtain Media storage path.
+ * @method string getFileId() Obtain Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+ * @method void setFileId(string $FileId) Set Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+ * @method string getMediaStoragePath() Obtain Storage path of the media.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
- * @method void setMediaStoragePath(string $MediaStoragePath) Set Media storage path.
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set Storage path of the media.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
- * @method EnhanceMediaQualityOutputConfig getOutputConfig() Obtain Media file configuration after audio and video quality revival.
- * @method void setOutputConfig(EnhanceMediaQualityOutputConfig $OutputConfig) Set Media file configuration after audio and video quality revival.
- * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
- * @method string getSessionContext() Obtain Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method EnhanceMediaQualityOutputConfig getOutputConfig() Obtain Configuration of the media file after audio and video quality revival.
+ * @method void setOutputConfig(EnhanceMediaQualityOutputConfig $OutputConfig) Set Configuration of the media file after audio and video quality revival.
+ * @method string getSessionId() Obtain Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+ * @method void setSessionId(string $SessionId) Set Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+ * @method string getSessionContext() Obtain Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.
+ * @method integer getTasksPriority() Obtain Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  */
 class EnhanceMediaQualityRequest extends AbstractModel
 {
@@ -52,54 +52,54 @@ For typical usage scenarios, VOD provides multiple preset templates (https://www
     public $Definition;
 
     /**
-     * @var string Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * @var string Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
      */
     public $FileId;
 
     /**
-     * @var string Media storage path.
+     * @var string Storage path of the media.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
      */
     public $MediaStoragePath;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var EnhanceMediaQualityOutputConfig Media file configuration after audio and video quality revival.
+     * @var EnhanceMediaQualityOutputConfig Configuration of the media file after audio and video quality revival.
      */
     public $OutputConfig;
 
     /**
-     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @var string Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
      */
     public $SessionId;
 
     /**
-     * @var string Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.
+     * @var string Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+     * @var integer Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TasksPriority;
 
     /**
      * @param integer $Definition Audio-visual quality rebirth template ID.
 For typical usage scenarios, VOD provides multiple preset templates (https://www.tencentcloud.com/document/product/266/102586?from_cn_redirect=1#50604b3f-0286-4a10-a3f7-18218116aff7).
-     * @param string $FileId Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
-     * @param string $MediaStoragePath Media storage path.
+     * @param string $FileId Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * @param string $MediaStoragePath Storage path of the media.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param EnhanceMediaQualityOutputConfig $OutputConfig Media file configuration after audio and video quality revival.
-     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-     * @param string $SessionContext Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param EnhanceMediaQualityOutputConfig $OutputConfig Configuration of the media file after audio and video quality revival.
+     * @param string $SessionId Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @param string $SessionContext Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.
+     * @param integer $TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     function __construct()
     {

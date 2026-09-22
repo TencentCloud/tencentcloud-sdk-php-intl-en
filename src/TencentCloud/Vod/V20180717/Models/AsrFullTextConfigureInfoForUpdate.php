@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for the speech full-text recognition task
+ * Speech full-text recognition task control parameters
  *
  * @method string getSwitch() Obtain Voice full-text recognition task switch. Available values:
 <li>ON: enable intelligent voice full-text recognition task;</li>
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF: Disable the intelligent voice full-text recognition task.</li>
  * @method SubtitleFormatsOperation getSubtitleFormatsOperation() Obtain Subtitle format list operation information.
  * @method void setSubtitleFormatsOperation(SubtitleFormatsOperation $SubtitleFormatsOperation) Set Subtitle format list operation information.
- * @method string getSubtitleFormat() Obtain Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+ * @method string getSubtitleFormat() Obtain Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li>en: English;</li>
 <li>ja: Japanese;</li>
 <li>zh-ca: Cantonese.</li>
- * @method string getSubtitleName() Obtain Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
- * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+ * @method string getSubtitleName() Obtain Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+ * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -64,7 +64,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $SubtitleFormatsOperation;
 
     /**
-     * @var string Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+     * @var string Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -82,7 +82,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $SrcLanguage;
 
     /**
-     * @var string Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+     * @var string Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     public $SubtitleName;
 
@@ -91,7 +91,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>ON: enable intelligent voice full-text recognition task;</li>
 <li>OFF: Disable the intelligent voice full-text recognition task.</li>
      * @param SubtitleFormatsOperation $SubtitleFormatsOperation Subtitle format list operation information.
-     * @param string $SubtitleFormat Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+     * @param string $SubtitleFormat Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -100,7 +100,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>en: English;</li>
 <li>ja: Japanese;</li>
 <li>zh-ca: Cantonese.</li>
-     * @param string $SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+     * @param string $SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     function __construct()
     {

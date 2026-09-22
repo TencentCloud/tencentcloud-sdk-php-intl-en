@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for mosaic detection in video footage.
+ * Control parameters for video frame mosaic detection.
  *
  * @method string getSwitch() Obtain Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
  * @method void setSwitch(string $Switch) Set Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
  */
 class MosaicConfigureInfoForUpdate extends AbstractModel
 {
     /**
      * @var string Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
      */
     public $Switch;
 
     /**
      * @param string $Switch Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
      */
     function __construct()
     {

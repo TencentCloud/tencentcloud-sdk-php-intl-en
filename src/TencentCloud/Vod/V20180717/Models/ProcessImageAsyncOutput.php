@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output of an image asynchronous processing task.
  *
- * @method ProcessImageAsyncOutputFileInfo getFileInfo() Obtain Output file information for an image asynchronous processing task.
- * @method void setFileInfo(ProcessImageAsyncOutputFileInfo $FileInfo) Set Output file information for an image asynchronous processing task.
+ * @method ProcessImageAsyncOutputFileInfo getFileInfo() Obtain Output file information for an asynchronous image processing task.
+ * @method void setFileInfo(ProcessImageAsyncOutputFileInfo $FileInfo) Set Output file information for an asynchronous image processing task.
  * @method string getOutputText() Obtain Image understanding result.
  * @method void setOutputText(string $OutputText) Set Image understanding result.
  */
 class ProcessImageAsyncOutput extends AbstractModel
 {
     /**
-     * @var ProcessImageAsyncOutputFileInfo Output file information for an image asynchronous processing task.
+     * @var ProcessImageAsyncOutputFileInfo Output file information for an asynchronous image processing task.
      */
     public $FileInfo;
 
@@ -38,7 +38,7 @@ class ProcessImageAsyncOutput extends AbstractModel
     public $OutputText;
 
     /**
-     * @param ProcessImageAsyncOutputFileInfo $FileInfo Output file information for an image asynchronous processing task.
+     * @param ProcessImageAsyncOutputFileInfo $FileInfo Output file information for an asynchronous image processing task.
      * @param string $OutputText Image understanding result.
      */
     function __construct()

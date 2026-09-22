@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIndex(integer $Index) Set Incorrect image subscript in the input parameter FaceContents, starting from 0.
  * @method integer getErrCode() Obtain Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
  * @method string getMessage() Obtain Error description.
  * @method void setMessage(string $Message) Set Error description.
  */
@@ -41,7 +41,7 @@ class AiSampleFailFaceInfo extends AbstractModel
     /**
      * @var integer Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
      */
     public $ErrCode;
 
@@ -54,7 +54,7 @@ class AiSampleFailFaceInfo extends AbstractModel
      * @param integer $Index Incorrect image subscript in the input parameter FaceContents, starting from 0.
      * @param integer $ErrCode Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
      * @param string $Message Error description.
      */
     function __construct()

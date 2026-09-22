@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
  * @method void setType(string $Type) Set <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
- * @method string getFileId() Obtain <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
- * @method void setFileId(string $FileId) Set <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
- * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
- * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
- * @method string getViewType() Obtain <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
- * @method void setViewType(string $ViewType) Set <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+ * @method string getFileId() Obtain <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+ * @method void setFileId(string $FileId) Set <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+ * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+ * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+ * @method string getViewType() Obtain <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+ * @method void setViewType(string $ViewType) Set <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
  */
 class AigcHunyuan3DMultiViewImageInfo extends AbstractModel
 {
@@ -37,25 +37,25 @@ class AigcHunyuan3DMultiViewImageInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * @var string <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     public $FileId;
 
     /**
-     * @var string <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
+     * @var string <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     public $Url;
 
     /**
-     * @var string <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+     * @var string <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
      */
     public $ViewType;
 
     /**
      * @param string $Type <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
-     * @param string $FileId <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
-     * @param string $Url <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
-     * @param string $ViewType <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+     * @param string $FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * @param string $Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * @param string $ViewType <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Segment undergone full text recognition.
+ * Full text recognition segment.
  *
  * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
  * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.

@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter of the image watermark template
+ * Input parameters of an image watermark template
  *
- * @method string getImageContent() Obtain Base64-encoded string of the watermark image. Supports jpeg and png image formats.
- * @method void setImageContent(string $ImageContent) Set Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+ * @method string getImageContent() Obtain Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
+ * @method void setImageContent(string $ImageContent) Set Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
  * @method string getWidth() Obtain Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li>
@@ -35,12 +35,12 @@ use TencentCloud\Common\AbstractModel;
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li>
  * @method string getRepeatType() Obtain Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
  * @method void setRepeatType(string $RepeatType) Set Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
  * @method integer getTransparency() Obtain Image transparency. Value range: [0, 100].
 <li>0: completely opaque.</li>
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class ImageWatermarkInputForUpdate extends AbstractModel
 {
     /**
-     * @var string Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * @var string Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
      */
     public $ImageContent;
 
@@ -72,8 +72,8 @@ class ImageWatermarkInputForUpdate extends AbstractModel
 
     /**
      * @var string Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
      */
     public $RepeatType;
@@ -86,7 +86,7 @@ class ImageWatermarkInputForUpdate extends AbstractModel
     public $Transparency;
 
     /**
-     * @param string $ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * @param string $ImageContent Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
      * @param string $Width Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li>
@@ -94,8 +94,8 @@ class ImageWatermarkInputForUpdate extends AbstractModel
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li>
      * @param string $RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
      * @param integer $Transparency Image transparency. Value range: [0, 100].
 <li>0: completely opaque.</li>

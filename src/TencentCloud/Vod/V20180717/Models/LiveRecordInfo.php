@@ -18,18 +18,18 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live recording information.
+ * Live recording information
  *
  * @method string getDomain() Obtain <p>Live streaming recording domain name</p>
  * @method void setDomain(string $Domain) Set <p>Live streaming recording domain name</p>
  * @method string getPath() Obtain <p>Live recording Path</p>
  * @method void setPath(string $Path) Set <p>Live recording Path</p>
- * @method string getStreamId() Obtain <p>ID of the live recording stream.</p>
- * @method void setStreamId(string $StreamId) Set <p>ID of the live recording stream.</p>
+ * @method string getStreamId() Obtain <p>Live recording stream ID.</p>
+ * @method void setStreamId(string $StreamId) Set <p>Live recording stream ID.</p>
  * @method string getRecordStartTime() Obtain <p>Recording start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method void setRecordStartTime(string $RecordStartTime) Set <p>Recording start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method string getRecordEndTime() Obtain <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date and time format</a>.</p>
- * @method void setRecordEndTime(string $RecordEndTime) Set <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date and time format</a>.</p>
+ * @method string getRecordEndTime() Obtain <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setRecordEndTime(string $RecordEndTime) Set <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  */
 class LiveRecordInfo extends AbstractModel
 {
@@ -44,7 +44,7 @@ class LiveRecordInfo extends AbstractModel
     public $Path;
 
     /**
-     * @var string <p>ID of the live recording stream.</p>
+     * @var string <p>Live recording stream ID.</p>
      */
     public $StreamId;
 
@@ -54,16 +54,16 @@ class LiveRecordInfo extends AbstractModel
     public $RecordStartTime;
 
     /**
-     * @var string <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date and time format</a>.</p>
+     * @var string <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $RecordEndTime;
 
     /**
      * @param string $Domain <p>Live streaming recording domain name</p>
      * @param string $Path <p>Live recording Path</p>
-     * @param string $StreamId <p>ID of the live recording stream.</p>
+     * @param string $StreamId <p>Live recording stream ID.</p>
      * @param string $RecordStartTime <p>Recording start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param string $RecordEndTime <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date and time format</a>.</p>
+     * @param string $RecordEndTime <p>Recording end time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     function __construct()
     {

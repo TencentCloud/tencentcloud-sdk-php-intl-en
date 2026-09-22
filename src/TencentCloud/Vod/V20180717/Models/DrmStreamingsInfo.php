@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimpleAesDefinition(integer $SimpleAesDefinition) Set Adaptive bitrate streaming template ID with the protection type SimpleAES.
  * @method integer getWidevineDefinition() Obtain Adaptive bitrate streaming template ID with Widevine protection type.
  * @method void setWidevineDefinition(integer $WidevineDefinition) Set Adaptive bitrate streaming template ID with Widevine protection type.
- * @method integer getFairPlayDefinition() Obtain Adaptive bitrate streaming template ID with FairPlay protection type.
- * @method void setFairPlayDefinition(integer $FairPlayDefinition) Set Adaptive bitrate streaming template ID with FairPlay protection type.
+ * @method integer getFairPlayDefinition() Obtain Adaptive bitstreaming template ID with FairPlay protection type.
+ * @method void setFairPlayDefinition(integer $FairPlayDefinition) Set Adaptive bitstreaming template ID with FairPlay protection type.
  */
 class DrmStreamingsInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DrmStreamingsInfo extends AbstractModel
     public $WidevineDefinition;
 
     /**
-     * @var integer Adaptive bitrate streaming template ID with FairPlay protection type.
+     * @var integer Adaptive bitstreaming template ID with FairPlay protection type.
      */
     public $FairPlayDefinition;
 
     /**
      * @param integer $SimpleAesDefinition Adaptive bitrate streaming template ID with the protection type SimpleAES.
      * @param integer $WidevineDefinition Adaptive bitrate streaming template ID with Widevine protection type.
-     * @param integer $FairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
+     * @param integer $FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection type.
      */
     function __construct()
     {

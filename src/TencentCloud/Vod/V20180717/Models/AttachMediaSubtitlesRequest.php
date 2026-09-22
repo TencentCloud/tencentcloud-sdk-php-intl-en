@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubtitleIds(array $SubtitleIds) Set Unique identifier of the subtitle.
  * @method string getDefaultSubtitleId() Obtain Unique identifier for default subtitle. If not specified, no default subtitle is set.
  * @method void setDefaultSubtitleId(string $DefaultSubtitleId) Set Unique identifier for default subtitle. If not specified, no default subtitle is set.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class AttachMediaSubtitlesRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class AttachMediaSubtitlesRequest extends AbstractModel
     public $DefaultSubtitleId;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -79,7 +79,7 @@ class AttachMediaSubtitlesRequest extends AbstractModel
      * @param integer $AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
      * @param array $SubtitleIds Unique identifier of the subtitle.
      * @param string $DefaultSubtitleId Unique identifier for default subtitle. If not specified, no default subtitle is set.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

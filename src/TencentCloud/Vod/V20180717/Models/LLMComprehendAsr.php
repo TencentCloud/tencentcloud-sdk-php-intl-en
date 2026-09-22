@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
  * @method void setSwitch(string $Switch) Set Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
  */
 class LLMComprehendAsr extends AbstractModel
 {
     /**
      * @var string Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
      */
     public $Switch;
 
     /**
      * @param string $Switch Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
      */
     function __construct()
     {

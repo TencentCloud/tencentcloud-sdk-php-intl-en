@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asynchronously fetch AIGC face information input.
+ * Asynchronously fetch AIGC human face information input.
  *
  * @method array getFileInfos() Obtain <p>Input video information that requires face information.</p>
  * @method void setFileInfos(array $FileInfos) Set <p>Input video information that requires face information.</p>

@@ -30,8 +30,8 @@ The format of Type must be HLS format.
 <li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
 <li>Original: original audio/video.</li>
 The format of Type must be HLS format.
- * @method string getItemId() Obtain Program ID assigned by the system.
- * @method void setItemId(string $ItemId) Set Program ID assigned by the system.
+ * @method string getItemId() Obtain Play program ID, assigned by the system.
+ * @method void setItemId(string $ItemId) Set Play program ID, assigned by the system.
  * @method integer getDefinition() Obtain Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
  * @method void setDefinition(integer $Definition) Set Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
  */
@@ -51,7 +51,7 @@ The format of Type must be HLS format.
     public $AudioVideoType;
 
     /**
-     * @var string Program ID assigned by the system.
+     * @var string Play program ID, assigned by the system.
      */
     public $ItemId;
 
@@ -66,7 +66,7 @@ The format of Type must be HLS format.
 <li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
 <li>Original: original audio/video.</li>
 The format of Type must be HLS format.
-     * @param string $ItemId Program ID assigned by the system.
+     * @param string $ItemId Play program ID, assigned by the system.
      * @param integer $Definition Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
      */
     function __construct()

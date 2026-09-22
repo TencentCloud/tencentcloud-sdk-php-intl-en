@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() Obtain <p>Domain name.</p>
  * @method void setDomainName(string $DomainName) Set <p>Domain name.</p>
- * @method string getStartTime() Obtain <p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
- * @method void setStartTime(string $StartTime) Set <p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
- * @method string getEndTime() Obtain <p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
- * @method void setEndTime(string $EndTime) Set <p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+ * @method string getStartTime() Obtain <p>Get the log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setStartTime(string $StartTime) Set <p>Get the log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method string getEndTime() Obtain <p>End time must be greater than the start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End time must be greater than the start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
  * @method integer getLimit() Obtain <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
  * @method void setLimit(integer $Limit) Set <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
  * @method integer getOffset() Obtain <p>Starting offset for pagination pull. Default value: 0.</p>
@@ -41,17 +41,17 @@ class DescribeCdnLogsRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string <p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
+     * @var string <p>Get the log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $StartTime;
 
     /**
-     * @var string <p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * @var string <p>End time must be greater than the start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
      */
     public $EndTime;
 
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+     * @var integer <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
      */
     public $SubAppId;
 
@@ -67,9 +67,9 @@ class DescribeCdnLogsRequest extends AbstractModel
 
     /**
      * @param string $DomainName <p>Domain name.</p>
-     * @param string $StartTime <p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
-     * @param string $EndTime <p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+     * @param string $StartTime <p>Get the log start time point. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @param string $EndTime <p>End time must be greater than the start time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
      * @param integer $Limit <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
      * @param integer $Offset <p>Starting offset for pagination pull. Default value: 0.</p>
      */

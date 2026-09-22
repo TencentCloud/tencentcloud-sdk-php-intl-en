@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Type of the intelligent cover result.
+ * Intelligent cover result type
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiAnalysisTaskCoverInput $Input) Set Input of the intelligent cover task.
  * @method AiAnalysisTaskCoverOutput getOutput() Obtain Output of intelligent cover tasks.
  * @method void setOutput(AiAnalysisTaskCoverOutput $Output) Set Output of intelligent cover tasks.
- * @method integer getProgress() Obtain Progress of the intelligent cover task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Progress of the intelligent cover task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Intelligent Cover Task progress, value ranges from 0 to 100.
+ * @method void setProgress(integer $Progress) Set Intelligent Cover Task progress, value ranges from 0 to 100.
+ * @method string getBeginProcessTime() Obtain Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Intelligent cover task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Intelligent cover task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -72,12 +72,12 @@ class AiAnalysisTaskCoverResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Progress of the intelligent cover task. Value range: 0-100.
+     * @var integer Intelligent Cover Task progress, value ranges from 0 to 100.
      */
     public $Progress;
 
     /**
-     * @var string Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -93,8 +93,8 @@ class AiAnalysisTaskCoverResult extends AbstractModel
      * @param string $Message Error message.
      * @param AiAnalysisTaskCoverInput $Input Input of the intelligent cover task.
      * @param AiAnalysisTaskCoverOutput $Output Output of intelligent cover tasks.
-     * @param integer $Progress Progress of the intelligent cover task. Value range: 0-100.
-     * @param string $BeginProcessTime Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Intelligent Cover Task progress, value ranges from 0 to 100.
+     * @param string $BeginProcessTime Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Intelligent cover task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Audio (mute, bass, pop) detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
  * @method void setSwitch(string $Switch) Set Audio (mute, bass, pop) detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
  */
 class VoiceConfigureInfoForUpdate extends AbstractModel
 {
     /**
      * @var string Audio (mute, bass, pop) detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
     /**
      * @param string $Switch Audio (mute, bass, pop) detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     function __construct()
     {

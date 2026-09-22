@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter configuration for AI product image generation
+ * Parameter configuration for AI-generated product images
  *
- * @method string getPrompt() Obtain Prompt for image generation background. If this field is default, inspiration is generated automatically.
- * @method void setPrompt(string $Prompt) Set Prompt for image generation background. If this field is default, inspiration is generated automatically.
- * @method string getNegativePrompt() Obtain Prompt content used to prevent the model from generating images.
- * @method void setNegativePrompt(string $NegativePrompt) Set Prompt content used to prevent the model from generating images.
+ * @method string getPrompt() Obtain Prompt for generating the image background. If this field is default, inspiration is generated automatically.
+ * @method void setPrompt(string $Prompt) Set Prompt for generating the image background. If this field is default, inspiration is generated automatically.
+ * @method string getNegativePrompt() Obtain Prompt used to prevent the model from image generation.
+ * @method void setNegativePrompt(string $NegativePrompt) Set Prompt used to prevent the model from image generation.
  * @method string getProductDesc() Obtain A detailed product description helps generate images that better meet requirements.
  * @method void setProductDesc(string $ProductDesc) Set A detailed product description helps generate images that better meet requirements.
  * @method string getMoreRequirement() Obtain Special requirements. If any, input them through this field.
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class ProductImageConfig extends AbstractModel
 {
     /**
-     * @var string Prompt for image generation background. If this field is default, inspiration is generated automatically.
+     * @var string Prompt for generating the image background. If this field is default, inspiration is generated automatically.
      */
     public $Prompt;
 
     /**
-     * @var string Prompt content used to prevent the model from generating images.
+     * @var string Prompt used to prevent the model from image generation.
      */
     public $NegativePrompt;
 
@@ -59,8 +59,8 @@ class ProductImageConfig extends AbstractModel
     public $OutputImageCount;
 
     /**
-     * @param string $Prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
-     * @param string $NegativePrompt Prompt content used to prevent the model from generating images.
+     * @param string $Prompt Prompt for generating the image background. If this field is default, inspiration is generated automatically.
+     * @param string $NegativePrompt Prompt used to prevent the model from image generation.
      * @param string $ProductDesc A detailed product description helps generate images that better meet requirements.
      * @param string $MoreRequirement Special requirements. If any, input them through this field.
      * @param integer $OutputImageCount Number of images expected to be generated. Default value: 1. Maximum valid value: 10.

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
  * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
  * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+ * @method string getErrCodeExt() Obtain <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
  * @method CreateAigcSubjectInput getInput() Obtain <p>Create AIGC subject input information.</p>
@@ -57,7 +57,7 @@ class CreateAigcSubjectTask extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var string <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+     * @var string <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      */
     public $ErrCodeExt;
 
@@ -90,7 +90,7 @@ class CreateAigcSubjectTask extends AbstractModel
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
      * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+     * @param string $ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      * @param string $Message <p>Error message.</p>
      * @param CreateAigcSubjectInput $Input <p>Create AIGC subject input information.</p>
      * @param CreateAigcSubjectOutput $Output <p>Create AIGC subject output information.</p>

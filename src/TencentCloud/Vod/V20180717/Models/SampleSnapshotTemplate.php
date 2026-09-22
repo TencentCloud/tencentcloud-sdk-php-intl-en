@@ -57,11 +57,11 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
  * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
  * @method string getFormat() Obtain Image format.
@@ -76,15 +76,15 @@ Default value: open.
  * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFillType() Obtain Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
  * @method void setFillType(string $FillType) Set Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
  */
 class SampleSnapshotTemplate extends AbstractModel
@@ -133,7 +133,7 @@ Default value: 0.
 
     /**
      * @var string Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
@@ -167,9 +167,9 @@ Default value: open.
     /**
      * @var string Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
      */
     public $FillType;
@@ -194,7 +194,7 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
      * @param string $ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      * @param string $Format Image format.
@@ -204,9 +204,9 @@ Default value: open.
      * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio, with edges filled with black.</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
      */
     function __construct()

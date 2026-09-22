@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of the bitrate reduction transcode task
+ * Transcoding result type of a bitrate reduction task
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(TranscodeTaskInput $Input) Set Input of the transcoding task.
  * @method MediaTranscodeItem getOutput() Obtain Transcoding task output.
  * @method void setOutput(MediaTranscodeItem $Output) Set Transcoding task output.
- * @method integer getProgress() Obtain Transcoding progress. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Transcoding progress. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFinishTime() Obtain Transcoding task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setFinishTime(string $FinishTime) Set Transcoding task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Transcoding progress, with a value range of [0-100].
+ * @method void setProgress(integer $Progress) Set Transcoding progress, with a value range of [0-100].
+ * @method string getBeginProcessTime() Obtain Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Transcoding task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Transcoding task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class ReduceMediaBitrateTranscodeResult extends AbstractModel
 {
@@ -65,17 +65,17 @@ class ReduceMediaBitrateTranscodeResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Transcoding progress. Value range: 0-100.
+     * @var integer Transcoding progress, with a value range of [0-100].
      */
     public $Progress;
 
     /**
-     * @var string Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Transcoding task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Transcoding task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
@@ -85,9 +85,9 @@ class ReduceMediaBitrateTranscodeResult extends AbstractModel
      * @param string $Message Error message.
      * @param TranscodeTaskInput $Input Input of the transcoding task.
      * @param MediaTranscodeItem $Output Transcoding task output.
-     * @param integer $Progress Transcoding progress. Value range: 0-100.
-     * @param string $BeginProcessTime Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FinishTime Transcoding task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Transcoding progress, with a value range of [0-100].
+     * @param string $BeginProcessTime Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Transcoding task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

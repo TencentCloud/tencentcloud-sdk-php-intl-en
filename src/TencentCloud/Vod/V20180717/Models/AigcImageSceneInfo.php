@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration for scenario-based AIGC image generation.
+ * Scenario-based AIGC image generation configuration.
  *
- * @method string getType() Obtain <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
- * @method void setType(string $Type) Set <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
- * @method AiTryOnConfig getAiTryOnConfig() Obtain <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
- * @method void setAiTryOnConfig(AiTryOnConfig $AiTryOnConfig) Set <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
- * @method ChangeClothesConfig getChangeClothesConfig() Obtain <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
- * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) Set <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
- * @method ProductImageConfig getProductImageConfig() Obtain <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
- * @method void setProductImageConfig(ProductImageConfig $ProductImageConfig) Set <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
+ * @method string getType() Obtain <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI try-on.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and will no longer be updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+ * @method void setType(string $Type) Set <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI try-on.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and will no longer be updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+ * @method AiTryOnConfig getAiTryOnConfig() Obtain <p>Required when Type is ai_try_on, indicating the AI dressing configuration parameters.</p>
+ * @method void setAiTryOnConfig(AiTryOnConfig $AiTryOnConfig) Set <p>Required when Type is ai_try_on, indicating the AI dressing configuration parameters.</p>
+ * @method ChangeClothesConfig getChangeClothesConfig() Obtain <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and represents the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+ * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) Set <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and represents the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+ * @method ProductImageConfig getProductImageConfig() Obtain <p>Required when Type is product_image, indicating the AI-generated product image configuration parameters.</p>
+ * @method void setProductImageConfig(ProductImageConfig $ProductImageConfig) Set <p>Required when Type is product_image, indicating the AI-generated product image configuration parameters.</p>
  */
 class AigcImageSceneInfo extends AbstractModel
 {
     /**
-     * @var string <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+     * @var string <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI try-on.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and will no longer be updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
      */
     public $Type;
 
     /**
-     * @var AiTryOnConfig <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
+     * @var AiTryOnConfig <p>Required when Type is ai_try_on, indicating the AI dressing configuration parameters.</p>
      */
     public $AiTryOnConfig;
 
     /**
-     * @var ChangeClothesConfig <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+     * @var ChangeClothesConfig <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and represents the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
      */
     public $ChangeClothesConfig;
 
     /**
-     * @var ProductImageConfig <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
+     * @var ProductImageConfig <p>Required when Type is product_image, indicating the AI-generated product image configuration parameters.</p>
      */
     public $ProductImageConfig;
 
     /**
-     * @param string $Type <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
-     * @param AiTryOnConfig $AiTryOnConfig <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
-     * @param ChangeClothesConfig $ChangeClothesConfig <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
-     * @param ProductImageConfig $ProductImageConfig <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
+     * @param string $Type <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI try-on.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and will no longer be updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+     * @param AiTryOnConfig $AiTryOnConfig <p>Required when Type is ai_try_on, indicating the AI dressing configuration parameters.</p>
+     * @param ChangeClothesConfig $ChangeClothesConfig <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and represents the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+     * @param ProductImageConfig $ProductImageConfig <p>Required when Type is product_image, indicating the AI-generated product image configuration parameters.</p>
      */
     function __construct()
     {

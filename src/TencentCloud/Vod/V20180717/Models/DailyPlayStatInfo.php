@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Playback statistics.
  *
- * @method string getDate() Obtain <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method void setDate(string $Date) Set <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getDate() Obtain <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setDate(string $Date) Set <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method string getFileId() Obtain <p>Media file ID.</p>
  * @method void setFileId(string $FileId) Set <p>Media file ID.</p>
  * @method integer getPlayTimes() Obtain <p>Number of plays.</p>
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DailyPlayStatInfo extends AbstractModel
 {
     /**
-     * @var string <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @var string <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $Date;
 
@@ -52,7 +52,7 @@ class DailyPlayStatInfo extends AbstractModel
     public $Traffic;
 
     /**
-     * @param string $Date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $Date <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      * @param string $FileId <p>Media file ID.</p>
      * @param integer $PlayTimes <p>Number of plays.</p>
      * @param integer $Traffic <p>Playback traffic volume, unit: byte.</p>

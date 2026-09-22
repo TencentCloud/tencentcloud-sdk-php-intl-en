@@ -21,50 +21,50 @@ use TencentCloud\Common\AbstractModel;
  * For description of the returned file result in an MPS video processing task.
  *
  * @method string getFileType() Obtain File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
-Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
-<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+Parameter Value: <li>AiAnalysis.DeLogo.Video: video file generated after erasure in an intelligent erasure task, stored in the original file type by default;</li><li>AiAnalysis.DeLogo.OriginSubtitle: subtitle file extracted from video in an intelligent erasure task;</li><li>AiAnalysis.DeLogo.TranslateSubtitle: translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: enhanced audio/video file in an audio and video enhancement task, stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in a horizontal to vertical task. It is stored as an intelligent media type by default.</li>
 <li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
 <li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
-<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task, stored as an intelligent media type by default.</li>
 
  * @method void setFileType(string $FileType) Set File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
-Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
-<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+Parameter Value: <li>AiAnalysis.DeLogo.Video: video file generated after erasure in an intelligent erasure task, stored in the original file type by default;</li><li>AiAnalysis.DeLogo.OriginSubtitle: subtitle file extracted from video in an intelligent erasure task;</li><li>AiAnalysis.DeLogo.TranslateSubtitle: translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: enhanced audio/video file in an audio and video enhancement task, stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in a horizontal to vertical task. It is stored as an intelligent media type by default.</li>
 <li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
 <li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
-<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task, stored as an intelligent media type by default.</li>
 
- * @method string getStorageMode() Obtain Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
- * @method void setStorageMode(string $StorageMode) Set Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
- * @method string getFileId() Obtain Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
- * @method void setFileId(string $FileId) Set Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
+ * @method string getStorageMode() Obtain Storage format. Used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
+ * @method void setStorageMode(string $StorageMode) Set Storage format. Used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
+ * @method string getFileId() Obtain Media file ID. Valid when `Type` is `Permanent`. It indicates that the result file is stored as a media asset on the VOD platform, and the field value is the `FileId` of the media asset.
+ * @method void setFileId(string $FileId) Set Media file ID. Valid when `Type` is `Permanent`. It indicates that the result file is stored as a media asset on the VOD platform, and the field value is the `FileId` of the media asset.
  * @method string getUrl() Obtain Downloadable Url of the result file.
  * @method void setUrl(string $Url) Set Downloadable Url of the result file.
  * @method string getDefinition() Obtain Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file.
  * @method void setDefinition(string $Definition) Set Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file.
- * @method integer getExpiredTime() Obtain Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
- * @method void setExpiredTime(integer $ExpiredTime) Set Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
+ * @method integer getExpiredTime() Obtain Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url in seconds.
+ * @method void setExpiredTime(integer $ExpiredTime) Set Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url in seconds.
  */
 class MPSOutputFile extends AbstractModel
 {
     /**
      * @var string File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
-Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
-<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+Parameter Value: <li>AiAnalysis.DeLogo.Video: video file generated after erasure in an intelligent erasure task, stored in the original file type by default;</li><li>AiAnalysis.DeLogo.OriginSubtitle: subtitle file extracted from video in an intelligent erasure task;</li><li>AiAnalysis.DeLogo.TranslateSubtitle: translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: enhanced audio/video file in an audio and video enhancement task, stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in a horizontal to vertical task. It is stored as an intelligent media type by default.</li>
 <li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
 <li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
-<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task, stored as an intelligent media type by default.</li>
 
      */
     public $FileType;
 
     /**
-     * @var string Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
+     * @var string Storage format. Used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
      */
     public $StorageMode;
 
     /**
-     * @var string Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
+     * @var string Media file ID. Valid when `Type` is `Permanent`. It indicates that the result file is stored as a media asset on the VOD platform, and the field value is the `FileId` of the media asset.
      */
     public $FileId;
 
@@ -79,23 +79,23 @@ Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal
     public $Definition;
 
     /**
-     * @var integer Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
+     * @var integer Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url in seconds.
      */
     public $ExpiredTime;
 
     /**
      * @param string $FileType File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
-Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
-<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+Parameter Value: <li>AiAnalysis.DeLogo.Video: video file generated after erasure in an intelligent erasure task, stored in the original file type by default;</li><li>AiAnalysis.DeLogo.OriginSubtitle: subtitle file extracted from video in an intelligent erasure task;</li><li>AiAnalysis.DeLogo.TranslateSubtitle: translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: enhanced audio/video file in an audio and video enhancement task, stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in a horizontal to vertical task. It is stored as an intelligent media type by default.</li>
 <li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
 <li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
-<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task, stored as an intelligent media type by default.</li>
 
-     * @param string $StorageMode Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
-     * @param string $FileId Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
+     * @param string $StorageMode Storage format. Used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
+     * @param string $FileId Media file ID. Valid when `Type` is `Permanent`. It indicates that the result file is stored as a media asset on the VOD platform, and the field value is the `FileId` of the media asset.
      * @param string $Url Downloadable Url of the result file.
      * @param string $Definition Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file.
-     * @param integer $ExpiredTime Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
+     * @param integer $ExpiredTime Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url in seconds.
      */
     function __construct()
     {

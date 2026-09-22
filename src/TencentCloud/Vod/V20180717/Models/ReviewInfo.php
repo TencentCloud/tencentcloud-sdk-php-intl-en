@@ -23,39 +23,39 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() Obtain Content review template ID.
  * @method void setDefinition(integer $Definition) Set Content review template ID.
  * @method string getSuggestion() Obtain Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
  * @method void setSuggestion(string $Suggestion) Set Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
- * @method array getTypeSet() Obtain Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+ * @method array getTypeSet() Obtain Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
- * @method void setTypeSet(array $TypeSet) Set Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+ * @method void setTypeSet(array $TypeSet) Set Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
  * @method string getReviewTime() Obtain Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -70,25 +70,25 @@ class ReviewInfo extends AbstractModel
 
     /**
      * @var string Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+     * @var array Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
      */
@@ -102,21 +102,21 @@ Label refers to prohibited tags. Value range:
     /**
      * @param integer $Definition Content review template ID.
      * @param string $Suggestion Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
-     * @param array $TypeSet Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+     * @param array $TypeSet Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
      * @param string $ReviewTime Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).

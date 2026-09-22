@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of the timbre clone task.
+ * Input for a voice cloning task.
  *
  * @method string getAudioUrl() Obtain <p>Cloning audio URL. Valid when AudioData is empty.</p>
  * @method void setAudioUrl(string $AudioUrl) Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
- * @method string getAudioFileId() Obtain <p>Input audio fileId</p>
- * @method void setAudioFileId(string $AudioFileId) Set <p>Input audio fileId</p>
+ * @method string getAudioFileId() Obtain <p>fileId of the input audio</p>
+ * @method void setAudioFileId(string $AudioFileId) Set <p>fileId of the input audio</p>
  * @method string getLanguageBoost() Obtain <p>Audio language</p>
  * @method void setLanguageBoost(string $LanguageBoost) Set <p>Audio language</p>
  * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
@@ -37,7 +37,7 @@ class CloneVoiceAsyncInput extends AbstractModel
     public $AudioUrl;
 
     /**
-     * @var string <p>Input audio fileId</p>
+     * @var string <p>fileId of the input audio</p>
      */
     public $AudioFileId;
 
@@ -53,7 +53,7 @@ class CloneVoiceAsyncInput extends AbstractModel
 
     /**
      * @param string $AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
-     * @param string $AudioFileId <p>Input audio fileId</p>
+     * @param string $AudioFileId <p>fileId of the input audio</p>
      * @param string $LanguageBoost <p>Audio language</p>
      * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */

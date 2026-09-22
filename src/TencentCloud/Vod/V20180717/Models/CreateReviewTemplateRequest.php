@@ -20,70 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReviewTemplate request structure.
  *
- * @method array getLabels() Obtain List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+ * @method array getLabels() Obtain List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
- * @method void setLabels(array $Labels) Set List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+ * @method void setLabels(array $Labels) Set List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
- * @method string getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
- * @method void setSubAppId(string $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
- * @method string getName() Obtain Review template name. The length cannot exceed 64 characters.
- * @method void setName(string $Name) Set Review template name. The length cannot exceed 64 characters.
- * @method string getComment() Obtain Review template description information, with a length limit of 256 characters.
- * @method void setComment(string $Comment) Set Review template description information, with a length limit of 256 characters.
+ * @method string getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(string $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method string getName() Obtain Review template name. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Review template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Review template description information. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Review template description information. Length limit: 256 characters.
  */
 class CreateReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var array List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+     * @var array List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
      */
     public $Labels;
 
     /**
-     * @var string <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
+     * @var string <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Review template name. The length cannot exceed 64 characters.
+     * @var string Review template name. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Review template description information, with a length limit of 256 characters.
+     * @var string Review template description information. Length limit: 256 characters.
      */
     public $Comment;
 
     /**
-     * @param array $Labels List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+     * @param array $Labels List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
-     * @param string $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
-     * @param string $Name Review template name. The length cannot exceed 64 characters.
-     * @param string $Comment Review template description information, with a length limit of 256 characters.
+     * @param string $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param string $Name Review template name. Length limit: 64 characters.
+     * @param string $Comment Review template description information. Length limit: 256 characters.
      */
     function __construct()
     {

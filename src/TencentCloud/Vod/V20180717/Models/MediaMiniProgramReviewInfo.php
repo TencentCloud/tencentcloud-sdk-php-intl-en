@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Mini Program Audio and Video moderation information
  *
- * @method array getMiniProgramReviewList() Obtain Audio and video moderation information list.
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audio and video moderation information list.
+ * @method array getMiniProgramReviewList() Obtain Audio/video moderation information list.
+ * @method void setMiniProgramReviewList(array $MiniProgramReviewList) Set Audio/video moderation information list.
  */
 class MediaMiniProgramReviewInfo extends AbstractModel
 {
     /**
-     * @var array Audio and video moderation information list.
+     * @var array Audio/video moderation information list.
      */
     public $MiniProgramReviewList;
 
     /**
-     * @param array $MiniProgramReviewList Audio and video moderation information list.
+     * @param array $MiniProgramReviewList Audio/video moderation information list.
      */
     function __construct()
     {

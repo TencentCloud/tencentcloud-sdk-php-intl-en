@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive Bitrate Streaming information
+ * Adaptive bitrate information.
  *
  * @method array getAdaptiveDynamicStreamingSet() Obtain Information array of adaptive bitrate streaming.
  * @method void setAdaptiveDynamicStreamingSet(array $AdaptiveDynamicStreamingSet) Set Information array of adaptive bitrate streaming.

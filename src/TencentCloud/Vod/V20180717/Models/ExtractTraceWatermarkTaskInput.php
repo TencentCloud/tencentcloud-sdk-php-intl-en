@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input for extracting traceability watermark
+ * Extraction traceability watermark input
  *
  * @method string getUrl() Obtain URL of the media requiring watermark extraction.
  * @method void setUrl(string $Url) Set URL of the media requiring watermark extraction.

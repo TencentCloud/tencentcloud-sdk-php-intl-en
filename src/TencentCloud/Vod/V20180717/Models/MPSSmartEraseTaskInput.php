@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain <p>id of the intelligent erasure template.</p>
  * @method void setDefinition(integer $Definition) Set <p>id of the intelligent erasure template.</p>
- * @method MPSRawSmartEraseParameter getRawParameter() Obtain <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
- * @method void setRawParameter(MPSRawSmartEraseParameter $RawParameter) Set <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
- * @method MPSOverrideEraseParameter getOverrideParameter() Obtain <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
- * @method void setOverrideParameter(MPSOverrideEraseParameter $OverrideParameter) Set <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+ * @method MPSRawSmartEraseParameter getRawParameter() Obtain <p>Custom parameters for smart erasing. When Definition is set to 0, this parameter is valid. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
+ * @method void setRawParameter(MPSRawSmartEraseParameter $RawParameter) Set <p>Custom parameters for smart erasing. When Definition is set to 0, this parameter is valid. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
+ * @method MPSOverrideEraseParameter getOverrideParameter() Obtain <p>Custom parameters for intelligent erasure. When the value of Definition is not 0, this parameter is valid. When certain erasure parameters in this structure are specified, the specified parameters will be used to overwrite those in the intelligent erasure template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify intelligent erasure parameters.</p>
+ * @method void setOverrideParameter(MPSOverrideEraseParameter $OverrideParameter) Set <p>Custom parameters for intelligent erasure. When the value of Definition is not 0, this parameter is valid. When certain erasure parameters in this structure are specified, the specified parameters will be used to overwrite those in the intelligent erasure template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify intelligent erasure parameters.</p>
  */
 class MPSSmartEraseTaskInput extends AbstractModel
 {
@@ -35,19 +35,19 @@ class MPSSmartEraseTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var MPSRawSmartEraseParameter <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
+     * @var MPSRawSmartEraseParameter <p>Custom parameters for smart erasing. When Definition is set to 0, this parameter is valid. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
      */
     public $RawParameter;
 
     /**
-     * @var MPSOverrideEraseParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+     * @var MPSOverrideEraseParameter <p>Custom parameters for intelligent erasure. When the value of Definition is not 0, this parameter is valid. When certain erasure parameters in this structure are specified, the specified parameters will be used to overwrite those in the intelligent erasure template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify intelligent erasure parameters.</p>
      */
     public $OverrideParameter;
 
     /**
      * @param integer $Definition <p>id of the intelligent erasure template.</p>
-     * @param MPSRawSmartEraseParameter $RawParameter <p>Custom parameters for smart erasing. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
-     * @param MPSOverrideEraseParameter $OverrideParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+     * @param MPSRawSmartEraseParameter $RawParameter <p>Custom parameters for smart erasing. When Definition is set to 0, this parameter is valid. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify smart erasing parameters.</p>
+     * @param MPSOverrideEraseParameter $OverrideParameter <p>Custom parameters for intelligent erasure. When the value of Definition is not 0, this parameter is valid. When certain erasure parameters in this structure are specified, the specified parameters will be used to overwrite those in the intelligent erasure template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify intelligent erasure parameters.</p>
      */
     function __construct()
     {

@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProcedureTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
- * @method array getNames() Obtain <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
- * @method void setNames(array $Names) Set <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
- * @method string getType() Obtain <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
- * @method void setType(string $Type) Set <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+ * @method array getNames() Obtain <p>Task flow template name filter conditions, with an array length limit of 100.</p>
+ * @method void setNames(array $Names) Set <p>Task flow template name filter conditions, with an array length limit of 100.</p>
+ * @method string getType() Obtain <p>Task flow template type filter conditions. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
+ * @method void setType(string $Type) Set <p>Task flow template type filter conditions. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
  * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
  * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
  * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
  * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
- * @method array getSortBy() Obtain <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
- * @method void setSortBy(array $SortBy) Set <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
+ * @method array getSortBy() Obtain <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (in descending order) or asc (in ascending order)</p><p>Input parameter limit: currently only supports CreateTime as the sorting field</p>
+ * @method void setSortBy(array $SortBy) Set <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (in descending order) or asc (in ascending order)</p><p>Input parameter limit: currently only supports CreateTime as the sorting field</p>
  */
 class DescribeProcedureTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
+     * @var array <p>Task flow template name filter conditions, with an array length limit of 100.</p>
      */
     public $Names;
 
     /**
-     * @var string <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
+     * @var string <p>Task flow template type filter conditions. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
      */
     public $Type;
 
@@ -61,17 +61,17 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
+     * @var array <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (in descending order) or asc (in ascending order)</p><p>Input parameter limit: currently only supports CreateTime as the sorting field</p>
      */
     public $SortBy;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
-     * @param array $Names <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
-     * @param string $Type <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+     * @param array $Names <p>Task flow template name filter conditions, with an array length limit of 100.</p>
+     * @param string $Type <p>Task flow template type filter conditions. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
      * @param integer $Offset <p>Paging offset. Default value: 0.</p>
      * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
-     * @param array $SortBy <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
+     * @param array $SortBy <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (in descending order) or asc (in ascending order)</p><p>Input parameter limit: currently only supports CreateTime as the sorting field</p>
      */
     function __construct()
     {

@@ -40,20 +40,20 @@ use TencentCloud\Common\AbstractModel;
 <li>For file, fill in the extension, such as jpg or txt;</li>
 <li>For directory, fill in the path, such as /xxx/test/;</li>
 <li>For path, fill in the absolute path, such as /xxx/test.html.</li>
- * @method string getRefererType() Obtain referer configuration type. Value:
+ * @method string getRefererType() Obtain referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
- * @method void setRefererType(string $RefererType) Set referer configuration type. Value:
+<li>blocklist: Blocklist.</li>
+ * @method void setRefererType(string $RefererType) Set referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
  * @method array getReferers() Obtain referer list.
  * @method void setReferers(array $Referers) Set referer list.
  * @method boolean getAllowEmpty() Obtain Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
  * @method void setAllowEmpty(boolean $AllowEmpty) Set Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
  */
 class RefererRule extends AbstractModel
 {
@@ -76,9 +76,9 @@ class RefererRule extends AbstractModel
     public $RulePaths;
 
     /**
-     * @var string referer configuration type. Value:
+     * @var string referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      */
     public $RefererType;
 
@@ -89,8 +89,8 @@ class RefererRule extends AbstractModel
 
     /**
      * @var boolean Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
      */
     public $AllowEmpty;
 
@@ -105,13 +105,13 @@ If the anti-hotlinking type is blocklist, true indicates to deny empty referers,
 <li>For file, fill in the extension, such as jpg or txt;</li>
 <li>For directory, fill in the path, such as /xxx/test/;</li>
 <li>For path, fill in the absolute path, such as /xxx/test.html.</li>
-     * @param string $RefererType referer configuration type. Value:
+     * @param string $RefererType referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      * @param array $Referers referer list.
      * @param boolean $AllowEmpty Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul>
  * @method void setSwitch(string $Switch) Set <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul>
- * @method string getType() Obtain <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
- * @method void setType(string $Type) Set <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
+ * @method string getType() Obtain <p>Color enhancement type. Valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
+ * @method void setType(string $Type) Set <p>Color enhancement type. Valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
  */
 class ColorEnhanceInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ColorEnhanceInfo extends AbstractModel
     public $Switch;
 
     /**
-     * @var string <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
+     * @var string <p>Color enhancement type. Valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
      */
     public $Type;
 
     /**
      * @param string $Switch <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul>
-     * @param string $Type <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
+     * @param string $Type <p>Color enhancement type. Valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
      */
     function __construct()
     {

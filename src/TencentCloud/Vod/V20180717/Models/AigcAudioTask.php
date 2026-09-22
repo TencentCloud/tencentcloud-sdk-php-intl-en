@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  * @method string getStatus() Obtain <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
- * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Content moderation failed.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Model generation failed.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Content moderation failed.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Model generation failed.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+ * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method string getErrCodeExt() Obtain <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameters.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameters.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method integer getProgress() Obtain <p>Task progress. Value range: 0–100.</p>
- * @method void setProgress(integer $Progress) Set <p>Task progress. Value range: 0–100.</p>
- * @method AigcAudioTaskInput getInput() Obtain <p>Input information of the AIGC audio task.</p>
- * @method void setInput(AigcAudioTaskInput $Input) Set <p>Input information of the AIGC audio task.</p>
+ * @method integer getProgress() Obtain <p>Task progress. Value range: [0-100].</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress. Value range: [0-100].</p>
+ * @method AigcAudioTaskInput getInput() Obtain <p>Input information of AIGC audio tasks.</p>
+ * @method void setInput(AigcAudioTaskInput $Input) Set <p>Input information of AIGC audio tasks.</p>
  * @method AigcAudioTaskOutput getOutput() Obtain <p>Output information of AIGC audio tasks.</p>
  * @method void setOutput(AigcAudioTaskOutput $Output) Set <p>Output information of AIGC audio tasks.</p>
  */
@@ -50,12 +50,12 @@ class AigcAudioTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Content moderation failed.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Model generation failed.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+     * @var string <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameters.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
      */
     public $ErrCodeExt;
 
@@ -65,12 +65,12 @@ class AigcAudioTask extends AbstractModel
     public $Message;
 
     /**
-     * @var integer <p>Task progress. Value range: 0–100.</p>
+     * @var integer <p>Task progress. Value range: [0-100].</p>
      */
     public $Progress;
 
     /**
-     * @var AigcAudioTaskInput <p>Input information of the AIGC audio task.</p>
+     * @var AigcAudioTaskInput <p>Input information of AIGC audio tasks.</p>
      */
     public $Input;
 
@@ -82,11 +82,11 @@ class AigcAudioTask extends AbstractModel
     /**
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
-     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Content moderation failed.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Model generation failed.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+     * @param string $ErrCodeExt <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter value error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameters.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
      * @param string $Message <p>Error message.</p>
-     * @param integer $Progress <p>Task progress. Value range: 0–100.</p>
-     * @param AigcAudioTaskInput $Input <p>Input information of the AIGC audio task.</p>
+     * @param integer $Progress <p>Task progress. Value range: [0-100].</p>
+     * @param AigcAudioTaskInput $Input <p>Input information of AIGC audio tasks.</p>
      * @param AigcAudioTaskOutput $Output <p>Output information of AIGC audio tasks.</p>
      */
     function __construct()

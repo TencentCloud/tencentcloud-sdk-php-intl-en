@@ -22,36 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Text keyword recognition task switch. Available values:
 <li>ON: enable the text keyword recognition task</li>
-<li>OFF: disables the text keyword recognition task.</li>
+<li>OFF: Disable the text keyword recognition task.</li>
  * @method void setSwitch(string $Switch) Set Text keyword recognition task switch. Available values:
 <li>ON: enable the text keyword recognition task</li>
-<li>OFF: disables the text keyword recognition task.</li>
- * @method array getLabelSet() Obtain Keyword-based filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
-The maximum number of tags is 10, and each tag can contain up to 16 characters.
- * @method void setLabelSet(array $LabelSet) Set Keyword-based filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
-The maximum number of tags is 10, and each tag can contain up to 16 characters.
+<li>OFF: Disable the text keyword recognition task.</li>
+ * @method array getLabelSet() Obtain Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+ * @method void setLabelSet(array $LabelSet) Set Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
  */
 class OcrWordsConfigureInfoForUpdate extends AbstractModel
 {
     /**
      * @var string Text keyword recognition task switch. Available values:
 <li>ON: enable the text keyword recognition task</li>
-<li>OFF: disables the text keyword recognition task.</li>
+<li>OFF: Disable the text keyword recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @var array Keyword-based filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
-The maximum number of tags is 10, and each tag can contain up to 16 characters.
+     * @var array Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public $LabelSet;
 
     /**
      * @param string $Switch Text keyword recognition task switch. Available values:
 <li>ON: enable the text keyword recognition task</li>
-<li>OFF: disables the text keyword recognition task.</li>
-     * @param array $LabelSet Keyword-based filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
-The maximum number of tags is 10, and each tag can contain up to 16 characters.
+<li>OFF: Disable the text keyword recognition task.</li>
+     * @param array $LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     function __construct()
     {

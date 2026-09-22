@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Array length limit: 16.
  * @method void setEventHandles(array $EventHandles) Set Event handler, which is the EventSet.EventHandle field in the output parameter of the [event notification pull](https://www.tencentcloud.com/document/product/266/33433?from_cn_redirect=1) API.
 Array length limit: 16.
- * @method string getExtInfo() Obtain Reserved field, used for special purpose.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purpose.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method string getExtInfo() Obtain Reserved field, used for special purposes.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class ConfirmEventsRequest extends AbstractModel
 {
@@ -38,20 +38,20 @@ Array length limit: 16.
     public $EventHandles;
 
     /**
-     * @var string Reserved field, used for special purpose.
+     * @var string Reserved field, used for special purposes.
      */
     public $ExtInfo;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
      * @param array $EventHandles Event handler, which is the EventSet.EventHandle field in the output parameter of the [event notification pull](https://www.tencentcloud.com/document/product/266/33433?from_cn_redirect=1) API.
 Array length limit: 16.
-     * @param string $ExtInfo Reserved field, used for special purpose.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param string $ExtInfo Reserved field, used for special purposes.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

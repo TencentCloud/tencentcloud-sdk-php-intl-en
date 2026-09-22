@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Animated image result information of a VOD file
+ * VOD file video motion graphic result information
  *
  * @method array getAnimatedGraphicsSet() Obtain Video motion graphic result information
  * @method void setAnimatedGraphicsSet(array $AnimatedGraphicsSet) Set Video motion graphic result information

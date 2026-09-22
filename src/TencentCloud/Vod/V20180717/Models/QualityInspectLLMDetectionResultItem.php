@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Aggregation results of one detection item for the LLM large model in audio and video quality detection.
+ * Aggregation results of one detection item of the LLM large model for audio and video quality detection.
  *
  * @method string getCategory() Obtain <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
  * @method void setCategory(string $Category) Set <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>

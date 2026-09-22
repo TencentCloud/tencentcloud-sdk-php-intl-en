@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Voice translation recognition control parameter
+ * Voice translation recognition control parameters.
  *
  * @method string getSwitch() Obtain Task switch for speech translation recognition. Value range:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition simultaneously is forbidden.
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full text recognition result. To avoid duplicate charges, do not enable the voice translation recognition and ASR full text recognition feature items simultaneously.
  * @method void setSwitch(string $Switch) Set Task switch for speech translation recognition. Value range:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition simultaneously is forbidden.
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full text recognition result. To avoid duplicate charges, do not enable the voice translation recognition and ASR full text recognition feature items simultaneously.
  * @method string getSrcLanguage() Obtain Media source language. Valid values:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
@@ -55,9 +55,9 @@ use TencentCloud\Common\AbstractModel;
 <li>hi: Hindi;</li>
 <li>fr: French.</li>
  * @method string getDstLanguage() Obtain Target language.
-If this parameter is set to an empty string, it means that only full text speech recognition is performed without translation (the billing item is the same as that of AsrFullTextConfigure full text speech recognition);
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), value ranges from...to...
+If this parameter is set to an empty string, it indicates that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the value range of this parameter is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
 <li>ja: Japanese;</li>
 <li>ko: Korean;</li>
@@ -97,10 +97,10 @@ When SrcLanguage is ko (Korean), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), value range:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value range:
+When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -139,9 +139,9 @@ When SrcLanguage is fr (French), value range:
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
  * @method void setDstLanguage(string $DstLanguage) Set Target language.
-If this parameter is set to an empty string, it means that only full text speech recognition is performed without translation (the billing item is the same as that of AsrFullTextConfigure full text speech recognition);
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), value ranges from...to...
+If this parameter is set to an empty string, it indicates that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the value range of this parameter is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
 <li>ja: Japanese;</li>
 <li>ko: Korean;</li>
@@ -181,10 +181,10 @@ When SrcLanguage is ko (Korean), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), value range:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value range:
+When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -224,15 +224,15 @@ When SrcLanguage is fr (French), value range:
 <li>pt: Portuguese.</li>
  * @method SubtitleFormatsOperation getSubtitleFormatsOperation() Obtain Subtitle format list operation information.
  * @method void setSubtitleFormatsOperation(SubtitleFormatsOperation $SubtitleFormatsOperation) Set Subtitle format list operation information.
- * @method string getSubtitleName() Obtain Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
- * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+ * @method string getSubtitleName() Obtain Specify subtitle name, length limited to 64 characters. This value will be used for player display.
+ * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name, length limited to 64 characters. This value will be used for player display.
  */
 class AsrTranslateConfigureInfoForUpdate extends AbstractModel
 {
     /**
      * @var string Task switch for speech translation recognition. Value range:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition simultaneously is forbidden.
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full text recognition result. To avoid duplicate charges, do not enable the voice translation recognition and ASR full text recognition feature items simultaneously.
      */
     public $Switch;
 
@@ -256,9 +256,9 @@ class AsrTranslateConfigureInfoForUpdate extends AbstractModel
 
     /**
      * @var string Target language.
-If this parameter is set to an empty string, it means that only full text speech recognition is performed without translation (the billing item is the same as that of AsrFullTextConfigure full text speech recognition);
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), value ranges from...to...
+If this parameter is set to an empty string, it indicates that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the value range of this parameter is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
 <li>ja: Japanese;</li>
 <li>ko: Korean;</li>
@@ -298,10 +298,10 @@ When SrcLanguage is ko (Korean), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), value range:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value range:
+When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -348,14 +348,14 @@ When SrcLanguage is fr (French), value range:
     public $SubtitleFormatsOperation;
 
     /**
-     * @var string Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+     * @var string Specify subtitle name, length limited to 64 characters. This value will be used for player display.
      */
     public $SubtitleName;
 
     /**
      * @param string $Switch Task switch for speech translation recognition. Value range:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition simultaneously is forbidden.
+<li>ON: enabled</li>
+<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full text recognition result. To avoid duplicate charges, do not enable the voice translation recognition and ASR full text recognition feature items simultaneously.
      * @param string $SrcLanguage Media source language. Valid values:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
@@ -371,9 +371,9 @@ When SrcLanguage is fr (French), value range:
 <li>hi: Hindi;</li>
 <li>fr: French.</li>
      * @param string $DstLanguage Target language.
-If this parameter is set to an empty string, it means that only full text speech recognition is performed without translation (the billing item is the same as that of AsrFullTextConfigure full text speech recognition);
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), value ranges from...to...
+If this parameter is set to an empty string, it indicates that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the value range of this parameter is divided into the following cases:
+When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
 <li>ja: Japanese;</li>
 <li>ko: Korean;</li>
@@ -413,10 +413,10 @@ When SrcLanguage is ko (Korean), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), value range:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value range:
+When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -455,7 +455,7 @@ When SrcLanguage is fr (French), value range:
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
      * @param SubtitleFormatsOperation $SubtitleFormatsOperation Subtitle format list operation information.
-     * @param string $SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+     * @param string $SubtitleName Specify subtitle name, length limited to 64 characters. This value will be used for player display.
      */
     function __construct()
     {

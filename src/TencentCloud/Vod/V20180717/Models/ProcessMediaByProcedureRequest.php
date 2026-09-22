@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProcedureName() Obtain <p>Name of the <a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">task flow</a>.</p>
  * @method void setProcedureName(string $ProcedureName) Set <p>Name of the <a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">task flow</a>.</p>
- * @method string getFileId() Obtain <p>Media file ID.<br>Either FileId or MediaStoragePath must be provided.</p>
- * @method void setFileId(string $FileId) Set <p>Media file ID.<br>Either FileId or MediaStoragePath must be provided.</p>
- * @method string getMediaStoragePath() Obtain <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>One of FileId and MediaStoragePath must be provided.</p>
- * @method void setMediaStoragePath(string $MediaStoragePath) Set <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>One of FileId and MediaStoragePath must be provided.</p>
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method string getFileId() Obtain <p>Media file ID.<br>You must provide either FileId or MediaStoragePath.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID.<br>You must provide either FileId or MediaStoragePath.</p>
+ * @method string getMediaStoragePath() Obtain <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
  * @method integer getTasksPriority() Obtain <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
  * @method void setTasksPriority(integer $TasksPriority) Set <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
  * @method string getTasksNotifyMode() Obtain <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
@@ -47,17 +47,17 @@ class ProcessMediaByProcedureRequest extends AbstractModel
     public $ProcedureName;
 
     /**
-     * @var string <p>Media file ID.<br>Either FileId or MediaStoragePath must be provided.</p>
+     * @var string <p>Media file ID.<br>You must provide either FileId or MediaStoragePath.</p>
      */
     public $FileId;
 
     /**
-     * @var string <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>One of FileId and MediaStoragePath must be provided.</p>
+     * @var string <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
      */
     public $MediaStoragePath;
 
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
@@ -88,9 +88,9 @@ class ProcessMediaByProcedureRequest extends AbstractModel
 
     /**
      * @param string $ProcedureName <p>Name of the <a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">task flow</a>.</p>
-     * @param string $FileId <p>Media file ID.<br>Either FileId or MediaStoragePath must be provided.</p>
-     * @param string $MediaStoragePath <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>One of FileId and MediaStoragePath must be provided.</p>
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param string $FileId <p>Media file ID.<br>You must provide either FileId or MediaStoragePath.</p>
+     * @param string $MediaStoragePath <p>Storage path of the media.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate tasks through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      * @param integer $TasksPriority <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      * @param string $TasksNotifyMode <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
      * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>

@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video start and end recognition output.
  *
- * @method float getHeadConfidence() Obtain Recognition confidence of the opening scene. Value range: 0-100.
- * @method void setHeadConfidence(float $HeadConfidence) Set Recognition confidence of the opening scene. Value range: 0-100.
+ * @method float getHeadConfidence() Obtain Confidence of opening scene recognition. Value range: 0-100.
+ * @method void setHeadConfidence(float $HeadConfidence) Set Confidence of opening scene recognition. Value range: 0-100.
  * @method float getHeadTimeOffset() Obtain End time point of the video intro, in seconds.
  * @method void setHeadTimeOffset(float $HeadTimeOffset) Set End time point of the video intro, in seconds.
  * @method float getTailConfidence() Obtain Recognition confidence of the ending scene. Value range: 0-100.
  * @method void setTailConfidence(float $TailConfidence) Set Recognition confidence of the ending scene. Value range: 0-100.
- * @method float getTailTimeOffset() Obtain Start time point of the video ending, in seconds.
- * @method void setTailTimeOffset(float $TailTimeOffset) Set Start time point of the video ending, in seconds.
+ * @method float getTailTimeOffset() Obtain Start time point of the video ending scene. Unit: seconds.
+ * @method void setTailTimeOffset(float $TailTimeOffset) Set Start time point of the video ending scene. Unit: seconds.
  */
 class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
 {
     /**
-     * @var float Recognition confidence of the opening scene. Value range: 0-100.
+     * @var float Confidence of opening scene recognition. Value range: 0-100.
      */
     public $HeadConfidence;
 
@@ -47,15 +47,15 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
     public $TailConfidence;
 
     /**
-     * @var float Start time point of the video ending, in seconds.
+     * @var float Start time point of the video ending scene. Unit: seconds.
      */
     public $TailTimeOffset;
 
     /**
-     * @param float $HeadConfidence Recognition confidence of the opening scene. Value range: 0-100.
+     * @param float $HeadConfidence Confidence of opening scene recognition. Value range: 0-100.
      * @param float $HeadTimeOffset End time point of the video intro, in seconds.
      * @param float $TailConfidence Recognition confidence of the ending scene. Value range: 0-100.
-     * @param float $TailTimeOffset Start time point of the video ending, in seconds.
+     * @param float $TailTimeOffset Start time point of the video ending scene. Unit: seconds.
      */
     function __construct()
     {

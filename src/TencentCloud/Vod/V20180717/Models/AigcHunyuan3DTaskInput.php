@@ -18,30 +18,30 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of an AIGC Hunyuan 3D task.
+ * Input of the AIGC Hunyuan 3D task.
  *
  * @method array getImageInfos() Obtain <p>Generate 3D reference image information.</p>
  * @method void setImageInfos(array $ImageInfos) Set <p>Generate 3D reference image information.</p>
- * @method array getMultiViewImageInfos() Obtain <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
- * @method void setMultiViewImageInfos(array $MultiViewImageInfos) Set <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+ * @method array getMultiViewImageInfos() Obtain <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
+ * @method void setMultiViewImageInfos(array $MultiViewImageInfos) Set <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
  * @method string getPrompt() Obtain <p>Prompt for generating a 3D model.</p>
  * @method void setPrompt(string $Prompt) Set <p>Prompt for generating a 3D model.</p>
  * @method string getGenerateType() Obtain <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
  * @method void setGenerateType(string $GenerateType) Set <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
  * @method array getMeshInfos() Obtain <p>Reference 3D model used to generate a 3D model.</p>
  * @method void setMeshInfos(array $MeshInfos) Set <p>Reference 3D model used to generate a 3D model.</p>
- * @method string getEnablePBR() Obtain <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
- * @method void setEnablePBR(string $EnablePBR) Set <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+ * @method string getEnablePBR() Obtain <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+ * @method void setEnablePBR(string $EnablePBR) Set <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
  * @method integer getFaceCount() Obtain <p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
  * @method void setFaceCount(integer $FaceCount) Set <p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
- * @method string getKeepUV() Obtain <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
- * @method void setKeepUV(string $KeepUV) Set <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+ * @method string getKeepUV() Obtain <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+ * @method void setKeepUV(string $KeepUV) Set <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
  * @method string getResultFormat() Obtain <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
  * @method void setResultFormat(string $ResultFormat) Set <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
  * @method integer getSeed() Obtain <p>Random Seed. Results can be reproduced with the same Seed input.</p>
  * @method void setSeed(integer $Seed) Set <p>Random Seed. Results can be reproduced with the same Seed input.</p>
- * @method string getStyle() Obtain <p>Style control words.</p>
- * @method void setStyle(string $Style) Set <p>Style control words.</p>
+ * @method string getStyle() Obtain <p>Style control word.</p>
+ * @method void setStyle(string $Style) Set <p>Style control word.</p>
  * @method AigcHunyuan3DOutputConfig getOutputConfig() Obtain <p>Configuration of the output media file of the task.</p>
  * @method void setOutputConfig(AigcHunyuan3DOutputConfig $OutputConfig) Set <p>Configuration of the output media file of the task.</p>
  */
@@ -53,7 +53,7 @@ class AigcHunyuan3DTaskInput extends AbstractModel
     public $ImageInfos;
 
     /**
-     * @var array <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+     * @var array <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
      */
     public $MultiViewImageInfos;
 
@@ -73,7 +73,7 @@ class AigcHunyuan3DTaskInput extends AbstractModel
     public $MeshInfos;
 
     /**
-     * @var string <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+     * @var string <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
      */
     public $EnablePBR;
 
@@ -83,7 +83,7 @@ class AigcHunyuan3DTaskInput extends AbstractModel
     public $FaceCount;
 
     /**
-     * @var string <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+     * @var string <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
      */
     public $KeepUV;
 
@@ -98,7 +98,7 @@ class AigcHunyuan3DTaskInput extends AbstractModel
     public $Seed;
 
     /**
-     * @var string <p>Style control words.</p>
+     * @var string <p>Style control word.</p>
      */
     public $Style;
 
@@ -109,16 +109,16 @@ class AigcHunyuan3DTaskInput extends AbstractModel
 
     /**
      * @param array $ImageInfos <p>Generate 3D reference image information.</p>
-     * @param array $MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+     * @param array $MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
      * @param string $Prompt <p>Prompt for generating a 3D model.</p>
      * @param string $GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
      * @param array $MeshInfos <p>Reference 3D model used to generate a 3D model.</p>
-     * @param string $EnablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+     * @param string $EnablePBR <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
      * @param integer $FaceCount <p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
-     * @param string $KeepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+     * @param string $KeepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
      * @param string $ResultFormat <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
      * @param integer $Seed <p>Random Seed. Results can be reproduced with the same Seed input.</p>
-     * @param string $Style <p>Style control words.</p>
+     * @param string $Style <p>Style control word.</p>
      * @param AigcHunyuan3DOutputConfig $OutputConfig <p>Configuration of the output media file of the task.</p>
      */
     function __construct()

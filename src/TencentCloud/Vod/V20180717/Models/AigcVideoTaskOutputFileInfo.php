@@ -18,16 +18,16 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the output file of an AIGC video generation task.
+ * Output file information for the AIGC video generation task.
  *
- * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
- * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
- * @method string getMediaName() Obtain <p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
- * @method void setMediaName(string $MediaName) Set <p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
- * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
- * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
- * @method string getExpireTime() Obtain <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+ * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+ * @method string getMediaName() Obtain <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
+ * @method void setMediaName(string $MediaName) Set <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
+ * @method integer getClassId() Obtain <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+ * @method void setClassId(integer $ClassId) Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+ * @method string getExpireTime() Obtain <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
  * @method string getFileType() Obtain <p>File type, for example, mp4 or flv.</p>
  * @method void setFileType(string $FileType) Set <p>File type, for example, mp4 or flv.</p>
  * @method string getFileUrl() Obtain <p>Media file playback address.</p>
@@ -36,30 +36,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileContent(string $FileContent) Set <p>File content. A return value is returned when UsageType is position_info.</p>
  * @method string getFileId() Obtain <p>Media file ID. Valid when StorageMode is Permanent.</p>
  * @method void setFileId(string $FileId) Set <p>Media file ID. Valid when StorageMode is Permanent.</p>
- * @method MediaMetaData getMetaData() Obtain <p>Meta information of the output video.</p>
- * @method void setMetaData(MediaMetaData $MetaData) Set <p>Meta information of the output video.</p>
- * @method string getUsageType() Obtain <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
- * @method void setUsageType(string $UsageType) Set <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+ * @method MediaMetaData getMetaData() Obtain <p>Metadata of the output video.</p>
+ * @method void setMetaData(MediaMetaData $MetaData) Set <p>Metadata of the output video.</p>
+ * @method string getUsageType() Obtain <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original mesh model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified mesh model file. The FileUrl field has a return value.</li><li>position_info: Scene spatial position information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+ * @method void setUsageType(string $UsageType) Set <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original mesh model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified mesh model file. The FileUrl field has a return value.</li><li>position_info: Scene spatial position information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
  */
 class AigcVideoTaskOutputFileInfo extends AbstractModel
 {
     /**
-     * @var string <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+     * @var string <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @var string <p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
+     * @var string <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
      */
     public $MediaName;
 
     /**
-     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+     * @var integer <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
      */
     public $ClassId;
 
     /**
-     * @var string <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @var string <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public $ExpireTime;
 
@@ -84,26 +84,26 @@ class AigcVideoTaskOutputFileInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var MediaMetaData <p>Meta information of the output video.</p>
+     * @var MediaMetaData <p>Metadata of the output video.</p>
      */
     public $MetaData;
 
     /**
-     * @var string <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+     * @var string <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original mesh model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified mesh model file. The FileUrl field has a return value.</li><li>position_info: Scene spatial position information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
      */
     public $UsageType;
 
     /**
-     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
-     * @param string $MediaName <p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
-     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
-     * @param string $ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+     * @param string $MediaName <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
+     * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+     * @param string $ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      * @param string $FileType <p>File type, for example, mp4 or flv.</p>
      * @param string $FileUrl <p>Media file playback address.</p>
      * @param string $FileContent <p>File content. A return value is returned when UsageType is position_info.</p>
      * @param string $FileId <p>Media file ID. Valid when StorageMode is Permanent.</p>
-     * @param MediaMetaData $MetaData <p>Meta information of the output video.</p>
-     * @param string $UsageType <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+     * @param MediaMetaData $MetaData <p>Metadata of the output video.</p>
+     * @param string $UsageType <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scene file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original mesh model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified mesh model file. The FileUrl field has a return value.</li><li>position_info: Scene spatial position information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
      */
     function __construct()
     {

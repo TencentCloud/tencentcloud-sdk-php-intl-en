@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of MPS smart subtitle template
+ * Input for MPS smart subtitle template
  *
  * @method integer getDefinition() Obtain <p>Unique identifier of the smart subtitle template.</p>
  * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the smart subtitle template.</p>

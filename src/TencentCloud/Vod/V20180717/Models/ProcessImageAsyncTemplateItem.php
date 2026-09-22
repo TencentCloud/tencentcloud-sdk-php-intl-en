@@ -18,16 +18,16 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of the async image processing template.
+ * Image async processing template details.
  *
- * @method integer getDefinition() Obtain Unique identifier of the image asynchronous processing template.
- * @method void setDefinition(integer $Definition) Set Unique identifier of the image asynchronous processing template.
+ * @method integer getDefinition() Obtain Template unique identifier for asynchronous image processing.
+ * @method void setDefinition(integer $Definition) Set Template unique identifier for asynchronous image processing.
  * @method string getType() Obtain Template type.
  * @method void setType(string $Type) Set Template type.
  * @method string getName() Obtain Image async processing template name.
  * @method void setName(string $Name) Set Image async processing template name.
- * @method string getComment() Obtain Description information of the async image processing template.
- * @method void setComment(string $Comment) Set Description information of the async image processing template.
+ * @method string getComment() Obtain Description information of the image async processing template.
+ * @method void setComment(string $Comment) Set Description information of the image async processing template.
  * @method string getCreateTime() Obtain Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ProcessImageAsyncTemplateItem extends AbstractModel
 {
     /**
-     * @var integer Unique identifier of the image asynchronous processing template.
+     * @var integer Template unique identifier for asynchronous image processing.
      */
     public $Definition;
 
@@ -53,7 +53,7 @@ class ProcessImageAsyncTemplateItem extends AbstractModel
     public $Name;
 
     /**
-     * @var string Description information of the async image processing template.
+     * @var string Description information of the image async processing template.
      */
     public $Comment;
 
@@ -73,10 +73,10 @@ class ProcessImageAsyncTemplateItem extends AbstractModel
     public $ProcessImageConfigure;
 
     /**
-     * @param integer $Definition Unique identifier of the image asynchronous processing template.
+     * @param integer $Definition Template unique identifier for asynchronous image processing.
      * @param string $Type Template type.
      * @param string $Name Image async processing template name.
-     * @param string $Comment Description information of the async image processing template.
+     * @param string $Comment Description information of the image async processing template.
      * @param string $CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param ProcessImageAsyncTask $ProcessImageConfigure Image async processing template configuration.

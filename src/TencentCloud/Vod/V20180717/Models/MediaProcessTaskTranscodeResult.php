@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
  * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method TranscodeTaskInput getInput() Obtain Input of the transcoding task.
- * @method void setInput(TranscodeTaskInput $Input) Set Input of the transcoding task.
+ * @method TranscodeTaskInput getInput() Obtain Input of a transcoding task.
+ * @method void setInput(TranscodeTaskInput $Input) Set Input of a transcoding task.
  * @method MediaTranscodeItem getOutput() Obtain Transcoding task output.
  * @method void setOutput(MediaTranscodeItem $Output) Set Transcoding task output.
  * @method integer getProgress() Obtain Transcoding progress, with a value range of [0-100].
  * @method void setProgress(integer $Progress) Set Transcoding progress, with a value range of [0-100].
- * @method string getBeginProcessTime() Obtain Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getBeginProcessTime() Obtain Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Transcoding task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Transcoding task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -47,7 +47,7 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public $ErrCodeExt;
 
@@ -62,7 +62,7 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
     public $Message;
 
     /**
-     * @var TranscodeTaskInput Input of the transcoding task.
+     * @var TranscodeTaskInput Input of a transcoding task.
      */
     public $Input;
 
@@ -77,7 +77,7 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
     public $Progress;
 
     /**
-     * @var string Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -88,13 +88,13 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
 
     /**
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param TranscodeTaskInput $Input Input of the transcoding task.
+     * @param TranscodeTaskInput $Input Input of a transcoding task.
      * @param MediaTranscodeItem $Output Transcoding task output.
      * @param integer $Progress Transcoding progress, with a value range of [0-100].
-     * @param string $BeginProcessTime Transcoding task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $BeginProcessTime Transcoding task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Transcoding task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

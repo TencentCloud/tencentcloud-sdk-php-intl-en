@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech keyword recognition input.
+ * Input for speech keyword recognition.
  *
  * @method integer getDefinition() Obtain Template ID for speech keyword recognition.
  * @method void setDefinition(integer $Definition) Set Template ID for speech keyword recognition.

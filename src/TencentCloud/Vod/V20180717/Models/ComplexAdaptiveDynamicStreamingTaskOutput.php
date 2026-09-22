@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output result of an adaptive bitrate streaming task.
+ * Output result of the adaptive bitrate streaming task.
  *
  * @method integer getDefinition() Obtain Adaptive bitrate template ID.
  * @method void setDefinition(integer $Definition) Set Adaptive bitrate template ID.
- * @method string getFormat() Obtain Adaptive bitrate stream packaging format. Available values:
+ * @method string getFormat() Obtain Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
- * @method void setFormat(string $Format) Set Adaptive bitrate stream packaging format. Available values:
+ * @method void setFormat(string $Format) Set Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
  * @method string getDrmType() Obtain DRM solution type. Available values:
@@ -49,7 +49,7 @@ class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Adaptive bitrate stream packaging format. Available values:
+     * @var string Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
      */
@@ -71,7 +71,7 @@ class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel
 
     /**
      * @param integer $Definition Adaptive bitrate template ID.
-     * @param string $Format Adaptive bitrate stream packaging format. Available values:
+     * @param string $Format Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
      * @param string $DrmType DRM solution type. Available values:

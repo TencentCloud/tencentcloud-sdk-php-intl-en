@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonId() Obtain Material ID.
  * @method void setPersonId(string $PersonId) Set Material ID.
- * @method integer getSubAppId() Obtain <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
  * @method string getName() Obtain Name, with a length limit of 128 characters.
  * @method void setName(string $Name) Set Name, with a length limit of 128 characters.
  * @method string getDescription() Obtain Description. Length limit: 1024 characters.
  * @method void setDescription(string $Description) Set Description. Length limit: 1024 characters.
  * @method array getUsages() Obtain Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
  * @method void setUsages(array $Usages) Set Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
  * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Facial operation information.
  * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Facial operation information.
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
@@ -49,7 +49,7 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $PersonId;
 
     /**
-     * @var integer <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
@@ -65,9 +65,9 @@ class ModifyPersonSampleRequest extends AbstractModel
 
     /**
      * @var array Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
      */
     public $Usages;
 
@@ -83,13 +83,13 @@ class ModifyPersonSampleRequest extends AbstractModel
 
     /**
      * @param string $PersonId Material ID.
-     * @param integer $SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      * @param string $Name Name, with a length limit of 128 characters.
      * @param string $Description Description. Length limit: 1024 characters.
      * @param array $Usages Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
      * @param AiSampleFaceOperation $FaceOperationInfo Facial operation information.
      * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
      */

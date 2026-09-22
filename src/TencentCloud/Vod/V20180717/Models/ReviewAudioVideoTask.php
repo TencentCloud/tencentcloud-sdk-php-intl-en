@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(ReviewAudioVideoTaskOutput $Output) Set Output of the audio/video moderation task.
  * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
- * @method string getSessionContext() Obtain Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+ * @method string getSessionContext() Obtain Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
  */
 class ReviewAudioVideoTask extends AbstractModel
 {
@@ -81,7 +81,7 @@ class ReviewAudioVideoTask extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+     * @var string Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
      */
     public $SessionContext;
 
@@ -95,7 +95,7 @@ class ReviewAudioVideoTask extends AbstractModel
      * @param ReviewAudioVideoTaskInput $Input Input of an audio/video moderation task.
      * @param ReviewAudioVideoTaskOutput $Output Output of the audio/video moderation task.
      * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-     * @param string $SessionContext Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+     * @param string $SessionContext Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
      */
     function __construct()
     {

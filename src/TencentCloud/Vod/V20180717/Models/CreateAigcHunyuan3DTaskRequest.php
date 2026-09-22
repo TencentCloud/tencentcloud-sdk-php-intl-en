@@ -20,73 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcHunyuan3DTask request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method array getImageInfos() Obtain <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
- * @method void setImageInfos(array $ImageInfos) Set <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
- * @method array getMultiViewImageInfos() Obtain <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
- * @method void setMultiViewImageInfos(array $MultiViewImageInfos) Set <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
- * @method string getPrompt() Obtain <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
- * @method void setPrompt(string $Prompt) Set <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
- * @method string getGenerateType() Obtain <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
- * @method void setGenerateType(string $GenerateType) Set <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
- * @method array getMeshInfos() Obtain <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
- * @method void setMeshInfos(array $MeshInfos) Set <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
- * @method string getEnablePBR() Obtain <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
- * @method void setEnablePBR(string $EnablePBR) Set <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+ * @method array getImageInfos() Obtain <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+ * @method void setImageInfos(array $ImageInfos) Set <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+ * @method array getMultiViewImageInfos() Obtain <p>Multi-perspective image information used to generate 3D models.</p><p>Input limitations: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+ * @method void setMultiViewImageInfos(array $MultiViewImageInfos) Set <p>Multi-perspective image information used to generate 3D models.</p><p>Input limitations: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+ * @method string getPrompt() Obtain <p>Prompt content for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt content for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+ * @method string getGenerateType() Obtain <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+ * @method void setGenerateType(string $GenerateType) Set <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+ * @method array getMeshInfos() Obtain <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be set to Texture (texture scenario).</p>
+ * @method void setMeshInfos(array $MeshInfos) Set <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be set to Texture (texture scenario).</p>
+ * @method string getEnablePBR() Obtain <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+ * @method void setEnablePBR(string $EnablePBR) Set <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
  * @method integer getFaceCount() Obtain <p>Number of patches. This parameter is valid only when GenerateType is Normal or Geometry.</p><p>Value range: [3000, 1500000]</p><p>Default value: 500000</p>
  * @method void setFaceCount(integer $FaceCount) Set <p>Number of patches. This parameter is valid only when GenerateType is Normal or Geometry.</p><p>Value range: [3000, 1500000]</p><p>Default value: 500000</p>
- * @method string getKeepUV() Obtain <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
- * @method void setKeepUV(string $KeepUV) Set <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
- * @method string getResultFormat() Obtain <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
- * @method void setResultFormat(string $ResultFormat) Set <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+ * @method string getKeepUV() Obtain <p>Whether to reserve UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+ * @method void setKeepUV(string $KeepUV) Set <p>Whether to reserve UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+ * @method string getResultFormat() Obtain <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+ * @method void setResultFormat(string $ResultFormat) Set <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
  * @method integer getSeed() Obtain <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
  * @method void setSeed(integer $Seed) Set <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
- * @method string getStyle() Obtain <p>Style control words.</p>
- * @method void setStyle(string $Style) Set <p>Style control words.</p>
- * @method AigcHunyuan3DOutputConfig getOutputConfig() Obtain <p>Configuration of the output media file of the task.</p>
- * @method void setOutputConfig(AigcHunyuan3DOutputConfig $OutputConfig) Set <p>Configuration of the output media file of the task.</p>
+ * @method string getStyle() Obtain <p>Style control word.</p>
+ * @method void setStyle(string $Style) Set <p>Style control word.</p>
+ * @method AigcHunyuan3DOutputConfig getOutputConfig() Obtain <p>Output media file configuration of the task.</p>
+ * @method void setOutputConfig(AigcHunyuan3DOutputConfig $OutputConfig) Set <p>Output media file configuration of the task.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
- * @method string getSessionContext() Obtain <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
- * @method void setSessionContext(string $SessionContext) Set <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
  * @method integer getTasksPriority() Obtain <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
  * @method void setTasksPriority(integer $TasksPriority) Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
  */
 class CreateAigcHunyuan3DTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @var integer <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * @var array <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
      */
     public $ImageInfos;
 
     /**
-     * @var array <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+     * @var array <p>Multi-perspective image information used to generate 3D models.</p><p>Input limitations: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
      */
     public $MultiViewImageInfos;
 
     /**
-     * @var string <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * @var string <p>Prompt content for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
      */
     public $Prompt;
 
     /**
-     * @var string <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+     * @var string <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
      */
     public $GenerateType;
 
     /**
-     * @var array <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
+     * @var array <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be set to Texture (texture scenario).</p>
      */
     public $MeshInfos;
 
     /**
-     * @var string <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+     * @var string <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
      */
     public $EnablePBR;
 
@@ -96,12 +96,12 @@ class CreateAigcHunyuan3DTaskRequest extends AbstractModel
     public $FaceCount;
 
     /**
-     * @var string <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+     * @var string <p>Whether to reserve UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
      */
     public $KeepUV;
 
     /**
-     * @var string <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+     * @var string <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
      */
     public $ResultFormat;
 
@@ -111,12 +111,12 @@ class CreateAigcHunyuan3DTaskRequest extends AbstractModel
     public $Seed;
 
     /**
-     * @var string <p>Style control words.</p>
+     * @var string <p>Style control word.</p>
      */
     public $Style;
 
     /**
-     * @var AigcHunyuan3DOutputConfig <p>Configuration of the output media file of the task.</p>
+     * @var AigcHunyuan3DOutputConfig <p>Output media file configuration of the task.</p>
      */
     public $OutputConfig;
 
@@ -126,7 +126,7 @@ class CreateAigcHunyuan3DTaskRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
+     * @var string <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
@@ -136,21 +136,21 @@ class CreateAigcHunyuan3DTaskRequest extends AbstractModel
     public $TasksPriority;
 
     /**
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param array $ImageInfos <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
-     * @param array $MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
-     * @param string $Prompt <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
-     * @param string $GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
-     * @param array $MeshInfos <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
-     * @param string $EnablePBR <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+     * @param array $ImageInfos <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * @param array $MultiViewImageInfos <p>Multi-perspective image information used to generate 3D models.</p><p>Input limitations: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+     * @param string $Prompt <p>Prompt content for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * @param string $GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+     * @param array $MeshInfos <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be set to Texture (texture scenario).</p>
+     * @param string $EnablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
      * @param integer $FaceCount <p>Number of patches. This parameter is valid only when GenerateType is Normal or Geometry.</p><p>Value range: [3000, 1500000]</p><p>Default value: 500000</p>
-     * @param string $KeepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
-     * @param string $ResultFormat <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+     * @param string $KeepUV <p>Whether to reserve UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+     * @param string $ResultFormat <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
      * @param integer $Seed <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
-     * @param string $Style <p>Style control words.</p>
-     * @param AigcHunyuan3DOutputConfig $OutputConfig <p>Configuration of the output media file of the task.</p>
+     * @param string $Style <p>Style control word.</p>
+     * @param AigcHunyuan3DOutputConfig $OutputConfig <p>Output media file configuration of the task.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-     * @param string $SessionContext <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
+     * @param string $SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of an AIGC image generation task.
+ * Input of the AIGC image generation task.
  *
  * @method string getModelName() Obtain <p>Model name.</p>
  * @method void setModelName(string $ModelName) Set <p>Model name.</p>
@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelVersion(string $ModelVersion) Set <p>Model version.</p>
  * @method array getFileInfos() Obtain <p>AIGC image generation task input file information.</p>
  * @method void setFileInfos(array $FileInfos) Set <p>AIGC image generation task input file information.</p>
- * @method string getPrompt() Obtain <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
- * @method void setPrompt(string $Prompt) Set <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
- * @method string getNegativePrompt() Obtain <p>Prompt to prevent the model from image generation.</p>
- * @method void setNegativePrompt(string $NegativePrompt) Set <p>Prompt to prevent the model from image generation.</p>
+ * @method string getPrompt() Obtain <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
+ * @method string getNegativePrompt() Obtain <p>Prompt content to prevent the model from generating images.</p>
+ * @method void setNegativePrompt(string $NegativePrompt) Set <p>Prompt content to prevent the model from generating images.</p>
  * @method string getEnhancePrompt() Obtain <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
  * @method void setEnhancePrompt(string $EnhancePrompt) Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
  * @method string getGenerationMode() Obtain <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
@@ -61,12 +61,12 @@ class AigcImageTaskInput extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var string <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+     * @var string <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
      */
     public $Prompt;
 
     /**
-     * @var string <p>Prompt to prevent the model from image generation.</p>
+     * @var string <p>Prompt content to prevent the model from generating images.</p>
      */
     public $NegativePrompt;
 
@@ -104,8 +104,8 @@ class AigcImageTaskInput extends AbstractModel
      * @param string $ModelName <p>Model name.</p>
      * @param string $ModelVersion <p>Model version.</p>
      * @param array $FileInfos <p>AIGC image generation task input file information.</p>
-     * @param string $Prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
-     * @param string $NegativePrompt <p>Prompt to prevent the model from image generation.</p>
+     * @param string $Prompt <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
+     * @param string $NegativePrompt <p>Prompt content to prevent the model from generating images.</p>
      * @param string $EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
      * @param string $GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
      * @param AigcImageOutputConfig $OutputConfig <p>AIGC image generation output result file output.</p>

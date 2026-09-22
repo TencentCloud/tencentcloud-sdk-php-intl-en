@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskHighlightInput getInput() Obtain Input of the intelligent highlight task.
  * @method void setInput(AiAnalysisTaskHighlightInput $Input) Set Input of the intelligent highlight task.
- * @method AiAnalysisTaskHighlightOutput getOutput() Obtain Task output of intelligent highlight.
- * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set Task output of intelligent highlight.
- * @method integer getProgress() Obtain Progress of the intelligent highlight task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set Progress of the intelligent highlight task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFinishTime() Obtain Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setFinishTime(string $FinishTime) Set Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method AiAnalysisTaskHighlightOutput getOutput() Obtain Task output of the intelligent highlight.
+ * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set Task output of the intelligent highlight.
+ * @method integer getProgress() Obtain Intelligent highlight task progress. Value range: [0-100].
+ * @method void setProgress(integer $Progress) Set Intelligent highlight task progress. Value range: [0-100].
+ * @method string getBeginProcessTime() Obtain Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiAnalysisTaskHighlightResult extends AbstractModel
 {
@@ -67,22 +67,22 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHighlightOutput Task output of intelligent highlight.
+     * @var AiAnalysisTaskHighlightOutput Task output of the intelligent highlight.
      */
     public $Output;
 
     /**
-     * @var integer Progress of the intelligent highlight task. Value range: 0-100.
+     * @var integer Intelligent highlight task progress. Value range: [0-100].
      */
     public $Progress;
 
     /**
-     * @var string Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
@@ -92,10 +92,10 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiAnalysisTaskHighlightInput $Input Input of the intelligent highlight task.
-     * @param AiAnalysisTaskHighlightOutput $Output Task output of intelligent highlight.
-     * @param integer $Progress Progress of the intelligent highlight task. Value range: 0-100.
-     * @param string $BeginProcessTime Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FinishTime Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param AiAnalysisTaskHighlightOutput $Output Task output of the intelligent highlight.
+     * @param integer $Progress Intelligent highlight task progress. Value range: [0-100].
+     * @param string $BeginProcessTime Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task input parameter type for prohibited information recognition in Ocr text during audio/video moderation
+ * Task input parameter type for Ocr text prohibited information recognition in audio/video moderation
  *
  * @method integer getDefinition() Obtain Prohibited information recognition template ID.
  * @method void setDefinition(integer $Definition) Set Prohibited information recognition template ID.

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Regional acceleration information of the domain.
+ * Region acceleration information of the domain
  *
  * @method string getArea() Obtain Acceleration region. Available values:
 <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>

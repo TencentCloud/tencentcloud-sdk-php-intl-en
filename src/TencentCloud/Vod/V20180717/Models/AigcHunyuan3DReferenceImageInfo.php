@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
  * @method void setType(string $Type) Set <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
- * @method string getFileId() Obtain <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
- * @method void setFileId(string $FileId) Set <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+ * @method string getFileId() Obtain <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+ * @method void setFileId(string $FileId) Set <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
  * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
  * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
  */
@@ -35,7 +35,7 @@ class AigcHunyuan3DReferenceImageInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * @var string <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     public $FileId;
 
@@ -46,7 +46,7 @@ class AigcHunyuan3DReferenceImageInfo extends AbstractModel
 
     /**
      * @param string $Type <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
-     * @param string $FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * @param string $FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      * @param string $Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     function __construct()

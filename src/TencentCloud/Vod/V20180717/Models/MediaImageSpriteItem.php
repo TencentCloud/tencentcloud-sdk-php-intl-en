@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) Set <p>Width of the small image in the sprite sheet.</p>
  * @method integer getTotalCount() Obtain <p>The number of small images in each large sprite sheet.</p>
  * @method void setTotalCount(integer $TotalCount) Set <p>The number of small images in each large sprite sheet.</p>
- * @method array getImageUrlSet() Obtain <p>Domain names or IP addresses of each sprite sheet.</p>
- * @method void setImageUrlSet(array $ImageUrlSet) Set <p>Domain names or IP addresses of each sprite sheet.</p>
- * @method string getWebVttUrl() Obtain <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
- * @method void setWebVttUrl(string $WebVttUrl) Set <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+ * @method array getImageUrlSet() Obtain <p>Address of each sprite sheet.</p>
+ * @method void setImageUrlSet(array $ImageUrlSet) Set <p>Address of each sprite sheet.</p>
+ * @method string getWebVttUrl() Obtain <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
+ * @method void setWebVttUrl(string $WebVttUrl) Set <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
  */
 class MediaImageSpriteItem extends AbstractModel
 {
@@ -56,12 +56,12 @@ class MediaImageSpriteItem extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array <p>Domain names or IP addresses of each sprite sheet.</p>
+     * @var array <p>Address of each sprite sheet.</p>
      */
     public $ImageUrlSet;
 
     /**
-     * @var string <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+     * @var string <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
      */
     public $WebVttUrl;
 
@@ -70,8 +70,8 @@ class MediaImageSpriteItem extends AbstractModel
      * @param integer $Height <p>Height of the small image in the sprite sheet.</p>
      * @param integer $Width <p>Width of the small image in the sprite sheet.</p>
      * @param integer $TotalCount <p>The number of small images in each large sprite sheet.</p>
-     * @param array $ImageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
-     * @param string $WebVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+     * @param array $ImageUrlSet <p>Address of each sprite sheet.</p>
+     * @param string $WebVttUrl <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
      */
     function __construct()
     {

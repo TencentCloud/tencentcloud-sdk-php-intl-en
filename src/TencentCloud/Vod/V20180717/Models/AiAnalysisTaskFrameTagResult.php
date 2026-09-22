@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
  * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiAnalysisTaskFrameTagInput $Input) Set Intelligent frame-specific tagging task input.
  * @method AiAnalysisTaskFrameTagOutput getOutput() Obtain Intelligent frame-specific tagging task output.
  * @method void setOutput(AiAnalysisTaskFrameTagOutput $Output) Set Intelligent frame-specific tagging task output.
- * @method integer getProgress() Obtain Progress of the intelligent frame tagging task. Value range: 0–100.
- * @method void setProgress(integer $Progress) Set Progress of the intelligent frame tagging task. Value range: 0–100.
- * @method string getBeginProcessTime() Obtain Intelligent frame tagging task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Intelligent frame tagging task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Intelligent frame-specific tagging task progress, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Intelligent frame-specific tagging task progress, in the range of [0,100].
+ * @method string getBeginProcessTime() Obtain Intelligent frame-specific tagging task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Intelligent frame-specific tagging task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Task completion time of intelligent frame tagging in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Task completion time of intelligent frame tagging in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -47,7 +47,7 @@ class AiAnalysisTaskFrameTagResult extends AbstractModel
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public $ErrCodeExt;
 
@@ -72,12 +72,12 @@ class AiAnalysisTaskFrameTagResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Progress of the intelligent frame tagging task. Value range: 0–100.
+     * @var integer Intelligent frame-specific tagging task progress, in the range of [0,100].
      */
     public $Progress;
 
     /**
-     * @var string Intelligent frame tagging task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Intelligent frame-specific tagging task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -88,13 +88,13 @@ class AiAnalysisTaskFrameTagResult extends AbstractModel
 
     /**
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiAnalysisTaskFrameTagInput $Input Intelligent frame-specific tagging task input.
      * @param AiAnalysisTaskFrameTagOutput $Output Intelligent frame-specific tagging task output.
-     * @param integer $Progress Progress of the intelligent frame tagging task. Value range: 0–100.
-     * @param string $BeginProcessTime Intelligent frame tagging task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Intelligent frame-specific tagging task progress, in the range of [0,100].
+     * @param string $BeginProcessTime Intelligent frame-specific tagging task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Task completion time of intelligent frame tagging in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instant transcoding video template configuration.
+ * JIT transcoding video template configuration.
  *
  * @method integer getWidth() Obtain Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
@@ -49,19 +49,19 @@ Default value: 0.
 
 Default value: 0.
  * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
- * @method integer getBitrate() Obtain Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+ * @method integer getBitrate() Obtain Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
  */
 class VideoConfigureInfo extends AbstractModel
 {
@@ -89,7 +89,7 @@ Default value: 0.
 
     /**
      * @var string Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
@@ -97,8 +97,8 @@ Default value: open.
     public $ResolutionAdaptive;
 
     /**
-     * @var integer Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+     * @var integer Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
      */
     public $Bitrate;
 
@@ -118,12 +118,12 @@ Default value: 0.
 
 Default value: 0.
      * @param string $ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
-     * @param integer $Bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+     * @param integer $Bitrate Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
      */
     function __construct()
     {

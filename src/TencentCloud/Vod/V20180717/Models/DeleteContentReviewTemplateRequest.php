@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteContentReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain Content review template unique identifier.
- * @method void setDefinition(integer $Definition) Set Content review template unique identifier.
+ * @method integer getDefinition() Obtain Unique identifier of a content review template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of a content review template.
  * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class DeleteContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Content review template unique identifier.
+     * @var integer Unique identifier of a content review template.
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class DeleteContentReviewTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param integer $Definition Content review template unique identifier.
+     * @param integer $Definition Unique identifier of a content review template.
      * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()

@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input of the MPS intelligent analysis template
  *
- * @method integer getDefinition() Obtain <p>Unique identifier of the video analysis template.</p>
- * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the video analysis template.</p>
- * @method string getName() Obtain <p>Video analysis template name, with a length limit of 64 characters.</p>
- * @method void setName(string $Name) Set <p>Video analysis template name, with a length limit of 64 characters.</p>
+ * @method integer getDefinition() Obtain <p>Unique identifier of the video content analysis template.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Unique identifier of the video content analysis template.</p>
+ * @method string getName() Obtain <p>Video analysis template name. Length limit: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Video analysis template name. Length limit: 64 characters.</p>
  * @method string getComment() Obtain <p>Video analysis template description. Length limit: 256 characters.</p>
  * @method void setComment(string $Comment) Set <p>Video analysis template description. Length limit: 256 characters.</p>
  * @method MPSAIAnalysisConfigureInfo getClassificationConfigure() Obtain <p>Intelligent Classification Task Control Parameters.</p>
  * @method void setClassificationConfigure(MPSAIAnalysisConfigureInfo $ClassificationConfigure) Set <p>Intelligent Classification Task Control Parameters.</p>
- * @method MPSAIAnalysisConfigureInfo getTagConfigure() Obtain <p>Intelligent tag task control parameters.</p>
- * @method void setTagConfigure(MPSAIAnalysisConfigureInfo $TagConfigure) Set <p>Intelligent tag task control parameters.</p>
+ * @method MPSAIAnalysisConfigureInfo getTagConfigure() Obtain <p>Control parameters for the intelligent tag task.</p>
+ * @method void setTagConfigure(MPSAIAnalysisConfigureInfo $TagConfigure) Set <p>Control parameters for the intelligent tag task.</p>
  * @method MPSAIAnalysisConfigureInfo getCoverConfigure() Obtain <p>Intelligent Cover Task Control Parameters.</p>
  * @method void setCoverConfigure(MPSAIAnalysisConfigureInfo $CoverConfigure) Set <p>Intelligent Cover Task Control Parameters.</p>
  * @method MPSAIAnalysisConfigureInfo getFrameTagConfigure() Obtain <p>Control parameters for the intelligent frame tagging task.</p>
  * @method void setFrameTagConfigure(MPSAIAnalysisConfigureInfo $FrameTagConfigure) Set <p>Control parameters for the intelligent frame tagging task.</p>
- * @method MPSAIAnalysisConfigureInfo getSplitConfigure() Obtain <p>Intelligent splitting task control parameters.</p>
- * @method void setSplitConfigure(MPSAIAnalysisConfigureInfo $SplitConfigure) Set <p>Intelligent splitting task control parameters.</p>
+ * @method MPSAIAnalysisConfigureInfo getSplitConfigure() Obtain <p>Intelligent splitting task control parameter.</p>
+ * @method void setSplitConfigure(MPSAIAnalysisConfigureInfo $SplitConfigure) Set <p>Intelligent splitting task control parameter.</p>
  * @method MPSAIAnalysisConfigureInfo getHighlightConfigure() Obtain <p>Control parameters for the intelligent highlights task.</p>
  * @method void setHighlightConfigure(MPSAIAnalysisConfigureInfo $HighlightConfigure) Set <p>Control parameters for the intelligent highlights task.</p>
- * @method MPSAIAnalysisConfigureInfo getOpeningAndEndingConfigure() Obtain <p>Control parameter for the intelligent opening and closing credits task.</p>
- * @method void setOpeningAndEndingConfigure(MPSAIAnalysisConfigureInfo $OpeningAndEndingConfigure) Set <p>Control parameter for the intelligent opening and closing credits task.</p>
+ * @method MPSAIAnalysisConfigureInfo getOpeningAndEndingConfigure() Obtain <p>Control parameters for the intelligent opening and ending sequences task.</p>
+ * @method void setOpeningAndEndingConfigure(MPSAIAnalysisConfigureInfo $OpeningAndEndingConfigure) Set <p>Control parameters for the intelligent opening and ending sequences task.</p>
  */
 class MPSAIAnalysisTemplateForUpdate extends AbstractModel
 {
     /**
-     * @var integer <p>Unique identifier of the video analysis template.</p>
+     * @var integer <p>Unique identifier of the video content analysis template.</p>
      */
     public $Definition;
 
     /**
-     * @var string <p>Video analysis template name, with a length limit of 64 characters.</p>
+     * @var string <p>Video analysis template name. Length limit: 64 characters.</p>
      */
     public $Name;
 
@@ -64,7 +64,7 @@ class MPSAIAnalysisTemplateForUpdate extends AbstractModel
     public $ClassificationConfigure;
 
     /**
-     * @var MPSAIAnalysisConfigureInfo <p>Intelligent tag task control parameters.</p>
+     * @var MPSAIAnalysisConfigureInfo <p>Control parameters for the intelligent tag task.</p>
      */
     public $TagConfigure;
 
@@ -79,7 +79,7 @@ class MPSAIAnalysisTemplateForUpdate extends AbstractModel
     public $FrameTagConfigure;
 
     /**
-     * @var MPSAIAnalysisConfigureInfo <p>Intelligent splitting task control parameters.</p>
+     * @var MPSAIAnalysisConfigureInfo <p>Intelligent splitting task control parameter.</p>
      */
     public $SplitConfigure;
 
@@ -89,21 +89,21 @@ class MPSAIAnalysisTemplateForUpdate extends AbstractModel
     public $HighlightConfigure;
 
     /**
-     * @var MPSAIAnalysisConfigureInfo <p>Control parameter for the intelligent opening and closing credits task.</p>
+     * @var MPSAIAnalysisConfigureInfo <p>Control parameters for the intelligent opening and ending sequences task.</p>
      */
     public $OpeningAndEndingConfigure;
 
     /**
-     * @param integer $Definition <p>Unique identifier of the video analysis template.</p>
-     * @param string $Name <p>Video analysis template name, with a length limit of 64 characters.</p>
+     * @param integer $Definition <p>Unique identifier of the video content analysis template.</p>
+     * @param string $Name <p>Video analysis template name. Length limit: 64 characters.</p>
      * @param string $Comment <p>Video analysis template description. Length limit: 256 characters.</p>
      * @param MPSAIAnalysisConfigureInfo $ClassificationConfigure <p>Intelligent Classification Task Control Parameters.</p>
-     * @param MPSAIAnalysisConfigureInfo $TagConfigure <p>Intelligent tag task control parameters.</p>
+     * @param MPSAIAnalysisConfigureInfo $TagConfigure <p>Control parameters for the intelligent tag task.</p>
      * @param MPSAIAnalysisConfigureInfo $CoverConfigure <p>Intelligent Cover Task Control Parameters.</p>
      * @param MPSAIAnalysisConfigureInfo $FrameTagConfigure <p>Control parameters for the intelligent frame tagging task.</p>
-     * @param MPSAIAnalysisConfigureInfo $SplitConfigure <p>Intelligent splitting task control parameters.</p>
+     * @param MPSAIAnalysisConfigureInfo $SplitConfigure <p>Intelligent splitting task control parameter.</p>
      * @param MPSAIAnalysisConfigureInfo $HighlightConfigure <p>Control parameters for the intelligent highlights task.</p>
-     * @param MPSAIAnalysisConfigureInfo $OpeningAndEndingConfigure <p>Control parameter for the intelligent opening and closing credits task.</p>
+     * @param MPSAIAnalysisConfigureInfo $OpeningAndEndingConfigure <p>Control parameters for the intelligent opening and ending sequences task.</p>
      */
     function __construct()
     {

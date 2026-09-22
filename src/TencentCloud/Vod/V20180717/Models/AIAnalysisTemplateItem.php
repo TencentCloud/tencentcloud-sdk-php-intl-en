@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI intelligent analysis template details
+ * Details of the AI intelligent analysis template
  *
  * @method integer getDefinition() Obtain Unique identifier of the intelligent analysis template.
  * @method void setDefinition(integer $Definition) Set Unique identifier of the intelligent analysis template.
  * @method string getName() Obtain Name of the intelligent analysis template.
  * @method void setName(string $Name) Set Name of the intelligent analysis template.
- * @method string getComment() Obtain Template description information for intelligent analysis.
- * @method void setComment(string $Comment) Set Template description information for intelligent analysis.
- * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Intelligent classification task control parameters.
- * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Intelligent classification task control parameters.
- * @method TagConfigureInfo getTagConfigure() Obtain Control parameter of the intelligent tag task.
- * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Control parameter of the intelligent tag task.
+ * @method string getComment() Obtain Description of the intelligent analysis template.
+ * @method void setComment(string $Comment) Set Description of the intelligent analysis template.
+ * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Intelligent Classification Task Control Parameters.
+ * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Intelligent Classification Task Control Parameters.
+ * @method TagConfigureInfo getTagConfigure() Obtain Intelligent tag task control parameter.
+ * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Intelligent tag task control parameter.
  * @method CoverConfigureInfo getCoverConfigure() Obtain Intelligent cover task control parameters.
  * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Intelligent cover task control parameters.
- * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Control parameter for intelligent frame-specific tagging task.
- * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Control parameter for intelligent frame-specific tagging task.
+ * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Intelligent frame tagging task control parameter.
+ * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Intelligent frame tagging task control parameter.
  * @method HighlightsConfigureInfo getHighlightConfigure() Obtain Control parameters for the intelligent highlights compilation task.
  * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) Set Control parameters for the intelligent highlights compilation task.
- * @method string getCreateTime() Obtain Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getCreateTime() Obtain Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AIAnalysisTemplateItem extends AbstractModel
 {
@@ -54,17 +54,17 @@ class AIAnalysisTemplateItem extends AbstractModel
     public $Name;
 
     /**
-     * @var string Template description information for intelligent analysis.
+     * @var string Description of the intelligent analysis template.
      */
     public $Comment;
 
     /**
-     * @var ClassificationConfigureInfo Intelligent classification task control parameters.
+     * @var ClassificationConfigureInfo Intelligent Classification Task Control Parameters.
      */
     public $ClassificationConfigure;
 
     /**
-     * @var TagConfigureInfo Control parameter of the intelligent tag task.
+     * @var TagConfigureInfo Intelligent tag task control parameter.
      */
     public $TagConfigure;
 
@@ -74,7 +74,7 @@ class AIAnalysisTemplateItem extends AbstractModel
     public $CoverConfigure;
 
     /**
-     * @var FrameTagConfigureInfo Control parameter for intelligent frame-specific tagging task.
+     * @var FrameTagConfigureInfo Intelligent frame tagging task control parameter.
      */
     public $FrameTagConfigure;
 
@@ -84,26 +84,26 @@ class AIAnalysisTemplateItem extends AbstractModel
     public $HighlightConfigure;
 
     /**
-     * @var string Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
      * @param integer $Definition Unique identifier of the intelligent analysis template.
      * @param string $Name Name of the intelligent analysis template.
-     * @param string $Comment Template description information for intelligent analysis.
-     * @param ClassificationConfigureInfo $ClassificationConfigure Intelligent classification task control parameters.
-     * @param TagConfigureInfo $TagConfigure Control parameter of the intelligent tag task.
+     * @param string $Comment Description of the intelligent analysis template.
+     * @param ClassificationConfigureInfo $ClassificationConfigure Intelligent Classification Task Control Parameters.
+     * @param TagConfigureInfo $TagConfigure Intelligent tag task control parameter.
      * @param CoverConfigureInfo $CoverConfigure Intelligent cover task control parameters.
-     * @param FrameTagConfigureInfo $FrameTagConfigure Control parameter for intelligent frame-specific tagging task.
+     * @param FrameTagConfigureInfo $FrameTagConfigure Intelligent frame tagging task control parameter.
      * @param HighlightsConfigureInfo $HighlightConfigure Control parameters for the intelligent highlights compilation task.
-     * @param string $CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

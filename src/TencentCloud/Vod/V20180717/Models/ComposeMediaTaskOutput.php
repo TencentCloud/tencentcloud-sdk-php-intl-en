@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of a media file creation task.
+ * Output of the media file creation task.
  *
  * @method string getFileType() Obtain File type, for example, mp4 and mp3.
  * @method void setFileType(string $FileType) Set File type, for example, mp4 and mp3.
@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set Media file ID.
  * @method string getFileUrl() Obtain Media file playback address.
  * @method void setFileUrl(string $FileUrl) Set Media file playback address.
- * @method string getMediaName() Obtain Filename, which contains up to 64 characters.
- * @method void setMediaName(string $MediaName) Set Filename, which contains up to 64 characters.
- * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+ * @method string getMediaName() Obtain File name, up to 64 characters.
+ * @method void setMediaName(string $MediaName) Set File name, up to 64 characters.
+ * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
- * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+ * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
- * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class ComposeMediaTaskOutput extends AbstractModel
 {
@@ -53,18 +53,18 @@ class ComposeMediaTaskOutput extends AbstractModel
     public $FileUrl;
 
     /**
-     * @var string Filename, which contains up to 64 characters.
+     * @var string File name, up to 64 characters.
      */
     public $MediaName;
 
     /**
-     * @var integer Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+     * @var integer Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
      */
     public $ClassId;
 
     /**
-     * @var string Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ExpireTime;
 
@@ -72,10 +72,10 @@ class ComposeMediaTaskOutput extends AbstractModel
      * @param string $FileType File type, for example, mp4 and mp3.
      * @param string $FileId Media file ID.
      * @param string $FileUrl Media file playback address.
-     * @param string $MediaName Filename, which contains up to 64 characters.
-     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+     * @param string $MediaName File name, up to 64 characters.
+     * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
-     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

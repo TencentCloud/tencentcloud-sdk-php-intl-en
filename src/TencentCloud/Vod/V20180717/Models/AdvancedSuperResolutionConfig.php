@@ -21,19 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * Super-resolution configuration.
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
  * @method string getType() Obtain Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
  * @method void setType(string $Type) Set Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
  * @method string getMode() Obtain Image output mode. The default value is percent.
@@ -46,24 +46,24 @@ Default value: standard.
 <li>percent: magnification factor of super-resolution, which can be a decimal.</li>
  * @method float getPercent() Obtain Overscaling multiplication rate, which can be a decimal.
  * @method void setPercent(float $Percent) Set Overscaling multiplication rate, which can be a decimal.
- * @method integer getWidth() Obtain Target image width. It cannot exceed 4096.
- * @method void setWidth(integer $Width) Set Target image width. It cannot exceed 4096.
+ * @method integer getWidth() Obtain Target image width. Cannot exceed 4096.
+ * @method void setWidth(integer $Width) Set Target image width. Cannot exceed 4096.
  * @method integer getHeight() Obtain Target image height. Cannot exceed 4096.
  * @method void setHeight(integer $Height) Set Target image height. Cannot exceed 4096.
- * @method integer getLongSide() Obtain Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
- * @method void setLongSide(integer $LongSide) Set Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+ * @method integer getLongSide() Obtain Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+ * @method void setLongSide(integer $LongSide) Set Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
  * @method integer getShortSide() Obtain Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
  * @method void setShortSide(integer $ShortSide) Set Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
  */
 class AdvancedSuperResolutionConfig extends AbstractModel
 {
     /**
      * @var string Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
      */
@@ -71,7 +71,7 @@ Default value: ON.
 
     /**
      * @var string Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
      */
@@ -91,7 +91,7 @@ Default value: standard.
     public $Percent;
 
     /**
-     * @var integer Target image width. It cannot exceed 4096.
+     * @var integer Target image width. Cannot exceed 4096.
      */
     public $Width;
 
@@ -101,24 +101,24 @@ Default value: standard.
     public $Height;
 
     /**
-     * @var integer Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+     * @var integer Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public $LongSide;
 
     /**
      * @var integer Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public $ShortSide;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
      * @param string $Type Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
      * @param string $Mode Image output mode. The default value is percent.
@@ -126,12 +126,12 @@ Default value: standard.
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
 <li>percent: magnification factor of super-resolution, which can be a decimal.</li>
      * @param float $Percent Overscaling multiplication rate, which can be a decimal.
-     * @param integer $Width Target image width. It cannot exceed 4096.
+     * @param integer $Width Target image width. Cannot exceed 4096.
      * @param integer $Height Target image height. Cannot exceed 4096.
-     * @param integer $LongSide Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+     * @param integer $LongSide Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      * @param integer $ShortSide Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     function __construct()
     {

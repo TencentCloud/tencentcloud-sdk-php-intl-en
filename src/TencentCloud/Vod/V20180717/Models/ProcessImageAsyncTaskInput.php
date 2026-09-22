@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Image async processing template ID.
  * @method void setDefinition(integer $Definition) Set Image async processing template ID.
- * @method ProcessImageAsyncInputExtendedParameter getExtendedParameter() Obtain Extended parameters for async image processing.
- * @method void setExtendedParameter(ProcessImageAsyncInputExtendedParameter $ExtendedParameter) Set Extended parameters for async image processing.
+ * @method ProcessImageAsyncInputExtendedParameter getExtendedParameter() Obtain Extended parameters for asynchronous image processing.
+ * @method void setExtendedParameter(ProcessImageAsyncInputExtendedParameter $ExtendedParameter) Set Extended parameters for asynchronous image processing.
  */
 class ProcessImageAsyncTaskInput extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ProcessImageAsyncTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var ProcessImageAsyncInputExtendedParameter Extended parameters for async image processing.
+     * @var ProcessImageAsyncInputExtendedParameter Extended parameters for asynchronous image processing.
      */
     public $ExtendedParameter;
 
     /**
      * @param integer $Definition Image async processing template ID.
-     * @param ProcessImageAsyncInputExtendedParameter $ExtendedParameter Extended parameters for async image processing.
+     * @param ProcessImageAsyncInputExtendedParameter $ExtendedParameter Extended parameters for asynchronous image processing.
      */
     function __construct()
     {

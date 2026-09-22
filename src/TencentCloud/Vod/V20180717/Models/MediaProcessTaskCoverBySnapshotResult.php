@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Screencapturing for cover image task result type
+ * Result type of the screencapturing for cover image task
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method CoverBySnapshotTaskInput getInput() Obtain Input of the screencapturing for cover image task for videos.
- * @method void setInput(CoverBySnapshotTaskInput $Input) Set Input of the screencapturing for cover image task for videos.
+ * @method CoverBySnapshotTaskInput getInput() Obtain Input of the screencapturing for cover image task.
+ * @method void setInput(CoverBySnapshotTaskInput $Input) Set Input of the screencapturing for cover image task.
  * @method CoverBySnapshotTaskOutput getOutput() Obtain Output of the screencapturing for cover image task for videos.
  * @method void setOutput(CoverBySnapshotTaskOutput $Output) Set Output of the screencapturing for cover image task for videos.
- * @method integer getProgress() Obtain Task progress of screencapturing for video cover image, in the range of [0,100].
- * @method void setProgress(integer $Progress) Set Task progress of screencapturing for video cover image, in the range of [0,100].
- * @method string getBeginProcessTime() Obtain Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFinishTime() Obtain Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setFinishTime(string $FinishTime) Set Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
+ * @method void setProgress(integer $Progress) Set Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
+ * @method string getBeginProcessTime() Obtain Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 {
@@ -62,7 +62,7 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
     public $Message;
 
     /**
-     * @var CoverBySnapshotTaskInput Input of the screencapturing for cover image task for videos.
+     * @var CoverBySnapshotTaskInput Input of the screencapturing for cover image task.
      */
     public $Input;
 
@@ -72,17 +72,17 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Task progress of screencapturing for video cover image, in the range of [0,100].
+     * @var integer Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
      */
     public $Progress;
 
     /**
-     * @var string Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
@@ -91,11 +91,11 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param CoverBySnapshotTaskInput $Input Input of the screencapturing for cover image task for videos.
+     * @param CoverBySnapshotTaskInput $Input Input of the screencapturing for cover image task.
      * @param CoverBySnapshotTaskOutput $Output Output of the screencapturing for cover image task for videos.
-     * @param integer $Progress Task progress of screencapturing for video cover image, in the range of [0,100].
-     * @param string $BeginProcessTime Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FinishTime Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
+     * @param string $BeginProcessTime Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

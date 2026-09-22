@@ -18,24 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Splitting result of the video.
+ * Video splitting result.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
  * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiRecognitionTaskSegmentResultInput getInput() Obtain Input information of the video splitting task.
- * @method void setInput(AiRecognitionTaskSegmentResultInput $Input) Set Input information of the video splitting task.
+ * @method AiRecognitionTaskSegmentResultInput getInput() Obtain Video splitting task input information.
+ * @method void setInput(AiRecognitionTaskSegmentResultInput $Input) Set Video splitting task input information.
  * @method AiRecognitionTaskSegmentResultOutput getOutput() Obtain Video splitting task output information.
  * @method void setOutput(AiRecognitionTaskSegmentResultOutput $Output) Set Video splitting task output information.
- * @method integer getProgress() Obtain Progress of the video splitting task. Value range: 0–100.
- * @method void setProgress(integer $Progress) Set Progress of the video splitting task. Value range: 0–100.
- * @method string getBeginProcessTime() Obtain Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Progress of the video splitting task, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Progress of the video splitting task, in the range of [0,100].
+ * @method string getBeginProcessTime() Obtain Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain Video splitting task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set Video splitting task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -47,7 +47,7 @@ class AiRecognitionTaskSegmentResult extends AbstractModel
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public $ErrCodeExt;
 
@@ -62,7 +62,7 @@ class AiRecognitionTaskSegmentResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskSegmentResultInput Input information of the video splitting task.
+     * @var AiRecognitionTaskSegmentResultInput Video splitting task input information.
      */
     public $Input;
 
@@ -72,12 +72,12 @@ class AiRecognitionTaskSegmentResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Progress of the video splitting task. Value range: 0–100.
+     * @var integer Progress of the video splitting task, in the range of [0,100].
      */
     public $Progress;
 
     /**
-     * @var string Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
@@ -88,13 +88,13 @@ class AiRecognitionTaskSegmentResult extends AbstractModel
 
     /**
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiRecognitionTaskSegmentResultInput $Input Input information of the video splitting task.
+     * @param AiRecognitionTaskSegmentResultInput $Input Video splitting task input information.
      * @param AiRecognitionTaskSegmentResultOutput $Output Video splitting task output information.
-     * @param integer $Progress Progress of the video splitting task. Value range: 0–100.
-     * @param string $BeginProcessTime Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Progress of the video splitting task, in the range of [0,100].
+     * @param string $BeginProcessTime Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime Video splitting task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

@@ -21,57 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * ReviewImage request structure.
  *
  * @method integer getDefinition() Obtain Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
  * @method void setDefinition(integer $Definition) Set Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
- * @method string getFileId() Obtain Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
+ * @method string getFileId() Obtain Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
- * @method void setFileId(string $FileId) Set Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+ * @method void setFileId(string $FileId) Set Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
- * @method string getMediaStoragePath() Obtain Storage path of the media.
+ * @method string getMediaStoragePath() Obtain Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
- * @method void setMediaStoragePath(string $MediaStoragePath) Set Storage path of the media.
+ * @method void setMediaStoragePath(string $MediaStoragePath) Set Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  */
 class ReviewImageRequest extends AbstractModel
 {
     /**
      * @var integer Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
      */
     public $Definition;
 
     /**
-     * @var string Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+     * @var string Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
      */
     public $FileId;
 
     /**
-     * @var string Storage path of the media.
+     * @var string Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
      */
     public $MediaStoragePath;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
      * @param integer $Definition Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
-     * @param string $FileId Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
+     * @param string $FileId Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
-     * @param string $MediaStoragePath Storage path of the media.
+     * @param string $MediaStoragePath Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     function __construct()
     {

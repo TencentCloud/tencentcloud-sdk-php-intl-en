@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method float getStartTimeOffset() Obtain Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method float getStartTimeOffset() Obtain Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
  * @method float getEndTimeOffset() Obtain End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method RepairInfo getRepairInfo() Obtain Image quality restoration control parameters.
@@ -52,14 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set Scratch removal control parameter.
  * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain Artifact (burr) removal control parameter.
  * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set Artifact (burr) removal control parameter.
- * @method RebuildMediaTargetInfo getTargetInfo() Obtain Output target parameters for audio-visual quality rebirth.
- * @method void setTargetInfo(RebuildMediaTargetInfo $TargetInfo) Set Output target parameters for audio-visual quality rebirth.
- * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method RebuildMediaTargetInfo getTargetInfo() Obtain Audio-visual quality rebirth output target parameters.
+ * @method void setTargetInfo(RebuildMediaTargetInfo $TargetInfo) Set Audio-visual quality rebirth output target parameters.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
- * @method void setTasksPriority(integer $TasksPriority) Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+ * @method integer getTasksPriority() Obtain Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
  * @method string getExtInfo() Obtain Reserved field, used for special purposes.
  * @method void setExtInfo(string $ExtInfo) Set Reserved field, used for special purposes.
  */
@@ -71,12 +71,12 @@ class RebuildMediaRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var float Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * @var float Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
      */
     public $StartTimeOffset;
 
@@ -146,12 +146,12 @@ class RebuildMediaRequest extends AbstractModel
     public $ArtifactRepairInfo;
 
     /**
-     * @var RebuildMediaTargetInfo Output target parameters for audio-visual quality rebirth.
+     * @var RebuildMediaTargetInfo Audio-visual quality rebirth output target parameters.
      */
     public $TargetInfo;
 
     /**
-     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
@@ -161,7 +161,7 @@ class RebuildMediaRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var integer Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+     * @var integer Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TasksPriority;
 
@@ -172,8 +172,8 @@ class RebuildMediaRequest extends AbstractModel
 
     /**
      * @param string $FileId Media file ID.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param float $StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param float $StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
      * @param float $EndTimeOffset End offset time, in seconds. Not filled indicates cutting to the end of the video.
      * @param RepairInfo $RepairInfo Image quality restoration control parameters.
      * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
@@ -187,10 +187,10 @@ class RebuildMediaRequest extends AbstractModel
      * @param LowLightEnhanceInfo $LowLightInfo Low-light control parameters.
      * @param ScratchRepairInfo $ScratchRepairInfo Scratch removal control parameter.
      * @param ArtifactRepairInfo $ArtifactRepairInfo Artifact (burr) removal control parameter.
-     * @param RebuildMediaTargetInfo $TargetInfo Output target parameters for audio-visual quality rebirth.
-     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param RebuildMediaTargetInfo $TargetInfo Audio-visual quality rebirth output target parameters.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+     * @param integer $TasksPriority Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      * @param string $ExtInfo Reserved field, used for special purposes.
      */
     function __construct()

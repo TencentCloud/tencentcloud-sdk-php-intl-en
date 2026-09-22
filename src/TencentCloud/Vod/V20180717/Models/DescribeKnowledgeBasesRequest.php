@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKnowledgeBases request structure.
  *
- * @method integer getSubAppId() Obtain <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
- * @method void setSubAppId(integer $SubAppId) Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+ * @method integer getSubAppId() Obtain <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
  * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
  * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
  * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
  * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
- * @method string getName() Obtain <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
- * @method void setName(string $Name) Set <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+ * @method string getName() Obtain <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
+ * @method void setName(string $Name) Set <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
  */
 class DescribeKnowledgeBasesRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+     * @var integer <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public $SubAppId;
 
@@ -47,15 +47,15 @@ class DescribeKnowledgeBasesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+     * @var string <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
      */
     public $Name;
 
     /**
-     * @param integer $SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+     * @param integer $SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      * @param integer $Offset <p>Paging offset. Default value: 0.</p>
      * @param integer $Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
-     * @param string $Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+     * @param string $Name <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
      */
     function __construct()
     {

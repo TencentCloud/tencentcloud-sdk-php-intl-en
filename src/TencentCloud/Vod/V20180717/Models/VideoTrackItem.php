@@ -21,43 +21,43 @@ use TencentCloud\Common\AbstractModel;
  * Video clip information of the video track.
  *
  * @method string getSourceMedia() Obtain Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
  * @method void setSourceMedia(string $SourceMedia) Set Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
  * @method float getSourceMediaStartTime() Obtain Start time of the video clip in the material file, in seconds. Default value: 0.
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of the video clip in the material file, in seconds. Default value: 0.
- * @method float getDuration() Obtain Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
- * @method void setDuration(float $Duration) Set Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+ * @method float getDuration() Obtain Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+ * @method void setDuration(float $Duration) Set Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
  * @method float getTargetDuration() Obtain Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
  * @method void setTargetDuration(float $TargetDuration) Set Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
  * @method string getCoordinateOrigin() Obtain Video origin position. Valid values:
 <li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
 Default value: Center.
  * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Video origin position. Valid values:
 <li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
 Default value: Center.
- * @method string getXPos() Obtain Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+ * @method string getXPos() Obtain Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
- * @method void setXPos(string $XPos) Set Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+ * @method void setXPos(string $XPos) Set Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
- * @method string getYPos() Obtain Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+ * @method string getYPos() Obtain Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
- * @method void setYPos(string $YPos) Set Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+ * @method void setYPos(string $YPos) Set Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
  * @method string getWidth() Obtain Width of a video clip, supporting two formats: % and px.
@@ -86,16 +86,16 @@ Default value: 0px.
 <li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
  * @method array getAudioOperations() Obtain Perform operations on audio, such as muting.
  * @method void setAudioOperations(array $AudioOperations) Set Perform operations on audio, such as muting.
- * @method array getImageOperations() Obtain Operation performed on the image, for example, image rotation.
- * @method void setImageOperations(array $ImageOperations) Set Operation performed on the image, for example, image rotation.
+ * @method array getImageOperations() Obtain Operation performed on the image, such as image rotation.
+ * @method void setImageOperations(array $ImageOperations) Set Operation performed on the image, such as image rotation.
  */
 class VideoTrackItem extends AbstractModel
 {
     /**
      * @var string Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public $SourceMedia;
 
@@ -105,14 +105,14 @@ Note: When using the download URL of another media file as the material source a
     public $SourceMediaStartTime;
 
     /**
-     * @var float Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+     * @var float Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
      */
     public $Duration;
 
     /**
      * @var float Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
      */
     public $TargetDuration;
 
@@ -124,16 +124,16 @@ Default value: Center.
     public $CoordinateOrigin;
 
     /**
-     * @var string Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+     * @var string Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
      */
     public $XPos;
 
     /**
-     * @var string Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+     * @var string Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      */
@@ -165,29 +165,29 @@ Default value: 0px.
     public $AudioOperations;
 
     /**
-     * @var array Operation performed on the image, for example, image rotation.
+     * @var array Operation performed on the image, such as image rotation.
      */
     public $ImageOperations;
 
     /**
      * @param string $SourceMedia Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      * @param float $SourceMediaStartTime Start time of the video clip in the material file, in seconds. Default value: 0.
-     * @param float $Duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+     * @param float $Duration Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
      * @param float $TargetDuration Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
      * @param string $CoordinateOrigin Video origin position. Valid values:
 <li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
 Default value: Center.
-     * @param string $XPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+     * @param string $XPos Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
-     * @param string $YPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+     * @param string $YPos Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      * @param string $Width Width of a video clip, supporting two formats: % and px.
@@ -203,7 +203,7 @@ Default value: 0px.
 <li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
 <li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
      * @param array $AudioOperations Perform operations on audio, such as muting.
-     * @param array $ImageOperations Operation performed on the image, for example, image rotation.
+     * @param array $ImageOperations Operation performed on the image, such as image rotation.
      */
     function __construct()
     {

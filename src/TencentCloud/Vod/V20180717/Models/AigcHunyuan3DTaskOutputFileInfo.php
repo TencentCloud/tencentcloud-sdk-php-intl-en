@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the output file of an AIGC Hunyuan 3D task.
+ * Output file information of the AIGC Hunyuan 3D task.
  *
- * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
- * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
- * @method string getExpireTime() Obtain <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
- * @method string getFileType() Obtain <p>File type, for example, OBJ, GLB, or FBX.</p>
- * @method void setFileType(string $FileType) Set <p>File type, for example, OBJ, GLB, or FBX.</p>
+ * @method string getStorageMode() Obtain <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+ * @method void setStorageMode(string $StorageMode) Set <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+ * @method string getExpireTime() Obtain <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+ * @method string getFileType() Obtain <p>File type, such as OBJ, GLB, and FBX.</p>
+ * @method void setFileType(string $FileType) Set <p>File type, such as OBJ, GLB, and FBX.</p>
  * @method string getFileUrl() Obtain <p>Output file address.</p>
  * @method void setFileUrl(string $FileUrl) Set <p>Output file address.</p>
  * @method string getPreviewFileUrl() Obtain <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class AigcHunyuan3DTaskOutputFileInfo extends AbstractModel
 {
     /**
-     * @var string <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+     * @var string <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @var string <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @var string <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string <p>File type, for example, OBJ, GLB, or FBX.</p>
+     * @var string <p>File type, such as OBJ, GLB, and FBX.</p>
      */
     public $FileType;
 
@@ -59,9 +59,9 @@ class AigcHunyuan3DTaskOutputFileInfo extends AbstractModel
     public $PreviewFileUrl;
 
     /**
-     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
-     * @param string $ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param string $FileType <p>File type, for example, OBJ, GLB, or FBX.</p>
+     * @param string $StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+     * @param string $ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param string $FileType <p>File type, such as OBJ, GLB, and FBX.</p>
      * @param string $FileUrl <p>Output file address.</p>
      * @param string $PreviewFileUrl <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
      */

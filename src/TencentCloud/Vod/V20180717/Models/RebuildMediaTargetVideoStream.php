@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 <li>libx264: H.264 encoding;</li>
 <li>libx265: H.265 encoding;</li>
 <li>av1: AOMedia Video 1 encoding.</li>
-The default encoding format for video streams is H.264.
+Default video stream encoding format: H.264.
  * @method void setCodec(string $Codec) Set Encoding format for video streams. Optional values:
 <li>libx264: H.264 encoding;</li>
 <li>libx265: H.265 encoding;</li>
 <li>av1: AOMedia Video 1 encoding.</li>
-The default encoding format for video streams is H.264.
+Default video stream encoding format: H.264.
  * @method integer getBitrate() Obtain Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
 When the value is 0, VOD automatically sets the bitrate.
  * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
@@ -37,13 +37,13 @@ When the value is 0, VOD automatically sets the bitrate.
  * @method integer getFps() Obtain Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
  * @method void setFps(integer $Fps) Set Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
  * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
  * @method integer getWidth() Obtain Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
@@ -60,14 +60,14 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 
 Default value: 0.
- * @method integer getHeight() Obtain Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+ * @method integer getHeight() Obtain Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 
 Default value: 0.
- * @method void setHeight(integer $Height) Set Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+ * @method void setHeight(integer $Height) Set Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -75,13 +75,13 @@ Default value: 0.
 
 Default value: 0.
  * @method string getFillType() Obtain Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 
 Default value: stretch.
  * @method void setFillType(string $FillType) Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 
 Default value: stretch.
  * @method integer getGop() Obtain Interval between I-frames, in frames. Value range: 0 and [1, 100000].
@@ -96,7 +96,7 @@ class RebuildMediaTargetVideoStream extends AbstractModel
 <li>libx264: H.264 encoding;</li>
 <li>libx265: H.265 encoding;</li>
 <li>av1: AOMedia Video 1 encoding.</li>
-The default encoding format for video streams is H.264.
+Default video stream encoding format: H.264.
      */
     public $Codec;
 
@@ -113,8 +113,8 @@ When the value is 0, VOD automatically sets the bitrate.
 
     /**
      * @var string Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
      */
@@ -132,7 +132,7 @@ Default value: 0.
     public $Width;
 
     /**
-     * @var integer Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+     * @var integer Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -144,8 +144,8 @@ Default value: 0.
 
     /**
      * @var string Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 
 Default value: stretch.
      */
@@ -162,13 +162,13 @@ If this parameter is 0 or left blank, the system will automatically set the GOP 
 <li>libx264: H.264 encoding;</li>
 <li>libx265: H.265 encoding;</li>
 <li>av1: AOMedia Video 1 encoding.</li>
-The default encoding format for video streams is H.264.
+Default video stream encoding format: H.264.
      * @param integer $Bitrate Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
 When the value is 0, VOD automatically sets the bitrate.
      * @param integer $Fps Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
      * @param string $ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
      * @param integer $Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
@@ -178,7 +178,7 @@ Default value: open.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 
 Default value: 0.
-     * @param integer $Height Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+     * @param integer $Height Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -186,8 +186,8 @@ Default value: 0.
 
 Default value: 0.
      * @param string $FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 
 Default value: stretch.
      * @param integer $Gop Interval between I-frames, in frames. Value range: 0 and [1, 100000].

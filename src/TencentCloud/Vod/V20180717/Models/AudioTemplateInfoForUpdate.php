@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBitrate(integer $Bitrate) Set <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
  * @method integer getSampleRate() Obtain <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
  * @method void setSampleRate(integer $SampleRate) Set <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
- * @method integer getAudioChannel() Obtain <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
- * @method void setAudioChannel(integer $AudioChannel) Set <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
- * @method array getStreamSelects() Obtain <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
- * @method void setStreamSelects(array $StreamSelects) Set <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
+ * @method integer getAudioChannel() Obtain <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+ * @method void setAudioChannel(integer $AudioChannel) Set <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+ * @method array getStreamSelects() Obtain <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+ * @method void setStreamSelects(array $StreamSelects) Set <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
  */
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
@@ -49,12 +49,12 @@ class AudioTemplateInfoForUpdate extends AbstractModel
     public $SampleRate;
 
     /**
-     * @var integer <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+     * @var integer <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
      */
     public $AudioChannel;
 
     /**
-     * @var array <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
+     * @var array <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
      */
     public $StreamSelects;
 
@@ -62,8 +62,8 @@ class AudioTemplateInfoForUpdate extends AbstractModel
      * @param string $Codec <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
      * @param integer $Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
      * @param integer $SampleRate <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
-     * @param integer $AudioChannel <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
-     * @param array $StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
+     * @param integer $AudioChannel <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+     * @param array $StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
      */
     function __construct()
     {

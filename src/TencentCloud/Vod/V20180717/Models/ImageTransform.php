@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Operations such as image rotation and flipping.
+ * Image rotation, flipping, and other operations.
  *
  * @method string getType() Obtain Type. Valid values:
 <li> Rotate: image rotation.</li>
@@ -26,15 +26,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
- * @method float getRotateAngle() Obtain Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
- * @method void setRotateAngle(float $RotateAngle) Set Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+ * @method float getRotateAngle() Obtain Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
+ * @method void setRotateAngle(float $RotateAngle) Set Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
  * @method string getFlip() Obtain Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
  * @method void setFlip(string $Flip) Set Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
  */
 class ImageTransform extends AbstractModel
@@ -47,14 +47,14 @@ class ImageTransform extends AbstractModel
     public $Type;
 
     /**
-     * @var float Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+     * @var float Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
      */
     public $RotateAngle;
 
     /**
      * @var string Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
      */
     public $Flip;
@@ -63,10 +63,10 @@ Valid when Type is set to Flip.
      * @param string $Type Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
-     * @param float $RotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+     * @param float $RotateAngle Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
      * @param string $Flip Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
      */
     function __construct()

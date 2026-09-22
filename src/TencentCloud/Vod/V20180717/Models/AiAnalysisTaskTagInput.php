@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input type of the intelligent tag task.
+ * Intelligent tag task input type.
  *
  * @method integer getDefinition() Obtain Video intelligent tag template ID.
  * @method void setDefinition(integer $Definition) Set Video intelligent tag template ID.

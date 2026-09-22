@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * An issue detected by the LLM large model for audio and video quality detection.
+ * Issue detected by the LLM in audio and video quality detection.
  *
  * @method string getTag() Obtain <p>Issue category tag.</p>
  * @method void setTag(string $Tag) Set <p>Issue category tag.</p>

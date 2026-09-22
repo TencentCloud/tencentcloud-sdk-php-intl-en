@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code.
 <li>0: success;</li>
 <li>Other value: failure.</li>
- * @method integer getTimeOffset() Obtain Screenshot time, in milliseconds.
- * @method void setTimeOffset(integer $TimeOffset) Set Screenshot time, in milliseconds.
+ * @method integer getTimeOffset() Obtain Screenshot time, in ms.
+ * @method void setTimeOffset(integer $TimeOffset) Set Screenshot time, in ms.
  * @method string getUrl() Obtain Screenshot output file address.
  * @method void setUrl(string $Url) Set Screenshot output file address.
  */
@@ -41,7 +41,7 @@ class SnapshotByTimeOffset2017 extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var integer Screenshot time, in milliseconds.
+     * @var integer Screenshot time, in ms.
      */
     public $TimeOffset;
 
@@ -54,7 +54,7 @@ class SnapshotByTimeOffset2017 extends AbstractModel
      * @param integer $ErrCode Error code.
 <li>0: success;</li>
 <li>Other value: failure.</li>
-     * @param integer $TimeOffset Screenshot time, in milliseconds.
+     * @param integer $TimeOffset Screenshot time, in ms.
      * @param string $Url Screenshot output file address.
      */
     function __construct()

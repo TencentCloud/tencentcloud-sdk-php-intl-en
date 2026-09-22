@@ -23,21 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMute() Obtain Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
  * @method void setMute(integer $Mute) Set Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
  * @method float getGain() Obtain Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
  * @method void setGain(float $Gain) Set Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
  */
 class AudioVolumeParam extends AbstractModel
 {
@@ -45,16 +45,16 @@ class AudioVolumeParam extends AbstractModel
      * @var integer Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
      */
     public $Mute;
 
     /**
      * @var float Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
      */
     public $Gain;
 
@@ -62,12 +62,12 @@ The default value is 0.
      * @param integer $Mute Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
      * @param float $Gain Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
      */
     function __construct()
     {

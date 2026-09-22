@@ -21,20 +21,20 @@ use TencentCloud\Common\AbstractModel;
  * Http header setting rules, with a maximum of 100.
  *
  * @method string getHeaderMode() Obtain http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
  * @method void setHeaderMode(string $HeaderMode) Set http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
- * @method string getHeaderName() Obtain http header name, up to 100 characters.
- * @method void setHeaderName(string $HeaderName) Set http header name, up to 100 characters.
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
+ * @method string getHeaderName() Obtain http header name, with a maximum of 100 characters.
+ * @method void setHeaderName(string $HeaderName) Set http header name, with a maximum of 100 characters.
  * @method string getHeaderValue() Obtain http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
  * @method void setHeaderValue(string $HeaderValue) Set http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
  * @method string getRuleType() Obtain Rule type:
 <li>all: take effect for all files;</li>
@@ -61,20 +61,20 @@ class HttpHeaderPathRule extends AbstractModel
 {
     /**
      * @var string http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
      */
     public $HeaderMode;
 
     /**
-     * @var string http header name, up to 100 characters.
+     * @var string http header name, with a maximum of 100 characters.
      */
     public $HeaderName;
 
     /**
      * @var string http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
      */
     public $HeaderValue;
@@ -99,12 +99,12 @@ Required if Mode is add/set.
 
     /**
      * @param string $HeaderMode http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
-     * @param string $HeaderName http header name, up to 100 characters.
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
+     * @param string $HeaderName http header name, with a maximum of 100 characters.
      * @param string $HeaderValue http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
      * @param string $RuleType Rule type:
 <li>all: take effect for all files;</li>

@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scenario-based information of an AIGC video task.
+ * Information of scenario-based AIGC video tasks.
  *
  * @method AigcVideoSceneInfo getSceneInfo() Obtain Scenario-based image generation parameter configuration.
  * @method void setSceneInfo(AigcVideoSceneInfo $SceneInfo) Set Scenario-based image generation parameter configuration.
  * @method array getFileInfos() Obtain List of input images.
  * @method void setFileInfos(array $FileInfos) Set List of input images.
- * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain Configuration of the output media file for the scenario-based image generation task.
- * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set Configuration of the output media file for the scenario-based image generation task.
+ * @method SceneAigcVideoOutputConfig getOutputConfig() Obtain Output media file configuration for scenario-based image generation tasks.
+ * @method void setOutputConfig(SceneAigcVideoOutputConfig $OutputConfig) Set Output media file configuration for scenario-based image generation tasks.
  */
 class SceneAigcVideoTaskInput extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SceneAigcVideoTaskInput extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var SceneAigcVideoOutputConfig Configuration of the output media file for the scenario-based image generation task.
+     * @var SceneAigcVideoOutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     public $OutputConfig;
 
     /**
      * @param AigcVideoSceneInfo $SceneInfo Scenario-based image generation parameter configuration.
      * @param array $FileInfos List of input images.
-     * @param SceneAigcVideoOutputConfig $OutputConfig Configuration of the output media file for the scenario-based image generation task.
+     * @param SceneAigcVideoOutputConfig $OutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     function __construct()
     {

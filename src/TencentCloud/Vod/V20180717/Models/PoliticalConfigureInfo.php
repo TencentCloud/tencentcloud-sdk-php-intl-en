@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task control parameter for authentication involving inappropriate information
+ * Task control parameters for authentication involving inappropriate information
  *
  * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() Obtain Image recognition involves control parameters for inappropriate information.
  * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) Set Image recognition involves control parameters for inappropriate information.
- * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameters for ASR-based recognition involving inappropriate information.
- * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameters for ASR-based recognition involving inappropriate information.
+ * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameters for inappropriate information involved in ASR-based recognition.
+ * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameters for inappropriate information involved in ASR-based recognition.
  * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameters for text recognition involving inappropriate information.
  * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameters for text recognition involving inappropriate information.
  */
@@ -35,7 +35,7 @@ class PoliticalConfigureInfo extends AbstractModel
     public $ImgReviewInfo;
 
     /**
-     * @var PoliticalAsrReviewTemplateInfo Control parameters for ASR-based recognition involving inappropriate information.
+     * @var PoliticalAsrReviewTemplateInfo Control parameters for inappropriate information involved in ASR-based recognition.
      */
     public $AsrReviewInfo;
 
@@ -46,7 +46,7 @@ class PoliticalConfigureInfo extends AbstractModel
 
     /**
      * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo Image recognition involves control parameters for inappropriate information.
-     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo Control parameters for inappropriate information involved in ASR-based recognition.
      * @param PoliticalOcrReviewTemplateInfo $OcrReviewInfo Control parameters for text recognition involving inappropriate information.
      */
     function __construct()

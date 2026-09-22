@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>FINISH: completed</li>
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method string getFileName() Obtain Media filename.
- * @method void setFileName(string $FileName) Set Media filename.
+ * @method string getFileName() Obtain Media file name.
+ * @method void setFileName(string $FileName) Set Media file name.
  * @method string getFileUrl() Obtain Media file address.
  * @method void setFileUrl(string $FileUrl) Set Media file address.
  * @method MediaMetaData getMetaData() Obtain Metadata of the original video.
@@ -41,10 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTasksPriority() Obtain Priority of the task flow, with a value range of [-10, 10].
  * @method void setTasksPriority(integer $TasksPriority) Set Priority of the task flow, with a value range of [-10, 10].
  * @method string getTasksNotifyMode() Obtain Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
  * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
@@ -71,7 +71,7 @@ class ReduceMediaBitrateTask extends AbstractModel
     public $FileId;
 
     /**
-     * @var string Media filename.
+     * @var string Media file name.
      */
     public $FileName;
 
@@ -97,7 +97,7 @@ class ReduceMediaBitrateTask extends AbstractModel
 
     /**
      * @var string Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      */
     public $TasksNotifyMode;
@@ -118,13 +118,13 @@ class ReduceMediaBitrateTask extends AbstractModel
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      * @param string $FileId Media file ID.
-     * @param string $FileName Media filename.
+     * @param string $FileName Media file name.
      * @param string $FileUrl Media file address.
      * @param MediaMetaData $MetaData Metadata of the original video.
      * @param array $MediaProcessResultSet Bitrate reduction task execution status and results.
      * @param integer $TasksPriority Priority of the task flow, with a value range of [-10, 10].
      * @param string $TasksNotifyMode Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.

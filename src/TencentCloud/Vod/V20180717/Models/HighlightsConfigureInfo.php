@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent highlight task control parameter
  *
- * @method string getSwitch() Obtain Intelligent highlight task switch. Available values:
+ * @method string getSwitch() Obtain Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
- * @method void setSwitch(string $Switch) Set Intelligent highlight task switch. Available values:
+ * @method void setSwitch(string $Switch) Set Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
  */
 class HighlightsConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Intelligent highlight task switch. Available values:
+     * @var string Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Intelligent highlight task switch. Available values:
+     * @param string $Switch Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
      */

@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
  * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
  * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+ * @method string getErrCodeExt() Obtain <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method integer getProgress() Obtain <p>Task progress. Value range: 0–100.</p>
- * @method void setProgress(integer $Progress) Set <p>Task progress. Value range: 0–100.</p>
- * @method CreateAigcAdvancedCustomElementInput getInput() Obtain <p>Create input information for the AIGC custom subject task.</p>
- * @method void setInput(CreateAigcAdvancedCustomElementInput $Input) Set <p>Create input information for the AIGC custom subject task.</p>
+ * @method integer getProgress() Obtain <p>Task progress, in the range of [0,100].</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress, in the range of [0,100].</p>
+ * @method CreateAigcAdvancedCustomElementInput getInput() Obtain <p>Input information for creating a custom AIGC subject task.</p>
+ * @method void setInput(CreateAigcAdvancedCustomElementInput $Input) Set <p>Input information for creating a custom AIGC subject task.</p>
  * @method CreateAigcAdvancedCustomElementOutput getOutput() Obtain <p>Create AIGC custom subject task output information.</p>
  * @method void setOutput(CreateAigcAdvancedCustomElementOutput $Output) Set <p>Create AIGC custom subject task output information.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
@@ -59,7 +59,7 @@ class CreateAigcAdvancedCustomElementTask extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var string <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+     * @var string <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      */
     public $ErrCodeExt;
 
@@ -69,12 +69,12 @@ class CreateAigcAdvancedCustomElementTask extends AbstractModel
     public $Message;
 
     /**
-     * @var integer <p>Task progress. Value range: 0–100.</p>
+     * @var integer <p>Task progress, in the range of [0,100].</p>
      */
     public $Progress;
 
     /**
-     * @var CreateAigcAdvancedCustomElementInput <p>Create input information for the AIGC custom subject task.</p>
+     * @var CreateAigcAdvancedCustomElementInput <p>Input information for creating a custom AIGC subject task.</p>
      */
     public $Input;
 
@@ -97,10 +97,10 @@ class CreateAigcAdvancedCustomElementTask extends AbstractModel
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
      * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+     * @param string $ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      * @param string $Message <p>Error message.</p>
-     * @param integer $Progress <p>Task progress. Value range: 0–100.</p>
-     * @param CreateAigcAdvancedCustomElementInput $Input <p>Create input information for the AIGC custom subject task.</p>
+     * @param integer $Progress <p>Task progress, in the range of [0,100].</p>
+     * @param CreateAigcAdvancedCustomElementInput $Input <p>Input information for creating a custom AIGC subject task.</p>
      * @param CreateAigcAdvancedCustomElementOutput $Output <p>Create AIGC custom subject task output information.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>

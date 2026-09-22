@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameters for mosaic detection in video footage.
+ * Control parameters for video frame mosaic detection.
  *
  * @method string getSwitch() Obtain Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>

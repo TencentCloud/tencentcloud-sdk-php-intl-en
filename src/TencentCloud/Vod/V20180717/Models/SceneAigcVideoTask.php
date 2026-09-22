@@ -18,24 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scenario-based AIGC video task info
+ * Information of the scenario-based AIGC video task.
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getStatus() Obtain Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
  * @method void setStatus(string $Status) Set Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
- * @method void setErrCode(integer $ErrCode) Set Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+ * @method integer getErrCode() Obtain Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+ * @method void setErrCode(integer $ErrCode) Set Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method integer getProgress() Obtain Task progress, value range: [0-100].
- * @method void setProgress(integer $Progress) Set Task progress, value range: [0-100].
- * @method SceneAigcVideoTaskInput getInput() Obtain Input information of the AIGC video generation task.
- * @method void setInput(SceneAigcVideoTaskInput $Input) Set Input information of the AIGC video generation task.
- * @method SceneAigcVideoTaskOutput getOutput() Obtain Output information of the AIGC video task.
- * @method void setOutput(SceneAigcVideoTaskOutput $Output) Set Output information of the AIGC video task.
- * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
- * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+ * @method integer getProgress() Obtain Task progress, with a value range of [0-100].
+ * @method void setProgress(integer $Progress) Set Task progress, with a value range of [0-100].
+ * @method SceneAigcVideoTaskInput getInput() Obtain Input information of an AIGC video task.
+ * @method void setInput(SceneAigcVideoTaskInput $Input) Set Input information of an AIGC video task.
+ * @method SceneAigcVideoTaskOutput getOutput() Obtain Output information of an AIGC video task.
+ * @method void setOutput(SceneAigcVideoTaskOutput $Output) Set Output information of an AIGC video task.
+ * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+ * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  */
@@ -52,7 +52,7 @@ class SceneAigcVideoTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * @var integer Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      */
     public $ErrCode;
 
@@ -62,22 +62,22 @@ class SceneAigcVideoTask extends AbstractModel
     public $Message;
 
     /**
-     * @var integer Task progress, value range: [0-100].
+     * @var integer Task progress, with a value range of [0-100].
      */
     public $Progress;
 
     /**
-     * @var SceneAigcVideoTaskInput Input information of the AIGC video generation task.
+     * @var SceneAigcVideoTaskInput Input information of an AIGC video task.
      */
     public $Input;
 
     /**
-     * @var SceneAigcVideoTaskOutput Output information of the AIGC video task.
+     * @var SceneAigcVideoTaskOutput Output information of an AIGC video task.
      */
     public $Output;
 
     /**
-     * @var string An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @var string Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public $SessionId;
 
@@ -89,12 +89,12 @@ class SceneAigcVideoTask extends AbstractModel
     /**
      * @param string $TaskId Task ID.
      * @param string $Status Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * @param integer $ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      * @param string $Message Error message.
-     * @param integer $Progress Task progress, value range: [0-100].
-     * @param SceneAigcVideoTaskInput $Input Input information of the AIGC video generation task.
-     * @param SceneAigcVideoTaskOutput $Output Output information of the AIGC video task.
-     * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param integer $Progress Task progress, with a value range of [0-100].
+     * @param SceneAigcVideoTaskInput $Input Input information of an AIGC video task.
+     * @param SceneAigcVideoTaskOutput $Output Output information of an AIGC video task.
+     * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     function __construct()

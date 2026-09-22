@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Playback statistics file information
  *
- * @method string getDate() Obtain Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setDate(string $Date) Set Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUrl() Obtain URL address of the playback statistics file. The content of the playback statistics file is:
+ * @method string getDate() Obtain Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setDate(string $Date) Set Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUrl() Obtain URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>
 <li> host_name	Domain name.</li>
- * @method void setUrl(string $Url) Set URL address of the playback statistics file. The content of the playback statistics file is:
+ * @method void setUrl(string $Url) Set URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>
@@ -48,18 +48,18 @@ use TencentCloud\Common\AbstractModel;
 class PlayStatFileInfo extends AbstractModel
 {
     /**
-     * @var string Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $Date;
 
     /**
-     * @var string URL address of the playback statistics file. The content of the playback statistics file is:
+     * @var string URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>
@@ -68,14 +68,14 @@ class PlayStatFileInfo extends AbstractModel
     public $Url;
 
     /**
-     * @param string $Date Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $Url URL address of the playback statistics file. The content of the playback statistics file is:
+     * @param string $Date Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $Url URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>

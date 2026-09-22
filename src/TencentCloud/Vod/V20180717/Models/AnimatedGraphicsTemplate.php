@@ -18,15 +18,15 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rotating image template details.
+ * Rotating image template description.
  *
  * @method integer getDefinition() Obtain Unique identifier for rotation diagram template.
  * @method void setDefinition(integer $Definition) Set Unique identifier for rotation diagram template.
  * @method string getType() Obtain Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  * @method void setType(string $Type) Set Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
  * @method string getName() Obtain Rotating image template name.
  * @method void setName(string $Name) Set Rotating image template name.
@@ -57,11 +57,11 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
  * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
  * @method string getFormat() Obtain Animated image file format.
@@ -84,7 +84,7 @@ class AnimatedGraphicsTemplate extends AbstractModel
 
     /**
      * @var string Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public $Type;
@@ -121,7 +121,7 @@ Default value: 0.
 
     /**
      * @var string Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      */
@@ -155,7 +155,7 @@ Default value: open.
     /**
      * @param integer $Definition Unique identifier for rotation diagram template.
      * @param string $Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      * @param string $Name Rotating image template name.
      * @param string $Comment Animated image template description information.
@@ -172,7 +172,7 @@ Default value: 0.
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
      * @param string $ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      * @param string $Format Animated image file format.

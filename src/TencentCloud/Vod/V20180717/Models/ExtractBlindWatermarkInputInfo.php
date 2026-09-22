@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Extract blind watermark input information
+ * Extraction blind watermark input information
  *
  * @method string getType() Obtain Digital watermark extraction input type. Available values: <li>FILEID: file media asset ID;</li><li>URL: file URL;</li>
  * @method void setType(string $Type) Set Digital watermark extraction input type. Available values: <li>FILEID: file media asset ID;</li><li>URL: file URL;</li>
- * @method string getFileId() Obtain Media asset file ID to be extracted
- * @method void setFileId(string $FileId) Set Media asset file ID to be extracted
+ * @method string getFileId() Obtain Media asset file ID to extract
+ * @method void setFileId(string $FileId) Set Media asset file ID to extract
  * @method string getUrl() Obtain url of the video file to extract
  * @method void setUrl(string $Url) Set url of the video file to extract
  */
@@ -35,7 +35,7 @@ class ExtractBlindWatermarkInputInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string Media asset file ID to be extracted
+     * @var string Media asset file ID to extract
      */
     public $FileId;
 
@@ -46,7 +46,7 @@ class ExtractBlindWatermarkInputInfo extends AbstractModel
 
     /**
      * @param string $Type Digital watermark extraction input type. Available values: <li>FILEID: file media asset ID;</li><li>URL: file URL;</li>
-     * @param string $FileId Media asset file ID to be extracted
+     * @param string $FileId Media asset file ID to extract
      * @param string $Url url of the video file to extract
      */
     function __construct()

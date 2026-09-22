@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseStreamingManifest request structure.
  *
- * @method string getMediaManifestContent() Obtain <p>Content of the index file to be parsed.</p>
- * @method void setMediaManifestContent(string $MediaManifestContent) Set <p>Content of the index file to be parsed.</p>
+ * @method string getMediaManifestContent() Obtain <p>Index file content to be parsed.</p>
+ * @method void setMediaManifestContent(string $MediaManifestContent) Set <p>Index file content to be parsed.</p>
  * @method string getManifestType() Obtain <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
  * @method void setManifestType(string $ManifestType) Set <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
  */
 class ParseStreamingManifestRequest extends AbstractModel
 {
     /**
-     * @var string <p>Content of the index file to be parsed.</p>
+     * @var string <p>Index file content to be parsed.</p>
      */
     public $MediaManifestContent;
 
@@ -38,7 +38,7 @@ class ParseStreamingManifestRequest extends AbstractModel
     public $ManifestType;
 
     /**
-     * @param string $MediaManifestContent <p>Content of the index file to be parsed.</p>
+     * @param string $MediaManifestContent <p>Index file content to be parsed.</p>
      * @param string $ManifestType <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
      */
     function __construct()

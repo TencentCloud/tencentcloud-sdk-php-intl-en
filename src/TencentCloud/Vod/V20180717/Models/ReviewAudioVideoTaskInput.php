@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input for the audio/video moderation task.
+ * Input of the audio/video moderation task.
  *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method integer getDefinition() Obtain Audio/video moderation template ID.
- * @method void setDefinition(integer $Definition) Set Audio/video moderation template ID.
+ * @method integer getDefinition() Obtain Audio/Video moderation template ID.
+ * @method void setDefinition(integer $Definition) Set Audio/Video moderation template ID.
  * @method array getReviewContents() Obtain Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
@@ -39,7 +39,7 @@ class ReviewAudioVideoTaskInput extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer Audio/video moderation template ID.
+     * @var integer Audio/Video moderation template ID.
      */
     public $Definition;
 
@@ -52,7 +52,7 @@ class ReviewAudioVideoTaskInput extends AbstractModel
 
     /**
      * @param string $FileId Media file ID.
-     * @param integer $Definition Audio/video moderation template ID.
+     * @param integer $Definition Audio/Video moderation template ID.
      * @param array $ReviewContents Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>

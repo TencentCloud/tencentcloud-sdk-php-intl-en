@@ -18,22 +18,22 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC video conversion task information.
+ * AIGC video conversion task info
  *
  * @method string getTaskId() Obtain <p>Task ID.</p>
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  * @method string getStatus() Obtain <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
  * @method void setStatus(string $Status) Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
- * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
- * @method string getErrCodeExt() Obtain <p>Extension error code.</p>
- * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Extension error code.</p>
+ * @method integer getErrCode() Obtain <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+ * @method string getErrCodeExt() Obtain <p>Expansion error code.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Expansion error code.</p>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method integer getProgress() Obtain <p>Task progress. Value ranges from 0 to 100.</p>
- * @method void setProgress(integer $Progress) Set <p>Task progress. Value ranges from 0 to 100.</p>
- * @method AigcVideoRedrawTaskInput getInput() Obtain <p>Input information of the AIGC video redrawing task.</p>
- * @method void setInput(AigcVideoRedrawTaskInput $Input) Set <p>Input information of the AIGC video redrawing task.</p>
+ * @method integer getProgress() Obtain <p>Task progress. Value range: [0-100].</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress. Value range: [0-100].</p>
+ * @method AigcVideoRedrawTaskInput getInput() Obtain <p>Input information of the AIGC video conversion task.</p>
+ * @method void setInput(AigcVideoRedrawTaskInput $Input) Set <p>Input information of the AIGC video conversion task.</p>
  * @method AigcVideoRedrawTaskOutput getOutput() Obtain <p>Output information of the AIGC video conversion task.</p>
  * @method void setOutput(AigcVideoRedrawTaskOutput $Output) Set <p>Output information of the AIGC video conversion task.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
@@ -54,12 +54,12 @@ class AigcVideoRedrawTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * @var integer <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string <p>Extension error code.</p>
+     * @var string <p>Expansion error code.</p>
      */
     public $ErrCodeExt;
 
@@ -69,12 +69,12 @@ class AigcVideoRedrawTask extends AbstractModel
     public $Message;
 
     /**
-     * @var integer <p>Task progress. Value ranges from 0 to 100.</p>
+     * @var integer <p>Task progress. Value range: [0-100].</p>
      */
     public $Progress;
 
     /**
-     * @var AigcVideoRedrawTaskInput <p>Input information of the AIGC video redrawing task.</p>
+     * @var AigcVideoRedrawTaskInput <p>Input information of the AIGC video conversion task.</p>
      */
     public $Input;
 
@@ -96,11 +96,11 @@ class AigcVideoRedrawTask extends AbstractModel
     /**
      * @param string $TaskId <p>Task ID.</p>
      * @param string $Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
-     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param string $ErrCodeExt <p>Extension error code.</p>
+     * @param integer $ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+     * @param string $ErrCodeExt <p>Expansion error code.</p>
      * @param string $Message <p>Error message.</p>
-     * @param integer $Progress <p>Task progress. Value ranges from 0 to 100.</p>
-     * @param AigcVideoRedrawTaskInput $Input <p>Input information of the AIGC video redrawing task.</p>
+     * @param integer $Progress <p>Task progress. Value range: [0-100].</p>
+     * @param AigcVideoRedrawTaskInput $Input <p>Input information of the AIGC video conversion task.</p>
      * @param AigcVideoRedrawTaskOutput $Output <p>Output information of the AIGC video conversion task.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>

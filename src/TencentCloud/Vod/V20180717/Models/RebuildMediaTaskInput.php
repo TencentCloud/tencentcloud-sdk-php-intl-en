@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method float getStartTimeOffset() Obtain Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+ * @method float getStartTimeOffset() Obtain Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
  * @method float getEndTimeOffset() Obtain End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End offset time, in seconds. Not filled indicates cutting to the end of the video.
  * @method integer getDefinition() Obtain Audio and video quality rebirth template number.
@@ -63,7 +63,7 @@ class RebuildMediaTaskInput extends AbstractModel
     public $FileId;
 
     /**
-     * @var float Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * @var float Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
      */
     public $StartTimeOffset;
 
@@ -144,7 +144,7 @@ class RebuildMediaTaskInput extends AbstractModel
 
     /**
      * @param string $FileId Media file ID.
-     * @param float $StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * @param float $StartTimeOffset Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
      * @param float $EndTimeOffset End offset time, in seconds. Not filled indicates cutting to the end of the video.
      * @param integer $Definition Audio and video quality rebirth template number.
      * @param RepairInfo $RepairInfo Image quality restoration control parameters.

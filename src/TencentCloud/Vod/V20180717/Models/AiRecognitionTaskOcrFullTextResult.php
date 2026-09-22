@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiRecognitionTaskOcrFullTextResultInput $Input) Set Input information on the full text recognition task.
  * @method AiRecognitionTaskOcrFullTextResultOutput getOutput() Obtain Output information on the full text recognition task.
  * @method void setOutput(AiRecognitionTaskOcrFullTextResultOutput $Output) Set Output information on the full text recognition task.
- * @method integer getProgress() Obtain Progress of the full text recognition task, in the range of [0,100].
- * @method void setProgress(integer $Progress) Set Progress of the full text recognition task, in the range of [0,100].
- * @method string getBeginProcessTime() Obtain Full text recognition task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Full text recognition task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFinishTime() Obtain Full text recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setFinishTime(string $FinishTime) Set Full text recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getProgress() Obtain Progress of the full text recognition task, with a value range of [0-100].
+ * @method void setProgress(integer $Progress) Set Progress of the full text recognition task, with a value range of [0-100].
+ * @method string getBeginProcessTime() Obtain Full text recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Full text recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Full text recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Full text recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiRecognitionTaskOcrFullTextResult extends AbstractModel
 {
@@ -72,17 +72,17 @@ class AiRecognitionTaskOcrFullTextResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer Progress of the full text recognition task, in the range of [0,100].
+     * @var integer Progress of the full text recognition task, with a value range of [0-100].
      */
     public $Progress;
 
     /**
-     * @var string Full text recognition task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Full text recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Full text recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Full text recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
@@ -93,9 +93,9 @@ class AiRecognitionTaskOcrFullTextResult extends AbstractModel
      * @param string $Message Error message.
      * @param AiRecognitionTaskOcrFullTextResultInput $Input Input information on the full text recognition task.
      * @param AiRecognitionTaskOcrFullTextResultOutput $Output Output information on the full text recognition task.
-     * @param integer $Progress Progress of the full text recognition task, in the range of [0,100].
-     * @param string $BeginProcessTime Full text recognition task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FinishTime Full text recognition task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $Progress Progress of the full text recognition task, with a value range of [0-100].
+     * @param string $BeginProcessTime Full text recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Full text recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

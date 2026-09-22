@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Blur: fuzzily process an image.</li>
  * @method ImageScale getScale() Obtain Image thumbnail processing. This parameter is valid only when Type is Scale.
  * @method void setScale(ImageScale $Scale) Set Image thumbnail processing. This parameter is valid only when Type is Scale.
- * @method ImageCenterCut getCenterCut() Obtain Image cropping. Valid only when Type is CenterCut.
- * @method void setCenterCut(ImageCenterCut $CenterCut) Set Image cropping. Valid only when Type is CenterCut.
+ * @method ImageCenterCut getCenterCut() Obtain Image crop processing. Valid only when Type is CenterCut.
+ * @method void setCenterCut(ImageCenterCut $CenterCut) Set Image crop processing. Valid only when Type is CenterCut.
  * @method ImageBlur getBlur() Obtain Blur the image. This parameter is valid only when Type is Blur.
  * @method void setBlur(ImageBlur $Blur) Set Blur the image. This parameter is valid only when Type is Blur.
  */
@@ -51,7 +51,7 @@ class ImageOperation extends AbstractModel
     public $Scale;
 
     /**
-     * @var ImageCenterCut Image cropping. Valid only when Type is CenterCut.
+     * @var ImageCenterCut Image crop processing. Valid only when Type is CenterCut.
      */
     public $CenterCut;
 
@@ -66,7 +66,7 @@ class ImageOperation extends AbstractModel
 <li>CenterCut: image cropping;</li>
 <li>Blur: fuzzily process an image.</li>
      * @param ImageScale $Scale Image thumbnail processing. This parameter is valid only when Type is Scale.
-     * @param ImageCenterCut $CenterCut Image cropping. Valid only when Type is CenterCut.
+     * @param ImageCenterCut $CenterCut Image crop processing. Valid only when Type is CenterCut.
      * @param ImageBlur $Blur Blur the image. This parameter is valid only when Type is Blur.
      */
     function __construct()

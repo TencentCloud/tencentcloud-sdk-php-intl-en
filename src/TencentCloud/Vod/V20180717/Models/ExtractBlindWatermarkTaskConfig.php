@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Extract the configuration of a video transcoding digital watermarking task
+ * Extract the digital watermark task configuration for video transcoding
  *
  * @method integer getSegmentDuration() Obtain Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.

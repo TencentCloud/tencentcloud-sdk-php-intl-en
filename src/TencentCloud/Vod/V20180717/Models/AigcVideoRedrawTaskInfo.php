@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Character parameter information for AIGC video conversion.
+ * AIGC video conversion figure parameter information.
  *
  * @method string getStyle() Obtain <p>For description of the style. Limited to 50 characters.</p>
  * @method void setStyle(string $Style) Set <p>For description of the style. Limited to 50 characters.</p>

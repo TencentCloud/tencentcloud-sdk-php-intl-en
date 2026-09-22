@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Image processing template name.
  * @method string getComment() Obtain Template description information.
  * @method void setComment(string $Comment) Set Template description information.
- * @method array getOperations() Obtain Array of image processing operations. Operations are performed in array order.
+ * @method array getOperations() Obtain Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
- * @method void setOperations(array $Operations) Set Array of image processing operations. Operations are performed in array order.
+ * @method void setOperations(array $Operations) Set Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
  * @method string getCreateTime() Obtain Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -64,7 +64,7 @@ class ImageProcessingTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var array Array of image processing operations. Operations are performed in array order.
+     * @var array Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
      */
     public $Operations;
@@ -81,7 +81,7 @@ class ImageProcessingTemplate extends AbstractModel
 <li>Custom: custom template.</li>
      * @param string $Name Image processing template name.
      * @param string $Comment Template description information.
-     * @param array $Operations Array of image processing operations. Operations are performed in array order.
+     * @param array $Operations Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
      * @param string $CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */

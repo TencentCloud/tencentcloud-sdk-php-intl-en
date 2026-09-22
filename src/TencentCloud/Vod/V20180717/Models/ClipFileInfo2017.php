@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video clipping result file info (2017)
+ * Video clipping result file information (2017 version)
  *
  * @method integer getErrCode() Obtain Error code.
 <li>0: success;</li>

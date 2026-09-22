@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlindWatermarkTemplates request structure.
  *
- * @method integer getSubAppId() Obtain VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
- * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
+ * @method integer getSubAppId() Obtain VOD application ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.
+ * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.
  * @method array getDefinitions() Obtain Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
  * @method void setDefinitions(array $Definitions) Set Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
  * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBlindWatermarkTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
+     * @var integer VOD application ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.
      */
     public $SubAppId;
 
@@ -65,7 +65,7 @@ class DescribeBlindWatermarkTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId VOD application ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.
+     * @param integer $SubAppId VOD application ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.
      * @param array $Definitions Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
      * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
      * @param integer $Offset Pagination offset. Default value: 0.

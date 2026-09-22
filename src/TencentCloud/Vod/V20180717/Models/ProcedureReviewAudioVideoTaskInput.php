@@ -18,18 +18,18 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type for audio/video moderation in a task flow template.
+ * Input parameter type for audio/video moderation in the task flow template.
  *
  * @method integer getDefinition() Obtain Moderation template.
  * @method void setDefinition(integer $Definition) Set Moderation template.
  * @method array getReviewContents() Obtain Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is reviewed by default.
  * @method void setReviewContents(array $ReviewContents) Set Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is reviewed by default.
  */
 class ProcedureReviewAudioVideoTaskInput extends AbstractModel
 {
@@ -42,7 +42,7 @@ class ProcedureReviewAudioVideoTaskInput extends AbstractModel
      * @var array Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is reviewed by default.
      */
     public $ReviewContents;
 
@@ -51,7 +51,7 @@ If this parameter is not specified or is set to an empty array, Media will be re
      * @param array $ReviewContents Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is reviewed by default.
      */
     function __construct()
     {

@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Watermark period configuration.
  *
- * @method float getStartTime() Obtain Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
- * @method void setStartTime(float $StartTime) Set Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
- * @method float getDisplayDuration() Obtain Duration of watermark display in a watermark cycle, in seconds.
- * @method void setDisplayDuration(float $DisplayDuration) Set Duration of watermark display in a watermark cycle, in seconds.
+ * @method float getStartTime() Obtain Playback time point when the watermark first appears in the video. Unit: second.
+ * @method void setStartTime(float $StartTime) Set Playback time point when the watermark first appears in the video. Unit: second.
+ * @method float getDisplayDuration() Obtain Duration of watermark display within a watermark cycle, in seconds.
+ * @method void setDisplayDuration(float $DisplayDuration) Set Duration of watermark display within a watermark cycle, in seconds.
  * @method float getCycleDuration() Obtain Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
  * @method void setCycleDuration(float $CycleDuration) Set Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
  */
 class WatermarkCycleConfigForUpdate extends AbstractModel
 {
     /**
-     * @var float Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+     * @var float Playback time point when the watermark first appears in the video. Unit: second.
      */
     public $StartTime;
 
     /**
-     * @var float Duration of watermark display in a watermark cycle, in seconds.
+     * @var float Duration of watermark display within a watermark cycle, in seconds.
      */
     public $DisplayDuration;
 
     /**
      * @var float Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     public $CycleDuration;
 
     /**
-     * @param float $StartTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
-     * @param float $DisplayDuration Duration of watermark display in a watermark cycle, in seconds.
+     * @param float $StartTime Playback time point when the watermark first appears in the video. Unit: second.
+     * @param float $DisplayDuration Duration of watermark display within a watermark cycle, in seconds.
      * @param float $CycleDuration Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     function __construct()
     {

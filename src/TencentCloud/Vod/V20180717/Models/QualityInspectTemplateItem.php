@@ -30,34 +30,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) Set <p>Template description.</p>
  * @method array getConfigs() Obtain <p>Configuration parameters for audio and video quality detection.</p>
  * @method void setConfigs(array $Configs) Set <p>Configuration parameters for audio and video quality detection.</p>
- * @method QualityInspectStrategy getStrategy() Obtain <p>Spot check policy for audio and video quality detection.</p>
- * @method void setStrategy(QualityInspectStrategy $Strategy) Set <p>Spot check policy for audio and video quality detection.</p>
+ * @method QualityInspectStrategy getStrategy() Obtain <p>Spot check policy for audio and video quality inspection.</p>
+ * @method void setStrategy(QualityInspectStrategy $Strategy) Set <p>Spot check policy for audio and video quality inspection.</p>
  * @method string getCreateTime() Obtain <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method string getUpdateTime() Obtain <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
- * @method void setUpdateTime(string $UpdateTime) Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method string getUpdateTime() Obtain <p>Template last modified time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Template last modified time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
  * @method float getScreenshotInterval() Obtain <p>(Not recommended. Use Configs as an alternative.) Frame interception interval in seconds.</p>
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set <p>(Not recommended. Use Configs as an alternative.) Frame interception interval in seconds.</p>
- * @method JitterConfigureInfo getJitterConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
- * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
- * @method BlurConfigureInfo getBlurConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
- * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
- * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for detecting low-light and overexposure in video frames.</p>
- * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for detecting low-light and overexposure in video frames.</p>
- * @method CrashScreenConfigureInfo getCrashScreenConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
- * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
- * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() Obtain <p>Control parameters for detecting video picture black edge, white edge, black screen, and white screen.</p>
- * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) Set <p>Control parameters for detecting video picture black edge, white edge, black screen, and white screen.</p>
- * @method NoiseConfigureInfo getNoiseConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
- * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+ * @method JitterConfigureInfo getJitterConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame jitter and ghosting detection.</p>
+ * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame jitter and ghosting detection.</p>
+ * @method BlurConfigureInfo getBlurConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+ * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+ * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+ * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+ * @method CrashScreenConfigureInfo getCrashScreenConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for video footage distortion detection.</p>
+ * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video footage distortion detection.</p>
+ * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() Obtain <p>Control parameters for detecting black edges, white edges, black screen, and white screen in video picture.</p>
+ * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) Set <p>Control parameters for detecting black edges, white edges, black screen, and white screen in video picture.</p>
+ * @method NoiseConfigureInfo getNoiseConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame noise detection.</p>
+ * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame noise detection.</p>
  * @method MosaicConfigureInfo getMosaicConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
  * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
- * @method QRCodeConfigureInfo getQRCodeConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
- * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+ * @method QRCodeConfigureInfo getQRCodeConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
+ * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
  * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
  * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
- * @method VoiceConfigureInfo getVoiceConfigure() Obtain <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
- * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) Set <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+ * @method VoiceConfigureInfo getVoiceConfigure() Obtain <p>(Not recommended. Use Configs as an alternative.) Control parameters for audio (mute, bass, pop) detection.</p>
+ * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for audio (mute, bass, pop) detection.</p>
  */
 class QualityInspectTemplateItem extends AbstractModel
 {
@@ -87,7 +87,7 @@ class QualityInspectTemplateItem extends AbstractModel
     public $Configs;
 
     /**
-     * @var QualityInspectStrategy <p>Spot check policy for audio and video quality detection.</p>
+     * @var QualityInspectStrategy <p>Spot check policy for audio and video quality inspection.</p>
      */
     public $Strategy;
 
@@ -97,7 +97,7 @@ class QualityInspectTemplateItem extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @var string <p>Template last modified time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public $UpdateTime;
 
@@ -107,32 +107,32 @@ class QualityInspectTemplateItem extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @var JitterConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
+     * @var JitterConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame jitter and ghosting detection.</p>
      */
     public $JitterConfigure;
 
     /**
-     * @var BlurConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+     * @var BlurConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
      */
     public $BlurConfigure;
 
     /**
-     * @var AbnormalLightingConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for detecting low-light and overexposure in video frames.</p>
+     * @var AbnormalLightingConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
      */
     public $AbnormalLightingConfigure;
 
     /**
-     * @var CrashScreenConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
+     * @var CrashScreenConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for video footage distortion detection.</p>
      */
     public $CrashScreenConfigure;
 
     /**
-     * @var BlackWhiteEdgeConfigureInfo <p>Control parameters for detecting video picture black edge, white edge, black screen, and white screen.</p>
+     * @var BlackWhiteEdgeConfigureInfo <p>Control parameters for detecting black edges, white edges, black screen, and white screen in video picture.</p>
      */
     public $BlackWhiteEdgeConfigure;
 
     /**
-     * @var NoiseConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+     * @var NoiseConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame noise detection.</p>
      */
     public $NoiseConfigure;
 
@@ -142,7 +142,7 @@ class QualityInspectTemplateItem extends AbstractModel
     public $MosaicConfigure;
 
     /**
-     * @var QRCodeConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+     * @var QRCodeConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
      */
     public $QRCodeConfigure;
 
@@ -152,7 +152,7 @@ class QualityInspectTemplateItem extends AbstractModel
     public $QualityEvaluationConfigure;
 
     /**
-     * @var VoiceConfigureInfo <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+     * @var VoiceConfigureInfo <p>(Not recommended. Use Configs as an alternative.) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     public $VoiceConfigure;
 
@@ -162,20 +162,20 @@ class QualityInspectTemplateItem extends AbstractModel
      * @param string $Name <p>Template name.</p>
      * @param string $Comment <p>Template description.</p>
      * @param array $Configs <p>Configuration parameters for audio and video quality detection.</p>
-     * @param QualityInspectStrategy $Strategy <p>Spot check policy for audio and video quality detection.</p>
+     * @param QualityInspectStrategy $Strategy <p>Spot check policy for audio and video quality inspection.</p>
      * @param string $CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param string $UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param string $UpdateTime <p>Template last modified time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      * @param float $ScreenshotInterval <p>(Not recommended. Use Configs as an alternative.) Frame interception interval in seconds.</p>
-     * @param JitterConfigureInfo $JitterConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
-     * @param BlurConfigureInfo $BlurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
-     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure <p>(Not recommended. Use Configs instead.) Control parameters for detecting low-light and overexposure in video frames.</p>
-     * @param CrashScreenConfigureInfo $CrashScreenConfigure <p>(Not recommended. Use Configs instead.) Control parameters for screen glitch detection in video footage.</p>
-     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure <p>Control parameters for detecting video picture black edge, white edge, black screen, and white screen.</p>
-     * @param NoiseConfigureInfo $NoiseConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+     * @param JitterConfigureInfo $JitterConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame jitter and ghosting detection.</p>
+     * @param BlurConfigureInfo $BlurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+     * @param CrashScreenConfigureInfo $CrashScreenConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video footage distortion detection.</p>
+     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure <p>Control parameters for detecting black edges, white edges, black screen, and white screen in video picture.</p>
+     * @param NoiseConfigureInfo $NoiseConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame noise detection.</p>
      * @param MosaicConfigureInfo $MosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
-     * @param QRCodeConfigureInfo $QRCodeConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+     * @param QRCodeConfigureInfo $QRCodeConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
      * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
-     * @param VoiceConfigureInfo $VoiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+     * @param VoiceConfigureInfo $VoiceConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     function __construct()
     {

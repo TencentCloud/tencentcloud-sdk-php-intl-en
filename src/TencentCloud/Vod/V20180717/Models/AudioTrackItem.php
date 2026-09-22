@@ -20,70 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio segment information on the audio track.
  *
- * @method string getSourceMedia() Obtain Media material source of the audio clip, which can be:
+ * @method string getSourceMedia() Obtain Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
- * @method void setSourceMedia(string $SourceMedia) Set Media material source of the audio clip, which can be:
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+ * @method void setSourceMedia(string $SourceMedia) Set Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
- * @method float getSourceMediaStartTime() Obtain The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
- * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
- * @method float getDuration() Obtain Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
- * @method void setDuration(float $Duration) Set Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
- * @method float getTargetDuration() Obtain Target duration of the audio clip in seconds.
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+ * @method float getSourceMediaStartTime() Obtain Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
+ * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
+ * @method float getDuration() Obtain Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
+ * @method void setDuration(float $Duration) Set Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
+ * @method float getTargetDuration() Obtain Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
- * @method void setTargetDuration(float $TargetDuration) Set Target duration of the audio clip in seconds.
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
+ * @method void setTargetDuration(float $TargetDuration) Set Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
- * @method array getAudioOperations() Obtain Operation performed on the audio clip, such as volume adjustment.
- * @method void setAudioOperations(array $AudioOperations) Set Operation performed on the audio clip, such as volume adjustment.
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
+ * @method array getAudioOperations() Obtain Operation performed on the audio clip, for example, audio volume adjustment.
+ * @method void setAudioOperations(array $AudioOperations) Set Operation performed on the audio clip, for example, audio volume adjustment.
  */
 class AudioTrackItem extends AbstractModel
 {
     /**
-     * @var string Media material source of the audio clip, which can be:
+     * @var string Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public $SourceMedia;
 
     /**
-     * @var float The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+     * @var float Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
      */
     public $SourceMediaStartTime;
 
     /**
-     * @var float Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+     * @var float Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
      */
     public $Duration;
 
     /**
-     * @var float Target duration of the audio clip in seconds.
+     * @var float Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
      */
     public $TargetDuration;
 
     /**
-     * @var array Operation performed on the audio clip, such as volume adjustment.
+     * @var array Operation performed on the audio clip, for example, audio volume adjustment.
      */
     public $AudioOperations;
 
     /**
-     * @param string $SourceMedia Media material source of the audio clip, which can be:
+     * @param string $SourceMedia Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
-     * @param float $SourceMediaStartTime The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
-     * @param float $Duration Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
-     * @param float $TargetDuration Target duration of the audio clip in seconds.
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+     * @param float $SourceMediaStartTime Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
+     * @param float $Duration Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
+     * @param float $TargetDuration Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
-     * @param array $AudioOperations Operation performed on the audio clip, such as volume adjustment.
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
+     * @param array $AudioOperations Operation performed on the audio clip, for example, audio volume adjustment.
      */
     function __construct()
     {

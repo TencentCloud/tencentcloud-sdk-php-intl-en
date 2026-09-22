@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWordSamples request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method array getUsages() Obtain <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
  * @method void setUsages(array $Usages) Set <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
  * @method array getKeywords() Obtain Keyword filtering conditions. Array length limit: 100 words.
  * @method void setKeywords(array $Keywords) Set Keyword filtering conditions. Array length limit: 100 words.
  * @method array getTags() Obtain Tag filtering condition. Array length limit: 20 words.
@@ -52,20 +52,20 @@ Multiple selections allowed. The relationship between elements is "or", meaning 
 class DescribeWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
      * @var array <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
      */
     public $Usages;
 
@@ -90,16 +90,16 @@ Multiple selections allowed. The relationship between elements is "or", meaning 
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param array $Usages <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
      * @param array $Keywords Keyword filtering conditions. Array length limit: 100 words.
      * @param array $Tags Tag filtering condition. Array length limit: 20 words.
      * @param integer $Offset Pagination offset. Default value: 0.

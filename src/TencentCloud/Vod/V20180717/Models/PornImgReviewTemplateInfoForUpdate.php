@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task control parameter for image recognition involving offensive content.
+ * Image recognition involves task control parameters for offensive information.
  *
- * @method string getSwitch() Obtain <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
- * @method void setSwitch(string $Switch) Set <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
- * @method array getLabelSet() Obtain <p>Image recognition filter tags for offensive content. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
- * @method void setLabelSet(array $LabelSet) Set <p>Image recognition filter tags for offensive content. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
- * @method integer getBlockConfidence() Obtain <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.</p>
- * @method void setBlockConfidence(integer $BlockConfidence) Set <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.</p>
- * @method integer getReviewConfidence() Obtain <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.</p>
- * @method void setReviewConfidence(integer $ReviewConfidence) Set <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.</p>
+ * @method string getSwitch() Obtain <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Turn on the task for image recognition involving offensive content;</li><li>OFF: Turn off the task for image recognition involving offensive content.</li>
+ * @method void setSwitch(string $Switch) Set <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Turn on the task for image recognition involving offensive content;</li><li>OFF: Turn off the task for image recognition involving offensive content.</li>
+ * @method array getLabelSet() Obtain <p>Filter tags for offensive content involved in image recognition. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
+ * @method void setLabelSet(array $LabelSet) Set <p>Filter tags for offensive content involved in image recognition. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
+ * @method integer getBlockConfidence() Obtain <p>Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.</p>
+ * @method void setBlockConfidence(integer $BlockConfidence) Set <p>Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.</p>
+ * @method integer getReviewConfidence() Obtain <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.</p>
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.</p>
  */
 class PornImgReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
+     * @var string <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Turn on the task for image recognition involving offensive content;</li><li>OFF: Turn off the task for image recognition involving offensive content.</li>
      */
     public $Switch;
 
     /**
-     * @var array <p>Image recognition filter tags for offensive content. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
+     * @var array <p>Filter tags for offensive content involved in image recognition. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
      */
     public $LabelSet;
 
     /**
-     * @var integer <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.</p>
+     * @var integer <p>Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.</p>
      */
     public $BlockConfidence;
 
     /**
-     * @var integer <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.</p>
+     * @var integer <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.</p>
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
-     * @param array $LabelSet <p>Image recognition filter tags for offensive content. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
-     * @param integer $BlockConfidence <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.</p>
-     * @param integer $ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.</p>
+     * @param string $Switch <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Turn on the task for image recognition involving offensive content;</li><li>OFF: Turn off the task for image recognition involving offensive content.</li>
+     * @param array $LabelSet <p>Filter tags for offensive content involved in image recognition. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
+     * @param integer $BlockConfidence <p>Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.</p>
+     * @param integer $ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.</p>
      */
     function __construct()
     {

@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
  * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskClassificationInput getInput() Obtain Intelligent classification task input.
  * @method void setInput(AiAnalysisTaskClassificationInput $Input) Set Intelligent classification task input.
- * @method AiAnalysisTaskClassificationOutput getOutput() Obtain Output of intelligent categorization tasks.
- * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) Set Output of intelligent categorization tasks.
- * @method integer getProgress() Obtain Progress of the intelligent classification task. Value range: 0–100.
- * @method void setProgress(integer $Progress) Set Progress of the intelligent classification task. Value range: 0–100.
- * @method string getBeginProcessTime() Obtain Intelligent classification task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Intelligent classification task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFinishTime() Obtain Task completion time of intelligent classification in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setFinishTime(string $FinishTime) Set Task completion time of intelligent classification in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method AiAnalysisTaskClassificationOutput getOutput() Obtain Output of the intelligent classification task.
+ * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) Set Output of the intelligent classification task.
+ * @method integer getProgress() Obtain Intelligent categorization task progress, in the range of [0,100].
+ * @method void setProgress(integer $Progress) Set Intelligent categorization task progress, in the range of [0,100].
+ * @method string getBeginProcessTime() Obtain Intelligent categorization task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Intelligent categorization task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getFinishTime() Obtain Task completion time of intelligent categorization in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setFinishTime(string $FinishTime) Set Task completion time of intelligent categorization in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class AiAnalysisTaskClassificationResult extends AbstractModel
 {
@@ -47,7 +47,7 @@ class AiAnalysisTaskClassificationResult extends AbstractModel
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public $ErrCodeExt;
 
@@ -67,35 +67,35 @@ class AiAnalysisTaskClassificationResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskClassificationOutput Output of intelligent categorization tasks.
+     * @var AiAnalysisTaskClassificationOutput Output of the intelligent classification task.
      */
     public $Output;
 
     /**
-     * @var integer Progress of the intelligent classification task. Value range: 0–100.
+     * @var integer Intelligent categorization task progress, in the range of [0,100].
      */
     public $Progress;
 
     /**
-     * @var string Intelligent classification task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Intelligent categorization task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Task completion time of intelligent classification in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Task completion time of intelligent categorization in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $FinishTime;
 
     /**
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiAnalysisTaskClassificationInput $Input Intelligent classification task input.
-     * @param AiAnalysisTaskClassificationOutput $Output Output of intelligent categorization tasks.
-     * @param integer $Progress Progress of the intelligent classification task. Value range: 0–100.
-     * @param string $BeginProcessTime Intelligent classification task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FinishTime Task completion time of intelligent classification in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param AiAnalysisTaskClassificationOutput $Output Output of the intelligent classification task.
+     * @param integer $Progress Intelligent categorization task progress, in the range of [0,100].
+     * @param string $BeginProcessTime Intelligent categorization task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $FinishTime Task completion time of intelligent categorization in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

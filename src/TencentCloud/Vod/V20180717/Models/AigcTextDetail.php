@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC-generated text detail
+ * AIGC-generated details
  *
  * @method integer getPageSize() Obtain <p>Entries per page</p>
  * @method void setPageSize(integer $PageSize) Set <p>Entries per page</p>
  * @method string getScrollToken() Obtain <p>scroll_token returned in the previous page response, used for turning to the next page</p>
  * @method void setScrollToken(string $ScrollToken) Set <p>scroll_token returned in the previous page response, used for turning to the next page</p>
- * @method array getData() Obtain <p>Text generation details</p>
- * @method void setData(array $Data) Set <p>Text generation details</p>
+ * @method array getData() Obtain <p>Detailed data for text generation</p>
+ * @method void setData(array $Data) Set <p>Detailed data for text generation</p>
  */
 class AigcTextDetail extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AigcTextDetail extends AbstractModel
     public $ScrollToken;
 
     /**
-     * @var array <p>Text generation details</p>
+     * @var array <p>Detailed data for text generation</p>
      */
     public $Data;
 
     /**
      * @param integer $PageSize <p>Entries per page</p>
      * @param string $ScrollToken <p>scroll_token returned in the previous page response, used for turning to the next page</p>
-     * @param array $Data <p>Text generation details</p>
+     * @param array $Data <p>Detailed data for text generation</p>
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task result type for unsafe information in Ocr text identification during audio and video moderation
+ * Task result type of Ocr text identification involving unsafe content in audio/video moderation
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewTerrorismOcrTaskInput getInput() Obtain Task input for audio/video moderation where Ocr text involves unsafe information.
- * @method void setInput(AiReviewTerrorismOcrTaskInput $Input) Set Task input for audio/video moderation where Ocr text involves unsafe information.
- * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain Task output of audio/video moderation involving unsafe information in Ocr text.
- * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set Task output of audio/video moderation involving unsafe information in Ocr text.
- * @method integer getProgress() Obtain Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
- * @method void setProgress(integer $Progress) Set Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+ * @method AiReviewTerrorismOcrTaskInput getInput() Obtain Task input of Ocr text involving unsafe information in audio/video moderation.
+ * @method void setInput(AiReviewTerrorismOcrTaskInput $Input) Set Task input of Ocr text involving unsafe information in audio/video moderation.
+ * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain Task output of Ocr text involving unsafe information in video moderation.
+ * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set Task output of Ocr text involving unsafe information in video moderation.
+ * @method integer getProgress() Obtain Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
+ * @method void setProgress(integer $Progress) Set Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
  */
 class AiReviewTaskTerrorismOcrResult extends AbstractModel
 {
@@ -58,17 +58,17 @@ class AiReviewTaskTerrorismOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewTerrorismOcrTaskInput Task input for audio/video moderation where Ocr text involves unsafe information.
+     * @var AiReviewTerrorismOcrTaskInput Task input of Ocr text involving unsafe information in audio/video moderation.
      */
     public $Input;
 
     /**
-     * @var AiReviewTerrorismOcrTaskOutput Task output of audio/video moderation involving unsafe information in Ocr text.
+     * @var AiReviewTerrorismOcrTaskOutput Task output of Ocr text involving unsafe information in video moderation.
      */
     public $Output;
 
     /**
-     * @var integer Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+     * @var integer Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
      */
     public $Progress;
 
@@ -77,9 +77,9 @@ class AiReviewTaskTerrorismOcrResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewTerrorismOcrTaskInput $Input Task input for audio/video moderation where Ocr text involves unsafe information.
-     * @param AiReviewTerrorismOcrTaskOutput $Output Task output of audio/video moderation involving unsafe information in Ocr text.
-     * @param integer $Progress Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+     * @param AiReviewTerrorismOcrTaskInput $Input Task input of Ocr text involving unsafe information in audio/video moderation.
+     * @param AiReviewTerrorismOcrTaskOutput $Output Task output of Ocr text involving unsafe information in video moderation.
+     * @param integer $Progress Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
      */
     function __construct()
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Abnormal fragment information for audio and video quality inspection.
+ * Audio and video quality detection abnormal fragment info.
  *
  * @method float getStartTimeOffset() Obtain Offset time of abnormal segment start, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of abnormal segment start, in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of an abnormal fragment, in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of an abnormal fragment, in seconds.
- * @method array getAreaCoordSet() Obtain Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+ * @method array getAreaCoordSet() Obtain Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
 <li>QRCode: QR code;</li>
 <li>AppletCode: mini program code;</li>
 <li>BarCode: barcode.</li>
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
@@ -64,7 +64,7 @@ class QualityInspectItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var array Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+     * @var array Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
@@ -87,7 +87,7 @@ class QualityInspectItem extends AbstractModel
     /**
      * @param float $StartTimeOffset Offset time of abnormal segment start, in seconds.
      * @param float $EndTimeOffset End time offset of an abnormal fragment, in seconds.
-     * @param array $AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+     * @param array $AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>

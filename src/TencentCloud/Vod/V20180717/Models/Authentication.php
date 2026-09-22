@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
 
- * @method AuthenticationTypeA getTypeA() Obtain Configuration of timestamp hotlink protection mode A.
- * @method void setTypeA(AuthenticationTypeA $TypeA) Set Configuration of timestamp hotlink protection mode A.
+ * @method AuthenticationTypeA getTypeA() Obtain Timestamp hotlink protection mode A configuration.
+ * @method void setTypeA(AuthenticationTypeA $TypeA) Set Timestamp hotlink protection mode A configuration.
  * @method AuthenticationTypeB getTypeB() Obtain Configuration of timestamp hotlink protection mode B.
  * @method void setTypeB(AuthenticationTypeB $TypeB) Set Configuration of timestamp hotlink protection mode B.
  * @method AuthenticationTypeC getTypeC() Obtain Configuration of timestamp hotlink protection mode C.
@@ -48,7 +48,7 @@ class Authentication extends AbstractModel
     public $Switch;
 
     /**
-     * @var AuthenticationTypeA Configuration of timestamp hotlink protection mode A.
+     * @var AuthenticationTypeA Timestamp hotlink protection mode A configuration.
      */
     public $TypeA;
 
@@ -72,7 +72,7 @@ class Authentication extends AbstractModel
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
 
-     * @param AuthenticationTypeA $TypeA Configuration of timestamp hotlink protection mode A.
+     * @param AuthenticationTypeA $TypeA Timestamp hotlink protection mode A configuration.
      * @param AuthenticationTypeB $TypeB Configuration of timestamp hotlink protection mode B.
      * @param AuthenticationTypeC $TypeC Configuration of timestamp hotlink protection mode C.
      * @param AuthenticationTypeD $TypeD Configuration of timestamp hotlink protection mode D.

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Unique identifier of the digital watermark template.
  * @method void setDefinition(integer $Definition) Set Unique identifier of the digital watermark template.
- * @method integer getSubAppId() Obtain VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.
- * @method void setSubAppId(integer $SubAppId) Set VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.
+ * @method integer getSubAppId() Obtain VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+ * @method void setSubAppId(integer $SubAppId) Set VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
  * @method string getName() Obtain Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
  * @method void setName(string $Name) Set Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
  * @method string getComment() Obtain Description information of the digital watermark template. The length cannot exceed 256 characters.
@@ -39,7 +39,7 @@ class ModifyBlindWatermarkTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var integer VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.
+     * @var integer VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
      */
     public $SubAppId;
 
@@ -60,7 +60,7 @@ class ModifyBlindWatermarkTemplateRequest extends AbstractModel
 
     /**
      * @param integer $Definition Unique identifier of the digital watermark template.
-     * @param integer $SubAppId VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.
+     * @param integer $SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
      * @param string $Name Digital watermark template name, which supports Chinese, English, digits, underscores (_), hyphens (-), and periods (.). The length cannot exceed 64 characters.
      * @param string $Comment Description information of the digital watermark template. The length cannot exceed 256 characters.
      * @param string $TextContent Text content of the digital watermark. The length cannot exceed 64 characters. The text content cannot be modified for NAGRA watermark templates.

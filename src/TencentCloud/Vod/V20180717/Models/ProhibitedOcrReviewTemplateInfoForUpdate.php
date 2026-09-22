@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of the text prohibition task
+ * Prohibited task control parameters for text.
  *
  * @method string getSwitch() Obtain Text prohibition task switch. Value range:
 <li>ON: enable the text prohibition task;</li>
@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Text prohibition task switch. Value range:
 <li>ON: enable the text prohibition task;</li>
 <li>OFF: disables the text prohibition task.</li>
- * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
- * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
+ * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+ * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
  */
 class ProhibitedOcrReviewTemplateInfoForUpdate extends AbstractModel
 {
@@ -41,12 +41,12 @@ class ProhibitedOcrReviewTemplateInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
+     * @var integer Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
      */
     public $BlockConfidence;
 
     /**
-     * @var integer Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
+     * @var integer Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
      */
     public $ReviewConfidence;
 
@@ -54,8 +54,8 @@ class ProhibitedOcrReviewTemplateInfoForUpdate extends AbstractModel
      * @param string $Switch Text prohibition task switch. Value range:
 <li>ON: enable the text prohibition task;</li>
 <li>OFF: disables the text prohibition task.</li>
-     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
-     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
+     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
      */
     function __construct()
     {

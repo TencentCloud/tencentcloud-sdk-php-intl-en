@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Frame interpolation frame rate configuration.
  *
- * @method string getSwitch() Obtain Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
- * @method void setSwitch(string $Switch) Set Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+ * @method string getSwitch() Obtain Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+ * @method void setSwitch(string $Switch) Set Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
  * @method integer getFpsNum() Obtain Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
  * @method void setFpsNum(integer $FpsNum) Set Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
  * @method integer getFpsDen() Obtain Frame rate denominator. Value range: equal to or greater than 1. Default value: 1.
@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class FrameRateWithDenInfo extends AbstractModel
 {
     /**
-     * @var string Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * @var string Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public $Switch;
 
@@ -51,9 +51,9 @@ class FrameRateWithDenInfo extends AbstractModel
     public $FpsDen;
 
     /**
-     * @param string $Switch Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * @param string $Switch Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      * @param integer $FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
      * @param integer $FpsDen Frame rate denominator. Value range: equal to or greater than 1. Default value: 1.
      */

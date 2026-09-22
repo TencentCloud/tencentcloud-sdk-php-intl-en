@@ -21,15 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * Low-light enhancement control
  *
  * @method string getSwitch() Obtain Low-light enhancement control switch. Available values:
-<li>ON: enable low-light enhancement;</li>
+<li>ON: turn on low-light enhancement;</li>
 <li>OFF: low-light enhancement disabled.</li>
  * @method void setSwitch(string $Switch) Set Low-light enhancement control switch. Available values:
-<li>ON: enable low-light enhancement;</li>
+<li>ON: turn on low-light enhancement;</li>
 <li>OFF: low-light enhancement disabled.</li>
- * @method string getType() Obtain Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+ * @method string getType() Obtain Low-light enhancement type. It is valid only when the low-light enhancement control switch is ON. Available values:
 <li>normal: Normal low-light enhancement;</li>
 Default value: normal.
- * @method void setType(string $Type) Set Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+ * @method void setType(string $Type) Set Low-light enhancement type. It is valid only when the low-light enhancement control switch is ON. Available values:
 <li>normal: Normal low-light enhancement;</li>
 Default value: normal.
  */
@@ -37,13 +37,13 @@ class LowLightEnhanceInfo extends AbstractModel
 {
     /**
      * @var string Low-light enhancement control switch. Available values:
-<li>ON: enable low-light enhancement;</li>
+<li>ON: turn on low-light enhancement;</li>
 <li>OFF: low-light enhancement disabled.</li>
      */
     public $Switch;
 
     /**
-     * @var string Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+     * @var string Low-light enhancement type. It is valid only when the low-light enhancement control switch is ON. Available values:
 <li>normal: Normal low-light enhancement;</li>
 Default value: normal.
      */
@@ -51,9 +51,9 @@ Default value: normal.
 
     /**
      * @param string $Switch Low-light enhancement control switch. Available values:
-<li>ON: enable low-light enhancement;</li>
+<li>ON: turn on low-light enhancement;</li>
 <li>OFF: low-light enhancement disabled.</li>
-     * @param string $Type Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+     * @param string $Type Low-light enhancement type. It is valid only when the low-light enhancement control switch is ON. Available values:
 <li>normal: Normal low-light enhancement;</li>
 Default value: normal.
      */

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputFileId(string $InputFileId) Set <p>FileId of the input video</p>
  * @method string getSrcLanguage() Obtain <p>Video source language. The default value is zh.</p>
  * @method void setSrcLanguage(string $SrcLanguage) Set <p>Video source language. The default value is zh.</p>
- * @method string getDstLanguage() Obtain <p>Target language of the video. Default: en.</p>
- * @method void setDstLanguage(string $DstLanguage) Set <p>Target language of the video. Default: en.</p>
+ * @method string getDstLanguage() Obtain <p>Target language of the video. Default: en</p>
+ * @method void setDstLanguage(string $DstLanguage) Set <p>Target language of the video. Default: en</p>
  * @method string getModel() Obtain <p>Dubbing model</p>
  * @method void setModel(string $Model) Set <p>Dubbing model</p>
  */
@@ -49,7 +49,7 @@ class VideoDubbingAsyncInput extends AbstractModel
     public $SrcLanguage;
 
     /**
-     * @var string <p>Target language of the video. Default: en.</p>
+     * @var string <p>Target language of the video. Default: en</p>
      */
     public $DstLanguage;
 
@@ -62,7 +62,7 @@ class VideoDubbingAsyncInput extends AbstractModel
      * @param string $InputUrl <p>Input video Url</p>
      * @param string $InputFileId <p>FileId of the input video</p>
      * @param string $SrcLanguage <p>Video source language. The default value is zh.</p>
-     * @param string $DstLanguage <p>Target language of the video. Default: en.</p>
+     * @param string $DstLanguage <p>Target language of the video. Default: en</p>
      * @param string $Model <p>Dubbing model</p>
      */
     function __construct()

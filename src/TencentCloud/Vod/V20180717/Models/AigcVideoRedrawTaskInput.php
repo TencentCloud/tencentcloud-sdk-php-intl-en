@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of the AIGC video conversion task.
+ * Input of an AIGC video stylization task.
  *
  * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain <p>Input file information of the AIGC video conversion task.</p>
  * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set <p>Input file information of the AIGC video conversion task.</p>
- * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain <p>AIGC video conversion task parameter information.</p>
- * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set <p>AIGC video conversion task parameter information.</p>
+ * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain <p>AIGC video redrawing task parameter information.</p>
+ * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set <p>AIGC video redrawing task parameter information.</p>
  * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain <p>Output configuration for AIGC video conversion.</p>
  * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set <p>Output configuration for AIGC video conversion.</p>
  */
@@ -35,7 +35,7 @@ class AigcVideoRedrawTaskInput extends AbstractModel
     public $FileInfo;
 
     /**
-     * @var AigcVideoRedrawTaskInfo <p>AIGC video conversion task parameter information.</p>
+     * @var AigcVideoRedrawTaskInfo <p>AIGC video redrawing task parameter information.</p>
      */
     public $TaskInfo;
 
@@ -46,7 +46,7 @@ class AigcVideoRedrawTaskInput extends AbstractModel
 
     /**
      * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>Input file information of the AIGC video conversion task.</p>
-     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>AIGC video conversion task parameter information.</p>
+     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>AIGC video redrawing task parameter information.</p>
      * @param AigcVideoRedrawOutputConfig $OutputConfig <p>Output configuration for AIGC video conversion.</p>
      */
     function __construct()

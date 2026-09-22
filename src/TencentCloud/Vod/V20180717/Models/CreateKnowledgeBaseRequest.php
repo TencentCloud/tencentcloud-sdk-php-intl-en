@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateKnowledgeBase request structure.
  *
- * @method integer getSubAppId() Obtain <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
- * @method void setSubAppId(integer $SubAppId) Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+ * @method integer getSubAppId() Obtain <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
  * @method string getName() Obtain <p>Knowledge base name. Length limit: 1-64 characters.</p>
  * @method void setName(string $Name) Set <p>Knowledge base name. Length limit: 1-64 characters.</p>
  * @method string getDescription() Obtain <p>Knowledge base description. Length limit: up to 256 characters.</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateKnowledgeBaseRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @var integer <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
      */
     public $SubAppId;
 
@@ -45,7 +45,7 @@ class CreateKnowledgeBaseRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param integer $SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @param integer $SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
      * @param string $Name <p>Knowledge base name. Length limit: 1-64 characters.</p>
      * @param string $Description <p>Knowledge base description. Length limit: up to 256 characters.</p>
      */

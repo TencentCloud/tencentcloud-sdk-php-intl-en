@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDefaultDistributionConfig request structure.
  *
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method string getDomain() Obtain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
- * @method void setDomain(string $Domain) Set Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+ * @method integer getSubAppId() Obtain <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+ * @method string getDomain() Obtain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
+ * @method void setDomain(string $Domain) Set Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
  * @method string getScheme() Obtain Distribution protocol. Value: HTTP or HTTPS.
  * @method void setScheme(string $Scheme) Set Distribution protocol. Value: HTTP or HTTPS.
  * @method string getPlayKey() Obtain Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDefaultDistributionConfigRequest extends AbstractModel
 {
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var string Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+     * @var string Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
      */
     public $Domain;
 
@@ -52,8 +52,8 @@ class ModifyDefaultDistributionConfigRequest extends AbstractModel
     public $PlayKey;
 
     /**
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param string $Domain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+     * @param integer $SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param string $Domain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
      * @param string $Scheme Distribution protocol. Value: HTTP or HTTPS.
      * @param string $PlayKey Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.
      */

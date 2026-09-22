@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio/video moderation task type
+ * Type of the audio/video moderation task
  *
  * @method integer getDefinition() Obtain Audio/video moderation template ID.
  * @method void setDefinition(integer $Definition) Set Audio/video moderation template ID.

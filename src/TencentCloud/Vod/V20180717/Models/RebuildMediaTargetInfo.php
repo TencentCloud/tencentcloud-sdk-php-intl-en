@@ -18,41 +18,41 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Target parameter for video quality remastering
+ * Target parameter for remastering
  *
- * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system specifies the generated file name.
- * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system specifies the generated file name.
+ * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system assigns the generated filename.
+ * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system assigns the generated filename.
  * @method string getDescription() Obtain Description. It can contain up to 128 characters. The default description is empty.
  * @method void setDescription(string $Description) Set Description. It can contain up to 128 characters. The default description is empty.
  * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li>
  * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li>
- * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getContainer() Obtain Output file container format. Available values: mp4, flv, hls. Default: mp4.
- * @method void setContainer(string $Container) Set Output file container format. Available values: mp4, flv, hls. Default: mp4.
+ * @method string getExpireTime() Obtain Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setExpireTime(string $ExpireTime) Set Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getContainer() Obtain Output file container format. Available values: mp4, flv, hls. Default value: mp4.
+ * @method void setContainer(string $Container) Set Output file container format. Available values: mp4, flv, hls. Default value: mp4.
  * @method RebuildMediaTargetVideoStream getVideoStream() Obtain Output video information.
  * @method void setVideoStream(RebuildMediaTargetVideoStream $VideoStream) Set Output video information.
- * @method RebuildMediaTargetAudioStream getAudioStream() Obtain Output audio information.
- * @method void setAudioStream(RebuildMediaTargetAudioStream $AudioStream) Set Output audio information.
- * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+ * @method RebuildMediaTargetAudioStream getAudioStream() Obtain Output audio content.
+ * @method void setAudioStream(RebuildMediaTargetAudioStream $AudioStream) Set Output audio content.
+ * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
- * @method void setRemoveVideo(integer $RemoveVideo) Set Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
  * @method integer getRemoveAudio() Obtain Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
  * @method void setRemoveAudio(integer $RemoveAudio) Set Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -60,7 +60,7 @@ Default value: 0.
 class RebuildMediaTargetInfo extends AbstractModel
 {
     /**
-     * @var string Output filename, up to 64 characters. By default, the system specifies the generated file name.
+     * @var string Output filename, up to 64 characters. By default, the system assigns the generated filename.
      */
     public $MediaName;
 
@@ -76,12 +76,12 @@ class RebuildMediaTargetInfo extends AbstractModel
     public $ClassId;
 
     /**
-     * @var string Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $ExpireTime;
 
     /**
-     * @var string Output file container format. Available values: mp4, flv, hls. Default: mp4.
+     * @var string Output file container format. Available values: mp4, flv, hls. Default value: mp4.
      */
     public $Container;
 
@@ -91,13 +91,13 @@ class RebuildMediaTargetInfo extends AbstractModel
     public $VideoStream;
 
     /**
-     * @var RebuildMediaTargetAudioStream Output audio information.
+     * @var RebuildMediaTargetAudioStream Output audio content.
      */
     public $AudioStream;
 
     /**
-     * @var integer Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * @var integer Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -106,7 +106,7 @@ Default value: 0.
 
     /**
      * @var integer Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -114,21 +114,21 @@ Default value: 0.
     public $RemoveAudio;
 
     /**
-     * @param string $MediaName Output filename, up to 64 characters. By default, the system specifies the generated file name.
+     * @param string $MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
      * @param string $Description Description. It can contain up to 128 characters. The default description is empty.
      * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li>
-     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $Container Output file container format. Available values: mp4, flv, hls. Default: mp4.
+     * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $Container Output file container format. Available values: mp4, flv, hls. Default value: mp4.
      * @param RebuildMediaTargetVideoStream $VideoStream Output video information.
-     * @param RebuildMediaTargetAudioStream $AudioStream Output audio information.
-     * @param integer $RemoveVideo Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * @param RebuildMediaTargetAudioStream $AudioStream Output audio content.
+     * @param integer $RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
      * @param integer $RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.

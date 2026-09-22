@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input of a media file creation task.
  *
- * @method array getTracks() Obtain Input media track list, including multiple track information composed of materials such as video, audio, and images.
- * @method void setTracks(array $Tracks) Set Input media track list, including multiple track information composed of materials such as video, audio, and images.
+ * @method array getTracks() Obtain Input media track list, including multiple track information composed of materials such as video, audio, and image.
+ * @method void setTracks(array $Tracks) Set Input media track list, including multiple track information composed of materials such as video, audio, and image.
  * @method Canvas getCanvas() Obtain Canvas used when making video files.
  * @method void setCanvas(Canvas $Canvas) Set Canvas used when making video files.
  * @method ComposeMediaOutput getOutput() Obtain Output media file information.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ComposeMediaTaskInput extends AbstractModel
 {
     /**
-     * @var array Input media track list, including multiple track information composed of materials such as video, audio, and images.
+     * @var array Input media track list, including multiple track information composed of materials such as video, audio, and image.
      */
     public $Tracks;
 
@@ -45,7 +45,7 @@ class ComposeMediaTaskInput extends AbstractModel
     public $Output;
 
     /**
-     * @param array $Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
+     * @param array $Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image.
      * @param Canvas $Canvas Canvas used when making video files.
      * @param ComposeMediaOutput $Output Output media file information.
      */

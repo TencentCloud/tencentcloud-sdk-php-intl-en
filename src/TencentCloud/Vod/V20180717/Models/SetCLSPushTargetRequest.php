@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name.
  * @method void setDomain(string $Domain) Set Domain name.
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
- * @method AreaCLSTargetInfo getChineseMainlandCLSTargetInfo() Obtain Push target to set for logs in the Chinese mainland.
- * @method void setChineseMainlandCLSTargetInfo(AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo) Set Push target to set for logs in the Chinese mainland.
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method AreaCLSTargetInfo getChineseMainlandCLSTargetInfo() Obtain Log push destination to set in the Chinese mainland.
+ * @method void setChineseMainlandCLSTargetInfo(AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo) Set Log push destination to set in the Chinese mainland.
  * @method AreaCLSTargetInfo getOutsideChineseMainlandCLSTargetInfo() Obtain Push target for logs outside the Chinese mainland to be set.
  * @method void setOutsideChineseMainlandCLSTargetInfo(AreaCLSTargetInfo $OutsideChineseMainlandCLSTargetInfo) Set Push target for logs outside the Chinese mainland to be set.
  */
@@ -37,12 +37,12 @@ class SetCLSPushTargetRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
     /**
-     * @var AreaCLSTargetInfo Push target to set for logs in the Chinese mainland.
+     * @var AreaCLSTargetInfo Log push destination to set in the Chinese mainland.
      */
     public $ChineseMainlandCLSTargetInfo;
 
@@ -53,8 +53,8 @@ class SetCLSPushTargetRequest extends AbstractModel
 
     /**
      * @param string $Domain Domain name.
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-     * @param AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo Push target to set for logs in the Chinese mainland.
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param AreaCLSTargetInfo $ChineseMainlandCLSTargetInfo Log push destination to set in the Chinese mainland.
      * @param AreaCLSTargetInfo $OutsideChineseMainlandCLSTargetInfo Push target for logs outside the Chinese mainland to be set.
      */
     function __construct()

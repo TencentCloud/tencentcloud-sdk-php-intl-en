@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
  * @method string getStatus() Obtain <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
  * @method void setStatus(string $Status) Set <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
- * @method string getFileId() Obtain <p>Filter criteria: file ID.</p>
- * @method void setFileId(string $FileId) Set <p>Filter criteria: file ID.</p>
+ * @method string getFileId() Obtain <p>Filtering Conditions: file ID.</p>
+ * @method void setFileId(string $FileId) Set <p>Filtering Conditions: file ID.</p>
  * @method TimeRange getCreateTime() Obtain <p>Filter condition: task creation time.</p>
  * @method void setCreateTime(TimeRange $CreateTime) Set <p>Filter condition: task creation time.</p>
  * @method TimeRange getFinishTime() Obtain <p>Filter condition: task end time.</p>
  * @method void setFinishTime(TimeRange $FinishTime) Set <p>Filter condition: task end time.</p>
- * @method SortBy getSort() Obtain <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
- * @method void setSort(SortBy $Sort) Set <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+ * @method SortBy getSort() Obtain <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+ * @method void setSort(SortBy $Sort) Set <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
  * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
  * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
  * @method string getScrollToken() Obtain <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var integer <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public $SubAppId;
 
@@ -50,7 +50,7 @@ class DescribeTasksRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string <p>Filter criteria: file ID.</p>
+     * @var string <p>Filtering Conditions: file ID.</p>
      */
     public $FileId;
 
@@ -65,7 +65,7 @@ class DescribeTasksRequest extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var SortBy <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+     * @var SortBy <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
      */
     public $Sort;
 
@@ -80,12 +80,12 @@ class DescribeTasksRequest extends AbstractModel
     public $ScrollToken;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      * @param string $Status <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
-     * @param string $FileId <p>Filter criteria: file ID.</p>
+     * @param string $FileId <p>Filtering Conditions: file ID.</p>
      * @param TimeRange $CreateTime <p>Filter condition: task creation time.</p>
      * @param TimeRange $FinishTime <p>Filter condition: task end time.</p>
-     * @param SortBy $Sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+     * @param SortBy $Sort <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
      * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      * @param string $ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */

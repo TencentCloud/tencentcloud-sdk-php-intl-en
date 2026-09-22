@@ -32,26 +32,26 @@ PROCESSING: Processing;
 FINISH: completed.
  * @method integer getErrCode() Obtain Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method string getFileId() Obtain Video file ID for publishing.
- * @method void setFileId(string $FileId) Set Video file ID for publishing.
+ * @method string getFileId() Obtain Video file ID to publish.
+ * @method void setFileId(string $FileId) Set Video file ID to publish.
  * @method integer getDefinition() Obtain Template ID for publishing on WeChat.
  * @method void setDefinition(integer $Definition) Set Template ID for publishing on WeChat.
  * @method integer getSourceDefinition() Obtain Transcoding template ID of the published video. 0 represents the original video.
  * @method void setSourceDefinition(integer $SourceDefinition) Set Transcoding template ID of the published video. 0 represents the original video.
  * @method string getWechatStatus() Obtain WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
  * @method void setWechatStatus(string $WechatStatus) Set WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
  * @method string getWechatVid() Obtain WeChat Vid.
@@ -77,7 +77,7 @@ FINISH: completed.
     /**
      * @var integer Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      */
     public $ErrCode;
 
@@ -87,7 +87,7 @@ FINISH: completed.
     public $Message;
 
     /**
-     * @var string Video file ID for publishing.
+     * @var string Video file ID to publish.
      */
     public $FileId;
 
@@ -104,7 +104,7 @@ FINISH: completed.
     /**
      * @var string WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
      */
@@ -128,14 +128,14 @@ PROCESSING: Processing;
 FINISH: completed.
      * @param integer $ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      * @param string $Message Error message.
-     * @param string $FileId Video file ID for publishing.
+     * @param string $FileId Video file ID to publish.
      * @param integer $Definition Template ID for publishing on WeChat.
      * @param integer $SourceDefinition Transcoding template ID of the published video. 0 represents the original video.
      * @param string $WechatStatus WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
      * @param string $WechatVid WeChat Vid.

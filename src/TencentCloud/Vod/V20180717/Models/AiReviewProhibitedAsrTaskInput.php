@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type for Asr text prohibited information recognition in audio/video moderation tasks
+ * Input parameter type for prohibited information recognition in Asr text in audio/video moderation
  *
  * @method integer getDefinition() Obtain Prohibited information recognition template ID.
  * @method void setDefinition(integer $Definition) Set Prohibited information recognition template ID.

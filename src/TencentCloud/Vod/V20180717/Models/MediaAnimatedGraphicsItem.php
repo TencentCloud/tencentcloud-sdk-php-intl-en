@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainer(string $Container) Set Animated image file format, for example, gif.
  * @method integer getHeight() Obtain Height of the animated image. Measurement unit: px.
  * @method void setHeight(integer $Height) Set Height of the animated image. Measurement unit: px.
- * @method integer getWidth() Obtain Width of the animated image in px.
- * @method void setWidth(integer $Width) Set Width of the animated image in px.
- * @method integer getBitrate() Obtain Animated image bitrate. Measurement unit: bps.
- * @method void setBitrate(integer $Bitrate) Set Animated image bitrate. Measurement unit: bps.
+ * @method integer getWidth() Obtain Width of the animated image. Unit: px.
+ * @method void setWidth(integer $Width) Set Width of the animated image. Unit: px.
+ * @method integer getBitrate() Obtain Animated image bitrate in bps.
+ * @method void setBitrate(integer $Bitrate) Set Animated image bitrate in bps.
  * @method integer getSize() Obtain Animated image size. Unit: byte.
  * @method void setSize(integer $Size) Set Animated image size. Unit: byte.
  * @method string getMd5() Obtain md5 value of the animated image.
  * @method void setMd5(string $Md5) Set md5 value of the animated image.
  * @method float getStartTimeOffset() Obtain Start time offset of the GIF in the video, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of the GIF in the video, in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of the GIF in the video, in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the GIF in the video, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of an animated image in the video, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of an animated image in the video, in seconds.
  */
 class MediaAnimatedGraphicsItem extends AbstractModel
 {
@@ -64,12 +64,12 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     public $Height;
 
     /**
-     * @var integer Width of the animated image in px.
+     * @var integer Width of the animated image. Unit: px.
      */
     public $Width;
 
     /**
-     * @var integer Animated image bitrate. Measurement unit: bps.
+     * @var integer Animated image bitrate in bps.
      */
     public $Bitrate;
 
@@ -89,7 +89,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of the GIF in the video, in seconds.
+     * @var float End time offset of an animated image in the video, in seconds.
      */
     public $EndTimeOffset;
 
@@ -98,12 +98,12 @@ class MediaAnimatedGraphicsItem extends AbstractModel
      * @param integer $Definition Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      * @param string $Container Animated image file format, for example, gif.
      * @param integer $Height Height of the animated image. Measurement unit: px.
-     * @param integer $Width Width of the animated image in px.
-     * @param integer $Bitrate Animated image bitrate. Measurement unit: bps.
+     * @param integer $Width Width of the animated image. Unit: px.
+     * @param integer $Bitrate Animated image bitrate in bps.
      * @param integer $Size Animated image size. Unit: byte.
      * @param string $Md5 md5 value of the animated image.
      * @param float $StartTimeOffset Start time offset of the GIF in the video, in seconds.
-     * @param float $EndTimeOffset End time offset of the GIF in the video, in seconds.
+     * @param float $EndTimeOffset End time offset of an animated image in the video, in seconds.
      */
     function __construct()
     {

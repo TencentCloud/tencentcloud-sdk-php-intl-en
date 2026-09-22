@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRoundPlay request structure.
  *
- * @method string getStartTime() Obtain Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
- * @method void setStartTime(string $StartTime) Set Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method string getStartTime() Obtain Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+ * @method void setStartTime(string $StartTime) Set Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
  * @method array getRoundPlaylist() Obtain Carousel list.
 <li>Array length limit: 100.</li>
  * @method void setRoundPlaylist(array $RoundPlaylist) Set Carousel list.
 <li>Array length limit: 100.</li>
- * @method integer getSubAppId() Obtain <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
  * @method string getName() Obtain Carousel playbill name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Carousel playbill name. Length limit: 64 characters.
  * @method string getDesc() Obtain Carousel playlist description, with a length limit of 256 characters.
@@ -40,15 +40,15 @@ Default value: Loop.
 <li>Loop: loop playback playlist;</li>
 <li>Linear: single play, stop playback after playlist finishes.</li>
 Default value: Loop.
- * @method string getRoundPlayId() Obtain Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
- * @method void setRoundPlayId(string $RoundPlayId) Set Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
- * @method string getExpiredTime() Obtain Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
- * @method void setExpiredTime(string $ExpiredTime) Set Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
+ * @method string getRoundPlayId() Obtain Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
+ * @method void setRoundPlayId(string $RoundPlayId) Set Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
+ * @method string getExpiredTime() Obtain Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
  */
 class CreateRoundPlayRequest extends AbstractModel
 {
     /**
-     * @var string Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @var string Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public $StartTime;
 
@@ -59,7 +59,7 @@ class CreateRoundPlayRequest extends AbstractModel
     public $RoundPlaylist;
 
     /**
-     * @var integer <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public $SubAppId;
 
@@ -82,28 +82,28 @@ Default value: Loop.
     public $PlayBackMode;
 
     /**
-     * @var string Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
+     * @var string Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
      */
     public $RoundPlayId;
 
     /**
-     * @var string Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
+     * @var string Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
      */
     public $ExpiredTime;
 
     /**
-     * @param string $StartTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param string $StartTime Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      * @param array $RoundPlaylist Carousel list.
 <li>Array length limit: 100.</li>
-     * @param integer $SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      * @param string $Name Carousel playbill name. Length limit: 64 characters.
      * @param string $Desc Carousel playlist description, with a length limit of 256 characters.
      * @param string $PlayBackMode Playback mode. Optional values:
 <li>Loop: loop playback playlist;</li>
 <li>Linear: single play, stop playback after playlist finishes.</li>
 Default value: Loop.
-     * @param string $RoundPlayId Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
-     * @param string $ExpiredTime Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
+     * @param string $RoundPlayId Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
+     * @param string $ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
      */
     function __construct()
     {

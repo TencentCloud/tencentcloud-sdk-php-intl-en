@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method string getSessionId() Obtain Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
  * @method void setSessionId(string $SessionId) Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
- * @method integer getProgress() Obtain Video splitting task progress, in the range of [0,100].
- * @method void setProgress(integer $Progress) Set Video splitting task progress, in the range of [0,100].
+ * @method integer getProgress() Obtain Video splitting task progress, value ranges from 0 to 100.
+ * @method void setProgress(integer $Progress) Set Video splitting task progress, value ranges from 0 to 100.
  */
 class SplitMediaTask extends AbstractModel
 {
@@ -88,7 +88,7 @@ class SplitMediaTask extends AbstractModel
     public $SessionId;
 
     /**
-     * @var integer Video splitting task progress, in the range of [0,100].
+     * @var integer Video splitting task progress, value ranges from 0 to 100.
      */
     public $Progress;
 
@@ -103,7 +103,7 @@ class SplitMediaTask extends AbstractModel
      * @param array $FileInfoSet Detailed information list of video splitting tasks.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      * @param string $SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param integer $Progress Video splitting task progress, in the range of [0,100].
+     * @param integer $Progress Video splitting task progress, value ranges from 0 to 100.
      */
     function __construct()
     {

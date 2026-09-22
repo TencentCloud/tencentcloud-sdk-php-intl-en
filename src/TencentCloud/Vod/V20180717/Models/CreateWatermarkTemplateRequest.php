@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>image: image watermark;</li>
 <li>Text: text watermark.</li>
 <li>svg: SVG watermark.</li>
- * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+ * @method integer getSubAppId() Obtain <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
  * @method string getName() Obtain Watermark template name. The length cannot exceed 64 characters.
  * @method void setName(string $Name) Set Watermark template name. The length cannot exceed 64 characters.
  * @method string getComment() Obtain Template description, with a length limit of 256 characters.
@@ -62,8 +62,8 @@ Default value: 0px.
 <li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
- * @method ImageWatermarkInput getImageTemplate() Obtain Image watermark template. This field is required when Type is image and invalid when Type is text.
- * @method void setImageTemplate(ImageWatermarkInput $ImageTemplate) Set Image watermark template. This field is required when Type is image and invalid when Type is text.
+ * @method ImageWatermarkInput getImageTemplate() Obtain Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
+ * @method void setImageTemplate(ImageWatermarkInput $ImageTemplate) Set Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
  * @method TextWatermarkTemplateInput getTextTemplate() Obtain Text watermarking template. This field is required when Type is text and invalid when Type is image.
  * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set Text watermarking template. This field is required when Type is text and invalid when Type is image.
  * @method SvgWatermarkInput getSvgTemplate() Obtain SVG watermark template. This field is required when Type is svg. This field is invalid when Type is image or text.
@@ -80,7 +80,7 @@ class CreateWatermarkTemplateRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @var integer <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public $SubAppId;
 
@@ -121,7 +121,7 @@ Default value: 0px.
     public $YPos;
 
     /**
-     * @var ImageWatermarkInput Image watermark template. This field is required when Type is image and invalid when Type is text.
+     * @var ImageWatermarkInput Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
      */
     public $ImageTemplate;
 
@@ -140,7 +140,7 @@ Default value: 0px.
 <li>image: image watermark;</li>
 <li>Text: text watermark.</li>
 <li>svg: SVG watermark.</li>
-     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @param integer $SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      * @param string $Name Watermark template name. The length cannot exceed 64 characters.
      * @param string $Comment Template description, with a length limit of 256 characters.
      * @param string $CoordinateOrigin Origin position. Valid values:
@@ -157,7 +157,7 @@ Default value: 0px.
 <li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
-     * @param ImageWatermarkInput $ImageTemplate Image watermark template. This field is required when Type is image and invalid when Type is text.
+     * @param ImageWatermarkInput $ImageTemplate Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
      * @param TextWatermarkTemplateInput $TextTemplate Text watermarking template. This field is required when Type is text and invalid when Type is image.
      * @param SvgWatermarkInput $SvgTemplate SVG watermark template. This field is required when Type is svg. This field is invalid when Type is image or text.
      */

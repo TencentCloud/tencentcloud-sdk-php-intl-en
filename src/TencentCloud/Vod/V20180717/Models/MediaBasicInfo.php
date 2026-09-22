@@ -24,32 +24,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Media file name.
  * @method string getDescription() Obtain Media file description.
  * @method void setDescription(string $Description) Set Media file description.
- * @method string getCreateTime() Obtain Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setCreateTime(string $CreateTime) Set Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getUpdateTime() Obtain Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setUpdateTime(string $UpdateTime) Set Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getCreateTime() Obtain Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getExpireTime() Obtain Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
  * @method void setExpireTime(string $ExpireTime) Set Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
  * @method integer getClassId() Obtain Category ID of the media file.
  * @method void setClassId(integer $ClassId) Set Category ID of the media file.
  * @method string getClassName() Obtain Category name of the media file.
  * @method void setClassName(string $ClassName) Set Category name of the media file.
- * @method string getClassPath() Obtain Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
- * @method void setClassPath(string $ClassPath) Set Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+ * @method string getClassPath() Obtain Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
+ * @method void setClassPath(string $ClassPath) Set Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
  * @method string getCoverUrl() Obtain Thumbnail URL of the media file.
  * @method void setCoverUrl(string $CoverUrl) Set Thumbnail URL of the media file.
- * @method string getType() Obtain Muxing format of the media file, such as mp4 and flv.
- * @method void setType(string $Type) Set Muxing format of the media file, such as mp4 and flv.
+ * @method string getType() Obtain Muxing format of the media file, for example, mp4 and flv.
+ * @method void setType(string $Type) Set Muxing format of the media file, for example, mp4 and flv.
  * @method string getMediaUrl() Obtain URL address of the original media file.
  * @method void setMediaUrl(string $MediaUrl) Set URL address of the original media file.
  * @method MediaSourceData getSourceInfo() Obtain Source information of the media file.
  * @method void setSourceInfo(MediaSourceData $SourceInfo) Set Source information of the media file.
- * @method string getStorageRegion() Obtain Storage region of media files, for example, ap-chongqing. See region list.
- * @method void setStorageRegion(string $StorageRegion) Set Storage region of media files, for example, ap-chongqing. See region list.
+ * @method string getStorageRegion() Obtain Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+ * @method void setStorageRegion(string $StorageRegion) Set Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
  * @method string getStoragePath() Obtain Media storage path.
  * @method void setStoragePath(string $StoragePath) Set Media storage path.
- * @method array getTagSet() Obtain Tag information of a media file.
- * @method void setTagSet(array $TagSet) Set Tag information of a media file.
+ * @method array getTagSet() Obtain Tag information of the media file.
+ * @method void setTagSet(array $TagSet) Set Tag information of the media file.
  * @method string getVid() Obtain Unique identifier of the live streaming recording file.
  * @method void setVid(string $Vid) Set Unique identifier of the live streaming recording file.
  * @method string getCategory() Obtain File type:
@@ -66,12 +66,12 @@ use TencentCloud\Common\AbstractModel;
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
  * @method void setStorageClass(string $StorageClass) Set Storage class of a media file
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -86,12 +86,12 @@ class MediaBasicInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
@@ -111,7 +111,7 @@ class MediaBasicInfo extends AbstractModel
     public $ClassName;
 
     /**
-     * @var string Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+     * @var string Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
      */
     public $ClassPath;
 
@@ -121,7 +121,7 @@ class MediaBasicInfo extends AbstractModel
     public $CoverUrl;
 
     /**
-     * @var string Muxing format of the media file, such as mp4 and flv.
+     * @var string Muxing format of the media file, for example, mp4 and flv.
      */
     public $Type;
 
@@ -136,7 +136,7 @@ class MediaBasicInfo extends AbstractModel
     public $SourceInfo;
 
     /**
-     * @var string Storage region of media files, for example, ap-chongqing. See region list.
+     * @var string Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public $StorageRegion;
 
@@ -146,7 +146,7 @@ class MediaBasicInfo extends AbstractModel
     public $StoragePath;
 
     /**
-     * @var array Tag information of a media file.
+     * @var array Tag information of the media file.
      */
     public $TagSet;
 
@@ -173,26 +173,26 @@ class MediaBasicInfo extends AbstractModel
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
      */
     public $StorageClass;
 
     /**
      * @param string $Name Media file name.
      * @param string $Description Media file description.
-     * @param string $CreateTime Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $UpdateTime Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $CreateTime Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $ExpireTime Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
      * @param integer $ClassId Category ID of the media file.
      * @param string $ClassName Category name of the media file.
-     * @param string $ClassPath Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+     * @param string $ClassPath Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
      * @param string $CoverUrl Thumbnail URL of the media file.
-     * @param string $Type Muxing format of the media file, such as mp4 and flv.
+     * @param string $Type Muxing format of the media file, for example, mp4 and flv.
      * @param string $MediaUrl URL address of the original media file.
      * @param MediaSourceData $SourceInfo Source information of the media file.
-     * @param string $StorageRegion Storage region of media files, for example, ap-chongqing. See region list.
+     * @param string $StorageRegion Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      * @param string $StoragePath Media storage path.
-     * @param array $TagSet Tag information of a media file.
+     * @param array $TagSet Tag information of the media file.
      * @param string $Vid Unique identifier of the live streaming recording file.
      * @param string $Category File type:
 <li>Video: video file</li>
@@ -203,7 +203,7 @@ class MediaBasicInfo extends AbstractModel
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
      */
     function __construct()
     {

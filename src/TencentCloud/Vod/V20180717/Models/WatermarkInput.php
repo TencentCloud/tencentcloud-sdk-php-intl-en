@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Watermark template ID.
  * @method void setDefinition(integer $Definition) Set Watermark template ID.
- * @method string getTextContent() Obtain Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+ * @method string getTextContent() Obtain Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
- * @method void setTextContent(string $TextContent) Set Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+ * @method void setTextContent(string $TextContent) Set Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
- * @method string getSvgContent() Obtain SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
- * @method void setSvgContent(string $SvgContent) Set SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+ * @method string getSvgContent() Obtain SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
+ * @method void setSvgContent(string $SvgContent) Set SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
  * @method float getStartTimeOffset() Obtain Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
 <li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
@@ -55,14 +55,14 @@ class WatermarkInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+     * @var string Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
      */
     public $TextContent;
 
     /**
-     * @var string SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+     * @var string SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
      */
     public $SvgContent;
 
@@ -84,10 +84,10 @@ SVG watermark does not support screenshot watermarking.
 
     /**
      * @param integer $Definition Watermark template ID.
-     * @param string $TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+     * @param string $TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
-     * @param string $SvgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+     * @param string $SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
      * @param float $StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
 <li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>

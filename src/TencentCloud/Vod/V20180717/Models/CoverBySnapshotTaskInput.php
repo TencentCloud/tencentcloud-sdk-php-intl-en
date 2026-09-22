@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task input parameter type for using a video screencapture as the cover image
+ * Task input parameter type for screencapturing for cover image of a video
  *
  * @method integer getDefinition() Obtain Time point screenshot template ID.
  * @method void setDefinition(integer $Definition) Set Time point screenshot template ID.
@@ -29,10 +29,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Time: time point screencapturing</li>
 <li>Percent: screenshot by percentage</li>
  * @method float getPositionValue() Obtain Screenshot position:
-<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
 <li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
  * @method void setPositionValue(float $PositionValue) Set Screenshot position:
-<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
 <li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
  * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
@@ -53,7 +53,7 @@ class CoverBySnapshotTaskInput extends AbstractModel
 
     /**
      * @var float Screenshot position:
-<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
 <li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
      */
     public $PositionValue;
@@ -69,7 +69,7 @@ class CoverBySnapshotTaskInput extends AbstractModel
 <li>Time: time point screencapturing</li>
 <li>Percent: screenshot by percentage</li>
      * @param float $PositionValue Screenshot position:
-<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
 <li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */

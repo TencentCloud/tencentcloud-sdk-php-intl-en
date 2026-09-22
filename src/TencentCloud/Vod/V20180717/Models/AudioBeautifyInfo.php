@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * Audio beautification configuration.
  *
  * @method string getSwitch() Obtain Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
  * @method void setSwitch(string $Switch) Set Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
  * @method array getTypes() Obtain Type. Multiple selections allowed. Valid values:
 <li>declick: noise removal</li>
@@ -39,7 +39,7 @@ class AudioBeautifyInfo extends AbstractModel
 {
     /**
      * @var string Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
      */
     public $Switch;
@@ -54,7 +54,7 @@ Default value: declick.
 
     /**
      * @param string $Switch Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
      * @param array $Types Type. Multiple selections allowed. Valid values:
 <li>declick: noise removal</li>

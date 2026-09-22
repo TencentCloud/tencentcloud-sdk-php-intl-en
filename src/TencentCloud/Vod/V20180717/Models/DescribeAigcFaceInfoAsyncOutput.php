@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asynchronously fetch AIGC face information output
+ * Asynchronously fetch AIGC human face information output
  *
  * @method array getFaceInfoSet() Obtain <p>Face information.</p>
  * @method void setFaceInfoSet(array $FaceInfoSet) Set <p>Face information.</p>

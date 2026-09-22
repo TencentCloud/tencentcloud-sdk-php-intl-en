@@ -18,26 +18,26 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task control parameter for image recognition involving inappropriate information
+ * Image recognition involves task control parameters for inappropriate information.
  *
- * @method string getSwitch() Obtain <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task for image recognition involving inappropriate information;</li><li>OFF: Disable the task for image recognition involving inappropriate information.</li>
- * @method void setSwitch(string $Switch) Set <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task for image recognition involving inappropriate information;</li><li>OFF: Disable the task for image recognition involving inappropriate information.</li>
- * @method array getLabelSet() Obtain <p>Filter tags for image recognition involving inappropriate information. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: business people;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
- * @method void setLabelSet(array $LabelSet) Set <p>Filter tags for image recognition involving inappropriate information. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: business people;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
+ * @method string getSwitch() Obtain <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task of image recognition involving inappropriate information;</li><li>OFF: Disable the task of image recognition involving inappropriate information.</li>
+ * @method void setSwitch(string $Switch) Set <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task of image recognition involving inappropriate information;</li><li>OFF: Disable the task of image recognition involving inappropriate information.</li>
+ * @method array getLabelSet() Obtain <p>Filter tags for image recognition involving inappropriate information. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: commercial figure;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
+ * @method void setLabelSet(array $LabelSet) Set <p>Filter tags for image recognition involving inappropriate information. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: commercial figure;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
  * @method integer getBlockConfidence() Obtain <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0–100.</p>
  * @method void setBlockConfidence(integer $BlockConfidence) Set <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0–100.</p>
- * @method integer getReviewConfidence() Obtain <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 95. Value range: 0–100.</p>
- * @method void setReviewConfidence(integer $ReviewConfidence) Set <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 95. Value range: 0–100.</p>
+ * @method integer getReviewConfidence() Obtain <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 95 points. Value range: 0–100.</p>
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 95 points. Value range: 0–100.</p>
  */
 class PoliticalImgReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task for image recognition involving inappropriate information;</li><li>OFF: Disable the task for image recognition involving inappropriate information.</li>
+     * @var string <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task of image recognition involving inappropriate information;</li><li>OFF: Disable the task of image recognition involving inappropriate information.</li>
      */
     public $Switch;
 
     /**
-     * @var array <p>Filter tags for image recognition involving inappropriate information. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: business people;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
+     * @var array <p>Filter tags for image recognition involving inappropriate information. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: commercial figure;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
      */
     public $LabelSet;
 
@@ -47,15 +47,15 @@ class PoliticalImgReviewTemplateInfo extends AbstractModel
     public $BlockConfidence;
 
     /**
-     * @var integer <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 95. Value range: 0–100.</p>
+     * @var integer <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 95 points. Value range: 0–100.</p>
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task for image recognition involving inappropriate information;</li><li>OFF: Disable the task for image recognition involving inappropriate information.</li>
-     * @param array $LabelSet <p>Filter tags for image recognition involving inappropriate information. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: business people;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
+     * @param string $Switch <p>Task switch for image recognition involving inappropriate information. Available values:</p><li>ON: Enable the task of image recognition involving inappropriate information;</li><li>OFF: Disable the task of image recognition involving inappropriate information.</li>
+     * @param array $LabelSet <p>Filter tags for image recognition involving inappropriate information. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>violation_photo: violation icon;</li><li>politician: relevant people;</li><li>entertainment: people in the entertainment industry;</li><li>sport: sports celebrity;</li><li>entrepreneur: commercial figure;</li><li>scholar: educational scholars;</li><li>celebrity: celebrity;</li><li>military: relevant people.</li>
      * @param integer $BlockConfidence <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0–100.</p>
-     * @param integer $ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 95. Value range: 0–100.</p>
+     * @param integer $ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 95 points. Value range: 0–100.</p>
      */
     function __construct()
     {

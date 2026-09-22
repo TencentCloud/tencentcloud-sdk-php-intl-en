@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output of the audio and video quality regeneration task
  *
- * @method string getFileType() Obtain File type, for example, mp4, flv.
- * @method void setFileType(string $FileType) Set File type, for example, mp4, flv.
+ * @method string getFileType() Obtain File type, for example, mp4 and flv.
+ * @method void setFileType(string $FileType) Set File type, for example, mp4 and flv.
  * @method string getFileUrl() Obtain Media file playback address.
  * @method void setFileUrl(string $FileUrl) Set Media file playback address.
  * @method string getFileId() Obtain Media file ID.
  * @method void setFileId(string $FileId) Set Media file ID.
- * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system assigns the generated filename.
- * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system assigns the generated filename.
+ * @method string getMediaName() Obtain Output filename, up to 64 characters. By default, the system assigns a generated filename.
+ * @method void setMediaName(string $MediaName) Set Output filename, up to 64 characters. By default, the system assigns a generated filename.
  * @method integer getClassId() Obtain Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
  * @method void setClassId(integer $ClassId) Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class RebuildMediaTaskOutput extends AbstractModel
 {
     /**
-     * @var string File type, for example, mp4, flv.
+     * @var string File type, for example, mp4 and flv.
      */
     public $FileType;
 
@@ -53,7 +53,7 @@ class RebuildMediaTaskOutput extends AbstractModel
     public $FileId;
 
     /**
-     * @var string Output filename, up to 64 characters. By default, the system assigns the generated filename.
+     * @var string Output filename, up to 64 characters. By default, the system assigns a generated filename.
      */
     public $MediaName;
 
@@ -69,10 +69,10 @@ class RebuildMediaTaskOutput extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @param string $FileType File type, for example, mp4, flv.
+     * @param string $FileType File type, for example, mp4 and flv.
      * @param string $FileUrl Media file playback address.
      * @param string $FileId Media file ID.
-     * @param string $MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
+     * @param string $MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
      * @param integer $ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
      * @param string $ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).

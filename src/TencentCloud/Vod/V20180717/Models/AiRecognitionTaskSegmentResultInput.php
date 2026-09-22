@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video splitting input.
+ * Input of video splitting.
  *
  * @method integer getDefinition() Obtain Video splitting template ID.
  * @method void setDefinition(integer $Definition) Set Video splitting template ID.

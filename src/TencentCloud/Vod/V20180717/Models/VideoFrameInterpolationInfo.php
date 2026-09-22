@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Intelligent frame interpolation control parameters
  *
  * @method string getSwitch() Obtain Intelligent frame interpolation control switch. Valid values:
-<li>ON: enable intelligent frame interpolation;</li>
-<li>OFF: disables intelligent frame interpolation.</li>
+<li>ON: enable intelligent frame interpolation</li>
+<li>OFF: Disable intelligent frame interpolation.</li>
  * @method void setSwitch(string $Switch) Set Intelligent frame interpolation control switch. Valid values:
-<li>ON: enable intelligent frame interpolation;</li>
-<li>OFF: disables intelligent frame interpolation.</li>
- * @method integer getFps() Obtain Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
- * @method void setFps(integer $Fps) Set Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
+<li>ON: enable intelligent frame interpolation</li>
+<li>OFF: Disable intelligent frame interpolation.</li>
+ * @method integer getFps() Obtain Intelligent frame interpolation frame rate. Value range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: match the source file frame rate.
+ * @method void setFps(integer $Fps) Set Intelligent frame interpolation frame rate. Value range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: match the source file frame rate.
  */
 class VideoFrameInterpolationInfo extends AbstractModel
 {
     /**
      * @var string Intelligent frame interpolation control switch. Valid values:
-<li>ON: enable intelligent frame interpolation;</li>
-<li>OFF: disables intelligent frame interpolation.</li>
+<li>ON: enable intelligent frame interpolation</li>
+<li>OFF: Disable intelligent frame interpolation.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
+     * @var integer Intelligent frame interpolation frame rate. Value range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: match the source file frame rate.
      */
     public $Fps;
 
     /**
      * @param string $Switch Intelligent frame interpolation control switch. Valid values:
-<li>ON: enable intelligent frame interpolation;</li>
-<li>OFF: disables intelligent frame interpolation.</li>
-     * @param integer $Fps Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
+<li>ON: enable intelligent frame interpolation</li>
+<li>OFF: Disable intelligent frame interpolation.</li>
+     * @param integer $Fps Intelligent frame interpolation frame rate. Value range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: match the source file frame rate.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Voice translation recognition segment.
+ * Segment undergone voice translation recognition.
  *
  * @method float getConfidence() Obtain Confidence of a recognized segment in speech translation. Value range: 0-100.
  * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment in speech translation. Value range: 0-100.

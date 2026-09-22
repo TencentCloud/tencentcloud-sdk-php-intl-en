@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * File information of the AIGC human face input
+ * AIGC human face input file information
  *
  * @method string getType() Obtain Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
  * @method void setType(string $Type) Set Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CommitUpload request structure.
  *
- * @method string getVodSessionKey() Obtain <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
- * @method void setVodSessionKey(string $VodSessionKey) Set <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
- * @method integer getSubAppId() Obtain <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+ * @method string getVodSessionKey() Obtain <p>VOD session, which is the VodSessionKey returned by the upload request API.</p>
+ * @method void setVodSessionKey(string $VodSessionKey) Set <p>VOD session, which is the VodSessionKey returned by the upload request API.</p>
+ * @method integer getSubAppId() Obtain <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
  */
 class CommitUploadRequest extends AbstractModel
 {
     /**
-     * @var string <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
+     * @var string <p>VOD session, which is the VodSessionKey returned by the upload request API.</p>
      */
     public $VodSessionKey;
 
     /**
-     * @var integer <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+     * @var integer <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param string $VodSessionKey <p>VOD session. Use the returned value of the upload request API: VodSessionKey.</p>
-     * @param integer $SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+     * @param string $VodSessionKey <p>VOD session, which is the VodSessionKey returned by the upload request API.</p>
+     * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     function __construct()
     {

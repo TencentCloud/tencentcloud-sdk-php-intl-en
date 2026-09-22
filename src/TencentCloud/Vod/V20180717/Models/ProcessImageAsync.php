@@ -18,22 +18,22 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of async image processing tasks.
+ * Information of the image asynchronous processing task.
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getStatus() Obtain Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
  * @method void setStatus(string $Status) Set Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
- * @method void setErrCode(integer $ErrCode) Set Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+ * @method integer getErrCode() Obtain Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+ * @method void setErrCode(integer $ErrCode) Set Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method integer getProgress() Obtain Task progress, value range: [0-100].
- * @method void setProgress(integer $Progress) Set Task progress, value range: [0-100].
- * @method ProcessImageAsyncInput getInput() Obtain Input information of async image processing tasks.
- * @method void setInput(ProcessImageAsyncInput $Input) Set Input information of async image processing tasks.
- * @method ProcessImageAsyncOutput getOutput() Obtain Output information of the image asynchronous processing task.
- * @method void setOutput(ProcessImageAsyncOutput $Output) Set Output information of the image asynchronous processing task.
+ * @method integer getProgress() Obtain Task progress. Value range: [0-100].
+ * @method void setProgress(integer $Progress) Set Task progress. Value range: [0-100].
+ * @method ProcessImageAsyncInput getInput() Obtain Input information of the image asynchronous processing task.
+ * @method void setInput(ProcessImageAsyncInput $Input) Set Input information of the image asynchronous processing task.
+ * @method ProcessImageAsyncOutput getOutput() Obtain Output information of the image asynchronous task processing.
+ * @method void setOutput(ProcessImageAsyncOutput $Output) Set Output information of the image asynchronous task processing.
  * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method string getSessionContext() Obtain Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
@@ -52,7 +52,7 @@ class ProcessImageAsync extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+     * @var integer Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
      */
     public $ErrCode;
 
@@ -62,17 +62,17 @@ class ProcessImageAsync extends AbstractModel
     public $Message;
 
     /**
-     * @var integer Task progress, value range: [0-100].
+     * @var integer Task progress. Value range: [0-100].
      */
     public $Progress;
 
     /**
-     * @var ProcessImageAsyncInput Input information of async image processing tasks.
+     * @var ProcessImageAsyncInput Input information of the image asynchronous processing task.
      */
     public $Input;
 
     /**
-     * @var ProcessImageAsyncOutput Output information of the image asynchronous processing task.
+     * @var ProcessImageAsyncOutput Output information of the image asynchronous task processing.
      */
     public $Output;
 
@@ -89,11 +89,11 @@ class ProcessImageAsync extends AbstractModel
     /**
      * @param string $TaskId Task ID.
      * @param string $Status Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-     * @param integer $ErrCode Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+     * @param integer $ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
      * @param string $Message Error message.
-     * @param integer $Progress Task progress, value range: [0-100].
-     * @param ProcessImageAsyncInput $Input Input information of async image processing tasks.
-     * @param ProcessImageAsyncOutput $Output Output information of the image asynchronous processing task.
+     * @param integer $Progress Task progress. Value range: [0-100].
+     * @param ProcessImageAsyncInput $Input Input information of the image asynchronous processing task.
+     * @param ProcessImageAsyncOutput $Output Output information of the image asynchronous task processing.
      * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      * @param string $SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */

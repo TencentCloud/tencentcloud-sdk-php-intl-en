@@ -18,9 +18,9 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent erasure and specified removal region configuration.
+ * Intelligent removal, specify the removal region configuration.
 Directly erase the specified region within a specified period.
-When both BeginMs and EndMs are set to 0, the specified region in the entire video is directly erased.
+When both BeginMs and EndMs are 0, directly erase the specified region in the entire video.
  *
  * @method integer getBeginMs() Obtain <p>Start time, unit: ms</p>
  * @method void setBeginMs(integer $BeginMs) Set <p>Start time, unit: ms</p>

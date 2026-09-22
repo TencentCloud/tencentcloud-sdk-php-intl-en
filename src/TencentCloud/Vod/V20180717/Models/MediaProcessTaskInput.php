@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video processing task type
  *
- * @method array getTranscodeTaskSet() Obtain Video transcoding task list.
- * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set Video transcoding task list.
+ * @method array getTranscodeTaskSet() Obtain List of video transcoding tasks.
+ * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set List of video transcoding tasks.
  * @method array getAnimatedGraphicTaskSet() Obtain List of video-to-GIF tasks.
  * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) Set List of video-to-GIF tasks.
- * @method array getSnapshotByTimeOffsetTaskSet() Obtain List of time point screencapturing tasks for videos.
- * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set List of time point screencapturing tasks for videos.
+ * @method array getSnapshotByTimeOffsetTaskSet() Obtain List of time point screenshot tasks for videos.
+ * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set List of time point screenshot tasks for videos.
  * @method array getSampleSnapshotTaskSet() Obtain List of sampled screenshot tasks for videos.
  * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screenshot tasks for videos.
  * @method array getImageSpriteTaskSet() Obtain List of image sprite tasks for videos.
  * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite tasks for videos.
- * @method array getCoverBySnapshotTaskSet() Obtain Task list of screencapturing for cover image tasks for videos.
- * @method void setCoverBySnapshotTaskSet(array $CoverBySnapshotTaskSet) Set Task list of screencapturing for cover image tasks for videos.
+ * @method array getCoverBySnapshotTaskSet() Obtain Task list of screencapturing for cover images from videos.
+ * @method void setCoverBySnapshotTaskSet(array $CoverBySnapshotTaskSet) Set Task list of screencapturing for cover images from videos.
  * @method array getAdaptiveDynamicStreamingTaskSet() Obtain List of video to adaptive streaming tasks.
  * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) Set List of video to adaptive streaming tasks.
  */
 class MediaProcessTaskInput extends AbstractModel
 {
     /**
-     * @var array Video transcoding task list.
+     * @var array List of video transcoding tasks.
      */
     public $TranscodeTaskSet;
 
@@ -48,7 +48,7 @@ class MediaProcessTaskInput extends AbstractModel
     public $AnimatedGraphicTaskSet;
 
     /**
-     * @var array List of time point screencapturing tasks for videos.
+     * @var array List of time point screenshot tasks for videos.
      */
     public $SnapshotByTimeOffsetTaskSet;
 
@@ -63,7 +63,7 @@ class MediaProcessTaskInput extends AbstractModel
     public $ImageSpriteTaskSet;
 
     /**
-     * @var array Task list of screencapturing for cover image tasks for videos.
+     * @var array Task list of screencapturing for cover images from videos.
      */
     public $CoverBySnapshotTaskSet;
 
@@ -73,12 +73,12 @@ class MediaProcessTaskInput extends AbstractModel
     public $AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * @param array $TranscodeTaskSet Video transcoding task list.
+     * @param array $TranscodeTaskSet List of video transcoding tasks.
      * @param array $AnimatedGraphicTaskSet List of video-to-GIF tasks.
-     * @param array $SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
+     * @param array $SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
      * @param array $SampleSnapshotTaskSet List of sampled screenshot tasks for videos.
      * @param array $ImageSpriteTaskSet List of image sprite tasks for videos.
-     * @param array $CoverBySnapshotTaskSet Task list of screencapturing for cover image tasks for videos.
+     * @param array $CoverBySnapshotTaskSet Task list of screencapturing for cover images from videos.
      * @param array $AdaptiveDynamicStreamingTaskSet List of video to adaptive streaming tasks.
      */
     function __construct()

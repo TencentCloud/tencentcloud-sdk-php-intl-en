@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task control parameters for text recognition involving offensive content.
+ * Task control parameters for text recognition involving offensive content
  *
  * @method string getSwitch() Obtain Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
  * @method void setSwitch(string $Switch) Set Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
- * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
- * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
+ * @method integer getBlockConfidence() Obtain Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+ * @method integer getReviewConfidence() Obtain Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
  */
 class PornOcrReviewTemplateInfo extends AbstractModel
 {
     /**
      * @var string Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+     * @var integer Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
      */
     public $BlockConfidence;
 
     /**
-     * @var integer Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * @var integer Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     public $ReviewConfidence;
 
     /**
      * @param string $Switch Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
-     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
-     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
+     * @param integer $BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+     * @param integer $ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     function __construct()
     {

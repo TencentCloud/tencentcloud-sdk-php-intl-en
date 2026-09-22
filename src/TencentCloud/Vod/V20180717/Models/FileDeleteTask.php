@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * File deletion task
  *
- * @method array getFileIdSet() Obtain <p>List of IDs of files to delete.</p>
- * @method void setFileIdSet(array $FileIdSet) Set <p>List of IDs of files to delete.</p>
+ * @method array getFileIdSet() Obtain <p>List of file IDs to delete.</p>
+ * @method void setFileIdSet(array $FileIdSet) Set <p>List of file IDs to delete.</p>
  * @method array getFileDeleteResultInfo() Obtain <p>List of result information for deleting files.</p>
  * @method void setFileDeleteResultInfo(array $FileDeleteResultInfo) Set <p>List of result information for deleting files.</p>
  */
 class FileDeleteTask extends AbstractModel
 {
     /**
-     * @var array <p>List of IDs of files to delete.</p>
+     * @var array <p>List of file IDs to delete.</p>
      */
     public $FileIdSet;
 
@@ -38,7 +38,7 @@ class FileDeleteTask extends AbstractModel
     public $FileDeleteResultInfo;
 
     /**
-     * @param array $FileIdSet <p>List of IDs of files to delete.</p>
+     * @param array $FileIdSet <p>List of file IDs to delete.</p>
      * @param array $FileDeleteResultInfo <p>List of result information for deleting files.</p>
      */
     function __construct()

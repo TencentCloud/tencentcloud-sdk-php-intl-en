@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set <p>Copyright watermark.</p>
  * @method BlindWatermarkInput getBlindWatermark() Obtain <p>Digital watermark.</p>
  * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set <p>Digital watermark.</p>
- * @method array getMosaicSet() Obtain <p>Mosaic list. Up to 10 mosaics are supported.</p>
- * @method void setMosaicSet(array $MosaicSet) Set <p>Mosaic list. Up to 10 mosaics are supported.</p>
+ * @method array getMosaicSet() Obtain <p>Mosaic list. Up to 10 images are supported.</p>
+ * @method void setMosaicSet(array $MosaicSet) Set <p>Mosaic list. Up to 10 images are supported.</p>
  * @method array getHeadTailSet() Obtain <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
  * @method void setHeadTailSet(array $HeadTailSet) Set <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
  * @method float getStartTimeOffset() Obtain <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
@@ -71,7 +71,7 @@ class TranscodeTaskInput extends AbstractModel
     public $BlindWatermark;
 
     /**
-     * @var array <p>Mosaic list. Up to 10 mosaics are supported.</p>
+     * @var array <p>Mosaic list. Up to 10 images are supported.</p>
      */
     public $MosaicSet;
 
@@ -106,7 +106,7 @@ class TranscodeTaskInput extends AbstractModel
      * @param TraceWatermarkInput $TraceWatermark <p>Traceable watermark.</p>
      * @param CopyRightWatermarkInput $CopyRightWatermark <p>Copyright watermark.</p>
      * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark.</p>
-     * @param array $MosaicSet <p>Mosaic list. Up to 10 mosaics are supported.</p>
+     * @param array $MosaicSet <p>Mosaic list. Up to 10 images are supported.</p>
      * @param array $HeadTailSet <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
      * @param float $StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
      * @param float $EndTimeOffset <p>End time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video lasts until the end of the original video.</li><li>If the value is greater than 0 (assuming n), the transcoded video lasts until the nth second of the original video.</li><li>If the value is less than 0 (assuming -n), the transcoded video lasts until n seconds before the end of the original video.</li>
