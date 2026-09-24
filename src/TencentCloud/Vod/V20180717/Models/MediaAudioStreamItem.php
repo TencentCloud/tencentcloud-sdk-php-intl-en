@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio stream information of VOD files
  *
- * @method integer getBitrate() Obtain <p>Bitrate of the audio stream. Unit: bps.</p>
- * @method void setBitrate(integer $Bitrate) Set <p>Bitrate of the audio stream. Unit: bps.</p>
- * @method integer getSamplingRate() Obtain <p>Sampling rate of the audio stream. Unit: hz.</p>
- * @method void setSamplingRate(integer $SamplingRate) Set <p>Sampling rate of the audio stream. Unit: hz.</p>
+ * @method integer getBitrate() Obtain <p>Audio stream bitrate, in bps.</p>
+ * @method void setBitrate(integer $Bitrate) Set <p>Audio stream bitrate, in bps.</p>
+ * @method integer getSamplingRate() Obtain <p>Sampling rate of the audio stream, unit: hz.</p>
+ * @method void setSamplingRate(integer $SamplingRate) Set <p>Sampling rate of the audio stream, unit: hz.</p>
  * @method string getCodec() Obtain <p>Audio stream encoding format, for example, aac.</p>
  * @method void setCodec(string $Codec) Set <p>Audio stream encoding format, for example, aac.</p>
  */
 class MediaAudioStreamItem extends AbstractModel
 {
     /**
-     * @var integer <p>Bitrate of the audio stream. Unit: bps.</p>
+     * @var integer <p>Audio stream bitrate, in bps.</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer <p>Sampling rate of the audio stream. Unit: hz.</p>
+     * @var integer <p>Sampling rate of the audio stream, unit: hz.</p>
      */
     public $SamplingRate;
 
@@ -45,8 +45,8 @@ class MediaAudioStreamItem extends AbstractModel
     public $Codec;
 
     /**
-     * @param integer $Bitrate <p>Bitrate of the audio stream. Unit: bps.</p>
-     * @param integer $SamplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
+     * @param integer $Bitrate <p>Audio stream bitrate, in bps.</p>
+     * @param integer $SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
      * @param string $Codec <p>Audio stream encoding format, for example, aac.</p>
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompanyName(string $CompanyName) Set <p>Enterprise name (required)</p>
  * @method string getCompanyCertNumber() Obtain <p>Enterprise registration number / unified social credit code (Option)</p>
  * @method void setCompanyCertNumber(string $CompanyCertNumber) Set <p>Enterprise registration number / unified social credit code (Option)</p>
- * @method string getCompanyCountry() Obtain <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
- * @method void setCompanyCountry(string $CompanyCountry) Set <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+ * @method string getCompanyCountry() Obtain <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
+ * @method void setCompanyCountry(string $CompanyCountry) Set <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
  * @method string getCompanyAddress() Obtain <p>Company address (optional)</p>
  * @method void setCompanyAddress(string $CompanyAddress) Set <p>Company address (optional)</p>
  */
@@ -42,7 +42,7 @@ class Company extends AbstractModel
     public $CompanyCertNumber;
 
     /**
-     * @var string <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+     * @var string <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
      */
     public $CompanyCountry;
 
@@ -54,7 +54,7 @@ class Company extends AbstractModel
     /**
      * @param string $CompanyName <p>Enterprise name (required)</p>
      * @param string $CompanyCertNumber <p>Enterprise registration number / unified social credit code (Option)</p>
-     * @param string $CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+     * @param string $CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
      * @param string $CompanyAddress <p>Company address (optional)</p>
      */
     function __construct()

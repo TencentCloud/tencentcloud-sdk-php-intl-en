@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AML Person object
  *
- * @method string getFullName() Obtain <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
- * @method void setFullName(string $FullName) Set <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
- * @method string getLastName() Obtain <p>name (Either this field or FullName is required)</p>
- * @method void setLastName(string $LastName) Set <p>name (Either this field or FullName is required)</p>
- * @method string getFirstName() Obtain <p>First name (Option)</p>
- * @method void setFirstName(string $FirstName) Set <p>First name (Option)</p>
- * @method string getMiddleName() Obtain <p>Middle name (Option)</p>
- * @method void setMiddleName(string $MiddleName) Set <p>Middle name (Option)</p>
+ * @method string getFullName() Obtain <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
+ * @method void setFullName(string $FullName) Set <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
+ * @method string getLastName() Obtain <p>name (either this or FullName is required)</p>
+ * @method void setLastName(string $LastName) Set <p>name (either this or FullName is required)</p>
+ * @method string getFirstName() Obtain <p>First name (optional)</p>
+ * @method void setFirstName(string $FirstName) Set <p>First name (optional)</p>
+ * @method string getMiddleName() Obtain <p>Middle name (optional)</p>
+ * @method void setMiddleName(string $MiddleName) Set <p>Middle name (optional)</p>
  * @method string getIdentityNumber() Obtain <p>ID number (Option)</p>
  * @method void setIdentityNumber(string $IdentityNumber) Set <p>ID number (Option)</p>
  * @method string getDateOfBirth() Obtain <p>Date of birth, format: YYYY-MM-DD, YYYY-MM, YYYY (Year-Month-Day separated by -)</p><p>Parameter format: YYYY-MM-DD</p>
@@ -44,22 +44,22 @@ use TencentCloud\Common\AbstractModel;
 class Person extends AbstractModel
 {
     /**
-     * @var string <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+     * @var string <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
      */
     public $FullName;
 
     /**
-     * @var string <p>name (Either this field or FullName is required)</p>
+     * @var string <p>name (either this or FullName is required)</p>
      */
     public $LastName;
 
     /**
-     * @var string <p>First name (Option)</p>
+     * @var string <p>First name (optional)</p>
      */
     public $FirstName;
 
     /**
-     * @var string <p>Middle name (Option)</p>
+     * @var string <p>Middle name (optional)</p>
      */
     public $MiddleName;
 
@@ -94,10 +94,10 @@ class Person extends AbstractModel
     public $Country;
 
     /**
-     * @param string $FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
-     * @param string $LastName <p>name (Either this field or FullName is required)</p>
-     * @param string $FirstName <p>First name (Option)</p>
-     * @param string $MiddleName <p>Middle name (Option)</p>
+     * @param string $FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
+     * @param string $LastName <p>name (either this or FullName is required)</p>
+     * @param string $FirstName <p>First name (optional)</p>
+     * @param string $MiddleName <p>Middle name (optional)</p>
      * @param string $IdentityNumber <p>ID number (Option)</p>
      * @param string $DateOfBirth <p>Date of birth, format: YYYY-MM-DD, YYYY-MM, YYYY (Year-Month-Day separated by -)</p><p>Parameter format: YYYY-MM-DD</p>
      * @param string $Gender <p>Gender: MALE / FEMALE / OTHER / NOT_KNOWN</p><p>Enumeration values:</p><ul><li>MALE: male</li><li>FEMALE: female</li><li>OTHER: OTHER</li><li>NOT_KNOWN: NOT_KNOWN</li></ul>

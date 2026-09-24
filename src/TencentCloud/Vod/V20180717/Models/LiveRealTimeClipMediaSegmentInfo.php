@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Segment information of the media after instant clipping.
  *
- * @method string getStartTime() Obtain Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setStartTime(string $StartTime) Set Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getStartTime() Obtain Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
+ * @method void setStartTime(string $StartTime) Set Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
  * @method string getEndTime() Obtain Segment end time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setEndTime(string $EndTime) Set Segment end time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class LiveRealTimeClipMediaSegmentInfo extends AbstractModel
 {
     /**
-     * @var string Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
      */
     public $StartTime;
 
@@ -38,7 +38,7 @@ class LiveRealTimeClipMediaSegmentInfo extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $StartTime Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $StartTime Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
      * @param string $EndTime Segment end time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming Instant Editing stream information
+ * Live streaming Instant Editing stream info
  *
  * @method string getType() Obtain Live stream type. Valid values:
 <li>Original (original stream, <b>default value</b>).</li>

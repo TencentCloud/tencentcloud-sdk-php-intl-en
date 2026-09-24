@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAMLCustomerProfile request structure.
  *
- * @method string getUniqueCustomerID() Obtain End user's unique identifier in the customer system, up to 256 characters.
- * @method void setUniqueCustomerID(string $UniqueCustomerID) Set End user's unique identifier in the customer system, up to 256 characters.
- * @method string getEntityType() Obtain Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
- * @method void setEntityType(string $EntityType) Set Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
- * @method Person getPerson() Obtain Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
- * @method void setPerson(Person $Person) Set Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
- * @method Company getCompany() Obtain Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
- * @method void setCompany(Company $Company) Set Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
+ * @method string getUniqueCustomerID() Obtain <p>User's unique identifier in the customer system, up to 256 characters.</p>
+ * @method void setUniqueCustomerID(string $UniqueCustomerID) Set <p>User's unique identifier in the customer system, up to 256 characters.</p>
+ * @method string getEntityType() Obtain <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+ * @method void setEntityType(string $EntityType) Set <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+ * @method Person getPerson() Obtain <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
+ * @method void setPerson(Person $Person) Set <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
+ * @method Company getCompany() Obtain <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+ * @method void setCompany(Company $Company) Set <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
  */
 class UpdateAMLCustomerProfileRequest extends AbstractModel
 {
     /**
-     * @var string End user's unique identifier in the customer system, up to 256 characters.
+     * @var string <p>User's unique identifier in the customer system, up to 256 characters.</p>
      */
     public $UniqueCustomerID;
 
     /**
-     * @var string Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+     * @var string <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
      */
     public $EntityType;
 
     /**
-     * @var Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+     * @var Person <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
      */
     public $Person;
 
     /**
-     * @var Company Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
+     * @var Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
      */
     public $Company;
 
     /**
-     * @param string $UniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
-     * @param string $EntityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
-     * @param Person $Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
-     * @param Company $Company Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
+     * @param string $UniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
+     * @param string $EntityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+     * @param Person $Person <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
+     * @param Company $Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
      */
     function __construct()
     {

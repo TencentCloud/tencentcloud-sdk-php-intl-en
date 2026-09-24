@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAMLScreeningResult request structure.
  *
- * @method string getUniqueCustomerID() Obtain <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
- * @method void setUniqueCustomerID(string $UniqueCustomerID) Set <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+ * @method string getUniqueCustomerID() Obtain <p>User's unique identifier in the customer system, up to 256 characters.</p>
+ * @method void setUniqueCustomerID(string $UniqueCustomerID) Set <p>User's unique identifier in the customer system, up to 256 characters.</p>
  */
 class GetAMLScreeningResultRequest extends AbstractModel
 {
     /**
-     * @var string <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+     * @var string <p>User's unique identifier in the customer system, up to 256 characters.</p>
      */
     public $UniqueCustomerID;
 
     /**
-     * @param string $UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+     * @param string $UniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
      */
     function __construct()
     {

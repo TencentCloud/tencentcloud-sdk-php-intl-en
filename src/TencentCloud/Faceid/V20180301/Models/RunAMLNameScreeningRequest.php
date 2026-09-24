@@ -22,18 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUniqueCustomerID() Obtain <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
  * @method void setUniqueCustomerID(string $UniqueCustomerID) Set <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
- * @method string getEntityType() Obtain Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
- * @method void setEntityType(string $EntityType) Set Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
- * @method Person getPerson() Obtain Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
- * @method void setPerson(Person $Person) Set Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
- * @method Company getCompany() Obtain Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
- * @method void setCompany(Company $Company) Set Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
- * @method boolean getEnableOngoingScreening() Obtain Whether continuous monitoring screening is enabled. Default value: false.
- * @method void setEnableOngoingScreening(boolean $EnableOngoingScreening) Set Whether continuous monitoring screening is enabled. Default value: false.
+ * @method string getEntityType() Obtain <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+ * @method void setEntityType(string $EntityType) Set <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+ * @method Person getPerson() Obtain <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
+ * @method void setPerson(Person $Person) Set <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
+ * @method Company getCompany() Obtain <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+ * @method void setCompany(Company $Company) Set <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+ * @method boolean getEnableOngoingScreening() Obtain <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
+ * @method void setEnableOngoingScreening(boolean $EnableOngoingScreening) Set <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
  */
 class RunAMLNameScreeningRequest extends AbstractModel
 {
@@ -43,35 +39,31 @@ class RunAMLNameScreeningRequest extends AbstractModel
     public $UniqueCustomerID;
 
     /**
-     * @var string Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+     * @var string <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
      */
     public $EntityType;
 
     /**
-     * @var Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+     * @var Person <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
      */
     public $Person;
 
     /**
-     * @var Company Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
+     * @var Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
      */
     public $Company;
 
     /**
-     * @var boolean Whether continuous monitoring screening is enabled. Default value: false.
+     * @var boolean <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
      */
     public $EnableOngoingScreening;
 
     /**
      * @param string $UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
-     * @param string $EntityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
-     * @param Person $Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
-     * @param Company $Company Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
-     * @param boolean $EnableOngoingScreening Whether continuous monitoring screening is enabled. Default value: false.
+     * @param string $EntityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+     * @param Person $Person <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
+     * @param Company $Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+     * @param boolean $EnableOngoingScreening <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
      */
     function __construct()
     {

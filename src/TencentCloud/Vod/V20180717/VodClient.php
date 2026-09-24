@@ -23,8 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Vod\V20180717\Models as Models;
 
 /**
- * @method Models\ApplyUploadResponse ApplyUpload(Models\ApplyUploadRequest $req) We strongly recommend that you use the [server-side upload SDK](https://www.tencentcloud.comhttps://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1?from_cn_redirect=1#1.-.E5.8F.91.E8.B5.B7.E4.B8.8A.E4.BC.A0) provided by VOD to upload files. Directly invoking the API for upload is significantly more difficult and involves a much larger workload than using the SDK.
-* This API is used to apply for uploading media files (and cover files), obtain the meta-information for uploading files to VOD (including upload path and upload signature), for subsequent upload APIs.
+ * @method Models\ApplyUploadResponse ApplyUpload(Models\ApplyUploadRequest $req) We strongly recommend that you use the [server-side upload SDK](https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1#1.-.E5.8F.91.E8.B5.B7.E4.B8.8A.E4.BC.A0) provided by VOD to upload files. Directly invoking the API for upload is significantly more difficult and involves a much larger workload than using the SDK.
+* This API is used to apply for uploading media files (and cover files), get the meta information for uploading files to VOD (including upload path, upload signature, etc.), for subsequent upload APIs.
 For the upload process, see [Server-Side Upload Overview](https://www.tencentcloud.com/document/product/266/9759?from_cn_redirect=1).
  * @method Models\AttachMediaSubtitlesResponse AttachMediaSubtitles(Models\AttachMediaSubtitlesRequest $req) Associate a media asset subtitle with the media output file corresponding to the adaptive bitrate streaming template ID (or disassociate it).
  * @method Models\CloneCDNDomainResponse CloneCDNDomain(Models\CloneCDNDomainRequest $req) Clone a CDN domain.
@@ -56,7 +56,7 @@ The muxing format of the composed media can be MP4 (video) or MP3 (audio). If ev
  * @method Models\CreateAigcCustomElementResponse CreateAigcCustomElement(Models\CreateAigcCustomElementRequest $req) Call this API to create a subject for a specified model.
  * @method Models\CreateAigcCustomVoiceResponse CreateAigcCustomVoice(Models\CreateAigcCustomVoiceRequest $req) This API is used to create AIGC custom voice types. Note that calling this API incurs a fee for creating custom voice types. Refer to the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#5e5217e8-29fc-467e-ac2d-853648f988b7).
  * @method Models\CreateAigcHunyuan3DTaskResponse CreateAigcHunyuan3DTask(Models\CreateAigcHunyuan3DTaskRequest $req) This API is used to create AIGC Hunyuan 3D tasks.
- * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) This API is used to [generate AIGC images](https://www.tencentcloud.com/document/product/266/124473?from_cn_redirect=1). The default limit is 1 concurrent processing. API calls will incur actual fees. Refer to the VOD [AIGC image generation billing documentation](https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac). The settlement mode for the feature is [pay-as-you-go](https://www.tencentcloud.com/document/product/266/2838?from_cn_redirect=1). For daily billing customers, usage on the day is billed on the second day. For monthly settlement customers, the previous month's usage fees are billed on the 1st of the next month.
+ * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) This API is used to generate AIGC images. The default limit is 1 concurrent processing. API calls incur actual fees. Refer to the VOD AIGC image generation billing documentation. The feature uses postpaid settlement mode. For daily billing customers, usage on the day is billed on the second day. For monthly settlement customers, the previous month's usage fees are billed on the 1st of the next month.
  * @method Models\CreateAigcQuotaResponse CreateAigcQuota(Models\CreateAigcQuotaRequest $req) This API is used to create and enable AIGC quota configuration. Quota usage starts accumulating from the enablement of the quota feature. Once the quota is reached, AIGC features will no longer be usable.
 
 If the quota is deleted and re-enabled, the amount will be cleared and recalculated.
@@ -120,7 +120,7 @@ Each file in the carousel playlist can specify a source file or a transcoded fil
 The designated file must be in hls format. All playlist files should preferably maintain the same bitrate and resolution.
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) This API is used to create a user-customized sampled screenshot template, with a maximum of 16.
  * @method Models\CreateSceneAigcImageTaskResponse CreateSceneAigcImageTask(Models\CreateSceneAigcImageTaskRequest $req) This API is used to generate scenario-based AIGC images. API calls incur actual fees. Refer to the VOD AIGC image generation billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac). The feature uses postpaid settlement. For daily billing customers, usage on the day is billed on the second day. For monthly billing customers, the previous month's usage fees are billed on the 1st of the next month.
- * @method Models\CreateSceneAigcVideoTaskResponse CreateSceneAigcVideoTask(Models\CreateSceneAigcVideoTaskRequest $req) This API is used to generate scenario-based AIGC images. <b>The API is in beta. If needed, please [contact us](https://www.tencentcloud.com/online?from_cn_redirect=1-service?from=sales_sales&source=PRESALE). API calls will incur actual fees.</b>
+ * @method Models\CreateSceneAigcVideoTaskResponse CreateSceneAigcVideoTask(Models\CreateSceneAigcVideoTaskRequest $req) This API is used to generate scenario-based AIGC images. <b>The API is in beta. If needed, please contact us. API calls will incur actual fees.</b>
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) This API is used to create user-customized specified time point screenshot templates. Maximum quantity: 16.
  * @method Models\CreateStorageRegionResponse CreateStorageRegion(Models\CreateStorageRegionRequest $req) This API is used to enable storage in a region.
 1. When a user enables the VOD service, storage in partial regions is enabled by default. If necessary, the user can use this API to enable storage in other regions.
@@ -130,7 +130,7 @@ The designated file must be in hls format. All playlist files should preferably 
 This API is used to create player configurations. Maximum number: 100.
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) This API is used to create custom transcoding templates. Maximum quantity: 100.
  * @method Models\CreateVodDomainResponse CreateVodDomain(Models\CreateVodDomainRequest $req) This API is used to add acceleration domain names to VOD. A user can add up to 20 acceleration domain names.
-1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from deployment status to online status.
+1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from deployment state to online status.
  * @method Models\CreateWatermarkTemplateResponse CreateWatermarkTemplate(Models\CreateWatermarkTemplateRequest $req) This API is used to create a user-defined watermark template with an upper limit of 1000.
  * @method Models\CreateWordSamplesResponse CreateWordSamples(Models\CreateWordSamplesRequest $req) This API is used to create keyword samples in batches. Samples are used for video processing such as inappropriate content recognition and content recognition through OCR and ASR technology.
  * @method Models\DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(Models\DeleteAIAnalysisTemplateRequest $req) This API is used to delete a user-defined audio and video content analysis template.
@@ -364,7 +364,7 @@ Use a template to initiate audio and video quality revival.
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is only used for special scenarios of customized development. Do not call this API unless VOD customer service proactively informs you that you need to use it.
  * @method Models\ExtractBlindWatermarkResponse ExtractBlindWatermark(Models\ExtractBlindWatermarkRequest $req) This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
  * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) If you need source tracing for piracy, see Ghost Watermark (https://www.tencentcloud.com/document/product/266/94228?from_cn_redirect=1).
- * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) If source tracing for piracy is required, ghost watermark is recommended for use (https://www.tencentcloud.com/document/product/266/94228?from_cn_redirect=1).
+ * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) If source tracing for piracy is needed, ghost watermark (https://www.tencentcloud.com/document/product/266/94228?from_cn_redirect=1) is recommended.
  * @method Models\FastEditMediaResponse FastEditMedia(Models\FastEditMediaRequest $req) Quickly splice and edit HLS videos in VOD to generate new media in HLS format.
 
 Quickly splice or edit the generated video to generate a new FileId and solidify it. After successful solidification, the new video file exists independent of the original input video and is not affected by the deletion of the original video.
@@ -379,32 +379,32 @@ It takes about 5 to 10 minutes for the ban/unban operation to take effect across
  * @method Models\ListFilesResponse ListFiles(Models\ListFilesRequest $req) This API is used to list stored file entries under a sub-app.
 
 **This API is only available in "FileID+Path" mode.**
- * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) Live streaming instant editing means that during live streaming (i.e., before the live stream has ended), customers can select a segment from the live stream content and generate a new video (in HLS format) in real time. Developers can share it instantly or save it for long-term preservation.
+ * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) Live stream clipping refers to generating a new video (HLS format) in real time from a selected segment of the live stream portion during live streaming (when the live stream has not yet ended). Developers can share it immediately or store it for long-term preservation.
 
-Tencent Cloud VOD supports two instant clipping modes:
-- Clip solidification: Save the edited video as a standalone video with an independent FileId; suitable for long-term preservation of highlights.
-- Editing is not solidified: The edited video is attached to the live streaming recording file and has no standalone FileId. It is suitable for scenarios where highlight clips are shared temporarily.
+Tencent Cloud VOD supports two real-time editing modes:
+- Edit and solidify: Save the edited video as a standalone video with an independent FileId. This is suitable for long-term preservation of highlight clips.
+- Editing is not solidified: the edited video is attached to the live streaming recording file and has no standalone FileId. It is suitable for scenarios where highlight clips are temporarily shared.
 
 Note:
-- The premise for using the live stream clipping feature is that the target live stream has [time shifting](https://www.tencentcloud.com/document/product/267/32742?from_cn_redirect=1) enabled.
+- The premise for using the live stream clipping feature is that the target live stream has the time shifting and playback (https://www.tencentcloud.com/document/product/267/32742?from_cn_redirect=1) feature enabled.
 -Live streaming Instant Editing is based on the m3u8 file generated by live recording, so its minimum editing precision is one ts slicing. Second-level or more precise editing precision cannot be achieved.
--Since stream disconnection may occur during live streaming, the actual video duration generated by editing might not be the same as expected. For example, if you edit a live stream from 2018-09-20T10:30:00Z to 2018-09-20T10:40:00Z, and a stream disconnection occurred during this time interval, the duration of the returned media asset file will be less than 10 minutes. In such cases, you can perceive it through the output parameter <a href="#p_segmentset">SegmentSet</a>.
+-Since stream disconnection may occur during live streaming, the actual video duration generated by editing may differ from the expected duration. For example, if you edit a live stream from 2018-09-20T10:30:00Z to 2018-09-20T10:40:00Z, and stream disconnection occurred during this time interval, the returned media file duration will be less than 10 minutes. In such cases, you can perceive it through the output parameter <a href="#p_segmentset">SegmentSet</a>.
 
 ### Edit solidification
-Editing solidification refers to saving an edited video as an independent video (with an independent FileId). Its lifecycle is not subject to any impact from the original live recorded video (even if the original recorded video is deleted, the clipping result will not be affected). It can also be transcoded, published on WeChat, or undergo other secondary processing.
+Clipping persistence refers to saving the edited video as an independent video with its own FileId. Its lifecycle is not subject to any impact from the original live recorded video. Even if the original recorded video is deleted, the clipping result is not affected. You can also transcode it or publish it on WeChat for post-processing.
 
-For example, a complete football match may have a live recording of over 2 hours. For cost savings, the customer can store the original video for 2 months, but can specify longer storage for the highlight reel from live stream clipping. You can also perform additional on-demand operations on the highlight reel, such as transcoding and publishing on WeChat. In this case, you can choose the live stream clipping and persistence solution.
+For example, a complete football match may have a live recording lasting over 2 hours. For cost savings, the customer can store the original video for 2 months, but can specify longer storage for the highlight reel from live stream clipping. You can also perform additional on-demand operations on the highlight reel separately, such as transcoding and publishing on WeChat. In this case, you can choose the live stream clipping and persistence solution.
 
-The advantage of solidified editing is that its lifecycle is independent of the original recorded video, allowing for separate management and long-term preservation.
+The advantage of solidifying editing is that its lifecycle is independent of the original recorded video, and it can be managed separately and preserved long-term.
 
 <font color='red'>Note:</font> If solidification is specified when editing, enable reception of editing solidification event notifications through the ModifyEventConfig API. After successful solidification, you will receive a PersistenceComplete event notification. Before receiving this event notification, you should not delete or archive the live video recording. Otherwise, playback of the generated video may be abnormal.
 
 ### Editing is not solidified
-The so-called "editing is not solidified" means that the result of editing (m3u8 file) shares the same TS segments with the live video recording. The newly generated video is not an independent and complete video (no standalone FileId, only a playback URL), and its valid period is consistent with that of the full video from live recording. Once the video from live recording is deleted, the clip will also become unplayable.
+Non-solidified editing means that the result of editing (m3u8 file) shares the same TS segments with the live video recording. The generated video is not an independent and complete video (no independent FileId, only a playback URL), and its valid period is consistent with that of the full video of the live recording. Once the live recorded video is deleted, this clip will also become unplayable.
 
-Editing is not solidified. Since the clipping result is not an independent video, it is not included in the video management of on-demand media assets. For example, the total number of videos in the console does not count this video clip. It is also unable to separately perform any video processing operation on this clip, such as transcoding or publishing on WeChat.
+Editing is not solidified. Since the clipping result is not an independent video, it is not included in the video management of on-demand media assets. For example, the total number of videos in the console does not count this clip. It is also unable to separately target this clip for any video processing operation such as transcoding or publishing on WeChat.
 
-The advantage of editing not being solidified is that the editing operation is relatively "lightweight" and will not generate additional storage overhead. However, its shortcoming is that the lifecycle is identical to the original recorded video, and it cannot be further transcoded for video processing.
+The advantage of not solidifying editing is that the editing operation is relatively "lightweight" and will not generate additional storage overhead. However, its shortcoming is that the lifecycle is the same as the original recorded video, and it is unable to further transcode or perform other video processing.
  * @method Models\ManageTaskResponse ManageTask(Models\ManageTaskRequest $req) Manage initiated tasks.
  * @method Models\ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(Models\ModifyAIAnalysisTemplateRequest $req) This API is used to modify a user-defined audio and video content analysis template.
 
@@ -472,7 +472,7 @@ After modification, only new playback requests will take effect. Users already p
  * @method Models\ModifySuperPlayerConfigResponse ModifySuperPlayerConfig(Models\ModifySuperPlayerConfigRequest $req) This API is <font color='red'>no longer maintained</font>. The new version of player signature no longer uses player configuration templates. For details, please see [Player Signature](https://www.tencentcloud.com/document/product/266/45554?from_cn_redirect=1).
 This API is used to modify player configurations.
  * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) Modify the information of a custom transcoding template.
- * @method Models\ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfig(Models\ModifyVodDomainAccelerateConfigRequest $req) This API is used to modify the acceleration region of a VOD domain.
+ * @method Models\ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfig(Models\ModifyVodDomainAccelerateConfigRequest $req) This API is used to modify the acceleration region of a vod domain.
 1. The acceleration region can be modified only when the domain name deployment state is Online.
  * @method Models\ModifyVodDomainConfigResponse ModifyVodDomainConfig(Models\ModifyVodDomainConfigRequest $req) This API is used to modify domain name configuration, including hotlink protection configuration.
 1. The domain name configuration can be modified only when the domain name deployment state is Online.

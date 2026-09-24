@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSize() Obtain Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
  * @method void setSize(integer $Size) Set Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
- * @method string getContainer() Obtain Container type, for example, m4a and mp4.
- * @method void setContainer(string $Container) Set Container type, for example, m4a and mp4.
- * @method integer getBitrate() Obtain Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
- * @method void setBitrate(integer $Bitrate) Set Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
- * @method integer getHeight() Obtain Maximum height of the video stream. Unit: px.
- * @method void setHeight(integer $Height) Set Maximum height of the video stream. Unit: px.
- * @method integer getWidth() Obtain Maximum video stream width in px.
- * @method void setWidth(integer $Width) Set Maximum video stream width in px.
- * @method float getDuration() Obtain Video duration, in seconds.
- * @method void setDuration(float $Duration) Set Video duration, in seconds.
- * @method integer getRotate() Obtain Selection angle during video shooting. Measurement unit: degree.
- * @method void setRotate(integer $Rotate) Set Selection angle during video shooting. Measurement unit: degree.
+ * @method string getContainer() Obtain Container type, such as m4a, mp4.
+ * @method void setContainer(string $Container) Set Container type, such as m4a, mp4.
+ * @method integer getBitrate() Obtain Sum of the average video stream bitrate and average audio stream bitrate, in bps.
+ * @method void setBitrate(integer $Bitrate) Set Sum of the average video stream bitrate and average audio stream bitrate, in bps.
+ * @method integer getHeight() Obtain Maximum value of the video stream height in px.
+ * @method void setHeight(integer $Height) Set Maximum value of the video stream height in px.
+ * @method integer getWidth() Obtain Maximum value of the video stream width in px.
+ * @method void setWidth(integer $Width) Set Maximum value of the video stream width in px.
+ * @method float getDuration() Obtain Video duration, unit: seconds.
+ * @method void setDuration(float $Duration) Set Video duration, unit: seconds.
+ * @method integer getRotate() Obtain Selection angle during video shooting. Unit: degree.
+ * @method void setRotate(integer $Rotate) Set Selection angle during video shooting. Unit: degree.
  * @method array getVideoStreamSet() Obtain Video stream information.
  * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
  * @method array getAudioStreamSet() Obtain Audio stream information.
  * @method void setAudioStreamSet(array $AudioStreamSet) Set Audio stream information.
- * @method float getVideoDuration() Obtain Video duration, in seconds.
- * @method void setVideoDuration(float $VideoDuration) Set Video duration, in seconds.
- * @method float getAudioDuration() Obtain Audio duration in seconds.
- * @method void setAudioDuration(float $AudioDuration) Set Audio duration in seconds.
+ * @method float getVideoDuration() Obtain Video duration, unit: seconds.
+ * @method void setVideoDuration(float $VideoDuration) Set Video duration, unit: seconds.
+ * @method float getAudioDuration() Obtain Audio duration, in seconds.
+ * @method void setAudioDuration(float $AudioDuration) Set Audio duration, in seconds.
  * @method string getMd5() Obtain Md5 value of the media file.
 <li><font color=red>Note</font>: To get the Md5 of a media file, call the DescribeFileAttributes API and get it after the task is completed.</li>
  * @method void setMd5(string $Md5) Set Md5 value of the media file.
@@ -55,32 +55,32 @@ class MediaMetaData extends AbstractModel
     public $Size;
 
     /**
-     * @var string Container type, for example, m4a and mp4.
+     * @var string Container type, such as m4a, mp4.
      */
     public $Container;
 
     /**
-     * @var integer Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+     * @var integer Sum of the average video stream bitrate and average audio stream bitrate, in bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer Maximum height of the video stream. Unit: px.
+     * @var integer Maximum value of the video stream height in px.
      */
     public $Height;
 
     /**
-     * @var integer Maximum video stream width in px.
+     * @var integer Maximum value of the video stream width in px.
      */
     public $Width;
 
     /**
-     * @var float Video duration, in seconds.
+     * @var float Video duration, unit: seconds.
      */
     public $Duration;
 
     /**
-     * @var integer Selection angle during video shooting. Measurement unit: degree.
+     * @var integer Selection angle during video shooting. Unit: degree.
      */
     public $Rotate;
 
@@ -95,12 +95,12 @@ class MediaMetaData extends AbstractModel
     public $AudioStreamSet;
 
     /**
-     * @var float Video duration, in seconds.
+     * @var float Video duration, unit: seconds.
      */
     public $VideoDuration;
 
     /**
-     * @var float Audio duration in seconds.
+     * @var float Audio duration, in seconds.
      */
     public $AudioDuration;
 
@@ -112,16 +112,16 @@ class MediaMetaData extends AbstractModel
 
     /**
      * @param integer $Size Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
-     * @param string $Container Container type, for example, m4a and mp4.
-     * @param integer $Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
-     * @param integer $Height Maximum height of the video stream. Unit: px.
-     * @param integer $Width Maximum video stream width in px.
-     * @param float $Duration Video duration, in seconds.
-     * @param integer $Rotate Selection angle during video shooting. Measurement unit: degree.
+     * @param string $Container Container type, such as m4a, mp4.
+     * @param integer $Bitrate Sum of the average video stream bitrate and average audio stream bitrate, in bps.
+     * @param integer $Height Maximum value of the video stream height in px.
+     * @param integer $Width Maximum value of the video stream width in px.
+     * @param float $Duration Video duration, unit: seconds.
+     * @param integer $Rotate Selection angle during video shooting. Unit: degree.
      * @param array $VideoStreamSet Video stream information.
      * @param array $AudioStreamSet Audio stream information.
-     * @param float $VideoDuration Video duration, in seconds.
-     * @param float $AudioDuration Audio duration in seconds.
+     * @param float $VideoDuration Video duration, unit: seconds.
+     * @param float $AudioDuration Audio duration, in seconds.
      * @param string $Md5 Md5 value of the media file.
 <li><font color=red>Note</font>: To get the Md5 of a media file, call the DescribeFileAttributes API and get it after the task is completed.</li>
      */
