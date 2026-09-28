@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskLevel(integer $RiskLevel) Set <p>Risk level</p>
  * @method array getRiskLabels() Obtain <p>Risk label</p>
  * @method void setRiskLabels(array $RiskLabels) Set <p>Risk label</p>
- * @method integer getRiskScore() Obtain <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
- * @method void setRiskScore(integer $RiskScore) Set <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+ * @method integer getRiskScore() Obtain <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
+ * @method void setRiskScore(integer $RiskScore) Set <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
  */
 class DataScore extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DataScore extends AbstractModel
     public $RiskLabels;
 
     /**
-     * @var integer <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+     * @var integer <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
      */
     public $RiskScore;
 
     /**
      * @param integer $RiskLevel <p>Risk level</p>
      * @param array $RiskLabels <p>Risk label</p>
-     * @param integer $RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+     * @param integer $RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
      */
     function __construct()
     {

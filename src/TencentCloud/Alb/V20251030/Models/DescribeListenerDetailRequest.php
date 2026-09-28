@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Alb\V20251030\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeListenerDetail request structure.
+ *
+ * @method string getListenerId() Obtain <p>Listener ID, in the format of lst- followed by 8 alphanumeric characters.</p>
+ * @method void setListenerId(string $ListenerId) Set <p>Listener ID, in the format of lst- followed by 8 alphanumeric characters.</p>
+ * @method string getLoadBalancerId() Obtain <p>Cloud Load Balancer instance ID. The format is alb- followed by 8 alphanumeric characters.</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set <p>Cloud Load Balancer instance ID. The format is alb- followed by 8 alphanumeric characters.</p>
+ */
+class DescribeListenerDetailRequest extends AbstractModel
+{
+    /**
+     * @var string <p>Listener ID, in the format of lst- followed by 8 alphanumeric characters.</p>
+     */
+    public $ListenerId;
+
+    /**
+     * @var string <p>Cloud Load Balancer instance ID. The format is alb- followed by 8 alphanumeric characters.</p>
+     */
+    public $LoadBalancerId;
+
+    /**
+     * @param string $ListenerId <p>Listener ID, in the format of lst- followed by 8 alphanumeric characters.</p>
+     * @param string $LoadBalancerId <p>Cloud Load Balancer instance ID. The format is alb- followed by 8 alphanumeric characters.</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
+            $this->ListenerId = $param["ListenerId"];
+        }
+
+        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
+            $this->LoadBalancerId = $param["LoadBalancerId"];
+        }
+    }
+}

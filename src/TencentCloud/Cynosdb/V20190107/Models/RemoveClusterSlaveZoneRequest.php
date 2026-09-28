@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveClusterSlaveZone request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getSlaveZone() Obtain Replica AZ
- * @method void setSlaveZone(string $SlaveZone) Set Replica AZ
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getSlaveZone() Obtain <p>Secondary AZ</p>
+ * @method void setSlaveZone(string $SlaveZone) Set <p>Secondary AZ</p>
  */
 class RemoveClusterSlaveZoneRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var string Replica AZ
+     * @var string <p>Secondary AZ</p>
      */
     public $SlaveZone;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $SlaveZone Replica AZ
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $SlaveZone <p>Secondary AZ</p>
      */
     function __construct()
     {

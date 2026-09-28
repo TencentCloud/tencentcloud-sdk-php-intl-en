@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeClusterVersion request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getCynosVersion() Obtain Kernel version
- * @method void setCynosVersion(string $CynosVersion) Set Kernel version
- * @method string getUpgradeType() Obtain Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
- * @method void setUpgradeType(string $UpgradeType) Set Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getCynosVersion() Obtain <p>Kernel version</p>
+ * @method void setCynosVersion(string $CynosVersion) Set <p>Kernel version</p>
+ * @method string getUpgradeType() Obtain <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
+ * @method void setUpgradeType(string $UpgradeType) Set <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
  */
 class UpgradeClusterVersionRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var string Kernel version
+     * @var string <p>Kernel version</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+     * @var string <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
      */
     public $UpgradeType;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $CynosVersion Kernel version
-     * @param string $UpgradeType Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $CynosVersion <p>Kernel version</p>
+     * @param string $UpgradeType <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
      */
     function __construct()
     {

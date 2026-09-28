@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) Set <p>Instance machine type.</p>
  * @method string getClusterLevel() Obtain <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
  * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
+ * @method string getZone() Obtain <p>AZ.</p>
+ * @method void setZone(string $Zone) Set <p>AZ.</p>
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $ClusterLevel;
 
     /**
+     * @var string <p>AZ.</p>
+     */
+    public $Zone;
+
+    /**
      * @param string $DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
      * @param boolean $IncludeZoneStocks <p>Whether required to return AZ information</p>
      * @param string $DeviceType <p>Instance machine type.</p>
      * @param string $ClusterLevel <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
+     * @param string $Zone <p>AZ.</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeInstanceSpecsRequest extends AbstractModel
 
         if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
             $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

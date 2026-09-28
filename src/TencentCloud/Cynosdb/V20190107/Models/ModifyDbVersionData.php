@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Modify database kernel version task information.
  *
- * @method string getOldVersion() Obtain Version before modification.
- * @method void setOldVersion(string $OldVersion) Set Version before modification.
- * @method string getNewVersion() Obtain Version after modification.
- * @method void setNewVersion(string $NewVersion) Set Version after modification.
- * @method string getUpgradeType() Obtain Upgrade method.
- * @method void setUpgradeType(string $UpgradeType) Set Upgrade method.
+ * @method string getOldVersion() Obtain <p>Version before modification</p>
+ * @method void setOldVersion(string $OldVersion) Set <p>Version before modification</p>
+ * @method string getNewVersion() Obtain <p>Modified version</p>
+ * @method void setNewVersion(string $NewVersion) Set <p>Modified version</p>
+ * @method string getUpgradeType() Obtain <p>Upgrade method</p>
+ * @method void setUpgradeType(string $UpgradeType) Set <p>Upgrade method</p>
  */
 class ModifyDbVersionData extends AbstractModel
 {
     /**
-     * @var string Version before modification.
+     * @var string <p>Version before modification</p>
      */
     public $OldVersion;
 
     /**
-     * @var string Version after modification.
+     * @var string <p>Modified version</p>
      */
     public $NewVersion;
 
     /**
-     * @var string Upgrade method.
+     * @var string <p>Upgrade method</p>
      */
     public $UpgradeType;
 
     /**
-     * @param string $OldVersion Version before modification.
-     * @param string $NewVersion Version after modification.
-     * @param string $UpgradeType Upgrade method.
+     * @param string $OldVersion <p>Version before modification</p>
+     * @param string $NewVersion <p>Modified version</p>
+     * @param string $UpgradeType <p>Upgrade method</p>
      */
     function __construct()
     {

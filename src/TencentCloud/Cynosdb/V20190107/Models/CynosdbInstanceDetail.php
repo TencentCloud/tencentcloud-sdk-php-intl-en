@@ -92,6 +92,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbMode(string $DbMode) Set <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
  * @method string getMasterZone() Obtain <p>Cluster read/write instance Availability Zone</p>
  * @method void setMasterZone(string $MasterZone) Set <p>Cluster read/write instance Availability Zone</p>
+ * @method string getRealZone() Obtain <p>Actual availability zone of the instance</p>
+ * @method void setRealZone(string $RealZone) Set <p>Actual availability zone of the instance</p>
+ * @method array getSlaveZones() Obtain <p>List of standby availability zones</p>
+ * @method void setSlaveZones(array $SlaveZones) Set <p>List of standby availability zones</p>
+ * @method string getStorageVersion() Obtain <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+ * @method void setStorageVersion(string $StorageVersion) Set <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
  */
 class CynosdbInstanceDetail extends AbstractModel
 {
@@ -276,6 +282,21 @@ class CynosdbInstanceDetail extends AbstractModel
     public $MasterZone;
 
     /**
+     * @var string <p>Actual availability zone of the instance</p>
+     */
+    public $RealZone;
+
+    /**
+     * @var array <p>List of standby availability zones</p>
+     */
+    public $SlaveZones;
+
+    /**
+     * @var string <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+     */
+    public $StorageVersion;
+
+    /**
      * @param string $Uin <p>User Uin</p>
      * @param integer $AppId <p>User AppId</p>
      * @param string $ClusterId <p>Cluster ID.</p>
@@ -312,6 +333,9 @@ class CynosdbInstanceDetail extends AbstractModel
      * @param float $MaxCpu <p>cpu cap of the serverless instance</p>
      * @param string $DbMode <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
      * @param string $MasterZone <p>Cluster read/write instance Availability Zone</p>
+     * @param string $RealZone <p>Actual availability zone of the instance</p>
+     * @param array $SlaveZones <p>List of standby availability zones</p>
+     * @param string $StorageVersion <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
      */
     function __construct()
     {
@@ -468,6 +492,18 @@ class CynosdbInstanceDetail extends AbstractModel
 
         if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
             $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
+            $this->RealZone = $param["RealZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = $param["SlaveZones"];
+        }
+
+        if (array_key_exists("StorageVersion",$param) and $param["StorageVersion"] !== null) {
+            $this->StorageVersion = $param["StorageVersion"];
         }
     }
 }
