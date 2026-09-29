@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrometheusInstanceAttributes request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getDataRetentionTime() Obtain Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
- * @method void setDataRetentionTime(integer $DataRetentionTime) Set Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
- * @method array getInstanceAttributes() Obtain 
- * @method void setInstanceAttributes(array $InstanceAttributes) Set 
+ * @method string getInstanceId() Obtain <p>Instance ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method integer getDataRetentionTime() Obtain <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
+ * @method void setDataRetentionTime(integer $DataRetentionTime) Set <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
+ * @method array getInstanceAttributes() Obtain <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+ * @method void setInstanceAttributes(array $InstanceAttributes) Set <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
  */
 class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+     * @var integer <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
      */
     public $DataRetentionTime;
 
     /**
-     * @var array 
+     * @var array <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
      */
     public $InstanceAttributes;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param integer $DataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
-     * @param array $InstanceAttributes 
+     * @param string $InstanceId <p>Instance ID</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param integer $DataRetentionTime <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
+     * @param array $InstanceAttributes <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
      */
     function __construct()
     {

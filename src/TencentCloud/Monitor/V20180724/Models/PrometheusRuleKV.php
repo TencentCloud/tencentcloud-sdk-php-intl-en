@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KV parameter of the Prometheus alerting rule
  *
- * @method string getKey() Obtain Key
- * @method void setKey(string $Key) Set Key
- * @method string getValue() Obtain Value
- * @method void setValue(string $Value) Set Value
+ * @method string getKey() Obtain <p>Key</p>
+ * @method void setKey(string $Key) Set <p>Key</p>
+ * @method string getValue() Obtain <p>Value.</p>
+ * @method void setValue(string $Value) Set <p>Value.</p>
  */
 class PrometheusRuleKV extends AbstractModel
 {
     /**
-     * @var string Key
+     * @var string <p>Key</p>
      */
     public $Key;
 
     /**
-     * @var string Value
+     * @var string <p>Value.</p>
      */
     public $Value;
 
     /**
-     * @param string $Key Key
-     * @param string $Value Value
+     * @param string $Key <p>Key</p>
+     * @param string $Value <p>Value.</p>
      */
     function __construct()
     {
