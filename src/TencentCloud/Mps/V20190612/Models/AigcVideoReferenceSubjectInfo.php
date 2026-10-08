@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reference entity information.
+ * For entity information, see.
 For the Vidu model:
-Id -> server_id. Principal ID obtained through the principal creation API.
-Principal ID, subsequently used in the format of @Principal ID.
+Id -> server_id, the principal ID obtained through the principal creation API.
+name -> principal ID, subsequently used in the format @principal ID.
 
 For the Kling model:
-element id, obtained through the principal creation API.
+id -> element_id, the principal ID obtained through the principal creation API.
  *
- * @method string getId() Obtain <p>ID of the reference subject.</p>
- * @method void setId(string $Id) Set <p>ID of the reference subject.</p>
+ * @method string getId() Obtain <p>ID of the referenced entity.</p>
+ * @method void setId(string $Id) Set <p>ID of the referenced entity.</p>
  * @method string getName() Obtain <p>Subject name.</p>
  * @method void setName(string $Name) Set <p>Subject name.</p>
- * @method string getVoiceId() Obtain <p>Main voice ID.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Main voice ID.</p>
+ * @method string getVoiceId() Obtain <p>Main voice type ID.</p>
+ * @method void setVoiceId(string $VoiceId) Set <p>Main voice type ID.</p>
  * @method array getImageUrls() Obtain <p>Main image list.</p>
  * @method void setImageUrls(array $ImageUrls) Set <p>Main image list.</p>
  * @method array getVideoUrls() Obtain <p>Main video list.</p>
@@ -40,7 +40,7 @@ element id, obtained through the principal creation API.
 class AigcVideoReferenceSubjectInfo extends AbstractModel
 {
     /**
-     * @var string <p>ID of the reference subject.</p>
+     * @var string <p>ID of the referenced entity.</p>
      */
     public $Id;
 
@@ -50,7 +50,7 @@ class AigcVideoReferenceSubjectInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string <p>Main voice ID.</p>
+     * @var string <p>Main voice type ID.</p>
      */
     public $VoiceId;
 
@@ -65,9 +65,9 @@ class AigcVideoReferenceSubjectInfo extends AbstractModel
     public $VideoUrls;
 
     /**
-     * @param string $Id <p>ID of the reference subject.</p>
+     * @param string $Id <p>ID of the referenced entity.</p>
      * @param string $Name <p>Subject name.</p>
-     * @param string $VoiceId <p>Main voice ID.</p>
+     * @param string $VoiceId <p>Main voice type ID.</p>
      * @param array $ImageUrls <p>Main image list.</p>
      * @param array $VideoUrls <p>Main video list.</p>
      */
