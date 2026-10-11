@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNodeName() Obtain Node type name.
  * @method void setNodeName(string $NodeName) Set Node type name.
  * @method array getTypes() Obtain Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTypes(array $Types) Set Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCmnTypes() Obtain Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCmnTypes(array $CmnTypes) Set Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCmnTypes() Obtain List of cloud-hosted node instance specifications.
+ * @method void setCmnTypes(array $CmnTypes) Set List of cloud-hosted node instance specifications.
  */
 class DescribeNodeSpec extends AbstractModel
 {
@@ -47,13 +43,11 @@ class DescribeNodeSpec extends AbstractModel
 
     /**
      * @var array Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Types;
 
     /**
-     * @var array Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of cloud-hosted node instance specifications.
      */
     public $CmnTypes;
 
@@ -61,9 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $NodeType Node type.
      * @param string $NodeName Node type name.
      * @param array $Types Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CmnTypes Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CmnTypes List of cloud-hosted node instance specifications.
      */
     function __construct()
     {

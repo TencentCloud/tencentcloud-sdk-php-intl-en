@@ -18,12 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Inquiry results
+ * Price inquiry result.
  *
  * @method float getOriginalCost() Obtain Original price.
  * @method void setOriginalCost(float $OriginalCost) Set Original price.
- * @method float getDiscountCost() Obtain Discount price.
- * @method void setDiscountCost(float $DiscountCost) Set Discount price.
+ * @method float getDiscountCost() Obtain Discounted price.
+ * @method void setDiscountCost(float $DiscountCost) Set Discounted price.
  */
 class PriceResult extends AbstractModel
 {
@@ -33,13 +33,13 @@ class PriceResult extends AbstractModel
     public $OriginalCost;
 
     /**
-     * @var float Discount price.
+     * @var float Discounted price.
      */
     public $DiscountCost;
 
     /**
      * @param float $OriginalCost Original price.
-     * @param float $DiscountCost Discount price.
+     * @param float $DiscountCost Discounted price.
      */
     function __construct()
     {

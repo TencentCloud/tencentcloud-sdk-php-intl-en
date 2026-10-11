@@ -18,17 +18,17 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * A key-value pair filter used for condition filtering and queries.
+ * Key-value pair filter, which is mainly for condition filtering and query.
  *
- * @method string getName() Obtain Fields that need to be filtered.
- * @method void setName(string $Name) Set Fields that need to be filtered.
+ * @method string getName() Obtain Fields to be filtered.
+ * @method void setName(string $Name) Set Fields to be filtered.
  * @method array getValues() Obtain Filter value of the field.
  * @method void setValues(array $Values) Set Filter value of the field.
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Fields that need to be filtered.
+     * @var string Fields to be filtered.
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class Filter extends AbstractModel
     public $Values;
 
     /**
-     * @param string $Name Fields that need to be filtered.
+     * @param string $Name Fields to be filtered.
      * @param array $Values Filter value of the field.
      */
     function __construct()

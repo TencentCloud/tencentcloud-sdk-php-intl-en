@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySLInstanceBasic request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
  * @method string getClusterName() Obtain Instance name.
  * @method void setClusterName(string $ClusterName) Set Instance name.
  */
 class ModifySLInstanceBasicRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class ModifySLInstanceBasicRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId Cluster ID.
      * @param string $ClusterName Instance name.
      */
     function __construct()

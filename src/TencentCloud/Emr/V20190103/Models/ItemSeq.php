@@ -18,24 +18,20 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of key-value pairs
+ * List of key-value pairs.
  *
  * @method array getItems() Obtain Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setItems(array $Items) Set Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ItemSeq extends AbstractModel
 {
     /**
      * @var array Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Items;
 
     /**
      * @param array $Items Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

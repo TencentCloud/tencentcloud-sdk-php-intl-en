@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScaleRecords request structure.
  *
- * @method string getInstanceId() Obtain The instance ID.
- * @method void setInstanceId(string $InstanceId) Set The instance ID.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method array getFilters() Obtain Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
  * @method void setFilters(array $Filters) Set Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
- * @method integer getOffset() Obtain Pagination parameters.
- * @method void setOffset(integer $Offset) Set Pagination parameters.
- * @method integer getLimit() Obtain Pagination parameters. Maximum value: 100
- * @method void setLimit(integer $Limit) Set Pagination parameters. Maximum value: 100
- * @method integer getRecordSource() Obtain Whether it is automatic scaling (0) or managed scaling (1)
- * @method void setRecordSource(integer $RecordSource) Set Whether it is automatic scaling (0) or managed scaling (1)
- * @method integer getAsc() Obtain Ascending or not. 1: ascending, 0: descending.
- * @method void setAsc(integer $Asc) Set Ascending or not. 1: ascending, 0: descending.
+ * @method integer getOffset() Obtain Pagination parameter.
+ * @method void setOffset(integer $Offset) Set Pagination parameter.
+ * @method integer getLimit() Obtain Number of entries per page. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of entries per page. Maximum value: 100.
+ * @method integer getRecordSource() Obtain Whether it is an auto scaling (0) or managed scaling (1) operation.
+ * @method void setRecordSource(integer $RecordSource) Set Whether it is an auto scaling (0) or managed scaling (1) operation.
+ * @method integer getAsc() Obtain Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
+ * @method void setAsc(integer $Asc) Set Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
  */
 class DescribeAutoScaleRecordsRequest extends AbstractModel
 {
     /**
-     * @var string The instance ID.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
      * @var array Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
      */
     public $Filters;
 
     /**
-     * @var integer Pagination parameters.
+     * @var integer Pagination parameter.
      */
     public $Offset;
 
     /**
-     * @var integer Pagination parameters. Maximum value: 100
+     * @var integer Number of entries per page. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Whether it is automatic scaling (0) or managed scaling (1)
+     * @var integer Whether it is an auto scaling (0) or managed scaling (1) operation.
      */
     public $RecordSource;
 
     /**
-     * @var integer Ascending or not. 1: ascending, 0: descending.
+     * @var integer Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     public $Asc;
 
     /**
-     * @param string $InstanceId The instance ID.
+     * @param string $InstanceId Instance ID.
      * @param array $Filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
-     * @param integer $Offset Pagination parameters.
-     * @param integer $Limit Pagination parameters. Maximum value: 100
-     * @param integer $RecordSource Whether it is automatic scaling (0) or managed scaling (1)
-     * @param integer $Asc Ascending or not. 1: ascending, 0: descending.
+     * @param integer $Offset Pagination parameter.
+     * @param integer $Limit Number of entries per page. Maximum value: 100.
+     * @param integer $RecordSource Whether it is an auto scaling (0) or managed scaling (1) operation.
+     * @param integer $Asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     function __construct()
     {

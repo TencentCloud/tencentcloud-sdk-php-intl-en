@@ -18,48 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node model type.
+ * Node instance type.
  *
- * @method string getType() Obtain Model series.
- * @method void setType(string $Type) Set Model series.
- * @method string getTypeName() Obtain Model series name.
- * @method void setTypeName(string $TypeName) Set Model series name.
- * @method integer getOrder() Obtain Order.
- * @method void setOrder(integer $Order) Set Order.
- * @method array getInstanceFamilies() Obtain InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceFamilies(array $InstanceFamilies) Set InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Instance type series.
+ * @method void setType(string $Type) Set Instance type series.
+ * @method string getTypeName() Obtain Instance type series name.
+ * @method void setTypeName(string $TypeName) Set Instance type series name.
+ * @method integer getOrder() Obtain Sorting order.
+ * @method void setOrder(integer $Order) Set Sorting order.
+ * @method array getInstanceFamilies() Obtain Array of instance families.
+ * @method void setInstanceFamilies(array $InstanceFamilies) Set Array of instance families.
  */
 class NodeSpecType extends AbstractModel
 {
     /**
-     * @var string Model series.
+     * @var string Instance type series.
      */
     public $Type;
 
     /**
-     * @var string Model series name.
+     * @var string Instance type series name.
      */
     public $TypeName;
 
     /**
-     * @var integer Order.
+     * @var integer Sorting order.
      */
     public $Order;
 
     /**
-     * @var array InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Array of instance families.
      */
     public $InstanceFamilies;
 
     /**
-     * @param string $Type Model series.
-     * @param string $TypeName Model series name.
-     * @param integer $Order Order.
-     * @param array $InstanceFamilies InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Instance type series.
+     * @param string $TypeName Instance type series name.
+     * @param integer $Order Sorting order.
+     * @param array $InstanceFamilies Array of instance families.
      */
     function __construct()
     {

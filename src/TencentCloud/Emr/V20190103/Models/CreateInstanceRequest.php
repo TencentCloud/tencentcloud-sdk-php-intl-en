@@ -20,442 +20,338 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstance request structure.
  *
- * @method integer getProductId() Obtain Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
- * @method void setProductId(integer $ProductId) Set Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
- * @method array getSoftware() Obtain List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
- * @method void setSoftware(array $Software) Set List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
- * @method integer getSupportHA() Obtain Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
- * @method void setSupportHA(integer $SupportHA) Set Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
- * @method string getInstanceName() Obtain Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
- * @method void setInstanceName(string $InstanceName) Set Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
- * @method integer getPayMode() Obtain Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
- * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
- * @method integer getTimeSpan() Obtain Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
- * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
- * @method string getTimeUnit() Obtain Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
- * @method void setTimeUnit(string $TimeUnit) Set Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
- * @method LoginSettings getLoginSettings() Obtain Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
- * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
- * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
- * @method void setVPCSettings(VPCSettings $VPCSettings) Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
- * @method NewResourceSpec getResourceSpec() Obtain Node resource specification.
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node resource specification.
- * @method COSSettings getCOSSettings() Obtain Parameter required for enabling COS access.
- * @method void setCOSSettings(COSSettings $COSSettings) Set Parameter required for enabling COS access.
- * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method string getSgId() Obtain Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
- * @method void setSgId(string $SgId) Set Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
- * @method array getPreExecutedFileSettings() Obtain [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
- * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) Set [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
- * @method integer getAutoRenew() Obtain Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
- * @method void setAutoRenew(integer $AutoRenew) Set Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
- * @method string getClientToken() Obtain Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
- * @method void setClientToken(string $ClientToken) Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
- * @method string getNeedMasterWan() Obtain Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
- * @method void setNeedMasterWan(string $NeedMasterWan) Set Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
- * @method integer getRemoteLoginAtCreate() Obtain Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
- * @method void setRemoteLoginAtCreate(integer $RemoteLoginAtCreate) Set Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
- * @method integer getCheckSecurity() Obtain Whether to enable secure cluster. 0: no; other values: yes.
- * @method void setCheckSecurity(integer $CheckSecurity) Set Whether to enable secure cluster. 0: no; other values: yes.
- * @method string getExtendFsField() Obtain Accesses to external file system.
- * @method void setExtendFsField(string $ExtendFsField) Set Accesses to external file system.
- * @method array getTags() Obtain Tag description list. This parameter is used to bind a tag to a resource instance.
- * @method void setTags(array $Tags) Set Tag description list. This parameter is used to bind a tag to a resource instance.
- * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
- * @method integer getCbsEncrypt() Obtain CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
- * @method void setCbsEncrypt(integer $CbsEncrypt) Set CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
- * @method string getMetaType() Obtain Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
- * @method void setMetaType(string $MetaType) Set Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
- * @method string getUnifyMetaInstanceId() Obtain EMR-MetaDB instance
- * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set EMR-MetaDB instance
- * @method CustomMetaInfo getMetaDBInfo() Obtain Custom MetaDB instance information
- * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set Custom MetaDB instance information
- * @method string getApplicationRole() Obtain Custom application role.
- * @method void setApplicationRole(string $ApplicationRole) Set Custom application role.
- * @method string getSceneName() Obtain Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
- * @method void setSceneName(string $SceneName) Set Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
- * @method array getExternalService() Obtain Shared component information
- * @method void setExternalService(array $ExternalService) Set Shared component information
- * @method integer getVersionID() Obtain If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
- * @method void setVersionID(integer $VersionID) Set If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
- * @method boolean getMultiZone() Obtain `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
- * @method void setMultiZone(boolean $MultiZone) Set `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
- * @method array getMultiZoneSettings() Obtain Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
- * @method void setMultiZoneSettings(array $MultiZoneSettings) Set Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
- * @method string getCosBucket() Obtain COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
- * @method void setCosBucket(string $CosBucket) Set COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
- * @method array getNodeMarks() Obtain Node identifier information: currently used only in Terraform.
- * @method void setNodeMarks(array $NodeMarks) Set Node identifier information: currently used only in Terraform.
- * @method string getLoadBalancerId() Obtain CLB id
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB id
+ * @method integer getProductId() Obtain <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
+ * @method void setProductId(integer $ProductId) Set <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
+ * @method array getSoftware() Obtain <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
+ * @method void setSoftware(array $Software) Set <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
+ * @method integer getSupportHA() Obtain <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
+ * @method void setSupportHA(integer $SupportHA) Set <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
+ * @method string getInstanceName() Obtain <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+ * @method integer getPayMode() Obtain <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method void setPayMode(integer $PayMode) Set <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method integer getTimeSpan() Obtain <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method void setTimeSpan(integer $TimeSpan) Set <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method string getTimeUnit() Obtain <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method void setTimeUnit(string $TimeUnit) Set <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method LoginSettings getLoginSettings() Obtain <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+ * @method VPCSettings getVPCSettings() Obtain <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+ * @method void setVPCSettings(VPCSettings $VPCSettings) Set <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+ * @method NewResourceSpec getResourceSpec() Obtain <p>Node resource specifications.</p>
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set <p>Node resource specifications.</p>
+ * @method COSSettings getCOSSettings() Obtain <p>Specifies the parameters to be set for enabling COS access.</p>
+ * @method void setCOSSettings(COSSettings $COSSettings) Set <p>Specifies the parameters to be set for enabling COS access.</p>
+ * @method Placement getPlacement() Obtain <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+ * @method void setPlacement(Placement $Placement) Set <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+ * @method string getSgId() Obtain <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+ * @method void setSgId(string $SgId) Set <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+ * @method array getPreExecutedFileSettings() Obtain <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+ * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) Set <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+ * @method integer getAutoRenew() Obtain <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
+ * @method void setAutoRenew(integer $AutoRenew) Set <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
+ * @method string getClientToken() Obtain <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+ * @method void setClientToken(string $ClientToken) Set <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+ * @method string getNeedMasterWan() Obtain <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+ * @method void setNeedMasterWan(string $NeedMasterWan) Set <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+ * @method integer getRemoteLoginAtCreate() Obtain <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
+ * @method void setRemoteLoginAtCreate(integer $RemoteLoginAtCreate) Set <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
+ * @method integer getCheckSecurity() Obtain <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
+ * @method void setCheckSecurity(integer $CheckSecurity) Set <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
+ * @method string getExtendFsField() Obtain <p>Specifies the external file system to be accessed.</p>
+ * @method void setExtendFsField(string $ExtendFsField) Set <p>Specifies the external file system to be accessed.</p>
+ * @method array getTags() Obtain <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+ * @method void setTags(array $Tags) Set <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+ * @method array getDisasterRecoverGroupIds() Obtain <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+ * @method integer getCbsEncrypt() Obtain <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
+ * @method void setCbsEncrypt(integer $CbsEncrypt) Set <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
+ * @method string getMetaType() Obtain <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+ * @method void setMetaType(string $MetaType) Set <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+ * @method string getUnifyMetaInstanceId() Obtain <p>EMR-MetaDB instance.</p>
+ * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set <p>EMR-MetaDB instance.</p>
+ * @method CustomMetaInfo getMetaDBInfo() Obtain <p>Custom MetaDB information.</p>
+ * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set <p>Custom MetaDB information.</p>
+ * @method string getApplicationRole() Obtain <p>Custom application role.</p>
+ * @method void setApplicationRole(string $ApplicationRole) Set <p>Custom application role.</p>
+ * @method string getSceneName() Obtain <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
+ * @method void setSceneName(string $SceneName) Set <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
+ * @method array getExternalService() Obtain <p>Shared component information.</p>
+ * @method void setExternalService(array $ExternalService) Set <p>Shared component information.</p>
+ * @method integer getVersionID() Obtain <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
+ * @method void setVersionID(integer $VersionID) Set <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
+ * @method boolean getMultiZone() Obtain <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
+ * @method void setMultiZone(boolean $MultiZone) Set <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
+ * @method array getMultiZoneSettings() Obtain <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+ * @method void setMultiZoneSettings(array $MultiZoneSettings) Set <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+ * @method string getCosBucket() Obtain <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+ * @method void setCosBucket(string $CosBucket) Set <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+ * @method array getNodeMarks() Obtain <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+ * @method void setNodeMarks(array $NodeMarks) Set <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+ * @method string getLoadBalancerId() Obtain <p>CLB id</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set <p>CLB id</p>
+ * @method string getDefaultMetaVersion() Obtain <p>Database type. Valid values: mysql8/tdsql8.</p>
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) Set <p>Database type. Valid values: mysql8/tdsql8.</p>
+ * @method integer getNeedCdbAudit() Obtain <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) Set <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+ * @method string getSgIP() Obtain <p>Source IP address, which is specified in the security group.</p>
+ * @method void setSgIP(string $SgIP) Set <p>Source IP address, which is specified in the security group.</p>
+ * @method integer getPartitionNumber() Obtain <p>Partition of a partition placement group.</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) Set <p>Partition of a partition placement group.</p>
+ * @method integer getWebUiVersion() Obtain <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+ * @method void setWebUiVersion(integer $WebUiVersion) Set <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+ * @method integer getCbsSysEncrypt() Obtain <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+ * @method void setCbsSysEncrypt(integer $CbsSysEncrypt) Set <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
  */
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
+     * @var integer <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
      */
     public $ProductId;
 
     /**
-     * @var array List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
+     * @var array <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
      */
     public $Software;
 
     /**
-     * @var integer Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
+     * @var integer <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
      */
     public $SupportHA;
 
     /**
-     * @var string Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
+     * @var string <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
      */
     public $InstanceName;
 
     /**
-     * @var integer Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+     * @var integer <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public $PayMode;
 
     /**
-     * @var integer Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+     * @var integer <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public $TimeSpan;
 
     /**
-     * @var string Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+     * @var string <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public $TimeUnit;
 
     /**
-     * @var LoginSettings Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+     * @var LoginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
      */
     public $LoginSettings;
 
     /**
-     * @var VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     * @var VPCSettings <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
      */
     public $VPCSettings;
 
     /**
-     * @var NewResourceSpec Node resource specification.
+     * @var NewResourceSpec <p>Node resource specifications.</p>
      */
     public $ResourceSpec;
 
     /**
-     * @var COSSettings Parameter required for enabling COS access.
+     * @var COSSettings <p>Specifies the parameters to be set for enabling COS access.</p>
      */
     public $COSSettings;
 
     /**
-     * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * @var Placement <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
      */
     public $Placement;
 
     /**
-     * @var string Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
+     * @var string <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
      */
     public $SgId;
 
     /**
-     * @var array [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+     * @var array <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
      */
     public $PreExecutedFileSettings;
 
     /**
-     * @var integer Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
+     * @var integer <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
      */
     public $AutoRenew;
 
     /**
-     * @var string Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+     * @var string <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
      */
     public $ClientToken;
 
     /**
-     * @var string Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
+     * @var string <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
      */
     public $NeedMasterWan;
 
     /**
-     * @var integer Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
+     * @var integer <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
      */
     public $RemoteLoginAtCreate;
 
     /**
-     * @var integer Whether to enable secure cluster. 0: no; other values: yes.
+     * @var integer <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
      */
     public $CheckSecurity;
 
     /**
-     * @var string Accesses to external file system.
+     * @var string <p>Specifies the external file system to be accessed.</p>
      */
     public $ExtendFsField;
 
     /**
-     * @var array Tag description list. This parameter is used to bind a tag to a resource instance.
+     * @var array <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
      */
     public $Tags;
 
     /**
-     * @var array List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
+     * @var array <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var integer CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+     * @var integer <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
      */
     public $CbsEncrypt;
 
     /**
-     * @var string Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     * @var string <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
      */
     public $MetaType;
 
     /**
-     * @var string EMR-MetaDB instance
+     * @var string <p>EMR-MetaDB instance.</p>
      */
     public $UnifyMetaInstanceId;
 
     /**
-     * @var CustomMetaInfo Custom MetaDB instance information
+     * @var CustomMetaInfo <p>Custom MetaDB information.</p>
      */
     public $MetaDBInfo;
 
     /**
-     * @var string Custom application role.
+     * @var string <p>Custom application role.</p>
      */
     public $ApplicationRole;
 
     /**
-     * @var string Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+     * @var string <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
      */
     public $SceneName;
 
     /**
-     * @var array Shared component information
+     * @var array <p>Shared component information.</p>
      */
     public $ExternalService;
 
     /**
-     * @var integer If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+     * @var integer <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
      */
     public $VersionID;
 
     /**
-     * @var boolean `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+     * @var boolean <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
      */
     public $MultiZone;
 
     /**
-     * @var array Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+     * @var array <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
      */
     public $MultiZoneSettings;
 
     /**
-     * @var string COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * @var string <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
      */
     public $CosBucket;
 
     /**
-     * @var array Node identifier information: currently used only in Terraform.
+     * @var array <p>Node flag information, which is currently only provided for the Terraform platform.</p>
      */
     public $NodeMarks;
 
     /**
-     * @var string CLB id
+     * @var string <p>CLB id</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @param integer $ProductId Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
-     * @param array $Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
-     * @param integer $SupportHA Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
-     * @param string $InstanceName Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
-     * @param integer $PayMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
-     * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
-     * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
-     * @param LoginSettings $LoginSettings Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
-     * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     * @param NewResourceSpec $ResourceSpec Node resource specification.
-     * @param COSSettings $COSSettings Parameter required for enabling COS access.
-     * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param string $SgId Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
-     * @param array $PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
-     * @param integer $AutoRenew Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
-     * @param string $ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
-     * @param string $NeedMasterWan Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
-     * @param integer $RemoteLoginAtCreate Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
-     * @param integer $CheckSecurity Whether to enable secure cluster. 0: no; other values: yes.
-     * @param string $ExtendFsField Accesses to external file system.
-     * @param array $Tags Tag description list. This parameter is used to bind a tag to a resource instance.
-     * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
-     * @param integer $CbsEncrypt CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
-     * @param string $MetaType Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
-     * @param string $UnifyMetaInstanceId EMR-MetaDB instance
-     * @param CustomMetaInfo $MetaDBInfo Custom MetaDB instance information
-     * @param string $ApplicationRole Custom application role.
-     * @param string $SceneName Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
-     * @param array $ExternalService Shared component information
-     * @param integer $VersionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
-     * @param boolean $MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
-     * @param array $MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
-     * @param string $CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
-     * @param array $NodeMarks Node identifier information: currently used only in Terraform.
-     * @param string $LoadBalancerId CLB id
+     * @var string <p>Database type. Valid values: mysql8/tdsql8.</p>
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var integer <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+     */
+    public $NeedCdbAudit;
+
+    /**
+     * @var string <p>Source IP address, which is specified in the security group.</p>
+     */
+    public $SgIP;
+
+    /**
+     * @var integer <p>Partition of a partition placement group.</p>
+     */
+    public $PartitionNumber;
+
+    /**
+     * @var integer <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+     */
+    public $WebUiVersion;
+
+    /**
+     * @var integer <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+     */
+    public $CbsSysEncrypt;
+
+    /**
+     * @param integer $ProductId <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
+     * @param array $Software <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
+     * @param integer $SupportHA <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
+     * @param string $InstanceName <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+     * @param integer $PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+     * @param integer $TimeSpan <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+     * @param string $TimeUnit <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param LoginSettings $LoginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+     * @param VPCSettings $VPCSettings <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+     * @param NewResourceSpec $ResourceSpec <p>Node resource specifications.</p>
+     * @param COSSettings $COSSettings <p>Specifies the parameters to be set for enabling COS access.</p>
+     * @param Placement $Placement <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+     * @param string $SgId <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+     * @param array $PreExecutedFileSettings <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+     * @param integer $AutoRenew <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
+     * @param string $ClientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+     * @param string $NeedMasterWan <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+     * @param integer $RemoteLoginAtCreate <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
+     * @param integer $CheckSecurity <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
+     * @param string $ExtendFsField <p>Specifies the external file system to be accessed.</p>
+     * @param array $Tags <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+     * @param array $DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+     * @param integer $CbsEncrypt <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
+     * @param string $MetaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+     * @param string $UnifyMetaInstanceId <p>EMR-MetaDB instance.</p>
+     * @param CustomMetaInfo $MetaDBInfo <p>Custom MetaDB information.</p>
+     * @param string $ApplicationRole <p>Custom application role.</p>
+     * @param string $SceneName <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
+     * @param array $ExternalService <p>Shared component information.</p>
+     * @param integer $VersionID <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
+     * @param boolean $MultiZone <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
+     * @param array $MultiZoneSettings <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+     * @param string $CosBucket <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+     * @param array $NodeMarks <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+     * @param string $LoadBalancerId <p>CLB id</p>
+     * @param string $DefaultMetaVersion <p>Database type. Valid values: mysql8/tdsql8.</p>
+     * @param integer $NeedCdbAudit <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+     * @param string $SgIP <p>Source IP address, which is specified in the security group.</p>
+     * @param integer $PartitionNumber <p>Partition of a partition placement group.</p>
+     * @param integer $WebUiVersion <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+     * @param integer $CbsSysEncrypt <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
      */
     function __construct()
     {
@@ -639,6 +535,30 @@ Hadoop-Hbase
 
         if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
             $this->LoadBalancerId = $param["LoadBalancerId"];
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
+            $this->NeedCdbAudit = $param["NeedCdbAudit"];
+        }
+
+        if (array_key_exists("SgIP",$param) and $param["SgIP"] !== null) {
+            $this->SgIP = $param["SgIP"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("WebUiVersion",$param) and $param["WebUiVersion"] !== null) {
+            $this->WebUiVersion = $param["WebUiVersion"];
+        }
+
+        if (array_key_exists("CbsSysEncrypt",$param) and $param["CbsSysEncrypt"] !== null) {
+            $this->CbsSysEncrypt = $param["CbsSysEncrypt"];
         }
     }
 }

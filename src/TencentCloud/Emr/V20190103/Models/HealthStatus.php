@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Process health status
+ * Process health status.
  *
  * @method integer getCode() Obtain Running normally.
  * @method void setCode(integer $Code) Set Running normally.

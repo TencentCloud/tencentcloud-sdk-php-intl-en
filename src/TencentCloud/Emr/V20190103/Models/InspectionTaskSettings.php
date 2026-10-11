@@ -18,18 +18,18 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Setting inspection task configurations.
+ * Specifies the inspection task configuration to be set.
  *
- * @method string getTaskType() Obtain Unique identifier for inspection tasks.
- * @method void setTaskType(string $TaskType) Set Unique identifier for inspection tasks.
+ * @method string getTaskType() Obtain Unique identifier for the inspection task.
+ * @method void setTaskType(string $TaskType) Set Unique identifier for the inspection task.
  * @method string getGroup() Obtain Inspection task group name.
  * @method void setGroup(string $Group) Set Inspection task group name.
  * @method string getName() Obtain Inspection task name.
  * @method void setName(string $Name) Set Inspection task name.
  * @method array getTaskSettings() Obtain Inspection task parameter settings.
  * @method void setTaskSettings(array $TaskSettings) Set Inspection task parameter settings.
- * @method string getSelected() Obtain Whether it is selected, with the valid values of "true" and "false".
- * @method void setSelected(string $Selected) Set Whether it is selected, with the valid values of "true" and "false".
+ * @method string getSelected() Obtain Whether it is selected. Valid values: "true" and "false".
+ * @method void setSelected(string $Selected) Set Whether it is selected. Valid values: "true" and "false".
  * @method string getEnable() Obtain Whether monitoring is enabled.
  * @method void setEnable(string $Enable) Set Whether monitoring is enabled.
  * @method string getSettingsJson() Obtain Event JSON template.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class InspectionTaskSettings extends AbstractModel
 {
     /**
-     * @var string Unique identifier for inspection tasks.
+     * @var string Unique identifier for the inspection task.
      */
     public $TaskType;
 
@@ -58,7 +58,7 @@ class InspectionTaskSettings extends AbstractModel
     public $TaskSettings;
 
     /**
-     * @var string Whether it is selected, with the valid values of "true" and "false".
+     * @var string Whether it is selected. Valid values: "true" and "false".
      */
     public $Selected;
 
@@ -73,11 +73,11 @@ class InspectionTaskSettings extends AbstractModel
     public $SettingsJson;
 
     /**
-     * @param string $TaskType Unique identifier for inspection tasks.
+     * @param string $TaskType Unique identifier for the inspection task.
      * @param string $Group Inspection task group name.
      * @param string $Name Inspection task name.
      * @param array $TaskSettings Inspection task parameter settings.
-     * @param string $Selected Whether it is selected, with the valid values of "true" and "false".
+     * @param string $Selected Whether it is selected. Valid values: "true" and "false".
      * @param string $Enable Whether monitoring is enabled.
      * @param string $SettingsJson Event JSON template.
      */

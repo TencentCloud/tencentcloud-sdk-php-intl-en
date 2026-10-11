@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Cluster ID.
  * @method void setInstanceId(string $InstanceId) Set Cluster ID.
- * @method integer getStartTime() Obtain Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
- * @method void setStartTime(integer $StartTime) Set Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
- * @method integer getEndTime() Obtain End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
- * @method void setEndTime(integer $EndTime) Set End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
- * @method integer getPageSize() Obtain Page size for pagination query. The minimum value is 1, and the maximum value is 100.
- * @method void setPageSize(integer $PageSize) Set Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+ * @method integer getStartTime() Obtain Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+ * @method void setStartTime(integer $StartTime) Set Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+ * @method integer getEndTime() Obtain End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+ * @method void setEndTime(integer $EndTime) Set End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+ * @method integer getPageSize() Obtain Number of items returned per page. Minimum value: 1. Maximum value: 100.
+ * @method void setPageSize(integer $PageSize) Set Number of items returned per page. Minimum value: 1. Maximum value: 100.
  * @method integer getPage() Obtain Page number for pagination queries, starting from 1.
  * @method void setPage(integer $Page) Set Page number for pagination queries, starting from 1.
- * @method string getType() Obtain Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
- * @method void setType(string $Type) Set Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
- * @method boolean getMustHasContext() Obtain Whether it includes specific parameter suggestions and other information
- * @method void setMustHasContext(boolean $MustHasContext) Set Whether it includes specific parameter suggestions and other information
+ * @method string getType() Obtain Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
+ * @method void setType(string $Type) Set Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
+ * @method boolean getMustHasContext() Obtain Whether information such as specific parameter suggestions is included.
+ * @method void setMustHasContext(boolean $MustHasContext) Set Whether information such as specific parameter suggestions is included.
  */
 class DescribeInsightListRequest extends AbstractModel
 {
@@ -43,17 +43,17 @@ class DescribeInsightListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+     * @var integer Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
      */
     public $StartTime;
 
     /**
-     * @var integer End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+     * @var integer End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
      */
     public $EndTime;
 
     /**
-     * @var integer Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+     * @var integer Number of items returned per page. Minimum value: 1. Maximum value: 100.
      */
     public $PageSize;
 
@@ -63,23 +63,23 @@ class DescribeInsightListRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var string Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
+     * @var string Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
      */
     public $Type;
 
     /**
-     * @var boolean Whether it includes specific parameter suggestions and other information
+     * @var boolean Whether information such as specific parameter suggestions is included.
      */
     public $MustHasContext;
 
     /**
      * @param string $InstanceId Cluster ID.
-     * @param integer $StartTime Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-     * @param integer $EndTime End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-     * @param integer $PageSize Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+     * @param integer $StartTime Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+     * @param integer $EndTime End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+     * @param integer $PageSize Number of items returned per page. Minimum value: 1. Maximum value: 100.
      * @param integer $Page Page number for pagination queries, starting from 1.
-     * @param string $Type Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
-     * @param boolean $MustHasContext Whether it includes specific parameter suggestions and other information
+     * @param string $Type Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
+     * @param boolean $MustHasContext Whether information such as specific parameter suggestions is included.
      */
     function __construct()
     {

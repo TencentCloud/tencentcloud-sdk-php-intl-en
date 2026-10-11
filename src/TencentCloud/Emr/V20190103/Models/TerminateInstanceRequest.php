@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method array getResourceIds() Obtain ID of terminated node. This parameter is reserved and does not need to be configured.
- * @method void setResourceIds(array $ResourceIds) Set ID of terminated node. This parameter is reserved and does not need to be configured.
- * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
- * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
- * @method string getComputeResourceId() Obtain Computing resource ID.
- * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method array getResourceIds() Obtain <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
+ * @method void setResourceIds(array $ResourceIds) Set <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
+ * @method string getResourceBaseType() Obtain <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
+ * @method void setResourceBaseType(string $ResourceBaseType) Set <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
+ * @method string getComputeResourceId() Obtain <p>Computing resource ID.</p>
+ * @method void setComputeResourceId(string $ComputeResourceId) Set <p>Computing resource ID.</p>
+ * @method boolean getRetainTkeCluster() Obtain <p>Retain the TKE cluster associated with the computing resource.</p>
+ * @method void setRetainTkeCluster(boolean $RetainTkeCluster) Set <p>Retain the TKE cluster associated with the computing resource.</p>
  */
 class TerminateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var array ID of terminated node. This parameter is reserved and does not need to be configured.
+     * @var array <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
      */
     public $ResourceIds;
 
     /**
-     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * @var string <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
      */
     public $ResourceBaseType;
 
     /**
-     * @var string Computing resource ID.
+     * @var string <p>Computing resource ID.</p>
      */
     public $ComputeResourceId;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param array $ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
-     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-     * @param string $ComputeResourceId Computing resource ID.
+     * @var boolean <p>Retain the TKE cluster associated with the computing resource.</p>
+     */
+    public $RetainTkeCluster;
+
+    /**
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param array $ResourceIds <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
+     * @param string $ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
+     * @param string $ComputeResourceId <p>Computing resource ID.</p>
+     * @param boolean $RetainTkeCluster <p>Retain the TKE cluster associated with the computing resource.</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class TerminateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
             $this->ComputeResourceId = $param["ComputeResourceId"];
+        }
+
+        if (array_key_exists("RetainTkeCluster",$param) and $param["RetainTkeCluster"] !== null) {
+            $this->RetainTkeCluster = $param["RetainTkeCluster"];
         }
     }
 }

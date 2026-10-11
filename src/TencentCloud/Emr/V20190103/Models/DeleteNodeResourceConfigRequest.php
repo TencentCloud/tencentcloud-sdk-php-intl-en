@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNodeResourceConfig request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
  * @method integer getResourceConfigId() Obtain Node configuration ID.
  * @method void setResourceConfigId(integer $ResourceConfigId) Set Node configuration ID.
- * @method string getResourceType() Obtain Node type: CORE, TASK, and ROUTER.
- * @method void setResourceType(string $ResourceType) Set Node type: CORE, TASK, and ROUTER.
- * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR.
- * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+ * @method string getResourceType() Obtain Node type. Valid values: CORE, TASK, and ROUTER.
+ * @method void setResourceType(string $ResourceType) Set Node type. Valid values: CORE, TASK, and ROUTER.
+ * @method string getResourceBaseType() Obtain Type. Valid values: ComputeResource and EMR. Default value: EMR.
+ * @method void setResourceBaseType(string $ResourceBaseType) Set Type. Valid values: ComputeResource and EMR. Default value: EMR.
  * @method string getComputeResourceId() Obtain Computing resource ID.
  * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
  */
 class DeleteNodeResourceConfigRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
@@ -44,12 +44,12 @@ class DeleteNodeResourceConfigRequest extends AbstractModel
     public $ResourceConfigId;
 
     /**
-     * @var string Node type: CORE, TASK, and ROUTER.
+     * @var string Node type. Valid values: CORE, TASK, and ROUTER.
      */
     public $ResourceType;
 
     /**
-     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @var string Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public $ResourceBaseType;
 
@@ -59,10 +59,10 @@ class DeleteNodeResourceConfigRequest extends AbstractModel
     public $ComputeResourceId;
 
     /**
-     * @param string $InstanceId Cluster instance ID.
+     * @param string $InstanceId Cluster ID.
      * @param integer $ResourceConfigId Node configuration ID.
-     * @param string $ResourceType Node type: CORE, TASK, and ROUTER.
-     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @param string $ResourceType Node type. Valid values: CORE, TASK, and ROUTER.
+     * @param string $ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      * @param string $ComputeResourceId Computing resource ID.
      */
     function __construct()

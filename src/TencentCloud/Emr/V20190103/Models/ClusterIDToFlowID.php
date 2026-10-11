@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mapping of cluster ID and process ID
+ * Mapping between the cluster ID and flow ID.
  *
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.

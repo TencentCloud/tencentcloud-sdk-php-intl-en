@@ -1,0 +1,221 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Databuddy\V20260715\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * GetWorkflowRsp
+ *
+ * @method string getWorkspaceId() Obtain <p>Workspace ID</p>
+ * @method void setWorkspaceId(string $WorkspaceId) Set <p>Workspace ID</p>
+ * @method WorkflowBaseInfoDetail getBaseInfo() Obtain <p>Workflow basic info</p>
+ * @method void setBaseInfo(WorkflowBaseInfoDetail $BaseInfo) Set <p>Workflow basic info</p>
+ * @method array getTrigger() Obtain <p>Workflow scheduling configuration.</p>
+ * @method void setTrigger(array $Trigger) Set <p>Workflow scheduling configuration.</p>
+ * @method array getParamList() Obtain <p>Workflow parameter list. The parameter name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+ * @method void setParamList(array $ParamList) Set <p>Workflow parameter list. The parameter name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+ * @method array getLabelList() Obtain <p>Tag name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+ * @method void setLabelList(array $LabelList) Set <p>Tag name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+ * @method AlarmBrief getAlarm() Obtain <p>Workflow alert configuration.</p>
+ * @method void setAlarm(AlarmBrief $Alarm) Set <p>Workflow alert configuration.</p>
+ * @method MonitorMetricBrief getMonitorMetric() Obtain <p>Monitoring metrics configuration</p>
+ * @method void setMonitorMetric(MonitorMetricBrief $MonitorMetric) Set <p>Monitoring metrics configuration</p>
+ * @method WorkflowAdvanceConfig getAdvanceConfig() Obtain <p>Workflow advanced setting.</p>
+ * @method void setAdvanceConfig(WorkflowAdvanceConfig $AdvanceConfig) Set <p>Workflow advanced setting.</p>
+ * @method array getTaskList() Obtain <p>Workflow task list</p>
+ * @method void setTaskList(array $TaskList) Set <p>Workflow task list</p>
+ * @method string getBundleId() Obtain <p>Unique ID of the Bundle bound to the workflow. It is empty if not bound.</p>
+ * @method void setBundleId(string $BundleId) Set <p>Unique ID of the Bundle bound to the workflow. It is empty if not bound.</p>
+ * @method string getBundleInfo() Obtain <p>Bundle information.</p>
+ * @method void setBundleInfo(string $BundleInfo) Set <p>Bundle information.</p>
+ * @method string getGitConfigId() Obtain <p>Git configuration ID.</p>
+ * @method void setGitConfigId(string $GitConfigId) Set <p>Git configuration ID.</p>
+ * @method string getGitBranch() Obtain <p>Git branch information.</p>
+ * @method void setGitBranch(string $GitBranch) Set <p>Git branch information.</p>
+ */
+class GetWorkflowRsp extends AbstractModel
+{
+    /**
+     * @var string <p>Workspace ID</p>
+     */
+    public $WorkspaceId;
+
+    /**
+     * @var WorkflowBaseInfoDetail <p>Workflow basic info</p>
+     */
+    public $BaseInfo;
+
+    /**
+     * @var array <p>Workflow scheduling configuration.</p>
+     */
+    public $Trigger;
+
+    /**
+     * @var array <p>Workflow parameter list. The parameter name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+     */
+    public $ParamList;
+
+    /**
+     * @var array <p>Tag name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+     */
+    public $LabelList;
+
+    /**
+     * @var AlarmBrief <p>Workflow alert configuration.</p>
+     */
+    public $Alarm;
+
+    /**
+     * @var MonitorMetricBrief <p>Monitoring metrics configuration</p>
+     */
+    public $MonitorMetric;
+
+    /**
+     * @var WorkflowAdvanceConfig <p>Workflow advanced setting.</p>
+     */
+    public $AdvanceConfig;
+
+    /**
+     * @var array <p>Workflow task list</p>
+     */
+    public $TaskList;
+
+    /**
+     * @var string <p>Unique ID of the Bundle bound to the workflow. It is empty if not bound.</p>
+     */
+    public $BundleId;
+
+    /**
+     * @var string <p>Bundle information.</p>
+     */
+    public $BundleInfo;
+
+    /**
+     * @var string <p>Git configuration ID.</p>
+     */
+    public $GitConfigId;
+
+    /**
+     * @var string <p>Git branch information.</p>
+     */
+    public $GitBranch;
+
+    /**
+     * @param string $WorkspaceId <p>Workspace ID</p>
+     * @param WorkflowBaseInfoDetail $BaseInfo <p>Workflow basic info</p>
+     * @param array $Trigger <p>Workflow scheduling configuration.</p>
+     * @param array $ParamList <p>Workflow parameter list. The parameter name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+     * @param array $LabelList <p>Tag name is required and can only contain digits, upper- and lower-case letters, spaces, .$@#!%^&amp;*()-_+=&gt;</p>
+     * @param AlarmBrief $Alarm <p>Workflow alert configuration.</p>
+     * @param MonitorMetricBrief $MonitorMetric <p>Monitoring metrics configuration</p>
+     * @param WorkflowAdvanceConfig $AdvanceConfig <p>Workflow advanced setting.</p>
+     * @param array $TaskList <p>Workflow task list</p>
+     * @param string $BundleId <p>Unique ID of the Bundle bound to the workflow. It is empty if not bound.</p>
+     * @param string $BundleInfo <p>Bundle information.</p>
+     * @param string $GitConfigId <p>Git configuration ID.</p>
+     * @param string $GitBranch <p>Git branch information.</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
+            $this->WorkspaceId = $param["WorkspaceId"];
+        }
+
+        if (array_key_exists("BaseInfo",$param) and $param["BaseInfo"] !== null) {
+            $this->BaseInfo = new WorkflowBaseInfoDetail();
+            $this->BaseInfo->deserialize($param["BaseInfo"]);
+        }
+
+        if (array_key_exists("Trigger",$param) and $param["Trigger"] !== null) {
+            $this->Trigger = [];
+            foreach ($param["Trigger"] as $key => $value){
+                $obj = new WorkflowTriggerConfiguration();
+                $obj->deserialize($value);
+                array_push($this->Trigger, $obj);
+            }
+        }
+
+        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
+            $this->ParamList = [];
+            foreach ($param["ParamList"] as $key => $value){
+                $obj = new ParamInfo();
+                $obj->deserialize($value);
+                array_push($this->ParamList, $obj);
+            }
+        }
+
+        if (array_key_exists("LabelList",$param) and $param["LabelList"] !== null) {
+            $this->LabelList = [];
+            foreach ($param["LabelList"] as $key => $value){
+                $obj = new LabelBrief();
+                $obj->deserialize($value);
+                array_push($this->LabelList, $obj);
+            }
+        }
+
+        if (array_key_exists("Alarm",$param) and $param["Alarm"] !== null) {
+            $this->Alarm = new AlarmBrief();
+            $this->Alarm->deserialize($param["Alarm"]);
+        }
+
+        if (array_key_exists("MonitorMetric",$param) and $param["MonitorMetric"] !== null) {
+            $this->MonitorMetric = new MonitorMetricBrief();
+            $this->MonitorMetric->deserialize($param["MonitorMetric"]);
+        }
+
+        if (array_key_exists("AdvanceConfig",$param) and $param["AdvanceConfig"] !== null) {
+            $this->AdvanceConfig = new WorkflowAdvanceConfig();
+            $this->AdvanceConfig->deserialize($param["AdvanceConfig"]);
+        }
+
+        if (array_key_exists("TaskList",$param) and $param["TaskList"] !== null) {
+            $this->TaskList = [];
+            foreach ($param["TaskList"] as $key => $value){
+                $obj = new WorkflowTask();
+                $obj->deserialize($value);
+                array_push($this->TaskList, $obj);
+            }
+        }
+
+        if (array_key_exists("BundleId",$param) and $param["BundleId"] !== null) {
+            $this->BundleId = $param["BundleId"];
+        }
+
+        if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
+            $this->BundleInfo = $param["BundleInfo"];
+        }
+
+        if (array_key_exists("GitConfigId",$param) and $param["GitConfigId"] !== null) {
+            $this->GitConfigId = $param["GitConfigId"];
+        }
+
+        if (array_key_exists("GitBranch",$param) and $param["GitBranch"] !== null) {
+            $this->GitBranch = $param["GitBranch"];
+        }
+    }
+}

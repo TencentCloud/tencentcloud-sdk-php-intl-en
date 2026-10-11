@@ -20,52 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachDisks request structure.
  *
- * @method string getInstanceId() Obtain ID of the EMR cluster instance.
- * @method void setInstanceId(string $InstanceId) Set ID of the EMR cluster instance.
- * @method array getDiskIds() Obtain Cloud disk ID required for mounting.
- * @method void setDiskIds(array $DiskIds) Set Cloud disk ID required for mounting.
- * @method string getAlignType() Obtain Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
- * @method void setAlignType(string $AlignType) Set Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
- * @method array getCvmInstanceIds() Obtain List of CVM node IDs requiring mounting.
- * @method void setCvmInstanceIds(array $CvmInstanceIds) Set List of CVM node IDs requiring mounting.
+ * @method string getInstanceId() Obtain ID of the EMR cluster.
+ * @method void setInstanceId(string $InstanceId) Set ID of the EMR cluster.
+ * @method array getDiskIds() Obtain ID of the cloud disk to be mounted.
+ * @method void setDiskIds(array $DiskIds) Set ID of the cloud disk to be mounted.
+ * @method string getAlignType() Obtain Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
+ * @method void setAlignType(string $AlignType) Set Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
+ * @method array getCvmInstanceIds() Obtain ID list of the CVM instances to which disks are to be mounted.
+ * @method void setCvmInstanceIds(array $CvmInstanceIds) Set ID list of the CVM instances to which disks are to be mounted.
  * @method boolean getCreateDisk() Obtain Whether to mount newly purchased cloud disks.
  * @method void setCreateDisk(boolean $CreateDisk) Set Whether to mount newly purchased cloud disks.
  * @method NodeSpecDiskV2 getDiskSpec() Obtain Specifications of newly purchased cloud disks.
  * @method void setDiskSpec(NodeSpecDiskV2 $DiskSpec) Set Specifications of newly purchased cloud disks.
- * @method boolean getDeleteWithInstance() Obtain Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+ * @method boolean getDeleteWithInstance() Obtain Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
  * @method array getSelectiveConfServices() Obtain Name list of services that can be configured when a new disk is mounted.
  * @method void setSelectiveConfServices(array $SelectiveConfServices) Set Name list of services that can be configured when a new disk is mounted.
- * @method integer getChargeType() Obtain Disk billing type (1: monthly subscription, 3: committed use).
- * @method void setChargeType(integer $ChargeType) Set Disk billing type (1: monthly subscription, 3: committed use).
- * @method integer getUnderWriteDuration() Obtain Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
- * @method void setUnderWriteDuration(integer $UnderWriteDuration) Set Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+ * @method integer getChargeType() Obtain Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
+ * @method void setChargeType(integer $ChargeType) Set Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
+ * @method integer getUnderWriteDuration() Obtain Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
+ * @method void setUnderWriteDuration(integer $UnderWriteDuration) Set Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
  */
 class AttachDisksRequest extends AbstractModel
 {
     /**
-     * @var string ID of the EMR cluster instance.
+     * @var string ID of the EMR cluster.
      */
     public $InstanceId;
 
     /**
-     * @var array Cloud disk ID required for mounting.
+     * @var array ID of the cloud disk to be mounted.
      */
     public $DiskIds;
 
     /**
-     * @var string Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
+     * @var string Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
      */
     public $AlignType;
 
     /**
-     * @var array List of CVM node IDs requiring mounting.
+     * @var array ID list of the CVM instances to which disks are to be mounted.
      */
     public $CvmInstanceIds;
 
@@ -80,7 +80,7 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
     public $DiskSpec;
 
     /**
-     * @var boolean Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+     * @var boolean Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
      */
     public $DeleteWithInstance;
 
@@ -90,28 +90,28 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
     public $SelectiveConfServices;
 
     /**
-     * @var integer Disk billing type (1: monthly subscription, 3: committed use).
+     * @var integer Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
      */
     public $ChargeType;
 
     /**
-     * @var integer Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+     * @var integer Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
      */
     public $UnderWriteDuration;
 
     /**
-     * @param string $InstanceId ID of the EMR cluster instance.
-     * @param array $DiskIds Cloud disk ID required for mounting.
-     * @param string $AlignType Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
-     * @param array $CvmInstanceIds List of CVM node IDs requiring mounting.
+     * @param string $InstanceId ID of the EMR cluster.
+     * @param array $DiskIds ID of the cloud disk to be mounted.
+     * @param string $AlignType Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
+     * @param array $CvmInstanceIds ID list of the CVM instances to which disks are to be mounted.
      * @param boolean $CreateDisk Whether to mount newly purchased cloud disks.
      * @param NodeSpecDiskV2 $DiskSpec Specifications of newly purchased cloud disks.
-     * @param boolean $DeleteWithInstance Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+     * @param boolean $DeleteWithInstance Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
      * @param array $SelectiveConfServices Name list of services that can be configured when a new disk is mounted.
-     * @param integer $ChargeType Disk billing type (1: monthly subscription, 3: committed use).
-     * @param integer $UnderWriteDuration Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+     * @param integer $ChargeType Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
+     * @param integer $UnderWriteDuration Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
      */
     function __construct()
     {

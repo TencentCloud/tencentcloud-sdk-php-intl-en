@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCatalog() Obtain catalog
  * @method void setCatalog(string $Catalog) Set catalog
- * @method string getClientIpAddr() Obtain IP address used for submission.
- * @method void setClientIpAddr(string $ClientIpAddr) Set IP address used for submission.
+ * @method string getClientIpAddr() Obtain Submission IP address.
+ * @method void setClientIpAddr(string $ClientIpAddr) Set Submission IP address.
  * @method string getCompletedSplits() Obtain Number of segments.
  * @method void setCompletedSplits(string $CompletedSplits) Set Number of segments.
  * @method integer getCpuTime() Obtain CPU time.
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCumulativeMemory(integer $CumulativeMemory) Set Cumulative memory.
  * @method integer getDurationMillis() Obtain Execution duration.
  * @method void setDurationMillis(integer $DurationMillis) Set Execution duration.
- * @method integer getEndTime() Obtain End time (seconds).
- * @method void setEndTime(integer $EndTime) Set End time (seconds).
+ * @method integer getEndTime() Obtain End time (s).
+ * @method void setEndTime(integer $EndTime) Set End time (s).
  * @method string getId() Obtain Query ID.
  * @method void setId(string $Id) Set Query ID.
  * @method integer getInternalNetworkBytes() Obtain Internal transmission volume.
@@ -48,16 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessedInputBytes(integer $ProcessedInputBytes) Set Processed input volume.
  * @method integer getSqlCompileTime() Obtain Compilation duration.
  * @method void setSqlCompileTime(integer $SqlCompileTime) Set Compilation duration.
- * @method integer getStartTime() Obtain Start time (seconds).
- * @method void setStartTime(integer $StartTime) Set Start time (seconds).
+ * @method integer getStartTime() Obtain Start time (s).
+ * @method void setStartTime(integer $StartTime) Set Start time (s).
  * @method string getState() Obtain Execution status.
  * @method void setState(string $State) Set Execution status.
  * @method string getStatement() Obtain Execution statement.
  * @method void setStatement(string $Statement) Set Execution statement.
- * @method string getUser() Obtain User who submits requests.
- * @method void setUser(string $User) Set User who submits requests.
+ * @method string getUser() Obtain Submission user.
+ * @method void setUser(string $User) Set Submission user.
  * @method integer getWrittenBytes() Obtain Number of bytes written.
  * @method void setWrittenBytes(integer $WrittenBytes) Set Number of bytes written.
+ * @method string getErrorMessage() Obtain Error log.
+ * @method void setErrorMessage(string $ErrorMessage) Set Error log.
  */
 class TrinoQueryInfo extends AbstractModel
 {
@@ -67,7 +69,7 @@ class TrinoQueryInfo extends AbstractModel
     public $Catalog;
 
     /**
-     * @var string IP address used for submission.
+     * @var string Submission IP address.
      */
     public $ClientIpAddr;
 
@@ -92,7 +94,7 @@ class TrinoQueryInfo extends AbstractModel
     public $DurationMillis;
 
     /**
-     * @var integer End time (seconds).
+     * @var integer End time (s).
      */
     public $EndTime;
 
@@ -132,7 +134,7 @@ class TrinoQueryInfo extends AbstractModel
     public $SqlCompileTime;
 
     /**
-     * @var integer Start time (seconds).
+     * @var integer Start time (s).
      */
     public $StartTime;
 
@@ -147,7 +149,7 @@ class TrinoQueryInfo extends AbstractModel
     public $Statement;
 
     /**
-     * @var string User who submits requests.
+     * @var string Submission user.
      */
     public $User;
 
@@ -157,13 +159,18 @@ class TrinoQueryInfo extends AbstractModel
     public $WrittenBytes;
 
     /**
+     * @var string Error log.
+     */
+    public $ErrorMessage;
+
+    /**
      * @param string $Catalog catalog
-     * @param string $ClientIpAddr IP address used for submission.
+     * @param string $ClientIpAddr Submission IP address.
      * @param string $CompletedSplits Number of segments.
      * @param integer $CpuTime CPU time.
      * @param integer $CumulativeMemory Cumulative memory.
      * @param integer $DurationMillis Execution duration.
-     * @param integer $EndTime End time (seconds).
+     * @param integer $EndTime End time (s).
      * @param string $Id Query ID.
      * @param integer $InternalNetworkBytes Internal transmission volume.
      * @param integer $OutputBytes Number of output bytes.
@@ -171,11 +178,12 @@ class TrinoQueryInfo extends AbstractModel
      * @param integer $PhysicalInputBytes Physical input volume.
      * @param integer $ProcessedInputBytes Processed input volume.
      * @param integer $SqlCompileTime Compilation duration.
-     * @param integer $StartTime Start time (seconds).
+     * @param integer $StartTime Start time (s).
      * @param string $State Execution status.
      * @param string $Statement Execution statement.
-     * @param string $User User who submits requests.
+     * @param string $User Submission user.
      * @param integer $WrittenBytes Number of bytes written.
+     * @param string $ErrorMessage Error log.
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class TrinoQueryInfo extends AbstractModel
 
         if (array_key_exists("WrittenBytes",$param) and $param["WrittenBytes"] !== null) {
             $this->WrittenBytes = $param["WrittenBytes"];
+        }
+
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
         }
     }
 }

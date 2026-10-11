@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddNodeResourceConfig request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
- * @method string getResourceType() Obtain Node type: Core, Task, and Router.
- * @method void setResourceType(string $ResourceType) Set Node type: Core, Task, and Router.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method string getResourceType() Obtain Node type. Valid values: CORE, TASK, and ROUTER.
+ * @method void setResourceType(string $ResourceType) Set Node type. Valid values: CORE, TASK, and ROUTER.
  * @method Resource getResourceConfig() Obtain Resource details.
  * @method void setResourceConfig(Resource $ResourceConfig) Set Resource details.
  * @method integer getPayMode() Obtain Payment mode.
  * @method void setPayMode(integer $PayMode) Set Payment mode.
- * @method string getIsDefault() Obtain Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
- * @method void setIsDefault(string $IsDefault) Set Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+ * @method string getIsDefault() Obtain Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
+ * @method void setIsDefault(string $IsDefault) Set Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
  * @method integer getZoneId() Obtain Region ID.
  * @method void setZoneId(integer $ZoneId) Set Region ID.
  * @method array getMultipleResourceConfig() Obtain When multiple specifications are added, details of the first specifications are in the ResourceConfig parameter, and those of the second to n-th are in the MultipleResourceConfig parameter.
  * @method void setMultipleResourceConfig(array $MultipleResourceConfig) Set When multiple specifications are added, details of the first specifications are in the ResourceConfig parameter, and those of the second to n-th are in the MultipleResourceConfig parameter.
- * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR.
- * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+ * @method string getResourceBaseType() Obtain Type. Valid values: ComputeResource and EMR. Default value: EMR.
+ * @method void setResourceBaseType(string $ResourceBaseType) Set Type. Valid values: ComputeResource and EMR. Default value: EMR.
  * @method string getComputeResourceId() Obtain Computing resource ID.
  * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
  * @method string getHardwareResourceType() Obtain Hardware type.
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class AddNodeResourceConfigRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Node type: Core, Task, and Router.
+     * @var string Node type. Valid values: CORE, TASK, and ROUTER.
      */
     public $ResourceType;
 
@@ -64,7 +64,7 @@ class AddNodeResourceConfigRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+     * @var string Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
      */
     public $IsDefault;
 
@@ -79,7 +79,7 @@ class AddNodeResourceConfigRequest extends AbstractModel
     public $MultipleResourceConfig;
 
     /**
-     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @var string Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public $ResourceBaseType;
 
@@ -94,14 +94,14 @@ class AddNodeResourceConfigRequest extends AbstractModel
     public $HardwareResourceType;
 
     /**
-     * @param string $InstanceId Cluster instance ID.
-     * @param string $ResourceType Node type: Core, Task, and Router.
+     * @param string $InstanceId Cluster ID.
+     * @param string $ResourceType Node type. Valid values: CORE, TASK, and ROUTER.
      * @param Resource $ResourceConfig Resource details.
      * @param integer $PayMode Payment mode.
-     * @param string $IsDefault Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+     * @param string $IsDefault Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
      * @param integer $ZoneId Region ID.
      * @param array $MultipleResourceConfig When multiple specifications are added, details of the first specifications are in the ResourceConfig parameter, and those of the second to n-th are in the MultipleResourceConfig parameter.
-     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @param string $ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      * @param string $ComputeResourceId Computing resource ID.
      * @param string $HardwareResourceType Hardware type.
      */

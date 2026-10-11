@@ -20,282 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleOutInstance request structure.
  *
- * @method string getTimeUnit() Obtain Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
- * @method void setTimeUnit(string $TimeUnit) Set Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
- * @method integer getTimeSpan() Obtain Time span of scale-out, which needs to be used together with `TimeUnit`.
- * @method void setTimeSpan(integer $TimeSpan) Set Time span of scale-out, which needs to be used together with `TimeUnit`.
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getPayMode() Obtain Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
- * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
- * @method string getClientToken() Obtain Client token.
- * @method void setClientToken(string $ClientToken) Set Client token.
- * @method array getPreExecutedFileSettings() Obtain Bootstrap script settings.
- * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) Set Bootstrap script settings.
- * @method integer getTaskCount() Obtain Number of task nodes to be added.
- * @method void setTaskCount(integer $TaskCount) Set Number of task nodes to be added.
- * @method integer getCoreCount() Obtain Number of core nodes to be added.
- * @method void setCoreCount(integer $CoreCount) Set Number of core nodes to be added.
- * @method array getUnNecessaryNodeList() Obtain Processes unnecessary for scale-out.
- * @method void setUnNecessaryNodeList(array $UnNecessaryNodeList) Set Processes unnecessary for scale-out.
- * @method integer getRouterCount() Obtain Number of router nodes to be added.
- * @method void setRouterCount(integer $RouterCount) Set Number of router nodes to be added.
- * @method array getSoftDeployInfo() Obtain Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
- * @method void setSoftDeployInfo(array $SoftDeployInfo) Set Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
- * @method array getServiceNodeInfo() Obtain Started process.
- * @method void setServiceNodeInfo(array $ServiceNodeInfo) Set Started process.
- * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs. Only one can be specified currently.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
- * @method array getTags() Obtain List of tags bound to added nodes.
- * @method void setTags(array $Tags) Set List of tags bound to added nodes.
- * @method string getHardwareResourceType() Obtain Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
- * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
- * @method PodSpec getPodSpec() Obtain Specified information such as pod specification and source for scale-out with pod resources.
- * @method void setPodSpec(PodSpec $PodSpec) Set Specified information such as pod specification and source for scale-out with pod resources.
- * @method string getClickHouseClusterName() Obtain Server group name selected for ClickHouse cluster scale-out.
- * @method void setClickHouseClusterName(string $ClickHouseClusterName) Set Server group name selected for ClickHouse cluster scale-out.
- * @method string getClickHouseClusterType() Obtain Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
- * @method void setClickHouseClusterType(string $ClickHouseClusterType) Set Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
- * @method string getYarnNodeLabel() Obtain Yarn node label specified for rule-based scale-out.
- * @method void setYarnNodeLabel(string $YarnNodeLabel) Set Yarn node label specified for rule-based scale-out.
- * @method PodParameter getPodParameter() Obtain Custom pod permission and parameter
- * @method void setPodParameter(PodParameter $PodParameter) Set Custom pod permission and parameter
- * @method integer getMasterCount() Obtain Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
- * @method void setMasterCount(integer $MasterCount) Set Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
- * @method string getStartServiceAfterScaleOut() Obtain Whether to start the service after scale-out. `true`: Yes; `false`: No.
- * @method void setStartServiceAfterScaleOut(string $StartServiceAfterScaleOut) Set Whether to start the service after scale-out. `true`: Yes; `false`: No.
- * @method integer getZoneId() Obtain AZ, which defaults to the primary AZ of the cluster.
- * @method void setZoneId(integer $ZoneId) Set AZ, which defaults to the primary AZ of the cluster.
- * @method string getSubnetId() Obtain Subnet, which defaults to the subnet used when the cluster is created.
- * @method void setSubnetId(string $SubnetId) Set Subnet, which defaults to the subnet used when the cluster is created.
- * @method string getScaleOutServiceConfAssign() Obtain Pre-defined configuration set
- * @method void setScaleOutServiceConfAssign(string $ScaleOutServiceConfAssign) Set Pre-defined configuration set
- * @method integer getAutoRenew() Obtain Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
- * @method void setAutoRenew(integer $AutoRenew) Set Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
- * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
- * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
- * @method string getComputeResourceId() Obtain Computing resource ID.
- * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
- * @method ComputeResourceAdvanceParams getComputeResourceAdvanceParams() Obtain Advanced settings of computing resources.
- * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) Set Advanced settings of computing resources.
- * @method NodeMark getNodeMarks() Obtain Node tag information: currently used only in Terraform.
- * @method void setNodeMarks(NodeMark $NodeMarks) Set Node tag information: currently used only in Terraform.
+ * @method string getTimeUnit() Obtain <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method void setTimeUnit(string $TimeUnit) Set <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method integer getTimeSpan() Obtain <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method void setTimeSpan(integer $TimeSpan) Set <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method integer getPayMode() Obtain <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method void setPayMode(integer $PayMode) Set <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method string getClientToken() Obtain <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+ * @method void setClientToken(string $ClientToken) Set <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+ * @method array getPreExecutedFileSettings() Obtain <p>Bootstrap script settings.</p>
+ * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) Set <p>Bootstrap script settings.</p>
+ * @method integer getTaskCount() Obtain <p>Number of Task nodes to be scaled out.</p>
+ * @method void setTaskCount(integer $TaskCount) Set <p>Number of Task nodes to be scaled out.</p>
+ * @method integer getCoreCount() Obtain <p>Number of scale-out Core nodes.</p>
+ * @method void setCoreCount(integer $CoreCount) Set <p>Number of scale-out Core nodes.</p>
+ * @method array getUnNecessaryNodeList() Obtain <p>Processes, which are not required during the scale-out.</p>
+ * @method void setUnNecessaryNodeList(array $UnNecessaryNodeList) Set <p>Processes, which are not required during the scale-out.</p>
+ * @method integer getRouterCount() Obtain <p>Number of Router nodes to be scaled out.</p>
+ * @method void setRouterCount(integer $RouterCount) Set <p>Number of Router nodes to be scaled out.</p>
+ * @method array getSoftDeployInfo() Obtain <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
+ * @method void setSoftDeployInfo(array $SoftDeployInfo) Set <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
+ * @method array getServiceNodeInfo() Obtain <p>Started process.</p>
+ * @method void setServiceNodeInfo(array $ServiceNodeInfo) Set <p>Started process.</p>
+ * @method array getDisasterRecoverGroupIds() Obtain <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
+ * @method array getTags() Obtain <p>List of tags bound to nodes for the scale-out.</p>
+ * @method void setTags(array $Tags) Set <p>List of tags bound to nodes for the scale-out.</p>
+ * @method string getHardwareResourceType() Obtain <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+ * @method PodSpec getPodSpec() Obtain <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
+ * @method void setPodSpec(PodSpec $PodSpec) Set <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
+ * @method string getClickHouseClusterName() Obtain <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+ * @method void setClickHouseClusterName(string $ClickHouseClusterName) Set <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+ * @method string getClickHouseClusterType() Obtain <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+ * @method void setClickHouseClusterType(string $ClickHouseClusterType) Set <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+ * @method string getYarnNodeLabel() Obtain <p>YARN node label specified for the rule-based scale-out.</p>
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) Set <p>YARN node label specified for the rule-based scale-out.</p>
+ * @method PodParameter getPodParameter() Obtain <p>Pod custom permission and parameter.</p>
+ * @method void setPodParameter(PodParameter $PodParameter) Set <p>Pod custom permission and parameter.</p>
+ * @method integer getMasterCount() Obtain <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
+ * @method void setMasterCount(integer $MasterCount) Set <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
+ * @method string getStartServiceAfterScaleOut() Obtain <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
+ * @method void setStartServiceAfterScaleOut(string $StartServiceAfterScaleOut) Set <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
+ * @method integer getZoneId() Obtain <p>AZ. The primary AZ of the cluster is selected by default.</p>
+ * @method void setZoneId(integer $ZoneId) Set <p>AZ. The primary AZ of the cluster is selected by default.</p>
+ * @method string getSubnetId() Obtain <p>Subnet. The subnet used during cluster creation is selected by default.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>Subnet. The subnet used during cluster creation is selected by default.</p>
+ * @method string getScaleOutServiceConfAssign() Obtain <p>Preset configuration group.</p>
+ * @method void setScaleOutServiceConfAssign(string $ScaleOutServiceConfAssign) Set <p>Preset configuration group.</p>
+ * @method integer getAutoRenew() Obtain <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
+ * @method void setAutoRenew(integer $AutoRenew) Set <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
+ * @method string getResourceBaseType() Obtain <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
+ * @method void setResourceBaseType(string $ResourceBaseType) Set <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
+ * @method string getComputeResourceId() Obtain <p>Computing resource ID.</p>
+ * @method void setComputeResourceId(string $ComputeResourceId) Set <p>Computing resource ID.</p>
+ * @method ComputeResourceAdvanceParams getComputeResourceAdvanceParams() Obtain <p>Advanced settings of computing resources.</p>
+ * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) Set <p>Advanced settings of computing resources.</p>
+ * @method NodeMark getNodeMarks() Obtain <p>Node tag information, which is currently only provided for the Terraform platform.</p>
+ * @method void setNodeMarks(NodeMark $NodeMarks) Set <p>Node tag information, which is currently only provided for the Terraform platform.</p>
+ * @method string getWarehouseName() Obtain <p>Compute group specified for the scale-out.</p>
+ * @method void setWarehouseName(string $WarehouseName) Set <p>Compute group specified for the scale-out.</p>
+ * @method integer getPartitionNumber() Obtain <p>Partition of a partition placement group.</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) Set <p>Partition of a partition placement group.</p>
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+     * @var string <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer Time span of scale-out, which needs to be used together with `TimeUnit`.
+     * @var integer <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public $TimeSpan;
 
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+     * @var integer <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public $PayMode;
 
     /**
-     * @var string Client token.
+     * @var string <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
      */
     public $ClientToken;
 
     /**
-     * @var array Bootstrap script settings.
+     * @var array <p>Bootstrap script settings.</p>
      */
     public $PreExecutedFileSettings;
 
     /**
-     * @var integer Number of task nodes to be added.
+     * @var integer <p>Number of Task nodes to be scaled out.</p>
      */
     public $TaskCount;
 
     /**
-     * @var integer Number of core nodes to be added.
+     * @var integer <p>Number of scale-out Core nodes.</p>
      */
     public $CoreCount;
 
     /**
-     * @var array Processes unnecessary for scale-out.
+     * @var array <p>Processes, which are not required during the scale-out.</p>
      */
     public $UnNecessaryNodeList;
 
     /**
-     * @var integer Number of router nodes to be added.
+     * @var integer <p>Number of Router nodes to be scaled out.</p>
      */
     public $RouterCount;
 
     /**
-     * @var array Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
+     * @var array <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
      */
     public $SoftDeployInfo;
 
     /**
-     * @var array Started process.
+     * @var array <p>Started process.</p>
      */
     public $ServiceNodeInfo;
 
     /**
-     * @var array List of spread placement group IDs. Only one can be specified currently.
+     * @var array <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var array List of tags bound to added nodes.
+     * @var array <p>List of tags bound to nodes for the scale-out.</p>
      */
     public $Tags;
 
     /**
-     * @var string Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+     * @var string <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
      */
     public $HardwareResourceType;
 
     /**
-     * @var PodSpec Specified information such as pod specification and source for scale-out with pod resources.
+     * @var PodSpec <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
      */
     public $PodSpec;
 
     /**
-     * @var string Server group name selected for ClickHouse cluster scale-out.
+     * @var string <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
      */
     public $ClickHouseClusterName;
 
     /**
-     * @var string Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+     * @var string <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
      */
     public $ClickHouseClusterType;
 
     /**
-     * @var string Yarn node label specified for rule-based scale-out.
+     * @var string <p>YARN node label specified for the rule-based scale-out.</p>
      */
     public $YarnNodeLabel;
 
     /**
-     * @var PodParameter Custom pod permission and parameter
+     * @var PodParameter <p>Pod custom permission and parameter.</p>
      */
     public $PodParameter;
 
     /**
-     * @var integer Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
+     * @var integer <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
      */
     public $MasterCount;
 
     /**
-     * @var string Whether to start the service after scale-out. `true`: Yes; `false`: No.
+     * @var string <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
      */
     public $StartServiceAfterScaleOut;
 
     /**
-     * @var integer AZ, which defaults to the primary AZ of the cluster.
+     * @var integer <p>AZ. The primary AZ of the cluster is selected by default.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string Subnet, which defaults to the subnet used when the cluster is created.
+     * @var string <p>Subnet. The subnet used during cluster creation is selected by default.</p>
      */
     public $SubnetId;
 
     /**
-     * @var string Pre-defined configuration set
+     * @var string <p>Preset configuration group.</p>
      */
     public $ScaleOutServiceConfAssign;
 
     /**
-     * @var integer Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     * @var integer <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public $AutoRenew;
 
     /**
-     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * @var string <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
      */
     public $ResourceBaseType;
 
     /**
-     * @var string Computing resource ID.
+     * @var string <p>Computing resource ID.</p>
      */
     public $ComputeResourceId;
 
     /**
-     * @var ComputeResourceAdvanceParams Advanced settings of computing resources.
+     * @var ComputeResourceAdvanceParams <p>Advanced settings of computing resources.</p>
      */
     public $ComputeResourceAdvanceParams;
 
     /**
-     * @var NodeMark Node tag information: currently used only in Terraform.
+     * @var NodeMark <p>Node tag information, which is currently only provided for the Terraform platform.</p>
      */
     public $NodeMarks;
 
     /**
-     * @param string $TimeUnit Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
-     * @param integer $TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
-     * @param string $InstanceId Instance ID.
-     * @param integer $PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-     * @param string $ClientToken Client token.
-     * @param array $PreExecutedFileSettings Bootstrap script settings.
-     * @param integer $TaskCount Number of task nodes to be added.
-     * @param integer $CoreCount Number of core nodes to be added.
-     * @param array $UnNecessaryNodeList Processes unnecessary for scale-out.
-     * @param integer $RouterCount Number of router nodes to be added.
-     * @param array $SoftDeployInfo Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
-     * @param array $ServiceNodeInfo Started process.
-     * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
-     * @param array $Tags List of tags bound to added nodes.
-     * @param string $HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
-     * @param PodSpec $PodSpec Specified information such as pod specification and source for scale-out with pod resources.
-     * @param string $ClickHouseClusterName Server group name selected for ClickHouse cluster scale-out.
-     * @param string $ClickHouseClusterType Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
-     * @param string $YarnNodeLabel Yarn node label specified for rule-based scale-out.
-     * @param PodParameter $PodParameter Custom pod permission and parameter
-     * @param integer $MasterCount Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
-     * @param string $StartServiceAfterScaleOut Whether to start the service after scale-out. `true`: Yes; `false`: No.
-     * @param integer $ZoneId AZ, which defaults to the primary AZ of the cluster.
-     * @param string $SubnetId Subnet, which defaults to the subnet used when the cluster is created.
-     * @param string $ScaleOutServiceConfAssign Pre-defined configuration set
-     * @param integer $AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
-     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-     * @param string $ComputeResourceId Computing resource ID.
-     * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams Advanced settings of computing resources.
-     * @param NodeMark $NodeMarks Node tag information: currently used only in Terraform.
+     * @var string <p>Compute group specified for the scale-out.</p>
+     */
+    public $WarehouseName;
+
+    /**
+     * @var integer <p>Partition of a partition placement group.</p>
+     */
+    public $PartitionNumber;
+
+    /**
+     * @param string $TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param integer $TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param integer $PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+     * @param string $ClientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+     * @param array $PreExecutedFileSettings <p>Bootstrap script settings.</p>
+     * @param integer $TaskCount <p>Number of Task nodes to be scaled out.</p>
+     * @param integer $CoreCount <p>Number of scale-out Core nodes.</p>
+     * @param array $UnNecessaryNodeList <p>Processes, which are not required during the scale-out.</p>
+     * @param integer $RouterCount <p>Number of Router nodes to be scaled out.</p>
+     * @param array $SoftDeployInfo <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
+     * @param array $ServiceNodeInfo <p>Started process.</p>
+     * @param array $DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
+     * @param array $Tags <p>List of tags bound to nodes for the scale-out.</p>
+     * @param string $HardwareResourceType <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+     * @param PodSpec $PodSpec <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
+     * @param string $ClickHouseClusterName <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+     * @param string $ClickHouseClusterType <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+     * @param string $YarnNodeLabel <p>YARN node label specified for the rule-based scale-out.</p>
+     * @param PodParameter $PodParameter <p>Pod custom permission and parameter.</p>
+     * @param integer $MasterCount <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
+     * @param string $StartServiceAfterScaleOut <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
+     * @param integer $ZoneId <p>AZ. The primary AZ of the cluster is selected by default.</p>
+     * @param string $SubnetId <p>Subnet. The subnet used during cluster creation is selected by default.</p>
+     * @param string $ScaleOutServiceConfAssign <p>Preset configuration group.</p>
+     * @param integer $AutoRenew <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * @param string $ResourceBaseType <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
+     * @param string $ComputeResourceId <p>Computing resource ID.</p>
+     * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams <p>Advanced settings of computing resources.</p>
+     * @param NodeMark $NodeMarks <p>Node tag information, which is currently only provided for the Terraform platform.</p>
+     * @param string $WarehouseName <p>Compute group specified for the scale-out.</p>
+     * @param integer $PartitionNumber <p>Partition of a partition placement group.</p>
      */
     function __construct()
     {
@@ -442,6 +426,14 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
             $this->NodeMarks = new NodeMark();
             $this->NodeMarks->deserialize($param["NodeMarks"]);
+        }
+
+        if (array_key_exists("WarehouseName",$param) and $param["WarehouseName"] !== null) {
+            $this->WarehouseName = $param["WarehouseName"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
         }
     }
 }

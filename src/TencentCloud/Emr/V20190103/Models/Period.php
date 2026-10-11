@@ -18,12 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Serverless HBase monthly subscription duration
+ * Serverless HBase monthly subscription duration.
  *
  * @method integer getTimeSpan() Obtain Time span.
  * @method void setTimeSpan(integer $TimeSpan) Set Time span.
- * @method string getTimeUnit() Obtain Time unit, "m" stands for month.
- * @method void setTimeUnit(string $TimeUnit) Set Time unit, "m" stands for month.
+ * @method string getTimeUnit() Obtain Time unit. "m" stands for month(s).
+ * @method void setTimeUnit(string $TimeUnit) Set Time unit. "m" stands for month(s).
  */
 class Period extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Period extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var string Time unit, "m" stands for month.
+     * @var string Time unit. "m" stands for month(s).
      */
     public $TimeUnit;
 
     /**
      * @param integer $TimeSpan Time span.
-     * @param string $TimeUnit Time unit, "m" stands for month.
+     * @param string $TimeUnit Time unit. "m" stands for month(s).
      */
     function __construct()
     {

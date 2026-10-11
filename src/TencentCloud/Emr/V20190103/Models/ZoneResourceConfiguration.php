@@ -18,25 +18,19 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AZ configurations
+ * AZ configuration information.
  *
- * @method VirtualPrivateCloud getVirtualPrivateCloud() Obtain The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) Set The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method Placement getPlacement() Obtain The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPlacement(Placement $Placement) Set The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AllNodeResourceSpec getAllNodeResourceSpec() Obtain The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAllNodeResourceSpec(AllNodeResourceSpec $AllNodeResourceSpec) Set The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneTag() Obtain Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+ * @method VirtualPrivateCloud getVirtualPrivateCloud() Obtain VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
+ * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) Set VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
+ * @method Placement getPlacement() Obtain Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
+ * @method void setPlacement(Placement $Placement) Set Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
+ * @method AllNodeResourceSpec getAllNodeResourceSpec() Obtain Specifications of all node resources.
+ * @method void setAllNodeResourceSpec(AllNodeResourceSpec $AllNodeResourceSpec) Set Specifications of all node resources.
+ * @method string getZoneTag() Obtain In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
- * @method void setZoneTag(string $ZoneTag) Set Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+ * @method void setZoneTag(string $ZoneTag) Set In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
@@ -44,25 +38,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class ZoneResourceConfiguration extends AbstractModel
 {
     /**
-     * @var VirtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VirtualPrivateCloud VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
      */
     public $VirtualPrivateCloud;
 
     /**
-     * @var Placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Placement Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
      */
     public $Placement;
 
     /**
-     * @var AllNodeResourceSpec The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AllNodeResourceSpec Specifications of all node resources.
      */
     public $AllNodeResourceSpec;
 
     /**
-     * @var string Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+     * @var string In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
@@ -70,13 +61,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ZoneTag;
 
     /**
-     * @param VirtualPrivateCloud $VirtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Placement $Placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AllNodeResourceSpec $AllNodeResourceSpec The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ZoneTag Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+     * @param VirtualPrivateCloud $VirtualPrivateCloud VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
+     * @param Placement $Placement Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
+     * @param AllNodeResourceSpec $AllNodeResourceSpec Specifications of all node resources.
+     * @param string $ZoneTag In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>

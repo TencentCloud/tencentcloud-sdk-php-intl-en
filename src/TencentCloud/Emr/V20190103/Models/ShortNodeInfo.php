@@ -18,17 +18,17 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node information
+ * Node information.
  *
- * @method string getNodeType() Obtain Node type: Master/Core/Task/Router/Common.
- * @method void setNodeType(string $NodeType) Set Node type: Master/Core/Task/Router/Common.
+ * @method string getNodeType() Obtain Node type. Valid values: Master/Core/Task/Router/Common.
+ * @method void setNodeType(string $NodeType) Set Node type. Valid values: Master/Core/Task/Router/Common.
  * @method integer getNodeSize() Obtain Number of nodes.
  * @method void setNodeSize(integer $NodeSize) Set Number of nodes.
  */
 class ShortNodeInfo extends AbstractModel
 {
     /**
-     * @var string Node type: Master/Core/Task/Router/Common.
+     * @var string Node type. Valid values: Master/Core/Task/Router/Common.
      */
     public $NodeType;
 
@@ -38,7 +38,7 @@ class ShortNodeInfo extends AbstractModel
     public $NodeSize;
 
     /**
-     * @param string $NodeType Node type: Master/Core/Task/Router/Common.
+     * @param string $NodeType Node type. Valid values: Master/Core/Task/Router/Common.
      * @param integer $NodeSize Number of nodes.
      */
     function __construct()

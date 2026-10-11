@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kyuubi query information.
  *
- * @method string getClientIP() Obtain Submitter IP address.
- * @method void setClientIP(string $ClientIP) Set Submitter IP address.
+ * @method string getClientIP() Obtain Submission IP address.
+ * @method void setClientIP(string $ClientIP) Set Submission IP address.
  * @method integer getDuration() Obtain Execution duration.
  * @method void setDuration(integer $Duration) Set Execution duration.
  * @method integer getEndTime() Obtain End time.
@@ -42,13 +42,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionStatement(string $ExecutionStatement) Set Execution statement.
  * @method string getStatementID() Obtain Statement Id
  * @method void setStatementID(string $StatementID) Set Statement Id
- * @method string getUser() Obtain User who submits requests.
- * @method void setUser(string $User) Set User who submits requests.
+ * @method string getUser() Obtain Submission user.
+ * @method void setUser(string $User) Set Submission user.
  */
 class KyuubiQueryInfo extends AbstractModel
 {
     /**
-     * @var string Submitter IP address.
+     * @var string Submission IP address.
      */
     public $ClientIP;
 
@@ -103,12 +103,12 @@ class KyuubiQueryInfo extends AbstractModel
     public $StatementID;
 
     /**
-     * @var string User who submits requests.
+     * @var string Submission user.
      */
     public $User;
 
     /**
-     * @param string $ClientIP Submitter IP address.
+     * @param string $ClientIP Submission IP address.
      * @param integer $Duration Execution duration.
      * @param integer $EndTime End time.
      * @param string $EngineID Engine Id
@@ -119,7 +119,7 @@ class KyuubiQueryInfo extends AbstractModel
      * @param string $ExecutionState Execution status.
      * @param string $ExecutionStatement Execution statement.
      * @param string $StatementID Statement Id
-     * @param string $User User who submits requests.
+     * @param string $User Submission user.
      */
     function __construct()
     {

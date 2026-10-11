@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shared self-built component parameters
+ * Shared self-built component parameters.
  *
- * @method string getName() Obtain Custom parameter key
- * @method void setName(string $Name) Set Custom parameter key
- * @method string getValue() Obtain Custom parameter value
- * @method void setValue(string $Value) Set Custom parameter value
+ * @method string getName() Obtain Custom parameter key.
+ * @method void setName(string $Name) Set Custom parameter key.
+ * @method string getValue() Obtain Custom parameter value.
+ * @method void setValue(string $Value) Set Custom parameter value.
  */
 class CustomServiceDefine extends AbstractModel
 {
     /**
-     * @var string Custom parameter key
+     * @var string Custom parameter key.
      */
     public $Name;
 
     /**
-     * @var string Custom parameter value
+     * @var string Custom parameter value.
      */
     public $Value;
 
     /**
-     * @param string $Name Custom parameter key
-     * @param string $Value Custom parameter value
+     * @param string $Name Custom parameter key.
+     * @param string $Value Custom parameter value.
      */
     function __construct()
     {

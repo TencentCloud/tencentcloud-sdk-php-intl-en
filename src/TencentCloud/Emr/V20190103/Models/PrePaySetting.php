@@ -18,32 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Serverless HBase prepaid settings
+ * Serverless HBase prepaid settings.
  *
  * @method Period getPeriod() Obtain Time.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPeriod(Period $Period) Set Time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
  */
 class PrePaySetting extends AbstractModel
 {
     /**
      * @var Period Time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Period;
 
     /**
-     * @var integer Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
+     * @var integer Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
      */
     public $AutoRenewFlag;
 
     /**
      * @param Period $Period Time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
+     * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
      */
     function __construct()
     {

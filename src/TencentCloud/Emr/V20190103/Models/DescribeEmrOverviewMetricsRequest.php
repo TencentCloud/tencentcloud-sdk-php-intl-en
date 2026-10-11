@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEmrOverviewMetrics request structure.
  *
- * @method integer getEnd() Obtain End time
- * @method void setEnd(integer $End) Set End time
- * @method string getMetric() Obtain Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
- * @method void setMetric(string $Metric) Set Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+ * @method integer getEnd() Obtain End time.
+ * @method void setEnd(integer $End) Set End time.
+ * @method string getMetric() Obtain Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
+ * @method void setMetric(string $Metric) Set Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
  * @method string getInstanceId() Obtain Cluster ID.
  * @method void setInstanceId(string $InstanceId) Set Cluster ID.
  * @method string getDownsample() Obtain Granularity, for example, 30s-max, 1m-max, and 1h-max.
  * @method void setDownsample(string $Downsample) Set Granularity, for example, 30s-max, 1m-max, and 1h-max.
- * @method integer getStart() Obtain Start time, not required for pie charts
- * @method void setStart(integer $Start) Set Start time, not required for pie charts
- * @method string getAggregator() Obtain Aggregation method, for future use
- * @method void setAggregator(string $Aggregator) Set Aggregation method, for future use
+ * @method integer getStart() Obtain Start time, which is not required for pie charts.
+ * @method void setStart(integer $Start) Set Start time, which is not required for pie charts.
+ * @method string getAggregator() Obtain Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
+ * @method void setAggregator(string $Aggregator) Set Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
  * @method string getTags() Obtain Specific type of metrics to be queried, for example, "{"type":"CapacityTotal|CapacityRemaining"}".
  * @method void setTags(string $Tags) Set Specific type of metrics to be queried, for example, "{"type":"CapacityTotal|CapacityRemaining"}".
  */
 class DescribeEmrOverviewMetricsRequest extends AbstractModel
 {
     /**
-     * @var integer End time
+     * @var integer End time.
      */
     public $End;
 
     /**
-     * @var string Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+     * @var string Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
      */
     public $Metric;
 
@@ -58,12 +58,12 @@ class DescribeEmrOverviewMetricsRequest extends AbstractModel
     public $Downsample;
 
     /**
-     * @var integer Start time, not required for pie charts
+     * @var integer Start time, which is not required for pie charts.
      */
     public $Start;
 
     /**
-     * @var string Aggregation method, for future use
+     * @var string Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
      */
     public $Aggregator;
 
@@ -73,12 +73,12 @@ class DescribeEmrOverviewMetricsRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param integer $End End time
-     * @param string $Metric Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+     * @param integer $End End time.
+     * @param string $Metric Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
      * @param string $InstanceId Cluster ID.
      * @param string $Downsample Granularity, for example, 30s-max, 1m-max, and 1h-max.
-     * @param integer $Start Start time, not required for pie charts
-     * @param string $Aggregator Aggregation method, for future use
+     * @param integer $Start Start time, which is not required for pie charts.
+     * @param string $Aggregator Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
      * @param string $Tags Specific type of metrics to be queried, for example, "{"type":"CapacityTotal|CapacityRemaining"}".
      */
     function __construct()

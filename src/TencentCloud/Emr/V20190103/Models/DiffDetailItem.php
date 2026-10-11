@@ -18,14 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Dynamically generated change detail entries.
+ * Dynamically generated change detailed items.
  *
  * @method string getAttribute() Obtain Attribute.
  * @method void setAttribute(string $Attribute) Set Attribute.
- * @method string getInEffect() Obtain Currently effective.
- * @method void setInEffect(string $InEffect) Set Currently effective.
- * @method string getPendingEffectiveness() Obtain To be effective.
- * @method void setPendingEffectiveness(string $PendingEffectiveness) Set To be effective.
+ * @method string getInEffect() Obtain Effective item.
+ * @method void setInEffect(string $InEffect) Set Effective item.
+ * @method string getPendingEffectiveness() Obtain Pending effective.
+ * @method void setPendingEffectiveness(string $PendingEffectiveness) Set Pending effective.
  * @method string getOperation() Obtain Operation.
  * @method void setOperation(string $Operation) Set Operation.
  * @method string getQueue() Obtain Queue.
@@ -55,12 +55,12 @@ class DiffDetailItem extends AbstractModel
     public $Attribute;
 
     /**
-     * @var string Currently effective.
+     * @var string Effective item.
      */
     public $InEffect;
 
     /**
-     * @var string To be effective.
+     * @var string Pending effective.
      */
     public $PendingEffectiveness;
 
@@ -116,8 +116,8 @@ class DiffDetailItem extends AbstractModel
 
     /**
      * @param string $Attribute Attribute.
-     * @param string $InEffect Currently effective.
-     * @param string $PendingEffectiveness To be effective.
+     * @param string $InEffect Effective item.
+     * @param string $PendingEffectiveness Pending effective.
      * @param string $Operation Operation.
      * @param string $Queue Queue.
      * @param string $ConfigSet Configuration set.

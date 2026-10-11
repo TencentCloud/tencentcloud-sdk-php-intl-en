@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance prepayment parameter. This parameter is valid only when the payment type is PREPAID.
  *
- * @method integer getPeriod() Obtain The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
- * @method void setPeriod(integer $Period) Set The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
- * @method boolean getRenewFlag() Obtain Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
- * @method void setRenewFlag(boolean $RenewFlag) Set Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+ * @method integer getPeriod() Obtain Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
+ * @method void setPeriod(integer $Period) Set Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
+ * @method boolean getRenewFlag() Obtain Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
+ * @method void setRenewFlag(boolean $RenewFlag) Set Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
  */
 class InstanceChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+     * @var integer Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
      */
     public $Period;
 
     /**
-     * @var boolean Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * @var boolean Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
      */
     public $RenewFlag;
 
     /**
-     * @param integer $Period The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
-     * @param boolean $RenewFlag Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * @param integer $Period Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
+     * @param boolean $RenewFlag Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
      */
     function __construct()
     {

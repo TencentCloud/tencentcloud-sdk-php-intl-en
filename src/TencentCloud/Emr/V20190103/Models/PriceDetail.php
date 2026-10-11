@@ -18,44 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pricing details
+ * Price details.
  *
- * @method string getResourceId() Obtain The node ID
- * @method void setResourceId(string $ResourceId) Set The node ID
- * @method string getFormula() Obtain The price formula
- * @method void setFormula(string $Formula) Set The price formula
- * @method float getOriginalCost() Obtain The original price
- * @method void setOriginalCost(float $OriginalCost) Set The original price
- * @method float getDiscountCost() Obtain The discount price
- * @method void setDiscountCost(float $DiscountCost) Set The discount price
+ * @method string getResourceId() Obtain Node ID.
+ * @method void setResourceId(string $ResourceId) Set Node ID.
+ * @method string getFormula() Obtain Price calculation formula.
+ * @method void setFormula(string $Formula) Set Price calculation formula.
+ * @method float getOriginalCost() Obtain Original price.
+ * @method void setOriginalCost(float $OriginalCost) Set Original price.
+ * @method float getDiscountCost() Obtain Discounted price.
+ * @method void setDiscountCost(float $DiscountCost) Set Discounted price.
  */
 class PriceDetail extends AbstractModel
 {
     /**
-     * @var string The node ID
+     * @var string Node ID.
      */
     public $ResourceId;
 
     /**
-     * @var string The price formula
+     * @var string Price calculation formula.
      */
     public $Formula;
 
     /**
-     * @var float The original price
+     * @var float Original price.
      */
     public $OriginalCost;
 
     /**
-     * @var float The discount price
+     * @var float Discounted price.
      */
     public $DiscountCost;
 
     /**
-     * @param string $ResourceId The node ID
-     * @param string $Formula The price formula
-     * @param float $OriginalCost The original price
-     * @param float $DiscountCost The discount price
+     * @param string $ResourceId Node ID.
+     * @param string $Formula Price calculation formula.
+     * @param float $OriginalCost Original price.
+     * @param float $DiscountCost Discounted price.
      */
     function __construct()
     {

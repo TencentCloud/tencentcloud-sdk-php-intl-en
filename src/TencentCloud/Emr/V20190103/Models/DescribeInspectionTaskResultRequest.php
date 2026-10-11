@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start time.
  * @method integer getEndTime() Obtain End time.
  * @method void setEndTime(integer $EndTime) Set End time.
- * @method integer getLimit() Obtain Page size.
- * @method void setLimit(integer $Limit) Set Page size.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
  * @method integer getOffset() Obtain Pagination offset.
  * @method void setOffset(integer $Offset) Set Pagination offset.
  */
@@ -56,7 +56,7 @@ class DescribeInspectionTaskResultRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Page size.
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeInspectionTaskResultRequest extends AbstractModel
      * @param string $Type Type.
      * @param integer $StartTime Start time.
      * @param integer $EndTime End time.
-     * @param integer $Limit Page size.
+     * @param integer $Limit Number of entries per page.
      * @param integer $Offset Pagination offset.
      */
     function __construct()

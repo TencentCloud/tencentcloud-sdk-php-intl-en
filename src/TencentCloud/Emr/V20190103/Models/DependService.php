@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shared component information
+ * Shared component information.
  *
- * @method string getServiceName() Obtain The shared component name.
- * @method void setServiceName(string $ServiceName) Set The shared component name.
- * @method string getInstanceId() Obtain The cluster to which the shared component belongs.
- * @method void setInstanceId(string $InstanceId) Set The cluster to which the shared component belongs.
+ * @method string getServiceName() Obtain Shared component name.
+ * @method void setServiceName(string $ServiceName) Set Shared component name.
+ * @method string getInstanceId() Obtain Shared component cluster.
+ * @method void setInstanceId(string $InstanceId) Set Shared component cluster.
  */
 class DependService extends AbstractModel
 {
     /**
-     * @var string The shared component name.
+     * @var string Shared component name.
      */
     public $ServiceName;
 
     /**
-     * @var string The cluster to which the shared component belongs.
+     * @var string Shared component cluster.
      */
     public $InstanceId;
 
     /**
-     * @param string $ServiceName The shared component name.
-     * @param string $InstanceId The cluster to which the shared component belongs.
+     * @param string $ServiceName Shared component name.
+     * @param string $InstanceId Shared component cluster.
      */
     function __construct()
     {

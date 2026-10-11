@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Other pod information.
+ * Pod-related information.
  *
- * @method PodNewSpec getPodSpec() Obtain The specified information such as pod spec and source for scale-out with pod resources.
- * @method void setPodSpec(PodNewSpec $PodSpec) Set The specified information such as pod spec and source for scale-out with pod resources.
- * @method PodNewParameter getPodParameter() Obtain The custom pod permission and parameter.
- * @method void setPodParameter(PodNewParameter $PodParameter) Set The custom pod permission and parameter.
+ * @method PodNewSpec getPodSpec() Obtain Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
+ * @method void setPodSpec(PodNewSpec $PodSpec) Set Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
+ * @method PodNewParameter getPodParameter() Obtain Pod custom permission and parameter.
+ * @method void setPodParameter(PodNewParameter $PodParameter) Set Pod custom permission and parameter.
  */
 class PodSpecInfo extends AbstractModel
 {
     /**
-     * @var PodNewSpec The specified information such as pod spec and source for scale-out with pod resources.
+     * @var PodNewSpec Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
      */
     public $PodSpec;
 
     /**
-     * @var PodNewParameter The custom pod permission and parameter.
+     * @var PodNewParameter Pod custom permission and parameter.
      */
     public $PodParameter;
 
     /**
-     * @param PodNewSpec $PodSpec The specified information such as pod spec and source for scale-out with pod resources.
-     * @param PodNewParameter $PodParameter The custom pod permission and parameter.
+     * @param PodNewSpec $PodSpec Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
+     * @param PodNewParameter $PodParameter Pod custom permission and parameter.
      */
     function __construct()
     {

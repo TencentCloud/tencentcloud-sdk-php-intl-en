@@ -18,14 +18,13 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
+ * Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, status, and time.
 
 If there are multiple Filters, the logical relationship between them is AND.
-If multiple values exist in one filter, the logical relationship between these values is OR.
+If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
 
 * A maximum of 5 filters are allowed.
-* If a single filter has multiple values, the number of values cannot exceed 5.
-
+* If multiple Values exist for the same Filter, the number of Values cannot exceed 5.
  *
  * @method string getName() Obtain <p>Name of filter key.</p>
  * @method void setName(string $Name) Set <p>Name of filter key.</p>

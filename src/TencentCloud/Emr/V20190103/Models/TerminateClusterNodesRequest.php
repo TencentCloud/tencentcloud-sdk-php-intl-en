@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateClusterNodes request structure.
  *
- * @method string getInstanceId() Obtain The instance ID.
- * @method void setInstanceId(string $InstanceId) Set The instance ID.
- * @method array getCvmInstanceIds() Obtain The list of resources to be terminated.
- * @method void setCvmInstanceIds(array $CvmInstanceIds) Set The list of resources to be terminated.
- * @method string getNodeFlag() Obtain Valid values of node type:
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method array getCvmInstanceIds() Obtain List of terminated resources.
+ * @method void setCvmInstanceIds(array $CvmInstanceIds) Set List of terminated resources.
+ * @method string getNodeFlag() Obtain Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
- * @method void setNodeFlag(string $NodeFlag) Set Valid values of node type:
+ * @method void setNodeFlag(string $NodeFlag) Set Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
- * @method boolean getGraceDownFlag() Obtain The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
- * @method void setGraceDownFlag(boolean $GraceDownFlag) Set The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
- * @method integer getGraceDownTime() Obtain The graceful scale-in wait time in seconds. Value range: 60–1800.
- * @method void setGraceDownTime(integer $GraceDownTime) Set The graceful scale-in wait time in seconds. Value range: 60–1800.
+ * @method boolean getGraceDownFlag() Obtain Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
+ * @method void setGraceDownFlag(boolean $GraceDownFlag) Set Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
+ * @method integer getGraceDownTime() Obtain Graceful scale-in waiting time. Value range: 60–1800, in seconds.
+ * @method void setGraceDownTime(integer $GraceDownTime) Set Graceful scale-in waiting time. Value range: 60–1800, in seconds.
  */
 class TerminateClusterNodesRequest extends AbstractModel
 {
     /**
-     * @var string The instance ID.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var array The list of resources to be terminated.
+     * @var array List of terminated resources.
      */
     public $CvmInstanceIds;
 
     /**
-     * @var string Valid values of node type:
+     * @var string Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -65,29 +65,29 @@ class TerminateClusterNodesRequest extends AbstractModel
     public $NodeFlag;
 
     /**
-     * @var boolean The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
+     * @var boolean Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
      */
     public $GraceDownFlag;
 
     /**
-     * @var integer The graceful scale-in wait time in seconds. Value range: 60–1800.
+     * @var integer Graceful scale-in waiting time. Value range: 60–1800, in seconds.
      */
     public $GraceDownTime;
 
     /**
-     * @param string $InstanceId The instance ID.
-     * @param array $CvmInstanceIds The list of resources to be terminated.
-     * @param string $NodeFlag Valid values of node type:
+     * @param string $InstanceId Instance ID.
+     * @param array $CvmInstanceIds List of terminated resources.
+     * @param string $NodeFlag Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-     * @param boolean $GraceDownFlag The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
-     * @param integer $GraceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+     * @param boolean $GraceDownFlag Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
+     * @param integer $GraceDownTime Graceful scale-in waiting time. Value range: 60–1800, in seconds.
      */
     function __construct()
     {

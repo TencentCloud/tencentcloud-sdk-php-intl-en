@@ -18,47 +18,47 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The bootstrap action.
+ * Bootstrap addition.
  *
- * @method string getCosFileURI() Obtain The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
- * @method void setCosFileURI(string $CosFileURI) Set The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
- * @method string getExecutionMoment() Obtain The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
- * @method void setExecutionMoment(string $ExecutionMoment) Set The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
- * @method array getArgs() Obtain The execution script parameter. The parameter format must comply with standard shell specifications.
- * @method void setArgs(array $Args) Set The execution script parameter. The parameter format must comply with standard shell specifications.
- * @method string getCosFileName() Obtain The script file name.
- * @method void setCosFileName(string $CosFileName) Set The script file name.
+ * @method string getCosFileURI() Obtain COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+ * @method void setCosFileURI(string $CosFileURI) Set COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+ * @method string getExecutionMoment() Obtain Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
+ * @method void setExecutionMoment(string $ExecutionMoment) Set Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
+ * @method array getArgs() Obtain Execution script parameters. For the parameter format, follow standard Shell specifications.
+ * @method void setArgs(array $Args) Set Execution script parameters. For the parameter format, follow standard Shell specifications.
+ * @method string getCosFileName() Obtain Script file name.
+ * @method void setCosFileName(string $CosFileName) Set Script file name.
  * @method string getRemark() Obtain Remarks.
  * @method void setRemark(string $Remark) Set Remarks.
  */
 class ScriptBootstrapActionConfig extends AbstractModel
 {
     /**
-     * @var string The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+     * @var string COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
      */
     public $CosFileURI;
 
     /**
-     * @var string The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
+     * @var string Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
      */
     public $ExecutionMoment;
 
     /**
-     * @var array The execution script parameter. The parameter format must comply with standard shell specifications.
+     * @var array Execution script parameters. For the parameter format, follow standard Shell specifications.
      */
     public $Args;
 
     /**
-     * @var string The script file name.
+     * @var string Script file name.
      */
     public $CosFileName;
 
@@ -68,13 +68,13 @@ class ScriptBootstrapActionConfig extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $CosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
-     * @param string $ExecutionMoment The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
-     * @param array $Args The execution script parameter. The parameter format must comply with standard shell specifications.
-     * @param string $CosFileName The script file name.
+     * @param string $CosFileURI COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+     * @param string $ExecutionMoment Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
+     * @param array $Args Execution script parameters. For the parameter format, follow standard Shell specifications.
+     * @param string $CosFileName Script file name.
      * @param string $Remark Remarks.
      */
     function __construct()

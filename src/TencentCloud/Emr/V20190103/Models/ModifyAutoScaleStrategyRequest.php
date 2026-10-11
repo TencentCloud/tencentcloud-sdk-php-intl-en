@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getStrategyType() Obtain Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
- * @method void setStrategyType(integer $StrategyType) Set Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+ * @method integer getStrategyType() Obtain Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
+ * @method void setStrategyType(integer $StrategyType) Set Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
  * @method array getLoadAutoScaleStrategies() Obtain Metric for load-based scaling.
  * @method void setLoadAutoScaleStrategies(array $LoadAutoScaleStrategies) Set Metric for load-based scaling.
- * @method array getTimeAutoScaleStrategies() Obtain Rule for time-based scaling
- * @method void setTimeAutoScaleStrategies(array $TimeAutoScaleStrategies) Set Rule for time-based scaling
+ * @method array getTimeAutoScaleStrategies() Obtain Time-based scaling rule.
+ * @method void setTimeAutoScaleStrategies(array $TimeAutoScaleStrategies) Set Time-based scaling rule.
  * @method integer getGroupId() Obtain Scaling group ID.
  * @method void setGroupId(integer $GroupId) Set Scaling group ID.
  */
@@ -39,7 +39,7 @@ class ModifyAutoScaleStrategyRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+     * @var integer Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
      */
     public $StrategyType;
 
@@ -49,7 +49,7 @@ class ModifyAutoScaleStrategyRequest extends AbstractModel
     public $LoadAutoScaleStrategies;
 
     /**
-     * @var array Rule for time-based scaling
+     * @var array Time-based scaling rule.
      */
     public $TimeAutoScaleStrategies;
 
@@ -60,9 +60,9 @@ class ModifyAutoScaleStrategyRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param integer $StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+     * @param integer $StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
      * @param array $LoadAutoScaleStrategies Metric for load-based scaling.
-     * @param array $TimeAutoScaleStrategies Rule for time-based scaling
+     * @param array $TimeAutoScaleStrategies Time-based scaling rule.
      * @param integer $GroupId Scaling group ID.
      */
     function __construct()

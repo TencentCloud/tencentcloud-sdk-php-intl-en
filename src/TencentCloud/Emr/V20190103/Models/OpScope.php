@@ -18,24 +18,20 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Operation scope
+ * Operation scope.
  *
- * @method array getServiceInfoList() Obtain The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServiceInfoList(array $ServiceInfoList) Set The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getServiceInfoList() Obtain Operation scope, with information of the service to be operated.
+ * @method void setServiceInfoList(array $ServiceInfoList) Set Operation scope, with information of the service to be operated.
  */
 class OpScope extends AbstractModel
 {
     /**
-     * @var array The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Operation scope, with information of the service to be operated.
      */
     public $ServiceInfoList;
 
     /**
-     * @param array $ServiceInfoList The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ServiceInfoList Operation scope, with information of the service to be operated.
      */
     function __construct()
     {

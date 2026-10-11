@@ -18,52 +18,52 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Component restart policy
+ * Component restart policy.
  *
- * @method string getName() Obtain Restart policy name
- * @method void setName(string $Name) Set Restart policy name
- * @method string getDisplayName() Obtain Policy display name
- * @method void setDisplayName(string $DisplayName) Set Policy display name
- * @method string getDescribe() Obtain Policy description
- * @method void setDescribe(string $Describe) Set Policy description
- * @method array getBatchSizeRange() Obtain Optional range for the number of batch restarted nodes
- * @method void setBatchSizeRange(array $BatchSizeRange) Set Optional range for the number of batch restarted nodes
- * @method string getIsDefault() Obtain Whether it is the default policy
- * @method void setIsDefault(string $IsDefault) Set Whether it is the default policy
+ * @method string getName() Obtain Restart policy name.
+ * @method void setName(string $Name) Set Restart policy name.
+ * @method string getDisplayName() Obtain Policy display name.
+ * @method void setDisplayName(string $DisplayName) Set Policy display name.
+ * @method string getDescribe() Obtain Policy description.
+ * @method void setDescribe(string $Describe) Set Policy description.
+ * @method array getBatchSizeRange() Obtain Optional range for the number of nodes restarted in batches.
+ * @method void setBatchSizeRange(array $BatchSizeRange) Set Optional range for the number of nodes restarted in batches.
+ * @method string getIsDefault() Obtain Whether it is the default policy.
+ * @method void setIsDefault(string $IsDefault) Set Whether it is the default policy.
  */
 class RestartPolicy extends AbstractModel
 {
     /**
-     * @var string Restart policy name
+     * @var string Restart policy name.
      */
     public $Name;
 
     /**
-     * @var string Policy display name
+     * @var string Policy display name.
      */
     public $DisplayName;
 
     /**
-     * @var string Policy description
+     * @var string Policy description.
      */
     public $Describe;
 
     /**
-     * @var array Optional range for the number of batch restarted nodes
+     * @var array Optional range for the number of nodes restarted in batches.
      */
     public $BatchSizeRange;
 
     /**
-     * @var string Whether it is the default policy
+     * @var string Whether it is the default policy.
      */
     public $IsDefault;
 
     /**
-     * @param string $Name Restart policy name
-     * @param string $DisplayName Policy display name
-     * @param string $Describe Policy description
-     * @param array $BatchSizeRange Optional range for the number of batch restarted nodes
-     * @param string $IsDefault Whether it is the default policy
+     * @param string $Name Restart policy name.
+     * @param string $DisplayName Policy display name.
+     * @param string $Describe Policy description.
+     * @param array $BatchSizeRange Optional range for the number of nodes restarted in batches.
+     * @param string $IsDefault Whether it is the default policy.
      */
     function __construct()
     {

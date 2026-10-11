@@ -18,60 +18,116 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Brief user information in user management
+ * Brief information of users in user management.
  *
- * @method string getUserName() Obtain Username
- * @method void setUserName(string $UserName) Set Username
- * @method string getUserGroup() Obtain The group to which the user belongs
- * @method void setUserGroup(string $UserGroup) Set The group to which the user belongs
- * @method string getUserType() Obtain `Manager` represents an admin, and `NormalUser` represents a general user.
- * @method void setUserType(string $UserType) Set `Manager` represents an admin, and `NormalUser` represents a general user.
- * @method string getCreateTime() Obtain User creation time.
- * @method void setCreateTime(string $CreateTime) Set User creation time.
- * @method boolean getSupportDownLoadKeyTab() Obtain Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
- * @method void setSupportDownLoadKeyTab(boolean $SupportDownLoadKeyTab) Set Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
- * @method string getDownLoadKeyTabUrl() Obtain Download address of the keytab file.
- * @method void setDownLoadKeyTabUrl(string $DownLoadKeyTabUrl) Set Download address of the keytab file.
+ * @method string getUserName() Obtain <p>Username.</p>
+ * @method void setUserName(string $UserName) Set <p>Username.</p>
+ * @method string getUserGroup() Obtain <p>Group to which the user belongs.</p>
+ * @method void setUserGroup(string $UserGroup) Set <p>Group to which the user belongs.</p>
+ * @method string getUserType() Obtain <p>Manager indicates an administrator, and NormalUser indicates a regular user.</p>
+ * @method void setUserType(string $UserType) Set <p>Manager indicates an administrator, and NormalUser indicates a regular user.</p>
+ * @method string getCreateTime() Obtain <p>User creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>User creation time.</p>
+ * @method boolean getSupportDownLoadKeyTab() Obtain <p>Whether to download the keytab file of the corresponding user. This is only meaningful for clusters with Kerberos enabled.</p>
+ * @method void setSupportDownLoadKeyTab(boolean $SupportDownLoadKeyTab) Set <p>Whether to download the keytab file of the corresponding user. This is only meaningful for clusters with Kerberos enabled.</p>
+ * @method string getDownLoadKeyTabUrl() Obtain <p>Download URL of the keytab file.</p>
+ * @method void setDownLoadKeyTabUrl(string $DownLoadKeyTabUrl) Set <p>Download URL of the keytab file.</p>
+ * @method array getGroups() Obtain <p>User group.</p>
+ * @method void setGroups(array $Groups) Set <p>User group.</p>
+ * @method string getUin() Obtain <p>Customer UIN.</p>
+ * @method void setUin(string $Uin) Set <p>Customer UIN.</p>
+ * @method integer getState() Obtain <p>User status.</p>
+ * @method void setState(integer $State) Set <p>User status.</p>
+ * @method boolean getDisplayPasswdUpdateTime() Obtain <p>Whether to display the password update time.</p>
+ * @method void setDisplayPasswdUpdateTime(boolean $DisplayPasswdUpdateTime) Set <p>Whether to display the password update time.</p>
+ * @method string getPasswdUpdateTime() Obtain <p>Latest password update time.</p>
+ * @method void setPasswdUpdateTime(string $PasswdUpdateTime) Set <p>Latest password update time.</p>
+ * @method integer getPasswdUsedDay() Obtain <p>Number of days used.</p><p>Unit: days.</p>
+ * @method void setPasswdUsedDay(integer $PasswdUsedDay) Set <p>Number of days used.</p><p>Unit: days.</p>
+ * @method integer getPasswdUsedHour() Obtain <p>Number of hours used.</p><p>Unit: hours.</p>
+ * @method void setPasswdUsedHour(integer $PasswdUsedHour) Set <p>Number of hours used.</p><p>Unit: hours.</p>
  */
 class UserManagerUserBriefInfo extends AbstractModel
 {
     /**
-     * @var string Username
+     * @var string <p>Username.</p>
      */
     public $UserName;
 
     /**
-     * @var string The group to which the user belongs
+     * @var string <p>Group to which the user belongs.</p>
      */
     public $UserGroup;
 
     /**
-     * @var string `Manager` represents an admin, and `NormalUser` represents a general user.
+     * @var string <p>Manager indicates an administrator, and NormalUser indicates a regular user.</p>
      */
     public $UserType;
 
     /**
-     * @var string User creation time.
+     * @var string <p>User creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var boolean Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
+     * @var boolean <p>Whether to download the keytab file of the corresponding user. This is only meaningful for clusters with Kerberos enabled.</p>
      */
     public $SupportDownLoadKeyTab;
 
     /**
-     * @var string Download address of the keytab file.
+     * @var string <p>Download URL of the keytab file.</p>
      */
     public $DownLoadKeyTabUrl;
 
     /**
-     * @param string $UserName Username
-     * @param string $UserGroup The group to which the user belongs
-     * @param string $UserType `Manager` represents an admin, and `NormalUser` represents a general user.
-     * @param string $CreateTime User creation time.
-     * @param boolean $SupportDownLoadKeyTab Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
-     * @param string $DownLoadKeyTabUrl Download address of the keytab file.
+     * @var array <p>User group.</p>
+     */
+    public $Groups;
+
+    /**
+     * @var string <p>Customer UIN.</p>
+     */
+    public $Uin;
+
+    /**
+     * @var integer <p>User status.</p>
+     */
+    public $State;
+
+    /**
+     * @var boolean <p>Whether to display the password update time.</p>
+     */
+    public $DisplayPasswdUpdateTime;
+
+    /**
+     * @var string <p>Latest password update time.</p>
+     */
+    public $PasswdUpdateTime;
+
+    /**
+     * @var integer <p>Number of days used.</p><p>Unit: days.</p>
+     */
+    public $PasswdUsedDay;
+
+    /**
+     * @var integer <p>Number of hours used.</p><p>Unit: hours.</p>
+     */
+    public $PasswdUsedHour;
+
+    /**
+     * @param string $UserName <p>Username.</p>
+     * @param string $UserGroup <p>Group to which the user belongs.</p>
+     * @param string $UserType <p>Manager indicates an administrator, and NormalUser indicates a regular user.</p>
+     * @param string $CreateTime <p>User creation time.</p>
+     * @param boolean $SupportDownLoadKeyTab <p>Whether to download the keytab file of the corresponding user. This is only meaningful for clusters with Kerberos enabled.</p>
+     * @param string $DownLoadKeyTabUrl <p>Download URL of the keytab file.</p>
+     * @param array $Groups <p>User group.</p>
+     * @param string $Uin <p>Customer UIN.</p>
+     * @param integer $State <p>User status.</p>
+     * @param boolean $DisplayPasswdUpdateTime <p>Whether to display the password update time.</p>
+     * @param string $PasswdUpdateTime <p>Latest password update time.</p>
+     * @param integer $PasswdUsedDay <p>Number of days used.</p><p>Unit: days.</p>
+     * @param integer $PasswdUsedHour <p>Number of hours used.</p><p>Unit: hours.</p>
      */
     function __construct()
     {
@@ -108,6 +164,34 @@ class UserManagerUserBriefInfo extends AbstractModel
 
         if (array_key_exists("DownLoadKeyTabUrl",$param) and $param["DownLoadKeyTabUrl"] !== null) {
             $this->DownLoadKeyTabUrl = $param["DownLoadKeyTabUrl"];
+        }
+
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = $param["Groups"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("DisplayPasswdUpdateTime",$param) and $param["DisplayPasswdUpdateTime"] !== null) {
+            $this->DisplayPasswdUpdateTime = $param["DisplayPasswdUpdateTime"];
+        }
+
+        if (array_key_exists("PasswdUpdateTime",$param) and $param["PasswdUpdateTime"] !== null) {
+            $this->PasswdUpdateTime = $param["PasswdUpdateTime"];
+        }
+
+        if (array_key_exists("PasswdUsedDay",$param) and $param["PasswdUsedDay"] !== null) {
+            $this->PasswdUsedDay = $param["PasswdUsedDay"];
+        }
+
+        if (array_key_exists("PasswdUsedHour",$param) and $param["PasswdUsedHour"] !== null) {
+            $this->PasswdUsedHour = $param["PasswdUsedHour"];
         }
     }
 }

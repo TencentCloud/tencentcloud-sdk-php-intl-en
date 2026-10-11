@@ -18,54 +18,56 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node disk information
+ * Node disk information.
  *
  * @method integer getCount() Obtain Number of disks.
  * @method void setCount(integer $Count) Set Number of disks.
- * @method string getDiskType() Obtain Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+ * @method string getDiskType() Obtain System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
- * @method void setDiskType(string $DiskType) Set Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+ * @method void setDiskType(string $DiskType) Set System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
- * @method integer getDiskSize() Obtain Data capacity in GB.
- * @method void setDiskSize(integer $DiskSize) Set Data capacity in GB.
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
+
+ * @method integer getDiskSize() Obtain Data capacity (GB).
+ * @method void setDiskSize(integer $DiskSize) Set Data capacity (GB).
  * @method integer getExtraPerformance() Obtain Additional performance.
  * @method void setExtraPerformance(integer $ExtraPerformance) Set Additional performance.
  */
@@ -77,32 +79,33 @@ class DiskSpecInfo extends AbstractModel
     public $Count;
 
     /**
-     * @var string Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+     * @var string System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
 
      */
     public $DiskType;
 
     /**
-     * @var integer Data capacity in GB.
+     * @var integer Data capacity (GB).
      */
     public $DiskSize;
 
@@ -113,28 +116,29 @@ Valid values of the data disk type.
 
     /**
      * @param integer $Count Number of disks.
-     * @param string $DiskType Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+     * @param string $DiskType System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-     * @param integer $DiskSize Data capacity in GB.
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
+
+     * @param integer $DiskSize Data capacity (GB).
      * @param integer $ExtraPerformance Additional performance.
      */
     function __construct()

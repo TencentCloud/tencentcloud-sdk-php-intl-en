@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain English ID of the EMR cluster.
  * @method void setInstanceId(string $InstanceId) Set English ID of the EMR cluster.
- * @method string getKey() Obtain Alias of the configuration to be reset. The options are as follows:
+ * @method string getKey() Obtain Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
- * @method void setKey(string $Key) Set Alias of the configuration to be reset. The options are as follows:
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
+ * @method void setKey(string $Key) Set Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
  */
 class ResetYarnConfigRequest extends AbstractModel
 {
@@ -41,21 +41,21 @@ class ResetYarnConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Alias of the configuration to be reset. The options are as follows:
+     * @var string Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
      */
     public $Key;
 
     /**
      * @param string $InstanceId English ID of the EMR cluster.
-     * @param string $Key Alias of the configuration to be reset. The options are as follows:
+     * @param string $Key Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
      */
     function __construct()
     {

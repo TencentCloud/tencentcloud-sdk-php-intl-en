@@ -18,10 +18,10 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Price details by node part, used for creating the cluster price list
+ * Prices of node components used for the cluster creation price list.
  *
- * @method string getInstanceType() Obtain Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
- * @method void setInstanceType(string $InstanceType) Set Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+ * @method string getInstanceType() Obtain Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
+ * @method void setInstanceType(string $InstanceType) Set Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
  * @method float getPrice() Obtain Unit price (original price).
  * @method void setPrice(float $Price) Set Unit price (original price).
  * @method float getRealCost() Obtain Unit price (discounted price).
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class PartDetailPriceItem extends AbstractModel
 {
     /**
-     * @var string Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+     * @var string Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
      */
     public $InstanceType;
 
@@ -66,7 +66,7 @@ class PartDetailPriceItem extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @param string $InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+     * @param string $InstanceType Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
      * @param float $Price Unit price (original price).
      * @param float $RealCost Unit price (discounted price).
      * @param float $RealTotalCost Total price (discounted price).

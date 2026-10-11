@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) Set End time.
  * @method integer getOffset() Obtain Starting offset for pages, starting from 0.
  * @method void setOffset(integer $Offset) Set Starting offset for pages, starting from 0.
- * @method integer getLimit() Obtain Page size. Valid range: [1,100].
- * @method void setLimit(integer $Limit) Set Page size. Valid range: [1,100].
- * @method array getStatus() Obtain Execution status: RUNNING,COMPLETED, FAILED.
- * @method void setStatus(array $Status) Set Execution status: RUNNING,COMPLETED, FAILED.
+ * @method integer getLimit() Obtain Number of entries per page. Value range: [1, 100].
+ * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: [1, 100].
+ * @method array getStatus() Obtain Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
+ * @method void setStatus(array $Status) Set Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
  */
 class DescribeSparkQueriesRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeSparkQueriesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Page size. Valid range: [1,100].
+     * @var integer Number of entries per page. Value range: [1, 100].
      */
     public $Limit;
 
     /**
-     * @var array Execution status: RUNNING,COMPLETED, FAILED.
+     * @var array Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
      */
     public $Status;
 
@@ -70,8 +70,8 @@ class DescribeSparkQueriesRequest extends AbstractModel
      * @param integer $StartTime Start time.
      * @param integer $EndTime End time.
      * @param integer $Offset Starting offset for pages, starting from 0.
-     * @param integer $Limit Page size. Valid range: [1,100].
-     * @param array $Status Execution status: RUNNING,COMPLETED, FAILED.
+     * @param integer $Limit Number of entries per page. Value range: [1, 100].
+     * @param array $Status Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
      */
     function __construct()
     {

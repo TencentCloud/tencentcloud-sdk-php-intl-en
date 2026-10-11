@@ -18,16 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HDFS Cloud File Storage (CFS) details.
+ * HDFS file storage details.
  *
  * @method string getMetricItem() Obtain Data item.
  * @method void setMetricItem(string $MetricItem) Set Data item.
  * @method string getMetricName() Obtain Data item description.
  * @method void setMetricName(string $MetricName) Set Data item description.
  * @method array getDps() Obtain Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDps(array $Dps) Set Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class StorageSummaryDistribution extends AbstractModel
 {
@@ -43,7 +41,6 @@ class StorageSummaryDistribution extends AbstractModel
 
     /**
      * @var array Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Dps;
 
@@ -51,7 +48,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MetricItem Data item.
      * @param string $MetricName Data item description.
      * @param array $Dps Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

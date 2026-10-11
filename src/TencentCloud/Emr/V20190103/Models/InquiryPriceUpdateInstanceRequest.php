@@ -20,78 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceUpdateInstance request structure.
  *
- * @method string getTimeUnit() Obtain Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
- * @method void setTimeUnit(string $TimeUnit) Set Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
- * @method integer getTimeSpan() Obtain Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
- * @method void setTimeSpan(integer $TimeSpan) Set Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+ * @method string getTimeUnit() Obtain Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method void setTimeUnit(string $TimeUnit) Set Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method integer getTimeSpan() Obtain Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
+ * @method void setTimeSpan(integer $TimeSpan) Set Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
  * @method integer getPayMode() Obtain Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
  * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
- * @method string getCurrency() Obtain Currency.
- * @method void setCurrency(string $Currency) Set Currency.
- * @method UpdateInstanceSettings getUpdateSpec() Obtain Target node specification.
- * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) Set Target node specification.
- * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method array getResourceIdList() Obtain The resource ID list for batch configuration change.
- * @method void setResourceIdList(array $ResourceIdList) Set The resource ID list for batch configuration change.
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
+ * @method UpdateInstanceSettings getUpdateSpec() Obtain 
+ * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) Set 
+ * @method Placement getPlacement() Obtain 
+ * @method void setPlacement(Placement $Placement) Set 
+ * @method string getCurrency() Obtain Currency type. Valid values:
+<li>CNY: RMB</li>
+ * @method void setCurrency(string $Currency) Set Currency type. Valid values:
+<li>CNY: RMB</li>
+ * @method array getResourceIdList() Obtain ID list of resources modified in batches.
+ * @method void setResourceIdList(array $ResourceIdList) Set ID list of resources modified in batches.
  */
 class InquiryPriceUpdateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+     * @var string Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+     * @var integer Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
      */
     public $TimeSpan;
 
     /**
      * @var integer Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
      */
     public $PayMode;
 
     /**
-     * @var string Currency.
-     */
-    public $Currency;
-
-    /**
-     * @var UpdateInstanceSettings Target node specification.
+     * @var UpdateInstanceSettings 
      */
     public $UpdateSpec;
 
     /**
-     * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * @var Placement 
      */
     public $Placement;
 
     /**
-     * @var array The resource ID list for batch configuration change.
+     * @var string Currency type. Valid values:
+<li>CNY: RMB</li>
+     */
+    public $Currency;
+
+    /**
+     * @var array ID list of resources modified in batches.
      */
     public $ResourceIdList;
 
     /**
-     * @param string $TimeUnit Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-     * @param integer $TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+     * @param string $TimeUnit Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param integer $TimeSpan Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
      * @param integer $PayMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
-     * @param string $Currency Currency.
-     * @param UpdateInstanceSettings $UpdateSpec Target node specification.
-     * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param array $ResourceIdList The resource ID list for batch configuration change.
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
+     * @param UpdateInstanceSettings $UpdateSpec 
+     * @param Placement $Placement 
+     * @param string $Currency Currency type. Valid values:
+<li>CNY: RMB</li>
+     * @param array $ResourceIdList ID list of resources modified in batches.
      */
     function __construct()
     {
@@ -118,10 +134,6 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
             $this->PayMode = $param["PayMode"];
         }
 
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
-        }
-
         if (array_key_exists("UpdateSpec",$param) and $param["UpdateSpec"] !== null) {
             $this->UpdateSpec = new UpdateInstanceSettings();
             $this->UpdateSpec->deserialize($param["UpdateSpec"]);
@@ -130,6 +142,10 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
         if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
             $this->Placement = new Placement();
             $this->Placement->deserialize($param["Placement"]);
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
 
         if (array_key_exists("ResourceIdList",$param) and $param["ResourceIdList"] !== null) {

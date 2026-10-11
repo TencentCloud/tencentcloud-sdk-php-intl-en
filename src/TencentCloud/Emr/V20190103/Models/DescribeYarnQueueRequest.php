@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeYarnQueue request structure.
  *
- * @method string getInstanceId() Obtain Cluster ID
- * @method void setInstanceId(string $InstanceId) Set Cluster ID
- * @method string getScheduler() Obtain Scheduler. The values are as follows:
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method string getScheduler() Obtain Scheduler. Valid values:
 
 1. capacity
 2. fair
- * @method void setScheduler(string $Scheduler) Set Scheduler. The values are as follows:
+ * @method void setScheduler(string $Scheduler) Set Scheduler. Valid values:
 
 1. capacity
 2. fair
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeYarnQueueRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Scheduler. The values are as follows:
+     * @var string Scheduler. Valid values:
 
 1. capacity
 2. fair
@@ -47,8 +47,8 @@ class DescribeYarnQueueRequest extends AbstractModel
     public $Scheduler;
 
     /**
-     * @param string $InstanceId Cluster ID
-     * @param string $Scheduler Scheduler. The values are as follows:
+     * @param string $InstanceId Cluster ID.
+     * @param string $Scheduler Scheduler. Valid values:
 
 1. capacity
 2. fair

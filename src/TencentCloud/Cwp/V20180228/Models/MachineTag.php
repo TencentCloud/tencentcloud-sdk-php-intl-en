@@ -18,36 +18,36 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Server tag information
+ * 
  *
- * @method integer getRid() Obtain Associated tag ID
- * @method void setRid(integer $Rid) Set Associated tag ID
- * @method string getName() Obtain Tag name
- * @method void setName(string $Name) Set Tag name
- * @method integer getTagId() Obtain Tag ID
- * @method void setTagId(integer $TagId) Set Tag ID
+ * @method integer getRid() Obtain 
+ * @method void setRid(integer $Rid) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method integer getTagId() Obtain 
+ * @method void setTagId(integer $TagId) Set 
  */
 class MachineTag extends AbstractModel
 {
     /**
-     * @var integer Associated tag ID
+     * @var integer 
      */
     public $Rid;
 
     /**
-     * @var string Tag name
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var integer Tag ID
+     * @var integer 
      */
     public $TagId;
 
     /**
-     * @param integer $Rid Associated tag ID
-     * @param string $Name Tag name
-     * @param integer $TagId Tag ID
+     * @param integer $Rid 
+     * @param string $Name 
+     * @param integer $TagId 
      */
     function __construct()
     {

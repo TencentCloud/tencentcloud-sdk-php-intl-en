@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserManagerPwd request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
- * @method string getUserName() Obtain Username
- * @method void setUserName(string $UserName) Set Username
- * @method string getPassWord() Obtain Password
- * @method void setPassWord(string $PassWord) Set Password
+ * @method string getInstanceId() Obtain <p>Cluster ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Cluster ID.</p>
+ * @method string getUserName() Obtain <p>Username.</p>
+ * @method void setUserName(string $UserName) Set <p>Username.</p>
+ * @method string getPassWord() Obtain <p>Password.</p>
+ * @method void setPassWord(string $PassWord) Set <p>Password.</p>
+ * @method boolean getSyncPwd() Obtain <p>Whether to synchronize the password.</p>
+ * @method void setSyncPwd(boolean $SyncPwd) Set <p>Whether to synchronize the password.</p>
  */
 class ModifyUserManagerPwdRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string <p>Cluster ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Username
+     * @var string <p>Username.</p>
      */
     public $UserName;
 
     /**
-     * @var string Password
+     * @var string <p>Password.</p>
      */
     public $PassWord;
 
     /**
-     * @param string $InstanceId Cluster instance ID
-     * @param string $UserName Username
-     * @param string $PassWord Password
+     * @var boolean <p>Whether to synchronize the password.</p>
+     */
+    public $SyncPwd;
+
+    /**
+     * @param string $InstanceId <p>Cluster ID.</p>
+     * @param string $UserName <p>Username.</p>
+     * @param string $PassWord <p>Password.</p>
+     * @param boolean $SyncPwd <p>Whether to synchronize the password.</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyUserManagerPwdRequest extends AbstractModel
 
         if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
             $this->PassWord = $param["PassWord"];
+        }
+
+        if (array_key_exists("SyncPwd",$param) and $param["SyncPwd"] !== null) {
+            $this->SyncPwd = $param["SyncPwd"];
         }
     }
 }

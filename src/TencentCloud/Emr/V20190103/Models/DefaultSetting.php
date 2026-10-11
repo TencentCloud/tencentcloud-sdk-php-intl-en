@@ -18,23 +18,23 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Default configurations of resource scheduling.
+ * Default settings of resource scheduling.
  *
- * @method string getName() Obtain Name: the key for input parameters.
- * @method void setName(string $Name) Set Name: the key for input parameters.
+ * @method string getName() Obtain Name, which is used as the key for request parameters.
+ * @method void setName(string $Name) Set Name, which is used as the key for request parameters.
  * @method string getDesc() Obtain Description.
  * @method void setDesc(string $Desc) Set Description.
  * @method string getPrompt() Obtain Prompt.
  * @method void setPrompt(string $Prompt) Set Prompt.
- * @method string getKey() Obtain Key: display the configuration item in the configuration file.
- * @method void setKey(string $Key) Set Key: display the configuration item in the configuration file.
+ * @method string getKey() Obtain Key, which is used to display the configuration items in the configuration file.
+ * @method void setKey(string $Key) Set Key, which is used to display the configuration items in the configuration file.
  * @method string getValue() Obtain Name value.
  * @method void setValue(string $Value) Set Name value.
  */
 class DefaultSetting extends AbstractModel
 {
     /**
-     * @var string Name: the key for input parameters.
+     * @var string Name, which is used as the key for request parameters.
      */
     public $Name;
 
@@ -49,7 +49,7 @@ class DefaultSetting extends AbstractModel
     public $Prompt;
 
     /**
-     * @var string Key: display the configuration item in the configuration file.
+     * @var string Key, which is used to display the configuration items in the configuration file.
      */
     public $Key;
 
@@ -59,10 +59,10 @@ class DefaultSetting extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Name Name: the key for input parameters.
+     * @param string $Name Name, which is used as the key for request parameters.
      * @param string $Desc Description.
      * @param string $Prompt Prompt.
-     * @param string $Key Key: display the configuration item in the configuration file.
+     * @param string $Key Key, which is used to display the configuration items in the configuration file.
      * @param string $Value Name value.
      */
     function __construct()

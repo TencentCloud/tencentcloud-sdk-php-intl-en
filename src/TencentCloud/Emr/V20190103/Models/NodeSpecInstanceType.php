@@ -20,194 +20,226 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node specifications type.
  *
- * @method string getInstanceType() Obtain Specifications.
- * @method void setInstanceType(string $InstanceType) Set Specifications.
- * @method integer getCpu() Obtain 4
- * @method void setCpu(integer $Cpu) Set 4
- * @method integer getMemory() Obtain 8, in GB.
- * @method void setMemory(integer $Memory) Set 8, in GB.
- * @method integer getOrder() Obtain Order, with the smaller coming first.
- * @method void setOrder(integer $Order) Set Order, with the smaller coming first.
- * @method integer getNum() Obtain Quantity.
- * @method void setNum(integer $Num) Set Quantity.
- * @method string getSellOutReason() Obtain Reasons for running out of stock.
- * @method void setSellOutReason(string $SellOutReason) Set Reasons for running out of stock.
- * @method array getSystemDisk() Obtain System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSystemDisk(array $SystemDisk) Set System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDataDisk() Obtain Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataDisk(array $DataDisk) Set Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getLocalDataDisk() Obtain Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLocalDataDisk(array $LocalDataDisk) Set Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSoldOutReason() Obtain Reasons for running out of stock.
- * @method void setSoldOutReason(string $SoldOutReason) Set Reasons for running out of stock.
- * @method string getInstanceFamily() Obtain Model category.
- * @method void setInstanceFamily(string $InstanceFamily) Set Model category.
- * @method string getNodeName() Obtain Node name.
- * @method void setNodeName(string $NodeName) Set Node name.
- * @method string getNodeType() Obtain Node type.
- * @method void setNodeType(string $NodeType) Set Node type.
- * @method string getType() Obtain Category.
- * @method void setType(string $Type) Set Category.
- * @method string getTypeName() Obtain Category name.
- * @method void setTypeName(string $TypeName) Set Category name.
- * @method string getFamilyName() Obtain Category classification.
- * @method void setFamilyName(string $FamilyName) Set Category classification.
- * @method string getCpuType() Obtain CPU type.
- * @method void setCpuType(string $CpuType) Set CPU type.
- * @method string getRemark() Obtain RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
- * @method void setRemark(string $Remark) Set RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
- * @method float getOriginPrice() Obtain Original price.
- * @method void setOriginPrice(float $OriginPrice) Set Original price.
- * @method array getPrepaidUnderwritePeriods() Obtain Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrepaidUnderwritePeriods(array $PrepaidUnderwritePeriods) Set Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGpuDesc() Obtain GPU information.
- * @method void setGpuDesc(string $GpuDesc) Set GPU information.
+ * @method string getInstanceType() Obtain <p>Specifications.</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Specifications.</p>
+ * @method integer getCpu() Obtain <p>4</p>
+ * @method void setCpu(integer $Cpu) Set <p>4</p>
+ * @method integer getMemory() Obtain <p>8, unit: GB.</p>
+ * @method void setMemory(integer $Memory) Set <p>8, unit: GB.</p>
+ * @method integer getOrder() Obtain <p>Sorting order. Smaller values come first.</p>
+ * @method void setOrder(integer $Order) Set <p>Sorting order. Smaller values come first.</p>
+ * @method integer getNum() Obtain <p>Quantity.</p>
+ * @method void setNum(integer $Num) Set <p>Quantity.</p>
+ * @method string getSellOutReason() Obtain <p>Sold-out reason.</p>
+ * @method void setSellOutReason(string $SellOutReason) Set <p>Sold-out reason.</p>
+ * @method array getSystemDisk() Obtain <p>System disk.</p>
+ * @method void setSystemDisk(array $SystemDisk) Set <p>System disk.</p>
+ * @method array getDataDisk() Obtain <p>Data disk.</p>
+ * @method void setDataDisk(array $DataDisk) Set <p>Data disk.</p>
+ * @method array getLocalDataDisk() Obtain <p>Local data disk.</p>
+ * @method void setLocalDataDisk(array $LocalDataDisk) Set <p>Local data disk.</p>
+ * @method string getSoldOutReason() Obtain <p>Sold-out reason.</p>
+ * @method void setSoldOutReason(string $SoldOutReason) Set <p>Sold-out reason.</p>
+ * @method string getInstanceFamily() Obtain <p>Instance family.</p>
+ * @method void setInstanceFamily(string $InstanceFamily) Set <p>Instance family.</p>
+ * @method string getNodeName() Obtain <p>Node name.</p>
+ * @method void setNodeName(string $NodeName) Set <p>Node name.</p>
+ * @method string getNodeType() Obtain <p>Node type.</p>
+ * @method void setNodeType(string $NodeType) Set <p>Node type.</p>
+ * @method string getType() Obtain <p>Category.</p>
+ * @method void setType(string $Type) Set <p>Category.</p>
+ * @method string getTypeName() Obtain <p>Category name.</p>
+ * @method void setTypeName(string $TypeName) Set <p>Category name.</p>
+ * @method string getFamilyName() Obtain <p>Category classification.</p>
+ * @method void setFamilyName(string $FamilyName) Set <p>Category classification.</p>
+ * @method string getCpuType() Obtain <p>CPU type.</p>
+ * @method void setCpuType(string $CpuType) Set <p>CPU type.</p>
+ * @method string getRemark() Obtain <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
+ * @method void setRemark(string $Remark) Set <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
+ * @method float getOriginPrice() Obtain <p>Original price.</p>
+ * @method void setOriginPrice(float $OriginPrice) Set <p>Original price.</p>
+ * @method array getPrepaidUnderwritePeriods() Obtain <p>Purchase duration supported by instance types using the committed use billing mode.</p>
+ * @method void setPrepaidUnderwritePeriods(array $PrepaidUnderwritePeriods) Set <p>Purchase duration supported by instance types using the committed use billing mode.</p>
+ * @method string getGpuDesc() Obtain <p>GPU information.</p>
+ * @method void setGpuDesc(string $GpuDesc) Set <p>GPU information.</p>
+ * @method integer getQuotaNum() Obtain <p>Number of quotas.</p>
+ * @method void setQuotaNum(integer $QuotaNum) Set <p>Number of quotas.</p>
+ * @method string getQuotaUnit() Obtain <p>Quota unit.</p>
+ * @method void setQuotaUnit(string $QuotaUnit) Set <p>Quota unit.</p>
+ * @method boolean getNeedHpcClusterId() Obtain <p>Whether a high-performance computing cluster needs to be provided.</p>
+ * @method void setNeedHpcClusterId(boolean $NeedHpcClusterId) Set <p>Whether a high-performance computing cluster needs to be provided.</p>
+ * @method boolean getIsGpuInstance() Obtain <p>Whether it is a GPU instance type.</p>
+ * @method void setIsGpuInstance(boolean $IsGpuInstance) Set <p>Whether it is a GPU instance type.</p>
+ * @method string getGpuResourceKey() Obtain <p>GPU resource definition in the Kubernetes scenario.</p>
+ * @method void setGpuResourceKey(string $GpuResourceKey) Set <p>GPU resource definition in the Kubernetes scenario.</p>
+ * @method integer getGpuNum() Obtain <p>Number of GPU cards.</p>
+ * @method void setGpuNum(integer $GpuNum) Set <p>Number of GPU cards.</p>
  */
 class NodeSpecInstanceType extends AbstractModel
 {
     /**
-     * @var string Specifications.
+     * @var string <p>Specifications.</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 4
+     * @var integer <p>4</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 8, in GB.
+     * @var integer <p>8, unit: GB.</p>
      */
     public $Memory;
 
     /**
-     * @var integer Order, with the smaller coming first.
+     * @var integer <p>Sorting order. Smaller values come first.</p>
      */
     public $Order;
 
     /**
-     * @var integer Quantity.
+     * @var integer <p>Quantity.</p>
      */
     public $Num;
 
     /**
-     * @var string Reasons for running out of stock.
+     * @var string <p>Sold-out reason.</p>
      */
     public $SellOutReason;
 
     /**
-     * @var array System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>System disk.</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Data disk.</p>
      */
     public $DataDisk;
 
     /**
-     * @var array Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Local data disk.</p>
      */
     public $LocalDataDisk;
 
     /**
-     * @var string Reasons for running out of stock.
+     * @var string <p>Sold-out reason.</p>
      */
     public $SoldOutReason;
 
     /**
-     * @var string Model category.
+     * @var string <p>Instance family.</p>
      */
     public $InstanceFamily;
 
     /**
-     * @var string Node name.
+     * @var string <p>Node name.</p>
      */
     public $NodeName;
 
     /**
-     * @var string Node type.
+     * @var string <p>Node type.</p>
      */
     public $NodeType;
 
     /**
-     * @var string Category.
+     * @var string <p>Category.</p>
      */
     public $Type;
 
     /**
-     * @var string Category name.
+     * @var string <p>Category name.</p>
      */
     public $TypeName;
 
     /**
-     * @var string Category classification.
+     * @var string <p>Category classification.</p>
      */
     public $FamilyName;
 
     /**
-     * @var string CPU type.
+     * @var string <p>CPU type.</p>
      */
     public $CpuType;
 
     /**
-     * @var string RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+     * @var string <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
      */
     public $Remark;
 
     /**
-     * @var float Original price.
+     * @var float <p>Original price.</p>
      */
     public $OriginPrice;
 
     /**
-     * @var array Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Purchase duration supported by instance types using the committed use billing mode.</p>
      */
     public $PrepaidUnderwritePeriods;
 
     /**
-     * @var string GPU information.
+     * @var string <p>GPU information.</p>
      */
     public $GpuDesc;
 
     /**
-     * @param string $InstanceType Specifications.
-     * @param integer $Cpu 4
-     * @param integer $Memory 8, in GB.
-     * @param integer $Order Order, with the smaller coming first.
-     * @param integer $Num Quantity.
-     * @param string $SellOutReason Reasons for running out of stock.
-     * @param array $SystemDisk System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DataDisk Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $LocalDataDisk Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SoldOutReason Reasons for running out of stock.
-     * @param string $InstanceFamily Model category.
-     * @param string $NodeName Node name.
-     * @param string $NodeType Node type.
-     * @param string $Type Category.
-     * @param string $TypeName Category name.
-     * @param string $FamilyName Category classification.
-     * @param string $CpuType CPU type.
-     * @param string $Remark RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
-     * @param float $OriginPrice Original price.
-     * @param array $PrepaidUnderwritePeriods Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GpuDesc GPU information.
+     * @var integer <p>Number of quotas.</p>
+     */
+    public $QuotaNum;
+
+    /**
+     * @var string <p>Quota unit.</p>
+     */
+    public $QuotaUnit;
+
+    /**
+     * @var boolean <p>Whether a high-performance computing cluster needs to be provided.</p>
+     */
+    public $NeedHpcClusterId;
+
+    /**
+     * @var boolean <p>Whether it is a GPU instance type.</p>
+     */
+    public $IsGpuInstance;
+
+    /**
+     * @var string <p>GPU resource definition in the Kubernetes scenario.</p>
+     */
+    public $GpuResourceKey;
+
+    /**
+     * @var integer <p>Number of GPU cards.</p>
+     */
+    public $GpuNum;
+
+    /**
+     * @param string $InstanceType <p>Specifications.</p>
+     * @param integer $Cpu <p>4</p>
+     * @param integer $Memory <p>8, unit: GB.</p>
+     * @param integer $Order <p>Sorting order. Smaller values come first.</p>
+     * @param integer $Num <p>Quantity.</p>
+     * @param string $SellOutReason <p>Sold-out reason.</p>
+     * @param array $SystemDisk <p>System disk.</p>
+     * @param array $DataDisk <p>Data disk.</p>
+     * @param array $LocalDataDisk <p>Local data disk.</p>
+     * @param string $SoldOutReason <p>Sold-out reason.</p>
+     * @param string $InstanceFamily <p>Instance family.</p>
+     * @param string $NodeName <p>Node name.</p>
+     * @param string $NodeType <p>Node type.</p>
+     * @param string $Type <p>Category.</p>
+     * @param string $TypeName <p>Category name.</p>
+     * @param string $FamilyName <p>Category classification.</p>
+     * @param string $CpuType <p>CPU type.</p>
+     * @param string $Remark <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
+     * @param float $OriginPrice <p>Original price.</p>
+     * @param array $PrepaidUnderwritePeriods <p>Purchase duration supported by instance types using the committed use billing mode.</p>
+     * @param string $GpuDesc <p>GPU information.</p>
+     * @param integer $QuotaNum <p>Number of quotas.</p>
+     * @param string $QuotaUnit <p>Quota unit.</p>
+     * @param boolean $NeedHpcClusterId <p>Whether a high-performance computing cluster needs to be provided.</p>
+     * @param boolean $IsGpuInstance <p>Whether it is a GPU instance type.</p>
+     * @param string $GpuResourceKey <p>GPU resource definition in the Kubernetes scenario.</p>
+     * @param integer $GpuNum <p>Number of GPU cards.</p>
      */
     function __construct()
     {
@@ -319,6 +351,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("GpuDesc",$param) and $param["GpuDesc"] !== null) {
             $this->GpuDesc = $param["GpuDesc"];
+        }
+
+        if (array_key_exists("QuotaNum",$param) and $param["QuotaNum"] !== null) {
+            $this->QuotaNum = $param["QuotaNum"];
+        }
+
+        if (array_key_exists("QuotaUnit",$param) and $param["QuotaUnit"] !== null) {
+            $this->QuotaUnit = $param["QuotaUnit"];
+        }
+
+        if (array_key_exists("NeedHpcClusterId",$param) and $param["NeedHpcClusterId"] !== null) {
+            $this->NeedHpcClusterId = $param["NeedHpcClusterId"];
+        }
+
+        if (array_key_exists("IsGpuInstance",$param) and $param["IsGpuInstance"] !== null) {
+            $this->IsGpuInstance = $param["IsGpuInstance"];
+        }
+
+        if (array_key_exists("GpuResourceKey",$param) and $param["GpuResourceKey"] !== null) {
+            $this->GpuResourceKey = $param["GpuResourceKey"];
+        }
+
+        if (array_key_exists("GpuNum",$param) and $param["GpuNum"] !== null) {
+            $this->GpuNum = $param["GpuNum"];
         }
     }
 }

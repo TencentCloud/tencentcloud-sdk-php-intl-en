@@ -20,34 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Load metric.
  *
- * @method array getLoadMetrics() Obtain Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadMetrics(array $LoadMetrics) Set Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMatch() Obtain 0: all conditions should be met.
-1: any one of the conditions is met.
- * @method void setMatch(integer $Match) Set 0: all conditions should be met.
-1: any one of the conditions is met.
+ * @method array getLoadMetrics() Obtain Rule trigger condition.
+ * @method void setLoadMetrics(array $LoadMetrics) Set Rule trigger condition.
+ * @method integer getMatch() Obtain 0: All conditions are met.
+1: Any one of the conditions is met.
+ * @method void setMatch(integer $Match) Set 0: All conditions are met.
+1: Any one of the conditions is met.
  */
 class LoadMetricsConditions extends AbstractModel
 {
     /**
-     * @var array Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Rule trigger condition.
      */
     public $LoadMetrics;
 
     /**
-     * @var integer 0: all conditions should be met.
-1: any one of the conditions is met.
+     * @var integer 0: All conditions are met.
+1: Any one of the conditions is met.
      */
     public $Match;
 
     /**
-     * @param array $LoadMetrics Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Match 0: all conditions should be met.
-1: any one of the conditions is met.
+     * @param array $LoadMetrics Rule trigger condition.
+     * @param integer $Match 0: All conditions are met.
+1: Any one of the conditions is met.
      */
     function __construct()
     {

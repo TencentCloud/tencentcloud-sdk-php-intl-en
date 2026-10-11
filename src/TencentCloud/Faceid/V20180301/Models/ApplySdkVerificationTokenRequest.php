@@ -146,9 +146,32 @@ false : Expired HKID is rejected and cannot enter the liveness process.
  </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
  * @method void setAllowUploadPhoto(boolean $AllowUploadPhoto) Set <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
  </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
- * @method boolean getEnableBotBgDetection() Obtain <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+ * @method boolean getEnableBotBgDetection() Obtain <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
 
- * @method void setEnableBotBgDetection(boolean $EnableBotBgDetection) Set <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+ * @method void setEnableBotBgDetection(boolean $EnableBotBgDetection) Set <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
+
+ * @method integer getOcrAutoDetectTimeout() Obtain OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+ * @method void setOcrAutoDetectTimeout(integer $OcrAutoDetectTimeout) Set OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+ * @method string getOcrModeType() Obtain OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
+ * @method void setOcrModeType(string $OcrModeType) Set OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
  */
 class ApplySdkVerificationTokenRequest extends AbstractModel
 {
@@ -301,10 +324,29 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     public $AllowUploadPhoto;
 
     /**
-     * @var boolean <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+     * @var boolean <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
 
      */
     public $EnableBotBgDetection;
+
+    /**
+     * @var integer OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+     */
+    public $OcrAutoDetectTimeout;
+
+    /**
+     * @var string OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
+     */
+    public $OcrModeType;
 
     /**
      * @param integer $CheckMode The verification mode. Valid values:
@@ -370,7 +412,19 @@ false : Expired HKID is rejected and cannot enter the liveness process.
      * @param boolean $HideProgressBar <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
      * @param boolean $AllowUploadPhoto <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
  </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
-     * @param boolean $EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+     * @param boolean $EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
+
+     * @param integer $OcrAutoDetectTimeout OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+     * @param string $OcrModeType OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
      */
     function __construct()
     {
@@ -471,6 +525,14 @@ false : Expired HKID is rejected and cannot enter the liveness process.
 
         if (array_key_exists("EnableBotBgDetection",$param) and $param["EnableBotBgDetection"] !== null) {
             $this->EnableBotBgDetection = $param["EnableBotBgDetection"];
+        }
+
+        if (array_key_exists("OcrAutoDetectTimeout",$param) and $param["OcrAutoDetectTimeout"] !== null) {
+            $this->OcrAutoDetectTimeout = $param["OcrAutoDetectTimeout"];
+        }
+
+        if (array_key_exists("OcrModeType",$param) and $param["OcrModeType"] !== null) {
+            $this->OcrModeType = $param["OcrModeType"];
         }
     }
 }

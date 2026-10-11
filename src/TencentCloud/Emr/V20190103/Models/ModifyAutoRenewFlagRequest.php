@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Cluster ID.
  * @method array getResourceIds() Obtain Instance ID.
  * @method void setResourceIds(array $ResourceIds) Set Instance ID.
- * @method string getRenewFlag() Obtain NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
- * @method void setRenewFlag(string $RenewFlag) Set NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
+ * @method string getRenewFlag() Obtain NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
+ * @method void setRenewFlag(string $RenewFlag) Set NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
  * @method string getComputeResourceId() Obtain Computing resource ID.
  * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
  */
@@ -42,7 +42,7 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var string NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
+     * @var string NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
      */
     public $RenewFlag;
 
@@ -54,7 +54,7 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
     /**
      * @param string $InstanceId Cluster ID.
      * @param array $ResourceIds Instance ID.
-     * @param string $RenewFlag NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
+     * @param string $RenewFlag NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
      * @param string $ComputeResourceId Computing resource ID.
      */
     function __construct()

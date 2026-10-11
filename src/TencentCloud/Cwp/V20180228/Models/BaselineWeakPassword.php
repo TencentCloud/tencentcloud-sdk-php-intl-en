@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Baseline weak password
  *
- * @method integer getPasswordId() Obtain Password ID
- * @method void setPasswordId(integer $PasswordId) Set Password ID
- * @method string getWeakPassword() Obtain Password
- * @method void setWeakPassword(string $WeakPassword) Set Password
+ * @method integer getPasswordId() Obtain Password Id
+ * @method void setPasswordId(integer $PasswordId) Set Password Id
+ * @method string getWeakPassword() Obtain Password.
+ * @method void setWeakPassword(string $WeakPassword) Set Password.
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method string getModifyTime() Obtain Modification time
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class BaselineWeakPassword extends AbstractModel
 {
     /**
-     * @var integer Password ID
+     * @var integer Password Id
      */
     public $PasswordId;
 
     /**
-     * @var string Password
+     * @var string Password.
      */
     public $WeakPassword;
 
@@ -52,8 +52,8 @@ class BaselineWeakPassword extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @param integer $PasswordId Password ID
-     * @param string $WeakPassword Password
+     * @param integer $PasswordId Password Id
+     * @param string $WeakPassword Password.
      * @param string $CreateTime Creation time
      * @param string $ModifyTime Modification time
      */

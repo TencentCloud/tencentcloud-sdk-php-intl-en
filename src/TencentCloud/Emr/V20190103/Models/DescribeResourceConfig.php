@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output parameters of the DescribeResourceConfig API.
+ * Response parameters of the DescribeResourceConfig API.
  *
  * @method string getResourceType() Obtain Specification management type.
  * @method void setResourceType(string $ResourceType) Set Specification management type.

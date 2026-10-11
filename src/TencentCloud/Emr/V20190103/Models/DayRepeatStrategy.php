@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description of daily repeated tasks for elastic scaling
+ * Description of daily repetition tasks for auto scaling.
  *
- * @method string getExecuteAtTimeOfDay() Obtain Specific time for repetition task execution, such as 01:02:00.
- * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) Set Specific time for repetition task execution, such as 01:02:00.
- * @method integer getStep() Obtain Executing every Step days.
- * @method void setStep(integer $Step) Set Executing every Step days.
+ * @method string getExecuteAtTimeOfDay() Obtain Specific time for repetition task execution, for example, 01:02:00.
+ * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) Set Specific time for repetition task execution, for example, 01:02:00.
+ * @method integer getStep() Obtain Execute every Step days.
+ * @method void setStep(integer $Step) Set Execute every Step days.
  */
 class DayRepeatStrategy extends AbstractModel
 {
     /**
-     * @var string Specific time for repetition task execution, such as 01:02:00.
+     * @var string Specific time for repetition task execution, for example, 01:02:00.
      */
     public $ExecuteAtTimeOfDay;
 
     /**
-     * @var integer Executing every Step days.
+     * @var integer Execute every Step days.
      */
     public $Step;
 
     /**
-     * @param string $ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
-     * @param integer $Step Executing every Step days.
+     * @param string $ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
+     * @param integer $Step Execute every Step days.
      */
     function __construct()
     {

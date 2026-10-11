@@ -18,516 +18,516 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node hardware information
+ * Node hardware information.
  *
- * @method integer getAppId() Obtain User AppID.
- * @method void setAppId(integer $AppId) Set User AppID.
- * @method string getSerialNo() Obtain Serial number.
- * @method void setSerialNo(string $SerialNo) Set Serial number.
- * @method string getOrderNo() Obtain Machine instance ID.
- * @method void setOrderNo(string $OrderNo) Set Machine instance ID.
- * @method string getWanIp() Obtain Public network IP address bound for the Master node.
- * @method void setWanIp(string $WanIp) Set Public network IP address bound for the Master node.
- * @method integer getFlag() Obtain Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
- * @method void setFlag(integer $Flag) Set Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
- * @method string getSpec() Obtain Node specifications.
- * @method void setSpec(string $Spec) Set Node specifications.
- * @method integer getCpuNum() Obtain Number of node cores.
- * @method void setCpuNum(integer $CpuNum) Set Number of node cores.
- * @method integer getMemSize() Obtain Node memory (bytes).
- * @method void setMemSize(integer $MemSize) Set Node memory (bytes).
- * @method string getMemDesc() Obtain Node memory (GB).
- * @method void setMemDesc(string $MemDesc) Set Node memory (GB).
- * @method integer getRegionId() Obtain The region where the node is located.
- * @method void setRegionId(integer $RegionId) Set The region where the node is located.
- * @method integer getZoneId() Obtain The zone where the node is located.
- * @method void setZoneId(integer $ZoneId) Set The zone where the node is located.
- * @method string getApplyTime() Obtain Application time.
- * @method void setApplyTime(string $ApplyTime) Set Application time.
- * @method string getFreeTime() Obtain Release time.
- * @method void setFreeTime(string $FreeTime) Set Release time.
- * @method string getDiskSize() Obtain Hard disk size.
- * @method void setDiskSize(string $DiskSize) Set Hard disk size.
- * @method string getNameTag() Obtain Node description.
- * @method void setNameTag(string $NameTag) Set Node description.
- * @method string getServices() Obtain Node deployment service.
- * @method void setServices(string $Services) Set Node deployment service.
- * @method integer getStorageType() Obtain Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
- * @method void setStorageType(integer $StorageType) Set Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
- * @method integer getRootSize() Obtain System disk size (GB).
- * @method void setRootSize(integer $RootSize) Set System disk size (GB).
- * @method integer getChargeType() Obtain Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
- * @method void setChargeType(integer $ChargeType) Set Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
- * @method string getCdbIp() Obtain Database IP address.
- * @method void setCdbIp(string $CdbIp) Set Database IP address.
- * @method integer getCdbPort() Obtain Database port.
- * @method void setCdbPort(integer $CdbPort) Set Database port.
- * @method integer getHwDiskSize() Obtain Hard disk capacity (bytes).
- * @method void setHwDiskSize(integer $HwDiskSize) Set Hard disk capacity (bytes).
- * @method string getHwDiskSizeDesc() Obtain Hard disk capacity description.
- * @method void setHwDiskSizeDesc(string $HwDiskSizeDesc) Set Hard disk capacity description.
- * @method integer getHwMemSize() Obtain Memory capacity (bytes).
- * @method void setHwMemSize(integer $HwMemSize) Set Memory capacity (bytes).
- * @method string getHwMemSizeDesc() Obtain Memory capacity description.
- * @method void setHwMemSizeDesc(string $HwMemSizeDesc) Set Memory capacity description.
- * @method string getExpireTime() Obtain Expiration time.
- * @method void setExpireTime(string $ExpireTime) Set Expiration time.
- * @method string getEmrResourceId() Obtain Node resource ID.
- * @method void setEmrResourceId(string $EmrResourceId) Set Node resource ID.
- * @method integer getIsAutoRenew() Obtain Renewal flag.
- * @method void setIsAutoRenew(integer $IsAutoRenew) Set Renewal flag.
- * @method string getDeviceClass() Obtain Device identification.
- * @method void setDeviceClass(string $DeviceClass) Set Device identification.
- * @method integer getMutable() Obtain Supporting resizing.
- * @method void setMutable(integer $Mutable) Set Supporting resizing.
- * @method array getMCMultiDisk() Obtain Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMCMultiDisk(array $MCMultiDisk) Set Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method CdbInfo getCdbNodeInfo() Obtain Database information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCdbNodeInfo(CdbInfo $CdbNodeInfo) Set Database information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIp() Obtain Private network IP address.
- * @method void setIp(string $Ip) Set Private network IP address.
- * @method integer getDestroyable() Obtain Whether this node can be terminated. 1: Yes, 0: No.
- * @method void setDestroyable(integer $Destroyable) Set Whether this node can be terminated. 1: Yes, 0: No.
- * @method array getTags() Obtain Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getAutoFlag() Obtain Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
- * @method void setAutoFlag(integer $AutoFlag) Set Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
- * @method string getHardwareResourceType() Obtain Resource type, with the valid values of "host" and "pod".
- * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type, with the valid values of "host" and "pod".
- * @method integer getIsDynamicSpec() Obtain Whether it is a floating specification. 1: Yes, 0: No.
- * @method void setIsDynamicSpec(integer $IsDynamicSpec) Set Whether it is a floating specification. 1: Yes, 0: No.
- * @method string getDynamicPodSpec() Obtain Floating specification value in the JSON string format.
- * @method void setDynamicPodSpec(string $DynamicPodSpec) Set Floating specification value in the JSON string format.
- * @method integer getSupportModifyPayMode() Obtain Whether the billing type can be changed. 1: Yes, 0: No.
- * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) Set Whether the billing type can be changed. 1: Yes, 0: No.
- * @method integer getRootStorageType() Obtain System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
- * @method void setRootStorageType(integer $RootStorageType) Set System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
- * @method string getZone() Obtain Availability information.
- * @method void setZone(string $Zone) Set Availability information.
- * @method SubnetInfo getSubnetInfo() Obtain Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSubnetInfo(SubnetInfo $SubnetInfo) Set Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getClients() Obtain Client.
- * @method void setClients(string $Clients) Set Client.
- * @method string getCurrentTime() Obtain Current system time.
- * @method void setCurrentTime(string $CurrentTime) Set Current system time.
- * @method integer getIsFederation() Obtain Indicates whether it is for federation. 1: Yes, 0: No.
- * @method void setIsFederation(integer $IsFederation) Set Indicates whether it is for federation. 1: Yes, 0: No.
- * @method string getDeviceName() Obtain Device name.
- * @method void setDeviceName(string $DeviceName) Set Device name.
- * @method string getServiceClient() Obtain Service.
- * @method void setServiceClient(string $ServiceClient) Set Service.
- * @method boolean getDisableApiTermination() Obtain Whether instance protection is enabled. True: enabled, false: disabled.
- * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Whether instance protection is enabled. True: enabled, false: disabled.
- * @method integer getTradeVersion() Obtain 0: old billing, 1: new billing.
- * @method void setTradeVersion(integer $TradeVersion) Set 0: old billing, 1: new billing.
- * @method string getServicesStatus() Obtain Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
- * @method void setServicesStatus(string $ServicesStatus) Set Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
- * @method string getRemark() Obtain Remarks.
- * @method void setRemark(string $Remark) Set Remarks.
- * @method string getSharedClusterId() Obtain Shared cluster ID.
- * @method void setSharedClusterId(string $SharedClusterId) Set Shared cluster ID.
- * @method string getSharedClusterIdDesc() Obtain Shared cluster ID description.
- * @method void setSharedClusterIdDesc(string $SharedClusterIdDesc) Set Shared cluster ID description.
- * @method boolean getTimingResource() Obtain Whether the resource is set for scheduled termination.
- * @method void setTimingResource(boolean $TimingResource) Set Whether the resource is set for scheduled termination.
- * @method string getTkeClusterId() Obtain Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
- * @method void setTkeClusterId(string $TkeClusterId) Set Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
- * @method array getConfigurableServices() Obtain Name list of services that can be configured when a new disk is mounted.
- * @method void setConfigurableServices(array $ConfigurableServices) Set Name list of services that can be configured when a new disk is mounted.
- * @method string getNodeMark() Obtain Node labeling information: currently used only in the Terraform.
- * @method void setNodeMark(string $NodeMark) Set Node labeling information: currently used only in the Terraform.
- * @method boolean getUnderwriteSetAutoRenew() Obtain Whether auto-renewal is available for committed use resources.
- * @method void setUnderwriteSetAutoRenew(boolean $UnderwriteSetAutoRenew) Set Whether auto-renewal is available for committed use resources.
- * @method string getGpuDesc() Obtain GPU information.
- * @method void setGpuDesc(string $GpuDesc) Set GPU information.
+ * @method integer getAppId() Obtain <p>User APPID.</p>
+ * @method void setAppId(integer $AppId) Set <p>User APPID.</p>
+ * @method string getSerialNo() Obtain <p>Serial number.</p>
+ * @method void setSerialNo(string $SerialNo) Set <p>Serial number.</p>
+ * @method string getOrderNo() Obtain <p>Machine instance ID.</p>
+ * @method void setOrderNo(string $OrderNo) Set <p>Machine instance ID.</p>
+ * @method string getWanIp() Obtain <p>Public IP address bound to the Master node.</p>
+ * @method void setWanIp(string $WanIp) Set <p>Public IP address bound to the Master node.</p>
+ * @method integer getFlag() Obtain <p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
+ * @method void setFlag(integer $Flag) Set <p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
+ * @method string getSpec() Obtain <p>Node specifications.</p>
+ * @method void setSpec(string $Spec) Set <p>Node specifications.</p>
+ * @method integer getCpuNum() Obtain <p>Number of node cores.</p>
+ * @method void setCpuNum(integer $CpuNum) Set <p>Number of node cores.</p>
+ * @method integer getMemSize() Obtain <p>Node memory (bytes).</p>
+ * @method void setMemSize(integer $MemSize) Set <p>Node memory (bytes).</p>
+ * @method string getMemDesc() Obtain <p>Node memory description (GB).</p>
+ * @method void setMemDesc(string $MemDesc) Set <p>Node memory description (GB).</p>
+ * @method integer getRegionId() Obtain <p>Region where the node is located.</p>
+ * @method void setRegionId(integer $RegionId) Set <p>Region where the node is located.</p>
+ * @method integer getZoneId() Obtain <p>Zone where the node is located.</p>
+ * @method void setZoneId(integer $ZoneId) Set <p>Zone where the node is located.</p>
+ * @method string getApplyTime() Obtain <p>Application time.</p>
+ * @method void setApplyTime(string $ApplyTime) Set <p>Application time.</p>
+ * @method string getFreeTime() Obtain <p>Release time.</p>
+ * @method void setFreeTime(string $FreeTime) Set <p>Release time.</p>
+ * @method string getDiskSize() Obtain <p>Hard disk size.</p>
+ * @method void setDiskSize(string $DiskSize) Set <p>Hard disk size.</p>
+ * @method string getNameTag() Obtain <p>Node description.</p>
+ * @method void setNameTag(string $NameTag) Set <p>Node description.</p>
+ * @method string getServices() Obtain <p>Services deployed on the node.</p>
+ * @method void setServices(string $Services) Set <p>Services deployed on the node.</p>
+ * @method integer getStorageType() Obtain <p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+ * @method void setStorageType(integer $StorageType) Set <p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+ * @method integer getRootSize() Obtain <p>System disk size (GB).</p>
+ * @method void setRootSize(integer $RootSize) Set <p>System disk size (GB).</p>
+ * @method integer getChargeType() Obtain <p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+ * @method void setChargeType(integer $ChargeType) Set <p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+ * @method string getCdbIp() Obtain <p>Database IP address.</p>
+ * @method void setCdbIp(string $CdbIp) Set <p>Database IP address.</p>
+ * @method integer getCdbPort() Obtain <p>Database port.</p>
+ * @method void setCdbPort(integer $CdbPort) Set <p>Database port.</p>
+ * @method integer getHwDiskSize() Obtain <p>Hard disk capacity (bytes).</p>
+ * @method void setHwDiskSize(integer $HwDiskSize) Set <p>Hard disk capacity (bytes).</p>
+ * @method string getHwDiskSizeDesc() Obtain <p>Hard disk capacity description.</p>
+ * @method void setHwDiskSizeDesc(string $HwDiskSizeDesc) Set <p>Hard disk capacity description.</p>
+ * @method integer getHwMemSize() Obtain <p>Memory capacity (bytes).</p>
+ * @method void setHwMemSize(integer $HwMemSize) Set <p>Memory capacity (bytes).</p>
+ * @method string getHwMemSizeDesc() Obtain <p>Memory capacity description.</p>
+ * @method void setHwMemSizeDesc(string $HwMemSizeDesc) Set <p>Memory capacity description.</p>
+ * @method string getExpireTime() Obtain <p>Expiration time.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Expiration time.</p>
+ * @method string getEmrResourceId() Obtain <p>Node resource ID.</p>
+ * @method void setEmrResourceId(string $EmrResourceId) Set <p>Node resource ID.</p>
+ * @method integer getIsAutoRenew() Obtain <p>Renewal flag.</p>
+ * @method void setIsAutoRenew(integer $IsAutoRenew) Set <p>Renewal flag.</p>
+ * @method string getDeviceClass() Obtain <p>Device identifier.</p>
+ * @method void setDeviceClass(string $DeviceClass) Set <p>Device identifier.</p>
+ * @method integer getMutable() Obtain <p>Supports configuration change.</p>
+ * @method void setMutable(integer $Mutable) Set <p>Supports configuration change.</p>
+ * @method array getMCMultiDisk() Obtain <p>Multi-cloud disk.</p>
+ * @method void setMCMultiDisk(array $MCMultiDisk) Set <p>Multi-cloud disk.</p>
+ * @method CdbInfo getCdbNodeInfo() Obtain <p>Database information.</p>
+ * @method void setCdbNodeInfo(CdbInfo $CdbNodeInfo) Set <p>Database information.</p>
+ * @method string getIp() Obtain <p>Private IP address.</p>
+ * @method void setIp(string $Ip) Set <p>Private IP address.</p>
+ * @method integer getDestroyable() Obtain <p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
+ * @method void setDestroyable(integer $Destroyable) Set <p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
+ * @method array getTags() Obtain <p>Tag bound to the node.</p>
+ * @method void setTags(array $Tags) Set <p>Tag bound to the node.</p>
+ * @method integer getAutoFlag() Obtain <p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
+ * @method void setAutoFlag(integer $AutoFlag) Set <p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
+ * @method string getHardwareResourceType() Obtain <p>Resource type. Valid values: host and pod.</p>
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set <p>Resource type. Valid values: host and pod.</p>
+ * @method integer getIsDynamicSpec() Obtain <p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
+ * @method void setIsDynamicSpec(integer $IsDynamicSpec) Set <p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
+ * @method string getDynamicPodSpec() Obtain <p>JSON string of the floating specification value.</p>
+ * @method void setDynamicPodSpec(string $DynamicPodSpec) Set <p>JSON string of the floating specification value.</p>
+ * @method integer getSupportModifyPayMode() Obtain <p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
+ * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) Set <p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
+ * @method integer getRootStorageType() Obtain <p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+ * @method void setRootStorageType(integer $RootStorageType) Set <p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+ * @method string getZone() Obtain <p>AZ information.</p>
+ * @method void setZone(string $Zone) Set <p>AZ information.</p>
+ * @method SubnetInfo getSubnetInfo() Obtain <p>Subnet.</p>
+ * @method void setSubnetInfo(SubnetInfo $SubnetInfo) Set <p>Subnet.</p>
+ * @method string getClients() Obtain <p>Client.</p>
+ * @method void setClients(string $Clients) Set <p>Client.</p>
+ * @method string getCurrentTime() Obtain <p>Current system time.</p>
+ * @method void setCurrentTime(string $CurrentTime) Set <p>Current system time.</p>
+ * @method integer getIsFederation() Obtain <p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
+ * @method void setIsFederation(integer $IsFederation) Set <p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
+ * @method string getDeviceName() Obtain <p>Device name.</p>
+ * @method void setDeviceName(string $DeviceName) Set <p>Device name.</p>
+ * @method string getServiceClient() Obtain <p>Service.</p>
+ * @method void setServiceClient(string $ServiceClient) Set <p>Service.</p>
+ * @method boolean getDisableApiTermination() Obtain <p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set <p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
+ * @method integer getTradeVersion() Obtain <p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
+ * @method void setTradeVersion(integer $TradeVersion) Set <p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
+ * @method string getServicesStatus() Obtain <p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
+ * @method void setServicesStatus(string $ServicesStatus) Set <p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
+ * @method string getRemark() Obtain <p>Remarks.</p>
+ * @method void setRemark(string $Remark) Set <p>Remarks.</p>
+ * @method string getSharedClusterId() Obtain <p>Shared cluster ID.</p>
+ * @method void setSharedClusterId(string $SharedClusterId) Set <p>Shared cluster ID.</p>
+ * @method string getSharedClusterIdDesc() Obtain <p>Description of the shared cluster ID.</p>
+ * @method void setSharedClusterIdDesc(string $SharedClusterIdDesc) Set <p>Description of the shared cluster ID.</p>
+ * @method boolean getTimingResource() Obtain <p>Whether it is a scheduled termination resource.</p>
+ * @method void setTimingResource(boolean $TimingResource) Set <p>Whether it is a scheduled termination resource.</p>
+ * @method string getTkeClusterId() Obtain <p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
+ * @method void setTkeClusterId(string $TkeClusterId) Set <p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
+ * @method array getConfigurableServices() Obtain <p>Name list of services that can be configured when a new disk is mounted.</p>
+ * @method void setConfigurableServices(array $ConfigurableServices) Set <p>Name list of services that can be configured when a new disk is mounted.</p>
+ * @method string getNodeMark() Obtain <p>Node annotation information, which is currently only provided for the Terraform platform.</p>
+ * @method void setNodeMark(string $NodeMark) Set <p>Node annotation information, which is currently only provided for the Terraform platform.</p>
+ * @method boolean getUnderwriteSetAutoRenew() Obtain <p>Whether the committed use resource supports setting auto-renewal.</p>
+ * @method void setUnderwriteSetAutoRenew(boolean $UnderwriteSetAutoRenew) Set <p>Whether the committed use resource supports setting auto-renewal.</p>
+ * @method string getGpuDesc() Obtain <p>GPU information.</p>
+ * @method void setGpuDesc(string $GpuDesc) Set <p>GPU information.</p>
+ * @method array getDiskHealthIssues() Obtain <p>Disk issue description.</p>
+ * @method void setDiskHealthIssues(array $DiskHealthIssues) Set <p>Disk issue description.</p>
+ * @method string getNodeGroupId() Obtain <p>ID of the node group where the node resides.</p>
+ * @method void setNodeGroupId(string $NodeGroupId) Set <p>ID of the node group where the node resides.</p>
+ * @method string getNodeGroupName() Obtain <p>Name of the node group where the node resides.</p>
+ * @method void setNodeGroupName(string $NodeGroupName) Set <p>Name of the node group where the node resides.</p>
  */
 class NodeHardwareInfo extends AbstractModel
 {
     /**
-     * @var integer User AppID.
+     * @var integer <p>User APPID.</p>
      */
     public $AppId;
 
     /**
-     * @var string Serial number.
+     * @var string <p>Serial number.</p>
      */
     public $SerialNo;
 
     /**
-     * @var string Machine instance ID.
+     * @var string <p>Machine instance ID.</p>
      */
     public $OrderNo;
 
     /**
-     * @var string Public network IP address bound for the Master node.
+     * @var string <p>Public IP address bound to the Master node.</p>
      */
     public $WanIp;
 
     /**
-     * @var integer Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
+     * @var integer <p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
      */
     public $Flag;
 
     /**
-     * @var string Node specifications.
+     * @var string <p>Node specifications.</p>
      */
     public $Spec;
 
     /**
-     * @var integer Number of node cores.
+     * @var integer <p>Number of node cores.</p>
      */
     public $CpuNum;
 
     /**
-     * @var integer Node memory (bytes).
+     * @var integer <p>Node memory (bytes).</p>
      */
     public $MemSize;
 
     /**
-     * @var string Node memory (GB).
+     * @var string <p>Node memory description (GB).</p>
      */
     public $MemDesc;
 
     /**
-     * @var integer The region where the node is located.
+     * @var integer <p>Region where the node is located.</p>
      */
     public $RegionId;
 
     /**
-     * @var integer The zone where the node is located.
+     * @var integer <p>Zone where the node is located.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string Application time.
+     * @var string <p>Application time.</p>
      */
     public $ApplyTime;
 
     /**
-     * @var string Release time.
+     * @var string <p>Release time.</p>
      */
     public $FreeTime;
 
     /**
-     * @var string Hard disk size.
+     * @var string <p>Hard disk size.</p>
      */
     public $DiskSize;
 
     /**
-     * @var string Node description.
+     * @var string <p>Node description.</p>
      */
     public $NameTag;
 
     /**
-     * @var string Node deployment service.
+     * @var string <p>Services deployed on the node.</p>
      */
     public $Services;
 
     /**
-     * @var integer Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
+     * @var integer <p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
      */
     public $StorageType;
 
     /**
-     * @var integer System disk size (GB).
+     * @var integer <p>System disk size (GB).</p>
      */
     public $RootSize;
 
     /**
-     * @var integer Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
+     * @var integer <p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      */
     public $ChargeType;
 
     /**
-     * @var string Database IP address.
+     * @var string <p>Database IP address.</p>
      */
     public $CdbIp;
 
     /**
-     * @var integer Database port.
+     * @var integer <p>Database port.</p>
      */
     public $CdbPort;
 
     /**
-     * @var integer Hard disk capacity (bytes).
+     * @var integer <p>Hard disk capacity (bytes).</p>
      */
     public $HwDiskSize;
 
     /**
-     * @var string Hard disk capacity description.
+     * @var string <p>Hard disk capacity description.</p>
      */
     public $HwDiskSizeDesc;
 
     /**
-     * @var integer Memory capacity (bytes).
+     * @var integer <p>Memory capacity (bytes).</p>
      */
     public $HwMemSize;
 
     /**
-     * @var string Memory capacity description.
+     * @var string <p>Memory capacity description.</p>
      */
     public $HwMemSizeDesc;
 
     /**
-     * @var string Expiration time.
+     * @var string <p>Expiration time.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string Node resource ID.
+     * @var string <p>Node resource ID.</p>
      */
     public $EmrResourceId;
 
     /**
-     * @var integer Renewal flag.
+     * @var integer <p>Renewal flag.</p>
      */
     public $IsAutoRenew;
 
     /**
-     * @var string Device identification.
+     * @var string <p>Device identifier.</p>
      */
     public $DeviceClass;
 
     /**
-     * @var integer Supporting resizing.
+     * @var integer <p>Supports configuration change.</p>
      */
     public $Mutable;
 
     /**
-     * @var array Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Multi-cloud disk.</p>
      */
     public $MCMultiDisk;
 
     /**
-     * @var CdbInfo Database information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var CdbInfo <p>Database information.</p>
      */
     public $CdbNodeInfo;
 
     /**
-     * @var string Private network IP address.
+     * @var string <p>Private IP address.</p>
      */
     public $Ip;
 
     /**
-     * @var integer Whether this node can be terminated. 1: Yes, 0: No.
+     * @var integer <p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
      */
     public $Destroyable;
 
     /**
-     * @var array Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Tag bound to the node.</p>
      */
     public $Tags;
 
     /**
-     * @var integer Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
+     * @var integer <p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
      */
     public $AutoFlag;
 
     /**
-     * @var string Resource type, with the valid values of "host" and "pod".
+     * @var string <p>Resource type. Valid values: host and pod.</p>
      */
     public $HardwareResourceType;
 
     /**
-     * @var integer Whether it is a floating specification. 1: Yes, 0: No.
+     * @var integer <p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
      */
     public $IsDynamicSpec;
 
     /**
-     * @var string Floating specification value in the JSON string format.
+     * @var string <p>JSON string of the floating specification value.</p>
      */
     public $DynamicPodSpec;
 
     /**
-     * @var integer Whether the billing type can be changed. 1: Yes, 0: No.
+     * @var integer <p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
      */
     public $SupportModifyPayMode;
 
     /**
-     * @var integer System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+     * @var integer <p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
      */
     public $RootStorageType;
 
     /**
-     * @var string Availability information.
+     * @var string <p>AZ information.</p>
      */
     public $Zone;
 
     /**
-     * @var SubnetInfo Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var SubnetInfo <p>Subnet.</p>
      */
     public $SubnetInfo;
 
     /**
-     * @var string Client.
+     * @var string <p>Client.</p>
      */
     public $Clients;
 
     /**
-     * @var string Current system time.
+     * @var string <p>Current system time.</p>
      */
     public $CurrentTime;
 
     /**
-     * @var integer Indicates whether it is for federation. 1: Yes, 0: No.
+     * @var integer <p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
      */
     public $IsFederation;
 
     /**
-     * @var string Device name.
+     * @var string <p>Device name.</p>
      */
     public $DeviceName;
 
     /**
-     * @var string Service.
+     * @var string <p>Service.</p>
      */
     public $ServiceClient;
 
     /**
-     * @var boolean Whether instance protection is enabled. True: enabled, false: disabled.
+     * @var boolean <p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
      */
     public $DisableApiTermination;
 
     /**
-     * @var integer 0: old billing, 1: new billing.
+     * @var integer <p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
      */
     public $TradeVersion;
 
     /**
-     * @var string Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
+     * @var string <p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
      */
     public $ServicesStatus;
 
     /**
-     * @var string Remarks.
+     * @var string <p>Remarks.</p>
      */
     public $Remark;
 
     /**
-     * @var string Shared cluster ID.
+     * @var string <p>Shared cluster ID.</p>
      */
     public $SharedClusterId;
 
     /**
-     * @var string Shared cluster ID description.
+     * @var string <p>Description of the shared cluster ID.</p>
      */
     public $SharedClusterIdDesc;
 
     /**
-     * @var boolean Whether the resource is set for scheduled termination.
+     * @var boolean <p>Whether it is a scheduled termination resource.</p>
      */
     public $TimingResource;
 
     /**
-     * @var string Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+     * @var string <p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
      */
     public $TkeClusterId;
 
     /**
-     * @var array Name list of services that can be configured when a new disk is mounted.
+     * @var array <p>Name list of services that can be configured when a new disk is mounted.</p>
      */
     public $ConfigurableServices;
 
     /**
-     * @var string Node labeling information: currently used only in the Terraform.
+     * @var string <p>Node annotation information, which is currently only provided for the Terraform platform.</p>
      */
     public $NodeMark;
 
     /**
-     * @var boolean Whether auto-renewal is available for committed use resources.
+     * @var boolean <p>Whether the committed use resource supports setting auto-renewal.</p>
      */
     public $UnderwriteSetAutoRenew;
 
     /**
-     * @var string GPU information.
+     * @var string <p>GPU information.</p>
      */
     public $GpuDesc;
 
     /**
-     * @param integer $AppId User AppID.
-     * @param string $SerialNo Serial number.
-     * @param string $OrderNo Machine instance ID.
-     * @param string $WanIp Public network IP address bound for the Master node.
-     * @param integer $Flag Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
-     * @param string $Spec Node specifications.
-     * @param integer $CpuNum Number of node cores.
-     * @param integer $MemSize Node memory (bytes).
-     * @param string $MemDesc Node memory (GB).
-     * @param integer $RegionId The region where the node is located.
-     * @param integer $ZoneId The zone where the node is located.
-     * @param string $ApplyTime Application time.
-     * @param string $FreeTime Release time.
-     * @param string $DiskSize Hard disk size.
-     * @param string $NameTag Node description.
-     * @param string $Services Node deployment service.
-     * @param integer $StorageType Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+     * @var array <p>Disk issue description.</p>
+     */
+    public $DiskHealthIssues;
 
-     * @param integer $RootSize System disk size (GB).
-     * @param integer $ChargeType Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
-     * @param string $CdbIp Database IP address.
-     * @param integer $CdbPort Database port.
-     * @param integer $HwDiskSize Hard disk capacity (bytes).
-     * @param string $HwDiskSizeDesc Hard disk capacity description.
-     * @param integer $HwMemSize Memory capacity (bytes).
-     * @param string $HwMemSizeDesc Memory capacity description.
-     * @param string $ExpireTime Expiration time.
-     * @param string $EmrResourceId Node resource ID.
-     * @param integer $IsAutoRenew Renewal flag.
-     * @param string $DeviceClass Device identification.
-     * @param integer $Mutable Supporting resizing.
-     * @param array $MCMultiDisk Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CdbInfo $CdbNodeInfo Database information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Ip Private network IP address.
-     * @param integer $Destroyable Whether this node can be terminated. 1: Yes, 0: No.
-     * @param array $Tags Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $AutoFlag Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
-     * @param string $HardwareResourceType Resource type, with the valid values of "host" and "pod".
-     * @param integer $IsDynamicSpec Whether it is a floating specification. 1: Yes, 0: No.
-     * @param string $DynamicPodSpec Floating specification value in the JSON string format.
-     * @param integer $SupportModifyPayMode Whether the billing type can be changed. 1: Yes, 0: No.
-     * @param integer $RootStorageType System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-     * @param string $Zone Availability information.
-     * @param SubnetInfo $SubnetInfo Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Clients Client.
-     * @param string $CurrentTime Current system time.
-     * @param integer $IsFederation Indicates whether it is for federation. 1: Yes, 0: No.
-     * @param string $DeviceName Device name.
-     * @param string $ServiceClient Service.
-     * @param boolean $DisableApiTermination Whether instance protection is enabled. True: enabled, false: disabled.
-     * @param integer $TradeVersion 0: old billing, 1: new billing.
-     * @param string $ServicesStatus Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
-     * @param string $Remark Remarks.
-     * @param string $SharedClusterId Shared cluster ID.
-     * @param string $SharedClusterIdDesc Shared cluster ID description.
-     * @param boolean $TimingResource Whether the resource is set for scheduled termination.
-     * @param string $TkeClusterId Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
-     * @param array $ConfigurableServices Name list of services that can be configured when a new disk is mounted.
-     * @param string $NodeMark Node labeling information: currently used only in the Terraform.
-     * @param boolean $UnderwriteSetAutoRenew Whether auto-renewal is available for committed use resources.
-     * @param string $GpuDesc GPU information.
+    /**
+     * @var string <p>ID of the node group where the node resides.</p>
+     */
+    public $NodeGroupId;
+
+    /**
+     * @var string <p>Name of the node group where the node resides.</p>
+     */
+    public $NodeGroupName;
+
+    /**
+     * @param integer $AppId <p>User APPID.</p>
+     * @param string $SerialNo <p>Serial number.</p>
+     * @param string $OrderNo <p>Machine instance ID.</p>
+     * @param string $WanIp <p>Public IP address bound to the Master node.</p>
+     * @param integer $Flag <p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
+     * @param string $Spec <p>Node specifications.</p>
+     * @param integer $CpuNum <p>Number of node cores.</p>
+     * @param integer $MemSize <p>Node memory (bytes).</p>
+     * @param string $MemDesc <p>Node memory description (GB).</p>
+     * @param integer $RegionId <p>Region where the node is located.</p>
+     * @param integer $ZoneId <p>Zone where the node is located.</p>
+     * @param string $ApplyTime <p>Application time.</p>
+     * @param string $FreeTime <p>Release time.</p>
+     * @param string $DiskSize <p>Hard disk size.</p>
+     * @param string $NameTag <p>Node description.</p>
+     * @param string $Services <p>Services deployed on the node.</p>
+     * @param integer $StorageType <p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+     * @param integer $RootSize <p>System disk size (GB).</p>
+     * @param integer $ChargeType <p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+     * @param string $CdbIp <p>Database IP address.</p>
+     * @param integer $CdbPort <p>Database port.</p>
+     * @param integer $HwDiskSize <p>Hard disk capacity (bytes).</p>
+     * @param string $HwDiskSizeDesc <p>Hard disk capacity description.</p>
+     * @param integer $HwMemSize <p>Memory capacity (bytes).</p>
+     * @param string $HwMemSizeDesc <p>Memory capacity description.</p>
+     * @param string $ExpireTime <p>Expiration time.</p>
+     * @param string $EmrResourceId <p>Node resource ID.</p>
+     * @param integer $IsAutoRenew <p>Renewal flag.</p>
+     * @param string $DeviceClass <p>Device identifier.</p>
+     * @param integer $Mutable <p>Supports configuration change.</p>
+     * @param array $MCMultiDisk <p>Multi-cloud disk.</p>
+     * @param CdbInfo $CdbNodeInfo <p>Database information.</p>
+     * @param string $Ip <p>Private IP address.</p>
+     * @param integer $Destroyable <p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
+     * @param array $Tags <p>Tag bound to the node.</p>
+     * @param integer $AutoFlag <p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
+     * @param string $HardwareResourceType <p>Resource type. Valid values: host and pod.</p>
+     * @param integer $IsDynamicSpec <p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
+     * @param string $DynamicPodSpec <p>JSON string of the floating specification value.</p>
+     * @param integer $SupportModifyPayMode <p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
+     * @param integer $RootStorageType <p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+     * @param string $Zone <p>AZ information.</p>
+     * @param SubnetInfo $SubnetInfo <p>Subnet.</p>
+     * @param string $Clients <p>Client.</p>
+     * @param string $CurrentTime <p>Current system time.</p>
+     * @param integer $IsFederation <p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
+     * @param string $DeviceName <p>Device name.</p>
+     * @param string $ServiceClient <p>Service.</p>
+     * @param boolean $DisableApiTermination <p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
+     * @param integer $TradeVersion <p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
+     * @param string $ServicesStatus <p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
+     * @param string $Remark <p>Remarks.</p>
+     * @param string $SharedClusterId <p>Shared cluster ID.</p>
+     * @param string $SharedClusterIdDesc <p>Description of the shared cluster ID.</p>
+     * @param boolean $TimingResource <p>Whether it is a scheduled termination resource.</p>
+     * @param string $TkeClusterId <p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
+     * @param array $ConfigurableServices <p>Name list of services that can be configured when a new disk is mounted.</p>
+     * @param string $NodeMark <p>Node annotation information, which is currently only provided for the Terraform platform.</p>
+     * @param boolean $UnderwriteSetAutoRenew <p>Whether the committed use resource supports setting auto-renewal.</p>
+     * @param string $GpuDesc <p>GPU information.</p>
+     * @param array $DiskHealthIssues <p>Disk issue description.</p>
+     * @param string $NodeGroupId <p>ID of the node group where the node resides.</p>
+     * @param string $NodeGroupName <p>Name of the node group where the node resides.</p>
      */
     function __construct()
     {
@@ -792,6 +792,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("GpuDesc",$param) and $param["GpuDesc"] !== null) {
             $this->GpuDesc = $param["GpuDesc"];
+        }
+
+        if (array_key_exists("DiskHealthIssues",$param) and $param["DiskHealthIssues"] !== null) {
+            $this->DiskHealthIssues = [];
+            foreach ($param["DiskHealthIssues"] as $key => $value){
+                $obj = new DiskHealthIssue();
+                $obj->deserialize($value);
+                array_push($this->DiskHealthIssues, $obj);
+            }
+        }
+
+        if (array_key_exists("NodeGroupId",$param) and $param["NodeGroupId"] !== null) {
+            $this->NodeGroupId = $param["NodeGroupId"];
+        }
+
+        if (array_key_exists("NodeGroupName",$param) and $param["NodeGroupName"] !== null) {
+            $this->NodeGroupName = $param["NodeGroupName"];
         }
     }
 }

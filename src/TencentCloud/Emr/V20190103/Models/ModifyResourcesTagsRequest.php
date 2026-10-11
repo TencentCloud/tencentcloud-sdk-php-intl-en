@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourcesTags request structure.
  *
- * @method string getModifyType() Obtain Tag type. Valid values: Cluster and Node
- * @method void setModifyType(string $ModifyType) Set Tag type. Valid values: Cluster and Node
- * @method array getModifyResourceTagsInfoList() Obtain Tag information
- * @method void setModifyResourceTagsInfoList(array $ModifyResourceTagsInfoList) Set Tag information
+ * @method string getModifyType() Obtain Tag type. Valid values: Cluster and Node.
+ * @method void setModifyType(string $ModifyType) Set Tag type. Valid values: Cluster and Node.
+ * @method array getModifyResourceTagsInfoList() Obtain Tag information.
+ * @method void setModifyResourceTagsInfoList(array $ModifyResourceTagsInfoList) Set Tag information.
  */
 class ModifyResourcesTagsRequest extends AbstractModel
 {
     /**
-     * @var string Tag type. Valid values: Cluster and Node
+     * @var string Tag type. Valid values: Cluster and Node.
      */
     public $ModifyType;
 
     /**
-     * @var array Tag information
+     * @var array Tag information.
      */
     public $ModifyResourceTagsInfoList;
 
     /**
-     * @param string $ModifyType Tag type. Valid values: Cluster and Node
-     * @param array $ModifyResourceTagsInfoList Tag information
+     * @param string $ModifyType Tag type. Valid values: Cluster and Node.
+     * @param array $ModifyResourceTagsInfoList Tag information.
      */
     function __construct()
     {

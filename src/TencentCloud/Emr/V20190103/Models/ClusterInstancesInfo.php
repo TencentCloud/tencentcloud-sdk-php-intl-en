@@ -18,530 +18,406 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster instance information
+ * Cluster information.
  *
- * @method integer getId() Obtain ID.
- * @method void setId(integer $Id) Set ID.
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getFtitle() Obtain Title
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFtitle(string $Ftitle) Set Title
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getClusterName() Obtain Cluster name.
- * @method void setClusterName(string $ClusterName) Set Cluster name.
- * @method integer getRegionId() Obtain Region ID.
- * @method void setRegionId(integer $RegionId) Set Region ID.
- * @method integer getZoneId() Obtain Region ID.
- * @method void setZoneId(integer $ZoneId) Set Region ID.
- * @method integer getAppId() Obtain User AppID.
- * @method void setAppId(integer $AppId) Set User AppID.
- * @method string getUin() Obtain User UIN.
- * @method void setUin(string $Uin) Set User UIN.
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method integer getVpcId() Obtain Cluster VPCID.
- * @method void setVpcId(integer $VpcId) Set Cluster VPCID.
- * @method integer getSubnetId() Obtain Subnet ID.
- * @method void setSubnetId(integer $SubnetId) Set Subnet ID.
- * @method integer getStatus() Obtain Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
- * @method void setStatus(integer $Status) Set Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
- * @method string getAddTime() Obtain Adding time.
- * @method void setAddTime(string $AddTime) Set Adding time.
- * @method string getRunTime() Obtain Runtime.
- * @method void setRunTime(string $RunTime) Set Runtime.
- * @method EmrProductConfigOutter getConfig() Obtain Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConfig(EmrProductConfigOutter $Config) Set Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMasterIp() Obtain Public network IP address of the primary node.
- * @method void setMasterIp(string $MasterIp) Set Public network IP address of the primary node.
- * @method string getEmrVersion() Obtain EMR version.
- * @method void setEmrVersion(string $EmrVersion) Set EMR version.
- * @method integer getChargeType() Obtain Charge type.
- * @method void setChargeType(integer $ChargeType) Set Charge type.
- * @method integer getTradeVersion() Obtain Transaction version.
- * @method void setTradeVersion(integer $TradeVersion) Set Transaction version.
- * @method integer getResourceOrderId() Obtain Resource order ID.
- * @method void setResourceOrderId(integer $ResourceOrderId) Set Resource order ID.
- * @method integer getIsTradeCluster() Obtain Whether it is a billing cluster.
- * @method void setIsTradeCluster(integer $IsTradeCluster) Set Whether it is a billing cluster.
- * @method string getAlarmInfo() Obtain Alarm information of cluster error status.
- * @method void setAlarmInfo(string $AlarmInfo) Set Alarm information of cluster error status.
- * @method integer getIsWoodpeckerCluster() Obtain Whether to adopt new architecture.
- * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) Set Whether to adopt new architecture.
- * @method string getMetaDb() Obtain Metadatabase information.
- * @method void setMetaDb(string $MetaDb) Set Metadatabase information.
- * @method array getTags() Obtain Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getHiveMetaDb() Obtain Hive metadata information.
- * @method void setHiveMetaDb(string $HiveMetaDb) Set Hive metadata information.
- * @method string getServiceClass() Obtain Cluster type: EMR,CLICKHOUSE,DRUID.
- * @method void setServiceClass(string $ServiceClass) Set Cluster type: EMR,CLICKHOUSE,DRUID.
- * @method string getAliasInfo() Obtain Alias serialization of all nodes in the cluster.
- * @method void setAliasInfo(string $AliasInfo) Set Alias serialization of all nodes in the cluster.
- * @method integer getProductId() Obtain Cluster version ID.
- * @method void setProductId(integer $ProductId) Set Cluster version ID.
- * @method string getZone() Obtain Region ID.
- * @method void setZone(string $Zone) Set Region ID.
- * @method string getSceneName() Obtain Scenario name.
- * @method void setSceneName(string $SceneName) Set Scenario name.
- * @method string getSceneServiceClass() Obtain Scenario-based cluster type.
- * @method void setSceneServiceClass(string $SceneServiceClass) Set Scenario-based cluster type.
- * @method string getSceneEmrVersion() Obtain Scenario-based EMR version.
- * @method void setSceneEmrVersion(string $SceneEmrVersion) Set Scenario-based EMR version.
- * @method string getDisplayName() Obtain Scenario-based cluster type.
- * @method void setDisplayName(string $DisplayName) Set Scenario-based cluster type.
- * @method string getVpcName() Obtain vpc name
- * @method void setVpcName(string $VpcName) Set vpc name
- * @method string getSubnetName() Obtain subnet name
- * @method void setSubnetName(string $SubnetName) Set subnet name
- * @method array getClusterExternalServiceInfo() Obtain Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) Set Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getUniqVpcId() Obtain Cluster vpcid string type.
- * @method void setUniqVpcId(string $UniqVpcId) Set Cluster vpcid string type.
- * @method string getUniqSubnetId() Obtain Subnet ID string type.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID string type.
- * @method array getTopologyInfoList() Obtain Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTopologyInfoList(array $TopologyInfoList) Set Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getIsMultiZoneCluster() Obtain Whether it is a cross-AZ cluster.
- * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set Whether it is a cross-AZ cluster.
- * @method boolean getIsCvmReplace() Obtain Whether to enable automatic compensation for abnormal nodes.
- * @method void setIsCvmReplace(boolean $IsCvmReplace) Set Whether to enable automatic compensation for abnormal nodes.
- * @method string getClusterTitle() Obtain Title.
- * @method void setClusterTitle(string $ClusterTitle) Set Title.
- * @method EmrProductConfigDetail getConfigDetail() Obtain Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigDetail(EmrProductConfigDetail $ConfigDetail) Set Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBindFileSystemNum() Obtain Number of file systems bound to a cluster.
- * @method void setBindFileSystemNum(integer $BindFileSystemNum) Set Number of file systems bound to a cluster.
- * @method array getClusterRelationInfoList() Obtain Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterRelationInfoList(array $ClusterRelationInfoList) Set Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRedisId() Obtain Redis information.
- * @method void setRedisId(string $RedisId) Set Redis information.
+ * @method integer getId() Obtain <p>ID.</p>
+ * @method void setId(integer $Id) Set <p>ID.</p>
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getFtitle() Obtain <p>Title.</p>
+ * @method void setFtitle(string $Ftitle) Set <p>Title.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method integer getRegionId() Obtain <p>Region ID.</p>
+ * @method void setRegionId(integer $RegionId) Set <p>Region ID.</p>
+ * @method integer getZoneId() Obtain <p>Region ID.</p>
+ * @method void setZoneId(integer $ZoneId) Set <p>Region ID.</p>
+ * @method integer getAppId() Obtain <p>User APPID.</p>
+ * @method void setAppId(integer $AppId) Set <p>User APPID.</p>
+ * @method string getUin() Obtain <p>User UIN.</p>
+ * @method void setUin(string $Uin) Set <p>User UIN.</p>
+ * @method integer getProjectId() Obtain <p>Project ID.</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID.</p>
+ * @method integer getVpcId() Obtain <p>Cluster VPC ID.</p>
+ * @method void setVpcId(integer $VpcId) Set <p>Cluster VPC ID.</p>
+ * @method integer getSubnetId() Obtain <p>Subnet ID.</p>
+ * @method void setSubnetId(integer $SubnetId) Set <p>Subnet ID.</p>
+ * @method integer getStatus() Obtain <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
+ * @method void setStatus(integer $Status) Set <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
+ * @method string getAddTime() Obtain <p>Addition time.</p>
+ * @method void setAddTime(string $AddTime) Set <p>Addition time.</p>
+ * @method string getRunTime() Obtain <p>Execution duration.</p>
+ * @method void setRunTime(string $RunTime) Set <p>Execution duration.</p>
+ * @method EmrProductConfigOutter getConfig() Obtain <p>Cluster product configuration information.</p>
+ * @method void setConfig(EmrProductConfigOutter $Config) Set <p>Cluster product configuration information.</p>
+ * @method string getMasterIp() Obtain <p>Public IP address of the Master node.</p>
+ * @method void setMasterIp(string $MasterIp) Set <p>Public IP address of the Master node.</p>
+ * @method string getEmrVersion() Obtain <p>EMR version.</p>
+ * @method void setEmrVersion(string $EmrVersion) Set <p>EMR version.</p>
+ * @method integer getChargeType() Obtain <p>Billing mode.</p>
+ * @method void setChargeType(integer $ChargeType) Set <p>Billing mode.</p>
+ * @method integer getTradeVersion() Obtain <p>Transaction version.</p>
+ * @method void setTradeVersion(integer $TradeVersion) Set <p>Transaction version.</p>
+ * @method integer getResourceOrderId() Obtain <p>Resource order ID.</p>
+ * @method void setResourceOrderId(integer $ResourceOrderId) Set <p>Resource order ID.</p>
+ * @method integer getIsTradeCluster() Obtain <p>Whether it is a billable cluster.</p>
+ * @method void setIsTradeCluster(integer $IsTradeCluster) Set <p>Whether it is a billable cluster.</p>
+ * @method string getAlarmInfo() Obtain <p>Cluster error status alarm information.</p>
+ * @method void setAlarmInfo(string $AlarmInfo) Set <p>Cluster error status alarm information.</p>
+ * @method integer getIsWoodpeckerCluster() Obtain <p>Whether a new architecture is used.</p>
+ * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) Set <p>Whether a new architecture is used.</p>
+ * @method string getMetaDb() Obtain <p>Meta database information.</p>
+ * @method void setMetaDb(string $MetaDb) Set <p>Meta database information.</p>
+ * @method array getTags() Obtain <p>Tag information.</p>
+ * @method void setTags(array $Tags) Set <p>Tag information.</p>
+ * @method string getHiveMetaDb() Obtain <p>Hive metadata information.</p>
+ * @method void setHiveMetaDb(string $HiveMetaDb) Set <p>Hive metadata information.</p>
+ * @method string getServiceClass() Obtain <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
+ * @method void setServiceClass(string $ServiceClass) Set <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
+ * @method string getAliasInfo() Obtain <p>Serialization of the aliases of all nodes in the cluster.</p>
+ * @method void setAliasInfo(string $AliasInfo) Set <p>Serialization of the aliases of all nodes in the cluster.</p>
+ * @method integer getProductId() Obtain <p>Cluster version ID.</p>
+ * @method void setProductId(integer $ProductId) Set <p>Cluster version ID.</p>
+ * @method string getZone() Obtain <p>Region ID.</p>
+ * @method void setZone(string $Zone) Set <p>Region ID.</p>
+ * @method string getSceneName() Obtain <p>Scenario name.</p>
+ * @method void setSceneName(string $SceneName) Set <p>Scenario name.</p>
+ * @method string getSceneServiceClass() Obtain <p>Scenario-based cluster type.</p>
+ * @method void setSceneServiceClass(string $SceneServiceClass) Set <p>Scenario-based cluster type.</p>
+ * @method string getSceneEmrVersion() Obtain <p>Scenario-based EMR version.</p>
+ * @method void setSceneEmrVersion(string $SceneEmrVersion) Set <p>Scenario-based EMR version.</p>
+ * @method string getDisplayName() Obtain <p>Scenario-based cluster type.</p>
+ * @method void setDisplayName(string $DisplayName) Set <p>Scenario-based cluster type.</p>
+ * @method string getVpcName() Obtain <p>vpc name</p>
+ * @method void setVpcName(string $VpcName) Set <p>vpc name</p>
+ * @method string getSubnetName() Obtain <p>subnet name</p>
+ * @method void setSubnetName(string $SubnetName) Set <p>subnet name</p>
+ * @method array getClusterExternalServiceInfo() Obtain <p>Cluster dependency.</p>
+ * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) Set <p>Cluster dependency.</p>
+ * @method string getUniqVpcId() Obtain <p>Cluster VPC ID, string type.</p>
+ * @method void setUniqVpcId(string $UniqVpcId) Set <p>Cluster VPC ID, string type.</p>
+ * @method string getUniqSubnetId() Obtain <p>Subnet ID, string type.</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set <p>Subnet ID, string type.</p>
+ * @method array getTopologyInfoList() Obtain <p>Node information.</p>
+ * @method void setTopologyInfoList(array $TopologyInfoList) Set <p>Node information.</p>
+ * @method boolean getIsMultiZoneCluster() Obtain <p>Whether it is a cross-AZ cluster.</p>
+ * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set <p>Whether it is a cross-AZ cluster.</p>
+ * @method boolean getIsCvmReplace() Obtain <p>Whether automatic compensation for abnormal nodes is enabled.</p>
+ * @method void setIsCvmReplace(boolean $IsCvmReplace) Set <p>Whether automatic compensation for abnormal nodes is enabled.</p>
+ * @method string getClusterTitle() Obtain <p>Title.</p>
+ * @method void setClusterTitle(string $ClusterTitle) Set <p>Title.</p>
+ * @method EmrProductConfigDetail getConfigDetail() Obtain <p>Cluster product configuration information.</p>
+ * @method void setConfigDetail(EmrProductConfigDetail $ConfigDetail) Set <p>Cluster product configuration information.</p>
+ * @method integer getBindFileSystemNum() Obtain <p>Number of file systems bound to the cluster.</p>
+ * @method void setBindFileSystemNum(integer $BindFileSystemNum) Set <p>Number of file systems bound to the cluster.</p>
+ * @method array getClusterRelationInfoList() Obtain <p>Binding list of the RSS cluster.</p>
+ * @method void setClusterRelationInfoList(array $ClusterRelationInfoList) Set <p>Binding list of the RSS cluster.</p>
+ * @method string getRedisId() Obtain <p>Redis information.</p>
+ * @method void setRedisId(string $RedisId) Set <p>Redis information.</p>
+ * @method boolean getIsIOHungSelfRecovery() Obtain <p>Whether IO fault self-healing is enabled.</p>
+ * @method void setIsIOHungSelfRecovery(boolean $IsIOHungSelfRecovery) Set <p>Whether IO fault self-healing is enabled.</p>
+ * @method array getMetaDBGroupInfo() Obtain <p>Metadata information.</p>
+ * @method void setMetaDBGroupInfo(array $MetaDBGroupInfo) Set <p>Metadata information.</p>
  */
 class ClusterInstancesInfo extends AbstractModel
 {
     /**
-     * @var integer ID.
+     * @var integer <p>ID.</p>
      */
     public $Id;
 
     /**
-     * @var string Cluster ID.
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var string Title
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Title.</p>
      * @deprecated
      */
     public $Ftitle;
 
     /**
-     * @var string Cluster name.
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @var integer Region ID.
+     * @var integer <p>Region ID.</p>
      */
     public $RegionId;
 
     /**
-     * @var integer Region ID.
+     * @var integer <p>Region ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer User AppID.
+     * @var integer <p>User APPID.</p>
      */
     public $AppId;
 
     /**
-     * @var string User UIN.
+     * @var string <p>User UIN.</p>
      */
     public $Uin;
 
     /**
-     * @var integer Project ID.
+     * @var integer <p>Project ID.</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer Cluster VPCID.
+     * @var integer <p>Cluster VPC ID.</p>
      */
     public $VpcId;
 
     /**
-     * @var integer Subnet ID.
+     * @var integer <p>Subnet ID.</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
+     * @var integer <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
      */
     public $Status;
 
     /**
-     * @var string Adding time.
+     * @var string <p>Addition time.</p>
      */
     public $AddTime;
 
     /**
-     * @var string Runtime.
+     * @var string <p>Execution duration.</p>
      */
     public $RunTime;
 
     /**
-     * @var EmrProductConfigOutter Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var EmrProductConfigOutter <p>Cluster product configuration information.</p>
      * @deprecated
      */
     public $Config;
 
     /**
-     * @var string Public network IP address of the primary node.
+     * @var string <p>Public IP address of the Master node.</p>
      */
     public $MasterIp;
 
     /**
-     * @var string EMR version.
+     * @var string <p>EMR version.</p>
      */
     public $EmrVersion;
 
     /**
-     * @var integer Charge type.
+     * @var integer <p>Billing mode.</p>
      */
     public $ChargeType;
 
     /**
-     * @var integer Transaction version.
+     * @var integer <p>Transaction version.</p>
      */
     public $TradeVersion;
 
     /**
-     * @var integer Resource order ID.
+     * @var integer <p>Resource order ID.</p>
      */
     public $ResourceOrderId;
 
     /**
-     * @var integer Whether it is a billing cluster.
+     * @var integer <p>Whether it is a billable cluster.</p>
      */
     public $IsTradeCluster;
 
     /**
-     * @var string Alarm information of cluster error status.
+     * @var string <p>Cluster error status alarm information.</p>
      */
     public $AlarmInfo;
 
     /**
-     * @var integer Whether to adopt new architecture.
+     * @var integer <p>Whether a new architecture is used.</p>
      */
     public $IsWoodpeckerCluster;
 
     /**
-     * @var string Metadatabase information.
+     * @var string <p>Meta database information.</p>
      */
     public $MetaDb;
 
     /**
-     * @var array Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Tag information.</p>
      */
     public $Tags;
 
     /**
-     * @var string Hive metadata information.
+     * @var string <p>Hive metadata information.</p>
      */
     public $HiveMetaDb;
 
     /**
-     * @var string Cluster type: EMR,CLICKHOUSE,DRUID.
+     * @var string <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
      */
     public $ServiceClass;
 
     /**
-     * @var string Alias serialization of all nodes in the cluster.
+     * @var string <p>Serialization of the aliases of all nodes in the cluster.</p>
      */
     public $AliasInfo;
 
     /**
-     * @var integer Cluster version ID.
+     * @var integer <p>Cluster version ID.</p>
      */
     public $ProductId;
 
     /**
-     * @var string Region ID.
+     * @var string <p>Region ID.</p>
      */
     public $Zone;
 
     /**
-     * @var string Scenario name.
+     * @var string <p>Scenario name.</p>
      */
     public $SceneName;
 
     /**
-     * @var string Scenario-based cluster type.
+     * @var string <p>Scenario-based cluster type.</p>
      */
     public $SceneServiceClass;
 
     /**
-     * @var string Scenario-based EMR version.
+     * @var string <p>Scenario-based EMR version.</p>
      */
     public $SceneEmrVersion;
 
     /**
-     * @var string Scenario-based cluster type.
+     * @var string <p>Scenario-based cluster type.</p>
      */
     public $DisplayName;
 
     /**
-     * @var string vpc name
+     * @var string <p>vpc name</p>
      */
     public $VpcName;
 
     /**
-     * @var string subnet name
+     * @var string <p>subnet name</p>
      */
     public $SubnetName;
 
     /**
-     * @var array Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Cluster dependency.</p>
      */
     public $ClusterExternalServiceInfo;
 
     /**
-     * @var string Cluster vpcid string type.
+     * @var string <p>Cluster VPC ID, string type.</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string Subnet ID string type.
+     * @var string <p>Subnet ID, string type.</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var array Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array <p>Node information.</p>
      */
     public $TopologyInfoList;
 
     /**
-     * @var boolean Whether it is a cross-AZ cluster.
+     * @var boolean <p>Whether it is a cross-AZ cluster.</p>
      */
     public $IsMultiZoneCluster;
 
     /**
-     * @var boolean Whether to enable automatic compensation for abnormal nodes.
+     * @var boolean <p>Whether automatic compensation for abnormal nodes is enabled.</p>
      */
     public $IsCvmReplace;
 
     /**
-     * @var string Title.
+     * @var string <p>Title.</p>
      */
     public $ClusterTitle;
 
     /**
-     * @var EmrProductConfigDetail Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var EmrProductConfigDetail <p>Cluster product configuration information.</p>
      */
     public $ConfigDetail;
 
     /**
-     * @var integer Number of file systems bound to a cluster.
+     * @var integer <p>Number of file systems bound to the cluster.</p>
      */
     public $BindFileSystemNum;
 
     /**
-     * @var array Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Binding list of the RSS cluster.</p>
      */
     public $ClusterRelationInfoList;
 
     /**
-     * @var string Redis information.
+     * @var string <p>Redis information.</p>
      */
     public $RedisId;
 
     /**
-     * @param integer $Id ID.
-     * @param string $ClusterId Cluster ID.
-     * @param string $Ftitle Title
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ClusterName Cluster name.
-     * @param integer $RegionId Region ID.
-     * @param integer $ZoneId Region ID.
-     * @param integer $AppId User AppID.
-     * @param string $Uin User UIN.
-     * @param integer $ProjectId Project ID.
-     * @param integer $VpcId Cluster VPCID.
-     * @param integer $SubnetId Subnet ID.
-     * @param integer $Status Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
-     * @param string $AddTime Adding time.
-     * @param string $RunTime Runtime.
-     * @param EmrProductConfigOutter $Config Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MasterIp Public network IP address of the primary node.
-     * @param string $EmrVersion EMR version.
-     * @param integer $ChargeType Charge type.
-     * @param integer $TradeVersion Transaction version.
-     * @param integer $ResourceOrderId Resource order ID.
-     * @param integer $IsTradeCluster Whether it is a billing cluster.
-     * @param string $AlarmInfo Alarm information of cluster error status.
-     * @param integer $IsWoodpeckerCluster Whether to adopt new architecture.
-     * @param string $MetaDb Metadatabase information.
-     * @param array $Tags Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $HiveMetaDb Hive metadata information.
-     * @param string $ServiceClass Cluster type: EMR,CLICKHOUSE,DRUID.
-     * @param string $AliasInfo Alias serialization of all nodes in the cluster.
-     * @param integer $ProductId Cluster version ID.
-     * @param string $Zone Region ID.
-     * @param string $SceneName Scenario name.
-     * @param string $SceneServiceClass Scenario-based cluster type.
-     * @param string $SceneEmrVersion Scenario-based EMR version.
-     * @param string $DisplayName Scenario-based cluster type.
-     * @param string $VpcName vpc name
-     * @param string $SubnetName subnet name
-     * @param array $ClusterExternalServiceInfo Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $UniqVpcId Cluster vpcid string type.
-     * @param string $UniqSubnetId Subnet ID string type.
-     * @param array $TopologyInfoList Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $IsMultiZoneCluster Whether it is a cross-AZ cluster.
-     * @param boolean $IsCvmReplace Whether to enable automatic compensation for abnormal nodes.
-     * @param string $ClusterTitle Title.
-     * @param EmrProductConfigDetail $ConfigDetail Cluster product configuration information
+     * @var boolean <p>Whether IO fault self-healing is enabled.</p>
+     */
+    public $IsIOHungSelfRecovery;
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BindFileSystemNum Number of file systems bound to a cluster.
-     * @param array $ClusterRelationInfoList Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RedisId Redis information.
+    /**
+     * @var array <p>Metadata information.</p>
+     */
+    public $MetaDBGroupInfo;
+
+    /**
+     * @param integer $Id <p>ID.</p>
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $Ftitle <p>Title.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param integer $RegionId <p>Region ID.</p>
+     * @param integer $ZoneId <p>Region ID.</p>
+     * @param integer $AppId <p>User APPID.</p>
+     * @param string $Uin <p>User UIN.</p>
+     * @param integer $ProjectId <p>Project ID.</p>
+     * @param integer $VpcId <p>Cluster VPC ID.</p>
+     * @param integer $SubnetId <p>Subnet ID.</p>
+     * @param integer $Status <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
+     * @param string $AddTime <p>Addition time.</p>
+     * @param string $RunTime <p>Execution duration.</p>
+     * @param EmrProductConfigOutter $Config <p>Cluster product configuration information.</p>
+     * @param string $MasterIp <p>Public IP address of the Master node.</p>
+     * @param string $EmrVersion <p>EMR version.</p>
+     * @param integer $ChargeType <p>Billing mode.</p>
+     * @param integer $TradeVersion <p>Transaction version.</p>
+     * @param integer $ResourceOrderId <p>Resource order ID.</p>
+     * @param integer $IsTradeCluster <p>Whether it is a billable cluster.</p>
+     * @param string $AlarmInfo <p>Cluster error status alarm information.</p>
+     * @param integer $IsWoodpeckerCluster <p>Whether a new architecture is used.</p>
+     * @param string $MetaDb <p>Meta database information.</p>
+     * @param array $Tags <p>Tag information.</p>
+     * @param string $HiveMetaDb <p>Hive metadata information.</p>
+     * @param string $ServiceClass <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
+     * @param string $AliasInfo <p>Serialization of the aliases of all nodes in the cluster.</p>
+     * @param integer $ProductId <p>Cluster version ID.</p>
+     * @param string $Zone <p>Region ID.</p>
+     * @param string $SceneName <p>Scenario name.</p>
+     * @param string $SceneServiceClass <p>Scenario-based cluster type.</p>
+     * @param string $SceneEmrVersion <p>Scenario-based EMR version.</p>
+     * @param string $DisplayName <p>Scenario-based cluster type.</p>
+     * @param string $VpcName <p>vpc name</p>
+     * @param string $SubnetName <p>subnet name</p>
+     * @param array $ClusterExternalServiceInfo <p>Cluster dependency.</p>
+     * @param string $UniqVpcId <p>Cluster VPC ID, string type.</p>
+     * @param string $UniqSubnetId <p>Subnet ID, string type.</p>
+     * @param array $TopologyInfoList <p>Node information.</p>
+     * @param boolean $IsMultiZoneCluster <p>Whether it is a cross-AZ cluster.</p>
+     * @param boolean $IsCvmReplace <p>Whether automatic compensation for abnormal nodes is enabled.</p>
+     * @param string $ClusterTitle <p>Title.</p>
+     * @param EmrProductConfigDetail $ConfigDetail <p>Cluster product configuration information.</p>
+     * @param integer $BindFileSystemNum <p>Number of file systems bound to the cluster.</p>
+     * @param array $ClusterRelationInfoList <p>Binding list of the RSS cluster.</p>
+     * @param string $RedisId <p>Redis information.</p>
+     * @param boolean $IsIOHungSelfRecovery <p>Whether IO fault self-healing is enabled.</p>
+     * @param array $MetaDBGroupInfo <p>Metadata information.</p>
      */
     function __construct()
     {
@@ -764,6 +640,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RedisId",$param) and $param["RedisId"] !== null) {
             $this->RedisId = $param["RedisId"];
+        }
+
+        if (array_key_exists("IsIOHungSelfRecovery",$param) and $param["IsIOHungSelfRecovery"] !== null) {
+            $this->IsIOHungSelfRecovery = $param["IsIOHungSelfRecovery"];
+        }
+
+        if (array_key_exists("MetaDBGroupInfo",$param) and $param["MetaDBGroupInfo"] !== null) {
+            $this->MetaDBGroupInfo = [];
+            foreach ($param["MetaDBGroupInfo"] as $key => $value){
+                $obj = new CustomMetaDBInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaDBGroupInfo, $obj);
+            }
         }
     }
 }

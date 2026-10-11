@@ -18,36 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scheduled scaling of monthly recurring task policy
+ * Monthly repetition task policy for scheduled scaling.
  *
- * @method string getExecuteAtTimeOfDay() Obtain Specific time for repetition task execution, such as 01:02:00.
- * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) Set Specific time for repetition task execution, such as 01:02:00.
- * @method array getDaysOfMonthRange() Obtain Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDaysOfMonthRange(array $DaysOfMonthRange) Set Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExecuteAtTimeOfDay() Obtain Specific time for repetition task execution, for example, 01:02:00.
+ * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) Set Specific time for repetition task execution, for example, 01:02:00.
+ * @method array getDaysOfMonthRange() Obtain Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
+ * @method void setDaysOfMonthRange(array $DaysOfMonthRange) Set Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
  */
 class MonthRepeatStrategy extends AbstractModel
 {
     /**
-     * @var string Specific time for repetition task execution, such as 01:02:00.
+     * @var string Specific time for repetition task execution, for example, 01:02:00.
      */
     public $ExecuteAtTimeOfDay;
 
     /**
-     * @var array Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
      */
     public $DaysOfMonthRange;
 
     /**
-     * @param string $ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
-     * @param array $DaysOfMonthRange Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
+     * @param array $DaysOfMonthRange Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
      */
     function __construct()
     {

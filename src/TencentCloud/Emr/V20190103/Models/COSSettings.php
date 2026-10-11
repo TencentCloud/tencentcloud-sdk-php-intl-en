@@ -18,36 +18,36 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * COS-related configuration
+ * COS related configuration.
  *
- * @method string getCosSecretId() Obtain COS `SecretId`
- * @method void setCosSecretId(string $CosSecretId) Set COS `SecretId`
- * @method string getCosSecretKey() Obtain COS `SecrectKey`
- * @method void setCosSecretKey(string $CosSecretKey) Set COS `SecrectKey`
- * @method string getLogOnCosPath() Obtain COS path to log
- * @method void setLogOnCosPath(string $LogOnCosPath) Set COS path to log
+ * @method string getCosSecretId() Obtain COS SecretId
+ * @method void setCosSecretId(string $CosSecretId) Set COS SecretId
+ * @method string getCosSecretKey() Obtain COS SecrectKey
+ * @method void setCosSecretKey(string $CosSecretKey) Set COS SecrectKey
+ * @method string getLogOnCosPath() Obtain Log storage path on COS.
+ * @method void setLogOnCosPath(string $LogOnCosPath) Set Log storage path on COS.
  */
 class COSSettings extends AbstractModel
 {
     /**
-     * @var string COS `SecretId`
+     * @var string COS SecretId
      */
     public $CosSecretId;
 
     /**
-     * @var string COS `SecrectKey`
+     * @var string COS SecrectKey
      */
     public $CosSecretKey;
 
     /**
-     * @var string COS path to log
+     * @var string Log storage path on COS.
      */
     public $LogOnCosPath;
 
     /**
-     * @param string $CosSecretId COS `SecretId`
-     * @param string $CosSecretKey COS `SecrectKey`
-     * @param string $LogOnCosPath COS path to log
+     * @param string $CosSecretId COS SecretId
+     * @param string $CosSecretKey COS SecrectKey
+     * @param string $LogOnCosPath Log storage path on COS.
      */
     function __construct()
     {

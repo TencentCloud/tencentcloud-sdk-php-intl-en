@@ -18,76 +18,76 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource description
+ * Resource description.
  *
- * @method Resource getMasterResourceSpec() Obtain Describes master node resource
- * @method void setMasterResourceSpec(Resource $MasterResourceSpec) Set Describes master node resource
- * @method Resource getCoreResourceSpec() Obtain Describes core node resource
- * @method void setCoreResourceSpec(Resource $CoreResourceSpec) Set Describes core node resource
- * @method Resource getTaskResourceSpec() Obtain Describes task node resource
- * @method void setTaskResourceSpec(Resource $TaskResourceSpec) Set Describes task node resource
- * @method integer getMasterCount() Obtain Number of master nodes
- * @method void setMasterCount(integer $MasterCount) Set Number of master nodes
- * @method integer getCoreCount() Obtain Number of core nodes
- * @method void setCoreCount(integer $CoreCount) Set Number of core nodes
- * @method integer getTaskCount() Obtain Number of task nodes
- * @method void setTaskCount(integer $TaskCount) Set Number of task nodes
- * @method Resource getCommonResourceSpec() Obtain Describes common node resource
- * @method void setCommonResourceSpec(Resource $CommonResourceSpec) Set Describes common node resource
- * @method integer getCommonCount() Obtain Number of common nodes
- * @method void setCommonCount(integer $CommonCount) Set Number of common nodes
+ * @method Resource getMasterResourceSpec() Obtain Description of Master node resources.
+ * @method void setMasterResourceSpec(Resource $MasterResourceSpec) Set Description of Master node resources.
+ * @method Resource getCoreResourceSpec() Obtain Description of Core node resources.
+ * @method void setCoreResourceSpec(Resource $CoreResourceSpec) Set Description of Core node resources.
+ * @method Resource getTaskResourceSpec() Obtain Description of Task node resources.
+ * @method void setTaskResourceSpec(Resource $TaskResourceSpec) Set Description of Task node resources.
+ * @method integer getMasterCount() Obtain Number of Master nodes.
+ * @method void setMasterCount(integer $MasterCount) Set Number of Master nodes.
+ * @method integer getCoreCount() Obtain Number of Core nodes.
+ * @method void setCoreCount(integer $CoreCount) Set Number of Core nodes.
+ * @method integer getTaskCount() Obtain Number of Task nodes.
+ * @method void setTaskCount(integer $TaskCount) Set Number of Task nodes.
+ * @method Resource getCommonResourceSpec() Obtain Description of Common node resources.
+ * @method void setCommonResourceSpec(Resource $CommonResourceSpec) Set Description of Common node resources.
+ * @method integer getCommonCount() Obtain Number of Common nodes.
+ * @method void setCommonCount(integer $CommonCount) Set Number of Common nodes.
  */
 class NewResourceSpec extends AbstractModel
 {
     /**
-     * @var Resource Describes master node resource
+     * @var Resource Description of Master node resources.
      */
     public $MasterResourceSpec;
 
     /**
-     * @var Resource Describes core node resource
+     * @var Resource Description of Core node resources.
      */
     public $CoreResourceSpec;
 
     /**
-     * @var Resource Describes task node resource
+     * @var Resource Description of Task node resources.
      */
     public $TaskResourceSpec;
 
     /**
-     * @var integer Number of master nodes
+     * @var integer Number of Master nodes.
      */
     public $MasterCount;
 
     /**
-     * @var integer Number of core nodes
+     * @var integer Number of Core nodes.
      */
     public $CoreCount;
 
     /**
-     * @var integer Number of task nodes
+     * @var integer Number of Task nodes.
      */
     public $TaskCount;
 
     /**
-     * @var Resource Describes common node resource
+     * @var Resource Description of Common node resources.
      */
     public $CommonResourceSpec;
 
     /**
-     * @var integer Number of common nodes
+     * @var integer Number of Common nodes.
      */
     public $CommonCount;
 
     /**
-     * @param Resource $MasterResourceSpec Describes master node resource
-     * @param Resource $CoreResourceSpec Describes core node resource
-     * @param Resource $TaskResourceSpec Describes task node resource
-     * @param integer $MasterCount Number of master nodes
-     * @param integer $CoreCount Number of core nodes
-     * @param integer $TaskCount Number of task nodes
-     * @param Resource $CommonResourceSpec Describes common node resource
-     * @param integer $CommonCount Number of common nodes
+     * @param Resource $MasterResourceSpec Description of Master node resources.
+     * @param Resource $CoreResourceSpec Description of Core node resources.
+     * @param Resource $TaskResourceSpec Description of Task node resources.
+     * @param integer $MasterCount Number of Master nodes.
+     * @param integer $CoreCount Number of Core nodes.
+     * @param integer $TaskCount Number of Task nodes.
+     * @param Resource $CommonResourceSpec Description of Common node resources.
+     * @param integer $CommonCount Number of Common nodes.
      */
     function __construct()
     {

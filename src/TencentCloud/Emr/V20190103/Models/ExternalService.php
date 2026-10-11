@@ -18,44 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shared component information
+ * Shared component information.
  *
- * @method string getShareType() Obtain Shared component type, which can be EMR or CUSTOM
- * @method void setShareType(string $ShareType) Set Shared component type, which can be EMR or CUSTOM
- * @method array getCustomServiceDefineList() Obtain Custom parameters
- * @method void setCustomServiceDefineList(array $CustomServiceDefineList) Set Custom parameters
- * @method string getService() Obtain Shared component name
- * @method void setService(string $Service) Set Shared component name
- * @method string getInstanceId() Obtain Shared component cluster
- * @method void setInstanceId(string $InstanceId) Set Shared component cluster
+ * @method string getShareType() Obtain Shared component type. Valid values: EMR and CUSTOM.
+ * @method void setShareType(string $ShareType) Set Shared component type. Valid values: EMR and CUSTOM.
+ * @method string getService() Obtain Shared component name.
+ * @method void setService(string $Service) Set Shared component name.
+ * @method string getInstanceId() Obtain Shared component cluster.
+ * @method void setInstanceId(string $InstanceId) Set Shared component cluster.
+ * @method array getCustomServiceDefineList() Obtain Custom parameter collection.
+ * @method void setCustomServiceDefineList(array $CustomServiceDefineList) Set Custom parameter collection.
  */
 class ExternalService extends AbstractModel
 {
     /**
-     * @var string Shared component type, which can be EMR or CUSTOM
+     * @var string Shared component type. Valid values: EMR and CUSTOM.
      */
     public $ShareType;
 
     /**
-     * @var array Custom parameters
-     */
-    public $CustomServiceDefineList;
-
-    /**
-     * @var string Shared component name
+     * @var string Shared component name.
      */
     public $Service;
 
     /**
-     * @var string Shared component cluster
+     * @var string Shared component cluster.
      */
     public $InstanceId;
 
     /**
-     * @param string $ShareType Shared component type, which can be EMR or CUSTOM
-     * @param array $CustomServiceDefineList Custom parameters
-     * @param string $Service Shared component name
-     * @param string $InstanceId Shared component cluster
+     * @var array Custom parameter collection.
+     */
+    public $CustomServiceDefineList;
+
+    /**
+     * @param string $ShareType Shared component type. Valid values: EMR and CUSTOM.
+     * @param string $Service Shared component name.
+     * @param string $InstanceId Shared component cluster.
+     * @param array $CustomServiceDefineList Custom parameter collection.
      */
     function __construct()
     {
@@ -74,6 +74,14 @@ class ExternalService extends AbstractModel
             $this->ShareType = $param["ShareType"];
         }
 
+        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
+            $this->Service = $param["Service"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("CustomServiceDefineList",$param) and $param["CustomServiceDefineList"] !== null) {
             $this->CustomServiceDefineList = [];
             foreach ($param["CustomServiceDefineList"] as $key => $value){
@@ -81,14 +89,6 @@ class ExternalService extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CustomServiceDefineList, $obj);
             }
-        }
-
-        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
-            $this->Service = $param["Service"];
-        }
-
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

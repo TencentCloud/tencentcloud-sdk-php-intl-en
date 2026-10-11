@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * EMR product configuration.
  *
  * @method array getSoftInfo() Obtain Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSoftInfo(array $SoftInfo) Set Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMasterNodeSize() Obtain Number of Master nodes.
  * @method void setMasterNodeSize(integer $MasterNodeSize) Set Number of Master nodes.
  * @method integer getCoreNodeSize() Obtain Number of Core nodes.
@@ -32,32 +30,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTaskNodeSize(integer $TaskNodeSize) Set Number of Task nodes.
  * @method integer getComNodeSize() Obtain Number of Common nodes.
  * @method void setComNodeSize(integer $ComNodeSize) Set Number of Common nodes.
- * @method ResourceDetail getMasterResource() Obtain Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMasterResource(ResourceDetail $MasterResource) Set Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ResourceDetail getCoreResource() Obtain Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCoreResource(ResourceDetail $CoreResource) Set Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ResourceDetail getTaskResource() Obtain Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskResource(ResourceDetail $TaskResource) Set Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ResourceDetail getComResource() Obtain Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComResource(ResourceDetail $ComResource) Set Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getOnCos() Obtain Whether to use COS.
- * @method void setOnCos(boolean $OnCos) Set Whether to use COS.
+ * @method ResourceDetail getMasterResource() Obtain Master node resources.
+ * @method void setMasterResource(ResourceDetail $MasterResource) Set Master node resources.
+ * @method ResourceDetail getCoreResource() Obtain Core node resources.
+ * @method void setCoreResource(ResourceDetail $CoreResource) Set Core node resources.
+ * @method ResourceDetail getTaskResource() Obtain Task node resources.
+ * @method void setTaskResource(ResourceDetail $TaskResource) Set Task node resources.
+ * @method ResourceDetail getComResource() Obtain Common node resources.
+ * @method void setComResource(ResourceDetail $ComResource) Set Common node resources.
+ * @method boolean getOnCos() Obtain Whether COS is used.
+ * @method void setOnCos(boolean $OnCos) Set Whether COS is used.
  * @method integer getChargeType() Obtain Charge type.
  * @method void setChargeType(integer $ChargeType) Set Charge type.
  * @method integer getRouterNodeSize() Obtain Number of Router nodes.
@@ -68,14 +50,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSecurityOn(boolean $SecurityOn) Set Whether security mode is supported.
  * @method string getSecurityGroup() Obtain Security group name.
  * @method void setSecurityGroup(string $SecurityGroup) Set Security group name.
- * @method integer getCbsEncrypt() Obtain Whether to enable CBS encryption.
- * @method void setCbsEncrypt(integer $CbsEncrypt) Set Whether to enable CBS encryption.
+ * @method integer getCbsEncrypt() Obtain Whether CBS encryption is enabled.
+ * @method void setCbsEncrypt(integer $CbsEncrypt) Set Whether CBS encryption is enabled.
  * @method string getApplicationRole() Obtain Custom application role.
  * @method void setApplicationRole(string $ApplicationRole) Set Custom application role.
  * @method array getSecurityGroups() Obtain Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSecurityGroups(array $SecurityGroups) Set Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPublicKeyId() Obtain SSH key ID.
  * @method void setPublicKeyId(string $PublicKeyId) Set SSH key ID.
  */
@@ -83,7 +63,6 @@ class EmrProductConfigDetail extends AbstractModel
 {
     /**
      * @var array Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SoftInfo;
 
@@ -108,35 +87,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ComNodeSize;
 
     /**
-     * @var ResourceDetail Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ResourceDetail Master node resources.
      */
     public $MasterResource;
 
     /**
-     * @var ResourceDetail Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ResourceDetail Core node resources.
      */
     public $CoreResource;
 
     /**
-     * @var ResourceDetail Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ResourceDetail Task node resources.
      */
     public $TaskResource;
 
     /**
-     * @var ResourceDetail Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ResourceDetail Common node resources.
      */
     public $ComResource;
 
     /**
-     * @var boolean Whether to use COS.
+     * @var boolean Whether COS is used.
      */
     public $OnCos;
 
@@ -166,7 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SecurityGroup;
 
     /**
-     * @var integer Whether to enable CBS encryption.
+     * @var integer Whether CBS encryption is enabled.
      */
     public $CbsEncrypt;
 
@@ -177,7 +148,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SecurityGroups;
 
@@ -188,33 +158,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param array $SoftInfo Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MasterNodeSize Number of Master nodes.
      * @param integer $CoreNodeSize Number of Core nodes.
      * @param integer $TaskNodeSize Number of Task nodes.
      * @param integer $ComNodeSize Number of Common nodes.
-     * @param ResourceDetail $MasterResource Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceDetail $CoreResource Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceDetail $TaskResource Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceDetail $ComResource Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $OnCos Whether to use COS.
+     * @param ResourceDetail $MasterResource Master node resources.
+     * @param ResourceDetail $CoreResource Core node resources.
+     * @param ResourceDetail $TaskResource Task node resources.
+     * @param ResourceDetail $ComResource Common node resources.
+     * @param boolean $OnCos Whether COS is used.
      * @param integer $ChargeType Charge type.
      * @param integer $RouterNodeSize Number of Router nodes.
      * @param boolean $SupportHA Whether HA is supported.
      * @param boolean $SecurityOn Whether security mode is supported.
      * @param string $SecurityGroup Security group name.
-     * @param integer $CbsEncrypt Whether to enable CBS encryption.
+     * @param integer $CbsEncrypt Whether CBS encryption is enabled.
      * @param string $ApplicationRole Custom application role.
      * @param array $SecurityGroups Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PublicKeyId SSH key ID.
      */
     function __construct()

@@ -20,28 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Load metric condition.
  *
- * @method integer getStatisticPeriod() Obtain Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
- * @method void setStatisticPeriod(integer $StatisticPeriod) Set Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
- * @method integer getTriggerThreshold() Obtain Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
- * @method void setTriggerThreshold(integer $TriggerThreshold) Set Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+ * @method integer getStatisticPeriod() Obtain Rule statistics cycle. One, three, and five minutes are supported.
+ * @method void setStatisticPeriod(integer $StatisticPeriod) Set Rule statistics cycle. One, three, and five minutes are supported.
+ * @method integer getTriggerThreshold() Obtain Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
+ * @method void setTriggerThreshold(integer $TriggerThreshold) Set Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
  * @method string getLoadMetrics() Obtain Scaling load metric.
  * @method void setLoadMetrics(string $LoadMetrics) Set Scaling load metric.
  * @method integer getMetricId() Obtain Rule metadata record ID.
  * @method void setMetricId(integer $MetricId) Set Rule metadata record ID.
- * @method array getConditions() Obtain Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConditions(array $Conditions) Set Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getConditions() Obtain Triggering condition.
+ * @method void setConditions(array $Conditions) Set Triggering condition.
  */
 class LoadMetricsCondition extends AbstractModel
 {
     /**
-     * @var integer Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+     * @var integer Rule statistics cycle. One, three, and five minutes are supported.
      */
     public $StatisticPeriod;
 
     /**
-     * @var integer Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+     * @var integer Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
      */
     public $TriggerThreshold;
 
@@ -56,18 +54,16 @@ class LoadMetricsCondition extends AbstractModel
     public $MetricId;
 
     /**
-     * @var array Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Triggering condition.
      */
     public $Conditions;
 
     /**
-     * @param integer $StatisticPeriod Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
-     * @param integer $TriggerThreshold Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+     * @param integer $StatisticPeriod Rule statistics cycle. One, three, and five minutes are supported.
+     * @param integer $TriggerThreshold Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
      * @param string $LoadMetrics Scaling load metric.
      * @param integer $MetricId Rule metadata record ID.
-     * @param array $Conditions Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Conditions Triggering condition.
      */
     function __construct()
     {

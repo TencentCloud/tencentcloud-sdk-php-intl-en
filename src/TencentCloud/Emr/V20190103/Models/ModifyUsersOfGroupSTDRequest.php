@@ -20,80 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUsersOfGroupSTD request structure.
  *
- * @method string getInstanceId() Obtain Cluster name.
- * @method void setInstanceId(string $InstanceId) Set Cluster name.
- * @method string getGroup() Obtain User group name.
- * @method void setGroup(string $Group) Set User group name.
- * @method array getUsers() Obtain User list.
- * @method void setUsers(array $Users) Set User list.
- * @method string getDescription() Obtain User group description.
- * @method void setDescription(string $Description) Set User group description.
- * @method string getOperateAction() Obtain Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
- * @method void setOperateAction(string $OperateAction) Set Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
+ * @method string getInstanceId() Obtain <p>Cluster name.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Cluster name.</p>
+ * @method string getGroup() Obtain <p>User group name.</p>
+ * @method void setGroup(string $Group) Set <p>User group name.</p>
+ * @method array getUsers() Obtain <p>User list.</p>
+ * @method void setUsers(array $Users) Set <p>User list.</p>
+ * @method string getDescription() Obtain <p>User group description.</p>
+ * @method void setDescription(string $Description) Set <p>User group description.</p>
+ * @method string getOperateAction() Obtain <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
+ * @method void setOperateAction(string $OperateAction) Set <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
  */
 class ModifyUsersOfGroupSTDRequest extends AbstractModel
 {
     /**
-     * @var string Cluster name.
+     * @var string <p>Cluster name.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string User group name.
+     * @var string <p>User group name.</p>
      */
     public $Group;
 
     /**
-     * @var array User list.
+     * @var array <p>User list.</p>
      */
     public $Users;
 
     /**
-     * @var string User group description.
+     * @var string <p>User group description.</p>
      */
     public $Description;
 
     /**
-     * @var string Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
+     * @var string <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
      */
     public $OperateAction;
 
     /**
-     * @param string $InstanceId Cluster name.
-     * @param string $Group User group name.
-     * @param array $Users User list.
-     * @param string $Description User group description.
-     * @param string $OperateAction Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
+     * @param string $InstanceId <p>Cluster name.</p>
+     * @param string $Group <p>User group name.</p>
+     * @param array $Users <p>User list.</p>
+     * @param string $Description <p>User group description.</p>
+     * @param string $OperateAction <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
      */
     function __construct()
     {

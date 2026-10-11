@@ -18,96 +18,95 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource descriptions for container resource scale-out
+ * Resource description, which is used during a container resource scale-out.
  *
- * @method string getResourceProviderIdentifier() Obtain The identifier of an external resource provider, such as "cls-a1cd23fa".
- * @method void setResourceProviderIdentifier(string $ResourceProviderIdentifier) Set The identifier of an external resource provider, such as "cls-a1cd23fa".
- * @method string getResourceProviderType() Obtain The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
- * @method void setResourceProviderType(string $ResourceProviderType) Set The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
- * @method string getNodeFlag() Obtain The purpose of the resource, which means the node type and can only be "TASK".
- * @method void setNodeFlag(string $NodeFlag) Set The purpose of the resource, which means the node type and can only be "TASK".
- * @method integer getCpu() Obtain The number of CPUs.
- * @method void setCpu(integer $Cpu) Set The number of CPUs.
- * @method integer getMemory() Obtain The memory size in GB.
- * @method void setMemory(integer $Memory) Set The memory size in GB.
- * @method string getCpuType() Obtain The EKS cluster - CPU type. Valid values: `intel` and `amd`.
- * @method void setCpuType(string $CpuType) Set The EKS cluster - CPU type. Valid values: `intel` and `amd`.
- * @method array getPodVolumes() Obtain The data directory mounting information of the pod node.
- * @method void setPodVolumes(array $PodVolumes) Set The data directory mounting information of the pod node.
- * @method boolean getEnableDynamicSpecFlag() Obtain Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
- * @method void setEnableDynamicSpecFlag(boolean $EnableDynamicSpecFlag) Set Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
- * @method DynamicPodSpec getDynamicPodSpec() Obtain The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) Set The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain Unique ID of VPC network.
- * @method void setVpcId(string $VpcId) Set Unique ID of VPC network.
- * @method string getSubnetId() Obtain Unique ID of a VPC subnet.
- * @method void setSubnetId(string $SubnetId) Set Unique ID of a VPC subnet.
+ * @method string getResourceProviderIdentifier() Obtain Identifier of the external resource provider, for example, "cls-a1cd23fa".
+ * @method void setResourceProviderIdentifier(string $ResourceProviderIdentifier) Set Identifier of the external resource provider, for example, "cls-a1cd23fa".
+ * @method string getResourceProviderType() Obtain Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+ * @method void setResourceProviderType(string $ResourceProviderType) Set Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+ * @method string getNodeFlag() Obtain Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+ * @method void setNodeFlag(string $NodeFlag) Set Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+ * @method integer getCpu() Obtain Number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores.
+ * @method integer getMemory() Obtain Memory size (GB).
+ * @method void setMemory(integer $Memory) Set Memory size (GB).
+ * @method string getCpuType() Obtain CPU type for the EKS cluster, currently supporting intel and amd.
+ * @method void setCpuType(string $CpuType) Set CPU type for the EKS cluster, currently supporting intel and amd.
+ * @method array getPodVolumes() Obtain Mounting information of the node data directory on Pod.
+ * @method void setPodVolumes(array $PodVolumes) Set Mounting information of the node data directory on Pod.
+ * @method boolean getEnableDynamicSpecFlag() Obtain Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
+ * @method void setEnableDynamicSpecFlag(boolean $EnableDynamicSpecFlag) Set Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
+ * @method DynamicPodSpec getDynamicPodSpec() Obtain Floating specification.
+ * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) Set Floating specification.
+ * @method string getVpcId() Obtain Unique ID of the VPC.
+ * @method void setVpcId(string $VpcId) Set Unique ID of the VPC.
+ * @method string getSubnetId() Obtain Unique ID of the VPC subnet.
+ * @method void setSubnetId(string $SubnetId) Set Unique ID of the VPC subnet.
  * @method string getPodName() Obtain pod name
  * @method void setPodName(string $PodName) Set pod name
+ * @method OtherAccountInfo getOtherAccountInfo() Obtain Other account authorization information.
+ * @method void setOtherAccountInfo(OtherAccountInfo $OtherAccountInfo) Set Other account authorization information.
  */
 class PodNewSpec extends AbstractModel
 {
     /**
-     * @var string The identifier of an external resource provider, such as "cls-a1cd23fa".
+     * @var string Identifier of the external resource provider, for example, "cls-a1cd23fa".
      */
     public $ResourceProviderIdentifier;
 
     /**
-     * @var string The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
+     * @var string Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
      */
     public $ResourceProviderType;
 
     /**
-     * @var string The purpose of the resource, which means the node type and can only be "TASK".
+     * @var string Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
      */
     public $NodeFlag;
 
     /**
-     * @var integer The number of CPUs.
+     * @var integer Number of CPU cores.
      */
     public $Cpu;
 
     /**
-     * @var integer The memory size in GB.
+     * @var integer Memory size (GB).
      */
     public $Memory;
 
     /**
-     * @var string The EKS cluster - CPU type. Valid values: `intel` and `amd`.
+     * @var string CPU type for the EKS cluster, currently supporting intel and amd.
      */
     public $CpuType;
 
     /**
-     * @var array The data directory mounting information of the pod node.
+     * @var array Mounting information of the node data directory on Pod.
      */
     public $PodVolumes;
 
     /**
-     * @var boolean Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+     * @var boolean Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
      */
     public $EnableDynamicSpecFlag;
 
     /**
-     * @var DynamicPodSpec The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DynamicPodSpec Floating specification.
      */
     public $DynamicPodSpec;
 
     /**
-     * @var string Unique ID of VPC network.
+     * @var string Unique ID of the VPC.
      */
     public $VpcId;
 
     /**
-     * @var string Unique ID of a VPC subnet.
+     * @var string Unique ID of the VPC subnet.
      */
     public $SubnetId;
 
@@ -117,21 +116,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PodName;
 
     /**
-     * @param string $ResourceProviderIdentifier The identifier of an external resource provider, such as "cls-a1cd23fa".
-     * @param string $ResourceProviderType The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
-     * @param string $NodeFlag The purpose of the resource, which means the node type and can only be "TASK".
-     * @param integer $Cpu The number of CPUs.
-     * @param integer $Memory The memory size in GB.
-     * @param string $CpuType The EKS cluster - CPU type. Valid values: `intel` and `amd`.
-     * @param array $PodVolumes The data directory mounting information of the pod node.
-     * @param boolean $EnableDynamicSpecFlag Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
-     * @param DynamicPodSpec $DynamicPodSpec The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VpcId Unique ID of VPC network.
-     * @param string $SubnetId Unique ID of a VPC subnet.
+     * @var OtherAccountInfo Other account authorization information.
+     */
+    public $OtherAccountInfo;
+
+    /**
+     * @param string $ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
+     * @param string $ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+     * @param string $NodeFlag Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+     * @param integer $Cpu Number of CPU cores.
+     * @param integer $Memory Memory size (GB).
+     * @param string $CpuType CPU type for the EKS cluster, currently supporting intel and amd.
+     * @param array $PodVolumes Mounting information of the node data directory on Pod.
+     * @param boolean $EnableDynamicSpecFlag Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
+     * @param DynamicPodSpec $DynamicPodSpec Floating specification.
+     * @param string $VpcId Unique ID of the VPC.
+     * @param string $SubnetId Unique ID of the VPC subnet.
      * @param string $PodName pod name
+     * @param OtherAccountInfo $OtherAccountInfo Other account authorization information.
      */
     function __construct()
     {
@@ -198,6 +202,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
             $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("OtherAccountInfo",$param) and $param["OtherAccountInfo"] !== null) {
+            $this->OtherAccountInfo = new OtherAccountInfo();
+            $this->OtherAccountInfo->deserialize($param["OtherAccountInfo"]);
         }
     }
 }

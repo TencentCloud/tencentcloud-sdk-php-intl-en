@@ -18,26 +18,26 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description of Pod `PVC` storage method
+ * Description of the Pod PVC storage method.
  *
- * @method integer getDiskSize() Obtain Disk size in GB.
- * @method void setDiskSize(integer $DiskSize) Set Disk size in GB.
- * @method string getDiskType() Obtain Disk type, CLOUD_PREMIUM or CLOUD_SSD.
- * @method void setDiskType(string $DiskType) Set Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+ * @method integer getDiskSize() Obtain Disk size (GB).
+ * @method void setDiskSize(integer $DiskSize) Set Disk size (GB).
+ * @method string getDiskType() Obtain Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
+ * @method void setDiskType(string $DiskType) Set Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
  * @method integer getDiskNum() Obtain Number of disks.
  * @method void setDiskNum(integer $DiskNum) Set Number of disks.
- * @method integer getExtraPerformance() Obtain Additional performance of cloud disks.
- * @method void setExtraPerformance(integer $ExtraPerformance) Set Additional performance of cloud disks.
+ * @method integer getExtraPerformance() Obtain Cloud disk additional performance.
+ * @method void setExtraPerformance(integer $ExtraPerformance) Set Cloud disk additional performance.
  */
 class PersistentVolumeContext extends AbstractModel
 {
     /**
-     * @var integer Disk size in GB.
+     * @var integer Disk size (GB).
      */
     public $DiskSize;
 
     /**
-     * @var string Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+     * @var string Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
      */
     public $DiskType;
 
@@ -47,15 +47,15 @@ class PersistentVolumeContext extends AbstractModel
     public $DiskNum;
 
     /**
-     * @var integer Additional performance of cloud disks.
+     * @var integer Cloud disk additional performance.
      */
     public $ExtraPerformance;
 
     /**
-     * @param integer $DiskSize Disk size in GB.
-     * @param string $DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+     * @param integer $DiskSize Disk size (GB).
+     * @param string $DiskType Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
      * @param integer $DiskNum Number of disks.
-     * @param integer $ExtraPerformance Additional performance of cloud disks.
+     * @param integer $ExtraPerformance Cloud disk additional performance.
      */
     function __construct()
     {

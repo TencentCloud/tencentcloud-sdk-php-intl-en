@@ -18,36 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scheduled scaling-out of weekly recurring tasks policy
+ * Weekly repetition task policy for scheduled scale-outs.
  *
- * @method string getExecuteAtTimeOfDay() Obtain Specific time for repetition task execution, such as 01:02:00.
- * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) Set Specific time for repetition task execution, such as 01:02:00.
- * @method array getDaysOfWeek() Obtain Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDaysOfWeek(array $DaysOfWeek) Set Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExecuteAtTimeOfDay() Obtain Specific time for repetition task execution, for example, 01:02:00.
+ * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) Set Specific time for repetition task execution, for example, 01:02:00.
+ * @method array getDaysOfWeek() Obtain Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
+ * @method void setDaysOfWeek(array $DaysOfWeek) Set Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
  */
 class WeekRepeatStrategy extends AbstractModel
 {
     /**
-     * @var string Specific time for repetition task execution, such as 01:02:00.
+     * @var string Specific time for repetition task execution, for example, 01:02:00.
      */
     public $ExecuteAtTimeOfDay;
 
     /**
-     * @var array Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
      */
     public $DaysOfWeek;
 
     /**
-     * @param string $ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
-     * @param array $DaysOfWeek Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
+     * @param array $DaysOfWeek Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Price details by AZ, used for creating the cluster price list
+ * Price list for cluster creation, which contains price details in different AZs.
  *
- * @method string getZoneId() Obtain Availability zone ID.
- * @method void setZoneId(string $ZoneId) Set Availability zone ID.
- * @method array getNodeDetailPrice() Obtain Price details by node
- * @method void setNodeDetailPrice(array $NodeDetailPrice) Set Price details by node
+ * @method string getZoneId() Obtain AZ ID.
+ * @method void setZoneId(string $ZoneId) Set AZ ID.
+ * @method array getNodeDetailPrice() Obtain Price details for different nodes.
+ * @method void setNodeDetailPrice(array $NodeDetailPrice) Set Price details for different nodes.
  */
 class ZoneDetailPriceResult extends AbstractModel
 {
     /**
-     * @var string Availability zone ID.
+     * @var string AZ ID.
      */
     public $ZoneId;
 
     /**
-     * @var array Price details by node
+     * @var array Price details for different nodes.
      */
     public $NodeDetailPrice;
 
     /**
-     * @param string $ZoneId Availability zone ID.
-     * @param array $NodeDetailPrice Price details by node
+     * @param string $ZoneId AZ ID.
+     * @param array $NodeDetailPrice Price details for different nodes.
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRootSize(integer $RootSize) Set System disk size.
  * @method integer getMemSize() Obtain Memory size.
  * @method void setMemSize(integer $MemSize) Set Memory size.
- * @method integer getCpu() Obtain Number of CPUs.
- * @method void setCpu(integer $Cpu) Set Number of CPUs.
+ * @method integer getCpu() Obtain Number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores.
  * @method integer getDiskSize() Obtain Hard disk size.
  * @method void setDiskSize(integer $DiskSize) Set Hard disk size.
  * @method string getInstanceType() Obtain Specifications.
@@ -72,7 +72,7 @@ class ResourceDetail extends AbstractModel
     public $MemSize;
 
     /**
-     * @var integer Number of CPUs.
+     * @var integer Number of CPU cores.
      */
     public $Cpu;
 
@@ -93,7 +93,7 @@ class ResourceDetail extends AbstractModel
      * @param string $DiskType Hard disk type.
      * @param integer $RootSize System disk size.
      * @param integer $MemSize Memory size.
-     * @param integer $Cpu Number of CPUs.
+     * @param integer $Cpu Number of CPU cores.
      * @param integer $DiskSize Hard disk size.
      * @param string $InstanceType Specifications.
      */

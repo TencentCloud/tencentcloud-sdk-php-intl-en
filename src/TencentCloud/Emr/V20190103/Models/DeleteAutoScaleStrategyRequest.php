@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getStrategyType() Obtain Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
- * @method void setStrategyType(integer $StrategyType) Set Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+ * @method integer getStrategyType() Obtain Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
+ * @method void setStrategyType(integer $StrategyType) Set Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
  * @method integer getStrategyId() Obtain Rule ID.
  * @method void setStrategyId(integer $StrategyId) Set Rule ID.
  * @method integer getGroupId() Obtain Scaling group ID.
@@ -37,7 +37,7 @@ class DeleteAutoScaleStrategyRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+     * @var integer Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
      */
     public $StrategyType;
 
@@ -53,7 +53,7 @@ class DeleteAutoScaleStrategyRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param integer $StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+     * @param integer $StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
      * @param integer $StrategyId Rule ID.
      * @param integer $GroupId Scaling group ID.
      */

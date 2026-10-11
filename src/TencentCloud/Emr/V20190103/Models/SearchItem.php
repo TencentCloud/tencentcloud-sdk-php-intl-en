@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Search field
+ * Searching field.
  *
  * @method string getSearchType() Obtain Searchable type.
  * @method void setSearchType(string $SearchType) Set Searchable type.

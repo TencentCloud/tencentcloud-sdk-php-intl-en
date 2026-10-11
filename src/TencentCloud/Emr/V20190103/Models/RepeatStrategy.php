@@ -18,36 +18,20 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scheduled scaling task policy
+ * Scheduled scaling task policy.
  *
  * @method string getRepeatType() Obtain The valid values DAY, DOW, DOM, and NONE respectively indicate repetition by day, repetition by week, repetition by month, and one-time execution. This parameter is required.
  * @method void setRepeatType(string $RepeatType) Set The valid values DAY, DOW, DOM, and NONE respectively indicate repetition by day, repetition by week, repetition by month, and one-time execution. This parameter is required.
- * @method DayRepeatStrategy getDayRepeat() Obtain Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDayRepeat(DayRepeatStrategy $DayRepeat) Set Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method WeekRepeatStrategy getWeekRepeat() Obtain Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWeekRepeat(WeekRepeatStrategy $WeekRepeat) Set Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MonthRepeatStrategy getMonthRepeat() Obtain Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonthRepeat(MonthRepeatStrategy $MonthRepeat) Set Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method NotRepeatStrategy getNotRepeat() Obtain One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNotRepeat(NotRepeatStrategy $NotRepeat) Set One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpire() Obtain Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
- * @method void setExpire(string $Expire) Set Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+ * @method DayRepeatStrategy getDayRepeat() Obtain Daily repetition rule, effective when RepeatType is set to DAY.
+ * @method void setDayRepeat(DayRepeatStrategy $DayRepeat) Set Daily repetition rule, effective when RepeatType is set to DAY.
+ * @method WeekRepeatStrategy getWeekRepeat() Obtain Weekly repetition rule, effective when RepeatType is set to DOW.
+ * @method void setWeekRepeat(WeekRepeatStrategy $WeekRepeat) Set Weekly repetition rule, effective when RepeatType is set to DOW.
+ * @method MonthRepeatStrategy getMonthRepeat() Obtain Monthly repetition rule, effective when RepeatType is set to DOM.
+ * @method void setMonthRepeat(MonthRepeatStrategy $MonthRepeat) Set Monthly repetition rule, effective when RepeatType is set to DOM.
+ * @method NotRepeatStrategy getNotRepeat() Obtain One-time execution rule, effective when RepeatType is set to NONE.
+ * @method void setNotRepeat(NotRepeatStrategy $NotRepeat) Set One-time execution rule, effective when RepeatType is set to NONE.
+ * @method string getExpire() Obtain Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
+ * @method void setExpire(string $Expire) Set Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
  * @method string getStartTime() Obtain Periodic rule start time.
  * @method void setStartTime(string $StartTime) Set Periodic rule start time.
  */
@@ -59,35 +43,27 @@ class RepeatStrategy extends AbstractModel
     public $RepeatType;
 
     /**
-     * @var DayRepeatStrategy Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DayRepeatStrategy Daily repetition rule, effective when RepeatType is set to DAY.
      */
     public $DayRepeat;
 
     /**
-     * @var WeekRepeatStrategy Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var WeekRepeatStrategy Weekly repetition rule, effective when RepeatType is set to DOW.
      */
     public $WeekRepeat;
 
     /**
-     * @var MonthRepeatStrategy Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MonthRepeatStrategy Monthly repetition rule, effective when RepeatType is set to DOM.
      */
     public $MonthRepeat;
 
     /**
-     * @var NotRepeatStrategy One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var NotRepeatStrategy One-time execution rule, effective when RepeatType is set to NONE.
      */
     public $NotRepeat;
 
     /**
-     * @var string Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+     * @var string Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
      */
     public $Expire;
 
@@ -98,19 +74,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $RepeatType The valid values DAY, DOW, DOM, and NONE respectively indicate repetition by day, repetition by week, repetition by month, and one-time execution. This parameter is required.
-     * @param DayRepeatStrategy $DayRepeat Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WeekRepeatStrategy $WeekRepeat Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonthRepeatStrategy $MonthRepeat Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NotRepeatStrategy $NotRepeat One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Expire Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+     * @param DayRepeatStrategy $DayRepeat Daily repetition rule, effective when RepeatType is set to DAY.
+     * @param WeekRepeatStrategy $WeekRepeat Weekly repetition rule, effective when RepeatType is set to DOW.
+     * @param MonthRepeatStrategy $MonthRepeat Monthly repetition rule, effective when RepeatType is set to DOM.
+     * @param NotRepeatStrategy $NotRepeat One-time execution rule, effective when RepeatType is set to NONE.
+     * @param string $Expire Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
      * @param string $StartTime Periodic rule start time.
      */
     function __construct()

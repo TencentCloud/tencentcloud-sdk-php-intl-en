@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The services to operate on
+ * Scope of service operations.
  *
- * @method string getServiceName() Obtain The service name (required), such as HDFS.
- * @method void setServiceName(string $ServiceName) Set The service name (required), such as HDFS.
- * @method array getComponentInfoList() Obtain If it is left empty, all processes will be operated on.
- * @method void setComponentInfoList(array $ComponentInfoList) Set If it is left empty, all processes will be operated on.
+ * @method string getServiceName() Obtain Service name, required. Example: HDFS.
+ * @method void setServiceName(string $ServiceName) Set Service name, required. Example: HDFS.
+ * @method array getComponentInfoList() Obtain If not provided, it indicates all processes.
+ * @method void setComponentInfoList(array $ComponentInfoList) Set If not provided, it indicates all processes.
  */
 class ServiceBasicRestartInfo extends AbstractModel
 {
     /**
-     * @var string The service name (required), such as HDFS.
+     * @var string Service name, required. Example: HDFS.
      */
     public $ServiceName;
 
     /**
-     * @var array If it is left empty, all processes will be operated on.
+     * @var array If not provided, it indicates all processes.
      */
     public $ComponentInfoList;
 
     /**
-     * @param string $ServiceName The service name (required), such as HDFS.
-     * @param array $ComponentInfoList If it is left empty, all processes will be operated on.
+     * @param string $ServiceName Service name, required. Example: HDFS.
+     * @param array $ComponentInfoList If not provided, it indicates all processes.
      */
     function __construct()
     {

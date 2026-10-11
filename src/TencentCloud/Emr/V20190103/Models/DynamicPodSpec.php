@@ -18,44 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pod floating specification
+ * Pod floating specifications
  *
- * @method float getRequestCpu() Obtain Minimum number of CPUs
- * @method void setRequestCpu(float $RequestCpu) Set Minimum number of CPUs
- * @method float getLimitCpu() Obtain Maximum number of CPUs
- * @method void setLimitCpu(float $LimitCpu) Set Maximum number of CPUs
- * @method float getRequestMemory() Obtain Minimum memory in MB
- * @method void setRequestMemory(float $RequestMemory) Set Minimum memory in MB
- * @method float getLimitMemory() Obtain Maximum memory in MB
- * @method void setLimitMemory(float $LimitMemory) Set Maximum memory in MB
+ * @method float getRequestCpu() Obtain Minimum number of required CPU cores.
+ * @method void setRequestCpu(float $RequestCpu) Set Minimum number of required CPU cores.
+ * @method float getLimitCpu() Obtain Maximum number of required CPU cores.
+ * @method void setLimitCpu(float $LimitCpu) Set Maximum number of required CPU cores.
+ * @method float getRequestMemory() Obtain Minimum required memory capacity (MB).
+ * @method void setRequestMemory(float $RequestMemory) Set Minimum required memory capacity (MB).
+ * @method float getLimitMemory() Obtain Maximum required memory capacity (MB).
+ * @method void setLimitMemory(float $LimitMemory) Set Maximum required memory capacity (MB).
  */
 class DynamicPodSpec extends AbstractModel
 {
     /**
-     * @var float Minimum number of CPUs
+     * @var float Minimum number of required CPU cores.
      */
     public $RequestCpu;
 
     /**
-     * @var float Maximum number of CPUs
+     * @var float Maximum number of required CPU cores.
      */
     public $LimitCpu;
 
     /**
-     * @var float Minimum memory in MB
+     * @var float Minimum required memory capacity (MB).
      */
     public $RequestMemory;
 
     /**
-     * @var float Maximum memory in MB
+     * @var float Maximum required memory capacity (MB).
      */
     public $LimitMemory;
 
     /**
-     * @param float $RequestCpu Minimum number of CPUs
-     * @param float $LimitCpu Maximum number of CPUs
-     * @param float $RequestMemory Minimum memory in MB
-     * @param float $LimitMemory Maximum memory in MB
+     * @param float $RequestCpu Minimum number of required CPU cores.
+     * @param float $LimitCpu Maximum number of required CPU cores.
+     * @param float $RequestMemory Minimum required memory capacity (MB).
+     * @param float $LimitMemory Maximum required memory capacity (MB).
      */
     function __construct()
     {

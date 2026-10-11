@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientIP(string $ClientIP) Set Submission IP address.
  * @method integer getCPUCost() Obtain Total CPU time (ns).
  * @method void setCPUCost(integer $CPUCost) Set Total CPU time (ns).
- * @method string getDefaultDB() Obtain Default DB.
- * @method void setDefaultDB(string $DefaultDB) Set Default DB.
+ * @method string getDefaultDB() Obtain Default database.
+ * @method void setDefaultDB(string $DefaultDB) Set Default database.
  * @method integer getEndTime() Obtain End time.
  * @method void setEndTime(integer $EndTime) Set End time.
  * @method string getExecutionIP() Obtain Execution IP address.
@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryType(string $QueryType) Set Query type.
  * @method integer getMemCost() Obtain Total memory consumed (bytes).
  * @method void setMemCost(integer $MemCost) Set Total memory consumed (bytes).
- * @method integer getPlanCpuCosts() Obtain CPU usage (ns) at the plan stage.
- * @method void setPlanCpuCosts(integer $PlanCpuCosts) Set CPU usage (ns) at the plan stage.
- * @method integer getPlanMemCosts() Obtain Memory usage (bytes) at the plan stage.
- * @method void setPlanMemCosts(integer $PlanMemCosts) Set Memory usage (bytes) at the plan stage.
+ * @method integer getPlanCpuCosts() Obtain CPU consumption in the plan phase (ns).
+ * @method void setPlanCpuCosts(integer $PlanCpuCosts) Set CPU consumption in the plan phase (ns).
+ * @method integer getPlanMemCosts() Obtain Memory consumption in the plan phase (bytes).
+ * @method void setPlanMemCosts(integer $PlanMemCosts) Set Memory consumption in the plan phase (bytes).
  * @method integer getQueryTime() Obtain Execution duration.
  * @method void setQueryTime(integer $QueryTime) Set Execution duration.
  * @method string getResourceGroup() Obtain Resource group.
@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionStatement(string $ExecutionStatement) Set Execution statement.
  * @method string getUser() Obtain User.
  * @method void setUser(string $User) Set User.
+ * @method string getErrorCode() Obtain Error code.
+ * @method void setErrorCode(string $ErrorCode) Set Error code.
  */
 class StarRocksQueryInfo extends AbstractModel
 {
@@ -72,7 +74,7 @@ class StarRocksQueryInfo extends AbstractModel
     public $CPUCost;
 
     /**
-     * @var string Default DB.
+     * @var string Default database.
      */
     public $DefaultDB;
 
@@ -102,12 +104,12 @@ class StarRocksQueryInfo extends AbstractModel
     public $MemCost;
 
     /**
-     * @var integer CPU usage (ns) at the plan stage.
+     * @var integer CPU consumption in the plan phase (ns).
      */
     public $PlanCpuCosts;
 
     /**
-     * @var integer Memory usage (bytes) at the plan stage.
+     * @var integer Memory consumption in the plan phase (bytes).
      */
     public $PlanMemCosts;
 
@@ -157,16 +159,21 @@ class StarRocksQueryInfo extends AbstractModel
     public $User;
 
     /**
+     * @var string Error code.
+     */
+    public $ErrorCode;
+
+    /**
      * @param string $ClientIP Submission IP address.
      * @param integer $CPUCost Total CPU time (ns).
-     * @param string $DefaultDB Default DB.
+     * @param string $DefaultDB Default database.
      * @param integer $EndTime End time.
      * @param string $ExecutionIP Execution IP address.
      * @param string $QueryID Query ID.
      * @param string $QueryType Query type.
      * @param integer $MemCost Total memory consumed (bytes).
-     * @param integer $PlanCpuCosts CPU usage (ns) at the plan stage.
-     * @param integer $PlanMemCosts Memory usage (bytes) at the plan stage.
+     * @param integer $PlanCpuCosts CPU consumption in the plan phase (ns).
+     * @param integer $PlanMemCosts Memory consumption in the plan phase (bytes).
      * @param integer $QueryTime Execution duration.
      * @param string $ResourceGroup Resource group.
      * @param integer $ReturnRows Number of rows obtained.
@@ -176,6 +183,7 @@ class StarRocksQueryInfo extends AbstractModel
      * @param string $ExecutionState Execution status.
      * @param string $ExecutionStatement Execution statement.
      * @param string $User User.
+     * @param string $ErrorCode Error code.
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class StarRocksQueryInfo extends AbstractModel
 
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = $param["User"];
+        }
+
+        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
+            $this->ErrorCode = $param["ErrorCode"];
         }
     }
 }

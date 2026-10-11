@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom query filter of the EMR cluster instance list
+ * Custom query filter for instances in the EMR cluster list.
  *
- * @method string getName() Obtain Field name
- * @method void setName(string $Name) Set Field name
- * @method array getValues() Obtain Filters by the field value
- * @method void setValues(array $Values) Set Filters by the field value
+ * @method string getName() Obtain Field name.
+ * @method void setName(string $Name) Set Field name.
+ * @method array getValues() Obtain Filter field value.
+ * @method void setValues(array $Values) Set Filter field value.
  */
 class Filters extends AbstractModel
 {
     /**
-     * @var string Field name
+     * @var string Field name.
      */
     public $Name;
 
     /**
-     * @var array Filters by the field value
+     * @var array Filter field value.
      */
     public $Values;
 
     /**
-     * @param string $Name Field name
-     * @param array $Values Filters by the field value
+     * @param string $Name Field name.
+     * @param array $Values Filter field value.
      */
     function __construct()
     {

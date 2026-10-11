@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AZ configuration description.
  *
- * @method string getZone() Obtain Availability zone name
- * @method void setZone(string $Zone) Set Availability zone name
+ * @method string getZone() Obtain AZ name.
+ * @method void setZone(string $Zone) Set AZ name.
  * @method VPCSettings getVPCSettings() Obtain AZ VPC and subnet.
  * @method void setVPCSettings(VPCSettings $VPCSettings) Set AZ VPC and subnet.
  * @method integer getNodeNum() Obtain Number of AZ nodes.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ZoneSetting extends AbstractModel
 {
     /**
-     * @var string Availability zone name
+     * @var string AZ name.
      */
     public $Zone;
 
@@ -45,7 +45,7 @@ class ZoneSetting extends AbstractModel
     public $NodeNum;
 
     /**
-     * @param string $Zone Availability zone name
+     * @param string $Zone AZ name.
      * @param VPCSettings $VPCSettings AZ VPC and subnet.
      * @param integer $NodeNum Number of AZ nodes.
      */

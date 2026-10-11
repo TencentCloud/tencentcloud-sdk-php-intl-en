@@ -18,47 +18,47 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Return of HBase TableMetric overview
+ * Return of the HBase TableMetric overview.
  *
- * @method string getTable() Obtain Table name
- * @method void setTable(string $Table) Set Table name
- * @method float getReadRequestCount() Obtain Number of read requests
- * @method void setReadRequestCount(float $ReadRequestCount) Set Number of read requests
- * @method float getWriteRequestCount() Obtain Number of write requests
- * @method void setWriteRequestCount(float $WriteRequestCount) Set Number of write requests
- * @method float getMemstoreSize() Obtain Current memstore size
- * @method void setMemstoreSize(float $MemstoreSize) Set Current memstore size
- * @method float getStoreFileSize() Obtain Size of StoreFile in the current region
- * @method void setStoreFileSize(float $StoreFileSize) Set Size of StoreFile in the current region
+ * @method string getTable() Obtain Table name.
+ * @method void setTable(string $Table) Set Table name.
+ * @method float getReadRequestCount() Obtain Number of read requests.
+ * @method void setReadRequestCount(float $ReadRequestCount) Set Number of read requests.
+ * @method float getWriteRequestCount() Obtain Number of write requests.
+ * @method void setWriteRequestCount(float $WriteRequestCount) Set Number of write requests.
+ * @method float getMemstoreSize() Obtain Size of the current MemStore.
+ * @method void setMemstoreSize(float $MemstoreSize) Set Size of the current MemStore.
+ * @method float getStoreFileSize() Obtain Size of the StoreFile in the current region.
+ * @method void setStoreFileSize(float $StoreFileSize) Set Size of the StoreFile in the current region.
  * @method string getOperation() Obtain Regions. Click to jump.
  * @method void setOperation(string $Operation) Set Regions. Click to jump.
- * @method float getStoreFileNum() Obtain StoreFile quantity. 
- * @method void setStoreFileNum(float $StoreFileNum) Set StoreFile quantity. 
+ * @method float getStoreFileNum() Obtain Number of StoreFiles.
+ * @method void setStoreFileNum(float $StoreFileNum) Set Number of StoreFiles.
  */
 class OverviewRow extends AbstractModel
 {
     /**
-     * @var string Table name
+     * @var string Table name.
      */
     public $Table;
 
     /**
-     * @var float Number of read requests
+     * @var float Number of read requests.
      */
     public $ReadRequestCount;
 
     /**
-     * @var float Number of write requests
+     * @var float Number of write requests.
      */
     public $WriteRequestCount;
 
     /**
-     * @var float Current memstore size
+     * @var float Size of the current MemStore.
      */
     public $MemstoreSize;
 
     /**
-     * @var float Size of StoreFile in the current region
+     * @var float Size of the StoreFile in the current region.
      */
     public $StoreFileSize;
 
@@ -68,18 +68,18 @@ class OverviewRow extends AbstractModel
     public $Operation;
 
     /**
-     * @var float StoreFile quantity. 
+     * @var float Number of StoreFiles.
      */
     public $StoreFileNum;
 
     /**
-     * @param string $Table Table name
-     * @param float $ReadRequestCount Number of read requests
-     * @param float $WriteRequestCount Number of write requests
-     * @param float $MemstoreSize Current memstore size
-     * @param float $StoreFileSize Size of StoreFile in the current region
+     * @param string $Table Table name.
+     * @param float $ReadRequestCount Number of read requests.
+     * @param float $WriteRequestCount Number of write requests.
+     * @param float $MemstoreSize Size of the current MemStore.
+     * @param float $StoreFileSize Size of the StoreFile in the current region.
      * @param string $Operation Regions. Click to jump.
-     * @param float $StoreFileNum StoreFile quantity. 
+     * @param float $StoreFileNum Number of StoreFiles.
      */
     function __construct()
     {

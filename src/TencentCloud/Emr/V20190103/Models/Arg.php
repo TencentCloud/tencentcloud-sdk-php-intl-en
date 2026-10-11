@@ -18,16 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * General parameters
+ * General parameters.
  *
  * @method string getKey() Obtain key
  * @method void setKey(string $Key) Set key
- * @method array getValues() Obtain Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValues(array $Values) Set Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getValues() Obtain Value list.
+ * @method void setValues(array $Values) Set Value list.
  */
 class Arg extends AbstractModel
 {
@@ -37,17 +33,13 @@ class Arg extends AbstractModel
     public $Key;
 
     /**
-     * @var array Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Value list.
      */
     public $Values;
 
     /**
      * @param string $Key key
-     * @param array $Values Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Values Value list.
      */
     function __construct()
     {

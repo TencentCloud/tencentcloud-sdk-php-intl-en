@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGroupsSTD request structure.
  *
- * @method string getInstanceId() Obtain Cluster name.
- * @method void setInstanceId(string $InstanceId) Set Cluster name.
- * @method array getGroupNames() Obtain User group name array.
- * @method void setGroupNames(array $GroupNames) Set User group name array.
+ * @method string getInstanceId() Obtain <p>Cluster name.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Cluster name.</p>
+ * @method array getGroupNames() Obtain <p>Array of user group names.</p>
+ * @method void setGroupNames(array $GroupNames) Set <p>Array of user group names.</p>
  */
 class DeleteGroupsSTDRequest extends AbstractModel
 {
     /**
-     * @var string Cluster name.
+     * @var string <p>Cluster name.</p>
      */
     public $InstanceId;
 
     /**
-     * @var array User group name array.
+     * @var array <p>Array of user group names.</p>
      */
     public $GroupNames;
 
     /**
-     * @param string $InstanceId Cluster name.
-     * @param array $GroupNames User group name array.
+     * @param string $InstanceId <p>Cluster name.</p>
+     * @param array $GroupNames <p>Array of user group names.</p>
      */
     function __construct()
     {

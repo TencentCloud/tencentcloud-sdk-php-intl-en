@@ -18,20 +18,20 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Context of the rule for executing elastic scaling once
+ * Context of the rule for executing auto scaling once.
  *
- * @method string getExecuteAt() Obtain The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
- * @method void setExecuteAt(string $ExecuteAt) Set The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+ * @method string getExecuteAt() Obtain Exact time when the task was executed. Format: "2020-07-13 00:00:00".
+ * @method void setExecuteAt(string $ExecuteAt) Set Exact time when the task was executed. Format: "2020-07-13 00:00:00".
  */
 class NotRepeatStrategy extends AbstractModel
 {
     /**
-     * @var string The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+     * @var string Exact time when the task was executed. Format: "2020-07-13 00:00:00".
      */
     public $ExecuteAt;
 
     /**
-     * @param string $ExecuteAt The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+     * @param string $ExecuteAt Exact time when the task was executed. Format: "2020-07-13 00:00:00".
      */
     function __construct()
     {

@@ -18,60 +18,56 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Restart, stop, or start of service/monitoring configurations
+ * Configuration for restarting services/stopping services/starting services/monitoring data.
  *
- * @method integer getRollingRestartSwitch() Obtain 0: disable rolling restart.
-1: enable rolling start.
- * @method void setRollingRestartSwitch(integer $RollingRestartSwitch) Set 0: disable rolling restart.
-1: enable rolling start.
- * @method integer getBatchSize() Obtain Rolling restart quantity per batch, which is up to 99999.
- * @method void setBatchSize(integer $BatchSize) Set Rolling restart quantity per batch, which is up to 99999.
- * @method integer getTimeWait() Obtain Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
- * @method void setTimeWait(integer $TimeWait) Set Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
- * @method integer getDealOnFail() Obtain Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
- * @method void setDealOnFail(integer $DealOnFail) Set Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+ * @method integer getRollingRestartSwitch() Obtain 0: disables rolling restart.
+1: enables rolling start.
+ * @method void setRollingRestartSwitch(integer $RollingRestartSwitch) Set 0: disables rolling restart.
+1: enables rolling start.
+ * @method integer getBatchSize() Obtain Number of instances to restart per batch for rolling restart. Maximum value: 99999.
+ * @method void setBatchSize(integer $BatchSize) Set Number of instances to restart per batch for rolling restart. Maximum value: 99999.
+ * @method integer getTimeWait() Obtain Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
+ * @method void setTimeWait(integer $TimeWait) Set Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
+ * @method integer getDealOnFail() Obtain Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
+ * @method void setDealOnFail(integer $DealOnFail) Set Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
  * @method array getArgs() Obtain Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setArgs(array $Args) Set Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class StrategyConfig extends AbstractModel
 {
     /**
-     * @var integer 0: disable rolling restart.
-1: enable rolling start.
+     * @var integer 0: disables rolling restart.
+1: enables rolling start.
      */
     public $RollingRestartSwitch;
 
     /**
-     * @var integer Rolling restart quantity per batch, which is up to 99999.
+     * @var integer Number of instances to restart per batch for rolling restart. Maximum value: 99999.
      */
     public $BatchSize;
 
     /**
-     * @var integer Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+     * @var integer Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
      */
     public $TimeWait;
 
     /**
-     * @var integer Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+     * @var integer Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
      */
     public $DealOnFail;
 
     /**
      * @var array Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Args;
 
     /**
-     * @param integer $RollingRestartSwitch 0: disable rolling restart.
-1: enable rolling start.
-     * @param integer $BatchSize Rolling restart quantity per batch, which is up to 99999.
-     * @param integer $TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
-     * @param integer $DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+     * @param integer $RollingRestartSwitch 0: disables rolling restart.
+1: enables rolling start.
+     * @param integer $BatchSize Number of instances to restart per batch for rolling restart. Maximum value: 99999.
+     * @param integer $TimeWait Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
+     * @param integer $DealOnFail Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
      * @param array $Args Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

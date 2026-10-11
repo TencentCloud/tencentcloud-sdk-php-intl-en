@@ -18,32 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Additional process information.
+ * Additional flow information.
  *
- * @method string getTitle() Obtain Additional information title.
- * @method void setTitle(string $Title) Set Additional information title.
+ * @method string getTitle() Obtain Title of additional information.
+ * @method void setTitle(string $Title) Set Title of additional information.
  * @method array getDetail() Obtain Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetail(array $Detail) Set Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class FlowExtraDetail extends AbstractModel
 {
     /**
-     * @var string Additional information title.
+     * @var string Title of additional information.
      */
     public $Title;
 
     /**
      * @var array Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Detail;
 
     /**
-     * @param string $Title Additional information title.
+     * @param string $Title Title of additional information.
      * @param array $Detail Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

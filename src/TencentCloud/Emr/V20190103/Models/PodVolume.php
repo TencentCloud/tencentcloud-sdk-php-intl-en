@@ -18,44 +18,36 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description of Pod storage.
+ * Description of the Pod storage device.
  *
- * @method string getVolumeType() Obtain Storage type, which can be "pvc" or "hostpath".
- * @method void setVolumeType(string $VolumeType) Set Storage type, which can be "pvc" or "hostpath".
- * @method PersistentVolumeContext getPVCVolume() Obtain This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPVCVolume(PersistentVolumeContext $PVCVolume) Set This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method HostVolumeContext getHostVolume() Obtain This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostVolume(HostVolumeContext $HostVolume) Set This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVolumeType() Obtain Storage type. Valid values: "pvc" and "hostpath".
+ * @method void setVolumeType(string $VolumeType) Set Storage type. Valid values: "pvc" and "hostpath".
+ * @method PersistentVolumeContext getPVCVolume() Obtain When VolumeType is set to "pvc", this parameter takes effect.
+ * @method void setPVCVolume(PersistentVolumeContext $PVCVolume) Set When VolumeType is set to "pvc", this parameter takes effect.
+ * @method HostVolumeContext getHostVolume() Obtain When VolumeType is set to "hostpath", this parameter takes effect.
+ * @method void setHostVolume(HostVolumeContext $HostVolume) Set When VolumeType is set to "hostpath", this parameter takes effect.
  */
 class PodVolume extends AbstractModel
 {
     /**
-     * @var string Storage type, which can be "pvc" or "hostpath".
+     * @var string Storage type. Valid values: "pvc" and "hostpath".
      */
     public $VolumeType;
 
     /**
-     * @var PersistentVolumeContext This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var PersistentVolumeContext When VolumeType is set to "pvc", this parameter takes effect.
      */
     public $PVCVolume;
 
     /**
-     * @var HostVolumeContext This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var HostVolumeContext When VolumeType is set to "hostpath", this parameter takes effect.
      */
     public $HostVolume;
 
     /**
-     * @param string $VolumeType Storage type, which can be "pvc" or "hostpath".
-     * @param PersistentVolumeContext $PVCVolume This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostVolumeContext $HostVolume This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VolumeType Storage type. Valid values: "pvc" and "hostpath".
+     * @param PersistentVolumeContext $PVCVolume When VolumeType is set to "pvc", this parameter takes effect.
+     * @param HostVolumeContext $HostVolume When VolumeType is set to "hostpath", this parameter takes effect.
      */
     function __construct()
     {

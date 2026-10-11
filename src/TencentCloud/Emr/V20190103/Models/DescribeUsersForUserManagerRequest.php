@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsersForUserManager request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
- * @method integer getPageNo() Obtain Page number
- * @method void setPageNo(integer $PageNo) Set Page number
- * @method integer getPageSize() Obtain Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
- * @method void setPageSize(integer $PageSize) Set Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
- * @method UserManagerFilter getUserManagerFilter() Obtain User list query filter
- * @method void setUserManagerFilter(UserManagerFilter $UserManagerFilter) Set User list query filter
- * @method boolean getNeedKeytabInfo() Obtain Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
- * @method void setNeedKeytabInfo(boolean $NeedKeytabInfo) Set Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method integer getPageNo() Obtain Page number.
+ * @method void setPageNo(integer $PageNo) Set Page number.
+ * @method integer getPageSize() Obtain Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
+ * @method UserManagerFilter getUserManagerFilter() Obtain User list filter.
+ * @method void setUserManagerFilter(UserManagerFilter $UserManagerFilter) Set User list filter.
+ * @method boolean getNeedKeytabInfo() Obtain Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
+ * @method void setNeedKeytabInfo(boolean $NeedKeytabInfo) Set Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
  */
 class DescribeUsersForUserManagerRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Page number
+     * @var integer Page number.
      */
     public $PageNo;
 
     /**
-     * @var integer Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+     * @var integer Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
      */
     public $PageSize;
 
     /**
-     * @var UserManagerFilter User list query filter
+     * @var UserManagerFilter User list filter.
      */
     public $UserManagerFilter;
 
     /**
-     * @var boolean Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+     * @var boolean Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
      */
     public $NeedKeytabInfo;
 
     /**
-     * @param string $InstanceId Cluster instance ID
-     * @param integer $PageNo Page number
-     * @param integer $PageSize Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
-     * @param UserManagerFilter $UserManagerFilter User list query filter
-     * @param boolean $NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+     * @param string $InstanceId Cluster ID.
+     * @param integer $PageNo Page number.
+     * @param integer $PageSize Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
+     * @param UserManagerFilter $UserManagerFilter User list filter.
+     * @param boolean $NeedKeytabInfo Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
      */
     function __construct()
     {

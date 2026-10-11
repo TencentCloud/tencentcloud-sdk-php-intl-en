@@ -18,24 +18,20 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Global configurations of the fair scheduler under Resource Scheduling.
+ * Global configuration of the fair scheduler in resource scheduling.
  *
- * @method integer getUserMaxAppsDefault() Obtain Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserMaxAppsDefault(integer $UserMaxAppsDefault) Set Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getUserMaxAppsDefault() Obtain <p>Program upper limit</p> on the corresponding page.
+ * @method void setUserMaxAppsDefault(integer $UserMaxAppsDefault) Set <p>Program upper limit</p> on the corresponding page.
  */
 class FairGlobalConfig extends AbstractModel
 {
     /**
-     * @var integer Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Program upper limit</p> on the corresponding page.
      */
     public $UserMaxAppsDefault;
 
     /**
-     * @param integer $UserMaxAppsDefault Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $UserMaxAppsDefault <p>Program upper limit</p> on the corresponding page.
      */
     function __construct()
     {

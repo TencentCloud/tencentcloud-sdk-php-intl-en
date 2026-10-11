@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * A key-value structure
+ * Key-value structure.
  *
  * @method string getKey() Obtain Key value.
  * @method void setKey(string $Key) Set Key value.

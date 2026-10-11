@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetNodeResourceConfigDefault request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
  * @method integer getResourceConfigId() Obtain Configuration ID.
  * @method void setResourceConfigId(integer $ResourceConfigId) Set Configuration ID.
- * @method string getResourceType() Obtain Specification node type, with the valid values of CORE, TASK, and ROUTER.
- * @method void setResourceType(string $ResourceType) Set Specification node type, with the valid values of CORE, TASK, and ROUTER.
- * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR.
- * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+ * @method string getResourceType() Obtain Specification node type. Valid values: CORE, TASK, and ROUTER.
+ * @method void setResourceType(string $ResourceType) Set Specification node type. Valid values: CORE, TASK, and ROUTER.
+ * @method string getResourceBaseType() Obtain Type. Valid values: ComputeResource and EMR. Default value: EMR.
+ * @method void setResourceBaseType(string $ResourceBaseType) Set Type. Valid values: ComputeResource and EMR. Default value: EMR.
  * @method string getComputeResourceId() Obtain Computing resource ID.
  * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
  * @method string getHardwareResourceType() Obtain Hardware type.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class SetNodeResourceConfigDefaultRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
@@ -46,12 +46,12 @@ class SetNodeResourceConfigDefaultRequest extends AbstractModel
     public $ResourceConfigId;
 
     /**
-     * @var string Specification node type, with the valid values of CORE, TASK, and ROUTER.
+     * @var string Specification node type. Valid values: CORE, TASK, and ROUTER.
      */
     public $ResourceType;
 
     /**
-     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @var string Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public $ResourceBaseType;
 
@@ -66,10 +66,10 @@ class SetNodeResourceConfigDefaultRequest extends AbstractModel
     public $HardwareResourceType;
 
     /**
-     * @param string $InstanceId Cluster instance ID.
+     * @param string $InstanceId Cluster ID.
      * @param integer $ResourceConfigId Configuration ID.
-     * @param string $ResourceType Specification node type, with the valid values of CORE, TASK, and ROUTER.
-     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @param string $ResourceType Specification node type. Valid values: CORE, TASK, and ROUTER.
+     * @param string $ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      * @param string $ComputeResourceId Computing resource ID.
      * @param string $HardwareResourceType Hardware type.
      */

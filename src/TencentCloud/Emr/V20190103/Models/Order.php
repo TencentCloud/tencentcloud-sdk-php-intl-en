@@ -18,17 +18,17 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description order, which is used for sorting.
+ * Sort description, used for sorting.
  *
- * @method string getName() Obtain Order field.
- * @method void setName(string $Name) Set Order field.
+ * @method string getName() Obtain Sorting field.
+ * @method void setName(string $Name) Set Sorting field.
  * @method string getDirection() Obtain Desc or Asc.
  * @method void setDirection(string $Direction) Set Desc or Asc.
  */
 class Order extends AbstractModel
 {
     /**
-     * @var string Order field.
+     * @var string Sorting field.
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class Order extends AbstractModel
     public $Direction;
 
     /**
-     * @param string $Name Order field.
+     * @param string $Name Sorting field.
      * @param string $Direction Desc or Asc.
      */
     function __construct()

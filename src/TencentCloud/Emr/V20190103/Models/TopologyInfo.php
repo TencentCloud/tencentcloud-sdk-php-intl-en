@@ -18,52 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster node topology information
+ * Cluster node topology information.
  *
- * @method integer getZoneId() Obtain Availability zone ID.
- * @method void setZoneId(integer $ZoneId) Set Availability zone ID.
- * @method string getZone() Obtain Availability information.
- * @method void setZone(string $Zone) Set Availability information.
- * @method array getSubnetInfoList() Obtain Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSubnetInfoList(array $SubnetInfoList) Set Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getNodeInfoList() Obtain Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNodeInfoList(array $NodeInfoList) Set Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getZoneId() Obtain AZ ID.
+ * @method void setZoneId(integer $ZoneId) Set AZ ID.
+ * @method string getZone() Obtain AZ information.
+ * @method void setZone(string $Zone) Set AZ information.
+ * @method array getSubnetInfoList() Obtain Subnet information.
+ * @method void setSubnetInfoList(array $SubnetInfoList) Set Subnet information.
+ * @method array getNodeInfoList() Obtain Node information.
+ * @method void setNodeInfoList(array $NodeInfoList) Set Node information.
  */
 class TopologyInfo extends AbstractModel
 {
     /**
-     * @var integer Availability zone ID.
+     * @var integer AZ ID.
      */
     public $ZoneId;
 
     /**
-     * @var string Availability information.
+     * @var string AZ information.
      */
     public $Zone;
 
     /**
-     * @var array Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Subnet information.
      */
     public $SubnetInfoList;
 
     /**
-     * @var array Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Node information.
      */
     public $NodeInfoList;
 
     /**
-     * @param integer $ZoneId Availability zone ID.
-     * @param string $Zone Availability information.
-     * @param array $SubnetInfoList Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $NodeInfoList Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ZoneId AZ ID.
+     * @param string $Zone AZ information.
+     * @param array $SubnetInfoList Subnet information.
+     * @param array $NodeInfoList Node information.
      */
     function __construct()
     {

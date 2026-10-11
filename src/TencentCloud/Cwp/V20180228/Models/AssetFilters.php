@@ -18,40 +18,36 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Container security
-Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
-If there are multiple Filters, the logical relationship between them is AND.
-If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
-
+ * 
  *
- * @method string getName() Obtain Name of filter key
- * @method void setName(string $Name) Set Name of filter key
- * @method array getValues() Obtain One or more filter values
- * @method void setValues(array $Values) Set One or more filter values
- * @method boolean getExactMatch() Obtain Whether to use fuzzy query
- * @method void setExactMatch(boolean $ExactMatch) Set Whether to use fuzzy query
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method array getValues() Obtain 
+ * @method void setValues(array $Values) Set 
+ * @method boolean getExactMatch() Obtain 
+ * @method void setExactMatch(boolean $ExactMatch) Set 
  */
 class AssetFilters extends AbstractModel
 {
     /**
-     * @var string Name of filter key
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var array One or more filter values
+     * @var array 
      */
     public $Values;
 
     /**
-     * @var boolean Whether to use fuzzy query
+     * @var boolean 
      */
     public $ExactMatch;
 
     /**
-     * @param string $Name Name of filter key
-     * @param array $Values One or more filter values
-     * @param boolean $ExactMatch Whether to use fuzzy query
+     * @param string $Name 
+     * @param array $Values 
+     * @param boolean $ExactMatch 
      */
     function __construct()
     {

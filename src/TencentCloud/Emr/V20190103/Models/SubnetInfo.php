@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subnet information
+ * Subnet information.
  *
  * @method string getSubnetName() Obtain Subnet information (name).
  * @method void setSubnetName(string $SubnetName) Set Subnet information (name).

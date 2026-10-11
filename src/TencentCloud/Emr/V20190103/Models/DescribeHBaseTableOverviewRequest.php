@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getOffset() Obtain Pagination query number offset, starting from 0.	
- * @method void setOffset(integer $Offset) Set Pagination query number offset, starting from 0.	
- * @method integer getLimit() Obtain Page size for pagination query. The minimum value is 1, and the maximum value is 100.
- * @method void setLimit(integer $Limit) Set Page size for pagination query. The minimum value is 1, and the maximum value is 100.
- * @method string getTable() Obtain Table name, supporting fuzzy matching
- * @method void setTable(string $Table) Set Table name, supporting fuzzy matching
- * @method string getOrderField() Obtain Field for sorting, with a default value
- * @method void setOrderField(string $OrderField) Set Field for sorting, with a default value
- * @method string getOrderType() Obtain asc: Ascending; desc: Descending (default)
- * @method void setOrderType(string $OrderType) Set asc: Ascending; desc: Descending (default)
+ * @method integer getOffset() Obtain Page number. Valid values: 0 (page 1) and 1 (page 2).
+ * @method void setOffset(integer $Offset) Set Page number. Valid values: 0 (page 1) and 1 (page 2).
+ * @method integer getLimit() Obtain Number of items returned per page. Minimum value: 1. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of items returned per page. Minimum value: 1. Maximum value: 100.
+ * @method string getTable() Obtain Table name, supporting fuzzy matching.
+ * @method void setTable(string $Table) Set Table name, supporting fuzzy matching.
+ * @method string getOrderField() Obtain Sorting field. It has a default value.
+ * @method void setOrderField(string $OrderField) Set Sorting field. It has a default value.
+ * @method string getOrderType() Obtain asc: ascending; desc: descending (default).
+ * @method void setOrderType(string $OrderType) Set asc: ascending; desc: descending (default).
  */
 class DescribeHBaseTableOverviewRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class DescribeHBaseTableOverviewRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Pagination query number offset, starting from 0.	
+     * @var integer Page number. Valid values: 0 (page 1) and 1 (page 2).
      */
     public $Offset;
 
     /**
-     * @var integer Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+     * @var integer Number of items returned per page. Minimum value: 1. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var string Table name, supporting fuzzy matching
+     * @var string Table name, supporting fuzzy matching.
      */
     public $Table;
 
     /**
-     * @var string Field for sorting, with a default value
+     * @var string Sorting field. It has a default value.
      */
     public $OrderField;
 
     /**
-     * @var string asc: Ascending; desc: Descending (default)
+     * @var string asc: ascending; desc: descending (default).
      */
     public $OrderType;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param integer $Offset Pagination query number offset, starting from 0.	
-     * @param integer $Limit Page size for pagination query. The minimum value is 1, and the maximum value is 100.
-     * @param string $Table Table name, supporting fuzzy matching
-     * @param string $OrderField Field for sorting, with a default value
-     * @param string $OrderType asc: Ascending; desc: Descending (default)
+     * @param integer $Offset Page number. Valid values: 0 (page 1) and 1 (page 2).
+     * @param integer $Limit Number of items returned per page. Minimum value: 1. Maximum value: 100.
+     * @param string $Table Table name, supporting fuzzy matching.
+     * @param string $OrderField Sorting field. It has a default value.
+     * @param string $OrderType asc: ascending; desc: descending (default).
      */
     function __construct()
     {

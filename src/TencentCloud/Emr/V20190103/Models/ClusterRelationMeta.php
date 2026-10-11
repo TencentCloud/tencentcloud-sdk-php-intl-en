@@ -18,14 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Inter-cluster binding and usage information.
+ * Binding usage information between clusters.
  *
  * @method string getClusterType() Obtain Cluster type.
  * @method void setClusterType(string $ClusterType) Set Cluster type.
- * @method array getClusterIdList() Obtain Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterIdList(array $ClusterIdList) Set Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getClusterIdList() Obtain List of cluster IDs.
+ * @method void setClusterIdList(array $ClusterIdList) Set List of cluster IDs.
  */
 class ClusterRelationMeta extends AbstractModel
 {
@@ -35,15 +33,13 @@ class ClusterRelationMeta extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of cluster IDs.
      */
     public $ClusterIdList;
 
     /**
      * @param string $ClusterType Cluster type.
-     * @param array $ClusterIdList Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ClusterIdList List of cluster IDs.
      */
     function __construct()
     {

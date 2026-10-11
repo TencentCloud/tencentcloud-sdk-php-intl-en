@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConvertPreToPostCluster request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
  * @method string getClientToken() Obtain Non-reentrant identifier (5-minute window). Order identifier.
  * @method void setClientToken(string $ClientToken) Set Non-reentrant identifier (5-minute window). Order identifier.
  */
 class ConvertPreToPostClusterRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class ConvertPreToPostClusterRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @param string $InstanceId Cluster instance ID.
+     * @param string $InstanceId Cluster ID.
      * @param string $ClientToken Non-reentrant identifier (5-minute window). Order identifier.
      */
     function __construct()

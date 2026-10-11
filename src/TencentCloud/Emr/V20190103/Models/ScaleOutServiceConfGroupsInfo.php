@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceComponentName() Obtain Component version name, for example, HDFS-2.8.5.
  * @method void setServiceComponentName(string $ServiceComponentName) Set Component version name, for example, HDFS-2.8.5.
- * @method string getConfGroupName() Obtain Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
- * @method void setConfGroupName(string $ConfGroupName) Set Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+ * @method string getConfGroupName() Obtain Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
+ * @method void setConfGroupName(string $ConfGroupName) Set Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
  */
 class ScaleOutServiceConfGroupsInfo extends AbstractModel
 {
@@ -35,15 +35,15 @@ class ScaleOutServiceConfGroupsInfo extends AbstractModel
     public $ServiceComponentName;
 
     /**
-     * @var string Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+     * @var string Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
      */
     public $ConfGroupName;
 
     /**
      * @param string $ServiceComponentName Component version name, for example, HDFS-2.8.5.
-     * @param string $ConfGroupName Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+     * @param string $ConfGroupName Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
      */
     function __construct()
     {

@@ -18,17 +18,17 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task parameter description
+ * Task parameter description.
  *
- * @method string getPKey() Obtain Parameter key
- * @method void setPKey(string $PKey) Set Parameter key
+ * @method string getPKey() Obtain Parameter key.
+ * @method void setPKey(string $PKey) Set Parameter key.
  * @method string getPValue() Obtain Parameter value.
  * @method void setPValue(string $PValue) Set Parameter value.
  */
 class FlowParamsDesc extends AbstractModel
 {
     /**
-     * @var string Parameter key
+     * @var string Parameter key.
      */
     public $PKey;
 
@@ -38,7 +38,7 @@ class FlowParamsDesc extends AbstractModel
     public $PValue;
 
     /**
-     * @param string $PKey Parameter key
+     * @param string $PKey Parameter key.
      * @param string $PValue Parameter value.
      */
     function __construct()

@@ -18,36 +18,36 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User-created Hive-MetaDB instance information
+ * User-built Hive-MetaDB information.
  *
- * @method string getMetaDataJdbcUrl() Obtain JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
- * @method void setMetaDataJdbcUrl(string $MetaDataJdbcUrl) Set JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
- * @method string getMetaDataUser() Obtain Custom MetaDB instance username
- * @method void setMetaDataUser(string $MetaDataUser) Set Custom MetaDB instance username
- * @method string getMetaDataPass() Obtain Custom MetaDB instance password
- * @method void setMetaDataPass(string $MetaDataPass) Set Custom MetaDB instance password
+ * @method string getMetaDataJdbcUrl() Obtain Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
+ * @method void setMetaDataJdbcUrl(string $MetaDataJdbcUrl) Set Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
+ * @method string getMetaDataUser() Obtain Custom MetaDB username.
+ * @method void setMetaDataUser(string $MetaDataUser) Set Custom MetaDB username.
+ * @method string getMetaDataPass() Obtain Custom MetaDB password.
+ * @method void setMetaDataPass(string $MetaDataPass) Set Custom MetaDB password.
  */
 class CustomMetaInfo extends AbstractModel
 {
     /**
-     * @var string JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+     * @var string Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
      */
     public $MetaDataJdbcUrl;
 
     /**
-     * @var string Custom MetaDB instance username
+     * @var string Custom MetaDB username.
      */
     public $MetaDataUser;
 
     /**
-     * @var string Custom MetaDB instance password
+     * @var string Custom MetaDB password.
      */
     public $MetaDataPass;
 
     /**
-     * @param string $MetaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
-     * @param string $MetaDataUser Custom MetaDB instance username
-     * @param string $MetaDataPass Custom MetaDB instance password
+     * @param string $MetaDataJdbcUrl Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
+     * @param string $MetaDataUser Custom MetaDB username.
+     * @param string $MetaDataPass Custom MetaDB password.
      */
     function __construct()
     {

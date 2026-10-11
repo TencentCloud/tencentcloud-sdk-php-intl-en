@@ -18,56 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource description
+ * Resource description.
  *
- * @method NodeResourceSpec getMasterResourceSpec() Obtain The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMasterResourceSpec(NodeResourceSpec $MasterResourceSpec) Set The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method NodeResourceSpec getCoreResourceSpec() Obtain The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCoreResourceSpec(NodeResourceSpec $CoreResourceSpec) Set The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method NodeResourceSpec getTaskResourceSpec() Obtain The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskResourceSpec(NodeResourceSpec $TaskResourceSpec) Set The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method NodeResourceSpec getCommonResourceSpec() Obtain The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCommonResourceSpec(NodeResourceSpec $CommonResourceSpec) Set The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method NodeResourceSpec getMasterResourceSpec() Obtain Description of Master node resources.
+ * @method void setMasterResourceSpec(NodeResourceSpec $MasterResourceSpec) Set Description of Master node resources.
+ * @method NodeResourceSpec getCoreResourceSpec() Obtain Description of Core node resources.
+ * @method void setCoreResourceSpec(NodeResourceSpec $CoreResourceSpec) Set Description of Core node resources.
+ * @method NodeResourceSpec getTaskResourceSpec() Obtain Description of Task node resources.
+ * @method void setTaskResourceSpec(NodeResourceSpec $TaskResourceSpec) Set Description of Task node resources.
+ * @method NodeResourceSpec getCommonResourceSpec() Obtain Description of Common node resources.
+ * @method void setCommonResourceSpec(NodeResourceSpec $CommonResourceSpec) Set Description of Common node resources.
  * @method integer getMasterCount() Obtain Number of Master nodes.
  * @method void setMasterCount(integer $MasterCount) Set Number of Master nodes.
- * @method integer getCoreCount() Obtain Number of core nodes.
- * @method void setCoreCount(integer $CoreCount) Set Number of core nodes.
- * @method integer getTaskCount() Obtain Number of task nodes.
- * @method void setTaskCount(integer $TaskCount) Set Number of task nodes.
- * @method integer getCommonCount() Obtain Number of common nodes.
- * @method void setCommonCount(integer $CommonCount) Set Number of common nodes.
+ * @method integer getCoreCount() Obtain Number of Core nodes.
+ * @method void setCoreCount(integer $CoreCount) Set Number of Core nodes.
+ * @method integer getTaskCount() Obtain Number of Task nodes.
+ * @method void setTaskCount(integer $TaskCount) Set Number of Task nodes.
+ * @method integer getCommonCount() Obtain Number of Common nodes.
+ * @method void setCommonCount(integer $CommonCount) Set Number of Common nodes.
  */
 class AllNodeResourceSpec extends AbstractModel
 {
     /**
-     * @var NodeResourceSpec The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var NodeResourceSpec Description of Master node resources.
      */
     public $MasterResourceSpec;
 
     /**
-     * @var NodeResourceSpec The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var NodeResourceSpec Description of Core node resources.
      */
     public $CoreResourceSpec;
 
     /**
-     * @var NodeResourceSpec The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var NodeResourceSpec Description of Task node resources.
      */
     public $TaskResourceSpec;
 
     /**
-     * @var NodeResourceSpec The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var NodeResourceSpec Description of Common node resources.
      */
     public $CommonResourceSpec;
 
@@ -77,33 +65,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MasterCount;
 
     /**
-     * @var integer Number of core nodes.
+     * @var integer Number of Core nodes.
      */
     public $CoreCount;
 
     /**
-     * @var integer Number of task nodes.
+     * @var integer Number of Task nodes.
      */
     public $TaskCount;
 
     /**
-     * @var integer Number of common nodes.
+     * @var integer Number of Common nodes.
      */
     public $CommonCount;
 
     /**
-     * @param NodeResourceSpec $MasterResourceSpec The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeResourceSpec $CoreResourceSpec The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeResourceSpec $TaskResourceSpec The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeResourceSpec $CommonResourceSpec The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NodeResourceSpec $MasterResourceSpec Description of Master node resources.
+     * @param NodeResourceSpec $CoreResourceSpec Description of Core node resources.
+     * @param NodeResourceSpec $TaskResourceSpec Description of Task node resources.
+     * @param NodeResourceSpec $CommonResourceSpec Description of Common node resources.
      * @param integer $MasterCount Number of Master nodes.
-     * @param integer $CoreCount Number of core nodes.
-     * @param integer $TaskCount Number of task nodes.
-     * @param integer $CommonCount Number of common nodes.
+     * @param integer $CoreCount Number of Core nodes.
+     * @param integer $TaskCount Number of Task nodes.
+     * @param integer $CommonCount Number of Common nodes.
      */
     function __construct()
     {

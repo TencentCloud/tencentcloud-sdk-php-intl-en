@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterFlowStatusDetail request structure.
  *
- * @method string getInstanceId() Obtain EMR instance ID
- * @method void setInstanceId(string $InstanceId) Set EMR instance ID
+ * @method string getInstanceId() Obtain EMR instance ID.
+ * @method void setInstanceId(string $InstanceId) Set EMR instance ID.
  * @method FlowParam getFlowParam() Obtain Process-related parameters.
  * @method void setFlowParam(FlowParam $FlowParam) Set Process-related parameters.
- * @method boolean getNeedExtraDetail() Obtain Whether to return additional task information.
-The default value is false.
- * @method void setNeedExtraDetail(boolean $NeedExtraDetail) Set Whether to return additional task information.
-The default value is false.
+ * @method boolean getNeedExtraDetail() Obtain Whether additional task information is returned.
+Default value: false.
+ * @method void setNeedExtraDetail(boolean $NeedExtraDetail) Set Whether additional task information is returned.
+Default value: false.
  */
 class DescribeClusterFlowStatusDetailRequest extends AbstractModel
 {
     /**
-     * @var string EMR instance ID
+     * @var string EMR instance ID.
      */
     public $InstanceId;
 
@@ -42,16 +42,16 @@ class DescribeClusterFlowStatusDetailRequest extends AbstractModel
     public $FlowParam;
 
     /**
-     * @var boolean Whether to return additional task information.
-The default value is false.
+     * @var boolean Whether additional task information is returned.
+Default value: false.
      */
     public $NeedExtraDetail;
 
     /**
-     * @param string $InstanceId EMR instance ID
+     * @param string $InstanceId EMR instance ID.
      * @param FlowParam $FlowParam Process-related parameters.
-     * @param boolean $NeedExtraDetail Whether to return additional task information.
-The default value is false.
+     * @param boolean $NeedExtraDetail Whether additional task information is returned.
+Default value: false.
      */
     function __construct()
     {

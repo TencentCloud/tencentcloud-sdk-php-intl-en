@@ -18,30 +18,30 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Returned cluster list sample
+ * Response example for the cluster list.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getStatusDesc() Obtain Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
- * @method void setStatusDesc(string $StatusDesc) Set Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method integer getZoneId() Obtain Cluster region
- * @method void setZoneId(integer $ZoneId) Set Cluster region
- * @method integer getAppId() Obtain User APPID
- * @method void setAppId(integer $AppId) Set User APPID
- * @method string getAddTime() Obtain Creation time
- * @method void setAddTime(string $AddTime) Set Creation time
- * @method string getRunTime() Obtain Running time
- * @method void setRunTime(string $RunTime) Set Running time
- * @method string getMasterIp() Obtain Cluster IP
- * @method void setMasterIp(string $MasterIp) Set Cluster IP
- * @method string getEmrVersion() Obtain Cluster version
- * @method void setEmrVersion(string $EmrVersion) Set Cluster version
- * @method integer getChargeType() Obtain Cluster billing mode
- * @method void setChargeType(integer $ChargeType) Set Cluster billing mode
- * @method integer getId() Obtain EMR ID
- * @method void setId(integer $Id) Set EMR ID
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getStatusDesc() Obtain Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
+ * @method void setStatusDesc(string $StatusDesc) Set Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
+ * @method integer getZoneId() Obtain Cluster region.
+ * @method void setZoneId(integer $ZoneId) Set Cluster region.
+ * @method integer getAppId() Obtain User APPID.
+ * @method void setAppId(integer $AppId) Set User APPID.
+ * @method string getAddTime() Obtain Creation time.
+ * @method void setAddTime(string $AddTime) Set Creation time.
+ * @method string getRunTime() Obtain Running time.
+ * @method void setRunTime(string $RunTime) Set Running time.
+ * @method string getMasterIp() Obtain Cluster IP address.
+ * @method void setMasterIp(string $MasterIp) Set Cluster IP address.
+ * @method string getEmrVersion() Obtain Cluster version.
+ * @method void setEmrVersion(string $EmrVersion) Set Cluster version.
+ * @method integer getChargeType() Obtain Cluster billing type.
+ * @method void setChargeType(integer $ChargeType) Set Cluster billing type.
+ * @method integer getId() Obtain emr ID
+ * @method void setId(integer $Id) Set emr ID
  * @method integer getProductId() Obtain Product ID.
  * @method void setProductId(integer $ProductId) Set Product ID.
  * @method integer getProjectId() Obtain Project ID.
@@ -54,95 +54,91 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(integer $VpcId) Set Network ID.
  * @method string getZone() Obtain Region.
  * @method void setZone(string $Zone) Set Region.
- * @method integer getStatus() Obtain Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
- * @method void setStatus(integer $Status) Set Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
- * @method array getTags() Obtain Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setTags(array $Tags) Set Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getStatus() Obtain Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+ * @method void setStatus(integer $Status) Set Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+ * @method array getTags() Obtain Instance tag.
+ * @method void setTags(array $Tags) Set Instance tag.
  * @method string getAlarmInfo() Obtain Alarm information.
  * @method void setAlarmInfo(string $AlarmInfo) Set Alarm information.
  * @method integer getIsWoodpeckerCluster() Obtain Whether it is a Woodpecker cluster.
  * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) Set Whether it is a Woodpecker cluster.
- * @method string getVpcName() Obtain VPC name in Chinese.
- * @method void setVpcName(string $VpcName) Set VPC name in Chinese.
- * @method string getSubnetName() Obtain Subnet in Chinese.
- * @method void setSubnetName(string $SubnetName) Set Subnet in Chinese.
- * @method string getUniqVpcId() Obtain String VpcId.
- * @method void setUniqVpcId(string $UniqVpcId) Set String VpcId.
- * @method string getUniqSubnetId() Obtain String subnet.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set String subnet.
+ * @method string getVpcName() Obtain VPC.
+ * @method void setVpcName(string $VpcName) Set VPC.
+ * @method string getSubnetName() Obtain Subnet.
+ * @method void setSubnetName(string $SubnetName) Set Subnet.
+ * @method string getUniqVpcId() Obtain VPC ID (string).
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID (string).
+ * @method string getUniqSubnetId() Obtain Subnet (string).
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet (string).
  * @method string getClusterClass() Obtain Cluster type.
  * @method void setClusterClass(string $ClusterClass) Set Cluster type.
  * @method boolean getIsMultiZoneCluster() Obtain Whether it is a cross-AZ cluster.
  * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set Whether it is a cross-AZ cluster.
- * @method boolean getIsHandsCluster() Obtain Whether it is a cluster created by a cluster CVM.
- * @method void setIsHandsCluster(boolean $IsHandsCluster) Set Whether it is a cluster created by a cluster CVM.
- * @method array getOutSideSoftInfo() Obtain Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutSideSoftInfo(array $OutSideSoftInfo) Set Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsHandsCluster() Obtain Whether it is a manually created cluster.
+ * @method void setIsHandsCluster(boolean $IsHandsCluster) Set Whether it is a manually created cluster.
+ * @method array getOutSideSoftInfo() Obtain External client component information.
+ * @method void setOutSideSoftInfo(array $OutSideSoftInfo) Set External client component information.
  * @method boolean getIsSupportOutsideCluster() Obtain Whether the current cluster's scenarios support external clients.
  * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) Set Whether the current cluster's scenarios support external clients.
  * @method boolean getIsDedicatedCluster() Obtain Whether the cluster is used in a dedicated cluster scenario.
  * @method void setIsDedicatedCluster(boolean $IsDedicatedCluster) Set Whether the cluster is used in a dedicated cluster scenario.
- * @method boolean getIsSupportClone() Obtain Cluster supports for cloning.
- * @method void setIsSupportClone(boolean $IsSupportClone) Set Cluster supports for cloning.
+ * @method boolean getIsSupportClone() Obtain Whether cloning is supported for the cluster.
+ * @method void setIsSupportClone(boolean $IsSupportClone) Set Whether cloning is supported for the cluster.
  */
 class EmrListInstance extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+     * @var string Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
      */
     public $StatusDesc;
 
     /**
-     * @var string Cluster name
+     * @var string Cluster name.
      */
     public $ClusterName;
 
     /**
-     * @var integer Cluster region
+     * @var integer Cluster region.
      */
     public $ZoneId;
 
     /**
-     * @var integer User APPID
+     * @var integer User APPID.
      */
     public $AppId;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $AddTime;
 
     /**
-     * @var string Running time
+     * @var string Running time.
      */
     public $RunTime;
 
     /**
-     * @var string Cluster IP
+     * @var string Cluster IP address.
      */
     public $MasterIp;
 
     /**
-     * @var string Cluster version
+     * @var string Cluster version.
      */
     public $EmrVersion;
 
     /**
-     * @var integer Cluster billing mode
+     * @var integer Cluster billing type.
      */
     public $ChargeType;
 
     /**
-     * @var integer EMR ID
+     * @var integer emr ID
      */
     public $Id;
 
@@ -177,13 +173,12 @@ class EmrListInstance extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+     * @var integer Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
      */
     public $Status;
 
     /**
-     * @var array Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Instance tag.
      */
     public $Tags;
 
@@ -198,22 +193,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $IsWoodpeckerCluster;
 
     /**
-     * @var string VPC name in Chinese.
+     * @var string VPC.
      */
     public $VpcName;
 
     /**
-     * @var string Subnet in Chinese.
+     * @var string Subnet.
      */
     public $SubnetName;
 
     /**
-     * @var string String VpcId.
+     * @var string VPC ID (string).
      */
     public $UniqVpcId;
 
     /**
-     * @var string String subnet.
+     * @var string Subnet (string).
      */
     public $UniqSubnetId;
 
@@ -228,13 +223,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $IsMultiZoneCluster;
 
     /**
-     * @var boolean Whether it is a cluster created by a cluster CVM.
+     * @var boolean Whether it is a manually created cluster.
      */
     public $IsHandsCluster;
 
     /**
-     * @var array Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array External client component information.
      */
     public $OutSideSoftInfo;
 
@@ -249,45 +243,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsDedicatedCluster;
 
     /**
-     * @var boolean Cluster supports for cloning.
+     * @var boolean Whether cloning is supported for the cluster.
      */
     public $IsSupportClone;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $StatusDesc Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
-     * @param string $ClusterName Cluster name
-     * @param integer $ZoneId Cluster region
-     * @param integer $AppId User APPID
-     * @param string $AddTime Creation time
-     * @param string $RunTime Running time
-     * @param string $MasterIp Cluster IP
-     * @param string $EmrVersion Cluster version
-     * @param integer $ChargeType Cluster billing mode
-     * @param integer $Id EMR ID
+     * @param string $ClusterId Cluster ID.
+     * @param string $StatusDesc Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
+     * @param string $ClusterName Cluster name.
+     * @param integer $ZoneId Cluster region.
+     * @param integer $AppId User APPID.
+     * @param string $AddTime Creation time.
+     * @param string $RunTime Running time.
+     * @param string $MasterIp Cluster IP address.
+     * @param string $EmrVersion Cluster version.
+     * @param integer $ChargeType Cluster billing type.
+     * @param integer $Id emr ID
      * @param integer $ProductId Product ID.
      * @param integer $ProjectId Project ID.
      * @param integer $RegionId Region.
      * @param integer $SubnetId Subnet ID.
      * @param integer $VpcId Network ID.
      * @param string $Zone Region.
-     * @param integer $Status Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
-     * @param array $Tags Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $Status Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+     * @param array $Tags Instance tag.
      * @param string $AlarmInfo Alarm information.
      * @param integer $IsWoodpeckerCluster Whether it is a Woodpecker cluster.
-     * @param string $VpcName VPC name in Chinese.
-     * @param string $SubnetName Subnet in Chinese.
-     * @param string $UniqVpcId String VpcId.
-     * @param string $UniqSubnetId String subnet.
+     * @param string $VpcName VPC.
+     * @param string $SubnetName Subnet.
+     * @param string $UniqVpcId VPC ID (string).
+     * @param string $UniqSubnetId Subnet (string).
      * @param string $ClusterClass Cluster type.
      * @param boolean $IsMultiZoneCluster Whether it is a cross-AZ cluster.
-     * @param boolean $IsHandsCluster Whether it is a cluster created by a cluster CVM.
-     * @param array $OutSideSoftInfo Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsHandsCluster Whether it is a manually created cluster.
+     * @param array $OutSideSoftInfo External client component information.
      * @param boolean $IsSupportOutsideCluster Whether the current cluster's scenarios support external clients.
      * @param boolean $IsDedicatedCluster Whether the cluster is used in a dedicated cluster scenario.
-     * @param boolean $IsSupportClone Cluster supports for cloning.
+     * @param boolean $IsSupportClone Whether cloning is supported for the cluster.
      */
     function __construct()
     {

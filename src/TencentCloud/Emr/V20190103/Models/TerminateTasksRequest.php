@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateTasks request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method array getResourceIds() Obtain List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
- * @method void setResourceIds(array $ResourceIds) Set List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+ * @method string getInstanceId() Obtain 
+ * @method void setInstanceId(string $InstanceId) Set 
+ * @method array getResourceIds() Obtain Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+ * @method void setResourceIds(array $ResourceIds) Set Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
  */
 class TerminateTasksRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string 
      */
     public $InstanceId;
 
     /**
-     * @var array List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     * @var array Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
      */
     public $ResourceIds;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param array $ResourceIds List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     * @param string $InstanceId 
+     * @param array $ResourceIds Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Price details by node, used for creating the cluster price list
+ * Node price details, which are used to create the cluster price list.
  *
- * @method string getNodeType() Obtain Node type: Master, Core, Task, Common, Router, and MySQL.
- * @method void setNodeType(string $NodeType) Set Node type: Master, Core, Task, Common, Router, and MySQL.
- * @method array getPartDetailPrice() Obtain Price details by node part
- * @method void setPartDetailPrice(array $PartDetailPrice) Set Price details by node part
+ * @method string getNodeType() Obtain Node type. Valid values: master, core, task, common, router, and mysql.
+ * @method void setNodeType(string $NodeType) Set Node type. Valid values: master, core, task, common, router, and mysql.
+ * @method array getPartDetailPrice() Obtain Price details for each component of the node.
+ * @method void setPartDetailPrice(array $PartDetailPrice) Set Price details for each component of the node.
  */
 class NodeDetailPriceResult extends AbstractModel
 {
     /**
-     * @var string Node type: Master, Core, Task, Common, Router, and MySQL.
+     * @var string Node type. Valid values: master, core, task, common, router, and mysql.
      */
     public $NodeType;
 
     /**
-     * @var array Price details by node part
+     * @var array Price details for each component of the node.
      */
     public $PartDetailPrice;
 
     /**
-     * @param string $NodeType Node type: Master, Core, Task, Common, Router, and MySQL.
-     * @param array $PartDetailPrice Price details by node part
+     * @param string $NodeType Node type. Valid values: master, core, task, common, router, and mysql.
+     * @param array $PartDetailPrice Price details for each component of the node.
      */
     function __construct()
     {

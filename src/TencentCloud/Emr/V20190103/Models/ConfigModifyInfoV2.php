@@ -18,75 +18,42 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource scheduling - Queue modification information
+ * Queue modification information in resource scheduling.
  *
  * @method integer getOpType() Obtain Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
  * @method void setOpType(integer $OpType) Set Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
  * @method string getName() Obtain Queue name. It cannot be modified.
  * @method void setName(string $Name) Set Queue name. It cannot be modified.
- * @method string getParentId() Obtain Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
- * @method void setParentId(string $ParentId) Set Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
- * @method string getMyId() Obtain Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
- * @method void setMyId(string $MyId) Set Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
- * @method ItemSeq getBasicParams() Obtain Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
+ * @method string getParentId() Obtain Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
+ * @method void setParentId(string $ParentId) Set Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
+ * @method string getMyId() Obtain Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
+ * @method void setMyId(string $MyId) Set Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
+ * @method ItemSeq getBasicParams() Obtain Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
 
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
-
-```
-type AclForYarnQueue struct {
-	User  *string `json:"user"` // Username
-	Group *string `json:"group"`// Group name
-}
-```
-###### Capacity scheduler
-Values of key are as follows:
-
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
-```
-type AclForYarnQueue struct {
-	User  *string `json:"user"` // Username
-	Group *string `json:"group"`// Group name
-}
-```
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBasicParams(ItemSeq $BasicParams) Set Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
-
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
 
 ```
 type AclForYarnQueue struct {
@@ -94,42 +61,71 @@ type AclForYarnQueue struct {
 	Group *string `json:"group"`// Group name
 }
 ```
-###### Capacity scheduler
-Values of key are as follows:
+###### Capacity scheduler.
+The key value information is as follows:
 
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
 ```
 type AclForYarnQueue struct {
 	User  *string `json:"user"` // Username
 	Group *string `json:"group"`// Group name
 }
 ```
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getConfigSetParams() Obtain Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigSetParams(array $ConfigSetParams) Set Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDeleteLables() Obtain This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDeleteLables(array $DeleteLables) Set This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBasicParams(ItemSeq $BasicParams) Set Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
+
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
+
+```
+type AclForYarnQueue struct {
+	User  *string `json:"user"` // Username
+	Group *string `json:"group"`// Group name
+}
+```
+###### Capacity scheduler.
+The key value information is as follows:
+
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
+```
+type AclForYarnQueue struct {
+	User  *string `json:"user"` // Username
+	Group *string `json:"group"`// Group name
+}
+```
+ * @method array getConfigSetParams() Obtain Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
+ * @method void setConfigSetParams(array $ConfigSetParams) Set Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
+ * @method array getDeleteLables() Obtain Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
+ * @method void setDeleteLables(array $DeleteLables) Set Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
  */
 class ConfigModifyInfoV2 extends AbstractModel
 {
     /**
      * @var integer Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
      */
     public $OpType;
 
@@ -139,27 +135,28 @@ class ConfigModifyInfoV2 extends AbstractModel
     public $Name;
 
     /**
-     * @var string Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
+     * @var string Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
      */
     public $ParentId;
 
     /**
-     * @var string Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
+     * @var string Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
      */
     public $MyId;
 
     /**
-     * @var ItemSeq Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
+     * @var ItemSeq Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
 
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
 
 ```
 type AclForYarnQueue struct {
@@ -167,60 +164,58 @@ type AclForYarnQueue struct {
 	Group *string `json:"group"`// Group name
 }
 ```
-###### Capacity scheduler
-Values of key are as follows:
+###### Capacity scheduler.
+The key value information is as follows:
 
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
 ```
 type AclForYarnQueue struct {
 	User  *string `json:"user"` // Username
 	Group *string `json:"group"`// Group name
 }
 ```
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BasicParams;
 
     /**
-     * @var array Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
      */
     public $ConfigSetParams;
 
     /**
-     * @var array This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
      */
     public $DeleteLables;
 
     /**
      * @param integer $OpType Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
      * @param string $Name Queue name. It cannot be modified.
-     * @param string $ParentId Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
-     * @param string $MyId Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
-     * @param ItemSeq $BasicParams Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
+     * @param string $ParentId Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
+     * @param string $MyId Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
+     * @param ItemSeq $BasicParams Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
 
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
 
 ```
 type AclForYarnQueue struct {
@@ -228,26 +223,23 @@ type AclForYarnQueue struct {
 	Group *string `json:"group"`// Group name
 }
 ```
-###### Capacity scheduler
-Values of key are as follows:
+###### Capacity scheduler.
+The key value information is as follows:
 
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
 ```
 type AclForYarnQueue struct {
 	User  *string `json:"user"` // Username
 	Group *string `json:"group"`// Group name
 }
 ```
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ConfigSetParams Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DeleteLables This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ConfigSetParams Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
+     * @param array $DeleteLables Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
      */
     function __construct()
     {

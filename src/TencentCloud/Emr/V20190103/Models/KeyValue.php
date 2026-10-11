@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair, primarily used for filtering
+ * Key-value pair, which is mainly for filtering.
  *
  * @method string getKey() Obtain Key.
  * @method void setKey(string $Key) Set Key.

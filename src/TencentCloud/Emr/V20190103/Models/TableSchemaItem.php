@@ -18,20 +18,16 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Table schema information
+ * Table schema information.
  *
- * @method string getName() Obtain Column identifier
- * @method void setName(string $Name) Set Column identifier
- * @method boolean getSortable() Obtain Whether it is sortable by this column
- * @method void setSortable(boolean $Sortable) Set Whether it is sortable by this column
- * @method boolean getWithFilter() Obtain Whether it is filterable
- * @method void setWithFilter(boolean $WithFilter) Set Whether it is filterable
- * @method array getCandidates() Obtain Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCandidates(array $Candidates) Set Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Column identifier.
+ * @method void setName(string $Name) Set Column identifier.
+ * @method boolean getSortable() Obtain Whether it is sortable by this column.
+ * @method void setSortable(boolean $Sortable) Set Whether it is sortable by this column.
+ * @method boolean getWithFilter() Obtain Whether it is filterable.
+ * @method void setWithFilter(boolean $WithFilter) Set Whether it is filterable.
+ * @method array getCandidates() Obtain Filtered candidate set.
+ * @method void setCandidates(array $Candidates) Set Filtered candidate set.
  * @method boolean getClickable() Obtain Whether it is clickable.
  * @method void setClickable(boolean $Clickable) Set Whether it is clickable.
  * @method string getTitle() Obtain Display name.
@@ -40,24 +36,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class TableSchemaItem extends AbstractModel
 {
     /**
-     * @var string Column identifier
+     * @var string Column identifier.
      */
     public $Name;
 
     /**
-     * @var boolean Whether it is sortable by this column
+     * @var boolean Whether it is sortable by this column.
      */
     public $Sortable;
 
     /**
-     * @var boolean Whether it is filterable
+     * @var boolean Whether it is filterable.
      */
     public $WithFilter;
 
     /**
-     * @var array Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Filtered candidate set.
      */
     public $Candidates;
 
@@ -72,12 +66,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Title;
 
     /**
-     * @param string $Name Column identifier
-     * @param boolean $Sortable Whether it is sortable by this column
-     * @param boolean $WithFilter Whether it is filterable
-     * @param array $Candidates Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Column identifier.
+     * @param boolean $Sortable Whether it is sortable by this column.
+     * @param boolean $WithFilter Whether it is filterable.
+     * @param array $Candidates Filtered candidate set.
      * @param boolean $Clickable Whether it is clickable.
      * @param string $Title Display name.
      */

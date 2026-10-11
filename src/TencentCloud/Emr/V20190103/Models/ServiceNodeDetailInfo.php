@@ -20,65 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Service process information.
  *
- * @method string getIp() Obtain Process node IP
- * @method void setIp(string $Ip) Set Process node IP
+ * @method string getIp() Obtain Process node IP address.
+ * @method void setIp(string $Ip) Set Process node IP address.
  * @method integer getNodeType() Obtain Process type.
  * @method void setNodeType(integer $NodeType) Set Process type.
- * @method string getNodeName() Obtain Process name
- * @method void setNodeName(string $NodeName) Set Process name
- * @method integer getServiceStatus() Obtain Service component status
- * @method void setServiceStatus(integer $ServiceStatus) Set Service component status
- * @method integer getMonitorStatus() Obtain Process monitoring status
- * @method void setMonitorStatus(integer $MonitorStatus) Set Process monitoring status
- * @method integer getStatus() Obtain Service component status
- * @method void setStatus(integer $Status) Set Service component status
- * @method string getPortsInfo() Obtain Process port information
- * @method void setPortsInfo(string $PortsInfo) Set Process port information
- * @method string getLastRestartTime() Obtain Last restart time.
- * @method void setLastRestartTime(string $LastRestartTime) Set Last restart time.
+ * @method string getNodeName() Obtain Process name.
+ * @method void setNodeName(string $NodeName) Set Process name.
+ * @method integer getServiceStatus() Obtain Service component status.
+ * @method void setServiceStatus(integer $ServiceStatus) Set Service component status.
+ * @method integer getMonitorStatus() Obtain Process monitoring status.
+ * @method void setMonitorStatus(integer $MonitorStatus) Set Process monitoring status.
+ * @method integer getStatus() Obtain Service component status.
+ * @method void setStatus(integer $Status) Set Service component status.
+ * @method string getPortsInfo() Obtain Process port information.
+ * @method void setPortsInfo(string $PortsInfo) Set Process port information.
+ * @method string getLastRestartTime() Obtain Latest restart time.
+ * @method void setLastRestartTime(string $LastRestartTime) Set Latest restart time.
  * @method integer getFlag() Obtain Node type.
  * @method void setFlag(integer $Flag) Set Node type.
  * @method integer getConfGroupId() Obtain Configuration group ID.
  * @method void setConfGroupId(integer $ConfGroupId) Set Configuration group ID.
  * @method string getConfGroupName() Obtain Configuration group name.
  * @method void setConfGroupName(string $ConfGroupName) Set Configuration group name.
- * @method integer getConfStatus() Obtain Whether the node needs to be restarted
- * @method void setConfStatus(integer $ConfStatus) Set Whether the node needs to be restarted
- * @method array getServiceDetectionInfo() Obtain Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServiceDetectionInfo(array $ServiceDetectionInfo) Set Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConfStatus() Obtain Whether the node needs to be restarted.
+ * @method void setConfStatus(integer $ConfStatus) Set Whether the node needs to be restarted.
+ * @method array getServiceDetectionInfo() Obtain Process detection information.
+ * @method void setServiceDetectionInfo(array $ServiceDetectionInfo) Set Process detection information.
  * @method string getNodeFlagFilter() Obtain Node type.
  * @method void setNodeFlagFilter(string $NodeFlagFilter) Set Node type.
- * @method HealthStatus getHealthStatus() Obtain Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHealthStatus(HealthStatus $HealthStatus) Set Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method HealthStatus getHealthStatus() Obtain Process health status.
+ * @method void setHealthStatus(HealthStatus $HealthStatus) Set Process health status.
  * @method boolean getIsSupportRoleMonitor() Obtain Whether the role supports monitoring.
  * @method void setIsSupportRoleMonitor(boolean $IsSupportRoleMonitor) Set Whether the role supports monitoring.
- * @method array getStopPolicies() Obtain Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStopPolicies(array $StopPolicies) Set Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHAState() Obtain Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
- * @method void setHAState(string $HAState) Set Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+ * @method array getStopPolicies() Obtain Suspension policy.
+ * @method void setStopPolicies(array $StopPolicies) Set Suspension policy.
+ * @method string getHAState() Obtain Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
+ * @method void setHAState(string $HAState) Set Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
  * @method string getNameService() Obtain NameService name.
  * @method void setNameService(string $NameService) Set NameService name.
  * @method boolean getIsFederation() Obtain Whether the federation is supported.
  * @method void setIsFederation(boolean $IsFederation) Set Whether the federation is supported.
- * @method integer getDataNodeMaintenanceState() Obtain Whether the DataNode is in maintenance status.
- * @method void setDataNodeMaintenanceState(integer $DataNodeMaintenanceState) Set Whether the DataNode is in maintenance status.
+ * @method integer getDataNodeMaintenanceState() Obtain Whether the DataNode is in the maintenance status.
+ * @method void setDataNodeMaintenanceState(integer $DataNodeMaintenanceState) Set Whether the DataNode is in the maintenance status.
  */
 class ServiceNodeDetailInfo extends AbstractModel
 {
     /**
-     * @var string Process node IP
+     * @var string Process node IP address.
      */
     public $Ip;
 
@@ -88,32 +76,32 @@ class ServiceNodeDetailInfo extends AbstractModel
     public $NodeType;
 
     /**
-     * @var string Process name
+     * @var string Process name.
      */
     public $NodeName;
 
     /**
-     * @var integer Service component status
+     * @var integer Service component status.
      */
     public $ServiceStatus;
 
     /**
-     * @var integer Process monitoring status
+     * @var integer Process monitoring status.
      */
     public $MonitorStatus;
 
     /**
-     * @var integer Service component status
+     * @var integer Service component status.
      */
     public $Status;
 
     /**
-     * @var string Process port information
+     * @var string Process port information.
      */
     public $PortsInfo;
 
     /**
-     * @var string Last restart time.
+     * @var string Latest restart time.
      */
     public $LastRestartTime;
 
@@ -133,14 +121,12 @@ class ServiceNodeDetailInfo extends AbstractModel
     public $ConfGroupName;
 
     /**
-     * @var integer Whether the node needs to be restarted
+     * @var integer Whether the node needs to be restarted.
      */
     public $ConfStatus;
 
     /**
-     * @var array Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Process detection information.
      */
     public $ServiceDetectionInfo;
 
@@ -150,9 +136,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NodeFlagFilter;
 
     /**
-     * @var HealthStatus Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var HealthStatus Process health status.
      */
     public $HealthStatus;
 
@@ -162,14 +146,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsSupportRoleMonitor;
 
     /**
-     * @var array Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Suspension policy.
      */
     public $StopPolicies;
 
     /**
-     * @var string Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+     * @var string Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
      */
     public $HAState;
 
@@ -184,38 +166,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsFederation;
 
     /**
-     * @var integer Whether the DataNode is in maintenance status.
+     * @var integer Whether the DataNode is in the maintenance status.
      */
     public $DataNodeMaintenanceState;
 
     /**
-     * @param string $Ip Process node IP
+     * @param string $Ip Process node IP address.
      * @param integer $NodeType Process type.
-     * @param string $NodeName Process name
-     * @param integer $ServiceStatus Service component status
-     * @param integer $MonitorStatus Process monitoring status
-     * @param integer $Status Service component status
-     * @param string $PortsInfo Process port information
-     * @param string $LastRestartTime Last restart time.
+     * @param string $NodeName Process name.
+     * @param integer $ServiceStatus Service component status.
+     * @param integer $MonitorStatus Process monitoring status.
+     * @param integer $Status Service component status.
+     * @param string $PortsInfo Process port information.
+     * @param string $LastRestartTime Latest restart time.
      * @param integer $Flag Node type.
      * @param integer $ConfGroupId Configuration group ID.
      * @param string $ConfGroupName Configuration group name.
-     * @param integer $ConfStatus Whether the node needs to be restarted
-     * @param array $ServiceDetectionInfo Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ConfStatus Whether the node needs to be restarted.
+     * @param array $ServiceDetectionInfo Process detection information.
      * @param string $NodeFlagFilter Node type.
-     * @param HealthStatus $HealthStatus Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HealthStatus $HealthStatus Process health status.
      * @param boolean $IsSupportRoleMonitor Whether the role supports monitoring.
-     * @param array $StopPolicies Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HAState Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+     * @param array $StopPolicies Suspension policy.
+     * @param string $HAState Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
      * @param string $NameService NameService name.
      * @param boolean $IsFederation Whether the federation is supported.
-     * @param integer $DataNodeMaintenanceState Whether the DataNode is in maintenance status.
+     * @param integer $DataNodeMaintenanceState Whether the DataNode is in the maintenance status.
      */
     function __construct()
     {

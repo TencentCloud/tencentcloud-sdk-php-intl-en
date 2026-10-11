@@ -18,19 +18,19 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The configuration of cluster application scenario and supported components.
+ * Cluster application scenario and supported deployment component information.
  *
- * @method array getSoftware() Obtain The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
- * @method void setSoftware(array $Software) Set The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
- * @method string getSceneName() Obtain The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+ * @method array getSoftware() Obtain List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
+ * @method void setSoftware(array $Software) Set List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
+ * @method string getSceneName() Obtain Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
 Hadoop-Default
- * @method void setSceneName(string $SceneName) Set The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+ * @method void setSceneName(string $SceneName) Set Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
@@ -40,13 +40,13 @@ Hadoop-Default
 class SceneSoftwareConfig extends AbstractModel
 {
     /**
-     * @var array The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
+     * @var array List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
      */
     public $Software;
 
     /**
-     * @var string The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+     * @var string Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
@@ -56,9 +56,9 @@ Hadoop-Default
     public $SceneName;
 
     /**
-     * @param array $Software The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
-     * @param string $SceneName The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+     * @param array $Software List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
+     * @param string $SceneName Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto

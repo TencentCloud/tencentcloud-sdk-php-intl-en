@@ -18,132 +18,140 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Elastic Scaling Record
+ * Auto scaling record.
  *
- * @method string getStrategyName() Obtain Name of the scale-in or scale-out rule.
- * @method void setStrategyName(string $StrategyName) Set Name of the scale-in or scale-out rule.
- * @method string getScaleAction() Obtain "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
- * @method void setScaleAction(string $ScaleAction) Set "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
- * @method string getActionStatus() Obtain The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
- * @method void setActionStatus(string $ActionStatus) Set The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
- * @method string getActionTime() Obtain Process initiation time.
- * @method void setActionTime(string $ActionTime) Set Process initiation time.
- * @method string getScaleInfo() Obtain Description related to auto-scaling.
- * @method void setScaleInfo(string $ScaleInfo) Set Description related to auto-scaling.
- * @method integer getExpectScaleNum() Obtain Valid only when ScaleAction is SCALE_OUT.
- * @method void setExpectScaleNum(integer $ExpectScaleNum) Set Valid only when ScaleAction is SCALE_OUT.
- * @method string getEndTime() Obtain Process termination time.
- * @method void setEndTime(string $EndTime) Set Process termination time.
- * @method integer getStrategyType() Obtain Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
- * @method void setStrategyType(integer $StrategyType) Set Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
- * @method string getSpecInfo() Obtain Specification information used during scale-out.
- * @method void setSpecInfo(string $SpecInfo) Set Specification information used during scale-out.
- * @method integer getCompensateFlag() Obtain Compensatory scale-out. 0: disable, 1: enable.
- * @method void setCompensateFlag(integer $CompensateFlag) Set Compensatory scale-out. 0: disable, 1: enable.
- * @method integer getCompensateCount() Obtain Number of compensations.
- * @method void setCompensateCount(integer $CompensateCount) Set Number of compensations.
- * @method integer getRetryCount() Obtain Number of retries.
- * @method void setRetryCount(integer $RetryCount) Set Number of retries.
- * @method string getRetryInfo() Obtain Retry information.
- * @method void setRetryInfo(string $RetryInfo) Set Retry information.
- * @method string getRetryEnReason() Obtain Retry description in English.
- * @method void setRetryEnReason(string $RetryEnReason) Set Retry description in English.
- * @method string getRetryReason() Obtain Retry description.
- * @method void setRetryReason(string $RetryReason) Set Retry description.
+ * @method string getStrategyName() Obtain <p>Scaling rule name.</p>
+ * @method void setStrategyName(string $StrategyName) Set <p>Scaling rule name.</p>
+ * @method string getScaleAction() Obtain <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
+ * @method void setScaleAction(string $ScaleAction) Set <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
+ * @method string getActionStatus() Obtain <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
+ * @method void setActionStatus(string $ActionStatus) Set <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
+ * @method string getActionTime() Obtain <p>Flow trigger time.</p>
+ * @method void setActionTime(string $ActionTime) Set <p>Flow trigger time.</p>
+ * @method string getScaleInfo() Obtain <p>Scaling-related description.</p>
+ * @method void setScaleInfo(string $ScaleInfo) Set <p>Scaling-related description.</p>
+ * @method integer getExpectScaleNum() Obtain <p>Valid only when ScaleAction is SCALE_OUT.</p>
+ * @method void setExpectScaleNum(integer $ExpectScaleNum) Set <p>Valid only when ScaleAction is SCALE_OUT.</p>
+ * @method string getEndTime() Obtain <p>Flow end time.</p>
+ * @method void setEndTime(string $EndTime) Set <p>Flow end time.</p>
+ * @method integer getStrategyType() Obtain <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
+ * @method void setStrategyType(integer $StrategyType) Set <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
+ * @method string getSpecInfo() Obtain <p>Specifications information used during scale-out.</p>
+ * @method void setSpecInfo(string $SpecInfo) Set <p>Specifications information used during scale-out.</p>
+ * @method integer getCompensateFlag() Obtain <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
+ * @method void setCompensateFlag(integer $CompensateFlag) Set <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
+ * @method integer getCompensateCount() Obtain <p>Number of compensations.</p>
+ * @method void setCompensateCount(integer $CompensateCount) Set <p>Number of compensations.</p>
+ * @method integer getRetryCount() Obtain <p>Number of retries.</p>
+ * @method void setRetryCount(integer $RetryCount) Set <p>Number of retries.</p>
+ * @method string getRetryInfo() Obtain <p>Retry information.</p>
+ * @method void setRetryInfo(string $RetryInfo) Set <p>Retry information.</p>
+ * @method string getRetryEnReason() Obtain <p>Retry description in English.</p>
+ * @method void setRetryEnReason(string $RetryEnReason) Set <p>Retry description in English.</p>
+ * @method string getRetryReason() Obtain <p>Retry description.</p>
+ * @method void setRetryReason(string $RetryReason) Set <p>Retry description.</p>
+ * @method integer getShortageClass() Obtain <p>Missing category.</p>
+ * @method void setShortageClass(integer $ShortageClass) Set <p>Missing category.</p>
  */
 class AutoScaleRecord extends AbstractModel
 {
     /**
-     * @var string Name of the scale-in or scale-out rule.
+     * @var string <p>Scaling rule name.</p>
      */
     public $StrategyName;
 
     /**
-     * @var string "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+     * @var string <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
      */
     public $ScaleAction;
 
     /**
-     * @var string The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+     * @var string <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
      */
     public $ActionStatus;
 
     /**
-     * @var string Process initiation time.
+     * @var string <p>Flow trigger time.</p>
      */
     public $ActionTime;
 
     /**
-     * @var string Description related to auto-scaling.
+     * @var string <p>Scaling-related description.</p>
      */
     public $ScaleInfo;
 
     /**
-     * @var integer Valid only when ScaleAction is SCALE_OUT.
+     * @var integer <p>Valid only when ScaleAction is SCALE_OUT.</p>
      */
     public $ExpectScaleNum;
 
     /**
-     * @var string Process termination time.
+     * @var string <p>Flow end time.</p>
      */
     public $EndTime;
 
     /**
-     * @var integer Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+     * @var integer <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
      */
     public $StrategyType;
 
     /**
-     * @var string Specification information used during scale-out.
+     * @var string <p>Specifications information used during scale-out.</p>
      */
     public $SpecInfo;
 
     /**
-     * @var integer Compensatory scale-out. 0: disable, 1: enable.
+     * @var integer <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
      */
     public $CompensateFlag;
 
     /**
-     * @var integer Number of compensations.
+     * @var integer <p>Number of compensations.</p>
      */
     public $CompensateCount;
 
     /**
-     * @var integer Number of retries.
+     * @var integer <p>Number of retries.</p>
      */
     public $RetryCount;
 
     /**
-     * @var string Retry information.
+     * @var string <p>Retry information.</p>
      */
     public $RetryInfo;
 
     /**
-     * @var string Retry description in English.
+     * @var string <p>Retry description in English.</p>
      */
     public $RetryEnReason;
 
     /**
-     * @var string Retry description.
+     * @var string <p>Retry description.</p>
      */
     public $RetryReason;
 
     /**
-     * @param string $StrategyName Name of the scale-in or scale-out rule.
-     * @param string $ScaleAction "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
-     * @param string $ActionStatus The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
-     * @param string $ActionTime Process initiation time.
-     * @param string $ScaleInfo Description related to auto-scaling.
-     * @param integer $ExpectScaleNum Valid only when ScaleAction is SCALE_OUT.
-     * @param string $EndTime Process termination time.
-     * @param integer $StrategyType Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
-     * @param string $SpecInfo Specification information used during scale-out.
-     * @param integer $CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
-     * @param integer $CompensateCount Number of compensations.
-     * @param integer $RetryCount Number of retries.
-     * @param string $RetryInfo Retry information.
-     * @param string $RetryEnReason Retry description in English.
-     * @param string $RetryReason Retry description.
+     * @var integer <p>Missing category.</p>
+     */
+    public $ShortageClass;
+
+    /**
+     * @param string $StrategyName <p>Scaling rule name.</p>
+     * @param string $ScaleAction <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
+     * @param string $ActionStatus <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
+     * @param string $ActionTime <p>Flow trigger time.</p>
+     * @param string $ScaleInfo <p>Scaling-related description.</p>
+     * @param integer $ExpectScaleNum <p>Valid only when ScaleAction is SCALE_OUT.</p>
+     * @param string $EndTime <p>Flow end time.</p>
+     * @param integer $StrategyType <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
+     * @param string $SpecInfo <p>Specifications information used during scale-out.</p>
+     * @param integer $CompensateFlag <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
+     * @param integer $CompensateCount <p>Number of compensations.</p>
+     * @param integer $RetryCount <p>Number of retries.</p>
+     * @param string $RetryInfo <p>Retry information.</p>
+     * @param string $RetryEnReason <p>Retry description in English.</p>
+     * @param string $RetryReason <p>Retry description.</p>
+     * @param integer $ShortageClass <p>Missing category.</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class AutoScaleRecord extends AbstractModel
 
         if (array_key_exists("RetryReason",$param) and $param["RetryReason"] !== null) {
             $this->RetryReason = $param["RetryReason"];
+        }
+
+        if (array_key_exists("ShortageClass",$param) and $param["ShortageClass"] !== null) {
+            $this->ShortageClass = $param["ShortageClass"];
         }
     }
 }

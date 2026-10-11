@@ -34,12 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanRowNum(integer $ScanRowNum) Set Total number of scanned rows.
  * @method integer getScanFileNum() Obtain Total number of scanned files.
  * @method void setScanFileNum(integer $ScanFileNum) Set Total number of scanned files.
- * @method integer getScanTotalData() Obtain Total data volume scanned by query (bytes).
- * @method void setScanTotalData(integer $ScanTotalData) Set Total data volume scanned by query (bytes).
+ * @method integer getScanTotalData() Obtain Total scanned and queried data volume (bytes).
+ * @method void setScanTotalData(integer $ScanTotalData) Set Total scanned and queried data volume (bytes).
  * @method array getApplicationId() Obtain Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApplicationId(array $ApplicationId) Set Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getOutputRowNum() Obtain Total number of output rows.
  * @method void setOutputRowNum(integer $OutputRowNum) Set Total number of output rows.
  * @method integer getOutputFileNum() Obtain Total number of output files.
@@ -91,13 +89,12 @@ class SparkQuery extends AbstractModel
     public $ScanFileNum;
 
     /**
-     * @var integer Total data volume scanned by query (bytes).
+     * @var integer Total scanned and queried data volume (bytes).
      */
     public $ScanTotalData;
 
     /**
      * @var array Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationId;
 
@@ -139,9 +136,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ScanPartitionNum Number of scanned partitions.
      * @param integer $ScanRowNum Total number of scanned rows.
      * @param integer $ScanFileNum Total number of scanned files.
-     * @param integer $ScanTotalData Total data volume scanned by query (bytes).
+     * @param integer $ScanTotalData Total scanned and queried data volume (bytes).
      * @param array $ApplicationId Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $OutputRowNum Total number of output rows.
      * @param integer $OutputFileNum Total number of output files.
      * @param integer $OutputPartitionNum Number of output partitions.

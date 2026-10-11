@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewInstance request structure.
  *
- * @method integer getTimeSpan() Obtain How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
- * @method void setTimeSpan(integer $TimeSpan) Set How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
- * @method integer getPayMode() Obtain Instance billing mode.
- * @method void setPayMode(integer $PayMode) Set Instance billing mode.
- * @method array getResourceIds() Obtain List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
- * @method void setResourceIds(array $ResourceIds) Set List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
- * @method string getTimeUnit() Obtain Unit of time for instance renewal.
- * @method void setTimeUnit(string $TimeUnit) Set Unit of time for instance renewal.
- * @method string getCurrency() Obtain Currency.
- * @method void setCurrency(string $Currency) Set Currency.
- * @method Placement getPlacement() Obtain Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method void setPlacement(Placement $Placement) Set Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method integer getModifyPayMode() Obtain Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
- * @method void setModifyPayMode(integer $ModifyPayMode) Set Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
- * @method boolean getNeedDetail() Obtain Whether the renewal price for every node is required.
- * @method void setNeedDetail(boolean $NeedDetail) Set Whether the renewal price for every node is required.
- * @method string getInstanceId() Obtain Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
- * @method void setInstanceId(string $InstanceId) Set Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+ * @method integer getTimeSpan() Obtain Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
+ * @method void setTimeSpan(integer $TimeSpan) Set Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
+ * @method integer getPayMode() Obtain Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
+ * @method void setPayMode(integer $PayMode) Set Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
+ * @method array getResourceIds() Obtain Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+ * @method void setResourceIds(array $ResourceIds) Set Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+ * @method string getTimeUnit() Obtain Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
+ * @method void setTimeUnit(string $TimeUnit) Set Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
+ * @method string getCurrency() Obtain Currency type. Valid values:
+<li>CNY: RMB</li>
+ * @method void setCurrency(string $Currency) Set Currency type. Valid values:
+<li>CNY: RMB</li>
+ * @method Placement getPlacement() Obtain 
+ * @method void setPlacement(Placement $Placement) Set 
+ * @method integer getModifyPayMode() Obtain Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
+ * @method void setModifyPayMode(integer $ModifyPayMode) Set Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
+ * @method boolean getNeedDetail() Obtain Whether to return the renewal price for each node.
+ * @method void setNeedDetail(boolean $NeedDetail) Set Whether to return the renewal price for each node.
+ * @method string getInstanceId() Obtain Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+     * @var integer Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
      */
     public $TimeSpan;
 
     /**
-     * @var integer Instance billing mode.
+     * @var integer Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
      */
     public $PayMode;
 
     /**
-     * @var array List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     * @var array Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
      */
     public $ResourceIds;
 
     /**
-     * @var string Unit of time for instance renewal.
+     * @var string Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
      */
     public $TimeUnit;
 
     /**
-     * @var string Currency.
+     * @var string Currency type. Valid values:
+<li>CNY: RMB</li>
      */
     public $Currency;
 
     /**
-     * @var Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * @var Placement 
      */
     public $Placement;
 
     /**
-     * @var integer Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     * @var integer Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
      */
     public $ModifyPayMode;
 
     /**
-     * @var boolean Whether the renewal price for every node is required.
+     * @var boolean Whether to return the renewal price for each node.
      */
     public $NeedDetail;
 
     /**
-     * @var string Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+     * @var string Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     public $InstanceId;
 
     /**
-     * @param integer $TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
-     * @param integer $PayMode Instance billing mode.
-     * @param array $ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-     * @param string $TimeUnit Unit of time for instance renewal.
-     * @param string $Currency Currency.
-     * @param Placement $Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param integer $ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
-     * @param boolean $NeedDetail Whether the renewal price for every node is required.
-     * @param string $InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+     * @param integer $TimeSpan Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
+     * @param integer $PayMode Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
+     * @param array $ResourceIds Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+     * @param string $TimeUnit Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
+     * @param string $Currency Currency type. Valid values:
+<li>CNY: RMB</li>
+     * @param Placement $Placement 
+     * @param integer $ModifyPayMode Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
+     * @param boolean $NeedDetail Whether to return the renewal price for each node.
+     * @param string $InstanceId Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     function __construct()
     {

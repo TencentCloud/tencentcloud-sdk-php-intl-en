@@ -18,25 +18,25 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The type and number of nodes to be added.
+ * Scale-out node type and quantity.
  *
- * @method string getNodeFlag() Obtain Valid values of node type:
+ * @method string getNodeFlag() Obtain Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
- * @method void setNodeFlag(string $NodeFlag) Set Valid values of node type:
+ * @method void setNodeFlag(string $NodeFlag) Set Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
- * @method integer getNodeCount() Obtain The number of nodes.
- * @method void setNodeCount(integer $NodeCount) Set The number of nodes.
+ * @method integer getNodeCount() Obtain Number of scale-out nodes.
+ * @method void setNodeCount(integer $NodeCount) Set Number of scale-out nodes.
  */
 class ScaleOutNodeConfig extends AbstractModel
 {
     /**
-     * @var string Valid values of node type:
+     * @var string Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -45,17 +45,17 @@ class ScaleOutNodeConfig extends AbstractModel
     public $NodeFlag;
 
     /**
-     * @var integer The number of nodes.
+     * @var integer Number of scale-out nodes.
      */
     public $NodeCount;
 
     /**
-     * @param string $NodeFlag Valid values of node type:
+     * @param string $NodeFlag Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-     * @param integer $NodeCount The number of nodes.
+     * @param integer $NodeCount Number of scale-out nodes.
      */
     function __construct()
     {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getType() Obtain Inspection type, FixedTime or RealTime.
- * @method void setType(string $Type) Set Inspection type, FixedTime or RealTime.
- * @method array getSettings() Obtain Task configurations.
- * @method void setSettings(array $Settings) Set Task configurations.
+ * @method string getType() Obtain Inspection type. Valid values: FixedTime and RealTime.
+ * @method void setType(string $Type) Set Inspection type. Valid values: FixedTime and RealTime.
+ * @method array getSettings() Obtain Task configuration.
+ * @method void setSettings(array $Settings) Set Task configuration.
  * @method integer getStartTime() Obtain Start timestamp.
  * @method void setStartTime(integer $StartTime) Set Start timestamp.
  * @method integer getEndTime() Obtain End timestamp.
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClock(string $Clock) Set Start time of each day.
  * @method string getDayOfWeek() Obtain Day of the week.
  * @method void setDayOfWeek(string $DayOfWeek) Set Day of the week.
- * @method string getDayOfMonth() Obtain Number of the day in a month.
- * @method void setDayOfMonth(string $DayOfMonth) Set Number of the day in a month.
+ * @method string getDayOfMonth() Obtain Day of the month.
+ * @method void setDayOfMonth(string $DayOfMonth) Set Day of the month.
  * @method string getJobId() Obtain Inspection job ID.
  * @method void setJobId(string $JobId) Set Inspection job ID.
  */
@@ -49,12 +49,12 @@ class ModifyInspectionSettingsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Inspection type, FixedTime or RealTime.
+     * @var string Inspection type. Valid values: FixedTime and RealTime.
      */
     public $Type;
 
     /**
-     * @var array Task configurations.
+     * @var array Task configuration.
      */
     public $Settings;
 
@@ -84,7 +84,7 @@ class ModifyInspectionSettingsRequest extends AbstractModel
     public $DayOfWeek;
 
     /**
-     * @var string Number of the day in a month.
+     * @var string Day of the month.
      */
     public $DayOfMonth;
 
@@ -95,14 +95,14 @@ class ModifyInspectionSettingsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $Type Inspection type, FixedTime or RealTime.
-     * @param array $Settings Task configurations.
+     * @param string $Type Inspection type. Valid values: FixedTime and RealTime.
+     * @param array $Settings Task configuration.
      * @param integer $StartTime Start timestamp.
      * @param integer $EndTime End timestamp.
      * @param string $Strategy Inspection cycle, such as EveryDay, EveryWeek or EveryMonth.
      * @param string $Clock Start time of each day.
      * @param string $DayOfWeek Day of the week.
-     * @param string $DayOfMonth Number of the day in a month.
+     * @param string $DayOfMonth Day of the month.
      * @param string $JobId Inspection job ID.
      */
     function __construct()

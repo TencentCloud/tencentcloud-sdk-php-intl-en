@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Cluster ID.
  * @method void setInstanceId(string $InstanceId) Set Cluster ID.
- * @method integer getStartTime() Obtain Obtain the start time for querying information (s).
- * @method void setStartTime(integer $StartTime) Set Obtain the start time for querying information (s).
- * @method integer getEndTime() Obtain Obtain the end time for querying information (s).
- * @method void setEndTime(integer $EndTime) Set Obtain the end time for querying information (s).
- * @method integer getPageSize() Obtain Page size for pagination queries. Minimum value: 1; maximum value: 100.
- * @method void setPageSize(integer $PageSize) Set Page size for pagination queries. Minimum value: 1; maximum value: 100.
+ * @method integer getStartTime() Obtain Start time for obtaining queried information (s).
+ * @method void setStartTime(integer $StartTime) Set Start time for obtaining queried information (s).
+ * @method integer getEndTime() Obtain End time for obtaining queried information (s).
+ * @method void setEndTime(integer $EndTime) Set End time for obtaining queried information (s).
+ * @method integer getPageSize() Obtain Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
  * @method integer getPage() Obtain Page number for pagination queries, starting from 1.
  * @method void setPage(integer $Page) Set Page number for pagination queries, starting from 1.
  */
@@ -39,17 +39,17 @@ class DescribeTrinoQueryInfoRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Obtain the start time for querying information (s).
+     * @var integer Start time for obtaining queried information (s).
      */
     public $StartTime;
 
     /**
-     * @var integer Obtain the end time for querying information (s).
+     * @var integer End time for obtaining queried information (s).
      */
     public $EndTime;
 
     /**
-     * @var integer Page size for pagination queries. Minimum value: 1; maximum value: 100.
+     * @var integer Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
      */
     public $PageSize;
 
@@ -60,9 +60,9 @@ class DescribeTrinoQueryInfoRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Cluster ID.
-     * @param integer $StartTime Obtain the start time for querying information (s).
-     * @param integer $EndTime Obtain the end time for querying information (s).
-     * @param integer $PageSize Page size for pagination queries. Minimum value: 1; maximum value: 100.
+     * @param integer $StartTime Start time for obtaining queried information (s).
+     * @param integer $EndTime End time for obtaining queried information (s).
+     * @param integer $PageSize Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
      * @param integer $Page Page number for pagination queries, starting from 1.
      */
     function __construct()

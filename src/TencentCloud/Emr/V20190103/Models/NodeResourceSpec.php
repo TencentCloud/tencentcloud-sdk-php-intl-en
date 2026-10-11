@@ -18,68 +18,68 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource details
+ * Resource details.
  *
- * @method string getInstanceType() Obtain specifications type, such as S2.MEDIUM8.
- * @method void setInstanceType(string $InstanceType) Set specifications type, such as S2.MEDIUM8.
- * @method array getSystemDisk() Obtain The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSystemDisk(array $SystemDisk) Set The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDataDisk() Obtain The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataDisk(array $DataDisk) Set The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getLocalDataDisk() Obtain The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLocalDataDisk(array $LocalDataDisk) Set The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain <p>Specifications type, such as S2.MEDIUM8.</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Specifications type, such as S2.MEDIUM8.</p>
+ * @method array getSystemDisk() Obtain <p>System disk. The number of system disks does not exceed 1.</p>
+ * @method void setSystemDisk(array $SystemDisk) Set <p>System disk. The number of system disks does not exceed 1.</p>
+ * @method array getTags() Obtain <p>List of tags to be bound.</p>
+ * @method void setTags(array $Tags) Set <p>List of tags to be bound.</p>
+ * @method array getDataDisk() Obtain <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
+ * @method void setDataDisk(array $DataDisk) Set <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
+ * @method array getLocalDataDisk() Obtain <p>Local data disk.</p>
+ * @method void setLocalDataDisk(array $LocalDataDisk) Set <p>Local data disk.</p>
+ * @method array getSoftwareConfig() Obtain <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+ * @method void setSoftwareConfig(array $SoftwareConfig) Set <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+ * @method string getCustomNodeName() Obtain <p>Custom hostname.</p>
+ * @method void setCustomNodeName(string $CustomNodeName) Set <p>Custom hostname.</p>
  */
 class NodeResourceSpec extends AbstractModel
 {
     /**
-     * @var string specifications type, such as S2.MEDIUM8.
+     * @var string <p>Specifications type, such as S2.MEDIUM8.</p>
      */
     public $InstanceType;
 
     /**
-     * @var array The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>System disk. The number of system disks does not exceed 1.</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>List of tags to be bound.</p>
      */
     public $Tags;
 
     /**
-     * @var array The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
      */
     public $DataDisk;
 
     /**
-     * @var array The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Local data disk.</p>
      */
     public $LocalDataDisk;
 
     /**
-     * @param string $InstanceType specifications type, such as S2.MEDIUM8.
-     * @param array $SystemDisk The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DataDisk The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $LocalDataDisk The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+     */
+    public $SoftwareConfig;
+
+    /**
+     * @var string <p>Custom hostname.</p>
+     */
+    public $CustomNodeName;
+
+    /**
+     * @param string $InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
+     * @param array $SystemDisk <p>System disk. The number of system disks does not exceed 1.</p>
+     * @param array $Tags <p>List of tags to be bound.</p>
+     * @param array $DataDisk <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
+     * @param array $LocalDataDisk <p>Local data disk.</p>
+     * @param array $SoftwareConfig <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+     * @param string $CustomNodeName <p>Custom hostname.</p>
      */
     function __construct()
     {
@@ -132,6 +132,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->LocalDataDisk, $obj);
             }
+        }
+
+        if (array_key_exists("SoftwareConfig",$param) and $param["SoftwareConfig"] !== null) {
+            $this->SoftwareConfig = [];
+            foreach ($param["SoftwareConfig"] as $key => $value){
+                $obj = new ServiceDeploy();
+                $obj->deserialize($value);
+                array_push($this->SoftwareConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("CustomNodeName",$param) and $param["CustomNodeName"] !== null) {
+            $this->CustomNodeName = $param["CustomNodeName"];
         }
     }
 }

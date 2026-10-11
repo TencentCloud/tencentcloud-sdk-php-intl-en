@@ -18,24 +18,22 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Hive query details
+ * Hive query details.
  *
  * @method string getStatement() Obtain Query statement.
  * @method void setStatement(string $Statement) Set Query statement.
  * @method string getDuration() Obtain Execution duration.
  * @method void setDuration(string $Duration) Set Execution duration.
- * @method integer getStartTime() Obtain Start time in milliseconds.
- * @method void setStartTime(integer $StartTime) Set Start time in milliseconds.
- * @method integer getEndTime() Obtain End time in milliseconds.
- * @method void setEndTime(integer $EndTime) Set End time in milliseconds.
+ * @method integer getStartTime() Obtain Start time (ms).
+ * @method void setStartTime(integer $StartTime) Set Start time (ms).
+ * @method integer getEndTime() Obtain End time (ms).
+ * @method void setEndTime(integer $EndTime) Set End time (ms).
  * @method string getState() Obtain Status.
  * @method void setState(string $State) Set Status.
  * @method string getUser() Obtain User.
  * @method void setUser(string $User) Set User.
- * @method array getJobIds() Obtain AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJobIds(array $JobIds) Set AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getJobIds() Obtain APPID list.
+ * @method void setJobIds(array $JobIds) Set APPID list.
  * @method string getExecutionEngine() Obtain Execution engine.
  * @method void setExecutionEngine(string $ExecutionEngine) Set Execution engine.
  * @method string getId() Obtain Query ID.
@@ -54,12 +52,12 @@ class HiveQuery extends AbstractModel
     public $Duration;
 
     /**
-     * @var integer Start time in milliseconds.
+     * @var integer Start time (ms).
      */
     public $StartTime;
 
     /**
-     * @var integer End time in milliseconds.
+     * @var integer End time (ms).
      */
     public $EndTime;
 
@@ -74,8 +72,7 @@ class HiveQuery extends AbstractModel
     public $User;
 
     /**
-     * @var array AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array APPID list.
      */
     public $JobIds;
 
@@ -92,12 +89,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Statement Query statement.
      * @param string $Duration Execution duration.
-     * @param integer $StartTime Start time in milliseconds.
-     * @param integer $EndTime End time in milliseconds.
+     * @param integer $StartTime Start time (ms).
+     * @param integer $EndTime End time (ms).
      * @param string $State Status.
      * @param string $User User.
-     * @param array $JobIds AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $JobIds APPID list.
      * @param string $ExecutionEngine Execution engine.
      * @param string $Id Query ID.
      */

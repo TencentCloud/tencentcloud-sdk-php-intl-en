@@ -18,10 +18,10 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Relationship between shared components and the current cluster
+ * Mapping between the current cluster and the shared component.
  *
- * @method integer getDependType() Obtain Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
- * @method void setDependType(integer $DependType) Set Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+ * @method integer getDependType() Obtain Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
+ * @method void setDependType(integer $DependType) Set Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
  * @method string getService() Obtain Shared component.
  * @method void setService(string $Service) Set Shared component.
  * @method string getClusterId() Obtain Shared cluster.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ClusterExternalServiceInfo extends AbstractModel
 {
     /**
-     * @var integer Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+     * @var integer Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
      */
     public $DependType;
 
@@ -52,7 +52,7 @@ class ClusterExternalServiceInfo extends AbstractModel
     public $ClusterStatus;
 
     /**
-     * @param integer $DependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+     * @param integer $DependType Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
      * @param string $Service Shared component.
      * @param string $ClusterId Shared cluster.
      * @param integer $ClusterStatus Shared cluster status.

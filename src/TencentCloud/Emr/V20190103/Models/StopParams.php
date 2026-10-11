@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Default mode: default.
  * @method void setStopPolicy(string $StopPolicy) Set Security mode: safe.
 Default mode: default.
- * @method integer getThreadCount() Obtain Thread Count
- * @method void setThreadCount(integer $ThreadCount) Set Thread Count
+ * @method integer getThreadCount() Obtain Number of threads.
+ * @method void setThreadCount(integer $ThreadCount) Set Number of threads.
+ * @method integer getGraceDownTime() Obtain Graceful stop timeout period (s).
+ * @method void setGraceDownTime(integer $GraceDownTime) Set Graceful stop timeout period (s).
  */
 class StopParams extends AbstractModel
 {
@@ -36,14 +38,20 @@ Default mode: default.
     public $StopPolicy;
 
     /**
-     * @var integer Thread Count
+     * @var integer Number of threads.
      */
     public $ThreadCount;
 
     /**
+     * @var integer Graceful stop timeout period (s).
+     */
+    public $GraceDownTime;
+
+    /**
      * @param string $StopPolicy Security mode: safe.
 Default mode: default.
-     * @param integer $ThreadCount Thread Count
+     * @param integer $ThreadCount Number of threads.
+     * @param integer $GraceDownTime Graceful stop timeout period (s).
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ Default mode: default.
 
         if (array_key_exists("ThreadCount",$param) and $param["ThreadCount"] !== null) {
             $this->ThreadCount = $param["ThreadCount"];
+        }
+
+        if (array_key_exists("GraceDownTime",$param) and $param["GraceDownTime"] !== null) {
+            $this->GraceDownTime = $param["GraceDownTime"];
         }
     }
 }

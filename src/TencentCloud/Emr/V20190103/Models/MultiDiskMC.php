@@ -18,36 +18,36 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-cloud disk parameters
+ * Multi-cloud disk parameter.
  *
  * @method integer getCount() Obtain Number of cloud disks of this type.
  * @method void setCount(integer $Count) Set Number of cloud disks of this type.
  * @method integer getType() Obtain Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
  * @method void setType(integer $Type) Set Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
  * @method string getSize() Obtain Disk size.
  * @method void setSize(string $Size) Set Disk size.
  * @method integer getVolume() Obtain Cloud disk size (bytes).
@@ -62,18 +62,18 @@ class MultiDiskMC extends AbstractModel
 
     /**
      * @var integer Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
      */
     public $Type;
 
@@ -90,18 +90,18 @@ class MultiDiskMC extends AbstractModel
     /**
      * @param integer $Count Number of cloud disks of this type.
      * @param integer $Type Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
      * @param string $Size Disk size.
      * @param integer $Volume Cloud disk size (bytes).
      */

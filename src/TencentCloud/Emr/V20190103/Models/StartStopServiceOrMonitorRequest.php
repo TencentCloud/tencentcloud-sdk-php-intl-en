@@ -20,53 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartStopServiceOrMonitor request structure.
  *
- * @method string getInstanceId() Obtain The cluster ID.
- * @method void setInstanceId(string $InstanceId) Set The cluster ID.
- * @method string getOpType() Obtain The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
- * @method void setOpType(string $OpType) Set The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
- * @method OpScope getOpScope() Obtain The operation scope.
- * @method void setOpScope(OpScope $OpScope) Set The operation scope.
- * @method StrategyConfig getStrategyConfig() Obtain The operation policy.
- * @method void setStrategyConfig(StrategyConfig $StrategyConfig) Set The operation policy.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method string getOpType() Obtain Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
+ * @method void setOpType(string $OpType) Set Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
+ * @method OpScope getOpScope() Obtain Operation scope.
+ * @method void setOpScope(OpScope $OpScope) Set Operation scope.
+ * @method StrategyConfig getStrategyConfig() Obtain Operation policy.
+ * @method void setStrategyConfig(StrategyConfig $StrategyConfig) Set Operation policy.
  * @method StopParams getStopParams() Obtain Parameters used for suspending services.
  * @method void setStopParams(StopParams $StopParams) Set Parameters used for suspending services.
- * @method boolean getKeepMonitorButNotRecoverProcess() Obtain This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
- * @method void setKeepMonitorButNotRecoverProcess(boolean $KeepMonitorButNotRecoverProcess) Set This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+ * @method boolean getKeepMonitorButNotRecoverProcess() Obtain This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
+ * @method void setKeepMonitorButNotRecoverProcess(boolean $KeepMonitorButNotRecoverProcess) Set This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
  */
 class StartStopServiceOrMonitorRequest extends AbstractModel
 {
     /**
-     * @var string The cluster ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var string The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
+     * @var string Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
      */
     public $OpType;
 
     /**
-     * @var OpScope The operation scope.
+     * @var OpScope Operation scope.
      */
     public $OpScope;
 
     /**
-     * @var StrategyConfig The operation policy.
+     * @var StrategyConfig Operation policy.
      */
     public $StrategyConfig;
 
@@ -76,22 +76,22 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
     public $StopParams;
 
     /**
-     * @var boolean This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     * @var boolean This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
      */
     public $KeepMonitorButNotRecoverProcess;
 
     /**
-     * @param string $InstanceId The cluster ID.
-     * @param string $OpType The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
-     * @param OpScope $OpScope The operation scope.
-     * @param StrategyConfig $StrategyConfig The operation policy.
+     * @param string $InstanceId Cluster ID.
+     * @param string $OpType Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
+     * @param OpScope $OpScope Operation scope.
+     * @param StrategyConfig $StrategyConfig Operation policy.
      * @param StopParams $StopParams Parameters used for suspending services.
-     * @param boolean $KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     * @param boolean $KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
      */
     function __construct()
     {

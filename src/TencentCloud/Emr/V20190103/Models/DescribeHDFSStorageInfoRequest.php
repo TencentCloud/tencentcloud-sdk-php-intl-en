@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Cluster ID.
  * @method void setInstanceId(string $InstanceId) Set Cluster ID.
- * @method integer getStartTime() Obtain Query information obtainment start time (seconds).
- * @method void setStartTime(integer $StartTime) Set Query information obtainment start time (seconds).
- * @method integer getEndTime() Obtain Query information obtainment end time (seconds).
- * @method void setEndTime(integer $EndTime) Set Query information obtainment end time (seconds).
+ * @method integer getStartTime() Obtain Start time for obtaining queried information (s).
+ * @method void setStartTime(integer $StartTime) Set Start time for obtaining queried information (s).
+ * @method integer getEndTime() Obtain End time for obtaining queried information (s).
+ * @method void setEndTime(integer $EndTime) Set End time for obtaining queried information (s).
  */
 class DescribeHDFSStorageInfoRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeHDFSStorageInfoRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Query information obtainment start time (seconds).
+     * @var integer Start time for obtaining queried information (s).
      */
     public $StartTime;
 
     /**
-     * @var integer Query information obtainment end time (seconds).
+     * @var integer End time for obtaining queried information (s).
      */
     public $EndTime;
 
     /**
      * @param string $InstanceId Cluster ID.
-     * @param integer $StartTime Query information obtainment start time (seconds).
-     * @param integer $EndTime Query information obtainment end time (seconds).
+     * @param integer $StartTime Start time for obtaining queried information (s).
+     * @param integer $EndTime End time for obtaining queried information (s).
      */
     function __construct()
     {

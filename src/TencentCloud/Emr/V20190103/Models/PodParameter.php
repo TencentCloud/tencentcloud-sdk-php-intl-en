@@ -18,15 +18,15 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom pod permission and parameter
+ * Pod custom permission and parameter.
  *
- * @method string getClusterId() Obtain ID of TKE or EKS cluster
- * @method void setClusterId(string $ClusterId) Set ID of TKE or EKS cluster
- * @method string getConfig() Obtain Custom permissions
+ * @method string getClusterId() Obtain TKE or EKS cluster ID.
+ * @method void setClusterId(string $ClusterId) Set TKE or EKS cluster ID.
+ * @method string getConfig() Obtain Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -57,11 +57,11 @@ Example:
     }
   ]
 }
- * @method void setConfig(string $Config) Set Custom permissions
+ * @method void setConfig(string $Config) Set Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -92,7 +92,7 @@ Example:
     }
   ]
 }
- * @method string getParameter() Obtain Custom parameters
+ * @method string getParameter() Obtain Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -167,7 +167,7 @@ Example:
       }
     }
   }
- * @method void setParameter(string $Parameter) Set Custom parameters
+ * @method void setParameter(string $Parameter) Set Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -246,16 +246,16 @@ Example:
 class PodParameter extends AbstractModel
 {
     /**
-     * @var string ID of TKE or EKS cluster
+     * @var string TKE or EKS cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Custom permissions
+     * @var string Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -290,7 +290,7 @@ Example:
     public $Config;
 
     /**
-     * @var string Custom parameters
+     * @var string Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -369,12 +369,12 @@ Example:
     public $Parameter;
 
     /**
-     * @param string $ClusterId ID of TKE or EKS cluster
-     * @param string $Config Custom permissions
+     * @param string $ClusterId TKE or EKS cluster ID.
+     * @param string $Config Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -405,7 +405,7 @@ Example:
     }
   ]
 }
-     * @param string $Parameter Custom parameters
+     * @param string $Parameter Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",

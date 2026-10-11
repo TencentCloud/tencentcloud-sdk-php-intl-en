@@ -18,29 +18,29 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node renewal pricing details.
+ * Node renewal inquiry details.
  *
- * @method integer getChargeType() Obtain Billing type (1: monthly subscription, 3: committed use).
- * @method void setChargeType(integer $ChargeType) Set Billing type (1: monthly subscription, 3: committed use).
+ * @method integer getChargeType() Obtain Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
+ * @method void setChargeType(integer $ChargeType) Set Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
  * @method string getEmrResourceId() Obtain EMR resource ID.
  * @method void setEmrResourceId(string $EmrResourceId) Set EMR resource ID.
  * @method string getNodeType() Obtain Node type.
  * @method void setNodeType(string $NodeType) Set Node type.
- * @method string getIp() Obtain Node private network IP.
- * @method void setIp(string $Ip) Set Node private network IP.
+ * @method string getIp() Obtain Node private network IP address.
+ * @method void setIp(string $Ip) Set Node private network IP address.
  * @method string getExpireTime() Obtain Current expiration time.
  * @method void setExpireTime(string $ExpireTime) Set Current expiration time.
  * @method float getOriginalCost() Obtain Original price.
  * @method void setOriginalCost(float $OriginalCost) Set Original price.
- * @method float getDiscountCost() Obtain Discount price.
- * @method void setDiscountCost(float $DiscountCost) Set Discount price.
- * @method array getRenewPriceDetails() Obtain Node component renewal pricing list.
- * @method void setRenewPriceDetails(array $RenewPriceDetails) Set Node component renewal pricing list.
+ * @method float getDiscountCost() Obtain Discounted price.
+ * @method void setDiscountCost(float $DiscountCost) Set Discounted price.
+ * @method array getRenewPriceDetails() Obtain Node sub-item renewal inquiry details list.
+ * @method void setRenewPriceDetails(array $RenewPriceDetails) Set Node sub-item renewal inquiry details list.
  */
 class NodeRenewPriceDetail extends AbstractModel
 {
     /**
-     * @var integer Billing type (1: monthly subscription, 3: committed use).
+     * @var integer Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
      */
     public $ChargeType;
 
@@ -55,7 +55,7 @@ class NodeRenewPriceDetail extends AbstractModel
     public $NodeType;
 
     /**
-     * @var string Node private network IP.
+     * @var string Node private network IP address.
      */
     public $Ip;
 
@@ -70,24 +70,24 @@ class NodeRenewPriceDetail extends AbstractModel
     public $OriginalCost;
 
     /**
-     * @var float Discount price.
+     * @var float Discounted price.
      */
     public $DiscountCost;
 
     /**
-     * @var array Node component renewal pricing list.
+     * @var array Node sub-item renewal inquiry details list.
      */
     public $RenewPriceDetails;
 
     /**
-     * @param integer $ChargeType Billing type (1: monthly subscription, 3: committed use).
+     * @param integer $ChargeType Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
      * @param string $EmrResourceId EMR resource ID.
      * @param string $NodeType Node type.
-     * @param string $Ip Node private network IP.
+     * @param string $Ip Node private network IP address.
      * @param string $ExpireTime Current expiration time.
      * @param float $OriginalCost Original price.
-     * @param float $DiscountCost Discount price.
-     * @param array $RenewPriceDetails Node component renewal pricing list.
+     * @param float $DiscountCost Discounted price.
+     * @param array $RenewPriceDetails Node sub-item renewal inquiry details list.
      */
     function __construct()
     {

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Cluster name.
  * @method void setInstanceId(string $InstanceId) Set Cluster name.
- * @method array getFilters() Obtain Description key-value pair filter, which is used for conditional filtering queries.
- * @method void setFilters(array $Filters) Set Description key-value pair filter, which is used for conditional filtering queries.
+ * @method array getFilters() Obtain Description key-value pair filter, which is used for conditional filter queries.
+ * @method void setFilters(array $Filters) Set Description key-value pair filter, which is used for conditional filter queries.
  * @method Order getOrderFields() Obtain Description order, which is used for sorting.
  * @method void setOrderFields(Order $OrderFields) Set Description order, which is used for sorting.
- * @method integer getLimit() Obtain Number of returns.
- * @method void setLimit(integer $Limit) Set Number of returns.
+ * @method integer getLimit() Obtain Number of returned items.
+ * @method void setLimit(integer $Limit) Set Number of returned items.
  * @method integer getOffset() Obtain Pagination parameter.
  * @method void setOffset(integer $Offset) Set Pagination parameter.
  */
@@ -39,7 +39,7 @@ class DescribeGroupsSTDRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Description key-value pair filter, which is used for conditional filtering queries.
+     * @var array Description key-value pair filter, which is used for conditional filter queries.
      */
     public $Filters;
 
@@ -49,7 +49,7 @@ class DescribeGroupsSTDRequest extends AbstractModel
     public $OrderFields;
 
     /**
-     * @var integer Number of returns.
+     * @var integer Number of returned items.
      */
     public $Limit;
 
@@ -60,9 +60,9 @@ class DescribeGroupsSTDRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Cluster name.
-     * @param array $Filters Description key-value pair filter, which is used for conditional filtering queries.
+     * @param array $Filters Description key-value pair filter, which is used for conditional filter queries.
      * @param Order $OrderFields Description order, which is used for sorting.
-     * @param integer $Limit Number of returns.
+     * @param integer $Limit Number of returned items.
      * @param integer $Offset Pagination parameter.
      */
     function __construct()

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dynamically generated change details.
  *
- * @method string getName() Obtain Name
- * @method void setName(string $Name) Set Name
- * @method string getId() Obtain ID, which is used by the front end.
- * @method void setId(string $Id) Set ID, which is used by the front end.
+ * @method string getName() Obtain Name.
+ * @method void setName(string $Name) Set Name.
+ * @method string getId() Obtain ID, which is used by the frontend.
+ * @method void setId(string $Id) Set ID, which is used by the frontend.
  */
 class DiffHeader extends AbstractModel
 {
     /**
-     * @var string Name
+     * @var string Name.
      */
     public $Name;
 
     /**
-     * @var string ID, which is used by the front end.
+     * @var string ID, which is used by the frontend.
      */
     public $Id;
 
     /**
-     * @param string $Name Name
-     * @param string $Id ID, which is used by the front end.
+     * @param string $Name Name.
+     * @param string $Id ID, which is used by the frontend.
      */
     function __construct()
     {

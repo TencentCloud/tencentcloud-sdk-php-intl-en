@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EMR inquiry description
+ * EMR inquiry description.
  *
  * @method string getOriginalCost() Obtain List price.
  * @method void setOriginalCost(string $OriginalCost) Set List price.
@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscountCost(string $DiscountCost) Set Discounted price.
  * @method string getUnit() Obtain Unit.
  * @method void setUnit(string $Unit) Set Unit.
- * @method PriceResource getPriceSpec() Obtain The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPriceSpec(PriceResource $PriceSpec) Set The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method PriceResource getPriceSpec() Obtain Price inquiry configuration.
+ * @method void setPriceSpec(PriceResource $PriceSpec) Set Price inquiry configuration.
  * @method boolean getSupportSpotPaid() Obtain Whether spot instances are supported.
  * @method void setSupportSpotPaid(boolean $SupportSpotPaid) Set Whether spot instances are supported.
  */
@@ -51,8 +49,7 @@ class EmrPrice extends AbstractModel
     public $Unit;
 
     /**
-     * @var PriceResource The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var PriceResource Price inquiry configuration.
      */
     public $PriceSpec;
 
@@ -65,8 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OriginalCost List price.
      * @param string $DiscountCost Discounted price.
      * @param string $Unit Unit.
-     * @param PriceResource $PriceSpec The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PriceResource $PriceSpec Price inquiry configuration.
      * @param boolean $SupportSpotPaid Whether spot instances are supported.
      */
     function __construct()

@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyYarnQueueV2 request structure.
  *
- * @method string getInstanceId() Obtain Cluster ID
- * @method void setInstanceId(string $InstanceId) Set Cluster ID
- * @method string getScheduler() Obtain Scheduler type. The values are as follows:
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method string getScheduler() Obtain Scheduler type. Valid values:
 
 1. capacity
 2. fair
- * @method void setScheduler(string $Scheduler) Set Scheduler type. The values are as follows:
+ * @method void setScheduler(string $Scheduler) Set Scheduler type. Valid values:
 
 1. capacity
 2. fair
- * @method array getConfigModifyInfoList() Obtain Resource pool data
- * @method void setConfigModifyInfoList(array $ConfigModifyInfoList) Set Resource pool data
+ * @method array getConfigModifyInfoList() Obtain Resource pool data.
+ * @method void setConfigModifyInfoList(array $ConfigModifyInfoList) Set Resource pool data.
  */
 class ModifyYarnQueueV2Request extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Scheduler type. The values are as follows:
+     * @var string Scheduler type. Valid values:
 
 1. capacity
 2. fair
@@ -49,17 +49,17 @@ class ModifyYarnQueueV2Request extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var array Resource pool data
+     * @var array Resource pool data.
      */
     public $ConfigModifyInfoList;
 
     /**
-     * @param string $InstanceId Cluster ID
-     * @param string $Scheduler Scheduler type. The values are as follows:
+     * @param string $InstanceId Cluster ID.
+     * @param string $Scheduler Scheduler type. Valid values:
 
 1. capacity
 2. fair
-     * @param array $ConfigModifyInfoList Resource pool data
+     * @param array $ConfigModifyInfoList Resource pool data.
      */
     function __construct()
     {

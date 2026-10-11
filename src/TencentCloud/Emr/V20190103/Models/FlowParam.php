@@ -18,36 +18,36 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FlowParam process parameters.
+ * FlowParam: flow parameters.
  *
- * @method string getFKey() Obtain Process parameter key.
+ * @method string getFKey() Obtain Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
- * @method void setFKey(string $FKey) Set Process parameter key.
+ * @method void setFKey(string $FKey) Set Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
- * @method string getFValue() Obtain Parameter value
- * @method void setFValue(string $FValue) Set Parameter value
+ * @method string getFValue() Obtain Parameter value.
+ * @method void setFValue(string $FValue) Set Parameter value.
  */
 class FlowParam extends AbstractModel
 {
     /**
-     * @var string Process parameter key.
+     * @var string Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
      */
     public $FKey;
 
     /**
-     * @var string Parameter value
+     * @var string Parameter value.
      */
     public $FValue;
 
     /**
-     * @param string $FKey Process parameter key.
+     * @param string $FKey Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
-     * @param string $FValue Parameter value
+     * @param string $FValue Parameter value.
      */
     function __construct()
     {

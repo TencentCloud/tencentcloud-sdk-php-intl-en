@@ -18,26 +18,16 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Process detection information
+ * Process detection information.
  *
  * @method string getDetectAlert() Obtain Detection alarm level.
  * @method void setDetectAlert(string $DetectAlert) Set Detection alarm level.
- * @method string getDetetcFunctionKey() Obtain Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDetetcFunctionKey(string $DetetcFunctionKey) Set Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDetetcFunctionValue() Obtain Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDetetcFunctionValue(string $DetetcFunctionValue) Set Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDetetcTime() Obtain Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDetetcTime(string $DetetcTime) Set Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDetetcFunctionKey() Obtain Detection feature description.
+ * @method void setDetetcFunctionKey(string $DetetcFunctionKey) Set Detection feature description.
+ * @method string getDetetcFunctionValue() Obtain Detection feature result.
+ * @method void setDetetcFunctionValue(string $DetetcFunctionValue) Set Detection feature result.
+ * @method string getDetetcTime() Obtain Detection result.
+ * @method void setDetetcTime(string $DetetcTime) Set Detection result.
  * @method string getDetectFunctionKey() Obtain Detection feature description.
  * @method void setDetectFunctionKey(string $DetectFunctionKey) Set Detection feature description.
  * @method string getDetectFunctionValue() Obtain Detection feature result.
@@ -53,24 +43,19 @@ class ServiceProcessFunctionInfo extends AbstractModel
     public $DetectAlert;
 
     /**
-     * @var string Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Detection feature description.
      * @deprecated
      */
     public $DetetcFunctionKey;
 
     /**
-     * @var string Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Detection feature result.
      * @deprecated
      */
     public $DetetcFunctionValue;
 
     /**
-     * @var string Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Detection result.
      * @deprecated
      */
     public $DetetcTime;
@@ -92,14 +77,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $DetectAlert Detection alarm level.
-     * @param string $DetetcFunctionKey Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DetetcFunctionValue Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DetetcTime Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DetetcFunctionKey Detection feature description.
+     * @param string $DetetcFunctionValue Detection feature result.
+     * @param string $DetetcTime Detection result.
      * @param string $DetectFunctionKey Detection feature description.
      * @param string $DetectFunctionValue Detection feature result.
      * @param string $DetectTime Detection result.

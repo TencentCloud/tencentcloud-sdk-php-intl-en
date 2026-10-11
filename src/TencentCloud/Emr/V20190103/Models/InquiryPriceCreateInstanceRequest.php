@@ -20,182 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateInstance request structure.
  *
- * @method string getTimeUnit() Obtain Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
- * @method void setTimeUnit(string $TimeUnit) Set Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
- * @method integer getTimeSpan() Obtain Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
- * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
- * @method string getCurrency() Obtain Currency.
- * @method void setCurrency(string $Currency) Set Currency.
- * @method integer getPayMode() Obtain Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
- * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
- * @method integer getSupportHA() Obtain Whether to enable high availability of node. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
- * @method void setSupportHA(integer $SupportHA) Set Whether to enable high availability of node. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
- * @method array getSoftware() Obtain List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
- * @method void setSoftware(array $Software) Set List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
- * @method NewResourceSpec getResourceSpec() Obtain Node specification queried for price.
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node specification queried for price.
- * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
- * @method void setVPCSettings(VPCSettings $VPCSettings) Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
- * @method string getMetaType() Obtain Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
- * @method void setMetaType(string $MetaType) Set Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
- * @method string getUnifyMetaInstanceId() Obtain EMR-MetaDB instance
- * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set EMR-MetaDB instance
- * @method CustomMetaInfo getMetaDBInfo() Obtain Custom MetaDB instance information
- * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set Custom MetaDB instance information
- * @method integer getProductId() Obtain Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
- * @method void setProductId(integer $ProductId) Set Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
- * @method string getSceneName() Obtain Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
- * @method void setSceneName(string $SceneName) Set Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
- * @method array getExternalService() Obtain Shared component information
- * @method void setExternalService(array $ExternalService) Set Shared component information
- * @method integer getVersionID() Obtain The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
- * @method void setVersionID(integer $VersionID) Set The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
- * @method array getMultiZoneSettings() Obtain AZ specs
- * @method void setMultiZoneSettings(array $MultiZoneSettings) Set AZ specs
+ * @method string getTimeUnit() Obtain <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method void setTimeUnit(string $TimeUnit) Set <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method integer getTimeSpan() Obtain <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method void setTimeSpan(integer $TimeSpan) Set <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method string getCurrency() Obtain <p>Currency type. Valid values:</p><li>CNY: RMB</li>
+ * @method void setCurrency(string $Currency) Set <p>Currency type. Valid values:</p><li>CNY: RMB</li>
+ * @method integer getPayMode() Obtain <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method void setPayMode(integer $PayMode) Set <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method integer getSupportHA() Obtain <p>Whether to enable high availability for the node. Valid values:</p><li>0: no</li><li>1: yes</li>
+ * @method void setSupportHA(integer $SupportHA) Set <p>Whether to enable high availability for the node. Valid values:</p><li>0: no</li><li>1: yes</li>
+ * @method array getSoftware() Obtain <p>List of deployed components. For different EMR product IDs, different required component lists need to be set (ProductId: For details about its meaning, see the ProductId parameter). Valid values: <li>When ProductId is set to 2 (EMR-V2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 16 (EMR-V2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li><li>When ProductId is set to 20 (EMR-V2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 30 (EMR-V2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 38 (EMR-V2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 57 (EMR-V2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 7 (EMR-V3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 25 (EMR-V3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 31 (EMR-V3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 28 (EMR-V3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 33 (EMR-V3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 34 (EMR-V3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 37 (EMR-V3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 44 (EMR-V3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 53 (EMR-V3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 58 (EMR-V3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li><li>When ProductId is set to 47 (EMR-V4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li></p>
+ * @method void setSoftware(array $Software) Set <p>List of deployed components. For different EMR product IDs, different required component lists need to be set (ProductId: For details about its meaning, see the ProductId parameter). Valid values: <li>When ProductId is set to 2 (EMR-V2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 16 (EMR-V2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li><li>When ProductId is set to 20 (EMR-V2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 30 (EMR-V2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 38 (EMR-V2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 57 (EMR-V2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 7 (EMR-V3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 25 (EMR-V3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 31 (EMR-V3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 28 (EMR-V3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 33 (EMR-V3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 34 (EMR-V3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 37 (EMR-V3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 44 (EMR-V3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 53 (EMR-V3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 58 (EMR-V3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li><li>When ProductId is set to 47 (EMR-V4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li></p>
+ * @method NewResourceSpec getResourceSpec() Obtain <p>Node specifications for price inquiry.</p>
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set <p>Node specifications for price inquiry.</p>
+ * @method Placement getPlacement() Obtain <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+ * @method void setPlacement(Placement $Placement) Set <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+ * @method VPCSettings getVPCSettings() Obtain <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+ * @method void setVPCSettings(VPCSettings $VPCSettings) Set <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+ * @method string getMetaType() Obtain <p>Hive shared metadata database type. Valid values:</p><li>EMR_NEW_META: created by the cluster by default</li><li>EMR_EXIT_METE: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+ * @method void setMetaType(string $MetaType) Set <p>Hive shared metadata database type. Valid values:</p><li>EMR_NEW_META: created by the cluster by default</li><li>EMR_EXIT_METE: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+ * @method string getUnifyMetaInstanceId() Obtain <p>EMR-MetaDB instance.</p>
+ * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set <p>EMR-MetaDB instance.</p>
+ * @method CustomMetaInfo getMetaDBInfo() Obtain <p>Custom MetaDB information.</p>
+ * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set <p>Custom MetaDB information.</p>
+ * @method integer getProductId() Obtain <p>Product ID. Different product IDs indicate different EMR product versions. Valid values: <li>2: EMR-V2.0.1</li><li>16: EMR-V2.3.0</li><li>20: EMR-V2.5.0</li><li>30: EMR-V2.6.0</li><li>38: EMR-V2.7.0</li><li>57: EMR-V2.8.0</li><li>7: EMR-V3.0.0</li><li>25: EMR-V3.1.0</li><li>31: EMR-V3.1.1</li><li>28: EMR-V3.2.0</li><li>33: EMR-V3.2.1</li><li>34: EMR-V3.3.0</li><li>37: EMR-V3.4.0</li><li>44: EMR-V3.5.0</li><li>53: EMR-V3.6.0</li><li>58: EMR-V3.6.1</li><li>47: EMR-V4.0.0</li></p>
+ * @method void setProductId(integer $ProductId) Set <p>Product ID. Different product IDs indicate different EMR product versions. Valid values: <li>2: EMR-V2.0.1</li><li>16: EMR-V2.3.0</li><li>20: EMR-V2.5.0</li><li>30: EMR-V2.6.0</li><li>38: EMR-V2.7.0</li><li>57: EMR-V2.8.0</li><li>7: EMR-V3.0.0</li><li>25: EMR-V3.1.0</li><li>31: EMR-V3.1.1</li><li>28: EMR-V3.2.0</li><li>33: EMR-V3.2.1</li><li>34: EMR-V3.3.0</li><li>37: EMR-V3.4.0</li><li>44: EMR-V3.5.0</li><li>53: EMR-V3.6.0</li><li>58: EMR-V3.6.1</li><li>47: EMR-V4.0.0</li></p>
+ * @method string getSceneName() Obtain <p>Scenario-based values: Hadoop-Kudu, Hadoop-Zookeeper, Hadoop-Presto, and Hadoop-Hbase.</p>
+ * @method void setSceneName(string $SceneName) Set <p>Scenario-based values: Hadoop-Kudu, Hadoop-Zookeeper, Hadoop-Presto, and Hadoop-Hbase.</p>
+ * @method array getExternalService() Obtain <p>Shared component information.</p>
+ * @method void setExternalService(array $ExternalService) Set <p>Shared component information.</p>
+ * @method integer getVersionID() Obtain <p>Default value: 0. It is changed to 1 after the cross-AZ feature is supported.</p>
+ * @method void setVersionID(integer $VersionID) Set <p>Default value: 0. It is changed to 1 after the cross-AZ feature is supported.</p>
+ * @method array getMultiZoneSettings() Obtain <p>Specification information of the AZ.</p>
+ * @method void setMultiZoneSettings(array $MultiZoneSettings) Set <p>Specification information of the AZ.</p>
+ * @method string getDefaultMetaVersion() Obtain <p>Database version.</p>
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) Set <p>Database version.</p>
+ * @method integer getNeedCdbAudit() Obtain <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) Set <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+ * @method array getMetaDBGroupInfo() Obtain <p>Custom database data.</p>
+ * @method void setMetaDBGroupInfo(array $MetaDBGroupInfo) Set <p>Custom database data.</p>
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+     * @var string <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+     * @var integer <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public $TimeSpan;
 
     /**
-     * @var string Currency.
+     * @var string <p>Currency type. Valid values:</p><li>CNY: RMB</li>
      */
     public $Currency;
 
     /**
-     * @var integer Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+     * @var integer <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public $PayMode;
 
     /**
-     * @var integer Whether to enable high availability of node. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
+     * @var integer <p>Whether to enable high availability for the node. Valid values:</p><li>0: no</li><li>1: yes</li>
      */
     public $SupportHA;
 
     /**
-     * @var array List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
+     * @var array <p>List of deployed components. For different EMR product IDs, different required component lists need to be set (ProductId: For details about its meaning, see the ProductId parameter). Valid values: <li>When ProductId is set to 2 (EMR-V2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 16 (EMR-V2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li><li>When ProductId is set to 20 (EMR-V2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 30 (EMR-V2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 38 (EMR-V2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 57 (EMR-V2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 7 (EMR-V3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 25 (EMR-V3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 31 (EMR-V3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 28 (EMR-V3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 33 (EMR-V3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 34 (EMR-V3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 37 (EMR-V3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 44 (EMR-V3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 53 (EMR-V3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 58 (EMR-V3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li><li>When ProductId is set to 47 (EMR-V4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li></p>
      */
     public $Software;
 
     /**
-     * @var NewResourceSpec Node specification queried for price.
+     * @var NewResourceSpec <p>Node specifications for price inquiry.</p>
      */
     public $ResourceSpec;
 
     /**
-     * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * @var Placement <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
      */
     public $Placement;
 
     /**
-     * @var VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     * @var VPCSettings <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
      */
     public $VPCSettings;
 
     /**
-     * @var string Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     * @var string <p>Hive shared metadata database type. Valid values:</p><li>EMR_NEW_META: created by the cluster by default</li><li>EMR_EXIT_METE: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
      */
     public $MetaType;
 
     /**
-     * @var string EMR-MetaDB instance
+     * @var string <p>EMR-MetaDB instance.</p>
      */
     public $UnifyMetaInstanceId;
 
     /**
-     * @var CustomMetaInfo Custom MetaDB instance information
+     * @var CustomMetaInfo <p>Custom MetaDB information.</p>
      */
     public $MetaDBInfo;
 
     /**
-     * @var integer Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
+     * @var integer <p>Product ID. Different product IDs indicate different EMR product versions. Valid values: <li>2: EMR-V2.0.1</li><li>16: EMR-V2.3.0</li><li>20: EMR-V2.5.0</li><li>30: EMR-V2.6.0</li><li>38: EMR-V2.7.0</li><li>57: EMR-V2.8.0</li><li>7: EMR-V3.0.0</li><li>25: EMR-V3.1.0</li><li>31: EMR-V3.1.1</li><li>28: EMR-V3.2.0</li><li>33: EMR-V3.2.1</li><li>34: EMR-V3.3.0</li><li>37: EMR-V3.4.0</li><li>44: EMR-V3.5.0</li><li>53: EMR-V3.6.0</li><li>58: EMR-V3.6.1</li><li>47: EMR-V4.0.0</li></p>
      */
     public $ProductId;
 
     /**
-     * @var string Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
+     * @var string <p>Scenario-based values: Hadoop-Kudu, Hadoop-Zookeeper, Hadoop-Presto, and Hadoop-Hbase.</p>
      */
     public $SceneName;
 
     /**
-     * @var array Shared component information
+     * @var array <p>Shared component information.</p>
      */
     public $ExternalService;
 
     /**
-     * @var integer The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
+     * @var integer <p>Default value: 0. It is changed to 1 after the cross-AZ feature is supported.</p>
      */
     public $VersionID;
 
     /**
-     * @var array AZ specs
+     * @var array <p>Specification information of the AZ.</p>
      */
     public $MultiZoneSettings;
 
     /**
-     * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-     * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
-     * @param string $Currency Currency.
-     * @param integer $PayMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
-     * @param integer $SupportHA Whether to enable high availability of node. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
-     * @param array $Software List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
-     * @param NewResourceSpec $ResourceSpec Node specification queried for price.
-     * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     * @param string $MetaType Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
-     * @param string $UnifyMetaInstanceId EMR-MetaDB instance
-     * @param CustomMetaInfo $MetaDBInfo Custom MetaDB instance information
-     * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
-     * @param string $SceneName Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
-     * @param array $ExternalService Shared component information
-     * @param integer $VersionID The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
-     * @param array $MultiZoneSettings AZ specs
+     * @var string <p>Database version.</p>
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var integer <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+     */
+    public $NeedCdbAudit;
+
+    /**
+     * @var array <p>Custom database data.</p>
+     */
+    public $MetaDBGroupInfo;
+
+    /**
+     * @param string $TimeUnit <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param integer $TimeSpan <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+     * @param string $Currency <p>Currency type. Valid values:</p><li>CNY: RMB</li>
+     * @param integer $PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+     * @param integer $SupportHA <p>Whether to enable high availability for the node. Valid values:</p><li>0: no</li><li>1: yes</li>
+     * @param array $Software <p>List of deployed components. For different EMR product IDs, different required component lists need to be set (ProductId: For details about its meaning, see the ProductId parameter). Valid values: <li>When ProductId is set to 2 (EMR-V2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 16 (EMR-V2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li><li>When ProductId is set to 20 (EMR-V2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 30 (EMR-V2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 38 (EMR-V2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 57 (EMR-V2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 7 (EMR-V3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 25 (EMR-V3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 31 (EMR-V3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 28 (EMR-V3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 33 (EMR-V3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 34 (EMR-V3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 37 (EMR-V3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 44 (EMR-V3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 53 (EMR-V3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 58 (EMR-V3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li><li>When ProductId is set to 47 (EMR-V4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li></p>
+     * @param NewResourceSpec $ResourceSpec <p>Node specifications for price inquiry.</p>
+     * @param Placement $Placement <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+     * @param VPCSettings $VPCSettings <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+     * @param string $MetaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_NEW_META: created by the cluster by default</li><li>EMR_EXIT_METE: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+     * @param string $UnifyMetaInstanceId <p>EMR-MetaDB instance.</p>
+     * @param CustomMetaInfo $MetaDBInfo <p>Custom MetaDB information.</p>
+     * @param integer $ProductId <p>Product ID. Different product IDs indicate different EMR product versions. Valid values: <li>2: EMR-V2.0.1</li><li>16: EMR-V2.3.0</li><li>20: EMR-V2.5.0</li><li>30: EMR-V2.6.0</li><li>38: EMR-V2.7.0</li><li>57: EMR-V2.8.0</li><li>7: EMR-V3.0.0</li><li>25: EMR-V3.1.0</li><li>31: EMR-V3.1.1</li><li>28: EMR-V3.2.0</li><li>33: EMR-V3.2.1</li><li>34: EMR-V3.3.0</li><li>37: EMR-V3.4.0</li><li>44: EMR-V3.5.0</li><li>53: EMR-V3.6.0</li><li>58: EMR-V3.6.1</li><li>47: EMR-V4.0.0</li></p>
+     * @param string $SceneName <p>Scenario-based values: Hadoop-Kudu, Hadoop-Zookeeper, Hadoop-Presto, and Hadoop-Hbase.</p>
+     * @param array $ExternalService <p>Shared component information.</p>
+     * @param integer $VersionID <p>Default value: 0. It is changed to 1 after the cross-AZ feature is supported.</p>
+     * @param array $MultiZoneSettings <p>Specification information of the AZ.</p>
+     * @param string $DefaultMetaVersion <p>Database version.</p>
+     * @param integer $NeedCdbAudit <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+     * @param array $MetaDBGroupInfo <p>Custom database data.</p>
      */
     function __construct()
     {
@@ -289,6 +277,23 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
                 $obj = new MultiZoneSetting();
                 $obj->deserialize($value);
                 array_push($this->MultiZoneSettings, $obj);
+            }
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
+            $this->NeedCdbAudit = $param["NeedCdbAudit"];
+        }
+
+        if (array_key_exists("MetaDBGroupInfo",$param) and $param["MetaDBGroupInfo"] !== null) {
+            $this->MetaDBGroupInfo = [];
+            foreach ($param["MetaDBGroupInfo"] as $key => $value){
+                $obj = new CustomMetaDBInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaDBGroupInfo, $obj);
             }
         }
     }

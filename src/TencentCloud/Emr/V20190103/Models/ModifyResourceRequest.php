@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getPayMode() Obtain Billing type.
  * @method void setPayMode(integer $PayMode) Set Billing type.
- * @method integer getNewCpu() Obtain Resized CPU.
- * @method void setNewCpu(integer $NewCpu) Set Resized CPU.
- * @method integer getNewMem() Obtain Resized memory.
- * @method void setNewMem(integer $NewMem) Set Resized memory.
+ * @method integer getNewCpu() Obtain Changed CPU.
+ * @method void setNewCpu(integer $NewCpu) Set Changed CPU.
+ * @method integer getNewMem() Obtain Changed memory.
+ * @method void setNewMem(integer $NewMem) Set Changed memory.
  * @method string getClientToken() Obtain Token
  * @method void setClientToken(string $ClientToken) Set Token
- * @method string getInstanceType() Obtain Resized machine specifications.
- * @method void setInstanceType(string $InstanceType) Set Resized machine specifications.
- * @method array getResourceIdList() Obtain Node ID List.
- * @method void setResourceIdList(array $ResourceIdList) Set Node ID List.
+ * @method string getInstanceType() Obtain Changed machine specifications.
+ * @method void setInstanceType(string $InstanceType) Set Changed machine specifications.
+ * @method array getResourceIdList() Obtain Node ID list.
+ * @method void setResourceIdList(array $ResourceIdList) Set Node ID list.
  */
 class ModifyResourceRequest extends AbstractModel
 {
@@ -48,12 +48,12 @@ class ModifyResourceRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer Resized CPU.
+     * @var integer Changed CPU.
      */
     public $NewCpu;
 
     /**
-     * @var integer Resized memory.
+     * @var integer Changed memory.
      */
     public $NewMem;
 
@@ -63,23 +63,23 @@ class ModifyResourceRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string Resized machine specifications.
+     * @var string Changed machine specifications.
      */
     public $InstanceType;
 
     /**
-     * @var array Node ID List.
+     * @var array Node ID list.
      */
     public $ResourceIdList;
 
     /**
      * @param string $InstanceId Instance ID.
      * @param integer $PayMode Billing type.
-     * @param integer $NewCpu Resized CPU.
-     * @param integer $NewMem Resized memory.
+     * @param integer $NewCpu Changed CPU.
+     * @param integer $NewMem Changed memory.
      * @param string $ClientToken Token
-     * @param string $InstanceType Resized machine specifications.
-     * @param array $ResourceIdList Node ID List.
+     * @param string $InstanceType Changed machine specifications.
+     * @param array $ResourceIdList Node ID list.
      */
     function __construct()
     {

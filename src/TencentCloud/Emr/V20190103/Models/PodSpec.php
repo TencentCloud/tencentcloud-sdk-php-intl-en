@@ -18,97 +18,94 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource description for container resource scale-out
+ * Resource description, which is used during a container resource scale-out.
  *
- * @method string getResourceProviderIdentifier() Obtain Identifier of external resource provider, such as "cls-a1cd23fa".
- * @method void setResourceProviderIdentifier(string $ResourceProviderIdentifier) Set Identifier of external resource provider, such as "cls-a1cd23fa".
- * @method string getResourceProviderType() Obtain Type of external resource provider, such as "tke". Currently, only "tke" is supported.
- * @method void setResourceProviderType(string $ResourceProviderType) Set Type of external resource provider, such as "tke". Currently, only "tke" is supported.
- * @method string getNodeType() Obtain Purpose of the resource, which means the node type and can only be "TASK".
- * @method void setNodeType(string $NodeType) Set Purpose of the resource, which means the node type and can only be "TASK".
- * @method integer getCpu() Obtain Number of CPUs
- * @method void setCpu(integer $Cpu) Set Number of CPUs
- * @method integer getMemory() Obtain Memory size in GB.
- * @method void setMemory(integer $Memory) Set Memory size in GB.
- * @method array getDataVolumes() Obtain Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
- * @method void setDataVolumes(array $DataVolumes) Set Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
- * @method string getCpuType() Obtain EKS cluster - CPU type. Valid values: `intel` and `amd`.
- * @method void setCpuType(string $CpuType) Set EKS cluster - CPU type. Valid values: `intel` and `amd`.
- * @method array getPodVolumes() Obtain Data directory mounting information of the pod node.
- * @method void setPodVolumes(array $PodVolumes) Set Data directory mounting information of the pod node.
- * @method integer getIsDynamicSpec() Obtain Whether floating specification is used. `1`: Yes; `0`: No.
- * @method void setIsDynamicSpec(integer $IsDynamicSpec) Set Whether floating specification is used. `1`: Yes; `0`: No.
- * @method DynamicPodSpec getDynamicPodSpec() Obtain Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) Set Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain Unique ID of VPC network.
- * @method void setVpcId(string $VpcId) Set Unique ID of VPC network.
- * @method string getSubnetId() Obtain Unique ID of a VPC subnet.
- * @method void setSubnetId(string $SubnetId) Set Unique ID of a VPC subnet.
+ * @method string getResourceProviderIdentifier() Obtain Identifier of the external resource provider, for example, "cls-a1cd23fa".
+ * @method void setResourceProviderIdentifier(string $ResourceProviderIdentifier) Set Identifier of the external resource provider, for example, "cls-a1cd23fa".
+ * @method string getResourceProviderType() Obtain Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+ * @method void setResourceProviderType(string $ResourceProviderType) Set Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+ * @method string getNodeType() Obtain Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+ * @method void setNodeType(string $NodeType) Set Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+ * @method integer getCpu() Obtain Number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores.
+ * @method integer getMemory() Obtain Memory size (GB).
+ * @method void setMemory(integer $Memory) Set Memory size (GB).
+ * @method array getDataVolumes() Obtain The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
+ * @method void setDataVolumes(array $DataVolumes) Set The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
+ * @method string getCpuType() Obtain CPU type for the EKS cluster, currently supporting intel and amd.
+ * @method void setCpuType(string $CpuType) Set CPU type for the EKS cluster, currently supporting intel and amd.
+ * @method array getPodVolumes() Obtain Mounting information of the node data directory on Pod.
+ * @method void setPodVolumes(array $PodVolumes) Set Mounting information of the node data directory on Pod.
+ * @method integer getIsDynamicSpec() Obtain Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
+ * @method void setIsDynamicSpec(integer $IsDynamicSpec) Set Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
+ * @method DynamicPodSpec getDynamicPodSpec() Obtain Floating specification.
+ * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) Set Floating specification.
+ * @method string getVpcId() Obtain Unique ID of the VPC.
+ * @method void setVpcId(string $VpcId) Set Unique ID of the VPC.
+ * @method string getSubnetId() Obtain Unique ID of the VPC subnet.
+ * @method void setSubnetId(string $SubnetId) Set Unique ID of the VPC subnet.
  * @method string getPodName() Obtain pod name
  * @method void setPodName(string $PodName) Set pod name
  */
 class PodSpec extends AbstractModel
 {
     /**
-     * @var string Identifier of external resource provider, such as "cls-a1cd23fa".
+     * @var string Identifier of the external resource provider, for example, "cls-a1cd23fa".
      */
     public $ResourceProviderIdentifier;
 
     /**
-     * @var string Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+     * @var string Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
      */
     public $ResourceProviderType;
 
     /**
-     * @var string Purpose of the resource, which means the node type and can only be "TASK".
+     * @var string Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
      */
     public $NodeType;
 
     /**
-     * @var integer Number of CPUs
+     * @var integer Number of CPU cores.
      */
     public $Cpu;
 
     /**
-     * @var integer Memory size in GB.
+     * @var integer Memory size (GB).
      */
     public $Memory;
 
     /**
-     * @var array Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * @var array The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
      */
     public $DataVolumes;
 
     /**
-     * @var string EKS cluster - CPU type. Valid values: `intel` and `amd`.
+     * @var string CPU type for the EKS cluster, currently supporting intel and amd.
      */
     public $CpuType;
 
     /**
-     * @var array Data directory mounting information of the pod node.
+     * @var array Mounting information of the node data directory on Pod.
      */
     public $PodVolumes;
 
     /**
-     * @var integer Whether floating specification is used. `1`: Yes; `0`: No.
+     * @var integer Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
      */
     public $IsDynamicSpec;
 
     /**
-     * @var DynamicPodSpec Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DynamicPodSpec Floating specification.
      */
     public $DynamicPodSpec;
 
     /**
-     * @var string Unique ID of VPC network.
+     * @var string Unique ID of the VPC.
      */
     public $VpcId;
 
     /**
-     * @var string Unique ID of a VPC subnet.
+     * @var string Unique ID of the VPC subnet.
      */
     public $SubnetId;
 
@@ -118,19 +115,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PodName;
 
     /**
-     * @param string $ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
-     * @param string $ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
-     * @param string $NodeType Purpose of the resource, which means the node type and can only be "TASK".
-     * @param integer $Cpu Number of CPUs
-     * @param integer $Memory Memory size in GB.
-     * @param array $DataVolumes Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
-     * @param string $CpuType EKS cluster - CPU type. Valid values: `intel` and `amd`.
-     * @param array $PodVolumes Data directory mounting information of the pod node.
-     * @param integer $IsDynamicSpec Whether floating specification is used. `1`: Yes; `0`: No.
-     * @param DynamicPodSpec $DynamicPodSpec Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VpcId Unique ID of VPC network.
-     * @param string $SubnetId Unique ID of a VPC subnet.
+     * @param string $ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
+     * @param string $ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+     * @param string $NodeType Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+     * @param integer $Cpu Number of CPU cores.
+     * @param integer $Memory Memory size (GB).
+     * @param array $DataVolumes The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
+     * @param string $CpuType CPU type for the EKS cluster, currently supporting intel and amd.
+     * @param array $PodVolumes Mounting information of the node data directory on Pod.
+     * @param integer $IsDynamicSpec Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
+     * @param DynamicPodSpec $DynamicPodSpec Floating specification.
+     * @param string $VpcId Unique ID of the VPC.
+     * @param string $SubnetId Unique ID of the VPC subnet.
      * @param string $PodName pod name
      */
     function __construct()

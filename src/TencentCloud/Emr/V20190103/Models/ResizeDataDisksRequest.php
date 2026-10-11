@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResizeDataDisks request structure.
  *
- * @method string getInstanceId() Obtain ID of the EMR cluster instance.
- * @method void setInstanceId(string $InstanceId) Set ID of the EMR cluster instance.
+ * @method string getInstanceId() Obtain ID of the EMR cluster.
+ * @method void setInstanceId(string $InstanceId) Set ID of the EMR cluster.
  * @method integer getDiskSize() Obtain Scale-out value, which should be greater than the original capacity and a multiple of 10.
  * @method void setDiskSize(integer $DiskSize) Set Scale-out value, which should be greater than the original capacity and a multiple of 10.
  * @method array getCvmInstanceIds() Obtain ID list of nodes to be scaled out.
  * @method void setCvmInstanceIds(array $CvmInstanceIds) Set ID list of nodes to be scaled out.
- * @method array getDiskIds() Obtain ID of the cloud disk to be scaled out.
- * @method void setDiskIds(array $DiskIds) Set ID of the cloud disk to be scaled out.
+ * @method array getDiskIds() Obtain ID of the cloud disks to be scaled out.
+ * @method void setDiskIds(array $DiskIds) Set ID of the cloud disks to be scaled out.
  * @method boolean getResizeAll() Obtain Whether to scale out all cloud disks.
  * @method void setResizeAll(boolean $ResizeAll) Set Whether to scale out all cloud disks.
  */
 class ResizeDataDisksRequest extends AbstractModel
 {
     /**
-     * @var string ID of the EMR cluster instance.
+     * @var string ID of the EMR cluster.
      */
     public $InstanceId;
 
@@ -49,7 +49,7 @@ class ResizeDataDisksRequest extends AbstractModel
     public $CvmInstanceIds;
 
     /**
-     * @var array ID of the cloud disk to be scaled out.
+     * @var array ID of the cloud disks to be scaled out.
      */
     public $DiskIds;
 
@@ -59,10 +59,10 @@ class ResizeDataDisksRequest extends AbstractModel
     public $ResizeAll;
 
     /**
-     * @param string $InstanceId ID of the EMR cluster instance.
+     * @param string $InstanceId ID of the EMR cluster.
      * @param integer $DiskSize Scale-out value, which should be greater than the original capacity and a multiple of 10.
      * @param array $CvmInstanceIds ID list of nodes to be scaled out.
-     * @param array $DiskIds ID of the cloud disk to be scaled out.
+     * @param array $DiskIds ID of the cloud disks to be scaled out.
      * @param boolean $ResizeAll Whether to scale out all cloud disks.
      */
     function __construct()

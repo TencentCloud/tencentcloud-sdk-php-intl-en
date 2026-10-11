@@ -18,23 +18,23 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node component renewal pricing details.
+ * Node sub-item renewal inquiry details.
  *
- * @method string getBillingName() Obtain Billing item name.
- * @method void setBillingName(string $BillingName) Set Billing item name.
+ * @method string getBillingName() Obtain Billable item name.
+ * @method void setBillingName(string $BillingName) Set Billable item name.
  * @method float getPolicy() Obtain Discount.
  * @method void setPolicy(float $Policy) Set Discount.
  * @method integer getQuantity() Obtain Quantity.
  * @method void setQuantity(integer $Quantity) Set Quantity.
  * @method float getOriginalCost() Obtain Original price.
  * @method void setOriginalCost(float $OriginalCost) Set Original price.
- * @method float getDiscountCost() Obtain Discount price.
- * @method void setDiscountCost(float $DiscountCost) Set Discount price.
+ * @method float getDiscountCost() Obtain Discounted price.
+ * @method void setDiscountCost(float $DiscountCost) Set Discounted price.
  */
 class RenewPriceDetail extends AbstractModel
 {
     /**
-     * @var string Billing item name.
+     * @var string Billable item name.
      */
     public $BillingName;
 
@@ -54,16 +54,16 @@ class RenewPriceDetail extends AbstractModel
     public $OriginalCost;
 
     /**
-     * @var float Discount price.
+     * @var float Discounted price.
      */
     public $DiscountCost;
 
     /**
-     * @param string $BillingName Billing item name.
+     * @param string $BillingName Billable item name.
      * @param float $Policy Discount.
      * @param integer $Quantity Quantity.
      * @param float $OriginalCost Original price.
-     * @param float $DiscountCost Discount price.
+     * @param float $DiscountCost Discounted price.
      */
     function __construct()
     {

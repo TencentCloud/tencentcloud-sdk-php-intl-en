@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User management list filter
+ * User management list filter.
  *
  * @method string getUserName() Obtain Username.
  * @method void setUserName(string $UserName) Set Username.

@@ -18,16 +18,16 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-cloud disk parameters
+ * Multi-cloud disk parameter.
  *
- * @method string getDiskType() Obtain Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
- * @method void setDiskType(string $DiskType) Set Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
+ * @method string getDiskType() Obtain Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+ * @method void setDiskType(string $DiskType) Set Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
  * @method integer getVolume() Obtain Cloud disk size.
  * @method void setVolume(integer $Volume) Set Cloud disk size.
  * @method integer getCount() Obtain Number of cloud disks of this type.
@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class MultiDisk extends AbstractModel
 {
     /**
-     * @var string Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
+     * @var string Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
      */
     public $DiskType;
 
@@ -54,10 +54,10 @@ class MultiDisk extends AbstractModel
     public $Count;
 
     /**
-     * @param string $DiskType Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
+     * @param string $DiskType Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
      * @param integer $Volume Cloud disk size.
      * @param integer $Count Number of cloud disks of this type.
      */

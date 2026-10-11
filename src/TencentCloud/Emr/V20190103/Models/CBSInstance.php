@@ -32,30 +32,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) Set Cloud disk media type.
  * @method boolean getDeleteWithInstance() Obtain Whether to delete it with the instance.
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Whether to delete it with the instance.
- * @method string getDiskChargeType() Obtain Cloud disk billing type.
- * @method void setDiskChargeType(string $DiskChargeType) Set Cloud disk billing type.
+ * @method string getDiskChargeType() Obtain Cloud disk billing mode.
+ * @method void setDiskChargeType(string $DiskChargeType) Set Cloud disk billing mode.
  * @method string getDiskState() Obtain Cloud disk running status.
  * @method void setDiskState(string $DiskState) Set Cloud disk running status.
  * @method string getRenewFlag() Obtain Whether to perform auto-renewal.
  * @method void setRenewFlag(string $RenewFlag) Set Whether to perform auto-renewal.
  * @method string getDeadlineTime() Obtain Expiration time.
  * @method void setDeadlineTime(string $DeadlineTime) Set Expiration time.
- * @method boolean getAttached() Obtain Whether the cloud disk is mounted on the cloud host.
- * @method void setAttached(boolean $Attached) Set Whether the cloud disk is mounted on the cloud host.
+ * @method boolean getAttached() Obtain Whether the cloud disk is mounted on the CVM.
+ * @method void setAttached(boolean $Attached) Set Whether the cloud disk is mounted on the CVM.
  * @method integer getDifferDaysOfDeadline() Obtain Days remaining until disk expiration.
  * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) Set Days remaining until disk expiration.
- * @method array getInstanceIdList() Obtain InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceIdList(array $InstanceIdList) Set InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain ID of the cloud host to which the Cloud disk is mounted.
- * @method void setInstanceId(string $InstanceId) Set ID of the cloud host to which the Cloud disk is mounted.
+ * @method array getInstanceIdList() Obtain ID of the CVM instance to which this cloud disk is currently mounted.
+ * @method void setInstanceIdList(array $InstanceIdList) Set ID of the CVM instance to which this cloud disk is currently mounted.
+ * @method string getInstanceId() Obtain ID of the CVM to which the cloud disk is mounted.
+ * @method void setInstanceId(string $InstanceId) Set ID of the CVM to which the cloud disk is mounted.
  * @method boolean getShareable() Obtain Whether the cloud disk is a shared cloud disk.
  * @method void setShareable(boolean $Shareable) Set Whether the cloud disk is a shared cloud disk.
  * @method string getEmrResourceId() Obtain EMR node ID.
  * @method void setEmrResourceId(string $EmrResourceId) Set EMR node ID.
  * @method string getUnderwriteExpiredTime() Obtain Committed use expiration time.
  * @method void setUnderwriteExpiredTime(string $UnderwriteExpiredTime) Set Committed use expiration time.
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
+ * @method integer getThroughputPerformance() Obtain Cloud disk additional performance value. Unit: MB/s.
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Cloud disk additional performance value. Unit: MB/s.
  */
 class CBSInstance extends AbstractModel
 {
@@ -90,7 +92,7 @@ class CBSInstance extends AbstractModel
     public $DeleteWithInstance;
 
     /**
-     * @var string Cloud disk billing type.
+     * @var string Cloud disk billing mode.
      */
     public $DiskChargeType;
 
@@ -110,7 +112,7 @@ class CBSInstance extends AbstractModel
     public $DeadlineTime;
 
     /**
-     * @var boolean Whether the cloud disk is mounted on the cloud host.
+     * @var boolean Whether the cloud disk is mounted on the CVM.
      */
     public $Attached;
 
@@ -120,13 +122,12 @@ class CBSInstance extends AbstractModel
     public $DifferDaysOfDeadline;
 
     /**
-     * @var array InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array ID of the CVM instance to which this cloud disk is currently mounted.
      */
     public $InstanceIdList;
 
     /**
-     * @var string ID of the cloud host to which the Cloud disk is mounted.
+     * @var string ID of the CVM to which the cloud disk is mounted.
      */
     public $InstanceId;
 
@@ -146,24 +147,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UnderwriteExpiredTime;
 
     /**
+     * @var array Tag.
+     */
+    public $Tags;
+
+    /**
+     * @var integer Cloud disk additional performance value. Unit: MB/s.
+     */
+    public $ThroughputPerformance;
+
+    /**
      * @param string $DiskId Cloud disk ID.
      * @param string $DiskUsage Cloud disk type.
      * @param string $DiskName Cloud disk name.
      * @param integer $DiskSize Cloud disk size.
      * @param string $DiskType Cloud disk media type.
      * @param boolean $DeleteWithInstance Whether to delete it with the instance.
-     * @param string $DiskChargeType Cloud disk billing type.
+     * @param string $DiskChargeType Cloud disk billing mode.
      * @param string $DiskState Cloud disk running status.
      * @param string $RenewFlag Whether to perform auto-renewal.
      * @param string $DeadlineTime Expiration time.
-     * @param boolean $Attached Whether the cloud disk is mounted on the cloud host.
+     * @param boolean $Attached Whether the cloud disk is mounted on the CVM.
      * @param integer $DifferDaysOfDeadline Days remaining until disk expiration.
-     * @param array $InstanceIdList InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId ID of the cloud host to which the Cloud disk is mounted.
+     * @param array $InstanceIdList ID of the CVM instance to which this cloud disk is currently mounted.
+     * @param string $InstanceId ID of the CVM to which the cloud disk is mounted.
      * @param boolean $Shareable Whether the cloud disk is a shared cloud disk.
      * @param string $EmrResourceId EMR node ID.
      * @param string $UnderwriteExpiredTime Committed use expiration time.
+     * @param array $Tags Tag.
+     * @param integer $ThroughputPerformance Cloud disk additional performance value. Unit: MB/s.
      */
     function __construct()
     {
@@ -244,6 +256,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UnderwriteExpiredTime",$param) and $param["UnderwriteExpiredTime"] !== null) {
             $this->UnderwriteExpiredTime = $param["UnderwriteExpiredTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

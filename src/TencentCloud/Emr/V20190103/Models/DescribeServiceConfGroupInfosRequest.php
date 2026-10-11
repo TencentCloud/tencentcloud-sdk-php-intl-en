@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfGroupName(string $ConfGroupName) Set Configuration group name.
  * @method integer getPageNo() Obtain Page number, starting from 1.
  * @method void setPageNo(integer $PageNo) Set Page number, starting from 1.
- * @method integer getPageSize() Obtain Page size.
- * @method void setPageSize(integer $PageSize) Set Page size.
+ * @method integer getPageSize() Obtain Number of entries per page.
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page.
  */
 class DescribeServiceConfGroupInfosRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeServiceConfGroupInfosRequest extends AbstractModel
     public $PageNo;
 
     /**
-     * @var integer Page size.
+     * @var integer Number of entries per page.
      */
     public $PageSize;
 
@@ -63,7 +63,7 @@ class DescribeServiceConfGroupInfosRequest extends AbstractModel
      * @param string $ServiceName Component name.
      * @param string $ConfGroupName Configuration group name.
      * @param integer $PageNo Page number, starting from 1.
-     * @param integer $PageSize Page size.
+     * @param integer $PageSize Number of entries per page.
      */
     function __construct()
     {

@@ -20,23 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNodeDataDisks request structure.
  *
- * @method string getInstanceId() Obtain ID of the EMR cluster instance.
- * @method void setInstanceId(string $InstanceId) Set ID of the EMR cluster instance.
+ * @method string getInstanceId() Obtain ID of the EMR cluster.
+ * @method void setInstanceId(string $InstanceId) Set ID of the EMR cluster.
  * @method array getCvmInstanceIds() Obtain ID list of node CVM instances.
  * @method void setCvmInstanceIds(array $CvmInstanceIds) Set ID list of node CVM instances.
  * @method array getFilters() Obtain Filter criteria for querying cloud disks.
  * @method void setFilters(array $Filters) Set Filter criteria for querying cloud disks.
  * @method string getInnerSearch() Obtain Fuzzy search.
  * @method void setInnerSearch(string $InnerSearch) Set Fuzzy search.
- * @method integer getLimit() Obtain Number of items returned per page. The default value is 100, and the maximum value is 100.
- * @method void setLimit(integer $Limit) Set Number of items returned per page. The default value is 100, and the maximum value is 100.
+ * @method integer getLimit() Obtain Number of items returned per page. Default value: 100. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of items returned per page. Default value: 100. Maximum value: 100.
  * @method integer getOffset() Obtain Data offset.
  * @method void setOffset(integer $Offset) Set Data offset.
+ * @method string getScene() Obtain Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+ * @method void setScene(string $Scene) Set Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
  */
 class DescribeNodeDataDisksRequest extends AbstractModel
 {
     /**
-     * @var string ID of the EMR cluster instance.
+     * @var string ID of the EMR cluster.
      */
     public $InstanceId;
 
@@ -56,7 +60,7 @@ class DescribeNodeDataDisksRequest extends AbstractModel
     public $InnerSearch;
 
     /**
-     * @var integer Number of items returned per page. The default value is 100, and the maximum value is 100.
+     * @var integer Number of items returned per page. Default value: 100. Maximum value: 100.
      */
     public $Limit;
 
@@ -66,12 +70,20 @@ class DescribeNodeDataDisksRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId ID of the EMR cluster instance.
+     * @var string Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+     */
+    public $Scene;
+
+    /**
+     * @param string $InstanceId ID of the EMR cluster.
      * @param array $CvmInstanceIds ID list of node CVM instances.
      * @param array $Filters Filter criteria for querying cloud disks.
      * @param string $InnerSearch Fuzzy search.
-     * @param integer $Limit Number of items returned per page. The default value is 100, and the maximum value is 100.
+     * @param integer $Limit Number of items returned per page. Default value: 100. Maximum value: 100.
      * @param integer $Offset Data offset.
+     * @param string $Scene Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
      */
     function __construct()
     {
@@ -113,6 +125,10 @@ class DescribeNodeDataDisksRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

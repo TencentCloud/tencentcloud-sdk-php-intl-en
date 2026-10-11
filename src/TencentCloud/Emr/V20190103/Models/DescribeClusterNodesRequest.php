@@ -20,60 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterNodes request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID in the format of emr-xxxxxxxx
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID in the format of emr-xxxxxxxx
- * @method string getNodeFlag() Obtain Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
- * @method void setNodeFlag(string $NodeFlag) Set Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+ * @method string getInstanceId() Obtain Cluster ID, such as emr-xxxxxxxx.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID, such as emr-xxxxxxxx.
+ * @method string getNodeFlag() Obtain Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
+ * @method void setNodeFlag(string $NodeFlag) Set Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
  * @method boolean getExportDb() Obtain Whether to carry CDB information when all node information is exported in CSV format.
  * @method void setExportDb(boolean $ExportDb) Set Whether to carry CDB information when all node information is exported in CSV format.
- * @method integer getOffset() Obtain Page number. Default value: 0, indicating the first page.
- * @method void setOffset(integer $Offset) Set Page number. Default value: 0, indicating the first page.
- * @method integer getLimit() Obtain Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+ * @method integer getOffset() Obtain Page number. The default value is 0, indicating the first page.
+ * @method void setOffset(integer $Offset) Set Page number. The default value is 0, indicating the first page.
+ * @method integer getLimit() Obtain Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
- * @method void setLimit(integer $Limit) Set Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+ * @method void setLimit(integer $Limit) Set Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
- * @method string getHardwareResourceType() Obtain Resource type. Valid values: all, host, pod. Default value: all
- * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: all, host, pod. Default value: all
- * @method array getSearchFields() Obtain Searchable field
- * @method void setSearchFields(array $SearchFields) Set Searchable field
- * @method string getOrderField() Obtain Order field.
- * @method void setOrderField(string $OrderField) Set Order field.
- * @method integer getAsc() Obtain Ascending or not. 1: ascending; 0: descending.
- * @method void setAsc(integer $Asc) Set Ascending or not. 1: ascending; 0: descending.
+ * @method string getHardwareResourceType() Obtain Resource type. Valid values: all (default), host, and pod.
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: all (default), host, and pod.
+ * @method array getSearchFields() Obtain Searchable fields.
+ * @method void setSearchFields(array $SearchFields) Set Searchable fields.
+ * @method string getOrderField() Obtain Sorting field.
+ * @method void setOrderField(string $OrderField) Set Sorting field.
+ * @method integer getAsc() Obtain Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
+ * @method void setAsc(integer $Asc) Set Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID in the format of emr-xxxxxxxx
+     * @var string Cluster ID, such as emr-xxxxxxxx.
      */
     public $InstanceId;
 
     /**
-     * @var string Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+     * @var string Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
      */
     public $NodeFlag;
 
@@ -83,55 +89,57 @@ Note: only the above values are supported for the time being. Entering other val
     public $ExportDb;
 
     /**
-     * @var integer Page number. Default value: 0, indicating the first page.
+     * @var integer Page number. The default value is 0, indicating the first page.
      */
     public $Offset;
 
     /**
-     * @var integer Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * @var integer Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
      */
     public $Limit;
 
     /**
-     * @var string Resource type. Valid values: all, host, pod. Default value: all
+     * @var string Resource type. Valid values: all (default), host, and pod.
      */
     public $HardwareResourceType;
 
     /**
-     * @var array Searchable field
+     * @var array Searchable fields.
      */
     public $SearchFields;
 
     /**
-     * @var string Order field.
+     * @var string Sorting field.
      */
     public $OrderField;
 
     /**
-     * @var integer Ascending or not. 1: ascending; 0: descending.
+     * @var integer Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     public $Asc;
 
     /**
-     * @param string $InstanceId Cluster instance ID in the format of emr-xxxxxxxx
-     * @param string $NodeFlag Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+     * @param string $InstanceId Cluster ID, such as emr-xxxxxxxx.
+     * @param string $NodeFlag Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
      * @param boolean $ExportDb Whether to carry CDB information when all node information is exported in CSV format.
-     * @param integer $Offset Page number. Default value: 0, indicating the first page.
-     * @param integer $Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * @param integer $Offset Page number. The default value is 0, indicating the first page.
+     * @param integer $Limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
-     * @param string $HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
-     * @param array $SearchFields Searchable field
-     * @param string $OrderField Order field.
-     * @param integer $Asc Ascending or not. 1: ascending; 0: descending.
+     * @param string $HardwareResourceType Resource type. Valid values: all (default), host, and pod.
+     * @param array $SearchFields Searchable fields.
+     * @param string $OrderField Sorting field.
+     * @param integer $Asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     function __construct()
     {

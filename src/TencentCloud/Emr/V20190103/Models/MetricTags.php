@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Metric tag.
  *
- * @method string getUnit() Obtain Metric Unit.
- * @method void setUnit(string $Unit) Set Metric Unit.
+ * @method string getUnit() Obtain Metric unit.
+ * @method void setUnit(string $Unit) Set Metric unit.
  * @method string getType() Obtain Metric type.
  * @method void setType(string $Type) Set Metric type.
  */
 class MetricTags extends AbstractModel
 {
     /**
-     * @var string Metric Unit.
+     * @var string Metric unit.
      */
     public $Unit;
 
@@ -38,7 +38,7 @@ class MetricTags extends AbstractModel
     public $Type;
 
     /**
-     * @param string $Unit Metric Unit.
+     * @param string $Unit Metric unit.
      * @param string $Type Metric type.
      */
     function __construct()

@@ -24,40 +24,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Character string identifier of the instance.
  * @method string getInstanceName() Obtain Instance name.
  * @method void setInstanceName(string $InstanceName) Set Instance name.
- * @method integer getPayMode() Obtain Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
- * @method void setPayMode(integer $PayMode) Set Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+ * @method integer getPayMode() Obtain Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
+ * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
  * @method string getDiskType() Obtain Instance storage type.
  * @method void setDiskType(string $DiskType) Set Instance storage type.
- * @method integer getDiskSize() Obtain Instance single-node disk capacity, in GB.
- * @method void setDiskSize(integer $DiskSize) Set Instance single-node disk capacity, in GB.
+ * @method integer getDiskSize() Obtain Instance single-node disk capacity (GB).
+ * @method void setDiskSize(integer $DiskSize) Set Instance single-node disk capacity (GB).
  * @method string getNodeType() Obtain Instance node specifications.
  * @method void setNodeType(string $NodeType) Set Instance node specifications.
  * @method array getZoneSettings() Obtain Detailed configuration of the instance AZ, including the AZ name, VPC information, and number of nodes.
  * @method void setZoneSettings(array $ZoneSettings) Set Detailed configuration of the instance AZ, including the AZ name, VPC information, and number of nodes.
  * @method array getTags() Obtain List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getClusterId() Obtain Numeric identifier of the instance.
  * @method void setClusterId(integer $ClusterId) Set Numeric identifier of the instance.
  * @method integer getRegionId() Obtain Instance region ID.
  * @method void setRegionId(integer $RegionId) Set Instance region ID.
  * @method string getZone() Obtain Primary AZ of the instance.
  * @method void setZone(string $Zone) Set Primary AZ of the instance.
- * @method string getExpireTime() Obtain Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
- * @method void setExpireTime(string $ExpireTime) Set Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
- * @method string getIsolateTime() Obtain Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
- * @method void setIsolateTime(string $IsolateTime) Set Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+ * @method string getExpireTime() Obtain Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+ * @method void setExpireTime(string $ExpireTime) Set Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+ * @method string getIsolateTime() Obtain Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
+ * @method void setIsolateTime(string $IsolateTime) Set Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
  * @method string getCreateTime() Obtain Instance creation time.
  * @method void setCreateTime(string $CreateTime) Set Instance creation time.
- * @method integer getStatus() Obtain Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
- * @method void setStatus(integer $Status) Set Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+ * @method integer getStatus() Obtain Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
+ * @method void setStatus(integer $Status) Set Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
  * @method integer getNodeNum() Obtain Total number of instance nodes.
  * @method void setNodeNum(integer $NodeNum) Set Total number of instance nodes.
- * @method array getSLInstance() Obtain 
- * @method void setSLInstance(array $SLInstance) Set 
+ * @method array getSLInstance() Obtain Serverless Instance infomation
+ * @method void setSLInstance(array $SLInstance) Set Serverless Instance infomation
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -74,7 +72,7 @@ class DescribeSLInstanceResponse extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+     * @var integer Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
      */
     public $PayMode;
 
@@ -84,7 +82,7 @@ class DescribeSLInstanceResponse extends AbstractModel
     public $DiskType;
 
     /**
-     * @var integer Instance single-node disk capacity, in GB.
+     * @var integer Instance single-node disk capacity (GB).
      */
     public $DiskSize;
 
@@ -100,7 +98,6 @@ class DescribeSLInstanceResponse extends AbstractModel
 
     /**
      * @var array List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
@@ -120,12 +117,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Zone;
 
     /**
-     * @var string Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+     * @var string Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
      */
     public $ExpireTime;
 
     /**
-     * @var string Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+     * @var string Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
      */
     public $IsolateTime;
 
@@ -135,12 +132,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
-     * @var integer Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
+     * @var integer Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
      */
     public $Status;
 
     /**
-     * @var integer Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+     * @var integer Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
      */
     public $AutoRenewFlag;
 
@@ -150,7 +147,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NodeNum;
 
     /**
-     * @var array 
+     * @var array Serverless Instance infomation
      */
     public $SLInstance;
 
@@ -162,23 +159,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $InstanceId Character string identifier of the instance.
      * @param string $InstanceName Instance name.
-     * @param integer $PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+     * @param integer $PayMode Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
      * @param string $DiskType Instance storage type.
-     * @param integer $DiskSize Instance single-node disk capacity, in GB.
+     * @param integer $DiskSize Instance single-node disk capacity (GB).
      * @param string $NodeType Instance node specifications.
      * @param array $ZoneSettings Detailed configuration of the instance AZ, including the AZ name, VPC information, and number of nodes.
      * @param array $Tags List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ClusterId Numeric identifier of the instance.
      * @param integer $RegionId Instance region ID.
      * @param string $Zone Primary AZ of the instance.
-     * @param string $ExpireTime Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
-     * @param string $IsolateTime Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+     * @param string $ExpireTime Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+     * @param string $IsolateTime Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
      * @param string $CreateTime Instance creation time.
-     * @param integer $Status Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
-     * @param integer $AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+     * @param integer $Status Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
+     * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
      * @param integer $NodeNum Total number of instance nodes.
-     * @param array $SLInstance 
+     * @param array $SLInstance Serverless Instance infomation
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

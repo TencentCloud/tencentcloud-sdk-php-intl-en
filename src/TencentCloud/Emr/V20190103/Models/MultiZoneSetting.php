@@ -18,44 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter information of each AZ
+ * Parameter information for each AZ.
  *
- * @method string getZoneTag() Obtain "master", "standby" or "third-party".
- * @method void setZoneTag(string $ZoneTag) Set "master", "standby" or "third-party".
- * @method VPCSettings getVPCSettings() Obtain None
- * @method void setVPCSettings(VPCSettings $VPCSettings) Set None
- * @method Placement getPlacement() Obtain None
- * @method void setPlacement(Placement $Placement) Set None
- * @method NewResourceSpec getResourceSpec() Obtain None
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set None
+ * @method string getZoneTag() Obtain "master", "standby", and "third-party".
+ * @method void setZoneTag(string $ZoneTag) Set "master", "standby", and "third-party".
+ * @method VPCSettings getVPCSettings() Obtain None.
+ * @method void setVPCSettings(VPCSettings $VPCSettings) Set None.
+ * @method Placement getPlacement() Obtain None.
+ * @method void setPlacement(Placement $Placement) Set None.
+ * @method NewResourceSpec getResourceSpec() Obtain None.
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set None.
  */
 class MultiZoneSetting extends AbstractModel
 {
     /**
-     * @var string "master", "standby" or "third-party".
+     * @var string "master", "standby", and "third-party".
      */
     public $ZoneTag;
 
     /**
-     * @var VPCSettings None
+     * @var VPCSettings None.
      */
     public $VPCSettings;
 
     /**
-     * @var Placement None
+     * @var Placement None.
      */
     public $Placement;
 
     /**
-     * @var NewResourceSpec None
+     * @var NewResourceSpec None.
      */
     public $ResourceSpec;
 
     /**
-     * @param string $ZoneTag "master", "standby" or "third-party".
-     * @param VPCSettings $VPCSettings None
-     * @param Placement $Placement None
-     * @param NewResourceSpec $ResourceSpec None
+     * @param string $ZoneTag "master", "standby", and "third-party".
+     * @param VPCSettings $VPCSettings None.
+     * @param Placement $Placement None.
+     * @param NewResourceSpec $ResourceSpec None.
      */
     function __construct()
     {

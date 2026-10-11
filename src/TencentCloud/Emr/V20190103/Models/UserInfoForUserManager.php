@@ -18,38 +18,38 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Added user information list
+ * List of added user information.
  *
- * @method string getUserName() Obtain Username
- * @method void setUserName(string $UserName) Set Username
- * @method string getUserGroup() Obtain The group to which the user belongs
- * @method void setUserGroup(string $UserGroup) Set The group to which the user belongs
- * @method string getPassWord() Obtain Password
- * @method void setPassWord(string $PassWord) Set Password
- * @method string getReMark() Obtain Remarks
- * @method void setReMark(string $ReMark) Set Remarks
+ * @method string getUserName() Obtain Username.
+ * @method void setUserName(string $UserName) Set Username.
+ * @method string getUserGroup() Obtain Group to which the user belongs.
+ * @method void setUserGroup(string $UserGroup) Set Group to which the user belongs.
+ * @method string getPassWord() Obtain Password.
+ * @method void setPassWord(string $PassWord) Set Password.
+ * @method string getReMark() Obtain Remarks.
+ * @method void setReMark(string $ReMark) Set Remarks.
  * @method array getGroups() Obtain User subgroup.
  * @method void setGroups(array $Groups) Set User subgroup.
  */
 class UserInfoForUserManager extends AbstractModel
 {
     /**
-     * @var string Username
+     * @var string Username.
      */
     public $UserName;
 
     /**
-     * @var string The group to which the user belongs
+     * @var string Group to which the user belongs.
      */
     public $UserGroup;
 
     /**
-     * @var string Password
+     * @var string Password.
      */
     public $PassWord;
 
     /**
-     * @var string Remarks
+     * @var string Remarks.
      */
     public $ReMark;
 
@@ -59,10 +59,10 @@ class UserInfoForUserManager extends AbstractModel
     public $Groups;
 
     /**
-     * @param string $UserName Username
-     * @param string $UserGroup The group to which the user belongs
-     * @param string $PassWord Password
-     * @param string $ReMark Remarks
+     * @param string $UserName Username.
+     * @param string $UserGroup Group to which the user belongs.
+     * @param string $PassWord Password.
+     * @param string $ReMark Remarks.
      * @param array $Groups User subgroup.
      */
     function __construct()

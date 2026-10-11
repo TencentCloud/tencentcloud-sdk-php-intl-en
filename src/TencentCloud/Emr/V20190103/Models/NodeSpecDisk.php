@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node disk type.
  *
- * @method integer getCount() Obtain Quantity.
- * @method void setCount(integer $Count) Set Quantity.
+ * @method integer getCount() Obtain Number.
+ * @method void setCount(integer $Count) Set Number.
  * @method string getName() Obtain Name.
  * @method void setName(string $Name) Set Name.
  * @method string getDiskType() Obtain Disk type.
  * @method void setDiskType(string $DiskType) Set Disk type.
  * @method integer getDefaultDiskSize() Obtain Specified disk size.
  * @method void setDefaultDiskSize(integer $DefaultDiskSize) Set Specified disk size.
+ * @method boolean getIsSpecialDisk() Obtain Whether it is a special data disk, for example, a single-replica disk.
+ * @method void setIsSpecialDisk(boolean $IsSpecialDisk) Set Whether it is a special data disk, for example, a single-replica disk.
  */
 class NodeSpecDisk extends AbstractModel
 {
     /**
-     * @var integer Quantity.
+     * @var integer Number.
      */
     public $Count;
 
@@ -52,10 +54,16 @@ class NodeSpecDisk extends AbstractModel
     public $DefaultDiskSize;
 
     /**
-     * @param integer $Count Quantity.
+     * @var boolean Whether it is a special data disk, for example, a single-replica disk.
+     */
+    public $IsSpecialDisk;
+
+    /**
+     * @param integer $Count Number.
      * @param string $Name Name.
      * @param string $DiskType Disk type.
      * @param integer $DefaultDiskSize Specified disk size.
+     * @param boolean $IsSpecialDisk Whether it is a special data disk, for example, a single-replica disk.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class NodeSpecDisk extends AbstractModel
 
         if (array_key_exists("DefaultDiskSize",$param) and $param["DefaultDiskSize"] !== null) {
             $this->DefaultDiskSize = $param["DefaultDiskSize"];
+        }
+
+        if (array_key_exists("IsSpecialDisk",$param) and $param["IsSpecialDisk"] !== null) {
+            $this->IsSpecialDisk = $param["IsSpecialDisk"];
         }
     }
 }

@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySLInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance unique identifier (string).
- * @method void setInstanceId(string $InstanceId) Set Instance unique identifier (string).
- * @method string getZone() Obtain Region name to be changed.
- * @method void setZone(string $Zone) Set Region name to be changed.
- * @method integer getNodeNum() Obtain Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
- * @method void setNodeNum(integer $NodeNum) Set Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
- * @method string getClientToken() Obtain The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
- * @method void setClientToken(string $ClientToken) Set The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+ * @method string getInstanceId() Obtain <p>Instance unique identifier (string).</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance unique identifier (string).</p>
+ * @method string getZone() Obtain <p>Name of the region to be changed.</p>
+ * @method void setZone(string $Zone) Set <p>Name of the region to be changed.</p>
+ * @method integer getNodeNum() Obtain <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
+ * @method void setNodeNum(integer $NodeNum) Set <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
+ * @method string getClientToken() Obtain <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+ * @method void setClientToken(string $ClientToken) Set <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+ * @method integer getDiskSize() Obtain <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+ * @method void setDiskSize(integer $DiskSize) Set <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
  */
 class ModifySLInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance unique identifier (string).
+     * @var string <p>Instance unique identifier (string).</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Region name to be changed.
+     * @var string <p>Name of the region to be changed.</p>
      */
     public $Zone;
 
     /**
-     * @var integer Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+     * @var integer <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
      */
     public $NodeNum;
 
     /**
-     * @var string The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * @var string <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
      */
     public $ClientToken;
 
     /**
-     * @param string $InstanceId Instance unique identifier (string).
-     * @param string $Zone Region name to be changed.
-     * @param integer $NodeNum Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
-     * @param string $ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * @var integer <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+     */
+    public $DiskSize;
+
+    /**
+     * @param string $InstanceId <p>Instance unique identifier (string).</p>
+     * @param string $Zone <p>Name of the region to be changed.</p>
+     * @param integer $NodeNum <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
+     * @param string $ClientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+     * @param integer $DiskSize <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifySLInstanceRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
+            $this->DiskSize = $param["DiskSize"];
         }
     }
 }

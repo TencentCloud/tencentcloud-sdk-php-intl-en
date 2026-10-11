@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(string $Value) Set Parameter value.
  * @method string getKey() Obtain Unique parameter identifier.
  * @method void setKey(string $Key) Set Unique parameter identifier.
- * @method string getEditable() Obtain Whether it is editable, "true" or "false".
- * @method void setEditable(string $Editable) Set Whether it is editable, "true" or "false".
+ * @method string getEditable() Obtain Whether it is editable. Valid values: true and false.
+ * @method void setEditable(string $Editable) Set Whether it is editable. Valid values: true and false.
  */
 class TaskSettings extends AbstractModel
 {
@@ -47,7 +47,7 @@ class TaskSettings extends AbstractModel
     public $Key;
 
     /**
-     * @var string Whether it is editable, "true" or "false".
+     * @var string Whether it is editable. Valid values: true and false.
      */
     public $Editable;
 
@@ -55,7 +55,7 @@ class TaskSettings extends AbstractModel
      * @param string $Name Parameter name.
      * @param string $Value Parameter value.
      * @param string $Key Unique parameter identifier.
-     * @param string $Editable Whether it is editable, "true" or "false".
+     * @param string $Editable Whether it is editable. Valid values: true and false.
      */
     function __construct()
     {

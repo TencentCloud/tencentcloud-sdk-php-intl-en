@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegion() Obtain Region identifiers, such as ap-guangzhou, ap-shanghai, and ap-beijing
  * @method void setRegion(string $Region) Set Region identifiers, such as ap-guangzhou, ap-shanghai, and ap-beijing
- * @method string getRegionName() Obtain Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
- * @method void setRegionName(string $RegionName) Set Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+ * @method string getRegionName() Obtain Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+ * @method void setRegionName(string $RegionName) Set Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
  * @method integer getRegionId() Obtain Region ID
  * @method void setRegionId(integer $RegionId) Set Region ID
- * @method string getRegionCode() Obtain Region code, such as gz, sh, and bj
- * @method void setRegionCode(string $RegionCode) Set Region code, such as gz, sh, and bj
+ * @method string getRegionCode() Obtain Region code, such as gz, sh, and bj
+ * @method void setRegionCode(string $RegionCode) Set Region code, such as gz, sh, and bj
  * @method string getRegionNameEn() Obtain English name of the region
  * @method void setRegionNameEn(string $RegionNameEn) Set English name of the region
  */
@@ -39,7 +39,7 @@ class RegionInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+     * @var string Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
      */
     public $RegionName;
 
@@ -49,7 +49,7 @@ class RegionInfo extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string Region code, such as gz, sh, and bj
+     * @var string Region code, such as gz, sh, and bj
      */
     public $RegionCode;
 
@@ -60,9 +60,9 @@ class RegionInfo extends AbstractModel
 
     /**
      * @param string $Region Region identifiers, such as ap-guangzhou, ap-shanghai, and ap-beijing
-     * @param string $RegionName Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+     * @param string $RegionName Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
      * @param integer $RegionId Region ID
-     * @param string $RegionCode Region code, such as gz, sh, and bj
+     * @param string $RegionCode Region code, such as gz, sh, and bj
      * @param string $RegionNameEn English name of the region
      */
     function __construct()

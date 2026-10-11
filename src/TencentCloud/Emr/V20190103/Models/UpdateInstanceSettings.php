@@ -18,44 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Target resource specification
+ * Changed resource specifications.
  *
- * @method integer getMemory() Obtain Memory capacity in GB
- * @method void setMemory(integer $Memory) Set Memory capacity in GB
- * @method integer getCPUCores() Obtain Number of CPU cores
- * @method void setCPUCores(integer $CPUCores) Set Number of CPU cores
- * @method string getResourceId() Obtain Machine resource ID (EMR resource identifier)
- * @method void setResourceId(string $ResourceId) Set Machine resource ID (EMR resource identifier)
- * @method string getInstanceType() Obtain Target machine specification
- * @method void setInstanceType(string $InstanceType) Set Target machine specification
+ * @method integer getMemory() Obtain Memory capacity, in GB.
+ * @method void setMemory(integer $Memory) Set Memory capacity, in GB.
+ * @method integer getCPUCores() Obtain Number of CPU cores.
+ * @method void setCPUCores(integer $CPUCores) Set Number of CPU cores.
+ * @method string getResourceId() Obtain Machine resource ID (EMR resource identifier).
+ * @method void setResourceId(string $ResourceId) Set Machine resource ID (EMR resource identifier).
+ * @method string getInstanceType() Obtain Changed machine specifications.
+ * @method void setInstanceType(string $InstanceType) Set Changed machine specifications.
  */
 class UpdateInstanceSettings extends AbstractModel
 {
     /**
-     * @var integer Memory capacity in GB
+     * @var integer Memory capacity, in GB.
      */
     public $Memory;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer Number of CPU cores.
      */
     public $CPUCores;
 
     /**
-     * @var string Machine resource ID (EMR resource identifier)
+     * @var string Machine resource ID (EMR resource identifier).
      */
     public $ResourceId;
 
     /**
-     * @var string Target machine specification
+     * @var string Changed machine specifications.
      */
     public $InstanceType;
 
     /**
-     * @param integer $Memory Memory capacity in GB
-     * @param integer $CPUCores Number of CPU cores
-     * @param string $ResourceId Machine resource ID (EMR resource identifier)
-     * @param string $InstanceType Target machine specification
+     * @param integer $Memory Memory capacity, in GB.
+     * @param integer $CPUCores Number of CPU cores.
+     * @param string $ResourceId Machine resource ID (EMR resource identifier).
+     * @param string $InstanceType Changed machine specifications.
      */
     function __construct()
     {

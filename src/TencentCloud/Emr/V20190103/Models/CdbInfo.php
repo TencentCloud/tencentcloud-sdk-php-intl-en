@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output parameters
+ * Response parameter.
  *
  * @method string getInstanceName() Obtain Database instance.
  * @method void setInstanceName(string $InstanceName) Set Database instance.
@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemSize(integer $MemSize) Set Database memory specifications.
  * @method integer getVolume() Obtain Database disk specifications.
  * @method void setVolume(integer $Volume) Set Database disk specifications.
- * @method string getService() Obtain Service identifier.
- * @method void setService(string $Service) Set Service identifier.
+ * @method string getService() Obtain Service flag.
+ * @method void setService(string $Service) Set Service flag.
  * @method string getExpireTime() Obtain Expiration time.
  * @method void setExpireTime(string $ExpireTime) Set Expiration time.
  * @method string getApplyTime() Obtain Application time.
  * @method void setApplyTime(string $ApplyTime) Set Application time.
- * @method integer getPayType() Obtain Billing type.
- * @method void setPayType(integer $PayType) Set Billing type.
+ * @method integer getPayType() Obtain Payment type.
+ * @method void setPayType(integer $PayType) Set Payment type.
  * @method boolean getExpireFlag() Obtain Expiration flag.
  * @method void setExpireFlag(boolean $ExpireFlag) Set Expiration flag.
  * @method integer getStatus() Obtain Database status.
@@ -79,7 +79,7 @@ class CdbInfo extends AbstractModel
     public $Volume;
 
     /**
-     * @var string Service identifier.
+     * @var string Service flag.
      */
     public $Service;
 
@@ -94,7 +94,7 @@ class CdbInfo extends AbstractModel
     public $ApplyTime;
 
     /**
-     * @var integer Billing type.
+     * @var integer Payment type.
      */
     public $PayType;
 
@@ -134,10 +134,10 @@ class CdbInfo extends AbstractModel
      * @param integer $Port Database port.
      * @param integer $MemSize Database memory specifications.
      * @param integer $Volume Database disk specifications.
-     * @param string $Service Service identifier.
+     * @param string $Service Service flag.
      * @param string $ExpireTime Expiration time.
      * @param string $ApplyTime Application time.
-     * @param integer $PayType Billing type.
+     * @param integer $PayType Payment type.
      * @param boolean $ExpireFlag Expiration flag.
      * @param integer $Status Database status.
      * @param integer $IsAutoRenew Renewal flag.

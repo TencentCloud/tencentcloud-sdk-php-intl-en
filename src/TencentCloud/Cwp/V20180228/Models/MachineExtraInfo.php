@@ -18,60 +18,60 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Server Basic Information
+ * 
  *
- * @method string getWanIP() Obtain Public IP address
- * @method void setWanIP(string $WanIP) Set Public IP address
- * @method string getPrivateIP() Obtain Private IP address
- * @method void setPrivateIP(string $PrivateIP) Set Private IP address
- * @method integer getNetworkType() Obtain Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
- * @method void setNetworkType(integer $NetworkType) Set Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
- * @method string getNetworkName() Obtain Network Name, returns vpc_id in the case of a VPC network
- * @method void setNetworkName(string $NetworkName) Set Network Name, returns vpc_id in the case of a VPC network
- * @method string getInstanceID() Obtain Instance ID
- * @method void setInstanceID(string $InstanceID) Set Instance ID
- * @method string getHostName() Obtain host name
- * @method void setHostName(string $HostName) Set host name
+ * @method string getWanIP() Obtain 
+ * @method void setWanIP(string $WanIP) Set 
+ * @method string getPrivateIP() Obtain 
+ * @method void setPrivateIP(string $PrivateIP) Set 
+ * @method integer getNetworkType() Obtain 
+ * @method void setNetworkType(integer $NetworkType) Set 
+ * @method string getNetworkName() Obtain 
+ * @method void setNetworkName(string $NetworkName) Set 
+ * @method string getInstanceID() Obtain 
+ * @method void setInstanceID(string $InstanceID) Set 
+ * @method string getHostName() Obtain 
+ * @method void setHostName(string $HostName) Set 
  */
 class MachineExtraInfo extends AbstractModel
 {
     /**
-     * @var string Public IP address
+     * @var string 
      */
     public $WanIP;
 
     /**
-     * @var string Private IP address
+     * @var string 
      */
     public $PrivateIP;
 
     /**
-     * @var integer Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+     * @var integer 
      */
     public $NetworkType;
 
     /**
-     * @var string Network Name, returns vpc_id in the case of a VPC network
+     * @var string 
      */
     public $NetworkName;
 
     /**
-     * @var string Instance ID
+     * @var string 
      */
     public $InstanceID;
 
     /**
-     * @var string host name
+     * @var string 
      */
     public $HostName;
 
     /**
-     * @param string $WanIP Public IP address
-     * @param string $PrivateIP Private IP address
-     * @param integer $NetworkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-     * @param string $NetworkName Network Name, returns vpc_id in the case of a VPC network
-     * @param string $InstanceID Instance ID
-     * @param string $HostName host name
+     * @param string $WanIP 
+     * @param string $PrivateIP 
+     * @param integer $NetworkType 
+     * @param string $NetworkName 
+     * @param string $InstanceID 
+     * @param string $HostName 
      */
     function __construct()
     {

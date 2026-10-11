@@ -18,116 +18,116 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pre-execution script configuration
+ * Pre-execution script configuration.
  *
- * @method string getPath() Obtain COS path to script, which has been disused
- * @method void setPath(string $Path) Set COS path to script, which has been disused
- * @method array getArgs() Obtain Execution script parameter
- * @method void setArgs(array $Args) Set Execution script parameter
- * @method string getBucket() Obtain COS bucket name, which has been disused
- * @method void setBucket(string $Bucket) Set COS bucket name, which has been disused
- * @method string getRegion() Obtain COS region name, which has been disused
- * @method void setRegion(string $Region) Set COS region name, which has been disused
- * @method string getDomain() Obtain COS domain data, which has been disused
- * @method void setDomain(string $Domain) Set COS domain data, which has been disused
- * @method integer getRunOrder() Obtain Execution sequence
- * @method void setRunOrder(integer $RunOrder) Set Execution sequence
- * @method string getWhenRun() Obtain `resourceAfter` or `clusterAfter`
- * @method void setWhenRun(string $WhenRun) Set `resourceAfter` or `clusterAfter`
- * @method string getCosFileName() Obtain Script name, which has been disused
- * @method void setCosFileName(string $CosFileName) Set Script name, which has been disused
- * @method string getCosFileURI() Obtain COS address of script
- * @method void setCosFileURI(string $CosFileURI) Set COS address of script
- * @method string getCosSecretId() Obtain COS `SecretId`
- * @method void setCosSecretId(string $CosSecretId) Set COS `SecretId`
- * @method string getCosSecretKey() Obtain COS `SecretKey`
- * @method void setCosSecretKey(string $CosSecretKey) Set COS `SecretKey`
- * @method string getAppId() Obtain COS `appid`, which has been disused
- * @method void setAppId(string $AppId) Set COS `appid`, which has been disused
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
+ * @method string getPath() Obtain Script path on COS, which has been deprecated.
+ * @method void setPath(string $Path) Set Script path on COS, which has been deprecated.
+ * @method array getArgs() Obtain Script execution parameter.
+ * @method void setArgs(array $Args) Set Script execution parameter.
+ * @method string getBucket() Obtain COS bucket name, which has been deprecated.
+ * @method void setBucket(string $Bucket) Set COS bucket name, which has been deprecated.
+ * @method string getRegion() Obtain COS region name, which has been deprecated.
+ * @method void setRegion(string $Region) Set COS region name, which has been deprecated.
+ * @method string getDomain() Obtain COS domain data, which has been deprecated.
+ * @method void setDomain(string $Domain) Set COS domain data, which has been deprecated.
+ * @method integer getRunOrder() Obtain Execution order.
+ * @method void setRunOrder(integer $RunOrder) Set Execution order.
+ * @method string getWhenRun() Obtain Whether resourceAfter or clusterAfter is used.
+ * @method void setWhenRun(string $WhenRun) Set Whether resourceAfter or clusterAfter is used.
+ * @method string getCosFileName() Obtain Script file name, which has been deprecated.
+ * @method void setCosFileName(string $CosFileName) Set Script file name, which has been deprecated.
+ * @method string getCosFileURI() Obtain COS address of the script.
+ * @method void setCosFileURI(string $CosFileURI) Set COS address of the script.
+ * @method string getCosSecretId() Obtain COS SecretId.
+ * @method void setCosSecretId(string $CosSecretId) Set COS SecretId.
+ * @method string getCosSecretKey() Obtain COS SecretKey.
+ * @method void setCosSecretKey(string $CosSecretKey) Set COS SecretKey.
+ * @method string getAppId() Obtain COS APPID, which has been deprecated.
+ * @method void setAppId(string $AppId) Set COS APPID, which has been deprecated.
+ * @method string getRemark() Obtain Remarks.
+ * @method void setRemark(string $Remark) Set Remarks.
  */
 class PreExecuteFileSettings extends AbstractModel
 {
     /**
-     * @var string COS path to script, which has been disused
+     * @var string Script path on COS, which has been deprecated.
      */
     public $Path;
 
     /**
-     * @var array Execution script parameter
+     * @var array Script execution parameter.
      */
     public $Args;
 
     /**
-     * @var string COS bucket name, which has been disused
+     * @var string COS bucket name, which has been deprecated.
      */
     public $Bucket;
 
     /**
-     * @var string COS region name, which has been disused
+     * @var string COS region name, which has been deprecated.
      */
     public $Region;
 
     /**
-     * @var string COS domain data, which has been disused
+     * @var string COS domain data, which has been deprecated.
      */
     public $Domain;
 
     /**
-     * @var integer Execution sequence
+     * @var integer Execution order.
      */
     public $RunOrder;
 
     /**
-     * @var string `resourceAfter` or `clusterAfter`
+     * @var string Whether resourceAfter or clusterAfter is used.
      */
     public $WhenRun;
 
     /**
-     * @var string Script name, which has been disused
+     * @var string Script file name, which has been deprecated.
      */
     public $CosFileName;
 
     /**
-     * @var string COS address of script
+     * @var string COS address of the script.
      */
     public $CosFileURI;
 
     /**
-     * @var string COS `SecretId`
+     * @var string COS SecretId.
      */
     public $CosSecretId;
 
     /**
-     * @var string COS `SecretKey`
+     * @var string COS SecretKey.
      */
     public $CosSecretKey;
 
     /**
-     * @var string COS `appid`, which has been disused
+     * @var string COS APPID, which has been deprecated.
      */
     public $AppId;
 
     /**
-     * @var string Remarks
+     * @var string Remarks.
      */
     public $Remark;
 
     /**
-     * @param string $Path COS path to script, which has been disused
-     * @param array $Args Execution script parameter
-     * @param string $Bucket COS bucket name, which has been disused
-     * @param string $Region COS region name, which has been disused
-     * @param string $Domain COS domain data, which has been disused
-     * @param integer $RunOrder Execution sequence
-     * @param string $WhenRun `resourceAfter` or `clusterAfter`
-     * @param string $CosFileName Script name, which has been disused
-     * @param string $CosFileURI COS address of script
-     * @param string $CosSecretId COS `SecretId`
-     * @param string $CosSecretKey COS `SecretKey`
-     * @param string $AppId COS `appid`, which has been disused
-     * @param string $Remark Remarks
+     * @param string $Path Script path on COS, which has been deprecated.
+     * @param array $Args Script execution parameter.
+     * @param string $Bucket COS bucket name, which has been deprecated.
+     * @param string $Region COS region name, which has been deprecated.
+     * @param string $Domain COS domain data, which has been deprecated.
+     * @param integer $RunOrder Execution order.
+     * @param string $WhenRun Whether resourceAfter or clusterAfter is used.
+     * @param string $CosFileName Script file name, which has been deprecated.
+     * @param string $CosFileURI COS address of the script.
+     * @param string $CosSecretId COS SecretId.
+     * @param string $CosSecretKey COS SecretKey.
+     * @param string $AppId COS APPID, which has been deprecated.
+     * @param string $Remark Remarks.
      */
     function __construct()
     {

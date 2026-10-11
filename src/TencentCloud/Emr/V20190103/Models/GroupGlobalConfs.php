@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Global parameter information of all scaling groups in the cluster.
  *
  * @method AutoScaleResourceConf getGroupGlobalConf() Obtain Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroupGlobalConf(AutoScaleResourceConf $GroupGlobalConf) Set Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCurrentNodes() Obtain Number of nodes scaled out in the current scaling group.
  * @method void setCurrentNodes(integer $CurrentNodes) Set Number of nodes scaled out in the current scaling group.
  * @method integer getCurrentPostPaidNodes() Obtain Number of postpaid nodes scaled out in the current scaling group.
@@ -35,7 +33,6 @@ class GroupGlobalConfs extends AbstractModel
 {
     /**
      * @var AutoScaleResourceConf Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GroupGlobalConf;
 
@@ -56,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param AutoScaleResourceConf $GroupGlobalConf Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CurrentNodes Number of nodes scaled out in the current scaling group.
      * @param integer $CurrentPostPaidNodes Number of postpaid nodes scaled out in the current scaling group.
      * @param integer $CurrentSpotPaidNodes Number of spot instance nodes scaled out in the current scaling group.

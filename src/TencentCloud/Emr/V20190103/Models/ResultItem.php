@@ -18,14 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output results of user groups.
+ * Response result of the user group.
  *
  * @method string getItem() Obtain User group name.
  * @method void setItem(string $Item) Set User group name.
  * @method boolean getResult() Obtain Whether the user group is created successfully.
  * @method void setResult(boolean $Result) Set Whether the user group is created successfully.
- * @method string getReason() Obtain Specify the reason for the failure in the case of creation failure.
- * @method void setReason(string $Reason) Set Specify the reason for the failure in the case of creation failure.
+ * @method string getReason() Obtain If the creation fails, specify the reason for the failure.
+ * @method void setReason(string $Reason) Set If the creation fails, specify the reason for the failure.
  */
 class ResultItem extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ResultItem extends AbstractModel
     public $Result;
 
     /**
-     * @var string Specify the reason for the failure in the case of creation failure.
+     * @var string If the creation fails, specify the reason for the failure.
      */
     public $Reason;
 
     /**
      * @param string $Item User group name.
      * @param boolean $Result Whether the user group is created successfully.
-     * @param string $Reason Specify the reason for the failure in the case of creation failure.
+     * @param string $Reason If the creation fails, specify the reason for the failure.
      */
     function __construct()
     {

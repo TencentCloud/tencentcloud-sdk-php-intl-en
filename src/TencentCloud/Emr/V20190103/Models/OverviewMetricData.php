@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInterval() Obtain Sampling point time interval.
  * @method void setInterval(integer $Interval) Set Sampling point time interval.
  * @method array getDataPoints() Obtain Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDataPoints(array $DataPoints) Set Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MetricTags getTags() Obtain Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(MetricTags $Tags) Set Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OverviewMetricData extends AbstractModel
 {
@@ -61,13 +57,11 @@ class OverviewMetricData extends AbstractModel
 
     /**
      * @var array Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataPoints;
 
     /**
      * @var MetricTags Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
@@ -77,9 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Last Last data timestamp.
      * @param integer $Interval Sampling point time interval.
      * @param array $DataPoints Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MetricTags $Tags Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

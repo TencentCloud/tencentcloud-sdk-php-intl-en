@@ -18,10 +18,10 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Scheduling task details
+ * Scheduling task details.
  *
- * @method string getStep() Obtain Steps.
- * @method void setStep(string $Step) Set Steps.
+ * @method string getStep() Obtain Step.
+ * @method void setStep(string $Step) Set Step.
  * @method string getProgress() Obtain Progress.
  * @method void setProgress(string $Progress) Set Progress.
  * @method string getFailReason() Obtain Failure information.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SchedulerTaskDetail extends AbstractModel
 {
     /**
-     * @var string Steps.
+     * @var string Step.
      */
     public $Step;
 
@@ -52,7 +52,7 @@ class SchedulerTaskDetail extends AbstractModel
     public $JobId;
 
     /**
-     * @param string $Step Steps.
+     * @param string $Step Step.
      * @param string $Progress Progress.
      * @param string $FailReason Failure information.
      * @param integer $JobId ID used to obtain details.

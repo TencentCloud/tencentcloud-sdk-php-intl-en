@@ -18,12 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The custom pod permission and parameter.
+ * Pod custom permission and parameter.
  *
- * @method string getInstanceId() Obtain The TKE or EKS cluster ID.
- * @method void setInstanceId(string $InstanceId) Set The TKE or EKS cluster ID.
- * @method string getConfig() Obtain Custom permissions
-Examples:
+ * @method string getInstanceId() Obtain TKE or EKS cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set TKE or EKS cluster ID.
+ * @method string getConfig() Obtain Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -57,8 +57,8 @@ Examples:
     }
   ]
 }
- * @method void setConfig(string $Config) Set Custom permissions
-Examples:
+ * @method void setConfig(string $Config) Set Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -92,8 +92,8 @@ Examples:
     }
   ]
 }
- * @method string getParameter() Obtain Custom parameters
-Examples:
+ * @method string getParameter() Obtain Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -167,8 +167,8 @@ Examples:
       }
     }
   }
- * @method void setParameter(string $Parameter) Set Custom parameters
-Examples:
+ * @method void setParameter(string $Parameter) Set Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -246,13 +246,13 @@ Examples:
 class PodNewParameter extends AbstractModel
 {
     /**
-     * @var string The TKE or EKS cluster ID.
+     * @var string TKE or EKS cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Custom permissions
-Examples:
+     * @var string Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -290,8 +290,8 @@ Examples:
     public $Config;
 
     /**
-     * @var string Custom parameters
-Examples:
+     * @var string Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -369,9 +369,9 @@ Examples:
     public $Parameter;
 
     /**
-     * @param string $InstanceId The TKE or EKS cluster ID.
-     * @param string $Config Custom permissions
-Examples:
+     * @param string $InstanceId TKE or EKS cluster ID.
+     * @param string $Config Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -405,8 +405,8 @@ Examples:
     }
   ]
 }
-     * @param string $Parameter Custom parameters
-Examples:
+     * @param string $Parameter Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",

@@ -18,7 +18,7 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description of key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
+ * Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
 
 If there are multiple Filters, the logical relationship between them is AND.
 If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.

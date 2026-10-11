@@ -18,76 +18,76 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Yarn application statistics
+ * YARN application statistics information.
  *
- * @method string getQueue() Obtain Queue name
- * @method void setQueue(string $Queue) Set Queue name
- * @method string getUser() Obtain Username
- * @method void setUser(string $User) Set Username
- * @method string getApplicationType() Obtain Application type
- * @method void setApplicationType(string $ApplicationType) Set Application type
- * @method integer getSumMemorySeconds() Obtain `SumMemorySeconds` meaning
- * @method void setSumMemorySeconds(integer $SumMemorySeconds) Set `SumMemorySeconds` meaning
- * @method integer getSumVCoreSeconds() Obtain Total VCore Seconds
- * @method void setSumVCoreSeconds(integer $SumVCoreSeconds) Set Total VCore Seconds
- * @method string getSumHDFSBytesWritten() Obtain SumHDFSBytesWritten (with unit)
- * @method void setSumHDFSBytesWritten(string $SumHDFSBytesWritten) Set SumHDFSBytesWritten (with unit)
- * @method string getSumHDFSBytesRead() Obtain SumHDFSBytesRead (with unit)
- * @method void setSumHDFSBytesRead(string $SumHDFSBytesRead) Set SumHDFSBytesRead (with unit)
- * @method integer getCountApps() Obtain Application count
- * @method void setCountApps(integer $CountApps) Set Application count
+ * @method string getQueue() Obtain Queue name.
+ * @method void setQueue(string $Queue) Set Queue name.
+ * @method string getUser() Obtain Username.
+ * @method void setUser(string $User) Set Username.
+ * @method string getApplicationType() Obtain Job type.
+ * @method void setApplicationType(string $ApplicationType) Set Job type.
+ * @method integer getSumMemorySeconds() Obtain Meaning of SumMemorySeconds.
+ * @method void setSumMemorySeconds(integer $SumMemorySeconds) Set Meaning of SumMemorySeconds.
+ * @method integer getSumVCoreSeconds() Obtain Meaning of SumVCoreSeconds.
+ * @method void setSumVCoreSeconds(integer $SumVCoreSeconds) Set Meaning of SumVCoreSeconds.
+ * @method string getSumHDFSBytesWritten() Obtain SumHDFSBytesWritten (with the unit).
+ * @method void setSumHDFSBytesWritten(string $SumHDFSBytesWritten) Set SumHDFSBytesWritten (with the unit).
+ * @method string getSumHDFSBytesRead() Obtain SumHDFSBytesRead (with the unit).
+ * @method void setSumHDFSBytesRead(string $SumHDFSBytesRead) Set SumHDFSBytesRead (with the unit).
+ * @method integer getCountApps() Obtain Number of jobs.
+ * @method void setCountApps(integer $CountApps) Set Number of jobs.
  */
 class ApplicationStatics extends AbstractModel
 {
     /**
-     * @var string Queue name
+     * @var string Queue name.
      */
     public $Queue;
 
     /**
-     * @var string Username
+     * @var string Username.
      */
     public $User;
 
     /**
-     * @var string Application type
+     * @var string Job type.
      */
     public $ApplicationType;
 
     /**
-     * @var integer `SumMemorySeconds` meaning
+     * @var integer Meaning of SumMemorySeconds.
      */
     public $SumMemorySeconds;
 
     /**
-     * @var integer Total VCore Seconds
+     * @var integer Meaning of SumVCoreSeconds.
      */
     public $SumVCoreSeconds;
 
     /**
-     * @var string SumHDFSBytesWritten (with unit)
+     * @var string SumHDFSBytesWritten (with the unit).
      */
     public $SumHDFSBytesWritten;
 
     /**
-     * @var string SumHDFSBytesRead (with unit)
+     * @var string SumHDFSBytesRead (with the unit).
      */
     public $SumHDFSBytesRead;
 
     /**
-     * @var integer Application count
+     * @var integer Number of jobs.
      */
     public $CountApps;
 
     /**
-     * @param string $Queue Queue name
-     * @param string $User Username
-     * @param string $ApplicationType Application type
-     * @param integer $SumMemorySeconds `SumMemorySeconds` meaning
-     * @param integer $SumVCoreSeconds Total VCore Seconds
-     * @param string $SumHDFSBytesWritten SumHDFSBytesWritten (with unit)
-     * @param string $SumHDFSBytesRead SumHDFSBytesRead (with unit)
-     * @param integer $CountApps Application count
+     * @param string $Queue Queue name.
+     * @param string $User Username.
+     * @param string $ApplicationType Job type.
+     * @param integer $SumMemorySeconds Meaning of SumMemorySeconds.
+     * @param integer $SumVCoreSeconds Meaning of SumVCoreSeconds.
+     * @param string $SumHDFSBytesWritten SumHDFSBytesWritten (with the unit).
+     * @param string $SumHDFSBytesRead SumHDFSBytesRead (with the unit).
+     * @param integer $CountApps Number of jobs.
      */
     function __construct()
     {

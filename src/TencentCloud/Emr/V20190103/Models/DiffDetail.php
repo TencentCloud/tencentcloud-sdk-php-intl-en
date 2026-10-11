@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCount() Obtain Number of change items.
  * @method void setCount(integer $Count) Set Number of change items.
  * @method array getRows() Obtain Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRows(array $Rows) Set Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getHeader() Obtain Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHeader(array $Header) Set Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DiffDetail extends AbstractModel
 {
@@ -47,13 +43,11 @@ class DiffDetail extends AbstractModel
 
     /**
      * @var array Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Rows;
 
     /**
      * @var array Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Header;
 
@@ -61,9 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Name Tab page header.
      * @param integer $Count Number of change items.
      * @param array $Rows Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Header Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

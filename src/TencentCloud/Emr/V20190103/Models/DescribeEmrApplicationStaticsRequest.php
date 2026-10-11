@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEmrApplicationStatics request structure.
  *
- * @method string getInstanceId() Obtain Cluster ID
- * @method void setInstanceId(string $InstanceId) Set Cluster ID
- * @method integer getStartTime() Obtain Start time in the format of timestamp. Unit: seconds.
- * @method void setStartTime(integer $StartTime) Set Start time in the format of timestamp. Unit: seconds.
- * @method integer getEndTime() Obtain End time in the format of timestamp. Unit: seconds.
- * @method void setEndTime(integer $EndTime) Set End time in the format of timestamp. Unit: seconds.
- * @method array getQueues() Obtain Queue name used for filtering
- * @method void setQueues(array $Queues) Set Queue name used for filtering
- * @method array getUsers() Obtain Username used for filtering
- * @method void setUsers(array $Users) Set Username used for filtering
- * @method array getApplicationTypes() Obtain Application type used for filtering
- * @method void setApplicationTypes(array $ApplicationTypes) Set Application type used for filtering
- * @method array getGroupBy() Obtain Group field. Valid values: `queue`, `user`, and `applicationType`.
- * @method void setGroupBy(array $GroupBy) Set Group field. Valid values: `queue`, `user`, and `applicationType`.
- * @method string getOrderBy() Obtain Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
- * @method integer getIsAsc() Obtain Order type. Valid values: `0` (descending) and `1`(ascending).
- * @method void setIsAsc(integer $IsAsc) Set Order type. Valid values: `0` (descending) and `1`(ascending).
- * @method integer getOffset() Obtain Page number
- * @method void setOffset(integer $Offset) Set Page number
- * @method integer getLimit() Obtain Page capacity in the range of [10,100].
- * @method void setLimit(integer $Limit) Set Page capacity in the range of [10,100].
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method integer getStartTime() Obtain Start timestamp (s).
+ * @method void setStartTime(integer $StartTime) Set Start timestamp (s).
+ * @method integer getEndTime() Obtain End timestamp (s).
+ * @method void setEndTime(integer $EndTime) Set End timestamp (s).
+ * @method array getQueues() Obtain Filtered queue name.
+ * @method void setQueues(array $Queues) Set Filtered queue name.
+ * @method array getUsers() Obtain Filtered username.
+ * @method void setUsers(array $Users) Set Filtered username.
+ * @method array getApplicationTypes() Obtain Filtered job type.
+ * @method void setApplicationTypes(array $ApplicationTypes) Set Filtered job type.
+ * @method array getGroupBy() Obtain Grouping field. Valid values: queue, user, and applicationType.
+ * @method void setGroupBy(array $GroupBy) Set Grouping field. Valid values: queue, user, and applicationType.
+ * @method string getOrderBy() Obtain Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
+ * @method integer getIsAsc() Obtain Sorting order. Valid values: 0 (descending) and 1 (ascending).
+ * @method void setIsAsc(integer $IsAsc) Set Sorting order. Valid values: 0 (descending) and 1 (ascending).
+ * @method integer getOffset() Obtain Page number.
+ * @method void setOffset(integer $Offset) Set Page number.
+ * @method integer getLimit() Obtain Number of entries per page. Value range: [10, 100].
+ * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: [10, 100].
  */
 class DescribeEmrApplicationStaticsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Start time in the format of timestamp. Unit: seconds.
+     * @var integer Start timestamp (s).
      */
     public $StartTime;
 
     /**
-     * @var integer End time in the format of timestamp. Unit: seconds.
+     * @var integer End timestamp (s).
      */
     public $EndTime;
 
     /**
-     * @var array Queue name used for filtering
+     * @var array Filtered queue name.
      */
     public $Queues;
 
     /**
-     * @var array Username used for filtering
+     * @var array Filtered username.
      */
     public $Users;
 
     /**
-     * @var array Application type used for filtering
+     * @var array Filtered job type.
      */
     public $ApplicationTypes;
 
     /**
-     * @var array Group field. Valid values: `queue`, `user`, and `applicationType`.
+     * @var array Grouping field. Valid values: queue, user, and applicationType.
      */
     public $GroupBy;
 
     /**
-     * @var string Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+     * @var string Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
      */
     public $OrderBy;
 
     /**
-     * @var integer Order type. Valid values: `0` (descending) and `1`(ascending).
+     * @var integer Sorting order. Valid values: 0 (descending) and 1 (ascending).
      */
     public $IsAsc;
 
     /**
-     * @var integer Page number
+     * @var integer Page number.
      */
     public $Offset;
 
     /**
-     * @var integer Page capacity in the range of [10,100].
+     * @var integer Number of entries per page. Value range: [10, 100].
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId Cluster ID
-     * @param integer $StartTime Start time in the format of timestamp. Unit: seconds.
-     * @param integer $EndTime End time in the format of timestamp. Unit: seconds.
-     * @param array $Queues Queue name used for filtering
-     * @param array $Users Username used for filtering
-     * @param array $ApplicationTypes Application type used for filtering
-     * @param array $GroupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
-     * @param string $OrderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
-     * @param integer $IsAsc Order type. Valid values: `0` (descending) and `1`(ascending).
-     * @param integer $Offset Page number
-     * @param integer $Limit Page capacity in the range of [10,100].
+     * @param string $InstanceId Cluster ID.
+     * @param integer $StartTime Start timestamp (s).
+     * @param integer $EndTime End timestamp (s).
+     * @param array $Queues Filtered queue name.
+     * @param array $Users Filtered username.
+     * @param array $ApplicationTypes Filtered job type.
+     * @param array $GroupBy Grouping field. Valid values: queue, user, and applicationType.
+     * @param string $OrderBy Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
+     * @param integer $IsAsc Sorting order. Valid values: 0 (descending) and 1 (ascending).
+     * @param integer $Offset Page number.
+     * @param integer $Limit Number of entries per page. Value range: [10, 100].
      */
     function __construct()
     {

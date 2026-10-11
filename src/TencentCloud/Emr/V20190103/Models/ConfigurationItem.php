@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Configuration item name.
  * @method string getValue() Obtain Configuration item value.
  * @method void setValue(string $Value) Set Configuration item value.
- * @method string getInFile() Obtain Name of the configuration file where the configuration item is located.
- * @method void setInFile(string $InFile) Set Name of the configuration file where the configuration item is located.
+ * @method string getInFile() Obtain Name of the configuration file where the configuration items are located.
+ * @method void setInFile(string $InFile) Set Name of the configuration file where the configuration items are located.
  */
 class ConfigurationItem extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ConfigurationItem extends AbstractModel
     public $Value;
 
     /**
-     * @var string Name of the configuration file where the configuration item is located.
+     * @var string Name of the configuration file where the configuration items are located.
      */
     public $InFile;
 
     /**
      * @param string $Name Configuration item name.
      * @param string $Value Configuration item value.
-     * @param string $InFile Name of the configuration file where the configuration item is located.
+     * @param string $InFile Name of the configuration file where the configuration items are located.
      */
     function __construct()
     {

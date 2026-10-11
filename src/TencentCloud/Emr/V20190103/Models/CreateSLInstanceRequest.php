@@ -22,24 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceName() Obtain Instance name.
  * @method void setInstanceName(string $InstanceName) Set Instance name.
- * @method integer getPayMode() Obtain Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
- * @method void setPayMode(integer $PayMode) Set Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
- * @method string getDiskType() Obtain Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
- * @method void setDiskType(string $DiskType) Set Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
- * @method integer getDiskSize() Obtain The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
- * @method void setDiskSize(integer $DiskSize) Set The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
- * @method string getNodeType() Obtain Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
- * @method void setNodeType(string $NodeType) Set Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
- * @method array getZoneSettings() Obtain Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
- * @method void setZoneSettings(array $ZoneSettings) Set Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
+ * @method integer getPayMode() Obtain Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
+ * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
+ * @method string getDiskType() Obtain Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
+ * @method void setDiskType(string $DiskType) Set Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
+ * @method integer getDiskSize() Obtain Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+ * @method void setDiskSize(integer $DiskSize) Set Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+ * @method string getNodeType() Obtain Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
+ * @method void setNodeType(string $NodeType) Set Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
+ * @method array getZoneSettings() Obtain Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
+ * @method void setZoneSettings(array $ZoneSettings) Set Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
  * @method array getTags() Obtain List of tags to be bound to the instance.
  * @method void setTags(array $Tags) Set List of tags to be bound to the instance.
  * @method PrePaySetting getPrePaySetting() Obtain Prepaid parameter.
  * @method void setPrePaySetting(PrePaySetting $PrePaySetting) Set Prepaid parameter.
- * @method string getClientToken() Obtain The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
- * @method void setClientToken(string $ClientToken) Set The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
- * @method string getDeploymentMode() Obtain Deployment Mode
- * @method void setDeploymentMode(string $DeploymentMode) Set Deployment Mode
+ * @method string getClientToken() Obtain Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+ * @method void setClientToken(string $ClientToken) Set Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+ * @method string getDeploymentMode() Obtain Deployment mode.
+ * @method void setDeploymentMode(string $DeploymentMode) Set Deployment mode.
+ * @method string getUserName() Obtain Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
+ * @method void setUserName(string $UserName) Set Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
  */
 class CreateSLInstanceRequest extends AbstractModel
 {
@@ -49,27 +51,27 @@ class CreateSLInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
+     * @var integer Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
      */
     public $PayMode;
 
     /**
-     * @var string Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
+     * @var string Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
      */
     public $DiskType;
 
     /**
-     * @var integer The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+     * @var integer Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
      */
     public $DiskSize;
 
     /**
-     * @var string Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
+     * @var string Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
      */
     public $NodeType;
 
     /**
-     * @var array Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
+     * @var array Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
      */
     public $ZoneSettings;
 
@@ -84,26 +86,32 @@ class CreateSLInstanceRequest extends AbstractModel
     public $PrePaySetting;
 
     /**
-     * @var string The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * @var string Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
      */
     public $ClientToken;
 
     /**
-     * @var string Deployment Mode
+     * @var string Deployment mode.
      */
     public $DeploymentMode;
 
     /**
+     * @var string Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
+     */
+    public $UserName;
+
+    /**
      * @param string $InstanceName Instance name.
-     * @param integer $PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
-     * @param string $DiskType Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
-     * @param integer $DiskSize The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
-     * @param string $NodeType Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
-     * @param array $ZoneSettings Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
+     * @param integer $PayMode Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
+     * @param string $DiskType Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
+     * @param integer $DiskSize Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+     * @param string $NodeType Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
+     * @param array $ZoneSettings Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
      * @param array $Tags List of tags to be bound to the instance.
      * @param PrePaySetting $PrePaySetting Prepaid parameter.
-     * @param string $ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
-     * @param string $DeploymentMode Deployment Mode
+     * @param string $ClientToken Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+     * @param string $DeploymentMode Deployment mode.
+     * @param string $UserName Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
      */
     function __construct()
     {
@@ -167,6 +175,10 @@ class CreateSLInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeploymentMode",$param) and $param["DeploymentMode"] !== null) {
             $this->DeploymentMode = $param["DeploymentMode"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
     }
 }

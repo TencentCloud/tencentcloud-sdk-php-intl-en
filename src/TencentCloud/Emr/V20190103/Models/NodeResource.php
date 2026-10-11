@@ -18,76 +18,84 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifications management, which includes specifications type descriptions.
+ * Specifications management, which includes the specifications type description.
  *
- * @method integer getResourceConfigId() Obtain Configuration ID.
- * @method void setResourceConfigId(integer $ResourceConfigId) Set Configuration ID.
- * @method Resource getResource() Obtain Resource
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResource(Resource $Resource) Set Resource
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
- * @method string getUpdateTime() Obtain Update time.
- * @method void setUpdateTime(string $UpdateTime) Set Update time.
- * @method string getIsDefault() Obtain Whether default configuration applies, DEFAULT or BACKUP.
- * @method void setIsDefault(string $IsDefault) Set Whether default configuration applies, DEFAULT or BACKUP.
- * @method integer getMaxResourceNum() Obtain Remaining of this type.
- * @method void setMaxResourceNum(integer $MaxResourceNum) Set Remaining of this type.
- * @method array getPrepaidUnderwritePeriods() Obtain Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrepaidUnderwritePeriods(array $PrepaidUnderwritePeriods) Set Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getResourceConfigId() Obtain <p>Configuration ID.</p>
+ * @method void setResourceConfigId(integer $ResourceConfigId) Set <p>Configuration ID.</p>
+ * @method Resource getResource() Obtain <p>Resource</p>
+ * @method void setResource(Resource $Resource) Set <p>Resource</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateTime() Obtain <p>Update time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
+ * @method string getIsDefault() Obtain <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
+ * @method void setIsDefault(string $IsDefault) Set <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
+ * @method integer getMaxResourceNum() Obtain <p>Remaining of this type.</p>
+ * @method void setMaxResourceNum(integer $MaxResourceNum) Set <p>Remaining of this type.</p>
+ * @method array getPrepaidUnderwritePeriods() Obtain <p>Supported committed use duration.</p>
+ * @method void setPrepaidUnderwritePeriods(array $PrepaidUnderwritePeriods) Set <p>Supported committed use duration.</p>
+ * @method integer getQuotaNum() Obtain <p>Number of quotas.</p>
+ * @method void setQuotaNum(integer $QuotaNum) Set <p>Number of quotas.</p>
+ * @method string getQuotaUnit() Obtain <p>Quota unit.</p>
+ * @method void setQuotaUnit(string $QuotaUnit) Set <p>Quota unit.</p>
  */
 class NodeResource extends AbstractModel
 {
     /**
-     * @var integer Configuration ID.
+     * @var integer <p>Configuration ID.</p>
      */
     public $ResourceConfigId;
 
     /**
-     * @var Resource Resource
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Resource <p>Resource</p>
      */
     public $Resource;
 
     /**
-     * @var string Creation time.
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Update time.
+     * @var string <p>Update time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string Whether default configuration applies, DEFAULT or BACKUP.
+     * @var string <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
      */
     public $IsDefault;
 
     /**
-     * @var integer Remaining of this type.
+     * @var integer <p>Remaining of this type.</p>
      */
     public $MaxResourceNum;
 
     /**
-     * @var array Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Supported committed use duration.</p>
      */
     public $PrepaidUnderwritePeriods;
 
     /**
-     * @param integer $ResourceConfigId Configuration ID.
-     * @param Resource $Resource Resource
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time.
-     * @param string $UpdateTime Update time.
-     * @param string $IsDefault Whether default configuration applies, DEFAULT or BACKUP.
-     * @param integer $MaxResourceNum Remaining of this type.
-     * @param array $PrepaidUnderwritePeriods Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Number of quotas.</p>
+     */
+    public $QuotaNum;
+
+    /**
+     * @var string <p>Quota unit.</p>
+     */
+    public $QuotaUnit;
+
+    /**
+     * @param integer $ResourceConfigId <p>Configuration ID.</p>
+     * @param Resource $Resource <p>Resource</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateTime <p>Update time.</p>
+     * @param string $IsDefault <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
+     * @param integer $MaxResourceNum <p>Remaining of this type.</p>
+     * @param array $PrepaidUnderwritePeriods <p>Supported committed use duration.</p>
+     * @param integer $QuotaNum <p>Number of quotas.</p>
+     * @param string $QuotaUnit <p>Quota unit.</p>
      */
     function __construct()
     {
@@ -129,6 +137,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PrepaidUnderwritePeriods",$param) and $param["PrepaidUnderwritePeriods"] !== null) {
             $this->PrepaidUnderwritePeriods = $param["PrepaidUnderwritePeriods"];
+        }
+
+        if (array_key_exists("QuotaNum",$param) and $param["QuotaNum"] !== null) {
+            $this->QuotaNum = $param["QuotaNum"];
+        }
+
+        if (array_key_exists("QuotaUnit",$param) and $param["QuotaUnit"] !== null) {
+            $this->QuotaUnit = $param["QuotaUnit"];
         }
     }
 }

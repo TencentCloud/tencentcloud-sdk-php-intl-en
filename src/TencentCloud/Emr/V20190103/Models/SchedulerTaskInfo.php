@@ -18,12 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Yarn resource scheduling history
+ * YARN resource scheduling history.
  *
- * @method string getSchedulerName() Obtain Scheduler type
- * @method void setSchedulerName(string $SchedulerName) Set Scheduler type
- * @method string getOperatorName() Obtain Operation type
- * @method void setOperatorName(string $OperatorName) Set Operation type
+ * @method string getSchedulerName() Obtain Scheduler type.
+ * @method void setSchedulerName(string $SchedulerName) Set Scheduler type.
+ * @method string getOperatorName() Obtain Operation type.
+ * @method void setOperatorName(string $OperatorName) Set Operation type.
  * @method string getCreateTime() Obtain Start time.
  * @method void setCreateTime(string $CreateTime) Set Start time.
  * @method string getEndTime() Obtain End time.
@@ -31,19 +31,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getState() Obtain Status.
  * @method void setState(integer $State) Set Status.
  * @method array getDetails() Obtain Details.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetails(array $Details) Set Details.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SchedulerTaskInfo extends AbstractModel
 {
     /**
-     * @var string Scheduler type
+     * @var string Scheduler type.
      */
     public $SchedulerName;
 
     /**
-     * @var string Operation type
+     * @var string Operation type.
      */
     public $OperatorName;
 
@@ -64,18 +62,16 @@ class SchedulerTaskInfo extends AbstractModel
 
     /**
      * @var array Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Details;
 
     /**
-     * @param string $SchedulerName Scheduler type
-     * @param string $OperatorName Operation type
+     * @param string $SchedulerName Scheduler type.
+     * @param string $OperatorName Operation type.
      * @param string $CreateTime Start time.
      * @param string $EndTime End time.
      * @param integer $State Status.
      * @param array $Details Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Client component dependencies
+ * External client component dependency information.
  *
- * @method string getSoftName() Obtain The component name.
- * @method void setSoftName(string $SoftName) Set The component name.
- * @method boolean getRequired() Obtain Whether the component is required.
- * @method void setRequired(boolean $Required) Set Whether the component is required.
+ * @method string getSoftName() Obtain Component name.
+ * @method void setSoftName(string $SoftName) Set Component name.
+ * @method boolean getRequired() Obtain Whether it is required.
+ * @method void setRequired(boolean $Required) Set Whether it is required.
  */
 class SoftDependInfo extends AbstractModel
 {
     /**
-     * @var string The component name.
+     * @var string Component name.
      */
     public $SoftName;
 
     /**
-     * @var boolean Whether the component is required.
+     * @var boolean Whether it is required.
      */
     public $Required;
 
     /**
-     * @param string $SoftName The component name.
-     * @param boolean $Required Whether the component is required.
+     * @param string $SoftName Component name.
+     * @param boolean $Required Whether it is required.
      */
     function __construct()
     {

@@ -18,22 +18,16 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Global configurations of the capacity scheduler under Resource Scheduling.
+ * Global configuration of the capacity scheduler in resource scheduling.
  *
  * @method boolean getEnableLabel() Obtain Whether label-based scheduling is enabled.
  * @method void setEnableLabel(boolean $EnableLabel) Set Whether label-based scheduling is enabled.
- * @method string getLabelDir() Obtain Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLabelDir(string $LabelDir) Set Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getQueueMappingOverride() Obtain Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQueueMappingOverride(boolean $QueueMappingOverride) Set Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLabelDir() Obtain Path where the label information is stored if label-based scheduling is enabled.
+ * @method void setLabelDir(string $LabelDir) Set Path where the label information is stored if label-based scheduling is enabled.
+ * @method boolean getQueueMappingOverride() Obtain Whether to overwrite the user-specified queue. true indicates overwriting.
+ * @method void setQueueMappingOverride(boolean $QueueMappingOverride) Set Whether to overwrite the user-specified queue. true indicates overwriting.
  * @method array getDefaultSettings() Obtain Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDefaultSettings(array $DefaultSettings) Set Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CapacityGlobalConfig extends AbstractModel
 {
@@ -43,31 +37,25 @@ class CapacityGlobalConfig extends AbstractModel
     public $EnableLabel;
 
     /**
-     * @var string Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Path where the label information is stored if label-based scheduling is enabled.
      */
     public $LabelDir;
 
     /**
-     * @var boolean Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether to overwrite the user-specified queue. true indicates overwriting.
      */
     public $QueueMappingOverride;
 
     /**
      * @var array Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DefaultSettings;
 
     /**
      * @param boolean $EnableLabel Whether label-based scheduling is enabled.
-     * @param string $LabelDir Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $QueueMappingOverride Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LabelDir Path where the label information is stored if label-based scheduling is enabled.
+     * @param boolean $QueueMappingOverride Whether to overwrite the user-specified queue. true indicates overwriting.
      * @param array $DefaultSettings Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

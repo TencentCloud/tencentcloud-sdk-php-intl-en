@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain English ID of the EMR cluster.
  * @method void setInstanceId(string $InstanceId) Set English ID of the EMR cluster.
- * @method string getScheduler() Obtain Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
- * @method void setScheduler(string $Scheduler) Set Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+ * @method string getScheduler() Obtain Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
+ * @method void setScheduler(string $Scheduler) Set Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
  */
 class DescribeResourceScheduleDiffDetailRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeResourceScheduleDiffDetailRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+     * @var string Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
      */
     public $Scheduler;
 
     /**
      * @param string $InstanceId English ID of the EMR cluster.
-     * @param string $Scheduler Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+     * @param string $Scheduler Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
      */
     function __construct()
     {

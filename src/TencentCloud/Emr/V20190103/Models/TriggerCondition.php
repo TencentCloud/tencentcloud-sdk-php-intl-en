@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule trigger condition.
  *
- * @method integer getCompareMethod() Obtain Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
- * @method void setCompareMethod(integer $CompareMethod) Set Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
- * @method float getThreshold() Obtain Conditional threshold.
- * @method void setThreshold(float $Threshold) Set Conditional threshold.
+ * @method integer getCompareMethod() Obtain Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
+ * @method void setCompareMethod(integer $CompareMethod) Set Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
+ * @method float getThreshold() Obtain Condition threshold.
+ * @method void setThreshold(float $Threshold) Set Condition threshold.
  */
 class TriggerCondition extends AbstractModel
 {
     /**
-     * @var integer Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+     * @var integer Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
      */
     public $CompareMethod;
 
     /**
-     * @var float Conditional threshold.
+     * @var float Condition threshold.
      */
     public $Threshold;
 
     /**
-     * @param integer $CompareMethod Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
-     * @param float $Threshold Conditional threshold.
+     * @param integer $CompareMethod Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
+     * @param float $Threshold Condition threshold.
      */
     function __construct()
     {

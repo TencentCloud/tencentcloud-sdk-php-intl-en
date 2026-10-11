@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node tag information.
  *
- * @method string getNodeType() Obtain Node type: master, core, task, router.
- * @method void setNodeType(string $NodeType) Set Node type: master, core, task, router.
- * @method array getNodeNames() Obtain Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
- * @method void setNodeNames(array $NodeNames) Set Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
- * @method string getZone() Obtain Availability zone name.
- * @method void setZone(string $Zone) Set Availability zone name.
+ * @method string getNodeType() Obtain Node type. Valid values: master, core, task, and router.
+ * @method void setNodeType(string $NodeType) Set Node type. Valid values: master, core, task, and router.
+ * @method array getNodeNames() Obtain Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
+ * @method void setNodeNames(array $NodeNames) Set Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
+ * @method string getZone() Obtain AZ name.
+ * @method void setZone(string $Zone) Set AZ name.
  */
 class NodeMark extends AbstractModel
 {
     /**
-     * @var string Node type: master, core, task, router.
+     * @var string Node type. Valid values: master, core, task, and router.
      */
     public $NodeType;
 
     /**
-     * @var array Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+     * @var array Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
      */
     public $NodeNames;
 
     /**
-     * @var string Availability zone name.
+     * @var string AZ name.
      */
     public $Zone;
 
     /**
-     * @param string $NodeType Node type: master, core, task, router.
-     * @param array $NodeNames Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
-     * @param string $Zone Availability zone name.
+     * @param string $NodeType Node type. Valid values: master, core, task, and router.
+     * @param array $NodeNames Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
+     * @param string $Zone AZ name.
      */
     function __construct()
     {

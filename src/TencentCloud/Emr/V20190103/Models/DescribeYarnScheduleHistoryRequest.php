@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Cluster ID.
  * @method void setInstanceId(string $InstanceId) Set Cluster ID.
- * @method integer getStartTime() Obtain Start time
- * @method void setStartTime(integer $StartTime) Set Start time
- * @method integer getEndTime() Obtain End time
- * @method void setEndTime(integer $EndTime) Set End time
+ * @method integer getStartTime() Obtain Start time.
+ * @method void setStartTime(integer $StartTime) Set Start time.
+ * @method integer getEndTime() Obtain End time.
+ * @method void setEndTime(integer $EndTime) Set End time.
  * @method integer getLimit() Obtain Page number.
  * @method void setLimit(integer $Limit) Set Page number.
- * @method integer getOffset() Obtain Page size.
- * @method void setOffset(integer $Offset) Set Page size.
- * @method string getSchedulerType() Obtain Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
- * @method void setSchedulerType(string $SchedulerType) Set Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
- * @method integer getTaskState() Obtain Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
- * @method void setTaskState(integer $TaskState) Set Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+ * @method integer getOffset() Obtain Number of entries per page.
+ * @method void setOffset(integer $Offset) Set Number of entries per page.
+ * @method string getSchedulerType() Obtain Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
+ * @method void setSchedulerType(string $SchedulerType) Set Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
+ * @method integer getTaskState() Obtain Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
+ * @method void setTaskState(integer $TaskState) Set Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
  */
 class DescribeYarnScheduleHistoryRequest extends AbstractModel
 {
@@ -43,12 +43,12 @@ class DescribeYarnScheduleHistoryRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Start time
+     * @var integer Start time.
      */
     public $StartTime;
 
     /**
-     * @var integer End time
+     * @var integer End time.
      */
     public $EndTime;
 
@@ -58,28 +58,28 @@ class DescribeYarnScheduleHistoryRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Page size.
+     * @var integer Number of entries per page.
      */
     public $Offset;
 
     /**
-     * @var string Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+     * @var string Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
      */
     public $SchedulerType;
 
     /**
-     * @var integer Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+     * @var integer Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
      */
     public $TaskState;
 
     /**
      * @param string $InstanceId Cluster ID.
-     * @param integer $StartTime Start time
-     * @param integer $EndTime End time
+     * @param integer $StartTime Start time.
+     * @param integer $EndTime End time.
      * @param integer $Limit Page number.
-     * @param integer $Offset Page size.
-     * @param string $SchedulerType Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
-     * @param integer $TaskState Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+     * @param integer $Offset Number of entries per page.
+     * @param string $SchedulerType Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
+     * @param integer $TaskState Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
      */
     function __construct()
     {

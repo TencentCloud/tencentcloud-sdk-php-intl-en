@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource queried for price
+ * Inquiry resources.
  *
  * @method string getSpec() Obtain Required specifications.
  * @method void setSpec(string $Spec) Set Required specifications.
@@ -34,18 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) Set Number of cores.
  * @method integer getDiskSize() Obtain Hard disk size.
  * @method void setDiskSize(integer $DiskSize) Set Hard disk size.
- * @method array getMultiDisks() Obtain List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMultiDisks(array $MultiDisks) Set List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getMultiDisks() Obtain Cloud disk list.
+ * @method void setMultiDisks(array $MultiDisks) Set Cloud disk list.
  * @method integer getDiskCnt() Obtain Number of disks.
  * @method void setDiskCnt(integer $DiskCnt) Set Number of disks.
  * @method string getInstanceType() Obtain Specifications.
  * @method void setInstanceType(string $InstanceType) Set Specifications.
- * @method array getTags() Obtain Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
  * @method integer getDiskNum() Obtain Number of disks.
  * @method void setDiskNum(integer $DiskNum) Set Number of disks.
  * @method integer getLocalDiskNum() Obtain Number of local disks.
@@ -91,8 +87,7 @@ class PriceResource extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var array List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Cloud disk list.
      */
     public $MultiDisks;
 
@@ -107,8 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceType;
 
     /**
-     * @var array Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tags;
 
@@ -135,12 +129,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $MemSize Memory size.
      * @param integer $Cpu Number of cores.
      * @param integer $DiskSize Hard disk size.
-     * @param array $MultiDisks List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $MultiDisks Cloud disk list.
      * @param integer $DiskCnt Number of disks.
      * @param string $InstanceType Specifications.
-     * @param array $Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag.
      * @param integer $DiskNum Number of disks.
      * @param integer $LocalDiskNum Number of local disks.
      * @param string $GpuDesc GPU information.

@@ -18,64 +18,76 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The user-created Hive-MetaDB instance information.
+ * User-defined database information.
  *
- * @method string getMetaDataJdbcUrl() Obtain The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
- * @method void setMetaDataJdbcUrl(string $MetaDataJdbcUrl) Set The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
- * @method string getMetaDataUser() Obtain The custom metadatabase instance username.
- * @method void setMetaDataUser(string $MetaDataUser) Set The custom metadatabase instance username.
- * @method string getMetaDataPass() Obtain The custom metadatabase instance password.
- * @method void setMetaDataPass(string $MetaDataPass) Set The custom metadatabase instance password.
- * @method string getMetaType() Obtain The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
- * @method void setMetaType(string $MetaType) Set The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
- * @method string getUnifyMetaInstanceId() Obtain The EMR-MetaDB instance.
- * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set The EMR-MetaDB instance.
+ * @method string getMetaDataJdbcUrl() Obtain <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
+ * @method void setMetaDataJdbcUrl(string $MetaDataJdbcUrl) Set <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
+ * @method string getMetaDataUser() Obtain <p>Custom MetaDB username.</p>
+ * @method void setMetaDataUser(string $MetaDataUser) Set <p>Custom MetaDB username.</p>
+ * @method string getMetaDataPass() Obtain <p>Custom MetaDB password.</p>
+ * @method void setMetaDataPass(string $MetaDataPass) Set <p>Custom MetaDB password.</p>
+ * @method string getMetaType() Obtain <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+ * @method void setMetaType(string $MetaType) Set <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+ * @method string getUnifyMetaInstanceId() Obtain <p>EMR-MetaDB instance.</p>
+ * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set <p>EMR-MetaDB instance.</p>
+ * @method array getComponents() Obtain <p>Component.</p>
+ * @method void setComponents(array $Components) Set <p>Component.</p>
+ * @method string getDefaultMetaVersion() Obtain <p>MetaDB version.</p>
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) Set <p>MetaDB version.</p>
+ * @method string getLinkInstanceId() Obtain <p>CDBId</p>
+ * @method void setLinkInstanceId(string $LinkInstanceId) Set <p>CDBId</p>
  */
 class CustomMetaDBInfo extends AbstractModel
 {
     /**
-     * @var string The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+     * @var string <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
      */
     public $MetaDataJdbcUrl;
 
     /**
-     * @var string The custom metadatabase instance username.
+     * @var string <p>Custom MetaDB username.</p>
      */
     public $MetaDataUser;
 
     /**
-     * @var string The custom metadatabase instance password.
+     * @var string <p>Custom MetaDB password.</p>
      */
     public $MetaDataPass;
 
     /**
-     * @var string The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+     * @var string <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
      */
     public $MetaType;
 
     /**
-     * @var string The EMR-MetaDB instance.
+     * @var string <p>EMR-MetaDB instance.</p>
      */
     public $UnifyMetaInstanceId;
 
     /**
-     * @param string $MetaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
-     * @param string $MetaDataUser The custom metadatabase instance username.
-     * @param string $MetaDataPass The custom metadatabase instance password.
-     * @param string $MetaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
-     * @param string $UnifyMetaInstanceId The EMR-MetaDB instance.
+     * @var array <p>Component.</p>
+     */
+    public $Components;
+
+    /**
+     * @var string <p>MetaDB version.</p>
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var string <p>CDBId</p>
+     */
+    public $LinkInstanceId;
+
+    /**
+     * @param string $MetaDataJdbcUrl <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
+     * @param string $MetaDataUser <p>Custom MetaDB username.</p>
+     * @param string $MetaDataPass <p>Custom MetaDB password.</p>
+     * @param string $MetaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+     * @param string $UnifyMetaInstanceId <p>EMR-MetaDB instance.</p>
+     * @param array $Components <p>Component.</p>
+     * @param string $DefaultMetaVersion <p>MetaDB version.</p>
+     * @param string $LinkInstanceId <p>CDBId</p>
      */
     function __construct()
     {
@@ -108,6 +120,18 @@ class CustomMetaDBInfo extends AbstractModel
 
         if (array_key_exists("UnifyMetaInstanceId",$param) and $param["UnifyMetaInstanceId"] !== null) {
             $this->UnifyMetaInstanceId = $param["UnifyMetaInstanceId"];
+        }
+
+        if (array_key_exists("Components",$param) and $param["Components"] !== null) {
+            $this->Components = $param["Components"];
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("LinkInstanceId",$param) and $param["LinkInstanceId"] !== null) {
+            $this->LinkInstanceId = $param["LinkInstanceId"];
         }
     }
 }

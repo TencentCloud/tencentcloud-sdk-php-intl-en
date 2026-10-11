@@ -18,32 +18,28 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Target processes
+ * Operation process scope.
  *
- * @method string getComponentName() Obtain Process name which is required, such as NameNode.
- * @method void setComponentName(string $ComponentName) Set Process name which is required, such as NameNode.
- * @method array getIpList() Obtain The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIpList(array $IpList) Set The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getComponentName() Obtain (Required) Process name, for example, NameNode.
+ * @method void setComponentName(string $ComponentName) Set (Required) Process name, for example, NameNode.
+ * @method array getIpList() Obtain List of operation IP addresses.
+ * @method void setIpList(array $IpList) Set List of operation IP addresses.
  */
 class ComponentBasicRestartInfo extends AbstractModel
 {
     /**
-     * @var string Process name which is required, such as NameNode.
+     * @var string (Required) Process name, for example, NameNode.
      */
     public $ComponentName;
 
     /**
-     * @var array The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of operation IP addresses.
      */
     public $IpList;
 
     /**
-     * @param string $ComponentName Process name which is required, such as NameNode.
-     * @param array $IpList The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ComponentName (Required) Process name, for example, NameNode.
+     * @param array $IpList List of operation IP addresses.
      */
     function __construct()
     {

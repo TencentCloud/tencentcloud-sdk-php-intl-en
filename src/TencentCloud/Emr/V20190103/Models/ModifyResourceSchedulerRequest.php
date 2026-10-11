@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourceScheduler request structure.
  *
- * @method string getInstanceId() Obtain EMR cluster ID
- * @method void setInstanceId(string $InstanceId) Set EMR cluster ID
- * @method string getOldValue() Obtain The original scheduler: `fair`
- * @method void setOldValue(string $OldValue) Set The original scheduler: `fair`
- * @method string getNewValue() Obtain The new scheduler: `capacity`
- * @method void setNewValue(string $NewValue) Set The new scheduler: `capacity`
+ * @method string getInstanceId() Obtain English ID of the EMR cluster.
+ * @method void setInstanceId(string $InstanceId) Set English ID of the EMR cluster.
+ * @method string getOldValue() Obtain Old scheduler: fair.
+ * @method void setOldValue(string $OldValue) Set Old scheduler: fair.
+ * @method string getNewValue() Obtain New scheduler: capacity.
+ * @method void setNewValue(string $NewValue) Set New scheduler: capacity.
  */
 class ModifyResourceSchedulerRequest extends AbstractModel
 {
     /**
-     * @var string EMR cluster ID
+     * @var string English ID of the EMR cluster.
      */
     public $InstanceId;
 
     /**
-     * @var string The original scheduler: `fair`
+     * @var string Old scheduler: fair.
      */
     public $OldValue;
 
     /**
-     * @var string The new scheduler: `capacity`
+     * @var string New scheduler: capacity.
      */
     public $NewValue;
 
     /**
-     * @param string $InstanceId EMR cluster ID
-     * @param string $OldValue The original scheduler: `fair`
-     * @param string $NewValue The new scheduler: `capacity`
+     * @param string $InstanceId English ID of the EMR cluster.
+     * @param string $OldValue Old scheduler: fair.
+     * @param string $NewValue New scheduler: capacity.
      */
     function __construct()
     {

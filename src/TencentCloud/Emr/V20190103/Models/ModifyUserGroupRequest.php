@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserGroup request structure.
  *
- * @method array getUsers() Obtain User information list.
- * @method void setUsers(array $Users) Set User information list.
- * @method string getUserGroup() Obtain User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
- * @method void setUserGroup(string $UserGroup) Set User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
- * @method array getGroups() Obtain User subgroup.
- * @method void setGroups(array $Groups) Set User subgroup.
- * @method string getRemark() Obtain Remarks.
- * @method void setRemark(string $Remark) Set Remarks.
+ * @method string getInstanceId() Obtain <p>Cluster string ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Cluster string ID.</p>
+ * @method array getUsers() Obtain <p>User information list.</p>
+ * @method void setUsers(array $Users) Set <p>User information list.</p>
+ * @method string getUserGroup() Obtain <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
+ * @method void setUserGroup(string $UserGroup) Set <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
+ * @method array getGroups() Obtain <p>Secondary user group.</p>
+ * @method void setGroups(array $Groups) Set <p>Secondary user group.</p>
+ * @method string getRemark() Obtain <p>Remarks.</p>
+ * @method void setRemark(string $Remark) Set <p>Remarks.</p>
  */
 class ModifyUserGroupRequest extends AbstractModel
 {
     /**
-     * @var array User information list.
+     * @var string <p>Cluster string ID.</p>
+     */
+    public $InstanceId;
+
+    /**
+     * @var array <p>User information list.</p>
      */
     public $Users;
 
     /**
-     * @var string User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+     * @var string <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
      */
     public $UserGroup;
 
     /**
-     * @var array User subgroup.
+     * @var array <p>Secondary user group.</p>
      */
     public $Groups;
 
     /**
-     * @var string Remarks.
+     * @var string <p>Remarks.</p>
      */
     public $Remark;
 
     /**
-     * @param array $Users User information list.
-     * @param string $UserGroup User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
-     * @param array $Groups User subgroup.
-     * @param string $Remark Remarks.
+     * @param string $InstanceId <p>Cluster string ID.</p>
+     * @param array $Users <p>User information list.</p>
+     * @param string $UserGroup <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
+     * @param array $Groups <p>Secondary user group.</p>
+     * @param string $Remark <p>Remarks.</p>
      */
     function __construct()
     {
@@ -70,6 +78,10 @@ class ModifyUserGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Users",$param) and $param["Users"] !== null) {
             $this->Users = $param["Users"];
         }

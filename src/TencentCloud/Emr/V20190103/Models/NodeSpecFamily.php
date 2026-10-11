@@ -18,48 +18,44 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node model list.
+ * Instance specification family.
  *
- * @method string getInstanceFamily() Obtain Model.
- * @method void setInstanceFamily(string $InstanceFamily) Set Model.
- * @method string getFamilyName() Obtain Model name.
- * @method void setFamilyName(string $FamilyName) Set Model name.
- * @method integer getOrder() Obtain Order.
- * @method void setOrder(integer $Order) Set Order.
- * @method array getInstanceTypes() Obtain InstanceType List.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceTypes(array $InstanceTypes) Set InstanceType List.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceFamily() Obtain Instance specification.
+ * @method void setInstanceFamily(string $InstanceFamily) Set Instance specification.
+ * @method string getFamilyName() Obtain Instance specification name.
+ * @method void setFamilyName(string $FamilyName) Set Instance specification name.
+ * @method integer getOrder() Obtain Sorting order.
+ * @method void setOrder(integer $Order) Set Sorting order.
+ * @method array getInstanceTypes() Obtain List of instance types.
+ * @method void setInstanceTypes(array $InstanceTypes) Set List of instance types.
  */
 class NodeSpecFamily extends AbstractModel
 {
     /**
-     * @var string Model.
+     * @var string Instance specification.
      */
     public $InstanceFamily;
 
     /**
-     * @var string Model name.
+     * @var string Instance specification name.
      */
     public $FamilyName;
 
     /**
-     * @var integer Order.
+     * @var integer Sorting order.
      */
     public $Order;
 
     /**
-     * @var array InstanceType List.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of instance types.
      */
     public $InstanceTypes;
 
     /**
-     * @param string $InstanceFamily Model.
-     * @param string $FamilyName Model name.
-     * @param integer $Order Order.
-     * @param array $InstanceTypes InstanceType List.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceFamily Instance specification.
+     * @param string $FamilyName Instance specification name.
+     * @param integer $Order Sorting order.
+     * @param array $InstanceTypes List of instance types.
      */
     function __construct()
     {

@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Advanced settings of computing resources.
  *
- * @method array getLabels() Obtain Node label array.
- * @method void setLabels(array $Labels) Set Node label array.
- * @method array getTaints() Obtain Node taint.
- * @method void setTaints(array $Taints) Set Node taint.
- * @method string getPreStartUserScript() Obtain Base64-encoded user script: executed before node initializing.
- * @method void setPreStartUserScript(string $PreStartUserScript) Set Base64-encoded user script: executed before node initializing.
- * @method string getUserScript() Obtain Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
- * @method void setUserScript(string $UserScript) Set Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+ * @method array getLabels() Obtain <p>Node Label array.</p>
+ * @method void setLabels(array $Labels) Set <p>Node Label array.</p>
+ * @method array getTaints() Obtain <p>Node taint.</p>
+ * @method void setTaints(array $Taints) Set <p>Node taint.</p>
+ * @method string getPreStartUserScript() Obtain <p>Base64-encoded user script, which is executed before node initialization.</p>
+ * @method void setPreStartUserScript(string $PreStartUserScript) Set <p>Base64-encoded user script, which is executed before node initialization.</p>
+ * @method string getUserScript() Obtain <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
+ * @method void setUserScript(string $UserScript) Set <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
+ * @method string getTkeClusterNodePool() Obtain <p>Node group ID.</p>
+ * @method void setTkeClusterNodePool(string $TkeClusterNodePool) Set <p>Node group ID.</p>
+ * @method string getNodePoolJoinMode() Obtain <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+ * @method void setNodePoolJoinMode(string $NodePoolJoinMode) Set <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
  */
 class ComputeResourceAdvanceParams extends AbstractModel
 {
     /**
-     * @var array Node label array.
+     * @var array <p>Node Label array.</p>
      */
     public $Labels;
 
     /**
-     * @var array Node taint.
+     * @var array <p>Node taint.</p>
      */
     public $Taints;
 
     /**
-     * @var string Base64-encoded user script: executed before node initializing.
+     * @var string <p>Base64-encoded user script, which is executed before node initialization.</p>
      */
     public $PreStartUserScript;
 
     /**
-     * @var string Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+     * @var string <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
      */
     public $UserScript;
 
     /**
-     * @param array $Labels Node label array.
-     * @param array $Taints Node taint.
-     * @param string $PreStartUserScript Base64-encoded user script: executed before node initializing.
-     * @param string $UserScript Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+     * @var string <p>Node group ID.</p>
+     */
+    public $TkeClusterNodePool;
+
+    /**
+     * @var string <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+     */
+    public $NodePoolJoinMode;
+
+    /**
+     * @param array $Labels <p>Node Label array.</p>
+     * @param array $Taints <p>Node taint.</p>
+     * @param string $PreStartUserScript <p>Base64-encoded user script, which is executed before node initialization.</p>
+     * @param string $UserScript <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
+     * @param string $TkeClusterNodePool <p>Node group ID.</p>
+     * @param string $NodePoolJoinMode <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
      */
     function __construct()
     {
@@ -94,6 +110,14 @@ class ComputeResourceAdvanceParams extends AbstractModel
 
         if (array_key_exists("UserScript",$param) and $param["UserScript"] !== null) {
             $this->UserScript = $param["UserScript"];
+        }
+
+        if (array_key_exists("TkeClusterNodePool",$param) and $param["TkeClusterNodePool"] !== null) {
+            $this->TkeClusterNodePool = $param["TkeClusterNodePool"];
+        }
+
+        if (array_key_exists("NodePoolJoinMode",$param) and $param["NodePoolJoinMode"] !== null) {
+            $this->NodePoolJoinMode = $param["NodePoolJoinMode"];
         }
     }
 }

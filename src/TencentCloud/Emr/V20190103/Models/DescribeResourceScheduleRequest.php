@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceSchedule request structure.
  *
- * @method string getInstanceId() Obtain EMR cluster ID
- * @method void setInstanceId(string $InstanceId) Set EMR cluster ID
+ * @method string getInstanceId() Obtain English ID of the EMR cluster.
+ * @method void setInstanceId(string $InstanceId) Set English ID of the EMR cluster.
  */
 class DescribeResourceScheduleRequest extends AbstractModel
 {
     /**
-     * @var string EMR cluster ID
+     * @var string English ID of the EMR cluster.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId EMR cluster ID
+     * @param string $InstanceId English ID of the EMR cluster.
      */
     function __construct()
     {

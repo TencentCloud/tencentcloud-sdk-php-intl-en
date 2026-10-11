@@ -20,126 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceScaleOutInstance request structure.
  *
- * @method string getTimeUnit() Obtain Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
- * @method void setTimeUnit(string $TimeUnit) Set Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
- * @method integer getTimeSpan() Obtain Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
- * @method void setTimeSpan(integer $TimeSpan) Set Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
- * @method integer getZoneId() Obtain ID of the AZ where an instance resides.
- * @method void setZoneId(integer $ZoneId) Set ID of the AZ where an instance resides.
- * @method integer getPayMode() Obtain Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
- * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getCoreCount() Obtain Number of core nodes to be added.
- * @method void setCoreCount(integer $CoreCount) Set Number of core nodes to be added.
- * @method integer getTaskCount() Obtain Number of task nodes to be added.
- * @method void setTaskCount(integer $TaskCount) Set Number of task nodes to be added.
- * @method string getCurrency() Obtain Currency.
- * @method void setCurrency(string $Currency) Set Currency.
- * @method integer getRouterCount() Obtain Number of router nodes to be added.
- * @method void setRouterCount(integer $RouterCount) Set Number of router nodes to be added.
- * @method integer getMasterCount() Obtain Number of master nodes to be added.
- * @method void setMasterCount(integer $MasterCount) Set Number of master nodes to be added.
- * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR.
- * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
- * @method string getComputeResourceId() Obtain Computing resource ID.
- * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
- * @method string getHardwareResourceType() Obtain Scale-out resource type.
- * @method void setHardwareResourceType(string $HardwareResourceType) Set Scale-out resource type.
+ * @method string getTimeUnit() Obtain <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method void setTimeUnit(string $TimeUnit) Set <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+ * @method integer getTimeSpan() Obtain <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method void setTimeSpan(integer $TimeSpan) Set <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+ * @method integer getZoneId() Obtain <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+ * @method void setZoneId(integer $ZoneId) Set <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+ * @method integer getPayMode() Obtain <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method void setPayMode(integer $PayMode) Set <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method integer getCoreCount() Obtain <p>Number of Core nodes to be scaled out.</p>
+ * @method void setCoreCount(integer $CoreCount) Set <p>Number of Core nodes to be scaled out.</p>
+ * @method integer getTaskCount() Obtain <p>Number of Task nodes to be scaled out.</p>
+ * @method void setTaskCount(integer $TaskCount) Set <p>Number of Task nodes to be scaled out.</p>
+ * @method string getCurrency() Obtain <p>Currency type. Valid values:</p><li>CNY: RMB</li>
+ * @method void setCurrency(string $Currency) Set <p>Currency type. Valid values:</p><li>CNY: RMB</li>
+ * @method integer getRouterCount() Obtain <p>Number of Router nodes to be scaled out.</p>
+ * @method void setRouterCount(integer $RouterCount) Set <p>Number of Router nodes to be scaled out.</p>
+ * @method integer getMasterCount() Obtain <p>Number of Master nodes to be scaled out.</p>
+ * @method void setMasterCount(integer $MasterCount) Set <p>Number of Master nodes to be scaled out.</p>
+ * @method string getResourceBaseType() Obtain <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+ * @method void setResourceBaseType(string $ResourceBaseType) Set <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+ * @method string getComputeResourceId() Obtain <p>Computing resource ID.</p>
+ * @method void setComputeResourceId(string $ComputeResourceId) Set <p>Computing resource ID.</p>
+ * @method string getHardwareResourceType() Obtain <p>Scale-out resource type.</p>
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set <p>Scale-out resource type.</p>
+ * @method string getNodeGroupId() Obtain <p>Node group ID.</p>
+ * @method void setNodeGroupId(string $NodeGroupId) Set <p>Node group ID.</p>
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+     * @var string <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+     * @var integer <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public $TimeSpan;
 
     /**
-     * @var integer ID of the AZ where an instance resides.
+     * @var integer <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+     * @var integer <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public $PayMode;
 
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Number of core nodes to be added.
+     * @var integer <p>Number of Core nodes to be scaled out.</p>
      */
     public $CoreCount;
 
     /**
-     * @var integer Number of task nodes to be added.
+     * @var integer <p>Number of Task nodes to be scaled out.</p>
      */
     public $TaskCount;
 
     /**
-     * @var string Currency.
+     * @var string <p>Currency type. Valid values:</p><li>CNY: RMB</li>
      */
     public $Currency;
 
     /**
-     * @var integer Number of router nodes to be added.
+     * @var integer <p>Number of Router nodes to be scaled out.</p>
      */
     public $RouterCount;
 
     /**
-     * @var integer Number of master nodes to be added.
+     * @var integer <p>Number of Master nodes to be scaled out.</p>
      */
     public $MasterCount;
 
     /**
-     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @var string <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
      */
     public $ResourceBaseType;
 
     /**
-     * @var string Computing resource ID.
+     * @var string <p>Computing resource ID.</p>
      */
     public $ComputeResourceId;
 
     /**
-     * @var string Scale-out resource type.
+     * @var string <p>Scale-out resource type.</p>
      */
     public $HardwareResourceType;
 
     /**
-     * @param string $TimeUnit Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-     * @param integer $TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-     * @param integer $ZoneId ID of the AZ where an instance resides.
-     * @param integer $PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-     * @param string $InstanceId Instance ID.
-     * @param integer $CoreCount Number of core nodes to be added.
-     * @param integer $TaskCount Number of task nodes to be added.
-     * @param string $Currency Currency.
-     * @param integer $RouterCount Number of router nodes to be added.
-     * @param integer $MasterCount Number of master nodes to be added.
-     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-     * @param string $ComputeResourceId Computing resource ID.
-     * @param string $HardwareResourceType Scale-out resource type.
+     * @var string <p>Node group ID.</p>
+     */
+    public $NodeGroupId;
+
+    /**
+     * @param string $TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param integer $TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+     * @param integer $ZoneId <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+     * @param integer $PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param integer $CoreCount <p>Number of Core nodes to be scaled out.</p>
+     * @param integer $TaskCount <p>Number of Task nodes to be scaled out.</p>
+     * @param string $Currency <p>Currency type. Valid values:</p><li>CNY: RMB</li>
+     * @param integer $RouterCount <p>Number of Router nodes to be scaled out.</p>
+     * @param integer $MasterCount <p>Number of Master nodes to be scaled out.</p>
+     * @param string $ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+     * @param string $ComputeResourceId <p>Computing resource ID.</p>
+     * @param string $HardwareResourceType <p>Scale-out resource type.</p>
+     * @param string $NodeGroupId <p>Node group ID.</p>
      */
     function __construct()
     {
@@ -204,6 +200,10 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
             $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("NodeGroupId",$param) and $param["NodeGroupId"] !== null) {
+            $this->NodeGroupId = $param["NodeGroupId"];
         }
     }
 }

@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNodeResourceConfigFast request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
- * @method string getResourceType() Obtain Node type, CORE, TASK, ROUTER or ALL.
- * @method void setResourceType(string $ResourceType) Set Node type, CORE, TASK, ROUTER or ALL.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method string getResourceType() Obtain Node type. Valid values: CORE, TASK, ROUTER, and ALL.
+ * @method void setResourceType(string $ResourceType) Set Node type. Valid values: CORE, TASK, ROUTER, and ALL.
  * @method integer getPayMode() Obtain Billing type.
  * @method void setPayMode(integer $PayMode) Set Billing type.
- * @method integer getZoneId() Obtain Availability zone ID.
- * @method void setZoneId(integer $ZoneId) Set Availability zone ID.
- * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR.
- * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+ * @method integer getZoneId() Obtain AZ ID.
+ * @method void setZoneId(integer $ZoneId) Set AZ ID.
+ * @method string getResourceBaseType() Obtain Type. Valid values: ComputeResource and EMR. Default value: EMR.
+ * @method void setResourceBaseType(string $ResourceBaseType) Set Type. Valid values: ComputeResource and EMR. Default value: EMR.
  * @method string getComputeResourceId() Obtain Computing resource ID.
  * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
  * @method string getHardwareResourceType() Obtain Hardware type.
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNodeResourceConfigFastRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Node type, CORE, TASK, ROUTER or ALL.
+     * @var string Node type. Valid values: CORE, TASK, ROUTER, and ALL.
      */
     public $ResourceType;
 
@@ -53,12 +53,12 @@ class DescribeNodeResourceConfigFastRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer Availability zone ID.
+     * @var integer AZ ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @var string Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public $ResourceBaseType;
 
@@ -73,11 +73,11 @@ class DescribeNodeResourceConfigFastRequest extends AbstractModel
     public $HardwareResourceType;
 
     /**
-     * @param string $InstanceId Cluster instance ID.
-     * @param string $ResourceType Node type, CORE, TASK, ROUTER or ALL.
+     * @param string $InstanceId Cluster ID.
+     * @param string $ResourceType Node type. Valid values: CORE, TASK, ROUTER, and ALL.
      * @param integer $PayMode Billing type.
-     * @param integer $ZoneId Availability zone ID.
-     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @param integer $ZoneId AZ ID.
+     * @param string $ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      * @param string $ComputeResourceId Computing resource ID.
      * @param string $HardwareResourceType Hardware type.
      */

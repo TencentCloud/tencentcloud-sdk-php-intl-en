@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHiveQueries request structure.
  *
- * @method string getInstanceId() Obtain The cluster ID.
- * @method void setInstanceId(string $InstanceId) Set The cluster ID.
- * @method integer getStartTime() Obtain The start time in seconds.
- * @method void setStartTime(integer $StartTime) Set The start time in seconds.
- * @method integer getEndTime() Obtain The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
- * @method void setEndTime(integer $EndTime) Set The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
- * @method integer getOffset() Obtain Starting offset for pagination. Start value: 0
- * @method void setOffset(integer $Offset) Set Starting offset for pagination. Start value: 0
- * @method integer getLimit() Obtain Page size. Valid range: [1,100]
- * @method void setLimit(integer $Limit) Set Page size. Valid range: [1,100]
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+ * @method integer getStartTime() Obtain Start time (s).
+ * @method void setStartTime(integer $StartTime) Set Start time (s).
+ * @method integer getEndTime() Obtain End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
+ * @method void setEndTime(integer $EndTime) Set End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
+ * @method integer getOffset() Obtain Starting offset for pages, starting from 0.
+ * @method void setOffset(integer $Offset) Set Starting offset for pages, starting from 0.
+ * @method integer getLimit() Obtain Number of entries per page. Value range: [1, 100].
+ * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: [1, 100].
  * @method array getState() Obtain Execution status, for example, ERROR.
  * @method void setState(array $State) Set Execution status, for example, ERROR.
  * @method integer getEndTimeGte() Obtain Time point earlier than the end time.
@@ -40,27 +40,27 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHiveQueriesRequest extends AbstractModel
 {
     /**
-     * @var string The cluster ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer The start time in seconds.
+     * @var integer Start time (s).
      */
     public $StartTime;
 
     /**
-     * @var integer The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+     * @var integer End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
      */
     public $EndTime;
 
     /**
-     * @var integer Starting offset for pagination. Start value: 0
+     * @var integer Starting offset for pages, starting from 0.
      */
     public $Offset;
 
     /**
-     * @var integer Page size. Valid range: [1,100]
+     * @var integer Number of entries per page. Value range: [1, 100].
      */
     public $Limit;
 
@@ -80,11 +80,11 @@ class DescribeHiveQueriesRequest extends AbstractModel
     public $EndTimeLte;
 
     /**
-     * @param string $InstanceId The cluster ID.
-     * @param integer $StartTime The start time in seconds.
-     * @param integer $EndTime The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
-     * @param integer $Offset Starting offset for pagination. Start value: 0
-     * @param integer $Limit Page size. Valid range: [1,100]
+     * @param string $InstanceId Cluster ID.
+     * @param integer $StartTime Start time (s).
+     * @param integer $EndTime End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
+     * @param integer $Offset Starting offset for pages, starting from 0.
+     * @param integer $Limit Number of entries per page. Value range: [1, 100].
      * @param array $State Execution status, for example, ERROR.
      * @param integer $EndTimeGte Time point earlier than the end time.
      * @param integer $EndTimeLte Time point later than the end time.

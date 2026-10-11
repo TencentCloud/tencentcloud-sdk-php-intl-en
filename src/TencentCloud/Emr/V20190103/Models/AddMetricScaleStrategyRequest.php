@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategyType(integer $StrategyType) Set 1 indicates scaling by load rules. 2 indicates scaling by time rules. This parameter is required and should match the following rule policy.
  * @method LoadAutoScaleStrategy getLoadAutoScaleStrategy() Obtain Load-based scale-out rules.
  * @method void setLoadAutoScaleStrategy(LoadAutoScaleStrategy $LoadAutoScaleStrategy) Set Load-based scale-out rules.
- * @method TimeAutoScaleStrategy getTimeAutoScaleStrategy() Obtain Rule for time-based scaling
- * @method void setTimeAutoScaleStrategy(TimeAutoScaleStrategy $TimeAutoScaleStrategy) Set Rule for time-based scaling
+ * @method TimeAutoScaleStrategy getTimeAutoScaleStrategy() Obtain Time-based scaling rule.
+ * @method void setTimeAutoScaleStrategy(TimeAutoScaleStrategy $TimeAutoScaleStrategy) Set Time-based scaling rule.
  */
 class AddMetricScaleStrategyRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class AddMetricScaleStrategyRequest extends AbstractModel
     public $LoadAutoScaleStrategy;
 
     /**
-     * @var TimeAutoScaleStrategy Rule for time-based scaling
+     * @var TimeAutoScaleStrategy Time-based scaling rule.
      */
     public $TimeAutoScaleStrategy;
 
@@ -55,7 +55,7 @@ class AddMetricScaleStrategyRequest extends AbstractModel
      * @param string $InstanceId Instance ID.
      * @param integer $StrategyType 1 indicates scaling by load rules. 2 indicates scaling by time rules. This parameter is required and should match the following rule policy.
      * @param LoadAutoScaleStrategy $LoadAutoScaleStrategy Load-based scale-out rules.
-     * @param TimeAutoScaleStrategy $TimeAutoScaleStrategy Rule for time-based scaling
+     * @param TimeAutoScaleStrategy $TimeAutoScaleStrategy Time-based scaling rule.
      */
     function __construct()
     {

@@ -20,198 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleOutCluster request structure.
  *
- * @method string getInstanceChargeType() Obtain The node billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
-<li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) Set The node billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
-<li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
- * @method string getInstanceId() Obtain Cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
- * @method ScaleOutNodeConfig getScaleOutNodeConfig() Obtain Scale-up node type and quantity.
- * @method void setScaleOutNodeConfig(ScaleOutNodeConfig $ScaleOutNodeConfig) Set Scale-up node type and quantity.
- * @method string getClientToken() Obtain Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
- * @method void setClientToken(string $ClientToken) Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
- * @method array getScriptBootstrapActionConfig() Obtain [Bootstrap Actions](https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1) script settings.
- * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) Set [Bootstrap Actions](https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1) script settings.
- * @method array getSoftDeployInfo() Obtain Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
- * @method void setSoftDeployInfo(array $SoftDeployInfo) Set Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
- * @method array getServiceNodeInfo() Obtain Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
- * @method void setServiceNodeInfo(array $ServiceNodeInfo) Set Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
- * @method array getDisasterRecoverGroupIds() Obtain Spread placement group ID list. Only one can be specified currently.
-This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1) API.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Spread placement group ID list. Only one can be specified currently.
-This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1) API.
- * @method array getTags() Obtain List of tags bound to scale-out nodes.
- * @method void setTags(array $Tags) Set List of tags bound to scale-out nodes.
- * @method string getHardwareSourceType() Obtain Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
- * @method void setHardwareSourceType(string $HardwareSourceType) Set Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
- * @method PodSpecInfo getPodSpecInfo() Obtain Pod-related resource information.
- * @method void setPodSpecInfo(PodSpecInfo $PodSpecInfo) Set Pod-related resource information.
- * @method string getClickHouseClusterName() Obtain Machine group name selected for ClickHouse cluster scale-out.
- * @method void setClickHouseClusterName(string $ClickHouseClusterName) Set Machine group name selected for ClickHouse cluster scale-out.
- * @method string getClickHouseClusterType() Obtain Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
- * @method void setClickHouseClusterType(string $ClickHouseClusterType) Set Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
- * @method string getYarnNodeLabel() Obtain Specified Yarn Node Label for scale-out.
- * @method void setYarnNodeLabel(string $YarnNodeLabel) Set Specified Yarn Node Label for scale-out.
- * @method boolean getEnableStartServiceFlag() Obtain Whether to start a service after scale-out (default: false).
-<li>true: yes</li>.
-<li>false: no</li>.
- * @method void setEnableStartServiceFlag(boolean $EnableStartServiceFlag) Set Whether to start a service after scale-out (default: false).
-<li>true: yes</li>.
-<li>false: no</li>.
- * @method NodeResourceSpec getResourceSpec() Obtain Specifications settings.
- * @method void setResourceSpec(NodeResourceSpec $ResourceSpec) Set Specifications settings.
- * @method string getZone() Obtain Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
- * @method void setZone(string $Zone) Set Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
- * @method string getSubnetId() Obtain Subnet, which is the subnet at the time of cluster creation by default.
- * @method void setSubnetId(string $SubnetId) Set Subnet, which is the subnet at the time of cluster creation by default.
- * @method array getScaleOutServiceConfGroupsInfo() Obtain Configuration group specified for scale-out.
- * @method void setScaleOutServiceConfGroupsInfo(array $ScaleOutServiceConfGroupsInfo) Set Configuration group specified for scale-out.
- * @method NodeMark getNodeMarks() Obtain Node tag information: currently used only in Terraform.
- * @method void setNodeMarks(NodeMark $NodeMarks) Set Node tag information: currently used only in Terraform.
+ * @method string getInstanceChargeType() Obtain <p>Node billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li><li>SPOTPAID: spot billing (for Task nodes only)</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Node billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li><li>SPOTPAID: spot billing (for Task nodes only)</li>
+ * @method string getInstanceId() Obtain <p>Cluster ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Cluster ID.</p>
+ * @method ScaleOutNodeConfig getScaleOutNodeConfig() Obtain <p>Type and number of nodes for the scale-out.</p>
+ * @method void setScaleOutNodeConfig(ScaleOutNodeConfig $ScaleOutNodeConfig) Set <p>Type and number of nodes for the scale-out.</p>
+ * @method string getClientToken() Obtain <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+ * @method void setClientToken(string $ClientToken) Set <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
+ * @method array getScriptBootstrapActionConfig() Obtain <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+ * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) Set <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+ * @method array getSoftDeployInfo() Obtain <p>To scale out deployment services, new nodes will inherit the services deployed on the current node type by default. The deployment service includes default optional services. This parameter is supported only when optional services are used. For example, if existing task nodes have HDFS, YARN, and impala deployed, when using the API to scale out Task nodes without deploying impala, fill in only HDFS and YARN for the deployment service. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Component Name Mapping Table</a>.</p>
+ * @method void setSoftDeployInfo(array $SoftDeployInfo) Set <p>To scale out deployment services, new nodes will inherit the services deployed on the current node type by default. The deployment service includes default optional services. This parameter is supported only when optional services are used. For example, if existing task nodes have HDFS, YARN, and impala deployed, when using the API to scale out Task nodes without deploying impala, fill in only HDFS and YARN for the deployment service. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Component Name Mapping Table</a>.</p>
+ * @method array getServiceNodeInfo() Obtain <p>Deployment processes. By default, all processes of the scaled‑out service are deployed. Deployment processes can be modified. For example, if the deployed services for the current task node are HDFS, YARN, and impala, the default deployment services are DataNode, NodeManager, and ImpalaServer. If you need to modify deployment process information, the deployment processes can be DataNode, NodeManager, and ImpalaServerCoordinator or DataNode, NodeManager, and ImpalaServerExecutor. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Process Name Mapping Table</a>.</p>
+ * @method void setServiceNodeInfo(array $ServiceNodeInfo) Set <p>Deployment processes. By default, all processes of the scaled‑out service are deployed. Deployment processes can be modified. For example, if the deployed services for the current task node are HDFS, YARN, and impala, the default deployment services are DataNode, NodeManager, and ImpalaServer. If you need to modify deployment process information, the deployment processes can be DataNode, NodeManager, and ImpalaServerCoordinator or DataNode, NodeManager, and ImpalaServerExecutor. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Process Name Mapping Table</a>.</p>
+ * @method array getDisasterRecoverGroupIds() Obtain <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
+ * @method array getTags() Obtain <p>List of tags bound to nodes for the scale-out.</p>
+ * @method void setTags(array $Tags) Set <p>List of tags bound to nodes for the scale-out.</p>
+ * @method string getHardwareSourceType() Obtain <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+ * @method void setHardwareSourceType(string $HardwareSourceType) Set <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+ * @method PodSpecInfo getPodSpecInfo() Obtain <p>Pod-related resource information.</p>
+ * @method void setPodSpecInfo(PodSpecInfo $PodSpecInfo) Set <p>Pod-related resource information.</p>
+ * @method string getClickHouseClusterName() Obtain <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+ * @method void setClickHouseClusterName(string $ClickHouseClusterName) Set <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+ * @method string getClickHouseClusterType() Obtain <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+ * @method void setClickHouseClusterType(string $ClickHouseClusterType) Set <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+ * @method string getYarnNodeLabel() Obtain <p>YARN node label specified for the scale-out.</p>
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) Set <p>YARN node label specified for the scale-out.</p>
+ * @method boolean getEnableStartServiceFlag() Obtain <p>Whether to start the service after a scale-out. Default value: false. Valid values:</p><li>true: yes</li><li>false: no</li>
+ * @method void setEnableStartServiceFlag(boolean $EnableStartServiceFlag) Set <p>Whether to start the service after a scale-out. Default value: false. Valid values:</p><li>true: yes</li><li>false: no</li>
+ * @method NodeResourceSpec getResourceSpec() Obtain <p>Specification settings.</p>
+ * @method void setResourceSpec(NodeResourceSpec $ResourceSpec) Set <p>Specification settings.</p>
+ * @method string getZone() Obtain <p>AZ to which the instance belongs, for example, ap-guangzhou-1. This parameter can be obtained from the Zone field in the response of <a href="https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+ * @method void setZone(string $Zone) Set <p>AZ to which the instance belongs, for example, ap-guangzhou-1. This parameter can be obtained from the Zone field in the response of <a href="https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+ * @method string getSubnetId() Obtain <p>Subnet. The subnet used during cluster creation is selected by default.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>Subnet. The subnet used during cluster creation is selected by default.</p>
+ * @method array getScaleOutServiceConfGroupsInfo() Obtain <p>Configuration group specified for the scale-out.</p>
+ * @method void setScaleOutServiceConfGroupsInfo(array $ScaleOutServiceConfGroupsInfo) Set <p>Configuration group specified for the scale-out.</p>
+ * @method NodeMark getNodeMarks() Obtain <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+ * @method void setNodeMarks(NodeMark $NodeMarks) Set <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+ * @method string getWarehouseName() Obtain <p>Name of the compute group specified for the scale-out.</p>
+ * @method void setWarehouseName(string $WarehouseName) Set <p>Name of the compute group specified for the scale-out.</p>
+ * @method integer getPartitionNumber() Obtain <p>Partition of a partition placement group.</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) Set <p>Partition of a partition placement group.</p>
  */
 class ScaleOutClusterRequest extends AbstractModel
 {
     /**
-     * @var string The node billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
-<li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
+     * @var string <p>Node billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li><li>SPOTPAID: spot billing (for Task nodes only)</li>
      */
     public $InstanceChargeType;
 
     /**
-     * @var string Cluster instance ID.
+     * @var string <p>Cluster ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var ScaleOutNodeConfig Scale-up node type and quantity.
+     * @var ScaleOutNodeConfig <p>Type and number of nodes for the scale-out.</p>
      */
     public $ScaleOutNodeConfig;
 
     /**
-     * @var string Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+     * @var string <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
      */
     public $ClientToken;
 
     /**
-     * @var InstanceChargePrepaid Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
+     * @var InstanceChargePrepaid <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var array [Bootstrap Actions](https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1) script settings.
+     * @var array <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
      */
     public $ScriptBootstrapActionConfig;
 
     /**
-     * @var array Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+     * @var array <p>To scale out deployment services, new nodes will inherit the services deployed on the current node type by default. The deployment service includes default optional services. This parameter is supported only when optional services are used. For example, if existing task nodes have HDFS, YARN, and impala deployed, when using the API to scale out Task nodes without deploying impala, fill in only HDFS and YARN for the deployment service. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Component Name Mapping Table</a>.</p>
      */
     public $SoftDeployInfo;
 
     /**
-     * @var array Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+     * @var array <p>Deployment processes. By default, all processes of the scaled‑out service are deployed. Deployment processes can be modified. For example, if the deployed services for the current task node are HDFS, YARN, and impala, the default deployment services are DataNode, NodeManager, and ImpalaServer. If you need to modify deployment process information, the deployment processes can be DataNode, NodeManager, and ImpalaServerCoordinator or DataNode, NodeManager, and ImpalaServerExecutor. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Process Name Mapping Table</a>.</p>
      */
     public $ServiceNodeInfo;
 
     /**
-     * @var array Spread placement group ID list. Only one can be specified currently.
-This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1) API.
+     * @var array <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var array List of tags bound to scale-out nodes.
+     * @var array <p>List of tags bound to nodes for the scale-out.</p>
      */
     public $Tags;
 
     /**
-     * @var string Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+     * @var string <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
      */
     public $HardwareSourceType;
 
     /**
-     * @var PodSpecInfo Pod-related resource information.
+     * @var PodSpecInfo <p>Pod-related resource information.</p>
      */
     public $PodSpecInfo;
 
     /**
-     * @var string Machine group name selected for ClickHouse cluster scale-out.
+     * @var string <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
      */
     public $ClickHouseClusterName;
 
     /**
-     * @var string Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
+     * @var string <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
      */
     public $ClickHouseClusterType;
 
     /**
-     * @var string Specified Yarn Node Label for scale-out.
+     * @var string <p>YARN node label specified for the scale-out.</p>
      */
     public $YarnNodeLabel;
 
     /**
-     * @var boolean Whether to start a service after scale-out (default: false).
-<li>true: yes</li>.
-<li>false: no</li>.
+     * @var boolean <p>Whether to start the service after a scale-out. Default value: false. Valid values:</p><li>true: yes</li><li>false: no</li>
      */
     public $EnableStartServiceFlag;
 
     /**
-     * @var NodeResourceSpec Specifications settings.
+     * @var NodeResourceSpec <p>Specification settings.</p>
      */
     public $ResourceSpec;
 
     /**
-     * @var string Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
+     * @var string <p>AZ to which the instance belongs, for example, ap-guangzhou-1. This parameter can be obtained from the Zone field in the response of <a href="https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
      */
     public $Zone;
 
     /**
-     * @var string Subnet, which is the subnet at the time of cluster creation by default.
+     * @var string <p>Subnet. The subnet used during cluster creation is selected by default.</p>
      */
     public $SubnetId;
 
     /**
-     * @var array Configuration group specified for scale-out.
+     * @var array <p>Configuration group specified for the scale-out.</p>
      */
     public $ScaleOutServiceConfGroupsInfo;
 
     /**
-     * @var NodeMark Node tag information: currently used only in Terraform.
+     * @var NodeMark <p>Node flag information, which is currently only provided for the Terraform platform.</p>
      */
     public $NodeMarks;
 
     /**
-     * @param string $InstanceChargeType The node billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
-<li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
-     * @param string $InstanceId Cluster instance ID.
-     * @param ScaleOutNodeConfig $ScaleOutNodeConfig Scale-up node type and quantity.
-     * @param string $ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
-     * @param array $ScriptBootstrapActionConfig [Bootstrap Actions](https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1) script settings.
-     * @param array $SoftDeployInfo Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-     * @param array $ServiceNodeInfo Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-     * @param array $DisasterRecoverGroupIds Spread placement group ID list. Only one can be specified currently.
-This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1) API.
-     * @param array $Tags List of tags bound to scale-out nodes.
-     * @param string $HardwareSourceType Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
-     * @param PodSpecInfo $PodSpecInfo Pod-related resource information.
-     * @param string $ClickHouseClusterName Machine group name selected for ClickHouse cluster scale-out.
-     * @param string $ClickHouseClusterType Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
-     * @param string $YarnNodeLabel Specified Yarn Node Label for scale-out.
-     * @param boolean $EnableStartServiceFlag Whether to start a service after scale-out (default: false).
-<li>true: yes</li>.
-<li>false: no</li>.
-     * @param NodeResourceSpec $ResourceSpec Specifications settings.
-     * @param string $Zone Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
-     * @param string $SubnetId Subnet, which is the subnet at the time of cluster creation by default.
-     * @param array $ScaleOutServiceConfGroupsInfo Configuration group specified for scale-out.
-     * @param NodeMark $NodeMarks Node tag information: currently used only in Terraform.
+     * @var string <p>Name of the compute group specified for the scale-out.</p>
+     */
+    public $WarehouseName;
+
+    /**
+     * @var integer <p>Partition of a partition placement group.</p>
+     */
+    public $PartitionNumber;
+
+    /**
+     * @param string $InstanceChargeType <p>Node billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li><li>SPOTPAID: spot billing (for Task nodes only)</li>
+     * @param string $InstanceId <p>Cluster ID.</p>
+     * @param ScaleOutNodeConfig $ScaleOutNodeConfig <p>Type and number of nodes for the scale-out.</p>
+     * @param string $ClientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
+     * @param array $ScriptBootstrapActionConfig <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+     * @param array $SoftDeployInfo <p>To scale out deployment services, new nodes will inherit the services deployed on the current node type by default. The deployment service includes default optional services. This parameter is supported only when optional services are used. For example, if existing task nodes have HDFS, YARN, and impala deployed, when using the API to scale out Task nodes without deploying impala, fill in only HDFS and YARN for the deployment service. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Component Name Mapping Table</a>.</p>
+     * @param array $ServiceNodeInfo <p>Deployment processes. By default, all processes of the scaled‑out service are deployed. Deployment processes can be modified. For example, if the deployed services for the current task node are HDFS, YARN, and impala, the default deployment services are DataNode, NodeManager, and ImpalaServer. If you need to modify deployment process information, the deployment processes can be DataNode, NodeManager, and ImpalaServerCoordinator or DataNode, NodeManager, and ImpalaServerExecutor. For details, see <a href="https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1">Process Name Mapping Table</a>.</p>
+     * @param array $DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
+     * @param array $Tags <p>List of tags bound to nodes for the scale-out.</p>
+     * @param string $HardwareSourceType <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+     * @param PodSpecInfo $PodSpecInfo <p>Pod-related resource information.</p>
+     * @param string $ClickHouseClusterName <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+     * @param string $ClickHouseClusterType <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+     * @param string $YarnNodeLabel <p>YARN node label specified for the scale-out.</p>
+     * @param boolean $EnableStartServiceFlag <p>Whether to start the service after a scale-out. Default value: false. Valid values:</p><li>true: yes</li><li>false: no</li>
+     * @param NodeResourceSpec $ResourceSpec <p>Specification settings.</p>
+     * @param string $Zone <p>AZ to which the instance belongs, for example, ap-guangzhou-1. This parameter can be obtained from the Zone field in the response of <a href="https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+     * @param string $SubnetId <p>Subnet. The subnet used during cluster creation is selected by default.</p>
+     * @param array $ScaleOutServiceConfGroupsInfo <p>Configuration group specified for the scale-out.</p>
+     * @param NodeMark $NodeMarks <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+     * @param string $WarehouseName <p>Name of the compute group specified for the scale-out.</p>
+     * @param integer $PartitionNumber <p>Partition of a partition placement group.</p>
      */
     function __construct()
     {
@@ -328,6 +324,14 @@ This parameter can be obtained by calling the DisasterRecoverGroupId field in th
         if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
             $this->NodeMarks = new NodeMark();
             $this->NodeMarks->deserialize($param["NodeMarks"]);
+        }
+
+        if (array_key_exists("WarehouseName",$param) and $param["WarehouseName"] !== null) {
+            $this->WarehouseName = $param["WarehouseName"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
         }
     }
 }

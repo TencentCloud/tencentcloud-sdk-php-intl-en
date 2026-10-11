@@ -18,39 +18,39 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Forcibly Modifying Tags
+ * Specifies the tags to be forcibly modified.
  *
- * @method string getResourceId() Obtain Cluster ID or CVM ID
- * @method void setResourceId(string $ResourceId) Set Cluster ID or CVM ID
- * @method string getResource() Obtain 6-segment resource expression
- * @method void setResource(string $Resource) Set 6-segment resource expression
- * @method string getResourcePrefix() Obtain Resource prefix
- * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix
+ * @method string getResourceId() Obtain Cluster ID or CVM ID.
+ * @method void setResourceId(string $ResourceId) Set Cluster ID or CVM ID.
+ * @method string getResource() Obtain Six-segment resource expression.
+ * @method void setResource(string $Resource) Set Six-segment resource expression.
+ * @method string getResourcePrefix() Obtain Resource prefix.
+ * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix.
  * @method string getResourceRegion() Obtain ap-beijing
  * @method void setResourceRegion(string $ResourceRegion) Set ap-beijing
  * @method string getServiceType() Obtain emr
  * @method void setServiceType(string $ServiceType) Set emr
- * @method array getDeleteTags() Obtain List of deleted tags
- * @method void setDeleteTags(array $DeleteTags) Set List of deleted tags
- * @method array getAddTags() Obtain List of added tags
- * @method void setAddTags(array $AddTags) Set List of added tags
- * @method array getModifyTags() Obtain List of modified tags
- * @method void setModifyTags(array $ModifyTags) Set List of modified tags
+ * @method array getDeleteTags() Obtain List of deleted tags.
+ * @method void setDeleteTags(array $DeleteTags) Set List of deleted tags.
+ * @method array getAddTags() Obtain List of added tags.
+ * @method void setAddTags(array $AddTags) Set List of added tags.
+ * @method array getModifyTags() Obtain List of modified tags.
+ * @method void setModifyTags(array $ModifyTags) Set List of modified tags.
  */
 class ModifyResourceTags extends AbstractModel
 {
     /**
-     * @var string Cluster ID or CVM ID
+     * @var string Cluster ID or CVM ID.
      */
     public $ResourceId;
 
     /**
-     * @var string 6-segment resource expression
+     * @var string Six-segment resource expression.
      */
     public $Resource;
 
     /**
-     * @var string Resource prefix
+     * @var string Resource prefix.
      */
     public $ResourcePrefix;
 
@@ -65,29 +65,29 @@ class ModifyResourceTags extends AbstractModel
     public $ServiceType;
 
     /**
-     * @var array List of deleted tags
+     * @var array List of deleted tags.
      */
     public $DeleteTags;
 
     /**
-     * @var array List of added tags
+     * @var array List of added tags.
      */
     public $AddTags;
 
     /**
-     * @var array List of modified tags
+     * @var array List of modified tags.
      */
     public $ModifyTags;
 
     /**
-     * @param string $ResourceId Cluster ID or CVM ID
-     * @param string $Resource 6-segment resource expression
-     * @param string $ResourcePrefix Resource prefix
+     * @param string $ResourceId Cluster ID or CVM ID.
+     * @param string $Resource Six-segment resource expression.
+     * @param string $ResourcePrefix Resource prefix.
      * @param string $ResourceRegion ap-beijing
      * @param string $ServiceType emr
-     * @param array $DeleteTags List of deleted tags
-     * @param array $AddTags List of added tags
-     * @param array $ModifyTags List of modified tags
+     * @param array $DeleteTags List of deleted tags.
+     * @param array $AddTags List of added tags.
+     * @param array $ModifyTags List of modified tags.
      */
     function __construct()
     {

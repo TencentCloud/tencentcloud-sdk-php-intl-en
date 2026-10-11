@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceBasic request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
+ * @method string getInstanceId() Obtain Cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
  * @method string getClusterName() Obtain Cluster name.
  * @method void setClusterName(string $ClusterName) Set Cluster name.
  * @method string getResourceBaseType() Obtain Used to label computing resources that need to be modified.
  * @method void setResourceBaseType(string $ResourceBaseType) Set Used to label computing resources that need to be modified.
- * @method string getComputeResourceId() Obtain Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
- * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+ * @method string getComputeResourceId() Obtain ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
+ * @method void setComputeResourceId(string $ComputeResourceId) Set ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
  */
 class ModifyInstanceBasicRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID.
+     * @var string Cluster ID.
      */
     public $InstanceId;
 
@@ -47,15 +47,15 @@ class ModifyInstanceBasicRequest extends AbstractModel
     public $ResourceBaseType;
 
     /**
-     * @var string Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+     * @var string ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
      */
     public $ComputeResourceId;
 
     /**
-     * @param string $InstanceId Cluster instance ID.
+     * @param string $InstanceId Cluster ID.
      * @param string $ClusterName Cluster name.
      * @param string $ResourceBaseType Used to label computing resources that need to be modified.
-     * @param string $ComputeResourceId Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+     * @param string $ComputeResourceId ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
      */
     function __construct()
     {

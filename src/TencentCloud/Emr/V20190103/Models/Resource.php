@@ -18,164 +18,148 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource details
+ * Resource details.
  *
- * @method string getSpec() Obtain Node specifications description, such as CVM.SA2.
- * @method void setSpec(string $Spec) Set Node specifications description, such as CVM.SA2.
- * @method integer getStorageType() Obtain Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
- * @method void setStorageType(integer $StorageType) Set Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
- * @method string getDiskType() Obtain Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
- * @method void setDiskType(string $DiskType) Set Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
- * @method integer getMemSize() Obtain Memory capacity, in MB.
- * @method void setMemSize(integer $MemSize) Set Memory capacity, in MB.
- * @method integer getCpu() Obtain Number of CPU cores.
- * @method void setCpu(integer $Cpu) Set Number of CPU cores.
- * @method integer getDiskSize() Obtain Data disk capacity.
- * @method void setDiskSize(integer $DiskSize) Set Data disk capacity.
- * @method integer getRootSize() Obtain System disk capacity.
- * @method void setRootSize(integer $RootSize) Set System disk capacity.
- * @method array getMultiDisks() Obtain List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMultiDisks(array $MultiDisks) Set List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Specifications type, such as S2.MEDIUM8.
- * @method void setInstanceType(string $InstanceType) Set Specifications type, such as S2.MEDIUM8.
- * @method integer getLocalDiskNum() Obtain Number of local disks. This field is deprecated.
- * @method void setLocalDiskNum(integer $LocalDiskNum) Set Number of local disks. This field is deprecated.
- * @method integer getDiskNum() Obtain Number of local disks, such as 2.
- * @method void setDiskNum(integer $DiskNum) Set Number of local disks, such as 2.
- * @method string getGpuDesc() Obtain GPU information.
- * @method void setGpuDesc(string $GpuDesc) Set GPU information.
+ * @method string getSpec() Obtain <p>Node specification description, such as CVM.SA2.</p>
+ * @method void setSpec(string $Spec) Set <p>Node specification description, such as CVM.SA2.</p>
+ * @method integer getStorageType() Obtain <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
+ * @method void setStorageType(integer $StorageType) Set <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
+ * @method string getDiskType() Obtain <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
+ * @method void setDiskType(string $DiskType) Set <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
+ * @method integer getMemSize() Obtain <p>Memory capacity (MB).</p>
+ * @method void setMemSize(integer $MemSize) Set <p>Memory capacity (MB).</p>
+ * @method integer getCpu() Obtain <p>Number of CPU cores.</p>
+ * @method void setCpu(integer $Cpu) Set <p>Number of CPU cores.</p>
+ * @method integer getDiskSize() Obtain <p>Data disk capacity.</p>
+ * @method void setDiskSize(integer $DiskSize) Set <p>Data disk capacity.</p>
+ * @method integer getRootSize() Obtain <p>System disk capacity.</p>
+ * @method void setRootSize(integer $RootSize) Set <p>System disk capacity.</p>
+ * @method array getMultiDisks() Obtain <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
+ * @method void setMultiDisks(array $MultiDisks) Set <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
+ * @method array getTags() Obtain <p>List of tags to be bound.</p>
+ * @method void setTags(array $Tags) Set <p>List of tags to be bound.</p>
+ * @method string getInstanceType() Obtain <p>Specifications type, such as S2.MEDIUM8.</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Specifications type, such as S2.MEDIUM8.</p>
+ * @method integer getLocalDiskNum() Obtain <p>Number of local disks. This field has been deprecated.</p>
+ * @method void setLocalDiskNum(integer $LocalDiskNum) Set <p>Number of local disks. This field has been deprecated.</p>
+ * @method integer getDiskNum() Obtain <p>Number of local disks, such as 2.</p>
+ * @method void setDiskNum(integer $DiskNum) Set <p>Number of local disks, such as 2.</p>
+ * @method string getGpuDesc() Obtain <p>GPU information.</p>
+ * @method void setGpuDesc(string $GpuDesc) Set <p>GPU information.</p>
+ * @method integer getPartitionNumber() Obtain <p>Number of partitions in a placement group.</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) Set <p>Number of partitions in a placement group.</p>
+ * @method string getHCCHpcClusterId() Obtain <p>High-performance cluster ID.</p>
+ * @method void setHCCHpcClusterId(string $HCCHpcClusterId) Set <p>High-performance cluster ID.</p>
+ * @method string getCustomNodeName() Obtain <p>Custom hostname.</p>
+ * @method void setCustomNodeName(string $CustomNodeName) Set <p>Custom hostname.</p>
+ * @method GpuImageDriverSpec getGpuImageDriver() Obtain <p>GPU image driver configuration.</p>
+ * @method void setGpuImageDriver(GpuImageDriverSpec $GpuImageDriver) Set <p>GPU image driver configuration.</p>
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string Node specifications description, such as CVM.SA2.
+     * @var string <p>Node specification description, such as CVM.SA2.</p>
      */
     public $Spec;
 
     /**
-     * @var integer Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+     * @var integer <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
      */
     public $StorageType;
 
     /**
-     * @var string Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
+     * @var string <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
      */
     public $DiskType;
 
     /**
-     * @var integer Memory capacity, in MB.
+     * @var integer <p>Memory capacity (MB).</p>
      */
     public $MemSize;
 
     /**
-     * @var integer Number of CPU cores.
+     * @var integer <p>Number of CPU cores.</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Data disk capacity.
+     * @var integer <p>Data disk capacity.</p>
      */
     public $DiskSize;
 
     /**
-     * @var integer System disk capacity.
+     * @var integer <p>System disk capacity.</p>
      */
     public $RootSize;
 
     /**
-     * @var array List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
      */
     public $MultiDisks;
 
     /**
-     * @var array List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>List of tags to be bound.</p>
      */
     public $Tags;
 
     /**
-     * @var string Specifications type, such as S2.MEDIUM8.
+     * @var string <p>Specifications type, such as S2.MEDIUM8.</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer Number of local disks. This field is deprecated.
+     * @var integer <p>Number of local disks. This field has been deprecated.</p>
      */
     public $LocalDiskNum;
 
     /**
-     * @var integer Number of local disks, such as 2.
+     * @var integer <p>Number of local disks, such as 2.</p>
      */
     public $DiskNum;
 
     /**
-     * @var string GPU information.
+     * @var string <p>GPU information.</p>
      */
     public $GpuDesc;
 
     /**
-     * @param string $Spec Node specifications description, such as CVM.SA2.
-     * @param integer $StorageType Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
-     * @param string $DiskType Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-     * @param integer $MemSize Memory capacity, in MB.
-     * @param integer $Cpu Number of CPU cores.
-     * @param integer $DiskSize Data disk capacity.
-     * @param integer $RootSize System disk capacity.
-     * @param array $MultiDisks List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Specifications type, such as S2.MEDIUM8.
-     * @param integer $LocalDiskNum Number of local disks. This field is deprecated.
-     * @param integer $DiskNum Number of local disks, such as 2.
-     * @param string $GpuDesc GPU information.
+     * @var integer <p>Number of partitions in a placement group.</p>
+     */
+    public $PartitionNumber;
+
+    /**
+     * @var string <p>High-performance cluster ID.</p>
+     */
+    public $HCCHpcClusterId;
+
+    /**
+     * @var string <p>Custom hostname.</p>
+     */
+    public $CustomNodeName;
+
+    /**
+     * @var GpuImageDriverSpec <p>GPU image driver configuration.</p>
+     */
+    public $GpuImageDriver;
+
+    /**
+     * @param string $Spec <p>Node specification description, such as CVM.SA2.</p>
+     * @param integer $StorageType <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
+     * @param string $DiskType <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
+     * @param integer $MemSize <p>Memory capacity (MB).</p>
+     * @param integer $Cpu <p>Number of CPU cores.</p>
+     * @param integer $DiskSize <p>Data disk capacity.</p>
+     * @param integer $RootSize <p>System disk capacity.</p>
+     * @param array $MultiDisks <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
+     * @param array $Tags <p>List of tags to be bound.</p>
+     * @param string $InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
+     * @param integer $LocalDiskNum <p>Number of local disks. This field has been deprecated.</p>
+     * @param integer $DiskNum <p>Number of local disks, such as 2.</p>
+     * @param string $GpuDesc <p>GPU information.</p>
+     * @param integer $PartitionNumber <p>Number of partitions in a placement group.</p>
+     * @param string $HCCHpcClusterId <p>High-performance cluster ID.</p>
+     * @param string $CustomNodeName <p>Custom hostname.</p>
+     * @param GpuImageDriverSpec $GpuImageDriver <p>GPU image driver configuration.</p>
      */
     function __construct()
     {
@@ -250,6 +234,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("GpuDesc",$param) and $param["GpuDesc"] !== null) {
             $this->GpuDesc = $param["GpuDesc"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("HCCHpcClusterId",$param) and $param["HCCHpcClusterId"] !== null) {
+            $this->HCCHpcClusterId = $param["HCCHpcClusterId"];
+        }
+
+        if (array_key_exists("CustomNodeName",$param) and $param["CustomNodeName"] !== null) {
+            $this->CustomNodeName = $param["CustomNodeName"];
+        }
+
+        if (array_key_exists("GpuImageDriver",$param) and $param["GpuImageDriver"] !== null) {
+            $this->GpuImageDriver = new GpuImageDriverSpec();
+            $this->GpuImageDriver->deserialize($param["GpuImageDriver"]);
         }
     }
 }

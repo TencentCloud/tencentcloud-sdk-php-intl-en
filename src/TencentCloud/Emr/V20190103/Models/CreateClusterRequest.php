@@ -20,266 +20,250 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster request structure.
  *
- * @method string getProductVersion() Obtain The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
- * @method void setProductVersion(string $ProductVersion) Set The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
- * @method boolean getEnableSupportHAFlag() Obtain Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
- * @method void setEnableSupportHAFlag(boolean $EnableSupportHAFlag) Set Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
- * @method string getInstanceName() Obtain The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
- * @method void setInstanceName(string $InstanceName) Set The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
- * @method string getInstanceChargeType() Obtain The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) Set The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
- * @method LoginSettings getLoginSettings() Obtain The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
- * @method void setLoginSettings(LoginSettings $LoginSettings) Set The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
- * @method SceneSoftwareConfig getSceneSoftwareConfig() Obtain The configuration of cluster application scenario and supported components.
- * @method void setSceneSoftwareConfig(SceneSoftwareConfig $SceneSoftwareConfig) Set The configuration of cluster application scenario and supported components.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
- * @method array getSecurityGroupIds() Obtain The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
- * @method array getScriptBootstrapActionConfig() Obtain The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
- * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) Set The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
- * @method string getClientToken() Obtain Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
- * @method void setClientToken(string $ClientToken) Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
- * @method string getNeedMasterWan() Obtain Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
- * @method void setNeedMasterWan(string $NeedMasterWan) Set Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
- * @method boolean getEnableRemoteLoginFlag() Obtain Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
- * @method void setEnableRemoteLoginFlag(boolean $EnableRemoteLoginFlag) Set Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
- * @method boolean getEnableKerberosFlag() Obtain Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
- * @method void setEnableKerberosFlag(boolean $EnableKerberosFlag) Set Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
- * @method string getCustomConf() Obtain [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
- * @method void setCustomConf(string $CustomConf) Set [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
- * @method array getTags() Obtain The tag description list. This parameter is used to bind a tag to a resource instance.
- * @method void setTags(array $Tags) Set The tag description list. This parameter is used to bind a tag to a resource instance.
- * @method array getDisasterRecoverGroupIds() Obtain The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
- * @method boolean getEnableCbsEncryptFlag() Obtain Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
- * @method void setEnableCbsEncryptFlag(boolean $EnableCbsEncryptFlag) Set Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
- * @method CustomMetaDBInfo getMetaDBInfo() Obtain The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
- * @method void setMetaDBInfo(CustomMetaDBInfo $MetaDBInfo) Set The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
- * @method array getDependService() Obtain The shared component information.
- * @method void setDependService(array $DependService) Set The shared component information.
- * @method array getZoneResourceConfiguration() Obtain The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
- * @method void setZoneResourceConfiguration(array $ZoneResourceConfiguration) Set The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
- * @method string getCosBucket() Obtain COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
- * @method void setCosBucket(string $CosBucket) Set COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
- * @method array getNodeMarks() Obtain Node identifier information: currently used only in Terraform.
- * @method void setNodeMarks(array $NodeMarks) Set Node identifier information: currently used only in Terraform.
- * @method string getLoadBalancerId() Obtain clb id
- * @method void setLoadBalancerId(string $LoadBalancerId) Set clb id
+ * @method string getProductVersion() Obtain <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
+ * @method void setProductVersion(string $ProductVersion) Set <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
+ * @method boolean getEnableSupportHAFlag() Obtain <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
+ * @method void setEnableSupportHAFlag(boolean $EnableSupportHAFlag) Set <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
+ * @method string getInstanceName() Obtain <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+ * @method string getInstanceChargeType() Obtain <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
+ * @method LoginSettings getLoginSettings() Obtain <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+ * @method SceneSoftwareConfig getSceneSoftwareConfig() Obtain <p>Cluster application scenario and supported deployment component configuration.</p>
+ * @method void setSceneSoftwareConfig(SceneSoftwareConfig $SceneSoftwareConfig) Set <p>Cluster application scenario and supported deployment component configuration.</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
+ * @method array getSecurityGroupIds() Obtain <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+ * @method array getScriptBootstrapActionConfig() Obtain <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+ * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) Set <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+ * @method string getClientToken() Obtain <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+ * @method void setClientToken(string $ClientToken) Set <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+ * @method string getNeedMasterWan() Obtain <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+ * @method void setNeedMasterWan(string $NeedMasterWan) Set <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+ * @method boolean getEnableRemoteLoginFlag() Obtain <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
+ * @method void setEnableRemoteLoginFlag(boolean $EnableRemoteLoginFlag) Set <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
+ * @method boolean getEnableKerberosFlag() Obtain <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
+ * @method void setEnableKerberosFlag(boolean $EnableKerberosFlag) Set <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
+ * @method string getCustomConf() Obtain <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
+ * @method void setCustomConf(string $CustomConf) Set <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
+ * @method array getTags() Obtain <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+ * @method void setTags(array $Tags) Set <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+ * @method array getDisasterRecoverGroupIds() Obtain <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
+ * @method boolean getEnableCbsEncryptFlag() Obtain <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
+ * @method void setEnableCbsEncryptFlag(boolean $EnableCbsEncryptFlag) Set <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
+ * @method CustomMetaDBInfo getMetaDBInfo() Obtain <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
+ * @method void setMetaDBInfo(CustomMetaDBInfo $MetaDBInfo) Set <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
+ * @method array getDependService() Obtain <p>Shared component information.</p>
+ * @method void setDependService(array $DependService) Set <p>Shared component information.</p>
+ * @method array getZoneResourceConfiguration() Obtain <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+ * @method void setZoneResourceConfiguration(array $ZoneResourceConfiguration) Set <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+ * @method string getCosBucket() Obtain <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+ * @method void setCosBucket(string $CosBucket) Set <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+ * @method array getNodeMarks() Obtain <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+ * @method void setNodeMarks(array $NodeMarks) Set <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+ * @method string getLoadBalancerId() Obtain <p>clb id</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set <p>clb id</p>
+ * @method string getDefaultMetaVersion() Obtain <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) Set <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+ * @method integer getNeedCdbAudit() Obtain <p>Whether database audit is enabled.</p>
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) Set <p>Whether database audit is enabled.</p>
+ * @method string getSgIP() Obtain <p>Source IP address, which is specified in the security group.</p>
+ * @method void setSgIP(string $SgIP) Set <p>Source IP address, which is specified in the security group.</p>
+ * @method integer getPartitionNumber() Obtain <p>Partition of a partition placement group.</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) Set <p>Partition of a partition placement group.</p>
+ * @method integer getWebUiVersion() Obtain <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+ * @method void setWebUiVersion(integer $WebUiVersion) Set <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+ * @method boolean getEnableCbsSysEncryptFlag() Obtain <p>Whether the system disk is encrypted.</p>
+ * @method void setEnableCbsSysEncryptFlag(boolean $EnableCbsSysEncryptFlag) Set <p>Whether the system disk is encrypted.</p>
+ * @method array getMetaDBGroupInfo() Obtain <p>Custom MetaDB data.</p>
+ * @method void setMetaDBGroupInfo(array $MetaDBGroupInfo) Set <p>Custom MetaDB data.</p>
  */
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var string The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
+     * @var string <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
      */
     public $ProductVersion;
 
     /**
-     * @var boolean Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+     * @var boolean <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
      */
     public $EnableSupportHAFlag;
 
     /**
-     * @var string The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
+     * @var string <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
      */
     public $InstanceName;
 
     /**
-     * @var string The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
+     * @var string <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
      */
     public $InstanceChargeType;
 
     /**
-     * @var LoginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+     * @var LoginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
      */
     public $LoginSettings;
 
     /**
-     * @var SceneSoftwareConfig The configuration of cluster application scenario and supported components.
+     * @var SceneSoftwareConfig <p>Cluster application scenario and supported deployment component configuration.</p>
      */
     public $SceneSoftwareConfig;
 
     /**
-     * @var InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
+     * @var InstanceChargePrepaid <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var array The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
+     * @var array <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+     * @var array <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
      */
     public $ScriptBootstrapActionConfig;
 
     /**
-     * @var string Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+     * @var string <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
      */
     public $ClientToken;
 
     /**
-     * @var string Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
+     * @var string <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
      */
     public $NeedMasterWan;
 
     /**
-     * @var boolean Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+     * @var boolean <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
      */
     public $EnableRemoteLoginFlag;
 
     /**
-     * @var boolean Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * @var boolean <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
      */
     public $EnableKerberosFlag;
 
     /**
-     * @var string [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
+     * @var string <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
      */
     public $CustomConf;
 
     /**
-     * @var array The tag description list. This parameter is used to bind a tag to a resource instance.
+     * @var array <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
      */
     public $Tags;
 
     /**
-     * @var array The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+     * @var array <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var boolean Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * @var boolean <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
      */
     public $EnableCbsEncryptFlag;
 
     /**
-     * @var CustomMetaDBInfo The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
+     * @var CustomMetaDBInfo <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
      */
     public $MetaDBInfo;
 
     /**
-     * @var array The shared component information.
+     * @var array <p>Shared component information.</p>
      */
     public $DependService;
 
     /**
-     * @var array The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+     * @var array <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
      */
     public $ZoneResourceConfiguration;
 
     /**
-     * @var string COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * @var string <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
      */
     public $CosBucket;
 
     /**
-     * @var array Node identifier information: currently used only in Terraform.
+     * @var array <p>Node flag information, which is currently only provided for the Terraform platform.</p>
      */
     public $NodeMarks;
 
     /**
-     * @var string clb id
+     * @var string <p>clb id</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @param string $ProductVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
-     * @param boolean $EnableSupportHAFlag Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
-     * @param string $InstanceName The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
-     * @param string $InstanceChargeType The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
-     * @param LoginSettings $LoginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
-     * @param SceneSoftwareConfig $SceneSoftwareConfig The configuration of cluster application scenario and supported components.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
-     * @param array $SecurityGroupIds The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
-     * @param array $ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
-     * @param string $ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
-     * @param string $NeedMasterWan Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
-     * @param boolean $EnableRemoteLoginFlag Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
-     * @param boolean $EnableKerberosFlag Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
-     * @param string $CustomConf [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
-     * @param array $Tags The tag description list. This parameter is used to bind a tag to a resource instance.
-     * @param array $DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
-     * @param boolean $EnableCbsEncryptFlag Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
-     * @param CustomMetaDBInfo $MetaDBInfo The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
-     * @param array $DependService The shared component information.
-     * @param array $ZoneResourceConfiguration The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
-     * @param string $CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
-     * @param array $NodeMarks Node identifier information: currently used only in Terraform.
-     * @param string $LoadBalancerId clb id
+     * @var string <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var integer <p>Whether database audit is enabled.</p>
+     */
+    public $NeedCdbAudit;
+
+    /**
+     * @var string <p>Source IP address, which is specified in the security group.</p>
+     */
+    public $SgIP;
+
+    /**
+     * @var integer <p>Partition of a partition placement group.</p>
+     */
+    public $PartitionNumber;
+
+    /**
+     * @var integer <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+     */
+    public $WebUiVersion;
+
+    /**
+     * @var boolean <p>Whether the system disk is encrypted.</p>
+     */
+    public $EnableCbsSysEncryptFlag;
+
+    /**
+     * @var array <p>Custom MetaDB data.</p>
+     */
+    public $MetaDBGroupInfo;
+
+    /**
+     * @param string $ProductVersion <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
+     * @param boolean $EnableSupportHAFlag <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
+     * @param string $InstanceName <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+     * @param string $InstanceChargeType <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
+     * @param LoginSettings $LoginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+     * @param SceneSoftwareConfig $SceneSoftwareConfig <p>Cluster application scenario and supported deployment component configuration.</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
+     * @param array $SecurityGroupIds <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+     * @param array $ScriptBootstrapActionConfig <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+     * @param string $ClientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+     * @param string $NeedMasterWan <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+     * @param boolean $EnableRemoteLoginFlag <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
+     * @param boolean $EnableKerberosFlag <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
+     * @param string $CustomConf <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
+     * @param array $Tags <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+     * @param array $DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
+     * @param boolean $EnableCbsEncryptFlag <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
+     * @param CustomMetaDBInfo $MetaDBInfo <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
+     * @param array $DependService <p>Shared component information.</p>
+     * @param array $ZoneResourceConfiguration <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+     * @param string $CosBucket <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+     * @param array $NodeMarks <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+     * @param string $LoadBalancerId <p>clb id</p>
+     * @param string $DefaultMetaVersion <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+     * @param integer $NeedCdbAudit <p>Whether database audit is enabled.</p>
+     * @param string $SgIP <p>Source IP address, which is specified in the security group.</p>
+     * @param integer $PartitionNumber <p>Partition of a partition placement group.</p>
+     * @param integer $WebUiVersion <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+     * @param boolean $EnableCbsSysEncryptFlag <p>Whether the system disk is encrypted.</p>
+     * @param array $MetaDBGroupInfo <p>Custom MetaDB data.</p>
      */
     function __construct()
     {
@@ -413,6 +397,39 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 
         if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
             $this->LoadBalancerId = $param["LoadBalancerId"];
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
+            $this->NeedCdbAudit = $param["NeedCdbAudit"];
+        }
+
+        if (array_key_exists("SgIP",$param) and $param["SgIP"] !== null) {
+            $this->SgIP = $param["SgIP"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("WebUiVersion",$param) and $param["WebUiVersion"] !== null) {
+            $this->WebUiVersion = $param["WebUiVersion"];
+        }
+
+        if (array_key_exists("EnableCbsSysEncryptFlag",$param) and $param["EnableCbsSysEncryptFlag"] !== null) {
+            $this->EnableCbsSysEncryptFlag = $param["EnableCbsSysEncryptFlag"];
+        }
+
+        if (array_key_exists("MetaDBGroupInfo",$param) and $param["MetaDBGroupInfo"] !== null) {
+            $this->MetaDBGroupInfo = [];
+            foreach ($param["MetaDBGroupInfo"] as $key => $value){
+                $obj = new CustomMetaDBInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaDBGroupInfo, $obj);
+            }
         }
     }
 }
