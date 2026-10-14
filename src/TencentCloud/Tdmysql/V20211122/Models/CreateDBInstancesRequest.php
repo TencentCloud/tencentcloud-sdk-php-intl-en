@@ -78,18 +78,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(string $TemplateId) Set <p>Parameter template id</p>
  * @method string getSQLMode() Obtain <p>Compatible mode, enum:MySQL,HBase</p>
  * @method void setSQLMode(string $SQLMode) Set <p>Compatible mode, enum:MySQL,HBase</p>
- * @method AutoScalingConfig getAutoScaleConfig() Obtain 
- * @method void setAutoScaleConfig(AutoScalingConfig $AutoScaleConfig) Set 
- * @method array getSecurityGroupIds() Obtain <p>Security group binding list</p>
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group binding list</p>
- * @method string getUserName() Obtain <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
- * @method void setUserName(string $UserName) Set <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+ * @method AutoScalingConfig getAutoScaleConfig() Obtain <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
+ * @method void setAutoScaleConfig(AutoScalingConfig $AutoScaleConfig) Set <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
+ * @method array getSecurityGroupIds() Obtain <p>List of bound security groups</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>List of bound security groups</p>
+ * @method string getUserName() Obtain <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
+ * @method void setUserName(string $UserName) Set <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
  * @method string getPassword() Obtain <p>dbaadmin password</p>
  * @method void setPassword(string $Password) Set <p>dbaadmin password</p>
- * @method integer getEncryptionEnable() Obtain <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
- * @method void setEncryptionEnable(integer $EncryptionEnable) Set <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
- * @method array getAutoScaleConfigs() Obtain 
- * @method void setAutoScaleConfigs(array $AutoScaleConfigs) Set 
+ * @method integer getEncryptionEnable() Obtain <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
+ * @method void setEncryptionEnable(integer $EncryptionEnable) Set <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
+ * @method array getAutoScaleConfigs() Obtain <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
+ * @method void setAutoScaleConfigs(array $AutoScaleConfigs) Set <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -239,17 +239,17 @@ class CreateDBInstancesRequest extends AbstractModel
     public $SQLMode;
 
     /**
-     * @var AutoScalingConfig 
+     * @var AutoScalingConfig <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
      */
     public $AutoScaleConfig;
 
     /**
-     * @var array <p>Security group binding list</p>
+     * @var array <p>List of bound security groups</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+     * @var string <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
      */
     public $UserName;
 
@@ -259,12 +259,12 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var integer <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+     * @var integer <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
      */
     public $EncryptionEnable;
 
     /**
-     * @var array 
+     * @var array <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
      */
     public $AutoScaleConfigs;
 
@@ -298,12 +298,12 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $InstanceMode <p>Instance mode</p>
      * @param string $TemplateId <p>Parameter template id</p>
      * @param string $SQLMode <p>Compatible mode, enum:MySQL,HBase</p>
-     * @param AutoScalingConfig $AutoScaleConfig 
-     * @param array $SecurityGroupIds <p>Security group binding list</p>
-     * @param string $UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+     * @param AutoScalingConfig $AutoScaleConfig <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
+     * @param array $SecurityGroupIds <p>List of bound security groups</p>
+     * @param string $UserName <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
      * @param string $Password <p>dbaadmin password</p>
-     * @param integer $EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
-     * @param array $AutoScaleConfigs 
+     * @param integer $EncryptionEnable <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
+     * @param array $AutoScaleConfigs <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Select the specified audio track or video output
  *
- * @method string getSelectorType() Obtain 
- * @method void setSelectorType(string $SelectorType) Set 
- * @method PidSelector getPidSelector() Obtain 
- * @method void setPidSelector(PidSelector $PidSelector) Set 
- * @method TrackSelector getTrackSelector() Obtain 
- * @method void setTrackSelector(TrackSelector $TrackSelector) Set 
+ * @method string getSelectorType() Obtain Selection type: PID | TRACK
+ * @method void setSelectorType(string $SelectorType) Set Selection type: PID | TRACK
+ * @method PidSelector getPidSelector() Obtain Based on the PID configuration selector
+ * @method void setPidSelector(PidSelector $PidSelector) Set Based on the PID configuration selector
+ * @method TrackSelector getTrackSelector() Obtain Select a selector based on the Track configuration
+ * @method void setTrackSelector(TrackSelector $TrackSelector) Set Select a selector based on the Track configuration
  */
 class StreamSelector extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Selection type: PID | TRACK
      */
     public $SelectorType;
 
     /**
-     * @var PidSelector 
+     * @var PidSelector Based on the PID configuration selector
      */
     public $PidSelector;
 
     /**
-     * @var TrackSelector 
+     * @var TrackSelector Select a selector based on the Track configuration
      */
     public $TrackSelector;
 
     /**
-     * @param string $SelectorType 
-     * @param PidSelector $PidSelector 
-     * @param TrackSelector $TrackSelector 
+     * @param string $SelectorType Selection type: PID | TRACK
+     * @param PidSelector $PidSelector Based on the PID configuration selector
+     * @param TrackSelector $TrackSelector Select a selector based on the Track configuration
      */
     function __construct()
     {

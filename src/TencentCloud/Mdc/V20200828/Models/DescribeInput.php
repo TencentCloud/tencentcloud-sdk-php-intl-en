@@ -18,61 +18,53 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration information of the queried input.
+ * Query input configuration message.
  *
- * @method string getInputId() Obtain Input ID.
- * @method void setInputId(string $InputId) Set Input ID.
+ * @method string getInputId() Obtain Input Id.
+ * @method void setInputId(string $InputId) Set Input Id.
  * @method string getInputName() Obtain Input name.
  * @method void setInputName(string $InputName) Set Input name.
  * @method string getDescription() Obtain Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getProtocol() Obtain Input protocol.
  * @method void setProtocol(string $Protocol) Set Input protocol.
- * @method array getInputAddressList() Obtain Input address list.
- * @method void setInputAddressList(array $InputAddressList) Set Input address list.
- * @method array getAllowIpList() Obtain Input IP allowlist.
- * @method void setAllowIpList(array $AllowIpList) Set Input IP allowlist.
- * @method DescribeInputSRTSettings getSRTSettings() Obtain SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSRTSettings(DescribeInputSRTSettings $SRTSettings) Set SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method DescribeInputRTPSettings getRTPSettings() Obtain RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRTPSettings(DescribeInputRTPSettings $RTPSettings) Set RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getInputAddressList() Obtain Input the address list.
+ * @method void setInputAddressList(array $InputAddressList) Set Input the address list.
+ * @method array getAllowIpList() Obtain Input the IP whitelist list.
+ * @method void setAllowIpList(array $AllowIpList) Set Input the IP whitelist list.
+ * @method DescribeInputSRTSettings getSRTSettings() Obtain SRT configuration information of the input.
+ * @method void setSRTSettings(DescribeInputSRTSettings $SRTSettings) Set SRT configuration information of the input.
+ * @method DescribeInputRTPSettings getRTPSettings() Obtain Input RTP configuration message.
+ * @method void setRTPSettings(DescribeInputRTPSettings $RTPSettings) Set Input RTP configuration message.
  * @method string getInputRegion() Obtain Input region.
  * @method void setInputRegion(string $InputRegion) Set Input region.
- * @method DescribeInputRTMPSettings getRTMPSettings() Obtain RTMP configuration information of an input
- * @method void setRTMPSettings(DescribeInputRTMPSettings $RTMPSettings) Set RTMP configuration information of an input
- * @method string getFailOver() Obtain Input failover
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setFailOver(string $FailOver) Set Input failover
-Note: this field may return `null`, indicating that no valid value was found.
- * @method array getZones() Obtain Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
- * @method void setZones(array $Zones) Set Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
- * @method DescribeInputRTMPPullSettings getRTMPPullSettings() Obtain The input RTMP_PULL configuration information.
- * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) Set The input RTMP_PULL configuration information.
- * @method DescribeInputRTSPPullSettings getRTSPPullSettings() Obtain The RTSP_PULL configuration information entered.
- * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) Set The RTSP_PULL configuration information entered.
- * @method DescribeInputHLSPullSettings getHLSPullSettings() Obtain The input HLS-PULL configuration information.
- * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) Set The input HLS-PULL configuration information.
- * @method ResilientStreamConf getResilientStream() Obtain Extended smooth streaming configuration information.
- * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set Extended smooth streaming configuration information.
- * @method array getSecurityGroupIds() Obtain The bound security group ID.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group ID.
- * @method DescribeInputRISTSettings getRISTSettings() Obtain The input RIST configuration information.
- * @method void setRISTSettings(DescribeInputRISTSettings $RISTSettings) Set The input RIST configuration information.
- * @method array getStreamUrls() Obtain Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
- * @method void setStreamUrls(array $StreamUrls) Set Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
- * @method FailOverOption getFailOverOption() Obtain Disaster recovery configuration items
- * @method void setFailOverOption(FailOverOption $FailOverOption) Set Disaster recovery configuration items
+ * @method DescribeInputRTMPSettings getRTMPSettings() Obtain Input RTMP configuration message.
+ * @method void setRTMPSettings(DescribeInputRTMPSettings $RTMPSettings) Set Input RTMP configuration message.
+ * @method string getFailOver() Obtain Primary/replica switch input.
+ * @method void setFailOver(string $FailOver) Set Primary/replica switch input.
+ * @method array getZones() Obtain Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
+ * @method void setZones(array $Zones) Set Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
+ * @method DescribeInputRTMPPullSettings getRTMPPullSettings() Obtain Input RTMP_PULL configuration message.
+ * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) Set Input RTMP_PULL configuration message.
+ * @method DescribeInputRTSPPullSettings getRTSPPullSettings() Obtain Input RTSP_PULL configuration message.
+ * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) Set Input RTSP_PULL configuration message.
+ * @method DescribeInputHLSPullSettings getHLSPullSettings() Obtain Input HLS_PULL configuration message.
+ * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) Set Input HLS_PULL configuration message.
+ * @method ResilientStreamConf getResilientStream() Obtain Configuration message for smooth streaming during delayed broadcasting.
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set Configuration message for smooth streaming during delayed broadcasting.
+ * @method array getSecurityGroupIds() Obtain Bound input security group ID.	
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Bound input security group ID.	
+ * @method DescribeInputRISTSettings getRISTSettings() Obtain Input RIST configuration message.
+ * @method void setRISTSettings(DescribeInputRISTSettings $RISTSettings) Set Input RIST configuration message.
+ * @method array getStreamUrls() Obtain Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
+ * @method void setStreamUrls(array $StreamUrls) Set Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
+ * @method FailOverOption getFailOverOption() Obtain Disaster recovery configuration item
+ * @method void setFailOverOption(FailOverOption $FailOverOption) Set Disaster recovery configuration item
  */
 class DescribeInput extends AbstractModel
 {
     /**
-     * @var string Input ID.
+     * @var string Input Id.
      */
     public $InputId;
 
@@ -83,7 +75,6 @@ class DescribeInput extends AbstractModel
 
     /**
      * @var string Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
@@ -93,24 +84,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var array Input address list.
+     * @var array Input the address list.
      */
     public $InputAddressList;
 
     /**
-     * @var array Input IP allowlist.
+     * @var array Input the IP whitelist list.
      */
     public $AllowIpList;
 
     /**
-     * @var DescribeInputSRTSettings SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var DescribeInputSRTSettings SRT configuration information of the input.
      */
     public $SRTSettings;
 
     /**
-     * @var DescribeInputRTPSettings RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var DescribeInputRTPSettings Input RTP configuration message.
      */
     public $RTPSettings;
 
@@ -120,86 +109,81 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InputRegion;
 
     /**
-     * @var DescribeInputRTMPSettings RTMP configuration information of an input
+     * @var DescribeInputRTMPSettings Input RTMP configuration message.
      */
     public $RTMPSettings;
 
     /**
-     * @var string Input failover
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string Primary/replica switch input.
      */
     public $FailOver;
 
     /**
-     * @var array Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     * @var array Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
      */
     public $Zones;
 
     /**
-     * @var DescribeInputRTMPPullSettings The input RTMP_PULL configuration information.
+     * @var DescribeInputRTMPPullSettings Input RTMP_PULL configuration message.
      */
     public $RTMPPullSettings;
 
     /**
-     * @var DescribeInputRTSPPullSettings The RTSP_PULL configuration information entered.
+     * @var DescribeInputRTSPPullSettings Input RTSP_PULL configuration message.
      */
     public $RTSPPullSettings;
 
     /**
-     * @var DescribeInputHLSPullSettings The input HLS-PULL configuration information.
+     * @var DescribeInputHLSPullSettings Input HLS_PULL configuration message.
      */
     public $HLSPullSettings;
 
     /**
-     * @var ResilientStreamConf Extended smooth streaming configuration information.
+     * @var ResilientStreamConf Configuration message for smooth streaming during delayed broadcasting.
      */
     public $ResilientStream;
 
     /**
-     * @var array The bound security group ID.
+     * @var array Bound input security group ID.	
      */
     public $SecurityGroupIds;
 
     /**
-     * @var DescribeInputRISTSettings The input RIST configuration information.
+     * @var DescribeInputRISTSettings Input RIST configuration message.
      */
     public $RISTSettings;
 
     /**
-     * @var array Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     * @var array Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
      */
     public $StreamUrls;
 
     /**
-     * @var FailOverOption Disaster recovery configuration items
+     * @var FailOverOption Disaster recovery configuration item
      */
     public $FailOverOption;
 
     /**
-     * @param string $InputId Input ID.
+     * @param string $InputId Input Id.
      * @param string $InputName Input name.
      * @param string $Description Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Protocol Input protocol.
-     * @param array $InputAddressList Input address list.
-     * @param array $AllowIpList Input IP allowlist.
-     * @param DescribeInputSRTSettings $SRTSettings SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DescribeInputRTPSettings $RTPSettings RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $InputAddressList Input the address list.
+     * @param array $AllowIpList Input the IP whitelist list.
+     * @param DescribeInputSRTSettings $SRTSettings SRT configuration information of the input.
+     * @param DescribeInputRTPSettings $RTPSettings Input RTP configuration message.
      * @param string $InputRegion Input region.
-     * @param DescribeInputRTMPSettings $RTMPSettings RTMP configuration information of an input
-     * @param string $FailOver Input failover
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $Zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
-     * @param DescribeInputRTMPPullSettings $RTMPPullSettings The input RTMP_PULL configuration information.
-     * @param DescribeInputRTSPPullSettings $RTSPPullSettings The RTSP_PULL configuration information entered.
-     * @param DescribeInputHLSPullSettings $HLSPullSettings The input HLS-PULL configuration information.
-     * @param ResilientStreamConf $ResilientStream Extended smooth streaming configuration information.
-     * @param array $SecurityGroupIds The bound security group ID.
-     * @param DescribeInputRISTSettings $RISTSettings The input RIST configuration information.
-     * @param array $StreamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
-     * @param FailOverOption $FailOverOption Disaster recovery configuration items
+     * @param DescribeInputRTMPSettings $RTMPSettings Input RTMP configuration message.
+     * @param string $FailOver Primary/replica switch input.
+     * @param array $Zones Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
+     * @param DescribeInputRTMPPullSettings $RTMPPullSettings Input RTMP_PULL configuration message.
+     * @param DescribeInputRTSPPullSettings $RTSPPullSettings Input RTSP_PULL configuration message.
+     * @param DescribeInputHLSPullSettings $HLSPullSettings Input HLS_PULL configuration message.
+     * @param ResilientStreamConf $ResilientStream Configuration message for smooth streaming during delayed broadcasting.
+     * @param array $SecurityGroupIds Bound input security group ID.	
+     * @param DescribeInputRISTSettings $RISTSettings Input RIST configuration message.
+     * @param array $StreamUrls Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
+     * @param FailOverOption $FailOverOption Disaster recovery configuration item
      */
     function __construct()
     {

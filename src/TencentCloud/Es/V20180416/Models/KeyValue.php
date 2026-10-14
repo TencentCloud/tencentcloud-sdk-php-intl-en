@@ -18,28 +18,28 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `OperationDetail` uses an array of this structure to describe the old and new configuration information
+ * OperationDetail uses an array of this structure to describe the old and new configuration
  *
- * @method string getKey() Obtain Key
- * @method void setKey(string $Key) Set Key
- * @method string getValue() Obtain Value
- * @method void setValue(string $Value) Set Value
+ * @method string getKey() Obtain Key.
+ * @method void setKey(string $Key) Set Key.
+ * @method string getValue() Obtain Value.
+ * @method void setValue(string $Value) Set Value.
  */
 class KeyValue extends AbstractModel
 {
     /**
-     * @var string Key
+     * @var string Key.
      */
     public $Key;
 
     /**
-     * @var string Value
+     * @var string Value.
      */
     public $Value;
 
     /**
-     * @param string $Key Key
-     * @param string $Value Value
+     * @param string $Key Key.
+     * @param string $Value Value.
      */
     function __construct()
     {

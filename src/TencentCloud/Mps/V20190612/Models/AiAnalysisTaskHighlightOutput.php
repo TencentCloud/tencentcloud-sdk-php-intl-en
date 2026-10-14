@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getHighlightSet() Obtain Intelligent video highlight list.
  * @method void setHighlightSet(array $HighlightSet) Set Intelligent video highlight list.
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of highlights.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of highlights.
  */
 class AiAnalysisTaskHighlightOutput extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
     public $HighlightSet;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage Storage location of highlights.
      */
     public $OutputStorage;
 
     /**
      * @param array $HighlightSet Intelligent video highlight list.
-     * @param TaskOutputStorage $OutputStorage 
+     * @param TaskOutputStorage $OutputStorage Storage location of highlights.
      */
     function __construct()
     {

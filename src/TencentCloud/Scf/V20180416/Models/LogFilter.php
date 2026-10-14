@@ -18,44 +18,44 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Log filtering criteria, which is for distinguishing between logs of successful and failed execution
+ * Log filter criteria, used to distinguish between correct and error logs
  *
- * @method string getRetCode() Obtain Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
- * @method void setRetCode(string $RetCode) Set Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+ * @method string getRetCode() Obtain Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
+ * @method void setRetCode(string $RetCode) Set Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
  */
 class LogFilter extends AbstractModel
 {
     /**
-     * @var string Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+     * @var string Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
      */
     public $RetCode;
 
     /**
-     * @param string $RetCode Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+     * @param string $RetCode Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
      */
     function __construct()
     {

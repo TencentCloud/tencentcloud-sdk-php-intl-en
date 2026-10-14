@@ -18,84 +18,104 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The SRT configuration of the output to create.
+ * Create the SRT configuration for the output of a media transmission stream.
  *
- * @method array getDestinations() Obtain The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
- * @method void setDestinations(array $Destinations) Set The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
- * @method string getStreamId() Obtain The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
- * @method void setStreamId(string $StreamId) Set The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
- * @method integer getLatency() Obtain The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
- * @method void setLatency(integer $Latency) Set The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
- * @method integer getRecvLatency() Obtain The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
- * @method void setRecvLatency(integer $RecvLatency) Set The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
- * @method integer getPeerLatency() Obtain The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
- * @method void setPeerLatency(integer $PeerLatency) Set The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
- * @method integer getPeerIdleTimeout() Obtain The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
- * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) Set The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
- * @method string getPassphrase() Obtain The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
- * @method void setPassphrase(string $Passphrase) Set The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
- * @method integer getPbKeyLen() Obtain The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
- * @method void setPbKeyLen(integer $PbKeyLen) Set The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
- * @method string getMode() Obtain The SRT mode. Valid values: LISTENER, CALLER (default).
- * @method void setMode(string $Mode) Set The SRT mode. Valid values: LISTENER, CALLER (default).
+ * @method array getDestinations() Obtain Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
+ * @method void setDestinations(array $Destinations) Set Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
+ * @method string getMode() Obtain SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
+ * @method void setMode(string $Mode) Set SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
+ * @method string getStreamId() Obtain Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+ * @method void setStreamId(string $StreamId) Set Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+ * @method integer getLatency() Obtain Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+ * @method void setLatency(integer $Latency) Set Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+ * @method integer getRecvLatency() Obtain Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+ * @method void setRecvLatency(integer $RecvLatency) Set Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+ * @method integer getPeerLatency() Obtain Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+ * @method void setPeerLatency(integer $PeerLatency) Set Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+ * @method integer getPeerIdleTimeout() Obtain Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+ * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) Set Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+ * @method string getPassphrase() Obtain Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+ * @method void setPassphrase(string $Passphrase) Set Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+ * @method integer getPbKeyLen() Obtain Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+ * @method void setPbKeyLen(integer $PbKeyLen) Set Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+ * @method SRTFECFullOptions getFEC() Obtain SRT FEC settings
+ * @method void setFEC(SRTFECFullOptions $FEC) Set SRT FEC settings
  */
 class CreateOutputSrtSettings extends AbstractModel
 {
     /**
-     * @var array The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     * @var array Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
      */
     public $Destinations;
 
     /**
-     * @var string The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-     */
-    public $StreamId;
-
-    /**
-     * @var integer The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     */
-    public $Latency;
-
-    /**
-     * @var integer The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
-     */
-    public $RecvLatency;
-
-    /**
-     * @var integer The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     */
-    public $PeerLatency;
-
-    /**
-     * @var integer The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
-     */
-    public $PeerIdleTimeout;
-
-    /**
-     * @var string The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
-     */
-    public $Passphrase;
-
-    /**
-     * @var integer The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
-     */
-    public $PbKeyLen;
-
-    /**
-     * @var string The SRT mode. Valid values: LISTENER, CALLER (default).
+     * @var string SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
      */
     public $Mode;
 
     /**
-     * @param array $Destinations The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
-     * @param string $StreamId The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-     * @param integer $Latency The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     * @param integer $RecvLatency The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
-     * @param integer $PeerLatency The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     * @param integer $PeerIdleTimeout The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
-     * @param string $Passphrase The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
-     * @param integer $PbKeyLen The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
-     * @param string $Mode The SRT mode. Valid values: LISTENER, CALLER (default).
+     * @var string Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+     */
+    public $StreamId;
+
+    /**
+     * @var integer Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+     */
+    public $Latency;
+
+    /**
+     * @var integer Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+     */
+    public $RecvLatency;
+
+    /**
+     * @var integer Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+     */
+    public $PeerLatency;
+
+    /**
+     * @var integer Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+     */
+    public $PeerIdleTimeout;
+
+    /**
+     * @var string Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+     */
+    public $Passphrase;
+
+    /**
+     * @var integer Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+     */
+    public $PbKeyLen;
+
+    /**
+     * @var SRTFECFullOptions SRT FEC settings
+     */
+    public $FEC;
+
+    /**
+     * @param array $Destinations Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
+     * @param string $Mode SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
+     * @param string $StreamId Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+     * @param integer $Latency Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+     * @param integer $RecvLatency Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+     * @param integer $PeerLatency Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+     * @param integer $PeerIdleTimeout Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+     * @param string $Passphrase Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+     * @param integer $PbKeyLen Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+     * @param SRTFECFullOptions $FEC SRT FEC settings
      */
     function __construct()
     {
@@ -117,6 +137,10 @@ class CreateOutputSrtSettings extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Destinations, $obj);
             }
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
@@ -147,8 +171,9 @@ class CreateOutputSrtSettings extends AbstractModel
             $this->PbKeyLen = $param["PbKeyLen"];
         }
 
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists("FEC",$param) and $param["FEC"] !== null) {
+            $this->FEC = new SRTFECFullOptions();
+            $this->FEC->deserialize($param["FEC"]);
         }
     }
 }

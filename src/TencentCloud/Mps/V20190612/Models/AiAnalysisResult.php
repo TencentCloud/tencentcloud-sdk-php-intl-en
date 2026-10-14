@@ -20,186 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent analysis result
  *
- * @method string getType() Obtain Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
- * @method void setType(string $Type) Set Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
- * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain 
- * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set 
- * @method AiAnalysisTaskCoverResult getCoverTask() Obtain 
- * @method void setCoverTask(AiAnalysisTaskCoverResult $CoverTask) Set 
- * @method AiAnalysisTaskTagResult getTagTask() Obtain 
- * @method void setTagTask(AiAnalysisTaskTagResult $TagTask) Set 
- * @method AiAnalysisTaskFrameTagResult getFrameTagTask() Obtain 
- * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) Set 
- * @method AiAnalysisTaskHighlightResult getHighlightTask() Obtain 
- * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) Set 
- * @method AiAnalysisTaskDelLogoResult getDeLogoTask() Obtain 
- * @method void setDeLogoTask(AiAnalysisTaskDelLogoResult $DeLogoTask) Set 
- * @method AiAnalysisTaskSegmentResult getSegmentTask() Obtain 
- * @method void setSegmentTask(AiAnalysisTaskSegmentResult $SegmentTask) Set 
- * @method AiAnalysisTaskHeadTailResult getHeadTailTask() Obtain 
- * @method void setHeadTailTask(AiAnalysisTaskHeadTailResult $HeadTailTask) Set 
- * @method AiAnalysisTaskDescriptionResult getDescriptionTask() Obtain 
- * @method void setDescriptionTask(AiAnalysisTaskDescriptionResult $DescriptionTask) Set 
- * @method AiAnalysisTaskHorizontalToVerticalResult getHorizontalToVerticalTask() Obtain 
- * @method void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask) Set 
- * @method AiAnalysisTaskDubbingResult getDubbingTask() Obtain 
- * @method void setDubbingTask(AiAnalysisTaskDubbingResult $DubbingTask) Set 
- * @method AiAnalysisTaskVideoRemakeResult getVideoRemakeTask() Obtain 
- * @method void setVideoRemakeTask(AiAnalysisTaskVideoRemakeResult $VideoRemakeTask) Set 
- * @method AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() Obtain 
- * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) Set 
- * @method AiAnalysisTaskCutoutResult getCutoutTask() Obtain 
- * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) Set 
- * @method AiAnalysisTaskReelResult getReelTask() Obtain 
- * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) Set 
+ * @method string getType() Obtain <p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
+ * @method void setType(string $Type) Set <p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
+ * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain <p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
+ * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set <p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
+ * @method AiAnalysisTaskCoverResult getCoverTask() Obtain <p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
+ * @method void setCoverTask(AiAnalysisTaskCoverResult $CoverTask) Set <p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
+ * @method AiAnalysisTaskTagResult getTagTask() Obtain <p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
+ * @method void setTagTask(AiAnalysisTaskTagResult $TagTask) Set <p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
+ * @method AiAnalysisTaskFrameTagResult getFrameTagTask() Obtain <p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
+ * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) Set <p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
+ * @method AiAnalysisTaskHighlightResult getHighlightTask() Obtain <p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
+ * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) Set <p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
+ * @method AiAnalysisTaskDelLogoResult getDeLogoTask() Obtain <p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
+ * @method void setDeLogoTask(AiAnalysisTaskDelLogoResult $DeLogoTask) Set <p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
+ * @method AiAnalysisTaskSegmentResult getSegmentTask() Obtain <p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
+ * @method void setSegmentTask(AiAnalysisTaskSegmentResult $SegmentTask) Set <p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
+ * @method AiAnalysisTaskHeadTailResult getHeadTailTask() Obtain <p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
+ * @method void setHeadTailTask(AiAnalysisTaskHeadTailResult $HeadTailTask) Set <p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
+ * @method AiAnalysisTaskDescriptionResult getDescriptionTask() Obtain <p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
+ * @method void setDescriptionTask(AiAnalysisTaskDescriptionResult $DescriptionTask) Set <p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
+ * @method AiAnalysisTaskHorizontalToVerticalResult getHorizontalToVerticalTask() Obtain <p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
+ * @method void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask) Set <p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
+ * @method AiAnalysisTaskDubbingResult getDubbingTask() Obtain <p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
+ * @method void setDubbingTask(AiAnalysisTaskDubbingResult $DubbingTask) Set <p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
+ * @method AiAnalysisTaskVideoRemakeResult getVideoRemakeTask() Obtain <p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
+ * @method void setVideoRemakeTask(AiAnalysisTaskVideoRemakeResult $VideoRemakeTask) Set <p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
+ * @method AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() Obtain <p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
+ * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) Set <p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
+ * @method AiAnalysisTaskCutoutResult getCutoutTask() Obtain <p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
+ * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) Set <p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
+ * @method AiAnalysisTaskReelResult getReelTask() Obtain <p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
+ * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) Set <p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
+ * @method AiAnalysisTaskGenericResult getGenericTask() Obtain <p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
+ * @method void setGenericTask(AiAnalysisTaskGenericResult $GenericTask) Set <p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
  */
 class AiAnalysisResult extends AbstractModel
 {
     /**
-     * @var string Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
+     * @var string <p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
      */
     public $Type;
 
     /**
-     * @var AiAnalysisTaskClassificationResult 
+     * @var AiAnalysisTaskClassificationResult <p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
      */
     public $ClassificationTask;
 
     /**
-     * @var AiAnalysisTaskCoverResult 
+     * @var AiAnalysisTaskCoverResult <p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
      */
     public $CoverTask;
 
     /**
-     * @var AiAnalysisTaskTagResult 
+     * @var AiAnalysisTaskTagResult <p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
      */
     public $TagTask;
 
     /**
-     * @var AiAnalysisTaskFrameTagResult 
+     * @var AiAnalysisTaskFrameTagResult <p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
      */
     public $FrameTagTask;
 
     /**
-     * @var AiAnalysisTaskHighlightResult 
+     * @var AiAnalysisTaskHighlightResult <p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
      */
     public $HighlightTask;
 
     /**
-     * @var AiAnalysisTaskDelLogoResult 
+     * @var AiAnalysisTaskDelLogoResult <p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
      */
     public $DeLogoTask;
 
     /**
-     * @var AiAnalysisTaskSegmentResult 
+     * @var AiAnalysisTaskSegmentResult <p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
      */
     public $SegmentTask;
 
     /**
-     * @var AiAnalysisTaskHeadTailResult 
+     * @var AiAnalysisTaskHeadTailResult <p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
      */
     public $HeadTailTask;
 
     /**
-     * @var AiAnalysisTaskDescriptionResult 
+     * @var AiAnalysisTaskDescriptionResult <p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
      */
     public $DescriptionTask;
 
     /**
-     * @var AiAnalysisTaskHorizontalToVerticalResult 
+     * @var AiAnalysisTaskHorizontalToVerticalResult <p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
      */
     public $HorizontalToVerticalTask;
 
     /**
-     * @var AiAnalysisTaskDubbingResult 
+     * @var AiAnalysisTaskDubbingResult <p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
      */
     public $DubbingTask;
 
     /**
-     * @var AiAnalysisTaskVideoRemakeResult 
+     * @var AiAnalysisTaskVideoRemakeResult <p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
      */
     public $VideoRemakeTask;
 
     /**
-     * @var AiAnalysisTaskVideoComprehensionResult 
+     * @var AiAnalysisTaskVideoComprehensionResult <p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
      */
     public $VideoComprehensionTask;
 
     /**
-     * @var AiAnalysisTaskCutoutResult 
+     * @var AiAnalysisTaskCutoutResult <p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
      */
     public $CutoutTask;
 
     /**
-     * @var AiAnalysisTaskReelResult 
+     * @var AiAnalysisTaskReelResult <p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
      */
     public $ReelTask;
 
     /**
-     * @param string $Type Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
-     * @param AiAnalysisTaskClassificationResult $ClassificationTask 
-     * @param AiAnalysisTaskCoverResult $CoverTask 
-     * @param AiAnalysisTaskTagResult $TagTask 
-     * @param AiAnalysisTaskFrameTagResult $FrameTagTask 
-     * @param AiAnalysisTaskHighlightResult $HighlightTask 
-     * @param AiAnalysisTaskDelLogoResult $DeLogoTask 
-     * @param AiAnalysisTaskSegmentResult $SegmentTask 
-     * @param AiAnalysisTaskHeadTailResult $HeadTailTask 
-     * @param AiAnalysisTaskDescriptionResult $DescriptionTask 
-     * @param AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask 
-     * @param AiAnalysisTaskDubbingResult $DubbingTask 
-     * @param AiAnalysisTaskVideoRemakeResult $VideoRemakeTask 
-     * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask 
-     * @param AiAnalysisTaskCutoutResult $CutoutTask 
-     * @param AiAnalysisTaskReelResult $ReelTask 
+     * @var AiAnalysisTaskGenericResult <p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
+     */
+    public $GenericTask;
+
+    /**
+     * @param string $Type <p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
+     * @param AiAnalysisTaskClassificationResult $ClassificationTask <p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
+     * @param AiAnalysisTaskCoverResult $CoverTask <p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
+     * @param AiAnalysisTaskTagResult $TagTask <p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
+     * @param AiAnalysisTaskFrameTagResult $FrameTagTask <p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
+     * @param AiAnalysisTaskHighlightResult $HighlightTask <p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
+     * @param AiAnalysisTaskDelLogoResult $DeLogoTask <p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
+     * @param AiAnalysisTaskSegmentResult $SegmentTask <p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
+     * @param AiAnalysisTaskHeadTailResult $HeadTailTask <p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
+     * @param AiAnalysisTaskDescriptionResult $DescriptionTask <p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
+     * @param AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask <p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
+     * @param AiAnalysisTaskDubbingResult $DubbingTask <p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
+     * @param AiAnalysisTaskVideoRemakeResult $VideoRemakeTask <p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
+     * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask <p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
+     * @param AiAnalysisTaskCutoutResult $CutoutTask <p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
+     * @param AiAnalysisTaskReelResult $ReelTask <p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
+     * @param AiAnalysisTaskGenericResult $GenericTask <p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
      */
     function __construct()
     {
@@ -291,6 +251,11 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("ReelTask",$param) and $param["ReelTask"] !== null) {
             $this->ReelTask = new AiAnalysisTaskReelResult();
             $this->ReelTask->deserialize($param["ReelTask"]);
+        }
+
+        if (array_key_exists("GenericTask",$param) and $param["GenericTask"] !== null) {
+            $this->GenericTask = new AiAnalysisTaskGenericResult();
+            $this->GenericTask->deserialize($param["GenericTask"]);
         }
     }
 }

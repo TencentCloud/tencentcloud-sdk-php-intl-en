@@ -20,44 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Live stream media quality inspection result.
  *
- * @method array getQualityControlResults() Obtain 
- * @method void setQualityControlResults(array $QualityControlResults) Set 
- * @method array getDiagnoseResults() Obtain 
- * @method void setDiagnoseResults(array $DiagnoseResults) Set 
- * @method array getQualityControlResultSet() Obtain 
- * @method void setQualityControlResultSet(array $QualityControlResultSet) Set 
- * @method array getDiagnoseResultSet() Obtain 
- * @method void setDiagnoseResultSet(array $DiagnoseResultSet) Set 
+ * @method array getQualityControlResults() Obtain Content quality inspection result list.
+ * @method void setQualityControlResults(array $QualityControlResults) Set Content quality inspection result list.
+ * @method array getDiagnoseResults() Obtain Format diagnostic result list.
+ * @method void setDiagnoseResults(array $DiagnoseResults) Set Format diagnostic result list.
+ * @method array getQualityControlResultSet() Obtain Content quality inspection result list.
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Content quality inspection result list.
+ * @method array getDiagnoseResultSet() Obtain Format diagnostic result list.
+ * @method void setDiagnoseResultSet(array $DiagnoseResultSet) Set Format diagnostic result list.
  */
 class LiveStreamAiQualityControlResultInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Content quality inspection result list.
      * @deprecated
      */
     public $QualityControlResults;
 
     /**
-     * @var array 
+     * @var array Format diagnostic result list.
      * @deprecated
      */
     public $DiagnoseResults;
 
     /**
-     * @var array 
+     * @var array Content quality inspection result list.
      */
     public $QualityControlResultSet;
 
     /**
-     * @var array 
+     * @var array Format diagnostic result list.
      */
     public $DiagnoseResultSet;
 
     /**
-     * @param array $QualityControlResults 
-     * @param array $DiagnoseResults 
-     * @param array $QualityControlResultSet 
-     * @param array $DiagnoseResultSet 
+     * @param array $QualityControlResults Content quality inspection result list.
+     * @param array $DiagnoseResults Format diagnostic result list.
+     * @param array $QualityControlResultSet Content quality inspection result list.
+     * @param array $DiagnoseResultSet Format diagnostic result list.
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Face Recognition result
+ * Face recognition result
  *
- * @method string getId() Obtain Unique identification ID of the figure.
- * @method void setId(string $Id) Set Unique identification ID of the figure.
- * @method string getType() Obtain Figure library type, indicates which figure library the recognized figure comes from.
+ * @method string getId() Obtain Unique identification ID of the person.
+ * @method void setId(string $Id) Set Unique identification ID of the person.
+ * @method string getType() Obtain Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
- * @method void setType(string $Type) Set Figure library type, indicates which figure library the recognized figure comes from.
+ * @method void setType(string $Type) Set Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
  * @method string getName() Obtain Figure name.
  * @method void setName(string $Name) Set Figure name.
- * @method array getSegmentSet() Obtain Result set of segments that contain people.
- * @method void setSegmentSet(array $SegmentSet) Set Result set of segments that contain people.
- * @method string getGender() Obtain Gender
-<li>Male: man</li>
+ * @method array getSegmentSet() Obtain Result set of segments where the person appears.
+ * @method void setSegmentSet(array $SegmentSet) Set Result set of segments where the person appears.
+ * @method string getGender() Obtain Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
- * @method void setGender(string $Gender) Set Gender
-<li>Male: man</li>
+ * @method void setGender(string $Gender) Set Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
- * @method string getBirthday() Obtain Date of birth of a person.
- * @method void setBirthday(string $Birthday) Set Date of birth of a person.
- * @method string getProfession() Obtain Occupation or position.
- * @method void setProfession(string $Profession) Set Occupation or position.
- * @method string getSchoolOfGraduation() Obtain Graduation institution of the person.
- * @method void setSchoolOfGraduation(string $SchoolOfGraduation) Set Graduation institution of the person.
- * @method string getAbstract() Obtain Figure description.
- * @method void setAbstract(string $Abstract) Set Figure description.
- * @method string getPlaceOfBirth() Obtain Birthplace or place of origin of a person.
- * @method void setPlaceOfBirth(string $PlaceOfBirth) Set Birthplace or place of origin of a person.
+ * @method string getBirthday() Obtain Date of birth of the person.
+ * @method void setBirthday(string $Birthday) Set Date of birth of the person.
+ * @method string getProfession() Obtain Person's occupation or position.
+ * @method void setProfession(string $Profession) Set Person's occupation or position.
+ * @method string getSchoolOfGraduation() Obtain University of the person
+ * @method void setSchoolOfGraduation(string $SchoolOfGraduation) Set University of the person
+ * @method string getAbstract() Obtain Figure introduction.
+ * @method void setAbstract(string $Abstract) Set Figure introduction.
+ * @method string getPlaceOfBirth() Obtain Birthplace or place of origin of the person.
+ * @method void setPlaceOfBirth(string $PlaceOfBirth) Set Birthplace or place of origin of the person.
  * @method string getPersonType() Obtain Person type:
 <li>Politician: official.</li>
 <li>Artist: artist.</li>
@@ -55,23 +55,23 @@ use TencentCloud\Common\AbstractModel;
 <li>Politician: official.</li>
 <li>Artist: artist.</li>
  * @method string getRemark() Obtain Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
  * @method void setRemark(string $Remark) Set Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
- * @method string getUrl() Obtain Screenshot link
- * @method void setUrl(string $Url) Set Screenshot link
+ * @method string getUrl() Obtain Screenshot link.
+ * @method void setUrl(string $Url) Set Screenshot link.
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
     /**
-     * @var string Unique identification ID of the figure.
+     * @var string Unique identification ID of the person.
      */
     public $Id;
 
     /**
-     * @var string Figure library type, indicates which figure library the recognized figure comes from.
+     * @var string Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      */
@@ -83,39 +83,39 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
     public $Name;
 
     /**
-     * @var array Result set of segments that contain people.
+     * @var array Result set of segments where the person appears.
      */
     public $SegmentSet;
 
     /**
-     * @var string Gender
-<li>Male: man</li>
+     * @var string Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
      */
     public $Gender;
 
     /**
-     * @var string Date of birth of a person.
+     * @var string Date of birth of the person.
      */
     public $Birthday;
 
     /**
-     * @var string Occupation or position.
+     * @var string Person's occupation or position.
      */
     public $Profession;
 
     /**
-     * @var string Graduation institution of the person.
+     * @var string University of the person
      */
     public $SchoolOfGraduation;
 
     /**
-     * @var string Figure description.
+     * @var string Figure introduction.
      */
     public $Abstract;
 
     /**
-     * @var string Birthplace or place of origin of a person.
+     * @var string Birthplace or place of origin of the person.
      */
     public $PlaceOfBirth;
 
@@ -128,38 +128,38 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
 
     /**
      * @var string Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
      */
     public $Remark;
 
     /**
-     * @var string Screenshot link
+     * @var string Screenshot link.
      */
     public $Url;
 
     /**
-     * @param string $Id Unique identification ID of the figure.
-     * @param string $Type Figure library type, indicates which figure library the recognized figure comes from.
+     * @param string $Id Unique identification ID of the person.
+     * @param string $Type Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      * @param string $Name Figure name.
-     * @param array $SegmentSet Result set of segments that contain people.
-     * @param string $Gender Gender
-<li>Male: man</li>
+     * @param array $SegmentSet Result set of segments where the person appears.
+     * @param string $Gender Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
-     * @param string $Birthday Date of birth of a person.
-     * @param string $Profession Occupation or position.
-     * @param string $SchoolOfGraduation Graduation institution of the person.
-     * @param string $Abstract Figure description.
-     * @param string $PlaceOfBirth Birthplace or place of origin of a person.
+     * @param string $Birthday Date of birth of the person.
+     * @param string $Profession Person's occupation or position.
+     * @param string $SchoolOfGraduation University of the person
+     * @param string $Abstract Figure introduction.
+     * @param string $PlaceOfBirth Birthplace or place of origin of the person.
      * @param string $PersonType Person type:
 <li>Politician: official.</li>
 <li>Artist: artist.</li>
      * @param string $Remark Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
-     * @param string $Url Screenshot link
+     * @param string $Url Screenshot link.
      */
     function __construct()
     {

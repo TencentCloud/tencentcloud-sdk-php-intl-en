@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RTP configuration information of the created input.
+ * Configuration message for creating an input RTP.
  *
- * @method string getFEC() Obtain Default value: none. Valid values: ['none'].
- * @method void setFEC(string $FEC) Set Default value: none. Valid values: ['none'].
- * @method integer getIdleTimeout() Obtain Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
- * @method void setIdleTimeout(integer $IdleTimeout) Set Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+ * @method string getFEC() Obtain Default value: "none". Available value: ['none'].
+ * @method void setFEC(string $FEC) Set Default value: "none". Available value: ['none'].
+ * @method integer getIdleTimeout() Obtain Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
+ * @method void setIdleTimeout(integer $IdleTimeout) Set Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
  */
 class CreateInputRTPSettings extends AbstractModel
 {
     /**
-     * @var string Default value: none. Valid values: ['none'].
+     * @var string Default value: "none". Available value: ['none'].
      */
     public $FEC;
 
     /**
-     * @var integer Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+     * @var integer Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
      */
     public $IdleTimeout;
 
     /**
-     * @param string $FEC Default value: none. Valid values: ['none'].
-     * @param integer $IdleTimeout Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+     * @param string $FEC Default value: "none". Available value: ['none'].
+     * @param integer $IdleTimeout Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
      */
     function __construct()
     {

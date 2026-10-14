@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio and video track selection
  *
- * @method array getVideoIndex() Obtain 
- * @method void setVideoIndex(array $VideoIndex) Set 
- * @method array getAudioIndex() Obtain 
- * @method void setAudioIndex(array $AudioIndex) Set 
+ * @method array getVideoIndex() Obtain Video track serial number. It starts from 1. Maximum value: 32.
+ * @method void setVideoIndex(array $VideoIndex) Set Video track serial number. It starts from 1. Maximum value: 32.
+ * @method array getAudioIndex() Obtain Video track serial number. Starts from 1. Maximum value: 32.
+ * @method void setAudioIndex(array $AudioIndex) Set Video track serial number. Starts from 1. Maximum value: 32.
  */
 class TrackSelector extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Video track serial number. It starts from 1. Maximum value: 32.
      */
     public $VideoIndex;
 
     /**
-     * @var array 
+     * @var array Video track serial number. Starts from 1. Maximum value: 32.
      */
     public $AudioIndex;
 
     /**
-     * @param array $VideoIndex 
-     * @param array $AudioIndex 
+     * @param array $VideoIndex Video track serial number. It starts from 1. Maximum value: 32.
+     * @param array $AudioIndex Video track serial number. Starts from 1. Maximum value: 32.
      */
     function __construct()
     {

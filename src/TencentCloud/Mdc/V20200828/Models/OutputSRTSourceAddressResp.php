@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The listen address for an SRT output.
+ * SRT output listening address.
  *
- * @method string getIp() Obtain The listen IP.
- * @method void setIp(string $Ip) Set The listen IP.
- * @method integer getPort() Obtain The listen port.
- * @method void setPort(integer $Port) Set The listen port.
+ * @method string getIp() Obtain Listening IP.
+ * @method void setIp(string $Ip) Set Listening IP.
+ * @method integer getPort() Obtain Listening port.
+ * @method void setPort(integer $Port) Set Listening port.
  */
 class OutputSRTSourceAddressResp extends AbstractModel
 {
     /**
-     * @var string The listen IP.
+     * @var string Listening IP.
      */
     public $Ip;
 
     /**
-     * @var integer The listen port.
+     * @var integer Listening port.
      */
     public $Port;
 
     /**
-     * @param string $Ip The listen IP.
-     * @param integer $Port The listen port.
+     * @param string $Ip Listening IP.
+     * @param integer $Port Listening port.
      */
     function __construct()
     {

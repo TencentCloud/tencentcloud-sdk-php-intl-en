@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Live streaming AI face recognition result.
  *
- * @method string getId() Obtain Unique identification ID of a figure.
- * @method void setId(string $Id) Set Unique identification ID of a figure.
- * @method string getName() Obtain Figure name.
- * @method void setName(string $Name) Set Figure name.
- * @method string getType() Obtain Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
- * @method void setType(string $Type) Set Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+ * @method string getId() Obtain Unique identification ID of a person.
+ * @method void setId(string $Id) Set Unique identification ID of a person.
+ * @method string getName() Obtain Character name.
+ * @method void setName(string $Name) Set Character name.
+ * @method string getType() Obtain Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
+ * @method void setType(string $Type) Set Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
  * @method float getStartPtsTime() Obtain Start PTS time of a recognized segment, in seconds.
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a recognized segment, in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a recognized segment, in seconds.
@@ -40,18 +40,18 @@ use TencentCloud\Common\AbstractModel;
 class LiveStreamFaceRecognitionResult extends AbstractModel
 {
     /**
-     * @var string Unique identification ID of a figure.
+     * @var string Unique identification ID of a person.
      */
     public $Id;
 
     /**
-     * @var string Figure name.
+     * @var string Character name.
      */
     public $Name;
 
     /**
-     * @var string Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+     * @var string Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
      */
     public $Type;
 
@@ -76,10 +76,10 @@ class LiveStreamFaceRecognitionResult extends AbstractModel
     public $AreaCoordSet;
 
     /**
-     * @param string $Id Unique identification ID of a figure.
-     * @param string $Name Figure name.
-     * @param string $Type Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+     * @param string $Id Unique identification ID of a person.
+     * @param string $Name Character name.
+     * @param string $Type Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
      * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
      * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
      * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.

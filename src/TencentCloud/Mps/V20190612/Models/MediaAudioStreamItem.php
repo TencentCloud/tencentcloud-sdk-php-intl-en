@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSamplingRate(integer $SamplingRate) Set Sampling rate of the audio stream. Unit: hz.
  * @method string getCodec() Obtain Audio stream encoding format, for example, aac.
  * @method void setCodec(string $Codec) Set Audio stream encoding format, for example, aac.
- * @method integer getChannel() Obtain 
- * @method void setChannel(integer $Channel) Set 
- * @method string getCodecs() Obtain 
- * @method void setCodecs(string $Codecs) Set 
- * @method float getLoudness() Obtain 
- * @method void setLoudness(float $Loudness) Set 
+ * @method integer getChannel() Obtain Number of audio channels, for example, 2.
+ * @method void setChannel(integer $Channel) Set Number of audio channels, for example, 2.
+ * @method string getCodecs() Obtain Audio Codecs.
+ * @method void setCodecs(string $Codecs) Set Audio Codecs.
+ * @method float getLoudness() Obtain Audio loudness.
+ * @method void setLoudness(float $Loudness) Set Audio loudness.
  */
 class MediaAudioStreamItem extends AbstractModel
 {
@@ -51,17 +51,17 @@ class MediaAudioStreamItem extends AbstractModel
     public $Codec;
 
     /**
-     * @var integer 
+     * @var integer Number of audio channels, for example, 2.
      */
     public $Channel;
 
     /**
-     * @var string 
+     * @var string Audio Codecs.
      */
     public $Codecs;
 
     /**
-     * @var float 
+     * @var float Audio loudness.
      */
     public $Loudness;
 
@@ -69,9 +69,9 @@ class MediaAudioStreamItem extends AbstractModel
      * @param integer $Bitrate Bitrate of the audio stream. Unit: bps.
      * @param integer $SamplingRate Sampling rate of the audio stream. Unit: hz.
      * @param string $Codec Audio stream encoding format, for example, aac.
-     * @param integer $Channel 
-     * @param string $Codecs 
-     * @param float $Loudness 
+     * @param integer $Channel Number of audio channels, for example, 2.
+     * @param string $Codecs Audio Codecs.
+     * @param float $Loudness Audio loudness.
      */
     function __construct()
     {

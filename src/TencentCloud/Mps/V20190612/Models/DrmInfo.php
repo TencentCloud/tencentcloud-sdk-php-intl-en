@@ -23,7 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() Obtain Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -42,16 +42,16 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
+For MPEG-DASH, only can be used in singlefile mode.
  * @method void setType(string $Type) Set Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -70,14 +70,14 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
- * @method SimpleAesDrm getSimpleAesDrm() Obtain 
- * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set 
+For MPEG-DASH, only can be used in singlefile mode.
+ * @method SimpleAesDrm getSimpleAesDrm() Obtain SimpleAes encryption information.
+ * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set SimpleAes encryption information.
  * @method SpekeDrm getSpekeDrm() Obtain Information about FairPlay, WideVine, and PlayReady encryption.
  * @method void setSpekeDrm(SpekeDrm $SpekeDrm) Set Information about FairPlay, WideVine, and PlayReady encryption.
  */
@@ -87,7 +87,7 @@ class DrmInfo extends AbstractModel
      * @var string Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -106,17 +106,17 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
+For MPEG-DASH, only can be used in singlefile mode.
      */
     public $Type;
 
     /**
-     * @var SimpleAesDrm 
+     * @var SimpleAesDrm SimpleAes encryption information.
      */
     public $SimpleAesDrm;
 
@@ -129,7 +129,7 @@ For MPEG-DASH, only singlefile mode can be used.
      * @param string $Type Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -148,13 +148,13 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
-     * @param SimpleAesDrm $SimpleAesDrm 
+For MPEG-DASH, only can be used in singlefile mode.
+     * @param SimpleAesDrm $SimpleAesDrm SimpleAes encryption information.
      * @param SpekeDrm $SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
      */
     function __construct()

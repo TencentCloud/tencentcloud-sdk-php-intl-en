@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeViews request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
+ * @method string getInstanceId() Obtain Cluster instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
  */
 class DescribeViewsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Cluster instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Cluster instance ID
+     * @param string $InstanceId Cluster instance ID.
      */
     function __construct()
     {

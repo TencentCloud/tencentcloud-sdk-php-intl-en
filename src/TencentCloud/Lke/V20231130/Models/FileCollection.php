@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * File collection information
  *
- * @method integer getMaxFileCount() Obtain 
- * @method void setMaxFileCount(integer $MaxFileCount) Set 
- * @method array getSupportedFileTypes() Obtain 
- * @method void setSupportedFileTypes(array $SupportedFileTypes) Set 
+ * @method integer getMaxFileCount() Obtain Maximum number of files to be uploaded
+ * @method void setMaxFileCount(integer $MaxFileCount) Set Maximum number of files to be uploaded
+ * @method array getSupportedFileTypes() Obtain Supported upload file types
+ * @method void setSupportedFileTypes(array $SupportedFileTypes) Set Supported upload file types
  */
 class FileCollection extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Maximum number of files to be uploaded
      */
     public $MaxFileCount;
 
     /**
-     * @var array 
+     * @var array Supported upload file types
      */
     public $SupportedFileTypes;
 
     /**
-     * @param integer $MaxFileCount 
-     * @param array $SupportedFileTypes 
+     * @param integer $MaxFileCount Maximum number of files to be uploaded
+     * @param array $SupportedFileTypes Supported upload file types
      */
     function __construct()
     {

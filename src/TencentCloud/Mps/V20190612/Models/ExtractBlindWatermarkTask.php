@@ -18,15 +18,15 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Extract video digital watermark task information
+ * Task information for extracting video digital watermark
  *
  * @method string getTaskId() Obtain Media processing task ID.
  * @method void setTaskId(string $TaskId) Set Media processing task ID.
- * @method string getStatus() Obtain Task flow status. Valid values:
+ * @method string getStatus() Obtain Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
- * @method void setStatus(string $Status) Set Task flow status. Valid values:
+ * @method void setStatus(string $Status) Set Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
@@ -34,16 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. `0` indicates success. Other values indicate failure.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method MediaInputInfo getInputInfo() Obtain Target file info of Media Processing Service.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Target file info of Media Processing Service.
+ * @method MediaInputInfo getInputInfo() Obtain Information of the media processing target file.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set Information of the media processing target file.
  * @method string getType() Obtain Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
  * @method void setType(string $Type) Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
- * @method boolean getIsDetected() Obtain Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
- * @method void setIsDetected(boolean $IsDetected) Set Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
- * @method string getResult() Obtain Watermark content fetched. Field will not be returned if no digital watermark is detected.
- * @method void setResult(string $Result) Set Watermark content fetched. Field will not be returned if no digital watermark is detected.
- * @method ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() Obtain Extract digital watermark configuration.
- * @method void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig) Set Extract digital watermark configuration.
+ * @method boolean getIsDetected() Obtain Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+ * @method void setIsDetected(boolean $IsDetected) Set Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+ * @method string getResult() Obtain Fetched digital watermark content. This field will not be returned if no watermark is detected.
+ * @method void setResult(string $Result) Set Fetched digital watermark content. This field will not be returned if no watermark is detected.
+ * @method ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() Obtain Configuration of digital watermark extraction.
+ * @method void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig) Set Configuration of digital watermark extraction.
  */
 class ExtractBlindWatermarkTask extends AbstractModel
 {
@@ -53,7 +53,7 @@ class ExtractBlindWatermarkTask extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Task flow status. Valid values:
+     * @var string Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
@@ -71,7 +71,7 @@ class ExtractBlindWatermarkTask extends AbstractModel
     public $Message;
 
     /**
-     * @var MediaInputInfo Target file info of Media Processing Service.
+     * @var MediaInputInfo Information of the media processing target file.
      */
     public $InputInfo;
 
@@ -81,33 +81,33 @@ class ExtractBlindWatermarkTask extends AbstractModel
     public $Type;
 
     /**
-     * @var boolean Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
+     * @var boolean Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
      */
     public $IsDetected;
 
     /**
-     * @var string Watermark content fetched. Field will not be returned if no digital watermark is detected.
+     * @var string Fetched digital watermark content. This field will not be returned if no watermark is detected.
      */
     public $Result;
 
     /**
-     * @var ExtractBlindWatermarkTaskConfig Extract digital watermark configuration.
+     * @var ExtractBlindWatermarkTaskConfig Configuration of digital watermark extraction.
      */
     public $ExtractBlindWatermarkConfig;
 
     /**
      * @param string $TaskId Media processing task ID.
-     * @param string $Status Task flow status. Valid values:
+     * @param string $Status Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      * @param integer $ErrCode Error code. `0` indicates success. Other values indicate failure.
      * @param string $Message Error message.
-     * @param MediaInputInfo $InputInfo Target file info of Media Processing Service.
+     * @param MediaInputInfo $InputInfo Information of the media processing target file.
      * @param string $Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
-     * @param boolean $IsDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
-     * @param string $Result Watermark content fetched. Field will not be returned if no digital watermark is detected.
-     * @param ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig Extract digital watermark configuration.
+     * @param boolean $IsDetected Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+     * @param string $Result Fetched digital watermark content. This field will not be returned if no watermark is detected.
+     * @param ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig Configuration of digital watermark extraction.
      */
     function __construct()
     {

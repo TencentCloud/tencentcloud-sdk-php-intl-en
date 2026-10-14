@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AWS S3 output location
  *
- * @method string getS3Bucket() Obtain S3 bucket。
- * @method void setS3Bucket(string $S3Bucket) Set S3 bucket。
- * @method string getS3Region() Obtain 
- * @method void setS3Region(string $S3Region) Set 
- * @method string getS3SecretId() Obtain 
- * @method void setS3SecretId(string $S3SecretId) Set 
- * @method string getS3SecretKey() Obtain 
- * @method void setS3SecretKey(string $S3SecretKey) Set 
+ * @method string getS3Bucket() Obtain S3 bucket.
+ * @method void setS3Bucket(string $S3Bucket) Set S3 bucket.
+ * @method string getS3Region() Obtain Region of the S3 bucket.
+ * @method void setS3Region(string $S3Region) Set Region of the S3 bucket.
+ * @method string getS3SecretId() Obtain AWS private network upload key id for media content.
+ * @method void setS3SecretId(string $S3SecretId) Set AWS private network upload key id for media content.
+ * @method string getS3SecretKey() Obtain key for uploading media content over the AWS private network.
+ * @method void setS3SecretKey(string $S3SecretKey) Set key for uploading media content over the AWS private network.
  */
 class S3OutputStorage extends AbstractModel
 {
     /**
-     * @var string S3 bucket。
+     * @var string S3 bucket.
      */
     public $S3Bucket;
 
     /**
-     * @var string 
+     * @var string Region of the S3 bucket.
      */
     public $S3Region;
 
     /**
-     * @var string 
+     * @var string AWS private network upload key id for media content.
      */
     public $S3SecretId;
 
     /**
-     * @var string 
+     * @var string key for uploading media content over the AWS private network.
      */
     public $S3SecretKey;
 
     /**
-     * @param string $S3Bucket S3 bucket。
-     * @param string $S3Region 
-     * @param string $S3SecretId 
-     * @param string $S3SecretKey 
+     * @param string $S3Bucket S3 bucket.
+     * @param string $S3Region Region of the S3 bucket.
+     * @param string $S3SecretId AWS private network upload key id for media content.
+     * @param string $S3SecretKey key for uploading media content over the AWS private network.
      */
     function __construct()
     {

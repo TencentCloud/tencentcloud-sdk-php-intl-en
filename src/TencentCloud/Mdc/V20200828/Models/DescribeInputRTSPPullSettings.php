@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query the input RTSP configuration message.
  *
- * @method array getSourceAddresses() Obtain 
- * @method void setSourceAddresses(array $SourceAddresses) Set 
+ * @method array getSourceAddresses() Obtain RTSP origin server address.
+ * @method void setSourceAddresses(array $SourceAddresses) Set RTSP origin server address.
  */
 class DescribeInputRTSPPullSettings extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array RTSP origin server address.
      */
     public $SourceAddresses;
 
     /**
-     * @param array $SourceAddresses 
+     * @param array $SourceAddresses RTSP origin server address.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Transcoding task result type
+ * Result type of the transcoding task
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method TranscodeTaskInput getInput() Obtain Input of the transcoding task.
  * @method void setInput(TranscodeTaskInput $Input) Set Input of the transcoding task.
- * @method MediaTranscodeItem getOutput() Obtain 
- * @method void setOutput(MediaTranscodeItem $Output) Set 
+ * @method MediaTranscodeItem getOutput() Obtain Transcoding task output.
+ * @method void setOutput(MediaTranscodeItem $Output) Set Transcoding task output.
  * @method integer getProgress() Obtain Transcoding progress, with a value range of [0-100].
  * @method void setProgress(integer $Progress) Set Transcoding progress, with a value range of [0-100].
  */
@@ -63,7 +63,7 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
     public $Input;
 
     /**
-     * @var MediaTranscodeItem 
+     * @var MediaTranscodeItem Transcoding task output.
      */
     public $Output;
 
@@ -78,7 +78,7 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param TranscodeTaskInput $Input Input of the transcoding task.
-     * @param MediaTranscodeItem $Output 
+     * @param MediaTranscodeItem $Output Transcoding task output.
      * @param integer $Progress Transcoding progress, with a value range of [0-100].
      */
     function __construct()

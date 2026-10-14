@@ -18,84 +18,268 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle removal configuration for the smart erasing template.
  *
- * @method string getSubtitleEraseMethod() Obtain 
- * @method void setSubtitleEraseMethod(string $SubtitleEraseMethod) Set 
- * @method string getSubtitleModel() Obtain 
- * @method void setSubtitleModel(string $SubtitleModel) Set 
- * @method string getOcrSwitch() Obtain 
- * @method void setOcrSwitch(string $OcrSwitch) Set 
- * @method string getSubtitleLang() Obtain 
- * @method void setSubtitleLang(string $SubtitleLang) Set 
- * @method string getSubtitleFormat() Obtain 
- * @method void setSubtitleFormat(string $SubtitleFormat) Set 
- * @method string getTransSwitch() Obtain 
- * @method void setTransSwitch(string $TransSwitch) Set 
- * @method string getTransDstLang() Obtain 
- * @method void setTransDstLang(string $TransDstLang) Set 
- * @method array getAutoAreas() Obtain 
- * @method void setAutoAreas(array $AutoAreas) Set 
- * @method array getCustomAreas() Obtain 
- * @method void setCustomAreas(array $CustomAreas) Set 
+ * @method string getSubtitleEraseMethod() Obtain Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
+ * @method void setSubtitleEraseMethod(string $SubtitleEraseMethod) Set Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
+ * @method string getSubtitleModel() Obtain Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
+ * @method void setSubtitleModel(string $SubtitleModel) Set Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
+ * @method string getOcrSwitch() Obtain Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
+ * @method void setOcrSwitch(string $OcrSwitch) Set Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
+ * @method string getSubtitleLang() Obtain Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
+ * @method void setSubtitleLang(string $SubtitleLang) Set Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
+ * @method string getSubtitleFormat() Obtain Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
+ * @method string getTransSwitch() Obtain Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
+ * @method void setTransSwitch(string $TransSwitch) Set Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
+ * @method string getTransDstLang() Obtain Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
+ * @method void setTransDstLang(string $TransDstLang) Set Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
+ * @method array getAutoAreas() Obtain Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+ * @method void setAutoAreas(array $AutoAreas) Set Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+ * @method array getCustomAreas() Obtain Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+ * @method void setCustomAreas(array $CustomAreas) Set Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
  */
 class UpdateSmartEraseSubtitleConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
      */
     public $SubtitleEraseMethod;
 
     /**
-     * @var string 
+     * @var string Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
      */
     public $SubtitleModel;
 
     /**
-     * @var string 
+     * @var string Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
      */
     public $OcrSwitch;
 
     /**
-     * @var string 
+     * @var string Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
      */
     public $SubtitleLang;
 
     /**
-     * @var string 
+     * @var string Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
      */
     public $SubtitleFormat;
 
     /**
-     * @var string 
+     * @var string Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
      */
     public $TransSwitch;
 
     /**
-     * @var string 
+     * @var string Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
      */
     public $TransDstLang;
 
     /**
-     * @var array 
+     * @var array Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public $AutoAreas;
 
     /**
-     * @var array 
+     * @var array Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public $CustomAreas;
 
     /**
-     * @param string $SubtitleEraseMethod 
-     * @param string $SubtitleModel 
-     * @param string $OcrSwitch 
-     * @param string $SubtitleLang 
-     * @param string $SubtitleFormat 
-     * @param string $TransSwitch 
-     * @param string $TransDstLang 
-     * @param array $AutoAreas 
-     * @param array $CustomAreas 
+     * @param string $SubtitleEraseMethod Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
+     * @param string $SubtitleModel Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
+     * @param string $OcrSwitch Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
+     * @param string $SubtitleLang Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
+     * @param string $SubtitleFormat Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
+     * @param string $TransSwitch Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
+     * @param string $TransDstLang Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
+     * @param array $AutoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+     * @param array $CustomAreas Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     function __construct()
     {

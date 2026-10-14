@@ -20,314 +20,362 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstance request structure.
  *
- * @method string getZone() Obtain Availability Zone
- * @method void setZone(string $Zone) Set Availability Zone
- * @method string getEsVersion() Obtain Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
- * @method void setEsVersion(string $EsVersion) Set Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method string getPassword() Obtain Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
- * @method void setPassword(string $Password) Set Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
- * @method string getInstanceName() Obtain Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
- * @method void setInstanceName(string $InstanceName) Set Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
- * @method integer getNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
- * @method void setNodeNum(integer $NodeNum) Set This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
- * @method string getChargeType() Obtain Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
- * @method void setChargeType(string $ChargeType) Set Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
- * @method integer getChargePeriod() Obtain This parameter is not used on the global website
- * @method void setChargePeriod(integer $ChargePeriod) Set This parameter is not used on the global website
- * @method string getRenewFlag() Obtain This parameter is not used on the global website
- * @method void setRenewFlag(string $RenewFlag) Set This parameter is not used on the global website
- * @method string getNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method void setNodeType(string $NodeType) Set This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method string getDiskType() Obtain This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
- * @method void setDiskType(string $DiskType) Set This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
- * @method integer getDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
- * @method void setDiskSize(integer $DiskSize) Set This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
- * @method string getTimeUnit() Obtain This parameter is not used on the global website
- * @method void setTimeUnit(string $TimeUnit) Set This parameter is not used on the global website
- * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
- * @method array getVoucherIds() Obtain List of voucher IDs (only one voucher can be specified at a time currently)
- * @method void setVoucherIds(array $VoucherIds) Set List of voucher IDs (only one voucher can be specified at a time currently)
- * @method boolean getEnableDedicatedMaster() Obtain This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
- * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) Set This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
- * @method integer getMasterNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
- * @method void setMasterNodeNum(integer $MasterNodeNum) Set This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
- * @method string getMasterNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method void setMasterNodeType(string $MasterNodeType) Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method integer getMasterNodeDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
- * @method string getClusterNameInConf() Obtain ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
- * @method void setClusterNameInConf(string $ClusterNameInConf) Set ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
- * @method integer getDeployMode() Obtain Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
- * @method void setDeployMode(integer $DeployMode) Set Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
- * @method array getMultiZoneInfo() Obtain Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
- * @method void setMultiZoneInfo(array $MultiZoneInfo) Set Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
- * @method string getLicenseType() Obtain License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method void setLicenseType(string $LicenseType) Set License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method array getNodeInfoList() Obtain Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
- * @method void setNodeInfoList(array $NodeInfoList) Set Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
- * @method array getTagList() Obtain Node tag information list
- * @method void setTagList(array $TagList) Set Node tag information list
- * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
- * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
- * @method integer getSceneType() Obtain Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
- * @method void setSceneType(integer $SceneType) Set Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
- * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
- * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
- * @method string getProtocol() Obtain Valid values: `https`, `http` (default)
- * @method void setProtocol(string $Protocol) Set Valid values: `https`, `http` (default)
- * @method OperationDuration getOperationDuration() Obtain The maintenance time slot
- * @method void setOperationDuration(OperationDuration $OperationDuration) Set The maintenance time slot
- * @method boolean getEnableHybridStorage() Obtain Whether to enable the storage-computing separation feature.
- * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set Whether to enable the storage-computing separation feature.
- * @method integer getDiskEnhance() Obtain Whether to enable enhanced SSD
- * @method void setDiskEnhance(integer $DiskEnhance) Set Whether to enable enhanced SSD
- * @method boolean getEnableDiagnose() Obtain Whether to enable smart inspection.
- * @method void setEnableDiagnose(boolean $EnableDiagnose) Set Whether to enable smart inspection.
+ * @method string getZone() Obtain <p>AZ.</p>
+ * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method string getEsVersion() Obtain <p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
+ * @method void setEsVersion(string $EsVersion) Set <p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
+ * @method string getVpcId() Obtain <p>VPC ID</p>
+ * @method void setVpcId(string $VpcId) Set <p>VPC ID</p>
+ * @method string getSubnetId() Obtain <p>Subnet ID.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID.</p>
+ * @method string getPassword() Obtain <p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
+ * @method void setPassword(string $Password) Set <p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
+ * @method string getInstanceName() Obtain <p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
+ * @method integer getNodeNum() Obtain <p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
+ * @method void setNodeNum(integer $NodeNum) Set <p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
+ * @method string getChargeType() Obtain <p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
+ * @method void setChargeType(string $ChargeType) Set <p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
+ * @method integer getChargePeriod() Obtain <p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
+ * @method void setChargePeriod(integer $ChargePeriod) Set <p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
+ * @method string getRenewFlag() Obtain <p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
+ * @method void setRenewFlag(string $RenewFlag) Set <p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
+ * @method string getNodeType() Obtain <p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method void setNodeType(string $NodeType) Set <p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method string getDiskType() Obtain <p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
+ * @method void setDiskType(string $DiskType) Set <p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
+ * @method integer getDiskSize() Obtain <p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
+ * @method void setDiskSize(integer $DiskSize) Set <p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
+ * @method string getTimeUnit() Obtain <p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
+ * @method void setTimeUnit(string $TimeUnit) Set <p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
+ * @method integer getAutoVoucher() Obtain <p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) Set <p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
+ * @method array getVoucherIds() Obtain <p>Voucher ID list. Only one voucher can be specified.</p>
+ * @method void setVoucherIds(array $VoucherIds) Set <p>Voucher ID list. Only one voucher can be specified.</p>
+ * @method boolean getEnableDedicatedMaster() Obtain <p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
+ * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) Set <p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
+ * @method integer getMasterNodeNum() Obtain <p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
+ * @method void setMasterNodeNum(integer $MasterNodeNum) Set <p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
+ * @method string getMasterNodeType() Obtain <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method void setMasterNodeType(string $MasterNodeType) Set <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method integer getMasterNodeDiskSize() Obtain <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
+ * @method string getClusterNameInConf() Obtain <p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
+ * @method void setClusterNameInConf(string $ClusterNameInConf) Set <p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
+ * @method integer getDeployMode() Obtain <p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
+ * @method void setDeployMode(integer $DeployMode) Set <p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
+ * @method array getMultiZoneInfo() Obtain <p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) Set <p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
+ * @method string getLicenseType() Obtain <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+ * @method void setLicenseType(string $LicenseType) Set <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+ * @method array getNodeInfoList() Obtain <p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
+ * @method void setNodeInfoList(array $NodeInfoList) Set <p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
+ * @method array getTagList() Obtain <p>Node tag information list</p>
+ * @method void setTagList(array $TagList) Set <p>Node tag information list</p>
+ * @method integer getBasicSecurityType() Obtain <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+ * @method void setBasicSecurityType(integer $BasicSecurityType) Set <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+ * @method integer getSceneType() Obtain <p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
+ * @method void setSceneType(integer $SceneType) Set <p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain <p>Visualize node configuration</p>
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set <p>Visualize node configuration</p>
+ * @method string getProtocol() Obtain <p>Create an https cluster. http is selected by default.</p>
+ * @method void setProtocol(string $Protocol) Set <p>Create an https cluster. http is selected by default.</p>
+ * @method OperationDuration getOperationDuration() Obtain <p>Maintenance time slot</p>
+ * @method void setOperationDuration(OperationDuration $OperationDuration) Set <p>Maintenance time slot</p>
+ * @method boolean getEnableHybridStorage() Obtain <p>Whether storage-compute separation is enabled</p>
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set <p>Whether storage-compute separation is enabled</p>
+ * @method integer getDiskEnhance() Obtain <p>Additional hard disk performance</p>
+ * @method void setDiskEnhance(integer $DiskEnhance) Set <p>Additional hard disk performance</p>
+ * @method boolean getEnableDiagnose() Obtain <p>Whether intelligent check is enabled</p>
+ * @method void setEnableDiagnose(boolean $EnableDiagnose) Set <p>Whether intelligent check is enabled</p>
+ * @method boolean getEnableCosBackup() Obtain <p>Whether to enable automatic backup</p>
+ * @method void setEnableCosBackup(boolean $EnableCosBackup) Set <p>Whether to enable automatic backup</p>
+ * @method string getCdcId() Obtain <p>cdcId, pass it when using a CDC subnet</p>
+ * @method void setCdcId(string $CdcId) Set <p>cdcId, pass it when using a CDC subnet</p>
+ * @method integer getDisasterRecoverGroupAffinity() Obtain <p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+ * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) Set <p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+ * @method string getSubProductCode() Obtain <p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+ * @method void setSubProductCode(string $SubProductCode) Set <p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+ * @method integer getReadWriteMode() Obtain <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+ * @method void setReadWriteMode(integer $ReadWriteMode) Set <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+ * @method boolean getEnableScheduleRecoverGroup() Obtain <p>Whether the placement group has asynchronous tasks enabled</p>
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) Set <p>Whether the placement group has asynchronous tasks enabled</p>
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() Obtain <p>Maintenance time slot for enabling async tasks in a placement group</p>
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) Set <p>Maintenance time slot for enabling async tasks in a placement group</p>
+ * @method array getAutoScaleDiskInfoList() Obtain <p>Auto capacity expansion parameter list</p>
+ * @method void setAutoScaleDiskInfoList(array $AutoScaleDiskInfoList) Set <p>Auto capacity expansion parameter list</p>
+ * @method string getEnableKibanaPublicAccess() Obtain <p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+ * @method void setEnableKibanaPublicAccess(string $EnableKibanaPublicAccess) Set <p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+ * @method array getAlarmPolicyIds() Obtain <p>Existing cloud monitoring and alarm policy ID</p>
+ * @method void setAlarmPolicyIds(array $AlarmPolicyIds) Set <p>Existing cloud monitoring and alarm policy ID</p>
  */
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Availability Zone
+     * @var string <p>AZ.</p>
      */
     public $Zone;
 
     /**
-     * @var string Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+     * @var string <p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
      */
     public $EsVersion;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string <p>Subnet ID.</p>
      */
     public $SubnetId;
 
     /**
-     * @var string Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+     * @var string <p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
      */
     public $Password;
 
     /**
-     * @var string Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+     * @var string <p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+     * @var integer <p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
      */
     public $NodeNum;
 
     /**
-     * @var string Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
+     * @var string <p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
      */
     public $ChargeType;
 
     /**
-     * @var integer This parameter is not used on the global website
+     * @var integer <p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
      */
     public $ChargePeriod;
 
     /**
-     * @var string This parameter is not used on the global website
+     * @var string <p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @var string <p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public $NodeType;
 
     /**
-     * @var string This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+     * @var string <p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
      */
     public $DiskType;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
+     * @var integer <p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
      */
     public $DiskSize;
 
     /**
-     * @var string This parameter is not used on the global website
+     * @var string <p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
      */
     public $TimeUnit;
 
     /**
-     * @var integer Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+     * @var integer <p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var array List of voucher IDs (only one voucher can be specified at a time currently)
+     * @var array <p>Voucher ID list. Only one voucher can be specified.</p>
      */
     public $VoucherIds;
 
     /**
-     * @var boolean This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
+     * @var boolean <p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
      */
     public $EnableDedicatedMaster;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+     * @var integer <p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
      */
     public $MasterNodeNum;
 
     /**
-     * @var string This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @var string <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public $MasterNodeType;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+     * @var integer <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
      */
     public $MasterNodeDiskSize;
 
     /**
-     * @var string ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
+     * @var string <p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
      */
     public $ClusterNameInConf;
 
     /**
-     * @var integer Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
+     * @var integer <p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
      */
     public $DeployMode;
 
     /**
-     * @var array Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
+     * @var array <p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
      */
     public $MultiZoneInfo;
 
     /**
-     * @var string License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+     * @var string <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
      */
     public $LicenseType;
 
     /**
-     * @var array Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+     * @var array <p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
      */
     public $NodeInfoList;
 
     /**
-     * @var array Node tag information list
+     * @var array <p>Node tag information list</p>
      */
     public $TagList;
 
     /**
-     * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @var integer <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
      */
     public $BasicSecurityType;
 
     /**
-     * @var integer Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+     * @var integer <p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
      */
     public $SceneType;
 
     /**
-     * @var WebNodeTypeInfo Visual node configuration
+     * @var WebNodeTypeInfo <p>Visualize node configuration</p>
      */
     public $WebNodeTypeInfo;
 
     /**
-     * @var string Valid values: `https`, `http` (default)
+     * @var string <p>Create an https cluster. http is selected by default.</p>
      */
     public $Protocol;
 
     /**
-     * @var OperationDuration The maintenance time slot
+     * @var OperationDuration <p>Maintenance time slot</p>
      */
     public $OperationDuration;
 
     /**
-     * @var boolean Whether to enable the storage-computing separation feature.
+     * @var boolean <p>Whether storage-compute separation is enabled</p>
      */
     public $EnableHybridStorage;
 
     /**
-     * @var integer Whether to enable enhanced SSD
+     * @var integer <p>Additional hard disk performance</p>
      */
     public $DiskEnhance;
 
     /**
-     * @var boolean Whether to enable smart inspection.
+     * @var boolean <p>Whether intelligent check is enabled</p>
      */
     public $EnableDiagnose;
 
     /**
-     * @param string $Zone Availability Zone
-     * @param string $EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId Subnet ID
-     * @param string $Password Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-     * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-     * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
-     * @param string $ChargeType Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
-     * @param integer $ChargePeriod This parameter is not used on the global website
-     * @param string $RenewFlag This parameter is not used on the global website
-     * @param string $NodeType This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param string $DiskType This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
-     * @param integer $DiskSize This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
-     * @param string $TimeUnit This parameter is not used on the global website
-     * @param integer $AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
-     * @param array $VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
-     * @param boolean $EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
-     * @param integer $MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
-     * @param string $MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param integer $MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
-     * @param string $ClusterNameInConf ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
-     * @param integer $DeployMode Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
-     * @param array $MultiZoneInfo Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
-     * @param string $LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-     * @param array $NodeInfoList Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
-     * @param array $TagList Node tag information list
-     * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-     * @param integer $SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
-     * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
-     * @param string $Protocol Valid values: `https`, `http` (default)
-     * @param OperationDuration $OperationDuration The maintenance time slot
-     * @param boolean $EnableHybridStorage Whether to enable the storage-computing separation feature.
-     * @param integer $DiskEnhance Whether to enable enhanced SSD
-     * @param boolean $EnableDiagnose Whether to enable smart inspection.
+     * @var boolean <p>Whether to enable automatic backup</p>
+     */
+    public $EnableCosBackup;
+
+    /**
+     * @var string <p>cdcId, pass it when using a CDC subnet</p>
+     */
+    public $CdcId;
+
+    /**
+     * @var integer <p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+     */
+    public $DisasterRecoverGroupAffinity;
+
+    /**
+     * @var string <p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+     */
+    public $SubProductCode;
+
+    /**
+     * @var integer <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+     */
+    public $ReadWriteMode;
+
+    /**
+     * @var boolean <p>Whether the placement group has asynchronous tasks enabled</p>
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration <p>Maintenance time slot for enabling async tasks in a placement group</p>
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
+     * @var array <p>Auto capacity expansion parameter list</p>
+     */
+    public $AutoScaleDiskInfoList;
+
+    /**
+     * @var string <p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+     */
+    public $EnableKibanaPublicAccess;
+
+    /**
+     * @var array <p>Existing cloud monitoring and alarm policy ID</p>
+     */
+    public $AlarmPolicyIds;
+
+    /**
+     * @param string $Zone <p>AZ.</p>
+     * @param string $EsVersion <p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
+     * @param string $VpcId <p>VPC ID</p>
+     * @param string $SubnetId <p>Subnet ID.</p>
+     * @param string $Password <p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
+     * @param string $InstanceName <p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
+     * @param integer $NodeNum <p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
+     * @param string $ChargeType <p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
+     * @param integer $ChargePeriod <p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
+     * @param string $RenewFlag <p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
+     * @param string $NodeType <p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param string $DiskType <p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
+     * @param integer $DiskSize <p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
+     * @param string $TimeUnit <p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
+     * @param integer $AutoVoucher <p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
+     * @param array $VoucherIds <p>Voucher ID list. Only one voucher can be specified.</p>
+     * @param boolean $EnableDedicatedMaster <p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
+     * @param integer $MasterNodeNum <p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
+     * @param string $MasterNodeType <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param integer $MasterNodeDiskSize <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
+     * @param string $ClusterNameInConf <p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
+     * @param integer $DeployMode <p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
+     * @param array $MultiZoneInfo <p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
+     * @param string $LicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+     * @param array $NodeInfoList <p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
+     * @param array $TagList <p>Node tag information list</p>
+     * @param integer $BasicSecurityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+     * @param integer $SceneType <p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
+     * @param WebNodeTypeInfo $WebNodeTypeInfo <p>Visualize node configuration</p>
+     * @param string $Protocol <p>Create an https cluster. http is selected by default.</p>
+     * @param OperationDuration $OperationDuration <p>Maintenance time slot</p>
+     * @param boolean $EnableHybridStorage <p>Whether storage-compute separation is enabled</p>
+     * @param integer $DiskEnhance <p>Additional hard disk performance</p>
+     * @param boolean $EnableDiagnose <p>Whether intelligent check is enabled</p>
+     * @param boolean $EnableCosBackup <p>Whether to enable automatic backup</p>
+     * @param string $CdcId <p>cdcId, pass it when using a CDC subnet</p>
+     * @param integer $DisasterRecoverGroupAffinity <p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+     * @param string $SubProductCode <p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+     * @param integer $ReadWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+     * @param boolean $EnableScheduleRecoverGroup <p>Whether the placement group has asynchronous tasks enabled</p>
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration <p>Maintenance time slot for enabling async tasks in a placement group</p>
+     * @param array $AutoScaleDiskInfoList <p>Auto capacity expansion parameter list</p>
+     * @param string $EnableKibanaPublicAccess <p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+     * @param array $AlarmPolicyIds <p>Existing cloud monitoring and alarm policy ID</p>
      */
     function __construct()
     {
@@ -493,6 +541,52 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
 
         if (array_key_exists("EnableDiagnose",$param) and $param["EnableDiagnose"] !== null) {
             $this->EnableDiagnose = $param["EnableDiagnose"];
+        }
+
+        if (array_key_exists("EnableCosBackup",$param) and $param["EnableCosBackup"] !== null) {
+            $this->EnableCosBackup = $param["EnableCosBackup"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupAffinity",$param) and $param["DisasterRecoverGroupAffinity"] !== null) {
+            $this->DisasterRecoverGroupAffinity = $param["DisasterRecoverGroupAffinity"];
+        }
+
+        if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
+            $this->SubProductCode = $param["SubProductCode"];
+        }
+
+        if (array_key_exists("ReadWriteMode",$param) and $param["ReadWriteMode"] !== null) {
+            $this->ReadWriteMode = $param["ReadWriteMode"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("AutoScaleDiskInfoList",$param) and $param["AutoScaleDiskInfoList"] !== null) {
+            $this->AutoScaleDiskInfoList = [];
+            foreach ($param["AutoScaleDiskInfoList"] as $key => $value){
+                $obj = new AutoScaleDiskInfo();
+                $obj->deserialize($value);
+                array_push($this->AutoScaleDiskInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableKibanaPublicAccess",$param) and $param["EnableKibanaPublicAccess"] !== null) {
+            $this->EnableKibanaPublicAccess = $param["EnableKibanaPublicAccess"];
+        }
+
+        if (array_key_exists("AlarmPolicyIds",$param) and $param["AlarmPolicyIds"] !== null) {
+            $this->AlarmPolicyIds = $param["AlarmPolicyIds"];
         }
     }
 }

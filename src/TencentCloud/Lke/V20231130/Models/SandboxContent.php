@@ -18,36 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sandbox information content
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method string getDisplayUrl() Obtain 
- * @method void setDisplayUrl(string $DisplayUrl) Set 
- * @method string getContent() Obtain 
- * @method void setContent(string $Content) Set 
+ * @method string getUrl() Obtain URL address of the sandbox
+ * @method void setUrl(string $Url) Set URL address of the sandbox
+ * @method string getDisplayUrl() Obtain URL address for opening the sandbox through a browser
+ * @method void setDisplayUrl(string $DisplayUrl) Set URL address for opening the sandbox through a browser
+ * @method string getContent() Obtain Sandbox output content
+ * @method void setContent(string $Content) Set Sandbox output content
  */
 class SandboxContent extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string URL address of the sandbox
      */
     public $Url;
 
     /**
-     * @var string 
+     * @var string URL address for opening the sandbox through a browser
      */
     public $DisplayUrl;
 
     /**
-     * @var string 
+     * @var string Sandbox output content
      */
     public $Content;
 
     /**
-     * @param string $Url 
-     * @param string $DisplayUrl 
-     * @param string $Content 
+     * @param string $Url URL address of the sandbox
+     * @param string $DisplayUrl URL address for opening the sandbox through a browser
+     * @param string $Content Sandbox output content
      */
     function __construct()
     {

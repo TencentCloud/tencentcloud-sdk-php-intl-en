@@ -18,28 +18,32 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query the input RTMP configuration message.
  *
- * @method string getTcUrl() Obtain 
- * @method void setTcUrl(string $TcUrl) Set 
- * @method string getStreamKey() Obtain 
- * @method void setStreamKey(string $StreamKey) Set 
+ * @method string getTcUrl() Obtain TcUrl of the RTMP origin server.
+ * @method void setTcUrl(string $TcUrl) Set TcUrl of the RTMP origin server.
+ * @method string getStreamKey() Obtain StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
+ * @method void setStreamKey(string $StreamKey) Set StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
  */
 class DescribeRTMPPullSourceAddress extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string TcUrl of the RTMP origin server.
      */
     public $TcUrl;
 
     /**
-     * @var string 
+     * @var string StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
      */
     public $StreamKey;
 
     /**
-     * @param string $TcUrl 
-     * @param string $StreamKey 
+     * @param string $TcUrl TcUrl of the RTMP origin server.
+     * @param string $StreamKey StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
      */
     function __construct()
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review Ocr text porn detection task input parameter type
+ * Task input parameter type for porn detection in Ocr text during content review.
  *
- * @method integer getDefinition() Obtain Template ID for porn detection.
- * @method void setDefinition(integer $Definition) Set Template ID for porn detection.
+ * @method integer getDefinition() Obtain Porn detection template ID.
+ * @method void setDefinition(integer $Definition) Set Porn detection template ID.
  */
 class AiReviewPornOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer Template ID for porn detection.
+     * @var integer Porn detection template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Template ID for porn detection.
+     * @param integer $Definition Porn detection template ID.
      */
     function __construct()
     {

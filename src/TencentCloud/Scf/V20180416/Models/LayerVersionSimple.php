@@ -18,28 +18,28 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies a layer version
+ * Specify a Layer version
  *
- * @method string getLayerName() Obtain Name of the layer to bind. Leave it blank if you want to unbind layers
- * @method void setLayerName(string $LayerName) Set Name of the layer to bind. Leave it blank if you want to unbind layers
- * @method integer getLayerVersion() Obtain Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
- * @method void setLayerVersion(integer $LayerVersion) Set Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+ * @method string getLayerName() Obtain Name of the bound layer. Pass an empty string to unbind the layer.
+ * @method void setLayerName(string $LayerName) Set Name of the bound layer. Pass an empty string to unbind the layer.
+ * @method integer getLayerVersion() Obtain Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
+ * @method void setLayerVersion(integer $LayerVersion) Set Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
  */
 class LayerVersionSimple extends AbstractModel
 {
     /**
-     * @var string Name of the layer to bind. Leave it blank if you want to unbind layers
+     * @var string Name of the bound layer. Pass an empty string to unbind the layer.
      */
     public $LayerName;
 
     /**
-     * @var integer Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+     * @var integer Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
      */
     public $LayerVersion;
 
     /**
-     * @param string $LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
-     * @param integer $LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+     * @param string $LayerName Name of the bound layer. Pass an empty string to unbind the layer.
+     * @param integer $LayerVersion Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
      */
     function __construct()
     {

@@ -18,76 +18,76 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of the rotating image task
+ * Result type of the rotating image task.
  *
- * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method AnimatedGraphicTaskInput getInput() Obtain Input of the animated image task.
- * @method void setInput(AnimatedGraphicTaskInput $Input) Set Input of the animated image task.
- * @method MediaAnimatedGraphicsItem getOutput() Obtain 
- * @method void setOutput(MediaAnimatedGraphicsItem $Output) Set 
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getStatus() Obtain <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+ * @method string getErrCodeExt() Obtain <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+ * @method string getMessage() Obtain <p>Error message.</p>
+ * @method void setMessage(string $Message) Set <p>Error message.</p>
+ * @method AnimatedGraphicTaskInput getInput() Obtain <p>Input of the animated image task.</p>
+ * @method void setInput(AnimatedGraphicTaskInput $Input) Set <p>Input of the animated image task.</p>
+ * @method MediaAnimatedGraphicsItem getOutput() Obtain <p>Rotating image task output.</p>
+ * @method void setOutput(MediaAnimatedGraphicsItem $Output) Set <p>Rotating image task output.</p>
+ * @method string getBeginProcessTime() Obtain <p>Starting time of task execution, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set <p>Starting time of task execution, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+ * @method string getFinishTime() Obtain <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+ * @method void setFinishTime(string $FinishTime) Set <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
  */
 class MediaProcessTaskAnimatedGraphicResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @var string <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @var integer <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string <p>Error message.</p>
      */
     public $Message;
 
     /**
-     * @var AnimatedGraphicTaskInput Input of the animated image task.
+     * @var AnimatedGraphicTaskInput <p>Input of the animated image task.</p>
      */
     public $Input;
 
     /**
-     * @var MediaAnimatedGraphicsItem 
+     * @var MediaAnimatedGraphicsItem <p>Rotating image task output.</p>
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string <p>Starting time of task execution, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
      */
     public $FinishTime;
 
     /**
-     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
-     * @param string $Message Error message.
-     * @param AnimatedGraphicTaskInput $Input Input of the animated image task.
-     * @param MediaAnimatedGraphicsItem $Output 
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+     * @param string $ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+     * @param string $Message <p>Error message.</p>
+     * @param AnimatedGraphicTaskInput $Input <p>Input of the animated image task.</p>
+     * @param MediaAnimatedGraphicsItem $Output <p>Rotating image task output.</p>
+     * @param string $BeginProcessTime <p>Starting time of task execution, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+     * @param string $FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
      */
     function __construct()
     {

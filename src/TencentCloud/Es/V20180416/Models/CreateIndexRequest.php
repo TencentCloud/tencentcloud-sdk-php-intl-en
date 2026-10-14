@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain ES cluster ID
  * @method void setInstanceId(string $InstanceId) Set ES cluster ID
- * @method string getIndexType() Obtain Type of the index to create. `auto`: Automated; `normal`: General.
- * @method void setIndexType(string $IndexType) Set Type of the index to create. `auto`: Automated; `normal`: General.
- * @method string getIndexName() Obtain Name of the index to create
- * @method void setIndexName(string $IndexName) Set Name of the index to create
- * @method string getIndexMetaJson() Obtain JSON-formatted index metadata to create, such as `mappings` and `settings`
- * @method void setIndexMetaJson(string $IndexMetaJson) Set JSON-formatted index metadata to create, such as `mappings` and `settings`
- * @method string getUsername() Obtain Username for cluster access
- * @method void setUsername(string $Username) Set Username for cluster access
- * @method string getPassword() Obtain Password for cluster access
- * @method void setPassword(string $Password) Set Password for cluster access
+ * @method string getIndexType() Obtain Index type of the created index. auto: autonomous index; normal: general index
+ * @method void setIndexType(string $IndexType) Set Index type of the created index. auto: autonomous index; normal: general index
+ * @method string getIndexName() Obtain Index name of the created index
+ * @method void setIndexName(string $IndexName) Set Index name of the created index
+ * @method string getIndexMetaJson() Obtain [Required] JSON-formatted index metadata created, such as mappings and settings
+ * @method void setIndexMetaJson(string $IndexMetaJson) Set [Required] JSON-formatted index metadata created, such as mappings and settings
+ * @method string getUsername() Obtain Cluster access username.
+ * @method void setUsername(string $Username) Set Cluster access username.
+ * @method string getPassword() Obtain Cluster access password
+ * @method void setPassword(string $Password) Set Cluster access password
  */
 class CreateIndexRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class CreateIndexRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Type of the index to create. `auto`: Automated; `normal`: General.
+     * @var string Index type of the created index. auto: autonomous index; normal: general index
      */
     public $IndexType;
 
     /**
-     * @var string Name of the index to create
+     * @var string Index name of the created index
      */
     public $IndexName;
 
     /**
-     * @var string JSON-formatted index metadata to create, such as `mappings` and `settings`
+     * @var string [Required] JSON-formatted index metadata created, such as mappings and settings
      */
     public $IndexMetaJson;
 
     /**
-     * @var string Username for cluster access
+     * @var string Cluster access username.
      */
     public $Username;
 
     /**
-     * @var string Password for cluster access
+     * @var string Cluster access password
      */
     public $Password;
 
     /**
      * @param string $InstanceId ES cluster ID
-     * @param string $IndexType Type of the index to create. `auto`: Automated; `normal`: General.
-     * @param string $IndexName Name of the index to create
-     * @param string $IndexMetaJson JSON-formatted index metadata to create, such as `mappings` and `settings`
-     * @param string $Username Username for cluster access
-     * @param string $Password Password for cluster access
+     * @param string $IndexType Index type of the created index. auto: autonomous index; normal: general index
+     * @param string $IndexName Index name of the created index
+     * @param string $IndexMetaJson [Required] JSON-formatted index metadata created, such as mappings and settings
+     * @param string $Username Cluster access username.
+     * @param string $Password Cluster access password
      */
     function __construct()
     {

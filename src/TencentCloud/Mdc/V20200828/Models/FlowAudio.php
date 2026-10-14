@@ -18,36 +18,36 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The audio data of the flow.
+ * Audio data of the stream.
  *
- * @method integer getFps() Obtain The frame rate.
- * @method void setFps(integer $Fps) Set The frame rate.
- * @method integer getRate() Obtain The bitrate (bps).
- * @method void setRate(integer $Rate) Set The bitrate (bps).
- * @method integer getPid() Obtain The audio PID.
- * @method void setPid(integer $Pid) Set The audio PID.
+ * @method integer getFps() Obtain Frame rate.
+ * @method void setFps(integer $Fps) Set Frame rate.
+ * @method integer getRate() Obtain Bitrate in bps.
+ * @method void setRate(integer $Rate) Set Bitrate in bps.
+ * @method integer getPid() Obtain Audio Pid.
+ * @method void setPid(integer $Pid) Set Audio Pid.
  */
 class FlowAudio extends AbstractModel
 {
     /**
-     * @var integer The frame rate.
+     * @var integer Frame rate.
      */
     public $Fps;
 
     /**
-     * @var integer The bitrate (bps).
+     * @var integer Bitrate in bps.
      */
     public $Rate;
 
     /**
-     * @var integer The audio PID.
+     * @var integer Audio Pid.
      */
     public $Pid;
 
     /**
-     * @param integer $Fps The frame rate.
-     * @param integer $Rate The bitrate (bps).
-     * @param integer $Pid The audio PID.
+     * @param integer $Fps Frame rate.
+     * @param integer $Rate Bitrate in bps.
+     * @param integer $Pid Audio Pid.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamLinkOutputInfo request structure.
  *
- * @method string getFlowId() Obtain The flow ID.
- * @method void setFlowId(string $FlowId) Set The flow ID.
- * @method CreateOutputInfo getOutput() Obtain The output configuration of the flow.
- * @method void setOutput(CreateOutputInfo $Output) Set The output configuration of the flow.
+ * @method string getFlowId() Obtain Transport stream Id.
+ * @method void setFlowId(string $FlowId) Set Transport stream Id.
+ * @method CreateOutputInfo getOutput() Obtain Output configuration of the transport stream.
+ * @method void setOutput(CreateOutputInfo $Output) Set Output configuration of the transport stream.
  */
 class CreateStreamLinkOutputInfoRequest extends AbstractModel
 {
     /**
-     * @var string The flow ID.
+     * @var string Transport stream Id.
      */
     public $FlowId;
 
     /**
-     * @var CreateOutputInfo The output configuration of the flow.
+     * @var CreateOutputInfo Output configuration of the transport stream.
      */
     public $Output;
 
     /**
-     * @param string $FlowId The flow ID.
-     * @param CreateOutputInfo $Output The output configuration of the flow.
+     * @param string $FlowId Transport stream Id.
+     * @param CreateOutputInfo $Output Output configuration of the transport stream.
      */
     function __construct()
     {

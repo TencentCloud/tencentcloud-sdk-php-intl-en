@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of the video editing task
+ * Output of the video editing task.
  *
  * @method TaskOutputStorage getOutputStorage() Obtain Target storage for the edited file.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for the edited file.
  * @method string getPath() Obtain Path of the edited video file.
  * @method void setPath(string $Path) Set Path of the edited video file.
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method MediaMetaData getMetaData() Obtain Metadata of the edited video file.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the edited video file.
  */
 class EditMediaTaskOutput extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EditMediaTaskOutput extends AbstractModel
     public $Path;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Metadata of the edited video file.
      */
     public $MetaData;
 
     /**
      * @param TaskOutputStorage $OutputStorage Target storage for the edited file.
      * @param string $Path Path of the edited video file.
-     * @param MediaMetaData $MetaData 
+     * @param MediaMetaData $MetaData Metadata of the edited video file.
      */
     function __construct()
     {

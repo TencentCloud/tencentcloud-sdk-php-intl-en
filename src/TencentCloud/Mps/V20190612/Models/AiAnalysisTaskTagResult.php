@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent tag result type
+ * Intelligent tag result type.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskTagInput getInput() Obtain Intelligent tag task input.
  * @method void setInput(AiAnalysisTaskTagInput $Input) Set Intelligent tag task input.
- * @method AiAnalysisTaskTagOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskTagOutput $Output) Set 
+ * @method AiAnalysisTaskTagOutput getOutput() Obtain Intelligent tag task output.
+ * @method void setOutput(AiAnalysisTaskTagOutput $Output) Set Intelligent tag task output.
  */
 class AiAnalysisTaskTagResult extends AbstractModel
 {
@@ -61,7 +61,7 @@ class AiAnalysisTaskTagResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskTagOutput 
+     * @var AiAnalysisTaskTagOutput Intelligent tag task output.
      */
     public $Output;
 
@@ -71,7 +71,7 @@ class AiAnalysisTaskTagResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiAnalysisTaskTagInput $Input Intelligent tag task input.
-     * @param AiAnalysisTaskTagOutput $Output 
+     * @param AiAnalysisTaskTagOutput $Output Intelligent tag task output.
      */
     function __construct()
     {

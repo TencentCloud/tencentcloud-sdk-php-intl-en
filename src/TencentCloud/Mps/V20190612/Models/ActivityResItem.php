@@ -18,116 +18,124 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Orchestration subtask output
+ * Output of the orchestration subtask
  *
- * @method MediaProcessTaskTranscodeResult getTranscodeTask() Obtain 
- * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) Set 
- * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() Obtain 
- * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set 
- * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain 
- * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set 
- * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain 
- * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set 
- * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain 
- * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set 
- * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain 
- * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set 
- * @method ScheduleRecognitionTaskResult getRecognitionTask() Obtain 
- * @method void setRecognitionTask(ScheduleRecognitionTaskResult $RecognitionTask) Set 
- * @method ScheduleReviewTaskResult getReviewTask() Obtain 
- * @method void setReviewTask(ScheduleReviewTaskResult $ReviewTask) Set 
- * @method ScheduleAnalysisTaskResult getAnalysisTask() Obtain 
- * @method void setAnalysisTask(ScheduleAnalysisTaskResult $AnalysisTask) Set 
- * @method ScheduleQualityControlTaskResult getQualityControlTask() Obtain 
- * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) Set 
- * @method ScheduleExecRuleTaskResult getExecRuleTask() Obtain 
- * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) Set 
- * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() Obtain 
- * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) Set 
- * @method SmartEraseTaskResult getSmartEraseTask() Obtain 
- * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) Set 
+ * @method MediaProcessTaskTranscodeResult getTranscodeTask() Obtain <p>Transcoding task output</p>
+ * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) Set <p>Transcoding task output</p>
+ * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() Obtain <p>Output of rotating image tasks</p>
+ * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set <p>Output of rotating image tasks</p>
+ * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain <p>Time point screenshot task output</p>
+ * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set <p>Time point screenshot task output</p>
+ * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain <p>Output of sampling screenshot task</p>
+ * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set <p>Output of sampling screenshot task</p>
+ * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain <p>Image sprite output</p>
+ * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set <p>Image sprite output</p>
+ * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain <p>Adaptive bitrate streaming task output</p>
+ * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set <p>Adaptive bitrate streaming task output</p>
+ * @method ScheduleRecognitionTaskResult getRecognitionTask() Obtain <p>Identification task output</p>
+ * @method void setRecognitionTask(ScheduleRecognitionTaskResult $RecognitionTask) Set <p>Identification task output</p>
+ * @method ScheduleReviewTaskResult getReviewTask() Obtain <p>Review task output</p>
+ * @method void setReviewTask(ScheduleReviewTaskResult $ReviewTask) Set <p>Review task output</p>
+ * @method ScheduleAnalysisTaskResult getAnalysisTask() Obtain <p>Analysis task output</p>
+ * @method void setAnalysisTask(ScheduleAnalysisTaskResult $AnalysisTask) Set <p>Analysis task output</p>
+ * @method ScheduleQualityControlTaskResult getQualityControlTask() Obtain <p>Media quality inspection task output</p>
+ * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) Set <p>Media quality inspection task output</p>
+ * @method ScheduleExecRuleTaskResult getExecRuleTask() Obtain <p>Conditional judgment task output</p>
+ * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) Set <p>Conditional judgment task output</p>
+ * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() Obtain <p>Smart subtitle task output</p>
+ * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) Set <p>Smart subtitle task output</p>
+ * @method SmartEraseTaskResult getSmartEraseTask() Obtain <p>Output of the intelligent erasure task</p>
+ * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) Set <p>Output of the intelligent erasure task</p>
+ * @method AIDubbingTaskResult getAIDubbingTask() Obtain <p>AI dubbing task output.</p>
+ * @method void setAIDubbingTask(AIDubbingTaskResult $AIDubbingTask) Set <p>AI dubbing task output.</p>
  */
 class ActivityResItem extends AbstractModel
 {
     /**
-     * @var MediaProcessTaskTranscodeResult 
+     * @var MediaProcessTaskTranscodeResult <p>Transcoding task output</p>
      */
     public $TranscodeTask;
 
     /**
-     * @var MediaProcessTaskAnimatedGraphicResult 
+     * @var MediaProcessTaskAnimatedGraphicResult <p>Output of rotating image tasks</p>
      */
     public $AnimatedGraphicTask;
 
     /**
-     * @var MediaProcessTaskSnapshotByTimeOffsetResult 
+     * @var MediaProcessTaskSnapshotByTimeOffsetResult <p>Time point screenshot task output</p>
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var MediaProcessTaskSampleSnapshotResult 
+     * @var MediaProcessTaskSampleSnapshotResult <p>Output of sampling screenshot task</p>
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var MediaProcessTaskImageSpriteResult 
+     * @var MediaProcessTaskImageSpriteResult <p>Image sprite output</p>
      */
     public $ImageSpriteTask;
 
     /**
-     * @var MediaProcessTaskAdaptiveDynamicStreamingResult 
+     * @var MediaProcessTaskAdaptiveDynamicStreamingResult <p>Adaptive bitrate streaming task output</p>
      */
     public $AdaptiveDynamicStreamingTask;
 
     /**
-     * @var ScheduleRecognitionTaskResult 
+     * @var ScheduleRecognitionTaskResult <p>Identification task output</p>
      */
     public $RecognitionTask;
 
     /**
-     * @var ScheduleReviewTaskResult 
+     * @var ScheduleReviewTaskResult <p>Review task output</p>
      */
     public $ReviewTask;
 
     /**
-     * @var ScheduleAnalysisTaskResult 
+     * @var ScheduleAnalysisTaskResult <p>Analysis task output</p>
      */
     public $AnalysisTask;
 
     /**
-     * @var ScheduleQualityControlTaskResult 
+     * @var ScheduleQualityControlTaskResult <p>Media quality inspection task output</p>
      */
     public $QualityControlTask;
 
     /**
-     * @var ScheduleExecRuleTaskResult 
+     * @var ScheduleExecRuleTaskResult <p>Conditional judgment task output</p>
      */
     public $ExecRuleTask;
 
     /**
-     * @var ScheduleSmartSubtitleTaskResult 
+     * @var ScheduleSmartSubtitleTaskResult <p>Smart subtitle task output</p>
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var SmartEraseTaskResult 
+     * @var SmartEraseTaskResult <p>Output of the intelligent erasure task</p>
      */
     public $SmartEraseTask;
 
     /**
-     * @param MediaProcessTaskTranscodeResult $TranscodeTask 
-     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask 
-     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask 
-     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask 
-     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask 
-     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask 
-     * @param ScheduleRecognitionTaskResult $RecognitionTask 
-     * @param ScheduleReviewTaskResult $ReviewTask 
-     * @param ScheduleAnalysisTaskResult $AnalysisTask 
-     * @param ScheduleQualityControlTaskResult $QualityControlTask 
-     * @param ScheduleExecRuleTaskResult $ExecRuleTask 
-     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask 
-     * @param SmartEraseTaskResult $SmartEraseTask 
+     * @var AIDubbingTaskResult <p>AI dubbing task output.</p>
+     */
+    public $AIDubbingTask;
+
+    /**
+     * @param MediaProcessTaskTranscodeResult $TranscodeTask <p>Transcoding task output</p>
+     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask <p>Output of rotating image tasks</p>
+     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask <p>Time point screenshot task output</p>
+     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask <p>Output of sampling screenshot task</p>
+     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask <p>Image sprite output</p>
+     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask <p>Adaptive bitrate streaming task output</p>
+     * @param ScheduleRecognitionTaskResult $RecognitionTask <p>Identification task output</p>
+     * @param ScheduleReviewTaskResult $ReviewTask <p>Review task output</p>
+     * @param ScheduleAnalysisTaskResult $AnalysisTask <p>Analysis task output</p>
+     * @param ScheduleQualityControlTaskResult $QualityControlTask <p>Media quality inspection task output</p>
+     * @param ScheduleExecRuleTaskResult $ExecRuleTask <p>Conditional judgment task output</p>
+     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask <p>Smart subtitle task output</p>
+     * @param SmartEraseTaskResult $SmartEraseTask <p>Output of the intelligent erasure task</p>
+     * @param AIDubbingTaskResult $AIDubbingTask <p>AI dubbing task output.</p>
      */
     function __construct()
     {
@@ -205,6 +213,11 @@ class ActivityResItem extends AbstractModel
         if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
             $this->SmartEraseTask = new SmartEraseTaskResult();
             $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
+        }
+
+        if (array_key_exists("AIDubbingTask",$param) and $param["AIDubbingTask"] !== null) {
+            $this->AIDubbingTask = new AIDubbingTaskResult();
+            $this->AIDubbingTask->deserialize($param["AIDubbingTask"]);
         }
     }
 }

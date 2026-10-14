@@ -18,36 +18,36 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The RTP configuration of the output to create.
+ * Create the RTP configuration for the output of a media transmission stream.
  *
- * @method array getDestinations() Obtain The relay destination addresses. One or two addresses are allowed.
- * @method void setDestinations(array $Destinations) Set The relay destination addresses. One or two addresses are allowed.
- * @method string getFEC() Obtain This parameter must be set to `none`.
- * @method void setFEC(string $FEC) Set This parameter must be set to `none`.
- * @method integer getIdleTimeout() Obtain The timeout period (ms).
- * @method void setIdleTimeout(integer $IdleTimeout) Set The timeout period (ms).
+ * @method array getDestinations() Obtain Destination address. You can enter 1 to 2 addresses.
+ * @method void setDestinations(array $Destinations) Set Destination address. You can enter 1 to 2 addresses.
+ * @method string getFEC() Obtain Can only be filled in with none.
+ * @method void setFEC(string $FEC) Set Can only be filled in with none.
+ * @method integer getIdleTimeout() Obtain Idle timeout period, in milliseconds.
+ * @method void setIdleTimeout(integer $IdleTimeout) Set Idle timeout period, in milliseconds.
  */
 class CreateOutputInfoRTPSettings extends AbstractModel
 {
     /**
-     * @var array The relay destination addresses. One or two addresses are allowed.
+     * @var array Destination address. You can enter 1 to 2 addresses.
      */
     public $Destinations;
 
     /**
-     * @var string This parameter must be set to `none`.
+     * @var string Can only be filled in with none.
      */
     public $FEC;
 
     /**
-     * @var integer The timeout period (ms).
+     * @var integer Idle timeout period, in milliseconds.
      */
     public $IdleTimeout;
 
     /**
-     * @param array $Destinations The relay destination addresses. One or two addresses are allowed.
-     * @param string $FEC This parameter must be set to `none`.
-     * @param integer $IdleTimeout The timeout period (ms).
+     * @param array $Destinations Destination address. You can enter 1 to 2 addresses.
+     * @param string $FEC Can only be filled in with none.
+     * @param integer $IdleTimeout Idle timeout period, in milliseconds.
      */
     function __construct()
     {

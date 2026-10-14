@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskAsrFullTextResultInput getInput() Obtain Input information on the full speech recognition task.
  * @method void setInput(AiRecognitionTaskAsrFullTextResultInput $Input) Set Input information on the full speech recognition task.
- * @method AiRecognitionTaskAsrFullTextResultOutput getOutput() Obtain 
- * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
+ * @method AiRecognitionTaskAsrFullTextResultOutput getOutput() Obtain Output information on the full speech recognition task.
+ * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set Output information on the full speech recognition task.
+ * @method integer getProgress() Obtain Task progress.
+ * @method void setProgress(integer $Progress) Set Task progress.
  */
 class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 {
@@ -63,12 +63,12 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskAsrFullTextResultOutput 
+     * @var AiRecognitionTaskAsrFullTextResultOutput Output information on the full speech recognition task.
      */
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Task progress.
      */
     public $Progress;
 
@@ -78,8 +78,8 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiRecognitionTaskAsrFullTextResultInput $Input Input information on the full speech recognition task.
-     * @param AiRecognitionTaskAsrFullTextResultOutput $Output 
-     * @param integer $Progress 
+     * @param AiRecognitionTaskAsrFullTextResultOutput $Output Output information on the full speech recognition task.
+     * @param integer $Progress Task progress.
      */
     function __construct()
     {

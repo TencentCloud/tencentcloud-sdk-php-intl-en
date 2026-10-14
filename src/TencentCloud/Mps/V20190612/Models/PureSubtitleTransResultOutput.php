@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detailed output result of translation.
  *
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the subtitle file.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the subtitle file.
  * @method array getSubtitleResults() Obtain Result set of multilingual translation.
  * @method void setSubtitleResults(array $SubtitleResults) Set Result set of multilingual translation.
  */
 class PureSubtitleTransResultOutput extends AbstractModel
 {
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage Storage location of the subtitle file.
      */
     public $OutputStorage;
 
@@ -38,7 +38,7 @@ class PureSubtitleTransResultOutput extends AbstractModel
     public $SubtitleResults;
 
     /**
-     * @param TaskOutputStorage $OutputStorage 
+     * @param TaskOutputStorage $OutputStorage Storage location of the subtitle file.
      * @param array $SubtitleResults Result set of multilingual translation.
      */
     function __construct()

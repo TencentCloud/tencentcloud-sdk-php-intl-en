@@ -18,36 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Agent debugging information
  *
- * @method string getInput() Obtain 
- * @method void setInput(string $Input) Set 
- * @method string getOutput() Obtain 
- * @method void setOutput(string $Output) Set 
- * @method string getModelName() Obtain 
- * @method void setModelName(string $ModelName) Set 
+ * @method string getInput() Obtain Input information of the tool and large model, json
+ * @method void setInput(string $Input) Set Input information of the tool and large model, json
+ * @method string getOutput() Obtain Output information of tools and large models, in json format
+ * @method void setOutput(string $Output) Set Output information of tools and large models, in json format
+ * @method string getModelName() Obtain Model name.
+ * @method void setModelName(string $ModelName) Set Model name.
  */
 class AgentDebugInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Input information of the tool and large model, json
      */
     public $Input;
 
     /**
-     * @var string 
+     * @var string Output information of tools and large models, in json format
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string Model name.
      */
     public $ModelName;
 
     /**
-     * @param string $Input 
-     * @param string $Output 
-     * @param string $ModelName 
+     * @param string $Input Input information of the tool and large model, json
+     * @param string $Output Output information of tools and large models, in json format
+     * @param string $ModelName Model name.
      */
     function __construct()
     {

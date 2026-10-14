@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent image masking configuration.
  *
- * @method string getSwitch() Obtain <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
- * @method void setSwitch(string $Switch) Set <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
- * @method string getType() Obtain <p>Target type: "foreground" (default) / "pattern"</p>
- * @method void setType(string $Type) Set <p>Target type: "foreground" (default) / "pattern"</p>
- * @method PatternConfig getPatternConfig() Obtain <p>Pattern matting configuration. This parameter is valid only when Type is pattern.</p>
- * @method void setPatternConfig(PatternConfig $PatternConfig) Set <p>Pattern matting configuration. This parameter is valid only when Type is pattern.</p>
- * @method string getModel() Obtain <p>Cutout model selection, optional.</p><p>Enumeration value:</p><ul><li>auto: Automatically choose appropriate model</li><li>WAND-cutout-1.0-lite: Standard version, fastest speed</li><li>WAND-cutout-2.0-lite: Enhanced, fastest speed</li><li>WAND-cutout-2.0-flash: Enhanced, quality-speed balance</li></ul>
- * @method void setModel(string $Model) Set <p>Cutout model selection, optional.</p><p>Enumeration value:</p><ul><li>auto: Automatically choose appropriate model</li><li>WAND-cutout-1.0-lite: Standard version, fastest speed</li><li>WAND-cutout-2.0-lite: Enhanced, fastest speed</li><li>WAND-cutout-2.0-flash: Enhanced, quality-speed balance</li></ul>
+ * @method string getSwitch() Obtain <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method void setSwitch(string $Switch) Set <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method string getType() Obtain <p>Matting target type: "foreground" (default) / "pattern"</p>
+ * @method void setType(string $Type) Set <p>Matting target type: "foreground" (default) / "pattern"</p>
+ * @method PatternConfig getPatternConfig() Obtain <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+ * @method void setPatternConfig(PatternConfig $PatternConfig) Set <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+ * @method string getModel() Obtain <p>Matting model selection.</p><p>Enumeration values:</p><ul><li>cutout-1.0-lite: basic version, fastest speed</li><li>cutout-1.0-flash: standard version, quality-speed balance</li></ul>
+ * @method void setModel(string $Model) Set <p>Matting model selection.</p><p>Enumeration values:</p><ul><li>cutout-1.0-lite: basic version, fastest speed</li><li>cutout-1.0-flash: standard version, quality-speed balance</li></ul>
  */
 class AiCutoutConfig extends AbstractModel
 {
     /**
-     * @var string <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @var string <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public $Switch;
 
     /**
-     * @var string <p>Target type: "foreground" (default) / "pattern"</p>
+     * @var string <p>Matting target type: "foreground" (default) / "pattern"</p>
      */
     public $Type;
 
     /**
-     * @var PatternConfig <p>Pattern matting configuration. This parameter is valid only when Type is pattern.</p>
+     * @var PatternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
      */
     public $PatternConfig;
 
     /**
-     * @var string <p>Cutout model selection, optional.</p><p>Enumeration value:</p><ul><li>auto: Automatically choose appropriate model</li><li>WAND-cutout-1.0-lite: Standard version, fastest speed</li><li>WAND-cutout-2.0-lite: Enhanced, fastest speed</li><li>WAND-cutout-2.0-flash: Enhanced, quality-speed balance</li></ul>
+     * @var string <p>Matting model selection.</p><p>Enumeration values:</p><ul><li>cutout-1.0-lite: basic version, fastest speed</li><li>cutout-1.0-flash: standard version, quality-speed balance</li></ul>
      */
     public $Model;
 
     /**
-     * @param string $Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-     * @param string $Type <p>Target type: "foreground" (default) / "pattern"</p>
-     * @param PatternConfig $PatternConfig <p>Pattern matting configuration. This parameter is valid only when Type is pattern.</p>
-     * @param string $Model <p>Cutout model selection, optional.</p><p>Enumeration value:</p><ul><li>auto: Automatically choose appropriate model</li><li>WAND-cutout-1.0-lite: Standard version, fastest speed</li><li>WAND-cutout-2.0-lite: Enhanced, fastest speed</li><li>WAND-cutout-2.0-flash: Enhanced, quality-speed balance</li></ul>
+     * @param string $Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @param string $Type <p>Matting target type: "foreground" (default) / "pattern"</p>
+     * @param PatternConfig $PatternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+     * @param string $Model <p>Matting model selection.</p><p>Enumeration values:</p><ul><li>cutout-1.0-lite: basic version, fastest speed</li><li>cutout-1.0-flash: standard version, quality-speed balance</li></ul>
      */
     function __construct()
     {

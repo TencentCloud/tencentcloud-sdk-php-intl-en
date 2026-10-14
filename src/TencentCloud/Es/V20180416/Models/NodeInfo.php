@@ -18,128 +18,124 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specification information of a node type in the cluster (such as hot data node, warm data node, or dedicated primary node), including node type, number of nodes, node specification, disk type, and disk size. If `Type` is not specified, it will be a hot data node by default; if the node is a primary node, then the `DiskType` and `DiskSize` parameters will be ignored (as a primary node has no data disks)
+ * Specification description information of a node type in the cluster (such as hot data node, cold data node, dedicated master node), including node type, number of nodes, node specification, disk type, and disk size. If Type is not specified, it defaults to hot data node. If the node is a master node, the DiskType and DiskSize parameters will be ignored (the primary node has no data disk).
  *
- * @method integer getNodeNum() Obtain Number of nodes
- * @method void setNodeNum(integer $NodeNum) Set Number of nodes
- * @method string getNodeType() Obtain Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method void setNodeType(string $NodeType) Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method string getType() Obtain Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
- * @method void setType(string $Type) Set Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
- * @method string getDiskType() Obtain Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
- * @method void setDiskType(string $DiskType) Set Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
- * @method integer getDiskSize() Obtain Node disk size in GB
- * @method void setDiskSize(integer $DiskSize) Set Node disk size in GB
- * @method LocalDiskInfo getLocalDiskInfo() Obtain Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLocalDiskInfo(LocalDiskInfo $LocalDiskInfo) Set Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskCount() Obtain Number of node disks
- * @method void setDiskCount(integer $DiskCount) Set Number of node disks
- * @method integer getDiskEncrypt() Obtain Whether to encrypt node disk. 0: no (default); 1: yes.
- * @method void setDiskEncrypt(integer $DiskEncrypt) Set Whether to encrypt node disk. 0: no (default); 1: yes.
- * @method integer getCpuNum() Obtain CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCpuNum(integer $CpuNum) Set CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMemSize() Obtain Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemSize(integer $MemSize) Set Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskEnhance() Obtain /
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskEnhance(integer $DiskEnhance) Set /
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNodeNum() Obtain <p>Number of nodes.</p>
+ * @method void setNodeNum(integer $NodeNum) Set <p>Number of nodes.</p>
+ * @method string getNodeType() Obtain <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method void setNodeType(string $NodeType) Set <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method string getType() Obtain <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
+ * @method void setType(string $Type) Set <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
+ * @method string getDiskType() Obtain <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
+ * @method void setDiskType(string $DiskType) Set <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
+ * @method integer getDiskSize() Obtain <p>Node disk capacity (GB)</p>
+ * @method void setDiskSize(integer $DiskSize) Set <p>Node disk capacity (GB)</p>
+ * @method LocalDiskInfo getLocalDiskInfo() Obtain <p>Node local disk information.</p>
+ * @method void setLocalDiskInfo(LocalDiskInfo $LocalDiskInfo) Set <p>Node local disk information.</p>
+ * @method integer getDiskCount() Obtain <p>Number of node disk blocks</p>
+ * @method void setDiskCount(integer $DiskCount) Set <p>Number of node disk blocks</p>
+ * @method integer getDiskEncrypt() Obtain <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
+ * @method void setDiskEncrypt(integer $DiskEncrypt) Set <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
+ * @method string getKmsKeyId() Obtain <p>Custom encryption key id</p>
+ * @method void setKmsKeyId(string $KmsKeyId) Set <p>Custom encryption key id</p>
+ * @method string getKmsKeyName() Obtain <p>Custom encryption key name</p>
+ * @method void setKmsKeyName(string $KmsKeyName) Set <p>Custom encryption key name</p>
+ * @method integer getCpuNum() Obtain <p>Number of CPUs</p>
+ * @method void setCpuNum(integer $CpuNum) Set <p>Number of CPUs</p>
+ * @method integer getMemSize() Obtain <p>Memory size, in GB.</p>
+ * @method void setMemSize(integer $MemSize) Set <p>Memory size, in GB.</p>
+ * @method integer getDiskEnhance() Obtain <p>Additional hard disk performance</p>
+ * @method void setDiskEnhance(integer $DiskEnhance) Set <p>Additional hard disk performance</p>
+ * @method GpuInfo getGpuInfo() Obtain <p>Gpu information of the node</p>
+ * @method void setGpuInfo(GpuInfo $GpuInfo) Set <p>Gpu information of the node</p>
  */
 class NodeInfo extends AbstractModel
 {
     /**
-     * @var integer Number of nodes
+     * @var integer <p>Number of nodes.</p>
      */
     public $NodeNum;
 
     /**
-     * @var string Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @var string <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public $NodeType;
 
     /**
-     * @var string Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
+     * @var string <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
      */
     public $Type;
 
     /**
-     * @var string Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+     * @var string <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
      */
     public $DiskType;
 
     /**
-     * @var integer Node disk size in GB
+     * @var integer <p>Node disk capacity (GB)</p>
      */
     public $DiskSize;
 
     /**
-     * @var LocalDiskInfo Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var LocalDiskInfo <p>Node local disk information.</p>
      */
     public $LocalDiskInfo;
 
     /**
-     * @var integer Number of node disks
+     * @var integer <p>Number of node disk blocks</p>
      */
     public $DiskCount;
 
     /**
-     * @var integer Whether to encrypt node disk. 0: no (default); 1: yes.
+     * @var integer <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
      */
     public $DiskEncrypt;
 
     /**
-     * @var integer CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Custom encryption key id</p>
+     */
+    public $KmsKeyId;
+
+    /**
+     * @var string <p>Custom encryption key name</p>
+     */
+    public $KmsKeyName;
+
+    /**
+     * @var integer <p>Number of CPUs</p>
      */
     public $CpuNum;
 
     /**
-     * @var integer Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Memory size, in GB.</p>
      */
     public $MemSize;
 
     /**
-     * @var integer /
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Additional hard disk performance</p>
      */
     public $DiskEnhance;
 
     /**
-     * @param integer $NodeNum Number of nodes
-     * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param string $Type Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
-     * @param string $DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
-     * @param integer $DiskSize Node disk size in GB
-     * @param LocalDiskInfo $LocalDiskInfo Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskCount Number of node disks
-     * @param integer $DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
-     * @param integer $CpuNum CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MemSize Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskEnhance /
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var GpuInfo <p>Gpu information of the node</p>
+     */
+    public $GpuInfo;
+
+    /**
+     * @param integer $NodeNum <p>Number of nodes.</p>
+     * @param string $NodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param string $Type <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
+     * @param string $DiskType <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
+     * @param integer $DiskSize <p>Node disk capacity (GB)</p>
+     * @param LocalDiskInfo $LocalDiskInfo <p>Node local disk information.</p>
+     * @param integer $DiskCount <p>Number of node disk blocks</p>
+     * @param integer $DiskEncrypt <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
+     * @param string $KmsKeyId <p>Custom encryption key id</p>
+     * @param string $KmsKeyName <p>Custom encryption key name</p>
+     * @param integer $CpuNum <p>Number of CPUs</p>
+     * @param integer $MemSize <p>Memory size, in GB.</p>
+     * @param integer $DiskEnhance <p>Additional hard disk performance</p>
+     * @param GpuInfo $GpuInfo <p>Gpu information of the node</p>
      */
     function __construct()
     {
@@ -187,6 +183,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->DiskEncrypt = $param["DiskEncrypt"];
         }
 
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
+        }
+
+        if (array_key_exists("KmsKeyName",$param) and $param["KmsKeyName"] !== null) {
+            $this->KmsKeyName = $param["KmsKeyName"];
+        }
+
         if (array_key_exists("CpuNum",$param) and $param["CpuNum"] !== null) {
             $this->CpuNum = $param["CpuNum"];
         }
@@ -197,6 +201,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DiskEnhance",$param) and $param["DiskEnhance"] !== null) {
             $this->DiskEnhance = $param["DiskEnhance"];
+        }
+
+        if (array_key_exists("GpuInfo",$param) and $param["GpuInfo"] !== null) {
+            $this->GpuInfo = new GpuInfo();
+            $this->GpuInfo->deserialize($param["GpuInfo"]);
         }
     }
 }

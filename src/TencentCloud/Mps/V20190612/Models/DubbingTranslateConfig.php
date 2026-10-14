@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoSrcLanguage(string $VideoSrcLanguage) Set <p>Source language.</p>
  * @method string getTranslateDstLanguage() Obtain <p>Target language of the translation.</p>
  * @method void setTranslateDstLanguage(string $TranslateDstLanguage) Set <p>Target language of the translation.</p>
- * @method string getSimplifyTranslation() Obtain <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
- * @method void setSimplifyTranslation(string $SimplifyTranslation) Set <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+ * @method string getSimplifyTranslation() Obtain <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+ * @method void setSimplifyTranslation(string $SimplifyTranslation) Set <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
  */
 class DubbingTranslateConfig extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DubbingTranslateConfig extends AbstractModel
     public $TranslateDstLanguage;
 
     /**
-     * @var string <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+     * @var string <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
      */
     public $SimplifyTranslation;
 
     /**
      * @param string $VideoSrcLanguage <p>Source language.</p>
      * @param string $TranslateDstLanguage <p>Target language of the translation.</p>
-     * @param string $SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+     * @param string $SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
      */
     function __construct()
     {

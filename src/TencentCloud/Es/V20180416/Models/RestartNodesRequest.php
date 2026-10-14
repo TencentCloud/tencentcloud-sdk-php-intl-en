@@ -20,21 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestartNodes request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
+ * @method string getInstanceId() Obtain Cluster instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
  * @method array getNodeNames() Obtain Node name list
  * @method void setNodeNames(array $NodeNames) Set Node name list
- * @method boolean getForceRestart() Obtain Whether to force restart
- * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart
- * @method string getRestartMode() Obtain The restart mode. Valid values: `in-place` (default), `blue-green`.
- * @method void setRestartMode(string $RestartMode) Set The restart mode. Valid values: `in-place` (default), `blue-green`.
- * @method boolean getIsOffline() Obtain The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
- * @method void setIsOffline(boolean $IsOffline) Set The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+ * @method boolean getForceRestart() Obtain Whether to perform forced reboot.
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to perform forced reboot.
+ * @method string getRestartMode() Obtain Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
+ * @method void setRestartMode(string $RestartMode) Set Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
+ * @method boolean getIsOffline() Obtain Node status, for use in blue-green mode; offline node blue/green at risk
+ * @method void setIsOffline(boolean $IsOffline) Set Node status, for use in blue-green mode; offline node blue/green at risk
+ * @method integer getCvmDelayOnlineTime() Obtain cvm delay listing time
+ * @method void setCvmDelayOnlineTime(integer $CvmDelayOnlineTime) Set cvm delay listing time
+ * @method integer getShardAllocationConcurrents() Obtain Number of concurrent shard migrations
+ * @method void setShardAllocationConcurrents(integer $ShardAllocationConcurrents) Set Number of concurrent shard migrations
+ * @method integer getShardAllocationBytes() Obtain Shard migration concurrency speed
+ * @method void setShardAllocationBytes(integer $ShardAllocationBytes) Set Shard migration concurrency speed
+ * @method boolean getEnableScheduleRecoverGroup() Obtain Whether to enable the placement group asynchronous task
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) Set Whether to enable the placement group asynchronous task
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() Obtain Time period of the async task for the placement group
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) Set Time period of the async task for the placement group
+ * @method array getEventTypeIds() Obtain Event ID list.
+ * @method void setEventTypeIds(array $EventTypeIds) Set Event ID list.
  */
 class RestartNodesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Cluster instance ID.
      */
     public $InstanceId;
 
@@ -44,26 +56,62 @@ class RestartNodesRequest extends AbstractModel
     public $NodeNames;
 
     /**
-     * @var boolean Whether to force restart
+     * @var boolean Whether to perform forced reboot.
      */
     public $ForceRestart;
 
     /**
-     * @var string The restart mode. Valid values: `in-place` (default), `blue-green`.
+     * @var string Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
      */
     public $RestartMode;
 
     /**
-     * @var boolean The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     * @var boolean Node status, for use in blue-green mode; offline node blue/green at risk
      */
     public $IsOffline;
 
     /**
-     * @param string $InstanceId Cluster instance ID
+     * @var integer cvm delay listing time
+     */
+    public $CvmDelayOnlineTime;
+
+    /**
+     * @var integer Number of concurrent shard migrations
+     */
+    public $ShardAllocationConcurrents;
+
+    /**
+     * @var integer Shard migration concurrency speed
+     */
+    public $ShardAllocationBytes;
+
+    /**
+     * @var boolean Whether to enable the placement group asynchronous task
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration Time period of the async task for the placement group
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
+     * @var array Event ID list.
+     */
+    public $EventTypeIds;
+
+    /**
+     * @param string $InstanceId Cluster instance ID.
      * @param array $NodeNames Node name list
-     * @param boolean $ForceRestart Whether to force restart
-     * @param string $RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
-     * @param boolean $IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     * @param boolean $ForceRestart Whether to perform forced reboot.
+     * @param string $RestartMode Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
+     * @param boolean $IsOffline Node status, for use in blue-green mode; offline node blue/green at risk
+     * @param integer $CvmDelayOnlineTime cvm delay listing time
+     * @param integer $ShardAllocationConcurrents Number of concurrent shard migrations
+     * @param integer $ShardAllocationBytes Shard migration concurrency speed
+     * @param boolean $EnableScheduleRecoverGroup Whether to enable the placement group asynchronous task
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration Time period of the async task for the placement group
+     * @param array $EventTypeIds Event ID list.
      */
     function __construct()
     {
@@ -96,6 +144,31 @@ class RestartNodesRequest extends AbstractModel
 
         if (array_key_exists("IsOffline",$param) and $param["IsOffline"] !== null) {
             $this->IsOffline = $param["IsOffline"];
+        }
+
+        if (array_key_exists("CvmDelayOnlineTime",$param) and $param["CvmDelayOnlineTime"] !== null) {
+            $this->CvmDelayOnlineTime = $param["CvmDelayOnlineTime"];
+        }
+
+        if (array_key_exists("ShardAllocationConcurrents",$param) and $param["ShardAllocationConcurrents"] !== null) {
+            $this->ShardAllocationConcurrents = $param["ShardAllocationConcurrents"];
+        }
+
+        if (array_key_exists("ShardAllocationBytes",$param) and $param["ShardAllocationBytes"] !== null) {
+            $this->ShardAllocationBytes = $param["ShardAllocationBytes"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("EventTypeIds",$param) and $param["EventTypeIds"] !== null) {
+            $this->EventTypeIds = $param["EventTypeIds"];
         }
     }
 }

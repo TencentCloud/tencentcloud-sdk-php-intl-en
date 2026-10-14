@@ -18,68 +18,68 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The real-time SRT streaming information of a flow.
+ * SRT information of the real-time stream status query API.
  *
- * @method integer getLatency() Obtain The latency (ms).
- * @method void setLatency(integer $Latency) Set The latency (ms).
- * @method integer getRTT() Obtain RTT (ms).
- * @method void setRTT(integer $RTT) Set RTT (ms).
- * @method integer getPackets() Obtain The number of packets sent or received.
- * @method void setPackets(integer $Packets) Set The number of packets sent or received.
- * @method float getPacketLossRate() Obtain The packet loss rate.
- * @method void setPacketLossRate(float $PacketLossRate) Set The packet loss rate.
- * @method float getRetransmitRate() Obtain The retransmission rate.
- * @method void setRetransmitRate(float $RetransmitRate) Set The retransmission rate.
- * @method integer getDroppedPackets() Obtain The number of packets dropped.
- * @method void setDroppedPackets(integer $DroppedPackets) Set The number of packets dropped.
- * @method string getEncryption() Obtain Whether to encrypt the stream. Valid values: On, Off.
- * @method void setEncryption(string $Encryption) Set Whether to encrypt the stream. Valid values: On, Off.
+ * @method integer getLatency() Obtain Delay in ms.
+ * @method void setLatency(integer $Latency) Set Delay in ms.
+ * @method integer getRTT() Obtain RTT in ms.
+ * @method void setRTT(integer $RTT) Set RTT in ms.
+ * @method integer getPackets() Obtain Number of packets sent or received in real time.
+ * @method void setPackets(integer $Packets) Set Number of packets sent or received in real time.
+ * @method float getPacketLossRate() Obtain Packet loss rate.
+ * @method void setPacketLossRate(float $PacketLossRate) Set Packet loss rate.
+ * @method float getRetransmitRate() Obtain Retransmission rate.
+ * @method void setRetransmitRate(float $RetransmitRate) Set Retransmission rate.
+ * @method integer getDroppedPackets() Obtain Real-time packet loss count.
+ * @method void setDroppedPackets(integer $DroppedPackets) Set Real-time packet loss count.
+ * @method string getEncryption() Obtain Whether to encrypt. On | Off.
+ * @method void setEncryption(string $Encryption) Set Whether to encrypt. On | Off.
  */
 class FlowRealtimeStatusSRT extends AbstractModel
 {
     /**
-     * @var integer The latency (ms).
+     * @var integer Delay in ms.
      */
     public $Latency;
 
     /**
-     * @var integer RTT (ms).
+     * @var integer RTT in ms.
      */
     public $RTT;
 
     /**
-     * @var integer The number of packets sent or received.
+     * @var integer Number of packets sent or received in real time.
      */
     public $Packets;
 
     /**
-     * @var float The packet loss rate.
+     * @var float Packet loss rate.
      */
     public $PacketLossRate;
 
     /**
-     * @var float The retransmission rate.
+     * @var float Retransmission rate.
      */
     public $RetransmitRate;
 
     /**
-     * @var integer The number of packets dropped.
+     * @var integer Real-time packet loss count.
      */
     public $DroppedPackets;
 
     /**
-     * @var string Whether to encrypt the stream. Valid values: On, Off.
+     * @var string Whether to encrypt. On | Off.
      */
     public $Encryption;
 
     /**
-     * @param integer $Latency The latency (ms).
-     * @param integer $RTT RTT (ms).
-     * @param integer $Packets The number of packets sent or received.
-     * @param float $PacketLossRate The packet loss rate.
-     * @param float $RetransmitRate The retransmission rate.
-     * @param integer $DroppedPackets The number of packets dropped.
-     * @param string $Encryption Whether to encrypt the stream. Valid values: On, Off.
+     * @param integer $Latency Delay in ms.
+     * @param integer $RTT RTT in ms.
+     * @param integer $Packets Number of packets sent or received in real time.
+     * @param float $PacketLossRate Packet loss rate.
+     * @param float $RetransmitRate Retransmission rate.
+     * @param integer $DroppedPackets Real-time packet loss count.
+     * @param string $Encryption Whether to encrypt. On | Off.
      */
     function __construct()
     {

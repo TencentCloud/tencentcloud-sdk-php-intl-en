@@ -18,7 +18,7 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of subtask in workflow task in the instance operation history (such as each check item in a upgrade check task)
+ * Subtask information in the process task of the instance operation record (for example, each check item in the upgrade check task)
  *
  * @method string getName() Obtain Subtask name
  * @method void setName(string $Name) Set Subtask name
@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrMsg(string $ErrMsg) Set Subtask error message
  * @method string getType() Obtain Subtask type
  * @method void setType(string $Type) Set Subtask type
- * @method integer getStatus() Obtain Subtask status. 0: processing, 1: succeeded, -1: failed
- * @method void setStatus(integer $Status) Set Subtask status. 0: processing, 1: succeeded, -1: failed
- * @method array getFailedIndices() Obtain Name of the index for which the check for upgrade failed
- * @method void setFailedIndices(array $FailedIndices) Set Name of the index for which the check for upgrade failed
+ * @method integer getStatus() Obtain Subtask status. 0: processing, 1: success, -1: failure
+ * @method void setStatus(integer $Status) Set Subtask status. 0: processing, 1: success, -1: failure
+ * @method array getFailedIndices() Obtain Index name that failed the upgrade check
+ * @method void setFailedIndices(array $FailedIndices) Set Index name that failed the upgrade check
  * @method string getFinishTime() Obtain Subtask end time
  * @method void setFinishTime(string $FinishTime) Set Subtask end time
- * @method integer getLevel() Obtain Subtask level. 1: warning, 2: failed
- * @method void setLevel(integer $Level) Set Subtask level. 1: warning, 2: failed
+ * @method integer getLevel() Obtain Subtask level. 1: warning; 2: failure
+ * @method void setLevel(integer $Level) Set Subtask level. 1: warning; 2: failure
  */
 class SubTaskDetail extends AbstractModel
 {
@@ -60,12 +60,12 @@ class SubTaskDetail extends AbstractModel
     public $Type;
 
     /**
-     * @var integer Subtask status. 0: processing, 1: succeeded, -1: failed
+     * @var integer Subtask status. 0: processing, 1: success, -1: failure
      */
     public $Status;
 
     /**
-     * @var array Name of the index for which the check for upgrade failed
+     * @var array Index name that failed the upgrade check
      */
     public $FailedIndices;
 
@@ -75,7 +75,7 @@ class SubTaskDetail extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var integer Subtask level. 1: warning, 2: failed
+     * @var integer Subtask level. 1: warning; 2: failure
      */
     public $Level;
 
@@ -84,10 +84,10 @@ class SubTaskDetail extends AbstractModel
      * @param boolean $Result Subtask result
      * @param string $ErrMsg Subtask error message
      * @param string $Type Subtask type
-     * @param integer $Status Subtask status. 0: processing, 1: succeeded, -1: failed
-     * @param array $FailedIndices Name of the index for which the check for upgrade failed
+     * @param integer $Status Subtask status. 0: processing, 1: success, -1: failure
+     * @param array $FailedIndices Index name that failed the upgrade check
      * @param string $FinishTime Subtask end time
-     * @param integer $Level Subtask level. 1: warning, 2: failed
+     * @param integer $Level Subtask level. 1: warning; 2: failure
      */
     function __construct()
     {

@@ -18,17 +18,17 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RTP configuration information of the queried input.
+ * Query the configuration message of the input RTP.
  *
- * @method string getFEC() Obtain Whether it is FEC.
- * @method void setFEC(string $FEC) Set Whether it is FEC.
+ * @method string getFEC() Obtain Whether to enable FEC.
+ * @method void setFEC(string $FEC) Set Whether to enable FEC.
  * @method integer getIdleTimeout() Obtain Idle timeout period.
  * @method void setIdleTimeout(integer $IdleTimeout) Set Idle timeout period.
  */
 class DescribeInputRTPSettings extends AbstractModel
 {
     /**
-     * @var string Whether it is FEC.
+     * @var string Whether to enable FEC.
      */
     public $FEC;
 
@@ -38,7 +38,7 @@ class DescribeInputRTPSettings extends AbstractModel
     public $IdleTimeout;
 
     /**
-     * @param string $FEC Whether it is FEC.
+     * @param string $FEC Whether to enable FEC.
      * @param integer $IdleTimeout Idle timeout period.
      */
     function __construct()

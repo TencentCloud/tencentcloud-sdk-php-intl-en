@@ -20,23 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio separation configuration
  *
- * @method string getSwitch() Obtain Capability configuration switch. Available values:
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Capability configuration switch. Available values:
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getTrack() Obtain 
- * @method void setTrack(string $Track) Set 
+ * @method string getType() Obtain Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+ * @method void setType(string $Type) Set Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+ * @method string getTrack() Obtain Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
+ * @method void setTrack(string $Track) Set Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
  */
 class AudioSeparateConfig extends AbstractModel
 {
     /**
-     * @var string Capability configuration switch. Available values:
+     * @var string Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -44,22 +56,34 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
      */
     public $Track;
 
     /**
-     * @param string $Switch Capability configuration switch. Available values:
+     * @param string $Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type 
-     * @param string $Track 
+     * @param string $Type Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+     * @param string $Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
      */
     function __construct()
     {

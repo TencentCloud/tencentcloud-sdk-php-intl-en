@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of image sprite
+ * Result type of an image sprite task for a video
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method ImageSpriteTaskInput getInput() Obtain Input of the image sprite task for videos.
  * @method void setInput(ImageSpriteTaskInput $Input) Set Input of the image sprite task for videos.
- * @method MediaImageSpriteItem getOutput() Obtain 
- * @method void setOutput(MediaImageSpriteItem $Output) Set 
+ * @method MediaImageSpriteItem getOutput() Obtain Output of the image sprite task for videos.
+ * @method void setOutput(MediaImageSpriteItem $Output) Set Output of the image sprite task for videos.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getFinishTime() Obtain Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -65,7 +65,7 @@ class MediaProcessTaskImageSpriteResult extends AbstractModel
     public $Input;
 
     /**
-     * @var MediaImageSpriteItem 
+     * @var MediaImageSpriteItem Output of the image sprite task for videos.
      */
     public $Output;
 
@@ -85,7 +85,7 @@ class MediaProcessTaskImageSpriteResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param ImageSpriteTaskInput $Input Input of the image sprite task for videos.
-     * @param MediaImageSpriteItem $Output 
+     * @param MediaImageSpriteItem $Output Output of the image sprite task for videos.
      * @param string $BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */

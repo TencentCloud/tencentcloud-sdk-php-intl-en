@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Answer to the questionnaire question
  *
- * @method string getQuestion() Obtain 
- * @method void setQuestion(string $Question) Set 
- * @method array getSelectedLabels() Obtain 
- * @method void setSelectedLabels(array $SelectedLabels) Set 
+ * @method string getQuestion() Obtain <p>Issue.</p>
+ * @method void setQuestion(string $Question) Set <p>Issue.</p>
+ * @method array getSelectedLabels() Obtain <p>Selected answer tag.</p>
+ * @method void setSelectedLabels(array $SelectedLabels) Set <p>Selected answer tag.</p>
  */
 class QuestionnaireQuestionAnswer extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Issue.</p>
      */
     public $Question;
 
     /**
-     * @var array 
+     * @var array <p>Selected answer tag.</p>
      */
     public $SelectedLabels;
 
     /**
-     * @param string $Question 
-     * @param array $SelectedLabels 
+     * @param string $Question <p>Issue.</p>
+     * @param array $SelectedLabels <p>Selected answer tag.</p>
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceOperations request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
- * @method string getStartTime() Obtain Start time, such as "2019-03-07 16:30:39"
- * @method void setStartTime(string $StartTime) Set Start time, such as "2019-03-07 16:30:39"
- * @method string getEndTime() Obtain End time, such as "2019-03-30 20:18:03"
- * @method void setEndTime(string $EndTime) Set End time, such as "2019-03-30 20:18:03"
- * @method integer getOffset() Obtain Pagination start value
- * @method void setOffset(integer $Offset) Set Pagination start value
- * @method integer getLimit() Obtain Number of entries per page
- * @method void setLimit(integer $Limit) Set Number of entries per page
+ * @method string getInstanceId() Obtain Cluster instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
+ * @method string getStartTime() Obtain Start time, e.g., "2019-03-07 16:30:39"
+ * @method void setStartTime(string $StartTime) Set Start time, e.g., "2019-03-07 16:30:39"
+ * @method string getEndTime() Obtain End time, e.g., "2019-03-30 20:18:03"
+ * @method void setEndTime(string $EndTime) Set End time, e.g., "2019-03-30 20:18:03"
+ * @method integer getOffset() Obtain Paging Starting Value
+ * @method void setOffset(integer $Offset) Set Paging Starting Value
+ * @method integer getLimit() Obtain Pagination size.
+ * @method void setLimit(integer $Limit) Set Pagination size.
  */
 class DescribeInstanceOperationsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Cluster instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Start time, such as "2019-03-07 16:30:39"
+     * @var string Start time, e.g., "2019-03-07 16:30:39"
      */
     public $StartTime;
 
     /**
-     * @var string End time, such as "2019-03-30 20:18:03"
+     * @var string End time, e.g., "2019-03-30 20:18:03"
      */
     public $EndTime;
 
     /**
-     * @var integer Pagination start value
+     * @var integer Paging Starting Value
      */
     public $Offset;
 
     /**
-     * @var integer Number of entries per page
+     * @var integer Pagination size.
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId Cluster instance ID
-     * @param string $StartTime Start time, such as "2019-03-07 16:30:39"
-     * @param string $EndTime End time, such as "2019-03-30 20:18:03"
-     * @param integer $Offset Pagination start value
-     * @param integer $Limit Number of entries per page
+     * @param string $InstanceId Cluster instance ID.
+     * @param string $StartTime Start time, e.g., "2019-03-07 16:30:39"
+     * @param string $EndTime End time, e.g., "2019-03-30 20:18:03"
+     * @param integer $Offset Paging Starting Value
+     * @param integer $Limit Pagination size.
      */
     function __construct()
     {

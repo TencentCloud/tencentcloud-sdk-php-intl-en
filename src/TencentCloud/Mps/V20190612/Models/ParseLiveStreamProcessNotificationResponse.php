@@ -36,28 +36,28 @@ use TencentCloud\Common\AbstractModel;
 <li>AiAnalysisResult: content analysis result.</li>
 <li>AiSmartSubtitleResult: smart subtitle result;</li>
 <li>ProcessEof: end of live stream processing.</li>
- * @method string getTaskId() Obtain Task ID for video processing.
- * @method void setTaskId(string $TaskId) Set Task ID for video processing.
- * @method LiveStreamProcessErrorInfo getProcessEofInfo() Obtain 
- * @method void setProcessEofInfo(LiveStreamProcessErrorInfo $ProcessEofInfo) Set 
- * @method LiveStreamAiReviewResultInfo getAiReviewResultInfo() Obtain 
- * @method void setAiReviewResultInfo(LiveStreamAiReviewResultInfo $AiReviewResultInfo) Set 
- * @method LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() Obtain 
- * @method void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo) Set 
- * @method LiveStreamAiAnalysisResultInfo getAiAnalysisResultInfo() Obtain 
- * @method void setAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo $AiAnalysisResultInfo) Set 
- * @method LiveStreamAiQualityControlResultInfo getAiQualityControlResultInfo() Obtain 
- * @method void setAiQualityControlResultInfo(LiveStreamAiQualityControlResultInfo $AiQualityControlResultInfo) Set 
- * @method LiveStreamRecordResultInfo getLiveRecordResultInfo() Obtain 
- * @method void setLiveRecordResultInfo(LiveStreamRecordResultInfo $LiveRecordResultInfo) Set 
- * @method LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() Obtain Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
- * @method void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo) Set Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+ * @method string getTaskId() Obtain Video processing task ID.
+ * @method void setTaskId(string $TaskId) Set Video processing task ID.
+ * @method LiveStreamProcessErrorInfo getProcessEofInfo() Obtain Error information of live stream processing. Valid when NotificationType is ProcessEof.
+ * @method void setProcessEofInfo(LiveStreamProcessErrorInfo $ProcessEofInfo) Set Error information of live stream processing. Valid when NotificationType is ProcessEof.
+ * @method LiveStreamAiReviewResultInfo getAiReviewResultInfo() Obtain Content moderation result. Valid when NotificationType is AiReviewResult.
+ * @method void setAiReviewResultInfo(LiveStreamAiReviewResultInfo $AiReviewResultInfo) Set Content moderation result. Valid when NotificationType is AiReviewResult.
+ * @method LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() Obtain Content recognition result. Valid when NotificationType is AiRecognitionResult.
+ * @method void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo) Set Content recognition result. Valid when NotificationType is AiRecognitionResult.
+ * @method LiveStreamAiAnalysisResultInfo getAiAnalysisResultInfo() Obtain Content analysis result. Valid when NotificationType is AiAnalysisResult.
+ * @method void setAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo $AiAnalysisResultInfo) Set Content analysis result. Valid when NotificationType is AiAnalysisResult.
+ * @method LiveStreamAiQualityControlResultInfo getAiQualityControlResultInfo() Obtain Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
+ * @method void setAiQualityControlResultInfo(LiveStreamAiQualityControlResultInfo $AiQualityControlResultInfo) Set Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
+ * @method LiveStreamRecordResultInfo getLiveRecordResultInfo() Obtain Live streaming result is valid when NotificationType is LiveRecordResult.
+ * @method void setLiveRecordResultInfo(LiveStreamRecordResultInfo $LiveRecordResultInfo) Set Live streaming result is valid when NotificationType is LiveRecordResult.
+ * @method LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() Obtain Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
+ * @method void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo) Set Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
  * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method string getSessionContext() Obtain Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method integer getTimestamp() Obtain -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
- * @method void setTimestamp(integer $Timestamp) Set -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+ * @method integer getTimestamp() Obtain - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
+ * @method void setTimestamp(integer $Timestamp) Set - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
  * @method string getSign() Obtain Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
  * @method void setSign(string $Sign) Set Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -78,42 +78,42 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
     public $NotificationType;
 
     /**
-     * @var string Task ID for video processing.
+     * @var string Video processing task ID.
      */
     public $TaskId;
 
     /**
-     * @var LiveStreamProcessErrorInfo 
+     * @var LiveStreamProcessErrorInfo Error information of live stream processing. Valid when NotificationType is ProcessEof.
      */
     public $ProcessEofInfo;
 
     /**
-     * @var LiveStreamAiReviewResultInfo 
+     * @var LiveStreamAiReviewResultInfo Content moderation result. Valid when NotificationType is AiReviewResult.
      */
     public $AiReviewResultInfo;
 
     /**
-     * @var LiveStreamAiRecognitionResultInfo 
+     * @var LiveStreamAiRecognitionResultInfo Content recognition result. Valid when NotificationType is AiRecognitionResult.
      */
     public $AiRecognitionResultInfo;
 
     /**
-     * @var LiveStreamAiAnalysisResultInfo 
+     * @var LiveStreamAiAnalysisResultInfo Content analysis result. Valid when NotificationType is AiAnalysisResult.
      */
     public $AiAnalysisResultInfo;
 
     /**
-     * @var LiveStreamAiQualityControlResultInfo 
+     * @var LiveStreamAiQualityControlResultInfo Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
      */
     public $AiQualityControlResultInfo;
 
     /**
-     * @var LiveStreamRecordResultInfo 
+     * @var LiveStreamRecordResultInfo Live streaming result is valid when NotificationType is LiveRecordResult.
      */
     public $LiveRecordResultInfo;
 
     /**
-     * @var LiveStreamAiSmartSubtitleResultInfo Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+     * @var LiveStreamAiSmartSubtitleResultInfo Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
      */
     public $AiSmartSubtitleResultInfo;
 
@@ -128,7 +128,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var integer -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+     * @var integer - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
      */
     public $Timestamp;
 
@@ -151,17 +151,17 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 <li>AiAnalysisResult: content analysis result.</li>
 <li>AiSmartSubtitleResult: smart subtitle result;</li>
 <li>ProcessEof: end of live stream processing.</li>
-     * @param string $TaskId Task ID for video processing.
-     * @param LiveStreamProcessErrorInfo $ProcessEofInfo 
-     * @param LiveStreamAiReviewResultInfo $AiReviewResultInfo 
-     * @param LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo 
-     * @param LiveStreamAiAnalysisResultInfo $AiAnalysisResultInfo 
-     * @param LiveStreamAiQualityControlResultInfo $AiQualityControlResultInfo 
-     * @param LiveStreamRecordResultInfo $LiveRecordResultInfo 
-     * @param LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+     * @param string $TaskId Video processing task ID.
+     * @param LiveStreamProcessErrorInfo $ProcessEofInfo Error information of live stream processing. Valid when NotificationType is ProcessEof.
+     * @param LiveStreamAiReviewResultInfo $AiReviewResultInfo Content moderation result. Valid when NotificationType is AiReviewResult.
+     * @param LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo Content recognition result. Valid when NotificationType is AiRecognitionResult.
+     * @param LiveStreamAiAnalysisResultInfo $AiAnalysisResultInfo Content analysis result. Valid when NotificationType is AiAnalysisResult.
+     * @param LiveStreamAiQualityControlResultInfo $AiQualityControlResultInfo Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
+     * @param LiveStreamRecordResultInfo $LiveRecordResultInfo Live streaming result is valid when NotificationType is LiveRecordResult.
+     * @param LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
      * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      * @param string $SessionContext Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param integer $Timestamp -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+     * @param integer $Timestamp - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
      * @param string $Sign Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */

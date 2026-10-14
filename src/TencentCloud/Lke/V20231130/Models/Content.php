@@ -18,148 +18,164 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Dialogue record content details
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
- * @method array getQuoteInfos() Obtain 
- * @method void setQuoteInfos(array $QuoteInfos) Set 
- * @method array getReferences() Obtain 
- * @method void setReferences(array $References) Set 
- * @method ImageInfoContent getImage() Obtain 
- * @method void setImage(ImageInfoContent $Image) Set 
- * @method FileInfoContent getFile() Obtain 
- * @method void setFile(FileInfoContent $File) Set 
- * @method array getOptionCards() Obtain 
- * @method void setOptionCards(array $OptionCards) Set 
- * @method array getCustomParams() Obtain 
- * @method void setCustomParams(array $CustomParams) Set 
- * @method array getCustomVariables() Obtain 
- * @method void setCustomVariables(array $CustomVariables) Set 
- * @method SandboxContent getSandbox() Obtain 
- * @method void setSandbox(SandboxContent $Sandbox) Set 
- * @method WebSearchContent getWebSearch() Obtain 
- * @method void setWebSearch(WebSearchContent $WebSearch) Set 
- * @method FileCollection getFileCollection() Obtain 
- * @method void setFileCollection(FileCollection $FileCollection) Set 
- * @method Widget getWidget() Obtain 
- * @method void setWidget(Widget $Widget) Set 
- * @method WidgetAction getWidgetAction() Obtain 
- * @method void setWidgetAction(WidgetAction $WidgetAction) Set 
- * @method array getTasks() Obtain 
- * @method void setTasks(array $Tasks) Set 
- * @method Questionnaire getQuestionnaire() Obtain 
- * @method void setQuestionnaire(Questionnaire $Questionnaire) Set 
- * @method integer getOptionMode() Obtain 
- * @method void setOptionMode(integer $OptionMode) Set 
+ * @method string getType() Obtain <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
+ * @method void setType(string $Type) Set <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
+ * @method string getText() Obtain <p>Text content</p>
+ * @method void setText(string $Text) Set <p>Text content</p>
+ * @method array getQuoteInfos() Obtain <p>Reference info.</p>
+ * @method void setQuoteInfos(array $QuoteInfos) Set <p>Reference info.</p>
+ * @method array getReferences() Obtain <p>Reference information</p>
+ * @method void setReferences(array $References) Set <p>Reference information</p>
+ * @method ImageInfoContent getImage() Obtain <p>Image information.</p>
+ * @method void setImage(ImageInfoContent $Image) Set <p>Image information.</p>
+ * @method FileInfoContent getFile() Obtain <p>File information</p>
+ * @method void setFile(FileInfoContent $File) Set <p>File information</p>
+ * @method array getOptionCards() Obtain <p>Tab info.</p>
+ * @method void setOptionCards(array $OptionCards) Set <p>Tab info.</p>
+ * @method array getCustomParams() Obtain <p>User-customized business parameter information.</p>
+ * @method void setCustomParams(array $CustomParams) Set <p>User-customized business parameter information.</p>
+ * @method array getCustomVariables() Obtain <p>Custom Variable</p>
+ * @method void setCustomVariables(array $CustomVariables) Set <p>Custom Variable</p>
+ * @method SandboxContent getSandbox() Obtain <p>Sandbox information</p>
+ * @method void setSandbox(SandboxContent $Sandbox) Set <p>Sandbox information</p>
+ * @method WebSearchContent getWebSearch() Obtain <p>Web page search content</p>
+ * @method void setWebSearch(WebSearchContent $WebSearch) Set <p>Web page search content</p>
+ * @method FileCollection getFileCollection() Obtain <p>File information collection</p>
+ * @method void setFileCollection(FileCollection $FileCollection) Set <p>File information collection</p>
+ * @method Widget getWidget() Obtain <p>Widget information.</p>
+ * @method void setWidget(Widget $Widget) Set <p>Widget information.</p>
+ * @method WidgetAction getWidgetAction() Obtain <p>Widget action information</p>
+ * @method void setWidgetAction(WidgetAction $WidgetAction) Set <p>Widget action information</p>
+ * @method array getTasks() Obtain <p>Task List</p>
+ * @method void setTasks(array $Tasks) Set <p>Task List</p>
+ * @method Questionnaire getQuestionnaire() Obtain <p>Questionnaire information</p>
+ * @method void setQuestionnaire(Questionnaire $Questionnaire) Set <p>Questionnaire information</p>
+ * @method integer getOptionMode() Obtain <p>Tab mode</p>
+ * @method void setOptionMode(integer $OptionMode) Set <p>Tab mode</p>
+ * @method ConversationMcpApp getMcpApp() Obtain <p>MCP APP information returned</p>
+ * @method void setMcpApp(ConversationMcpApp $McpApp) Set <p>MCP APP information returned</p>
+ * @method ConversationResourceArtifact getResource() Obtain <p>Application or workflow resource product</p>
+ * @method void setResource(ConversationResourceArtifact $Resource) Set <p>Application or workflow resource product</p>
  */
 class Content extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>Text content</p>
      */
     public $Text;
 
     /**
-     * @var array 
+     * @var array <p>Reference info.</p>
      */
     public $QuoteInfos;
 
     /**
-     * @var array 
+     * @var array <p>Reference information</p>
      */
     public $References;
 
     /**
-     * @var ImageInfoContent 
+     * @var ImageInfoContent <p>Image information.</p>
      */
     public $Image;
 
     /**
-     * @var FileInfoContent 
+     * @var FileInfoContent <p>File information</p>
      */
     public $File;
 
     /**
-     * @var array 
+     * @var array <p>Tab info.</p>
      */
     public $OptionCards;
 
     /**
-     * @var array 
+     * @var array <p>User-customized business parameter information.</p>
      */
     public $CustomParams;
 
     /**
-     * @var array 
+     * @var array <p>Custom Variable</p>
      */
     public $CustomVariables;
 
     /**
-     * @var SandboxContent 
+     * @var SandboxContent <p>Sandbox information</p>
      */
     public $Sandbox;
 
     /**
-     * @var WebSearchContent 
+     * @var WebSearchContent <p>Web page search content</p>
      */
     public $WebSearch;
 
     /**
-     * @var FileCollection 
+     * @var FileCollection <p>File information collection</p>
      */
     public $FileCollection;
 
     /**
-     * @var Widget 
+     * @var Widget <p>Widget information.</p>
      */
     public $Widget;
 
     /**
-     * @var WidgetAction 
+     * @var WidgetAction <p>Widget action information</p>
      */
     public $WidgetAction;
 
     /**
-     * @var array 
+     * @var array <p>Task List</p>
      */
     public $Tasks;
 
     /**
-     * @var Questionnaire 
+     * @var Questionnaire <p>Questionnaire information</p>
      */
     public $Questionnaire;
 
     /**
-     * @var integer 
+     * @var integer <p>Tab mode</p>
      */
     public $OptionMode;
 
     /**
-     * @param string $Type 
-     * @param string $Text 
-     * @param array $QuoteInfos 
-     * @param array $References 
-     * @param ImageInfoContent $Image 
-     * @param FileInfoContent $File 
-     * @param array $OptionCards 
-     * @param array $CustomParams 
-     * @param array $CustomVariables 
-     * @param SandboxContent $Sandbox 
-     * @param WebSearchContent $WebSearch 
-     * @param FileCollection $FileCollection 
-     * @param Widget $Widget 
-     * @param WidgetAction $WidgetAction 
-     * @param array $Tasks 
-     * @param Questionnaire $Questionnaire 
-     * @param integer $OptionMode 
+     * @var ConversationMcpApp <p>MCP APP information returned</p>
+     */
+    public $McpApp;
+
+    /**
+     * @var ConversationResourceArtifact <p>Application or workflow resource product</p>
+     */
+    public $Resource;
+
+    /**
+     * @param string $Type <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
+     * @param string $Text <p>Text content</p>
+     * @param array $QuoteInfos <p>Reference info.</p>
+     * @param array $References <p>Reference information</p>
+     * @param ImageInfoContent $Image <p>Image information.</p>
+     * @param FileInfoContent $File <p>File information</p>
+     * @param array $OptionCards <p>Tab info.</p>
+     * @param array $CustomParams <p>User-customized business parameter information.</p>
+     * @param array $CustomVariables <p>Custom Variable</p>
+     * @param SandboxContent $Sandbox <p>Sandbox information</p>
+     * @param WebSearchContent $WebSearch <p>Web page search content</p>
+     * @param FileCollection $FileCollection <p>File information collection</p>
+     * @param Widget $Widget <p>Widget information.</p>
+     * @param WidgetAction $WidgetAction <p>Widget action information</p>
+     * @param array $Tasks <p>Task List</p>
+     * @param Questionnaire $Questionnaire <p>Questionnaire information</p>
+     * @param integer $OptionMode <p>Tab mode</p>
+     * @param ConversationMcpApp $McpApp <p>MCP APP information returned</p>
+     * @param ConversationResourceArtifact $Resource <p>Application or workflow resource product</p>
      */
     function __construct()
     {
@@ -263,6 +279,16 @@ class Content extends AbstractModel
 
         if (array_key_exists("OptionMode",$param) and $param["OptionMode"] !== null) {
             $this->OptionMode = $param["OptionMode"];
+        }
+
+        if (array_key_exists("McpApp",$param) and $param["McpApp"] !== null) {
+            $this->McpApp = new ConversationMcpApp();
+            $this->McpApp->deserialize($param["McpApp"]);
+        }
+
+        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
+            $this->Resource = new ConversationResourceArtifact();
+            $this->Resource->deserialize($param["Resource"]);
         }
     }
 }

@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kibana view data
  *
- * @method string getIp() Obtain Kibana node IP
- * @method void setIp(string $Ip) Set Kibana node IP
- * @method integer getDiskSize() Obtain Node disk size
- * @method void setDiskSize(integer $DiskSize) Set Node disk size
- * @method float getDiskUsage() Obtain Disk usage
- * @method void setDiskUsage(float $DiskUsage) Set Disk usage
- * @method integer getMemSize() Obtain Node memory size
- * @method void setMemSize(integer $MemSize) Set Node memory size
- * @method float getMemUsage() Obtain Memory usage
- * @method void setMemUsage(float $MemUsage) Set Memory usage
- * @method integer getCpuNum() Obtain Number of node CPUs
- * @method void setCpuNum(integer $CpuNum) Set Number of node CPUs
- * @method float getCpuUsage() Obtain CPU usage
- * @method void setCpuUsage(float $CpuUsage) Set CPU usage
- * @method string getZone() Obtain Availability zone
- * @method void setZone(string $Zone) Set Availability zone
+ * @method string getIp() Obtain <p>Kibana node IP</p>
+ * @method void setIp(string $Ip) Set <p>Kibana node IP</p>
+ * @method integer getDiskSize() Obtain <p>Total node disk size</p>
+ * @method void setDiskSize(integer $DiskSize) Set <p>Total node disk size</p>
+ * @method float getDiskUsage() Obtain <p>Disk utilization rate</p>
+ * @method void setDiskUsage(float $DiskUsage) Set <p>Disk utilization rate</p>
+ * @method integer getMemSize() Obtain <p>Node memory size</p>
+ * @method void setMemSize(integer $MemSize) Set <p>Node memory size</p>
+ * @method float getMemUsage() Obtain <p>Memory usage rate</p>
+ * @method void setMemUsage(float $MemUsage) Set <p>Memory usage rate</p>
+ * @method integer getCpuNum() Obtain <p>Number of CPUs on the node</p>
+ * @method void setCpuNum(integer $CpuNum) Set <p>Number of CPUs on the node</p>
+ * @method float getCpuUsage() Obtain <p>cpu utilization</p>
+ * @method void setCpuUsage(float $CpuUsage) Set <p>cpu utilization</p>
+ * @method string getZone() Obtain <p>AZ.</p>
+ * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method string getNodeId() Obtain <p>ts-0noqayxu-az6-hot-03222010-0</p>
+ * @method void setNodeId(string $NodeId) Set <p>ts-0noqayxu-az6-hot-03222010-0</p>
+ * @method string getUserIp() Obtain <p>Client-side Ip info</p>
+ * @method void setUserIp(string $UserIp) Set <p>Client-side Ip info</p>
  */
 class KibanaView extends AbstractModel
 {
     /**
-     * @var string Kibana node IP
+     * @var string <p>Kibana node IP</p>
      */
     public $Ip;
 
     /**
-     * @var integer Node disk size
+     * @var integer <p>Total node disk size</p>
      */
     public $DiskSize;
 
     /**
-     * @var float Disk usage
+     * @var float <p>Disk utilization rate</p>
      */
     public $DiskUsage;
 
     /**
-     * @var integer Node memory size
+     * @var integer <p>Node memory size</p>
      */
     public $MemSize;
 
     /**
-     * @var float Memory usage
+     * @var float <p>Memory usage rate</p>
      */
     public $MemUsage;
 
     /**
-     * @var integer Number of node CPUs
+     * @var integer <p>Number of CPUs on the node</p>
      */
     public $CpuNum;
 
     /**
-     * @var float CPU usage
+     * @var float <p>cpu utilization</p>
      */
     public $CpuUsage;
 
     /**
-     * @var string Availability zone
+     * @var string <p>AZ.</p>
      */
     public $Zone;
 
     /**
-     * @param string $Ip Kibana node IP
-     * @param integer $DiskSize Node disk size
-     * @param float $DiskUsage Disk usage
-     * @param integer $MemSize Node memory size
-     * @param float $MemUsage Memory usage
-     * @param integer $CpuNum Number of node CPUs
-     * @param float $CpuUsage CPU usage
-     * @param string $Zone Availability zone
+     * @var string <p>ts-0noqayxu-az6-hot-03222010-0</p>
+     */
+    public $NodeId;
+
+    /**
+     * @var string <p>Client-side Ip info</p>
+     */
+    public $UserIp;
+
+    /**
+     * @param string $Ip <p>Kibana node IP</p>
+     * @param integer $DiskSize <p>Total node disk size</p>
+     * @param float $DiskUsage <p>Disk utilization rate</p>
+     * @param integer $MemSize <p>Node memory size</p>
+     * @param float $MemUsage <p>Memory usage rate</p>
+     * @param integer $CpuNum <p>Number of CPUs on the node</p>
+     * @param float $CpuUsage <p>cpu utilization</p>
+     * @param string $Zone <p>AZ.</p>
+     * @param string $NodeId <p>ts-0noqayxu-az6-hot-03222010-0</p>
+     * @param string $UserIp <p>Client-side Ip info</p>
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class KibanaView extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
+            $this->UserIp = $param["UserIp"];
         }
     }
 }

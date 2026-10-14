@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom parameters for AI Dubbing
+ * Custom parameter for AI dubbing
  *
  * @method DubbingTranslateConfig getTranslateConfig() Obtain <p>Translation configuration message.</p>
  * @method void setTranslateConfig(DubbingTranslateConfig $TranslateConfig) Set <p>Translation configuration message.</p>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubtitleConfig(DubbingSubtitleConfig $SubtitleConfig) Set <p>Subtitle configuration message.</p>
  * @method DubbingConfig getDubbingConfig() Obtain <p>Dubbing configuration message.</p>
  * @method void setDubbingConfig(DubbingConfig $DubbingConfig) Set <p>Dubbing configuration message.</p>
- * @method DubbingOutputConfig getOutputConfig() Obtain <p>Output configuration information.</p>
- * @method void setOutputConfig(DubbingOutputConfig $OutputConfig) Set <p>Output configuration information.</p>
+ * @method DubbingOutputConfig getOutputConfig() Obtain <p>Outputs configuration message.</p>
+ * @method void setOutputConfig(DubbingOutputConfig $OutputConfig) Set <p>Outputs configuration message.</p>
  */
 class OverrideAIDubbingParameter extends AbstractModel
 {
@@ -47,7 +47,7 @@ class OverrideAIDubbingParameter extends AbstractModel
     public $DubbingConfig;
 
     /**
-     * @var DubbingOutputConfig <p>Output configuration information.</p>
+     * @var DubbingOutputConfig <p>Outputs configuration message.</p>
      */
     public $OutputConfig;
 
@@ -55,7 +55,7 @@ class OverrideAIDubbingParameter extends AbstractModel
      * @param DubbingTranslateConfig $TranslateConfig <p>Translation configuration message.</p>
      * @param DubbingSubtitleConfig $SubtitleConfig <p>Subtitle configuration message.</p>
      * @param DubbingConfig $DubbingConfig <p>Dubbing configuration message.</p>
-     * @param DubbingOutputConfig $OutputConfig <p>Output configuration information.</p>
+     * @param DubbingOutputConfig $OutputConfig <p>Outputs configuration message.</p>
      */
     function __construct()
     {

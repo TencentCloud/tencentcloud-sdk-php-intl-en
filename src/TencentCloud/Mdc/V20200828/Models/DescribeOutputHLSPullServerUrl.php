@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query the output HLS pull URL information.
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getUrl() Obtain Url of the HLS pull address.
+ * @method void setUrl(string $Url) Set Url of the HLS pull address.
  */
 class DescribeOutputHLSPullServerUrl extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Url of the HLS pull address.
      */
     public $Url;
 
     /**
-     * @param string $Url 
+     * @param string $Url Url of the HLS pull address.
      */
     function __construct()
     {

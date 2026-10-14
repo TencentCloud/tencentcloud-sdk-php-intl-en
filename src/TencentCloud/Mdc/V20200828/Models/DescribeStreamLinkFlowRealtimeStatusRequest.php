@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamLinkFlowRealtimeStatus request structure.
  *
- * @method string getFlowId() Obtain The flow ID.
- * @method void setFlowId(string $FlowId) Set The flow ID.
- * @method array getInputIds() Obtain The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
- * @method void setInputIds(array $InputIds) Set The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
- * @method array getOutputIds() Obtain The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
- * @method void setOutputIds(array $OutputIds) Set The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+ * @method string getFlowId() Obtain <p>Stream ID.</p>
+ * @method void setFlowId(string $FlowId) Set <p>Stream ID.</p>
+ * @method array getInputIds() Obtain <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
+ * @method void setInputIds(array $InputIds) Set <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
+ * @method array getOutputIds() Obtain <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
+ * @method void setOutputIds(array $OutputIds) Set <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
  */
 class DescribeStreamLinkFlowRealtimeStatusRequest extends AbstractModel
 {
     /**
-     * @var string The flow ID.
+     * @var string <p>Stream ID.</p>
      */
     public $FlowId;
 
     /**
-     * @var array The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+     * @var array <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
      */
     public $InputIds;
 
     /**
-     * @var array The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+     * @var array <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
      */
     public $OutputIds;
 
     /**
-     * @param string $FlowId The flow ID.
-     * @param array $InputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-     * @param array $OutputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+     * @param string $FlowId <p>Stream ID.</p>
+     * @param array $InputIds <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
+     * @param array $OutputIds <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
      */
     function __construct()
     {

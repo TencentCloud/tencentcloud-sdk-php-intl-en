@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopStreamLinkFlow request structure.
  *
- * @method string getFlowId() Obtain Flow ID
- * @method void setFlowId(string $FlowId) Set Flow ID
+ * @method string getFlowId() Obtain <p>Stream Id.</p>
+ * @method void setFlowId(string $FlowId) Set <p>Stream Id.</p>
  */
 class StopStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string Flow ID
+     * @var string <p>Stream Id.</p>
      */
     public $FlowId;
 
     /**
-     * @param string $FlowId Flow ID
+     * @param string $FlowId <p>Stream Id.</p>
      */
     function __construct()
     {

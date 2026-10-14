@@ -21,37 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * Frame interpolation frame rate configuration
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method integer getFps() Obtain 
- * @method void setFps(integer $Fps) Set 
+ * @method integer getFps() Obtain Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
+ * @method void setFps(integer $Fps) Set Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
  */
 class FrameRateConfig extends AbstractModel
 {
     /**
      * @var string Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var integer 
+     * @var integer Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
      */
     public $Fps;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param integer $Fps 
+     * @param integer $Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
      */
     function __construct()
     {

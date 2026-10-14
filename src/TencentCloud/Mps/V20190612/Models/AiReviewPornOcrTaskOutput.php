@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ocr text pornographic information
+ * Pornographic information in Ocr text.
  *
- * @method float getConfidence() Obtain Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
- * @method string getSuggestion() Obtain Result Suggestions for Ocr text pornographic content, value ranges from...to...
+ * @method float getConfidence() Obtain Ocr text porn score. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Ocr text porn score. Value range: 0-100.
+ * @method string getSuggestion() Obtain Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Result Suggestions for Ocr text pornographic content, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getSegmentSet() Obtain Video segment list with suspect Ocr text pornographic information.
- * @method void setSegmentSet(array $SegmentSet) Set Video segment list with suspect Ocr text pornographic information.
+ * @method array getSegmentSet() Obtain List of video segments where the Ocr text is suspected of containing pornographic content.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments where the Ocr text is suspected of containing pornographic content.
  */
 class AiReviewPornOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+     * @var float Ocr text porn score. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string Result Suggestions for Ocr text pornographic content, value ranges from...to...
+     * @var string Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,17 +49,17 @@ class AiReviewPornOcrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Video segment list with suspect Ocr text pornographic information.
+     * @var array List of video segments where the Ocr text is suspected of containing pornographic content.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
-     * @param string $Suggestion Result Suggestions for Ocr text pornographic content, value ranges from...to...
+     * @param float $Confidence Ocr text porn score. Value range: 0-100.
+     * @param string $Suggestion Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $SegmentSet Video segment list with suspect Ocr text pornographic information.
+     * @param array $SegmentSet List of video segments where the Ocr text is suspected of containing pornographic content.
      */
     function __construct()
     {

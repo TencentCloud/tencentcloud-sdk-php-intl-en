@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StreamLink region information
+ * Region information for media transmission.
  *
- * @method array getRegions() Obtain List of StreamLink regions
- * @method void setRegions(array $Regions) Set List of StreamLink regions
+ * @method array getRegions() Obtain List of region information for media direct transmission.
+ * @method void setRegions(array $Regions) Set List of region information for media direct transmission.
  */
 class StreamLinkRegionInfo extends AbstractModel
 {
     /**
-     * @var array List of StreamLink regions
+     * @var array List of region information for media direct transmission.
      */
     public $Regions;
 
     /**
-     * @param array $Regions List of StreamLink regions
+     * @param array $Regions List of region information for media direct transmission.
      */
     function __construct()
     {

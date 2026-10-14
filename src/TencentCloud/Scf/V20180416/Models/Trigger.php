@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Trigger type
  *
- * @method string getModTime() Obtain Latest modification time of the trigger
- * @method void setModTime(string $ModTime) Set Latest modification time of the trigger
+ * @method string getModTime() Obtain Last modification time of the trigger
+ * @method void setModTime(string $ModTime) Set Last modification time of the trigger
  * @method string getType() Obtain Trigger type
  * @method void setType(string $Type) Set Trigger type
- * @method string getTriggerDesc() Obtain Detailed trigger configuration
- * @method void setTriggerDesc(string $TriggerDesc) Set Detailed trigger configuration
- * @method string getTriggerName() Obtain Trigger name
- * @method void setTriggerName(string $TriggerName) Set Trigger name
- * @method string getAddTime() Obtain Creation time of the trigger
- * @method void setAddTime(string $AddTime) Set Creation time of the trigger
- * @method integer getEnable() Obtain Enabling switch
- * @method void setEnable(integer $Enable) Set Enabling switch
- * @method string getCustomArgument() Obtain Custom parameter
- * @method void setCustomArgument(string $CustomArgument) Set Custom parameter
+ * @method string getTriggerDesc() Obtain Trigger detailed configuration
+ * @method void setTriggerDesc(string $TriggerDesc) Set Trigger detailed configuration
+ * @method string getTriggerName() Obtain Trigger name.
+ * @method void setTriggerName(string $TriggerName) Set Trigger name.
+ * @method string getAddTime() Obtain Trigger creation time
+ * @method void setAddTime(string $AddTime) Set Trigger creation time
+ * @method integer getEnable() Obtain Enable switch
+ * @method void setEnable(integer $Enable) Set Enable switch
+ * @method string getCustomArgument() Obtain Customer custom parameter
+ * @method void setCustomArgument(string $CustomArgument) Set Customer custom parameter
  * @method string getAvailableStatus() Obtain Trigger status
  * @method void setAvailableStatus(string $AvailableStatus) Set Trigger status
- * @method string getResourceId() Obtain Minimum resource ID of trigger
- * @method void setResourceId(string $ResourceId) Set Minimum resource ID of trigger
- * @method string getBindStatus() Obtain Trigger-Function binding status
- * @method void setBindStatus(string $BindStatus) Set Trigger-Function binding status
- * @method string getTriggerAttribute() Obtain Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
- * @method void setTriggerAttribute(string $TriggerAttribute) Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
- * @method string getQualifier() Obtain The alias or version bound with the trigger
- * @method void setQualifier(string $Qualifier) Set The alias or version bound with the trigger
- * @method string getDescription() Obtain Trigger description
- * @method void setDescription(string $Description) Set Trigger description
+ * @method string getResourceId() Obtain Minimum resource ID of the trigger
+ * @method void setResourceId(string $ResourceId) Set Minimum resource ID of the trigger
+ * @method string getBindStatus() Obtain Binding status of the trigger and SCF
+ * @method void setBindStatus(string $BindStatus) Set Binding status of the trigger and SCF
+ * @method string getTriggerAttribute() Obtain Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
+ * @method void setTriggerAttribute(string $TriggerAttribute) Set Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
+ * @method string getQualifier() Obtain Alias name or version bound to the trigger
+ * @method void setQualifier(string $Qualifier) Set Alias name or version bound to the trigger
+ * @method string getDescription() Obtain Trigger description.
+ * @method void setDescription(string $Description) Set Trigger description.
  */
 class Trigger extends AbstractModel
 {
     /**
-     * @var string Latest modification time of the trigger
+     * @var string Last modification time of the trigger
      */
     public $ModTime;
 
@@ -60,27 +60,27 @@ class Trigger extends AbstractModel
     public $Type;
 
     /**
-     * @var string Detailed trigger configuration
+     * @var string Trigger detailed configuration
      */
     public $TriggerDesc;
 
     /**
-     * @var string Trigger name
+     * @var string Trigger name.
      */
     public $TriggerName;
 
     /**
-     * @var string Creation time of the trigger
+     * @var string Trigger creation time
      */
     public $AddTime;
 
     /**
-     * @var integer Enabling switch
+     * @var integer Enable switch
      */
     public $Enable;
 
     /**
-     * @var string Custom parameter
+     * @var string Customer custom parameter
      */
     public $CustomArgument;
 
@@ -90,47 +90,47 @@ class Trigger extends AbstractModel
     public $AvailableStatus;
 
     /**
-     * @var string Minimum resource ID of trigger
+     * @var string Minimum resource ID of the trigger
      * @deprecated
      */
     public $ResourceId;
 
     /**
-     * @var string Trigger-Function binding status
+     * @var string Binding status of the trigger and SCF
      * @deprecated
      */
     public $BindStatus;
 
     /**
-     * @var string Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @var string Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
      * @deprecated
      */
     public $TriggerAttribute;
 
     /**
-     * @var string The alias or version bound with the trigger
+     * @var string Alias name or version bound to the trigger
      */
     public $Qualifier;
 
     /**
-     * @var string Trigger description
+     * @var string Trigger description.
      */
     public $Description;
 
     /**
-     * @param string $ModTime Latest modification time of the trigger
+     * @param string $ModTime Last modification time of the trigger
      * @param string $Type Trigger type
-     * @param string $TriggerDesc Detailed trigger configuration
-     * @param string $TriggerName Trigger name
-     * @param string $AddTime Creation time of the trigger
-     * @param integer $Enable Enabling switch
-     * @param string $CustomArgument Custom parameter
+     * @param string $TriggerDesc Trigger detailed configuration
+     * @param string $TriggerName Trigger name.
+     * @param string $AddTime Trigger creation time
+     * @param integer $Enable Enable switch
+     * @param string $CustomArgument Customer custom parameter
      * @param string $AvailableStatus Trigger status
-     * @param string $ResourceId Minimum resource ID of trigger
-     * @param string $BindStatus Trigger-Function binding status
-     * @param string $TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
-     * @param string $Qualifier The alias or version bound with the trigger
-     * @param string $Description Trigger description
+     * @param string $ResourceId Minimum resource ID of the trigger
+     * @param string $BindStatus Binding status of the trigger and SCF
+     * @param string $TriggerAttribute Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
+     * @param string $Qualifier Alias name or version bound to the trigger
+     * @param string $Description Trigger description.
      */
     function __construct()
     {

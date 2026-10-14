@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image understanding task.
  *
- * @method string getModel() Obtain <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
- * @method void setModel(string $Model) Set <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
- * @method string getPrompt() Obtain <p>Image understanding directive</p>
- * @method void setPrompt(string $Prompt) Set <p>Image understanding directive</p>
+ * @method string getModel() Obtain <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
+ * @method void setModel(string $Model) Set <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
+ * @method string getPrompt() Obtain <p>Image understanding instruction</p>
+ * @method void setPrompt(string $Prompt) Set <p>Image understanding instruction</p>
+ * @method string getParameters() Obtain <p>Image understanding model parameters, of JSON string type.</p>
+ * @method void setParameters(string $Parameters) Set <p>Image understanding model parameters, of JSON string type.</p>
  */
 class UnderstandImageConfig extends AbstractModel
 {
     /**
-     * @var string <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
+     * @var string <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
      */
     public $Model;
 
     /**
-     * @var string <p>Image understanding directive</p>
+     * @var string <p>Image understanding instruction</p>
      */
     public $Prompt;
 
     /**
-     * @param string $Model <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
-     * @param string $Prompt <p>Image understanding directive</p>
+     * @var string <p>Image understanding model parameters, of JSON string type.</p>
+     */
+    public $Parameters;
+
+    /**
+     * @param string $Model <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
+     * @param string $Prompt <p>Image understanding instruction</p>
+     * @param string $Parameters <p>Image understanding model parameters, of JSON string type.</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class UnderstandImageConfig extends AbstractModel
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("Parameters",$param) and $param["Parameters"] !== null) {
+            $this->Parameters = $param["Parameters"];
         }
     }
 }

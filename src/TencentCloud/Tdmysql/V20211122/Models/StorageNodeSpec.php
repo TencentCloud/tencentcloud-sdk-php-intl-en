@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node specification for storage
  *
- * @method string getSpecCode() Obtain 
- * @method void setSpecCode(string $SpecCode) Set 
+ * @method string getSpecCode() Obtain <p>Specification code</p>
+ * @method void setSpecCode(string $SpecCode) Set <p>Specification code</p>
  * @method integer getStorageNodeCpu() Obtain <p>CPU cores of the storage node</p>
  * @method void setStorageNodeCpu(integer $StorageNodeCpu) Set <p>CPU cores of the storage node</p>
  * @method integer getStorageNodeMem() Obtain <p>Storage node memory size</p>
@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageNodeMinNum(integer $StorageNodeMinNum) Set <p>Minimum number of storage nodes</p>
  * @method integer getStorageNodeMinDisk() Obtain <p>Node disk size minimum</p>
  * @method void setStorageNodeMinDisk(integer $StorageNodeMinDisk) Set <p>Node disk size minimum</p>
- * @method string getStorageType() Obtain 
- * @method void setStorageType(string $StorageType) Set 
- * @method integer getStorageNodeDefaultDisk() Obtain 
- * @method void setStorageNodeDefaultDisk(integer $StorageNodeDefaultDisk) Set 
+ * @method string getStorageType() Obtain <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+ * @method void setStorageType(string $StorageType) Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+ * @method integer getStorageNodeDefaultDisk() Obtain <p>Default disk size of storage node for frontend display</p>
+ * @method void setStorageNodeDefaultDisk(integer $StorageNodeDefaultDisk) Set <p>Default disk size of storage node for frontend display</p>
  * @method array getInstanceMode() Obtain <p>Specification support billing mode list</p>
  * @method void setInstanceMode(array $InstanceMode) Set <p>Specification support billing mode list</p>
  * @method string getDiskTypeCategory() Obtain <p>Disk Type CLOUD_DISK: cloud disk LOCAL_DISK: local disk</p>
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class StorageNodeSpec extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Specification code</p>
      */
     public $SpecCode;
 
@@ -81,12 +81,12 @@ class StorageNodeSpec extends AbstractModel
     public $StorageNodeMinDisk;
 
     /**
-     * @var string 
+     * @var string <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public $StorageType;
 
     /**
-     * @var integer 
+     * @var integer <p>Default disk size of storage node for frontend display</p>
      */
     public $StorageNodeDefaultDisk;
 
@@ -101,15 +101,15 @@ class StorageNodeSpec extends AbstractModel
     public $DiskTypeCategory;
 
     /**
-     * @param string $SpecCode 
+     * @param string $SpecCode <p>Specification code</p>
      * @param integer $StorageNodeCpu <p>CPU cores of the storage node</p>
      * @param integer $StorageNodeMem <p>Storage node memory size</p>
      * @param integer $StorageNodeMaxNum <p>Maximum quantity of storage nodes</p>
      * @param integer $StorageNodeMaxDisk <p>Node disk size capacity limit</p>
      * @param integer $StorageNodeMinNum <p>Minimum number of storage nodes</p>
      * @param integer $StorageNodeMinDisk <p>Node disk size minimum</p>
-     * @param string $StorageType 
-     * @param integer $StorageNodeDefaultDisk 
+     * @param string $StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+     * @param integer $StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
      * @param array $InstanceMode <p>Specification support billing mode list</p>
      * @param string $DiskTypeCategory <p>Disk Type CLOUD_DISK: cloud disk LOCAL_DISK: local disk</p>
      */

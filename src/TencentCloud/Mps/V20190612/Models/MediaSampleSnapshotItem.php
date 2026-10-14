@@ -20,74 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sampling screenshot information
  *
- * @method integer getDefinition() Obtain Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method string getSampleType() Obtain Sampling method, Valid value:
-<li>Percent: interval sampling based on percentage.</li>
-<li>Time: sampling based on time interval.</li>
- * @method void setSampleType(string $SampleType) Set Sampling method, Valid value:
-<li>Percent: interval sampling based on percentage.</li>
-<li>Time: sampling based on time interval.</li>
- * @method integer getInterval() Obtain Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
-<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
- * @method void setInterval(integer $Interval) Set Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
-<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
- * @method TaskOutputStorage getStorage() Obtain Storage location of a file after screenshot.
- * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of a file after screenshot.
- * @method array getImagePathSet() Obtain List of generated screenshot paths.
- * @method void setImagePathSet(array $ImagePathSet) Set List of generated screenshot paths.
- * @method array getWaterMarkDefinition() Obtain If a screenshot is watermarked, the watermark template ID list.
- * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set If a screenshot is watermarked, the watermark template ID list.
+ * @method integer getDefinition() Obtain <p>Sampled screenshot specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">sampling screenshot parameter template</a>.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Sampled screenshot specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">sampling screenshot parameter template</a>.</p>
+ * @method string getSampleType() Obtain <p>Sampling method, valid value:</p><li>Percent: Sampling based on percentage interval.</li><li>Time: Sampling based on time interval.</li>
+ * @method void setSampleType(string $SampleType) Set <p>Sampling method, valid value:</p><li>Percent: Sampling based on percentage interval.</li><li>Time: Sampling based on time interval.</li>
+ * @method integer getInterval() Obtain <p>Sampling interval</p><li>When SampleType is Percent, this value indicates the percentage of images.</li><li>When SampleType is Time, this value indicates the time interval for each image, in seconds. The first image is always the first video frame.</li>
+ * @method void setInterval(integer $Interval) Set <p>Sampling interval</p><li>When SampleType is Percent, this value indicates the percentage of images.</li><li>When SampleType is Time, this value indicates the time interval for each image, in seconds. The first image is always the first video frame.</li>
+ * @method TaskOutputStorage getStorage() Obtain <p>Storage location of a file after screenshot.</p>
+ * @method void setStorage(TaskOutputStorage $Storage) Set <p>Storage location of a file after screenshot.</p>
+ * @method array getImagePathSet() Obtain <p>List of generated screenshot paths.</p>
+ * @method void setImagePathSet(array $ImagePathSet) Set <p>List of generated screenshot paths.</p>
+ * @method array getWaterMarkDefinition() Obtain <p>List of template IDs of watermarked screenshots.</p>
+ * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set <p>List of template IDs of watermarked screenshots.</p>
  */
 class MediaSampleSnapshotItem extends AbstractModel
 {
     /**
-     * @var integer Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @var integer <p>Sampled screenshot specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">sampling screenshot parameter template</a>.</p>
      */
     public $Definition;
 
     /**
-     * @var string Sampling method, Valid value:
-<li>Percent: interval sampling based on percentage.</li>
-<li>Time: sampling based on time interval.</li>
+     * @var string <p>Sampling method, valid value:</p><li>Percent: Sampling based on percentage interval.</li><li>Time: Sampling based on time interval.</li>
      */
     public $SampleType;
 
     /**
-     * @var integer Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
-<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
+     * @var integer <p>Sampling interval</p><li>When SampleType is Percent, this value indicates the percentage of images.</li><li>When SampleType is Time, this value indicates the time interval for each image, in seconds. The first image is always the first video frame.</li>
      */
     public $Interval;
 
     /**
-     * @var TaskOutputStorage Storage location of a file after screenshot.
+     * @var TaskOutputStorage <p>Storage location of a file after screenshot.</p>
      */
     public $Storage;
 
     /**
-     * @var array List of generated screenshot paths.
+     * @var array <p>List of generated screenshot paths.</p>
      */
     public $ImagePathSet;
 
     /**
-     * @var array If a screenshot is watermarked, the watermark template ID list.
+     * @var array <p>List of template IDs of watermarked screenshots.</p>
      */
     public $WaterMarkDefinition;
 
     /**
-     * @param integer $Definition Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param string $SampleType Sampling method, Valid value:
-<li>Percent: interval sampling based on percentage.</li>
-<li>Time: sampling based on time interval.</li>
-     * @param integer $Interval Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
-<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
-     * @param TaskOutputStorage $Storage Storage location of a file after screenshot.
-     * @param array $ImagePathSet List of generated screenshot paths.
-     * @param array $WaterMarkDefinition If a screenshot is watermarked, the watermark template ID list.
+     * @param integer $Definition <p>Sampled screenshot specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">sampling screenshot parameter template</a>.</p>
+     * @param string $SampleType <p>Sampling method, valid value:</p><li>Percent: Sampling based on percentage interval.</li><li>Time: Sampling based on time interval.</li>
+     * @param integer $Interval <p>Sampling interval</p><li>When SampleType is Percent, this value indicates the percentage of images.</li><li>When SampleType is Time, this value indicates the time interval for each image, in seconds. The first image is always the first video frame.</li>
+     * @param TaskOutputStorage $Storage <p>Storage location of a file after screenshot.</p>
+     * @param array $ImagePathSet <p>List of generated screenshot paths.</p>
+     * @param array $WaterMarkDefinition <p>List of template IDs of watermarked screenshots.</p>
      */
     function __construct()
     {

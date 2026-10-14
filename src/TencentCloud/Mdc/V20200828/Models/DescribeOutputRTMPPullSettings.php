@@ -18,24 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RTMP pull configuration of the output
+ * Query the output RTMP pull stream configuration message.
  *
- * @method array getServerUrls() Obtain List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setServerUrls(array $ServerUrls) Set List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getServerUrls() Obtain List of pull addresses.
+ * @method void setServerUrls(array $ServerUrls) Set List of pull addresses.
  */
 class DescribeOutputRTMPPullSettings extends AbstractModel
 {
     /**
-     * @var array List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array List of pull addresses.
      */
     public $ServerUrls;
 
     /**
-     * @param array $ServerUrls List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $ServerUrls List of pull addresses.
      */
     function __construct()
     {

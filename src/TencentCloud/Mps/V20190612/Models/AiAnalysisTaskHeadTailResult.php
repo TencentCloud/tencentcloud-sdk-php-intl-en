@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskHeadTailInput getInput() Obtain Opening and closing segments recognition task input.
  * @method void setInput(AiAnalysisTaskHeadTailInput $Input) Set Opening and closing segments recognition task input.
- * @method AiAnalysisTaskHeadTailOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskHeadTailOutput $Output) Set 
+ * @method AiAnalysisTaskHeadTailOutput getOutput() Obtain Output of the opening and closing credits task.
+ * @method void setOutput(AiAnalysisTaskHeadTailOutput $Output) Set Output of the opening and closing credits task.
  */
 class AiAnalysisTaskHeadTailResult extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AiAnalysisTaskHeadTailResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHeadTailOutput 
+     * @var AiAnalysisTaskHeadTailOutput Output of the opening and closing credits task.
      */
     public $Output;
 
@@ -63,7 +63,7 @@ class AiAnalysisTaskHeadTailResult extends AbstractModel
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskHeadTailInput $Input Opening and closing segments recognition task input.
-     * @param AiAnalysisTaskHeadTailOutput $Output 
+     * @param AiAnalysisTaskHeadTailOutput $Output Output of the opening and closing credits task.
      */
     function __construct()
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * File system (CFS) configuration description
+ * Configuration description of the file system (cfs)
  *
- * @method array getCfsInsList() Obtain File system information list
- * @method void setCfsInsList(array $CfsInsList) Set File system information list
+ * @method array getCfsInsList() Obtain List of file system information
+ * @method void setCfsInsList(array $CfsInsList) Set List of file system information
  */
 class CfsConfig extends AbstractModel
 {
     /**
-     * @var array File system information list
+     * @var array List of file system information
      */
     public $CfsInsList;
 
     /**
-     * @param array $CfsInsList File system information list
+     * @param array $CfsInsList List of file system information
      */
     function __construct()
     {

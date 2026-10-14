@@ -18,20 +18,20 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Update time policy
  *
- * @method integer getUpdatePeriodH() Obtain 
- * @method void setUpdatePeriodH(integer $UpdatePeriodH) Set 
+ * @method integer getUpdatePeriodH() Obtain Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
+ * @method void setUpdatePeriodH(integer $UpdatePeriodH) Set Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
  */
 class UpdatePeriodInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
      */
     public $UpdatePeriodH;
 
     /**
-     * @param integer $UpdatePeriodH 
+     * @param integer $UpdatePeriodH Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
      */
     function __construct()
     {

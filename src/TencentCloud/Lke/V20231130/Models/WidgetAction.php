@@ -18,44 +18,44 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Widget action submission structure for the dialogue side
  *
- * @method string getWidgetId() Obtain 
- * @method void setWidgetId(string $WidgetId) Set 
- * @method string getWidgetRunId() Obtain 
- * @method void setWidgetRunId(string $WidgetRunId) Set 
- * @method string getActionType() Obtain 
- * @method void setActionType(string $ActionType) Set 
- * @method string getPayload() Obtain 
- * @method void setPayload(string $Payload) Set 
+ * @method string getWidgetId() Obtain Widget configuration ID
+ * @method void setWidgetId(string $WidgetId) Set Widget configuration ID
+ * @method string getWidgetRunId() Obtain Widget instance ID
+ * @method void setWidgetRunId(string $WidgetRunId) Set Widget instance ID
+ * @method string getActionType() Obtain Widget action
+ * @method void setActionType(string $ActionType) Set Widget action
+ * @method string getPayload() Obtain Data submitted by the Widget action
+ * @method void setPayload(string $Payload) Set Data submitted by the Widget action
  */
 class WidgetAction extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Widget configuration ID
      */
     public $WidgetId;
 
     /**
-     * @var string 
+     * @var string Widget instance ID
      */
     public $WidgetRunId;
 
     /**
-     * @var string 
+     * @var string Widget action
      */
     public $ActionType;
 
     /**
-     * @var string 
+     * @var string Data submitted by the Widget action
      */
     public $Payload;
 
     /**
-     * @param string $WidgetId 
-     * @param string $WidgetRunId 
-     * @param string $ActionType 
-     * @param string $Payload 
+     * @param string $WidgetId Widget configuration ID
+     * @param string $WidgetRunId Widget instance ID
+     * @param string $ActionType Widget action
+     * @param string $Payload Data submitted by the Widget action
      */
     function __construct()
     {

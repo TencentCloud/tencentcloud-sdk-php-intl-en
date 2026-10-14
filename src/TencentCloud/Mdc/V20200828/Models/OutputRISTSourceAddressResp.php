@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Listening address for RIST output.
  *
- * @method string getIp() Obtain 
- * @method void setIp(string $Ip) Set 
- * @method integer getPort() Obtain 
- * @method void setPort(integer $Port) Set 
+ * @method string getIp() Obtain Listening IP.
+ * @method void setIp(string $Ip) Set Listening IP.
+ * @method integer getPort() Obtain Listening port.
+ * @method void setPort(integer $Port) Set Listening port.
  */
 class OutputRISTSourceAddressResp extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Listening IP.
      */
     public $Ip;
 
     /**
-     * @var integer 
+     * @var integer Listening port.
      */
     public $Port;
 
     /**
-     * @param string $Ip 
-     * @param integer $Port 
+     * @param string $Ip Listening IP.
+     * @param integer $Port Listening port.
      */
     function __construct()
     {

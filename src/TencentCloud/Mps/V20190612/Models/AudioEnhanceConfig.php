@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio enhancement configuration
  *
- * @method AudioDenoiseConfig getDenoise() Obtain 
- * @method void setDenoise(AudioDenoiseConfig $Denoise) Set 
- * @method AudioSeparateConfig getSeparate() Obtain 
- * @method void setSeparate(AudioSeparateConfig $Separate) Set 
- * @method VolumeBalanceConfig getVolumeBalance() Obtain 
- * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set 
- * @method AudioBeautifyConfig getBeautify() Obtain 
- * @method void setBeautify(AudioBeautifyConfig $Beautify) Set 
+ * @method AudioDenoiseConfig getDenoise() Obtain <p>Audio noise reduction configuration.</p>
+ * @method void setDenoise(AudioDenoiseConfig $Denoise) Set <p>Audio noise reduction configuration.</p>
+ * @method AudioSeparateConfig getSeparate() Obtain <p>Audio separation configuration.</p>
+ * @method void setSeparate(AudioSeparateConfig $Separate) Set <p>Audio separation configuration.</p>
+ * @method VolumeBalanceConfig getVolumeBalance() Obtain <p>Volume equalization configuration.</p>
+ * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set <p>Volume equalization configuration.</p>
+ * @method AudioBeautifyConfig getBeautify() Obtain <p>Audio beautification configurations.</p>
+ * @method void setBeautify(AudioBeautifyConfig $Beautify) Set <p>Audio beautification configurations.</p>
+ * @method AudioEnhanceEditConfig getAudioEnhanceEdit() Obtain <p>Audio enhancement edit.</p>
+ * @method void setAudioEnhanceEdit(AudioEnhanceEditConfig $AudioEnhanceEdit) Set <p>Audio enhancement edit.</p>
  */
 class AudioEnhanceConfig extends AbstractModel
 {
     /**
-     * @var AudioDenoiseConfig 
+     * @var AudioDenoiseConfig <p>Audio noise reduction configuration.</p>
      */
     public $Denoise;
 
     /**
-     * @var AudioSeparateConfig 
+     * @var AudioSeparateConfig <p>Audio separation configuration.</p>
      */
     public $Separate;
 
     /**
-     * @var VolumeBalanceConfig 
+     * @var VolumeBalanceConfig <p>Volume equalization configuration.</p>
      */
     public $VolumeBalance;
 
     /**
-     * @var AudioBeautifyConfig 
+     * @var AudioBeautifyConfig <p>Audio beautification configurations.</p>
      */
     public $Beautify;
 
     /**
-     * @param AudioDenoiseConfig $Denoise 
-     * @param AudioSeparateConfig $Separate 
-     * @param VolumeBalanceConfig $VolumeBalance 
-     * @param AudioBeautifyConfig $Beautify 
+     * @var AudioEnhanceEditConfig <p>Audio enhancement edit.</p>
+     */
+    public $AudioEnhanceEdit;
+
+    /**
+     * @param AudioDenoiseConfig $Denoise <p>Audio noise reduction configuration.</p>
+     * @param AudioSeparateConfig $Separate <p>Audio separation configuration.</p>
+     * @param VolumeBalanceConfig $VolumeBalance <p>Volume equalization configuration.</p>
+     * @param AudioBeautifyConfig $Beautify <p>Audio beautification configurations.</p>
+     * @param AudioEnhanceEditConfig $AudioEnhanceEdit <p>Audio enhancement edit.</p>
      */
     function __construct()
     {
@@ -88,6 +96,11 @@ class AudioEnhanceConfig extends AbstractModel
         if (array_key_exists("Beautify",$param) and $param["Beautify"] !== null) {
             $this->Beautify = new AudioBeautifyConfig();
             $this->Beautify->deserialize($param["Beautify"]);
+        }
+
+        if (array_key_exists("AudioEnhanceEdit",$param) and $param["AudioEnhanceEdit"] !== null) {
+            $this->AudioEnhanceEdit = new AudioEnhanceEditConfig();
+            $this->AudioEnhanceEdit->deserialize($param["AudioEnhanceEdit"]);
         }
     }
 }

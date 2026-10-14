@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStreamLinkOutputInfo request structure.
  *
- * @method string getFlowId() Obtain The flow ID.
- * @method void setFlowId(string $FlowId) Set The flow ID.
- * @method ModifyOutputInfo getOutput() Obtain The output configuration to modify.
- * @method void setOutput(ModifyOutputInfo $Output) Set The output configuration to modify.
+ * @method string getFlowId() Obtain 01937702ecc509dc0f3269ca3420
+ * @method void setFlowId(string $FlowId) Set 01937702ecc509dc0f3269ca3420
+ * @method ModifyOutputInfo getOutput() Obtain Output configuration that needs to be modified.
+ * @method void setOutput(ModifyOutputInfo $Output) Set Output configuration that needs to be modified.
  */
 class ModifyStreamLinkOutputInfoRequest extends AbstractModel
 {
     /**
-     * @var string The flow ID.
+     * @var string 01937702ecc509dc0f3269ca3420
      */
     public $FlowId;
 
     /**
-     * @var ModifyOutputInfo The output configuration to modify.
+     * @var ModifyOutputInfo Output configuration that needs to be modified.
      */
     public $Output;
 
     /**
-     * @param string $FlowId The flow ID.
-     * @param ModifyOutputInfo $Output The output configuration to modify.
+     * @param string $FlowId 01937702ecc509dc0f3269ca3420
+     * @param ModifyOutputInfo $Output Output configuration that needs to be modified.
      */
     function __construct()
     {

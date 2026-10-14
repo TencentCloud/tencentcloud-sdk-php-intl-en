@@ -22,40 +22,60 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
+ * @method void setType(string $Type) Set Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
  */
 class DiffusionEnhanceConfig extends AbstractModel
 {
     /**
      * @var string Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
      */
     public $Type;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
-     * @param string $Type 
+     * @param string $Type Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
      */
     function __construct()
     {

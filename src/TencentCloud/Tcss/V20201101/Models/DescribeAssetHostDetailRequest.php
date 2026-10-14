@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetHostDetail request structure.
  *
- * @method string getHostId() Obtain Server ID
- * @method void setHostId(string $HostId) Set Server ID
+ * @method string getHostId() Obtain Host ID
+ * @method void setHostId(string $HostId) Set Host ID
  */
 class DescribeAssetHostDetailRequest extends AbstractModel
 {
     /**
-     * @var string Server ID
+     * @var string Host ID
      */
     public $HostId;
 
     /**
-     * @param string $HostId Server ID
+     * @param string $HostId Host ID
      */
     function __construct()
     {

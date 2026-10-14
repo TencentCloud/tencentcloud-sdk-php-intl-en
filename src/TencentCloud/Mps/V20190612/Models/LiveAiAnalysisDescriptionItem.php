@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information about the live streaming summary result.
  *
- * @method array getParagraphs() Obtain 
- * @method void setParagraphs(array $Paragraphs) Set 
+ * @method array getParagraphs() Obtain Segmentation result.
+ * @method void setParagraphs(array $Paragraphs) Set Segmentation result.
  */
 class LiveAiAnalysisDescriptionItem extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Segmentation result.
      */
     public $Paragraphs;
 
     /**
-     * @param array $Paragraphs 
+     * @param array $Paragraphs Segmentation result.
      */
     function __construct()
     {

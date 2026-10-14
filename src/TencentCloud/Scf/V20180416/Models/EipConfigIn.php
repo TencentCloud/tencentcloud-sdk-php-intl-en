@@ -18,20 +18,20 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Fixed IP configuration for public network access
+ * Public network access fixed ip configuration
  *
- * @method string getEipStatus() Obtain Status of the EIP. Values: ['ENABLE','DISABLE']
- * @method void setEipStatus(string $EipStatus) Set Status of the EIP. Values: ['ENABLE','DISABLE']
+ * @method string getEipStatus() Obtain Eip status. Valid values: `ENABLE` and `DISABLE`
+ * @method void setEipStatus(string $EipStatus) Set Eip status. Valid values: `ENABLE` and `DISABLE`
  */
 class EipConfigIn extends AbstractModel
 {
     /**
-     * @var string Status of the EIP. Values: ['ENABLE','DISABLE']
+     * @var string Eip status. Valid values: `ENABLE` and `DISABLE`
      */
     public $EipStatus;
 
     /**
-     * @param string $EipStatus Status of the EIP. Values: ['ENABLE','DISABLE']
+     * @param string $EipStatus Eip status. Valid values: `ENABLE` and `DISABLE`
      */
     function __construct()
     {

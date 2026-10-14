@@ -18,28 +18,28 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The project to which the host belongs
+ * Host Project Ownership
  *
- * @method string getProjectName() Obtain Project name
- * @method void setProjectName(string $ProjectName) Set Project name
- * @method integer getProjectID() Obtain Project ID
- * @method void setProjectID(integer $ProjectID) Set Project ID
+ * @method string getProjectName() Obtain Project name.
+ * @method void setProjectName(string $ProjectName) Set Project name.
+ * @method integer getProjectID() Obtain Project ID.
+ * @method void setProjectID(integer $ProjectID) Set Project ID.
  */
 class ProjectInfo extends AbstractModel
 {
     /**
-     * @var string Project name
+     * @var string Project name.
      */
     public $ProjectName;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectID;
 
     /**
-     * @param string $ProjectName Project name
-     * @param integer $ProjectID Project ID
+     * @param string $ProjectName Project name.
+     * @param integer $ProjectID Project ID.
      */
     function __construct()
     {

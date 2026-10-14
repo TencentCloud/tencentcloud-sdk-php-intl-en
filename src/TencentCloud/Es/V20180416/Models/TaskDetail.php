@@ -18,25 +18,25 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of workflow task in instance operation history
+ * Process task information in the instance operation record
  *
- * @method string getName() Obtain Task name
- * @method void setName(string $Name) Set Task name
+ * @method string getName() Obtain Task Name
+ * @method void setName(string $Name) Set Task Name
  * @method float getProgress() Obtain Task progress
  * @method void setProgress(float $Progress) Set Task progress
  * @method string getFinishTime() Obtain Task completion time
  * @method void setFinishTime(string $FinishTime) Set Task completion time
  * @method array getSubTasks() Obtain Subtask
  * @method void setSubTasks(array $SubTasks) Set Subtask
- * @method integer getElapsedTime() Obtain The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setElapsedTime(integer $ElapsedTime) Set The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getElapsedTime() Obtain Time taken by the task
+ * @method void setElapsedTime(integer $ElapsedTime) Set Time taken by the task
+ * @method ProcessDetail getProcessInfo() Obtain Task progress details
+ * @method void setProcessInfo(ProcessDetail $ProcessInfo) Set Task progress details
  */
 class TaskDetail extends AbstractModel
 {
     /**
-     * @var string Task name
+     * @var string Task Name
      */
     public $Name;
 
@@ -56,18 +56,22 @@ class TaskDetail extends AbstractModel
     public $SubTasks;
 
     /**
-     * @var integer The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Time taken by the task
      */
     public $ElapsedTime;
 
     /**
-     * @param string $Name Task name
+     * @var ProcessDetail Task progress details
+     */
+    public $ProcessInfo;
+
+    /**
+     * @param string $Name Task Name
      * @param float $Progress Task progress
      * @param string $FinishTime Task completion time
      * @param array $SubTasks Subtask
-     * @param integer $ElapsedTime The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ElapsedTime Time taken by the task
+     * @param ProcessDetail $ProcessInfo Task progress details
      */
     function __construct()
     {
@@ -105,6 +109,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ElapsedTime",$param) and $param["ElapsedTime"] !== null) {
             $this->ElapsedTime = $param["ElapsedTime"];
+        }
+
+        if (array_key_exists("ProcessInfo",$param) and $param["ProcessInfo"] !== null) {
+            $this->ProcessInfo = new ProcessDetail();
+            $this->ProcessInfo->deserialize($param["ProcessInfo"]);
         }
     }
 }

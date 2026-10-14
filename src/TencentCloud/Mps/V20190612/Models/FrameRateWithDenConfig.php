@@ -21,45 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * New frame interpolation configuration, which supports fractional frame rates.
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method integer getFpsNum() Obtain 
- * @method void setFpsNum(integer $FpsNum) Set 
- * @method integer getFpsDen() Obtain 
- * @method void setFpsDen(integer $FpsDen) Set 
+ * @method integer getFpsNum() Obtain Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
+ * @method void setFpsNum(integer $FpsNum) Set Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
+ * @method integer getFpsDen() Obtain Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+ * @method void setFpsDen(integer $FpsDen) Set Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
  */
 class FrameRateWithDenConfig extends AbstractModel
 {
     /**
      * @var string Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var integer 
+     * @var integer Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
      */
     public $FpsNum;
 
     /**
-     * @var integer 
+     * @var integer Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     public $FpsDen;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-     * @param integer $FpsNum 
-     * @param integer $FpsDen 
+     * @param integer $FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
+     * @param integer $FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     function __construct()
     {

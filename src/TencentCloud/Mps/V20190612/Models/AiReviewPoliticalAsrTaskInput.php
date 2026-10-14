@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review Asr text sensitivity task input parameter type
+ * Input parameter type of the sensitive Asr text task in content review
  *
  * @method integer getDefinition() Obtain Template ID.
  * @method void setDefinition(integer $Definition) Set Template ID.

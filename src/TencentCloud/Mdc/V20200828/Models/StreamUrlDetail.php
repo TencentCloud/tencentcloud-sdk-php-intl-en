@@ -18,19 +18,21 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Description of the complete URL information
  *
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
+ * @method string getLabel() Obtain Describes carrier information and other details.
+ * @method void setLabel(string $Label) Set Describes carrier information and other details.
  * @method string getUrl() Obtain URL 
  * @method void setUrl(string $Url) Set URL 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
+ * @method void setType(string $Type) Set Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
  */
 class StreamUrlDetail extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Describes carrier information and other details.
      */
     public $Label;
 
@@ -40,14 +42,16 @@ class StreamUrlDetail extends AbstractModel
     public $Url;
 
     /**
-     * @var string 
+     * @var string Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
      */
     public $Type;
 
     /**
-     * @param string $Label 
+     * @param string $Label Describes carrier information and other details.
      * @param string $Url URL 
-     * @param string $Type 
+     * @param string $Type Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
      */
     function __construct()
     {

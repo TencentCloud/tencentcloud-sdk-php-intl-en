@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Face Recognition result.
+ * Face recognition result.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiRecognitionTaskFaceResultInput getInput() Obtain Face Recognition task input.
- * @method void setInput(AiRecognitionTaskFaceResultInput $Input) Set Face Recognition task input.
- * @method AiRecognitionTaskFaceResultOutput getOutput() Obtain 
- * @method void setOutput(AiRecognitionTaskFaceResultOutput $Output) Set 
+ * @method AiRecognitionTaskFaceResultInput getInput() Obtain Face recognition task input information.
+ * @method void setInput(AiRecognitionTaskFaceResultInput $Input) Set Face recognition task input information.
+ * @method AiRecognitionTaskFaceResultOutput getOutput() Obtain Output information of the face recognition task.
+ * @method void setOutput(AiRecognitionTaskFaceResultOutput $Output) Set Output information of the face recognition task.
  */
 class AiRecognitionTaskFaceResult extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AiRecognitionTaskFaceResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskFaceResultInput Face Recognition task input.
+     * @var AiRecognitionTaskFaceResultInput Face recognition task input information.
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskFaceResultOutput 
+     * @var AiRecognitionTaskFaceResultOutput Output information of the face recognition task.
      */
     public $Output;
 
@@ -70,8 +70,8 @@ class AiRecognitionTaskFaceResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiRecognitionTaskFaceResultInput $Input Face Recognition task input.
-     * @param AiRecognitionTaskFaceResultOutput $Output 
+     * @param AiRecognitionTaskFaceResultInput $Input Face recognition task input information.
+     * @param AiRecognitionTaskFaceResultOutput $Output Output information of the face recognition task.
      */
     function __construct()
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subtitle suppression configuration for a dubbing task
+ * Subtitle configuration for dubbing task suppression
  *
- * @method integer getSubtitleEmbedId() Obtain <p>id of the suppressed subtitles.</p>
- * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>id of the suppressed subtitles.</p>
+ * @method integer getSubtitleEmbedId() Obtain <p>Subtitle suppression id.</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>Subtitle suppression id.</p>
  * @method integer getUseOriginalPos() Obtain <p>Continue to use the original subtitle position.</p><p>Default value: 1</p>
  * @method void setUseOriginalPos(integer $UseOriginalPos) Set <p>Continue to use the original subtitle position.</p><p>Default value: 1</p>
  * @method integer getUseOriginalSize() Obtain <p>Continue to use the original subtitle font size.</p><p>Default value: 1</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DubbingEmbedSubtitleConfig extends AbstractModel
 {
     /**
-     * @var integer <p>id of the suppressed subtitles.</p>
+     * @var integer <p>Subtitle suppression id.</p>
      */
     public $SubtitleEmbedId;
 
@@ -45,7 +45,7 @@ class DubbingEmbedSubtitleConfig extends AbstractModel
     public $UseOriginalSize;
 
     /**
-     * @param integer $SubtitleEmbedId <p>id of the suppressed subtitles.</p>
+     * @param integer $SubtitleEmbedId <p>Subtitle suppression id.</p>
      * @param integer $UseOriginalPos <p>Continue to use the original subtitle position.</p><p>Default value: 1</p>
      * @param integer $UseOriginalSize <p>Continue to use the original subtitle font size.</p><p>Default value: 1</p>
      */

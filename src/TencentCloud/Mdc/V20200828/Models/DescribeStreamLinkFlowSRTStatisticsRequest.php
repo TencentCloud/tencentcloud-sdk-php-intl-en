@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamLinkFlowSRTStatistics request structure.
  *
- * @method string getFlowId() Obtain The flow ID.
- * @method void setFlowId(string $FlowId) Set The flow ID.
- * @method string getType() Obtain Whether to query the inputs or outputs. Valid values: input, output.
- * @method void setType(string $Type) Set Whether to query the inputs or outputs. Valid values: input, output.
- * @method string getInputOutputId() Obtain The input or output ID.
- * @method void setInputOutputId(string $InputOutputId) Set The input or output ID.
- * @method string getPipeline() Obtain Whether to query the primary or backup pipeline. Valid values: 0, 1.
- * @method void setPipeline(string $Pipeline) Set Whether to query the primary or backup pipeline. Valid values: 0, 1.
- * @method string getStartTime() Obtain The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method void setStartTime(string $StartTime) Set The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method string getEndTime() Obtain The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method void setEndTime(string $EndTime) Set The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method string getPeriod() Obtain The query interval. Valid values: 5s, 1min, 5min, 15min.
- * @method void setPeriod(string $Period) Set The query interval. Valid values: 5s, 1min, 5min, 15min.
- * @method string getRemoteIp() Obtain Peer IP address
- * @method void setRemoteIp(string $RemoteIp) Set Peer IP address
+ * @method string getFlowId() Obtain Transport stream ID.
+ * @method void setFlowId(string $FlowId) Set Transport stream ID.
+ * @method string getType() Obtain Input or output type. Valid values: `input`, `output`.
+ * @method void setType(string $Type) Set Input or output type. Valid values: `input`, `output`.
+ * @method string getInputOutputId() Obtain Input or output Id.
+ * @method void setInputOutputId(string $InputOutputId) Set Input or output Id.
+ * @method string getPipeline() Obtain Primary or backup channel. Valid values: 0 and 1.
+ * @method void setPipeline(string $Pipeline) Set Primary or backup channel. Valid values: 0 and 1.
+ * @method string getStartTime() Obtain Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+ * @method void setStartTime(string $StartTime) Set Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+ * @method string getEndTime() Obtain End time for statistics. Default value: one hour after `StartTime`. You can query data up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+ * @method void setEndTime(string $EndTime) Set End time for statistics. Default value: one hour after `StartTime`. You can query data up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+ * @method string getPeriod() Obtain Query interval. Options: [5s|1min|5min|15min].
+ * @method void setPeriod(string $Period) Set Query interval. Options: [5s|1min|5min|15min].
+ * @method string getRemoteIp() Obtain Peer IP address.
+ * @method void setRemoteIp(string $RemoteIp) Set Peer IP address.
  */
 class DescribeStreamLinkFlowSRTStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string The flow ID.
+     * @var string Transport stream ID.
      */
     public $FlowId;
 
     /**
-     * @var string Whether to query the inputs or outputs. Valid values: input, output.
+     * @var string Input or output type. Valid values: `input`, `output`.
      */
     public $Type;
 
     /**
-     * @var string The input or output ID.
+     * @var string Input or output Id.
      */
     public $InputOutputId;
 
     /**
-     * @var string Whether to query the primary or backup pipeline. Valid values: 0, 1.
+     * @var string Primary or backup channel. Valid values: 0 and 1.
      */
     public $Pipeline;
 
     /**
-     * @var string The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * @var string Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
      */
     public $StartTime;
 
     /**
-     * @var string The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * @var string End time for statistics. Default value: one hour after `StartTime`. You can query data up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
      */
     public $EndTime;
 
     /**
-     * @var string The query interval. Valid values: 5s, 1min, 5min, 15min.
+     * @var string Query interval. Options: [5s|1min|5min|15min].
      */
     public $Period;
 
     /**
-     * @var string Peer IP address
+     * @var string Peer IP address.
      */
     public $RemoteIp;
 
     /**
-     * @param string $FlowId The flow ID.
-     * @param string $Type Whether to query the inputs or outputs. Valid values: input, output.
-     * @param string $InputOutputId The input or output ID.
-     * @param string $Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
-     * @param string $StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param string $EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param string $Period The query interval. Valid values: 5s, 1min, 5min, 15min.
-     * @param string $RemoteIp Peer IP address
+     * @param string $FlowId Transport stream ID.
+     * @param string $Type Input or output type. Valid values: `input`, `output`.
+     * @param string $InputOutputId Input or output Id.
+     * @param string $Pipeline Primary or backup channel. Valid values: 0 and 1.
+     * @param string $StartTime Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+     * @param string $EndTime End time for statistics. Default value: one hour after `StartTime`. You can query data up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+     * @param string $Period Query interval. Options: [5s|1min|5min|15min].
+     * @param string $RemoteIp Peer IP address.
      */
     function __construct()
     {

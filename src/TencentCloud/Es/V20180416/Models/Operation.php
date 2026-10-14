@@ -18,68 +18,100 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ES cluster operation details
+ * Detailed ES cluster operation information
  *
- * @method integer getId() Obtain Unique operation ID
- * @method void setId(integer $Id) Set Unique operation ID
- * @method string getStartTime() Obtain Operation start time
- * @method void setStartTime(string $StartTime) Set Operation start time
- * @method string getType() Obtain Operation type
- * @method void setType(string $Type) Set Operation type
- * @method OperationDetail getDetail() Obtain Operation details
- * @method void setDetail(OperationDetail $Detail) Set Operation details
- * @method string getResult() Obtain Operation result
- * @method void setResult(string $Result) Set Operation result
- * @method array getTasks() Obtain Workflow task information
- * @method void setTasks(array $Tasks) Set Workflow task information
- * @method float getProgress() Obtain Operation progress
- * @method void setProgress(float $Progress) Set Operation progress
+ * @method integer getId() Obtain <p>Unique id of the operation</p>
+ * @method void setId(integer $Id) Set <p>Unique id of the operation</p>
+ * @method string getStartTime() Obtain <p>Operation start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Operation start time.</p>
+ * @method string getType() Obtain <p>Operation type.</p>
+ * @method void setType(string $Type) Set <p>Operation type.</p>
+ * @method OperationDetail getDetail() Obtain <p>Operation details.</p>
+ * @method void setDetail(OperationDetail $Detail) Set <p>Operation details.</p>
+ * @method string getResult() Obtain <p>Operation result.</p>
+ * @method void setResult(string $Result) Set <p>Operation result.</p>
+ * @method array getTasks() Obtain <p>Process task info</p>
+ * @method void setTasks(array $Tasks) Set <p>Process task info</p>
+ * @method float getProgress() Obtain <p>Operation progress.</p>
+ * @method void setProgress(float $Progress) Set <p>Operation progress.</p>
+ * @method integer getRollbackTag() Obtain <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+ * @method void setRollbackTag(integer $RollbackTag) Set <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+ * @method string getSubAccountUin() Obtain <p>Operator Uin</p>
+ * @method void setSubAccountUin(string $SubAccountUin) Set <p>Operator Uin</p>
+ * @method integer getAutoScaleTag() Obtain <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+ * @method void setAutoScaleTag(integer $AutoScaleTag) Set <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+ * @method string getSuspendedReason() Obtain <p>Process exception cause</p>
+ * @method void setSuspendedReason(string $SuspendedReason) Set <p>Process exception cause</p>
  */
 class Operation extends AbstractModel
 {
     /**
-     * @var integer Unique operation ID
+     * @var integer <p>Unique id of the operation</p>
      */
     public $Id;
 
     /**
-     * @var string Operation start time
+     * @var string <p>Operation start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string Operation type
+     * @var string <p>Operation type.</p>
      */
     public $Type;
 
     /**
-     * @var OperationDetail Operation details
+     * @var OperationDetail <p>Operation details.</p>
      */
     public $Detail;
 
     /**
-     * @var string Operation result
+     * @var string <p>Operation result.</p>
      */
     public $Result;
 
     /**
-     * @var array Workflow task information
+     * @var array <p>Process task info</p>
      */
     public $Tasks;
 
     /**
-     * @var float Operation progress
+     * @var float <p>Operation progress.</p>
      */
     public $Progress;
 
     /**
-     * @param integer $Id Unique operation ID
-     * @param string $StartTime Operation start time
-     * @param string $Type Operation type
-     * @param OperationDetail $Detail Operation details
-     * @param string $Result Operation result
-     * @param array $Tasks Workflow task information
-     * @param float $Progress Operation progress
+     * @var integer <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+     */
+    public $RollbackTag;
+
+    /**
+     * @var string <p>Operator Uin</p>
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var integer <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+     */
+    public $AutoScaleTag;
+
+    /**
+     * @var string <p>Process exception cause</p>
+     */
+    public $SuspendedReason;
+
+    /**
+     * @param integer $Id <p>Unique id of the operation</p>
+     * @param string $StartTime <p>Operation start time.</p>
+     * @param string $Type <p>Operation type.</p>
+     * @param OperationDetail $Detail <p>Operation details.</p>
+     * @param string $Result <p>Operation result.</p>
+     * @param array $Tasks <p>Process task info</p>
+     * @param float $Progress <p>Operation progress.</p>
+     * @param integer $RollbackTag <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+     * @param string $SubAccountUin <p>Operator Uin</p>
+     * @param integer $AutoScaleTag <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+     * @param string $SuspendedReason <p>Process exception cause</p>
      */
     function __construct()
     {
@@ -126,6 +158,22 @@ class Operation extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("RollbackTag",$param) and $param["RollbackTag"] !== null) {
+            $this->RollbackTag = $param["RollbackTag"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("AutoScaleTag",$param) and $param["AutoScaleTag"] !== null) {
+            $this->AutoScaleTag = $param["AutoScaleTag"];
+        }
+
+        if (array_key_exists("SuspendedReason",$param) and $param["SuspendedReason"] !== null) {
+            $this->SuspendedReason = $param["SuspendedReason"];
         }
     }
 }

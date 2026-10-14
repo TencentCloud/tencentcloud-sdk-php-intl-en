@@ -18,38 +18,38 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream AI content review image pornographic result
+ * Live stream AI content moderation pornographic result of images
  *
  * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment, in seconds.
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment, in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a suspected segment, in seconds.
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment, in seconds.
- * @method float getConfidence() Obtain Suspected segment porn score.
- * @method void setConfidence(float $Confidence) Set Suspected segment porn score.
- * @method string getSuggestion() Obtain Pornographic result suggestion for suspected segment, value ranges from...to...
+ * @method float getConfidence() Obtain Pornography score of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Pornography score of the suspected segment.
+ * @method string getSuggestion() Obtain Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Pornographic result suggestion for suspected segment, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() Obtain Pornographic result tag for video, value ranges from...to...
+ * @method string getLabel() Obtain Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
- * @method void setLabel(string $Label) Set Pornographic result tag for video, value ranges from...to...
+ * @method void setLabel(string $Label) Set Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
- * @method string getUrl() Obtain Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
- * @method void setUrl(string $Url) Set Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
- * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class LiveStreamAiReviewImagePornResult extends AbstractModel
 {
@@ -64,12 +64,12 @@ class LiveStreamAiReviewImagePornResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float Suspected segment porn score.
+     * @var float Pornography score of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @var string Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -77,41 +77,41 @@ class LiveStreamAiReviewImagePornResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Pornographic result tag for video, value ranges from...to...
+     * @var string Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
      */
     public $Label;
 
     /**
-     * @var string Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * @var string Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public $Url;
 
     /**
-     * @var string Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $PicUrlExpireTime;
 
     /**
      * @param float $StartPtsTime Start PTS time of a suspected segment, in seconds.
      * @param float $EndPtsTime End PTS time of a suspected segment, in seconds.
-     * @param float $Confidence Suspected segment porn score.
-     * @param string $Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @param float $Confidence Pornography score of the suspected segment.
+     * @param string $Suggestion Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label Pornographic result tag for video, value ranges from...to...
+     * @param string $Label Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
-     * @param string $Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

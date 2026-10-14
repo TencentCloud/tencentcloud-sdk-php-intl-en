@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Media processing URL object information.
  *
- * @method string getUrl() Obtain Video URL.
- * @method void setUrl(string $Url) Set Video URL.
+ * @method string getUrl() Obtain URL of the video.
+ * @method void setUrl(string $Url) Set URL of the video.
  */
 class UrlInputInfo extends AbstractModel
 {
     /**
-     * @var string Video URL.
+     * @var string URL of the video.
      */
     public $Url;
 
     /**
-     * @param string $Url Video URL.
+     * @param string $Url URL of the video.
      */
     function __construct()
     {

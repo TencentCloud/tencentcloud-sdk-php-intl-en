@@ -18,76 +18,76 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Workflow information.
  *
- * @method string getWorkflowId() Obtain 
- * @method void setWorkflowId(string $WorkflowId) Set 
- * @method string getWorkflowName() Obtain 
- * @method void setWorkflowName(string $WorkflowName) Set 
- * @method string getWorkflowRunId() Obtain 
- * @method void setWorkflowRunId(string $WorkflowRunId) Set 
- * @method array getOptionCards() Obtain 
- * @method void setOptionCards(array $OptionCards) Set 
- * @method array getOutputs() Obtain 
- * @method void setOutputs(array $Outputs) Set 
- * @method string getWorkflowReleaseTime() Obtain 
- * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) Set 
- * @method array getContents() Obtain 
- * @method void setContents(array $Contents) Set 
- * @method integer getOptionMode() Obtain 
- * @method void setOptionMode(integer $OptionMode) Set 
+ * @method string getWorkflowId() Obtain <p>Workflow ID</p>
+ * @method void setWorkflowId(string $WorkflowId) Set <p>Workflow ID</p>
+ * @method string getWorkflowName() Obtain <p>Workflow name.</p>
+ * @method void setWorkflowName(string $WorkflowName) Set <p>Workflow name.</p>
+ * @method string getWorkflowRunId() Obtain <p>Workflow run ID</p>
+ * @method void setWorkflowRunId(string $WorkflowRunId) Set <p>Workflow run ID</p>
+ * @method array getOptionCards() Obtain <p>Tab</p>
+ * @method void setOptionCards(array $OptionCards) Set <p>Tab</p>
+ * @method array getOutputs() Obtain <p>Output result of multiple bubbles</p>
+ * @method void setOutputs(array $Outputs) Set <p>Output result of multiple bubbles</p>
+ * @method string getWorkflowReleaseTime() Obtain <p>Workflow release time, unix timestamp.</p>
+ * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) Set <p>Workflow release time, unix timestamp.</p>
+ * @method array getContents() Obtain <p>Workflow multi-bubble output</p>
+ * @method void setContents(array $Contents) Set <p>Workflow multi-bubble output</p>
+ * @method integer getOptionMode() Obtain <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
+ * @method void setOptionMode(integer $OptionMode) Set <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
  */
 class WorkflowInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Workflow ID</p>
      */
     public $WorkflowId;
 
     /**
-     * @var string 
+     * @var string <p>Workflow name.</p>
      */
     public $WorkflowName;
 
     /**
-     * @var string 
+     * @var string <p>Workflow run ID</p>
      */
     public $WorkflowRunId;
 
     /**
-     * @var array 
+     * @var array <p>Tab</p>
      */
     public $OptionCards;
 
     /**
-     * @var array 
+     * @var array <p>Output result of multiple bubbles</p>
      */
     public $Outputs;
 
     /**
-     * @var string 
+     * @var string <p>Workflow release time, unix timestamp.</p>
      */
     public $WorkflowReleaseTime;
 
     /**
-     * @var array 
+     * @var array <p>Workflow multi-bubble output</p>
      */
     public $Contents;
 
     /**
-     * @var integer 
+     * @var integer <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
      */
     public $OptionMode;
 
     /**
-     * @param string $WorkflowId 
-     * @param string $WorkflowName 
-     * @param string $WorkflowRunId 
-     * @param array $OptionCards 
-     * @param array $Outputs 
-     * @param string $WorkflowReleaseTime 
-     * @param array $Contents 
-     * @param integer $OptionMode 
+     * @param string $WorkflowId <p>Workflow ID</p>
+     * @param string $WorkflowName <p>Workflow name.</p>
+     * @param string $WorkflowRunId <p>Workflow run ID</p>
+     * @param array $OptionCards <p>Tab</p>
+     * @param array $Outputs <p>Output result of multiple bubbles</p>
+     * @param string $WorkflowReleaseTime <p>Workflow release time, unix timestamp.</p>
+     * @param array $Contents <p>Workflow multi-bubble output</p>
+     * @param integer $OptionMode <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
      */
     function __construct()
     {

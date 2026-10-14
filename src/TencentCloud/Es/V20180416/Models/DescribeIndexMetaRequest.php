@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain ES cluster ID
  * @method void setInstanceId(string $InstanceId) Set ES cluster ID
- * @method string getIndexType() Obtain Index type. `auto`: Automated; `normal`: General.
- * @method void setIndexType(string $IndexType) Set Index type. `auto`: Automated; `normal`: General.
- * @method string getIndexName() Obtain Index name. `null` indicates that all indexes are requested.
- * @method void setIndexName(string $IndexName) Set Index name. `null` indicates that all indexes are requested.
- * @method string getUsername() Obtain Username for cluster access
- * @method void setUsername(string $Username) Set Username for cluster access
- * @method string getPassword() Obtain Password for cluster access
- * @method void setPassword(string $Password) Set Password for cluster access
+ * @method string getIndexType() Obtain Index type. auto: autonomous index; normal: general index
+ * @method void setIndexType(string $IndexType) Set Index type. auto: autonomous index; normal: general index
+ * @method string getIndexName() Obtain Index name. If this parameter is left empty, all indexes are obtained.
+ * @method void setIndexName(string $IndexName) Set Index name. If this parameter is left empty, all indexes are obtained.
+ * @method string getUsername() Obtain Cluster access username.
+ * @method void setUsername(string $Username) Set Cluster access username.
+ * @method string getPassword() Obtain Cluster access password
+ * @method void setPassword(string $Password) Set Cluster access password
  */
 class DescribeIndexMetaRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeIndexMetaRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Index type. `auto`: Automated; `normal`: General.
+     * @var string Index type. auto: autonomous index; normal: general index
      */
     public $IndexType;
 
     /**
-     * @var string Index name. `null` indicates that all indexes are requested.
+     * @var string Index name. If this parameter is left empty, all indexes are obtained.
      */
     public $IndexName;
 
     /**
-     * @var string Username for cluster access
+     * @var string Cluster access username.
      */
     public $Username;
 
     /**
-     * @var string Password for cluster access
+     * @var string Cluster access password
      */
     public $Password;
 
     /**
      * @param string $InstanceId ES cluster ID
-     * @param string $IndexType Index type. `auto`: Automated; `normal`: General.
-     * @param string $IndexName Index name. `null` indicates that all indexes are requested.
-     * @param string $Username Username for cluster access
-     * @param string $Password Password for cluster access
+     * @param string $IndexType Index type. auto: autonomous index; normal: general index
+     * @param string $IndexName Index name. If this parameter is left empty, all indexes are obtained.
+     * @param string $Username Cluster access username.
+     * @param string $Password Cluster access password
      */
     function __construct()
     {

@@ -18,136 +18,148 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The new input configuration.
+ * Modify the parameters of the input.
  *
- * @method string getInputId() Obtain The input ID.
- * @method void setInputId(string $InputId) Set The input ID.
- * @method string getInputName() Obtain The input name.
- * @method void setInputName(string $InputName) Set The input name.
- * @method string getDescription() Obtain The description of the input.
- * @method void setDescription(string $Description) Set The description of the input.
- * @method array getAllowIpList() Obtain The IP addresses (CIDR) allowed to push streams.
- * @method void setAllowIpList(array $AllowIpList) Set The IP addresses (CIDR) allowed to push streams.
- * @method CreateInputSRTSettings getSRTSettings() Obtain The SRT configuration information.
- * @method void setSRTSettings(CreateInputSRTSettings $SRTSettings) Set The SRT configuration information.
- * @method CreateInputRTPSettings getRTPSettings() Obtain The RTP configuration information.
- * @method void setRTPSettings(CreateInputRTPSettings $RTPSettings) Set The RTP configuration information.
- * @method string getProtocol() Obtain The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
- * @method void setProtocol(string $Protocol) Set The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
- * @method string getFailOver() Obtain Whether to enable input failover. Valid values: OPEN, CLOSE.
- * @method void setFailOver(string $FailOver) Set Whether to enable input failover. Valid values: OPEN, CLOSE.
- * @method CreateInputRTMPPullSettings getRTMPPullSettings() Obtain Configuration information for RTMP_PULL.
- * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) Set Configuration information for RTMP_PULL.
- * @method CreateInputRTSPPullSettings getRTSPPullSettings() Obtain Configuration information of RTSP_PULL.
- * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) Set Configuration information of RTSP_PULL.
- * @method CreateInputHLSPullSettings getHLSPullSettings() Obtain HLS_PULL configuration information.
- * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) Set HLS_PULL configuration information.
- * @method ResilientStreamConf getResilientStream() Obtain Delayed broadcast smooth streaming configuration information.
- * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set Delayed broadcast smooth streaming configuration information.
- * @method array getSecurityGroupIds() Obtain The ID of the input security group to bind. Only one security group can be associated.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The ID of the input security group to bind. Only one security group can be associated.
- * @method array getZones() Obtain Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
- * @method void setZones(array $Zones) Set Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+ * @method string getInputId() Obtain Input Id.
+ * @method void setInputId(string $InputId) Set Input Id.
+ * @method string getInputName() Obtain Enter a name.
+ * @method void setInputName(string $InputName) Set Enter a name.
+ * @method string getDescription() Obtain Input description.
+ * @method void setDescription(string $Description) Set Input description.
+ * @method array getAllowIpList() Obtain IPs allowed for push, in CIDR format.
+ * @method void setAllowIpList(array $AllowIpList) Set IPs allowed for push, in CIDR format.
+ * @method CreateInputSRTSettings getSRTSettings() Obtain Configuration of SRT.
+ * @method void setSRTSettings(CreateInputSRTSettings $SRTSettings) Set Configuration of SRT.
+ * @method CreateInputRTPSettings getRTPSettings() Obtain Configuration message of RTP.
+ * @method void setRTPSettings(CreateInputRTPSettings $RTPSettings) Set Configuration message of RTP.
+ * @method string getProtocol() Obtain Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
+ * @method void setProtocol(string $Protocol) Set Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
+ * @method string getFailOver() Obtain Input primary/replica switch. Option: [OPEN|CLOSE].
+ * @method void setFailOver(string $FailOver) Set Input primary/replica switch. Option: [OPEN|CLOSE].
+ * @method CreateInputRTMPPullSettings getRTMPPullSettings() Obtain Configuration message of RTMP_PULL.
+ * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) Set Configuration message of RTMP_PULL.
+ * @method CreateInputRTSPPullSettings getRTSPPullSettings() Obtain Configuration message of RTSP_PULL.
+ * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) Set Configuration message of RTSP_PULL.
+ * @method CreateInputHLSPullSettings getHLSPullSettings() Obtain Configuration message of HLS_PULL.
+ * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) Set Configuration message of HLS_PULL.
+ * @method ResilientStreamConf getResilientStream() Obtain Configuration message for smooth stream output during delayed playback.
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set Configuration message for smooth stream output during delayed playback.
+ * @method array getSecurityGroupIds() Obtain ID of the bound input security group. Only one security group can be associated.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the bound input security group. Only one security group can be associated.
+ * @method array getZones() Obtain Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
+ * @method void setZones(array $Zones) Set Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
+ * @method CreateInputRISTSettings getRISTSettings() Obtain Configuration information of RIST.
+ * @method void setRISTSettings(CreateInputRISTSettings $RISTSettings) Set Configuration information of RIST.
+ * @method string getInputRegion() Obtain Region of the input node.
+ * @method void setInputRegion(string $InputRegion) Set Region of the input node.
+ * @method FailOverOption getFailOverOption() Obtain Hot/cold backup related
+ * @method void setFailOverOption(FailOverOption $FailOverOption) Set Hot/cold backup related
  */
 class ModifyInput extends AbstractModel
 {
     /**
-     * @var string The input ID.
+     * @var string Input Id.
      */
     public $InputId;
 
     /**
-     * @var string The input name.
+     * @var string Enter a name.
      */
     public $InputName;
 
     /**
-     * @var string The description of the input.
+     * @var string Input description.
      */
     public $Description;
 
     /**
-     * @var array The IP addresses (CIDR) allowed to push streams.
+     * @var array IPs allowed for push, in CIDR format.
      */
     public $AllowIpList;
 
     /**
-     * @var CreateInputSRTSettings The SRT configuration information.
+     * @var CreateInputSRTSettings Configuration of SRT.
      */
     public $SRTSettings;
 
     /**
-     * @var CreateInputRTPSettings The RTP configuration information.
+     * @var CreateInputRTPSettings Configuration message of RTP.
      */
     public $RTPSettings;
 
     /**
-     * @var string The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
+     * @var string Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
      */
     public $Protocol;
 
     /**
-     * @var string Whether to enable input failover. Valid values: OPEN, CLOSE.
+     * @var string Input primary/replica switch. Option: [OPEN|CLOSE].
      */
     public $FailOver;
 
     /**
-     * @var CreateInputRTMPPullSettings Configuration information for RTMP_PULL.
+     * @var CreateInputRTMPPullSettings Configuration message of RTMP_PULL.
      */
     public $RTMPPullSettings;
 
     /**
-     * @var CreateInputRTSPPullSettings Configuration information of RTSP_PULL.
+     * @var CreateInputRTSPPullSettings Configuration message of RTSP_PULL.
      */
     public $RTSPPullSettings;
 
     /**
-     * @var CreateInputHLSPullSettings HLS_PULL configuration information.
+     * @var CreateInputHLSPullSettings Configuration message of HLS_PULL.
      */
     public $HLSPullSettings;
 
     /**
-     * @var ResilientStreamConf Delayed broadcast smooth streaming configuration information.
+     * @var ResilientStreamConf Configuration message for smooth stream output during delayed playback.
      */
     public $ResilientStream;
 
     /**
-     * @var array The ID of the input security group to bind. Only one security group can be associated.
+     * @var array ID of the bound input security group. Only one security group can be associated.
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+     * @var array Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
      */
     public $Zones;
 
     /**
-     * @param string $InputId The input ID.
-     * @param string $InputName The input name.
-     * @param string $Description The description of the input.
-     * @param array $AllowIpList The IP addresses (CIDR) allowed to push streams.
-     * @param CreateInputSRTSettings $SRTSettings The SRT configuration information.
-     * @param CreateInputRTPSettings $RTPSettings The RTP configuration information.
-     * @param string $Protocol The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
-     * @param string $FailOver Whether to enable input failover. Valid values: OPEN, CLOSE.
-     * @param CreateInputRTMPPullSettings $RTMPPullSettings Configuration information for RTMP_PULL.
-     * @param CreateInputRTSPPullSettings $RTSPPullSettings Configuration information of RTSP_PULL.
-     * @param CreateInputHLSPullSettings $HLSPullSettings HLS_PULL configuration information.
-     * @param ResilientStreamConf $ResilientStream Delayed broadcast smooth streaming configuration information.
-     * @param array $SecurityGroupIds The ID of the input security group to bind. Only one security group can be associated.
-     * @param array $Zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+     * @var CreateInputRISTSettings Configuration information of RIST.
+     */
+    public $RISTSettings;
+
+    /**
+     * @var string Region of the input node.
+     */
+    public $InputRegion;
+
+    /**
+     * @var FailOverOption Hot/cold backup related
+     */
+    public $FailOverOption;
+
+    /**
+     * @param string $InputId Input Id.
+     * @param string $InputName Enter a name.
+     * @param string $Description Input description.
+     * @param array $AllowIpList IPs allowed for push, in CIDR format.
+     * @param CreateInputSRTSettings $SRTSettings Configuration of SRT.
+     * @param CreateInputRTPSettings $RTPSettings Configuration message of RTP.
+     * @param string $Protocol Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
+     * @param string $FailOver Input primary/replica switch. Option: [OPEN|CLOSE].
+     * @param CreateInputRTMPPullSettings $RTMPPullSettings Configuration message of RTMP_PULL.
+     * @param CreateInputRTSPPullSettings $RTSPPullSettings Configuration message of RTSP_PULL.
+     * @param CreateInputHLSPullSettings $HLSPullSettings Configuration message of HLS_PULL.
+     * @param ResilientStreamConf $ResilientStream Configuration message for smooth stream output during delayed playback.
+     * @param array $SecurityGroupIds ID of the bound input security group. Only one security group can be associated.
+     * @param array $Zones Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
+     * @param CreateInputRISTSettings $RISTSettings Configuration information of RIST.
+     * @param string $InputRegion Region of the input node.
+     * @param FailOverOption $FailOverOption Hot/cold backup related
      */
     function __construct()
     {
@@ -222,6 +234,20 @@ If there is an SRT input, the output must be SRT.
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new CreateInputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("FailOverOption",$param) and $param["FailOverOption"] !== null) {
+            $this->FailOverOption = new FailOverOption();
+            $this->FailOverOption->deserialize($param["FailOverOption"]);
         }
     }
 }

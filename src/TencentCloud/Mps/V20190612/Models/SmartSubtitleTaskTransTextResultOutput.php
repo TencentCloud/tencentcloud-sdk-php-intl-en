@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Translation result.
  *
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
+ * @method array getSegmentSet() Obtain <p>List of segments for translation.</p>
+ * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for translation.</p>
  * @method string getSubtitlePath() Obtain <p>Subtitle file URL.</p>
  * @method void setSubtitlePath(string $SubtitlePath) Set <p>Subtitle file URL.</p>
  * @method TaskOutputStorage getOutputStorage() Obtain <p>Smart subtitling result storage information.</p>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>List of segments for translation.</p>
      */
     public $SegmentSet;
 
@@ -59,7 +59,7 @@ class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
     public $SubtitleResults;
 
     /**
-     * @param array $SegmentSet 
+     * @param array $SegmentSet <p>List of segments for translation.</p>
      * @param string $SubtitlePath <p>Subtitle file URL.</p>
      * @param TaskOutputStorage $OutputStorage <p>Smart subtitling result storage information.</p>
      * @param string $Path <p>Subtitle file path</p>

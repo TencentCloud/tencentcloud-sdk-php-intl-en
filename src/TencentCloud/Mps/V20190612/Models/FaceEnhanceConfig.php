@@ -20,41 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Face enhancement configuration.
  *
- * @method string getSwitch() Obtain Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method float getIntensity() Obtain Intensity, value ranges from 0.0 to 1.0.
+ * @method float getIntensity() Obtain Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
- * @method void setIntensity(float $Intensity) Set Intensity, value ranges from 0.0 to 1.0.
+ * @method void setIntensity(float $Intensity) Set Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
  */
 class FaceEnhanceConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @var string Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var float Intensity, value ranges from 0.0 to 1.0.
+     * @var float Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
      */
     public $Intensity;
 
     /**
-     * @param string $Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param string $Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-     * @param float $Intensity Intensity, value ranges from 0.0 to 1.0.
+     * @param float $Intensity Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
      */
     function __construct()

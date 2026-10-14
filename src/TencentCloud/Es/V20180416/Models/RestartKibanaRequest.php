@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestartKibana request structure.
  *
- * @method string getInstanceId() Obtain ES instance ID
- * @method void setInstanceId(string $InstanceId) Set ES instance ID
+ * @method string getInstanceId() Obtain ES instance ID.
+ * @method void setInstanceId(string $InstanceId) Set ES instance ID.
  */
 class RestartKibanaRequest extends AbstractModel
 {
     /**
-     * @var string ES instance ID
+     * @var string ES instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ES instance ID
+     * @param string $InstanceId ES instance ID.
      */
     function __construct()
     {

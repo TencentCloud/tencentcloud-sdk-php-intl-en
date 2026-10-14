@@ -21,133 +21,133 @@ use TencentCloud\Common\AbstractModel;
  * Super-resolution configuration.
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain Type, available values:
-<li>standard: Common super-resolution</li>
-<li>super: Advanced super-resolution.
-<li>ultra: Advanced super-resolution ultra edition.</li>
+ * @method string getType() Obtain Type. Valid values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution super version.</li>
+<li>ultra: Advanced super resolution ultra version.</li>
 Default value: standard.
- * @method void setType(string $Type) Set Type, available values:
-<li>standard: Common super-resolution</li>
-<li>super: Advanced super-resolution.
-<li>ultra: Advanced super-resolution ultra edition.</li>
+ * @method void setType(string $Type) Set Type. Valid values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution super version.</li>
+<li>ultra: Advanced super resolution ultra version.</li>
 Default value: standard.
  * @method string getMode() Obtain Image output mode. The default value is percent.
-<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
  * @method void setMode(string $Mode) Set Image output mode. The default value is percent.
-<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
- * @method float getPercent() Obtain Super-resolution multiplication rate, can be a decimal.
-Note: Used when Mode equals percent.
- * @method void setPercent(float $Percent) Set Super-resolution multiplication rate, can be a decimal.
-Note: Used when Mode equals percent.
- * @method integer getWidth() Obtain Image width must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
- * @method void setWidth(integer $Width) Set Image width must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
- * @method integer getHeight() Obtain Target image height must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
- * @method void setHeight(integer $Height) Set Target image height must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
- * @method integer getLongSide() Obtain The long side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
- * @method void setLongSide(integer $LongSide) Set The long side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
- * @method integer getShortSide() Obtain The short side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
- * @method void setShortSide(integer $ShortSide) Set The short side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
+ * @method float getPercent() Obtain Super resolution multiplication rate, which can be a decimal.
+Note: Used when Mode is equal to percent.
+ * @method void setPercent(float $Percent) Set Super resolution multiplication rate, which can be a decimal.
+Note: Used when Mode is equal to percent.
+ * @method integer getWidth() Obtain Target image width. Cannot exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
+ * @method void setWidth(integer $Width) Set Target image width. Cannot exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
+ * @method integer getHeight() Obtain Target image height. Must not exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
+ * @method void setHeight(integer $Height) Set Target image height. Must not exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
+ * @method integer getLongSide() Obtain Long side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+ * @method void setLongSide(integer $LongSide) Set Long side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+ * @method integer getShortSide() Obtain Short side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+ * @method void setShortSide(integer $ShortSide) Set Short side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
  */
 class AdvancedSuperResolutionConfig extends AbstractModel
 {
     /**
      * @var string Capability configuration switch. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string Type, available values:
-<li>standard: Common super-resolution</li>
-<li>super: Advanced super-resolution.
-<li>ultra: Advanced super-resolution ultra edition.</li>
+     * @var string Type. Valid values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution super version.</li>
+<li>ultra: Advanced super resolution ultra version.</li>
 Default value: standard.
      */
     public $Type;
 
     /**
      * @var string Image output mode. The default value is percent.
-<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
      */
     public $Mode;
 
     /**
-     * @var float Super-resolution multiplication rate, can be a decimal.
-Note: Used when Mode equals percent.
+     * @var float Super resolution multiplication rate, which can be a decimal.
+Note: Used when Mode is equal to percent.
      */
     public $Percent;
 
     /**
-     * @var integer Image width must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
+     * @var integer Target image width. Cannot exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
      */
     public $Width;
 
     /**
-     * @var integer Target image height must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
+     * @var integer Target image height. Must not exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
      */
     public $Height;
 
     /**
-     * @var integer The long side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+     * @var integer Long side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public $LongSide;
 
     /**
-     * @var integer The short side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+     * @var integer Short side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public $ShortSide;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type Type, available values:
-<li>standard: Common super-resolution</li>
-<li>super: Advanced super-resolution.
-<li>ultra: Advanced super-resolution ultra edition.</li>
+     * @param string $Type Type. Valid values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution super version.</li>
+<li>ultra: Advanced super resolution ultra version.</li>
 Default value: standard.
      * @param string $Mode Image output mode. The default value is percent.
-<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
-     * @param float $Percent Super-resolution multiplication rate, can be a decimal.
-Note: Used when Mode equals percent.
-     * @param integer $Width Image width must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
-     * @param integer $Height Target image height must not exceed 4096.
-Note: When Mode equals aspect or fixed, preferentially use this configuration.
-     * @param integer $LongSide The long side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
-     * @param integer $ShortSide The short side length of the target image must not exceed 4096.
-Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
+     * @param float $Percent Super resolution multiplication rate, which can be a decimal.
+Note: Used when Mode is equal to percent.
+     * @param integer $Width Target image width. Cannot exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
+     * @param integer $Height Target image height. Must not exceed 4096.
+Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
+     * @param integer $LongSide Long side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+     * @param integer $ShortSide Short side length of the target image. Must not exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     function __construct()
     {

@@ -18,18 +18,18 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent video splitting recording clip.
+ * Intelligent splitting video clip.
  *
  * @method float getConfidence() Obtain Confidence degree.
  * @method void setConfidence(float $Confidence) Set Confidence degree.
- * @method float getStartTimeOffset() Obtain Start time offset of a recording clip.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recording clip.
- * @method float getEndTimeOffset() Obtain End time offset of the recording clip.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the recording clip.
- * @method string getSegmentUrl() Obtain Split segment URL.
- * @method void setSegmentUrl(string $SegmentUrl) Set Split segment URL.
- * @method string getCovImgUrl() Obtain Segment cover.
- * @method void setCovImgUrl(string $CovImgUrl) Set Segment cover.
+ * @method float getStartTimeOffset() Obtain Start time offset of the segment.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of the segment.
+ * @method float getEndTimeOffset() Obtain Segment end time offset.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set Segment end time offset.
+ * @method string getSegmentUrl() Obtain Segment URL.
+ * @method void setSegmentUrl(string $SegmentUrl) Set Segment URL.
+ * @method string getCovImgUrl() Obtain Split clip cover.
+ * @method void setCovImgUrl(string $CovImgUrl) Set Split clip cover.
  * @method string getTitle() Obtain Segment title.
  * @method void setTitle(string $Title) Set Segment title.
  * @method string getSummary() Obtain Segment summary.
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set The start time of a live streaming segment, in the ISO date format.
  * @method string getEndTime() Obtain The end time of a live streaming segment, in the ISO date format.
  * @method void setEndTime(string $EndTime) Set The end time of a live streaming segment, in the ISO date format.
- * @method string getPersonId() Obtain Specify the figure ID.
- * @method void setPersonId(string $PersonId) Set Specify the figure ID.
+ * @method string getPersonId() Obtain Specify the person ID.
+ * @method void setPersonId(string $PersonId) Set Specify the person ID.
  */
 class SegmentRecognitionItem extends AbstractModel
 {
@@ -51,22 +51,22 @@ class SegmentRecognitionItem extends AbstractModel
     public $Confidence;
 
     /**
-     * @var float Start time offset of a recording clip.
+     * @var float Start time offset of the segment.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of the recording clip.
+     * @var float Segment end time offset.
      */
     public $EndTimeOffset;
 
     /**
-     * @var string Split segment URL.
+     * @var string Segment URL.
      */
     public $SegmentUrl;
 
     /**
-     * @var string Segment cover.
+     * @var string Split clip cover.
      */
     public $CovImgUrl;
 
@@ -96,22 +96,22 @@ class SegmentRecognitionItem extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Specify the figure ID.
+     * @var string Specify the person ID.
      */
     public $PersonId;
 
     /**
      * @param float $Confidence Confidence degree.
-     * @param float $StartTimeOffset Start time offset of a recording clip.
-     * @param float $EndTimeOffset End time offset of the recording clip.
-     * @param string $SegmentUrl Split segment URL.
-     * @param string $CovImgUrl Segment cover.
+     * @param float $StartTimeOffset Start time offset of the segment.
+     * @param float $EndTimeOffset Segment end time offset.
+     * @param string $SegmentUrl Segment URL.
+     * @param string $CovImgUrl Split clip cover.
      * @param string $Title Segment title.
      * @param string $Summary Segment summary.
      * @param array $Keywords Segmentation keywords.
      * @param string $BeginTime The start time of a live streaming segment, in the ISO date format.
      * @param string $EndTime The end time of a live streaming segment, in the ISO date format.
-     * @param string $PersonId Specify the figure ID.
+     * @param string $PersonId Specify the person ID.
      */
     function __construct()
     {

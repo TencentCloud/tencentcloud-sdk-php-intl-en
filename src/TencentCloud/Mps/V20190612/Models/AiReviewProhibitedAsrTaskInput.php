@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review Asr text prohibited information recognition task input parameter type
+ * Input parameter type for the Asr text prohibited information recognition task of content review
  *
  * @method integer getDefinition() Obtain Prohibited information recognition template ID.
  * @method void setDefinition(integer $Definition) Set Prohibited information recognition template ID.

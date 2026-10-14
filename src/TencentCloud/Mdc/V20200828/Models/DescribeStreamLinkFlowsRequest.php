@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamLinkFlows request structure.
  *
- * @method integer getPageNum() Obtain Number of the current page. Default value: `1`
- * @method void setPageNum(integer $PageNum) Set Number of the current page. Default value: `1`
- * @method integer getPageSize() Obtain Number of entries per page. Default value: `10`
- * @method void setPageSize(integer $PageSize) Set Number of entries per page. Default value: `10`
+ * @method integer getPageNum() Obtain Current page number. Default value: 1.
+ * @method void setPageNum(integer $PageNum) Set Current page number. Default value: 1.
+ * @method integer getPageSize() Obtain Size per page. Default value: 10.
+ * @method void setPageSize(integer $PageSize) Set Size per page. Default value: 10.
  */
 class DescribeStreamLinkFlowsRequest extends AbstractModel
 {
     /**
-     * @var integer Number of the current page. Default value: `1`
+     * @var integer Current page number. Default value: 1.
      */
     public $PageNum;
 
     /**
-     * @var integer Number of entries per page. Default value: `10`
+     * @var integer Size per page. Default value: 10.
      */
     public $PageSize;
 
     /**
-     * @param integer $PageNum Number of the current page. Default value: `1`
-     * @param integer $PageSize Number of entries per page. Default value: `10`
+     * @param integer $PageNum Current page number. Default value: 1.
+     * @param integer $PageSize Size per page. Default value: 10.
      */
     function __construct()
     {

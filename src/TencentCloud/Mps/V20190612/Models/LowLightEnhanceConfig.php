@@ -21,37 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * Low-light enhancement configuration
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Type. Valid values:
+<li>normal</li>
+Default value: normal.
+ * @method void setType(string $Type) Set Type. Valid values:
+<li>normal</li>
+Default value: normal.
  */
 class LowLightEnhanceConfig extends AbstractModel
 {
     /**
      * @var string Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Type. Valid values:
+<li>normal</li>
+Default value: normal.
      */
     public $Type;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type 
+     * @param string $Type Type. Valid values:
+<li>normal</li>
+Default value: normal.
      */
     function __construct()
     {

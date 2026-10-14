@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Results of subtasks for a batch task.
  *
- * @method array getInputInfos() Obtain 
- * @method void setInputInfos(array $InputInfos) Set 
- * @method array getMetadatas() Obtain 
- * @method void setMetadatas(array $Metadatas) Set 
- * @method BatchSmartSubtitlesResult getSmartSubtitlesTaskResult() Obtain 
- * @method void setSmartSubtitlesTaskResult(BatchSmartSubtitlesResult $SmartSubtitlesTaskResult) Set 
+ * @method array getInputInfos() Obtain Input information for a batch task.
+ * @method void setInputInfos(array $InputInfos) Set Input information for a batch task.
+ * @method array getMetadatas() Obtain Metadata of the original video.
+ * @method void setMetadatas(array $Metadatas) Set Metadata of the original video.
+ * @method BatchSmartSubtitlesResult getSmartSubtitlesTaskResult() Obtain Execution result of the smart subtitle task.
+ * @method void setSmartSubtitlesTaskResult(BatchSmartSubtitlesResult $SmartSubtitlesTaskResult) Set Execution result of the smart subtitle task.
  */
 class BatchSubTaskResult extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Input information for a batch task.
      */
     public $InputInfos;
 
     /**
-     * @var array 
+     * @var array Metadata of the original video.
      */
     public $Metadatas;
 
     /**
-     * @var BatchSmartSubtitlesResult 
+     * @var BatchSmartSubtitlesResult Execution result of the smart subtitle task.
      */
     public $SmartSubtitlesTaskResult;
 
     /**
-     * @param array $InputInfos 
-     * @param array $Metadatas 
-     * @param BatchSmartSubtitlesResult $SmartSubtitlesTaskResult 
+     * @param array $InputInfos Input information for a batch task.
+     * @param array $Metadatas Metadata of the original video.
+     * @param BatchSmartSubtitlesResult $SmartSubtitlesTaskResult Execution result of the smart subtitle task.
      */
     function __construct()
     {

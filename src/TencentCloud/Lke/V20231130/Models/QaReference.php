@@ -18,44 +18,44 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Reference information of the Q&A pair
  *
- * @method integer getQaBizId() Obtain 
- * @method void setQaBizId(integer $QaBizId) Set 
- * @method integer getReferBizId() Obtain 
- * @method void setReferBizId(integer $ReferBizId) Set 
- * @method integer getKnowledgeBizId() Obtain 
- * @method void setKnowledgeBizId(integer $KnowledgeBizId) Set 
- * @method string getKnowledgeName() Obtain 
- * @method void setKnowledgeName(string $KnowledgeName) Set 
+ * @method string getQaBizId() Obtain <p>QA business ID</p>
+ * @method void setQaBizId(string $QaBizId) Set <p>QA business ID</p>
+ * @method string getReferBizId() Obtain <p>Document fragment reference ID</p>
+ * @method void setReferBizId(string $ReferBizId) Set <p>Document fragment reference ID</p>
+ * @method string getKnowledgeBizId() Obtain <p>Business ID of the knowledge base where the QA resides</p>
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) Set <p>Business ID of the knowledge base where the QA resides</p>
+ * @method string getKnowledgeName() Obtain <p>Name of the knowledge base where the QA resides</p>
+ * @method void setKnowledgeName(string $KnowledgeName) Set <p>Name of the knowledge base where the QA resides</p>
  */
 class QaReference extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var string <p>QA business ID</p>
      */
     public $QaBizId;
 
     /**
-     * @var integer 
+     * @var string <p>Document fragment reference ID</p>
      */
     public $ReferBizId;
 
     /**
-     * @var integer 
+     * @var string <p>Business ID of the knowledge base where the QA resides</p>
      */
     public $KnowledgeBizId;
 
     /**
-     * @var string 
+     * @var string <p>Name of the knowledge base where the QA resides</p>
      */
     public $KnowledgeName;
 
     /**
-     * @param integer $QaBizId 
-     * @param integer $ReferBizId 
-     * @param integer $KnowledgeBizId 
-     * @param string $KnowledgeName 
+     * @param string $QaBizId <p>QA business ID</p>
+     * @param string $ReferBizId <p>Document fragment reference ID</p>
+     * @param string $KnowledgeBizId <p>Business ID of the knowledge base where the QA resides</p>
+     * @param string $KnowledgeName <p>Name of the knowledge base where the QA resides</p>
      */
     function __construct()
     {

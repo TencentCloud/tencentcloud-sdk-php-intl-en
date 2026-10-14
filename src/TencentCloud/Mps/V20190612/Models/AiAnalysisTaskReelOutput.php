@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI narration and video re-creation result information
  *
- * @method string getVideoPath() Obtain Path of the commentated video.
- * @method void setVideoPath(string $VideoPath) Set Path of the commentated video.
- * @method array getVideoPaths() Obtain Path list of the commentated video.
+ * @method string getVideoPath() Obtain Path of the commentary video.
+ * @method void setVideoPath(string $VideoPath) Set Path of the commentary video.
+ * @method array getVideoPaths() Obtain List of commentated video paths.
 
 **Note**:
-1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
-2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
- * @method void setVideoPaths(array $VideoPaths) Set Path list of the commentated video.
+1. When a file is returned, `VideoPath` returns a file path, and `VideoPaths` also fills an element with the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+ * @method void setVideoPaths(array $VideoPaths) Set List of commentated video paths.
 
 **Note**:
-1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
-2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
- * @method string getScriptPath() Obtain Script file path
+1. When a file is returned, `VideoPath` returns a file path, and `VideoPaths` also fills an element with the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+ * @method string getScriptPath() Obtain Script file path.
 
- * @method void setScriptPath(string $ScriptPath) Set Script file path
+ * @method void setScriptPath(string $ScriptPath) Set Script file path.
 
- * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the commentated video.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the commentated video.
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the commentary video.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the commentary video.
  */
 class AiAnalysisTaskReelOutput extends AbstractModel
 {
     /**
-     * @var string Path of the commentated video.
+     * @var string Path of the commentary video.
      */
     public $VideoPath;
 
     /**
-     * @var array Path list of the commentated video.
+     * @var array List of commentated video paths.
 
 **Note**:
-1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
-2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
+1. When a file is returned, `VideoPath` returns a file path, and `VideoPaths` also fills an element with the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
      */
     public $VideoPaths;
 
     /**
-     * @var string Script file path
+     * @var string Script file path.
 
      */
     public $ScriptPath;
 
     /**
-     * @var TaskOutputStorage Storage location of the commentated video.
+     * @var TaskOutputStorage Storage location of the commentary video.
      */
     public $OutputStorage;
 
     /**
-     * @param string $VideoPath Path of the commentated video.
-     * @param array $VideoPaths Path list of the commentated video.
+     * @param string $VideoPath Path of the commentary video.
+     * @param array $VideoPaths List of commentated video paths.
 
 **Note**:
-1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
-2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
-     * @param string $ScriptPath Script file path
+1. When a file is returned, `VideoPath` returns a file path, and `VideoPaths` also fills an element with the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+     * @param string $ScriptPath Script file path.
 
-     * @param TaskOutputStorage $OutputStorage Storage location of the commentated video.
+     * @param TaskOutputStorage $OutputStorage Storage location of the commentary video.
      */
     function __construct()
     {

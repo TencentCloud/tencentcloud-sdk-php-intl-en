@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStreamLinkInput request structure.
  *
- * @method string getFlowId() Obtain The flow ID.
- * @method void setFlowId(string $FlowId) Set The flow ID.
- * @method ModifyInput getInput() Obtain The input information to modify.
- * @method void setInput(ModifyInput $Input) Set The input information to modify.
+ * @method string getFlowId() Obtain Stream Id.
+ * @method void setFlowId(string $FlowId) Set Stream Id.
+ * @method ModifyInput getInput() Obtain Input information that needs to be modified.
+ * @method void setInput(ModifyInput $Input) Set Input information that needs to be modified.
  */
 class ModifyStreamLinkInputRequest extends AbstractModel
 {
     /**
-     * @var string The flow ID.
+     * @var string Stream Id.
      */
     public $FlowId;
 
     /**
-     * @var ModifyInput The input information to modify.
+     * @var ModifyInput Input information that needs to be modified.
      */
     public $Input;
 
     /**
-     * @param string $FlowId The flow ID.
-     * @param ModifyInput $Input The input information to modify.
+     * @param string $FlowId Stream Id.
+     * @param ModifyInput $Input Input information that needs to be modified.
      */
     function __construct()
     {

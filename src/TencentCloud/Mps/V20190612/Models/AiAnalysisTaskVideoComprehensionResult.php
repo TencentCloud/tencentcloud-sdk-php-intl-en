@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message
  * @method AiAnalysisTaskVideoComprehensionInput getInput() Obtain Input file for video (audio) recognition.
  * @method void setInput(AiAnalysisTaskVideoComprehensionInput $Input) Set Input file for video (audio) recognition.
- * @method AiAnalysisTaskVideoComprehensionOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskVideoComprehensionOutput $Output) Set 
+ * @method AiAnalysisTaskVideoComprehensionOutput getOutput() Obtain Output file for video (audio) recognition.
+ * @method void setOutput(AiAnalysisTaskVideoComprehensionOutput $Output) Set Output file for video (audio) recognition.
  * @method string getErrCodeExt() Obtain Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.
  * @method integer getProgress() Obtain Task progress
@@ -62,7 +62,7 @@ class AiAnalysisTaskVideoComprehensionResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskVideoComprehensionOutput 
+     * @var AiAnalysisTaskVideoComprehensionOutput Output file for video (audio) recognition.
      */
     public $Output;
 
@@ -91,7 +91,7 @@ class AiAnalysisTaskVideoComprehensionResult extends AbstractModel
      * @param integer $ErrCode Error code. 0: successful; other values: failed.
      * @param string $Message Error message
      * @param AiAnalysisTaskVideoComprehensionInput $Input Input file for video (audio) recognition.
-     * @param AiAnalysisTaskVideoComprehensionOutput $Output 
+     * @param AiAnalysisTaskVideoComprehensionOutput $Output Output file for video (audio) recognition.
      * @param string $ErrCodeExt Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.
      * @param integer $Progress Task progress
      * @param string $BeginProcessTime Starting time of task execution, in ISO date and time format.

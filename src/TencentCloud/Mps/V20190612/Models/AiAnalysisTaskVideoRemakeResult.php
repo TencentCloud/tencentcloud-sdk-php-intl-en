@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0: successful; other values: failed.
  * @method string getMessage() Obtain Error message
  * @method void setMessage(string $Message) Set Error message
- * @method AiAnalysisTaskVideoRemakeInput getInput() Obtain Task input for deduplication
- * @method void setInput(AiAnalysisTaskVideoRemakeInput $Input) Set Task input for deduplication
- * @method AiAnalysisTaskVideoRemakeOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskVideoRemakeOutput $Output) Set 
+ * @method AiAnalysisTaskVideoRemakeInput getInput() Obtain Input of the deduplication task.
+ * @method void setInput(AiAnalysisTaskVideoRemakeInput $Input) Set Input of the deduplication task.
+ * @method AiAnalysisTaskVideoRemakeOutput getOutput() Obtain Output of the deduplication task.
+ * @method void setOutput(AiAnalysisTaskVideoRemakeOutput $Output) Set Output of the deduplication task.
  */
 class AiAnalysisTaskVideoRemakeResult extends AbstractModel
 {
@@ -49,12 +49,12 @@ class AiAnalysisTaskVideoRemakeResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiAnalysisTaskVideoRemakeInput Task input for deduplication
+     * @var AiAnalysisTaskVideoRemakeInput Input of the deduplication task.
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskVideoRemakeOutput 
+     * @var AiAnalysisTaskVideoRemakeOutput Output of the deduplication task.
      */
     public $Output;
 
@@ -62,8 +62,8 @@ class AiAnalysisTaskVideoRemakeResult extends AbstractModel
      * @param string $Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      * @param integer $ErrCode Error code. 0: successful; other values: failed.
      * @param string $Message Error message
-     * @param AiAnalysisTaskVideoRemakeInput $Input Task input for deduplication
-     * @param AiAnalysisTaskVideoRemakeOutput $Output 
+     * @param AiAnalysisTaskVideoRemakeInput $Input Input of the deduplication task.
+     * @param AiAnalysisTaskVideoRemakeOutput $Output Output of the deduplication task.
      */
     function __construct()
     {

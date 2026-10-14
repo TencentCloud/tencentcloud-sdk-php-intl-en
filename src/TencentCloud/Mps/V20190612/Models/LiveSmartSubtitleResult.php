@@ -18,24 +18,24 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream smart subtitle result
+ * Smart subtitle result of the live stream.
  *
  * @method string getText() Obtain Recognized text.
  * @method void setText(string $Text) Set Recognized text.
- * @method float getStartPTSTime() Obtain Start PTS time of a translated recording clip, in seconds.
- * @method void setStartPTSTime(float $StartPTSTime) Set Start PTS time of a translated recording clip, in seconds.
- * @method float getEndPTSTime() Obtain End PTS time of a translated recording clip, in seconds.
- * @method void setEndPTSTime(float $EndPTSTime) Set End PTS time of a translated recording clip, in seconds.
+ * @method float getStartPTSTime() Obtain Start PTS time of a translated segment, in seconds.
+ * @method void setStartPTSTime(float $StartPTSTime) Set Start PTS time of a translated segment, in seconds.
+ * @method float getEndPTSTime() Obtain End PTS time of a translated segment, in seconds.
+ * @method void setEndPTSTime(float $EndPTSTime) Set End PTS time of a translated segment, in seconds.
  * @method string getTrans() Obtain Translated text.
  * @method void setTrans(string $Trans) Set Translated text.
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method boolean getSteadyState() Obtain 
- * @method void setSteadyState(boolean $SteadyState) Set 
- * @method string getUserId() Obtain 
- * @method void setUserId(string $UserId) Set 
+ * @method string getStartTime() Obtain Translation start UTC time.
+ * @method void setStartTime(string $StartTime) Set Translation start UTC time.
+ * @method string getEndTime() Obtain UTC time when translation is completed.
+ * @method void setEndTime(string $EndTime) Set UTC time when translation is completed.
+ * @method boolean getSteadyState() Obtain Steady-state tag.
+ * @method void setSteadyState(boolean $SteadyState) Set Steady-state tag.
+ * @method string getUserId() Obtain UserId for real-time translation over websocket and trtc
+ * @method void setUserId(string $UserId) Set UserId for real-time translation over websocket and trtc
  */
 class LiveSmartSubtitleResult extends AbstractModel
 {
@@ -45,12 +45,12 @@ class LiveSmartSubtitleResult extends AbstractModel
     public $Text;
 
     /**
-     * @var float Start PTS time of a translated recording clip, in seconds.
+     * @var float Start PTS time of a translated segment, in seconds.
      */
     public $StartPTSTime;
 
     /**
-     * @var float End PTS time of a translated recording clip, in seconds.
+     * @var float End PTS time of a translated segment, in seconds.
      */
     public $EndPTSTime;
 
@@ -60,34 +60,34 @@ class LiveSmartSubtitleResult extends AbstractModel
     public $Trans;
 
     /**
-     * @var string 
+     * @var string Translation start UTC time.
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string UTC time when translation is completed.
      */
     public $EndTime;
 
     /**
-     * @var boolean 
+     * @var boolean Steady-state tag.
      */
     public $SteadyState;
 
     /**
-     * @var string 
+     * @var string UserId for real-time translation over websocket and trtc
      */
     public $UserId;
 
     /**
      * @param string $Text Recognized text.
-     * @param float $StartPTSTime Start PTS time of a translated recording clip, in seconds.
-     * @param float $EndPTSTime End PTS time of a translated recording clip, in seconds.
+     * @param float $StartPTSTime Start PTS time of a translated segment, in seconds.
+     * @param float $EndPTSTime End PTS time of a translated segment, in seconds.
      * @param string $Trans Translated text.
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param boolean $SteadyState 
-     * @param string $UserId 
+     * @param string $StartTime Translation start UTC time.
+     * @param string $EndTime UTC time when translation is completed.
+     * @param boolean $SteadyState Steady-state tag.
+     * @param string $UserId UserId for real-time translation over websocket and trtc
      */
     function __construct()
     {

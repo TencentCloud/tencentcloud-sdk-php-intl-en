@@ -18,40 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pornographic result info
+ * Pornographic result information
  *
- * @method float getConfidence() Obtain Video porn detection score, ranging from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Video porn detection score, ranging from 0 to 100.
- * @method string getSuggestion() Obtain Pornographic result recommendation, value ranges from...to...
+ * @method float getConfidence() Obtain Porn information detection score in a video. The score ranges from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Porn information detection score in a video. The score ranges from 0 to 100.
+ * @method string getSuggestion() Obtain Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Pornographic result recommendation, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method string getLabel() Obtain Video pornographic result tag, value ranges from...to...
+ * @method string getLabel() Obtain Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
- * @method void setLabel(string $Label) Set Video pornographic result tag, value ranges from...to...
+ * @method void setLabel(string $Label) Set Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
- * @method array getSegmentSet() Obtain List of video segments suspected of containing pornographic content.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of containing pornographic content.
+ * @method array getSegmentSet() Obtain List of video segments suspected of pornography.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of pornography.
  */
 class AiReviewPornTaskOutput extends AbstractModel
 {
     /**
-     * @var float Video porn detection score, ranging from 0 to 100.
+     * @var float Porn information detection score in a video. The score ranges from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string Pornographic result recommendation, value ranges from...to...
+     * @var string Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -59,31 +59,31 @@ class AiReviewPornTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Video pornographic result tag, value ranges from...to...
+     * @var string Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
      */
     public $Label;
 
     /**
-     * @var array List of video segments suspected of containing pornographic content.
+     * @var array List of video segments suspected of pornography.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Video porn detection score, ranging from 0 to 100.
-     * @param string $Suggestion Pornographic result recommendation, value ranges from...to...
+     * @param float $Confidence Porn information detection score in a video. The score ranges from 0 to 100.
+     * @param string $Suggestion Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param string $Label Video pornographic result tag, value ranges from...to...
+     * @param string $Label Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
-     * @param array $SegmentSet List of video segments suspected of containing pornographic content.
+     * @param array $SegmentSet List of video segments suspected of pornography.
      */
     function __construct()
     {

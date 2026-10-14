@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming AI recognition result
+ * AI recognition result of the live stream
  *
  * @method array getResultSet() Obtain Content recognition result list.
  * @method void setResultSet(array $ResultSet) Set Content recognition result list.

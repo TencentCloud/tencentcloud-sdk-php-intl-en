@@ -18,132 +18,100 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SRT configuration information of the queried output.
+ * Query the output SRT configuration information.
  *
- * @method array getDestinations() Obtain A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setDestinations(array $Destinations) Set A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getStreamId() Obtain Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStreamId(string $StreamId) Set Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getLatency() Obtain Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLatency(integer $Latency) Set Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getRecvLatency() Obtain Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRecvLatency(integer $RecvLatency) Set Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPeerLatency() Obtain Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPeerLatency(integer $PeerLatency) Set Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPeerIdleTimeout() Obtain Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) Set Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDestinations() Obtain Destination address list. Used when the SRT mode is CALLER.
+ * @method void setDestinations(array $Destinations) Set Destination address list. Used when the SRT mode is CALLER.
+ * @method string getStreamId() Obtain Stream Id.
+ * @method void setStreamId(string $StreamId) Set Stream Id.
+ * @method integer getLatency() Obtain Delay.
+ * @method void setLatency(integer $Latency) Set Delay.
+ * @method integer getRecvLatency() Obtain Receive delay.
+ * @method void setRecvLatency(integer $RecvLatency) Set Receive delay.
+ * @method integer getPeerLatency() Obtain Peer delay.
+ * @method void setPeerLatency(integer $PeerLatency) Set Peer delay.
+ * @method integer getPeerIdleTimeout() Obtain Idle timeout period of the peer.
+ * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) Set Idle timeout period of the peer.
  * @method string getPassphrase() Obtain Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPassphrase(string $Passphrase) Set Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getPbKeyLen() Obtain Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPbKeyLen(integer $PbKeyLen) Set Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMode() Obtain The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setMode(string $Mode) Set The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getSourceAddresses() Obtain The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSourceAddresses(array $SourceAddresses) Set The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getMode() Obtain SRT mode.
+ * @method void setMode(string $Mode) Set SRT mode.
+ * @method array getSourceAddresses() Obtain Server listening address, used when the SRT mode is LISTENER.
+ * @method void setSourceAddresses(array $SourceAddresses) Set Server listening address, used when the SRT mode is LISTENER.
+ * @method SRTFECFullOptions getFEC() Obtain SRT FEC configuration
+ * @method void setFEC(SRTFECFullOptions $FEC) Set SRT FEC configuration
  */
 class DescribeOutputSRTSettings extends AbstractModel
 {
     /**
-     * @var array A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Destination address list. Used when the SRT mode is CALLER.
      */
     public $Destinations;
 
     /**
-     * @var string Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Stream Id.
      */
     public $StreamId;
 
     /**
-     * @var integer Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Delay.
      */
     public $Latency;
 
     /**
-     * @var integer Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Receive delay.
      */
     public $RecvLatency;
 
     /**
-     * @var integer Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Peer delay.
      */
     public $PeerLatency;
 
     /**
-     * @var integer Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Idle timeout period of the peer.
      */
     public $PeerIdleTimeout;
 
     /**
      * @var string Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Passphrase;
 
     /**
      * @var integer Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PbKeyLen;
 
     /**
-     * @var string The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string SRT mode.
      */
     public $Mode;
 
     /**
-     * @var array The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Server listening address, used when the SRT mode is LISTENER.
      */
     public $SourceAddresses;
 
     /**
-     * @param array $Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $StreamId Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Latency Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $RecvLatency Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PeerLatency Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PeerIdleTimeout Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var SRTFECFullOptions SRT FEC configuration
+     */
+    public $FEC;
+
+    /**
+     * @param array $Destinations Destination address list. Used when the SRT mode is CALLER.
+     * @param string $StreamId Stream Id.
+     * @param integer $Latency Delay.
+     * @param integer $RecvLatency Receive delay.
+     * @param integer $PeerLatency Peer delay.
+     * @param integer $PeerIdleTimeout Idle timeout period of the peer.
      * @param string $Passphrase Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $PbKeyLen Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Mode SRT mode.
+     * @param array $SourceAddresses Server listening address, used when the SRT mode is LISTENER.
+     * @param SRTFECFullOptions $FEC SRT FEC configuration
      */
     function __construct()
     {
@@ -206,6 +174,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->SourceAddresses, $obj);
             }
+        }
+
+        if (array_key_exists("FEC",$param) and $param["FEC"] !== null) {
+            $this->FEC = new SRTFECFullOptions();
+            $this->FEC->deserialize($param["FEC"]);
         }
     }
 }

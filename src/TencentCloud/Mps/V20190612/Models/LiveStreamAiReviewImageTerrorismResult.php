@@ -18,51 +18,51 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream AI content review image sensitive result
+ * Live stream AI content moderation result of images involving sensitive content
  *
- * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment, in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment, in seconds.
+ * @method float getStartPtsTime() Obtain Starting PTS time of a suspected segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Starting PTS time of a suspected segment, in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a suspected segment, in seconds.
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment, in seconds.
- * @method float getConfidence() Obtain Suspected segment sensitivity score.
- * @method void setConfidence(float $Confidence) Set Suspected segment sensitivity score.
- * @method string getSuggestion() Obtain Suspected segment sensitive result suggestion, permissible range:
+ * @method float getConfidence() Obtain Sensitivity score of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Sensitivity score of the suspected segment.
+ * @method string getSuggestion() Obtain Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Suspected segment sensitive result suggestion, permissible range:
+ * @method void setSuggestion(string $Suggestion) Set Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() Obtain Video sensitive content result tag, value ranges from...to...
+ * @method string getLabel() Obtain Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
- * @method void setLabel(string $Label) Set Video sensitive content result tag, value ranges from...to...
+ * @method void setLabel(string $Label) Set Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
- * @method string getUrl() Obtain Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
- * @method void setUrl(string $Url) Set Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
- * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
 {
     /**
-     * @var float Start PTS time of a suspected segment, in seconds.
+     * @var float Starting PTS time of a suspected segment, in seconds.
      */
     public $StartPtsTime;
 
@@ -72,12 +72,12 @@ class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float Suspected segment sensitivity score.
+     * @var float Sensitivity score of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string Suspected segment sensitive result suggestion, permissible range:
+     * @var string Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -85,49 +85,49 @@ class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Video sensitive content result tag, value ranges from...to...
+     * @var string Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
      */
     public $Label;
 
     /**
-     * @var string Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * @var string Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public $Url;
 
     /**
-     * @var string Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartPtsTime Start PTS time of a suspected segment, in seconds.
+     * @param float $StartPtsTime Starting PTS time of a suspected segment, in seconds.
      * @param float $EndPtsTime End PTS time of a suspected segment, in seconds.
-     * @param float $Confidence Suspected segment sensitivity score.
-     * @param string $Suggestion Suspected segment sensitive result suggestion, permissible range:
+     * @param float $Confidence Sensitivity score of the suspected segment.
+     * @param string $Suggestion Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label Video sensitive content result tag, value ranges from...to...
+     * @param string $Label Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-     * @param string $Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

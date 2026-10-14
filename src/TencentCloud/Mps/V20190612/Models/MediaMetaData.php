@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Meta-information of on-demand media files
  *
- * @method integer getSize() Obtain Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
- * @method void setSize(integer $Size) Set Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+ * @method integer getSize() Obtain Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
+ * @method void setSize(integer $Size) Set Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
  * @method string getContainer() Obtain Container type, for example, m4a and mp4.
  * @method void setContainer(string $Container) Set Container type, for example, m4a and mp4.
  * @method integer getBitrate() Obtain Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
  * @method void setBitrate(integer $Bitrate) Set Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
- * @method integer getHeight() Obtain Maximum height of a video stream. Unit: px.
- * @method void setHeight(integer $Height) Set Maximum height of a video stream. Unit: px.
+ * @method integer getHeight() Obtain Maximum height of the video stream. Measurement unit: px.
+ * @method void setHeight(integer $Height) Set Maximum height of the video stream. Measurement unit: px.
  * @method integer getWidth() Obtain Maximum video stream width in px.
  * @method void setWidth(integer $Width) Set Maximum video stream width in px.
  * @method float getDuration() Obtain Video duration, unit: seconds.
  * @method void setDuration(float $Duration) Set Video duration, unit: seconds.
- * @method integer getRotate() Obtain Selection angle during video shooting. Unit: degree.
- * @method void setRotate(integer $Rotate) Set Selection angle during video shooting. Unit: degree.
+ * @method integer getRotate() Obtain Selection angle during video shooting. Measurement unit: degree.
+ * @method void setRotate(integer $Rotate) Set Selection angle during video shooting. Measurement unit: degree.
  * @method array getVideoStreamSet() Obtain Video stream information.
  * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
  * @method array getAudioStreamSet() Obtain Audio stream information.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaMetaData extends AbstractModel
 {
     /**
-     * @var integer Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+     * @var integer Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
      */
     public $Size;
 
@@ -61,7 +61,7 @@ class MediaMetaData extends AbstractModel
     public $Bitrate;
 
     /**
-     * @var integer Maximum height of a video stream. Unit: px.
+     * @var integer Maximum height of the video stream. Measurement unit: px.
      */
     public $Height;
 
@@ -76,7 +76,7 @@ class MediaMetaData extends AbstractModel
     public $Duration;
 
     /**
-     * @var integer Selection angle during video shooting. Unit: degree.
+     * @var integer Selection angle during video shooting. Measurement unit: degree.
      */
     public $Rotate;
 
@@ -101,13 +101,13 @@ class MediaMetaData extends AbstractModel
     public $AudioDuration;
 
     /**
-     * @param integer $Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+     * @param integer $Size Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
      * @param string $Container Container type, for example, m4a and mp4.
      * @param integer $Bitrate Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
-     * @param integer $Height Maximum height of a video stream. Unit: px.
+     * @param integer $Height Maximum height of the video stream. Measurement unit: px.
      * @param integer $Width Maximum video stream width in px.
      * @param float $Duration Video duration, unit: seconds.
-     * @param integer $Rotate Selection angle during video shooting. Unit: degree.
+     * @param integer $Rotate Selection angle during video shooting. Measurement unit: degree.
      * @param array $VideoStreamSet Video stream information.
      * @param array $AudioStreamSet Audio stream information.
      * @param float $VideoDuration Video duration, unit: seconds.

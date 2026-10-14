@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getLicenseType() Obtain License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method void setLicenseType(string $LicenseType) Set License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
- * @method array getVoucherIds() Obtain List of voucher IDs (only one voucher can be specified at a time currently)
- * @method void setVoucherIds(array $VoucherIds) Set List of voucher IDs (only one voucher can be specified at a time currently)
- * @method integer getBasicSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
- * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
- * @method boolean getForceRestart() Obtain Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
- * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+ * @method string getLicenseType() Obtain License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
+ * @method void setLicenseType(string $LicenseType) Set License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
+ * @method integer getAutoVoucher() Obtain Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
+ * @method array getVoucherIds() Obtain Voucher ID list. Only one voucher can be specified.
+ * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list. Only one voucher can be specified.
+ * @method integer getBasicSecurityType() Obtain Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
+ * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
+ * @method boolean getForceRestart() Obtain Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
  */
 class UpgradeLicenseRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class UpgradeLicenseRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+     * @var string License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
      */
     public $LicenseType;
 
     /**
-     * @var integer Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+     * @var integer Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
      */
     public $AutoVoucher;
 
     /**
-     * @var array List of voucher IDs (only one voucher can be specified at a time currently)
+     * @var array Voucher ID list. Only one voucher can be specified.
      */
     public $VoucherIds;
 
     /**
-     * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @var integer Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
      */
     public $BasicSecurityType;
 
     /**
-     * @var boolean Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+     * @var boolean Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
      */
     public $ForceRestart;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-     * @param integer $AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
-     * @param array $VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
-     * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-     * @param boolean $ForceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+     * @param string $LicenseType License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
+     * @param integer $AutoVoucher Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
+     * @param array $VoucherIds Voucher ID list. Only one voucher can be specified.
+     * @param integer $BasicSecurityType Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
+     * @param boolean $ForceRestart Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
      */
     function __construct()
     {

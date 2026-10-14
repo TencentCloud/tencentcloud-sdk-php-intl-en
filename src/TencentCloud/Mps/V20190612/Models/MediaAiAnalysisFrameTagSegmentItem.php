@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Frame tagging segments
+ * Segments for frame tagging
  *
- * @method float getStartTimeOffset() Obtain Offset time starting from frame tagging.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time starting from frame tagging.
- * @method float getEndTimeOffset() Obtain Offset time for frame tagging completion.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Offset time for frame tagging completion.
- * @method array getTagSet() Obtain Tag list within the time segment.
- * @method void setTagSet(array $TagSet) Set Tag list within the time segment.
+ * @method float getStartTimeOffset() Obtain Time offset starting from the frame tag.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Time offset starting from the frame tag.
+ * @method float getEndTimeOffset() Obtain Offset time for frame tagging to end.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set Offset time for frame tagging to end.
+ * @method array getTagSet() Obtain Tag list in the time segment.
+ * @method void setTagSet(array $TagSet) Set Tag list in the time segment.
  */
 class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
 {
     /**
-     * @var float Offset time starting from frame tagging.
+     * @var float Time offset starting from the frame tag.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Offset time for frame tagging completion.
+     * @var float Offset time for frame tagging to end.
      */
     public $EndTimeOffset;
 
     /**
-     * @var array Tag list within the time segment.
+     * @var array Tag list in the time segment.
      */
     public $TagSet;
 
     /**
-     * @param float $StartTimeOffset Offset time starting from frame tagging.
-     * @param float $EndTimeOffset Offset time for frame tagging completion.
-     * @param array $TagSet Tag list within the time segment.
+     * @param float $StartTimeOffset Time offset starting from the frame tag.
+     * @param float $EndTimeOffset Offset time for frame tagging to end.
+     * @param array $TagSet Tag list in the time segment.
      */
     function __construct()
     {

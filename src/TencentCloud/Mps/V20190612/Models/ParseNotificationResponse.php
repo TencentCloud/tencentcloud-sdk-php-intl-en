@@ -23,35 +23,35 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEventType() Obtain Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
  * @method void setEventType(string $EventType) Set Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
- * @method WorkflowTask getWorkflowTaskEvent() Obtain 
- * @method void setWorkflowTaskEvent(WorkflowTask $WorkflowTaskEvent) Set 
- * @method EditMediaTask getEditMediaTaskEvent() Obtain 
- * @method void setEditMediaTaskEvent(EditMediaTask $EditMediaTaskEvent) Set 
+<li>ScheduleTask: orchestration task.</li>
+ * @method WorkflowTask getWorkflowTaskEvent() Obtain Video processing task information. This field has a value only when EventType is WorkflowTask.
+ * @method void setWorkflowTaskEvent(WorkflowTask $WorkflowTaskEvent) Set Video processing task information. This field has a value only when EventType is WorkflowTask.
+ * @method EditMediaTask getEditMediaTaskEvent() Obtain Video editing task information. This field has a value only when EventType is EditMediaTask.
+ * @method void setEditMediaTaskEvent(EditMediaTask $EditMediaTaskEvent) Set Video editing task information. This field has a value only when EventType is EditMediaTask.
  * @method string getSessionId() Obtain An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method void setSessionId(string $SessionId) Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
  * @method string getSessionContext() Obtain Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
- * @method ScheduleTask getScheduleTaskEvent() Obtain 
- * @method void setScheduleTaskEvent(ScheduleTask $ScheduleTaskEvent) Set 
- * @method integer getTimestamp() Obtain -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+ * @method ScheduleTask getScheduleTaskEvent() Obtain Orchestration task information. This field has a value only when EventType is ScheduleTask.
+ * @method void setScheduleTaskEvent(ScheduleTask $ScheduleTaskEvent) Set Orchestration task information. This field has a value only when EventType is ScheduleTask.
+ * @method integer getTimestamp() Obtain -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
- * @method void setTimestamp(integer $Timestamp) Set -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+ * @method void setTimestamp(integer $Timestamp) Set -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
  * @method string getSign() Obtain Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
  * @method void setSign(string $Sign) Set Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
- * @method BatchSubTaskResult getBatchTaskEvent() Obtain 
- * @method void setBatchTaskEvent(BatchSubTaskResult $BatchTaskEvent) Set 
- * @method ExtractBlindWatermarkTask getExtractBlindWatermarkTask() Obtain 
- * @method void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask $ExtractBlindWatermarkTask) Set 
+ * @method BatchSubTaskResult getBatchTaskEvent() Obtain Batch operation information. This field has a value only when EventType is BatchTask.
+ * @method void setBatchTaskEvent(BatchSubTaskResult $BatchTaskEvent) Set Batch operation information. This field has a value only when EventType is BatchTask.
+ * @method ExtractBlindWatermarkTask getExtractBlindWatermarkTask() Obtain Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
+ * @method void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask $ExtractBlindWatermarkTask) Set Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -61,17 +61,17 @@ class ParseNotificationResponse extends AbstractModel
      * @var string Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
      */
     public $EventType;
 
     /**
-     * @var WorkflowTask 
+     * @var WorkflowTask Video processing task information. This field has a value only when EventType is WorkflowTask.
      */
     public $WorkflowTaskEvent;
 
     /**
-     * @var EditMediaTask 
+     * @var EditMediaTask Video editing task information. This field has a value only when EventType is EditMediaTask.
      */
     public $EditMediaTaskEvent;
 
@@ -86,14 +86,14 @@ class ParseNotificationResponse extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var ScheduleTask 
+     * @var ScheduleTask Orchestration task information. This field has a value only when EventType is ScheduleTask.
      */
     public $ScheduleTaskEvent;
 
     /**
-     * @var integer -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+     * @var integer -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
      */
     public $Timestamp;
@@ -104,12 +104,12 @@ class ParseNotificationResponse extends AbstractModel
     public $Sign;
 
     /**
-     * @var BatchSubTaskResult 
+     * @var BatchSubTaskResult Batch operation information. This field has a value only when EventType is BatchTask.
      */
     public $BatchTaskEvent;
 
     /**
-     * @var ExtractBlindWatermarkTask 
+     * @var ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
      */
     public $ExtractBlindWatermarkTask;
 
@@ -122,19 +122,19 @@ class ParseNotificationResponse extends AbstractModel
      * @param string $EventType Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
-     * @param WorkflowTask $WorkflowTaskEvent 
-     * @param EditMediaTask $EditMediaTaskEvent 
+<li>ScheduleTask: orchestration task.</li>
+     * @param WorkflowTask $WorkflowTaskEvent Video processing task information. This field has a value only when EventType is WorkflowTask.
+     * @param EditMediaTask $EditMediaTaskEvent Video editing task information. This field has a value only when EventType is EditMediaTask.
      * @param string $SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      * @param string $SessionContext Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param ScheduleTask $ScheduleTaskEvent 
-     * @param integer $Timestamp -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+     * @param ScheduleTask $ScheduleTaskEvent Orchestration task information. This field has a value only when EventType is ScheduleTask.
+     * @param integer $Timestamp -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
      * @param string $Sign Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
-     * @param BatchSubTaskResult $BatchTaskEvent 
-     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkTask 
+     * @param BatchSubTaskResult $BatchTaskEvent Batch operation information. This field has a value only when EventType is BatchTask.
+     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

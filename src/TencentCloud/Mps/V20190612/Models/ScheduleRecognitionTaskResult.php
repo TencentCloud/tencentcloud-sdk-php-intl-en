@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Orchestrate the result type of a video recognition task
+ * Result type of the orchestration video recognition task
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiRecognitionTaskInput getInput() Obtain Recognition task input.
- * @method void setInput(AiRecognitionTaskInput $Input) Set Recognition task input.
- * @method array getOutput() Obtain Recognition task output.
- * @method void setOutput(array $Output) Set Recognition task output.
+ * @method AiRecognitionTaskInput getInput() Obtain Input of the recognition task.
+ * @method void setInput(AiRecognitionTaskInput $Input) Set Input of the recognition task.
+ * @method array getOutput() Obtain Output of the identification task.
+ * @method void setOutput(array $Output) Set Output of the identification task.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getFinishTime() Obtain Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -60,12 +60,12 @@ class ScheduleRecognitionTaskResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskInput Recognition task input.
+     * @var AiRecognitionTaskInput Input of the recognition task.
      */
     public $Input;
 
     /**
-     * @var array Recognition task output.
+     * @var array Output of the identification task.
      */
     public $Output;
 
@@ -84,8 +84,8 @@ class ScheduleRecognitionTaskResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiRecognitionTaskInput $Input Recognition task input.
-     * @param array $Output Recognition task output.
+     * @param AiRecognitionTaskInput $Input Input of the recognition task.
+     * @param array $Output Output of the identification task.
      * @param string $BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */

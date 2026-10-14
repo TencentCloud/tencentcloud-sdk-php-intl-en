@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Media processing COS object information.
  *
- * @method string getBucket() Obtain Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
- * @method void setBucket(string $Bucket) Set Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
- * @method string getRegion() Obtain Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
- * @method void setRegion(string $Region) Set Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
- * @method string getObject() Obtain Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
- * @method void setObject(string $Object) Set Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
+ * @method string getBucket() Obtain Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
+ * @method void setBucket(string $Bucket) Set Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
+ * @method string getRegion() Obtain Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
+ * @method void setRegion(string $Region) Set Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
+ * @method string getObject() Obtain Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
+ * @method void setObject(string $Object) Set Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
  */
 class CosInputInfo extends AbstractModel
 {
     /**
-     * @var string Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
+     * @var string Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
      */
     public $Bucket;
 
     /**
-     * @var string Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
+     * @var string Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
      */
     public $Region;
 
     /**
-     * @var string Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
+     * @var string Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
      */
     public $Object;
 
     /**
-     * @param string $Bucket Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
-     * @param string $Region Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
-     * @param string $Object Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
+     * @param string $Bucket Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
+     * @param string $Region Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
+     * @param string $Object Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
      */
     function __construct()
     {

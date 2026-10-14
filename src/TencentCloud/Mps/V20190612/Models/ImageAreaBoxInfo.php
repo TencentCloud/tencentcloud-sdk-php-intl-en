@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on the box selection area in an image.
  *
- * @method string getType() Obtain Type of the box selection area in the image. Valid values:
+ * @method string getType() Obtain Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
- * @method void setType(string $Type) Set Type of the box selection area in the image. Valid values:
+ * @method void setType(string $Type) Set Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
  * @method array getAreaCoordSet() Obtain Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
+For example, [101, 85, 111, 95].
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
- * @method array getBoundingBox() Obtain Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+For example, [101, 85, 111, 95].
+ * @method array getBoundingBox() Obtain Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
- * @method void setBoundingBox(array $BoundingBox) Set Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+ * @method void setBoundingBox(array $BoundingBox) Set Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
  * @method integer getBoundingBoxUnitType() Obtain BoundingBox field unit. When the value is set to 0, select the unit automatically according to the field rule. When it is set to 1, the unit is ratio. When it is set to 2, the unit is pixel.
@@ -44,7 +44,7 @@ For example, [101, 85, 111, —].
 class ImageAreaBoxInfo extends AbstractModel
 {
     /**
-     * @var string Type of the box selection area in the image. Valid values:
+     * @var string Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
@@ -53,12 +53,12 @@ Default value: logo.
 
     /**
      * @var array Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
+For example, [101, 85, 111, 95].
      */
     public $AreaCoordSet;
 
     /**
-     * @var array Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+     * @var array Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
      */
@@ -70,13 +70,13 @@ For example, [101, 85, 111, —].
     public $BoundingBoxUnitType;
 
     /**
-     * @param string $Type Type of the box selection area in the image. Valid values:
+     * @param string $Type Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
      * @param array $AreaCoordSet Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
-     * @param array $BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+For example, [101, 85, 111, 95].
+     * @param array $BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
      * @param integer $BoundingBoxUnitType BoundingBox field unit. When the value is set to 0, select the unit automatically according to the field rule. When it is set to 1, the unit is ratio. When it is set to 2, the unit is pixel.

@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream smart subtitle result
+ * Smart subtitle result of the live stream.
  *
- * @method array getSmartSubtitleResult() Obtain Live stream smart subtitle task result list.
- * @method void setSmartSubtitleResult(array $SmartSubtitleResult) Set Live stream smart subtitle task result list.
+ * @method array getSmartSubtitleResult() Obtain List of live stream smart subtitle task results.
+ * @method void setSmartSubtitleResult(array $SmartSubtitleResult) Set List of live stream smart subtitle task results.
  */
 class LiveStreamAiSmartSubtitleResultInfo extends AbstractModel
 {
     /**
-     * @var array Live stream smart subtitle task result list.
+     * @var array List of live stream smart subtitle task results.
      */
     public $SmartSubtitleResult;
 
     /**
-     * @param array $SmartSubtitleResult Live stream smart subtitle task result list.
+     * @param array $SmartSubtitleResult List of live stream smart subtitle task results.
      */
     function __construct()
     {

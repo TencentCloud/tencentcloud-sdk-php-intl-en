@@ -18,19 +18,19 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the IK plugin dictionary
+ * ik plug-in dictionary information
  *
- * @method string getKey() Obtain Dictionary key value
- * @method void setKey(string $Key) Set Dictionary key value
+ * @method string getKey() Obtain Dictionary key-value
+ * @method void setKey(string $Key) Set Dictionary key-value
  * @method string getName() Obtain Dictionary name
  * @method void setName(string $Name) Set Dictionary name
- * @method integer getSize() Obtain Dictionary size in B
- * @method void setSize(integer $Size) Set Dictionary size in B
+ * @method integer getSize() Obtain Dictionary size. Unit: B.
+ * @method void setSize(integer $Size) Set Dictionary size. Unit: B.
  */
 class DictInfo extends AbstractModel
 {
     /**
-     * @var string Dictionary key value
+     * @var string Dictionary key-value
      */
     public $Key;
 
@@ -40,14 +40,14 @@ class DictInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Dictionary size in B
+     * @var integer Dictionary size. Unit: B.
      */
     public $Size;
 
     /**
-     * @param string $Key Dictionary key value
+     * @param string $Key Dictionary key-value
      * @param string $Name Dictionary name
-     * @param integer $Size Dictionary size in B
+     * @param integer $Size Dictionary size. Unit: B.
      */
     function __construct()
     {

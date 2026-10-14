@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTrigger request structure.
  *
- * @method string getFunctionName() Obtain Name of the function bound to the new trigger
- * @method void setFunctionName(string $FunctionName) Set Name of the function bound to the new trigger
- * @method string getTriggerName() Obtain Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
- * @method void setTriggerName(string $TriggerName) Set Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
- * @method string getType() Obtain Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
- * @method void setType(string $Type) Set Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
- * @method string getTriggerDesc() Obtain For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
- * @method void setTriggerDesc(string $TriggerDesc) Set For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
- * @method string getNamespace() Obtain Function namespace
- * @method void setNamespace(string $Namespace) Set Function namespace
- * @method string getQualifier() Obtain Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
- * @method void setQualifier(string $Qualifier) Set Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
- * @method string getEnable() Obtain Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
- * @method void setEnable(string $Enable) Set Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
- * @method string getCustomArgument() Obtain Custom argument, supporting only the timer trigger.
- * @method void setCustomArgument(string $CustomArgument) Set Custom argument, supporting only the timer trigger.
- * @method string getDescription() Obtain Trigger description
- * @method void setDescription(string $Description) Set Trigger description
+ * @method string getFunctionName() Obtain Function name bound to the created trigger
+ * @method void setFunctionName(string $FunctionName) Set Function name bound to the created trigger
+ * @method string getTriggerName() Obtain Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
+ * @method void setTriggerName(string $TriggerName) Set Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
+ * @method string getType() Obtain Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
+ * @method void setType(string $Type) Set Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
+ * @method string getTriggerDesc() Obtain Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
+ * @method void setTriggerDesc(string $TriggerDesc) Set Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
+ * @method string getNamespace() Obtain Namespace of the function
+ * @method void setNamespace(string $Namespace) Set Namespace of the function
+ * @method string getQualifier() Obtain Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
+ * @method void setQualifier(string $Qualifier) Set Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
+ * @method string getEnable() Obtain Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
+ * @method void setEnable(string $Enable) Set Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
+ * @method string getCustomArgument() Obtain User-defined parameter. Only timer triggers are supported.
+ * @method void setCustomArgument(string $CustomArgument) Set User-defined parameter. Only timer triggers are supported.
+ * @method string getDescription() Obtain Trigger description.
+ * @method void setDescription(string $Description) Set Trigger description.
  */
 class CreateTriggerRequest extends AbstractModel
 {
     /**
-     * @var string Name of the function bound to the new trigger
+     * @var string Function name bound to the created trigger
      */
     public $FunctionName;
 
     /**
-     * @var string Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+     * @var string Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
      */
     public $TriggerName;
 
     /**
-     * @var string Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+     * @var string Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
      */
     public $Type;
 
     /**
-     * @var string For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+     * @var string Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
      */
     public $TriggerDesc;
 
     /**
-     * @var string Function namespace
+     * @var string Namespace of the function
      */
     public $Namespace;
 
     /**
-     * @var string Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+     * @var string Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
      */
     public $Qualifier;
 
     /**
-     * @var string Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+     * @var string Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
      */
     public $Enable;
 
     /**
-     * @var string Custom argument, supporting only the timer trigger.
+     * @var string User-defined parameter. Only timer triggers are supported.
      */
     public $CustomArgument;
 
     /**
-     * @var string Trigger description
+     * @var string Trigger description.
      */
     public $Description;
 
     /**
-     * @param string $FunctionName Name of the function bound to the new trigger
-     * @param string $TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
-     * @param string $Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
-     * @param string $TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
-     * @param string $Namespace Function namespace
-     * @param string $Qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
-     * @param string $Enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
-     * @param string $CustomArgument Custom argument, supporting only the timer trigger.
-     * @param string $Description Trigger description
+     * @param string $FunctionName Function name bound to the created trigger
+     * @param string $TriggerName Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
+     * @param string $Type Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
+     * @param string $TriggerDesc Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
+     * @param string $Namespace Namespace of the function
+     * @param string $Qualifier Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
+     * @param string $Enable Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
+     * @param string $CustomArgument User-defined parameter. Only timer triggers are supported.
+     * @param string $Description Trigger description.
      */
     function __construct()
     {

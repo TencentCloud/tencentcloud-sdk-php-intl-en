@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent erasure task result
+ * Intelligent erasure task result.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method SmartEraseTaskInput getInput() Obtain 
- * @method void setInput(SmartEraseTaskInput $Input) Set 
- * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set 
+ * @method SmartEraseTaskInput getInput() Obtain Intelligent removal input.
+ * @method void setInput(SmartEraseTaskInput $Input) Set Intelligent removal input.
+ * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain Output of the intelligent erasure task.
+ * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set Output of the intelligent erasure task.
  * @method integer getProgress() Obtain Task progress.	
  * @method void setProgress(integer $Progress) Set Task progress.	
  * @method string getBeginProcessTime() Obtain Starting time of task execution, in ISO date and time format.
@@ -55,12 +55,12 @@ class SmartEraseTaskResult extends AbstractModel
     public $Message;
 
     /**
-     * @var SmartEraseTaskInput 
+     * @var SmartEraseTaskInput Intelligent removal input.
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDelLogoOutput 
+     * @var AiAnalysisTaskDelLogoOutput Output of the intelligent erasure task.
      */
     public $Output;
 
@@ -83,8 +83,8 @@ class SmartEraseTaskResult extends AbstractModel
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param string $Message Error message.
-     * @param SmartEraseTaskInput $Input 
-     * @param AiAnalysisTaskDelLogoOutput $Output 
+     * @param SmartEraseTaskInput $Input Intelligent removal input.
+     * @param AiAnalysisTaskDelLogoOutput $Output Output of the intelligent erasure task.
      * @param integer $Progress Task progress.	
      * @param string $BeginProcessTime Starting time of task execution, in ISO date and time format.
      * @param string $FinishTime Task completion time, in ISO date and time format.

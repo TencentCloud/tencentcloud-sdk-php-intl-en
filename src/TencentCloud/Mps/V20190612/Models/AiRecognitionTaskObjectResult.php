@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskObjectResultInput getInput() Obtain Object recognition task input.
  * @method void setInput(AiRecognitionTaskObjectResultInput $Input) Set Object recognition task input.
- * @method AiRecognitionTaskObjectResultOutput getOutput() Obtain 
- * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) Set 
+ * @method AiRecognitionTaskObjectResultOutput getOutput() Obtain Object recognition task output information.
+ * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) Set Object recognition task output information.
  */
 class AiRecognitionTaskObjectResult extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AiRecognitionTaskObjectResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskObjectResultOutput 
+     * @var AiRecognitionTaskObjectResultOutput Object recognition task output information.
      */
     public $Output;
 
@@ -63,7 +63,7 @@ class AiRecognitionTaskObjectResult extends AbstractModel
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiRecognitionTaskObjectResultInput $Input Object recognition task input.
-     * @param AiRecognitionTaskObjectResultOutput $Output 
+     * @param AiRecognitionTaskObjectResultOutput $Output Object recognition task output information.
      */
     function __construct()
     {

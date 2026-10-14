@@ -20,46 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Super-resolution configuration.
  *
- * @method string getSwitch() Obtain Capability configuration switch. Available values:
-<li>ON: enabled;</li>
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Capability configuration switch. Available values:
-<li>ON: enabled;</li>
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getSize() Obtain 
- * @method void setSize(integer $Size) Set 
+ * @method string getType() Obtain Type. Valid values:
+<li>lq: super resolution for low resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
+ * @method void setType(string $Type) Set Type. Valid values:
+<li>lq: super resolution for low resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
+ * @method integer getSize() Obtain Upscaling multiple. Available values:
+<li>2: currently only support 2x super resolution.</li>
+Default value: 2.
+ * @method void setSize(integer $Size) Set Upscaling multiple. Available values:
+<li>2: currently only support 2x super resolution.</li>
+Default value: 2.
  */
 class SuperResolutionConfig extends AbstractModel
 {
     /**
-     * @var string Capability configuration switch. Available values:
-<li>ON: enabled;</li>
+     * @var string Capability configuration switch. Valid values:
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Type. Valid values:
+<li>lq: super resolution for low resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Upscaling multiple. Available values:
+<li>2: currently only support 2x super resolution.</li>
+Default value: 2.
      */
     public $Size;
 
     /**
-     * @param string $Switch Capability configuration switch. Available values:
-<li>ON: enabled;</li>
+     * @param string $Switch Capability configuration switch. Valid values:
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type 
-     * @param integer $Size 
+     * @param string $Type Type. Valid values:
+<li>lq: super resolution for low resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
+     * @param integer $Size Upscaling multiple. Available values:
+<li>2: currently only support 2x super resolution.</li>
+Default value: 2.
      */
     function __construct()
     {

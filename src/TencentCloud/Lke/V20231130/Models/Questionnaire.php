@@ -18,36 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Questionnaire information
  *
- * @method string getTitle() Obtain 
- * @method void setTitle(string $Title) Set 
- * @method array getQuestions() Obtain 
- * @method void setQuestions(array $Questions) Set 
- * @method array getAnswers() Obtain 
- * @method void setAnswers(array $Answers) Set 
+ * @method string getTitle() Obtain <p>Questionnaire title</p>
+ * @method void setTitle(string $Title) Set <p>Questionnaire title</p>
+ * @method array getQuestions() Obtain <p>Question list of the questionnaire</p>
+ * @method void setQuestions(array $Questions) Set <p>Question list of the questionnaire</p>
+ * @method array getAnswers() Obtain <p>List of answers to the questionnaire</p>
+ * @method void setAnswers(array $Answers) Set <p>List of answers to the questionnaire</p>
  */
 class Questionnaire extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Questionnaire title</p>
      */
     public $Title;
 
     /**
-     * @var array 
+     * @var array <p>Question list of the questionnaire</p>
      */
     public $Questions;
 
     /**
-     * @var array 
+     * @var array <p>List of answers to the questionnaire</p>
      */
     public $Answers;
 
     /**
-     * @param string $Title 
-     * @param array $Questions 
-     * @param array $Answers 
+     * @param string $Title <p>Questionnaire title</p>
+     * @param array $Questions <p>Question list of the questionnaire</p>
+     * @param array $Answers <p>List of answers to the questionnaire</p>
      */
     function __construct()
     {

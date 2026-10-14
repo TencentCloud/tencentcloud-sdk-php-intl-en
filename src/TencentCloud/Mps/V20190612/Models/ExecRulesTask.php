@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task judgment conditions.
  *
- * @method array getRules() Obtain 
- * @method void setRules(array $Rules) Set 
+ * @method array getRules() Obtain Conditional judgment information.
+ * @method void setRules(array $Rules) Set Conditional judgment information.
  */
 class ExecRulesTask extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Conditional judgment information.
      */
     public $Rules;
 
     /**
-     * @param array $Rules 
+     * @param array $Rules Conditional judgment information.
      */
     function __construct()
     {

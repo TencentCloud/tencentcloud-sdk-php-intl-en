@@ -20,126 +20,137 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateFunctionConfiguration request structure.
  *
- * @method string getFunctionName() Obtain Name of the function to be modified
- * @method void setFunctionName(string $FunctionName) Set Name of the function to be modified
- * @method string getDescription() Obtain Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
- * @method void setDescription(string $Description) Set Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
- * @method integer getMemorySize() Obtain Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
- * @method void setMemorySize(integer $MemorySize) Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
- * @method integer getTimeout() Obtain Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
- * @method void setTimeout(integer $Timeout) Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
- * @method string getRuntime() Obtain Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
- * @method void setRuntime(string $Runtime) Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
- * @method Environment getEnvironment() Obtain Function environment variable
- * @method void setEnvironment(Environment $Environment) Set Function environment variable
- * @method string getNamespace() Obtain Function namespace
- * @method void setNamespace(string $Namespace) Set Function namespace
- * @method VpcConfig getVpcConfig() Obtain Function VPC configuration
- * @method void setVpcConfig(VpcConfig $VpcConfig) Set Function VPC configuration
- * @method string getRole() Obtain Role bound to the function
- * @method void setRole(string $Role) Set Role bound to the function
- * @method string getInstallDependency() Obtain Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
- * @method void setInstallDependency(string $InstallDependency) Set Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
- * @method string getClsLogsetId() Obtain CLS logset ID to which logs are shipped
- * @method void setClsLogsetId(string $ClsLogsetId) Set CLS logset ID to which logs are shipped
- * @method string getClsTopicId() Obtain CLS Topic ID to which logs are shipped
- * @method void setClsTopicId(string $ClsTopicId) Set CLS Topic ID to which logs are shipped
- * @method string getPublish() Obtain It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
- * @method void setPublish(string $Publish) Set It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
- * @method string getL5Enable() Obtain Whether to enable L5 access. TRUE: enable; FALSE: not enable
- * @method void setL5Enable(string $L5Enable) Set Whether to enable L5 access. TRUE: enable; FALSE: not enable
- * @method array getLayers() Obtain List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
- * @method void setLayers(array $Layers) Set List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
- * @method DeadLetterConfig getDeadLetterConfig() Obtain Information of a dead letter queue associated with a function
- * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Information of a dead letter queue associated with a function
+ * @method string getFunctionName() Obtain The function name to be modified
+ * @method void setFunctionName(string $FunctionName) Set The function name to be modified
+ * @method string getDescription() Obtain Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
+ * @method void setDescription(string $Description) Set Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
+ * @method integer getMemorySize() Obtain Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
+ * @method void setMemorySize(integer $MemorySize) Set Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
+ * @method integer getTimeout() Obtain Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
+ * @method void setTimeout(integer $Timeout) Set Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
+ * @method string getRuntime() Obtain Runtime environment. It is specified upon creation and currently does not support modification.
+ * @method void setRuntime(string $Runtime) Set Runtime environment. It is specified upon creation and currently does not support modification.
+ * @method Environment getEnvironment() Obtain Environment variable of the function
+ * @method void setEnvironment(Environment $Environment) Set Environment variable of the function
+ * @method string getNamespace() Obtain Namespace of the function
+Default value: default
+ * @method void setNamespace(string $Namespace) Set Namespace of the function
+Default value: default
+ * @method VpcConfig getVpcConfig() Obtain VPC configuration of the function
+ * @method void setVpcConfig(VpcConfig $VpcConfig) Set VPC configuration of the function
+ * @method string getRole() Obtain Role bound to a function
+ * @method void setRole(string $Role) Set Role bound to a function
+ * @method string getInstallDependency() Obtain [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
+ * @method void setInstallDependency(string $InstallDependency) Set [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
+ * @method string getClsLogsetId() Obtain ID of the cls Log Set for log delivery
+ * @method void setClsLogsetId(string $ClsLogsetId) Set ID of the cls Log Set for log delivery
+ * @method string getClsTopicId() Obtain cls Topic ID for log delivery
+ * @method void setClsTopicId(string $ClsTopicId) Set cls Topic ID for log delivery
+ * @method string getPublish() Obtain Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
+ * @method void setPublish(string $Publish) Set Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
+ * @method string getL5Enable() Obtain Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
+ * @method void setL5Enable(string $L5Enable) Set Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
+ * @method array getLayers() Obtain List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
+ * @method void setLayers(array $Layers) Set List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
+ * @method DeadLetterConfig getDeadLetterConfig() Obtain Dead letter queue information associated with the function
+ * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) Set Dead letter queue information associated with the function
  * @method PublicNetConfigIn getPublicNetConfig() Obtain Public network access configuration
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
- * @method CfsConfig getCfsConfig() Obtain File system configuration input parameter, which is used for the function to bind the CFS file system
- * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration input parameter, which is used for the function to bind the CFS file system
- * @method integer getInitTimeout() Obtain The function initialization timeout period
- * @method void setInitTimeout(integer $InitTimeout) Set The function initialization timeout period
- * @method ProtocolParams getProtocolParams() Obtain Parameters of the specified protocol
- * @method void setProtocolParams(ProtocolParams $ProtocolParams) Set Parameters of the specified protocol
+ * @method CfsConfig getCfsConfig() Obtain File system configuration parameters for binding a CFS file system in SCF
+ * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration parameters for binding a CFS file system in SCF
+ * @method integer getInitTimeout() Obtain Function initialization timeout period
+ * @method void setInitTimeout(integer $InitTimeout) Set Function initialization timeout period
+ * @method ProtocolParams getProtocolParams() Obtain Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
+ * @method void setProtocolParams(ProtocolParams $ProtocolParams) Set Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
+ * @method InstanceConcurrencyConfig getInstanceConcurrencyConfig() Obtain Single-instance multi-concurrency configuration. Supports only Web functions.
+ * @method void setInstanceConcurrencyConfig(InstanceConcurrencyConfig $InstanceConcurrencyConfig) Set Single-instance multi-concurrency configuration. Supports only Web functions.
+ * @method string getDnsCache() Obtain Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+ * @method void setDnsCache(string $DnsCache) Set Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+ * @method IntranetConfigIn getIntranetConfig() Obtain Private network access configuration
+ * @method void setIntranetConfig(IntranetConfigIn $IntranetConfig) Set Private network access configuration
+ * @method boolean getIgnoreSysLog() Obtain Ignorable system log reporting
+ * @method void setIgnoreSysLog(boolean $IgnoreSysLog) Set Ignorable system log reporting
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string Name of the function to be modified
+     * @var string The function name to be modified
      */
     public $FunctionName;
 
     /**
-     * @var string Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
+     * @var string Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
      */
     public $Description;
 
     /**
-     * @var integer Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+     * @var integer Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
      */
     public $MemorySize;
 
     /**
-     * @var integer Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+     * @var integer Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
      */
     public $Timeout;
 
     /**
-     * @var string Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+     * @var string Runtime environment. It is specified upon creation and currently does not support modification.
      */
     public $Runtime;
 
     /**
-     * @var Environment Function environment variable
+     * @var Environment Environment variable of the function
      */
     public $Environment;
 
     /**
-     * @var string Function namespace
+     * @var string Namespace of the function
+Default value: default
      */
     public $Namespace;
 
     /**
-     * @var VpcConfig Function VPC configuration
+     * @var VpcConfig VPC configuration of the function
      */
     public $VpcConfig;
 
     /**
-     * @var string Role bound to the function
+     * @var string Role bound to a function
      */
     public $Role;
 
     /**
-     * @var string Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     * @var string [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
      */
     public $InstallDependency;
 
     /**
-     * @var string CLS logset ID to which logs are shipped
+     * @var string ID of the cls Log Set for log delivery
      */
     public $ClsLogsetId;
 
     /**
-     * @var string CLS Topic ID to which logs are shipped
+     * @var string cls Topic ID for log delivery
      */
     public $ClsTopicId;
 
     /**
-     * @var string It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+     * @var string Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
      */
     public $Publish;
 
     /**
-     * @var string Whether to enable L5 access. TRUE: enable; FALSE: not enable
+     * @var string Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
      */
     public $L5Enable;
 
     /**
-     * @var array List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
+     * @var array List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
      */
     public $Layers;
 
     /**
-     * @var DeadLetterConfig Information of a dead letter queue associated with a function
+     * @var DeadLetterConfig Dead letter queue information associated with the function
      */
     public $DeadLetterConfig;
 
@@ -149,41 +160,66 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $PublicNetConfig;
 
     /**
-     * @var CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
+     * @var CfsConfig File system configuration parameters for binding a CFS file system in SCF
      */
     public $CfsConfig;
 
     /**
-     * @var integer The function initialization timeout period
+     * @var integer Function initialization timeout period
      */
     public $InitTimeout;
 
     /**
-     * @var ProtocolParams Parameters of the specified protocol
+     * @var ProtocolParams Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
      */
     public $ProtocolParams;
 
     /**
-     * @param string $FunctionName Name of the function to be modified
-     * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
-     * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
-     * @param integer $Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
-     * @param string $Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
-     * @param Environment $Environment Function environment variable
-     * @param string $Namespace Function namespace
-     * @param VpcConfig $VpcConfig Function VPC configuration
-     * @param string $Role Role bound to the function
-     * @param string $InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
-     * @param string $ClsLogsetId CLS logset ID to which logs are shipped
-     * @param string $ClsTopicId CLS Topic ID to which logs are shipped
-     * @param string $Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
-     * @param string $L5Enable Whether to enable L5 access. TRUE: enable; FALSE: not enable
-     * @param array $Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
-     * @param DeadLetterConfig $DeadLetterConfig Information of a dead letter queue associated with a function
+     * @var InstanceConcurrencyConfig Single-instance multi-concurrency configuration. Supports only Web functions.
+     */
+    public $InstanceConcurrencyConfig;
+
+    /**
+     * @var string Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+     */
+    public $DnsCache;
+
+    /**
+     * @var IntranetConfigIn Private network access configuration
+     */
+    public $IntranetConfig;
+
+    /**
+     * @var boolean Ignorable system log reporting
+     */
+    public $IgnoreSysLog;
+
+    /**
+     * @param string $FunctionName The function name to be modified
+     * @param string $Description Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
+     * @param integer $MemorySize Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
+     * @param integer $Timeout Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
+     * @param string $Runtime Runtime environment. It is specified upon creation and currently does not support modification.
+     * @param Environment $Environment Environment variable of the function
+     * @param string $Namespace Namespace of the function
+Default value: default
+     * @param VpcConfig $VpcConfig VPC configuration of the function
+     * @param string $Role Role bound to a function
+     * @param string $InstallDependency [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
+     * @param string $ClsLogsetId ID of the cls Log Set for log delivery
+     * @param string $ClsTopicId cls Topic ID for log delivery
+     * @param string $Publish Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
+     * @param string $L5Enable Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
+     * @param array $Layers List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
+     * @param DeadLetterConfig $DeadLetterConfig Dead letter queue information associated with the function
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
-     * @param CfsConfig $CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
-     * @param integer $InitTimeout The function initialization timeout period
-     * @param ProtocolParams $ProtocolParams Parameters of the specified protocol
+     * @param CfsConfig $CfsConfig File system configuration parameters for binding a CFS file system in SCF
+     * @param integer $InitTimeout Function initialization timeout period
+     * @param ProtocolParams $ProtocolParams Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
+     * @param InstanceConcurrencyConfig $InstanceConcurrencyConfig Single-instance multi-concurrency configuration. Supports only Web functions.
+     * @param string $DnsCache Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+     * @param IntranetConfigIn $IntranetConfig Private network access configuration
+     * @param boolean $IgnoreSysLog Ignorable system log reporting
      */
     function __construct()
     {
@@ -287,6 +323,24 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
         if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
             $this->ProtocolParams = new ProtocolParams();
             $this->ProtocolParams->deserialize($param["ProtocolParams"]);
+        }
+
+        if (array_key_exists("InstanceConcurrencyConfig",$param) and $param["InstanceConcurrencyConfig"] !== null) {
+            $this->InstanceConcurrencyConfig = new InstanceConcurrencyConfig();
+            $this->InstanceConcurrencyConfig->deserialize($param["InstanceConcurrencyConfig"]);
+        }
+
+        if (array_key_exists("DnsCache",$param) and $param["DnsCache"] !== null) {
+            $this->DnsCache = $param["DnsCache"];
+        }
+
+        if (array_key_exists("IntranetConfig",$param) and $param["IntranetConfig"] !== null) {
+            $this->IntranetConfig = new IntranetConfigIn();
+            $this->IntranetConfig->deserialize($param["IntranetConfig"]);
+        }
+
+        if (array_key_exists("IgnoreSysLog",$param) and $param["IgnoreSysLog"] !== null) {
+            $this->IgnoreSysLog = $param["IgnoreSysLog"];
         }
     }
 }

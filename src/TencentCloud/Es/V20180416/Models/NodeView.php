@@ -18,47 +18,55 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node view data
+ * Node dimension view data
  *
- * @method string getNodeId() Obtain Node ID
- * @method void setNodeId(string $NodeId) Set Node ID
+ * @method string getNodeId() Obtain Node ID.
+ * @method void setNodeId(string $NodeId) Set Node ID.
  * @method string getNodeIp() Obtain Node IP
  * @method void setNodeIp(string $NodeIp) Set Node IP
  * @method float getVisible() Obtain Whether the node is visible
  * @method void setVisible(float $Visible) Set Whether the node is visible
- * @method float getBreak() Obtain Whether the node encounters circuit breaking
- * @method void setBreak(float $Break) Set Whether the node encounters circuit breaking
- * @method integer getDiskSize() Obtain Node disk size
- * @method void setDiskSize(integer $DiskSize) Set Node disk size
- * @method float getDiskUsage() Obtain Disk usage
- * @method void setDiskUsage(float $DiskUsage) Set Disk usage
- * @method integer getMemSize() Obtain Node memory size (in GB)
- * @method void setMemSize(integer $MemSize) Set Node memory size (in GB)
- * @method float getMemUsage() Obtain Memory usage
- * @method void setMemUsage(float $MemUsage) Set Memory usage
- * @method integer getCpuNum() Obtain Number of node CPUs
- * @method void setCpuNum(integer $CpuNum) Set Number of node CPUs
- * @method float getCpuUsage() Obtain CPU usage
- * @method void setCpuUsage(float $CpuUsage) Set CPU usage
- * @method string getZone() Obtain Availability zone
- * @method void setZone(string $Zone) Set Availability zone
+ * @method float getBreak() Obtain Whether to fuse
+ * @method void setBreak(float $Break) Set Whether to fuse
+ * @method integer getDiskSize() Obtain Total node disk size
+ * @method void setDiskSize(integer $DiskSize) Set Total node disk size
+ * @method float getDiskUsage() Obtain Disk utilization rate
+ * @method void setDiskUsage(float $DiskUsage) Set Disk utilization rate
+ * @method integer getMemSize() Obtain Node memory size (unit: GB)
+ * @method void setMemSize(integer $MemSize) Set Node memory size (unit: GB)
+ * @method float getMemUsage() Obtain Memory usage rate
+ * @method void setMemUsage(float $MemUsage) Set Memory usage rate
+ * @method integer getCpuNum() Obtain Number of CPUs on the node
+ * @method void setCpuNum(integer $CpuNum) Set Number of CPUs on the node
+ * @method float getCpuUsage() Obtain CPU utilization
+ * @method void setCpuUsage(float $CpuUsage) Set CPU utilization
+ * @method string getZone() Obtain AZ.
+ * @method void setZone(string $Zone) Set AZ.
  * @method string getNodeRole() Obtain Node role
  * @method void setNodeRole(string $NodeRole) Set Node role
  * @method string getNodeHttpIp() Obtain Node HTTP IP
  * @method void setNodeHttpIp(string $NodeHttpIp) Set Node HTTP IP
- * @method float getJvmMemUsage() Obtain JVM memory usage
- * @method void setJvmMemUsage(float $JvmMemUsage) Set JVM memory usage
- * @method integer getShardNum() Obtain Number of node shards
- * @method void setShardNum(integer $ShardNum) Set Number of node shards
- * @method array getDiskIds() Obtain ID list of node disks
- * @method void setDiskIds(array $DiskIds) Set ID list of node disks
- * @method boolean getHidden() Obtain Whether a hidden availability zone
- * @method void setHidden(boolean $Hidden) Set Whether a hidden availability zone
+ * @method float getJvmMemUsage() Obtain JVM memory usage rate
+ * @method void setJvmMemUsage(float $JvmMemUsage) Set JVM memory usage rate
+ * @method integer getShardNum() Obtain Number of shards per node
+ * @method void setShardNum(integer $ShardNum) Set Number of shards per node
+ * @method array getDiskIds() Obtain Disk ID list on node
+ * @method void setDiskIds(array $DiskIds) Set Disk ID list on node
+ * @method boolean getHidden() Obtain Whether it is a hidden AZ
+ * @method void setHidden(boolean $Hidden) Set Whether it is a hidden AZ
+ * @method boolean getIsCoordinationNode() Obtain Whether to act as the coordination node role
+ * @method void setIsCoordinationNode(boolean $IsCoordinationNode) Set Whether to act as the coordination node role
+ * @method string getCVMStatus() Obtain CVM running state
+ * @method void setCVMStatus(string $CVMStatus) Set CVM running state
+ * @method string getCVMDisasterRecoverGroupId() Obtain id of the placement group bound to the cvm
+ * @method void setCVMDisasterRecoverGroupId(string $CVMDisasterRecoverGroupId) Set id of the placement group bound to the cvm
+ * @method integer getCVMDisasterRecoverGroupStatus() Obtain Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+ * @method void setCVMDisasterRecoverGroupStatus(integer $CVMDisasterRecoverGroupStatus) Set Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
  */
 class NodeView extends AbstractModel
 {
     /**
-     * @var string Node ID
+     * @var string Node ID.
      */
     public $NodeId;
 
@@ -73,42 +81,42 @@ class NodeView extends AbstractModel
     public $Visible;
 
     /**
-     * @var float Whether the node encounters circuit breaking
+     * @var float Whether to fuse
      */
     public $Break;
 
     /**
-     * @var integer Node disk size
+     * @var integer Total node disk size
      */
     public $DiskSize;
 
     /**
-     * @var float Disk usage
+     * @var float Disk utilization rate
      */
     public $DiskUsage;
 
     /**
-     * @var integer Node memory size (in GB)
+     * @var integer Node memory size (unit: GB)
      */
     public $MemSize;
 
     /**
-     * @var float Memory usage
+     * @var float Memory usage rate
      */
     public $MemUsage;
 
     /**
-     * @var integer Number of node CPUs
+     * @var integer Number of CPUs on the node
      */
     public $CpuNum;
 
     /**
-     * @var float CPU usage
+     * @var float CPU utilization
      */
     public $CpuUsage;
 
     /**
-     * @var string Availability zone
+     * @var string AZ.
      */
     public $Zone;
 
@@ -123,43 +131,67 @@ class NodeView extends AbstractModel
     public $NodeHttpIp;
 
     /**
-     * @var float JVM memory usage
+     * @var float JVM memory usage rate
      */
     public $JvmMemUsage;
 
     /**
-     * @var integer Number of node shards
+     * @var integer Number of shards per node
      */
     public $ShardNum;
 
     /**
-     * @var array ID list of node disks
+     * @var array Disk ID list on node
      */
     public $DiskIds;
 
     /**
-     * @var boolean Whether a hidden availability zone
+     * @var boolean Whether it is a hidden AZ
      */
     public $Hidden;
 
     /**
-     * @param string $NodeId Node ID
+     * @var boolean Whether to act as the coordination node role
+     */
+    public $IsCoordinationNode;
+
+    /**
+     * @var string CVM running state
+     */
+    public $CVMStatus;
+
+    /**
+     * @var string id of the placement group bound to the cvm
+     */
+    public $CVMDisasterRecoverGroupId;
+
+    /**
+     * @var integer Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+     */
+    public $CVMDisasterRecoverGroupStatus;
+
+    /**
+     * @param string $NodeId Node ID.
      * @param string $NodeIp Node IP
      * @param float $Visible Whether the node is visible
-     * @param float $Break Whether the node encounters circuit breaking
-     * @param integer $DiskSize Node disk size
-     * @param float $DiskUsage Disk usage
-     * @param integer $MemSize Node memory size (in GB)
-     * @param float $MemUsage Memory usage
-     * @param integer $CpuNum Number of node CPUs
-     * @param float $CpuUsage CPU usage
-     * @param string $Zone Availability zone
+     * @param float $Break Whether to fuse
+     * @param integer $DiskSize Total node disk size
+     * @param float $DiskUsage Disk utilization rate
+     * @param integer $MemSize Node memory size (unit: GB)
+     * @param float $MemUsage Memory usage rate
+     * @param integer $CpuNum Number of CPUs on the node
+     * @param float $CpuUsage CPU utilization
+     * @param string $Zone AZ.
      * @param string $NodeRole Node role
      * @param string $NodeHttpIp Node HTTP IP
-     * @param float $JvmMemUsage JVM memory usage
-     * @param integer $ShardNum Number of node shards
-     * @param array $DiskIds ID list of node disks
-     * @param boolean $Hidden Whether a hidden availability zone
+     * @param float $JvmMemUsage JVM memory usage rate
+     * @param integer $ShardNum Number of shards per node
+     * @param array $DiskIds Disk ID list on node
+     * @param boolean $Hidden Whether it is a hidden AZ
+     * @param boolean $IsCoordinationNode Whether to act as the coordination node role
+     * @param string $CVMStatus CVM running state
+     * @param string $CVMDisasterRecoverGroupId id of the placement group bound to the cvm
+     * @param integer $CVMDisasterRecoverGroupStatus Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
      */
     function __construct()
     {
@@ -240,6 +272,22 @@ class NodeView extends AbstractModel
 
         if (array_key_exists("Hidden",$param) and $param["Hidden"] !== null) {
             $this->Hidden = $param["Hidden"];
+        }
+
+        if (array_key_exists("IsCoordinationNode",$param) and $param["IsCoordinationNode"] !== null) {
+            $this->IsCoordinationNode = $param["IsCoordinationNode"];
+        }
+
+        if (array_key_exists("CVMStatus",$param) and $param["CVMStatus"] !== null) {
+            $this->CVMStatus = $param["CVMStatus"];
+        }
+
+        if (array_key_exists("CVMDisasterRecoverGroupId",$param) and $param["CVMDisasterRecoverGroupId"] !== null) {
+            $this->CVMDisasterRecoverGroupId = $param["CVMDisasterRecoverGroupId"];
+        }
+
+        if (array_key_exists("CVMDisasterRecoverGroupStatus",$param) and $param["CVMDisasterRecoverGroupStatus"] !== null) {
+            $this->CVMDisasterRecoverGroupStatus = $param["CVMDisasterRecoverGroupStatus"];
         }
     }
 }

@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asr text contains sensitive information
+ * Sensitive information in Asr text
  *
- * @method float getConfidence() Obtain Asr text sensitivity scoring, with a score ranging from 0 to -100.
- * @method void setConfidence(float $Confidence) Set Asr text sensitivity scoring, with a score ranging from 0 to -100.
- * @method string getSuggestion() Obtain Asr text sensitive result recommendation, value ranges from...to...
+ * @method float getConfidence() Obtain Sensitive score of the Asr text. Value range: 0–100.
+ * @method void setConfidence(float $Confidence) Set Sensitive score of the Asr text. Value range: 0–100.
+ * @method string getSuggestion() Obtain Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Asr text sensitive result recommendation, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getSegmentSet() Obtain Video segment list with Asr text suspected of sensitivity.
- * @method void setSegmentSet(array $SegmentSet) Set Video segment list with Asr text suspected of sensitivity.
+ * @method array getSegmentSet() Obtain List of video segments with sensitive Asr text.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments with sensitive Asr text.
  */
 class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Asr text sensitivity scoring, with a score ranging from 0 to -100.
+     * @var float Sensitive score of the Asr text. Value range: 0–100.
      */
     public $Confidence;
 
     /**
-     * @var string Asr text sensitive result recommendation, value ranges from...to...
+     * @var string Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,17 +49,17 @@ class AiReviewPoliticalAsrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Video segment list with Asr text suspected of sensitivity.
+     * @var array List of video segments with sensitive Asr text.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Asr text sensitivity scoring, with a score ranging from 0 to -100.
-     * @param string $Suggestion Asr text sensitive result recommendation, value ranges from...to...
+     * @param float $Confidence Sensitive score of the Asr text. Value range: 0–100.
+     * @param string $Suggestion Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $SegmentSet Video segment list with Asr text suspected of sensitivity.
+     * @param array $SegmentSet List of video segments with sensitive Asr text.
      */
     function __construct()
     {

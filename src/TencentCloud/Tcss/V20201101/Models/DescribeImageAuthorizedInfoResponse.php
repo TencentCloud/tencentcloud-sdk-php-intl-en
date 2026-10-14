@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageAuthorizedInfo response structure.
  *
- * @method integer getTotalAuthorizedCnt() Obtain Total number of valid image licenses
- * @method void setTotalAuthorizedCnt(integer $TotalAuthorizedCnt) Set Total number of valid image licenses
- * @method integer getUsedAuthorizedCnt() Obtain Number of used image licenses
- * @method void setUsedAuthorizedCnt(integer $UsedAuthorizedCnt) Set Number of used image licenses
- * @method integer getScannedImageCnt() Obtain Number of images with scan enabled
- * @method void setScannedImageCnt(integer $ScannedImageCnt) Set Number of images with scan enabled
- * @method integer getNotScannedImageCnt() Obtain Number of images with scan not enabled
- * @method void setNotScannedImageCnt(integer $NotScannedImageCnt) Set Number of images with scan not enabled
- * @method integer getNotScannedLocalImageCnt() Obtain Number of local images with scan not enabled
- * @method void setNotScannedLocalImageCnt(integer $NotScannedLocalImageCnt) Set Number of local images with scan not enabled
- * @method integer getTrialAuthorizedCnt() Obtain 
- * @method void setTrialAuthorizedCnt(integer $TrialAuthorizedCnt) Set 
- * @method integer getUsedTrialAuthorizedCnt() Obtain 
- * @method void setUsedTrialAuthorizedCnt(integer $UsedTrialAuthorizedCnt) Set 
- * @method integer getPurchasedAuthorizedCnt() Obtain 
- * @method void setPurchasedAuthorizedCnt(integer $PurchasedAuthorizedCnt) Set 
- * @method integer getUsedPurchasedAuthorizedCnt() Obtain 
- * @method void setUsedPurchasedAuthorizedCnt(integer $UsedPurchasedAuthorizedCnt) Set 
- * @method boolean getCanApplyFreeImageAuthorize() Obtain 
- * @method void setCanApplyFreeImageAuthorize(boolean $CanApplyFreeImageAuthorize) Set 
+ * @method integer getTotalAuthorizedCnt() Obtain Total number of effective image licenses.
+ * @method void setTotalAuthorizedCnt(integer $TotalAuthorizedCnt) Set Total number of effective image licenses.
+ * @method integer getUsedAuthorizedCnt() Obtain Used image licenses
+ * @method void setUsedAuthorizedCnt(integer $UsedAuthorizedCnt) Set Used image licenses
+ * @method integer getScannedImageCnt() Obtain Scan image count enabled
+ * @method void setScannedImageCnt(integer $ScannedImageCnt) Set Scan image count enabled
+ * @method integer getNotScannedImageCnt() Obtain Scan image count when not enabled
+ * @method void setNotScannedImageCnt(integer $NotScannedImageCnt) Set Scan image count when not enabled
+ * @method integer getNotScannedLocalImageCnt() Obtain Number of Local Images with Scans Not Enabled
+ * @method void setNotScannedLocalImageCnt(integer $NotScannedLocalImageCnt) Set Number of Local Images with Scans Not Enabled
+ * @method integer getTrialAuthorizedCnt() Obtain Number of licensed trial images.
+ * @method void setTrialAuthorizedCnt(integer $TrialAuthorizedCnt) Set Number of licensed trial images.
+ * @method integer getUsedTrialAuthorizedCnt() Obtain Number of licensed trial images that have been used.
+ * @method void setUsedTrialAuthorizedCnt(integer $UsedTrialAuthorizedCnt) Set Number of licensed trial images that have been used.
+ * @method integer getPurchasedAuthorizedCnt() Obtain Number of purchased image authorizations
+ * @method void setPurchasedAuthorizedCnt(integer $PurchasedAuthorizedCnt) Set Number of purchased image authorizations
+ * @method integer getUsedPurchasedAuthorizedCnt() Obtain Number of purchased licensed images that have been used.
+ * @method void setUsedPurchasedAuthorizedCnt(integer $UsedPurchasedAuthorizedCnt) Set Number of purchased licensed images that have been used.
+ * @method boolean getCanApplyFreeImageAuthorize() Obtain Whether the free image licenses can be collected.
+ * @method void setCanApplyFreeImageAuthorize(boolean $CanApplyFreeImageAuthorize) Set Whether the free image licenses can be collected.
  * @method ImageScanInquireInfo getImageScanInquireInfo() Obtain Image scanning billing information.
  * @method void setImageScanInquireInfo(ImageScanInquireInfo $ImageScanInquireInfo) Set Image scanning billing information.
  * @method integer getRepeatImageIdCnt() Obtain Number of duplicate images (local images and repository images).
@@ -50,52 +50,52 @@ use TencentCloud\Common\AbstractModel;
 class DescribeImageAuthorizedInfoResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of valid image licenses
+     * @var integer Total number of effective image licenses.
      */
     public $TotalAuthorizedCnt;
 
     /**
-     * @var integer Number of used image licenses
+     * @var integer Used image licenses
      */
     public $UsedAuthorizedCnt;
 
     /**
-     * @var integer Number of images with scan enabled
+     * @var integer Scan image count enabled
      */
     public $ScannedImageCnt;
 
     /**
-     * @var integer Number of images with scan not enabled
+     * @var integer Scan image count when not enabled
      */
     public $NotScannedImageCnt;
 
     /**
-     * @var integer Number of local images with scan not enabled
+     * @var integer Number of Local Images with Scans Not Enabled
      */
     public $NotScannedLocalImageCnt;
 
     /**
-     * @var integer 
+     * @var integer Number of licensed trial images.
      */
     public $TrialAuthorizedCnt;
 
     /**
-     * @var integer 
+     * @var integer Number of licensed trial images that have been used.
      */
     public $UsedTrialAuthorizedCnt;
 
     /**
-     * @var integer 
+     * @var integer Number of purchased image authorizations
      */
     public $PurchasedAuthorizedCnt;
 
     /**
-     * @var integer 
+     * @var integer Number of purchased licensed images that have been used.
      */
     public $UsedPurchasedAuthorizedCnt;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the free image licenses can be collected.
      */
     public $CanApplyFreeImageAuthorize;
 
@@ -115,16 +115,16 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalAuthorizedCnt Total number of valid image licenses
-     * @param integer $UsedAuthorizedCnt Number of used image licenses
-     * @param integer $ScannedImageCnt Number of images with scan enabled
-     * @param integer $NotScannedImageCnt Number of images with scan not enabled
-     * @param integer $NotScannedLocalImageCnt Number of local images with scan not enabled
-     * @param integer $TrialAuthorizedCnt 
-     * @param integer $UsedTrialAuthorizedCnt 
-     * @param integer $PurchasedAuthorizedCnt 
-     * @param integer $UsedPurchasedAuthorizedCnt 
-     * @param boolean $CanApplyFreeImageAuthorize 
+     * @param integer $TotalAuthorizedCnt Total number of effective image licenses.
+     * @param integer $UsedAuthorizedCnt Used image licenses
+     * @param integer $ScannedImageCnt Scan image count enabled
+     * @param integer $NotScannedImageCnt Scan image count when not enabled
+     * @param integer $NotScannedLocalImageCnt Number of Local Images with Scans Not Enabled
+     * @param integer $TrialAuthorizedCnt Number of licensed trial images.
+     * @param integer $UsedTrialAuthorizedCnt Number of licensed trial images that have been used.
+     * @param integer $PurchasedAuthorizedCnt Number of purchased image authorizations
+     * @param integer $UsedPurchasedAuthorizedCnt Number of purchased licensed images that have been used.
+     * @param boolean $CanApplyFreeImageAuthorize Whether the free image licenses can be collected.
      * @param ImageScanInquireInfo $ImageScanInquireInfo Image scanning billing information.
      * @param integer $RepeatImageIdCnt Number of duplicate images (local images and repository images).
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.

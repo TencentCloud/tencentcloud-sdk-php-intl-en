@@ -20,98 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceLogs request structure.
  *
- * @method string getInstanceId() Obtain Cluster instance ID
- * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
- * @method integer getLogType() Obtain Log type. Default value: 1
-<li>1: primary log</li>
-<li>2: search slow log</li>
-<li>3: index slow log</li>
-<li>4: GC log</li>
- * @method void setLogType(integer $LogType) Set Log type. Default value: 1
-<li>1: primary log</li>
-<li>2: search slow log</li>
-<li>3: index slow log</li>
-<li>4: GC log</li>
- * @method string getSearchKey() Obtain Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
- * @method void setSearchKey(string $SearchKey) Set Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
- * @method string getStartTime() Obtain Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
- * @method void setStartTime(string $StartTime) Set Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
- * @method string getEndTime() Obtain Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
- * @method void setEndTime(string $EndTime) Set Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
- * @method integer getOffset() Obtain Pagination start value. Default value: 0
- * @method void setOffset(integer $Offset) Set Pagination start value. Default value: 0
- * @method integer getLimit() Obtain Number of entries per page. Default value: 100. Maximum value: 100
- * @method void setLimit(integer $Limit) Set Number of entries per page. Default value: 100. Maximum value: 100
- * @method integer getOrderByType() Obtain Time sorting order. Default value: 0
-<li>0: descending</li>
-<li>1: ascending</li>
- * @method void setOrderByType(integer $OrderByType) Set Time sorting order. Default value: 0
-<li>0: descending</li>
-<li>1: ascending</li>
+ * @method string getInstanceId() Obtain Cluster instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Cluster instance ID.
+ * @method integer getLogType() Obtain Log type. Default value: 1.
+<li>1, master log</li>
+<li>2. Search slow logs</li>
+<li>3. Index slow log</li>
+<li>4. GC log</li>
+ * @method void setLogType(integer $LogType) Set Log type. Default value: 1.
+<li>1, master log</li>
+<li>2. Search slow logs</li>
+<li>3. Index slow log</li>
+<li>4. GC log</li>
+ * @method string getSearchKey() Obtain Search term. LUCENE grammar is supported, for example, level:WARN, ip:1.1.1.1, message:test-index
+ * @method void setSearchKey(string $SearchKey) Set Search term. LUCENE grammar is supported, for example, level:WARN, ip:1.1.1.1, message:test-index
+ * @method string getStartTime() Obtain Log start time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
+ * @method void setStartTime(string $StartTime) Set Log start time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
+ * @method string getEndTime() Obtain Log end time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
+ * @method void setEndTime(string $EndTime) Set Log end time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
+ * @method integer getOffset() Obtain Pagination starting value. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination starting value. Default value: 0.
+ * @method integer getLimit() Obtain Pagination size. Default value: 100. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Pagination size. Default value: 100. Maximum value: 100.
+ * @method integer getOrderByType() Obtain Time sort method. Default value: 0.
+<li>0: descending order</li>
+<li>1, ascending</li>
+ * @method void setOrderByType(integer $OrderByType) Set Time sort method. Default value: 0.
+<li>0: descending order</li>
+<li>1, ascending</li>
+ * @method array getLogLevels() Obtain Log level
+ * @method void setLogLevels(array $LogLevels) Set Log level
+ * @method array getNodeIds() Obtain Node ID.
+ * @method void setNodeIds(array $NodeIds) Set Node ID.
+ * @method string getIndexName() Obtain Slow log index name
+ * @method void setIndexName(string $IndexName) Set Slow log index name
+ * @method string getShardId() Obtain Slow log index shards
+ * @method void setShardId(string $ShardId) Set Slow log index shards
+ * @method integer getQueryCost() Obtain Slow log query time
+ * @method void setQueryCost(integer $QueryCost) Set Slow log query time
  */
 class DescribeInstanceLogsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster instance ID
+     * @var string Cluster instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Log type. Default value: 1
-<li>1: primary log</li>
-<li>2: search slow log</li>
-<li>3: index slow log</li>
-<li>4: GC log</li>
+     * @var integer Log type. Default value: 1.
+<li>1, master log</li>
+<li>2. Search slow logs</li>
+<li>3. Index slow log</li>
+<li>4. GC log</li>
      */
     public $LogType;
 
     /**
-     * @var string Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
+     * @var string Search term. LUCENE grammar is supported, for example, level:WARN, ip:1.1.1.1, message:test-index
      */
     public $SearchKey;
 
     /**
-     * @var string Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+     * @var string Log start time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
      */
     public $StartTime;
 
     /**
-     * @var string Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+     * @var string Log end time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
      */
     public $EndTime;
 
     /**
-     * @var integer Pagination start value. Default value: 0
+     * @var integer Pagination starting value. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of entries per page. Default value: 100. Maximum value: 100
+     * @var integer Pagination size. Default value: 100. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Time sorting order. Default value: 0
-<li>0: descending</li>
-<li>1: ascending</li>
+     * @var integer Time sort method. Default value: 0.
+<li>0: descending order</li>
+<li>1, ascending</li>
      */
     public $OrderByType;
 
     /**
-     * @param string $InstanceId Cluster instance ID
-     * @param integer $LogType Log type. Default value: 1
-<li>1: primary log</li>
-<li>2: search slow log</li>
-<li>3: index slow log</li>
-<li>4: GC log</li>
-     * @param string $SearchKey Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
-     * @param string $StartTime Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
-     * @param string $EndTime Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
-     * @param integer $Offset Pagination start value. Default value: 0
-     * @param integer $Limit Number of entries per page. Default value: 100. Maximum value: 100
-     * @param integer $OrderByType Time sorting order. Default value: 0
-<li>0: descending</li>
-<li>1: ascending</li>
+     * @var array Log level
+     */
+    public $LogLevels;
+
+    /**
+     * @var array Node ID.
+     */
+    public $NodeIds;
+
+    /**
+     * @var string Slow log index name
+     */
+    public $IndexName;
+
+    /**
+     * @var string Slow log index shards
+     */
+    public $ShardId;
+
+    /**
+     * @var integer Slow log query time
+     */
+    public $QueryCost;
+
+    /**
+     * @param string $InstanceId Cluster instance ID.
+     * @param integer $LogType Log type. Default value: 1.
+<li>1, master log</li>
+<li>2. Search slow logs</li>
+<li>3. Index slow log</li>
+<li>4. GC log</li>
+     * @param string $SearchKey Search term. LUCENE grammar is supported, for example, level:WARN, ip:1.1.1.1, message:test-index
+     * @param string $StartTime Log start time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
+     * @param string $EndTime Log end time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
+     * @param integer $Offset Pagination starting value. Default value: 0.
+     * @param integer $Limit Pagination size. Default value: 100. Maximum value: 100.
+     * @param integer $OrderByType Time sort method. Default value: 0.
+<li>0: descending order</li>
+<li>1, ascending</li>
+     * @param array $LogLevels Log level
+     * @param array $NodeIds Node ID.
+     * @param string $IndexName Slow log index name
+     * @param string $ShardId Slow log index shards
+     * @param integer $QueryCost Slow log query time
      */
     function __construct()
     {
@@ -156,6 +196,26 @@ class DescribeInstanceLogsRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("LogLevels",$param) and $param["LogLevels"] !== null) {
+            $this->LogLevels = $param["LogLevels"];
+        }
+
+        if (array_key_exists("NodeIds",$param) and $param["NodeIds"] !== null) {
+            $this->NodeIds = $param["NodeIds"];
+        }
+
+        if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
+            $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
+            $this->ShardId = $param["ShardId"];
+        }
+
+        if (array_key_exists("QueryCost",$param) and $param["QueryCost"] !== null) {
+            $this->QueryCost = $param["QueryCost"];
         }
     }
 }

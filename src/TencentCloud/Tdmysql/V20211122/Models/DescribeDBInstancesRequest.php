@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set <p>Offset, which is an integer multiple of Limit.</p>
  * @method string getEngineType() Obtain <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
  * @method void setEngineType(string $EngineType) Set <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
- * @method string getOrderBy() Obtain 
- * @method void setOrderBy(string $OrderBy) Set 
- * @method string getOrderDirection() Obtain 
- * @method void setOrderDirection(string $OrderDirection) Set 
+ * @method string getOrderBy() Obtain <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
+ * @method void setOrderBy(string $OrderBy) Set <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
+ * @method string getOrderDirection() Obtain <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
+ * @method void setOrderDirection(string $OrderDirection) Set <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $EngineType;
 
     /**
-     * @var string 
+     * @var string <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
      */
     public $OrderBy;
 
     /**
-     * @var string 
+     * @var string <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
      */
     public $OrderDirection;
 
@@ -70,8 +70,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $Limit <p>Maximum return count, defaults to 20, maximum 100</p>
      * @param integer $Offset <p>Offset, which is an integer multiple of Limit.</p>
      * @param string $EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
-     * @param string $OrderBy 
-     * @param string $OrderDirection 
+     * @param string $OrderBy <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
+     * @param string $OrderDirection <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
      */
     function __construct()
     {

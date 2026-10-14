@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input address information.
  *
- * @method string getIp() Obtain Input address IP.
- * @method void setIp(string $Ip) Set Input address IP.
- * @method integer getPort() Obtain Input address port.
- * @method void setPort(integer $Port) Set Input address port.
+ * @method string getIp() Obtain IP of the input address.
+ * @method void setIp(string $Ip) Set IP of the input address.
+ * @method integer getPort() Obtain The port of the input address.
+ * @method void setPort(integer $Port) Set The port of the input address.
  */
 class InputAddress extends AbstractModel
 {
     /**
-     * @var string Input address IP.
+     * @var string IP of the input address.
      */
     public $Ip;
 
     /**
-     * @var integer Input address port.
+     * @var integer The port of the input address.
      */
     public $Port;
 
     /**
-     * @param string $Ip Input address IP.
-     * @param integer $Port Input address port.
+     * @param string $Ip IP of the input address.
+     * @param integer $Port The port of the input address.
      */
     function __construct()
     {

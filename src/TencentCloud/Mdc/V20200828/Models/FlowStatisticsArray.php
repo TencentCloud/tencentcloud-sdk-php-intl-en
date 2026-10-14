@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * A list of the flow statistics.
+ * List of the stream's statistical data.
  *
- * @method integer getTimestamp() Obtain The timestamp.
- * @method void setTimestamp(integer $Timestamp) Set The timestamp.
- * @method array getFlowStatistics() Obtain The statistics of all the sessions.
- * @method void setFlowStatistics(array $FlowStatistics) Set The statistics of all the sessions.
+ * @method integer getTimestamp() Obtain Timestamp.
+ * @method void setTimestamp(integer $Timestamp) Set Timestamp.
+ * @method array getFlowStatistics() Obtain Statistics for each session.
+ * @method void setFlowStatistics(array $FlowStatistics) Set Statistics for each session.
  */
 class FlowStatisticsArray extends AbstractModel
 {
     /**
-     * @var integer The timestamp.
+     * @var integer Timestamp.
      */
     public $Timestamp;
 
     /**
-     * @var array The statistics of all the sessions.
+     * @var array Statistics for each session.
      */
     public $FlowStatistics;
 
     /**
-     * @param integer $Timestamp The timestamp.
-     * @param array $FlowStatistics The statistics of all the sessions.
+     * @param integer $Timestamp Timestamp.
+     * @param array $FlowStatistics Statistics for each session.
      */
     function __construct()
     {

@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessLiveStream request structure.
  *
- * @method string getUrl() Obtain <p>Live stream URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the TRTC room number ID<br><code>&lt;sdkappid&gt;</code> is the TRTC SDK app ID<br><code>&lt;userid&gt;</code> is the user ID for the service to enter the room, which can distinguish who is the robot<br><code>&lt;usersig&gt;</code> is the TRTC user signature</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For srt supported addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
- * @method void setUrl(string $Url) Set <p>Live stream URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the TRTC room number ID<br><code>&lt;sdkappid&gt;</code> is the TRTC SDK app ID<br><code>&lt;userid&gt;</code> is the user ID for the service to enter the room, which can distinguish who is the robot<br><code>&lt;usersig&gt;</code> is the TRTC user signature</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For srt supported addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
- * @method LiveStreamTaskNotifyConfig getTaskNotifyConfig() Obtain 
- * @method void setTaskNotifyConfig(LiveStreamTaskNotifyConfig $TaskNotifyConfig) Set 
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
- * @method string getOutputDir() Obtain 
- * @method void setOutputDir(string $OutputDir) Set 
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain 
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set 
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
- * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain 
- * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set 
- * @method LiveSmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain 
- * @method void setSmartSubtitlesTask(LiveSmartSubtitlesTaskInput $SmartSubtitlesTask) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method integer getScheduleId() Obtain 
- * @method void setScheduleId(integer $ScheduleId) Set 
- * @method string getResourceId() Obtain 
- * @method void setResourceId(string $ResourceId) Set 
+ * @method string getUrl() Obtain <p>Live streaming URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the room number ID of trtc<br><code>&lt;sdkappid&gt;</code> is the SDK app ID of trtc<br><code>&lt;userid&gt;</code> is the user ID for the service to enter a room, which can be used to identify the robot<br><code>&lt;usersig&gt;</code> is the signature of the trtc user</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For supported srt addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
+ * @method void setUrl(string $Url) Set <p>Live streaming URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the room number ID of trtc<br><code>&lt;sdkappid&gt;</code> is the SDK app ID of trtc<br><code>&lt;userid&gt;</code> is the user ID for the service to enter a room, which can be used to identify the robot<br><code>&lt;usersig&gt;</code> is the signature of the trtc user</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For supported srt addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
+ * @method LiveStreamTaskNotifyConfig getTaskNotifyConfig() Obtain <p>Event notification information of the task. This is used to specify the live stream processing result.</p>
+ * @method void setTaskNotifyConfig(LiveStreamTaskNotifyConfig $TaskNotifyConfig) Set <p>Event notification information of the task. This is used to specify the live stream processing result.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the output file of the live stream processing task. This parameter is required if the processing task has an output file.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the output file of the live stream processing task. This parameter is required if the processing task has an output file.</p>
+ * @method string getOutputDir() Obtain <p>Target output directory for the file generated by the live stream processing task, such as <code>/movie/201909/</code>. If this is not specified, the default directory is <code>/</code>.</p>
+ * @method void setOutputDir(string $OutputDir) Set <p>Target output directory for the file generated by the live stream processing task, such as <code>/movie/201909/</code>. If this is not specified, the default directory is <code>/</code>.</p>
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain <p>Parameters for the video content review task.</p>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set <p>Parameters for the video content review task.</p>
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain <p>Parameters for the video content recognition task.</p>
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set <p>Parameters for the video content recognition task.</p>
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the video content analysis task.</p>
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the video content analysis task.</p>
+ * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain <p>Parameters for the media quality inspection task.</p>
+ * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set <p>Parameters for the media quality inspection task.</p>
+ * @method LiveSmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain <p>Parameters for the smart subtitle task.</p>
+ * @method void setSmartSubtitlesTask(LiveSmartSubtitlesTaskInput $SmartSubtitlesTask) Set <p>Parameters for the smart subtitle task.</p>
+ * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method integer getScheduleId() Obtain <p>Live streaming orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and ProcessLiveStream has output, the default output of the original orchestration is overridden.</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessLiveStream), the default callback of the original orchestration is overridden.
+ * @method void setScheduleId(integer $ScheduleId) Set <p>Live streaming orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and ProcessLiveStream has output, the default output of the original orchestration is overridden.</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessLiveStream), the default callback of the original orchestration is overridden.
+ * @method string getResourceId() Obtain <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
  */
 class ProcessLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string <p>Live stream URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the TRTC room number ID<br><code>&lt;sdkappid&gt;</code> is the TRTC SDK app ID<br><code>&lt;userid&gt;</code> is the user ID for the service to enter the room, which can distinguish who is the robot<br><code>&lt;usersig&gt;</code> is the TRTC user signature</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For srt supported addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
+     * @var string <p>Live streaming URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the room number ID of trtc<br><code>&lt;sdkappid&gt;</code> is the SDK app ID of trtc<br><code>&lt;userid&gt;</code> is the user ID for the service to enter a room, which can be used to identify the robot<br><code>&lt;usersig&gt;</code> is the signature of the trtc user</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For supported srt addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
      */
     public $Url;
 
     /**
-     * @var LiveStreamTaskNotifyConfig 
+     * @var LiveStreamTaskNotifyConfig <p>Event notification information of the task. This is used to specify the live stream processing result.</p>
      */
     public $TaskNotifyConfig;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage <p>Target storage for the output file of the live stream processing task. This parameter is required if the processing task has an output file.</p>
      */
     public $OutputStorage;
 
     /**
-     * @var string 
+     * @var string <p>Target output directory for the file generated by the live stream processing task, such as <code>/movie/201909/</code>. If this is not specified, the default directory is <code>/</code>.</p>
      */
     public $OutputDir;
 
     /**
-     * @var AiContentReviewTaskInput 
+     * @var AiContentReviewTaskInput <p>Parameters for the video content review task.</p>
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiRecognitionTaskInput 
+     * @var AiRecognitionTaskInput <p>Parameters for the video content recognition task.</p>
      */
     public $AiRecognitionTask;
 
     /**
-     * @var AiAnalysisTaskInput 
+     * @var AiAnalysisTaskInput <p>Parameters for the video content analysis task.</p>
      */
     public $AiAnalysisTask;
 
     /**
-     * @var AiQualityControlTaskInput 
+     * @var AiQualityControlTaskInput <p>Parameters for the media quality inspection task.</p>
      */
     public $AiQualityControlTask;
 
     /**
-     * @var LiveSmartSubtitlesTaskInput 
+     * @var LiveSmartSubtitlesTaskInput <p>Parameters for the smart subtitle task.</p>
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var string 
+     * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var integer 
+     * @var integer <p>Live streaming orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and ProcessLiveStream has output, the default output of the original orchestration is overridden.</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessLiveStream), the default callback of the original orchestration is overridden.
      */
     public $ScheduleId;
 
     /**
-     * @var string 
+     * @var string <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
      */
     public $ResourceId;
 
     /**
-     * @param string $Url <p>Live stream URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the TRTC room number ID<br><code>&lt;sdkappid&gt;</code> is the TRTC SDK app ID<br><code>&lt;userid&gt;</code> is the user ID for the service to enter the room, which can distinguish who is the robot<br><code>&lt;usersig&gt;</code> is the TRTC user signature</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For srt supported addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
-     * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig 
-     * @param TaskOutputStorage $OutputStorage 
-     * @param string $OutputDir 
-     * @param AiContentReviewTaskInput $AiContentReviewTask 
-     * @param AiRecognitionTaskInput $AiRecognitionTask 
-     * @param AiAnalysisTaskInput $AiAnalysisTask 
-     * @param AiQualityControlTaskInput $AiQualityControlTask 
-     * @param LiveSmartSubtitlesTaskInput $SmartSubtitlesTask 
-     * @param string $SessionId 
-     * @param string $SessionContext 
-     * @param integer $ScheduleId 
-     * @param string $ResourceId 
+     * @param string $Url <p>Live streaming URL (must be a live streaming address, supporting rtmp, hls, flv, trtc, webrtc, srt, etc.).<br>The trtc address is as follows:<br> trtc://trtc.rtc.qq.com/mps/<code>&lt;roomid&gt;</code>?sdkappid=<code>&lt;sdkappid&gt;</code>&amp;userid=<code>&lt;userid&gt;</code>&amp;usersig=<code>&lt;usersig&gt;</code><br><code>&lt;roomid&gt;</code> is the room number ID of trtc<br><code>&lt;sdkappid&gt;</code> is the SDK app ID of trtc<br><code>&lt;userid&gt;</code> is the user ID for the service to enter a room, which can be used to identify the robot<br><code>&lt;usersig&gt;</code> is the signature of the trtc user</p><p>webrtc supports LEB live streams. For address retrieval, please <a href="https://www.tencentcloud.com/document/product/267/32720?from_cn_redirect=1">refer</a></p><p>For supported srt addresses, please <a href="https://ffmpeg.org/ffmpeg-protocols.html#srt">refer</a></p>
+     * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig <p>Event notification information of the task. This is used to specify the live stream processing result.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Target storage for the output file of the live stream processing task. This parameter is required if the processing task has an output file.</p>
+     * @param string $OutputDir <p>Target output directory for the file generated by the live stream processing task, such as <code>/movie/201909/</code>. If this is not specified, the default directory is <code>/</code>.</p>
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>Parameters for the video content review task.</p>
+     * @param AiRecognitionTaskInput $AiRecognitionTask <p>Parameters for the video content recognition task.</p>
+     * @param AiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the video content analysis task.</p>
+     * @param AiQualityControlTaskInput $AiQualityControlTask <p>Parameters for the media quality inspection task.</p>
+     * @param LiveSmartSubtitlesTaskInput $SmartSubtitlesTask <p>Parameters for the smart subtitle task.</p>
+     * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param integer $ScheduleId <p>Live streaming orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and ProcessLiveStream has output, the default output of the original orchestration is overridden.</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessLiveStream), the default callback of the original orchestration is overridden.
+     * @param string $ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
      */
     function __construct()
     {

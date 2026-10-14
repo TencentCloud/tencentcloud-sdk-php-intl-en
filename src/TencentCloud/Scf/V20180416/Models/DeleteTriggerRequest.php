@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
- * @method string getTriggerName() Obtain Name of the trigger to be deleted
- * @method void setTriggerName(string $TriggerName) Set Name of the trigger to be deleted
- * @method string getType() Obtain Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
- * @method void setType(string $Type) Set Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
- * @method string getNamespace() Obtain Function namespace
- * @method void setNamespace(string $Namespace) Set Function namespace
- * @method string getTriggerDesc() Obtain This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
- * @method void setTriggerDesc(string $TriggerDesc) Set This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
- * @method string getQualifier() Obtain Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
- * @method void setQualifier(string $Qualifier) Set Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+ * @method string getTriggerName() Obtain Trigger name to delete
+ * @method void setTriggerName(string $TriggerName) Set Trigger name to delete
+ * @method string getType() Obtain Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
+ * @method void setType(string $Type) Set Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
+ * @method string getNamespace() Obtain Namespace of the function
+ * @method void setNamespace(string $Namespace) Set Namespace of the function
+ * @method string getTriggerDesc() Obtain If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
+ * @method void setTriggerDesc(string $TriggerDesc) Set If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
+ * @method string getQualifier() Obtain The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
+ * @method void setQualifier(string $Qualifier) Set The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
  */
 class DeleteTriggerRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class DeleteTriggerRequest extends AbstractModel
     public $FunctionName;
 
     /**
-     * @var string Name of the trigger to be deleted
+     * @var string Trigger name to delete
      */
     public $TriggerName;
 
     /**
-     * @var string Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+     * @var string Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
      */
     public $Type;
 
     /**
-     * @var string Function namespace
+     * @var string Namespace of the function
      */
     public $Namespace;
 
     /**
-     * @var string This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+     * @var string If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
      */
     public $TriggerDesc;
 
     /**
-     * @var string Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+     * @var string The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
      */
     public $Qualifier;
 
     /**
      * @param string $FunctionName Function name
-     * @param string $TriggerName Name of the trigger to be deleted
-     * @param string $Type Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-     * @param string $Namespace Function namespace
-     * @param string $TriggerDesc This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
-     * @param string $Qualifier Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+     * @param string $TriggerName Trigger name to delete
+     * @param string $Type Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
+     * @param string $Namespace Namespace of the function
+     * @param string $TriggerDesc If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
+     * @param string $Qualifier The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
      */
     function __construct()
     {

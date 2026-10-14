@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Translation result.
  *
- * @method array getSegmentSet() Obtain Translate segments.
- * @method void setSegmentSet(array $SegmentSet) Set Translate segments.
- * @method string getSubtitlePath() Obtain Subtitle file path.
- * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path.
+ * @method array getSegmentSet() Obtain <p>List of segments for translation.</p>
+ * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for translation.</p>
+ * @method string getSubtitlePath() Obtain <p>Subtitle file URL.</p>
+ * @method void setSubtitlePath(string $SubtitlePath) Set <p>Subtitle file URL.</p>
  */
 class AiRecognitionTaskTransTextResultOutput extends AbstractModel
 {
     /**
-     * @var array Translate segments.
+     * @var array <p>List of segments for translation.</p>
      */
     public $SegmentSet;
 
     /**
-     * @var string Subtitle file path.
+     * @var string <p>Subtitle file URL.</p>
      */
     public $SubtitlePath;
 
     /**
-     * @param array $SegmentSet Translate segments.
-     * @param string $SubtitlePath Subtitle file path.
+     * @param array $SegmentSet <p>List of segments for translation.</p>
+     * @param string $SubtitlePath <p>Subtitle file URL.</p>
      */
     function __construct()
     {

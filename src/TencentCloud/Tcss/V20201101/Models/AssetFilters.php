@@ -18,13 +18,13 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TCSS
-Key-value pair filter for conditional filtering queries, such as filter ID, name, and status
-If more than one filter exists, the logical relationship between these filters is `AND`.
-If multiple values exist in one filter, the logical relationship between these values is `OR`.
+ * Container security
+Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
+If there are multiple Filters, the logical relationship between them is AND.
+If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
  *
- * @method string getName() Obtain Filter name
- * @method void setName(string $Name) Set Filter name
+ * @method string getName() Obtain Name of the filter key
+ * @method void setName(string $Name) Set Name of the filter key
  * @method array getValues() Obtain One or more filter values
  * @method void setValues(array $Values) Set One or more filter values
  * @method boolean getExactMatch() Obtain Whether to use fuzzy query
@@ -33,7 +33,7 @@ If multiple values exist in one filter, the logical relationship between these v
 class AssetFilters extends AbstractModel
 {
     /**
-     * @var string Filter name
+     * @var string Name of the filter key
      */
     public $Name;
 
@@ -48,7 +48,7 @@ class AssetFilters extends AbstractModel
     public $ExactMatch;
 
     /**
-     * @param string $Name Filter name
+     * @param string $Name Name of the filter key
      * @param array $Values One or more filter values
      * @param boolean $ExactMatch Whether to use fuzzy query
      */

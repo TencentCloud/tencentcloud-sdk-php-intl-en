@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asr text pornographic information
+ * Pornographic information in Asr text
  *
- * @method float getConfidence() Obtain Asr text porn score, ranging from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Asr text porn score, ranging from 0 to 100.
- * @method string getSuggestion() Obtain Asr text pornographic result suggestion, value ranges from...to...
+ * @method float getConfidence() Obtain Porn score of the Asr text. The score ranges from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Porn score of the Asr text. The score ranges from 0 to 100.
+ * @method string getSuggestion() Obtain Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Asr text pornographic result suggestion, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getSegmentSet() Obtain Video segment list with suspect Asr text pornographic information.
- * @method void setSegmentSet(array $SegmentSet) Set Video segment list with suspect Asr text pornographic information.
+ * @method array getSegmentSet() Obtain List of video segments whose Asr text is suspected of involving pornography.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments whose Asr text is suspected of involving pornography.
  */
 class AiReviewPornAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Asr text porn score, ranging from 0 to 100.
+     * @var float Porn score of the Asr text. The score ranges from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string Asr text pornographic result suggestion, value ranges from...to...
+     * @var string Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,17 +49,17 @@ class AiReviewPornAsrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Video segment list with suspect Asr text pornographic information.
+     * @var array List of video segments whose Asr text is suspected of involving pornography.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Asr text porn score, ranging from 0 to 100.
-     * @param string $Suggestion Asr text pornographic result suggestion, value ranges from...to...
+     * @param float $Confidence Porn score of the Asr text. The score ranges from 0 to 100.
+     * @param string $Suggestion Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $SegmentSet Video segment list with suspect Asr text pornographic information.
+     * @param array $SegmentSet List of video segments whose Asr text is suspected of involving pornography.
      */
     function __construct()
     {

@@ -24,28 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set <p>Adaptive bitrate streaming template ID.</p>
  * @method array getWatermarkSet() Obtain <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
  * @method void setWatermarkSet(array $WatermarkSet) Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
- * @method BlindWatermarkInput getBlindWatermark() Obtain 
- * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set 
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+ * @method BlindWatermarkInput getBlindWatermark() Obtain <p>Digital watermark parameter.</p>
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set <p>Digital watermark parameter.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
  * @method string getOutputObjectPath() Obtain <p>Output path for the manifest file after adaptive bitrate streaming, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">Filename Variables</a>.<br>Relative path example:</p><li>Filename_{variable name}.{format}</li><li>Filename.{format}</li>Absolute path example:<li>/custom path/Filename_{variable name}.{format}</li>If this is not specified, the default relative path is {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set <p>Output path for the manifest file after adaptive bitrate streaming, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">Filename Variables</a>.<br>Relative path example:</p><li>Filename_{variable name}.{format}</li><li>Filename.{format}</li>Absolute path example:<li>/custom path/Filename_{variable name}.{format}</li>If this is not specified, the default relative path is {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
  * @method string getSubStreamObjectName() Obtain <p>Output path for substream files after adaptive bitrate streaming, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}</code>.</p>
  * @method void setSubStreamObjectName(string $SubStreamObjectName) Set <p>Output path for substream files after adaptive bitrate streaming, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}</code>.</p>
  * @method string getSegmentObjectName() Obtain <p>Output path for segment files after adaptive bitrate streaming (HLS only), which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}</code>.</p>
  * @method void setSegmentObjectName(string $SegmentObjectName) Set <p>Output path for segment files after adaptive bitrate streaming (HLS only), which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}</code>.</p>
- * @method array getAddOnSubtitles() Obtain 
- * @method void setAddOnSubtitles(array $AddOnSubtitles) Set 
- * @method DrmInfo getDrmInfo() Obtain 
- * @method void setDrmInfo(DrmInfo $DrmInfo) Set 
+ * @method array getAddOnSubtitles() Obtain <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) Set <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+ * @method DrmInfo getDrmInfo() Obtain <p>Drm information.</p>
+ * @method void setDrmInfo(DrmInfo $DrmInfo) Set <p>Drm information.</p>
  * @method string getDefinitionType() Obtain <p>Adaptive bitrate streaming template type. Valid values:<br>Common: audio and video.<br>PureAudio: audio only.</p>
  * @method void setDefinitionType(string $DefinitionType) Set <p>Adaptive bitrate streaming template type. Valid values:<br>Common: audio and video.<br>PureAudio: audio only.</p>
- * @method SubtitleTemplate getSubtitleTemplate() Obtain 
- * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set 
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
  * @method string getStdExtInfo() Obtain <p>Extended transcoding parameter field.</p>
  * @method void setStdExtInfo(string $StdExtInfo) Set <p>Extended transcoding parameter field.</p>
- * @method array getKeyPTSList() Obtain 
- * @method void setKeyPTSList(array $KeyPTSList) Set 
+ * @method array getKeyPTSList() Obtain <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
+ * @method void setKeyPTSList(array $KeyPTSList) Set <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
  * @method array getAddOnAudios() Obtain <p>External audio feature. Specifies the audio files to be inserted.</p>
  * @method void setAddOnAudios(array $AddOnAudios) Set <p>External audio feature. Specifies the audio files to be inserted.</p>
  * @method array getStdExtStreamInfos() Obtain <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
@@ -64,12 +64,12 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
-     * @var BlindWatermarkInput 
+     * @var BlindWatermarkInput <p>Digital watermark parameter.</p>
      */
     public $BlindWatermark;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
      */
     public $OutputStorage;
 
@@ -89,12 +89,12 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $SegmentObjectName;
 
     /**
-     * @var array 
+     * @var array <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
      */
     public $AddOnSubtitles;
 
     /**
-     * @var DrmInfo 
+     * @var DrmInfo <p>Drm information.</p>
      */
     public $DrmInfo;
 
@@ -104,7 +104,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $DefinitionType;
 
     /**
-     * @var SubtitleTemplate 
+     * @var SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
      */
     public $SubtitleTemplate;
 
@@ -114,7 +114,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $StdExtInfo;
 
     /**
-     * @var array 
+     * @var array <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
      */
     public $KeyPTSList;
 
@@ -131,17 +131,17 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     /**
      * @param integer $Definition <p>Adaptive bitrate streaming template ID.</p>
      * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
-     * @param BlindWatermarkInput $BlindWatermark 
-     * @param TaskOutputStorage $OutputStorage 
+     * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark parameter.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
      * @param string $OutputObjectPath <p>Output path for the manifest file after adaptive bitrate streaming, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">Filename Variables</a>.<br>Relative path example:</p><li>Filename_{variable name}.{format}</li><li>Filename.{format}</li>Absolute path example:<li>/custom path/Filename_{variable name}.{format}</li>If this is not specified, the default relative path is {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
      * @param string $SubStreamObjectName <p>Output path for substream files after adaptive bitrate streaming, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}</code>.</p>
      * @param string $SegmentObjectName <p>Output path for segment files after adaptive bitrate streaming (HLS only), which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}</code>.</p>
-     * @param array $AddOnSubtitles 
-     * @param DrmInfo $DrmInfo 
+     * @param array $AddOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+     * @param DrmInfo $DrmInfo <p>Drm information.</p>
      * @param string $DefinitionType <p>Adaptive bitrate streaming template type. Valid values:<br>Common: audio and video.<br>PureAudio: audio only.</p>
-     * @param SubtitleTemplate $SubtitleTemplate 
+     * @param SubtitleTemplate $SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
      * @param string $StdExtInfo <p>Extended transcoding parameter field.</p>
-     * @param array $KeyPTSList 
+     * @param array $KeyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
      * @param array $AddOnAudios <p>External audio feature. Specifies the audio files to be inserted.</p>
      * @param array $StdExtStreamInfos <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
      */

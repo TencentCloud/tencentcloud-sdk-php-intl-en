@@ -18,61 +18,58 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SRT configuration information of the queried input.
+ * Query the input SRT configuration information.
  *
- * @method string getMode() Obtain The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setMode(string $Mode) Set The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getStreamId() Obtain Stream ID.
- * @method void setStreamId(string $StreamId) Set Stream ID.
- * @method integer getLatency() Obtain Latency.
- * @method void setLatency(integer $Latency) Set Latency.
- * @method integer getRecvLatency() Obtain Receive latency.
- * @method void setRecvLatency(integer $RecvLatency) Set Receive latency.
- * @method integer getPeerLatency() Obtain Peer latency.
- * @method void setPeerLatency(integer $PeerLatency) Set Peer latency.
- * @method integer getPeerIdleTimeout() Obtain Peer idle timeout period.
- * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) Set Peer idle timeout period.
+ * @method string getMode() Obtain SRT mode.
+ * @method void setMode(string $Mode) Set SRT mode.
+ * @method string getStreamId() Obtain Stream Id.
+ * @method void setStreamId(string $StreamId) Set Stream Id.
+ * @method integer getLatency() Obtain Delay.
+ * @method void setLatency(integer $Latency) Set Delay.
+ * @method integer getRecvLatency() Obtain Receive delay.
+ * @method void setRecvLatency(integer $RecvLatency) Set Receive delay.
+ * @method integer getPeerLatency() Obtain Peer delay.
+ * @method void setPeerLatency(integer $PeerLatency) Set Peer delay.
+ * @method integer getPeerIdleTimeout() Obtain Idle timeout period of the peer.
+ * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) Set Idle timeout period of the peer.
  * @method string getPassphrase() Obtain Decryption key.
  * @method void setPassphrase(string $Passphrase) Set Decryption key.
  * @method integer getPbKeyLen() Obtain Key length.
  * @method void setPbKeyLen(integer $PbKeyLen) Set Key length.
- * @method array getSourceAddresses() Obtain The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSourceAddresses(array $SourceAddresses) Set The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getSourceAddresses() Obtain SRT peer address.
+ * @method void setSourceAddresses(array $SourceAddresses) Set SRT peer address.
+ * @method SRTFECSimpleOptions getFEC() Obtain FEC settings
+ * @method void setFEC(SRTFECSimpleOptions $FEC) Set FEC settings
  */
 class DescribeInputSRTSettings extends AbstractModel
 {
     /**
-     * @var string The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string SRT mode.
      */
     public $Mode;
 
     /**
-     * @var string Stream ID.
+     * @var string Stream Id.
      */
     public $StreamId;
 
     /**
-     * @var integer Latency.
+     * @var integer Delay.
      */
     public $Latency;
 
     /**
-     * @var integer Receive latency.
+     * @var integer Receive delay.
      */
     public $RecvLatency;
 
     /**
-     * @var integer Peer latency.
+     * @var integer Peer delay.
      */
     public $PeerLatency;
 
     /**
-     * @var integer Peer idle timeout period.
+     * @var integer Idle timeout period of the peer.
      */
     public $PeerIdleTimeout;
 
@@ -87,23 +84,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $PbKeyLen;
 
     /**
-     * @var array The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array SRT peer address.
      */
     public $SourceAddresses;
 
     /**
-     * @param string $Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $StreamId Stream ID.
-     * @param integer $Latency Latency.
-     * @param integer $RecvLatency Receive latency.
-     * @param integer $PeerLatency Peer latency.
-     * @param integer $PeerIdleTimeout Peer idle timeout period.
+     * @var SRTFECSimpleOptions FEC settings
+     */
+    public $FEC;
+
+    /**
+     * @param string $Mode SRT mode.
+     * @param string $StreamId Stream Id.
+     * @param integer $Latency Delay.
+     * @param integer $RecvLatency Receive delay.
+     * @param integer $PeerLatency Peer delay.
+     * @param integer $PeerIdleTimeout Idle timeout period of the peer.
      * @param string $Passphrase Decryption key.
      * @param integer $PbKeyLen Key length.
-     * @param array $SourceAddresses The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $SourceAddresses SRT peer address.
+     * @param SRTFECSimpleOptions $FEC FEC settings
      */
     function __construct()
     {
@@ -157,6 +157,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->SourceAddresses, $obj);
             }
+        }
+
+        if (array_key_exists("FEC",$param) and $param["FEC"] !== null) {
+            $this->FEC = new SRTFECSimpleOptions();
+            $this->FEC->deserialize($param["FEC"]);
         }
     }
 }

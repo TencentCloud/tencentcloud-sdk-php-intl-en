@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Orchestrate the task result type of video analysis
+ * Result type of the orchestration video analysis task
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiAnalysisTaskInput getInput() Obtain Analyze the input of the task.
- * @method void setInput(AiAnalysisTaskInput $Input) Set Analyze the input of the task.
+ * @method AiAnalysisTaskInput getInput() Obtain Input of the analysis task.
+ * @method void setInput(AiAnalysisTaskInput $Input) Set Input of the analysis task.
  * @method array getOutput() Obtain Analysis task output.
  * @method void setOutput(array $Output) Set Analysis task output.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -60,7 +60,7 @@ class ScheduleAnalysisTaskResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiAnalysisTaskInput Analyze the input of the task.
+     * @var AiAnalysisTaskInput Input of the analysis task.
      */
     public $Input;
 
@@ -84,7 +84,7 @@ class ScheduleAnalysisTaskResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiAnalysisTaskInput $Input Analyze the input of the task.
+     * @param AiAnalysisTaskInput $Input Input of the analysis task.
      * @param array $Output Analysis task output.
      * @param string $BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).

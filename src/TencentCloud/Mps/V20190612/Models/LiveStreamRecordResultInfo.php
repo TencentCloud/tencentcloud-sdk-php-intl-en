@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Live stream recording result.
  *
- * @method integer getRecordOver() Obtain 
- * @method void setRecordOver(integer $RecordOver) Set 
- * @method array getFileResults() Obtain 
- * @method void setFileResults(array $FileResults) Set 
+ * @method integer getRecordOver() Obtain Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
+ * @method void setRecordOver(integer $RecordOver) Set Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
+ * @method array getFileResults() Obtain File list.
+ * @method void setFileResults(array $FileResults) Set File list.
  */
 class LiveStreamRecordResultInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
      */
     public $RecordOver;
 
     /**
-     * @var array 
+     * @var array File list.
      */
     public $FileResults;
 
     /**
-     * @param integer $RecordOver 
-     * @param array $FileResults 
+     * @param integer $RecordOver Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
+     * @param array $FileResults File list.
      */
     function __construct()
     {

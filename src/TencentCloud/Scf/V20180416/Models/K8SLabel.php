@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * k8s label
  *
- * @method string getKey() Obtain 
- * @method void setKey(string $Key) Set 
- * @method string getValue() Obtain 
- * @method void setValue(string $Value) Set 
+ * @method string getKey() Obtain Name of the label
+ * @method void setKey(string $Key) Set Name of the label
+ * @method string getValue() Obtain Value of the label
+ * @method void setValue(string $Value) Set Value of the label
  */
 class K8SLabel extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Name of the label
      */
     public $Key;
 
     /**
-     * @var string 
+     * @var string Value of the label
      */
     public $Value;
 
     /**
-     * @param string $Key 
-     * @param string $Value 
+     * @param string $Key Name of the label
+     * @param string $Value Value of the label
      */
     function __construct()
     {

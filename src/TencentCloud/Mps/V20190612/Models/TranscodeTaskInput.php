@@ -26,56 +26,60 @@ use TencentCloud\Common\AbstractModel;
 This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters.
  * @method void setRawParameter(RawTranscodeParameter $RawParameter) Set Custom video transcoding parameter. It takes effect when Definition is set to 0.
 This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters.
- * @method OverrideTranscodeParameter getOverrideParameter() Obtain 
- * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) Set 
+ * @method OverrideTranscodeParameter getOverrideParameter() Obtain Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+ * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) Set Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
  * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
- * @method BlindWatermarkInput getBlindWatermark() Obtain 
- * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set 
- * @method array getMosaicSet() Obtain Mosaic list. A maximum of 10 images is supported.
- * @method void setMosaicSet(array $MosaicSet) Set Mosaic list. A maximum of 10 images is supported.
+ * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark parameter.
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark parameter.
+ * @method array getMosaicSet() Obtain Mosaic list. Up to 10 images supported.
+ * @method void setMosaicSet(array $MosaicSet) Set Mosaic list. Up to 10 images supported.
  * @method float getStartTimeOffset() Obtain Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
  * @method float getEndTimeOffset() Obtain End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
+ * @method TaskOutputStorage getOutputStorage() Obtain Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
  * @method string getOutputObjectPath() Obtain Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
  * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
- * @method string getSegmentObjectName() Obtain Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
- * @method void setSegmentObjectName(string $SegmentObjectName) Set Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
- * @method NumberFormat getObjectNumberFormat() Obtain 
- * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set 
- * @method HeadTailParameter getHeadTailParameter() Obtain 
- * @method void setHeadTailParameter(HeadTailParameter $HeadTailParameter) Set 
+ * @method string getSegmentObjectName() Obtain Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
+ * @method void setSegmentObjectName(string $SegmentObjectName) Set Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
+ * @method NumberFormat getObjectNumberFormat() Obtain Rule of the `{number}` variable in the output path after transcoding.
+ * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set Rule of the `{number}` variable in the output path after transcoding.
+ * @method HeadTailParameter getHeadTailParameter() Obtain Opening and ending content parameters.
+ * @method void setHeadTailParameter(HeadTailParameter $HeadTailParameter) Set Opening and ending content parameters.
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -91,7 +95,9 @@ This parameter is used in high customization scenarios. It is recommended that y
     public $RawParameter;
 
     /**
-     * @var OverrideTranscodeParameter 
+     * @var OverrideTranscodeParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
      */
     public $OverrideParameter;
 
@@ -101,33 +107,33 @@ This parameter is used in high customization scenarios. It is recommended that y
     public $WatermarkSet;
 
     /**
-     * @var BlindWatermarkInput 
+     * @var BlindWatermarkInput Digital watermark parameter.
      */
     public $BlindWatermark;
 
     /**
-     * @var array Mosaic list. A maximum of 10 images is supported.
+     * @var array Mosaic list. Up to 10 images supported.
      */
     public $MosaicSet;
 
     /**
      * @var float Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
      */
     public $StartTimeOffset;
 
     /**
      * @var float End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
      */
     public $EndTimeOffset;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
      */
     public $OutputStorage;
 
@@ -135,27 +141,27 @@ This parameter is used in high customization scenarios. It is recommended that y
      * @var string Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
      */
     public $OutputObjectPath;
 
     /**
-     * @var string Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
+     * @var string Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
      */
     public $SegmentObjectName;
 
     /**
-     * @var NumberFormat 
+     * @var NumberFormat Rule of the `{number}` variable in the output path after transcoding.
      */
     public $ObjectNumberFormat;
 
     /**
-     * @var HeadTailParameter 
+     * @var HeadTailParameter Opening and ending content parameters.
      */
     public $HeadTailParameter;
 
@@ -163,31 +169,33 @@ If left empty, the default relative path is `{inputName}_transcode_{definition}.
      * @param integer $Definition Video transcoding template ID.
      * @param RawTranscodeParameter $RawParameter Custom video transcoding parameter. It takes effect when Definition is set to 0.
 This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters.
-     * @param OverrideTranscodeParameter $OverrideParameter 
+     * @param OverrideTranscodeParameter $OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
-     * @param BlindWatermarkInput $BlindWatermark 
-     * @param array $MosaicSet Mosaic list. A maximum of 10 images is supported.
+     * @param BlindWatermarkInput $BlindWatermark Digital watermark parameter.
+     * @param array $MosaicSet Mosaic list. Up to 10 images supported.
      * @param float $StartTimeOffset Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
      * @param float $EndTimeOffset End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
-     * @param TaskOutputStorage $OutputStorage 
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
+     * @param TaskOutputStorage $OutputStorage Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
      * @param string $OutputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
-     * @param string $SegmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
-     * @param NumberFormat $ObjectNumberFormat 
-     * @param HeadTailParameter $HeadTailParameter 
+     * @param string $SegmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
+     * @param NumberFormat $ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
+     * @param HeadTailParameter $HeadTailParameter Opening and ending content parameters.
      */
     function __construct()
     {

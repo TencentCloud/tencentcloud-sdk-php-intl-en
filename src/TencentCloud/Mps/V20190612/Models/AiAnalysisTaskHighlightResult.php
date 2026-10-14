@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of the intelligent highlight
+ * Type of the intelligent highlight result.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskHighlightInput getInput() Obtain Input of the intelligent highlight task.
  * @method void setInput(AiAnalysisTaskHighlightInput $Input) Set Input of the intelligent highlight task.
- * @method AiAnalysisTaskHighlightOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set 
+ * @method AiAnalysisTaskHighlightOutput getOutput() Obtain Output of the intelligent highlight task.
+ * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set Output of the intelligent highlight task.
  */
 class AiAnalysisTaskHighlightResult extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHighlightOutput 
+     * @var AiAnalysisTaskHighlightOutput Output of the intelligent highlight task.
      */
     public $Output;
 
@@ -63,7 +63,7 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskHighlightInput $Input Input of the intelligent highlight task.
-     * @param AiAnalysisTaskHighlightOutput $Output 
+     * @param AiAnalysisTaskHighlightOutput $Output Output of the intelligent highlight task.
      */
     function __construct()
     {

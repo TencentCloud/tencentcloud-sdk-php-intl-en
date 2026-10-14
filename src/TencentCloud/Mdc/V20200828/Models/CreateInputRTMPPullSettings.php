@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Configuration message of the created input RTMP pull.
  *
- * @method array getSourceAddresses() Obtain 
- * @method void setSourceAddresses(array $SourceAddresses) Set 
+ * @method array getSourceAddresses() Obtain RTMP origin server address. Only one is allowed.
+ * @method void setSourceAddresses(array $SourceAddresses) Set RTMP origin server address. Only one is allowed.
  */
 class CreateInputRTMPPullSettings extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array RTMP origin server address. Only one is allowed.
      */
     public $SourceAddresses;
 
     /**
-     * @param array $SourceAddresses 
+     * @param array $SourceAddresses RTMP origin server address. Only one is allowed.
      */
     function __construct()
     {

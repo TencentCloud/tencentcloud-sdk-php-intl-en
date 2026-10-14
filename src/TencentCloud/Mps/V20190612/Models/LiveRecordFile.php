@@ -18,52 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming Recording output file information
+ * Live recording output file information
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method integer getSize() Obtain 
- * @method void setSize(integer $Size) Set 
- * @method integer getDuration() Obtain 
- * @method void setDuration(integer $Duration) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
+ * @method string getUrl() Obtain Live recording file URL
+ * @method void setUrl(string $Url) Set Live recording file URL
+ * @method integer getSize() Obtain Live recording file size
+ * @method void setSize(integer $Size) Set Live recording file size
+ * @method integer getDuration() Obtain Recording file duration of live stream
+ * @method void setDuration(integer $Duration) Set Recording file duration of live stream
+ * @method string getStartTime() Obtain Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setStartTime(string $StartTime) Set Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getEndTime() Obtain End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setEndTime(string $EndTime) Set End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class LiveRecordFile extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Live recording file URL
      */
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer Live recording file size
      */
     public $Size;
 
     /**
-     * @var integer 
+     * @var integer Recording file duration of live stream
      */
     public $Duration;
 
     /**
-     * @var string 
+     * @var string Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $EndTime;
 
     /**
-     * @param string $Url 
-     * @param integer $Size 
-     * @param integer $Duration 
-     * @param string $StartTime 
-     * @param string $EndTime 
+     * @param string $Url Live recording file URL
+     * @param integer $Size Live recording file size
+     * @param integer $Duration Recording file duration of live stream
+     * @param string $StartTime Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $EndTime End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

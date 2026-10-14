@@ -18,28 +18,48 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Filter criteria.
  *
- * @method string getFilterKey() Obtain 
- * @method void setFilterKey(string $FilterKey) Set 
- * @method array getFilterValue() Obtain 
- * @method void setFilterValue(array $FilterValue) Set 
+ * @method string getFilterKey() Obtain Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
+ * @method void setFilterKey(string $FilterKey) Set Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
+ * @method array getFilterValue() Obtain Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
+ * @method void setFilterValue(array $FilterValue) Set Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
  */
 class FilterItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
      */
     public $FilterKey;
 
     /**
-     * @var array 
+     * @var array Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
      */
     public $FilterValue;
 
     /**
-     * @param string $FilterKey 
-     * @param array $FilterValue 
+     * @param string $FilterKey Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
+     * @param array $FilterValue Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
      */
     function __construct()
     {

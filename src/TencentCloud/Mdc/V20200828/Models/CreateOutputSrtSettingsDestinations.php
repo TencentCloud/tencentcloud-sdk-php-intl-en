@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The SRT destination address of the output to create.
+ * Create the SRT destination address for the output of a media transmission stream.
  *
- * @method string getIp() Obtain The output IP.
- * @method void setIp(string $Ip) Set The output IP.
- * @method integer getPort() Obtain The output port.
- * @method void setPort(integer $Port) Set The output port.
+ * @method string getIp() Obtain Output IP or domain.
+ * @method void setIp(string $Ip) Set Output IP or domain.
+ * @method integer getPort() Obtain Output port.
+ * @method void setPort(integer $Port) Set Output port.
  */
 class CreateOutputSrtSettingsDestinations extends AbstractModel
 {
     /**
-     * @var string The output IP.
+     * @var string Output IP or domain.
      */
     public $Ip;
 
     /**
-     * @var integer The output port.
+     * @var integer Output port.
      */
     public $Port;
 
     /**
-     * @param string $Ip The output IP.
-     * @param integer $Port The output port.
+     * @param string $Ip Output IP or domain.
+     * @param integer $Port Output port.
      */
     function __construct()
     {

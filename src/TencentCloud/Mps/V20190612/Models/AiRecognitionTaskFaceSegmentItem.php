@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Face Recognition result fragment
+ * Face recognition result fragment
  *
  * @method float getStartTimeOffset() Obtain Start time offset of a recognized segment, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognized segment, in seconds.

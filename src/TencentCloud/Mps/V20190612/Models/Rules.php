@@ -18,44 +18,56 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task judgment conditions.
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method array getConditions() Obtain 
- * @method void setConditions(array $Conditions) Set 
- * @method string getLinker() Obtain 
- * @method void setLinker(string $Linker) Set 
- * @method array getRearDriveIndexs() Obtain 
- * @method void setRearDriveIndexs(array $RearDriveIndexs) Set 
+ * @method string getId() Obtain Judgment condition id
+ * @method void setId(string $Id) Set Judgment condition id
+ * @method array getConditions() Obtain Judgment condition configuration
+ * @method void setConditions(array $Conditions) Set Judgment condition configuration
+ * @method string getLinker() Obtain Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
+ * @method void setLinker(string $Linker) Set Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
+ * @method array getRearDriveIndexs() Obtain Indexes of the nodes to execute if the judgment conditions are met.
+ * @method void setRearDriveIndexs(array $RearDriveIndexs) Set Indexes of the nodes to execute if the judgment conditions are met.
  */
 class Rules extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Judgment condition id
      */
     public $Id;
 
     /**
-     * @var array 
+     * @var array Judgment condition configuration
      */
     public $Conditions;
 
     /**
-     * @var string 
+     * @var string Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
      */
     public $Linker;
 
     /**
-     * @var array 
+     * @var array Indexes of the nodes to execute if the judgment conditions are met.
      */
     public $RearDriveIndexs;
 
     /**
-     * @param string $Id 
-     * @param array $Conditions 
-     * @param string $Linker 
-     * @param array $RearDriveIndexs 
+     * @param string $Id Judgment condition id
+     * @param array $Conditions Judgment condition configuration
+     * @param string $Linker Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
+     * @param array $RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
      */
     function __construct()
     {

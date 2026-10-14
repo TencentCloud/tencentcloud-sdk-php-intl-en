@@ -18,69 +18,85 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * File information content
  *
- * @method string getDocBizId() Obtain 
- * @method void setDocBizId(string $DocBizId) Set 
- * @method string getFileName() Obtain 
- * @method void setFileName(string $FileName) Set 
- * @method string getFileType() Obtain 
- * @method void setFileType(string $FileType) Set 
- * @method string getFileSize() Obtain 
- * @method void setFileSize(string $FileSize) Set 
- * @method string getFileUrl() Obtain 
- * @method void setFileUrl(string $FileUrl) Set 
- * @method string getDocId() Obtain 
- * @method void setDocId(string $DocId) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getDocBizId() Obtain <p>DocBizId returned by the real-time document parsing API</p>
+ * @method void setDocBizId(string $DocBizId) Set <p>DocBizId returned by the real-time document parsing API</p>
+ * @method string getFileName() Obtain <p>File name.</p>
+ * @method void setFileName(string $FileName) Set <p>File name.</p>
+ * @method string getFileType() Obtain <p>File type</p>
+ * @method void setFileType(string $FileType) Set <p>File type</p>
+ * @method string getFileSize() Obtain <p>File size in bytes</p>
+ * @method void setFileSize(string $FileSize) Set <p>File size in bytes</p>
+ * @method string getFileUrl() Obtain <p>File URL</p>
+ * @method void setFileUrl(string $FileUrl) Set <p>File URL</p>
+ * @method string getDocId() Obtain <p>doc_id returned by the real-time document parsing API.</p>
+ * @method void setDocId(string $DocId) Set <p>doc_id returned by the real-time document parsing API.</p>
+ * @method string getCreateTime() Obtain <p>File creation time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>File creation time</p>
+ * @method string getLocalPath() Obtain <p>Local path of the file in the sandbox</p>
+ * @method void setLocalPath(string $LocalPath) Set <p>Local path of the file in the sandbox</p>
+ * @method integer getAuditStatus() Obtain <p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
+ * @method void setAuditStatus(integer $AuditStatus) Set <p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
  */
 class FileInfoContent extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>DocBizId returned by the real-time document parsing API</p>
      * @deprecated
      */
     public $DocBizId;
 
     /**
-     * @var string 
+     * @var string <p>File name.</p>
      */
     public $FileName;
 
     /**
-     * @var string 
+     * @var string <p>File type</p>
      */
     public $FileType;
 
     /**
-     * @var string 
+     * @var string <p>File size in bytes</p>
      */
     public $FileSize;
 
     /**
-     * @var string 
+     * @var string <p>File URL</p>
      */
     public $FileUrl;
 
     /**
-     * @var string 
+     * @var string <p>doc_id returned by the real-time document parsing API.</p>
      */
     public $DocId;
 
     /**
-     * @var string 
+     * @var string <p>File creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $DocBizId 
-     * @param string $FileName 
-     * @param string $FileType 
-     * @param string $FileSize 
-     * @param string $FileUrl 
-     * @param string $DocId 
-     * @param string $CreateTime 
+     * @var string <p>Local path of the file in the sandbox</p>
+     */
+    public $LocalPath;
+
+    /**
+     * @var integer <p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
+     */
+    public $AuditStatus;
+
+    /**
+     * @param string $DocBizId <p>DocBizId returned by the real-time document parsing API</p>
+     * @param string $FileName <p>File name.</p>
+     * @param string $FileType <p>File type</p>
+     * @param string $FileSize <p>File size in bytes</p>
+     * @param string $FileUrl <p>File URL</p>
+     * @param string $DocId <p>doc_id returned by the real-time document parsing API.</p>
+     * @param string $CreateTime <p>File creation time</p>
+     * @param string $LocalPath <p>Local path of the file in the sandbox</p>
+     * @param integer $AuditStatus <p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ class FileInfoContent extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("LocalPath",$param) and $param["LocalPath"] !== null) {
+            $this->LocalPath = $param["LocalPath"];
+        }
+
+        if (array_key_exists("AuditStatus",$param) and $param["AuditStatus"] !== null) {
+            $this->AuditStatus = $param["AuditStatus"];
         }
     }
 }

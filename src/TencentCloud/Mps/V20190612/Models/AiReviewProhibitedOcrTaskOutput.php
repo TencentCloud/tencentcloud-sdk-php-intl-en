@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ocr (Optical Character Recognition) text contains prohibited information
+ * Prohibited information in Ocr text
  *
- * @method float getConfidence() Obtain Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
- * @method string getSuggestion() Obtain Ocr text prohibited content result suggestion, value ranges from...to...
+ * @method float getConfidence() Obtain Prohibited content score of the Ocr text. Value range: 0–100.
+ * @method void setConfidence(float $Confidence) Set Prohibited content score of the Ocr text. Value range: 0–100.
+ * @method string getSuggestion() Obtain Ocr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Ocr text prohibited content result suggestion, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Ocr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getSegmentSet() Obtain Video segment list with Ocr text suspected of prohibition violations.
- * @method void setSegmentSet(array $SegmentSet) Set Video segment list with Ocr text suspected of prohibition violations.
+ * @method array getSegmentSet() Obtain List of video segments with Ocr text suspected of prohibition violations.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments with Ocr text suspected of prohibition violations.
  */
 class AiReviewProhibitedOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
+     * @var float Prohibited content score of the Ocr text. Value range: 0–100.
      */
     public $Confidence;
 
     /**
-     * @var string Ocr text prohibited content result suggestion, value ranges from...to...
+     * @var string Ocr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,17 +49,17 @@ class AiReviewProhibitedOcrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Video segment list with Ocr text suspected of prohibition violations.
+     * @var array List of video segments with Ocr text suspected of prohibition violations.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
-     * @param string $Suggestion Ocr text prohibited content result suggestion, value ranges from...to...
+     * @param float $Confidence Prohibited content score of the Ocr text. Value range: 0–100.
+     * @param string $Suggestion Ocr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $SegmentSet Video segment list with Ocr text suspected of prohibition violations.
+     * @param array $SegmentSet List of video segments with Ocr text suspected of prohibition violations.
      */
     function __construct()
     {

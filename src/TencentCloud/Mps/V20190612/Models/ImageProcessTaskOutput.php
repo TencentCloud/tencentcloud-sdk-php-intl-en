@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image processing result information.
  *
- * @method string getPath() Obtain 
- * @method void setPath(string $Path) Set 
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+ * @method string getPath() Obtain <p>Path of the output file.</p>
+ * @method void setPath(string $Path) Set <p>Path of the output file.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the output file.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the output file.</p>
  * @method string getContent() Obtain <p>Processing result of the image-to-text task.</p>
  * @method void setContent(string $Content) Set <p>Processing result of the image-to-text task.</p>
  * @method string getFileId() Obtain <p>VOD Standard Edition FileId</p>
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ImageProcessTaskOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Path of the output file.</p>
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage <p>Storage location of the output file.</p>
      */
     public $OutputStorage;
 
@@ -52,8 +52,8 @@ class ImageProcessTaskOutput extends AbstractModel
     public $FileId;
 
     /**
-     * @param string $Path 
-     * @param TaskOutputStorage $OutputStorage 
+     * @param string $Path <p>Path of the output file.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Storage location of the output file.</p>
      * @param string $Content <p>Processing result of the image-to-text task.</p>
      * @param string $FileId <p>VOD Standard Edition FileId</p>
      */

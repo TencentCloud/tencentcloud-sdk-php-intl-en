@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The RTMP configuration of the output to create.
+ * RTMP configuration for creating the output of a media transmission stream.
  *
- * @method array getDestinations() Obtain The relay destination addresses. One or two addresses are allowed.
- * @method void setDestinations(array $Destinations) Set The relay destination addresses. One or two addresses are allowed.
- * @method integer getChunkSize() Obtain The RTMP chunk size. Value range: [4096, 40960].
- * @method void setChunkSize(integer $ChunkSize) Set The RTMP chunk size. Value range: [4096, 40960].
+ * @method array getDestinations() Obtain Target address for repost. You can enter 1 to 2 addresses.
+ * @method void setDestinations(array $Destinations) Set Target address for repost. You can enter 1 to 2 addresses.
+ * @method integer getChunkSize() Obtain Chunk size of RTMP, ranging from 4096 to 40960.
+ * @method void setChunkSize(integer $ChunkSize) Set Chunk size of RTMP, ranging from 4096 to 40960.
  */
 class CreateOutputRTMPSettings extends AbstractModel
 {
     /**
-     * @var array The relay destination addresses. One or two addresses are allowed.
+     * @var array Target address for repost. You can enter 1 to 2 addresses.
      */
     public $Destinations;
 
     /**
-     * @var integer The RTMP chunk size. Value range: [4096, 40960].
+     * @var integer Chunk size of RTMP, ranging from 4096 to 40960.
      */
     public $ChunkSize;
 
     /**
-     * @param array $Destinations The relay destination addresses. One or two addresses are allowed.
-     * @param integer $ChunkSize The RTMP chunk size. Value range: [4096, 40960].
+     * @param array $Destinations Target address for repost. You can enter 1 to 2 addresses.
+     * @param integer $ChunkSize Chunk size of RTMP, ranging from 4096 to 40960.
      */
     function __construct()
     {

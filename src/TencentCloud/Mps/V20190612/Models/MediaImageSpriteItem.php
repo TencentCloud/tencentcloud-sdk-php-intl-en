@@ -20,40 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sprite image information
  *
- * @method integer getDefinition() Obtain Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method integer getHeight() Obtain Height of small images in sprite sheet.
- * @method void setHeight(integer $Height) Set Height of small images in sprite sheet.
- * @method integer getWidth() Obtain Width of small images in sprite sheet.
- * @method void setWidth(integer $Width) Set Width of small images in sprite sheet.
- * @method integer getTotalCount() Obtain Number of small images in each sprite sheet.
- * @method void setTotalCount(integer $TotalCount) Set Number of small images in each sprite sheet.
+ * @method integer getDefinition() Obtain Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method integer getHeight() Obtain Height of small images in sprite image.
+ * @method void setHeight(integer $Height) Set Height of small images in sprite image.
+ * @method integer getWidth() Obtain Width of a small image in the sprite sheet.
+ * @method void setWidth(integer $Width) Set Width of a small image in the sprite sheet.
+ * @method integer getTotalCount() Obtain Number of small images in each sprite image.
+ * @method void setTotalCount(integer $TotalCount) Set Number of small images in each sprite image.
  * @method array getImagePathSet() Obtain Path of each sprite sheet.
  * @method void setImagePathSet(array $ImagePathSet) Set Path of each sprite sheet.
- * @method string getWebVttPath() Obtain 
- * @method void setWebVttPath(string $WebVttPath) Set 
+ * @method string getWebVttPath() Obtain Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
+ * @method void setWebVttPath(string $WebVttPath) Set Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
  * @method TaskOutputStorage getStorage() Obtain Storage location of the sprite sheet file.
  * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of the sprite sheet file.
  */
 class MediaImageSpriteItem extends AbstractModel
 {
     /**
-     * @var integer Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @var integer Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
     /**
-     * @var integer Height of small images in sprite sheet.
+     * @var integer Height of small images in sprite image.
      */
     public $Height;
 
     /**
-     * @var integer Width of small images in sprite sheet.
+     * @var integer Width of a small image in the sprite sheet.
      */
     public $Width;
 
     /**
-     * @var integer Number of small images in each sprite sheet.
+     * @var integer Number of small images in each sprite image.
      */
     public $TotalCount;
 
@@ -63,7 +63,7 @@ class MediaImageSpriteItem extends AbstractModel
     public $ImagePathSet;
 
     /**
-     * @var string 
+     * @var string Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
      */
     public $WebVttPath;
 
@@ -73,12 +73,12 @@ class MediaImageSpriteItem extends AbstractModel
     public $Storage;
 
     /**
-     * @param integer $Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param integer $Height Height of small images in sprite sheet.
-     * @param integer $Width Width of small images in sprite sheet.
-     * @param integer $TotalCount Number of small images in each sprite sheet.
+     * @param integer $Definition Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param integer $Height Height of small images in sprite image.
+     * @param integer $Width Width of a small image in the sprite sheet.
+     * @param integer $TotalCount Number of small images in each sprite image.
      * @param array $ImagePathSet Path of each sprite sheet.
-     * @param string $WebVttPath 
+     * @param string $WebVttPath Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
      * @param TaskOutputStorage $Storage Storage location of the sprite sheet file.
      */
     function __construct()

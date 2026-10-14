@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateRequestTargetNodeTypes request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method array getTargetNodeTypes() Obtain A list of node types used to receive requests.
- * @method void setTargetNodeTypes(array $TargetNodeTypes) Set A list of node types used to receive requests.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method array getTargetNodeTypes() Obtain List of target node types that receive requests
+ * @method void setTargetNodeTypes(array $TargetNodeTypes) Set List of target node types that receive requests
  */
 class UpdateRequestTargetNodeTypesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @var array A list of node types used to receive requests.
+     * @var array List of target node types that receive requests
      */
     public $TargetNodeTypes;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param array $TargetNodeTypes A list of node types used to receive requests.
+     * @param string $InstanceId Instance ID
+     * @param array $TargetNodeTypes List of target node types that receive requests
      */
     function __construct()
     {

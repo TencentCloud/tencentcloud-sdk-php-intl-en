@@ -18,76 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Orchestration task output
+ * Output of the orchestration task
  *
- * @method string getActivityType() Obtain Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
- * @method void setActivityType(string $ActivityType) Set Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
- * @method ActivityResItem getActivityResItem() Obtain Atomic task output.
- * @method void setActivityResItem(ActivityResItem $ActivityResItem) Set Atomic task output.
+ * @method string getActivityType() Obtain <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
+ * @method void setActivityType(string $ActivityType) Set <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
+ * @method ActivityResItem getActivityResItem() Obtain <p>Output of the atomic task.</p>
+ * @method void setActivityResItem(ActivityResItem $ActivityResItem) Set <p>Output of the atomic task.</p>
  */
 class ActivityResult extends AbstractModel
 {
     /**
-     * @var string Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
+     * @var string <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
      */
     public $ActivityType;
 
     /**
-     * @var ActivityResItem Atomic task output.
+     * @var ActivityResItem <p>Output of the atomic task.</p>
      */
     public $ActivityResItem;
 
     /**
-     * @param string $ActivityType Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
-     * @param ActivityResItem $ActivityResItem Atomic task output.
+     * @param string $ActivityType <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
+     * @param ActivityResItem $ActivityResItem <p>Output of the atomic task.</p>
      */
     function __construct()
     {

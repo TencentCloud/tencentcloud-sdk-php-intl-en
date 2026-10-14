@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Configure smooth stream output for delayed playback.
  *
- * @method boolean getEnable() Obtain 
- * @method void setEnable(boolean $Enable) Set 
- * @method integer getBufferTime() Obtain 
- * @method void setBufferTime(integer $BufferTime) Set 
+ * @method boolean getEnable() Obtain Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
+ * @method void setEnable(boolean $Enable) Set Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
+ * @method integer getBufferTime() Obtain Delay time in seconds, ranging from 10 to 300 for the time being.
+ * @method void setBufferTime(integer $BufferTime) Set Delay time in seconds, ranging from 10 to 300 for the time being.
  */
 class ResilientStreamConf extends AbstractModel
 {
     /**
-     * @var boolean 
+     * @var boolean Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
      */
     public $Enable;
 
     /**
-     * @var integer 
+     * @var integer Delay time in seconds, ranging from 10 to 300 for the time being.
      */
     public $BufferTime;
 
     /**
-     * @param boolean $Enable 
-     * @param integer $BufferTime 
+     * @param boolean $Enable Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
+     * @param integer $BufferTime Delay time in seconds, ranging from 10 to 300 for the time being.
      */
     function __construct()
     {

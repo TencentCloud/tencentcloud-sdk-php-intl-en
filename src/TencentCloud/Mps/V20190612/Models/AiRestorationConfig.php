@@ -18,12 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * LLM repair
  *
  * @method string getSwitch() Obtain <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
  * @method void setSwitch(string $Switch) Set <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
+ * @method void setType(string $Type) Set <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
  */
 class AiRestorationConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AiRestorationConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 
+     * @var string <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
      */
     public $Type;
 
     /**
      * @param string $Switch <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
-     * @param string $Type 
+     * @param string $Type <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
      */
     function __construct()
     {

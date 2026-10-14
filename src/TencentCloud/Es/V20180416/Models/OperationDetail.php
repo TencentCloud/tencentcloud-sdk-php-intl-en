@@ -18,28 +18,28 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Operation details
+ * Operation details.
  *
- * @method array getOldInfo() Obtain Original instance configuration information
- * @method void setOldInfo(array $OldInfo) Set Original instance configuration information
- * @method array getNewInfo() Obtain Updated instance configuration information
- * @method void setNewInfo(array $NewInfo) Set Updated instance configuration information
+ * @method array getOldInfo() Obtain Original configuration message of the instance
+ * @method void setOldInfo(array $OldInfo) Set Original configuration message of the instance
+ * @method array getNewInfo() Obtain Configuration message after the instance update
+ * @method void setNewInfo(array $NewInfo) Set Configuration message after the instance update
  */
 class OperationDetail extends AbstractModel
 {
     /**
-     * @var array Original instance configuration information
+     * @var array Original configuration message of the instance
      */
     public $OldInfo;
 
     /**
-     * @var array Updated instance configuration information
+     * @var array Configuration message after the instance update
      */
     public $NewInfo;
 
     /**
-     * @param array $OldInfo Original instance configuration information
-     * @param array $NewInfo Updated instance configuration information
+     * @param array $OldInfo Original configuration message of the instance
+     * @param array $NewInfo Configuration message after the instance update
      */
     function __construct()
     {

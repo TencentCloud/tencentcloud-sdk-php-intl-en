@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming AI Ocr word recognition result
+ * Live streaming AI Ocr word recognition result.
  *
  * @method string getWord() Obtain Text keyword.
  * @method void setWord(string $Word) Set Text keyword.

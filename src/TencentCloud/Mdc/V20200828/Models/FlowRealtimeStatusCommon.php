@@ -18,52 +18,52 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The common real-time status information of a flow.
+ * Common status information for querying stream status in real time.
  *
- * @method string getState() Obtain The connection status. Valid values: Connected, Waiting, Idle.
- * @method void setState(string $State) Set The connection status. Valid values: Connected, Waiting, Idle.
- * @method string getMode() Obtain The connection mode. Valid values: Listener, Caller.
- * @method void setMode(string $Mode) Set The connection mode. Valid values: Listener, Caller.
- * @method integer getConnectedTime() Obtain The connected time.
- * @method void setConnectedTime(integer $ConnectedTime) Set The connected time.
- * @method integer getBitrate() Obtain The real-time bitrate (bps).
- * @method void setBitrate(integer $Bitrate) Set The real-time bitrate (bps).
- * @method integer getReconnections() Obtain The number of retries.
- * @method void setReconnections(integer $Reconnections) Set The number of retries.
+ * @method string getState() Obtain Current connection status. Connected | Waiting | Idle.
+ * @method void setState(string $State) Set Current connection status. Connected | Waiting | Idle.
+ * @method string getMode() Obtain Connection mode. Listener|Caller.
+ * @method void setMode(string $Mode) Set Connection mode. Listener|Caller.
+ * @method integer getConnectedTime() Obtain Connection duration, unit: ms.
+ * @method void setConnectedTime(integer $ConnectedTime) Set Connection duration, unit: ms.
+ * @method integer getBitrate() Obtain Real-time bitrate, unit in bps.
+ * @method void setBitrate(integer $Bitrate) Set Real-time bitrate, unit in bps.
+ * @method integer getReconnections() Obtain Number of retries.
+ * @method void setReconnections(integer $Reconnections) Set Number of retries.
  */
 class FlowRealtimeStatusCommon extends AbstractModel
 {
     /**
-     * @var string The connection status. Valid values: Connected, Waiting, Idle.
+     * @var string Current connection status. Connected | Waiting | Idle.
      */
     public $State;
 
     /**
-     * @var string The connection mode. Valid values: Listener, Caller.
+     * @var string Connection mode. Listener|Caller.
      */
     public $Mode;
 
     /**
-     * @var integer The connected time.
+     * @var integer Connection duration, unit: ms.
      */
     public $ConnectedTime;
 
     /**
-     * @var integer The real-time bitrate (bps).
+     * @var integer Real-time bitrate, unit in bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer The number of retries.
+     * @var integer Number of retries.
      */
     public $Reconnections;
 
     /**
-     * @param string $State The connection status. Valid values: Connected, Waiting, Idle.
-     * @param string $Mode The connection mode. Valid values: Listener, Caller.
-     * @param integer $ConnectedTime The connected time.
-     * @param integer $Bitrate The real-time bitrate (bps).
-     * @param integer $Reconnections The number of retries.
+     * @param string $State Current connection status. Connected | Waiting | Idle.
+     * @param string $Mode Connection mode. Listener|Caller.
+     * @param integer $ConnectedTime Connection duration, unit: ms.
+     * @param integer $Bitrate Real-time bitrate, unit in bps.
+     * @param integer $Reconnections Number of retries.
      */
     function __construct()
     {

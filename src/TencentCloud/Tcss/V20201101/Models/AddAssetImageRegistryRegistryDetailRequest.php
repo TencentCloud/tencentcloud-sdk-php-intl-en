@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddAssetImageRegistryRegistryDetail request structure.
  *
- * @method string getName() Obtain Repository name
- * @method void setName(string $Name) Set Repository name
- * @method string getUsername() Obtain Username
- * @method void setUsername(string $Username) Set Username
- * @method string getPassword() Obtain Password
- * @method void setPassword(string $Password) Set Password
- * @method string getUrl() Obtain Repository URL
- * @method void setUrl(string $Url) Set Repository URL
+ * @method string getName() Obtain Repository Name
+ * @method void setName(string $Name) Set Repository Name
+ * @method string getUsername() Obtain Username.
+ * @method void setUsername(string $Username) Set Username.
+ * @method string getPassword() Obtain Password.
+ * @method void setPassword(string $Password) Set Password.
+ * @method string getUrl() Obtain Warehouse url
+ * @method void setUrl(string $Url) Set Warehouse url
  * @method string getRegistryType() Obtain Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
  * @method void setRegistryType(string $RegistryType) Set Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
- * @method string getNetType() Obtain Network type, which can be `public` (public network).
- * @method void setNetType(string $NetType) Set Network type, which can be `public` (public network).
- * @method string getRegistryVersion() Obtain Repository version
- * @method void setRegistryVersion(string $RegistryVersion) Set Repository version
- * @method string getRegistryRegion() Obtain Region. Default value: `default`.
- * @method void setRegistryRegion(string $RegistryRegion) Set Region. Default value: `default`.
+ * @method string getNetType() Obtain Network type. List: public
+ * @method void setNetType(string $NetType) Set Network type. List: public
+ * @method string getRegistryVersion() Obtain Warehouse version
+ * @method void setRegistryVersion(string $RegistryVersion) Set Warehouse version
+ * @method string getRegistryRegion() Obtain Region, list: default.
+ * @method void setRegistryRegion(string $RegistryRegion) Set Region, list: default.
  * @method integer getSpeedLimit() Obtain Speed limit
  * @method void setSpeedLimit(integer $SpeedLimit) Set Speed limit
- * @method integer getInsecure() Obtain Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
- * @method void setInsecure(integer $Insecure) Set Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
- * @method array getConnDetectConfig() Obtain 
- * @method void setConnDetectConfig(array $ConnDetectConfig) Set 
+ * @method integer getInsecure() Obtain 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
+ * @method void setInsecure(integer $Insecure) Set 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
+ * @method array getConnDetectConfig() Obtain Record ID of Connectivity Check
+ * @method void setConnDetectConfig(array $ConnDetectConfig) Set Record ID of Connectivity Check
  * @method boolean getNeedScan() Obtain Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
  * @method void setNeedScan(boolean $NeedScan) Set Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
  * @method integer getSyncMode() Obtain Synchronization method. 0: full synchronization; 1: incremental synchronization.
@@ -56,22 +56,22 @@ use TencentCloud\Common\AbstractModel;
 class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
     /**
-     * @var string Repository name
+     * @var string Repository Name
      */
     public $Name;
 
     /**
-     * @var string Username
+     * @var string Username.
      */
     public $Username;
 
     /**
-     * @var string Password
+     * @var string Password.
      */
     public $Password;
 
     /**
-     * @var string Repository URL
+     * @var string Warehouse url
      */
     public $Url;
 
@@ -81,17 +81,17 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $RegistryType;
 
     /**
-     * @var string Network type, which can be `public` (public network).
+     * @var string Network type. List: public
      */
     public $NetType;
 
     /**
-     * @var string Repository version
+     * @var string Warehouse version
      */
     public $RegistryVersion;
 
     /**
-     * @var string Region. Default value: `default`.
+     * @var string Region, list: default.
      */
     public $RegistryRegion;
 
@@ -101,12 +101,12 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $SpeedLimit;
 
     /**
-     * @var integer Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+     * @var integer 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
      */
     public $Insecure;
 
     /**
-     * @var array 
+     * @var array Record ID of Connectivity Check
      */
     public $ConnDetectConfig;
 
@@ -136,17 +136,17 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $Name Repository name
-     * @param string $Username Username
-     * @param string $Password Password
-     * @param string $Url Repository URL
+     * @param string $Name Repository Name
+     * @param string $Username Username.
+     * @param string $Password Password.
+     * @param string $Url Warehouse url
      * @param string $RegistryType Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
-     * @param string $NetType Network type, which can be `public` (public network).
-     * @param string $RegistryVersion Repository version
-     * @param string $RegistryRegion Region. Default value: `default`.
+     * @param string $NetType Network type. List: public
+     * @param string $RegistryVersion Warehouse version
+     * @param string $RegistryRegion Region, list: default.
      * @param integer $SpeedLimit Speed limit
-     * @param integer $Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
-     * @param array $ConnDetectConfig 
+     * @param integer $Insecure 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
+     * @param array $ConnDetectConfig Record ID of Connectivity Check
      * @param boolean $NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
      * @param integer $SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
      * @param string $WebhookUrl Webhook access address.

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream AI review result
+ * AI review result of the live stream
  *
  * @method array getResultSet() Obtain Content moderation result list.
  * @method void setResultSet(array $ResultSet) Set Content moderation result list.

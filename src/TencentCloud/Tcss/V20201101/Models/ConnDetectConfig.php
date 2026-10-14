@@ -18,28 +18,28 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Connectivity Check Configuration
  *
- * @method string getQuuid() Obtain 
- * @method void setQuuid(string $Quuid) Set 
- * @method string getUuid() Obtain 
- * @method void setUuid(string $Uuid) Set 
+ * @method string getQuuid() Obtain Host QUUID
+ * @method void setQuuid(string $Quuid) Set Host QUUID
+ * @method string getUuid() Obtain Host UUID
+ * @method void setUuid(string $Uuid) Set Host UUID
  */
 class ConnDetectConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Host QUUID
      */
     public $Quuid;
 
     /**
-     * @var string 
+     * @var string Host UUID
      */
     public $Uuid;
 
     /**
-     * @param string $Quuid 
-     * @param string $Uuid 
+     * @param string $Quuid Host QUUID
+     * @param string $Uuid Host UUID
      */
     function __construct()
     {

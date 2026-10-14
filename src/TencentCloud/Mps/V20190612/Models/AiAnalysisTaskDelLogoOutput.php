@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginSubtitlePath(string $OriginSubtitlePath) Set <p>Path of subtitle file extracted from video.</p>
  * @method string getTranslateSubtitlePath() Obtain <p>Path of a subtitle translation file extracted from a video.</p>
  * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) Set <p>Path of a subtitle translation file extracted from a video.</p>
- * @method SubtitlePosition getSubtitlePos() Obtain 
- * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) Set 
- * @method string getVoiceClonedVideo() Obtain 
- * @method void setVoiceClonedVideo(string $VoiceClonedVideo) Set 
- * @method string getVoiceClonedMarkFile() Obtain 
- * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) Set 
+ * @method SubtitlePosition getSubtitlePos() Obtain <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+ * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) Set <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+ * @method string getVoiceClonedVideo() Obtain <p>File URL of the video after voice type cloning</p>
+ * @method void setVoiceClonedVideo(string $VoiceClonedVideo) Set <p>File URL of the video after voice type cloning</p>
+ * @method string getVoiceClonedMarkFile() Obtain <p>File address of the voice type clone annotation</p>
+ * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) Set <p>File address of the voice type clone annotation</p>
  * @method string getErasedVideoPath() Obtain <p>Result path of a video for removal only</p>
  * @method void setErasedVideoPath(string $ErasedVideoPath) Set <p>Result path of a video for removal only</p>
  * @method string getDubbingEditInfoUrl() Obtain <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
@@ -68,17 +68,17 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
     public $TranslateSubtitlePath;
 
     /**
-     * @var SubtitlePosition 
+     * @var SubtitlePosition <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
      */
     public $SubtitlePos;
 
     /**
-     * @var string 
+     * @var string <p>File URL of the video after voice type cloning</p>
      */
     public $VoiceClonedVideo;
 
     /**
-     * @var string 
+     * @var string <p>File address of the voice type clone annotation</p>
      */
     public $VoiceClonedMarkFile;
 
@@ -112,9 +112,9 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
      * @param TaskOutputStorage $OutputStorage <p>Storage location of a file after removal.</p>
      * @param string $OriginSubtitlePath <p>Path of subtitle file extracted from video.</p>
      * @param string $TranslateSubtitlePath <p>Path of a subtitle translation file extracted from a video.</p>
-     * @param SubtitlePosition $SubtitlePos 
-     * @param string $VoiceClonedVideo 
-     * @param string $VoiceClonedMarkFile 
+     * @param SubtitlePosition $SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+     * @param string $VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
+     * @param string $VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
      * @param string $ErasedVideoPath <p>Result path of a video for removal only</p>
      * @param string $DubbingEditInfoUrl <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
      * @param string $FileId <p>FileId of a file after removal.</p>

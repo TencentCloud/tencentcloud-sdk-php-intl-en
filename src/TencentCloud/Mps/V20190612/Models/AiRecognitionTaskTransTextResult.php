@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskTransTextResultInput getInput() Obtain Translation task input information.
  * @method void setInput(AiRecognitionTaskTransTextResultInput $Input) Set Translation task input information.
- * @method AiRecognitionTaskTransTextResultOutput getOutput() Obtain 
- * @method void setOutput(AiRecognitionTaskTransTextResultOutput $Output) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
+ * @method AiRecognitionTaskTransTextResultOutput getOutput() Obtain Translation task output information.
+ * @method void setOutput(AiRecognitionTaskTransTextResultOutput $Output) Set Translation task output information.
+ * @method integer getProgress() Obtain Task progress.
+ * @method void setProgress(integer $Progress) Set Task progress.
  */
 class AiRecognitionTaskTransTextResult extends AbstractModel
 {
@@ -63,12 +63,12 @@ class AiRecognitionTaskTransTextResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskTransTextResultOutput 
+     * @var AiRecognitionTaskTransTextResultOutput Translation task output information.
      */
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Task progress.
      */
     public $Progress;
 
@@ -78,8 +78,8 @@ class AiRecognitionTaskTransTextResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiRecognitionTaskTransTextResultInput $Input Translation task input information.
-     * @param AiRecognitionTaskTransTextResultOutput $Output 
-     * @param integer $Progress 
+     * @param AiRecognitionTaskTransTextResultOutput $Output Translation task output information.
+     * @param integer $Progress Task progress.
      */
     function __construct()
     {

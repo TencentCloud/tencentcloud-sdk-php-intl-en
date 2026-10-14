@@ -18,24 +18,20 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters of the protocol
+ * Parameters for HTTP function support of other access protocols
  *
- * @method WSParams getWSParams() Obtain Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setWSParams(WSParams $WSParams) Set Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method WSParams getWSParams() Obtain Supported parameters of the WebSockets protocol
+ * @method void setWSParams(WSParams $WSParams) Set Supported parameters of the WebSockets protocol
  */
 class ProtocolParams extends AbstractModel
 {
     /**
-     * @var WSParams Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var WSParams Supported parameters of the WebSockets protocol
      */
     public $WSParams;
 
     /**
-     * @param WSParams $WSParams Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param WSParams $WSParams Supported parameters of the WebSockets protocol
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The real-time RTMP streaming information of a flow.
+ * RTMP information of the real-time stream status query API.
  *
- * @method integer getVideoFPS() Obtain The video frame rate.
- * @method void setVideoFPS(integer $VideoFPS) Set The video frame rate.
- * @method integer getAudioFPS() Obtain The audio frame rate.
- * @method void setAudioFPS(integer $AudioFPS) Set The audio frame rate.
+ * @method integer getVideoFPS() Obtain Video frame rate.
+ * @method void setVideoFPS(integer $VideoFPS) Set Video frame rate.
+ * @method integer getAudioFPS() Obtain Audio frame rate.
+ * @method void setAudioFPS(integer $AudioFPS) Set Audio frame rate.
  */
 class FlowRealtimeStatusRTMP extends AbstractModel
 {
     /**
-     * @var integer The video frame rate.
+     * @var integer Video frame rate.
      */
     public $VideoFPS;
 
     /**
-     * @var integer The audio frame rate.
+     * @var integer Audio frame rate.
      */
     public $AudioFPS;
 
     /**
-     * @param integer $VideoFPS The video frame rate.
-     * @param integer $AudioFPS The audio frame rate.
+     * @param integer $VideoFPS Video frame rate.
+     * @param integer $AudioFPS Audio frame rate.
      */
     function __construct()
     {

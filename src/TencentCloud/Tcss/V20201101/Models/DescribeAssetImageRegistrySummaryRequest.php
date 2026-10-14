@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistrySummary request structure.
  *
- * @method array getFilters() Obtain 
- * @method void setFilters(array $Filters) Set 
+ * @method array getFilters() Obtain Filter fields
+ * @method void setFilters(array $Filters) Set Filter fields
  */
 class DescribeAssetImageRegistrySummaryRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Filter fields
      */
     public $Filters;
 
     /**
-     * @param array $Filters 
+     * @param array $Filters Filter fields
      */
     function __construct()
     {

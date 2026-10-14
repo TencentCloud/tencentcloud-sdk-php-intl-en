@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIndexList request structure.
  *
- * @method string getIndexType() Obtain Index type. `auto`: Automated; `normal`: General.
- * @method void setIndexType(string $IndexType) Set Index type. `auto`: Automated; `normal`: General.
+ * @method string getIndexType() Obtain Index type. auto: autonomous index; normal: general index
+ * @method void setIndexType(string $IndexType) Set Index type. auto: autonomous index; normal: general index
  * @method string getInstanceId() Obtain ES cluster ID
  * @method void setInstanceId(string $InstanceId) Set ES cluster ID
- * @method string getIndexName() Obtain Index name. `null` indicates that all indexes are requested.
- * @method void setIndexName(string $IndexName) Set Index name. `null` indicates that all indexes are requested.
- * @method string getUsername() Obtain Username for cluster access
- * @method void setUsername(string $Username) Set Username for cluster access
- * @method string getPassword() Obtain Password for cluster access
- * @method void setPassword(string $Password) Set Password for cluster access
- * @method integer getOffset() Obtain The starting position of paging
- * @method void setOffset(integer $Offset) Set The starting position of paging
- * @method integer getLimit() Obtain The number of results per page
- * @method void setLimit(integer $Limit) Set The number of results per page
- * @method string getOrderBy() Obtain Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
- * @method void setOrderBy(string $OrderBy) Set Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
- * @method array getIndexStatusList() Obtain Filtering by index status
- * @method void setIndexStatusList(array $IndexStatusList) Set Filtering by index status
- * @method string getOrder() Obtain Sorting mode, which can be `asc` and `desc`.
- * @method void setOrder(string $Order) Set Sorting mode, which can be `asc` and `desc`.
+ * @method string getIndexName() Obtain Index name. If this parameter is left empty, all indexes are obtained.
+ * @method void setIndexName(string $IndexName) Set Index name. If this parameter is left empty, all indexes are obtained.
+ * @method string getUsername() Obtain Cluster access username.
+ * @method void setUsername(string $Username) Set Cluster access username.
+ * @method string getPassword() Obtain Cluster access password
+ * @method void setPassword(string $Password) Set Cluster access password
+ * @method integer getOffset() Obtain Paging start position
+ * @method void setOffset(integer $Offset) Set Paging start position
+ * @method integer getLimit() Obtain Number of items displayed per page
+ * @method void setLimit(integer $Limit) Set Number of items displayed per page
+ * @method string getOrderBy() Obtain Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
+ * @method void setOrderBy(string $OrderBy) Set Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
+ * @method array getIndexStatusList() Obtain Filter by index status
+ * @method void setIndexStatusList(array $IndexStatusList) Set Filter by index status
+ * @method string getOrder() Obtain Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
+ * @method void setOrder(string $Order) Set Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
  */
 class DescribeIndexListRequest extends AbstractModel
 {
     /**
-     * @var string Index type. `auto`: Automated; `normal`: General.
+     * @var string Index type. auto: autonomous index; normal: general index
      */
     public $IndexType;
 
@@ -54,56 +54,56 @@ class DescribeIndexListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Index name. `null` indicates that all indexes are requested.
+     * @var string Index name. If this parameter is left empty, all indexes are obtained.
      */
     public $IndexName;
 
     /**
-     * @var string Username for cluster access
+     * @var string Cluster access username.
      */
     public $Username;
 
     /**
-     * @var string Password for cluster access
+     * @var string Cluster access password
      */
     public $Password;
 
     /**
-     * @var integer The starting position of paging
+     * @var integer Paging start position
      */
     public $Offset;
 
     /**
-     * @var integer The number of results per page
+     * @var integer Number of items displayed per page
      */
     public $Limit;
 
     /**
-     * @var string Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+     * @var string Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
      */
     public $OrderBy;
 
     /**
-     * @var array Filtering by index status
+     * @var array Filter by index status
      */
     public $IndexStatusList;
 
     /**
-     * @var string Sorting mode, which can be `asc` and `desc`.
+     * @var string Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
      */
     public $Order;
 
     /**
-     * @param string $IndexType Index type. `auto`: Automated; `normal`: General.
+     * @param string $IndexType Index type. auto: autonomous index; normal: general index
      * @param string $InstanceId ES cluster ID
-     * @param string $IndexName Index name. `null` indicates that all indexes are requested.
-     * @param string $Username Username for cluster access
-     * @param string $Password Password for cluster access
-     * @param integer $Offset The starting position of paging
-     * @param integer $Limit The number of results per page
-     * @param string $OrderBy Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
-     * @param array $IndexStatusList Filtering by index status
-     * @param string $Order Sorting mode, which can be `asc` and `desc`.
+     * @param string $IndexName Index name. If this parameter is left empty, all indexes are obtained.
+     * @param string $Username Cluster access username.
+     * @param string $Password Cluster access password
+     * @param integer $Offset Paging start position
+     * @param integer $Limit Number of items displayed per page
+     * @param string $OrderBy Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
+     * @param array $IndexStatusList Filter by index status
+     * @param string $Order Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
      */
     function __construct()
     {

@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image denoising configuration.
  *
- * @method string getSwitch() Obtain Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+ * @method string getSwitch() Obtain Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain Type, available values:
+ * @method string getType() Obtain Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
- * @method void setType(string $Type) Set Type, available values:
+ * @method void setType(string $Type) Set Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
@@ -40,15 +40,15 @@ Default value: weak.
 class ImageDenoiseConfig extends AbstractModel
 {
     /**
-     * @var string Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+     * @var string Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string Type, available values:
+     * @var string Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
@@ -56,11 +56,11 @@ Default value: weak.
     public $Type;
 
     /**
-     * @param string $Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+     * @param string $Switch Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type Type, available values:
+     * @param string $Type Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.

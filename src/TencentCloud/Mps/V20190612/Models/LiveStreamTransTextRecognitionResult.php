@@ -18,26 +18,26 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream real-time translation result
+ * Real-time translation result of the live stream
  *
  * @method string getText() Obtain Recognized text.
  * @method void setText(string $Text) Set Recognized text.
- * @method float getStartPtsTime() Obtain Start PTS time of a translated fragment, in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a translated fragment, in seconds.
+ * @method float getStartPtsTime() Obtain Start PTS time of a translated segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a translated segment, in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a translated segment, in seconds.
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a translated segment, in seconds.
  * @method float getConfidence() Obtain Confidence of a translated segment. Value range: 0-100.
  * @method void setConfidence(float $Confidence) Set Confidence of a translated segment. Value range: 0-100.
  * @method string getTrans() Obtain Translated text.
  * @method void setTrans(string $Trans) Set Translated text.
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method boolean getSteadyState() Obtain 
- * @method void setSteadyState(boolean $SteadyState) Set 
- * @method string getUserId() Obtain 
- * @method void setUserId(string $UserId) Set 
+ * @method string getStartTime() Obtain Translation start UTC time.
+ * @method void setStartTime(string $StartTime) Set Translation start UTC time.
+ * @method string getEndTime() Obtain UTC time when translation is completed.
+ * @method void setEndTime(string $EndTime) Set UTC time when translation is completed.
+ * @method boolean getSteadyState() Obtain Steady-state tag.
+ * @method void setSteadyState(boolean $SteadyState) Set Steady-state tag.
+ * @method string getUserId() Obtain UserId for real-time translation over websocket and trtc
+ * @method void setUserId(string $UserId) Set UserId for real-time translation over websocket and trtc
  */
 class LiveStreamTransTextRecognitionResult extends AbstractModel
 {
@@ -47,7 +47,7 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
     public $Text;
 
     /**
-     * @var float Start PTS time of a translated fragment, in seconds.
+     * @var float Start PTS time of a translated segment, in seconds.
      */
     public $StartPtsTime;
 
@@ -67,35 +67,35 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
     public $Trans;
 
     /**
-     * @var string 
+     * @var string Translation start UTC time.
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string UTC time when translation is completed.
      */
     public $EndTime;
 
     /**
-     * @var boolean 
+     * @var boolean Steady-state tag.
      */
     public $SteadyState;
 
     /**
-     * @var string 
+     * @var string UserId for real-time translation over websocket and trtc
      */
     public $UserId;
 
     /**
      * @param string $Text Recognized text.
-     * @param float $StartPtsTime Start PTS time of a translated fragment, in seconds.
+     * @param float $StartPtsTime Start PTS time of a translated segment, in seconds.
      * @param float $EndPtsTime End PTS time of a translated segment, in seconds.
      * @param float $Confidence Confidence of a translated segment. Value range: 0-100.
      * @param string $Trans Translated text.
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param boolean $SteadyState 
-     * @param string $UserId 
+     * @param string $StartTime Translation start UTC time.
+     * @param string $EndTime UTC time when translation is completed.
+     * @param boolean $SteadyState Steady-state tag.
+     * @param string $UserId UserId for real-time translation over websocket and trtc
      */
     function __construct()
     {

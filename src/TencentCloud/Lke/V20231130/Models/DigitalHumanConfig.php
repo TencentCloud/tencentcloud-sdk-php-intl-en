@@ -18,44 +18,44 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Digital human configuration
  *
- * @method string getAssetKey() Obtain 
- * @method void setAssetKey(string $AssetKey) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getAvatar() Obtain 
- * @method void setAvatar(string $Avatar) Set 
- * @method string getPreviewUrl() Obtain 
- * @method void setPreviewUrl(string $PreviewUrl) Set 
+ * @method string getAssetKey() Obtain Digital human asset key
+ * @method void setAssetKey(string $AssetKey) Set Digital human asset key
+ * @method string getName() Obtain Digital human name
+ * @method void setName(string $Name) Set Digital human name
+ * @method string getAvatar() Obtain image
+ * @method void setAvatar(string $Avatar) Set image
+ * @method string getPreviewUrl() Obtain Preview image
+ * @method void setPreviewUrl(string $PreviewUrl) Set Preview image
  */
 class DigitalHumanConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Digital human asset key
      */
     public $AssetKey;
 
     /**
-     * @var string 
+     * @var string Digital human name
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string image
      */
     public $Avatar;
 
     /**
-     * @var string 
+     * @var string Preview image
      */
     public $PreviewUrl;
 
     /**
-     * @param string $AssetKey 
-     * @param string $Name 
-     * @param string $Avatar 
-     * @param string $PreviewUrl 
+     * @param string $AssetKey Digital human asset key
+     * @param string $Name Digital human name
+     * @param string $Avatar image
+     * @param string $PreviewUrl Preview image
      */
     function __construct()
     {

@@ -18,26 +18,26 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Orchestration task info
+ * Orchestration task information
  *
  * @method string getTaskId() Obtain Orchestration task ID.
  * @method void setTaskId(string $TaskId) Set Orchestration task ID.
- * @method string getStatus() Obtain Task flow status. Valid values:
+ * @method string getStatus() Obtain Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
- * @method void setStatus(string $Status) Set Task flow status. Valid values:
+ * @method void setStatus(string $Status) Set Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
  * @method integer getErrCode() Obtain An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
  * @method void setErrCode(integer $ErrCode) Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
  * @method string getMessage() Obtain The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
  * @method void setMessage(string $Message) Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
- * @method MediaInputInfo getInputInfo() Obtain 
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
- * @method array getActivityResultSet() Obtain 
- * @method void setActivityResultSet(array $ActivityResultSet) Set 
+ * @method MediaInputInfo getInputInfo() Obtain Information about the target file for media processing.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set Information about the target file for media processing.
+ * @method MediaMetaData getMetaData() Obtain Metadata of the original video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of the original video.
+ * @method array getActivityResultSet() Obtain Output of the orchestration task.
+ * @method void setActivityResultSet(array $ActivityResultSet) Set Output of the orchestration task.
  */
 class ScheduleTask extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ScheduleTask extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Task flow status. Valid values:
+     * @var string Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -64,30 +64,30 @@ class ScheduleTask extends AbstractModel
     public $Message;
 
     /**
-     * @var MediaInputInfo 
+     * @var MediaInputInfo Information about the target file for media processing.
      */
     public $InputInfo;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData Metadata of the original video.
      */
     public $MetaData;
 
     /**
-     * @var array 
+     * @var array Output of the orchestration task.
      */
     public $ActivityResultSet;
 
     /**
      * @param string $TaskId Orchestration task ID.
-     * @param string $Status Task flow status. Valid values:
+     * @param string $Status Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      * @param integer $ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      * @param string $Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
-     * @param MediaInputInfo $InputInfo 
-     * @param MediaMetaData $MetaData 
-     * @param array $ActivityResultSet 
+     * @param MediaInputInfo $InputInfo Information about the target file for media processing.
+     * @param MediaMetaData $MetaData Metadata of the original video.
+     * @param array $ActivityResultSet Output of the orchestration task.
      */
     function __construct()
     {

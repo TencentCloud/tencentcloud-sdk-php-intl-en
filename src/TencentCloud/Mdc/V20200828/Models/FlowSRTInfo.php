@@ -18,204 +18,220 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The SRT streaming performance data.
+ * SRT quality data in the transport stream.
  *
- * @method integer getTimestamp() Obtain The timestamp (seconds).
- * @method void setTimestamp(integer $Timestamp) Set The timestamp (seconds).
- * @method integer getSendPacketLossRate() Obtain The packet loss rate for sending.
- * @method void setSendPacketLossRate(integer $SendPacketLossRate) Set The packet loss rate for sending.
- * @method integer getSendRetransmissionRate() Obtain The retry rate for sending.
- * @method void setSendRetransmissionRate(integer $SendRetransmissionRate) Set The retry rate for sending.
- * @method integer getRecvPacketLossRate() Obtain The packet loss rate for receiving.
- * @method void setRecvPacketLossRate(integer $RecvPacketLossRate) Set The packet loss rate for receiving.
- * @method integer getRecvRetransmissionRate() Obtain The retry rate for receiving.
- * @method void setRecvRetransmissionRate(integer $RecvRetransmissionRate) Set The retry rate for receiving.
- * @method integer getRTT() Obtain The peer RTT.
- * @method void setRTT(integer $RTT) Set The peer RTT.
- * @method string getSessionId() Obtain The ID of a push session.
- * @method void setSessionId(string $SessionId) Set The ID of a push session.
- * @method integer getSendPacketDropNumber() Obtain The number of dropped packets for sending.
- * @method void setSendPacketDropNumber(integer $SendPacketDropNumber) Set The number of dropped packets for sending.
- * @method integer getRecvPacketDropNumber() Obtain The number of dropped packets for receiving.
- * @method void setRecvPacketDropNumber(integer $RecvPacketDropNumber) Set The number of dropped packets for receiving.
- * @method float getBandwidth() Obtain Bandwidth
- * @method void setBandwidth(float $Bandwidth) Set Bandwidth
- * @method float getSendBandwidth() Obtain transmit bandwidth
- * @method void setSendBandwidth(float $SendBandwidth) Set transmit bandwidth
- * @method float getRecvBandwidth() Obtain Receiving bandwidth
- * @method void setRecvBandwidth(float $RecvBandwidth) Set Receiving bandwidth
- * @method integer getSendPackets() Obtain Sent packet count
- * @method void setSendPackets(integer $SendPackets) Set Sent packet count
- * @method integer getRecvPackets() Obtain Received packets
- * @method void setRecvPackets(integer $RecvPackets) Set Received packets
- * @method integer getSendLostPackets() Obtain Sent lost packets
- * @method void setSendLostPackets(integer $SendLostPackets) Set Sent lost packets
- * @method integer getRecvLostPackets() Obtain accept lost packets
- * @method void setRecvLostPackets(integer $RecvLostPackets) Set accept lost packets
- * @method integer getSendRetransmitPackets() Obtain Retransmitted packet count
- * @method void setSendRetransmitPackets(integer $SendRetransmitPackets) Set Retransmitted packet count
- * @method integer getRecvRetransmitPackets() Obtain Retransmitted packets received
- * @method void setRecvRetransmitPackets(integer $RecvRetransmitPackets) Set Retransmitted packets received
- * @method integer getFlightSize() Obtain Window size
- * @method void setFlightSize(integer $FlightSize) Set Window size
- * @method integer getCongestionWindow() Obtain Congestion window
- * @method void setCongestionWindow(integer $CongestionWindow) Set Congestion window
- * @method integer getSendBuffer() Obtain Sending buffer (ms)
- * @method void setSendBuffer(integer $SendBuffer) Set Sending buffer (ms)
- * @method integer getRecvBuffer() Obtain Receive buffer (ms)
- * @method void setRecvBuffer(integer $RecvBuffer) Set Receive buffer (ms)
- * @method integer getSendLatency() Obtain Send delay
- * @method void setSendLatency(integer $SendLatency) Set Send delay
- * @method integer getRecvLatency() Obtain receive latency
- * @method void setRecvLatency(integer $RecvLatency) Set receive latency
+ * @method integer getTimestamp() Obtain <p>Timestamp in seconds.</p>
+ * @method void setTimestamp(integer $Timestamp) Set <p>Timestamp in seconds.</p>
+ * @method integer getSendPacketLossRate() Obtain <p>Packet loss rate on transmitting.</p>
+ * @method void setSendPacketLossRate(integer $SendPacketLossRate) Set <p>Packet loss rate on transmitting.</p>
+ * @method integer getSendRetransmissionRate() Obtain <p>Retransmission rate.</p>
+ * @method void setSendRetransmissionRate(integer $SendRetransmissionRate) Set <p>Retransmission rate.</p>
+ * @method integer getRecvPacketLossRate() Obtain <p>Packet loss rate on receiving.</p>
+ * @method void setRecvPacketLossRate(integer $RecvPacketLossRate) Set <p>Packet loss rate on receiving.</p>
+ * @method integer getRecvRetransmissionRate() Obtain <p>Receiving retransmission rate.</p>
+ * @method void setRecvRetransmissionRate(integer $RecvRetransmissionRate) Set <p>Receiving retransmission rate.</p>
+ * @method integer getRTT() Obtain <p>RTT latency to the peer.</p>
+ * @method void setRTT(integer $RTT) Set <p>RTT latency to the peer.</p>
+ * @method string getSessionId() Obtain <p>Flag the same streaming session.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Flag the same streaming session.</p>
+ * @method integer getSendPacketDropNumber() Obtain <p>Number of discarded packets on sending.</p>
+ * @method void setSendPacketDropNumber(integer $SendPacketDropNumber) Set <p>Number of discarded packets on sending.</p>
+ * @method integer getRecvPacketDropNumber() Obtain <p>Number of received dropped packets.</p>
+ * @method void setRecvPacketDropNumber(integer $RecvPacketDropNumber) Set <p>Number of received dropped packets.</p>
+ * @method float getBandwidth() Obtain <p>Bandwidth.</p>
+ * @method void setBandwidth(float $Bandwidth) Set <p>Bandwidth.</p>
+ * @method float getSendBandwidth() Obtain <p>Transmit bandwidth</p>
+ * @method void setSendBandwidth(float $SendBandwidth) Set <p>Transmit bandwidth</p>
+ * @method float getRecvBandwidth() Obtain <p>Receiving bandwidth</p>
+ * @method void setRecvBandwidth(float $RecvBandwidth) Set <p>Receiving bandwidth</p>
+ * @method integer getSendPackets() Obtain <p>Sent packet count</p>
+ * @method void setSendPackets(integer $SendPackets) Set <p>Sent packet count</p>
+ * @method integer getRecvPackets() Obtain <p>Number of received packets</p>
+ * @method void setRecvPackets(integer $RecvPackets) Set <p>Number of received packets</p>
+ * @method integer getSendLostPackets() Obtain <p>Sending lost packets</p>
+ * @method void setSendLostPackets(integer $SendLostPackets) Set <p>Sending lost packets</p>
+ * @method integer getRecvLostPackets() Obtain <p>Accept lost packets</p>
+ * @method void setRecvLostPackets(integer $RecvLostPackets) Set <p>Accept lost packets</p>
+ * @method integer getSendRetransmitPackets() Obtain <p>Sent retransmission packet count</p>
+ * @method void setSendRetransmitPackets(integer $SendRetransmitPackets) Set <p>Sent retransmission packet count</p>
+ * @method integer getRecvRetransmitPackets() Obtain <p>Number of received retransmission packets</p>
+ * @method void setRecvRetransmitPackets(integer $RecvRetransmitPackets) Set <p>Number of received retransmission packets</p>
+ * @method integer getFlightSize() Obtain <p>Flight window size</p>
+ * @method void setFlightSize(integer $FlightSize) Set <p>Flight window size</p>
+ * @method integer getCongestionWindow() Obtain <p>Congestion window.</p>
+ * @method void setCongestionWindow(integer $CongestionWindow) Set <p>Congestion window.</p>
+ * @method integer getSendBuffer() Obtain <p>Sending buffer (ms)</p>
+ * @method void setSendBuffer(integer $SendBuffer) Set <p>Sending buffer (ms)</p>
+ * @method integer getRecvBuffer() Obtain <p>Receive buffer (ms)</p>
+ * @method void setRecvBuffer(integer $RecvBuffer) Set <p>Receive buffer (ms)</p>
+ * @method integer getSendLatency() Obtain <p>Sending delay</p>
+ * @method void setSendLatency(integer $SendLatency) Set <p>Sending delay</p>
+ * @method integer getRecvLatency() Obtain <p>Receive latency</p>
+ * @method void setRecvLatency(integer $RecvLatency) Set <p>Receive latency</p>
+ * @method integer getSendNAKPackets() Obtain <p>Sent NAK packet count</p>
+ * @method void setSendNAKPackets(integer $SendNAKPackets) Set <p>Sent NAK packet count</p>
+ * @method integer getRecvNAKPackets() Obtain <p>Number of received NAK packets</p>
+ * @method void setRecvNAKPackets(integer $RecvNAKPackets) Set <p>Number of received NAK packets</p>
  */
 class FlowSRTInfo extends AbstractModel
 {
     /**
-     * @var integer The timestamp (seconds).
+     * @var integer <p>Timestamp in seconds.</p>
      */
     public $Timestamp;
 
     /**
-     * @var integer The packet loss rate for sending.
+     * @var integer <p>Packet loss rate on transmitting.</p>
      */
     public $SendPacketLossRate;
 
     /**
-     * @var integer The retry rate for sending.
+     * @var integer <p>Retransmission rate.</p>
      */
     public $SendRetransmissionRate;
 
     /**
-     * @var integer The packet loss rate for receiving.
+     * @var integer <p>Packet loss rate on receiving.</p>
      */
     public $RecvPacketLossRate;
 
     /**
-     * @var integer The retry rate for receiving.
+     * @var integer <p>Receiving retransmission rate.</p>
      */
     public $RecvRetransmissionRate;
 
     /**
-     * @var integer The peer RTT.
+     * @var integer <p>RTT latency to the peer.</p>
      */
     public $RTT;
 
     /**
-     * @var string The ID of a push session.
+     * @var string <p>Flag the same streaming session.</p>
      */
     public $SessionId;
 
     /**
-     * @var integer The number of dropped packets for sending.
+     * @var integer <p>Number of discarded packets on sending.</p>
      */
     public $SendPacketDropNumber;
 
     /**
-     * @var integer The number of dropped packets for receiving.
+     * @var integer <p>Number of received dropped packets.</p>
      */
     public $RecvPacketDropNumber;
 
     /**
-     * @var float Bandwidth
+     * @var float <p>Bandwidth.</p>
      */
     public $Bandwidth;
 
     /**
-     * @var float transmit bandwidth
+     * @var float <p>Transmit bandwidth</p>
      */
     public $SendBandwidth;
 
     /**
-     * @var float Receiving bandwidth
+     * @var float <p>Receiving bandwidth</p>
      */
     public $RecvBandwidth;
 
     /**
-     * @var integer Sent packet count
+     * @var integer <p>Sent packet count</p>
      */
     public $SendPackets;
 
     /**
-     * @var integer Received packets
+     * @var integer <p>Number of received packets</p>
      */
     public $RecvPackets;
 
     /**
-     * @var integer Sent lost packets
+     * @var integer <p>Sending lost packets</p>
      */
     public $SendLostPackets;
 
     /**
-     * @var integer accept lost packets
+     * @var integer <p>Accept lost packets</p>
      */
     public $RecvLostPackets;
 
     /**
-     * @var integer Retransmitted packet count
+     * @var integer <p>Sent retransmission packet count</p>
      */
     public $SendRetransmitPackets;
 
     /**
-     * @var integer Retransmitted packets received
+     * @var integer <p>Number of received retransmission packets</p>
      */
     public $RecvRetransmitPackets;
 
     /**
-     * @var integer Window size
+     * @var integer <p>Flight window size</p>
      */
     public $FlightSize;
 
     /**
-     * @var integer Congestion window
+     * @var integer <p>Congestion window.</p>
      */
     public $CongestionWindow;
 
     /**
-     * @var integer Sending buffer (ms)
+     * @var integer <p>Sending buffer (ms)</p>
      */
     public $SendBuffer;
 
     /**
-     * @var integer Receive buffer (ms)
+     * @var integer <p>Receive buffer (ms)</p>
      */
     public $RecvBuffer;
 
     /**
-     * @var integer Send delay
+     * @var integer <p>Sending delay</p>
      */
     public $SendLatency;
 
     /**
-     * @var integer receive latency
+     * @var integer <p>Receive latency</p>
      */
     public $RecvLatency;
 
     /**
-     * @param integer $Timestamp The timestamp (seconds).
-     * @param integer $SendPacketLossRate The packet loss rate for sending.
-     * @param integer $SendRetransmissionRate The retry rate for sending.
-     * @param integer $RecvPacketLossRate The packet loss rate for receiving.
-     * @param integer $RecvRetransmissionRate The retry rate for receiving.
-     * @param integer $RTT The peer RTT.
-     * @param string $SessionId The ID of a push session.
-     * @param integer $SendPacketDropNumber The number of dropped packets for sending.
-     * @param integer $RecvPacketDropNumber The number of dropped packets for receiving.
-     * @param float $Bandwidth Bandwidth
-     * @param float $SendBandwidth transmit bandwidth
-     * @param float $RecvBandwidth Receiving bandwidth
-     * @param integer $SendPackets Sent packet count
-     * @param integer $RecvPackets Received packets
-     * @param integer $SendLostPackets Sent lost packets
-     * @param integer $RecvLostPackets accept lost packets
-     * @param integer $SendRetransmitPackets Retransmitted packet count
-     * @param integer $RecvRetransmitPackets Retransmitted packets received
-     * @param integer $FlightSize Window size
-     * @param integer $CongestionWindow Congestion window
-     * @param integer $SendBuffer Sending buffer (ms)
-     * @param integer $RecvBuffer Receive buffer (ms)
-     * @param integer $SendLatency Send delay
-     * @param integer $RecvLatency receive latency
+     * @var integer <p>Sent NAK packet count</p>
+     */
+    public $SendNAKPackets;
+
+    /**
+     * @var integer <p>Number of received NAK packets</p>
+     */
+    public $RecvNAKPackets;
+
+    /**
+     * @param integer $Timestamp <p>Timestamp in seconds.</p>
+     * @param integer $SendPacketLossRate <p>Packet loss rate on transmitting.</p>
+     * @param integer $SendRetransmissionRate <p>Retransmission rate.</p>
+     * @param integer $RecvPacketLossRate <p>Packet loss rate on receiving.</p>
+     * @param integer $RecvRetransmissionRate <p>Receiving retransmission rate.</p>
+     * @param integer $RTT <p>RTT latency to the peer.</p>
+     * @param string $SessionId <p>Flag the same streaming session.</p>
+     * @param integer $SendPacketDropNumber <p>Number of discarded packets on sending.</p>
+     * @param integer $RecvPacketDropNumber <p>Number of received dropped packets.</p>
+     * @param float $Bandwidth <p>Bandwidth.</p>
+     * @param float $SendBandwidth <p>Transmit bandwidth</p>
+     * @param float $RecvBandwidth <p>Receiving bandwidth</p>
+     * @param integer $SendPackets <p>Sent packet count</p>
+     * @param integer $RecvPackets <p>Number of received packets</p>
+     * @param integer $SendLostPackets <p>Sending lost packets</p>
+     * @param integer $RecvLostPackets <p>Accept lost packets</p>
+     * @param integer $SendRetransmitPackets <p>Sent retransmission packet count</p>
+     * @param integer $RecvRetransmitPackets <p>Number of received retransmission packets</p>
+     * @param integer $FlightSize <p>Flight window size</p>
+     * @param integer $CongestionWindow <p>Congestion window.</p>
+     * @param integer $SendBuffer <p>Sending buffer (ms)</p>
+     * @param integer $RecvBuffer <p>Receive buffer (ms)</p>
+     * @param integer $SendLatency <p>Sending delay</p>
+     * @param integer $RecvLatency <p>Receive latency</p>
+     * @param integer $SendNAKPackets <p>Sent NAK packet count</p>
+     * @param integer $RecvNAKPackets <p>Number of received NAK packets</p>
      */
     function __construct()
     {
@@ -324,6 +340,14 @@ class FlowSRTInfo extends AbstractModel
 
         if (array_key_exists("RecvLatency",$param) and $param["RecvLatency"] !== null) {
             $this->RecvLatency = $param["RecvLatency"];
+        }
+
+        if (array_key_exists("SendNAKPackets",$param) and $param["SendNAKPackets"] !== null) {
+            $this->SendNAKPackets = $param["SendNAKPackets"];
+        }
+
+        if (array_key_exists("RecvNAKPackets",$param) and $param["RecvNAKPackets"] !== null) {
+            $this->RecvNAKPackets = $param["RecvNAKPackets"];
         }
     }
 }

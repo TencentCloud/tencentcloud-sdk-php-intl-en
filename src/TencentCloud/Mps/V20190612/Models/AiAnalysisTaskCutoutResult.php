@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Data structure of the video intelligence matting result.
+ * Data structure of the intelligent video masking result.
  *
  * @method string getStatus() Obtain Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
  * @method void setStatus(string $Status) Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message
  * @method AiAnalysisTaskCutoutInput getInput() Obtain Input of the video matting task.
  * @method void setInput(AiAnalysisTaskCutoutInput $Input) Set Input of the video matting task.
- * @method AiAnalysisTaskCutoutOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskCutoutOutput $Output) Set 
+ * @method AiAnalysisTaskCutoutOutput getOutput() Obtain Output of the video matting task.
+ * @method void setOutput(AiAnalysisTaskCutoutOutput $Output) Set Output of the video matting task.
  * @method integer getProgress() Obtain Task progress
  * @method void setProgress(integer $Progress) Set Task progress
  * @method string getBeginProcessTime() Obtain Starting time of task execution, in ISO date and time format.
@@ -60,7 +60,7 @@ class AiAnalysisTaskCutoutResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskCutoutOutput 
+     * @var AiAnalysisTaskCutoutOutput Output of the video matting task.
      */
     public $Output;
 
@@ -84,7 +84,7 @@ class AiAnalysisTaskCutoutResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param string $Message Error message
      * @param AiAnalysisTaskCutoutInput $Input Input of the video matting task.
-     * @param AiAnalysisTaskCutoutOutput $Output 
+     * @param AiAnalysisTaskCutoutOutput $Output Output of the video matting task.
      * @param integer $Progress Task progress
      * @param string $BeginProcessTime Starting time of task execution, in ISO date and time format.
      * @param string $FinishTime Task completion time, in ISO date and time format.

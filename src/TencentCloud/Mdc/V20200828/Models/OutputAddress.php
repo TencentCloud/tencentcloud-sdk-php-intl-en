@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output destination address.
+ * Egress address of the output.
  *
- * @method string getIp() Obtain Output destination IP.
- * @method void setIp(string $Ip) Set Output destination IP.
+ * @method string getIp() Obtain Outbound IP address.
+ * @method void setIp(string $Ip) Set Outbound IP address.
  */
 class OutputAddress extends AbstractModel
 {
     /**
-     * @var string Output destination IP.
+     * @var string Outbound IP address.
      */
     public $Ip;
 
     /**
-     * @param string $Ip Output destination IP.
+     * @param string $Ip Outbound IP address.
      */
     function __construct()
     {

@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeNodeNum(integer $ComputeNodeNum) Set <p>Number of compute nodes</p>
  * @method string getZone() Obtain <p>Region</p>
  * @method void setZone(string $Zone) Set <p>Region</p>
- * @method string getCreateVersion() Obtain 
- * @method void setCreateVersion(string $CreateVersion) Set 
- * @method array getInitParams() Obtain 
- * @method void setInitParams(array $InitParams) Set 
+ * @method string getCreateVersion() Obtain <p>Create an instance version</p>
+ * @method void setCreateVersion(string $CreateVersion) Set <p>Create an instance version</p>
+ * @method array getInitParams() Obtain <p>Initialize instance parameters</p>
+ * @method void setInitParams(array $InitParams) Set <p>Initialize instance parameters</p>
  * @method string getStatus() Obtain <p>Instance status: creating, created, initializing, running, modifying, isolating, isolated, destroying, destroyed</p>
  * @method void setStatus(string $Status) Set <p>Instance status: creating, created, initializing, running, modifying, isolating, isolated, destroying, destroyed</p>
  * @method string getInstanceId() Obtain <p>Instance id</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Instance id</p>
  * @method integer getStorageNodeNum() Obtain <p>Number of storage nodes</p>
  * @method void setStorageNodeNum(integer $StorageNodeNum) Set <p>Number of storage nodes</p>
- * @method array getResourceTags() Obtain 
- * @method void setResourceTags(array $ResourceTags) Set 
- * @method string getInstanceName() Obtain 
- * @method void setInstanceName(string $InstanceName) Set 
+ * @method array getResourceTags() Obtain <p>Instance tag information.</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>Instance tag information.</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
  * @method integer getCpu() Obtain <p>cpu cores of the computing node</p>
  * @method void setCpu(integer $Cpu) Set <p>cpu cores of the computing node</p>
  * @method string getVpcId() Obtain <p>Character type vpcid</p>
@@ -58,30 +58,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set <p>Region of the instance</p>
  * @method string getStatusDesc() Obtain <p>Status description in Chinese of the instance</p>
  * @method void setStatusDesc(string $StatusDesc) Set <p>Status description in Chinese of the instance</p>
- * @method integer getMCCpu() Obtain 
- * @method void setMCCpu(integer $MCCpu) Set 
- * @method integer getMCMem() Obtain 
- * @method void setMCMem(integer $MCMem) Set 
- * @method integer getComputerNodeCpu() Obtain 
- * @method void setComputerNodeCpu(integer $ComputerNodeCpu) Set 
- * @method integer getComputerNodeMem() Obtain 
- * @method void setComputerNodeMem(integer $ComputerNodeMem) Set 
- * @method integer getStorageNodeCpu() Obtain 
- * @method void setStorageNodeCpu(integer $StorageNodeCpu) Set 
- * @method integer getStorageNodeMem() Obtain 
- * @method void setStorageNodeMem(integer $StorageNodeMem) Set 
- * @method integer getMCNum() Obtain 
- * @method void setMCNum(integer $MCNum) Set 
- * @method integer getRenewFlag() Obtain 
- * @method void setRenewFlag(integer $RenewFlag) Set 
+ * @method integer getMCCpu() Obtain <p>CPU cores of the control node</p>
+ * @method void setMCCpu(integer $MCCpu) Set <p>CPU cores of the control node</p>
+ * @method integer getMCMem() Obtain <p>CPU size of the control node</p>
+ * @method void setMCMem(integer $MCMem) Set <p>CPU size of the control node</p>
+ * @method integer getComputerNodeCpu() Obtain <p>CPU cores of the computing node</p>
+ * @method void setComputerNodeCpu(integer $ComputerNodeCpu) Set <p>CPU cores of the computing node</p>
+ * @method integer getComputerNodeMem() Obtain <p>Compute node memory size</p>
+ * @method void setComputerNodeMem(integer $ComputerNodeMem) Set <p>Compute node memory size</p>
+ * @method integer getStorageNodeCpu() Obtain <p>CPU cores of the storage node</p>
+ * @method void setStorageNodeCpu(integer $StorageNodeCpu) Set <p>CPU cores of the storage node</p>
+ * @method integer getStorageNodeMem() Obtain <p>Storage node memory size</p>
+ * @method void setStorageNodeMem(integer $StorageNodeMem) Set <p>Storage node memory size</p>
+ * @method integer getMCNum() Obtain <p>Number of control nodes</p>
+ * @method void setMCNum(integer $MCNum) Set <p>Number of control nodes</p>
+ * @method integer getRenewFlag() Obtain <p>Renewal flag</p>
+ * @method void setRenewFlag(integer $RenewFlag) Set <p>Renewal flag</p>
  * @method string getPayMode() Obtain <p>Payment mode, 0 pay-as-you-go; 1 annual/monthly subscription</p>
  * @method void setPayMode(string $PayMode) Set <p>Payment mode, 0 pay-as-you-go; 1 annual/monthly subscription</p>
- * @method string getAccountTag() Obtain 
- * @method void setAccountTag(string $AccountTag) Set 
- * @method string getInstanceType() Obtain 
- * @method void setInstanceType(string $InstanceType) Set 
- * @method string getStorageType() Obtain 
- * @method void setStorageType(string $StorageType) Set 
+ * @method string getAccountTag() Obtain <p>User tag, inner: internal user; external: external user</p>
+ * @method void setAccountTag(string $AccountTag) Set <p>User tag, inner: internal user; external: external user</p>
+ * @method string getInstanceType() Obtain <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
+ * @method string getStorageType() Obtain <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+ * @method void setStorageType(string $StorageType) Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
  * @method string getDestroyedAt() Obtain <p>&quot;0000-00-00 00:00:00&quot;</p>
  * @method void setDestroyedAt(string $DestroyedAt) Set <p>&quot;0000-00-00 00:00:00&quot;</p>
  * @method string getExpireAt() Obtain <p>&quot;0000-00-00 00:00:00&quot;</p>
@@ -94,16 +94,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplications(integer $Replications) Set <p>1</p>
  * @method integer getFullReplications() Obtain <p>Number of replicas</p>
  * @method void setFullReplications(integer $FullReplications) Set <p>Number of replicas</p>
- * @method integer getAppId() Obtain 
- * @method void setAppId(integer $AppId) Set 
- * @method string getSubAccountUin() Obtain 
- * @method void setSubAccountUin(string $SubAccountUin) Set 
- * @method string getUin() Obtain 
- * @method void setUin(string $Uin) Set 
- * @method array getZones() Obtain 
- * @method void setZones(array $Zones) Set 
- * @method array getNodes() Obtain 
- * @method void setNodes(array $Nodes) Set 
+ * @method integer getAppId() Obtain <p>Account information</p>
+ * @method void setAppId(integer $AppId) Set <p>Account information</p>
+ * @method string getSubAccountUin() Obtain <p>Account information</p>
+ * @method void setSubAccountUin(string $SubAccountUin) Set <p>Account information</p>
+ * @method string getUin() Obtain <p>Account information</p>
+ * @method void setUin(string $Uin) Set <p>Account information</p>
+ * @method array getZones() Obtain <p>AZ information</p>
+ * @method void setZones(array $Zones) Set <p>AZ information</p>
+ * @method array getNodes() Obtain <p>Instance node</p>
+ * @method void setNodes(array $Nodes) Set <p>Instance node</p>
  * @method integer getBinlogStatus() Obtain <p>Whether binlog is on</p>
  * @method void setBinlogStatus(integer $BinlogStatus) Set <p>Whether binlog is on</p>
  * @method integer getCdcNodeCpu() Obtain <p>Number of cdc node cores</p>
@@ -112,12 +112,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcNodeMem(integer $CdcNodeMem) Set <p>cdc node memory size</p>
  * @method integer getCdcNodeNum() Obtain <p>Number of cdc nodes</p>
  * @method void setCdcNodeNum(integer $CdcNodeNum) Set <p>Number of cdc nodes</p>
- * @method integer getAZMode() Obtain 
- * @method void setAZMode(integer $AZMode) Set 
- * @method integer getStandbyFlag() Obtain 
- * @method void setStandbyFlag(integer $StandbyFlag) Set 
- * @method integer getStandbySecondaryNum() Obtain 
- * @method void setStandbySecondaryNum(integer $StandbySecondaryNum) Set 
+ * @method integer getAZMode() Obtain <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
+ * @method void setAZMode(integer $AZMode) Set <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
+ * @method integer getStandbyFlag() Obtain <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
+ * @method void setStandbyFlag(integer $StandbyFlag) Set <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
+ * @method integer getStandbySecondaryNum() Obtain <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
+ * @method void setStandbySecondaryNum(integer $StandbySecondaryNum) Set <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
  * @method integer getColumnarNodeCpu() Obtain <p>cpu cores of the columnar node</p>
  * @method void setColumnarNodeCpu(integer $ColumnarNodeCpu) Set <p>cpu cores of the columnar node</p>
  * @method integer getColumnarNodeMem() Obtain <p>Columnar node memory size</p>
@@ -146,8 +146,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnalysisRelationInfos(array $AnalysisRelationInfos) Set <p>Analysis engine relationship information</p>
  * @method AnalysisInstanceInfo getAnalysisInstanceInfo() Obtain <p>Analysis engine instance information</p>
  * @method void setAnalysisInstanceInfo(AnalysisInstanceInfo $AnalysisInstanceInfo) Set <p>Analysis engine instance information</p>
- * @method array getAutoScaleConfigs() Obtain 
- * @method void setAutoScaleConfigs(array $AutoScaleConfigs) Set 
+ * @method array getAutoScaleConfigs() Obtain <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
+ * @method void setAutoScaleConfigs(array $AutoScaleConfigs) Set <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -163,12 +163,12 @@ class InstanceInfo extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 
+     * @var string <p>Create an instance version</p>
      */
     public $CreateVersion;
 
     /**
-     * @var array 
+     * @var array <p>Initialize instance parameters</p>
      */
     public $InitParams;
 
@@ -188,12 +188,12 @@ class InstanceInfo extends AbstractModel
     public $StorageNodeNum;
 
     /**
-     * @var array 
+     * @var array <p>Instance tag information.</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string 
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
@@ -250,47 +250,47 @@ class InstanceInfo extends AbstractModel
     public $StatusDesc;
 
     /**
-     * @var integer 
+     * @var integer <p>CPU cores of the control node</p>
      * @deprecated
      */
     public $MCCpu;
 
     /**
-     * @var integer 
+     * @var integer <p>CPU size of the control node</p>
      * @deprecated
      */
     public $MCMem;
 
     /**
-     * @var integer 
+     * @var integer <p>CPU cores of the computing node</p>
      * @deprecated
      */
     public $ComputerNodeCpu;
 
     /**
-     * @var integer 
+     * @var integer <p>Compute node memory size</p>
      * @deprecated
      */
     public $ComputerNodeMem;
 
     /**
-     * @var integer 
+     * @var integer <p>CPU cores of the storage node</p>
      */
     public $StorageNodeCpu;
 
     /**
-     * @var integer 
+     * @var integer <p>Storage node memory size</p>
      */
     public $StorageNodeMem;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of control nodes</p>
      * @deprecated
      */
     public $MCNum;
 
     /**
-     * @var integer 
+     * @var integer <p>Renewal flag</p>
      */
     public $RenewFlag;
 
@@ -300,17 +300,17 @@ class InstanceInfo extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string 
+     * @var string <p>User tag, inner: internal user; external: external user</p>
      */
     public $AccountTag;
 
     /**
-     * @var string 
+     * @var string <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public $StorageType;
 
@@ -345,27 +345,27 @@ class InstanceInfo extends AbstractModel
     public $FullReplications;
 
     /**
-     * @var integer 
+     * @var integer <p>Account information</p>
      */
     public $AppId;
 
     /**
-     * @var string 
+     * @var string <p>Account information</p>
      */
     public $SubAccountUin;
 
     /**
-     * @var string 
+     * @var string <p>Account information</p>
      */
     public $Uin;
 
     /**
-     * @var array 
+     * @var array <p>AZ information</p>
      */
     public $Zones;
 
     /**
-     * @var array 
+     * @var array <p>Instance node</p>
      */
     public $Nodes;
 
@@ -393,17 +393,17 @@ class InstanceInfo extends AbstractModel
     public $CdcNodeNum;
 
     /**
-     * @var integer 
+     * @var integer <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
      */
     public $AZMode;
 
     /**
-     * @var integer 
+     * @var integer <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
      */
     public $StandbyFlag;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
      */
     public $StandbySecondaryNum;
 
@@ -479,20 +479,20 @@ class InstanceInfo extends AbstractModel
     public $AnalysisInstanceInfo;
 
     /**
-     * @var array 
+     * @var array <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
      */
     public $AutoScaleConfigs;
 
     /**
      * @param integer $ComputeNodeNum <p>Number of compute nodes</p>
      * @param string $Zone <p>Region</p>
-     * @param string $CreateVersion 
-     * @param array $InitParams 
+     * @param string $CreateVersion <p>Create an instance version</p>
+     * @param array $InitParams <p>Initialize instance parameters</p>
      * @param string $Status <p>Instance status: creating, created, initializing, running, modifying, isolating, isolated, destroying, destroyed</p>
      * @param string $InstanceId <p>Instance id</p>
      * @param integer $StorageNodeNum <p>Number of storage nodes</p>
-     * @param array $ResourceTags 
-     * @param string $InstanceName 
+     * @param array $ResourceTags <p>Instance tag information.</p>
+     * @param string $InstanceName <p>Instance name</p>
      * @param integer $Cpu <p>cpu cores of the computing node</p>
      * @param string $VpcId <p>Character type vpcid</p>
      * @param integer $Mem <p>Computing node mem, in GB</p>
@@ -503,36 +503,36 @@ class InstanceInfo extends AbstractModel
      * @param string $CreateTime <p>Instance Creation Time</p>
      * @param string $Region <p>Region of the instance</p>
      * @param string $StatusDesc <p>Status description in Chinese of the instance</p>
-     * @param integer $MCCpu 
-     * @param integer $MCMem 
-     * @param integer $ComputerNodeCpu 
-     * @param integer $ComputerNodeMem 
-     * @param integer $StorageNodeCpu 
-     * @param integer $StorageNodeMem 
-     * @param integer $MCNum 
-     * @param integer $RenewFlag 
+     * @param integer $MCCpu <p>CPU cores of the control node</p>
+     * @param integer $MCMem <p>CPU size of the control node</p>
+     * @param integer $ComputerNodeCpu <p>CPU cores of the computing node</p>
+     * @param integer $ComputerNodeMem <p>Compute node memory size</p>
+     * @param integer $StorageNodeCpu <p>CPU cores of the storage node</p>
+     * @param integer $StorageNodeMem <p>Storage node memory size</p>
+     * @param integer $MCNum <p>Number of control nodes</p>
+     * @param integer $RenewFlag <p>Renewal flag</p>
      * @param string $PayMode <p>Payment mode, 0 pay-as-you-go; 1 annual/monthly subscription</p>
-     * @param string $AccountTag 
-     * @param string $InstanceType 
-     * @param string $StorageType 
+     * @param string $AccountTag <p>User tag, inner: internal user; external: external user</p>
+     * @param string $InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
+     * @param string $StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      * @param string $DestroyedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
      * @param string $ExpireAt <p>&quot;0000-00-00 00:00:00&quot;</p>
      * @param string $IsolatedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
      * @param string $IsolatedFrom <p>&quot;0000-00-00 00:00:00&quot;</p>
      * @param integer $Replications <p>1</p>
      * @param integer $FullReplications <p>Number of replicas</p>
-     * @param integer $AppId 
-     * @param string $SubAccountUin 
-     * @param string $Uin 
-     * @param array $Zones 
-     * @param array $Nodes 
+     * @param integer $AppId <p>Account information</p>
+     * @param string $SubAccountUin <p>Account information</p>
+     * @param string $Uin <p>Account information</p>
+     * @param array $Zones <p>AZ information</p>
+     * @param array $Nodes <p>Instance node</p>
      * @param integer $BinlogStatus <p>Whether binlog is on</p>
      * @param integer $CdcNodeCpu <p>Number of cdc node cores</p>
      * @param integer $CdcNodeMem <p>cdc node memory size</p>
      * @param integer $CdcNodeNum <p>Number of cdc nodes</p>
-     * @param integer $AZMode 
-     * @param integer $StandbyFlag 
-     * @param integer $StandbySecondaryNum 
+     * @param integer $AZMode <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
+     * @param integer $StandbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
+     * @param integer $StandbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
      * @param integer $ColumnarNodeCpu <p>cpu cores of the columnar node</p>
      * @param integer $ColumnarNodeMem <p>Columnar node memory size</p>
      * @param integer $ColumnarNodeNum <p>Number of columnar nodes</p>
@@ -547,7 +547,7 @@ class InstanceInfo extends AbstractModel
      * @param string $AnalysisMode <p>Analytical engine mode</p><p>Enumeration value:</p><ul><li>libra: LibraDB analytical engine mode</li></ul>
      * @param array $AnalysisRelationInfos <p>Analysis engine relationship information</p>
      * @param AnalysisInstanceInfo $AnalysisInstanceInfo <p>Analysis engine instance information</p>
-     * @param array $AutoScaleConfigs 
+     * @param array $AutoScaleConfigs <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
      */
     function __construct()
     {

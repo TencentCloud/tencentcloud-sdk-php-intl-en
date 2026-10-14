@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Region information
+ * Region information.
  *
- * @method string getName() Obtain Region name
- * @method void setName(string $Name) Set Region name
+ * @method string getName() Obtain Zone name.
+ * @method void setName(string $Name) Set Zone name.
  */
 class RegionInfo extends AbstractModel
 {
     /**
-     * @var string Region name
+     * @var string Zone name.
      */
     public $Name;
 
     /**
-     * @param string $Name Region name
+     * @param string $Name Zone name.
      */
     function __construct()
     {

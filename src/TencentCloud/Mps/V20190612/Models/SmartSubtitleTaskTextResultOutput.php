@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle recognition result.
  *
- * @method array getSegmentSet() Obtain 
- * @method void setSegmentSet(array $SegmentSet) Set 
- * @method array getRecognizeSubtitleResult() Obtain 
- * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) Set 
- * @method array getTransSubtitleResult() Obtain 
- * @method void setTransSubtitleResult(array $TransSubtitleResult) Set 
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+ * @method array getSegmentSet() Obtain <p>List of segments for smart subtitle recognition.</p>
+ * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for smart subtitle recognition.</p>
+ * @method array getRecognizeSubtitleResult() Obtain <p>Subtitle recognition result</p>
+ * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) Set <p>Subtitle recognition result</p>
+ * @method array getTransSubtitleResult() Obtain <p>Translated subtitles</p>
+ * @method void setTransSubtitleResult(array $TransSubtitleResult) Set <p>Translated subtitles</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the subtitle file</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the subtitle file</p>
  */
 class SmartSubtitleTaskTextResultOutput extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>List of segments for smart subtitle recognition.</p>
      */
     public $SegmentSet;
 
     /**
-     * @var array 
+     * @var array <p>Subtitle recognition result</p>
      */
     public $RecognizeSubtitleResult;
 
     /**
-     * @var array 
+     * @var array <p>Translated subtitles</p>
      */
     public $TransSubtitleResult;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage <p>Storage location of the subtitle file</p>
      */
     public $OutputStorage;
 
     /**
-     * @param array $SegmentSet 
-     * @param array $RecognizeSubtitleResult 
-     * @param array $TransSubtitleResult 
-     * @param TaskOutputStorage $OutputStorage 
+     * @param array $SegmentSet <p>List of segments for smart subtitle recognition.</p>
+     * @param array $RecognizeSubtitleResult <p>Subtitle recognition result</p>
+     * @param array $TransSubtitleResult <p>Translated subtitles</p>
+     * @param TaskOutputStorage $OutputStorage <p>Storage location of the subtitle file</p>
      */
     function __construct()
     {

@@ -18,40 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Remove scratch configuration
+ * Scratch removal configuration
  *
- * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+ * @method string getSwitch() Obtain Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method float getIntensity() Obtain 
- * @method void setIntensity(float $Intensity) Set 
+ * @method float getIntensity() Obtain Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
+ * @method void setIntensity(float $Intensity) Set Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
  */
 class ScratchRepairConfig extends AbstractModel
 {
     /**
-     * @var string Capability configuration switch. Valid values:
+     * @var string Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var float 
+     * @var float Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
      */
     public $Intensity;
 
     /**
-     * @param string $Switch Capability configuration switch. Valid values:
+     * @param string $Switch Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-     * @param float $Intensity 
+     * @param float $Intensity Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
      */
     function __construct()
     {

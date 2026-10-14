@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task type for intelligent content moderation
+ * Intelligent content review task type
  *
  * @method integer getDefinition() Obtain Video content review template ID.
  * @method void setDefinition(integer $Definition) Set Video content review template ID.

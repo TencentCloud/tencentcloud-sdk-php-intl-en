@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent shot deconstruction configuration.
+ * Intelligent storyboard deconstruct configuration.
  *
- * @method string getSwitch() Obtain <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
- * @method void setSwitch(string $Switch) Set <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
- * @method integer getProcessIndex() Obtain <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
- * @method void setProcessIndex(integer $ProcessIndex) Set <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+ * @method string getSwitch() Obtain <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method void setSwitch(string $Switch) Set <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method integer getProcessIndex() Obtain <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
+ * @method void setProcessIndex(integer $ProcessIndex) Set <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
  */
 class AiStoryboardConfig extends AbstractModel
 {
     /**
-     * @var string <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @var string <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public $Switch;
 
     /**
-     * @var integer <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+     * @var integer <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
      */
     public $ProcessIndex;
 
     /**
-     * @param string $Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-     * @param integer $ProcessIndex <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+     * @param string $Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @param integer $ProcessIndex <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
      */
     function __construct()
     {

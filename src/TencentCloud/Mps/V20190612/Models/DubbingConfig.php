@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDubbingMode(string $DubbingMode) Set <p>Dubbing type. Available values: FullAutoEmotionClone: fully automated high-emotion clone dubbing; RoleBasedSmartDubbing: intelligent dubbing by role; SingleVoice: specify a single voice type;</p>
  * @method integer getBackgroundVolume() Obtain <p>Background sound volume, range: 0-100</p><p>Default value: 80</p>
  * @method void setBackgroundVolume(integer $BackgroundVolume) Set <p>Background sound volume, range: 0-100</p><p>Default value: 80</p>
- * @method string getSecondaryTuning() Obtain <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
- * @method void setSecondaryTuning(string $SecondaryTuning) Set <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+ * @method string getSecondaryTuning() Obtain <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+ * @method void setSecondaryTuning(string $SecondaryTuning) Set <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
  * @method string getVoiceId() Obtain <p>Specify voice tone</p><p>Valid only for SingleVoice and required for Create</p>
  * @method void setVoiceId(string $VoiceId) Set <p>Specify voice tone</p><p>Valid only for SingleVoice and required for Create</p>
  * @method string getDubbingVersion() Obtain <p>Dubbing version. Available values: v1, v2</p><p>Default value: v2</p><p>Only takes effect in FullAutoEmotionClone (fully automated high-emotion clone dubbing) mode</p>
@@ -44,7 +44,7 @@ class DubbingConfig extends AbstractModel
     public $BackgroundVolume;
 
     /**
-     * @var string <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+     * @var string <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
      */
     public $SecondaryTuning;
 
@@ -61,7 +61,7 @@ class DubbingConfig extends AbstractModel
     /**
      * @param string $DubbingMode <p>Dubbing type. Available values: FullAutoEmotionClone: fully automated high-emotion clone dubbing; RoleBasedSmartDubbing: intelligent dubbing by role; SingleVoice: specify a single voice type;</p>
      * @param integer $BackgroundVolume <p>Background sound volume, range: 0-100</p><p>Default value: 80</p>
-     * @param string $SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+     * @param string $SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
      * @param string $VoiceId <p>Specify voice tone</p><p>Valid only for SingleVoice and required for Create</p>
      * @param string $DubbingVersion <p>Dubbing version. Available values: v1, v2</p><p>Default value: v2</p><p>Only takes effect in FullAutoEmotionClone (fully automated high-emotion clone dubbing) mode</p>
      */

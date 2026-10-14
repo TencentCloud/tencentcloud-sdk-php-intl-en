@@ -20,49 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageRegistryScanTaskOneKey request structure.
  *
- * @method boolean getAll() Obtain Whether to scan all images
- * @method void setAll(boolean $All) Set Whether to scan all images
- * @method array getImages() Obtain List of scanned images
- * @method void setImages(array $Images) Set List of scanned images
- * @method array getScanType() Obtain Array of scan types
- * @method void setScanType(array $ScanType) Set Array of scan types
- * @method array getId() Obtain List of IDs of scanned images
- * @method void setId(array $Id) Set List of IDs of scanned images
+ * @method boolean getAll() Obtain Scan All Images (Deprecated)
+ * @method void setAll(boolean $All) Set Scan All Images (Deprecated)
+ * @method array getImages() Obtain Scanned Image List
+ * @method void setImages(array $Images) Set Scanned Image List
+ * @method array getScanType() Obtain Type Array for scanning
+ * @method void setScanType(array $ScanType) Set Type Array for scanning
+ * @method array getId() Obtain Scanned Image List ID
+ * @method void setId(array $Id) Set Scanned Image List ID
  * @method array getExcludeIDs() Obtain List of image IDs excluded from scanning.
  * @method void setExcludeIDs(array $ExcludeIDs) Set List of image IDs excluded from scanning.
- * @method boolean getIsLatest() Obtain 
- * @method void setIsLatest(boolean $IsLatest) Set 
- * @method integer getScanScope() Obtain 
- * @method void setScanScope(integer $ScanScope) Set 
- * @method array getRegistryType() Obtain 
- * @method void setRegistryType(array $RegistryType) Set 
- * @method array getNamespace() Obtain 
- * @method void setNamespace(array $Namespace) Set 
- * @method boolean getContainerRunning() Obtain 
- * @method void setContainerRunning(boolean $ContainerRunning) Set 
- * @method integer getTimeout() Obtain 
- * @method void setTimeout(integer $Timeout) Set 
+ * @method boolean getIsLatest() Obtain Whether the Latest Image
+ * @method void setIsLatest(boolean $IsLatest) Set Whether the Latest Image
+ * @method integer getScanScope() Obtain Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+ * @method void setScanScope(integer $ScanScope) Set Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+ * @method array getRegistryType() Obtain Repository type
+ * @method void setRegistryType(array $RegistryType) Set Repository type
+ * @method array getNamespace() Obtain Namespace
+ * @method void setNamespace(array $Namespace) Set Namespace
+ * @method boolean getContainerRunning() Obtain Whether There Are Running Containers
+ * @method void setContainerRunning(boolean $ContainerRunning) Set Whether There Are Running Containers
+ * @method integer getTimeout() Obtain Task Timeout Duration Unit (s)
+ * @method void setTimeout(integer $Timeout) Set Task Timeout Duration Unit (s)
  */
 class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
 {
     /**
-     * @var boolean Whether to scan all images
+     * @var boolean Scan All Images (Deprecated)
      * @deprecated
      */
     public $All;
 
     /**
-     * @var array List of scanned images
+     * @var array Scanned Image List
      */
     public $Images;
 
     /**
-     * @var array Array of scan types
+     * @var array Type Array for scanning
      */
     public $ScanType;
 
     /**
-     * @var array List of IDs of scanned images
+     * @var array Scanned Image List ID
      */
     public $Id;
 
@@ -72,47 +72,47 @@ class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     public $ExcludeIDs;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the Latest Image
      */
     public $IsLatest;
 
     /**
-     * @var integer 
+     * @var integer Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
      */
     public $ScanScope;
 
     /**
-     * @var array 
+     * @var array Repository type
      */
     public $RegistryType;
 
     /**
-     * @var array 
+     * @var array Namespace
      */
     public $Namespace;
 
     /**
-     * @var boolean 
+     * @var boolean Whether There Are Running Containers
      */
     public $ContainerRunning;
 
     /**
-     * @var integer 
+     * @var integer Task Timeout Duration Unit (s)
      */
     public $Timeout;
 
     /**
-     * @param boolean $All Whether to scan all images
-     * @param array $Images List of scanned images
-     * @param array $ScanType Array of scan types
-     * @param array $Id List of IDs of scanned images
+     * @param boolean $All Scan All Images (Deprecated)
+     * @param array $Images Scanned Image List
+     * @param array $ScanType Type Array for scanning
+     * @param array $Id Scanned Image List ID
      * @param array $ExcludeIDs List of image IDs excluded from scanning.
-     * @param boolean $IsLatest 
-     * @param integer $ScanScope 
-     * @param array $RegistryType 
-     * @param array $Namespace 
-     * @param boolean $ContainerRunning 
-     * @param integer $Timeout 
+     * @param boolean $IsLatest Whether the Latest Image
+     * @param integer $ScanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+     * @param array $RegistryType Repository type
+     * @param array $Namespace Namespace
+     * @param boolean $ContainerRunning Whether There Are Running Containers
+     * @param integer $Timeout Task Timeout Duration Unit (s)
      */
     function __construct()
     {

@@ -18,10 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming AI timestamp recognition result
+ * Live streaming AI timestamp recognition result.
  *
- * @method string getId() Obtain Timestamp events.
- * @method void setId(string $Id) Set Timestamp events.
+ * @method string getId() Obtain Timestamp event.
+ * @method void setId(string $Id) Set Timestamp event.
  * @method float getStartPtsTime() Obtain Start PTS time of a recognized segment, in seconds.
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a recognized segment, in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a recognized segment, in seconds.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class LiveStreamTagRecognitionResult extends AbstractModel
 {
     /**
-     * @var string Timestamp events.
+     * @var string Timestamp event.
      */
     public $Id;
 
@@ -52,7 +52,7 @@ class LiveStreamTagRecognitionResult extends AbstractModel
     public $Confidence;
 
     /**
-     * @param string $Id Timestamp events.
+     * @param string $Id Timestamp event.
      * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
      * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
      * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.

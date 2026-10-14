@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizePhilippinesVoteIDOCR request structure.
  *
- * @method boolean getReturnHeadImage() Obtain Whether to return the identity photo.
- * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to return the identity photo.
+ * @method boolean getReturnHeadImage() Obtain Whether to return the portrait photo.
+ * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to return the portrait photo.
  * @method string getImageBase64() Obtain The Base64-encoded value of an image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
@@ -44,7 +44,7 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
 class RecognizePhilippinesVoteIDOCRRequest extends AbstractModel
 {
     /**
-     * @var boolean Whether to return the identity photo.
+     * @var boolean Whether to return the portrait photo.
      */
     public $ReturnHeadImage;
 
@@ -66,7 +66,7 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
     public $ImageUrl;
 
     /**
-     * @param boolean $ReturnHeadImage Whether to return the identity photo.
+     * @param boolean $ReturnHeadImage Whether to return the portrait photo.
      * @param string $ImageBase64 The Base64-encoded value of an image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.

@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image scanning billing information.
  *
- * @method string getInquireKey() Obtain Billing item
- * @method void setInquireKey(string $InquireKey) Set Billing item
- * @method integer getCapcity() Obtain Total Capacity
- * @method void setCapcity(integer $Capcity) Set Total Capacity
+ * @method string getInquireKey() Obtain Billing item.
+ * @method void setInquireKey(string $InquireKey) Set Billing item.
+ * @method integer getCapcity() Obtain Total capacity
+ * @method void setCapcity(integer $Capcity) Set Total capacity
  * @method integer getUseage() Obtain Used amount
  * @method void setUseage(integer $Useage) Set Used amount
  * @method string getStartTime() Obtain Start time.
  * @method void setStartTime(string $StartTime) Set Start time.
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
  * @method string getPurchaseStatus() Obtain Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
  * @method void setPurchaseStatus(string $PurchaseStatus) Set Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
  * @method string getResourceID() Obtain Resource ID
  * @method void setResourceID(string $ResourceID) Set Resource ID
@@ -50,12 +50,12 @@ Isolate
 class ImageScanInquireInfo extends AbstractModel
 {
     /**
-     * @var string Billing item
+     * @var string Billing item.
      */
     public $InquireKey;
 
     /**
-     * @var integer Total Capacity
+     * @var integer Total capacity
      */
     public $Capcity;
 
@@ -70,14 +70,14 @@ class ImageScanInquireInfo extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time
+     * @var string End time.
      */
     public $EndTime;
 
     /**
      * @var string Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
      */
     public $PurchaseStatus;
@@ -103,14 +103,14 @@ Isolate
     public $PayUsage;
 
     /**
-     * @param string $InquireKey Billing item
-     * @param integer $Capcity Total Capacity
+     * @param string $InquireKey Billing item.
+     * @param integer $Capcity Total capacity
      * @param integer $Useage Used amount
      * @param string $StartTime Start time.
-     * @param string $EndTime End time
+     * @param string $EndTime End time.
      * @param string $PurchaseStatus Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
      * @param string $ResourceID Resource ID
      * @param integer $PayNum Number of purchased scans.

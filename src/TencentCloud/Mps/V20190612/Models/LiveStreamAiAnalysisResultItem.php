@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming AI analysis result
+ * Live stream AI analysis result.
  *
  * @method string getType() Obtain Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
 <li>Description: summary.</li>
- * @method array getSegmentResultSet() Obtain 
- * @method void setSegmentResultSet(array $SegmentResultSet) Set 
- * @method array getHighlightResultSet() Obtain 
- * @method void setHighlightResultSet(array $HighlightResultSet) Set 
+ * @method array getSegmentResultSet() Obtain Split result. When `Type` is
+Valid for SegmentRecognition.
+ * @method void setSegmentResultSet(array $SegmentResultSet) Set Split result. When `Type` is
+Valid for SegmentRecognition.
+ * @method array getHighlightResultSet() Obtain Highlight result. This field is valid when Type is set to Highlight.
+ * @method void setHighlightResultSet(array $HighlightResultSet) Set Highlight result. This field is valid when Type is set to Highlight.
  * @method LiveAiAnalysisDescriptionItem getDescriptionResult() Obtain Summary result. It is valid when Type is Description.
  * @method void setDescriptionResult(LiveAiAnalysisDescriptionItem $DescriptionResult) Set Summary result. It is valid when Type is Description.
  */
@@ -46,12 +48,13 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
     public $Type;
 
     /**
-     * @var array 
+     * @var array Split result. When `Type` is
+Valid for SegmentRecognition.
      */
     public $SegmentResultSet;
 
     /**
-     * @var array 
+     * @var array Highlight result. This field is valid when Type is set to Highlight.
      */
     public $HighlightResultSet;
 
@@ -65,8 +68,9 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
 <li>Description: summary.</li>
-     * @param array $SegmentResultSet 
-     * @param array $HighlightResultSet 
+     * @param array $SegmentResultSet Split result. When `Type` is
+Valid for SegmentRecognition.
+     * @param array $HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
      * @param LiveAiAnalysisDescriptionItem $DescriptionResult Summary result. It is valid when Type is Description.
      */
     function __construct()

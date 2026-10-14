@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * For streams with multiple audio/video tracks, you can specify the tracks to use.
  *
- * @method array getAudioPID() Obtain 
- * @method void setAudioPID(array $AudioPID) Set 
- * @method array getVideoPID() Obtain 
- * @method void setVideoPID(array $VideoPID) Set 
+ * @method array getAudioPID() Obtain For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
+ * @method void setAudioPID(array $AudioPID) Set For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
+ * @method array getVideoPID() Obtain For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
+ * @method void setVideoPID(array $VideoPID) Set For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
  */
 class PidSelector extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
      */
     public $AudioPID;
 
     /**
-     * @var array 
+     * @var array For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
      */
     public $VideoPID;
 
     /**
-     * @param array $AudioPID 
-     * @param array $VideoPID 
+     * @param array $AudioPID For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
+     * @param array $VideoPID For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
      */
     function __construct()
     {

@@ -18,156 +18,180 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Auto-backup to COS for ES
+ * ES cos auto backup information
  *
- * @method boolean getIsAutoBackup() Obtain Whether to enable auto-backup to COS
- * @method void setIsAutoBackup(boolean $IsAutoBackup) Set Whether to enable auto-backup to COS
- * @method string getBackupTime() Obtain Auto-backup time (accurate down to the hour), such as "22:00"
- * @method void setBackupTime(string $BackupTime) Set Auto-backup time (accurate down to the hour), such as "22:00"
- * @method string getSnapshotName() Obtain Backup snapshot prefix.
- * @method void setSnapshotName(string $SnapshotName) Set Backup snapshot prefix.
- * @method integer getEsRepositoryType() Obtain Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
- * @method void setEsRepositoryType(integer $EsRepositoryType) Set Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
- * @method string getPaasEsRepository() Obtain Managed snapshot repository name.
- * @method void setPaasEsRepository(string $PaasEsRepository) Set Managed snapshot repository name.
- * @method string getUserEsRepository() Obtain Customer snapshot repository name.
- * @method void setUserEsRepository(string $UserEsRepository) Set Customer snapshot repository name.
- * @method string getCosBasePath() Obtain COS storage folder directory.
- * @method void setCosBasePath(string $CosBasePath) Set COS storage folder directory.
- * @method integer getStorageDuration() Obtain Snapshot storage cycle in days.
- * @method void setStorageDuration(integer $StorageDuration) Set Snapshot storage cycle in days.
- * @method integer getAutoBackupInterval() Obtain Auto backup frequency in hours.
- * @method void setAutoBackupInterval(integer $AutoBackupInterval) Set Auto backup frequency in hours.
- * @method integer getCosRetention() Obtain Backup lock. Valid values: 0 (not locked) and 1 (locked).
- * @method void setCosRetention(integer $CosRetention) Set Backup lock. Valid values: 0 (not locked) and 1 (locked).
- * @method string getRetainUntilDate() Obtain Lock expiration date, such as 2022-12-10T08:34:48.000Z.
- * @method void setRetainUntilDate(string $RetainUntilDate) Set Lock expiration date, such as 2022-12-10T08:34:48.000Z.
- * @method integer getRetentionGraceTime() Obtain Lock grace period.
- * @method void setRetentionGraceTime(integer $RetentionGraceTime) Set Lock grace period.
- * @method integer getRemoteCos() Obtain Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
- * @method void setRemoteCos(integer $RemoteCos) Set Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
- * @method string getRemoteCosRegion() Obtain Region name for cross-region backup, such as ap-guangzhou.
- * @method void setRemoteCosRegion(string $RemoteCosRegion) Set Region name for cross-region backup, such as ap-guangzhou.
- * @method string getStrategyName() Obtain Policy name.
- * @method void setStrategyName(string $StrategyName) Set Policy name.
- * @method string getIndices() Obtain Backup index list. If left empty, it means to back up all indexes.
- * @method void setIndices(string $Indices) Set Backup index list. If left empty, it means to back up all indexes.
- * @method integer getMultiAz() Obtain 
- * @method void setMultiAz(integer $MultiAz) Set 
- * @method string getCreateTime() Obtain Policy creation time.
- * @method void setCreateTime(string $CreateTime) Set Policy creation time.
+ * @method boolean getIsAutoBackup() Obtain <p>Whether to enable cos automatic backup</p>
+ * @method void setIsAutoBackup(boolean $IsAutoBackup) Set <p>Whether to enable cos automatic backup</p>
+ * @method string getBackupTime() Obtain <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
+ * @method void setBackupTime(string $BackupTime) Set <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
+ * @method string getSnapshotName() Obtain <p>Backup snapshot prefix</p>
+ * @method void setSnapshotName(string $SnapshotName) Set <p>Backup snapshot prefix</p>
+ * @method integer getEsRepositoryType() Obtain <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
+ * @method void setEsRepositoryType(integer $EsRepositoryType) Set <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
+ * @method string getPaasEsRepository() Obtain <p>Managed snapshot repository name.</p>
+ * @method void setPaasEsRepository(string $PaasEsRepository) Set <p>Managed snapshot repository name.</p>
+ * @method string getUserEsRepository() Obtain <p>Customer snapshot repository name</p>
+ * @method void setUserEsRepository(string $UserEsRepository) Set <p>Customer snapshot repository name</p>
+ * @method string getCosBasePath() Obtain <p>cos storage folder directory</p>
+ * @method void setCosBasePath(string $CosBasePath) Set <p>cos storage folder directory</p>
+ * @method integer getStorageDuration() Obtain <p>Snapshot storage cycle in days</p>
+ * @method void setStorageDuration(integer $StorageDuration) Set <p>Snapshot storage cycle in days</p>
+ * @method integer getAutoBackupInterval() Obtain <p>Auto backup frequency in hours.</p>
+ * @method void setAutoBackupInterval(integer $AutoBackupInterval) Set <p>Auto backup frequency in hours.</p>
+ * @method integer getCosRetention() Obtain <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
+ * @method void setCosRetention(integer $CosRetention) Set <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
+ * @method string getRetainUntilDate() Obtain <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
+ * @method void setRetainUntilDate(string $RetainUntilDate) Set <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
+ * @method integer getRetentionGraceTime() Obtain <p>Lock grace period</p>
+ * @method void setRetentionGraceTime(integer $RetentionGraceTime) Set <p>Lock grace period</p>
+ * @method integer getRemoteCos() Obtain <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
+ * @method void setRemoteCos(integer $RemoteCos) Set <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
+ * @method string getRemoteCosRegion() Obtain <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
+ * @method void setRemoteCosRegion(string $RemoteCosRegion) Set <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
+ * @method string getStrategyName() Obtain <p>Policy name.</p>
+ * @method void setStrategyName(string $StrategyName) Set <p>Policy name.</p>
+ * @method string getIndices() Obtain <p>Backup index list. If left empty, it means to back up all indexes.</p>
+ * @method void setIndices(string $Indices) Set <p>Backup index list. If left empty, it means to back up all indexes.</p>
+ * @method integer getMultiAz() Obtain <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
+ * @method void setMultiAz(integer $MultiAz) Set <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
+ * @method string getMaxSnapshotPerSec() Obtain <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+ * @method void setMaxSnapshotPerSec(string $MaxSnapshotPerSec) Set <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+ * @method string getMaxRestorePerSec() Obtain <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+ * @method void setMaxRestorePerSec(string $MaxRestorePerSec) Set <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+ * @method string getCreateTime() Obtain <p>Policy creation time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Policy creation time</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
  */
 class CosBackup extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable auto-backup to COS
+     * @var boolean <p>Whether to enable cos automatic backup</p>
      */
     public $IsAutoBackup;
 
     /**
-     * @var string Auto-backup time (accurate down to the hour), such as "22:00"
+     * @var string <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
      */
     public $BackupTime;
 
     /**
-     * @var string Backup snapshot prefix.
+     * @var string <p>Backup snapshot prefix</p>
      */
     public $SnapshotName;
 
     /**
-     * @var integer Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
+     * @var integer <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
      */
     public $EsRepositoryType;
 
     /**
-     * @var string Managed snapshot repository name.
+     * @var string <p>Managed snapshot repository name.</p>
      */
     public $PaasEsRepository;
 
     /**
-     * @var string Customer snapshot repository name.
+     * @var string <p>Customer snapshot repository name</p>
      */
     public $UserEsRepository;
 
     /**
-     * @var string COS storage folder directory.
+     * @var string <p>cos storage folder directory</p>
      */
     public $CosBasePath;
 
     /**
-     * @var integer Snapshot storage cycle in days.
+     * @var integer <p>Snapshot storage cycle in days</p>
      */
     public $StorageDuration;
 
     /**
-     * @var integer Auto backup frequency in hours.
+     * @var integer <p>Auto backup frequency in hours.</p>
      */
     public $AutoBackupInterval;
 
     /**
-     * @var integer Backup lock. Valid values: 0 (not locked) and 1 (locked).
+     * @var integer <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
      */
     public $CosRetention;
 
     /**
-     * @var string Lock expiration date, such as 2022-12-10T08:34:48.000Z.
+     * @var string <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
      */
     public $RetainUntilDate;
 
     /**
-     * @var integer Lock grace period.
+     * @var integer <p>Lock grace period</p>
      */
     public $RetentionGraceTime;
 
     /**
-     * @var integer Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
+     * @var integer <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public $RemoteCos;
 
     /**
-     * @var string Region name for cross-region backup, such as ap-guangzhou.
+     * @var string <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
      */
     public $RemoteCosRegion;
 
     /**
-     * @var string Policy name.
+     * @var string <p>Policy name.</p>
      */
     public $StrategyName;
 
     /**
-     * @var string Backup index list. If left empty, it means to back up all indexes.
+     * @var string <p>Backup index list. If left empty, it means to back up all indexes.</p>
      */
     public $Indices;
 
     /**
-     * @var integer 
+     * @var integer <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
      */
     public $MultiAz;
 
     /**
-     * @var string Policy creation time.
+     * @var string <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+     */
+    public $MaxSnapshotPerSec;
+
+    /**
+     * @var string <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+     */
+    public $MaxRestorePerSec;
+
+    /**
+     * @var string <p>Policy creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @param boolean $IsAutoBackup Whether to enable auto-backup to COS
-     * @param string $BackupTime Auto-backup time (accurate down to the hour), such as "22:00"
-     * @param string $SnapshotName Backup snapshot prefix.
-     * @param integer $EsRepositoryType Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
-     * @param string $PaasEsRepository Managed snapshot repository name.
-     * @param string $UserEsRepository Customer snapshot repository name.
-     * @param string $CosBasePath COS storage folder directory.
-     * @param integer $StorageDuration Snapshot storage cycle in days.
-     * @param integer $AutoBackupInterval Auto backup frequency in hours.
-     * @param integer $CosRetention Backup lock. Valid values: 0 (not locked) and 1 (locked).
-     * @param string $RetainUntilDate Lock expiration date, such as 2022-12-10T08:34:48.000Z.
-     * @param integer $RetentionGraceTime Lock grace period.
-     * @param integer $RemoteCos Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
-     * @param string $RemoteCosRegion Region name for cross-region backup, such as ap-guangzhou.
-     * @param string $StrategyName Policy name.
-     * @param string $Indices Backup index list. If left empty, it means to back up all indexes.
-     * @param integer $MultiAz 
-     * @param string $CreateTime Policy creation time.
+     * @var string <p>Instance ID.</p>
+     */
+    public $InstanceId;
+
+    /**
+     * @param boolean $IsAutoBackup <p>Whether to enable cos automatic backup</p>
+     * @param string $BackupTime <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
+     * @param string $SnapshotName <p>Backup snapshot prefix</p>
+     * @param integer $EsRepositoryType <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
+     * @param string $PaasEsRepository <p>Managed snapshot repository name.</p>
+     * @param string $UserEsRepository <p>Customer snapshot repository name</p>
+     * @param string $CosBasePath <p>cos storage folder directory</p>
+     * @param integer $StorageDuration <p>Snapshot storage cycle in days</p>
+     * @param integer $AutoBackupInterval <p>Auto backup frequency in hours.</p>
+     * @param integer $CosRetention <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
+     * @param string $RetainUntilDate <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
+     * @param integer $RetentionGraceTime <p>Lock grace period</p>
+     * @param integer $RemoteCos <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * @param string $RemoteCosRegion <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
+     * @param string $StrategyName <p>Policy name.</p>
+     * @param string $Indices <p>Backup index list. If left empty, it means to back up all indexes.</p>
+     * @param integer $MultiAz <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
+     * @param string $MaxSnapshotPerSec <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+     * @param string $MaxRestorePerSec <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+     * @param string $CreateTime <p>Policy creation time</p>
+     * @param string $InstanceId <p>Instance ID.</p>
      */
     function __construct()
     {
@@ -250,8 +274,20 @@ class CosBackup extends AbstractModel
             $this->MultiAz = $param["MultiAz"];
         }
 
+        if (array_key_exists("MaxSnapshotPerSec",$param) and $param["MaxSnapshotPerSec"] !== null) {
+            $this->MaxSnapshotPerSec = $param["MaxSnapshotPerSec"];
+        }
+
+        if (array_key_exists("MaxRestorePerSec",$param) and $param["MaxRestorePerSec"] !== null) {
+            $this->MaxRestorePerSec = $param["MaxRestorePerSec"];
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

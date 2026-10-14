@@ -28,8 +28,14 @@ Default value: ON.
 <li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
+ * @method void setType(string $Type) Set Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
  */
 class VolumeBalanceConfig extends AbstractModel
 {
@@ -42,7 +48,10 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
      */
     public $Type;
 
@@ -51,7 +60,10 @@ Default value: ON.
 <li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type 
+     * @param string $Type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
      */
     function __construct()
     {

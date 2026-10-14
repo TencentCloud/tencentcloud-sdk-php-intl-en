@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
  * @method string getMessage() Obtain <p>Error message.</p>
  * @method void setMessage(string $Message) Set <p>Error message.</p>
- * @method SmartSubtitleTaskTransTextResultOutput getTransTextTask() Obtain 
- * @method void setTransTextTask(SmartSubtitleTaskTransTextResultOutput $TransTextTask) Set 
- * @method SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() Obtain 
- * @method void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask) Set 
+ * @method SmartSubtitleTaskTransTextResultOutput getTransTextTask() Obtain <p>Translation task output information.</p>
+ * @method void setTransTextTask(SmartSubtitleTaskTransTextResultOutput $TransTextTask) Set <p>Translation task output information.</p>
+ * @method SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() Obtain <p>Full speech recognition task output information.</p>
+ * @method void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask) Set <p>Full speech recognition task output information.</p>
  */
 class SmartSubtitleTaskBatchOutput extends AbstractModel
 {
@@ -56,12 +56,12 @@ class SmartSubtitleTaskBatchOutput extends AbstractModel
     public $Message;
 
     /**
-     * @var SmartSubtitleTaskTransTextResultOutput 
+     * @var SmartSubtitleTaskTransTextResultOutput <p>Translation task output information.</p>
      */
     public $TransTextTask;
 
     /**
-     * @var SmartSubtitleTaskAsrFullTextResultOutput 
+     * @var SmartSubtitleTaskAsrFullTextResultOutput <p>Full speech recognition task output information.</p>
      */
     public $AsrFullTextTask;
 
@@ -70,8 +70,8 @@ class SmartSubtitleTaskBatchOutput extends AbstractModel
      * @param string $Status <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
      * @param string $ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      * @param string $Message <p>Error message.</p>
-     * @param SmartSubtitleTaskTransTextResultOutput $TransTextTask 
-     * @param SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask 
+     * @param SmartSubtitleTaskTransTextResultOutput $TransTextTask <p>Translation task output information.</p>
+     * @param SmartSubtitleTaskAsrFullTextResultOutput $AsrFullTextTask <p>Full speech recognition task output information.</p>
      */
     function __construct()
     {

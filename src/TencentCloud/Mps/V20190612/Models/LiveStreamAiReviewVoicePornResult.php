@@ -18,26 +18,26 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream AI content review sound pornographic result
+ * Live stream AI content moderation pornographic result of sound
  *
  * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment, in seconds.
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment, in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a suspected segment, in seconds.
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment, in seconds.
- * @method float getConfidence() Obtain Suspected segment porn score.
- * @method void setConfidence(float $Confidence) Set Suspected segment porn score.
- * @method string getSuggestion() Obtain Pornographic result suggestion for suspected segment, value ranges from...to...
+ * @method float getConfidence() Obtain Porn score of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Porn score of the suspected segment.
+ * @method string getSuggestion() Obtain Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Pornographic result suggestion for suspected segment, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() Obtain Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
- * @method void setLabel(string $Label) Set Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+ * @method string getLabel() Obtain Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
+ * @method void setLabel(string $Label) Set Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
  */
 class LiveStreamAiReviewVoicePornResult extends AbstractModel
 {
@@ -52,12 +52,12 @@ class LiveStreamAiReviewVoicePornResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float Suspected segment porn score.
+     * @var float Porn score of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @var string Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -65,21 +65,21 @@ class LiveStreamAiReviewVoicePornResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+     * @var string Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
      */
     public $Label;
 
     /**
      * @param float $StartPtsTime Start PTS time of a suspected segment, in seconds.
      * @param float $EndPtsTime End PTS time of a suspected segment, in seconds.
-     * @param float $Confidence Suspected segment porn score.
-     * @param string $Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @param float $Confidence Porn score of the suspected segment.
+     * @param string $Suggestion Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+     * @param string $Label Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
      */
     function __construct()
     {

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneVoice request structure.
  *
- * @method string getAudioData() Obtain 
- * @method void setAudioData(string $AudioData) Set 
- * @method string getAudioUrl() Obtain 
- * @method void setAudioUrl(string $AudioUrl) Set 
- * @method string getAudioLang() Obtain 
- * @method void setAudioLang(string $AudioLang) Set 
- * @method VoiceProfile getVoiceProfile() Obtain 
- * @method void setVoiceProfile(VoiceProfile $VoiceProfile) Set 
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
- * @method string getTextLang() Obtain 
- * @method void setTextLang(string $TextLang) Set 
- * @method SyncDubbingOutputOption getOutput() Obtain 
- * @method void setOutput(SyncDubbingOutputOption $Output) Set 
- * @method string getExtParam() Obtain 
- * @method void setExtParam(string $ExtParam) Set 
+ * @method string getAudioData() Obtain <p>Clone audio base64 code</p>
+ * @method void setAudioData(string $AudioData) Set <p>Clone audio base64 code</p>
+ * @method string getAudioUrl() Obtain <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method void setAudioUrl(string $AudioUrl) Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
+ * @method string getAudioLang() Obtain <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
+ * @method void setAudioLang(string $AudioLang) Set <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
+ * @method VoiceProfile getVoiceProfile() Obtain <p>Voice attribute. Use timbre for querying and matching.</p>
+ * @method void setVoiceProfile(VoiceProfile $VoiceProfile) Set <p>Voice attribute. Use timbre for querying and matching.</p>
+ * @method string getText() Obtain <p>Trial text</p>
+ * @method void setText(string $Text) Set <p>Trial text</p>
+ * @method string getTextLang() Obtain <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
+ * @method void setTextLang(string $TextLang) Set <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
+ * @method SyncDubbingOutputOption getOutput() Obtain <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
+ * @method void setOutput(SyncDubbingOutputOption $Output) Set <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
+ * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
  */
 class CloneVoiceRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Clone audio base64 code</p>
      */
     public $AudioData;
 
     /**
-     * @var string 
+     * @var string <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public $AudioUrl;
 
     /**
-     * @var string 
+     * @var string <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
      */
     public $AudioLang;
 
     /**
-     * @var VoiceProfile 
+     * @var VoiceProfile <p>Voice attribute. Use timbre for querying and matching.</p>
      */
     public $VoiceProfile;
 
     /**
-     * @var string 
+     * @var string <p>Trial text</p>
      */
     public $Text;
 
     /**
-     * @var string 
+     * @var string <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
      */
     public $TextLang;
 
     /**
-     * @var SyncDubbingOutputOption 
+     * @var SyncDubbingOutputOption <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string <p>Extended parameters in the format of a JSON string.</p>
      */
     public $ExtParam;
 
     /**
-     * @param string $AudioData 
-     * @param string $AudioUrl 
-     * @param string $AudioLang 
-     * @param VoiceProfile $VoiceProfile 
-     * @param string $Text 
-     * @param string $TextLang 
-     * @param SyncDubbingOutputOption $Output 
-     * @param string $ExtParam 
+     * @param string $AudioData <p>Clone audio base64 code</p>
+     * @param string $AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * @param string $AudioLang <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
+     * @param VoiceProfile $VoiceProfile <p>Voice attribute. Use timbre for querying and matching.</p>
+     * @param string $Text <p>Trial text</p>
+     * @param string $TextLang <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
+     * @param SyncDubbingOutputOption $Output <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
+     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     function __construct()
     {

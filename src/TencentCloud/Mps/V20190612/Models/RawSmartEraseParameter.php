@@ -18,68 +18,68 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom parameters for smart erasing.
  *
- * @method string getEraseType() Obtain 
- * @method void setEraseType(string $EraseType) Set 
- * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain 
- * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) Set 
- * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain 
- * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) Set 
- * @method SmartErasePrivacyConfig getErasePrivacyConfig() Obtain 
- * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) Set 
- * @method integer getSubtitleEmbedId() Obtain 
- * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set 
- * @method integer getUseOriginalPos() Obtain 
- * @method void setUseOriginalPos(integer $UseOriginalPos) Set 
- * @method integer getUseOriginalSize() Obtain 
- * @method void setUseOriginalSize(integer $UseOriginalSize) Set 
+ * @method string getEraseType() Obtain <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method void setEraseType(string $EraseType) Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+ * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) Set <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+ * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+ * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) Set <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+ * @method SmartErasePrivacyConfig getErasePrivacyConfig() Obtain <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+ * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) Set <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+ * @method integer getSubtitleEmbedId() Obtain <p>id of the subtitle removal suppression template.</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>id of the subtitle removal suppression template.</p>
+ * @method integer getUseOriginalPos() Obtain <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+ * @method void setUseOriginalPos(integer $UseOriginalPos) Set <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+ * @method integer getUseOriginalSize() Obtain <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+ * @method void setUseOriginalSize(integer $UseOriginalSize) Set <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
  */
 class RawSmartEraseParameter extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public $EraseType;
 
     /**
-     * @var SmartEraseSubtitleConfig 
+     * @var SmartEraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
      */
     public $EraseSubtitleConfig;
 
     /**
-     * @var SmartEraseWatermarkConfig 
+     * @var SmartEraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
      */
     public $EraseWatermarkConfig;
 
     /**
-     * @var SmartErasePrivacyConfig 
+     * @var SmartErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
      */
     public $ErasePrivacyConfig;
 
     /**
-     * @var integer 
+     * @var integer <p>id of the subtitle removal suppression template.</p>
      */
     public $SubtitleEmbedId;
 
     /**
-     * @var integer 
+     * @var integer <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
      */
     public $UseOriginalPos;
 
     /**
-     * @var integer 
+     * @var integer <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
      */
     public $UseOriginalSize;
 
     /**
-     * @param string $EraseType 
-     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig 
-     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig 
-     * @param SmartErasePrivacyConfig $ErasePrivacyConfig 
-     * @param integer $SubtitleEmbedId 
-     * @param integer $UseOriginalPos 
-     * @param integer $UseOriginalSize 
+     * @param string $EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+     * @param SmartErasePrivacyConfig $ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+     * @param integer $SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     * @param integer $UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     * @param integer $UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
      */
     function __construct()
     {

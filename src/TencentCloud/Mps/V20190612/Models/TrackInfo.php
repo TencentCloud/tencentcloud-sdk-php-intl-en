@@ -20,26 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio track information.
  *
- * @method string getTrackNum() Obtain 
- * @method void setTrackNum(string $TrackNum) Set 
- * @method array getChannelVolume() Obtain 
- * @method void setChannelVolume(array $ChannelVolume) Set 
+ * @method string getTrackNum() Obtain Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+ * @method void setTrackNum(string $TrackNum) Set Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+ * @method array getChannelVolume() Obtain Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
+
+ * @method void setChannelVolume(array $ChannelVolume) Set Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
  */
 class TrackInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
      */
     public $TrackNum;
 
     /**
-     * @var array 
+     * @var array Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
+
      */
     public $ChannelVolume;
 
     /**
-     * @param string $TrackNum 
-     * @param array $ChannelVolume 
+     * @param string $TrackNum Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+     * @param array $ChannelVolume Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
      */
     function __construct()
     {

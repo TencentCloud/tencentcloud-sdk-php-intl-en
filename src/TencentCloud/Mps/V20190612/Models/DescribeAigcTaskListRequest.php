@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcTaskList request structure.
  *
- * @method integer getPageNum() Obtain <p>Query page started</p>
- * @method void setPageNum(integer $PageNum) Set <p>Query page started</p>
- * @method integer getPageSize() Obtain <p>How many data to get on the current page</p>
- * @method void setPageSize(integer $PageSize) Set <p>How many data to get on the current page</p>
- * @method QueryTaskFilter getQueryTaskFilter() Obtain <p>Query filter criteria</p>
- * @method void setQueryTaskFilter(QueryTaskFilter $QueryTaskFilter) Set <p>Query filter criteria</p>
+ * @method integer getPageNum() Obtain <p>Start query page</p>
+ * @method void setPageNum(integer $PageNum) Set <p>Start query page</p>
+ * @method integer getPageSize() Obtain <p>How many data entries to retrieve on the current page</p>
+ * @method void setPageSize(integer $PageSize) Set <p>How many data entries to retrieve on the current page</p>
+ * @method QueryTaskFilter getQueryTaskFilter() Obtain <p>Query filter conditions.</p>
+ * @method void setQueryTaskFilter(QueryTaskFilter $QueryTaskFilter) Set <p>Query filter conditions.</p>
  */
 class DescribeAigcTaskListRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Query page started</p>
+     * @var integer <p>Start query page</p>
      */
     public $PageNum;
 
     /**
-     * @var integer <p>How many data to get on the current page</p>
+     * @var integer <p>How many data entries to retrieve on the current page</p>
      */
     public $PageSize;
 
     /**
-     * @var QueryTaskFilter <p>Query filter criteria</p>
+     * @var QueryTaskFilter <p>Query filter conditions.</p>
      */
     public $QueryTaskFilter;
 
     /**
-     * @param integer $PageNum <p>Query page started</p>
-     * @param integer $PageSize <p>How many data to get on the current page</p>
-     * @param QueryTaskFilter $QueryTaskFilter <p>Query filter criteria</p>
+     * @param integer $PageNum <p>Start query page</p>
+     * @param integer $PageSize <p>How many data entries to retrieve on the current page</p>
+     * @param QueryTaskFilter $QueryTaskFilter <p>Query filter conditions.</p>
      */
     function __construct()
     {

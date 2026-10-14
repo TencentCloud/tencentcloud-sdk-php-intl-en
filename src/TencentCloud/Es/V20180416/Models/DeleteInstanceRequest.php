@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method boolean getLockEnabled() Obtain <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+ * @method void setLockEnabled(boolean $LockEnabled) Set <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+ * @method integer getLockDuration() Obtain <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
+ * @method void setLockDuration(integer $LockDuration) Set <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
  */
 class DeleteInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @var boolean <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+     */
+    public $LockEnabled;
+
+    /**
+     * @var integer <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
+     */
+    public $LockDuration;
+
+    /**
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param boolean $LockEnabled <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+     * @param integer $LockDuration <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DeleteInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("LockEnabled",$param) and $param["LockEnabled"] !== null) {
+            $this->LockEnabled = $param["LockEnabled"];
+        }
+
+        if (array_key_exists("LockDuration",$param) and $param["LockDuration"] !== null) {
+            $this->LockDuration = $param["LockDuration"];
         }
     }
 }

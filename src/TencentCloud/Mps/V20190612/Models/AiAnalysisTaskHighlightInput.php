@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent highlight task input type
+ * Input type of the intelligent highlight task.
  *
  * @method integer getDefinition() Obtain <p>ID of the intelligent video highlight template.</p>
  * @method void setDefinition(integer $Definition) Set <p>ID of the intelligent video highlight template.</p>

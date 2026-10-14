@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming AI Asr word recognition result
+ * Live streaming AI Asr word recognition result.
  *
  * @method string getWord() Obtain Speech keyword.
  * @method void setWord(string $Word) Set Speech keyword.

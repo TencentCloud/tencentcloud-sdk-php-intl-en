@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteStreamLinkOutput request structure.
  *
- * @method string getFlowId() Obtain Flow ID
- * @method void setFlowId(string $FlowId) Set Flow ID
- * @method string getOutputId() Obtain Output ID
- * @method void setOutputId(string $OutputId) Set Output ID
+ * @method string getFlowId() Obtain Stream Id.
+ * @method void setFlowId(string $FlowId) Set Stream Id.
+ * @method string getOutputId() Obtain Output Id.
+ * @method void setOutputId(string $OutputId) Set Output Id.
  */
 class DeleteStreamLinkOutputRequest extends AbstractModel
 {
     /**
-     * @var string Flow ID
+     * @var string Stream Id.
      */
     public $FlowId;
 
     /**
-     * @var string Output ID
+     * @var string Output Id.
      */
     public $OutputId;
 
     /**
-     * @param string $FlowId Flow ID
-     * @param string $OutputId Output ID
+     * @param string $FlowId Stream Id.
+     * @param string $OutputId Output Id.
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent landscape-to-portrait result type.
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method AiAnalysisTaskHorizontalToVerticalInput getInput() Obtain 
- * @method void setInput(AiAnalysisTaskHorizontalToVerticalInput $Input) Set 
- * @method AiAnalysisTaskHorizontalToVerticalOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskHorizontalToVerticalOutput $Output) Set 
+ * @method string getStatus() Obtain Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+ * @method void setStatus(string $Status) Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+ * @method integer getErrCode() Obtain Error code. 0: successful; other values: failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: successful; other values: failed.
+ * @method string getMessage() Obtain Error message
+ * @method void setMessage(string $Message) Set Error message
+ * @method AiAnalysisTaskHorizontalToVerticalInput getInput() Obtain Intelligent horizontal-to-vertical task input.
+ * @method void setInput(AiAnalysisTaskHorizontalToVerticalInput $Input) Set Intelligent horizontal-to-vertical task input.
+ * @method AiAnalysisTaskHorizontalToVerticalOutput getOutput() Obtain Intelligent horizontal-to-vertical task output.
+ * @method void setOutput(AiAnalysisTaskHorizontalToVerticalOutput $Output) Set Intelligent horizontal-to-vertical task output.
  */
 class AiAnalysisTaskHorizontalToVerticalResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code. 0: successful; other values: failed.
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message
      */
     public $Message;
 
     /**
-     * @var AiAnalysisTaskHorizontalToVerticalInput 
+     * @var AiAnalysisTaskHorizontalToVerticalInput Intelligent horizontal-to-vertical task input.
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHorizontalToVerticalOutput 
+     * @var AiAnalysisTaskHorizontalToVerticalOutput Intelligent horizontal-to-vertical task output.
      */
     public $Output;
 
     /**
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param AiAnalysisTaskHorizontalToVerticalInput $Input 
-     * @param AiAnalysisTaskHorizontalToVerticalOutput $Output 
+     * @param string $Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * @param integer $ErrCode Error code. 0: successful; other values: failed.
+     * @param string $Message Error message
+     * @param AiAnalysisTaskHorizontalToVerticalInput $Input Intelligent horizontal-to-vertical task input.
+     * @param AiAnalysisTaskHorizontalToVerticalOutput $Output Intelligent horizontal-to-vertical task output.
      */
     function __construct()
     {

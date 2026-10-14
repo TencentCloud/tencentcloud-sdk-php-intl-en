@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edit video task info
+ * Video editing task information
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
@@ -29,17 +29,17 @@ use TencentCloud\Common\AbstractModel;
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
  * @method integer getErrCode() Obtain Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method EditMediaTaskInput getInput() Obtain Input for video editing tasks.
- * @method void setInput(EditMediaTaskInput $Input) Set Input for video editing tasks.
- * @method EditMediaTaskOutput getOutput() Obtain 
- * @method void setOutput(EditMediaTaskOutput $Output) Set 
+ * @method EditMediaTaskInput getInput() Obtain Input for a video editing task.
+ * @method void setInput(EditMediaTaskInput $Input) Set Input for a video editing task.
+ * @method EditMediaTaskOutput getOutput() Obtain Output of the video editing task.
+ * @method void setOutput(EditMediaTaskOutput $Output) Set Output of the video editing task.
  */
 class EditMediaTask extends AbstractModel
 {
@@ -57,8 +57,8 @@ class EditMediaTask extends AbstractModel
 
     /**
      * @var integer Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      */
     public $ErrCode;
 
@@ -68,12 +68,12 @@ class EditMediaTask extends AbstractModel
     public $Message;
 
     /**
-     * @var EditMediaTaskInput Input for video editing tasks.
+     * @var EditMediaTaskInput Input for a video editing task.
      */
     public $Input;
 
     /**
-     * @var EditMediaTaskOutput 
+     * @var EditMediaTaskOutput Output of the video editing task.
      */
     public $Output;
 
@@ -83,11 +83,11 @@ class EditMediaTask extends AbstractModel
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      * @param integer $ErrCode Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      * @param string $Message Error message.
-     * @param EditMediaTaskInput $Input Input for video editing tasks.
-     * @param EditMediaTaskOutput $Output 
+     * @param EditMediaTaskInput $Input Input for a video editing task.
+     * @param EditMediaTaskOutput $Output Output of the video editing task.
      */
     function __construct()
     {

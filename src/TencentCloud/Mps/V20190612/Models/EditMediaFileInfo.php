@@ -18,44 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edit on-demand video file information
+ * Edit video-on-demand file information.
  *
- * @method MediaInputInfo getInputInfo() Obtain Input video information.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Input video information.
- * @method float getStartTimeOffset() Obtain [Edit] task takes effect, video editing start time offset, measurement unit: second.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set [Edit] task takes effect, video editing start time offset, measurement unit: second.
- * @method float getEndTimeOffset() Obtain [Edit] task takes effect, video editing end time offset, measurement unit: second.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set [Edit] task takes effect, video editing end time offset, measurement unit: second.
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
+ * @method MediaInputInfo getInputInfo() Obtain Video input information.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set Video input information.
+ * @method float getStartTimeOffset() Obtain [Edit] task takes effect. Start time offset for video editing, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set [Edit] task takes effect. Start time offset for video editing, in seconds.
+ * @method float getEndTimeOffset() Obtain [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
+ * @method string getId() Obtain [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
+ * @method void setId(string $Id) Set [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
  */
 class EditMediaFileInfo extends AbstractModel
 {
     /**
-     * @var MediaInputInfo Input video information.
+     * @var MediaInputInfo Video input information.
      */
     public $InputInfo;
 
     /**
-     * @var float [Edit] task takes effect, video editing start time offset, measurement unit: second.
+     * @var float [Edit] task takes effect. Start time offset for video editing, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float [Edit] task takes effect, video editing end time offset, measurement unit: second.
+     * @var float [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
      */
     public $EndTimeOffset;
 
     /**
-     * @var string 
+     * @var string [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
      */
     public $Id;
 
     /**
-     * @param MediaInputInfo $InputInfo Input video information.
-     * @param float $StartTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
-     * @param float $EndTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
-     * @param string $Id 
+     * @param MediaInputInfo $InputInfo Video input information.
+     * @param float $StartTimeOffset [Edit] task takes effect. Start time offset for video editing, in seconds.
+     * @param float $EndTimeOffset [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
+     * @param string $Id [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
      */
     function __construct()
     {

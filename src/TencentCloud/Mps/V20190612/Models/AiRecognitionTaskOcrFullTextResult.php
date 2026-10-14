@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskOcrFullTextResultInput getInput() Obtain Input information on the full text recognition task.
  * @method void setInput(AiRecognitionTaskOcrFullTextResultInput $Input) Set Input information on the full text recognition task.
- * @method AiRecognitionTaskOcrFullTextResultOutput getOutput() Obtain 
- * @method void setOutput(AiRecognitionTaskOcrFullTextResultOutput $Output) Set 
+ * @method AiRecognitionTaskOcrFullTextResultOutput getOutput() Obtain Output information on the full text recognition task.
+ * @method void setOutput(AiRecognitionTaskOcrFullTextResultOutput $Output) Set Output information on the full text recognition task.
  */
 class AiRecognitionTaskOcrFullTextResult extends AbstractModel
 {
@@ -61,7 +61,7 @@ class AiRecognitionTaskOcrFullTextResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskOcrFullTextResultOutput 
+     * @var AiRecognitionTaskOcrFullTextResultOutput Output information on the full text recognition task.
      */
     public $Output;
 
@@ -71,7 +71,7 @@ class AiRecognitionTaskOcrFullTextResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiRecognitionTaskOcrFullTextResultInput $Input Input information on the full text recognition task.
-     * @param AiRecognitionTaskOcrFullTextResultOutput $Output 
+     * @param AiRecognitionTaskOcrFullTextResultOutput $Output Output information on the full text recognition task.
      */
     function __construct()
     {

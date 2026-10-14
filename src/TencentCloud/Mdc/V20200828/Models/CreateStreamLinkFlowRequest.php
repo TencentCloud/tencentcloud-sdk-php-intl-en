@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamLinkFlow request structure.
  *
- * @method string getFlowName() Obtain Flow name
- * @method void setFlowName(string $FlowName) Set Flow name
- * @method integer getMaxBandwidth() Obtain Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
- * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
- * @method array getInputGroup() Obtain Flow input group
- * @method void setInputGroup(array $InputGroup) Set Flow input group
- * @method string getEventId() Obtain The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
- * @method void setEventId(string $EventId) Set The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
- * @method array getOutputGroup() Obtain Flow output group.
- * @method void setOutputGroup(array $OutputGroup) Set Flow output group.
+ * @method string getFlowName() Obtain Stream name.
+ * @method void setFlowName(string $FlowName) Set Stream name.
+ * @method integer getMaxBandwidth() Obtain Maximum bandwidth in bps. Options: [10000000, 20000000].
+ * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth in bps. Options: [10000000, 20000000].
+ * @method array getInputGroup() Obtain Input group of a stream.
+ * @method void setInputGroup(array $InputGroup) Set Input group of a stream.
+ * @method string getEventId() Obtain Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
+ * @method void setEventId(string $EventId) Set Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
+ * @method array getOutputGroup() Obtain Output group of the stream.
+ * @method void setOutputGroup(array $OutputGroup) Set Output group of the stream.
  */
 class CreateStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string Flow name
+     * @var string Stream name.
      */
     public $FlowName;
 
     /**
-     * @var integer Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+     * @var integer Maximum bandwidth in bps. Options: [10000000, 20000000].
      */
     public $MaxBandwidth;
 
     /**
-     * @var array Flow input group
+     * @var array Input group of a stream.
      */
     public $InputGroup;
 
     /**
-     * @var string The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     * @var string Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
      */
     public $EventId;
 
     /**
-     * @var array Flow output group.
+     * @var array Output group of the stream.
      */
     public $OutputGroup;
 
     /**
-     * @param string $FlowName Flow name
-     * @param integer $MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
-     * @param array $InputGroup Flow input group
-     * @param string $EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
-     * @param array $OutputGroup Flow output group.
+     * @param string $FlowName Stream name.
+     * @param integer $MaxBandwidth Maximum bandwidth in bps. Options: [10000000, 20000000].
+     * @param array $InputGroup Input group of a stream.
+     * @param string $EventId Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
+     * @param array $OutputGroup Output group of the stream.
      */
     function __construct()
     {

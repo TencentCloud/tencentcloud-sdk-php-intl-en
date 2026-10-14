@@ -18,52 +18,84 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent erasure task
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method RawSmartEraseParameter getRawParameter() Obtain 
- * @method void setRawParameter(RawSmartEraseParameter $RawParameter) Set 
- * @method OverrideEraseParameter getOverrideParameter() Obtain 
- * @method void setOverrideParameter(OverrideEraseParameter $OverrideParameter) Set 
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
- * @method string getOutputObjectPath() Obtain 
- * @method void setOutputObjectPath(string $OutputObjectPath) Set 
+ * @method integer getDefinition() Obtain Smart erasing template id.
+ * @method void setDefinition(integer $Definition) Set Smart erasing template id.
+ * @method RawSmartEraseParameter getRawParameter() Obtain Custom parameter for smart erasing. Valid when Definition is set to 0. This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify smart erasing parameters.
+ * @method void setRawParameter(RawSmartEraseParameter $RawParameter) Set Custom parameter for smart erasing. Valid when Definition is set to 0. This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify smart erasing parameters.
+ * @method OverrideEraseParameter getOverrideParameter() Obtain Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+ * @method void setOverrideParameter(OverrideEraseParameter $OverrideParameter) Set Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+ * @method TaskOutputStorage getOutputStorage() Obtain Target storage for files. If left blank, it inherits the upper-level OutputStorage value.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for files. If left blank, it inherits the upper-level OutputStorage value.
+ * @method string getOutputObjectPath() Obtain Output path of the file, which can be a relative or absolute path.
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+
+**Note**: The `BatchProcessMedia` API is currently not supported.
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path of the file, which can be a relative or absolute path.
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+
+**Note**: The `BatchProcessMedia` API is currently not supported.
  */
 class SmartEraseTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Smart erasing template id.
      */
     public $Definition;
 
     /**
-     * @var RawSmartEraseParameter 
+     * @var RawSmartEraseParameter Custom parameter for smart erasing. Valid when Definition is set to 0. This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify smart erasing parameters.
      */
     public $RawParameter;
 
     /**
-     * @var OverrideEraseParameter 
+     * @var OverrideEraseParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
      */
     public $OverrideParameter;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage Target storage for files. If left blank, it inherits the upper-level OutputStorage value.
      */
     public $OutputStorage;
 
     /**
-     * @var string 
+     * @var string Output path of the file, which can be a relative or absolute path.
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+
+**Note**: The `BatchProcessMedia` API is currently not supported.
      */
     public $OutputObjectPath;
 
     /**
-     * @param integer $Definition 
-     * @param RawSmartEraseParameter $RawParameter 
-     * @param OverrideEraseParameter $OverrideParameter 
-     * @param TaskOutputStorage $OutputStorage 
-     * @param string $OutputObjectPath 
+     * @param integer $Definition Smart erasing template id.
+     * @param RawSmartEraseParameter $RawParameter Custom parameter for smart erasing. Valid when Definition is set to 0. This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify smart erasing parameters.
+     * @param OverrideEraseParameter $OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+     * @param TaskOutputStorage $OutputStorage Target storage for files. If left blank, it inherits the upper-level OutputStorage value.
+     * @param string $OutputObjectPath Output path of the file, which can be a relative or absolute path.
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+
+**Note**: The `BatchProcessMedia` API is currently not supported.
      */
     function __construct()
     {

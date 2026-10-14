@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The SRT input address.
+ * SRT input source address.
  *
- * @method string getIp() Obtain The peer IP.
- * @method void setIp(string $Ip) Set The peer IP.
- * @method integer getPort() Obtain The peer port.
- * @method void setPort(integer $Port) Set The peer port.
+ * @method string getIp() Obtain Peer IP.
+ * @method void setIp(string $Ip) Set Peer IP.
+ * @method integer getPort() Obtain Peer port.
+ * @method void setPort(integer $Port) Set Peer port.
  */
 class SRTSourceAddressResp extends AbstractModel
 {
     /**
-     * @var string The peer IP.
+     * @var string Peer IP.
      */
     public $Ip;
 
     /**
-     * @var integer The peer port.
+     * @var integer Peer port.
      */
     public $Port;
 
     /**
-     * @param string $Ip The peer IP.
-     * @param integer $Port The peer port.
+     * @param string $Ip Peer IP.
+     * @param integer $Port Peer port.
      */
     function __construct()
     {

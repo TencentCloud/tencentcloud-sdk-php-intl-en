@@ -20,106 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances request structure.
  *
- * @method string getZone() Obtain AZ of the cluster instance. If this is not passed in, all AZs are used by default
- * @method void setZone(string $Zone) Set AZ of the cluster instance. If this is not passed in, all AZs are used by default
- * @method array getInstanceIds() Obtain List of cluster instance IDs
- * @method void setInstanceIds(array $InstanceIds) Set List of cluster instance IDs
- * @method array getInstanceNames() Obtain List of cluster instance names
- * @method void setInstanceNames(array $InstanceNames) Set List of cluster instance names
- * @method integer getOffset() Obtain Pagination start value. Default value: 0
- * @method void setOffset(integer $Offset) Set Pagination start value. Default value: 0
- * @method integer getLimit() Obtain Number of entries per page. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of entries per page. Default value: 20
- * @method integer getOrderByKey() Obtain The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
- * @method void setOrderByKey(integer $OrderByKey) Set The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
- * @method integer getOrderByType() Obtain Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
- * @method void setOrderByType(integer $OrderByType) Set Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
- * @method array getTagList() Obtain Node tag information list
- * @method void setTagList(array $TagList) Set Node tag information list
- * @method array getIpList() Obtain VPC VIP list
- * @method void setIpList(array $IpList) Set VPC VIP list
- * @method array getZoneList() Obtain List of availability zones
- * @method void setZoneList(array $ZoneList) Set List of availability zones
- * @method array getHealthStatus() Obtain The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
- * @method void setHealthStatus(array $HealthStatus) Set The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
- * @method array getVpcIds() Obtain VPC IDs
- * @method void setVpcIds(array $VpcIds) Set VPC IDs
+ * @method string getZone() Obtain <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
+ * @method void setZone(string $Zone) Set <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
+ * @method array getInstanceIds() Obtain <p>Cluster instance ID list</p>
+ * @method void setInstanceIds(array $InstanceIds) Set <p>Cluster instance ID list</p>
+ * @method array getInstanceNames() Obtain <p>Cluster instance name list.</p>
+ * @method void setInstanceNames(array $InstanceNames) Set <p>Cluster instance name list.</p>
+ * @method integer getOffset() Obtain <p>Pagination starting value. Default value: 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination starting value. Default value: 0</p>
+ * @method integer getLimit() Obtain <p>Page size. Default value: 20</p>
+ * @method void setLimit(integer $Limit) Set <p>Page size. Default value: 20</p>
+ * @method integer getOrderByKey() Obtain <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
+ * @method void setOrderByKey(integer $OrderByKey) Set <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
+ * @method integer getOrderByType() Obtain <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
+ * @method void setOrderByType(integer $OrderByType) Set <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
+ * @method array getTagList() Obtain <p>Node tag information list</p>
+ * @method void setTagList(array $TagList) Set <p>Node tag information list</p>
+ * @method array getIpList() Obtain <p>Private network vip list</p>
+ * @method void setIpList(array $IpList) Set <p>Private network vip list</p>
+ * @method array getNodeIps() Obtain <p>IP list of cluster nodes</p>
+ * @method void setNodeIps(array $NodeIps) Set <p>IP list of cluster nodes</p>
+ * @method array getZoneList() Obtain <p>Availability zone list</p>
+ * @method void setZoneList(array $ZoneList) Set <p>Availability zone list</p>
+ * @method array getHealthStatus() Obtain <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
+ * @method void setHealthStatus(array $HealthStatus) Set <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
+ * @method array getVpcIds() Obtain <p>Vpc list filter item</p>
+ * @method void setVpcIds(array $VpcIds) Set <p>Vpc list filter item</p>
+ * @method string getCdcId() Obtain <p>cdc cluster id</p>
+ * @method void setCdcId(string $CdcId) Set <p>cdc cluster id</p>
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string AZ of the cluster instance. If this is not passed in, all AZs are used by default
+     * @var string <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
      */
     public $Zone;
 
     /**
-     * @var array List of cluster instance IDs
+     * @var array <p>Cluster instance ID list</p>
      */
     public $InstanceIds;
 
     /**
-     * @var array List of cluster instance names
+     * @var array <p>Cluster instance name list.</p>
      */
     public $InstanceNames;
 
     /**
-     * @var integer Pagination start value. Default value: 0
+     * @var integer <p>Pagination starting value. Default value: 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of entries per page. Default value: 20
+     * @var integer <p>Page size. Default value: 20</p>
      */
     public $Limit;
 
     /**
-     * @var integer The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+     * @var integer <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
      */
     public $OrderByKey;
 
     /**
-     * @var integer Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
+     * @var integer <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
      */
     public $OrderByType;
 
     /**
-     * @var array Node tag information list
+     * @var array <p>Node tag information list</p>
      */
     public $TagList;
 
     /**
-     * @var array VPC VIP list
+     * @var array <p>Private network vip list</p>
      */
     public $IpList;
 
     /**
-     * @var array List of availability zones
+     * @var array <p>IP list of cluster nodes</p>
+     */
+    public $NodeIps;
+
+    /**
+     * @var array <p>Availability zone list</p>
      */
     public $ZoneList;
 
     /**
-     * @var array The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+     * @var array <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
      */
     public $HealthStatus;
 
     /**
-     * @var array VPC IDs
+     * @var array <p>Vpc list filter item</p>
      */
     public $VpcIds;
 
     /**
-     * @param string $Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
-     * @param array $InstanceIds List of cluster instance IDs
-     * @param array $InstanceNames List of cluster instance names
-     * @param integer $Offset Pagination start value. Default value: 0
-     * @param integer $Limit Number of entries per page. Default value: 20
-     * @param integer $OrderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
-     * @param integer $OrderByType Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
-     * @param array $TagList Node tag information list
-     * @param array $IpList VPC VIP list
-     * @param array $ZoneList List of availability zones
-     * @param array $HealthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
-     * @param array $VpcIds VPC IDs
+     * @var string <p>cdc cluster id</p>
+     */
+    public $CdcId;
+
+    /**
+     * @param string $Zone <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
+     * @param array $InstanceIds <p>Cluster instance ID list</p>
+     * @param array $InstanceNames <p>Cluster instance name list.</p>
+     * @param integer $Offset <p>Pagination starting value. Default value: 0</p>
+     * @param integer $Limit <p>Page size. Default value: 20</p>
+     * @param integer $OrderByKey <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
+     * @param integer $OrderByType <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
+     * @param array $TagList <p>Node tag information list</p>
+     * @param array $IpList <p>Private network vip list</p>
+     * @param array $NodeIps <p>IP list of cluster nodes</p>
+     * @param array $ZoneList <p>Availability zone list</p>
+     * @param array $HealthStatus <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
+     * @param array $VpcIds <p>Vpc list filter item</p>
+     * @param string $CdcId <p>cdc cluster id</p>
      */
     function __construct()
     {
@@ -175,6 +191,10 @@ class DescribeInstancesRequest extends AbstractModel
             $this->IpList = $param["IpList"];
         }
 
+        if (array_key_exists("NodeIps",$param) and $param["NodeIps"] !== null) {
+            $this->NodeIps = $param["NodeIps"];
+        }
+
         if (array_key_exists("ZoneList",$param) and $param["ZoneList"] !== null) {
             $this->ZoneList = $param["ZoneList"];
         }
@@ -185,6 +205,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
             $this->VpcIds = $param["VpcIds"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

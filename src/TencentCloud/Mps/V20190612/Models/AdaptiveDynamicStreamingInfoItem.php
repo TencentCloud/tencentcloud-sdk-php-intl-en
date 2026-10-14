@@ -18,12 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive Bitrate Streaming information
+ * Adaptive bitrate streaming information
  *
- * @method integer getDefinition() Obtain Adaptive bitrate streaming specification.
- * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming specification.
- * @method string getPackage() Obtain Packaging format, which may be two kinds: HLS and MPEG-DASH.
- * @method void setPackage(string $Package) Set Packaging format, which may be two kinds: HLS and MPEG-DASH.
+ * @method integer getDefinition() Obtain Adaptive bitstreaming specification.
+ * @method void setDefinition(integer $Definition) Set Adaptive bitstreaming specification.
+ * @method string getPackage() Obtain Packaging format. Possible values: HLS and MPEG-DASH.
+ * @method void setPackage(string $Package) Set Packaging format. Possible values: HLS and MPEG-DASH.
  * @method string getPath() Obtain Playback path.
  * @method void setPath(string $Path) Set Playback path.
  * @method TaskOutputStorage getStorage() Obtain Storage location of the adaptive bitrate stream file.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
     /**
-     * @var integer Adaptive bitrate streaming specification.
+     * @var integer Adaptive bitstreaming specification.
      */
     public $Definition;
 
     /**
-     * @var string Packaging format, which may be two kinds: HLS and MPEG-DASH.
+     * @var string Packaging format. Possible values: HLS and MPEG-DASH.
      */
     public $Package;
 
@@ -52,8 +52,8 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Storage;
 
     /**
-     * @param integer $Definition Adaptive bitrate streaming specification.
-     * @param string $Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
+     * @param integer $Definition Adaptive bitstreaming specification.
+     * @param string $Package Packaging format. Possible values: HLS and MPEG-DASH.
      * @param string $Path Playback path.
      * @param TaskOutputStorage $Storage Storage location of the adaptive bitrate stream file.
      */

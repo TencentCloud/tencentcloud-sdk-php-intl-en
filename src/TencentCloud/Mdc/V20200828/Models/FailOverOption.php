@@ -18,20 +18,22 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * type FailOverOption struct {
+	FailOverType string `json:"FailOverType"` // Newly-added cold/standby COLDSTANDBY, HOTSTANDBY
+}
  *
- * @method string getFailOverType() Obtain 
- * @method void setFailOverType(string $FailOverType) Set 
+ * @method string getFailOverType() Obtain Hot backup
+ * @method void setFailOverType(string $FailOverType) Set Hot backup
  */
 class FailOverOption extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Hot backup
      */
     public $FailOverType;
 
     /**
-     * @param string $FailOverType 
+     * @param string $FailOverType Hot backup
      */
     function __construct()
     {

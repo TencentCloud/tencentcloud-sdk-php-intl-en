@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review Asr text audit suspected segment
+ * Suspected segment of Asr text audit in content review
  *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
  * @method float getConfidence() Obtain Confidence degree of the suspected segment.
  * @method void setConfidence(float $Confidence) Set Confidence degree of the suspected segment.
- * @method string getSuggestion() Obtain Review result suggestion for suspected segment, value ranges from...to...
+ * @method string getSuggestion() Obtain Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Review result suggestion for suspected segment, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getKeywordSet() Obtain Suspicious keyword list.
- * @method void setKeywordSet(array $KeywordSet) Set Suspicious keyword list.
+ * @method array getKeywordSet() Obtain List of suspicious keywords.
+ * @method void setKeywordSet(array $KeywordSet) Set List of suspicious keywords.
  */
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
@@ -55,7 +55,7 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string Review result suggestion for suspected segment, value ranges from...to...
+     * @var string Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -63,7 +63,7 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Suspicious keyword list.
+     * @var array List of suspicious keywords.
      */
     public $KeywordSet;
 
@@ -71,11 +71,11 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
      * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
      * @param float $Confidence Confidence degree of the suspected segment.
-     * @param string $Suggestion Review result suggestion for suspected segment, value ranges from...to...
+     * @param string $Suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $KeywordSet Suspicious keyword list.
+     * @param array $KeywordSet List of suspicious keywords.
      */
     function __construct()
     {

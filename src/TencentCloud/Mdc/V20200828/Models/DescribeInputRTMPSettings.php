@@ -18,36 +18,32 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RTMP configuration information of the queried input
+ * Query the input RTMP configuration message.
  *
- * @method string getAppName() Obtain Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setAppName(string $AppName) Set Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
- * @method string getStreamKey() Obtain StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
- * @method void setStreamKey(string $StreamKey) Set StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+ * @method string getAppName() Obtain RTMP push path.
+ * @method void setAppName(string $AppName) Set RTMP push path.
+ * @method string getStreamKey() Obtain RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
+ * @method void setStreamKey(string $StreamKey) Set RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
  */
 class DescribeInputRTMPSettings extends AbstractModel
 {
     /**
-     * @var string Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string RTMP push path.
      */
     public $AppName;
 
     /**
-     * @var string StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+     * @var string RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
      */
     public $StreamKey;
 
     /**
-     * @param string $AppName Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param string $StreamKey StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+     * @param string $AppName RTMP push path.
+     * @param string $StreamKey RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
      */
     function __construct()
     {

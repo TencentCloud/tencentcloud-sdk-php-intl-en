@@ -18,92 +18,92 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The logs of a flow.
+ * Transmit streaming log information.
  *
- * @method integer getTimestamp() Obtain The timestamp (seconds).
- * @method void setTimestamp(integer $Timestamp) Set The timestamp (seconds).
- * @method string getType() Obtain Whether it is an input or output.
- * @method void setType(string $Type) Set Whether it is an input or output.
- * @method string getInputOutputId() Obtain The input or output ID.
- * @method void setInputOutputId(string $InputOutputId) Set The input or output ID.
- * @method string getProtocol() Obtain The protocol.
- * @method void setProtocol(string $Protocol) Set The protocol.
- * @method string getEventCode() Obtain The event code.
- * @method void setEventCode(string $EventCode) Set The event code.
- * @method string getEventMessage() Obtain The event information.
- * @method void setEventMessage(string $EventMessage) Set The event information.
- * @method string getRemoteIp() Obtain The peer IP.
- * @method void setRemoteIp(string $RemoteIp) Set The peer IP.
- * @method string getRemotePort() Obtain The peer port.
- * @method void setRemotePort(string $RemotePort) Set The peer port.
- * @method string getPipeline() Obtain Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
- * @method void setPipeline(string $Pipeline) Set Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
- * @method string getInputOutputName() Obtain The input or output name.
- * @method void setInputOutputName(string $InputOutputName) Set The input or output name.
+ * @method integer getTimestamp() Obtain Timestamp in seconds.
+ * @method void setTimestamp(integer $Timestamp) Set Timestamp in seconds.
+ * @method string getType() Obtain Input/output type. Valid values: `input`, `output`.
+ * @method void setType(string $Type) Set Input/output type. Valid values: `input`, `output`.
+ * @method string getInputOutputId() Obtain Input or output Id.
+ * @method void setInputOutputId(string $InputOutputId) Set Input or output Id.
+ * @method string getProtocol() Obtain Protocol.
+ * @method void setProtocol(string $Protocol) Set Protocol.
+ * @method string getEventCode() Obtain Event code.
+ * @method void setEventCode(string $EventCode) Set Event code.
+ * @method string getEventMessage() Obtain Event information.
+ * @method void setEventMessage(string $EventMessage) Set Event information.
+ * @method string getRemoteIp() Obtain Peer IP.
+ * @method void setRemoteIp(string $RemoteIp) Set Peer IP.
+ * @method string getRemotePort() Obtain Peer port.
+ * @method void setRemotePort(string $RemotePort) Set Peer port.
+ * @method string getPipeline() Obtain Primary/secondary tunnel. 0: primary, 1: backup.
+ * @method void setPipeline(string $Pipeline) Set Primary/secondary tunnel. 0: primary, 1: backup.
+ * @method string getInputOutputName() Obtain Input or output name.
+ * @method void setInputOutputName(string $InputOutputName) Set Input or output name.
  */
 class FlowLogInfo extends AbstractModel
 {
     /**
-     * @var integer The timestamp (seconds).
+     * @var integer Timestamp in seconds.
      */
     public $Timestamp;
 
     /**
-     * @var string Whether it is an input or output.
+     * @var string Input/output type. Valid values: `input`, `output`.
      */
     public $Type;
 
     /**
-     * @var string The input or output ID.
+     * @var string Input or output Id.
      */
     public $InputOutputId;
 
     /**
-     * @var string The protocol.
+     * @var string Protocol.
      */
     public $Protocol;
 
     /**
-     * @var string The event code.
+     * @var string Event code.
      */
     public $EventCode;
 
     /**
-     * @var string The event information.
+     * @var string Event information.
      */
     public $EventMessage;
 
     /**
-     * @var string The peer IP.
+     * @var string Peer IP.
      */
     public $RemoteIp;
 
     /**
-     * @var string The peer port.
+     * @var string Peer port.
      */
     public $RemotePort;
 
     /**
-     * @var string Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+     * @var string Primary/secondary tunnel. 0: primary, 1: backup.
      */
     public $Pipeline;
 
     /**
-     * @var string The input or output name.
+     * @var string Input or output name.
      */
     public $InputOutputName;
 
     /**
-     * @param integer $Timestamp The timestamp (seconds).
-     * @param string $Type Whether it is an input or output.
-     * @param string $InputOutputId The input or output ID.
-     * @param string $Protocol The protocol.
-     * @param string $EventCode The event code.
-     * @param string $EventMessage The event information.
-     * @param string $RemoteIp The peer IP.
-     * @param string $RemotePort The peer port.
-     * @param string $Pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
-     * @param string $InputOutputName The input or output name.
+     * @param integer $Timestamp Timestamp in seconds.
+     * @param string $Type Input/output type. Valid values: `input`, `output`.
+     * @param string $InputOutputId Input or output Id.
+     * @param string $Protocol Protocol.
+     * @param string $EventCode Event code.
+     * @param string $EventMessage Event information.
+     * @param string $RemoteIp Peer IP.
+     * @param string $RemotePort Peer port.
+     * @param string $Pipeline Primary/secondary tunnel. 0: primary, 1: backup.
+     * @param string $InputOutputName Input or output name.
      */
     function __construct()
     {

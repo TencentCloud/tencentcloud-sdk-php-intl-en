@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Destination address information of RTMP push.
+ * Target address information for RTMP repush.
  *
- * @method string getUrl() Obtain Destination URL of RTMP push in the format of 'rtmp://domain/live'.
- * @method void setUrl(string $Url) Set Destination URL of RTMP push in the format of 'rtmp://domain/live'.
- * @method string getStreamKey() Obtain Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
- * @method void setStreamKey(string $StreamKey) Set Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+ * @method string getUrl() Obtain Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
+ * @method void setUrl(string $Url) Set Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
+ * @method string getStreamKey() Obtain Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
+ * @method void setStreamKey(string $StreamKey) Set Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
  */
 class RTMPAddressDestination extends AbstractModel
 {
     /**
-     * @var string Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+     * @var string Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
      */
     public $Url;
 
     /**
-     * @var string Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+     * @var string Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
      */
     public $StreamKey;
 
     /**
-     * @param string $Url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
-     * @param string $StreamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+     * @param string $Url Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
+     * @param string $StreamKey Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
      */
     function __construct()
     {

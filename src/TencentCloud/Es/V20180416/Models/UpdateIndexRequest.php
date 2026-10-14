@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateIndex request structure.
  *
- * @method string getInstanceId() Obtain ES cluster ID
- * @method void setInstanceId(string $InstanceId) Set ES cluster ID
- * @method string getIndexType() Obtain Type of the index to update. `auto`: Automated; `normal`: General.
- * @method void setIndexType(string $IndexType) Set Type of the index to update. `auto`: Automated; `normal`: General.
- * @method string getIndexName() Obtain Name of the index to update
- * @method void setIndexName(string $IndexName) Set Name of the index to update
- * @method string getUpdateMetaJson() Obtain JSON-formatted index metadata to update, such as `mappings` and `settings`.
- * @method void setUpdateMetaJson(string $UpdateMetaJson) Set JSON-formatted index metadata to update, such as `mappings` and `settings`.
- * @method string getUsername() Obtain Username for cluster access
- * @method void setUsername(string $Username) Set Username for cluster access
- * @method string getPassword() Obtain Password for cluster access
- * @method void setPassword(string $Password) Set Password for cluster access
- * @method boolean getRolloverBackingIndex() Obtain Whether to roll over the backup index
- * @method void setRolloverBackingIndex(boolean $RolloverBackingIndex) Set Whether to roll over the backup index
- * @method boolean getMountIndex() Obtain 
- * @method void setMountIndex(boolean $MountIndex) Set 
- * @method string getIndexUuid() Obtain 
- * @method void setIndexUuid(string $IndexUuid) Set 
- * @method string getBackingIndexName() Obtain 
- * @method void setBackingIndexName(string $BackingIndexName) Set 
+ * @method string getInstanceId() Obtain <p>ES cluster ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ES cluster ID</p>
+ * @method string getIndexType() Obtain <p>Updated index type. auto: autonomous index; normal: general index</p>
+ * @method void setIndexType(string $IndexType) Set <p>Updated index type. auto: autonomous index; normal: general index</p>
+ * @method string getIndexName() Obtain <p>Updated index name</p>
+ * @method void setIndexName(string $IndexName) Set <p>Updated index name</p>
+ * @method string getUpdateMetaJson() Obtain <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
+ * @method void setUpdateMetaJson(string $UpdateMetaJson) Set <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
+ * @method string getUsername() Obtain <p>Cluster access username.</p>
+ * @method void setUsername(string $Username) Set <p>Cluster access username.</p>
+ * @method string getPassword() Obtain <p>Cluster access password</p>
+ * @method void setPassword(string $Password) Set <p>Cluster access password</p>
+ * @method boolean getRolloverBackingIndex() Obtain <p>Whether to scroll the backup index</p>
+ * @method void setRolloverBackingIndex(boolean $RolloverBackingIndex) Set <p>Whether to scroll the backup index</p>
+ * @method boolean getMountIndex() Obtain <p>Whether to retrieve the full uninstall index</p>
+ * @method void setMountIndex(boolean $MountIndex) Set <p>Whether to retrieve the full uninstall index</p>
+ * @method string getIndexUuid() Obtain <p>Index Uuid</p>
+ * @method void setIndexUuid(string $IndexUuid) Set <p>Index Uuid</p>
+ * @method string getBackingIndexName() Obtain <p>Backing index name</p>
+ * @method void setBackingIndexName(string $BackingIndexName) Set <p>Backing index name</p>
  */
 class UpdateIndexRequest extends AbstractModel
 {
     /**
-     * @var string ES cluster ID
+     * @var string <p>ES cluster ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Type of the index to update. `auto`: Automated; `normal`: General.
+     * @var string <p>Updated index type. auto: autonomous index; normal: general index</p>
      */
     public $IndexType;
 
     /**
-     * @var string Name of the index to update
+     * @var string <p>Updated index name</p>
      */
     public $IndexName;
 
     /**
-     * @var string JSON-formatted index metadata to update, such as `mappings` and `settings`.
+     * @var string <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
      */
     public $UpdateMetaJson;
 
     /**
-     * @var string Username for cluster access
+     * @var string <p>Cluster access username.</p>
      */
     public $Username;
 
     /**
-     * @var string Password for cluster access
+     * @var string <p>Cluster access password</p>
      */
     public $Password;
 
     /**
-     * @var boolean Whether to roll over the backup index
+     * @var boolean <p>Whether to scroll the backup index</p>
      */
     public $RolloverBackingIndex;
 
     /**
-     * @var boolean 
+     * @var boolean <p>Whether to retrieve the full uninstall index</p>
      */
     public $MountIndex;
 
     /**
-     * @var string 
+     * @var string <p>Index Uuid</p>
      */
     public $IndexUuid;
 
     /**
-     * @var string 
+     * @var string <p>Backing index name</p>
      */
     public $BackingIndexName;
 
     /**
-     * @param string $InstanceId ES cluster ID
-     * @param string $IndexType Type of the index to update. `auto`: Automated; `normal`: General.
-     * @param string $IndexName Name of the index to update
-     * @param string $UpdateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
-     * @param string $Username Username for cluster access
-     * @param string $Password Password for cluster access
-     * @param boolean $RolloverBackingIndex Whether to roll over the backup index
-     * @param boolean $MountIndex 
-     * @param string $IndexUuid 
-     * @param string $BackingIndexName 
+     * @param string $InstanceId <p>ES cluster ID</p>
+     * @param string $IndexType <p>Updated index type. auto: autonomous index; normal: general index</p>
+     * @param string $IndexName <p>Updated index name</p>
+     * @param string $UpdateMetaJson <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
+     * @param string $Username <p>Cluster access username.</p>
+     * @param string $Password <p>Cluster access password</p>
+     * @param boolean $RolloverBackingIndex <p>Whether to scroll the backup index</p>
+     * @param boolean $MountIndex <p>Whether to retrieve the full uninstall index</p>
+     * @param string $IndexUuid <p>Index Uuid</p>
+     * @param string $BackingIndexName <p>Backing index name</p>
      */
     function __construct()
     {

@@ -18,17 +18,17 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration set information
+ * Configuration group information
  *
- * @method string getType() Obtain Configuration set type, such as `LDAP` and `AD`.
- * @method void setType(string $Type) Set Configuration set type, such as `LDAP` and `AD`.
+ * @method string getType() Obtain Configuration group type, for example, ldap and ad
+ * @method void setType(string $Type) Set Configuration group type, for example, ldap and ad
  * @method string getEsConfig() Obtain "{\"order\":0,\"url\":\"ldap://10.0.1.72:389\",\"bind_dn\":\"cn=admin,dc=tencent,dc=com\",\"user_search.base_dn\":\"dc=tencent,dc=com\",\"user_search.filter\":\"(cn={0})\",\"group_search.base_dn\":\"dc=tencent,dc=com\"}"
  * @method void setEsConfig(string $EsConfig) Set "{\"order\":0,\"url\":\"ldap://10.0.1.72:389\",\"bind_dn\":\"cn=admin,dc=tencent,dc=com\",\"user_search.base_dn\":\"dc=tencent,dc=com\",\"user_search.filter\":\"(cn={0})\",\"group_search.base_dn\":\"dc=tencent,dc=com\"}"
  */
 class EsConfigSetInfo extends AbstractModel
 {
     /**
-     * @var string Configuration set type, such as `LDAP` and `AD`.
+     * @var string Configuration group type, for example, ldap and ad
      */
     public $Type;
 
@@ -38,7 +38,7 @@ class EsConfigSetInfo extends AbstractModel
     public $EsConfig;
 
     /**
-     * @param string $Type Configuration set type, such as `LDAP` and `AD`.
+     * @param string $Type Configuration group type, for example, ldap and ad
      * @param string $EsConfig "{\"order\":0,\"url\":\"ldap://10.0.1.72:389\",\"bind_dn\":\"cn=admin,dc=tencent,dc=com\",\"user_search.base_dn\":\"dc=tencent,dc=com\",\"user_search.filter\":\"(cn={0})\",\"group_search.base_dn\":\"dc=tencent,dc=com\"}"
      */
     function __construct()

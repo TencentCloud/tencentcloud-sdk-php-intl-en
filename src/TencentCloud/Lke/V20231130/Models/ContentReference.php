@@ -18,60 +18,72 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Session content reference information
  *
- * @method integer getIndex() Obtain 
- * @method void setIndex(integer $Index) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method integer getType() Obtain 
- * @method void setType(integer $Type) Set 
- * @method DocReference getDocRefer() Obtain 
- * @method void setDocRefer(DocReference $DocRefer) Set 
- * @method QaReference getQaRefer() Obtain 
- * @method void setQaRefer(QaReference $QaRefer) Set 
- * @method WebSearchReference getWebSearchRefer() Obtain 
- * @method void setWebSearchRefer(WebSearchReference $WebSearchRefer) Set 
+ * @method integer getIndex() Obtain Source index ID
+ * @method void setIndex(integer $Index) Set Source index ID
+ * @method string getName() Obtain Reference source name
+ * @method void setName(string $Name) Set Reference source name
+ * @method integer getType() Obtain Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
+ * @method void setType(integer $Type) Set Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
+ * @method DocReference getDocRefer() Obtain Document fragment reference
+ * @method void setDocRefer(DocReference $DocRefer) Set Document fragment reference
+ * @method QaReference getQaRefer() Obtain QA reference
+ * @method void setQaRefer(QaReference $QaRefer) Set QA reference
+ * @method WebSearchReference getWebSearchRefer() Obtain Reference information for online retrieval content
+ * @method void setWebSearchRefer(WebSearchReference $WebSearchRefer) Set Reference information for online retrieval content
  */
 class ContentReference extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Source index ID
      */
     public $Index;
 
     /**
-     * @var string 
+     * @var string Reference source name
      */
     public $Name;
 
     /**
-     * @var integer 
+     * @var integer Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
      */
     public $Type;
 
     /**
-     * @var DocReference 
+     * @var DocReference Document fragment reference
      */
     public $DocRefer;
 
     /**
-     * @var QaReference 
+     * @var QaReference QA reference
      */
     public $QaRefer;
 
     /**
-     * @var WebSearchReference 
+     * @var WebSearchReference Reference information for online retrieval content
      */
     public $WebSearchRefer;
 
     /**
-     * @param integer $Index 
-     * @param string $Name 
-     * @param integer $Type 
-     * @param DocReference $DocRefer 
-     * @param QaReference $QaRefer 
-     * @param WebSearchReference $WebSearchRefer 
+     * @param integer $Index Source index ID
+     * @param string $Name Reference source name
+     * @param integer $Type Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
+     * @param DocReference $DocRefer Document fragment reference
+     * @param QaReference $QaRefer QA reference
+     * @param WebSearchReference $WebSearchRefer Reference information for online retrieval content
      */
     function __construct()
     {

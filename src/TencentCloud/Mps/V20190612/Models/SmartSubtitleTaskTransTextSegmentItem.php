@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) Set <p>Recognized text.</p>
  * @method string getTrans() Obtain <p>Translated text.</p>
  * @method void setTrans(string $Trans) Set <p>Translated text.</p>
- * @method array getWordlist() Obtain 
- * @method void setWordlist(array $Wordlist) Set 
+ * @method array getWordlist() Obtain <p>Word timestamp information.</p>
+ * @method void setWordlist(array $Wordlist) Set <p>Word timestamp information.</p>
  * @method string getSpeakerId() Obtain <p>Speaker ID (if speaker recognition is enabled).</p>
  * @method void setSpeakerId(string $SpeakerId) Set <p>Speaker ID (if speaker recognition is enabled).</p>
  */
@@ -63,7 +63,7 @@ class SmartSubtitleTaskTransTextSegmentItem extends AbstractModel
     public $Trans;
 
     /**
-     * @var array 
+     * @var array <p>Word timestamp information.</p>
      */
     public $Wordlist;
 
@@ -78,7 +78,7 @@ class SmartSubtitleTaskTransTextSegmentItem extends AbstractModel
      * @param float $EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      * @param string $Text <p>Recognized text.</p>
      * @param string $Trans <p>Translated text.</p>
-     * @param array $Wordlist 
+     * @param array $Wordlist <p>Word timestamp information.</p>
      * @param string $SpeakerId <p>Speaker ID (if speaker recognition is enabled).</p>
      */
     function __construct()

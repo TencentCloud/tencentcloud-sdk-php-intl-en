@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Push destination address information.
+ * Target address information for repush.
  *
- * @method string getIp() Obtain Destination address IP.
- * @method void setIp(string $Ip) Set Destination address IP.
- * @method integer getPort() Obtain Destination address port.
- * @method void setPort(integer $Port) Set Destination address port.
+ * @method string getIp() Obtain IP of the target address.
+ * @method void setIp(string $Ip) Set IP of the target address.
+ * @method integer getPort() Obtain The port of the destination address.
+ * @method void setPort(integer $Port) Set The port of the destination address.
  */
 class SRTAddressDestination extends AbstractModel
 {
     /**
-     * @var string Destination address IP.
+     * @var string IP of the target address.
      */
     public $Ip;
 
     /**
-     * @var integer Destination address port.
+     * @var integer The port of the destination address.
      */
     public $Port;
 
     /**
-     * @param string $Ip Destination address IP.
-     * @param integer $Port Destination address port.
+     * @param string $Ip IP of the target address.
+     * @param integer $Port The port of the destination address.
      */
     function __construct()
     {

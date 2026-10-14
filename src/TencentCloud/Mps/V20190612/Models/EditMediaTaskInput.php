@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input for the video editing task.
+ * Input of the video editing task.
  *
  * @method array getFileInfoSet() Obtain Input video file information.
  * @method void setFileInfoSet(array $FileInfoSet) Set Input video file information.

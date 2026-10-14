@@ -18,20 +18,20 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Web page search content
  *
- * @method string getContent() Obtain 
- * @method void setContent(string $Content) Set 
+ * @method string getContent() Obtain Web search result, a string in json format
+ * @method void setContent(string $Content) Set Web search result, a string in json format
  */
 class WebSearchContent extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Web search result, a string in json format
      */
     public $Content;
 
     /**
-     * @param string $Content 
+     * @param string $Content Web search result, a string in json format
      */
     function __construct()
     {

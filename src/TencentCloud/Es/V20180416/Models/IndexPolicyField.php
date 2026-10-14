@@ -18,96 +18,68 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Index lifecycle policy field
+ * Index lifecycle field
  *
- * @method string getWarmEnable() Obtain Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setWarmEnable(string $WarmEnable) Set Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getWarmMinAge() Obtain Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setWarmMinAge(string $WarmMinAge) Set Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getColdEnable() Obtain Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setColdEnable(string $ColdEnable) Set Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getColdMinAge() Obtain Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setColdMinAge(string $ColdMinAge) Set Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getFrozenEnable() Obtain Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setFrozenEnable(string $FrozenEnable) Set Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getFrozenMinAge() Obtain Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setFrozenMinAge(string $FrozenMinAge) Set Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getWarmEnable() Obtain Whether the warm phase is enabled
+ * @method void setWarmEnable(string $WarmEnable) Set Whether the warm phase is enabled
+ * @method string getWarmMinAge() Obtain Transfer time to the warm phase
+ * @method void setWarmMinAge(string $WarmMinAge) Set Transfer time to the warm phase
+ * @method string getColdEnable() Obtain Whether the cold phase is enabled
+ * @method void setColdEnable(string $ColdEnable) Set Whether the cold phase is enabled
+ * @method string getColdMinAge() Obtain Transfer time to the cold phase
+ * @method void setColdMinAge(string $ColdMinAge) Set Transfer time to the cold phase
+ * @method string getFrozenEnable() Obtain Whether the frozen phase is enabled
+ * @method void setFrozenEnable(string $FrozenEnable) Set Whether the frozen phase is enabled
+ * @method string getFrozenMinAge() Obtain Time of transfer to the frozen stage
+ * @method void setFrozenMinAge(string $FrozenMinAge) Set Time of transfer to the frozen stage
  * @method string getColdAction() Obtain /
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setColdAction(string $ColdAction) Set /
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class IndexPolicyField extends AbstractModel
 {
     /**
-     * @var string Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether the warm phase is enabled
      */
     public $WarmEnable;
 
     /**
-     * @var string Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Transfer time to the warm phase
      */
     public $WarmMinAge;
 
     /**
-     * @var string Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether the cold phase is enabled
      */
     public $ColdEnable;
 
     /**
-     * @var string Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Transfer time to the cold phase
      */
     public $ColdMinAge;
 
     /**
-     * @var string Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether the frozen phase is enabled
      */
     public $FrozenEnable;
 
     /**
-     * @var string Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Time of transfer to the frozen stage
      */
     public $FrozenMinAge;
 
     /**
      * @var string /
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ColdAction;
 
     /**
-     * @param string $WarmEnable Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $WarmMinAge Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ColdEnable Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ColdMinAge Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $FrozenEnable Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $FrozenMinAge Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $WarmEnable Whether the warm phase is enabled
+     * @param string $WarmMinAge Transfer time to the warm phase
+     * @param string $ColdEnable Whether the cold phase is enabled
+     * @param string $ColdMinAge Transfer time to the cold phase
+     * @param string $FrozenEnable Whether the frozen phase is enabled
+     * @param string $FrozenMinAge Time of transfer to the frozen stage
      * @param string $ColdAction /
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

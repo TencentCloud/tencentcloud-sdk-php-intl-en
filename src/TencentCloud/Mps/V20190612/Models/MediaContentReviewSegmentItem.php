@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review suspected pornographic/sensitive segment
+ * Suspected pornographic/sensitive segment in content review
  *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
- * @method float getConfidence() Obtain Suspected segment porn score.
- * @method void setConfidence(float $Confidence) Set Suspected segment porn score.
+ * @method float getConfidence() Obtain Porn score of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Porn score of the suspected segment.
  * @method string getLabel() Obtain Tag of the pornographic result for the suspected segment.
  * @method void setLabel(string $Label) Set Tag of the pornographic result for the suspected segment.
- * @method string getSuggestion() Obtain Pornographic result suggestion for suspected segment, value ranges from...to...
+ * @method string getSuggestion() Obtain Porn detection result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Pornographic result suggestion for suspected segment, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Porn detection result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method string getUrl() Obtain Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
- * @method void setUrl(string $Url) Set Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
- * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUrl() Obtain Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method void setUrl(string $Url) Set Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class MediaContentReviewSegmentItem extends AbstractModel
 {
@@ -56,7 +56,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var float Suspected segment porn score.
+     * @var float Porn score of the suspected segment.
      */
     public $Confidence;
 
@@ -66,7 +66,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
     public $Label;
 
     /**
-     * @var string Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @var string Porn detection result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -74,28 +74,28 @@ class MediaContentReviewSegmentItem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * @var string Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public $Url;
 
     /**
-     * @var string Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @var string Expiration time of the suspected image URL, in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $PicUrlExpireTime;
 
     /**
      * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
-     * @param float $Confidence Suspected segment porn score.
+     * @param float $Confidence Porn score of the suspected segment.
      * @param string $Label Tag of the pornographic result for the suspected segment.
-     * @param string $Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @param string $Suggestion Porn detection result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param string $Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

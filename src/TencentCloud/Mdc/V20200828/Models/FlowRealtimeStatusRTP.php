@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The real-time RTP streaming information of a flow.
+ * RTP stream status information of the real-time stream status query API.
  *
- * @method integer getPackets() Obtain The number of packets transmitted.
- * @method void setPackets(integer $Packets) Set The number of packets transmitted.
+ * @method integer getPackets() Obtain Number of transmitted packets
+ * @method void setPackets(integer $Packets) Set Number of transmitted packets
  */
 class FlowRealtimeStatusRTP extends AbstractModel
 {
     /**
-     * @var integer The number of packets transmitted.
+     * @var integer Number of transmitted packets
      */
     public $Packets;
 
     /**
-     * @param integer $Packets The number of packets transmitted.
+     * @param integer $Packets Number of transmitted packets
      */
     function __construct()
     {

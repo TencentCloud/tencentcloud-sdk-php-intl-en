@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node information type
  *
- * @method string getIP() Obtain 
- * @method void setIP(string $IP) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getNodeId() Obtain 
- * @method void setNodeId(string $NodeId) Set 
- * @method integer getPort() Obtain 
- * @method void setPort(integer $Port) Set 
- * @method string getZone() Obtain 
- * @method void setZone(string $Zone) Set 
- * @method string getHost() Obtain 
- * @method void setHost(string $Host) Set 
+ * @method string getIP() Obtain <p>Node IP information</p>
+ * @method void setIP(string $IP) Set <p>Node IP information</p>
+ * @method string getType() Obtain <p>Node types, such as sqlengine, tdstore, mc</p>
+ * @method void setType(string $Type) Set <p>Node types, such as sqlengine, tdstore, mc</p>
+ * @method string getNodeId() Obtain <p>Unique identifier of the node</p>
+ * @method void setNodeId(string $NodeId) Set <p>Unique identifier of the node</p>
+ * @method integer getPort() Obtain <p>Node port information</p>
+ * @method void setPort(integer $Port) Set <p>Node port information</p>
+ * @method string getZone() Obtain <p>Availability zone of the node</p>
+ * @method void setZone(string $Zone) Set <p>Availability zone of the node</p>
+ * @method string getHost() Obtain <p>Machine ip of the node</p>
+ * @method void setHost(string $Host) Set <p>Machine ip of the node</p>
  * @method array getBinlogInfo() Obtain <p>Node log service information</p>
  * @method void setBinlogInfo(array $BinlogInfo) Set <p>Node log service information</p>
  * @method integer getCpu() Obtain <p>Number of CPUs of the node</p>
@@ -44,32 +44,32 @@ use TencentCloud\Common\AbstractModel;
 class NodeInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Node IP information</p>
      */
     public $IP;
 
     /**
-     * @var string 
+     * @var string <p>Node types, such as sqlengine, tdstore, mc</p>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>Unique identifier of the node</p>
      */
     public $NodeId;
 
     /**
-     * @var integer 
+     * @var integer <p>Node port information</p>
      */
     public $Port;
 
     /**
-     * @var string 
+     * @var string <p>Availability zone of the node</p>
      */
     public $Zone;
 
     /**
-     * @var string 
+     * @var string <p>Machine ip of the node</p>
      */
     public $Host;
 
@@ -94,12 +94,12 @@ class NodeInfo extends AbstractModel
     public $DataDisk;
 
     /**
-     * @param string $IP 
-     * @param string $Type 
-     * @param string $NodeId 
-     * @param integer $Port 
-     * @param string $Zone 
-     * @param string $Host 
+     * @param string $IP <p>Node IP information</p>
+     * @param string $Type <p>Node types, such as sqlengine, tdstore, mc</p>
+     * @param string $NodeId <p>Unique identifier of the node</p>
+     * @param integer $Port <p>Node port information</p>
+     * @param string $Zone <p>Availability zone of the node</p>
+     * @param string $Host <p>Machine ip of the node</p>
      * @param array $BinlogInfo <p>Node log service information</p>
      * @param integer $Cpu <p>Number of CPUs of the node</p>
      * @param integer $Mem <p>Node mem size</p>

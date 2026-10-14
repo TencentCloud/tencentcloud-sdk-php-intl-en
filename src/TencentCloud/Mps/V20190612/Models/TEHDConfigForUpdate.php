@@ -18,28 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TSC parameter configuration.
+ * Top Speed Codec parameter configuration.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getMaxVideoBitrate() Obtain 
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set 
+ * @method string getType() Obtain Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
+ * @method void setType(string $Type) Set Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
+ * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. If this parameter is left empty, no modification is made.
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. If this parameter is left empty, no modification is made.
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Maximum video bitrate. If this parameter is left empty, no modification is made.
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type 
-     * @param integer $MaxVideoBitrate 
+     * @param string $Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
+     * @param integer $MaxVideoBitrate Maximum video bitrate. If this parameter is left empty, no modification is made.
      */
     function __construct()
     {

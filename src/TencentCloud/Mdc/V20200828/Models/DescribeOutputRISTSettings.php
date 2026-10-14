@@ -18,44 +18,44 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query the output RIST pull stream configuration message.
  *
- * @method string getMode() Obtain 
- * @method void setMode(string $Mode) Set 
- * @method string getProfile() Obtain 
- * @method void setProfile(string $Profile) Set 
- * @method integer getBuffer() Obtain 
- * @method void setBuffer(integer $Buffer) Set 
- * @method array getSourceAddresses() Obtain 
- * @method void setSourceAddresses(array $SourceAddresses) Set 
+ * @method string getMode() Obtain RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
+ * @method void setMode(string $Mode) Set RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
+ * @method string getProfile() Obtain RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+ * @method void setProfile(string $Profile) Set RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+ * @method integer getBuffer() Obtain RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
+ * @method void setBuffer(integer $Buffer) Set RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
+ * @method array getSourceAddresses() Obtain Server listening address, used when the RIST mode is LISTENER.
+ * @method void setSourceAddresses(array $SourceAddresses) Set Server listening address, used when the RIST mode is LISTENER.
  */
 class DescribeOutputRISTSettings extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
      */
     public $Mode;
 
     /**
-     * @var string 
+     * @var string RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
      */
     public $Profile;
 
     /**
-     * @var integer 
+     * @var integer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
      */
     public $Buffer;
 
     /**
-     * @var array 
+     * @var array Server listening address, used when the RIST mode is LISTENER.
      */
     public $SourceAddresses;
 
     /**
-     * @param string $Mode 
-     * @param string $Profile 
-     * @param integer $Buffer 
-     * @param array $SourceAddresses 
+     * @param string $Mode RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
+     * @param string $Profile RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+     * @param integer $Buffer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
+     * @param array $SourceAddresses Server listening address, used when the RIST mode is LISTENER.
      */
     function __construct()
     {

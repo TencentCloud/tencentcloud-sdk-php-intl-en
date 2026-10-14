@@ -18,44 +18,48 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration information of the queried flow.
+ * Query the Flow configuration information.
  *
- * @method string getFlowId() Obtain Flow ID.
- * @method void setFlowId(string $FlowId) Set Flow ID.
- * @method string getFlowName() Obtain Flow name.
- * @method void setFlowName(string $FlowName) Set Flow name.
- * @method string getState() Obtain Flow status. Valid values: `IDLE`, `RUNNING`
- * @method void setState(string $State) Set Flow status. Valid values: `IDLE`, `RUNNING`
- * @method integer getMaxBandwidth() Obtain Maximum bandwidth value.
- * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth value.
+ * @method string getFlowId() Obtain Stream Id.
+ * @method void setFlowId(string $FlowId) Set Stream Id.
+ * @method string getFlowName() Obtain Stream name.
+ * @method void setFlowName(string $FlowName) Set Stream name.
+ * @method string getState() Obtain Stream status. Valid values: IDLE, RUNNING.
+ * @method void setState(string $State) Set Stream status. Valid values: IDLE, RUNNING.
+ * @method integer getMaxBandwidth() Obtain Maximum bandwidth.
+ * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth.
  * @method array getInputGroup() Obtain Input group.
  * @method void setInputGroup(array $InputGroup) Set Input group.
  * @method array getOutputGroup() Obtain Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutputGroup(array $OutputGroup) Set Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getEventId() Obtain EventId of the StreamLink event associated with this Flow.
- * @method void setEventId(string $EventId) Set EventId of the StreamLink event associated with this Flow.
+ * @method string getEventId() Obtain EventId of the media transmission event associated with this Flow.
+ * @method void setEventId(string $EventId) Set EventId of the media transmission event associated with this Flow.
+ * @method string getCreateTime() Obtain Creation time of the Flow in UTC format.
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the Flow in UTC format.
+ * @method array getAllowedInputProtocols() Obtain Input protocols that can be created for this Flow.
+ * @method void setAllowedInputProtocols(array $AllowedInputProtocols) Set Input protocols that can be created for this Flow.
+ * @method array getAllowedOutputProtocols() Obtain Output protocols allowed to be created by this Flow
+ * @method void setAllowedOutputProtocols(array $AllowedOutputProtocols) Set Output protocols allowed to be created by this Flow
  */
 class DescribeFlow extends AbstractModel
 {
     /**
-     * @var string Flow ID.
+     * @var string Stream Id.
      */
     public $FlowId;
 
     /**
-     * @var string Flow name.
+     * @var string Stream name.
      */
     public $FlowName;
 
     /**
-     * @var string Flow status. Valid values: `IDLE`, `RUNNING`
+     * @var string Stream status. Valid values: IDLE, RUNNING.
      */
     public $State;
 
     /**
-     * @var integer Maximum bandwidth value.
+     * @var integer Maximum bandwidth.
      */
     public $MaxBandwidth;
 
@@ -66,24 +70,40 @@ class DescribeFlow extends AbstractModel
 
     /**
      * @var array Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OutputGroup;
 
     /**
-     * @var string EventId of the StreamLink event associated with this Flow.
+     * @var string EventId of the media transmission event associated with this Flow.
      */
     public $EventId;
 
     /**
-     * @param string $FlowId Flow ID.
-     * @param string $FlowName Flow name.
-     * @param string $State Flow status. Valid values: `IDLE`, `RUNNING`
-     * @param integer $MaxBandwidth Maximum bandwidth value.
+     * @var string Creation time of the Flow in UTC format.
+     */
+    public $CreateTime;
+
+    /**
+     * @var array Input protocols that can be created for this Flow.
+     */
+    public $AllowedInputProtocols;
+
+    /**
+     * @var array Output protocols allowed to be created by this Flow
+     */
+    public $AllowedOutputProtocols;
+
+    /**
+     * @param string $FlowId Stream Id.
+     * @param string $FlowName Stream name.
+     * @param string $State Stream status. Valid values: IDLE, RUNNING.
+     * @param integer $MaxBandwidth Maximum bandwidth.
      * @param array $InputGroup Input group.
      * @param array $OutputGroup Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $EventId EventId of the StreamLink event associated with this Flow.
+     * @param string $EventId EventId of the media transmission event associated with this Flow.
+     * @param string $CreateTime Creation time of the Flow in UTC format.
+     * @param array $AllowedInputProtocols Input protocols that can be created for this Flow.
+     * @param array $AllowedOutputProtocols Output protocols allowed to be created by this Flow
      */
     function __construct()
     {
@@ -134,6 +154,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("AllowedInputProtocols",$param) and $param["AllowedInputProtocols"] !== null) {
+            $this->AllowedInputProtocols = $param["AllowedInputProtocols"];
+        }
+
+        if (array_key_exists("AllowedOutputProtocols",$param) and $param["AllowedOutputProtocols"] !== null) {
+            $this->AllowedOutputProtocols = $param["AllowedOutputProtocols"];
         }
     }
 }

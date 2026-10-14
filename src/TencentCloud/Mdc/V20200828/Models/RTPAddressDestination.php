@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Destination address information of RTP push.
+ * Target address information for RTP repush.
  *
- * @method string getIp() Obtain Push destination address IP.
- * @method void setIp(string $Ip) Set Push destination address IP.
- * @method integer getPort() Obtain Push destination address port.
- * @method void setPort(integer $Port) Set Push destination address port.
+ * @method string getIp() Obtain IP of the destination address for repush.
+ * @method void setIp(string $Ip) Set IP of the destination address for repush.
+ * @method integer getPort() Obtain Port of the destination address for push.
+ * @method void setPort(integer $Port) Set Port of the destination address for push.
  */
 class RTPAddressDestination extends AbstractModel
 {
     /**
-     * @var string Push destination address IP.
+     * @var string IP of the destination address for repush.
      */
     public $Ip;
 
     /**
-     * @var integer Push destination address port.
+     * @var integer Port of the destination address for push.
      */
     public $Port;
 
     /**
-     * @param string $Ip Push destination address IP.
-     * @param integer $Port Push destination address port.
+     * @param string $Ip IP of the destination address for repush.
+     * @param integer $Port Port of the destination address for push.
      */
     function __construct()
     {

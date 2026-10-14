@@ -18,36 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent Agent task information
  *
- * @method integer getIndex() Obtain 
- * @method void setIndex(integer $Index) Set 
- * @method string getContent() Obtain 
- * @method void setContent(string $Content) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
+ * @method integer getIndex() Obtain <p>Task serial number</p>
+ * @method void setIndex(integer $Index) Set <p>Task serial number</p>
+ * @method string getContent() Obtain <p>Task content</p>
+ * @method void setContent(string $Content) Set <p>Task content</p>
+ * @method string getStatus() Obtain <p>Task status.</p>
+ * @method void setStatus(string $Status) Set <p>Task status.</p>
  */
 class AgentTask extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Task serial number</p>
      */
     public $Index;
 
     /**
-     * @var string 
+     * @var string <p>Task content</p>
      */
     public $Content;
 
     /**
-     * @var string 
+     * @var string <p>Task status.</p>
      */
     public $Status;
 
     /**
-     * @param integer $Index 
-     * @param string $Content 
-     * @param string $Status 
+     * @param integer $Index <p>Task serial number</p>
+     * @param string $Content <p>Task content</p>
+     * @param string $Status <p>Task status.</p>
      */
     function __construct()
     {

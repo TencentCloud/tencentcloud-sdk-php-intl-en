@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRequestTargetNodeTypes request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
  */
 class GetRequestTargetNodeTypesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId Instance ID
      */
     function __construct()
     {

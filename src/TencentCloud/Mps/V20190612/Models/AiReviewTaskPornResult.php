@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review porn detection task result type
+ * Result type of the porn detection task during content review.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewPornTaskInput getInput() Obtain Content review porn task input.
- * @method void setInput(AiReviewPornTaskInput $Input) Set Content review porn task input.
- * @method AiReviewPornTaskOutput getOutput() Obtain 
- * @method void setOutput(AiReviewPornTaskOutput $Output) Set 
+ * @method AiReviewPornTaskInput getInput() Obtain Input for the content review pornography detection task.
+ * @method void setInput(AiReviewPornTaskInput $Input) Set Input for the content review pornography detection task.
+ * @method AiReviewPornTaskOutput getOutput() Obtain Pornography detection task output of content review.
+ * @method void setOutput(AiReviewPornTaskOutput $Output) Set Pornography detection task output of content review.
  */
 class AiReviewTaskPornResult extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AiReviewTaskPornResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPornTaskInput Content review porn task input.
+     * @var AiReviewPornTaskInput Input for the content review pornography detection task.
      */
     public $Input;
 
     /**
-     * @var AiReviewPornTaskOutput 
+     * @var AiReviewPornTaskOutput Pornography detection task output of content review.
      */
     public $Output;
 
@@ -70,8 +70,8 @@ class AiReviewTaskPornResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewPornTaskInput $Input Content review porn task input.
-     * @param AiReviewPornTaskOutput $Output 
+     * @param AiReviewPornTaskInput $Input Input for the content review pornography detection task.
+     * @param AiReviewPornTaskOutput $Output Pornography detection task output of content review.
      */
     function __construct()
     {

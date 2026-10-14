@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent translation result type
+ * Intelligent dubbing result type.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiAnalysisTaskDubbingInput getInput() Obtain Intelligent dubbing task input.
- * @method void setInput(AiAnalysisTaskDubbingInput $Input) Set Intelligent dubbing task input.
- * @method AiAnalysisTaskDubbingOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskDubbingOutput $Output) Set 
+ * @method AiAnalysisTaskDubbingInput getInput() Obtain Intelligent captioning task input.
+ * @method void setInput(AiAnalysisTaskDubbingInput $Input) Set Intelligent captioning task input.
+ * @method AiAnalysisTaskDubbingOutput getOutput() Obtain Intelligent captioning task output.
+ * @method void setOutput(AiAnalysisTaskDubbingOutput $Output) Set Intelligent captioning task output.
  */
 class AiAnalysisTaskDubbingResult extends AbstractModel
 {
@@ -49,12 +49,12 @@ class AiAnalysisTaskDubbingResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiAnalysisTaskDubbingInput Intelligent dubbing task input.
+     * @var AiAnalysisTaskDubbingInput Intelligent captioning task input.
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDubbingOutput 
+     * @var AiAnalysisTaskDubbingOutput Intelligent captioning task output.
      */
     public $Output;
 
@@ -62,8 +62,8 @@ class AiAnalysisTaskDubbingResult extends AbstractModel
      * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
-     * @param AiAnalysisTaskDubbingInput $Input Intelligent dubbing task input.
-     * @param AiAnalysisTaskDubbingOutput $Output 
+     * @param AiAnalysisTaskDubbingInput $Input Intelligent captioning task input.
+     * @param AiAnalysisTaskDubbingOutput $Output Intelligent captioning task output.
      */
     function __construct()
     {

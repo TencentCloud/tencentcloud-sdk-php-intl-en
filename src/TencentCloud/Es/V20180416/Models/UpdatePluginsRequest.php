@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getInstallPluginList() Obtain List of names of the plugins to be installed
- * @method void setInstallPluginList(array $InstallPluginList) Set List of names of the plugins to be installed
- * @method array getRemovePluginList() Obtain List of names of the plugins to be uninstalled
- * @method void setRemovePluginList(array $RemovePluginList) Set List of names of the plugins to be uninstalled
- * @method boolean getForceRestart() Obtain Whether to force restart the cluster. The default value is `false`.
- * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart the cluster. The default value is `false`.
- * @method boolean getForceUpdate() Obtain Whether to reinstall the cluster. The default value is `false`.
- * @method void setForceUpdate(boolean $ForceUpdate) Set Whether to reinstall the cluster. The default value is `false`.
- * @method integer getPluginType() Obtain 0: system plugin
- * @method void setPluginType(integer $PluginType) Set 0: system plugin
+ * @method array getInstallPluginList() Obtain Name list of plug-ins that needs to be installed
+ * @method void setInstallPluginList(array $InstallPluginList) Set Name list of plug-ins that needs to be installed
+ * @method array getRemovePluginList() Obtain List of plug-in names to uninstall
+ * @method void setRemovePluginList(array $RemovePluginList) Set List of plug-in names to uninstall
+ * @method boolean getForceRestart() Obtain Whether to force restart. Default value: false
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart. Default value: false
+ * @method boolean getForceUpdate() Obtain Whether to reinstall. Default value: false
+ * @method void setForceUpdate(boolean $ForceUpdate) Set Whether to reinstall. Default value: false
+ * @method integer getPluginType() Obtain 0: System plugin
+ * @method void setPluginType(integer $PluginType) Set 0: System plugin
  */
 class UpdatePluginsRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class UpdatePluginsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array List of names of the plugins to be installed
+     * @var array Name list of plug-ins that needs to be installed
      */
     public $InstallPluginList;
 
     /**
-     * @var array List of names of the plugins to be uninstalled
+     * @var array List of plug-in names to uninstall
      */
     public $RemovePluginList;
 
     /**
-     * @var boolean Whether to force restart the cluster. The default value is `false`.
+     * @var boolean Whether to force restart. Default value: false
      */
     public $ForceRestart;
 
     /**
-     * @var boolean Whether to reinstall the cluster. The default value is `false`.
+     * @var boolean Whether to reinstall. Default value: false
      */
     public $ForceUpdate;
 
     /**
-     * @var integer 0: system plugin
+     * @var integer 0: System plugin
      */
     public $PluginType;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param array $InstallPluginList List of names of the plugins to be installed
-     * @param array $RemovePluginList List of names of the plugins to be uninstalled
-     * @param boolean $ForceRestart Whether to force restart the cluster. The default value is `false`.
-     * @param boolean $ForceUpdate Whether to reinstall the cluster. The default value is `false`.
-     * @param integer $PluginType 0: system plugin
+     * @param array $InstallPluginList Name list of plug-ins that needs to be installed
+     * @param array $RemovePluginList List of plug-in names to uninstall
+     * @param boolean $ForceRestart Whether to force restart. Default value: false
+     * @param boolean $ForceUpdate Whether to reinstall. Default value: false
+     * @param integer $PluginType 0: System plugin
      */
     function __construct()
     {

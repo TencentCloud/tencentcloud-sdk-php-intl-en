@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input type of the intelligent dubbing task.
+ * Input type of the intelligent captioning task.
  *
  * @method integer getDefinition() Obtain <p>ID of the video localization template.</p>
  * @method void setDefinition(integer $Definition) Set <p>ID of the video localization template.</p>

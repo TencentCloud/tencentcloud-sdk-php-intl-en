@@ -18,40 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent frame tagging result information
+ * Intelligent frame tagging result information.
  *
- * @method string getTag() Obtain Tag name by frame.
- * @method void setTag(string $Tag) Set Tag name by frame.
- * @method array getCategorySet() Obtain Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
- * @method void setCategorySet(array $CategorySet) Set Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
- * @method float getConfidence() Obtain Reliability of frame tagging, with a value range from 0 to -100.
- * @method void setConfidence(float $Confidence) Set Reliability of frame tagging, with a value range from 0 to -100.
+ * @method string getTag() Obtain Frame-specific tag name.
+ * @method void setTag(string $Tag) Set Frame-specific tag name.
+ * @method array getCategorySet() Obtain Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
+ * @method void setCategorySet(array $CategorySet) Set Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
+ * @method float getConfidence() Obtain Confidence of frame tagging, with a value range from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Confidence of frame tagging, with a value range from 0 to 100.
  */
 class MediaAiAnalysisFrameTagItem extends AbstractModel
 {
     /**
-     * @var string Tag name by frame.
+     * @var string Frame-specific tag name.
      */
     public $Tag;
 
     /**
-     * @var array Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+     * @var array Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
      */
     public $CategorySet;
 
     /**
-     * @var float Reliability of frame tagging, with a value range from 0 to -100.
+     * @var float Confidence of frame tagging, with a value range from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @param string $Tag Tag name by frame.
-     * @param array $CategorySet Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
-     * @param float $Confidence Reliability of frame tagging, with a value range from 0 to -100.
+     * @param string $Tag Frame-specific tag name.
+     * @param array $CategorySet Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
+     * @param float $Confidence Confidence of frame tagging, with a value range from 0 to 100.
      */
     function __construct()
     {

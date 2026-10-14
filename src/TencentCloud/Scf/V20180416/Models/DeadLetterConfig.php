@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Dead letter queue mode
  * @method string getName() Obtain Dead letter queue name
  * @method void setName(string $Name) Set Dead letter queue name
- * @method string getFilterType() Obtain Tag form of a dead letter queue topic mode
- * @method void setFilterType(string $FilterType) Set Tag form of a dead letter queue topic mode
+ * @method string getFilterType() Obtain Tag format of the DLQ topic model
+ * @method void setFilterType(string $FilterType) Set Tag format of the DLQ topic model
  */
 class DeadLetterConfig extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeadLetterConfig extends AbstractModel
     public $Name;
 
     /**
-     * @var string Tag form of a dead letter queue topic mode
+     * @var string Tag format of the DLQ topic model
      */
     public $FilterType;
 
     /**
      * @param string $Type Dead letter queue mode
      * @param string $Name Dead letter queue name
-     * @param string $FilterType Tag form of a dead letter queue topic mode
+     * @param string $FilterType Tag format of the DLQ topic model
      */
     function __construct()
     {

@@ -24,10 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) Set Log time
  * @method string getLevel() Obtain Log level
  * @method void setLevel(string $Level) Set Log level
- * @method string getIp() Obtain Cluster node IP
- * @method void setIp(string $Ip) Set Cluster node IP
+ * @method string getIp() Obtain Cluster node IP address.
+ * @method void setIp(string $Ip) Set Cluster node IP address.
  * @method string getMessage() Obtain Log content
  * @method void setMessage(string $Message) Set Log content
+ * @method string getNodeID() Obtain Cluster node ID.
+ * @method void setNodeID(string $NodeID) Set Cluster node ID.
+ * @method string getIndexName() Obtain Slow log index name
+ * @method void setIndexName(string $IndexName) Set Slow log index name
+ * @method string getShard() Obtain Slow log index shards
+ * @method void setShard(string $Shard) Set Slow log index shards
+ * @method string getQueryCost() Obtain Slow log index query time
+ * @method void setQueryCost(string $QueryCost) Set Slow log index query time
  */
 class InstanceLog extends AbstractModel
 {
@@ -42,7 +50,7 @@ class InstanceLog extends AbstractModel
     public $Level;
 
     /**
-     * @var string Cluster node IP
+     * @var string Cluster node IP address.
      */
     public $Ip;
 
@@ -52,10 +60,34 @@ class InstanceLog extends AbstractModel
     public $Message;
 
     /**
+     * @var string Cluster node ID.
+     */
+    public $NodeID;
+
+    /**
+     * @var string Slow log index name
+     */
+    public $IndexName;
+
+    /**
+     * @var string Slow log index shards
+     */
+    public $Shard;
+
+    /**
+     * @var string Slow log index query time
+     */
+    public $QueryCost;
+
+    /**
      * @param string $Time Log time
      * @param string $Level Log level
-     * @param string $Ip Cluster node IP
+     * @param string $Ip Cluster node IP address.
      * @param string $Message Log content
+     * @param string $NodeID Cluster node ID.
+     * @param string $IndexName Slow log index name
+     * @param string $Shard Slow log index shards
+     * @param string $QueryCost Slow log index query time
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class InstanceLog extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
+            $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("Shard",$param) and $param["Shard"] !== null) {
+            $this->Shard = $param["Shard"];
+        }
+
+        if (array_key_exists("QueryCost",$param) and $param["QueryCost"] !== null) {
+            $this->QueryCost = $param["QueryCost"];
         }
     }
 }

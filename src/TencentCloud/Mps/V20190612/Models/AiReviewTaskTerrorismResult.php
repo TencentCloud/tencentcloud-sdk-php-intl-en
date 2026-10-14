@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewTerrorismTaskInput getInput() Obtain Content review sensitive task input.
- * @method void setInput(AiReviewTerrorismTaskInput $Input) Set Content review sensitive task input.
- * @method AiReviewTerrorismTaskOutput getOutput() Obtain 
- * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set 
+ * @method AiReviewTerrorismTaskInput getInput() Obtain Sensitive task input for content review.
+ * @method void setInput(AiReviewTerrorismTaskInput $Input) Set Sensitive task input for content review.
+ * @method AiReviewTerrorismTaskOutput getOutput() Obtain Output of sensitive tasks in content review.
+ * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set Output of sensitive tasks in content review.
  */
 class AiReviewTaskTerrorismResult extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AiReviewTaskTerrorismResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewTerrorismTaskInput Content review sensitive task input.
+     * @var AiReviewTerrorismTaskInput Sensitive task input for content review.
      */
     public $Input;
 
     /**
-     * @var AiReviewTerrorismTaskOutput 
+     * @var AiReviewTerrorismTaskOutput Output of sensitive tasks in content review.
      */
     public $Output;
 
@@ -70,8 +70,8 @@ class AiReviewTaskTerrorismResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewTerrorismTaskInput $Input Content review sensitive task input.
-     * @param AiReviewTerrorismTaskOutput $Output 
+     * @param AiReviewTerrorismTaskInput $Input Sensitive task input for content review.
+     * @param AiReviewTerrorismTaskOutput $Output Output of sensitive tasks in content review.
      */
     function __construct()
     {

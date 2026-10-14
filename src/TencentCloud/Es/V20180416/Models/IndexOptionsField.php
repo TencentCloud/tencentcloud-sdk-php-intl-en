@@ -18,96 +18,92 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Index automation field
+ * Index autonomous field
  *
- * @method string getExpireMaxAge() Obtain Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setExpireMaxAge(string $ExpireMaxAge) Set Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getExpireMaxSize() Obtain Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setExpireMaxSize(string $ExpireMaxSize) Set Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getRolloverMaxAge() Obtain Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRolloverMaxAge(string $RolloverMaxAge) Set Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getRolloverDynamic() Obtain Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRolloverDynamic(string $RolloverDynamic) Set Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getShardNumDynamic() Obtain Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setShardNumDynamic(string $ShardNumDynamic) Set Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getTimestampField() Obtain Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setTimestampField(string $TimestampField) Set Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getWriteMode() Obtain Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setWriteMode(string $WriteMode) Set Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getExpireMaxAge() Obtain <p>Expiration time.</p>
+ * @method void setExpireMaxAge(string $ExpireMaxAge) Set <p>Expiration time.</p>
+ * @method string getExpireMaxSize() Obtain <p>Expiration size</p>
+ * @method void setExpireMaxSize(string $ExpireMaxSize) Set <p>Expiration size</p>
+ * @method string getRolloverMaxAge() Obtain <p>Rollover period</p>
+ * @method void setRolloverMaxAge(string $RolloverMaxAge) Set <p>Rollover period</p>
+ * @method string getRolloverDynamic() Obtain <p>Whether to enable dynamic scrolling</p>
+ * @method void setRolloverDynamic(string $RolloverDynamic) Set <p>Whether to enable dynamic scrolling</p>
+ * @method string getShardNumDynamic() Obtain <p>Whether to enable dynamic sharding</p>
+ * @method void setShardNumDynamic(string $ShardNumDynamic) Set <p>Whether to enable dynamic sharding</p>
+ * @method string getTimestampField() Obtain <p>Time partition field</p>
+ * @method void setTimestampField(string $TimestampField) Set <p>Time partition field</p>
+ * @method string getWriteMode() Obtain <p>Write mode</p>
+ * @method void setWriteMode(string $WriteMode) Set <p>Write mode</p>
+ * @method string getFullOffloadedEnable() Obtain <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+ * @method void setFullOffloadedEnable(string $FullOffloadedEnable) Set <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+ * @method string getFullOffloadedMaxAge() Obtain <p>Full uninstall lifecycle</p>
+ * @method void setFullOffloadedMaxAge(string $FullOffloadedMaxAge) Set <p>Full uninstall lifecycle</p>
+ * @method string getFullOffloadedRetrieveMaxAge() Obtain <p>Completely uninstall the lifecycle after backup index retrieval</p>
+ * @method void setFullOffloadedRetrieveMaxAge(string $FullOffloadedRetrieveMaxAge) Set <p>Completely uninstall the lifecycle after backup index retrieval</p>
  */
 class IndexOptionsField extends AbstractModel
 {
     /**
-     * @var string Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Expiration time.</p>
      */
     public $ExpireMaxAge;
 
     /**
-     * @var string Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Expiration size</p>
      */
     public $ExpireMaxSize;
 
     /**
-     * @var string Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Rollover period</p>
      */
     public $RolloverMaxAge;
 
     /**
-     * @var string Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Whether to enable dynamic scrolling</p>
      */
     public $RolloverDynamic;
 
     /**
-     * @var string Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Whether to enable dynamic sharding</p>
      */
     public $ShardNumDynamic;
 
     /**
-     * @var string Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Time partition field</p>
      */
     public $TimestampField;
 
     /**
-     * @var string Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Write mode</p>
      */
     public $WriteMode;
 
     /**
-     * @param string $ExpireMaxAge Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ExpireMaxSize Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $RolloverMaxAge Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $RolloverDynamic Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ShardNumDynamic Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $TimestampField Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $WriteMode Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+     */
+    public $FullOffloadedEnable;
+
+    /**
+     * @var string <p>Full uninstall lifecycle</p>
+     */
+    public $FullOffloadedMaxAge;
+
+    /**
+     * @var string <p>Completely uninstall the lifecycle after backup index retrieval</p>
+     */
+    public $FullOffloadedRetrieveMaxAge;
+
+    /**
+     * @param string $ExpireMaxAge <p>Expiration time.</p>
+     * @param string $ExpireMaxSize <p>Expiration size</p>
+     * @param string $RolloverMaxAge <p>Rollover period</p>
+     * @param string $RolloverDynamic <p>Whether to enable dynamic scrolling</p>
+     * @param string $ShardNumDynamic <p>Whether to enable dynamic sharding</p>
+     * @param string $TimestampField <p>Time partition field</p>
+     * @param string $WriteMode <p>Write mode</p>
+     * @param string $FullOffloadedEnable <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+     * @param string $FullOffloadedMaxAge <p>Full uninstall lifecycle</p>
+     * @param string $FullOffloadedRetrieveMaxAge <p>Completely uninstall the lifecycle after backup index retrieval</p>
      */
     function __construct()
     {
@@ -148,6 +144,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("WriteMode",$param) and $param["WriteMode"] !== null) {
             $this->WriteMode = $param["WriteMode"];
+        }
+
+        if (array_key_exists("FullOffloadedEnable",$param) and $param["FullOffloadedEnable"] !== null) {
+            $this->FullOffloadedEnable = $param["FullOffloadedEnable"];
+        }
+
+        if (array_key_exists("FullOffloadedMaxAge",$param) and $param["FullOffloadedMaxAge"] !== null) {
+            $this->FullOffloadedMaxAge = $param["FullOffloadedMaxAge"];
+        }
+
+        if (array_key_exists("FullOffloadedRetrieveMaxAge",$param) and $param["FullOffloadedRetrieveMaxAge"] !== null) {
+            $this->FullOffloadedRetrieveMaxAge = $param["FullOffloadedRetrieveMaxAge"];
         }
     }
 }

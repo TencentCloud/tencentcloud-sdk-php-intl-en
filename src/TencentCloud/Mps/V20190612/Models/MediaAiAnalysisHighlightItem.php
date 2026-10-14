@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighlightPath(string $HighlightPath) Set Intelligent highlight address.
  * @method string getCovImgPath() Obtain Intelligent highlight cover address.
  * @method void setCovImgPath(string $CovImgPath) Set Intelligent highlight cover address.
- * @method float getConfidence() Obtain Reliability of the intelligent highlights, with a value range from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Reliability of the intelligent highlights, with a value range from 0 to 100.
+ * @method float getConfidence() Obtain Confidence of the intelligent highlights, with a value range from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Confidence of the intelligent highlights, with a value range from 0 to 100.
  * @method float getDuration() Obtain Intelligent highlight duration.
  * @method void setDuration(float $Duration) Set Intelligent highlight duration.
  * @method array getSegmentSet() Obtain Intelligent highlight sub-clip list.
  * @method void setSegmentSet(array $SegmentSet) Set Intelligent highlight sub-clip list.
- * @method string getHighlightUrl() Obtain 
- * @method void setHighlightUrl(string $HighlightUrl) Set 
- * @method string getCovImgUrl() Obtain 
- * @method void setCovImgUrl(string $CovImgUrl) Set 
+ * @method string getHighlightUrl() Obtain Intelligent highlight address.
+ * @method void setHighlightUrl(string $HighlightUrl) Set Intelligent highlight address.
+ * @method string getCovImgUrl() Obtain Intelligent highlight cover address.
+ * @method void setCovImgUrl(string $CovImgUrl) Set Intelligent highlight cover address.
  */
 class MediaAiAnalysisHighlightItem extends AbstractModel
 {
@@ -48,7 +48,7 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
     public $CovImgPath;
 
     /**
-     * @var float Reliability of the intelligent highlights, with a value range from 0 to 100.
+     * @var float Confidence of the intelligent highlights, with a value range from 0 to 100.
      */
     public $Confidence;
 
@@ -63,23 +63,23 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
     public $SegmentSet;
 
     /**
-     * @var string 
+     * @var string Intelligent highlight address.
      */
     public $HighlightUrl;
 
     /**
-     * @var string 
+     * @var string Intelligent highlight cover address.
      */
     public $CovImgUrl;
 
     /**
      * @param string $HighlightPath Intelligent highlight address.
      * @param string $CovImgPath Intelligent highlight cover address.
-     * @param float $Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
+     * @param float $Confidence Confidence of the intelligent highlights, with a value range from 0 to 100.
      * @param float $Duration Intelligent highlight duration.
      * @param array $SegmentSet Intelligent highlight sub-clip list.
-     * @param string $HighlightUrl 
-     * @param string $CovImgUrl 
+     * @param string $HighlightUrl Intelligent highlight address.
+     * @param string $CovImgUrl Intelligent highlight cover address.
      */
     function __construct()
     {

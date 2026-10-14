@@ -18,28 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Input parameter type for media quality inspection.
  *
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getChannelExtPara() Obtain 
- * @method void setChannelExtPara(string $ChannelExtPara) Set 
+ * @method integer getDefinition() Obtain Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
+ * @method void setDefinition(integer $Definition) Set Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
+ * @method string getChannelExtPara() Obtain Channel expansion parameter, json serialized string.
+ * @method void setChannelExtPara(string $ChannelExtPara) Set Channel expansion parameter, json serialized string.
  */
 class AiQualityControlTaskInput extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Channel expansion parameter, json serialized string.
      */
     public $ChannelExtPara;
 
     /**
-     * @param integer $Definition 
-     * @param string $ChannelExtPara 
+     * @param integer $Definition Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
+     * @param string $ChannelExtPara Channel expansion parameter, json serialized string.
      */
     function __construct()
     {

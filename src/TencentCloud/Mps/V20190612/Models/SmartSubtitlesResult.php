@@ -21,65 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Smart subtitle task result.
  *
  * @method string getType() Obtain Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
  * @method void setType(string $Type) Set Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
- * @method SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() Obtain 
- * @method void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask) Set 
- * @method SmartSubtitleTaskTransTextResult getTransTextTask() Obtain 
- * @method void setTransTextTask(SmartSubtitleTaskTransTextResult $TransTextTask) Set 
- * @method PureSubtitleTransResult getPureSubtitleTransTask() Obtain 
- * @method void setPureSubtitleTransTask(PureSubtitleTransResult $PureSubtitleTransTask) Set 
- * @method SmartSubtitleTaskFullTextResult getOcrFullTextTask() Obtain 
- * @method void setOcrFullTextTask(SmartSubtitleTaskFullTextResult $OcrFullTextTask) Set 
+ * @method SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() Obtain Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
+ * @method void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask) Set Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
+ * @method SmartSubtitleTaskTransTextResult getTransTextTask() Obtain Translation result. When Type is
+
+Valid when set to TransTextRecognition.
+ * @method void setTransTextTask(SmartSubtitleTaskTransTextResult $TransTextTask) Set Translation result. When Type is
+
+Valid when set to TransTextRecognition.
+ * @method PureSubtitleTransResult getPureSubtitleTransTask() Obtain The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+ * @method void setPureSubtitleTransTask(PureSubtitleTransResult $PureSubtitleTransTask) Set The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+ * @method SmartSubtitleTaskFullTextResult getOcrFullTextTask() Obtain Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
+ * @method void setOcrFullTextTask(SmartSubtitleTaskFullTextResult $OcrFullTextTask) Set Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
  */
 class SmartSubtitlesResult extends AbstractModel
 {
     /**
      * @var string Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
      */
     public $Type;
 
     /**
-     * @var SmartSubtitleTaskAsrFullTextResult 
+     * @var SmartSubtitleTaskAsrFullTextResult Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
      */
     public $AsrFullTextTask;
 
     /**
-     * @var SmartSubtitleTaskTransTextResult 
+     * @var SmartSubtitleTaskTransTextResult Translation result. When Type is
+
+Valid when set to TransTextRecognition.
      */
     public $TransTextTask;
 
     /**
-     * @var PureSubtitleTransResult 
+     * @var PureSubtitleTransResult The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
      */
     public $PureSubtitleTransTask;
 
     /**
-     * @var SmartSubtitleTaskFullTextResult 
+     * @var SmartSubtitleTaskFullTextResult Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
      */
     public $OcrFullTextTask;
 
     /**
      * @param string $Type Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
-     * @param SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask 
-     * @param SmartSubtitleTaskTransTextResult $TransTextTask 
-     * @param PureSubtitleTransResult $PureSubtitleTransTask 
-     * @param SmartSubtitleTaskFullTextResult $OcrFullTextTask 
+     * @param SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
+     * @param SmartSubtitleTaskTransTextResult $TransTextTask Translation result. When Type is
+
+Valid when set to TransTextRecognition.
+     * @param PureSubtitleTransResult $PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+     * @param SmartSubtitleTaskFullTextResult $OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskDelLogoInput getInput() Obtain Intelligent removal task input.
  * @method void setInput(AiAnalysisTaskDelLogoInput $Input) Set Intelligent removal task input.
- * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set 
+ * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain Output of intelligent erasure task.
+ * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set Output of intelligent erasure task.
  */
 class AiAnalysisTaskDelLogoResult extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AiAnalysisTaskDelLogoResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDelLogoOutput 
+     * @var AiAnalysisTaskDelLogoOutput Output of intelligent erasure task.
      */
     public $Output;
 
@@ -63,7 +63,7 @@ class AiAnalysisTaskDelLogoResult extends AbstractModel
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskDelLogoInput $Input Intelligent removal task input.
-     * @param AiAnalysisTaskDelLogoOutput $Output 
+     * @param AiAnalysisTaskDelLogoOutput $Output Output of intelligent erasure task.
      */
     function __construct()
     {

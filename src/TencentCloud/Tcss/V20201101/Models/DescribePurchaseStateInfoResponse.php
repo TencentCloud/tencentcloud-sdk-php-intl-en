@@ -20,160 +20,164 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePurchaseStateInfo response structure.
  *
- * @method integer getState() Obtain Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
- * @method void setState(integer $State) Set Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
- * @method integer getAllCoresCnt() Obtain 
- * @method void setAllCoresCnt(integer $AllCoresCnt) Set 
- * @method integer getCoresCnt() Obtain Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
- * @method void setCoresCnt(integer $CoresCnt) Set Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
- * @method integer getUndefendCoresCnt() Obtain 
- * @method void setUndefendCoresCnt(integer $UndefendCoresCnt) Set 
- * @method integer getAuthorizedCoresCnt() Obtain Number of purchased cores
- * @method void setAuthorizedCoresCnt(integer $AuthorizedCoresCnt) Set Number of purchased cores
- * @method integer getGivenAuthorizedCoresCnt() Obtain Number of free trial cores for Pro Edition.
- * @method void setGivenAuthorizedCoresCnt(integer $GivenAuthorizedCoresCnt) Set Number of free trial cores for Pro Edition.
- * @method integer getCurrentFlexibleCoresCnt() Obtain 
- * @method void setCurrentFlexibleCoresCnt(integer $CurrentFlexibleCoresCnt) Set 
- * @method integer getImageCnt() Obtain Image count
- * @method void setImageCnt(integer $ImageCnt) Set Image count
- * @method integer getAuthorizedImageCnt() Obtain Number of licensed images
- * @method void setAuthorizedImageCnt(integer $AuthorizedImageCnt) Set Number of licensed images
- * @method string getExpirationTime() Obtain Expiration time
- * @method void setExpirationTime(string $ExpirationTime) Set Expiration time
- * @method integer getPurchasedAuthorizedCnt() Obtain Number of purchased image licenses
- * @method void setPurchasedAuthorizedCnt(integer $PurchasedAuthorizedCnt) Set Number of purchased image licenses
- * @method integer getAutomaticRenewal() Obtain 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
- * @method void setAutomaticRenewal(integer $AutomaticRenewal) Set 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
- * @method integer getGivenAuthorizedCnt() Obtain Complimentary image licenses during the trial period may expire.
- * @method void setGivenAuthorizedCnt(integer $GivenAuthorizedCnt) Set Complimentary image licenses during the trial period may expire.
- * @method string getBeginTime() Obtain Start time.
- * @method void setBeginTime(string $BeginTime) Set Start time.
- * @method string getSubState() Obtain Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
- * @method void setSubState(string $SubState) Set Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
- * @method string getInquireKey() Obtain Billing key.
- * @method void setInquireKey(string $InquireKey) Set Billing key.
- * @method string getDefendPolicy() Obtain 
- * @method void setDefendPolicy(string $DefendPolicy) Set 
- * @method integer getFlexibleCoresLimit() Obtain 
- * @method void setFlexibleCoresLimit(integer $FlexibleCoresLimit) Set 
- * @method integer getDefendClusterCoresCnt() Obtain 
- * @method void setDefendClusterCoresCnt(integer $DefendClusterCoresCnt) Set 
- * @method integer getDefendHostCoresCnt() Obtain 
- * @method void setDefendHostCoresCnt(integer $DefendHostCoresCnt) Set 
- * @method integer getTrialCoresCnt() Obtain Number of trial cores for Pro Edition.
- * @method void setTrialCoresCnt(integer $TrialCoresCnt) Set Number of trial cores for Pro Edition.
+ * @method integer getState() Obtain <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
+ * @method void setState(integer $State) Set <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
+ * @method integer getAllCoresCnt() Obtain <p>Total resource cores = total protected cores + unprotected cores</p>
+ * @method void setAllCoresCnt(integer $AllCoresCnt) Set <p>Total resource cores = total protected cores + unprotected cores</p>
+ * @method integer getCoresCnt() Obtain <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
+ * @method void setCoresCnt(integer $CoresCnt) Set <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
+ * @method integer getUndefendCoresCnt() Obtain <p>Unprotected cores (number of resource cores with protection not enabled)</p>
+ * @method void setUndefendCoresCnt(integer $UndefendCoresCnt) Set <p>Unprotected cores (number of resource cores with protection not enabled)</p>
+ * @method integer getAuthorizedCoresCnt() Obtain <p>Number of purchased cores</p>
+ * @method void setAuthorizedCoresCnt(integer $AuthorizedCoresCnt) Set <p>Number of purchased cores</p>
+ * @method integer getGivenAuthorizedCoresCnt() Obtain <p>Trial giveaway of Pro Edition cores</p>
+ * @method void setGivenAuthorizedCoresCnt(integer $GivenAuthorizedCoresCnt) Set <p>Trial giveaway of Pro Edition cores</p>
+ * @method integer getCurrentFlexibleCoresCnt() Obtain <p>Current number of elastic billing cores</p>
+ * @method void setCurrentFlexibleCoresCnt(integer $CurrentFlexibleCoresCnt) Set <p>Current number of elastic billing cores</p>
+ * @method integer getImageCnt() Obtain <p>Number of images.</p>
+ * @method void setImageCnt(integer $ImageCnt) Set <p>Number of images.</p>
+ * @method integer getAuthorizedImageCnt() Obtain <p>Number of licensed images</p>
+ * @method void setAuthorizedImageCnt(integer $AuthorizedImageCnt) Set <p>Number of licensed images</p>
+ * @method string getExpirationTime() Obtain <p>Expiration time.</p>
+ * @method void setExpirationTime(string $ExpirationTime) Set <p>Expiration time.</p>
+ * @method integer getPurchasedAuthorizedCnt() Obtain <p>Number of purchased image licenses</p>
+ * @method void setPurchasedAuthorizedCnt(integer $PurchasedAuthorizedCnt) Set <p>Number of purchased image licenses</p>
+ * @method integer getAutomaticRenewal() Obtain <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
+ * @method void setAutomaticRenewal(integer $AutomaticRenewal) Set <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
+ * @method integer getGivenAuthorizedCnt() Obtain <p>Complimentary image licenses during the trial period may expire.</p>
+ * @method void setGivenAuthorizedCnt(integer $GivenAuthorizedCnt) Set <p>Complimentary image licenses during the trial period may expire.</p>
+ * @method string getBeginTime() Obtain <p>Start time</p>
+ * @method void setBeginTime(string $BeginTime) Set <p>Start time</p>
+ * @method string getSubState() Obtain <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
+ * @method void setSubState(string $SubState) Set <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
+ * @method string getInquireKey() Obtain <p>Billing key</p>
+ * @method void setInquireKey(string $InquireKey) Set <p>Billing key</p>
+ * @method string getDefendPolicy() Obtain <p>Protection policy</p>
+ * @method void setDefendPolicy(string $DefendPolicy) Set <p>Protection policy</p>
+ * @method integer getFlexibleCoresLimit() Obtain <p>Upper limit of elastic billing cores</p>
+ * @method void setFlexibleCoresLimit(integer $FlexibleCoresLimit) Set <p>Upper limit of elastic billing cores</p>
+ * @method integer getDefendClusterCoresCnt() Obtain <p>Number of cores in the protected cluster</p>
+ * @method void setDefendClusterCoresCnt(integer $DefendClusterCoresCnt) Set <p>Number of cores in the protected cluster</p>
+ * @method integer getDefendHostCoresCnt() Obtain <p>Protected host cores</p>
+ * @method void setDefendHostCoresCnt(integer $DefendHostCoresCnt) Set <p>Protected host cores</p>
+ * @method integer getTrialCoresCnt() Obtain <p>Number of cores of the Pro Edition for trial use</p>
+ * @method void setTrialCoresCnt(integer $TrialCoresCnt) Set <p>Number of cores of the Pro Edition for trial use</p>
+ * @method integer getNoContainerCoresCnt() Obtain <p>Number of machines with zero protection containers.</p>
+ * @method void setNoContainerCoresCnt(integer $NoContainerCoresCnt) Set <p>Number of machines with zero protection containers.</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribePurchaseStateInfoResponse extends AbstractModel
 {
     /**
-     * @var integer Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
+     * @var integer <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
      */
     public $State;
 
     /**
-     * @var integer 
+     * @var integer <p>Total resource cores = total protected cores + unprotected cores</p>
      */
     public $AllCoresCnt;
 
     /**
-     * @var integer Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+     * @var integer <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
      */
     public $CoresCnt;
 
     /**
-     * @var integer 
+     * @var integer <p>Unprotected cores (number of resource cores with protection not enabled)</p>
      */
     public $UndefendCoresCnt;
 
     /**
-     * @var integer Number of purchased cores
+     * @var integer <p>Number of purchased cores</p>
      */
     public $AuthorizedCoresCnt;
 
     /**
-     * @var integer Number of free trial cores for Pro Edition.
+     * @var integer <p>Trial giveaway of Pro Edition cores</p>
      */
     public $GivenAuthorizedCoresCnt;
 
     /**
-     * @var integer 
+     * @var integer <p>Current number of elastic billing cores</p>
      */
     public $CurrentFlexibleCoresCnt;
 
     /**
-     * @var integer Image count
+     * @var integer <p>Number of images.</p>
      */
     public $ImageCnt;
 
     /**
-     * @var integer Number of licensed images
+     * @var integer <p>Number of licensed images</p>
      */
     public $AuthorizedImageCnt;
 
     /**
-     * @var string Expiration time
+     * @var string <p>Expiration time.</p>
      */
     public $ExpirationTime;
 
     /**
-     * @var integer Number of purchased image licenses
+     * @var integer <p>Number of purchased image licenses</p>
      */
     public $PurchasedAuthorizedCnt;
 
     /**
-     * @var integer 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+     * @var integer <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
      */
     public $AutomaticRenewal;
 
     /**
-     * @var integer Complimentary image licenses during the trial period may expire.
+     * @var integer <p>Complimentary image licenses during the trial period may expire.</p>
      */
     public $GivenAuthorizedCnt;
 
     /**
-     * @var string Start time.
+     * @var string <p>Start time</p>
      */
     public $BeginTime;
 
     /**
-     * @var string Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
+     * @var string <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
      */
     public $SubState;
 
     /**
-     * @var string Billing key.
+     * @var string <p>Billing key</p>
      */
     public $InquireKey;
 
     /**
-     * @var string 
+     * @var string <p>Protection policy</p>
      */
     public $DefendPolicy;
 
     /**
-     * @var integer 
+     * @var integer <p>Upper limit of elastic billing cores</p>
      */
     public $FlexibleCoresLimit;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of cores in the protected cluster</p>
      */
     public $DefendClusterCoresCnt;
 
     /**
-     * @var integer 
+     * @var integer <p>Protected host cores</p>
      */
     public $DefendHostCoresCnt;
 
     /**
-     * @var integer Number of trial cores for Pro Edition.
+     * @var integer <p>Number of cores of the Pro Edition for trial use</p>
      */
     public $TrialCoresCnt;
+
+    /**
+     * @var integer <p>Number of machines with zero protection containers.</p>
+     */
+    public $NoContainerCoresCnt;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -181,28 +185,28 @@ Valid values when State is 4: ISOLATE, TERMINATED.
     public $RequestId;
 
     /**
-     * @param integer $State Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
-     * @param integer $AllCoresCnt 
-     * @param integer $CoresCnt Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
-     * @param integer $UndefendCoresCnt 
-     * @param integer $AuthorizedCoresCnt Number of purchased cores
-     * @param integer $GivenAuthorizedCoresCnt Number of free trial cores for Pro Edition.
-     * @param integer $CurrentFlexibleCoresCnt 
-     * @param integer $ImageCnt Image count
-     * @param integer $AuthorizedImageCnt Number of licensed images
-     * @param string $ExpirationTime Expiration time
-     * @param integer $PurchasedAuthorizedCnt Number of purchased image licenses
-     * @param integer $AutomaticRenewal 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
-     * @param integer $GivenAuthorizedCnt Complimentary image licenses during the trial period may expire.
-     * @param string $BeginTime Start time.
-     * @param string $SubState Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
-     * @param string $InquireKey Billing key.
-     * @param string $DefendPolicy 
-     * @param integer $FlexibleCoresLimit 
-     * @param integer $DefendClusterCoresCnt 
-     * @param integer $DefendHostCoresCnt 
-     * @param integer $TrialCoresCnt Number of trial cores for Pro Edition.
+     * @param integer $State <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
+     * @param integer $AllCoresCnt <p>Total resource cores = total protected cores + unprotected cores</p>
+     * @param integer $CoresCnt <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
+     * @param integer $UndefendCoresCnt <p>Unprotected cores (number of resource cores with protection not enabled)</p>
+     * @param integer $AuthorizedCoresCnt <p>Number of purchased cores</p>
+     * @param integer $GivenAuthorizedCoresCnt <p>Trial giveaway of Pro Edition cores</p>
+     * @param integer $CurrentFlexibleCoresCnt <p>Current number of elastic billing cores</p>
+     * @param integer $ImageCnt <p>Number of images.</p>
+     * @param integer $AuthorizedImageCnt <p>Number of licensed images</p>
+     * @param string $ExpirationTime <p>Expiration time.</p>
+     * @param integer $PurchasedAuthorizedCnt <p>Number of purchased image licenses</p>
+     * @param integer $AutomaticRenewal <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
+     * @param integer $GivenAuthorizedCnt <p>Complimentary image licenses during the trial period may expire.</p>
+     * @param string $BeginTime <p>Start time</p>
+     * @param string $SubState <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
+     * @param string $InquireKey <p>Billing key</p>
+     * @param string $DefendPolicy <p>Protection policy</p>
+     * @param integer $FlexibleCoresLimit <p>Upper limit of elastic billing cores</p>
+     * @param integer $DefendClusterCoresCnt <p>Number of cores in the protected cluster</p>
+     * @param integer $DefendHostCoresCnt <p>Protected host cores</p>
+     * @param integer $TrialCoresCnt <p>Number of cores of the Pro Edition for trial use</p>
+     * @param integer $NoContainerCoresCnt <p>Number of machines with zero protection containers.</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -300,6 +304,10 @@ Valid values when State is 4: ISOLATE, TERMINATED.
 
         if (array_key_exists("TrialCoresCnt",$param) and $param["TrialCoresCnt"] !== null) {
             $this->TrialCoresCnt = $param["TrialCoresCnt"];
+        }
+
+        if (array_key_exists("NoContainerCoresCnt",$param) and $param["NoContainerCoresCnt"] !== null) {
+            $this->NoContainerCoresCnt = $param["NoContainerCoresCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

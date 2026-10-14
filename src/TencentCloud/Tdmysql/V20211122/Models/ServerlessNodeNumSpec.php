@@ -18,28 +18,28 @@ namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Upper and lower limit of the hybrid node quantity allowed for adjustment for a Serverless instance
  *
- * @method integer getMinNodeNum() Obtain 
- * @method void setMinNodeNum(integer $MinNodeNum) Set 
- * @method integer getMaxNodeNum() Obtain 
- * @method void setMaxNodeNum(integer $MaxNodeNum) Set 
+ * @method integer getMinNodeNum() Obtain <p>Minimum number of nodes.</p>
+ * @method void setMinNodeNum(integer $MinNodeNum) Set <p>Minimum number of nodes.</p>
+ * @method integer getMaxNodeNum() Obtain <p>Maximum number of nodes.</p>
+ * @method void setMaxNodeNum(integer $MaxNodeNum) Set <p>Maximum number of nodes.</p>
  */
 class ServerlessNodeNumSpec extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Minimum number of nodes.</p>
      */
     public $MinNodeNum;
 
     /**
-     * @var integer 
+     * @var integer <p>Maximum number of nodes.</p>
      */
     public $MaxNodeNum;
 
     /**
-     * @param integer $MinNodeNum 
-     * @param integer $MaxNodeNum 
+     * @param integer $MinNodeNum <p>Minimum number of nodes.</p>
+     * @param integer $MaxNodeNum <p>Maximum number of nodes.</p>
      */
     function __construct()
     {

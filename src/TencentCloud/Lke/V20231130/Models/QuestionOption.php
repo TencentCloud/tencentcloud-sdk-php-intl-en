@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Optional issue
  *
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
+ * @method string getLabel() Obtain <p>Tag of the option</p>
+ * @method void setLabel(string $Label) Set <p>Tag of the option</p>
+ * @method string getDescription() Obtain <p>Description of the option.</p>
+ * @method void setDescription(string $Description) Set <p>Description of the option.</p>
  */
 class QuestionOption extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Tag of the option</p>
      */
     public $Label;
 
     /**
-     * @var string 
+     * @var string <p>Description of the option.</p>
      */
     public $Description;
 
     /**
-     * @param string $Label 
-     * @param string $Description 
+     * @param string $Label <p>Tag of the option</p>
+     * @param string $Description <p>Description of the option.</p>
      */
     function __construct()
     {

@@ -18,31 +18,31 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Basic image information
+ * Basic mirror information
  *
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
- * @method string getImageName() Obtain Image name
- * @method void setImageName(string $ImageName) Set Image name
+ * @method string getImageName() Obtain Image name.
+ * @method void setImageName(string $ImageName) Set Image name.
  * @method string getImageTag() Obtain Image tag
  * @method void setImageTag(string $ImageTag) Set Image tag
- * @method string getForce() Obtain Forced scan
- * @method void setForce(string $Force) Set Forced scan
- * @method string getImageDigest() Obtain Image ID
- * @method void setImageDigest(string $ImageDigest) Set Image ID
+ * @method string getForce() Obtain Force scan
+ * @method void setForce(string $Force) Set Force scan
+ * @method string getImageDigest() Obtain Image id
+ * @method void setImageDigest(string $ImageDigest) Set Image id
  * @method string getRegistryType() Obtain Repository type
  * @method void setRegistryType(string $RegistryType) Set Repository type
  * @method string getImageRepoAddress() Obtain Image repository address
  * @method void setImageRepoAddress(string $ImageRepoAddress) Set Image repository address
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
 class ImageInfo extends AbstractModel
 {
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
@@ -52,7 +52,7 @@ class ImageInfo extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string Image name
+     * @var string Image name.
      */
     public $ImageName;
 
@@ -62,12 +62,12 @@ class ImageInfo extends AbstractModel
     public $ImageTag;
 
     /**
-     * @var string Forced scan
+     * @var string Force scan
      */
     public $Force;
 
     /**
-     * @var string Image ID
+     * @var string Image id
      */
     public $ImageDigest;
 
@@ -82,20 +82,20 @@ class ImageInfo extends AbstractModel
     public $ImageRepoAddress;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceName Instance name
+     * @param string $InstanceName Instance name.
      * @param string $Namespace Namespace
-     * @param string $ImageName Image name
+     * @param string $ImageName Image name.
      * @param string $ImageTag Image tag
-     * @param string $Force Forced scan
-     * @param string $ImageDigest Image ID
+     * @param string $Force Force scan
+     * @param string $ImageDigest Image id
      * @param string $RegistryType Repository type
      * @param string $ImageRepoAddress Image repository address
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {

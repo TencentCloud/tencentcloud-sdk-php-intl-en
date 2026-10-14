@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFullReplications(integer $FullReplications) Set <p>Number of replicas. Currently supported range: 1-3. Default is 3.</p>
  * @method integer getIsExclusiveInstance() Obtain <p>Exclusive instance</p>
  * @method void setIsExclusiveInstance(integer $IsExclusiveInstance) Set <p>Exclusive instance</p>
+ * @method array getZones() Obtain <p>Availability zone combination list</p>
+ * @method void setZones(array $Zones) Set <p>Availability zone combination list</p>
  */
 class DescribeSpecsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeSpecsRequest extends AbstractModel
     public $IsExclusiveInstance;
 
     /**
+     * @var array <p>Availability zone combination list</p>
+     */
+    public $Zones;
+
+    /**
      * @param integer $FullReplications <p>Number of replicas. Currently supported range: 1-3. Default is 3.</p>
      * @param integer $IsExclusiveInstance <p>Exclusive instance</p>
+     * @param array $Zones <p>Availability zone combination list</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeSpecsRequest extends AbstractModel
 
         if (array_key_exists("IsExclusiveInstance",$param) and $param["IsExclusiveInstance"] !== null) {
             $this->IsExclusiveInstance = $param["IsExclusiveInstance"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

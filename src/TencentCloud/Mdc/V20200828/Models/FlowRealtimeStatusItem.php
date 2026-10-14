@@ -18,104 +18,92 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The real-time status information of a flow.
+ * Stream status information of the real-time stream status query API.
  *
- * @method string getType() Obtain Whether it is an input or output. Valid values: Input, Output.
- * @method void setType(string $Type) Set Whether it is an input or output. Valid values: Input, Output.
- * @method string getInputId() Obtain The input ID, which is not empty if `Type` is `Input`.
- * @method void setInputId(string $InputId) Set The input ID, which is not empty if `Type` is `Input`.
- * @method string getOutputId() Obtain The output ID, which is not empty if `Type` is `Output`.
- * @method void setOutputId(string $OutputId) Set The output ID, which is not empty if `Type` is `Output`.
- * @method string getFlowId() Obtain The flow ID.
- * @method void setFlowId(string $FlowId) Set The flow ID.
- * @method string getProtocol() Obtain The protocol used. Valid values: SRT, RTP, RTMP.
- * @method void setProtocol(string $Protocol) Set The protocol used. Valid values: SRT, RTP, RTMP.
- * @method FlowRealtimeStatusCommon getCommonStatus() Obtain The common status information.
- * @method void setCommonStatus(FlowRealtimeStatusCommon $CommonStatus) Set The common status information.
- * @method FlowRealtimeStatusSRT getSRTStatus() Obtain This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSRTStatus(FlowRealtimeStatusSRT $SRTStatus) Set This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method FlowRealtimeStatusRTMP getRTMPStatus() Obtain This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRTMPStatus(FlowRealtimeStatusRTMP $RTMPStatus) Set This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getConnectServerIP() Obtain The server IP.
- * @method void setConnectServerIP(string $ConnectServerIP) Set The server IP.
- * @method FlowRealtimeStatusRTP getRTPStatus() Obtain This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRTPStatus(FlowRealtimeStatusRTP $RTPStatus) Set This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getType() Obtain Type. Valid values: `Input`, `Output`.
+ * @method void setType(string $Type) Set Type. Valid values: `Input`, `Output`.
+ * @method string getInputId() Obtain Input Id. If Type is Input, this field is not empty.
+ * @method void setInputId(string $InputId) Set Input Id. If Type is Input, this field is not empty.
+ * @method string getOutputId() Obtain Output Id. If Type is Output, this field is not empty.
+ * @method void setOutputId(string $OutputId) Set Output Id. If Type is Output, this field is not empty.
+ * @method string getFlowId() Obtain Stream Id.
+ * @method void setFlowId(string $FlowId) Set Stream Id.
+ * @method string getProtocol() Obtain Protocol. SRT | RTMP.
+ * @method void setProtocol(string $Protocol) Set Protocol. SRT | RTMP.
+ * @method FlowRealtimeStatusCommon getCommonStatus() Obtain Common status information.
+ * @method void setCommonStatus(FlowRealtimeStatusCommon $CommonStatus) Set Common status information.
+ * @method FlowRealtimeStatusSRT getSRTStatus() Obtain If it is the SRT Protocol, this field will be present.
+ * @method void setSRTStatus(FlowRealtimeStatusSRT $SRTStatus) Set If it is the SRT Protocol, this field will be present.
+ * @method FlowRealtimeStatusRTMP getRTMPStatus() Obtain If it is the RTMP protocol, this field exists.
+ * @method void setRTMPStatus(FlowRealtimeStatusRTMP $RTMPStatus) Set If it is the RTMP protocol, this field exists.
+ * @method string getConnectServerIP() Obtain Server IP address.
+ * @method void setConnectServerIP(string $ConnectServerIP) Set Server IP address.
+ * @method FlowRealtimeStatusRTP getRTPStatus() Obtain If it is the RTP protocol, this field exists.
+ * @method void setRTPStatus(FlowRealtimeStatusRTP $RTPStatus) Set If it is the RTP protocol, this field exists.
  */
 class FlowRealtimeStatusItem extends AbstractModel
 {
     /**
-     * @var string Whether it is an input or output. Valid values: Input, Output.
+     * @var string Type. Valid values: `Input`, `Output`.
      */
     public $Type;
 
     /**
-     * @var string The input ID, which is not empty if `Type` is `Input`.
+     * @var string Input Id. If Type is Input, this field is not empty.
      */
     public $InputId;
 
     /**
-     * @var string The output ID, which is not empty if `Type` is `Output`.
+     * @var string Output Id. If Type is Output, this field is not empty.
      */
     public $OutputId;
 
     /**
-     * @var string The flow ID.
+     * @var string Stream Id.
      */
     public $FlowId;
 
     /**
-     * @var string The protocol used. Valid values: SRT, RTP, RTMP.
+     * @var string Protocol. SRT | RTMP.
      */
     public $Protocol;
 
     /**
-     * @var FlowRealtimeStatusCommon The common status information.
+     * @var FlowRealtimeStatusCommon Common status information.
      */
     public $CommonStatus;
 
     /**
-     * @var FlowRealtimeStatusSRT This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var FlowRealtimeStatusSRT If it is the SRT Protocol, this field will be present.
      */
     public $SRTStatus;
 
     /**
-     * @var FlowRealtimeStatusRTMP This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var FlowRealtimeStatusRTMP If it is the RTMP protocol, this field exists.
      */
     public $RTMPStatus;
 
     /**
-     * @var string The server IP.
+     * @var string Server IP address.
      */
     public $ConnectServerIP;
 
     /**
-     * @var FlowRealtimeStatusRTP This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var FlowRealtimeStatusRTP If it is the RTP protocol, this field exists.
      */
     public $RTPStatus;
 
     /**
-     * @param string $Type Whether it is an input or output. Valid values: Input, Output.
-     * @param string $InputId The input ID, which is not empty if `Type` is `Input`.
-     * @param string $OutputId The output ID, which is not empty if `Type` is `Output`.
-     * @param string $FlowId The flow ID.
-     * @param string $Protocol The protocol used. Valid values: SRT, RTP, RTMP.
-     * @param FlowRealtimeStatusCommon $CommonStatus The common status information.
-     * @param FlowRealtimeStatusSRT $SRTStatus This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param FlowRealtimeStatusRTMP $RTMPStatus This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ConnectServerIP The server IP.
-     * @param FlowRealtimeStatusRTP $RTPStatus This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Type Type. Valid values: `Input`, `Output`.
+     * @param string $InputId Input Id. If Type is Input, this field is not empty.
+     * @param string $OutputId Output Id. If Type is Output, this field is not empty.
+     * @param string $FlowId Stream Id.
+     * @param string $Protocol Protocol. SRT | RTMP.
+     * @param FlowRealtimeStatusCommon $CommonStatus Common status information.
+     * @param FlowRealtimeStatusSRT $SRTStatus If it is the SRT Protocol, this field will be present.
+     * @param FlowRealtimeStatusRTMP $RTMPStatus If it is the RTMP protocol, this field exists.
+     * @param string $ConnectServerIP Server IP address.
+     * @param FlowRealtimeStatusRTP $RTPStatus If it is the RTP protocol, this field exists.
      */
     function __construct()
     {

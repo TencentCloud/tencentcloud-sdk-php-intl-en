@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI dubbing task
  *
- * @method integer getDefinition() Obtain <p>AI Dubbing template id.</p>
- * @method void setDefinition(integer $Definition) Set <p>AI Dubbing template id.</p>
+ * @method integer getDefinition() Obtain <p>AI dubbing template id.</p>
+ * @method void setDefinition(integer $Definition) Set <p>AI dubbing template id.</p>
  * @method RawAIDubbingParameter getRawParameter() Obtain <p>Custom AI dubbing parameter. It takes effect when Definition is set to 0. This parameter is used in highly customized scenarios. We recommend that you use Definition to specify dubbing parameters.</p>
  * @method void setRawParameter(RawAIDubbingParameter $RawParameter) Set <p>Custom AI dubbing parameter. It takes effect when Definition is set to 0. This parameter is used in highly customized scenarios. We recommend that you use Definition to specify dubbing parameters.</p>
- * @method OverrideAIDubbingParameter getOverrideParameter() Obtain <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
- * @method void setOverrideParameter(OverrideAIDubbingParameter $OverrideParameter) Set <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
- * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+ * @method OverrideAIDubbingParameter getOverrideParameter() Obtain <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+ * @method void setOverrideParameter(OverrideAIDubbingParameter $OverrideParameter) Set <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
  * @method MediaInputInfo getSrcSubtitleInfo() Obtain <p>External source subtitle file information.</p>
  * @method void setSrcSubtitleInfo(MediaInputInfo $SrcSubtitleInfo) Set <p>External source subtitle file information.</p>
- * @method array getDstSubtitleInfos() Obtain <p>External subtitle file information, translated subtitles.</p>
- * @method void setDstSubtitleInfos(array $DstSubtitleInfos) Set <p>External subtitle file information, translated subtitles.</p>
+ * @method array getDstSubtitleInfos() Obtain <p>External subtitle file info, translated subtitles.</p>
+ * @method void setDstSubtitleInfos(array $DstSubtitleInfos) Set <p>External subtitle file info, translated subtitles.</p>
  * @method string getOutputObjectPath() Obtain <p>Output path of the file, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li><p><strong>Note</strong>: The <code>BatchProcessMedia</code> API is currently not supported.</p>
  * @method void setOutputObjectPath(string $OutputObjectPath) Set <p>Output path of the file, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li><p><strong>Note</strong>: The <code>BatchProcessMedia</code> API is currently not supported.</p>
- * @method string getExtendedParameter() Obtain <p>Additional parameters for AI Dubbing, serialized json string.</p>
- * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Additional parameters for AI Dubbing, serialized json string.</p>
- * @method string getDramaId() Obtain <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
- * @method void setDramaId(string $DramaId) Set <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+ * @method string getExtendedParameter() Obtain <p>AI dubbing extension parameter, serialized json string.</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) Set <p>AI dubbing extension parameter, serialized json string.</p>
+ * @method string getDramaId() Obtain <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
+ * @method void setDramaId(string $DramaId) Set <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
  */
 class AIDubbingTaskInput extends AbstractModel
 {
     /**
-     * @var integer <p>AI Dubbing template id.</p>
+     * @var integer <p>AI dubbing template id.</p>
      */
     public $Definition;
 
@@ -52,12 +52,12 @@ class AIDubbingTaskInput extends AbstractModel
     public $RawParameter;
 
     /**
-     * @var OverrideAIDubbingParameter <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+     * @var OverrideAIDubbingParameter <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
      */
     public $OverrideParameter;
 
     /**
-     * @var TaskOutputStorage <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * @var TaskOutputStorage <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
      */
     public $OutputStorage;
 
@@ -67,7 +67,7 @@ class AIDubbingTaskInput extends AbstractModel
     public $SrcSubtitleInfo;
 
     /**
-     * @var array <p>External subtitle file information, translated subtitles.</p>
+     * @var array <p>External subtitle file info, translated subtitles.</p>
      */
     public $DstSubtitleInfos;
 
@@ -77,25 +77,25 @@ class AIDubbingTaskInput extends AbstractModel
     public $OutputObjectPath;
 
     /**
-     * @var string <p>Additional parameters for AI Dubbing, serialized json string.</p>
+     * @var string <p>AI dubbing extension parameter, serialized json string.</p>
      */
     public $ExtendedParameter;
 
     /**
-     * @var string <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+     * @var string <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
      */
     public $DramaId;
 
     /**
-     * @param integer $Definition <p>AI Dubbing template id.</p>
+     * @param integer $Definition <p>AI dubbing template id.</p>
      * @param RawAIDubbingParameter $RawParameter <p>Custom AI dubbing parameter. It takes effect when Definition is set to 0. This parameter is used in highly customized scenarios. We recommend that you use Definition to specify dubbing parameters.</p>
-     * @param OverrideAIDubbingParameter $OverrideParameter <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
-     * @param TaskOutputStorage $OutputStorage <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * @param OverrideAIDubbingParameter $OverrideParameter <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
      * @param MediaInputInfo $SrcSubtitleInfo <p>External source subtitle file information.</p>
-     * @param array $DstSubtitleInfos <p>External subtitle file information, translated subtitles.</p>
+     * @param array $DstSubtitleInfos <p>External subtitle file info, translated subtitles.</p>
      * @param string $OutputObjectPath <p>Output path of the file, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li><p><strong>Note</strong>: The <code>BatchProcessMedia</code> API is currently not supported.</p>
-     * @param string $ExtendedParameter <p>Additional parameters for AI Dubbing, serialized json string.</p>
-     * @param string $DramaId <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+     * @param string $ExtendedParameter <p>AI dubbing extension parameter, serialized json string.</p>
+     * @param string $DramaId <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
      */
     function __construct()
     {

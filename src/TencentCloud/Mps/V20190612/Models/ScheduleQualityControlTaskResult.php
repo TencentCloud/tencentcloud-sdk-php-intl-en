@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiQualityControlTaskInput getInput() Obtain Media quality inspection task input.
  * @method void setInput(AiQualityControlTaskInput $Input) Set Media quality inspection task input.
- * @method QualityControlData getOutput() Obtain 
- * @method void setOutput(QualityControlData $Output) Set 
+ * @method QualityControlData getOutput() Obtain Output of a media quality inspection task.
+ * @method void setOutput(QualityControlData $Output) Set Output of a media quality inspection task.
  * @method integer getProgress() Obtain Task execution progress.
  * @method void setProgress(integer $Progress) Set Task execution progress.
  */
@@ -63,7 +63,7 @@ class ScheduleQualityControlTaskResult extends AbstractModel
     public $Input;
 
     /**
-     * @var QualityControlData 
+     * @var QualityControlData Output of a media quality inspection task.
      */
     public $Output;
 
@@ -78,7 +78,7 @@ class ScheduleQualityControlTaskResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
      * @param AiQualityControlTaskInput $Input Media quality inspection task input.
-     * @param QualityControlData $Output 
+     * @param QualityControlData $Output Output of a media quality inspection task.
      * @param integer $Progress Task execution progress.
      */
     function __construct()

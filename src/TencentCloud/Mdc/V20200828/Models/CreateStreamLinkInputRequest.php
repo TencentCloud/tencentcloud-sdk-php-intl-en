@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamLinkInput request structure.
  *
- * @method string getFlowId() Obtain StreamLink stream ID.
- * @method void setFlowId(string $FlowId) Set StreamLink stream ID.
- * @method array getInputGroup() Obtain The input group of the Flow.
- * @method void setInputGroup(array $InputGroup) Set The input group of the Flow.
+ * @method string getFlowId() Obtain <p>Media transmission stream ID.</p>
+ * @method void setFlowId(string $FlowId) Set <p>Media transmission stream ID.</p>
+ * @method array getInputGroup() Obtain <p>Input group of a stream.</p>
+ * @method void setInputGroup(array $InputGroup) Set <p>Input group of a stream.</p>
  */
 class CreateStreamLinkInputRequest extends AbstractModel
 {
     /**
-     * @var string StreamLink stream ID.
+     * @var string <p>Media transmission stream ID.</p>
      */
     public $FlowId;
 
     /**
-     * @var array The input group of the Flow.
+     * @var array <p>Input group of a stream.</p>
      */
     public $InputGroup;
 
     /**
-     * @param string $FlowId StreamLink stream ID.
-     * @param array $InputGroup The input group of the Flow.
+     * @param string $FlowId <p>Media transmission stream ID.</p>
+     * @param array $InputGroup <p>Input group of a stream.</p>
      */
     function __construct()
     {

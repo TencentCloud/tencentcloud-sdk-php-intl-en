@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent classification results info
+ * Intelligent classification result information.
  *
  * @method array getClassificationSet() Obtain Video intelligent classification list.
  * @method void setClassificationSet(array $ClassificationSet) Set Video intelligent classification list.

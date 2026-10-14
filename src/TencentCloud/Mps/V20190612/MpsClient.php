@@ -23,11 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mps\V20190612\Models as Models;
 
 /**
- * @method Models\BatchProcessMediaResponse BatchProcessMedia(Models\BatchProcessMediaRequest $req) This API is used to initiate batch processing tasks for URL video links, with features:
+ * @method Models\BatchProcessMediaResponse BatchProcessMedia(Models\BatchProcessMediaRequest $req) This API is used to initiate batch processing tasks for URL video links, with features including:
 Smart subtitle (full speech, speech hotword, and speech translation)
  * @method Models\ChangeVoiceResponse ChangeVoice(Models\ChangeVoiceRequest $req) Synchronize tone conversion to convert the input audio into the specified timbre based on the input audio and specified timbre.
  * @method Models\CloneViralResponse CloneViral(Models\CloneViralRequest $req) Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
- * @method Models\CloneVoiceResponse CloneVoice(Models\CloneVoiceRequest $req) This API is used to clone a voice type from a reference audio.
+ * @method Models\CloneVoiceResponse CloneVoice(Models\CloneVoiceRequest $req) This API is used to clone a voice from reference audio.
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) This API is used to create a user-defined content analysis template. Up to 50 templates can be created.
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) This API is used to create a user-defined Content Recognition template. Up to 50 templates can be created.
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
@@ -115,7 +115,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) This API is used to query the list of adaptive bitrate streaming templates and supports paginated queries by filters.
  * @method Models\DescribeAigcAudioTaskResponse DescribeAigcAudioTask(Models\DescribeAigcAudioTaskRequest $req) This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
  * @method Models\DescribeAigcImageTaskResponse DescribeAigcImageTask(Models\DescribeAigcImageTaskRequest $req) This API is used to query the progress of AIGC image generation tasks and obtain the generation results.
- * @method Models\DescribeAigcTaskListResponse DescribeAigcTaskList(Models\DescribeAigcTaskListRequest $req) Query AIGC task list details
+ * @method Models\DescribeAigcTaskListResponse DescribeAigcTaskList(Models\DescribeAigcTaskListRequest $req) Query the list details of AIGC tasks.
  * @method Models\DescribeAigcTaskStatusResponse DescribeAigcTaskStatus(Models\DescribeAigcTaskStatusRequest $req) Queries AIGC scenario task APIs
  * @method Models\DescribeAigcVideoTaskResponse DescribeAigcVideoTask(Models\DescribeAigcVideoTaskRequest $req) This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) This API is used to query the list of animated image generating templates and supports paged queries by filters.
@@ -204,24 +204,25 @@ Contains two actions: confirm and regenerate.
  * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) This API is used to modify custom transcoding template information.
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) This API is used to modify a custom watermarking template. The watermark type cannot be modified.
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) This API is used to modify the use case and tag of a keyword. The keyword itself cannot be modified, but you can delete it and create another one if needed.
- * @method Models\ParseLiveStreamProcessNotificationResponse ParseLiveStreamProcessNotification(Models\ParseLiveStreamProcessNotificationRequest $req) After receiving the message from CMQ, parse out the content of the MPS live stream processing event notification from the msgBody field of the message.
-This API is not used to trigger network calls, but to help generate SDKs for each language platform. You can refer to the parsing implementation in the SDK to parse event notifications.
- * @method Models\ParseNotificationResponse ParseNotification(Models\ParseNotificationRequest $req) After receiving a message from CMQ, parse out the content of the MPS event notification from the msgBody field of the message.
-This API is not used to trigger network calls, but to help generate SDKs for each language platform. You can refer to the parsing function in the SDK to implement event notification parsing.
+ * @method Models\ParseLiveStreamProcessNotificationResponse ParseLiveStreamProcessNotification(Models\ParseLiveStreamProcessNotificationRequest $req) After receiving a message from CMQ, parse out the content of the MPS live stream processing event notification from the msgBody field in the message.
+This API is not used to initiate network calls. Instead, it helps generate SDKs for each language platform. You can refer to the parsing implementation in the SDK for event notification parsing.
+ * @method Models\ParseNotificationResponse ParseNotification(Models\ParseNotificationRequest $req) After a message is received from CMQ, parse out the content of the MPS event notification from the msgBody field.
+This API is not used to initiate network calls. Instead, it is used to help generate SDKs for each language platform. You can refer to the parsing functions in the SDK to implement event notification parsing.
  * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is used to initiate image processing. Its features include:
 1. Format conversion;
 2. Image enhancement;
-3. Image erasure;4. Digital watermark;
+3. Image erasure.
+4. Digital watermark;
 5. Beauty filter;
- * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate processing tasks on a live stream. Features include:
+ * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) Initiate processing task for live streaming. Features include:
 
-Intelligent content moderation (porn detection in images, sensitive information detection, audio pornography detection);
+* Intelligent content moderation (porn detection in images, sensitive information detection, and audio pornography detection);
 * Smart content recognition (human faces, full texts, text keywords, full speech, speech keywords, real-time speech translation, object recognition, and game tagging).
-Intelligent content analysis (clipping, highlights).
+Intelligent content analysis (highlight splitting and compilation).
 Quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
-Recording
+* Recording
 
-Live stream processing event notification supports HTTP callbacks and also supports real-time writing to the message queue CMQ specified by the user. The user obtains the event notification result from the message queue CMQ. Meanwhile, if an output file exists during the process, it will be written to the target storage of the output file specified by the user.
+Live stream processing event notification supports HTTP callback and real-time writing to a user-specified TDMQ CMQ. Users obtain event notification results from TDMQ CMQ. If output files exist during the process, they are written to the target storage of the user-specified output files.
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for URL video links or media files in COS. Features include:
 - Audio/Video transcoding (such as standard transcoding, Top Speed Codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
 - Adaptive bitrate streaming conversion for audios/videos.

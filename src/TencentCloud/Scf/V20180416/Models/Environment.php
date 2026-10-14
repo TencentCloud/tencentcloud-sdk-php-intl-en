@@ -18,7 +18,7 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Environment variable parameter of the function
+ * Environment variable parameters of the function
  *
  * @method array getVariables() Obtain Environment variable array
  * @method void setVariables(array $Variables) Set Environment variable array

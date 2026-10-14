@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of the animated image file.
  * @method string getPath() Obtain File path of the animated image.
  * @method void setPath(string $Path) Set File path of the animated image.
- * @method integer getDefinition() Obtain Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
- * @method void setDefinition(integer $Definition) Set Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
- * @method string getContainer() Obtain Animated image file format, for example gif.
- * @method void setContainer(string $Container) Set Animated image file format, for example gif.
- * @method integer getHeight() Obtain Height of the animated image, measurement unit: px.
- * @method void setHeight(integer $Height) Set Height of the animated image, measurement unit: px.
- * @method integer getWidth() Obtain Width of the animated image, measurement unit: px.
- * @method void setWidth(integer $Width) Set Width of the animated image, measurement unit: px.
- * @method integer getBitrate() Obtain Animated image bitrate. Measurement unit: bps.
- * @method void setBitrate(integer $Bitrate) Set Animated image bitrate. Measurement unit: bps.
- * @method integer getSize() Obtain Animated image size, unit: byte.
- * @method void setSize(integer $Size) Set Animated image size, unit: byte.
+ * @method integer getDefinition() Obtain ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+ * @method void setDefinition(integer $Definition) Set ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+ * @method string getContainer() Obtain Animated image file format, for example, gif.
+ * @method void setContainer(string $Container) Set Animated image file format, for example, gif.
+ * @method integer getHeight() Obtain Height of the animated image. Measurement unit: px.
+ * @method void setHeight(integer $Height) Set Height of the animated image. Measurement unit: px.
+ * @method integer getWidth() Obtain Width of the animated image in px.
+ * @method void setWidth(integer $Width) Set Width of the animated image in px.
+ * @method integer getBitrate() Obtain Animated image bitrate. Unit: bps.
+ * @method void setBitrate(integer $Bitrate) Set Animated image bitrate. Unit: bps.
+ * @method integer getSize() Obtain Animation size. Unit: byte.
+ * @method void setSize(integer $Size) Set Animation size. Unit: byte.
  * @method string getMd5() Obtain md5 value of the animated image.
  * @method void setMd5(string $Md5) Set md5 value of the animated image.
  * @method float getStartTimeOffset() Obtain Start time offset of the GIF in the video, in seconds.
@@ -56,32 +56,32 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     public $Path;
 
     /**
-     * @var integer Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+     * @var integer ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
      */
     public $Definition;
 
     /**
-     * @var string Animated image file format, for example gif.
+     * @var string Animated image file format, for example, gif.
      */
     public $Container;
 
     /**
-     * @var integer Height of the animated image, measurement unit: px.
+     * @var integer Height of the animated image. Measurement unit: px.
      */
     public $Height;
 
     /**
-     * @var integer Width of the animated image, measurement unit: px.
+     * @var integer Width of the animated image in px.
      */
     public $Width;
 
     /**
-     * @var integer Animated image bitrate. Measurement unit: bps.
+     * @var integer Animated image bitrate. Unit: bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer Animated image size, unit: byte.
+     * @var integer Animation size. Unit: byte.
      */
     public $Size;
 
@@ -103,12 +103,12 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     /**
      * @param TaskOutputStorage $Storage Storage location of the animated image file.
      * @param string $Path File path of the animated image.
-     * @param integer $Definition Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
-     * @param string $Container Animated image file format, for example gif.
-     * @param integer $Height Height of the animated image, measurement unit: px.
-     * @param integer $Width Width of the animated image, measurement unit: px.
-     * @param integer $Bitrate Animated image bitrate. Measurement unit: bps.
-     * @param integer $Size Animated image size, unit: byte.
+     * @param integer $Definition ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+     * @param string $Container Animated image file format, for example, gif.
+     * @param integer $Height Height of the animated image. Measurement unit: px.
+     * @param integer $Width Width of the animated image in px.
+     * @param integer $Bitrate Animated image bitrate. Unit: bps.
+     * @param integer $Size Animation size. Unit: byte.
      * @param string $Md5 md5 value of the animated image.
      * @param float $StartTimeOffset Start time offset of the GIF in the video, in seconds.
      * @param float $EndTimeOffset End time offset of the GIF in the video, in seconds.

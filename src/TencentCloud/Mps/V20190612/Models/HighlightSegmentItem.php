@@ -18,16 +18,16 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent highlight collection segments.
+ * List of intelligent highlight segments.
  *
  * @method float getConfidence() Obtain Confidence degree.
  * @method void setConfidence(float $Confidence) Set Confidence degree.
  * @method float getStartTimeOffset() Obtain Segment start time offset.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Segment start time offset.
- * @method float getEndTimeOffset() Obtain End time offset of the recording clip.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of the recording clip.
- * @method array getSegmentTags() Obtain 
- * @method void setSegmentTags(array $SegmentTags) Set 
+ * @method float getEndTimeOffset() Obtain End time offset of a recording clip.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recording clip.
+ * @method array getSegmentTags() Obtain Segment tag.
+ * @method void setSegmentTags(array $SegmentTags) Set Segment tag.
  * @method string getBeginTime() Obtain The start time of a live streaming segment, in the ISO date format.	
  * @method void setBeginTime(string $BeginTime) Set The start time of a live streaming segment, in the ISO date format.	
  * @method string getEndTime() Obtain The end time of a live streaming segment, in the ISO date format.	
@@ -50,12 +50,12 @@ class HighlightSegmentItem extends AbstractModel
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of the recording clip.
+     * @var float End time offset of a recording clip.
      */
     public $EndTimeOffset;
 
     /**
-     * @var array 
+     * @var array Segment tag.
      */
     public $SegmentTags;
 
@@ -82,8 +82,8 @@ class HighlightSegmentItem extends AbstractModel
     /**
      * @param float $Confidence Confidence degree.
      * @param float $StartTimeOffset Segment start time offset.
-     * @param float $EndTimeOffset End time offset of the recording clip.
-     * @param array $SegmentTags 
+     * @param float $EndTimeOffset End time offset of a recording clip.
+     * @param array $SegmentTags Segment tag.
      * @param string $BeginTime The start time of a live streaming segment, in the ISO date format.	
      * @param string $EndTime The end time of a live streaming segment, in the ISO date format.	
      * @param string $Title Highlight title.

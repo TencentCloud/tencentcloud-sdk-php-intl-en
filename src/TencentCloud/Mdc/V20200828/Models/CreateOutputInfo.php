@@ -18,100 +18,145 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of the output to create.
+ * Configuration message for creating an output.
  *
- * @method string getOutputName() Obtain The output name.
- * @method void setOutputName(string $OutputName) Set The output name.
- * @method string getDescription() Obtain Description of the output.
- * @method void setDescription(string $Description) Set Description of the output.
- * @method string getProtocol() Obtain The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
- * @method void setProtocol(string $Protocol) Set The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
- * @method string getOutputRegion() Obtain The output region.
- * @method void setOutputRegion(string $OutputRegion) Set The output region.
- * @method CreateOutputSrtSettings getSRTSettings() Obtain The SRT configuration.
- * @method void setSRTSettings(CreateOutputSrtSettings $SRTSettings) Set The SRT configuration.
- * @method CreateOutputRTMPSettings getRTMPSettings() Obtain The RTMP configuration.
- * @method void setRTMPSettings(CreateOutputRTMPSettings $RTMPSettings) Set The RTMP configuration.
- * @method CreateOutputInfoRTPSettings getRTPSettings() Obtain The RTP configuration.
- * @method void setRTPSettings(CreateOutputInfoRTPSettings $RTPSettings) Set The RTP configuration.
- * @method array getAllowIpList() Obtain IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
- * @method void setAllowIpList(array $AllowIpList) Set IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
- * @method integer getMaxConcurrent() Obtain The maximum number of concurrent stream pulls is 4, and the default value is 4.
- * @method void setMaxConcurrent(integer $MaxConcurrent) Set The maximum number of concurrent stream pulls is 4, and the default value is 4.
- * @method array getSecurityGroupIds() Obtain The bound security group IDs.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
- * @method array getZones() Obtain Availability zone: output supports at most one availability zone as input.
- * @method void setZones(array $Zones) Set Availability zone: output supports at most one availability zone as input.
+ * @method string getOutputName() Obtain Output name.
+ * @method void setOutputName(string $OutputName) Set Output name.
+ * @method string getDescription() Obtain Output description.
+ * @method void setDescription(string $Description) Set Output description.
+ * @method string getProtocol() Obtain Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
+ * @method void setProtocol(string $Protocol) Set Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
+ * @method string getOutputRegion() Obtain Output region.
+ * @method void setOutputRegion(string $OutputRegion) Set Output region.
+ * @method CreateOutputSrtSettings getSRTSettings() Obtain Configuration of the output SRT.
+ * @method void setSRTSettings(CreateOutputSrtSettings $SRTSettings) Set Configuration of the output SRT.
+ * @method CreateOutputRTMPSettings getRTMPSettings() Obtain Configuration of the output RTMP.
+ * @method void setRTMPSettings(CreateOutputRTMPSettings $RTMPSettings) Set Configuration of the output RTMP.
+ * @method CreateOutputInfoRTPSettings getRTPSettings() Obtain Configuration of the output RTP.
+ * @method void setRTPSettings(CreateOutputInfoRTPSettings $RTPSettings) Set Configuration of the output RTP.
+ * @method array getAllowIpList() Obtain IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
+ * @method void setAllowIpList(array $AllowIpList) Set IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
+ * @method integer getMaxConcurrent() Obtain Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
+ * @method void setMaxConcurrent(integer $MaxConcurrent) Set Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
+ * @method array getSecurityGroupIds() Obtain ID of the bound input security group.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the bound input security group.
+ * @method array getZones() Obtain Availability zone. output supports a maximum of one user-submitted input availability zone.
+ * @method void setZones(array $Zones) Set Availability zone. output supports a maximum of one user-submitted input availability zone.
+ * @method string getOutputType() Obtain Output type: Internet/TencentCSS/StreamLive
+ * @method void setOutputType(string $OutputType) Set Output type: Internet/TencentCSS/StreamLive
+ * @method CreateOutputRistSettings getRISTSettings() Obtain Output RIST configuration.
+ * @method void setRISTSettings(CreateOutputRistSettings $RISTSettings) Set Output RIST configuration.
+ * @method PidSelector getPidSelector() Obtain For streams with multiple audio/video tracks, you can specify the track to be used
+ * @method void setPidSelector(PidSelector $PidSelector) Set For streams with multiple audio/video tracks, you can specify the track to be used
+ * @method string getOutputKind() Obtain Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+ * @method void setOutputKind(string $OutputKind) Set Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+ * @method StreamSelector getStreamSelector() Obtain For streams with multiple audio/video tracks, you can specify the track to be used
+ * @method void setStreamSelector(StreamSelector $StreamSelector) Set For streams with multiple audio/video tracks, you can specify the track to be used
  */
 class CreateOutputInfo extends AbstractModel
 {
     /**
-     * @var string The output name.
+     * @var string Output name.
      */
     public $OutputName;
 
     /**
-     * @var string Description of the output.
+     * @var string Output description.
      */
     public $Description;
 
     /**
-     * @var string The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+     * @var string Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
      */
     public $Protocol;
 
     /**
-     * @var string The output region.
+     * @var string Output region.
      */
     public $OutputRegion;
 
     /**
-     * @var CreateOutputSrtSettings The SRT configuration.
+     * @var CreateOutputSrtSettings Configuration of the output SRT.
      */
     public $SRTSettings;
 
     /**
-     * @var CreateOutputRTMPSettings The RTMP configuration.
+     * @var CreateOutputRTMPSettings Configuration of the output RTMP.
      */
     public $RTMPSettings;
 
     /**
-     * @var CreateOutputInfoRTPSettings The RTP configuration.
+     * @var CreateOutputInfoRTPSettings Configuration of the output RTP.
      */
     public $RTPSettings;
 
     /**
-     * @var array IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * @var array IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
      */
     public $AllowIpList;
 
     /**
-     * @var integer The maximum number of concurrent stream pulls is 4, and the default value is 4.
+     * @var integer Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
      */
     public $MaxConcurrent;
 
     /**
-     * @var array The bound security group IDs.
+     * @var array ID of the bound input security group.
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array Availability zone: output supports at most one availability zone as input.
+     * @var array Availability zone. output supports a maximum of one user-submitted input availability zone.
      */
     public $Zones;
 
     /**
-     * @param string $OutputName The output name.
-     * @param string $Description Description of the output.
-     * @param string $Protocol The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
-     * @param string $OutputRegion The output region.
-     * @param CreateOutputSrtSettings $SRTSettings The SRT configuration.
-     * @param CreateOutputRTMPSettings $RTMPSettings The RTMP configuration.
-     * @param CreateOutputInfoRTPSettings $RTPSettings The RTP configuration.
-     * @param array $AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
-     * @param integer $MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
-     * @param array $SecurityGroupIds The bound security group IDs.
-     * @param array $Zones Availability zone: output supports at most one availability zone as input.
+     * @var string Output type: Internet/TencentCSS/StreamLive
+     */
+    public $OutputType;
+
+    /**
+     * @var CreateOutputRistSettings Output RIST configuration.
+     */
+    public $RISTSettings;
+
+    /**
+     * @var PidSelector For streams with multiple audio/video tracks, you can specify the track to be used
+     * @deprecated
+     */
+    public $PidSelector;
+
+    /**
+     * @var string Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+     */
+    public $OutputKind;
+
+    /**
+     * @var StreamSelector For streams with multiple audio/video tracks, you can specify the track to be used
+     */
+    public $StreamSelector;
+
+    /**
+     * @param string $OutputName Output name.
+     * @param string $Description Output description.
+     * @param string $Protocol Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
+     * @param string $OutputRegion Output region.
+     * @param CreateOutputSrtSettings $SRTSettings Configuration of the output SRT.
+     * @param CreateOutputRTMPSettings $RTMPSettings Configuration of the output RTMP.
+     * @param CreateOutputInfoRTPSettings $RTPSettings Configuration of the output RTP.
+     * @param array $AllowIpList IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
+     * @param integer $MaxConcurrent Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
+     * @param array $SecurityGroupIds ID of the bound input security group.
+     * @param array $Zones Availability zone. output supports a maximum of one user-submitted input availability zone.
+     * @param string $OutputType Output type: Internet/TencentCSS/StreamLive
+     * @param CreateOutputRistSettings $RISTSettings Output RIST configuration.
+     * @param PidSelector $PidSelector For streams with multiple audio/video tracks, you can specify the track to be used
+     * @param string $OutputKind Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+     * @param StreamSelector $StreamSelector For streams with multiple audio/video tracks, you can specify the track to be used
      */
     function __construct()
     {
@@ -171,6 +216,29 @@ class CreateOutputInfo extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("OutputType",$param) and $param["OutputType"] !== null) {
+            $this->OutputType = $param["OutputType"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new CreateOutputRistSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("PidSelector",$param) and $param["PidSelector"] !== null) {
+            $this->PidSelector = new PidSelector();
+            $this->PidSelector->deserialize($param["PidSelector"]);
+        }
+
+        if (array_key_exists("OutputKind",$param) and $param["OutputKind"] !== null) {
+            $this->OutputKind = $param["OutputKind"];
+        }
+
+        if (array_key_exists("StreamSelector",$param) and $param["StreamSelector"] !== null) {
+            $this->StreamSelector = new StreamSelector();
+            $this->StreamSelector->deserialize($param["StreamSelector"]);
         }
     }
 }

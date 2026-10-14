@@ -18,20 +18,32 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream analysis result
+ * Live stream analysis result.
  *
- * @method array getResultSet() Obtain 
- * @method void setResultSet(array $ResultSet) Set 
+ * @method array getResultSet() Obtain Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+ * @method void setResultSet(array $ResultSet) Set Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
  */
 class LiveStreamAiAnalysisResultInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
      */
     public $ResultSet;
 
     /**
-     * @param array $ResultSet 
+     * @param array $ResultSet Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
      */
     function __construct()
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The maintenance time slot of the cluster
+ * Cluster maintainability time
  *
- * @method array getPeriods() Obtain Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
- * @method void setPeriods(array $Periods) Set Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
- * @method string getTimeStart() Obtain The maintenance start time
- * @method void setTimeStart(string $TimeStart) Set The maintenance start time
- * @method string getTimeEnd() Obtain The maintenance end time
- * @method void setTimeEnd(string $TimeEnd) Set The maintenance end time
- * @method string getTimeZone() Obtain The time zone expressed in UTC.
- * @method void setTimeZone(string $TimeZone) Set The time zone expressed in UTC.
- * @method array getMoreInstances() Obtain The array of ES cluster IDs
- * @method void setMoreInstances(array $MoreInstances) Set The array of ES cluster IDs
+ * @method array getPeriods() Obtain Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+ * @method void setPeriods(array $Periods) Set Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+ * @method string getTimeStart() Obtain Maintenance start time
+ * @method void setTimeStart(string $TimeStart) Set Maintenance start time
+ * @method string getTimeEnd() Obtain Maintenance end time.
+ * @method void setTimeEnd(string $TimeEnd) Set Maintenance end time.
+ * @method string getTimeZone() Obtain Time zone in UTC format
+ * @method void setTimeZone(string $TimeZone) Set Time zone in UTC format
+ * @method array getMoreInstances() Obtain ES cluster ID array
+ * @method void setMoreInstances(array $MoreInstances) Set ES cluster ID array
  */
 class OperationDurationUpdated extends AbstractModel
 {
     /**
-     * @var array Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+     * @var array Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
      */
     public $Periods;
 
     /**
-     * @var string The maintenance start time
+     * @var string Maintenance start time
      */
     public $TimeStart;
 
     /**
-     * @var string The maintenance end time
+     * @var string Maintenance end time.
      */
     public $TimeEnd;
 
     /**
-     * @var string The time zone expressed in UTC.
+     * @var string Time zone in UTC format
      */
     public $TimeZone;
 
     /**
-     * @var array The array of ES cluster IDs
+     * @var array ES cluster ID array
      */
     public $MoreInstances;
 
     /**
-     * @param array $Periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-     * @param string $TimeStart The maintenance start time
-     * @param string $TimeEnd The maintenance end time
-     * @param string $TimeZone The time zone expressed in UTC.
-     * @param array $MoreInstances The array of ES cluster IDs
+     * @param array $Periods Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+     * @param string $TimeStart Maintenance start time
+     * @param string $TimeEnd Maintenance end time.
+     * @param string $TimeZone Time zone in UTC format
+     * @param array $MoreInstances ES cluster ID array
      */
     function __construct()
     {

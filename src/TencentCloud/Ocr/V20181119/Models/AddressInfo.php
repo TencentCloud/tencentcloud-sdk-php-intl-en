@@ -18,156 +18,108 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Overseas document recognition address information.
+ * Overseas document recognition address information
  *
- * @method string getCountry() Obtain Country.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCountry(string $Country) Set Country.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPostalCode() Obtain Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPostalCode(string $PostalCode) Set Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubdivision() Obtain Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubdivision(string $Subdivision) Set Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDistrict() Obtain District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDistrict(string $District) Set District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCity() Obtain City name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCity(string $City) Set City name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubdistrict() Obtain Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubdistrict(string $Subdistrict) Set Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormattedAddress() Obtain Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormattedAddress(string $FormattedAddress) Set Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLineOne() Obtain First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLineOne(string $LineOne) Set First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLineTwo() Obtain Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLineTwo(string $LineTwo) Set Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLineThree() Obtain Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLineThree(string $LineThree) Set Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLineFour() Obtain Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLineFour(string $LineFour) Set Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLineFive() Obtain Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLineFive(string $LineFive) Set Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCountry() Obtain <p>Country</p>
+ * @method void setCountry(string $Country) Set <p>Country</p>
+ * @method string getPostalCode() Obtain <p>Postal code</p>
+ * @method void setPostalCode(string $PostalCode) Set <p>Postal code</p>
+ * @method string getSubdivision() Obtain <p>Sub-region</p>
+ * @method void setSubdivision(string $Subdivision) Set <p>Sub-region</p>
+ * @method string getDistrict() Obtain <p>District</p>
+ * @method void setDistrict(string $District) Set <p>District</p>
+ * @method string getCity() Obtain <p>City</p>
+ * @method void setCity(string $City) Set <p>City</p>
+ * @method string getSubdistrict() Obtain <p>Sub-district office</p>
+ * @method void setSubdistrict(string $Subdistrict) Set <p>Sub-district office</p>
+ * @method string getFormattedAddress() Obtain <p>Complete address</p>
+ * @method void setFormattedAddress(string $FormattedAddress) Set <p>Complete address</p>
+ * @method string getLineOne() Obtain <p>First line of the address bar</p>
+ * @method void setLineOne(string $LineOne) Set <p>First line of the address bar</p>
+ * @method string getLineTwo() Obtain <p>Second line of the address bar</p>
+ * @method void setLineTwo(string $LineTwo) Set <p>Second line of the address bar</p>
+ * @method string getLineThree() Obtain <p>Third line of the address bar</p>
+ * @method void setLineThree(string $LineThree) Set <p>Third line of the address bar</p>
+ * @method string getLineFour() Obtain <p>Fourth line of the address bar</p>
+ * @method void setLineFour(string $LineFour) Set <p>Fourth line of the address bar</p>
+ * @method string getLineFive() Obtain <p>Fifth line of the address bar</p>
+ * @method void setLineFive(string $LineFive) Set <p>Fifth line of the address bar</p>
  */
 class AddressInfo extends AbstractModel
 {
     /**
-     * @var string Country.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Country</p>
      */
     public $Country;
 
     /**
-     * @var string Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Postal code</p>
      */
     public $PostalCode;
 
     /**
-     * @var string Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Sub-region</p>
      */
     public $Subdivision;
 
     /**
-     * @var string District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>District</p>
      */
     public $District;
 
     /**
-     * @var string City name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>City</p>
      */
     public $City;
 
     /**
-     * @var string Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Sub-district office</p>
      */
     public $Subdistrict;
 
     /**
-     * @var string Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Complete address</p>
      */
     public $FormattedAddress;
 
     /**
-     * @var string First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>First line of the address bar</p>
      */
     public $LineOne;
 
     /**
-     * @var string Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Second line of the address bar</p>
      */
     public $LineTwo;
 
     /**
-     * @var string Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Third line of the address bar</p>
      */
     public $LineThree;
 
     /**
-     * @var string Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Fourth line of the address bar</p>
      */
     public $LineFour;
 
     /**
-     * @var string Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Fifth line of the address bar</p>
      */
     public $LineFive;
 
     /**
-     * @param string $Country Country.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PostalCode Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Subdivision Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $District District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $City City name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Subdistrict Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FormattedAddress Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LineOne First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LineTwo Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LineThree Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LineFour Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LineFive Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Country <p>Country</p>
+     * @param string $PostalCode <p>Postal code</p>
+     * @param string $Subdivision <p>Sub-region</p>
+     * @param string $District <p>District</p>
+     * @param string $City <p>City</p>
+     * @param string $Subdistrict <p>Sub-district office</p>
+     * @param string $FormattedAddress <p>Complete address</p>
+     * @param string $LineOne <p>First line of the address bar</p>
+     * @param string $LineTwo <p>Second line of the address bar</p>
+     * @param string $LineThree <p>Third line of the address bar</p>
+     * @param string $LineFour <p>Fourth line of the address bar</p>
+     * @param string $LineFive <p>Fifth line of the address bar</p>
      */
     function __construct()
     {

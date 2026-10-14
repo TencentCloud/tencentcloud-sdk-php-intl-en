@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskDescriptionInput getInput() Obtain Intelligent description task input.
  * @method void setInput(AiAnalysisTaskDescriptionInput $Input) Set Intelligent description task input.
- * @method AiAnalysisTaskDescriptionOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskDescriptionOutput $Output) Set 
+ * @method AiAnalysisTaskDescriptionOutput getOutput() Obtain Intelligent description task output.
+ * @method void setOutput(AiAnalysisTaskDescriptionOutput $Output) Set Intelligent description task output.
  */
 class AiAnalysisTaskDescriptionResult extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AiAnalysisTaskDescriptionResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDescriptionOutput 
+     * @var AiAnalysisTaskDescriptionOutput Intelligent description task output.
      */
     public $Output;
 
@@ -63,7 +63,7 @@ class AiAnalysisTaskDescriptionResult extends AbstractModel
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskDescriptionInput $Input Intelligent description task input.
-     * @param AiAnalysisTaskDescriptionOutput $Output 
+     * @param AiAnalysisTaskDescriptionOutput $Output Intelligent description task output.
      */
     function __construct()
     {

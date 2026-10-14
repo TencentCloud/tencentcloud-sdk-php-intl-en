@@ -18,48 +18,36 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Index configuration fields
+ * Index configuration field
  *
- * @method string getNumberOfShards() Obtain Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNumberOfShards(string $NumberOfShards) Set Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getNumberOfReplicas() Obtain Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNumberOfReplicas(string $NumberOfReplicas) Set Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getRefreshInterval() Obtain Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRefreshInterval(string $RefreshInterval) Set Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getNumberOfShards() Obtain Number of index primary shards
+ * @method void setNumberOfShards(string $NumberOfShards) Set Number of index primary shards
+ * @method string getNumberOfReplicas() Obtain Replica shard count of an index
+ * @method void setNumberOfReplicas(string $NumberOfReplicas) Set Replica shard count of an index
+ * @method string getRefreshInterval() Obtain Index refresh frequency
+ * @method void setRefreshInterval(string $RefreshInterval) Set Index refresh frequency
  */
 class IndexSettingsField extends AbstractModel
 {
     /**
-     * @var string Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Number of index primary shards
      */
     public $NumberOfShards;
 
     /**
-     * @var string Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Replica shard count of an index
      */
     public $NumberOfReplicas;
 
     /**
-     * @var string Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Index refresh frequency
      */
     public $RefreshInterval;
 
     /**
-     * @param string $NumberOfShards Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $NumberOfReplicas Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $RefreshInterval Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $NumberOfShards Number of index primary shards
+     * @param string $NumberOfReplicas Replica shard count of an index
+     * @param string $RefreshInterval Index refresh frequency
      */
     function __construct()
     {

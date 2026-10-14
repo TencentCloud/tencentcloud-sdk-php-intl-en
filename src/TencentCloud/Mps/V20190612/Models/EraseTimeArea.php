@@ -18,36 +18,38 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Smart erasing: specify the region configuration for removal.
+Directly erase the specified region within a specified period.
+When both BeginMs and EndMs are 0, directly erase the specified region in the entire video.
  *
- * @method integer getBeginMs() Obtain 
- * @method void setBeginMs(integer $BeginMs) Set 
- * @method integer getEndMs() Obtain 
- * @method void setEndMs(integer $EndMs) Set 
- * @method array getAreas() Obtain 
- * @method void setAreas(array $Areas) Set 
+ * @method integer getBeginMs() Obtain Start time in milliseconds.
+ * @method void setBeginMs(integer $BeginMs) Set Start time in milliseconds.
+ * @method integer getEndMs() Obtain End time in ms.
+ * @method void setEndMs(integer $EndMs) Set End time in ms.
+ * @method array getAreas() Obtain List of regions removed within the period
+ * @method void setAreas(array $Areas) Set List of regions removed within the period
  */
 class EraseTimeArea extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Start time in milliseconds.
      */
     public $BeginMs;
 
     /**
-     * @var integer 
+     * @var integer End time in ms.
      */
     public $EndMs;
 
     /**
-     * @var array 
+     * @var array List of regions removed within the period
      */
     public $Areas;
 
     /**
-     * @param integer $BeginMs 
-     * @param integer $EndMs 
-     * @param array $Areas 
+     * @param integer $BeginMs Start time in milliseconds.
+     * @param integer $EndMs End time in ms.
+     * @param array $Areas List of regions removed within the period
      */
     function __construct()
     {

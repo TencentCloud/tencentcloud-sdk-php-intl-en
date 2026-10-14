@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specification parameters for custom transcoding. Used to overwrite the corresponding parameter values in the template.
+ * Specification parameters for custom transcoding. Used to override the corresponding parameter values in the template.
  *
  * @method string getContainer() Obtain Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
  * @method void setContainer(string $Container) Set Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
  * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
  * @method void setRemoveVideo(integer $RemoveVideo) Set Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
  * @method integer getRemoveAudio() Obtain Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
  * @method void setRemoveAudio(integer $RemoveAudio) Set Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
  * @method VideoTemplateInfoForUpdate getVideoTemplate() Obtain Video stream configuration parameters.
  * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set Video stream configuration parameters.
  * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain Audio stream configuration parameters.
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameters.
- * @method TEHDConfigForUpdate getTEHDConfig() Obtain 
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set 
+ * @method TEHDConfigForUpdate getTEHDConfig() Obtain Top Speed Codec transcoding parameters.
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set Top Speed Codec transcoding parameters.
  * @method SubtitleTemplate getSubtitleTemplate() Obtain Subtitle stream configuration parameters.
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Subtitle stream configuration parameters.
  * @method array getAddonAudioStream() Obtain External audio track parameter.
@@ -58,14 +58,14 @@ class OverrideTranscodeParameter extends AbstractModel
 
     /**
      * @var integer Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      */
     public $RemoveVideo;
 
     /**
      * @var integer Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      */
     public $RemoveAudio;
@@ -81,7 +81,7 @@ class OverrideTranscodeParameter extends AbstractModel
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate 
+     * @var TEHDConfigForUpdate Top Speed Codec transcoding parameters.
      */
     public $TEHDConfig;
 
@@ -108,14 +108,14 @@ class OverrideTranscodeParameter extends AbstractModel
     /**
      * @param string $Container Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
      * @param integer $RemoveVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      * @param integer $RemoveAudio Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameters.
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameters.
-     * @param TEHDConfigForUpdate $TEHDConfig 
+     * @param TEHDConfigForUpdate $TEHDConfig Top Speed Codec transcoding parameters.
      * @param SubtitleTemplate $SubtitleTemplate Subtitle stream configuration parameters.
      * @param array $AddonAudioStream External audio track parameter.
      * @param string $StdExtInfo Transcoding extension field.

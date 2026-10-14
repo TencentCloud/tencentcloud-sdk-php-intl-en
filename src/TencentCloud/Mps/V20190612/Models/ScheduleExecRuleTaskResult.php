@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method ExecRulesTask getInput() Obtain Input of the conditional judgment task.
  * @method void setInput(ExecRulesTask $Input) Set Input of the conditional judgment task.
- * @method ExecRuleTaskData getOutput() Obtain 
- * @method void setOutput(ExecRuleTaskData $Output) Set 
+ * @method ExecRuleTaskData getOutput() Obtain Output of the conditional judgment task.
+ * @method void setOutput(ExecRuleTaskData $Output) Set Output of the conditional judgment task.
  */
 class ScheduleExecRuleTaskResult extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ScheduleExecRuleTaskResult extends AbstractModel
     public $Input;
 
     /**
-     * @var ExecRuleTaskData 
+     * @var ExecRuleTaskData Output of the conditional judgment task.
      */
     public $Output;
 
@@ -63,7 +63,7 @@ class ScheduleExecRuleTaskResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param string $Message Error message.
      * @param ExecRulesTask $Input Input of the conditional judgment task.
-     * @param ExecRuleTaskData $Output 
+     * @param ExecRuleTaskData $Output Output of the conditional judgment task.
      */
     function __construct()
     {

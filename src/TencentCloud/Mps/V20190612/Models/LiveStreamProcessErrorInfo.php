@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream processing error information
+ * Error information of live stream processing
  *
  * @method integer getErrCode() Obtain Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
  * @method void setErrCode(integer $ErrCode) Set Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  */
@@ -33,8 +33,8 @@ class LiveStreamProcessErrorInfo extends AbstractModel
 {
     /**
      * @var integer Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
      */
     public $ErrCode;
 
@@ -45,8 +45,8 @@ class LiveStreamProcessErrorInfo extends AbstractModel
 
     /**
      * @param integer $ErrCode Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
      * @param string $Message Error message.
      */
     function __construct()

@@ -18,28 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Privacy protection configuration for the smart erasing template.
  *
- * @method string getPrivacyModel() Obtain 
- * @method void setPrivacyModel(string $PrivacyModel) Set 
- * @method array getPrivacyTargets() Obtain 
- * @method void setPrivacyTargets(array $PrivacyTargets) Set 
+ * @method string getPrivacyModel() Obtain Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
+ * @method void setPrivacyModel(string $PrivacyModel) Set Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
+ * @method array getPrivacyTargets() Obtain Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
+ * @method void setPrivacyTargets(array $PrivacyTargets) Set Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
  */
 class SmartErasePrivacyConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
      */
     public $PrivacyModel;
 
     /**
-     * @var array 
+     * @var array Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
      */
     public $PrivacyTargets;
 
     /**
-     * @param string $PrivacyModel 
-     * @param array $PrivacyTargets 
+     * @param string $PrivacyModel Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
+     * @param array $PrivacyTargets Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
      */
     function __construct()
     {

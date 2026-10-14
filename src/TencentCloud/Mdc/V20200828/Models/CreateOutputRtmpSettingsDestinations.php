@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The RTMP destination address of the output to create.
+ * RTMP destination address for creating the output of a media transmission stream.
  *
- * @method string getUrl() Obtain The relay URL. Format: `rtmp://domain/live`.
- * @method void setUrl(string $Url) Set The relay URL. Format: `rtmp://domain/live`.
- * @method string getStreamKey() Obtain The `StreamKey` for relay. Format: `stream?key=value`.
- * @method void setStreamKey(string $StreamKey) Set The `StreamKey` for relay. Format: `stream?key=value`.
+ * @method string getUrl() Obtain URL for push forwarding, in the format of rtmp://domain/live.
+ * @method void setUrl(string $Url) Set URL for push forwarding, in the format of rtmp://domain/live.
+ * @method string getStreamKey() Obtain StreamKey for republishing, in the format of: stream?key=value.
+ * @method void setStreamKey(string $StreamKey) Set StreamKey for republishing, in the format of: stream?key=value.
  */
 class CreateOutputRtmpSettingsDestinations extends AbstractModel
 {
     /**
-     * @var string The relay URL. Format: `rtmp://domain/live`.
+     * @var string URL for push forwarding, in the format of rtmp://domain/live.
      */
     public $Url;
 
     /**
-     * @var string The `StreamKey` for relay. Format: `stream?key=value`.
+     * @var string StreamKey for republishing, in the format of: stream?key=value.
      */
     public $StreamKey;
 
     /**
-     * @param string $Url The relay URL. Format: `rtmp://domain/live`.
-     * @param string $StreamKey The `StreamKey` for relay. Format: `stream?key=value`.
+     * @param string $Url URL for push forwarding, in the format of rtmp://domain/live.
+     * @param string $StreamKey StreamKey for republishing, in the format of: stream?key=value.
      */
     function __construct()
     {

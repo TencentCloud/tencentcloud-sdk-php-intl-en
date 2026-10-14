@@ -18,48 +18,36 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RTP configuration information of the queried output.
+ * Query the configuration message of the output RTP.
  *
- * @method array getDestinations() Obtain Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDestinations(array $Destinations) Set Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFEC() Obtain Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFEC(string $FEC) Set Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDestinations() Obtain List of target address information for RTP repush.
+ * @method void setDestinations(array $Destinations) Set List of target address information for RTP repush.
+ * @method string getFEC() Obtain Whether to enable FEC.
+ * @method void setFEC(string $FEC) Set Whether to enable FEC.
  * @method integer getIdleTimeout() Obtain Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIdleTimeout(integer $IdleTimeout) Set Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DescribeOutputRTPSettings extends AbstractModel
 {
     /**
-     * @var array Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of target address information for RTP repush.
      */
     public $Destinations;
 
     /**
-     * @var string Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to enable FEC.
      */
     public $FEC;
 
     /**
      * @var integer Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IdleTimeout;
 
     /**
-     * @param array $Destinations Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FEC Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Destinations List of target address information for RTP repush.
+     * @param string $FEC Whether to enable FEC.
      * @param integer $IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

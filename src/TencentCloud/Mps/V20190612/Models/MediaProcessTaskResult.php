@@ -21,93 +21,93 @@ use TencentCloud\Common\AbstractModel;
  * Task query result type
  *
  * @method string getType() Obtain Task type. Valid values:
-<li>Transcode: Transcode</li>
-<li>AnimatedGraphics: Animated image</li>
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheet</li>
-<li>CoverBySnapshot: screencapturing for cover image.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+<li>ImageSprites: sprite sheets.</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
  * @method void setType(string $Type) Set Task type. Valid values:
-<li>Transcode: Transcode</li>
-<li>AnimatedGraphics: Animated image</li>
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheet</li>
-<li>CoverBySnapshot: screencapturing for cover image.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
- * @method MediaProcessTaskTranscodeResult getTranscodeTask() Obtain 
- * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) Set 
- * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() Obtain 
- * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set 
- * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain 
- * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set 
- * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain 
- * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set 
- * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain 
- * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set 
- * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain 
- * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set 
+<li>ImageSprites: sprite sheets.</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+ * @method MediaProcessTaskTranscodeResult getTranscodeTask() Obtain Query result of video transcoding tasks. Valid when the task type is `Transcode`.
+ * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) Set Query result of video transcoding tasks. Valid when the task type is `Transcode`.
+ * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() Obtain Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
+ * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
+ * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain Query result of a time point screencapturing task for a video. Valid when the task type is `SnapshotByTimeOffset`.
+ * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set Query result of a time point screencapturing task for a video. Valid when the task type is `SnapshotByTimeOffset`.
+ * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
+ * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
+ * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain Query result of the image sprite task for video. Valid when the task type is ImageSprite.
+ * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set Query result of the image sprite task for video. Valid when the task type is ImageSprite.
+ * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain Query result of adaptive bitrate streaming tasks. Valid when the task type is AdaptiveDynamicStreaming.
+ * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set Query result of adaptive bitrate streaming tasks. Valid when the task type is AdaptiveDynamicStreaming.
  */
 class MediaProcessTaskResult extends AbstractModel
 {
     /**
      * @var string Task type. Valid values:
-<li>Transcode: Transcode</li>
-<li>AnimatedGraphics: Animated image</li>
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheet</li>
-<li>CoverBySnapshot: screencapturing for cover image.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+<li>ImageSprites: sprite sheets.</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
      */
     public $Type;
 
     /**
-     * @var MediaProcessTaskTranscodeResult 
+     * @var MediaProcessTaskTranscodeResult Query result of video transcoding tasks. Valid when the task type is `Transcode`.
      */
     public $TranscodeTask;
 
     /**
-     * @var MediaProcessTaskAnimatedGraphicResult 
+     * @var MediaProcessTaskAnimatedGraphicResult Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
      */
     public $AnimatedGraphicTask;
 
     /**
-     * @var MediaProcessTaskSnapshotByTimeOffsetResult 
+     * @var MediaProcessTaskSnapshotByTimeOffsetResult Query result of a time point screencapturing task for a video. Valid when the task type is `SnapshotByTimeOffset`.
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var MediaProcessTaskSampleSnapshotResult 
+     * @var MediaProcessTaskSampleSnapshotResult Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var MediaProcessTaskImageSpriteResult 
+     * @var MediaProcessTaskImageSpriteResult Query result of the image sprite task for video. Valid when the task type is ImageSprite.
      */
     public $ImageSpriteTask;
 
     /**
-     * @var MediaProcessTaskAdaptiveDynamicStreamingResult 
+     * @var MediaProcessTaskAdaptiveDynamicStreamingResult Query result of adaptive bitrate streaming tasks. Valid when the task type is AdaptiveDynamicStreaming.
      */
     public $AdaptiveDynamicStreamingTask;
 
     /**
      * @param string $Type Task type. Valid values:
-<li>Transcode: Transcode</li>
-<li>AnimatedGraphics: Animated image</li>
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheet</li>
-<li>CoverBySnapshot: screencapturing for cover image.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-     * @param MediaProcessTaskTranscodeResult $TranscodeTask 
-     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask 
-     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask 
-     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask 
-     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask 
-     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask 
+<li>ImageSprites: sprite sheets.</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+     * @param MediaProcessTaskTranscodeResult $TranscodeTask Query result of video transcoding tasks. Valid when the task type is `Transcode`.
+     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
+     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask Query result of a time point screencapturing task for a video. Valid when the task type is `SnapshotByTimeOffset`.
+     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
+     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask Query result of the image sprite task for video. Valid when the task type is ImageSprite.
+     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask Query result of adaptive bitrate streaming tasks. Valid when the task type is AdaptiveDynamicStreaming.
      */
     function __construct()
     {

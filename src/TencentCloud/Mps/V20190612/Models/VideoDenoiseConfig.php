@@ -20,21 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video noise reduction configuration
  *
- * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+ * @method string getSwitch() Obtain Capability configuration switch. Available values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Available values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
+ * @method void setType(string $Type) Set Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
  */
 class VideoDenoiseConfig extends AbstractModel
 {
     /**
-     * @var string Capability configuration switch. Valid values:
+     * @var string Capability configuration switch. Available values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -42,16 +48,22 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
      */
     public $Type;
 
     /**
-     * @param string $Switch Capability configuration switch. Valid values:
+     * @param string $Switch Capability configuration switch. Available values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type 
+     * @param string $Type Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
      */
     function __construct()
     {

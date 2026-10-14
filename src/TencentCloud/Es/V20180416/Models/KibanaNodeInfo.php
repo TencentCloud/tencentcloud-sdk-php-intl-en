@@ -18,20 +18,20 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Kibana node information
+ * Kibana node-related information of the instance
  *
  * @method string getKibanaNodeType() Obtain Kibana node specification
  * @method void setKibanaNodeType(string $KibanaNodeType) Set Kibana node specification
  * @method integer getKibanaNodeNum() Obtain Number of Kibana nodes
  * @method void setKibanaNodeNum(integer $KibanaNodeNum) Set Number of Kibana nodes
- * @method integer getKibanaNodeCpuNum() Obtain Number of Kibana node's CPUs
- * @method void setKibanaNodeCpuNum(integer $KibanaNodeCpuNum) Set Number of Kibana node's CPUs
- * @method integer getKibanaNodeMemSize() Obtain Kibana node's memory in GB
- * @method void setKibanaNodeMemSize(integer $KibanaNodeMemSize) Set Kibana node's memory in GB
- * @method string getKibanaNodeDiskType() Obtain Kibana node's disk type
- * @method void setKibanaNodeDiskType(string $KibanaNodeDiskType) Set Kibana node's disk type
- * @method integer getKibanaNodeDiskSize() Obtain Kibana node's disk size
- * @method void setKibanaNodeDiskSize(integer $KibanaNodeDiskSize) Set Kibana node's disk size
+ * @method integer getKibanaNodeCpuNum() Obtain Number of CPUs of the Kibana node
+ * @method void setKibanaNodeCpuNum(integer $KibanaNodeCpuNum) Set Number of CPUs of the Kibana node
+ * @method integer getKibanaNodeMemSize() Obtain Kibana node memory in GB
+ * @method void setKibanaNodeMemSize(integer $KibanaNodeMemSize) Set Kibana node memory in GB
+ * @method string getKibanaNodeDiskType() Obtain Kibana node disk type
+ * @method void setKibanaNodeDiskType(string $KibanaNodeDiskType) Set Kibana node disk type
+ * @method integer getKibanaNodeDiskSize() Obtain Kibana node disk size
+ * @method void setKibanaNodeDiskSize(integer $KibanaNodeDiskSize) Set Kibana node disk size
  */
 class KibanaNodeInfo extends AbstractModel
 {
@@ -46,32 +46,32 @@ class KibanaNodeInfo extends AbstractModel
     public $KibanaNodeNum;
 
     /**
-     * @var integer Number of Kibana node's CPUs
+     * @var integer Number of CPUs of the Kibana node
      */
     public $KibanaNodeCpuNum;
 
     /**
-     * @var integer Kibana node's memory in GB
+     * @var integer Kibana node memory in GB
      */
     public $KibanaNodeMemSize;
 
     /**
-     * @var string Kibana node's disk type
+     * @var string Kibana node disk type
      */
     public $KibanaNodeDiskType;
 
     /**
-     * @var integer Kibana node's disk size
+     * @var integer Kibana node disk size
      */
     public $KibanaNodeDiskSize;
 
     /**
      * @param string $KibanaNodeType Kibana node specification
      * @param integer $KibanaNodeNum Number of Kibana nodes
-     * @param integer $KibanaNodeCpuNum Number of Kibana node's CPUs
-     * @param integer $KibanaNodeMemSize Kibana node's memory in GB
-     * @param string $KibanaNodeDiskType Kibana node's disk type
-     * @param integer $KibanaNodeDiskSize Kibana node's disk size
+     * @param integer $KibanaNodeCpuNum Number of CPUs of the Kibana node
+     * @param integer $KibanaNodeMemSize Kibana node memory in GB
+     * @param string $KibanaNodeDiskType Kibana node disk type
+     * @param integer $KibanaNodeDiskSize Kibana node disk size
      */
     function __construct()
     {

@@ -18,44 +18,44 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The audio data of a flow.
+ * Transmit audio data of streaming media.
  *
- * @method integer getFps() Obtain The frame rate.
- * @method void setFps(integer $Fps) Set The frame rate.
- * @method integer getRate() Obtain The bitrate (bps).
- * @method void setRate(integer $Rate) Set The bitrate (bps).
- * @method integer getPid() Obtain The audio PID.
- * @method void setPid(integer $Pid) Set The audio PID.
- * @method string getSessionId() Obtain The ID of a push session.
- * @method void setSessionId(string $SessionId) Set The ID of a push session.
+ * @method integer getFps() Obtain Frame rate.
+ * @method void setFps(integer $Fps) Set Frame rate.
+ * @method integer getRate() Obtain Bitrate in bps.
+ * @method void setRate(integer $Rate) Set Bitrate in bps.
+ * @method integer getPid() Obtain Audio Pid.
+ * @method void setPid(integer $Pid) Set Audio Pid.
+ * @method string getSessionId() Obtain Flag of the same push.
+ * @method void setSessionId(string $SessionId) Set Flag of the same push.
  */
 class FlowMediaAudio extends AbstractModel
 {
     /**
-     * @var integer The frame rate.
+     * @var integer Frame rate.
      */
     public $Fps;
 
     /**
-     * @var integer The bitrate (bps).
+     * @var integer Bitrate in bps.
      */
     public $Rate;
 
     /**
-     * @var integer The audio PID.
+     * @var integer Audio Pid.
      */
     public $Pid;
 
     /**
-     * @var string The ID of a push session.
+     * @var string Flag of the same push.
      */
     public $SessionId;
 
     /**
-     * @param integer $Fps The frame rate.
-     * @param integer $Rate The bitrate (bps).
-     * @param integer $Pid The audio PID.
-     * @param string $SessionId The ID of a push session.
+     * @param integer $Fps Frame rate.
+     * @param integer $Rate Bitrate in bps.
+     * @param integer $Pid Audio Pid.
+     * @param string $SessionId Flag of the same push.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProtectDirAddr() Obtain Website protection directory address
  * @method void setProtectDirAddr(string $ProtectDirAddr) Set Website protection directory address
- * @method string getProtectDirName() Obtain Website protection directory name
- * @method void setProtectDirName(string $ProtectDirName) Set Website protection directory name
+ * @method string getProtectDirName() Obtain Name of the website protection directory
+ * @method void setProtectDirName(string $ProtectDirName) Set Name of the website protection directory
  * @method string getProtectFileType() Obtain Protected file types, separated by semicolons
  * @method void setProtectFileType(string $ProtectFileType) Set Protected file types, separated by semicolons
  * @method array getHostConfig() Obtain Protection machine list information
@@ -37,7 +37,7 @@ class ModifyWebPageProtectDirRequest extends AbstractModel
     public $ProtectDirAddr;
 
     /**
-     * @var string Website protection directory name
+     * @var string Name of the website protection directory
      */
     public $ProtectDirName;
 
@@ -53,7 +53,7 @@ class ModifyWebPageProtectDirRequest extends AbstractModel
 
     /**
      * @param string $ProtectDirAddr Website protection directory address
-     * @param string $ProtectDirName Website protection directory name
+     * @param string $ProtectDirName Name of the website protection directory
      * @param string $ProtectFileType Protected file types, separated by semicolons
      * @param array $HostConfig Protection machine list information
      */

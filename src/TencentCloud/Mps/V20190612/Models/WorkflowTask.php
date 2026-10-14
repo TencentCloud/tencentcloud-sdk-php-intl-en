@@ -18,124 +18,124 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Media Processing Service task information
+ * Media processing task information
  *
- * @method string getTaskId() Obtain Media processing task ID.
- * @method void setTaskId(string $TaskId) Set Media processing task ID.
- * @method string getStatus() Obtain Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
- * @method void setStatus(string $Status) Set Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
- * @method integer getErrCode() Obtain An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
- * @method void setErrCode(integer $ErrCode) Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
- * @method string getMessage() Obtain The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
- * @method void setMessage(string $Message) Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
- * @method MediaInputInfo getInputInfo() Obtain 
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set 
- * @method MediaMetaData getMetaData() Obtain 
- * @method void setMetaData(MediaMetaData $MetaData) Set 
- * @method array getMediaProcessResultSet() Obtain Execution status and results of a Media Processing Service task.
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Execution status and results of a Media Processing Service task.
- * @method array getAiContentReviewResultSet() Obtain Execution status and results of a video content review task.
- * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Execution status and results of a video content review task.
- * @method array getAiAnalysisResultSet() Obtain Execution status and results of a video content analysis task.
- * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and results of a video content analysis task.
- * @method array getAiRecognitionResultSet() Obtain Task execution status and results of the video content recognition task.
- * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Task execution status and results of the video content recognition task.
- * @method ScheduleQualityControlTaskResult getAiQualityControlTaskResult() Obtain 
- * @method void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult $AiQualityControlTaskResult) Set 
- * @method array getSmartSubtitlesTaskResult() Obtain 
- * @method void setSmartSubtitlesTaskResult(array $SmartSubtitlesTaskResult) Set 
- * @method SmartEraseTaskResult getSmartEraseTaskResult() Obtain 
- * @method void setSmartEraseTaskResult(SmartEraseTaskResult $SmartEraseTaskResult) Set 
+ * @method string getTaskId() Obtain <p>Media processing task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Media processing task ID.</p>
+ * @method string getStatus() Obtain <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+ * @method void setStatus(string $Status) Set <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+ * @method integer getErrCode() Obtain <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+ * @method string getMessage() Obtain <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
+ * @method void setMessage(string $Message) Set <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
+ * @method MediaInputInfo getInputInfo() Obtain <p>Target file information of media processing.</p>
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set <p>Target file information of media processing.</p>
+ * @method MediaMetaData getMetaData() Obtain <p>Metadata of the original video.</p>
+ * @method void setMetaData(MediaMetaData $MetaData) Set <p>Metadata of the original video.</p>
+ * @method array getMediaProcessResultSet() Obtain <p>Execution status and result of the media processing task.</p>
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set <p>Execution status and result of the media processing task.</p>
+ * @method array getAiContentReviewResultSet() Obtain <p>Execution status and results of the video content review task.</p>
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set <p>Execution status and results of the video content review task.</p>
+ * @method array getAiAnalysisResultSet() Obtain <p>Execution status and results of the video content analysis task.</p>
+ * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set <p>Execution status and results of the video content analysis task.</p>
+ * @method array getAiRecognitionResultSet() Obtain <p>Execution status and results of the video content recognition task.</p>
+ * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set <p>Execution status and results of the video content recognition task.</p>
+ * @method ScheduleQualityControlTaskResult getAiQualityControlTaskResult() Obtain <p>Execution status and results of a media quality inspection task.</p>
+ * @method void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult $AiQualityControlTaskResult) Set <p>Execution status and results of a media quality inspection task.</p>
+ * @method array getSmartSubtitlesTaskResult() Obtain <p>Execution result of the smart subtitle task</p>
+ * @method void setSmartSubtitlesTaskResult(array $SmartSubtitlesTaskResult) Set <p>Execution result of the smart subtitle task</p>
+ * @method SmartEraseTaskResult getSmartEraseTaskResult() Obtain <p>Outcome of the intelligent erasure task</p>
+ * @method void setSmartEraseTaskResult(SmartEraseTaskResult $SmartEraseTaskResult) Set <p>Outcome of the intelligent erasure task</p>
+ * @method AIDubbingTaskResult getAiDubbingTaskResult() Obtain <p>Outcome of the AI dubbing task.</p>
+ * @method void setAiDubbingTaskResult(AIDubbingTaskResult $AiDubbingTaskResult) Set <p>Outcome of the AI dubbing task.</p>
  */
 class WorkflowTask extends AbstractModel
 {
     /**
-     * @var string Media processing task ID.
+     * @var string <p>Media processing task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @var string Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
+     * @var string <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
      */
     public $Status;
 
     /**
-     * @var integer An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * @var integer <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
      */
     public $ErrCode;
 
     /**
-     * @var string The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * @var string <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
      */
     public $Message;
 
     /**
-     * @var MediaInputInfo 
+     * @var MediaInputInfo <p>Target file information of media processing.</p>
      */
     public $InputInfo;
 
     /**
-     * @var MediaMetaData 
+     * @var MediaMetaData <p>Metadata of the original video.</p>
      */
     public $MetaData;
 
     /**
-     * @var array Execution status and results of a Media Processing Service task.
+     * @var array <p>Execution status and result of the media processing task.</p>
      */
     public $MediaProcessResultSet;
 
     /**
-     * @var array Execution status and results of a video content review task.
+     * @var array <p>Execution status and results of the video content review task.</p>
      */
     public $AiContentReviewResultSet;
 
     /**
-     * @var array Execution status and results of a video content analysis task.
+     * @var array <p>Execution status and results of the video content analysis task.</p>
      */
     public $AiAnalysisResultSet;
 
     /**
-     * @var array Task execution status and results of the video content recognition task.
+     * @var array <p>Execution status and results of the video content recognition task.</p>
      */
     public $AiRecognitionResultSet;
 
     /**
-     * @var ScheduleQualityControlTaskResult 
+     * @var ScheduleQualityControlTaskResult <p>Execution status and results of a media quality inspection task.</p>
      */
     public $AiQualityControlTaskResult;
 
     /**
-     * @var array 
+     * @var array <p>Execution result of the smart subtitle task</p>
      */
     public $SmartSubtitlesTaskResult;
 
     /**
-     * @var SmartEraseTaskResult 
+     * @var SmartEraseTaskResult <p>Outcome of the intelligent erasure task</p>
      */
     public $SmartEraseTaskResult;
 
     /**
-     * @param string $TaskId Media processing task ID.
-     * @param string $Status Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
-     * @param integer $ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
-     * @param string $Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
-     * @param MediaInputInfo $InputInfo 
-     * @param MediaMetaData $MetaData 
-     * @param array $MediaProcessResultSet Execution status and results of a Media Processing Service task.
-     * @param array $AiContentReviewResultSet Execution status and results of a video content review task.
-     * @param array $AiAnalysisResultSet Execution status and results of a video content analysis task.
-     * @param array $AiRecognitionResultSet Task execution status and results of the video content recognition task.
-     * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult 
-     * @param array $SmartSubtitlesTaskResult 
-     * @param SmartEraseTaskResult $SmartEraseTaskResult 
+     * @var AIDubbingTaskResult <p>Outcome of the AI dubbing task.</p>
+     */
+    public $AiDubbingTaskResult;
+
+    /**
+     * @param string $TaskId <p>Media processing task ID.</p>
+     * @param string $Status <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+     * @param integer $ErrCode <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * @param string $Message <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
+     * @param MediaInputInfo $InputInfo <p>Target file information of media processing.</p>
+     * @param MediaMetaData $MetaData <p>Metadata of the original video.</p>
+     * @param array $MediaProcessResultSet <p>Execution status and result of the media processing task.</p>
+     * @param array $AiContentReviewResultSet <p>Execution status and results of the video content review task.</p>
+     * @param array $AiAnalysisResultSet <p>Execution status and results of the video content analysis task.</p>
+     * @param array $AiRecognitionResultSet <p>Execution status and results of the video content recognition task.</p>
+     * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult <p>Execution status and results of a media quality inspection task.</p>
+     * @param array $SmartSubtitlesTaskResult <p>Execution result of the smart subtitle task</p>
+     * @param SmartEraseTaskResult $SmartEraseTaskResult <p>Outcome of the intelligent erasure task</p>
+     * @param AIDubbingTaskResult $AiDubbingTaskResult <p>Outcome of the AI dubbing task.</p>
      */
     function __construct()
     {
@@ -229,6 +229,11 @@ class WorkflowTask extends AbstractModel
         if (array_key_exists("SmartEraseTaskResult",$param) and $param["SmartEraseTaskResult"] !== null) {
             $this->SmartEraseTaskResult = new SmartEraseTaskResult();
             $this->SmartEraseTaskResult->deserialize($param["SmartEraseTaskResult"]);
+        }
+
+        if (array_key_exists("AiDubbingTaskResult",$param) and $param["AiDubbingTaskResult"] !== null) {
+            $this->AiDubbingTaskResult = new AIDubbingTaskResult();
+            $this->AiDubbingTaskResult->deserialize($param["AiDubbingTaskResult"]);
         }
     }
 }

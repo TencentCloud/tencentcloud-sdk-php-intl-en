@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getInitialValue() Obtain The starting value of the `{number}` variable. Default value: 0.
  * @method void setInitialValue(integer $InitialValue) Set The starting value of the `{number}` variable. Default value: 0.
- * @method integer getIncrement() Obtain The growth step length of the `{number}` variable, with a default value of 1.
- * @method void setIncrement(integer $Increment) Set The growth step length of the `{number}` variable, with a default value of 1.
+ * @method integer getIncrement() Obtain The increase step length of the `{number}` variable. Default value: 1.
+ * @method void setIncrement(integer $Increment) Set The increase step length of the `{number}` variable. Default value: 1.
  * @method integer getMinLength() Obtain Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
  * @method void setMinLength(integer $MinLength) Set Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
  * @method string getPlaceHolder() Obtain Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
@@ -37,7 +37,7 @@ class NumberFormat extends AbstractModel
     public $InitialValue;
 
     /**
-     * @var integer The growth step length of the `{number}` variable, with a default value of 1.
+     * @var integer The increase step length of the `{number}` variable. Default value: 1.
      */
     public $Increment;
 
@@ -53,7 +53,7 @@ class NumberFormat extends AbstractModel
 
     /**
      * @param integer $InitialValue The starting value of the `{number}` variable. Default value: 0.
-     * @param integer $Increment The growth step length of the `{number}` variable, with a default value of 1.
+     * @param integer $Increment The increase step length of the `{number}` variable. Default value: 1.
      * @param integer $MinLength Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
      * @param string $PlaceHolder Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
      */

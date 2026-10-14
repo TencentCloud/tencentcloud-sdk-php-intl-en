@@ -21,185 +21,137 @@ use TencentCloud\Common\AbstractModel;
  * Index metadata field
  *
  * @method string getIndexType() Obtain Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIndexType(string $IndexType) Set Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getIndexName() Obtain Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIndexName(string $IndexName) Set Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getIndexMetaJson() Obtain 
- * @method void setIndexMetaJson(string $IndexMetaJson) Set 
+ * @method string getIndexMetaJson() Obtain JSON-formatted index metadata
+ * @method void setIndexMetaJson(string $IndexMetaJson) Set JSON-formatted index metadata
  * @method string getIndexStatus() Obtain Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIndexStatus(string $IndexStatus) Set Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getIndexStorage() Obtain Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexStorage(integer $IndexStorage) Set Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getIndexStorage() Obtain Index storage size in bytes
+ * @method void setIndexStorage(integer $IndexStorage) Set Index storage size in bytes
  * @method string getIndexCreateTime() Obtain Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIndexCreateTime(string $IndexCreateTime) Set Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getBackingIndices() Obtain Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setBackingIndices(array $BackingIndices) Set Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getClusterId() Obtain Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setClusterId(string $ClusterId) Set Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getClusterName() Obtain Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setClusterName(string $ClusterName) Set Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getClusterVersion() Obtain Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setClusterVersion(string $ClusterVersion) Set Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method IndexPolicyField getIndexPolicyField() Obtain Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexPolicyField(IndexPolicyField $IndexPolicyField) Set Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method IndexOptionsField getIndexOptionsField() Obtain Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexOptionsField(IndexOptionsField $IndexOptionsField) Set Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method IndexSettingsField getIndexSettingsField() Obtain Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexSettingsField(IndexSettingsField $IndexSettingsField) Set Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getAppId() Obtain Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setAppId(integer $AppId) Set Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getIndexDocs() Obtain The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIndexDocs(integer $IndexDocs) Set The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getBackingIndices() Obtain Backup index
+ * @method void setBackingIndices(array $BackingIndices) Set Backup index
+ * @method string getClusterId() Obtain Cluster ID of the index
+ * @method void setClusterId(string $ClusterId) Set Cluster ID of the index
+ * @method string getClusterName() Obtain Cluster name of the index
+ * @method void setClusterName(string $ClusterName) Set Cluster name of the index
+ * @method string getClusterVersion() Obtain Version number of the cluster to which the index belongs
+ * @method void setClusterVersion(string $ClusterVersion) Set Version number of the cluster to which the index belongs
+ * @method IndexPolicyField getIndexPolicyField() Obtain Index lifecycle field
+ * @method void setIndexPolicyField(IndexPolicyField $IndexPolicyField) Set Index lifecycle field
+ * @method IndexOptionsField getIndexOptionsField() Obtain Index autonomous field
+ * @method void setIndexOptionsField(IndexOptionsField $IndexOptionsField) Set Index autonomous field
+ * @method IndexSettingsField getIndexSettingsField() Obtain Index configuration field
+ * @method void setIndexSettingsField(IndexSettingsField $IndexSettingsField) Set Index configuration field
+ * @method array getIndexAliasesField() Obtain Index alias field
+ * @method void setIndexAliasesField(array $IndexAliasesField) Set Index alias field
+ * @method integer getAppId() Obtain APP ID of the cluster to which the index belongs
+ * @method void setAppId(integer $AppId) Set APP ID of the cluster to which the index belongs
+ * @method integer getIndexDocs() Obtain Number of indexed documents
+ * @method void setIndexDocs(integer $IndexDocs) Set Number of indexed documents
  */
 class IndexMetaField extends AbstractModel
 {
     /**
      * @var string Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IndexType;
 
     /**
      * @var string Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IndexName;
 
     /**
-     * @var string 
+     * @var string JSON-formatted index metadata
      */
     public $IndexMetaJson;
 
     /**
      * @var string Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IndexStatus;
 
     /**
-     * @var integer Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Index storage size in bytes
      */
     public $IndexStorage;
 
     /**
      * @var string Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IndexCreateTime;
 
     /**
-     * @var array Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Backup index
      */
     public $BackingIndices;
 
     /**
-     * @var string Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Cluster ID of the index
      */
     public $ClusterId;
 
     /**
-     * @var string Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Cluster name of the index
      */
     public $ClusterName;
 
     /**
-     * @var string Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Version number of the cluster to which the index belongs
      */
     public $ClusterVersion;
 
     /**
-     * @var IndexPolicyField Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var IndexPolicyField Index lifecycle field
      */
     public $IndexPolicyField;
 
     /**
-     * @var IndexOptionsField Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var IndexOptionsField Index autonomous field
      */
     public $IndexOptionsField;
 
     /**
-     * @var IndexSettingsField Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var IndexSettingsField Index configuration field
      */
     public $IndexSettingsField;
 
     /**
-     * @var integer Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Index alias field
+     */
+    public $IndexAliasesField;
+
+    /**
+     * @var integer APP ID of the cluster to which the index belongs
      */
     public $AppId;
 
     /**
-     * @var integer The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of indexed documents
      */
     public $IndexDocs;
 
     /**
      * @param string $IndexType Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IndexName Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $IndexMetaJson 
+     * @param string $IndexMetaJson JSON-formatted index metadata
      * @param string $IndexStatus Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $IndexStorage Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $IndexStorage Index storage size in bytes
      * @param string $IndexCreateTime Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $BackingIndices Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ClusterId Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ClusterName Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ClusterVersion Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexPolicyField $IndexPolicyField Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexOptionsField $IndexOptionsField Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexSettingsField $IndexSettingsField Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $AppId Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $IndexDocs The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $BackingIndices Backup index
+     * @param string $ClusterId Cluster ID of the index
+     * @param string $ClusterName Cluster name of the index
+     * @param string $ClusterVersion Version number of the cluster to which the index belongs
+     * @param IndexPolicyField $IndexPolicyField Index lifecycle field
+     * @param IndexOptionsField $IndexOptionsField Index autonomous field
+     * @param IndexSettingsField $IndexSettingsField Index configuration field
+     * @param array $IndexAliasesField Index alias field
+     * @param integer $AppId APP ID of the cluster to which the index belongs
+     * @param integer $IndexDocs Number of indexed documents
      */
     function __construct()
     {
@@ -272,6 +224,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("IndexSettingsField",$param) and $param["IndexSettingsField"] !== null) {
             $this->IndexSettingsField = new IndexSettingsField();
             $this->IndexSettingsField->deserialize($param["IndexSettingsField"]);
+        }
+
+        if (array_key_exists("IndexAliasesField",$param) and $param["IndexAliasesField"] !== null) {
+            $this->IndexAliasesField = $param["IndexAliasesField"];
         }
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {

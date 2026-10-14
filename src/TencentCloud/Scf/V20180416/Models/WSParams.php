@@ -18,24 +18,20 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters of the specified protocol
+ * Parameters for accessing an HTTP function over the WebSockets protocol
  *
- * @method integer getIdleTimeOut() Obtain Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setIdleTimeOut(integer $IdleTimeOut) Set Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIdleTimeOut() Obtain Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
+ * @method void setIdleTimeOut(integer $IdleTimeOut) Set Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
  */
 class WSParams extends AbstractModel
 {
     /**
-     * @var integer Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
      */
     public $IdleTimeOut;
 
     /**
-     * @param integer $IdleTimeOut Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IdleTimeOut Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
      */
     function __construct()
     {

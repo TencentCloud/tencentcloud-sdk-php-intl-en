@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
  * @method array getAreaCoordSet() Obtain Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getUrl() Obtain Screenshot link.
+ * @method void setUrl(string $Url) Set Screenshot link.
  */
 class LiveStreamObjectRecognitionResult extends AbstractModel
 {
@@ -61,7 +61,7 @@ class LiveStreamObjectRecognitionResult extends AbstractModel
     public $AreaCoordSet;
 
     /**
-     * @var string 
+     * @var string Screenshot link.
      */
     public $Url;
 
@@ -71,7 +71,7 @@ class LiveStreamObjectRecognitionResult extends AbstractModel
      * @param float $EndPtsOffset End PTS time of a recognized segment, in seconds.
      * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      * @param array $AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
-     * @param string $Url 
+     * @param string $Url Screenshot link.
      */
     function __construct()
     {

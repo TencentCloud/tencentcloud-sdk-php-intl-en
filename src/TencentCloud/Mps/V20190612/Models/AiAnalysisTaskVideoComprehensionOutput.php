@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVideoComprehensionAnalysisResult() Obtain Details of the video (audio) recognition output content.
  * @method void setVideoComprehensionAnalysisResult(string $VideoComprehensionAnalysisResult) Set Details of the video (audio) recognition output content.
- * @method string getVideoComprehensionExtInfo() Obtain Video (Audio) understanding extended information
- * @method void setVideoComprehensionExtInfo(string $VideoComprehensionExtInfo) Set Video (Audio) understanding extended information
- * @method array getVideoComprehensionResultList() Obtain Video shot understanding result
- * @method void setVideoComprehensionResultList(array $VideoComprehensionResultList) Set Video shot understanding result
+ * @method string getVideoComprehensionExtInfo() Obtain Extended information for video (audio) understanding.
+ * @method void setVideoComprehensionExtInfo(string $VideoComprehensionExtInfo) Set Extended information for video (audio) understanding.
+ * @method array getVideoComprehensionResultList() Obtain Video storyboard understanding result
+ * @method void setVideoComprehensionResultList(array $VideoComprehensionResultList) Set Video storyboard understanding result
  */
 class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
     public $VideoComprehensionAnalysisResult;
 
     /**
-     * @var string Video (Audio) understanding extended information
+     * @var string Extended information for video (audio) understanding.
      */
     public $VideoComprehensionExtInfo;
 
     /**
-     * @var array Video shot understanding result
+     * @var array Video storyboard understanding result
      */
     public $VideoComprehensionResultList;
 
     /**
      * @param string $VideoComprehensionAnalysisResult Details of the video (audio) recognition output content.
-     * @param string $VideoComprehensionExtInfo Video (Audio) understanding extended information
-     * @param array $VideoComprehensionResultList Video shot understanding result
+     * @param string $VideoComprehensionExtInfo Extended information for video (audio) understanding.
+     * @param array $VideoComprehensionResultList Video storyboard understanding result
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Local disk information of node
+ * Local disk information of the node
  *
- * @method string getLocalDiskType() Obtain Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
- * @method void setLocalDiskType(string $LocalDiskType) Set Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
- * @method integer getLocalDiskSize() Obtain Size of a single local disk
- * @method void setLocalDiskSize(integer $LocalDiskSize) Set Size of a single local disk
- * @method integer getLocalDiskCount() Obtain Number of local disks
- * @method void setLocalDiskCount(integer $LocalDiskCount) Set Number of local disks
+ * @method string getLocalDiskType() Obtain Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
+ * @method void setLocalDiskType(string $LocalDiskType) Set Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
+ * @method integer getLocalDiskSize() Obtain Single local disk size
+ * @method void setLocalDiskSize(integer $LocalDiskSize) Set Single local disk size
+ * @method integer getLocalDiskCount() Obtain Number of local disk blocks
+ * @method void setLocalDiskCount(integer $LocalDiskCount) Set Number of local disk blocks
  */
 class LocalDiskInfo extends AbstractModel
 {
     /**
-     * @var string Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+     * @var string Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
      */
     public $LocalDiskType;
 
     /**
-     * @var integer Size of a single local disk
+     * @var integer Single local disk size
      */
     public $LocalDiskSize;
 
     /**
-     * @var integer Number of local disks
+     * @var integer Number of local disk blocks
      */
     public $LocalDiskCount;
 
     /**
-     * @param string $LocalDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
-     * @param integer $LocalDiskSize Size of a single local disk
-     * @param integer $LocalDiskCount Number of local disks
+     * @param string $LocalDiskType Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
+     * @param integer $LocalDiskSize Single local disk size
+     * @param integer $LocalDiskCount Number of local disk blocks
      */
     function __construct()
     {

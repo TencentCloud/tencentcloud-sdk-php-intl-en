@@ -18,44 +18,104 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Watermark removal configuration for the smart erasing template.
  *
- * @method string getWatermarkEraseMethod() Obtain 
- * @method void setWatermarkEraseMethod(string $WatermarkEraseMethod) Set 
- * @method string getWatermarkModel() Obtain 
- * @method void setWatermarkModel(string $WatermarkModel) Set 
- * @method array getAutoAreas() Obtain 
- * @method void setAutoAreas(array $AutoAreas) Set 
- * @method array getCustomAreas() Obtain 
- * @method void setCustomAreas(array $CustomAreas) Set 
+ * @method string getWatermarkEraseMethod() Obtain Watermark erasing method.
+**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks in fixed positions, we recommend you directly specify the erasure area.
+When you choose specified area erasure, import at least one specified region.
+
+- auto: automatic erasing.
+- custom: specified area erasing.
+ * @method void setWatermarkEraseMethod(string $WatermarkEraseMethod) Set Watermark erasing method.
+**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks in fixed positions, we recommend you directly specify the erasure area.
+When you choose specified area erasure, import at least one specified region.
+
+- auto: automatic erasing.
+- custom: specified area erasing.
+ * @method string getWatermarkModel() Obtain Watermark erasing model.
+Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
+Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
+- basic: Basic Edition.
+- advanced: Advanced Edition.
+ * @method void setWatermarkModel(string $WatermarkModel) Set Watermark erasing model.
+Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
+Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
+- basic: Basic Edition.
+- advanced: Advanced Edition.
+ * @method array getAutoAreas() Obtain Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+ * @method void setAutoAreas(array $AutoAreas) Set Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+ * @method array getCustomAreas() Obtain Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+ * @method void setCustomAreas(array $CustomAreas) Set Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
  */
 class SmartEraseWatermarkConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Watermark erasing method.
+**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks in fixed positions, we recommend you directly specify the erasure area.
+When you choose specified area erasure, import at least one specified region.
+
+- auto: automatic erasing.
+- custom: specified area erasing.
      */
     public $WatermarkEraseMethod;
 
     /**
-     * @var string 
+     * @var string Watermark erasing model.
+Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
+Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
+- basic: Basic Edition.
+- advanced: Advanced Edition.
      */
     public $WatermarkModel;
 
     /**
-     * @var array 
+     * @var array Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public $AutoAreas;
 
     /**
-     * @var array 
+     * @var array Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public $CustomAreas;
 
     /**
-     * @param string $WatermarkEraseMethod 
-     * @param string $WatermarkModel 
-     * @param array $AutoAreas 
-     * @param array $CustomAreas 
+     * @param string $WatermarkEraseMethod Watermark erasing method.
+**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks in fixed positions, we recommend you directly specify the erasure area.
+When you choose specified area erasure, import at least one specified region.
+
+- auto: automatic erasing.
+- custom: specified area erasing.
+     * @param string $WatermarkModel Watermark erasing model.
+Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
+Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
+- basic: Basic Edition.
+- advanced: Advanced Edition.
+     * @param array $AutoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+     * @param array $CustomAreas Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Method to attain the intent
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getDesc() Obtain 
- * @method void setDesc(string $Desc) Set 
+ * @method string getName() Obtain Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
+ * @method void setName(string $Name) Set Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
+ * @method string getDesc() Obtain Description of the method to attain the intent
+ * @method void setDesc(string $Desc) Set Description of the method to attain the intent
  */
 class IntentAchievement extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Description of the method to attain the intent
      */
     public $Desc;
 
     /**
-     * @param string $Name 
-     * @param string $Desc 
+     * @param string $Name Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
+     * @param string $Desc Description of the method to attain the intent
      */
     function __construct()
     {

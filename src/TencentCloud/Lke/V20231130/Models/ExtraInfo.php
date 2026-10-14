@@ -18,20 +18,20 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Extension Information
  *
- * @method array getEChartsInfo() Obtain 
- * @method void setEChartsInfo(array $EChartsInfo) Set 
+ * @method array getEChartsInfo() Obtain ECharts information
+ * @method void setEChartsInfo(array $EChartsInfo) Set ECharts information
  */
 class ExtraInfo extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array ECharts information
      */
     public $EChartsInfo;
 
     /**
-     * @param array $EChartsInfo 
+     * @param array $EChartsInfo ECharts information
      */
     function __construct()
     {

@@ -18,116 +18,124 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Transcoding info
+ * Transcoding information
  *
- * @method TaskOutputStorage getOutputStorage() Obtain Target storage of the transcoded file.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage of the transcoded file.
- * @method string getPath() Obtain Video file path after transcoding.
- * @method void setPath(string $Path) Set Video file path after transcoding.
- * @method integer getDefinition() Obtain Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
- * @method void setDefinition(integer $Definition) Set Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
- * @method integer getBitrate() Obtain Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
- * @method void setBitrate(integer $Bitrate) Set Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
- * @method integer getHeight() Obtain Maximum value of video stream height, measurement unit: px.
- * @method void setHeight(integer $Height) Set Maximum value of video stream height, measurement unit: px.
- * @method integer getWidth() Obtain Maximum value of the video stream width in px.
- * @method void setWidth(integer $Width) Set Maximum value of the video stream width in px.
- * @method integer getSize() Obtain Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
- * @method void setSize(integer $Size) Set Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
- * @method float getDuration() Obtain Video duration, in seconds.
- * @method void setDuration(float $Duration) Set Video duration, in seconds.
- * @method string getContainer() Obtain Container type, such as m4a and mp4.
- * @method void setContainer(string $Container) Set Container type, such as m4a and mp4.
- * @method string getMd5() Obtain md5 value of the video.
- * @method void setMd5(string $Md5) Set md5 value of the video.
- * @method array getAudioStreamSet() Obtain Audio stream information.
- * @method void setAudioStreamSet(array $AudioStreamSet) Set Audio stream information.
- * @method array getVideoStreamSet() Obtain Video stream information.
- * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
- * @method string getCallBackExtInfo() Obtain 
- * @method void setCallBackExtInfo(string $CallBackExtInfo) Set 
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the transcoded file.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the transcoded file.</p>
+ * @method string getPath() Obtain <p>Transcoded video file path.</p>
+ * @method void setPath(string $Path) Set <p>Transcoded video file path.</p>
+ * @method integer getDefinition() Obtain <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
+ * @method integer getBitrate() Obtain <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
+ * @method void setBitrate(integer $Bitrate) Set <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
+ * @method integer getHeight() Obtain <p>Maximum height of the video stream. Unit: px.</p>
+ * @method void setHeight(integer $Height) Set <p>Maximum height of the video stream. Unit: px.</p>
+ * @method integer getWidth() Obtain <p>Maximum video stream width. Unit: px.</p>
+ * @method void setWidth(integer $Width) Set <p>Maximum video stream width. Unit: px.</p>
+ * @method integer getSize() Obtain <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
+ * @method void setSize(integer $Size) Set <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
+ * @method float getDuration() Obtain <p>Video duration, in seconds.</p>
+ * @method void setDuration(float $Duration) Set <p>Video duration, in seconds.</p>
+ * @method string getContainer() Obtain <p>Container type, for example, m4a, mp4.</p>
+ * @method void setContainer(string $Container) Set <p>Container type, for example, m4a, mp4.</p>
+ * @method string getMd5() Obtain <p>md5 value of the video.</p>
+ * @method void setMd5(string $Md5) Set <p>md5 value of the video.</p>
+ * @method array getAudioStreamSet() Obtain <p>Audio stream information.</p>
+ * @method void setAudioStreamSet(array $AudioStreamSet) Set <p>Audio stream information.</p>
+ * @method array getVideoStreamSet() Obtain <p>Video stream information.</p>
+ * @method void setVideoStreamSet(array $VideoStreamSet) Set <p>Video stream information.</p>
+ * @method string getCallBackExtInfo() Obtain <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
+ * @method void setCallBackExtInfo(string $CallBackExtInfo) Set <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
+ * @method MediaUsageItem getUsage() Obtain <p>MediaTranscodeItem</p>
+ * @method void setUsage(MediaUsageItem $Usage) Set <p>MediaTranscodeItem</p>
  */
 class MediaTranscodeItem extends AbstractModel
 {
     /**
-     * @var TaskOutputStorage Target storage of the transcoded file.
+     * @var TaskOutputStorage <p>Target storage for the transcoded file.</p>
      */
     public $OutputStorage;
 
     /**
-     * @var string Video file path after transcoding.
+     * @var string <p>Transcoded video file path.</p>
      */
     public $Path;
 
     /**
-     * @var integer Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
+     * @var integer <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
      */
     public $Definition;
 
     /**
-     * @var integer Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
+     * @var integer <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer Maximum value of video stream height, measurement unit: px.
+     * @var integer <p>Maximum height of the video stream. Unit: px.</p>
      */
     public $Height;
 
     /**
-     * @var integer Maximum value of the video stream width in px.
+     * @var integer <p>Maximum video stream width. Unit: px.</p>
      */
     public $Width;
 
     /**
-     * @var integer Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
+     * @var integer <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
      */
     public $Size;
 
     /**
-     * @var float Video duration, in seconds.
+     * @var float <p>Video duration, in seconds.</p>
      */
     public $Duration;
 
     /**
-     * @var string Container type, such as m4a and mp4.
+     * @var string <p>Container type, for example, m4a, mp4.</p>
      */
     public $Container;
 
     /**
-     * @var string md5 value of the video.
+     * @var string <p>md5 value of the video.</p>
      */
     public $Md5;
 
     /**
-     * @var array Audio stream information.
+     * @var array <p>Audio stream information.</p>
      */
     public $AudioStreamSet;
 
     /**
-     * @var array Video stream information.
+     * @var array <p>Video stream information.</p>
      */
     public $VideoStreamSet;
 
     /**
-     * @var string 
+     * @var string <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
      */
     public $CallBackExtInfo;
 
     /**
-     * @param TaskOutputStorage $OutputStorage Target storage of the transcoded file.
-     * @param string $Path Video file path after transcoding.
-     * @param integer $Definition Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
-     * @param integer $Bitrate Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
-     * @param integer $Height Maximum value of video stream height, measurement unit: px.
-     * @param integer $Width Maximum value of the video stream width in px.
-     * @param integer $Size Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
-     * @param float $Duration Video duration, in seconds.
-     * @param string $Container Container type, such as m4a and mp4.
-     * @param string $Md5 md5 value of the video.
-     * @param array $AudioStreamSet Audio stream information.
-     * @param array $VideoStreamSet Video stream information.
-     * @param string $CallBackExtInfo 
+     * @var MediaUsageItem <p>MediaTranscodeItem</p>
+     */
+    public $Usage;
+
+    /**
+     * @param TaskOutputStorage $OutputStorage <p>Target storage for the transcoded file.</p>
+     * @param string $Path <p>Transcoded video file path.</p>
+     * @param integer $Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
+     * @param integer $Bitrate <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
+     * @param integer $Height <p>Maximum height of the video stream. Unit: px.</p>
+     * @param integer $Width <p>Maximum video stream width. Unit: px.</p>
+     * @param integer $Size <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
+     * @param float $Duration <p>Video duration, in seconds.</p>
+     * @param string $Container <p>Container type, for example, m4a, mp4.</p>
+     * @param string $Md5 <p>md5 value of the video.</p>
+     * @param array $AudioStreamSet <p>Audio stream information.</p>
+     * @param array $VideoStreamSet <p>Video stream information.</p>
+     * @param string $CallBackExtInfo <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
+     * @param MediaUsageItem $Usage <p>MediaTranscodeItem</p>
      */
     function __construct()
     {
@@ -203,6 +211,11 @@ class MediaTranscodeItem extends AbstractModel
 
         if (array_key_exists("CallBackExtInfo",$param) and $param["CallBackExtInfo"] !== null) {
             $this->CallBackExtInfo = $param["CallBackExtInfo"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new MediaUsageItem();
+            $this->Usage->deserialize($param["Usage"]);
         }
     }
 }

@@ -18,52 +18,52 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The flow statistics.
+ * Stream stats.
  *
- * @method string getSessionId() Obtain The session ID.
- * @method void setSessionId(string $SessionId) Set The session ID.
- * @method string getClientIp() Obtain The peer IP.
- * @method void setClientIp(string $ClientIp) Set The peer IP.
- * @method integer getNetwork() Obtain The total bandwidth.
- * @method void setNetwork(integer $Network) Set The total bandwidth.
- * @method array getVideo() Obtain The video data.
- * @method void setVideo(array $Video) Set The video data.
- * @method array getAudio() Obtain The audio data.
- * @method void setAudio(array $Audio) Set The audio data.
+ * @method string getSessionId() Obtain Session ID.
+ * @method void setSessionId(string $SessionId) Set Session ID.
+ * @method string getClientIp() Obtain Peer IP.
+ * @method void setClientIp(string $ClientIp) Set Peer IP.
+ * @method integer getNetwork() Obtain Total bandwidth.
+ * @method void setNetwork(integer $Network) Set Total bandwidth.
+ * @method array getVideo() Obtain Video data.
+ * @method void setVideo(array $Video) Set Video data.
+ * @method array getAudio() Obtain Audio data.
+ * @method void setAudio(array $Audio) Set Audio data.
  */
 class FlowStatistics extends AbstractModel
 {
     /**
-     * @var string The session ID.
+     * @var string Session ID.
      */
     public $SessionId;
 
     /**
-     * @var string The peer IP.
+     * @var string Peer IP.
      */
     public $ClientIp;
 
     /**
-     * @var integer The total bandwidth.
+     * @var integer Total bandwidth.
      */
     public $Network;
 
     /**
-     * @var array The video data.
+     * @var array Video data.
      */
     public $Video;
 
     /**
-     * @var array The audio data.
+     * @var array Audio data.
      */
     public $Audio;
 
     /**
-     * @param string $SessionId The session ID.
-     * @param string $ClientIp The peer IP.
-     * @param integer $Network The total bandwidth.
-     * @param array $Video The video data.
-     * @param array $Audio The audio data.
+     * @param string $SessionId Session ID.
+     * @param string $ClientIp Peer IP.
+     * @param integer $Network Total bandwidth.
+     * @param array $Video Video data.
+     * @param array $Audio Audio data.
      */
     function __construct()
     {

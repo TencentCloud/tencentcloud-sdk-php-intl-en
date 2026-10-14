@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() Obtain <p>Task ID.</p>
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
- * @method string getTaskType() Obtain <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
- * @method void setTaskType(string $TaskType) Set <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
- * @method string getTaskStatus() Obtain <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
- * @method void setTaskStatus(string $TaskStatus) Set <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+ * @method string getTaskType() Obtain <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+ * @method void setTaskType(string $TaskType) Set <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+ * @method string getTaskStatus() Obtain <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+ * @method void setTaskStatus(string $TaskStatus) Set <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
  * @method string getCreateTime() Obtain <p>Task creation time</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Task creation time</p>
  * @method string getScheduledTime() Obtain <p>Task start scheduling time</p>
@@ -38,12 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskResultCode(integer $TaskResultCode) Set <p>Task execution error code</p>
  * @method string getTaskResultMsg() Obtain <p>Task execution error message</p>
  * @method void setTaskResultMsg(string $TaskResultMsg) Set <p>Task execution error message</p>
- * @method string getResolution() Obtain <p>Output video resolution</p>
- * @method void setResolution(string $Resolution) Set <p>Output video resolution</p>
+ * @method string getResolution() Obtain <p>Resolution of the output video</p>
+ * @method void setResolution(string $Resolution) Set <p>Resolution of the output video</p>
  * @method string getRatio() Obtain <p>Aspect ratio of the output video</p>
  * @method void setRatio(string $Ratio) Set <p>Aspect ratio of the output video</p>
- * @method string getRequestBody() Obtain <p>Task request package</p>
- * @method void setRequestBody(string $RequestBody) Set <p>Task request package</p>
+ * @method string getRequestBody() Obtain <p>Task request packet</p>
+ * @method void setRequestBody(string $RequestBody) Set <p>Task request packet</p>
+ * @method string getTaskInfo() Obtain <p>Other task information.</p>
+ * @method void setTaskInfo(string $TaskInfo) Set <p>Other task information.</p>
+ * @method string getStage() Obtain <p>Task sub-status.</p>
+ * @method void setStage(string $Stage) Set <p>Task sub-status.</p>
  */
 class AigcTaskListItem extends AbstractModel
 {
@@ -53,12 +57,12 @@ class AigcTaskListItem extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+     * @var string <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
      */
     public $TaskType;
 
     /**
-     * @var string <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+     * @var string <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
      */
     public $TaskStatus;
 
@@ -93,7 +97,7 @@ class AigcTaskListItem extends AbstractModel
     public $TaskResultMsg;
 
     /**
-     * @var string <p>Output video resolution</p>
+     * @var string <p>Resolution of the output video</p>
      */
     public $Resolution;
 
@@ -103,23 +107,35 @@ class AigcTaskListItem extends AbstractModel
     public $Ratio;
 
     /**
-     * @var string <p>Task request package</p>
+     * @var string <p>Task request packet</p>
      */
     public $RequestBody;
 
     /**
+     * @var string <p>Other task information.</p>
+     */
+    public $TaskInfo;
+
+    /**
+     * @var string <p>Task sub-status.</p>
+     */
+    public $Stage;
+
+    /**
      * @param string $TaskId <p>Task ID.</p>
-     * @param string $TaskType <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
-     * @param string $TaskStatus <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+     * @param string $TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+     * @param string $TaskStatus <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
      * @param string $CreateTime <p>Task creation time</p>
      * @param string $ScheduledTime <p>Task start scheduling time</p>
      * @param string $FinishedTime <p>Task end time</p>
      * @param array $Urls <p>Task result Url.</p>
      * @param integer $TaskResultCode <p>Task execution error code</p>
      * @param string $TaskResultMsg <p>Task execution error message</p>
-     * @param string $Resolution <p>Output video resolution</p>
+     * @param string $Resolution <p>Resolution of the output video</p>
      * @param string $Ratio <p>Aspect ratio of the output video</p>
-     * @param string $RequestBody <p>Task request package</p>
+     * @param string $RequestBody <p>Task request packet</p>
+     * @param string $TaskInfo <p>Other task information.</p>
+     * @param string $Stage <p>Task sub-status.</p>
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class AigcTaskListItem extends AbstractModel
 
         if (array_key_exists("RequestBody",$param) and $param["RequestBody"] !== null) {
             $this->RequestBody = $param["RequestBody"];
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = $param["TaskInfo"];
+        }
+
+        if (array_key_exists("Stage",$param) and $param["Stage"] !== null) {
+            $this->Stage = $param["Stage"];
         }
     }
 }

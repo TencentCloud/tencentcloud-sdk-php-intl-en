@@ -18,60 +18,60 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent cover result type
+ * Result type of intelligent cover
  *
- * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method AiAnalysisTaskCoverInput getInput() Obtain Input of the intelligent cover task.
- * @method void setInput(AiAnalysisTaskCoverInput $Input) Set Input of the intelligent cover task.
- * @method AiAnalysisTaskCoverOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskCoverOutput $Output) Set 
+ * @method string getStatus() Obtain <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+ * @method string getErrCodeExt() Obtain <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+ * @method string getMessage() Obtain <p>Error message.</p>
+ * @method void setMessage(string $Message) Set <p>Error message.</p>
+ * @method AiAnalysisTaskCoverInput getInput() Obtain <p>Intelligent Cover Task input.</p>
+ * @method void setInput(AiAnalysisTaskCoverInput $Input) Set <p>Intelligent Cover Task input.</p>
+ * @method AiAnalysisTaskCoverOutput getOutput() Obtain <p>Output of the intelligent cover task.</p>
+ * @method void setOutput(AiAnalysisTaskCoverOutput $Output) Set <p>Output of the intelligent cover task.</p>
  */
 class AiAnalysisTaskCoverResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @var string <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @var integer <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string <p>Error message.</p>
      */
     public $Message;
 
     /**
-     * @var AiAnalysisTaskCoverInput Input of the intelligent cover task.
+     * @var AiAnalysisTaskCoverInput <p>Intelligent Cover Task input.</p>
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskCoverOutput 
+     * @var AiAnalysisTaskCoverOutput <p>Output of the intelligent cover task.</p>
      */
     public $Output;
 
     /**
-     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
-     * @param string $Message Error message.
-     * @param AiAnalysisTaskCoverInput $Input Input of the intelligent cover task.
-     * @param AiAnalysisTaskCoverOutput $Output 
+     * @param string $Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+     * @param string $ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+     * @param string $Message <p>Error message.</p>
+     * @param AiAnalysisTaskCoverInput $Input <p>Intelligent Cover Task input.</p>
+     * @param AiAnalysisTaskCoverOutput $Output <p>Output of the intelligent cover task.</p>
      */
     function __construct()
     {

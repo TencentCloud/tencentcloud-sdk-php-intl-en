@@ -28,14 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEraseConfig(ImageEraseConfig $EraseConfig) Set <p>Image erasing configuration.</p>
  * @method AiPosterSuiteConfig getAiPosterSuiteConfig() Obtain <p>AI image set configuration.</p>
  * @method void setAiPosterSuiteConfig(AiPosterSuiteConfig $AiPosterSuiteConfig) Set <p>AI image set configuration.</p>
- * @method AiCutoutConfig getAiCutoutConfig() Obtain <p>Ai image cutout configuration</p>
- * @method void setAiCutoutConfig(AiCutoutConfig $AiCutoutConfig) Set <p>Ai image cutout configuration</p>
- * @method AiExpansionConfig getAiExpansionConfig() Obtain <p>Ai Image Expansion Configuration</p>
- * @method void setAiExpansionConfig(AiExpansionConfig $AiExpansionConfig) Set <p>Ai Image Expansion Configuration</p>
+ * @method AiCutoutConfig getAiCutoutConfig() Obtain <p>Ai cutout configuration</p>
+ * @method void setAiCutoutConfig(AiCutoutConfig $AiCutoutConfig) Set <p>Ai cutout configuration</p>
+ * @method AiExpansionConfig getAiExpansionConfig() Obtain <p>Ai outpainting configuration</p>
+ * @method void setAiExpansionConfig(AiExpansionConfig $AiExpansionConfig) Set <p>Ai outpainting configuration</p>
  * @method AiStoryboardConfig getAiStoryboardConfig() Obtain <p>Ai storyboard deconstruction configuration</p>
  * @method void setAiStoryboardConfig(AiStoryboardConfig $AiStoryboardConfig) Set <p>Ai storyboard deconstruction configuration</p>
- * @method UnderstandImageConfig getUnderstandImageConfig() Obtain <p>Image understanding configuration.</p>
- * @method void setUnderstandImageConfig(UnderstandImageConfig $UnderstandImageConfig) Set <p>Image understanding configuration.</p>
+ * @method UnderstandImageConfig getUnderstandImageConfig() Obtain <p>Image understanding configuration</p>
+ * @method void setUnderstandImageConfig(UnderstandImageConfig $UnderstandImageConfig) Set <p>Image understanding configuration</p>
+ * @method ImageQualityConfig getImageQualityConfig() Obtain <p>Image quality assessment configuration</p>
+ * @method void setImageQualityConfig(ImageQualityConfig $ImageQualityConfig) Set <p>Image quality assessment configuration</p>
+ * @method AiComposeConfig getAiComposeConfig() Obtain <p>Layer fusion configuration.</p>
+ * @method void setAiComposeConfig(AiComposeConfig $AiComposeConfig) Set <p>Layer fusion configuration.</p>
+ * @method AiDecomposeConfig getAiDecomposeConfig() Obtain <p>Layer separation configuration.</p>
+ * @method void setAiDecomposeConfig(AiDecomposeConfig $AiDecomposeConfig) Set <p>Layer separation configuration.</p>
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -60,12 +66,12 @@ class ImageTaskInput extends AbstractModel
     public $AiPosterSuiteConfig;
 
     /**
-     * @var AiCutoutConfig <p>Ai image cutout configuration</p>
+     * @var AiCutoutConfig <p>Ai cutout configuration</p>
      */
     public $AiCutoutConfig;
 
     /**
-     * @var AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     * @var AiExpansionConfig <p>Ai outpainting configuration</p>
      */
     public $AiExpansionConfig;
 
@@ -75,19 +81,37 @@ class ImageTaskInput extends AbstractModel
     public $AiStoryboardConfig;
 
     /**
-     * @var UnderstandImageConfig <p>Image understanding configuration.</p>
+     * @var UnderstandImageConfig <p>Image understanding configuration</p>
      */
     public $UnderstandImageConfig;
+
+    /**
+     * @var ImageQualityConfig <p>Image quality assessment configuration</p>
+     */
+    public $ImageQualityConfig;
+
+    /**
+     * @var AiComposeConfig <p>Layer fusion configuration.</p>
+     */
+    public $AiComposeConfig;
+
+    /**
+     * @var AiDecomposeConfig <p>Layer separation configuration.</p>
+     */
+    public $AiDecomposeConfig;
 
     /**
      * @param ImageEncodeConfig $EncodeConfig <p>Image encoding configuration.</p>
      * @param ImageEnhanceConfig $EnhanceConfig <p>Image enhancement configuration.</p>
      * @param ImageEraseConfig $EraseConfig <p>Image erasing configuration.</p>
      * @param AiPosterSuiteConfig $AiPosterSuiteConfig <p>AI image set configuration.</p>
-     * @param AiCutoutConfig $AiCutoutConfig <p>Ai image cutout configuration</p>
-     * @param AiExpansionConfig $AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     * @param AiCutoutConfig $AiCutoutConfig <p>Ai cutout configuration</p>
+     * @param AiExpansionConfig $AiExpansionConfig <p>Ai outpainting configuration</p>
      * @param AiStoryboardConfig $AiStoryboardConfig <p>Ai storyboard deconstruction configuration</p>
-     * @param UnderstandImageConfig $UnderstandImageConfig <p>Image understanding configuration.</p>
+     * @param UnderstandImageConfig $UnderstandImageConfig <p>Image understanding configuration</p>
+     * @param ImageQualityConfig $ImageQualityConfig <p>Image quality assessment configuration</p>
+     * @param AiComposeConfig $AiComposeConfig <p>Layer fusion configuration.</p>
+     * @param AiDecomposeConfig $AiDecomposeConfig <p>Layer separation configuration.</p>
      */
     function __construct()
     {
@@ -140,6 +164,21 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("UnderstandImageConfig",$param) and $param["UnderstandImageConfig"] !== null) {
             $this->UnderstandImageConfig = new UnderstandImageConfig();
             $this->UnderstandImageConfig->deserialize($param["UnderstandImageConfig"]);
+        }
+
+        if (array_key_exists("ImageQualityConfig",$param) and $param["ImageQualityConfig"] !== null) {
+            $this->ImageQualityConfig = new ImageQualityConfig();
+            $this->ImageQualityConfig->deserialize($param["ImageQualityConfig"]);
+        }
+
+        if (array_key_exists("AiComposeConfig",$param) and $param["AiComposeConfig"] !== null) {
+            $this->AiComposeConfig = new AiComposeConfig();
+            $this->AiComposeConfig->deserialize($param["AiComposeConfig"]);
+        }
+
+        if (array_key_exists("AiDecomposeConfig",$param) and $param["AiDecomposeConfig"] !== null) {
+            $this->AiDecomposeConfig = new AiDecomposeConfig();
+            $this->AiDecomposeConfig->deserialize($param["AiDecomposeConfig"]);
         }
     }
 }

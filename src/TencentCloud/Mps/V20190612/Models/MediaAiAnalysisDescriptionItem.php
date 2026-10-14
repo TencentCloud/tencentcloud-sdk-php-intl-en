@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTitle(string $Title) Set Intelligent description title.
  * @method array getKeywords() Obtain Intelligent description keywords.
  * @method void setKeywords(array $Keywords) Set Intelligent description keywords.
- * @method array getParagraphs() Obtain 
- * @method void setParagraphs(array $Paragraphs) Set 
- * @method string getMindMapUrl() Obtain 
- * @method void setMindMapUrl(string $MindMapUrl) Set 
+ * @method array getParagraphs() Obtain Segmentation result.
+ * @method void setParagraphs(array $Paragraphs) Set Segmentation result.
+ * @method string getMindMapUrl() Obtain Address of the mind map of a summary task.
+ * @method void setMindMapUrl(string $MindMapUrl) Set Address of the mind map of a summary task.
  * @method string getMindMapPath() Obtain Path of the mind map of a summary task.
  * @method void setMindMapPath(string $MindMapPath) Set Path of the mind map of a summary task.
  * @method string getSubtitlePath() Obtain Subtitle file path of the video.
@@ -62,12 +62,12 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
     public $Keywords;
 
     /**
-     * @var array 
+     * @var array Segmentation result.
      */
     public $Paragraphs;
 
     /**
-     * @var string 
+     * @var string Address of the mind map of a summary task.
      */
     public $MindMapUrl;
 
@@ -91,8 +91,8 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
      * @param float $Confidence Confidence of the intelligent description, with a value range from 0 to 100.
      * @param string $Title Intelligent description title.
      * @param array $Keywords Intelligent description keywords.
-     * @param array $Paragraphs 
-     * @param string $MindMapUrl 
+     * @param array $Paragraphs Segmentation result.
+     * @param string $MindMapUrl Address of the mind map of a summary task.
      * @param string $MindMapPath Path of the mind map of a summary task.
      * @param string $SubtitlePath Subtitle file path of the video.
      * @param TaskOutputStorage $OutputStorage Storage location of the summary file.

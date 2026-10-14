@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateDictionaries request structure.
  *
- * @method string getInstanceId() Obtain ES instance ID
- * @method void setInstanceId(string $InstanceId) Set ES instance ID
- * @method array getIkMainDicts() Obtain COS address of the main dictionary for the IK analyzer
- * @method void setIkMainDicts(array $IkMainDicts) Set COS address of the main dictionary for the IK analyzer
- * @method array getIkStopwords() Obtain COS address of the stopword dictionary for the IK analyzer
- * @method void setIkStopwords(array $IkStopwords) Set COS address of the stopword dictionary for the IK analyzer
- * @method array getSynonym() Obtain COS address of the synonym dictionary
- * @method void setSynonym(array $Synonym) Set COS address of the synonym dictionary
- * @method array getQQDict() Obtain COS address of the QQ dictionary
- * @method void setQQDict(array $QQDict) Set COS address of the QQ dictionary
- * @method integer getUpdateType() Obtain `0` (default): Install, `1`: Delete
- * @method void setUpdateType(integer $UpdateType) Set `0` (default): Install, `1`: Delete
- * @method boolean getForceRestart() Obtain Whether to force restart the cluster. The default value is `false`.
- * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart the cluster. The default value is `false`.
+ * @method string getInstanceId() Obtain ES instance ID.
+ * @method void setInstanceId(string $InstanceId) Set ES instance ID.
+ * @method array getIkMainDicts() Obtain Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
+ * @method void setIkMainDicts(array $IkMainDicts) Set Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
+ * @method array getIkStopwords() Obtain Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
+ * @method void setIkStopwords(array $IkStopwords) Set Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
+ * @method array getSynonym() Obtain Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
+ * @method void setSynonym(array $Synonym) Set Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
+ * @method array getQQDict() Obtain Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
+ * @method void setQQDict(array $QQDict) Set Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
+ * @method integer getUpdateType() Obtain 0: installation; 1: deletion. Default value: 0
+ * @method void setUpdateType(integer $UpdateType) Set 0: installation; 1: deletion. Default value: 0
+ * @method boolean getForceRestart() Obtain Whether to force restart the cluster. Default value: false
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart the cluster. Default value: false
  */
 class UpdateDictionariesRequest extends AbstractModel
 {
     /**
-     * @var string ES instance ID
+     * @var string ES instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var array COS address of the main dictionary for the IK analyzer
+     * @var array Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
      */
     public $IkMainDicts;
 
     /**
-     * @var array COS address of the stopword dictionary for the IK analyzer
+     * @var array Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
      */
     public $IkStopwords;
 
     /**
-     * @var array COS address of the synonym dictionary
+     * @var array Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
      */
     public $Synonym;
 
     /**
-     * @var array COS address of the QQ dictionary
+     * @var array Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
      */
     public $QQDict;
 
     /**
-     * @var integer `0` (default): Install, `1`: Delete
+     * @var integer 0: installation; 1: deletion. Default value: 0
      */
     public $UpdateType;
 
     /**
-     * @var boolean Whether to force restart the cluster. The default value is `false`.
+     * @var boolean Whether to force restart the cluster. Default value: false
      */
     public $ForceRestart;
 
     /**
-     * @param string $InstanceId ES instance ID
-     * @param array $IkMainDicts COS address of the main dictionary for the IK analyzer
-     * @param array $IkStopwords COS address of the stopword dictionary for the IK analyzer
-     * @param array $Synonym COS address of the synonym dictionary
-     * @param array $QQDict COS address of the QQ dictionary
-     * @param integer $UpdateType `0` (default): Install, `1`: Delete
-     * @param boolean $ForceRestart Whether to force restart the cluster. The default value is `false`.
+     * @param string $InstanceId ES instance ID.
+     * @param array $IkMainDicts Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
+     * @param array $IkStopwords Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
+     * @param array $Synonym Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
+     * @param array $QQDict Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
+     * @param integer $UpdateType 0: installation; 1: deletion. Default value: 0
+     * @param boolean $ForceRestart Whether to force restart the cluster. Default value: false
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Opening and closing segments recognition result.
  *
- * @method float getHeadTimeOffset() Obtain 
- * @method void setHeadTimeOffset(float $HeadTimeOffset) Set 
- * @method float getTailTimeOffset() Obtain 
- * @method void setTailTimeOffset(float $TailTimeOffset) Set 
+ * @method float getHeadTimeOffset() Obtain Opening pts.
+ * @method void setHeadTimeOffset(float $HeadTimeOffset) Set Opening pts.
+ * @method float getTailTimeOffset() Obtain Outro pts.
+ * @method void setTailTimeOffset(float $TailTimeOffset) Set Outro pts.
  */
 class AiAnalysisTaskHeadTailOutput extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float Opening pts.
      */
     public $HeadTimeOffset;
 
     /**
-     * @var float 
+     * @var float Outro pts.
      */
     public $TailTimeOffset;
 
     /**
-     * @param float $HeadTimeOffset 
-     * @param float $TailTimeOffset 
+     * @param float $HeadTimeOffset Opening pts.
+     * @param float $TailTimeOffset Outro pts.
      */
     function __construct()
     {

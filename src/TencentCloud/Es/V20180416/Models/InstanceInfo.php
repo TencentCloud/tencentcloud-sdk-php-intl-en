@@ -20,838 +20,874 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance details
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method string getZone() Obtain Availability Zone
- * @method void setZone(string $Zone) Set Availability Zone
- * @method integer getAppId() Obtain User ID
- * @method void setAppId(integer $AppId) Set User ID
- * @method string getUin() Obtain User UIN
- * @method void setUin(string $Uin) Set User UIN
- * @method string getVpcUid() Obtain UID of the VPC where the instance resides
- * @method void setVpcUid(string $VpcUid) Set UID of the VPC where the instance resides
- * @method string getSubnetUid() Obtain UID of the subnet where the instance resides
- * @method void setSubnetUid(string $SubnetUid) Set UID of the subnet where the instance resides
- * @method integer getStatus() Obtain Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
- * @method void setStatus(integer $Status) Set Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
- * @method string getRenewFlag() Obtain This parameter is not used on the global website
- * @method void setRenewFlag(string $RenewFlag) Set This parameter is not used on the global website
- * @method string getChargeType() Obtain Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
- * @method void setChargeType(string $ChargeType) Set Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
- * @method integer getChargePeriod() Obtain This parameter is not used on the global website
- * @method void setChargePeriod(integer $ChargePeriod) Set This parameter is not used on the global website
- * @method string getNodeType() Obtain Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method void setNodeType(string $NodeType) Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method integer getNodeNum() Obtain Number of nodes
- * @method void setNodeNum(integer $NodeNum) Set Number of nodes
- * @method integer getCpuNum() Obtain Number of CPU cores of the node
- * @method void setCpuNum(integer $CpuNum) Set Number of CPU cores of the node
- * @method integer getMemSize() Obtain Node memory size in GB
- * @method void setMemSize(integer $MemSize) Set Node memory size in GB
- * @method string getDiskType() Obtain Node disk type
- * @method void setDiskType(string $DiskType) Set Node disk type
- * @method integer getDiskSize() Obtain Node disk size in GB
- * @method void setDiskSize(integer $DiskSize) Set Node disk size in GB
- * @method string getEsDomain() Obtain ES domain name
- * @method void setEsDomain(string $EsDomain) Set ES domain name
- * @method string getEsVip() Obtain ES VIP
- * @method void setEsVip(string $EsVip) Set ES VIP
- * @method integer getEsPort() Obtain ES port
- * @method void setEsPort(integer $EsPort) Set ES port
- * @method string getKibanaUrl() Obtain Kibana access URL
- * @method void setKibanaUrl(string $KibanaUrl) Set Kibana access URL
- * @method string getEsVersion() Obtain ES version number
- * @method void setEsVersion(string $EsVersion) Set ES version number
- * @method string getEsConfig() Obtain ES configuration item
- * @method void setEsConfig(string $EsConfig) Set ES configuration item
- * @method EsAcl getEsAcl() Obtain Kibana access control configuration
- * @method void setEsAcl(EsAcl $EsAcl) Set Kibana access control configuration
- * @method string getCreateTime() Obtain Instance creation time
- * @method void setCreateTime(string $CreateTime) Set Instance creation time
- * @method string getUpdateTime() Obtain Last modified time of the instance
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of the instance
- * @method string getDeadline() Obtain This parameter is not used on the global website
- * @method void setDeadline(string $Deadline) Set This parameter is not used on the global website
- * @method integer getInstanceType() Obtain Instance type (instance type identifier, which can be only 1 or 2 currently)
- * @method void setInstanceType(integer $InstanceType) Set Instance type (instance type identifier, which can be only 1 or 2 currently)
- * @method EsDictionaryInfo getIkConfig() Obtain IK analyzer configuration
- * @method void setIkConfig(EsDictionaryInfo $IkConfig) Set IK analyzer configuration
- * @method MasterNodeInfo getMasterNodeInfo() Obtain Dedicated primary node configuration
- * @method void setMasterNodeInfo(MasterNodeInfo $MasterNodeInfo) Set Dedicated primary node configuration
- * @method CosBackup getCosBackup() Obtain Auto-backup to COS configuration
- * @method void setCosBackup(CosBackup $CosBackup) Set Auto-backup to COS configuration
- * @method boolean getAllowCosBackup() Obtain Whether to allow auto-backup to COS
- * @method void setAllowCosBackup(boolean $AllowCosBackup) Set Whether to allow auto-backup to COS
- * @method array getTagList() Obtain List of tags owned by the instance
- * @method void setTagList(array $TagList) Set List of tags owned by the instance
- * @method string getLicenseType() Obtain License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method void setLicenseType(string $LicenseType) Set License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
- * @method boolean getEnableHotWarmMode() Obtain Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) Set Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getWarmNodeType() Obtain Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setWarmNodeType(string $WarmNodeType) Set Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getWarmNodeNum() Obtain Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setWarmNodeNum(integer $WarmNodeNum) Set Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getWarmCpuNum() Obtain Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setWarmCpuNum(integer $WarmCpuNum) Set Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getWarmMemSize() Obtain Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setWarmMemSize(integer $WarmMemSize) Set Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getWarmDiskType() Obtain Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setWarmDiskType(string $WarmDiskType) Set Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getWarmDiskSize() Obtain Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setWarmDiskSize(integer $WarmDiskSize) Set Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getNodeInfoList() Obtain Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNodeInfoList(array $NodeInfoList) Set Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEsPublicUrl() Obtain ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEsPublicUrl(string $EsPublicUrl) Set ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMultiZoneInfo() Obtain Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMultiZoneInfo(array $MultiZoneInfo) Set Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDeployMode() Obtain Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDeployMode(integer $DeployMode) Set Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPublicAccess() Obtain ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicAccess(string $PublicAccess) Set ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method EsAcl getEsPublicAcl() Obtain ES public access control configuration
- * @method void setEsPublicAcl(EsAcl $EsPublicAcl) Set ES public access control configuration
- * @method string getKibanaPrivateUrl() Obtain Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) Set Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKibanaPublicAccess() Obtain Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKibanaPrivateAccess() Obtain Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSecurityType() Obtain Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSecurityType(integer $SecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSceneType() Obtain Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSceneType(integer $SceneType) Set Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getKibanaConfig() Obtain Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method KibanaNodeInfo getKibanaNodeInfo() Obtain Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) Set Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getJdk() Obtain JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setJdk(string $Jdk) Set JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getProtocol() Obtain Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) Set Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getSecurityGroups() Obtain Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSecurityGroups(array $SecurityGroups) Set Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getColdNodeType() Obtain Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColdNodeType(string $ColdNodeType) Set Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getColdNodeNum() Obtain Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColdNodeNum(integer $ColdNodeNum) Set Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getColdCpuNum() Obtain Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColdCpuNum(integer $ColdCpuNum) Set Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getColdMemSize() Obtain Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColdMemSize(integer $ColdMemSize) Set Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getColdDiskType() Obtain Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColdDiskType(string $ColdDiskType) Set Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getColdDiskSize() Obtain Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColdDiskSize(integer $ColdDiskSize) Set Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getFrozenNodeType() Obtain Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setFrozenNodeType(string $FrozenNodeType) Set Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getFrozenNodeNum() Obtain Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setFrozenNodeNum(integer $FrozenNodeNum) Set Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getFrozenCpuNum() Obtain Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setFrozenCpuNum(integer $FrozenCpuNum) Set Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getFrozenMemSize() Obtain Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setFrozenMemSize(integer $FrozenMemSize) Set Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getFrozenDiskType() Obtain Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setFrozenDiskType(string $FrozenDiskType) Set Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getFrozenDiskSize() Obtain Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setFrozenDiskSize(integer $FrozenDiskSize) Set Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getHealthStatus() Obtain Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setHealthStatus(integer $HealthStatus) Set Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getEsPrivateUrl() Obtain Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setEsPrivateUrl(string $EsPrivateUrl) Set Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getEsPrivateDomain() Obtain Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setEsPrivateDomain(string $EsPrivateDomain) Set Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getEsConfigSets() Obtain Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEsConfigSets(array $EsConfigSets) Set Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method OperationDuration getOperationDuration() Obtain The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperationDuration(OperationDuration $OperationDuration) Set The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getOptionalWebServiceInfos() Obtain Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOptionalWebServiceInfos(array $OptionalWebServiceInfos) Set Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getAutoIndexEnabled() Obtain Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) Set Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getEnableHybridStorage() Obtain Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getProcessPercent() Obtain The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcessPercent(float $ProcessPercent) Set The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKibanaAlteringPublicAccess() Obtain The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) Set The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
+ * @method string getZone() Obtain <p>AZ.</p>
+ * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method integer getAppId() Obtain <p>uid</p>
+ * @method void setAppId(integer $AppId) Set <p>uid</p>
+ * @method string getUin() Obtain <p>User UIN.</p>
+ * @method void setUin(string $Uin) Set <p>User UIN.</p>
+ * @method string getVpcUid() Obtain <p>UID of the VPC to which the instance belongs</p>
+ * @method void setVpcUid(string $VpcUid) Set <p>UID of the VPC to which the instance belongs</p>
+ * @method string getSubnetUid() Obtain <p>UID of the subnet to which the instance belongs</p>
+ * @method void setSubnetUid(string $SubnetUid) Set <p>UID of the subnet to which the instance belongs</p>
+ * @method integer getStatus() Obtain <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
+ * @method void setStatus(integer $Status) Set <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
+ * @method string getRenewFlag() Obtain <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
+ * @method void setRenewFlag(string $RenewFlag) Set <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
+ * @method string getChargeType() Obtain <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
+ * @method void setChargeType(string $ChargeType) Set <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
+ * @method integer getChargePeriod() Obtain <p>Annual and monthly subscription duration, unit: month</p>
+ * @method void setChargePeriod(integer $ChargePeriod) Set <p>Annual and monthly subscription duration, unit: month</p>
+ * @method string getNodeType() Obtain <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method void setNodeType(string $NodeType) Set <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method integer getNodeNum() Obtain <p>Number of nodes</p>
+ * @method void setNodeNum(integer $NodeNum) Set <p>Number of nodes</p>
+ * @method integer getCpuNum() Obtain <p>Number of node CPU cores.</p>
+ * @method void setCpuNum(integer $CpuNum) Set <p>Number of node CPU cores.</p>
+ * @method integer getMemSize() Obtain <p>Node memory size (GB).</p>
+ * @method void setMemSize(integer $MemSize) Set <p>Node memory size (GB).</p>
+ * @method string getDiskType() Obtain <p>Node disk type</p>
+ * @method void setDiskType(string $DiskType) Set <p>Node disk type</p>
+ * @method integer getDiskSize() Obtain <p>Node disk size (GB).</p>
+ * @method void setDiskSize(integer $DiskSize) Set <p>Node disk size (GB).</p>
+ * @method string getEsDomain() Obtain <p>ES domain name</p>
+ * @method void setEsDomain(string $EsDomain) Set <p>ES domain name</p>
+ * @method string getEsVip() Obtain <p>ES VIP</p>
+ * @method void setEsVip(string $EsVip) Set <p>ES VIP</p>
+ * @method integer getEsPort() Obtain <p>ES port</p>
+ * @method void setEsPort(integer $EsPort) Set <p>ES port</p>
+ * @method string getKibanaUrl() Obtain <p>Kibana access url</p>
+ * @method void setKibanaUrl(string $KibanaUrl) Set <p>Kibana access url</p>
+ * @method string getEsVersion() Obtain <p>ES version number</p>
+ * @method void setEsVersion(string $EsVersion) Set <p>ES version number</p>
+ * @method string getEsConfig() Obtain <p>ES configuration item</p>
+ * @method void setEsConfig(string $EsConfig) Set <p>ES configuration item</p>
+ * @method EsAcl getEsAcl() Obtain <p>Kibana Access Control Configuration</p>
+ * @method void setEsAcl(EsAcl $EsAcl) Set <p>Kibana Access Control Configuration</p>
+ * @method string getCreateTime() Obtain <p>Instance creation time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Instance creation time</p>
+ * @method string getUpdateTime() Obtain <p>Last modification time of the instance</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last modification time of the instance</p>
+ * @method string getDeadline() Obtain <p>Instance expiration time</p>
+ * @method void setDeadline(string $Deadline) Set <p>Instance expiration time</p>
+ * @method integer getInstanceType() Obtain <p>Instance type (instance type flag, currently only 1 and 2)</p>
+ * @method void setInstanceType(integer $InstanceType) Set <p>Instance type (instance type flag, currently only 1 and 2)</p>
+ * @method EsDictionaryInfo getIkConfig() Obtain <p>Ik analyzer configuration</p>
+ * @method void setIkConfig(EsDictionaryInfo $IkConfig) Set <p>Ik analyzer configuration</p>
+ * @method MasterNodeInfo getMasterNodeInfo() Obtain <p>Dedicated master node configuration</p>
+ * @method void setMasterNodeInfo(MasterNodeInfo $MasterNodeInfo) Set <p>Dedicated master node configuration</p>
+ * @method CosBackup getCosBackup() Obtain <p>cos automatic backup configuration</p>
+ * @method void setCosBackup(CosBackup $CosBackup) Set <p>cos automatic backup configuration</p>
+ * @method boolean getAllowCosBackup() Obtain <p>Whether cos automatic backup is allowed</p>
+ * @method void setAllowCosBackup(boolean $AllowCosBackup) Set <p>Whether cos automatic backup is allowed</p>
+ * @method array getTagList() Obtain <p>Tag list of the instance</p>
+ * @method void setTagList(array $TagList) Set <p>Tag list of the instance</p>
+ * @method string getLicenseType() Obtain <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+ * @method void setLicenseType(string $LicenseType) Set <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+ * @method string getRealLicenseType() Obtain <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+ * @method void setRealLicenseType(string $RealLicenseType) Set <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+ * @method boolean getEnableHotWarmMode() Obtain <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
+ * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) Set <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
+ * @method string getWarmNodeType() Obtain <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method void setWarmNodeType(string $WarmNodeType) Set <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method integer getWarmNodeNum() Obtain <p>Number of warm nodes</p>
+ * @method void setWarmNodeNum(integer $WarmNodeNum) Set <p>Number of warm nodes</p>
+ * @method integer getWarmCpuNum() Obtain <p>Warm node CPU cores</p>
+ * @method void setWarmCpuNum(integer $WarmCpuNum) Set <p>Warm node CPU cores</p>
+ * @method integer getWarmMemSize() Obtain <p>Warm node memory size (GB).</p>
+ * @method void setWarmMemSize(integer $WarmMemSize) Set <p>Warm node memory size (GB).</p>
+ * @method string getWarmDiskType() Obtain <p>Warm node disk type</p>
+ * @method void setWarmDiskType(string $WarmDiskType) Set <p>Warm node disk type</p>
+ * @method integer getWarmDiskSize() Obtain <p>Warm node disk size (GB).</p>
+ * @method void setWarmDiskSize(integer $WarmDiskSize) Set <p>Warm node disk size (GB).</p>
+ * @method array getNodeInfoList() Obtain <p>Cluster node information list</p>
+ * @method void setNodeInfoList(array $NodeInfoList) Set <p>Cluster node information list</p>
+ * @method string getEsPublicUrl() Obtain <p>Es public network address</p>
+ * @method void setEsPublicUrl(string $EsPublicUrl) Set <p>Es public network address</p>
+ * @method array getMultiZoneInfo() Obtain <p>Multi-AZ network info</p>
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) Set <p>Multi-AZ network info</p>
+ * @method integer getDeployMode() Obtain <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
+ * @method void setDeployMode(integer $DeployMode) Set <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
+ * @method string getPublicAccess() Obtain <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+ * @method void setPublicAccess(string $PublicAccess) Set <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+ * @method EsAcl getEsPublicAcl() Obtain <p>ES public network access control configuration</p>
+ * @method void setEsPublicAcl(EsAcl $EsPublicAcl) Set <p>ES public network access control configuration</p>
+ * @method string getKibanaPrivateUrl() Obtain <p>Kibana private network address</p>
+ * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) Set <p>Kibana private network address</p>
+ * @method string getKibanaPublicAccess() Obtain <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
+ * @method string getKibanaPrivateAccess() Obtain <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+ * @method integer getSecurityType() Obtain <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+ * @method void setSecurityType(integer $SecurityType) Set <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+ * @method integer getSceneType() Obtain <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
+ * @method void setSceneType(integer $SceneType) Set <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
+ * @method string getKibanaConfig() Obtain <p>Kibana configuration item</p>
+ * @method void setKibanaConfig(string $KibanaConfig) Set <p>Kibana configuration item</p>
+ * @method KibanaNodeInfo getKibanaNodeInfo() Obtain <p>Kibana node information</p>
+ * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) Set <p>Kibana node information</p>
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain <p>Visualize node configuration</p>
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set <p>Visualize node configuration</p>
+ * @method string getJdk() Obtain <p>JDK type. Valid values: oracle, kona</p>
+ * @method void setJdk(string $Jdk) Set <p>JDK type. Valid values: oracle, kona</p>
+ * @method string getProtocol() Obtain <p>Cluster network communication protocol</p>
+ * @method void setProtocol(string $Protocol) Set <p>Cluster network communication protocol</p>
+ * @method array getSecurityGroups() Obtain <p>Security group id</p>
+ * @method void setSecurityGroups(array $SecurityGroups) Set <p>Security group id</p>
+ * @method string getColdNodeType() Obtain <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method void setColdNodeType(string $ColdNodeType) Set <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+ * @method integer getColdNodeNum() Obtain <p>Number of cold nodes</p>
+ * @method void setColdNodeNum(integer $ColdNodeNum) Set <p>Number of cold nodes</p>
+ * @method integer getColdCpuNum() Obtain <p>Cold node CPU cores</p>
+ * @method void setColdCpuNum(integer $ColdCpuNum) Set <p>Cold node CPU cores</p>
+ * @method integer getColdMemSize() Obtain <p>Cold node memory size (GB).</p>
+ * @method void setColdMemSize(integer $ColdMemSize) Set <p>Cold node memory size (GB).</p>
+ * @method string getColdDiskType() Obtain <p>Cold node disk type</p>
+ * @method void setColdDiskType(string $ColdDiskType) Set <p>Cold node disk type</p>
+ * @method integer getColdDiskSize() Obtain <p>Cold node disk size (GB).</p>
+ * @method void setColdDiskSize(integer $ColdDiskSize) Set <p>Cold node disk size (GB).</p>
+ * @method string getFrozenNodeType() Obtain <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
+ * @method void setFrozenNodeType(string $FrozenNodeType) Set <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
+ * @method integer getFrozenNodeNum() Obtain <p>Number of frozen nodes</p>
+ * @method void setFrozenNodeNum(integer $FrozenNodeNum) Set <p>Number of frozen nodes</p>
+ * @method integer getFrozenCpuNum() Obtain <p>Frozen node CPU cores</p>
+ * @method void setFrozenCpuNum(integer $FrozenCpuNum) Set <p>Frozen node CPU cores</p>
+ * @method integer getFrozenMemSize() Obtain <p>Frozen node memory size (GB).</p>
+ * @method void setFrozenMemSize(integer $FrozenMemSize) Set <p>Frozen node memory size (GB).</p>
+ * @method string getFrozenDiskType() Obtain <p>Frozen node disk type</p>
+ * @method void setFrozenDiskType(string $FrozenDiskType) Set <p>Frozen node disk type</p>
+ * @method integer getFrozenDiskSize() Obtain <p>Frozen node disk size (GB).</p>
+ * @method void setFrozenDiskSize(integer $FrozenDiskSize) Set <p>Frozen node disk size (GB).</p>
+ * @method integer getHealthStatus() Obtain <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
+ * @method void setHealthStatus(integer $HealthStatus) Set <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
+ * @method string getEsPrivateUrl() Obtain <p>Intracluster network url for https.</p>
+ * @method void setEsPrivateUrl(string $EsPrivateUrl) Set <p>Intracluster network url for https.</p>
+ * @method string getEsPrivateDomain() Obtain <p>https cluster private network domain name</p>
+ * @method void setEsPrivateDomain(string $EsPrivateDomain) Set <p>https cluster private network domain name</p>
+ * @method array getEsConfigSets() Obtain <p>Cluster configuration group information.</p>
+ * @method void setEsConfigSets(array $EsConfigSets) Set <p>Cluster configuration group information.</p>
+ * @method OperationDuration getOperationDuration() Obtain <p>Cluster maintenance time slot</p>
+ * @method void setOperationDuration(OperationDuration $OperationDuration) Set <p>Cluster maintenance time slot</p>
+ * @method array getOptionalWebServiceInfos() Obtain <p>web node list</p>
+ * @method void setOptionalWebServiceInfos(array $OptionalWebServiceInfos) Set <p>web node list</p>
+ * @method boolean getAutoIndexEnabled() Obtain <p>Autonomous index switch</p>
+ * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) Set <p>Autonomous index switch</p>
+ * @method boolean getEnableHybridStorage() Obtain <p>Whether storage and computation separation is supported.</p>
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set <p>Whether storage and computation separation is supported.</p>
+ * @method float getProcessPercent() Obtain <p>Process progress.</p>
+ * @method void setProcessPercent(float $ProcessPercent) Set <p>Process progress.</p>
+ * @method string getKibanaAlteringPublicAccess() Obtain <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) Set <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+ * @method boolean getHasKernelUpgrade() Obtain <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+ * @method void setHasKernelUpgrade(boolean $HasKernelUpgrade) Set <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+ * @method string getCdcId() Obtain <p>cdcId, pass it when using a CDC subnet</p>
+ * @method void setCdcId(string $CdcId) Set <p>cdcId, pass it when using a CDC subnet</p>
+ * @method string getKibanaPrivateVip() Obtain <p>kibana intranet vip</p>
+ * @method void setKibanaPrivateVip(string $KibanaPrivateVip) Set <p>kibana intranet vip</p>
+ * @method string getCustomKibanaPrivateUrl() Obtain <p>Customize the private network url of kibana</p>
+ * @method void setCustomKibanaPrivateUrl(string $CustomKibanaPrivateUrl) Set <p>Customize the private network url of kibana</p>
+ * @method array getOutboundPublicAcls() Obtain <p>Node outbound access detailed information.</p>
+ * @method void setOutboundPublicAcls(array $OutboundPublicAcls) Set <p>Node outbound access detailed information.</p>
+ * @method string getNetConnectScheme() Obtain <p>Network connection solution</p>
+ * @method void setNetConnectScheme(string $NetConnectScheme) Set <p>Network connection solution</p>
+ * @method integer getDisasterRecoverGroupAffinity() Obtain <p>Placement group related parameters</p>
+ * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) Set <p>Placement group related parameters</p>
+ * @method string getSubProductCode() Obtain <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+ * @method void setSubProductCode(string $SubProductCode) Set <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+ * @method integer getCosBucketStorageSize() Obtain <p>Storage-compute separation cos usage, Unit: M</p>
+ * @method void setCosBucketStorageSize(integer $CosBucketStorageSize) Set <p>Storage-compute separation cos usage, Unit: M</p>
+ * @method integer getReadWriteMode() Obtain <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+ * @method void setReadWriteMode(integer $ReadWriteMode) Set <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+ * @method boolean getEnableScheduleRecoverGroup() Obtain <p>Whether there is an asynchronous task scheduling for placement groups</p>
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) Set <p>Whether there is an asynchronous task scheduling for placement groups</p>
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() Obtain <p>The time when an asynchronous task is scheduled</p>
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) Set <p>The time when an asynchronous task is scheduled</p>
+ * @method string getEnableDestroyProtection() Obtain <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+ * @method void setEnableDestroyProtection(string $EnableDestroyProtection) Set <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+ * @method string getShowKibanaIpPort() Obtain <p>kibana intranet access address</p>
+ * @method void setShowKibanaIpPort(string $ShowKibanaIpPort) Set <p>kibana intranet access address</p>
+ * @method boolean getIsCdzLite() Obtain <p>Whether it is a CDZLite availability zone</p>
+ * @method void setIsCdzLite(boolean $IsCdzLite) Set <p>Whether it is a CDZLite availability zone</p>
+ * @method string getEsPrivateTcpUrl() Obtain <p>Cluster private network tcp address</p>
+ * @method void setEsPrivateTcpUrl(string $EsPrivateTcpUrl) Set <p>Cluster private network tcp address</p>
+ * @method boolean getIsInRecycleBin() Obtain <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+ * @method void setIsInRecycleBin(boolean $IsInRecycleBin) Set <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+ * @method boolean getRecycleLockEnabled() Obtain <p>Is locked in the recycle bin</p><p>Default value: false</p>
+ * @method void setRecycleLockEnabled(boolean $RecycleLockEnabled) Set <p>Is locked in the recycle bin</p><p>Default value: false</p>
+ * @method string getMayDestroyPoint() Obtain <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+ * @method void setMayDestroyPoint(string $MayDestroyPoint) Set <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+ * @method integer getDelayDestroyInterval() Obtain <p>The time when termination is delayed</p><p>Unit: day</p>
+ * @method void setDelayDestroyInterval(integer $DelayDestroyInterval) Set <p>The time when termination is delayed</p><p>Unit: day</p>
+ * @method integer getEnableAutoReplace() Obtain <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+ * @method void setEnableAutoReplace(integer $EnableAutoReplace) Set <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+ * @method integer getOpenMTLS() Obtain <p>Enable mtls. 0: disable, 1: enable</p>
+ * @method void setOpenMTLS(integer $OpenMTLS) Set <p>Enable mtls. 0: disable, 1: enable</p>
+ * @method string getServerCertSource() Obtain <p>Certificate type</p>
+ * @method void setServerCertSource(string $ServerCertSource) Set <p>Certificate type</p>
+ * @method string getOldEsVip() Obtain <p>VIP pending migration for the cluster</p>
+ * @method void setOldEsVip(string $OldEsVip) Set <p>VIP pending migration for the cluster</p>
+ * @method string getOldEsPrivateTcpUrl() Obtain <p>Cluster TCP address to be migrated</p>
+ * @method void setOldEsPrivateTcpUrl(string $OldEsPrivateTcpUrl) Set <p>Cluster TCP address to be migrated</p>
+ * @method boolean getNeedOfflineOldNodesNotify() Obtain <p>Whether to take old nodes offline from the VIP</p>
+ * @method void setNeedOfflineOldNodesNotify(boolean $NeedOfflineOldNodesNotify) Set <p>Whether to take old nodes offline from the VIP</p>
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var string Region
+     * @var string <p>Region.</p>
      */
     public $Region;
 
     /**
-     * @var string Availability Zone
+     * @var string <p>AZ.</p>
      */
     public $Zone;
 
     /**
-     * @var integer User ID
+     * @var integer <p>uid</p>
      */
     public $AppId;
 
     /**
-     * @var string User UIN
+     * @var string <p>User UIN.</p>
      */
     public $Uin;
 
     /**
-     * @var string UID of the VPC where the instance resides
+     * @var string <p>UID of the VPC to which the instance belongs</p>
      */
     public $VpcUid;
 
     /**
-     * @var string UID of the subnet where the instance resides
+     * @var string <p>UID of the subnet to which the instance belongs</p>
      */
     public $SubnetUid;
 
     /**
-     * @var integer Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+     * @var integer <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
      */
     public $Status;
 
     /**
-     * @var string This parameter is not used on the global website
+     * @var string <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+     * @var string <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
      */
     public $ChargeType;
 
     /**
-     * @var integer This parameter is not used on the global website
+     * @var integer <p>Annual and monthly subscription duration, unit: month</p>
      */
     public $ChargePeriod;
 
     /**
-     * @var string Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @var string <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public $NodeType;
 
     /**
-     * @var integer Number of nodes
+     * @var integer <p>Number of nodes</p>
      */
     public $NodeNum;
 
     /**
-     * @var integer Number of CPU cores of the node
+     * @var integer <p>Number of node CPU cores.</p>
      */
     public $CpuNum;
 
     /**
-     * @var integer Node memory size in GB
+     * @var integer <p>Node memory size (GB).</p>
      */
     public $MemSize;
 
     /**
-     * @var string Node disk type
+     * @var string <p>Node disk type</p>
      */
     public $DiskType;
 
     /**
-     * @var integer Node disk size in GB
+     * @var integer <p>Node disk size (GB).</p>
      */
     public $DiskSize;
 
     /**
-     * @var string ES domain name
+     * @var string <p>ES domain name</p>
      */
     public $EsDomain;
 
     /**
-     * @var string ES VIP
+     * @var string <p>ES VIP</p>
      */
     public $EsVip;
 
     /**
-     * @var integer ES port
+     * @var integer <p>ES port</p>
      */
     public $EsPort;
 
     /**
-     * @var string Kibana access URL
+     * @var string <p>Kibana access url</p>
      */
     public $KibanaUrl;
 
     /**
-     * @var string ES version number
+     * @var string <p>ES version number</p>
      */
     public $EsVersion;
 
     /**
-     * @var string ES configuration item
+     * @var string <p>ES configuration item</p>
      */
     public $EsConfig;
 
     /**
-     * @var EsAcl Kibana access control configuration
+     * @var EsAcl <p>Kibana Access Control Configuration</p>
      */
     public $EsAcl;
 
     /**
-     * @var string Instance creation time
+     * @var string <p>Instance creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of the instance
+     * @var string <p>Last modification time of the instance</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string This parameter is not used on the global website
+     * @var string <p>Instance expiration time</p>
      */
     public $Deadline;
 
     /**
-     * @var integer Instance type (instance type identifier, which can be only 1 or 2 currently)
+     * @var integer <p>Instance type (instance type flag, currently only 1 and 2)</p>
      */
     public $InstanceType;
 
     /**
-     * @var EsDictionaryInfo IK analyzer configuration
+     * @var EsDictionaryInfo <p>Ik analyzer configuration</p>
      */
     public $IkConfig;
 
     /**
-     * @var MasterNodeInfo Dedicated primary node configuration
+     * @var MasterNodeInfo <p>Dedicated master node configuration</p>
      */
     public $MasterNodeInfo;
 
     /**
-     * @var CosBackup Auto-backup to COS configuration
+     * @var CosBackup <p>cos automatic backup configuration</p>
      */
     public $CosBackup;
 
     /**
-     * @var boolean Whether to allow auto-backup to COS
+     * @var boolean <p>Whether cos automatic backup is allowed</p>
      */
     public $AllowCosBackup;
 
     /**
-     * @var array List of tags owned by the instance
+     * @var array <p>Tag list of the instance</p>
      */
     public $TagList;
 
     /**
-     * @var string License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+     * @var string <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
      */
     public $LicenseType;
 
     /**
-     * @var boolean Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+     */
+    public $RealLicenseType;
+
+    /**
+     * @var boolean <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
      */
     public $EnableHotWarmMode;
 
     /**
-     * @var string Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public $WarmNodeType;
 
     /**
-     * @var integer Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Number of warm nodes</p>
      */
     public $WarmNodeNum;
 
     /**
-     * @var integer Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Warm node CPU cores</p>
      */
     public $WarmCpuNum;
 
     /**
-     * @var integer Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Warm node memory size (GB).</p>
      */
     public $WarmMemSize;
 
     /**
-     * @var string Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Warm node disk type</p>
      */
     public $WarmDiskType;
 
     /**
-     * @var integer Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Warm node disk size (GB).</p>
      */
     public $WarmDiskSize;
 
     /**
-     * @var array Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Cluster node information list</p>
      */
     public $NodeInfoList;
 
     /**
-     * @var string ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Es public network address</p>
      */
     public $EsPublicUrl;
 
     /**
-     * @var array Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Multi-AZ network info</p>
      */
     public $MultiZoneInfo;
 
     /**
-     * @var integer Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
      */
     public $DeployMode;
 
     /**
-     * @var string ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public $PublicAccess;
 
     /**
-     * @var EsAcl ES public access control configuration
+     * @var EsAcl <p>ES public network access control configuration</p>
      */
     public $EsPublicAcl;
 
     /**
-     * @var string Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Kibana private network address</p>
      */
     public $KibanaPrivateUrl;
 
     /**
-     * @var string Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
      */
     public $KibanaPublicAccess;
 
     /**
-     * @var string Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public $KibanaPrivateAccess;
 
     /**
-     * @var integer Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
      */
     public $SecurityType;
 
     /**
-     * @var integer Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
      */
     public $SceneType;
 
     /**
-     * @var string Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>Kibana configuration item</p>
      */
     public $KibanaConfig;
 
     /**
-     * @var KibanaNodeInfo Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @var KibanaNodeInfo <p>Kibana node information</p>
      */
     public $KibanaNodeInfo;
 
     /**
-     * @var WebNodeTypeInfo Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var WebNodeTypeInfo <p>Visualize node configuration</p>
      */
     public $WebNodeTypeInfo;
 
     /**
-     * @var string JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>JDK type. Valid values: oracle, kona</p>
      */
     public $Jdk;
 
     /**
-     * @var string Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>Cluster network communication protocol</p>
      */
     public $Protocol;
 
     /**
-     * @var array Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array <p>Security group id</p>
      */
     public $SecurityGroups;
 
     /**
-     * @var string Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public $ColdNodeType;
 
     /**
-     * @var integer Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Number of cold nodes</p>
      */
     public $ColdNodeNum;
 
     /**
-     * @var integer Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Cold node CPU cores</p>
      */
     public $ColdCpuNum;
 
     /**
-     * @var integer Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Cold node memory size (GB).</p>
      */
     public $ColdMemSize;
 
     /**
-     * @var string Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Cold node disk type</p>
      */
     public $ColdDiskType;
 
     /**
-     * @var integer Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Cold node disk size (GB).</p>
      */
     public $ColdDiskSize;
 
     /**
-     * @var string Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
      */
     public $FrozenNodeType;
 
     /**
-     * @var integer Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Number of frozen nodes</p>
      */
     public $FrozenNodeNum;
 
     /**
-     * @var integer Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Frozen node CPU cores</p>
      */
     public $FrozenCpuNum;
 
     /**
-     * @var integer Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Frozen node memory size (GB).</p>
      */
     public $FrozenMemSize;
 
     /**
-     * @var string Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Frozen node disk type</p>
      */
     public $FrozenDiskType;
 
     /**
-     * @var integer Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Frozen node disk size (GB).</p>
      */
     public $FrozenDiskSize;
 
     /**
-     * @var integer Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
      */
     public $HealthStatus;
 
     /**
-     * @var string Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Intracluster network url for https.</p>
      */
     public $EsPrivateUrl;
 
     /**
-     * @var string Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>https cluster private network domain name</p>
      */
     public $EsPrivateDomain;
 
     /**
-     * @var array Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Cluster configuration group information.</p>
      */
     public $EsConfigSets;
 
     /**
-     * @var OperationDuration The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var OperationDuration <p>Cluster maintenance time slot</p>
      */
     public $OperationDuration;
 
     /**
-     * @var array Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>web node list</p>
      */
     public $OptionalWebServiceInfos;
 
     /**
-     * @var boolean Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean <p>Autonomous index switch</p>
      */
     public $AutoIndexEnabled;
 
     /**
-     * @var boolean Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean <p>Whether storage and computation separation is supported.</p>
      */
     public $EnableHybridStorage;
 
     /**
-     * @var float The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float <p>Process progress.</p>
      */
     public $ProcessPercent;
 
     /**
-     * @var string The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public $KibanaAlteringPublicAccess;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $Region Region
-     * @param string $Zone Availability Zone
-     * @param integer $AppId User ID
-     * @param string $Uin User UIN
-     * @param string $VpcUid UID of the VPC where the instance resides
-     * @param string $SubnetUid UID of the subnet where the instance resides
-     * @param integer $Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
-     * @param string $RenewFlag This parameter is not used on the global website
-     * @param string $ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
-     * @param integer $ChargePeriod This parameter is not used on the global website
-     * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param integer $NodeNum Number of nodes
-     * @param integer $CpuNum Number of CPU cores of the node
-     * @param integer $MemSize Node memory size in GB
-     * @param string $DiskType Node disk type
-     * @param integer $DiskSize Node disk size in GB
-     * @param string $EsDomain ES domain name
-     * @param string $EsVip ES VIP
-     * @param integer $EsPort ES port
-     * @param string $KibanaUrl Kibana access URL
-     * @param string $EsVersion ES version number
-     * @param string $EsConfig ES configuration item
-     * @param EsAcl $EsAcl Kibana access control configuration
-     * @param string $CreateTime Instance creation time
-     * @param string $UpdateTime Last modified time of the instance
-     * @param string $Deadline This parameter is not used on the global website
-     * @param integer $InstanceType Instance type (instance type identifier, which can be only 1 or 2 currently)
-     * @param EsDictionaryInfo $IkConfig IK analyzer configuration
-     * @param MasterNodeInfo $MasterNodeInfo Dedicated primary node configuration
-     * @param CosBackup $CosBackup Auto-backup to COS configuration
-     * @param boolean $AllowCosBackup Whether to allow auto-backup to COS
-     * @param array $TagList List of tags owned by the instance
-     * @param string $LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-     * @param boolean $EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $WarmNodeNum Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $WarmCpuNum Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $WarmMemSize Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $WarmDiskType Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $WarmDiskSize Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $NodeInfoList Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EsPublicUrl ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MultiZoneInfo Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DeployMode Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PublicAccess ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EsAcl $EsPublicAcl ES public access control configuration
-     * @param string $KibanaPrivateUrl Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $KibanaPublicAccess Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $KibanaPrivateAccess Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $KibanaConfig Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param KibanaNodeInfo $KibanaNodeInfo Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Jdk JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Protocol Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $SecurityGroups Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $ColdNodeNum Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $ColdCpuNum Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $ColdMemSize Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $ColdDiskType Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $ColdDiskSize Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $FrozenNodeNum Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $FrozenCpuNum Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $FrozenMemSize Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $FrozenDiskType Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $FrozenDiskSize Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $EsPrivateUrl Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $EsPrivateDomain Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $EsConfigSets Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OperationDuration $OperationDuration The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $OptionalWebServiceInfos Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $AutoIndexEnabled Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $EnableHybridStorage Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $ProcessPercent The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+     */
+    public $HasKernelUpgrade;
+
+    /**
+     * @var string <p>cdcId, pass it when using a CDC subnet</p>
+     */
+    public $CdcId;
+
+    /**
+     * @var string <p>kibana intranet vip</p>
+     */
+    public $KibanaPrivateVip;
+
+    /**
+     * @var string <p>Customize the private network url of kibana</p>
+     */
+    public $CustomKibanaPrivateUrl;
+
+    /**
+     * @var array <p>Node outbound access detailed information.</p>
+     */
+    public $OutboundPublicAcls;
+
+    /**
+     * @var string <p>Network connection solution</p>
+     */
+    public $NetConnectScheme;
+
+    /**
+     * @var integer <p>Placement group related parameters</p>
+     */
+    public $DisasterRecoverGroupAffinity;
+
+    /**
+     * @var string <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+     */
+    public $SubProductCode;
+
+    /**
+     * @var integer <p>Storage-compute separation cos usage, Unit: M</p>
+     */
+    public $CosBucketStorageSize;
+
+    /**
+     * @var integer <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+     */
+    public $ReadWriteMode;
+
+    /**
+     * @var boolean <p>Whether there is an asynchronous task scheduling for placement groups</p>
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration <p>The time when an asynchronous task is scheduled</p>
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
+     * @var string <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+     */
+    public $EnableDestroyProtection;
+
+    /**
+     * @var string <p>kibana intranet access address</p>
+     */
+    public $ShowKibanaIpPort;
+
+    /**
+     * @var boolean <p>Whether it is a CDZLite availability zone</p>
+     */
+    public $IsCdzLite;
+
+    /**
+     * @var string <p>Cluster private network tcp address</p>
+     */
+    public $EsPrivateTcpUrl;
+
+    /**
+     * @var boolean <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+     */
+    public $IsInRecycleBin;
+
+    /**
+     * @var boolean <p>Is locked in the recycle bin</p><p>Default value: false</p>
+     */
+    public $RecycleLockEnabled;
+
+    /**
+     * @var string <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+     */
+    public $MayDestroyPoint;
+
+    /**
+     * @var integer <p>The time when termination is delayed</p><p>Unit: day</p>
+     */
+    public $DelayDestroyInterval;
+
+    /**
+     * @var integer <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+     */
+    public $EnableAutoReplace;
+
+    /**
+     * @var integer <p>Enable mtls. 0: disable, 1: enable</p>
+     */
+    public $OpenMTLS;
+
+    /**
+     * @var string <p>Certificate type</p>
+     */
+    public $ServerCertSource;
+
+    /**
+     * @var string <p>VIP pending migration for the cluster</p>
+     */
+    public $OldEsVip;
+
+    /**
+     * @var string <p>Cluster TCP address to be migrated</p>
+     */
+    public $OldEsPrivateTcpUrl;
+
+    /**
+     * @var boolean <p>Whether to take old nodes offline from the VIP</p>
+     */
+    public $NeedOfflineOldNodesNotify;
+
+    /**
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param string $Region <p>Region.</p>
+     * @param string $Zone <p>AZ.</p>
+     * @param integer $AppId <p>uid</p>
+     * @param string $Uin <p>User UIN.</p>
+     * @param string $VpcUid <p>UID of the VPC to which the instance belongs</p>
+     * @param string $SubnetUid <p>UID of the subnet to which the instance belongs</p>
+     * @param integer $Status <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
+     * @param string $RenewFlag <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
+     * @param string $ChargeType <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
+     * @param integer $ChargePeriod <p>Annual and monthly subscription duration, unit: month</p>
+     * @param string $NodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param integer $NodeNum <p>Number of nodes</p>
+     * @param integer $CpuNum <p>Number of node CPU cores.</p>
+     * @param integer $MemSize <p>Node memory size (GB).</p>
+     * @param string $DiskType <p>Node disk type</p>
+     * @param integer $DiskSize <p>Node disk size (GB).</p>
+     * @param string $EsDomain <p>ES domain name</p>
+     * @param string $EsVip <p>ES VIP</p>
+     * @param integer $EsPort <p>ES port</p>
+     * @param string $KibanaUrl <p>Kibana access url</p>
+     * @param string $EsVersion <p>ES version number</p>
+     * @param string $EsConfig <p>ES configuration item</p>
+     * @param EsAcl $EsAcl <p>Kibana Access Control Configuration</p>
+     * @param string $CreateTime <p>Instance creation time</p>
+     * @param string $UpdateTime <p>Last modification time of the instance</p>
+     * @param string $Deadline <p>Instance expiration time</p>
+     * @param integer $InstanceType <p>Instance type (instance type flag, currently only 1 and 2)</p>
+     * @param EsDictionaryInfo $IkConfig <p>Ik analyzer configuration</p>
+     * @param MasterNodeInfo $MasterNodeInfo <p>Dedicated master node configuration</p>
+     * @param CosBackup $CosBackup <p>cos automatic backup configuration</p>
+     * @param boolean $AllowCosBackup <p>Whether cos automatic backup is allowed</p>
+     * @param array $TagList <p>Tag list of the instance</p>
+     * @param string $LicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+     * @param string $RealLicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+     * @param boolean $EnableHotWarmMode <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
+     * @param string $WarmNodeType <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param integer $WarmNodeNum <p>Number of warm nodes</p>
+     * @param integer $WarmCpuNum <p>Warm node CPU cores</p>
+     * @param integer $WarmMemSize <p>Warm node memory size (GB).</p>
+     * @param string $WarmDiskType <p>Warm node disk type</p>
+     * @param integer $WarmDiskSize <p>Warm node disk size (GB).</p>
+     * @param array $NodeInfoList <p>Cluster node information list</p>
+     * @param string $EsPublicUrl <p>Es public network address</p>
+     * @param array $MultiZoneInfo <p>Multi-AZ network info</p>
+     * @param integer $DeployMode <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
+     * @param string $PublicAccess <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+     * @param EsAcl $EsPublicAcl <p>ES public network access control configuration</p>
+     * @param string $KibanaPrivateUrl <p>Kibana private network address</p>
+     * @param string $KibanaPublicAccess <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
+     * @param string $KibanaPrivateAccess <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+     * @param integer $SecurityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+     * @param integer $SceneType <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
+     * @param string $KibanaConfig <p>Kibana configuration item</p>
+     * @param KibanaNodeInfo $KibanaNodeInfo <p>Kibana node information</p>
+     * @param WebNodeTypeInfo $WebNodeTypeInfo <p>Visualize node configuration</p>
+     * @param string $Jdk <p>JDK type. Valid values: oracle, kona</p>
+     * @param string $Protocol <p>Cluster network communication protocol</p>
+     * @param array $SecurityGroups <p>Security group id</p>
+     * @param string $ColdNodeType <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param integer $ColdNodeNum <p>Number of cold nodes</p>
+     * @param integer $ColdCpuNum <p>Cold node CPU cores</p>
+     * @param integer $ColdMemSize <p>Cold node memory size (GB).</p>
+     * @param string $ColdDiskType <p>Cold node disk type</p>
+     * @param integer $ColdDiskSize <p>Cold node disk size (GB).</p>
+     * @param string $FrozenNodeType <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
+     * @param integer $FrozenNodeNum <p>Number of frozen nodes</p>
+     * @param integer $FrozenCpuNum <p>Frozen node CPU cores</p>
+     * @param integer $FrozenMemSize <p>Frozen node memory size (GB).</p>
+     * @param string $FrozenDiskType <p>Frozen node disk type</p>
+     * @param integer $FrozenDiskSize <p>Frozen node disk size (GB).</p>
+     * @param integer $HealthStatus <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
+     * @param string $EsPrivateUrl <p>Intracluster network url for https.</p>
+     * @param string $EsPrivateDomain <p>https cluster private network domain name</p>
+     * @param array $EsConfigSets <p>Cluster configuration group information.</p>
+     * @param OperationDuration $OperationDuration <p>Cluster maintenance time slot</p>
+     * @param array $OptionalWebServiceInfos <p>web node list</p>
+     * @param boolean $AutoIndexEnabled <p>Autonomous index switch</p>
+     * @param boolean $EnableHybridStorage <p>Whether storage and computation separation is supported.</p>
+     * @param float $ProcessPercent <p>Process progress.</p>
+     * @param string $KibanaAlteringPublicAccess <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+     * @param boolean $HasKernelUpgrade <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+     * @param string $CdcId <p>cdcId, pass it when using a CDC subnet</p>
+     * @param string $KibanaPrivateVip <p>kibana intranet vip</p>
+     * @param string $CustomKibanaPrivateUrl <p>Customize the private network url of kibana</p>
+     * @param array $OutboundPublicAcls <p>Node outbound access detailed information.</p>
+     * @param string $NetConnectScheme <p>Network connection solution</p>
+     * @param integer $DisasterRecoverGroupAffinity <p>Placement group related parameters</p>
+     * @param string $SubProductCode <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+     * @param integer $CosBucketStorageSize <p>Storage-compute separation cos usage, Unit: M</p>
+     * @param integer $ReadWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+     * @param boolean $EnableScheduleRecoverGroup <p>Whether there is an asynchronous task scheduling for placement groups</p>
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration <p>The time when an asynchronous task is scheduled</p>
+     * @param string $EnableDestroyProtection <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+     * @param string $ShowKibanaIpPort <p>kibana intranet access address</p>
+     * @param boolean $IsCdzLite <p>Whether it is a CDZLite availability zone</p>
+     * @param string $EsPrivateTcpUrl <p>Cluster private network tcp address</p>
+     * @param boolean $IsInRecycleBin <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+     * @param boolean $RecycleLockEnabled <p>Is locked in the recycle bin</p><p>Default value: false</p>
+     * @param string $MayDestroyPoint <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+     * @param integer $DelayDestroyInterval <p>The time when termination is delayed</p><p>Unit: day</p>
+     * @param integer $EnableAutoReplace <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+     * @param integer $OpenMTLS <p>Enable mtls. 0: disable, 1: enable</p>
+     * @param string $ServerCertSource <p>Certificate type</p>
+     * @param string $OldEsVip <p>VIP pending migration for the cluster</p>
+     * @param string $OldEsPrivateTcpUrl <p>Cluster TCP address to be migrated</p>
+     * @param boolean $NeedOfflineOldNodesNotify <p>Whether to take old nodes offline from the VIP</p>
      */
     function __construct()
     {
@@ -1013,6 +1049,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("RealLicenseType",$param) and $param["RealLicenseType"] !== null) {
+            $this->RealLicenseType = $param["RealLicenseType"];
         }
 
         if (array_key_exists("EnableHotWarmMode",$param) and $param["EnableHotWarmMode"] !== null) {
@@ -1221,6 +1261,116 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
             $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
+        }
+
+        if (array_key_exists("HasKernelUpgrade",$param) and $param["HasKernelUpgrade"] !== null) {
+            $this->HasKernelUpgrade = $param["HasKernelUpgrade"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("KibanaPrivateVip",$param) and $param["KibanaPrivateVip"] !== null) {
+            $this->KibanaPrivateVip = $param["KibanaPrivateVip"];
+        }
+
+        if (array_key_exists("CustomKibanaPrivateUrl",$param) and $param["CustomKibanaPrivateUrl"] !== null) {
+            $this->CustomKibanaPrivateUrl = $param["CustomKibanaPrivateUrl"];
+        }
+
+        if (array_key_exists("OutboundPublicAcls",$param) and $param["OutboundPublicAcls"] !== null) {
+            $this->OutboundPublicAcls = [];
+            foreach ($param["OutboundPublicAcls"] as $key => $value){
+                $obj = new OutboundPublicAcl();
+                $obj->deserialize($value);
+                array_push($this->OutboundPublicAcls, $obj);
+            }
+        }
+
+        if (array_key_exists("NetConnectScheme",$param) and $param["NetConnectScheme"] !== null) {
+            $this->NetConnectScheme = $param["NetConnectScheme"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupAffinity",$param) and $param["DisasterRecoverGroupAffinity"] !== null) {
+            $this->DisasterRecoverGroupAffinity = $param["DisasterRecoverGroupAffinity"];
+        }
+
+        if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
+            $this->SubProductCode = $param["SubProductCode"];
+        }
+
+        if (array_key_exists("CosBucketStorageSize",$param) and $param["CosBucketStorageSize"] !== null) {
+            $this->CosBucketStorageSize = $param["CosBucketStorageSize"];
+        }
+
+        if (array_key_exists("ReadWriteMode",$param) and $param["ReadWriteMode"] !== null) {
+            $this->ReadWriteMode = $param["ReadWriteMode"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("EnableDestroyProtection",$param) and $param["EnableDestroyProtection"] !== null) {
+            $this->EnableDestroyProtection = $param["EnableDestroyProtection"];
+        }
+
+        if (array_key_exists("ShowKibanaIpPort",$param) and $param["ShowKibanaIpPort"] !== null) {
+            $this->ShowKibanaIpPort = $param["ShowKibanaIpPort"];
+        }
+
+        if (array_key_exists("IsCdzLite",$param) and $param["IsCdzLite"] !== null) {
+            $this->IsCdzLite = $param["IsCdzLite"];
+        }
+
+        if (array_key_exists("EsPrivateTcpUrl",$param) and $param["EsPrivateTcpUrl"] !== null) {
+            $this->EsPrivateTcpUrl = $param["EsPrivateTcpUrl"];
+        }
+
+        if (array_key_exists("IsInRecycleBin",$param) and $param["IsInRecycleBin"] !== null) {
+            $this->IsInRecycleBin = $param["IsInRecycleBin"];
+        }
+
+        if (array_key_exists("RecycleLockEnabled",$param) and $param["RecycleLockEnabled"] !== null) {
+            $this->RecycleLockEnabled = $param["RecycleLockEnabled"];
+        }
+
+        if (array_key_exists("MayDestroyPoint",$param) and $param["MayDestroyPoint"] !== null) {
+            $this->MayDestroyPoint = $param["MayDestroyPoint"];
+        }
+
+        if (array_key_exists("DelayDestroyInterval",$param) and $param["DelayDestroyInterval"] !== null) {
+            $this->DelayDestroyInterval = $param["DelayDestroyInterval"];
+        }
+
+        if (array_key_exists("EnableAutoReplace",$param) and $param["EnableAutoReplace"] !== null) {
+            $this->EnableAutoReplace = $param["EnableAutoReplace"];
+        }
+
+        if (array_key_exists("OpenMTLS",$param) and $param["OpenMTLS"] !== null) {
+            $this->OpenMTLS = $param["OpenMTLS"];
+        }
+
+        if (array_key_exists("ServerCertSource",$param) and $param["ServerCertSource"] !== null) {
+            $this->ServerCertSource = $param["ServerCertSource"];
+        }
+
+        if (array_key_exists("OldEsVip",$param) and $param["OldEsVip"] !== null) {
+            $this->OldEsVip = $param["OldEsVip"];
+        }
+
+        if (array_key_exists("OldEsPrivateTcpUrl",$param) and $param["OldEsPrivateTcpUrl"] !== null) {
+            $this->OldEsPrivateTcpUrl = $param["OldEsPrivateTcpUrl"];
+        }
+
+        if (array_key_exists("NeedOfflineOldNodesNotify",$param) and $param["NeedOfflineOldNodesNotify"] !== null) {
+            $this->NeedOfflineOldNodesNotify = $param["NeedOfflineOldNodesNotify"];
         }
     }
 }

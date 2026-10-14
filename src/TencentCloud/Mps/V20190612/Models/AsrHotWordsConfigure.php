@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Smart subtitle hotword parameter.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getLibraryId() Obtain 
- * @method void setLibraryId(string $LibraryId) Set 
+ * @method string getSwitch() Obtain Hotword switch.
+ * @method void setSwitch(string $Switch) Set Hotword switch.
+ * @method string getLibraryId() Obtain Hotword lexicon ID
+ * @method void setLibraryId(string $LibraryId) Set Hotword lexicon ID
  */
 class AsrHotWordsConfigure extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Hotword switch.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Hotword lexicon ID
      */
     public $LibraryId;
 
     /**
-     * @param string $Switch 
-     * @param string $LibraryId 
+     * @param string $Switch Hotword switch.
+     * @param string $LibraryId Hotword lexicon ID
      */
     function __construct()
     {

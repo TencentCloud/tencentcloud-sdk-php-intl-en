@@ -18,36 +18,36 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Machine protection information
  *
- * @method string getQuuid() Obtain 
- * @method void setQuuid(string $Quuid) Set 
- * @method integer getProtectSwitch() Obtain 
- * @method void setProtectSwitch(integer $ProtectSwitch) Set 
- * @method integer getAutoRecovery() Obtain 
- * @method void setAutoRecovery(integer $AutoRecovery) Set 
+ * @method string getQuuid() Obtain Unique host ID.
+ * @method void setQuuid(string $Quuid) Set Unique host ID.
+ * @method integer getProtectSwitch() Obtain Protection switch: 0 - off; 1 - on
+ * @method void setProtectSwitch(integer $ProtectSwitch) Set Protection switch: 0 - off; 1 - on
+ * @method integer getAutoRecovery() Obtain Auto recovery switch. 0: disabled. 1: enabled.
+ * @method void setAutoRecovery(integer $AutoRecovery) Set Auto recovery switch. 0: disabled. 1: enabled.
  */
 class ProtectHostConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Unique host ID.
      */
     public $Quuid;
 
     /**
-     * @var integer 
+     * @var integer Protection switch: 0 - off; 1 - on
      */
     public $ProtectSwitch;
 
     /**
-     * @var integer 
+     * @var integer Auto recovery switch. 0: disabled. 1: enabled.
      */
     public $AutoRecovery;
 
     /**
-     * @param string $Quuid 
-     * @param integer $ProtectSwitch 
-     * @param integer $AutoRecovery 
+     * @param string $Quuid Unique host ID.
+     * @param integer $ProtectSwitch Protection switch: 0 - off; 1 - on
+     * @param integer $AutoRecovery Auto recovery switch. 0: disabled. 1: enabled.
      */
     function __construct()
     {

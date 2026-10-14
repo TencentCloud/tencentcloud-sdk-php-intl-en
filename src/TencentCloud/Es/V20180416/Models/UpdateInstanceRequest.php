@@ -22,104 +22,140 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
- * @method void setInstanceName(string $InstanceName) Set Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
- * @method integer getNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
- * @method void setNodeNum(integer $NodeNum) Set This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
- * @method string getEsConfig() Obtain ES configuration item (JSON string)
- * @method void setEsConfig(string $EsConfig) Set ES configuration item (JSON string)
- * @method string getPassword() Obtain Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
- * @method void setPassword(string $Password) Set Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
- * @method EsAcl getEsAcl() Obtain The policy for visual component (Kibana and Cerebro) access over public network.
- * @method void setEsAcl(EsAcl $EsAcl) Set The policy for visual component (Kibana and Cerebro) access over public network.
- * @method integer getDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
+ * @method string getInstanceName() Obtain Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
+ * @method void setInstanceName(string $InstanceName) Set Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
+ * @method integer getNodeNum() Obtain Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
+ * @method void setNodeNum(integer $NodeNum) Set Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
+ * @method string getEsConfig() Obtain ES configuration item (JSON format string)
+ * @method void setEsConfig(string $EsConfig) Set ES configuration item (JSON format string)
+ * @method string getPassword() Obtain Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
+ * @method void setPassword(string $Password) Set Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
+ * @method EsAcl getEsAcl() Obtain Public access policy for visualization components (Kibana and Cerebro)
+ * @method void setEsAcl(EsAcl $EsAcl) Set Public access policy for visualization components (Kibana and Cerebro)
+ * @method integer getDiskSize() Obtain Abandoned. Please use NodeInfoList.
 Disk size in GB
- * @method void setDiskSize(integer $DiskSize) Set This parameter has been disused. Please use `NodeInfoList`
+ * @method void setDiskSize(integer $DiskSize) Set Abandoned. Please use NodeInfoList.
 Disk size in GB
- * @method string getNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method void setNodeType(string $NodeType) Set This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method integer getMasterNodeNum() Obtain This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
- * @method void setMasterNodeNum(integer $MasterNodeNum) Set This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
- * @method string getMasterNodeType() Obtain This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method void setMasterNodeType(string $MasterNodeType) Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
- * @method integer getMasterNodeDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
- * @method boolean getForceRestart() Obtain Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
- * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
- * @method CosBackup getCosBackup() Obtain Auto-backup to COS
- * @method void setCosBackup(CosBackup $CosBackup) Set Auto-backup to COS
- * @method array getNodeInfoList() Obtain Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
- * @method void setNodeInfoList(array $NodeInfoList) Set Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
- * @method string getPublicAccess() Obtain The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method void setPublicAccess(string $PublicAccess) Set The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method EsPublicAcl getEsPublicAcl() Obtain Public network ACL
- * @method void setEsPublicAcl(EsPublicAcl $EsPublicAcl) Set Public network ACL
- * @method string getKibanaPublicAccess() Obtain The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method string getKibanaPrivateAccess() Obtain The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method integer getBasicSecurityType() Obtain Enables or disables user authentication for ES Basic Edition v6.8 and above
- * @method void setBasicSecurityType(integer $BasicSecurityType) Set Enables or disables user authentication for ES Basic Edition v6.8 and above
- * @method integer getKibanaPrivatePort() Obtain Kibana private port
- * @method void setKibanaPrivatePort(integer $KibanaPrivatePort) Set Kibana private port
- * @method integer getScaleType() Obtain 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
- * @method void setScaleType(integer $ScaleType) Set 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+ * @method string getNodeType() Obtain Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+ * @method void setNodeType(string $NodeType) Set Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+ * @method integer getMasterNodeNum() Obtain Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
+ * @method void setMasterNodeNum(integer $MasterNodeNum) Set Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
+ * @method string getMasterNodeType() Obtain Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
+ * @method void setMasterNodeType(string $MasterNodeType) Set Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
+ * @method integer getMasterNodeDiskSize() Obtain Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) Set Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
+ * @method boolean getForceRestart() Obtain Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
+ * @method CosBackup getCosBackup() Obtain COS auto backup information
+ * @method void setCosBackup(CosBackup $CosBackup) Set COS auto backup information
+ * @method array getNodeInfoList() Obtain Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
+ * @method void setNodeInfoList(array $NodeInfoList) Set Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
+ * @method string getPublicAccess() Obtain Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method void setPublicAccess(string $PublicAccess) Set Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method EsPublicAcl getEsPublicAcl() Obtain Public network access control list
+ * @method void setEsPublicAcl(EsPublicAcl $EsPublicAcl) Set Public network access control list
+ * @method string getKibanaPublicAccess() Obtain Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method string getKibanaPrivateAccess() Obtain Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method integer getBasicSecurityType() Obtain Turn on or off user authentication for the basic version of ES 6.8 and above
+ * @method void setBasicSecurityType(integer $BasicSecurityType) Set Turn on or off user authentication for the basic version of ES 6.8 and above
+ * @method integer getKibanaPrivatePort() Obtain Kibana private network port
+ * @method void setKibanaPrivatePort(integer $KibanaPrivatePort) Set Kibana private network port
+ * @method integer getScaleType() Obtain 0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
+ * @method void setScaleType(integer $ScaleType) Set 0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
  * @method array getMultiZoneInfo() Obtain Multi-AZ deployment
  * @method void setMultiZoneInfo(array $MultiZoneInfo) Set Multi-AZ deployment
- * @method integer getSceneType() Obtain Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
- * @method void setSceneType(integer $SceneType) Set Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
- * @method string getKibanaConfig() Obtain Kibana configuration item (JSON string)
- * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item (JSON string)
- * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
- * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
- * @method string getSwitchPrivateLink() Obtain Whether to switch to the new network architecture
- * @method void setSwitchPrivateLink(string $SwitchPrivateLink) Set Whether to switch to the new network architecture
- * @method boolean getEnableCerebro() Obtain Whether to enable Cerebro
- * @method void setEnableCerebro(boolean $EnableCerebro) Set Whether to enable Cerebro
- * @method string getCerebroPublicAccess() Obtain The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method void setCerebroPublicAccess(string $CerebroPublicAccess) Set The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method string getCerebroPrivateAccess() Obtain The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) Set The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method EsConfigSetInfo getEsConfigSet() Obtain Added or modified configuration set information
- * @method void setEsConfigSet(EsConfigSetInfo $EsConfigSet) Set Added or modified configuration set information
- * @method OperationDurationUpdated getOperationDuration() Obtain The maintenance time slot
- * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) Set The maintenance time slot
- * @method string getKibanaAlteringPublicAccess() Obtain Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
- * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) Set Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+ * @method integer getSceneType() Obtain Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
+ * @method void setSceneType(integer $SceneType) Set Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
+ * @method string getKibanaConfig() Obtain Kibana configuration item (JSON format string)
+ * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item (JSON format string)
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visualize node configuration
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visualize node configuration
+ * @method string getSwitchPrivateLink() Obtain Switch to the new network architecture
+ * @method void setSwitchPrivateLink(string $SwitchPrivateLink) Set Switch to the new network architecture
+ * @method boolean getEnableCerebro() Obtain Enable Cerebro
+ * @method void setEnableCerebro(boolean $EnableCerebro) Set Enable Cerebro
+ * @method string getCerebroPublicAccess() Obtain Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method void setCerebroPublicAccess(string $CerebroPublicAccess) Set Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method string getCerebroPrivateAccess() Obtain Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) Set Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method EsConfigSetInfo getEsConfigSet() Obtain Newly-added or modified configuration group information
+ * @method void setEsConfigSet(EsConfigSetInfo $EsConfigSet) Set Newly-added or modified configuration group information
+ * @method OperationDurationUpdated getOperationDuration() Obtain Maintenance time slot.
+ * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) Set Maintenance time slot.
+ * @method string getKibanaAlteringPublicAccess() Obtain Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) Set Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
+ * @method string getKibanaPrivateDomain() Obtain Custom domain name of kibana on the private network
+ * @method void setKibanaPrivateDomain(string $KibanaPrivateDomain) Set Custom domain name of kibana on the private network
+ * @method string getCerebroPrivateDomain() Obtain Custom domain name of cerebro on the private network
+ * @method void setCerebroPrivateDomain(string $CerebroPrivateDomain) Set Custom domain name of cerebro on the private network
+ * @method string getProtocol() Obtain Change to an https cluster. http is selected by default.
+ * @method void setProtocol(string $Protocol) Set Change to an https cluster. http is selected by default.
+ * @method array getOutboundPublicAcls() Obtain Outbound access details of the node
+
+ * @method void setOutboundPublicAcls(array $OutboundPublicAcls) Set Outbound access details of the node
+
+ * @method string getOutboundPublicAccess() Obtain Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+ * @method void setOutboundPublicAccess(string $OutboundPublicAccess) Set Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+ * @method integer getCvmDelayOnlineTime() Obtain Parameter for delayed cvm launch
+ * @method void setCvmDelayOnlineTime(integer $CvmDelayOnlineTime) Set Parameter for delayed cvm launch
+ * @method integer getShardAllocationConcurrents() Obtain Number of concurrent shard migrations
+ * @method void setShardAllocationConcurrents(integer $ShardAllocationConcurrents) Set Number of concurrent shard migrations
+ * @method integer getShardAllocationBytes() Obtain Shard migration concurrency speed
+ * @method void setShardAllocationBytes(integer $ShardAllocationBytes) Set Shard migration concurrency speed
+ * @method integer getReadWriteMode() Obtain Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+ * @method void setReadWriteMode(integer $ReadWriteMode) Set Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+ * @method boolean getEnableScheduleRecoverGroup() Obtain Whether to enable the placement group async task
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) Set Whether to enable the placement group async task
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() Obtain Placement group async task maintenance time slot
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) Set Placement group async task maintenance time slot
+ * @method string getEnableDestroyProtection() Obtain Cluster protection: OPEN: enable, CLOSE: disable
+ * @method void setEnableDestroyProtection(string $EnableDestroyProtection) Set Cluster protection: OPEN: enable, CLOSE: disable
+ * @method array getAutoScaleDiskInfoList() Obtain Auto capacity expansion parameter
+ * @method void setAutoScaleDiskInfoList(array $AutoScaleDiskInfoList) Set Auto capacity expansion parameter
+ * @method array getAutoScaleDiskDeleteNodeTypeList() Obtain Auto-expansion delete parameter
+ * @method void setAutoScaleDiskDeleteNodeTypeList(array $AutoScaleDiskDeleteNodeTypeList) Set Auto-expansion delete parameter
+ * @method OtherConfig getOtherConfig() Obtain Other additional configuration, jvm or yml.
+ * @method void setOtherConfig(OtherConfig $OtherConfig) Set Other additional configuration, jvm or yml.
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -129,114 +165,114 @@ class UpdateInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+     * @var string Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
      */
     public $InstanceName;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+     * @var integer Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
      */
     public $NodeNum;
 
     /**
-     * @var string ES configuration item (JSON string)
+     * @var string ES configuration item (JSON format string)
      */
     public $EsConfig;
 
     /**
-     * @var string Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+     * @var string Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
      */
     public $Password;
 
     /**
-     * @var EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
+     * @var EsAcl Public access policy for visualization components (Kibana and Cerebro)
      */
     public $EsAcl;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
+     * @var integer Abandoned. Please use NodeInfoList.
 Disk size in GB
      */
     public $DiskSize;
 
     /**
-     * @var string This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @var string Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
      */
     public $NodeType;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
+     * @var integer Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
      */
     public $MasterNodeNum;
 
     /**
-     * @var string This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @var string Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
      */
     public $MasterNodeType;
 
     /**
-     * @var integer This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
+     * @var integer Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
      */
     public $MasterNodeDiskSize;
 
     /**
-     * @var boolean Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
+     * @var boolean Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
      */
     public $ForceRestart;
 
     /**
-     * @var CosBackup Auto-backup to COS
+     * @var CosBackup COS auto backup information
      */
     public $CosBackup;
 
     /**
-     * @var array Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+     * @var array Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
      */
     public $NodeInfoList;
 
     /**
-     * @var string The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+     * @var string Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
      */
     public $PublicAccess;
 
     /**
-     * @var EsPublicAcl Public network ACL
+     * @var EsPublicAcl Public network access control list
      */
     public $EsPublicAcl;
 
     /**
-     * @var string The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+     * @var string Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
      */
     public $KibanaPublicAccess;
 
     /**
-     * @var string The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+     * @var string Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
      */
     public $KibanaPrivateAccess;
 
     /**
-     * @var integer Enables or disables user authentication for ES Basic Edition v6.8 and above
+     * @var integer Turn on or off user authentication for the basic version of ES 6.8 and above
      */
     public $BasicSecurityType;
 
     /**
-     * @var integer Kibana private port
+     * @var integer Kibana private network port
      */
     public $KibanaPrivatePort;
 
     /**
-     * @var integer 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+     * @var integer 0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
      */
     public $ScaleType;
 
@@ -246,112 +282,208 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $MultiZoneInfo;
 
     /**
-     * @var integer Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+     * @var integer Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
      */
     public $SceneType;
 
     /**
-     * @var string Kibana configuration item (JSON string)
+     * @var string Kibana configuration item (JSON format string)
      */
     public $KibanaConfig;
 
     /**
-     * @var WebNodeTypeInfo Visual node configuration
+     * @var WebNodeTypeInfo Visualize node configuration
      */
     public $WebNodeTypeInfo;
 
     /**
-     * @var string Whether to switch to the new network architecture
+     * @var string Switch to the new network architecture
      */
     public $SwitchPrivateLink;
 
     /**
-     * @var boolean Whether to enable Cerebro
+     * @var boolean Enable Cerebro
      */
     public $EnableCerebro;
 
     /**
-     * @var string The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+     * @var string Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
      */
     public $CerebroPublicAccess;
 
     /**
-     * @var string The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+     * @var string Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
      */
     public $CerebroPrivateAccess;
 
     /**
-     * @var EsConfigSetInfo Added or modified configuration set information
+     * @var EsConfigSetInfo Newly-added or modified configuration group information
      */
     public $EsConfigSet;
 
     /**
-     * @var OperationDurationUpdated The maintenance time slot
+     * @var OperationDurationUpdated Maintenance time slot.
      */
     public $OperationDuration;
 
     /**
-     * @var string Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+     * @var string Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
      */
     public $KibanaAlteringPublicAccess;
 
     /**
+     * @var string Custom domain name of kibana on the private network
+     */
+    public $KibanaPrivateDomain;
+
+    /**
+     * @var string Custom domain name of cerebro on the private network
+     */
+    public $CerebroPrivateDomain;
+
+    /**
+     * @var string Change to an https cluster. http is selected by default.
+     */
+    public $Protocol;
+
+    /**
+     * @var array Outbound access details of the node
+
+     */
+    public $OutboundPublicAcls;
+
+    /**
+     * @var string Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+     */
+    public $OutboundPublicAccess;
+
+    /**
+     * @var integer Parameter for delayed cvm launch
+     */
+    public $CvmDelayOnlineTime;
+
+    /**
+     * @var integer Number of concurrent shard migrations
+     */
+    public $ShardAllocationConcurrents;
+
+    /**
+     * @var integer Shard migration concurrency speed
+     */
+    public $ShardAllocationBytes;
+
+    /**
+     * @var integer Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+     */
+    public $ReadWriteMode;
+
+    /**
+     * @var boolean Whether to enable the placement group async task
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration Placement group async task maintenance time slot
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
+     * @var string Cluster protection: OPEN: enable, CLOSE: disable
+     */
+    public $EnableDestroyProtection;
+
+    /**
+     * @var array Auto capacity expansion parameter
+     */
+    public $AutoScaleDiskInfoList;
+
+    /**
+     * @var array Auto-expansion delete parameter
+     */
+    public $AutoScaleDiskDeleteNodeTypeList;
+
+    /**
+     * @var OtherConfig Other additional configuration, jvm or yml.
+     */
+    public $OtherConfig;
+
+    /**
      * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-     * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
-     * @param string $EsConfig ES configuration item (JSON string)
-     * @param string $Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-     * @param EsAcl $EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
-     * @param integer $DiskSize This parameter has been disused. Please use `NodeInfoList`
+     * @param string $InstanceName Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
+     * @param integer $NodeNum Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
+     * @param string $EsConfig ES configuration item (JSON format string)
+     * @param string $Password Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
+     * @param EsAcl $EsAcl Public access policy for visualization components (Kibana and Cerebro)
+     * @param integer $DiskSize Abandoned. Please use NodeInfoList.
 Disk size in GB
-     * @param string $NodeType This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param integer $MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
-     * @param string $MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param integer $MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
-     * @param boolean $ForceRestart Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
-     * @param CosBackup $CosBackup Auto-backup to COS
-     * @param array $NodeInfoList Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
-     * @param string $PublicAccess The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-     * @param EsPublicAcl $EsPublicAcl Public network ACL
-     * @param string $KibanaPublicAccess The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-     * @param string $KibanaPrivateAccess The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-     * @param integer $BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
-     * @param integer $KibanaPrivatePort Kibana private port
-     * @param integer $ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+     * @param string $NodeType Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+     * @param integer $MasterNodeNum Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
+     * @param string $MasterNodeType Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
+     * @param integer $MasterNodeDiskSize Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
+     * @param boolean $ForceRestart Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
+     * @param CosBackup $CosBackup COS auto backup information
+     * @param array $NodeInfoList Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
+     * @param string $PublicAccess Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
+     * @param EsPublicAcl $EsPublicAcl Public network access control list
+     * @param string $KibanaPublicAccess Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
+     * @param string $KibanaPrivateAccess Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
+     * @param integer $BasicSecurityType Turn on or off user authentication for the basic version of ES 6.8 and above
+     * @param integer $KibanaPrivatePort Kibana private network port
+     * @param integer $ScaleType 0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
      * @param array $MultiZoneInfo Multi-AZ deployment
-     * @param integer $SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
-     * @param string $KibanaConfig Kibana configuration item (JSON string)
-     * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
-     * @param string $SwitchPrivateLink Whether to switch to the new network architecture
-     * @param boolean $EnableCerebro Whether to enable Cerebro
-     * @param string $CerebroPublicAccess The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-     * @param string $CerebroPrivateAccess The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-     * @param EsConfigSetInfo $EsConfigSet Added or modified configuration set information
-     * @param OperationDurationUpdated $OperationDuration The maintenance time slot
-     * @param string $KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+     * @param integer $SceneType Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
+     * @param string $KibanaConfig Kibana configuration item (JSON format string)
+     * @param WebNodeTypeInfo $WebNodeTypeInfo Visualize node configuration
+     * @param string $SwitchPrivateLink Switch to the new network architecture
+     * @param boolean $EnableCerebro Enable Cerebro
+     * @param string $CerebroPublicAccess Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
+     * @param string $CerebroPrivateAccess Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
+     * @param EsConfigSetInfo $EsConfigSet Newly-added or modified configuration group information
+     * @param OperationDurationUpdated $OperationDuration Maintenance time slot.
+     * @param string $KibanaAlteringPublicAccess Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
+     * @param string $KibanaPrivateDomain Custom domain name of kibana on the private network
+     * @param string $CerebroPrivateDomain Custom domain name of cerebro on the private network
+     * @param string $Protocol Change to an https cluster. http is selected by default.
+     * @param array $OutboundPublicAcls Outbound access details of the node
+
+     * @param string $OutboundPublicAccess Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+     * @param integer $CvmDelayOnlineTime Parameter for delayed cvm launch
+     * @param integer $ShardAllocationConcurrents Number of concurrent shard migrations
+     * @param integer $ShardAllocationBytes Shard migration concurrency speed
+     * @param integer $ReadWriteMode Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+     * @param boolean $EnableScheduleRecoverGroup Whether to enable the placement group async task
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration Placement group async task maintenance time slot
+     * @param string $EnableDestroyProtection Cluster protection: OPEN: enable, CLOSE: disable
+     * @param array $AutoScaleDiskInfoList Auto capacity expansion parameter
+     * @param array $AutoScaleDiskDeleteNodeTypeList Auto-expansion delete parameter
+     * @param OtherConfig $OtherConfig Other additional configuration, jvm or yml.
      */
     function __construct()
     {
@@ -508,6 +640,78 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
         if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
             $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
+        }
+
+        if (array_key_exists("KibanaPrivateDomain",$param) and $param["KibanaPrivateDomain"] !== null) {
+            $this->KibanaPrivateDomain = $param["KibanaPrivateDomain"];
+        }
+
+        if (array_key_exists("CerebroPrivateDomain",$param) and $param["CerebroPrivateDomain"] !== null) {
+            $this->CerebroPrivateDomain = $param["CerebroPrivateDomain"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("OutboundPublicAcls",$param) and $param["OutboundPublicAcls"] !== null) {
+            $this->OutboundPublicAcls = [];
+            foreach ($param["OutboundPublicAcls"] as $key => $value){
+                $obj = new OutboundPublicAcl();
+                $obj->deserialize($value);
+                array_push($this->OutboundPublicAcls, $obj);
+            }
+        }
+
+        if (array_key_exists("OutboundPublicAccess",$param) and $param["OutboundPublicAccess"] !== null) {
+            $this->OutboundPublicAccess = $param["OutboundPublicAccess"];
+        }
+
+        if (array_key_exists("CvmDelayOnlineTime",$param) and $param["CvmDelayOnlineTime"] !== null) {
+            $this->CvmDelayOnlineTime = $param["CvmDelayOnlineTime"];
+        }
+
+        if (array_key_exists("ShardAllocationConcurrents",$param) and $param["ShardAllocationConcurrents"] !== null) {
+            $this->ShardAllocationConcurrents = $param["ShardAllocationConcurrents"];
+        }
+
+        if (array_key_exists("ShardAllocationBytes",$param) and $param["ShardAllocationBytes"] !== null) {
+            $this->ShardAllocationBytes = $param["ShardAllocationBytes"];
+        }
+
+        if (array_key_exists("ReadWriteMode",$param) and $param["ReadWriteMode"] !== null) {
+            $this->ReadWriteMode = $param["ReadWriteMode"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("EnableDestroyProtection",$param) and $param["EnableDestroyProtection"] !== null) {
+            $this->EnableDestroyProtection = $param["EnableDestroyProtection"];
+        }
+
+        if (array_key_exists("AutoScaleDiskInfoList",$param) and $param["AutoScaleDiskInfoList"] !== null) {
+            $this->AutoScaleDiskInfoList = [];
+            foreach ($param["AutoScaleDiskInfoList"] as $key => $value){
+                $obj = new AutoScaleDiskInfo();
+                $obj->deserialize($value);
+                array_push($this->AutoScaleDiskInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoScaleDiskDeleteNodeTypeList",$param) and $param["AutoScaleDiskDeleteNodeTypeList"] !== null) {
+            $this->AutoScaleDiskDeleteNodeTypeList = $param["AutoScaleDiskDeleteNodeTypeList"];
+        }
+
+        if (array_key_exists("OtherConfig",$param) and $param["OtherConfig"] !== null) {
+            $this->OtherConfig = new OtherConfig();
+            $this->OtherConfig->deserialize($param["OtherConfig"]);
         }
     }
 }

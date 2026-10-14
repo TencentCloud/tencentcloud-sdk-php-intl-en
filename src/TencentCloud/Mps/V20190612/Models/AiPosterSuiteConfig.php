@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPanelResolution(string $PanelResolution) Set <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
  * @method array getCustomVariables() Obtain <p>User-defined variable.</p>
  * @method void setCustomVariables(array $CustomVariables) Set <p>User-defined variable.</p>
- * @method string getModel() Obtain <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
- * @method void setModel(string $Model) Set <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+ * @method string getModel() Obtain <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
+ * @method void setModel(string $Model) Set <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
  */
 class AiPosterSuiteConfig extends AbstractModel
 {
@@ -75,7 +75,7 @@ class AiPosterSuiteConfig extends AbstractModel
     public $CustomVariables;
 
     /**
-     * @var string <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+     * @var string <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
      */
     public $Model;
 
@@ -87,7 +87,7 @@ class AiPosterSuiteConfig extends AbstractModel
      * @param string $PanelRatio <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
      * @param string $PanelResolution <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
      * @param array $CustomVariables <p>User-defined variable.</p>
-     * @param string $Model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+     * @param string $Model <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
      */
     function __construct()
     {

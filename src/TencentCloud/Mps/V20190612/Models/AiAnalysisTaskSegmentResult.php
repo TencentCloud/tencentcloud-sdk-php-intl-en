@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskSegmentInput getInput() Obtain Splitting task input.
  * @method void setInput(AiAnalysisTaskSegmentInput $Input) Set Splitting task input.
- * @method AiAnalysisTaskSegmentOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskSegmentOutput $Output) Set 
+ * @method AiAnalysisTaskSegmentOutput getOutput() Obtain Splitting task output.
+ * @method void setOutput(AiAnalysisTaskSegmentOutput $Output) Set Splitting task output.
  */
 class AiAnalysisTaskSegmentResult extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AiAnalysisTaskSegmentResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskSegmentOutput 
+     * @var AiAnalysisTaskSegmentOutput Splitting task output.
      */
     public $Output;
 
@@ -63,7 +63,7 @@ class AiAnalysisTaskSegmentResult extends AbstractModel
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskSegmentInput $Input Splitting task input.
-     * @param AiAnalysisTaskSegmentOutput $Output 
+     * @param AiAnalysisTaskSegmentOutput $Output Splitting task output.
      */
     function __construct()
     {

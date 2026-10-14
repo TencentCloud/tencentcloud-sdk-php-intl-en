@@ -18,56 +18,52 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster view data
+ * Cluster dimension view data
  *
  * @method float getHealth() Obtain Cluster health status
  * @method void setHealth(float $Health) Set Cluster health status
  * @method float getVisible() Obtain Whether the cluster is visible
  * @method void setVisible(float $Visible) Set Whether the cluster is visible
- * @method float getBreak() Obtain Whether the cluster encounters circuit breaking
- * @method void setBreak(float $Break) Set Whether the cluster encounters circuit breaking
- * @method float getAvgDiskUsage() Obtain Average disk usage
- * @method void setAvgDiskUsage(float $AvgDiskUsage) Set Average disk usage
- * @method float getAvgMemUsage() Obtain Average memory usage
- * @method void setAvgMemUsage(float $AvgMemUsage) Set Average memory usage
- * @method float getAvgCpuUsage() Obtain Average CPU usage
- * @method void setAvgCpuUsage(float $AvgCpuUsage) Set Average CPU usage
- * @method integer getTotalDiskSize() Obtain Total disk size of the cluster
- * @method void setTotalDiskSize(integer $TotalDiskSize) Set Total disk size of the cluster
- * @method array getTargetNodeTypes() Obtain Types of nodes to receive client requests
- * @method void setTargetNodeTypes(array $TargetNodeTypes) Set Types of nodes to receive client requests
+ * @method float getBreak() Obtain Whether to fuse the cluster
+ * @method void setBreak(float $Break) Set Whether to fuse the cluster
+ * @method float getAvgDiskUsage() Obtain Average Disk Usage
+ * @method void setAvgDiskUsage(float $AvgDiskUsage) Set Average Disk Usage
+ * @method float getAvgMemUsage() Obtain Average memory utilization
+ * @method void setAvgMemUsage(float $AvgMemUsage) Set Average memory utilization
+ * @method float getAvgCpuUsage() Obtain Average CPU Usage
+ * @method void setAvgCpuUsage(float $AvgCpuUsage) Set Average CPU Usage
+ * @method integer getTotalDiskSize() Obtain Total storage size of a cluster.
+ * @method void setTotalDiskSize(integer $TotalDiskSize) Set Total storage size of a cluster.
+ * @method array getTargetNodeTypes() Obtain Client request node
+ * @method void setTargetNodeTypes(array $TargetNodeTypes) Set Client request node
  * @method integer getNodeNum() Obtain Number of online nodes
  * @method void setNodeNum(integer $NodeNum) Set Number of online nodes
  * @method integer getTotalNodeNum() Obtain Total number of nodes
  * @method void setTotalNodeNum(integer $TotalNodeNum) Set Total number of nodes
- * @method integer getDataNodeNum() Obtain Number of data nodes
- * @method void setDataNodeNum(integer $DataNodeNum) Set Number of data nodes
- * @method integer getIndexNum() Obtain Number of indices
- * @method void setIndexNum(integer $IndexNum) Set Number of indices
+ * @method integer getDataNodeNum() Obtain Number of Data Nodes
+ * @method void setDataNodeNum(integer $DataNodeNum) Set Number of Data Nodes
+ * @method integer getIndexNum() Obtain Index count
+ * @method void setIndexNum(integer $IndexNum) Set Index count
  * @method integer getDocNum() Obtain Number of documents
  * @method void setDocNum(integer $DocNum) Set Number of documents
- * @method integer getDiskUsedInBytes() Obtain Used disk size (in bytes)
- * @method void setDiskUsedInBytes(integer $DiskUsedInBytes) Set Used disk size (in bytes)
+ * @method integer getDiskUsedInBytes() Obtain Used bytes of the disk
+ * @method void setDiskUsedInBytes(integer $DiskUsedInBytes) Set Used bytes of the disk
  * @method integer getShardNum() Obtain Number of shards
  * @method void setShardNum(integer $ShardNum) Set Number of shards
  * @method integer getPrimaryShardNum() Obtain Number of primary shards
  * @method void setPrimaryShardNum(integer $PrimaryShardNum) Set Number of primary shards
- * @method integer getRelocatingShardNum() Obtain Number of relocating shards
- * @method void setRelocatingShardNum(integer $RelocatingShardNum) Set Number of relocating shards
- * @method integer getInitializingShardNum() Obtain Number of initializing shards
- * @method void setInitializingShardNum(integer $InitializingShardNum) Set Number of initializing shards
+ * @method integer getRelocatingShardNum() Obtain Number of migrating shards
+ * @method void setRelocatingShardNum(integer $RelocatingShardNum) Set Number of migrating shards
+ * @method integer getInitializingShardNum() Obtain Number of initializing shards.
+ * @method void setInitializingShardNum(integer $InitializingShardNum) Set Number of initializing shards.
  * @method integer getUnassignedShardNum() Obtain Number of unassigned shards
  * @method void setUnassignedShardNum(integer $UnassignedShardNum) Set Number of unassigned shards
- * @method integer getTotalCosStorage() Obtain Total COS storage of an enterprise cluster, in GB
- * @method void setTotalCosStorage(integer $TotalCosStorage) Set Total COS storage of an enterprise cluster, in GB
- * @method string getSearchableSnapshotCosBucket() Obtain Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setSearchableSnapshotCosBucket(string $SearchableSnapshotCosBucket) Set Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getSearchableSnapshotCosAppId() Obtain COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setSearchableSnapshotCosAppId(string $SearchableSnapshotCosAppId) Set COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getTotalCosStorage() Obtain Enterprise Edition COS storage capacity size in GB
+ * @method void setTotalCosStorage(integer $TotalCosStorage) Set Enterprise Edition COS storage capacity size in GB
+ * @method string getSearchableSnapshotCosBucket() Obtain bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
+ * @method void setSearchableSnapshotCosBucket(string $SearchableSnapshotCosBucket) Set bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
+ * @method string getSearchableSnapshotCosAppId() Obtain App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
+ * @method void setSearchableSnapshotCosAppId(string $SearchableSnapshotCosAppId) Set App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
  */
 class ClusterView extends AbstractModel
 {
@@ -82,32 +78,32 @@ class ClusterView extends AbstractModel
     public $Visible;
 
     /**
-     * @var float Whether the cluster encounters circuit breaking
+     * @var float Whether to fuse the cluster
      */
     public $Break;
 
     /**
-     * @var float Average disk usage
+     * @var float Average Disk Usage
      */
     public $AvgDiskUsage;
 
     /**
-     * @var float Average memory usage
+     * @var float Average memory utilization
      */
     public $AvgMemUsage;
 
     /**
-     * @var float Average CPU usage
+     * @var float Average CPU Usage
      */
     public $AvgCpuUsage;
 
     /**
-     * @var integer Total disk size of the cluster
+     * @var integer Total storage size of a cluster.
      */
     public $TotalDiskSize;
 
     /**
-     * @var array Types of nodes to receive client requests
+     * @var array Client request node
      */
     public $TargetNodeTypes;
 
@@ -122,12 +118,12 @@ class ClusterView extends AbstractModel
     public $TotalNodeNum;
 
     /**
-     * @var integer Number of data nodes
+     * @var integer Number of Data Nodes
      */
     public $DataNodeNum;
 
     /**
-     * @var integer Number of indices
+     * @var integer Index count
      */
     public $IndexNum;
 
@@ -137,7 +133,7 @@ class ClusterView extends AbstractModel
     public $DocNum;
 
     /**
-     * @var integer Used disk size (in bytes)
+     * @var integer Used bytes of the disk
      */
     public $DiskUsedInBytes;
 
@@ -152,12 +148,12 @@ class ClusterView extends AbstractModel
     public $PrimaryShardNum;
 
     /**
-     * @var integer Number of relocating shards
+     * @var integer Number of migrating shards
      */
     public $RelocatingShardNum;
 
     /**
-     * @var integer Number of initializing shards
+     * @var integer Number of initializing shards.
      */
     public $InitializingShardNum;
 
@@ -167,47 +163,43 @@ class ClusterView extends AbstractModel
     public $UnassignedShardNum;
 
     /**
-     * @var integer Total COS storage of an enterprise cluster, in GB
+     * @var integer Enterprise Edition COS storage capacity size in GB
      */
     public $TotalCosStorage;
 
     /**
-     * @var string Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
      */
     public $SearchableSnapshotCosBucket;
 
     /**
-     * @var string COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
      */
     public $SearchableSnapshotCosAppId;
 
     /**
      * @param float $Health Cluster health status
      * @param float $Visible Whether the cluster is visible
-     * @param float $Break Whether the cluster encounters circuit breaking
-     * @param float $AvgDiskUsage Average disk usage
-     * @param float $AvgMemUsage Average memory usage
-     * @param float $AvgCpuUsage Average CPU usage
-     * @param integer $TotalDiskSize Total disk size of the cluster
-     * @param array $TargetNodeTypes Types of nodes to receive client requests
+     * @param float $Break Whether to fuse the cluster
+     * @param float $AvgDiskUsage Average Disk Usage
+     * @param float $AvgMemUsage Average memory utilization
+     * @param float $AvgCpuUsage Average CPU Usage
+     * @param integer $TotalDiskSize Total storage size of a cluster.
+     * @param array $TargetNodeTypes Client request node
      * @param integer $NodeNum Number of online nodes
      * @param integer $TotalNodeNum Total number of nodes
-     * @param integer $DataNodeNum Number of data nodes
-     * @param integer $IndexNum Number of indices
+     * @param integer $DataNodeNum Number of Data Nodes
+     * @param integer $IndexNum Index count
      * @param integer $DocNum Number of documents
-     * @param integer $DiskUsedInBytes Used disk size (in bytes)
+     * @param integer $DiskUsedInBytes Used bytes of the disk
      * @param integer $ShardNum Number of shards
      * @param integer $PrimaryShardNum Number of primary shards
-     * @param integer $RelocatingShardNum Number of relocating shards
-     * @param integer $InitializingShardNum Number of initializing shards
+     * @param integer $RelocatingShardNum Number of migrating shards
+     * @param integer $InitializingShardNum Number of initializing shards.
      * @param integer $UnassignedShardNum Number of unassigned shards
-     * @param integer $TotalCosStorage Total COS storage of an enterprise cluster, in GB
-     * @param string $SearchableSnapshotCosBucket Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $SearchableSnapshotCosAppId COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $TotalCosStorage Enterprise Edition COS storage capacity size in GB
+     * @param string $SearchableSnapshotCosBucket bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
+     * @param string $SearchableSnapshotCosAppId App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
      */
     function __construct()
     {

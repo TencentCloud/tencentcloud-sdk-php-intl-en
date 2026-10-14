@@ -24,28 +24,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanPeriod(integer $ScanPeriod) Set Scheduled scan cycle
  * @method boolean getEnable() Obtain Scheduled scan switch
  * @method void setEnable(boolean $Enable) Set Scheduled scan switch
- * @method string getScanTime() Obtain Scheduled scan time
- * @method void setScanTime(string $ScanTime) Set Scheduled scan time
- * @method array getScanType() Obtain Array of the scanned trojan types
- * @method void setScanType(array $ScanType) Set Array of the scanned trojan types
- * @method array getImages() Obtain Scanned image
- * @method void setImages(array $Images) Set Scanned image
+ * @method string getScanTime() Obtain The time for scheduled scan
+ * @method void setScanTime(string $ScanTime) Set The time for scheduled scan
+ * @method array getScanType() Obtain Array of Trojan horse types to scan
+ * @method void setScanType(array $ScanType) Set Array of Trojan horse types to scan
+ * @method array getImages() Obtain Scan image
+ * @method void setImages(array $Images) Set Scan image
  * @method boolean getAll() Obtain Whether to scan all
  * @method void setAll(boolean $All) Set Whether to scan all
- * @method array getId() Obtain ID of the image to be scanned
- * @method void setId(array $Id) Set ID of the image to be scanned
- * @method boolean getLatest() Obtain Whether to scan for the latest version
- * @method void setLatest(boolean $Latest) Set Whether to scan for the latest version
- * @method boolean getContainerRunning() Obtain 
- * @method void setContainerRunning(boolean $ContainerRunning) Set 
- * @method string getScanEndTime() Obtain 
- * @method void setScanEndTime(string $ScanEndTime) Set 
- * @method integer getScanScope() Obtain 
- * @method void setScanScope(integer $ScanScope) Set 
- * @method array getRegistryType() Obtain 
- * @method void setRegistryType(array $RegistryType) Set 
- * @method array getNamespace() Obtain 
- * @method void setNamespace(array $Namespace) Set 
+ * @method array getId() Obtain Scan Image ID
+ * @method void setId(array $Id) Set Scan Image ID
+ * @method boolean getLatest() Obtain Whether to Scan the Latest Version
+ * @method void setLatest(boolean $Latest) Set Whether to Scan the Latest Version
+ * @method boolean getContainerRunning() Obtain Whether There Are Running Containers
+ * @method void setContainerRunning(boolean $ContainerRunning) Set Whether There Are Running Containers
+ * @method string getScanEndTime() Obtain Scan end time
+ * @method void setScanEndTime(string $ScanEndTime) Set Scan end time
+ * @method integer getScanScope() Obtain Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+ * @method void setScanScope(integer $ScanScope) Set Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+ * @method array getRegistryType() Obtain Repository Type: tcr, ccr, harbor
+ * @method void setRegistryType(array $RegistryType) Set Repository Type: tcr, ccr, harbor
+ * @method array getNamespace() Obtain Namespace
+ * @method void setNamespace(array $Namespace) Set Namespace
+ * @method array getExcludeImageAssetIds() Obtain IDs of excluded image assets.
+ * @method void setExcludeImageAssetIds(array $ExcludeImageAssetIds) Set IDs of excluded image assets.
  */
 class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 {
@@ -60,17 +62,17 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var string Scheduled scan time
+     * @var string The time for scheduled scan
      */
     public $ScanTime;
 
     /**
-     * @var array Array of the scanned trojan types
+     * @var array Array of Trojan horse types to scan
      */
     public $ScanType;
 
     /**
-     * @var array Scanned image
+     * @var array Scan image
      */
     public $Images;
 
@@ -81,54 +83,60 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
     public $All;
 
     /**
-     * @var array ID of the image to be scanned
+     * @var array Scan Image ID
      */
     public $Id;
 
     /**
-     * @var boolean Whether to scan for the latest version
+     * @var boolean Whether to Scan the Latest Version
      */
     public $Latest;
 
     /**
-     * @var boolean 
+     * @var boolean Whether There Are Running Containers
      */
     public $ContainerRunning;
 
     /**
-     * @var string 
+     * @var string Scan end time
      */
     public $ScanEndTime;
 
     /**
-     * @var integer 
+     * @var integer Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
      */
     public $ScanScope;
 
     /**
-     * @var array 
+     * @var array Repository Type: tcr, ccr, harbor
      */
     public $RegistryType;
 
     /**
-     * @var array 
+     * @var array Namespace
      */
     public $Namespace;
 
     /**
+     * @var array IDs of excluded image assets.
+     */
+    public $ExcludeImageAssetIds;
+
+    /**
      * @param integer $ScanPeriod Scheduled scan cycle
      * @param boolean $Enable Scheduled scan switch
-     * @param string $ScanTime Scheduled scan time
-     * @param array $ScanType Array of the scanned trojan types
-     * @param array $Images Scanned image
+     * @param string $ScanTime The time for scheduled scan
+     * @param array $ScanType Array of Trojan horse types to scan
+     * @param array $Images Scan image
      * @param boolean $All Whether to scan all
-     * @param array $Id ID of the image to be scanned
-     * @param boolean $Latest Whether to scan for the latest version
-     * @param boolean $ContainerRunning 
-     * @param string $ScanEndTime 
-     * @param integer $ScanScope 
-     * @param array $RegistryType 
-     * @param array $Namespace 
+     * @param array $Id Scan Image ID
+     * @param boolean $Latest Whether to Scan the Latest Version
+     * @param boolean $ContainerRunning Whether There Are Running Containers
+     * @param string $ScanEndTime Scan end time
+     * @param integer $ScanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+     * @param array $RegistryType Repository Type: tcr, ccr, harbor
+     * @param array $Namespace Namespace
+     * @param array $ExcludeImageAssetIds IDs of excluded image assets.
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("ExcludeImageAssetIds",$param) and $param["ExcludeImageAssetIds"] !== null) {
+            $this->ExcludeImageAssetIds = $param["ExcludeImageAssetIds"];
         }
     }
 }

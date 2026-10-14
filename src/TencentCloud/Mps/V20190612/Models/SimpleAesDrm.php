@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SimpleAes encryption information.
  *
- * @method string getUri() Obtain 
- * @method void setUri(string $Uri) Set 
- * @method string getKey() Obtain 
- * @method void setKey(string $Key) Set 
- * @method string getVector() Obtain 
- * @method void setVector(string $Vector) Set 
+ * @method string getUri() Obtain Request decryption key uri address.
+ * @method void setUri(string $Uri) Set Request decryption key uri address.
+ * @method string getKey() Obtain Encryption key (32-byte hexadecimal string).
+ * @method void setKey(string $Key) Set Encryption key (32-byte hexadecimal string).
+ * @method string getVector() Obtain Encryption initialization vector (32-byte hexadecimal string).
+ * @method void setVector(string $Vector) Set Encryption initialization vector (32-byte hexadecimal string).
  */
 class SimpleAesDrm extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Request decryption key uri address.
      */
     public $Uri;
 
     /**
-     * @var string 
+     * @var string Encryption key (32-byte hexadecimal string).
      */
     public $Key;
 
     /**
-     * @var string 
+     * @var string Encryption initialization vector (32-byte hexadecimal string).
      */
     public $Vector;
 
     /**
-     * @param string $Uri 
-     * @param string $Key 
-     * @param string $Vector 
+     * @param string $Uri Request decryption key uri address.
+     * @param string $Key Encryption key (32-byte hexadecimal string).
+     * @param string $Vector Encryption initialization vector (32-byte hexadecimal string).
      */
     function __construct()
     {

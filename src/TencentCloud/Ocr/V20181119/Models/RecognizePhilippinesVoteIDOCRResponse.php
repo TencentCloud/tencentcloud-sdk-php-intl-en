@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizePhilippinesVoteIDOCR response structure.
  *
- * @method TextDetectionResult getHeadPortrait() Obtain The Base64-encoded identity photo.
- * @method void setHeadPortrait(TextDetectionResult $HeadPortrait) Set The Base64-encoded identity photo.
+ * @method TextDetectionResult getHeadPortrait() Obtain Base64 encoded result of portrait photo.
+ * @method void setHeadPortrait(TextDetectionResult $HeadPortrait) Set Base64 encoded result of portrait photo.
  * @method TextDetectionResult getVIN() Obtain The voter's identification number (VIN).
  * @method void setVIN(TextDetectionResult $VIN) Set The voter's identification number (VIN).
  * @method TextDetectionResult getLastName() Obtain The last name.
  * @method void setLastName(TextDetectionResult $LastName) Set The last name.
  * @method TextDetectionResult getFirstName() Obtain The first name.
  * @method void setFirstName(TextDetectionResult $FirstName) Set The first name.
- * @method TextDetectionResult getMiddleName() Obtain 
- * @method void setMiddleName(TextDetectionResult $MiddleName) Set 
+ * @method TextDetectionResult getMiddleName() Obtain The middle name.
+ * @method void setMiddleName(TextDetectionResult $MiddleName) Set The middle name.
  * @method TextDetectionResult getBirthday() Obtain The date of birth.
  * @method void setBirthday(TextDetectionResult $Birthday) Set The date of birth.
  * @method TextDetectionResult getCivilStatus() Obtain The civil status.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel
 {
     /**
-     * @var TextDetectionResult The Base64-encoded identity photo.
+     * @var TextDetectionResult Base64 encoded result of portrait photo.
      */
     public $HeadPortrait;
 
@@ -66,7 +66,7 @@ class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel
     public $FirstName;
 
     /**
-     * @var TextDetectionResult 
+     * @var TextDetectionResult The middle name.
      */
     public $MiddleName;
 
@@ -101,11 +101,11 @@ class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TextDetectionResult $HeadPortrait The Base64-encoded identity photo.
+     * @param TextDetectionResult $HeadPortrait Base64 encoded result of portrait photo.
      * @param TextDetectionResult $VIN The voter's identification number (VIN).
      * @param TextDetectionResult $LastName The last name.
      * @param TextDetectionResult $FirstName The first name.
-     * @param TextDetectionResult $MiddleName 
+     * @param TextDetectionResult $MiddleName The middle name.
      * @param TextDetectionResult $Birthday The date of birth.
      * @param TextDetectionResult $CivilStatus The civil status.
      * @param TextDetectionResult $Citizenship The citizenship.

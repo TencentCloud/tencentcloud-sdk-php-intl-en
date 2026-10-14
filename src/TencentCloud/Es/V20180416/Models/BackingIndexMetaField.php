@@ -18,72 +18,60 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Backing index metadata fields
+ * Backup index metadata field
  *
- * @method string getIndexName() Obtain Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexName(string $IndexName) Set Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getIndexStatus() Obtain Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexStatus(string $IndexStatus) Set Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getIndexStorage() Obtain Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexStorage(integer $IndexStorage) Set Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getIndexPhrase() Obtain Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexPhrase(string $IndexPhrase) Set Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getIndexCreateTime() Obtain Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIndexCreateTime(string $IndexCreateTime) Set Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getIndexName() Obtain <p>Backing index name</p>
+ * @method void setIndexName(string $IndexName) Set <p>Backing index name</p>
+ * @method string getIndexStatus() Obtain <p>Backup index status</p>
+ * @method void setIndexStatus(string $IndexStatus) Set <p>Backup index status</p>
+ * @method integer getIndexStorage() Obtain <p>Backup index storage size</p>
+ * @method void setIndexStorage(integer $IndexStorage) Set <p>Backup index storage size</p>
+ * @method string getIndexPhrase() Obtain <p>Backup index current lifecycle</p>
+ * @method void setIndexPhrase(string $IndexPhrase) Set <p>Backup index current lifecycle</p>
+ * @method string getIndexCreateTime() Obtain <p>Backup index creation time</p>
+ * @method void setIndexCreateTime(string $IndexCreateTime) Set <p>Backup index creation time</p>
+ * @method string getIndexUuid() Obtain <p>Index Uuid</p>
+ * @method void setIndexUuid(string $IndexUuid) Set <p>Index Uuid</p>
  */
 class BackingIndexMetaField extends AbstractModel
 {
     /**
-     * @var string Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Backing index name</p>
      */
     public $IndexName;
 
     /**
-     * @var string Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Backup index status</p>
      */
     public $IndexStatus;
 
     /**
-     * @var integer Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer <p>Backup index storage size</p>
      */
     public $IndexStorage;
 
     /**
-     * @var string Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Backup index current lifecycle</p>
      */
     public $IndexPhrase;
 
     /**
-     * @var string Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Backup index creation time</p>
      */
     public $IndexCreateTime;
 
     /**
-     * @param string $IndexName Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $IndexStatus Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $IndexStorage Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $IndexPhrase Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $IndexCreateTime Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string <p>Index Uuid</p>
+     */
+    public $IndexUuid;
+
+    /**
+     * @param string $IndexName <p>Backing index name</p>
+     * @param string $IndexStatus <p>Backup index status</p>
+     * @param integer $IndexStorage <p>Backup index storage size</p>
+     * @param string $IndexPhrase <p>Backup index current lifecycle</p>
+     * @param string $IndexCreateTime <p>Backup index creation time</p>
+     * @param string $IndexUuid <p>Index Uuid</p>
      */
     function __construct()
     {
@@ -116,6 +104,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("IndexCreateTime",$param) and $param["IndexCreateTime"] !== null) {
             $this->IndexCreateTime = $param["IndexCreateTime"];
+        }
+
+        if (array_key_exists("IndexUuid",$param) and $param["IndexUuid"] !== null) {
+            $this->IndexUuid = $param["IndexUuid"];
         }
     }
 }

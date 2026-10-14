@@ -18,28 +18,28 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Namespace resource pool configuration
  *
- * @method NamespaceResourceEnvTKE getTKE() Obtain 
- * @method void setTKE(NamespaceResourceEnvTKE $TKE) Set 
- * @method boolean getOFFLINE() Obtain 
- * @method void setOFFLINE(boolean $OFFLINE) Set 
+ * @method NamespaceResourceEnvTKE getTKE() Obtain Resource pool based on a TKE cluster
+ * @method void setTKE(NamespaceResourceEnvTKE $TKE) Set Resource pool based on a TKE cluster
+ * @method boolean getOFFLINE() Obtain Namespace of the near-offline computing type
+ * @method void setOFFLINE(boolean $OFFLINE) Set Namespace of the near-offline computing type
  */
 class NamespaceResourceEnv extends AbstractModel
 {
     /**
-     * @var NamespaceResourceEnvTKE 
+     * @var NamespaceResourceEnvTKE Resource pool based on a TKE cluster
      */
     public $TKE;
 
     /**
-     * @var boolean 
+     * @var boolean Namespace of the near-offline computing type
      */
     public $OFFLINE;
 
     /**
-     * @param NamespaceResourceEnvTKE $TKE 
-     * @param boolean $OFFLINE 
+     * @param NamespaceResourceEnvTKE $TKE Resource pool based on a TKE cluster
+     * @param boolean $OFFLINE Namespace of the near-offline computing type
      */
     function __construct()
     {

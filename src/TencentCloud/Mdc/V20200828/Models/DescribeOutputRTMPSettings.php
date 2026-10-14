@@ -18,48 +18,36 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RTMP configuration information of the queried output.
+ * Query the output RTMP configuration message.
  *
  * @method integer getIdleTimeout() Obtain Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIdleTimeout(integer $IdleTimeout) Set Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getChunkSize() Obtain Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setChunkSize(integer $ChunkSize) Set Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getDestinations() Obtain Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDestinations(array $Destinations) Set Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDestinations() Obtain List of target address information for RTMP repush.
+ * @method void setDestinations(array $Destinations) Set List of target address information for RTMP repush.
  */
 class DescribeOutputRTMPSettings extends AbstractModel
 {
     /**
      * @var integer Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IdleTimeout;
 
     /**
      * @var integer Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ChunkSize;
 
     /**
-     * @var array Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of target address information for RTMP repush.
      */
     public $Destinations;
 
     /**
      * @param integer $IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ChunkSize Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Destinations Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Destinations List of target address information for RTMP repush.
      */
     function __construct()
     {

@@ -20,87 +20,87 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Log information
  *
- * @method string getFunctionName() Obtain Function name
- * @method void setFunctionName(string $FunctionName) Set Function name
- * @method string getRetMsg() Obtain Return value after the function is executed
- * @method void setRetMsg(string $RetMsg) Set Return value after the function is executed
- * @method string getRequestId() Obtain RequestId corresponding to the executed function
- * @method void setRequestId(string $RequestId) Set RequestId corresponding to the executed function
- * @method string getStartTime() Obtain Start time of the function execution
- * @method void setStartTime(string $StartTime) Set Start time of the function execution
- * @method integer getRetCode() Obtain Function execution result. `0` indicates successful execution and other values indicate failure.
- * @method void setRetCode(integer $RetCode) Set Function execution result. `0` indicates successful execution and other values indicate failure.
- * @method integer getInvokeFinished() Obtain It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
- * @method void setInvokeFinished(integer $InvokeFinished) Set It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
- * @method float getDuration() Obtain Duration of the function execution. The unit is millisecond (ms).
- * @method void setDuration(float $Duration) Set Duration of the function execution. The unit is millisecond (ms).
- * @method integer getBillDuration() Obtain Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
- * @method void setBillDuration(integer $BillDuration) Set Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
- * @method integer getMemUsage() Obtain Actual memory size used during the function execution. The unit is byte.
- * @method void setMemUsage(integer $MemUsage) Set Actual memory size used during the function execution. The unit is byte.
- * @method string getLog() Obtain Function execution logs
- * @method void setLog(string $Log) Set Function execution logs
- * @method string getLevel() Obtain Log level
- * @method void setLevel(string $Level) Set Log level
+ * @method string getFunctionName() Obtain Function name.
+ * @method void setFunctionName(string $FunctionName) Set Function name.
+ * @method string getRetMsg() Obtain Returned value after function execution
+ * @method void setRetMsg(string $RetMsg) Set Returned value after function execution
+ * @method string getRequestId() Obtain requestId for executing the function
+ * @method void setRequestId(string $RequestId) Set requestId for executing the function
+ * @method string getStartTime() Obtain Time point when the function starts execution
+ * @method void setStartTime(string $StartTime) Set Time point when the function starts execution
+ * @method integer getRetCode() Obtain Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
+ * @method void setRetCode(integer $RetCode) Set Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
+ * @method integer getInvokeFinished() Obtain Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
+ * @method void setInvokeFinished(integer $InvokeFinished) Set Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
+ * @method float getDuration() Obtain Function execution duration in milliseconds.
+ * @method void setDuration(float $Duration) Set Function execution duration in milliseconds.
+ * @method integer getBillDuration() Obtain Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
+ * @method void setBillDuration(integer $BillDuration) Set Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
+ * @method integer getMemUsage() Obtain Memory size actually consumed during function execution, in bytes.
+ * @method void setMemUsage(integer $MemUsage) Set Memory size actually consumed during function execution, in bytes.
+ * @method string getLog() Obtain Log output during function execution
+ * @method void setLog(string $Log) Set Log output during function execution
+ * @method string getLevel() Obtain Log level.
+ * @method void setLevel(string $Level) Set Log level.
  * @method string getSource() Obtain Log source
  * @method void setSource(string $Source) Set Log source
- * @method integer getRetryNum() Obtain Number of retries
- * @method void setRetryNum(integer $RetryNum) Set Number of retries
+ * @method integer getRetryNum() Obtain Number of retries.
+ * @method void setRetryNum(integer $RetryNum) Set Number of retries.
  */
 class FunctionLog extends AbstractModel
 {
     /**
-     * @var string Function name
+     * @var string Function name.
      */
     public $FunctionName;
 
     /**
-     * @var string Return value after the function is executed
+     * @var string Returned value after function execution
      */
     public $RetMsg;
 
     /**
-     * @var string RequestId corresponding to the executed function
+     * @var string requestId for executing the function
      */
     public $RequestId;
 
     /**
-     * @var string Start time of the function execution
+     * @var string Time point when the function starts execution
      */
     public $StartTime;
 
     /**
-     * @var integer Function execution result. `0` indicates successful execution and other values indicate failure.
+     * @var integer Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
      */
     public $RetCode;
 
     /**
-     * @var integer It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+     * @var integer Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
      */
     public $InvokeFinished;
 
     /**
-     * @var float Duration of the function execution. The unit is millisecond (ms).
+     * @var float Function execution duration in milliseconds.
      */
     public $Duration;
 
     /**
-     * @var integer Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+     * @var integer Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
      */
     public $BillDuration;
 
     /**
-     * @var integer Actual memory size used during the function execution. The unit is byte.
+     * @var integer Memory size actually consumed during function execution, in bytes.
      */
     public $MemUsage;
 
     /**
-     * @var string Function execution logs
+     * @var string Log output during function execution
      */
     public $Log;
 
     /**
-     * @var string Log level
+     * @var string Log level.
      * @deprecated
      */
     public $Level;
@@ -112,24 +112,24 @@ class FunctionLog extends AbstractModel
     public $Source;
 
     /**
-     * @var integer Number of retries
+     * @var integer Number of retries.
      */
     public $RetryNum;
 
     /**
-     * @param string $FunctionName Function name
-     * @param string $RetMsg Return value after the function is executed
-     * @param string $RequestId RequestId corresponding to the executed function
-     * @param string $StartTime Start time of the function execution
-     * @param integer $RetCode Function execution result. `0` indicates successful execution and other values indicate failure.
-     * @param integer $InvokeFinished It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
-     * @param float $Duration Duration of the function execution. The unit is millisecond (ms).
-     * @param integer $BillDuration Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
-     * @param integer $MemUsage Actual memory size used during the function execution. The unit is byte.
-     * @param string $Log Function execution logs
-     * @param string $Level Log level
+     * @param string $FunctionName Function name.
+     * @param string $RetMsg Returned value after function execution
+     * @param string $RequestId requestId for executing the function
+     * @param string $StartTime Time point when the function starts execution
+     * @param integer $RetCode Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
+     * @param integer $InvokeFinished Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
+     * @param float $Duration Function execution duration in milliseconds.
+     * @param integer $BillDuration Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
+     * @param integer $MemUsage Memory size actually consumed during function execution, in bytes.
+     * @param string $Log Log output during function execution
+     * @param string $Level Log level.
      * @param string $Source Log source
-     * @param integer $RetryNum Number of retries
+     * @param integer $RetryNum Number of retries.
      */
     function __construct()
     {

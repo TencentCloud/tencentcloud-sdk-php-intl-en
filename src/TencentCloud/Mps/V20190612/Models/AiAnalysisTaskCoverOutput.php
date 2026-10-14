@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent cover result information
+ * Intelligent cover result information.
  *
- * @method array getCoverSet() Obtain Intelligent cover list.
- * @method void setCoverSet(array $CoverSet) Set Intelligent cover list.
- * @method TaskOutputStorage getOutputStorage() Obtain Intelligent cover storage location.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Intelligent cover storage location.
+ * @method array getCoverSet() Obtain List of smart covers.
+ * @method void setCoverSet(array $CoverSet) Set List of smart covers.
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the intelligent cover.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the intelligent cover.
  */
 class AiAnalysisTaskCoverOutput extends AbstractModel
 {
     /**
-     * @var array Intelligent cover list.
+     * @var array List of smart covers.
      */
     public $CoverSet;
 
     /**
-     * @var TaskOutputStorage Intelligent cover storage location.
+     * @var TaskOutputStorage Storage location of the intelligent cover.
      */
     public $OutputStorage;
 
     /**
-     * @param array $CoverSet Intelligent cover list.
-     * @param TaskOutputStorage $OutputStorage Intelligent cover storage location.
+     * @param array $CoverSet List of smart covers.
+     * @param TaskOutputStorage $OutputStorage Storage location of the intelligent cover.
      */
     function __construct()
     {

@@ -18,28 +18,36 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of AZs in multi-AZ deployment mode
+ * Detailed information of availability zones in multi-AZ deployment
  *
- * @method string getZone() Obtain AZ
- * @method void setZone(string $Zone) Set AZ
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
+ * @method string getZone() Obtain AZ.
+ * @method void setZone(string $Zone) Set AZ.
+ * @method string getSubnetId() Obtain Subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID.
+ * @method boolean getHidden() Obtain Whether it is a hidden AZ
+ * @method void setHidden(boolean $Hidden) Set Whether it is a hidden AZ
  */
 class ZoneDetail extends AbstractModel
 {
     /**
-     * @var string AZ
+     * @var string AZ.
      */
     public $Zone;
 
     /**
-     * @var string Subnet ID
+     * @var string Subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @param string $Zone AZ
-     * @param string $SubnetId Subnet ID
+     * @var boolean Whether it is a hidden AZ
+     */
+    public $Hidden;
+
+    /**
+     * @param string $Zone AZ.
+     * @param string $SubnetId Subnet ID.
+     * @param boolean $Hidden Whether it is a hidden AZ
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ZoneDetail extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Hidden",$param) and $param["Hidden"] !== null) {
+            $this->Hidden = $param["Hidden"];
         }
     }
 }

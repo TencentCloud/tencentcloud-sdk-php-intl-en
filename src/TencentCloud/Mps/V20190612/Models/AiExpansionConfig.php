@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent image expansion configuration.
  *
- * @method string getSwitch() Obtain <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
- * @method void setSwitch(string $Switch) Set <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
- * @method string getAspectRatio() Obtain <p>Target ratio, for example "16:9"</p>
- * @method void setAspectRatio(string $AspectRatio) Set <p>Target ratio, for example "16:9"</p>
- * @method integer getWidth() Obtain <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
- * @method void setWidth(integer $Width) Set <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
- * @method integer getHeight() Obtain <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
- * @method void setHeight(integer $Height) Set <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+ * @method string getSwitch() Obtain <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method void setSwitch(string $Switch) Set <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+ * @method string getAspectRatio() Obtain <p>Target ratio, for example, "16:9"</p>
+ * @method void setAspectRatio(string $AspectRatio) Set <p>Target ratio, for example, "16:9"</p>
+ * @method integer getWidth() Obtain <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
+ * @method void setWidth(integer $Width) Set <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
+ * @method integer getHeight() Obtain <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
+ * @method void setHeight(integer $Height) Set <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
  */
 class AiExpansionConfig extends AbstractModel
 {
     /**
-     * @var string <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @var string <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public $Switch;
 
     /**
-     * @var string <p>Target ratio, for example "16:9"</p>
+     * @var string <p>Target ratio, for example, "16:9"</p>
      */
     public $AspectRatio;
 
     /**
-     * @var integer <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+     * @var integer <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
      */
     public $Width;
 
     /**
-     * @var integer <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+     * @var integer <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
      */
     public $Height;
 
     /**
-     * @param string $Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-     * @param string $AspectRatio <p>Target ratio, for example "16:9"</p>
-     * @param integer $Width <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
-     * @param integer $Height <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+     * @param string $Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @param string $AspectRatio <p>Target ratio, for example, "16:9"</p>
+     * @param integer $Width <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
+     * @param integer $Height <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
      */
     function __construct()
     {

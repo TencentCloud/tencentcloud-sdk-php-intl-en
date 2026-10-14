@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ocr text sensitive information
+ * Sensitive information in Ocr text
  *
- * @method float getConfidence() Obtain Ocr text sensitivity score, ranging from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Ocr text sensitivity score, ranging from 0 to 100.
- * @method string getSuggestion() Obtain Ocr text sensitive result recommendation, value ranges from...to...
+ * @method float getConfidence() Obtain Sensitive score of the Ocr text. Value range: 0–100.
+ * @method void setConfidence(float $Confidence) Set Sensitive score of the Ocr text. Value range: 0–100.
+ * @method string getSuggestion() Obtain Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Ocr text sensitive result recommendation, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getSegmentSet() Obtain Video segment list with suspect Ocr text sensitivity.
- * @method void setSegmentSet(array $SegmentSet) Set Video segment list with suspect Ocr text sensitivity.
+ * @method array getSegmentSet() Obtain List of video segments with sensitive Ocr text.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments with sensitive Ocr text.
  */
 class AiReviewPoliticalOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Ocr text sensitivity score, ranging from 0 to 100.
+     * @var float Sensitive score of the Ocr text. Value range: 0–100.
      */
     public $Confidence;
 
     /**
-     * @var string Ocr text sensitive result recommendation, value ranges from...to...
+     * @var string Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,17 +49,17 @@ class AiReviewPoliticalOcrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Video segment list with suspect Ocr text sensitivity.
+     * @var array List of video segments with sensitive Ocr text.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Ocr text sensitivity score, ranging from 0 to 100.
-     * @param string $Suggestion Ocr text sensitive result recommendation, value ranges from...to...
+     * @param float $Confidence Sensitive score of the Ocr text. Value range: 0–100.
+     * @param string $Suggestion Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $SegmentSet Video segment list with suspect Ocr text sensitivity.
+     * @param array $SegmentSet List of video segments with sensitive Ocr text.
      */
     function __construct()
     {

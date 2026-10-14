@@ -24,6 +24,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 /**
  * @method Models\ApplyCardVerificationExternalResponse ApplyCardVerificationExternal(Models\ApplyCardVerificationExternalRequest $req) This API provides general OCR recognition for [overseas identity documents.](https://www.tencentcloud.com/document/product/1061/82424)
+ * @method Models\ApplyOcrTokenResponse ApplyOcrToken(Models\ApplyOcrTokenRequest $req) This API retrieves a token before each call to the OCR SDK verification service. Save the token to initiate the verification process and retrieve the verification result after the process completes.
  * @method Models\ExtractDocMultiResponse ExtractDocMulti(Models\ExtractDocMultiRequest $req) This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
 This API is used to set the alias SmartStructuralPro.
 
@@ -43,6 +44,7 @@ Strengths: it can automatically recognize the text language, return the text box
 
 This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
  * @method Models\GetCardVerificationExternalResultResponse GetCardVerificationExternalResult(Models\GetCardVerificationExternalResultRequest $req) This API is used to obtain document recognition results.
+ * @method Models\GetOcrVerificationResultResponse GetOcrVerificationResult(Models\GetOcrVerificationResultRequest $req) This API retrieves the SDK verification result.
  * @method Models\HKIDCardOCRResponse HKIDCardOCR(Models\HKIDCardOCRRequest $req) This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute.
  * @method Models\HmtResidentPermitOCRResponse HmtResidentPermitOCR(Models\HmtResidentPermitOCRRequest $req) This API recognizes the Residence Permit for Hong Kong, Macao, and Taiwan, China Residents. Its OCR feature supports content detection and recognition of all fields on both sides, including name, sex, date of birth, address, identity card number, issuing authority, validity period, number of issuances, and travel permit number (a key field). It can be applied to information recognition scenarios for Residence Permit for Hong Kong, Macao, and Taiwan, China Residents, such as bank account opening and user registration. 
 
@@ -84,7 +86,9 @@ In addition, the interface provides additional features for various scenarios, s
 The API request rate is limited to 20 requests/sec by default.
  * @method Models\RecognizeSingaporeIDCardOCRResponse RecognizeSingaporeIDCardOCR(Models\RecognizeSingaporeIDCardOCRRequest $req) This interface supports the identification of all fields on the front side of ID card for Singapore residents.The identification accuracy reaches more than 99%.In addition, this interface also supports a variety of value-added capabilities to meet the needs of different scenarios. Such as the cropping function of ID card photos and portrait photos, and also has 5 alarm functions.
 As shown in the table below. <table style="width:650px"> <thead> <tr> <th width="150">Value-added ability</th> <th width="500">Ability items</th> </tr> </thead> <tbody> <tr> <td rowspan="9">Alarm function</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>Alarm for occlusion in the ID card frame</td> </tr> <tr> <td>ID card reflective warning</td> </tr> <tr> <td>Blurry picture warning</td> </tr> </tbody> </table> Default interface request frequency limit: 20 times/second
- * @method Models\RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(Models\RecognizeThaiIDCardOCRRequest $req) This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+ * @method Models\RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(Models\RecognizeThaiIDCardOCRRequest $req) Domain name for API request: ocr.intl.tencentcloudapi.com.
+
+This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
 
 A maximum of 10 requests can be initiated per second for this API.
  * @method Models\RecognizeThaiPinkCardResponse RecognizeThaiPinkCard(Models\RecognizeThaiPinkCardRequest $req) This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.

@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Quality inspection result item
  *
- * @method integer getConfidence() Obtain 
- * @method void setConfidence(integer $Confidence) Set 
- * @method float getStartTimeOffset() Obtain Start time of occurrence, in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time of occurrence, in seconds.
+ * @method integer getConfidence() Obtain Confidence, with a value range from 0 to 100.
+ * @method void setConfidence(integer $Confidence) Set Confidence, with a value range from 0 to 100.
+ * @method float getStartTimeOffset() Obtain Start timestamp of the occurrence, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start timestamp of the occurrence, in seconds.
  * @method float getEndTimeOffset() Obtain End timestamp of the occurrence, in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End timestamp of the occurrence, in seconds.
- * @method array getAreaCoordSet() Obtain 
- * @method void setAreaCoordSet(array $AreaCoordSet) Set 
+ * @method array getAreaCoordSet() Obtain Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
  */
 class QualityControlItem extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Confidence, with a value range from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var float Start time of occurrence, in seconds.
+     * @var float Start timestamp of the occurrence, in seconds.
      */
     public $StartTimeOffset;
 
@@ -47,15 +47,15 @@ class QualityControlItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var array 
+     * @var array Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @param integer $Confidence 
-     * @param float $StartTimeOffset Start time of occurrence, in seconds.
+     * @param integer $Confidence Confidence, with a value range from 0 to 100.
+     * @param float $StartTimeOffset Start timestamp of the occurrence, in seconds.
      * @param float $EndTimeOffset End timestamp of the occurrence, in seconds.
-     * @param array $AreaCoordSet 
+     * @param array $AreaCoordSet Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     function __construct()
     {

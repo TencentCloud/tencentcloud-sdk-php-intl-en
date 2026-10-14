@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query the output RTSP pull stream configuration message.
  *
- * @method array getServerUrls() Obtain 
- * @method void setServerUrls(array $ServerUrls) Set 
+ * @method array getServerUrls() Obtain List of RTSP pull addresses.
+ * @method void setServerUrls(array $ServerUrls) Set List of RTSP pull addresses.
  */
 class DescribeOutputRTSPPullSettings extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array List of RTSP pull addresses.
      */
     public $ServerUrls;
 
     /**
-     * @param array $ServerUrls 
+     * @param array $ServerUrls List of RTSP pull addresses.
      */
     function __construct()
     {

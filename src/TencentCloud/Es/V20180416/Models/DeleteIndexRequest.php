@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteIndex request structure.
  *
- * @method string getInstanceId() Obtain ES cluster ID
- * @method void setInstanceId(string $InstanceId) Set ES cluster ID
- * @method string getIndexType() Obtain Type of the index to delete. `auto`: Automated; `normal`: General.
- * @method void setIndexType(string $IndexType) Set Type of the index to delete. `auto`: Automated; `normal`: General.
- * @method string getIndexName() Obtain Name of the index to delete
- * @method void setIndexName(string $IndexName) Set Name of the index to delete
- * @method string getUsername() Obtain Username for cluster access
- * @method void setUsername(string $Username) Set Username for cluster access
- * @method string getPassword() Obtain Password for cluster access
- * @method void setPassword(string $Password) Set Password for cluster access
- * @method string getBackingIndexName() Obtain Backing index name
- * @method void setBackingIndexName(string $BackingIndexName) Set Backing index name
+ * @method string getInstanceId() Obtain <p>ES cluster ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ES cluster ID</p>
+ * @method string getIndexType() Obtain <p>Deleted index type. auto: autonomous index; normal: general index</p>
+ * @method void setIndexType(string $IndexType) Set <p>Deleted index type. auto: autonomous index; normal: general index</p>
+ * @method string getIndexName() Obtain <p>Name of the deleted index</p>
+ * @method void setIndexName(string $IndexName) Set <p>Name of the deleted index</p>
+ * @method string getUsername() Obtain <p>Cluster access username.</p>
+ * @method void setUsername(string $Username) Set <p>Cluster access username.</p>
+ * @method string getPassword() Obtain <p>Cluster access password</p>
+ * @method void setPassword(string $Password) Set <p>Cluster access password</p>
+ * @method string getBackingIndexName() Obtain <p>Backing index name</p>
+ * @method void setBackingIndexName(string $BackingIndexName) Set <p>Backing index name</p>
+ * @method string getIndexPhrase() Obtain <p>Index life cycle</p>
+ * @method void setIndexPhrase(string $IndexPhrase) Set <p>Index life cycle</p>
  */
 class DeleteIndexRequest extends AbstractModel
 {
     /**
-     * @var string ES cluster ID
+     * @var string <p>ES cluster ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Type of the index to delete. `auto`: Automated; `normal`: General.
+     * @var string <p>Deleted index type. auto: autonomous index; normal: general index</p>
      */
     public $IndexType;
 
     /**
-     * @var string Name of the index to delete
+     * @var string <p>Name of the deleted index</p>
      */
     public $IndexName;
 
     /**
-     * @var string Username for cluster access
+     * @var string <p>Cluster access username.</p>
      */
     public $Username;
 
     /**
-     * @var string Password for cluster access
+     * @var string <p>Cluster access password</p>
      */
     public $Password;
 
     /**
-     * @var string Backing index name
+     * @var string <p>Backing index name</p>
      */
     public $BackingIndexName;
 
     /**
-     * @param string $InstanceId ES cluster ID
-     * @param string $IndexType Type of the index to delete. `auto`: Automated; `normal`: General.
-     * @param string $IndexName Name of the index to delete
-     * @param string $Username Username for cluster access
-     * @param string $Password Password for cluster access
-     * @param string $BackingIndexName Backing index name
+     * @var string <p>Index life cycle</p>
+     */
+    public $IndexPhrase;
+
+    /**
+     * @param string $InstanceId <p>ES cluster ID</p>
+     * @param string $IndexType <p>Deleted index type. auto: autonomous index; normal: general index</p>
+     * @param string $IndexName <p>Name of the deleted index</p>
+     * @param string $Username <p>Cluster access username.</p>
+     * @param string $Password <p>Cluster access password</p>
+     * @param string $BackingIndexName <p>Backing index name</p>
+     * @param string $IndexPhrase <p>Index life cycle</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DeleteIndexRequest extends AbstractModel
 
         if (array_key_exists("BackingIndexName",$param) and $param["BackingIndexName"] !== null) {
             $this->BackingIndexName = $param["BackingIndexName"];
+        }
+
+        if (array_key_exists("IndexPhrase",$param) and $param["IndexPhrase"] !== null) {
+            $this->IndexPhrase = $param["IndexPhrase"];
         }
     }
 }

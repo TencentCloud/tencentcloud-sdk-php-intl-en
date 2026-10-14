@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method SampleSnapshotTaskInput getInput() Obtain Input for the sampling screenshot task on a video.
- * @method void setInput(SampleSnapshotTaskInput $Input) Set Input for the sampling screenshot task on a video.
- * @method MediaSampleSnapshotItem getOutput() Obtain 
- * @method void setOutput(MediaSampleSnapshotItem $Output) Set 
+ * @method SampleSnapshotTaskInput getInput() Obtain Input of the sampling screenshot task for videos.
+ * @method void setInput(SampleSnapshotTaskInput $Input) Set Input of the sampling screenshot task for videos.
+ * @method MediaSampleSnapshotItem getOutput() Obtain Output of the sampling screenshot task for videos.
+ * @method void setOutput(MediaSampleSnapshotItem $Output) Set Output of the sampling screenshot task for videos.
  * @method string getBeginProcessTime() Obtain Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getFinishTime() Obtain Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -60,12 +60,12 @@ class MediaProcessTaskSampleSnapshotResult extends AbstractModel
     public $Message;
 
     /**
-     * @var SampleSnapshotTaskInput Input for the sampling screenshot task on a video.
+     * @var SampleSnapshotTaskInput Input of the sampling screenshot task for videos.
      */
     public $Input;
 
     /**
-     * @var MediaSampleSnapshotItem 
+     * @var MediaSampleSnapshotItem Output of the sampling screenshot task for videos.
      */
     public $Output;
 
@@ -84,8 +84,8 @@ class MediaProcessTaskSampleSnapshotResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param SampleSnapshotTaskInput $Input Input for the sampling screenshot task on a video.
-     * @param MediaSampleSnapshotItem $Output 
+     * @param SampleSnapshotTaskInput $Input Input of the sampling screenshot task for videos.
+     * @param MediaSampleSnapshotItem $Output Output of the sampling screenshot task for videos.
      * @param string $BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */

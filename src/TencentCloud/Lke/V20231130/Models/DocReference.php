@@ -18,60 +18,60 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Documentation reference source info
  *
- * @method integer getDocBizId() Obtain 
- * @method void setDocBizId(integer $DocBizId) Set 
- * @method integer getReferBizId() Obtain 
- * @method void setReferBizId(integer $ReferBizId) Set 
- * @method string getDocName() Obtain 
- * @method void setDocName(string $DocName) Set 
- * @method integer getKnowledgeBizId() Obtain 
- * @method void setKnowledgeBizId(integer $KnowledgeBizId) Set 
- * @method string getKnowledgeName() Obtain 
- * @method void setKnowledgeName(string $KnowledgeName) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getDocBizId() Obtain <p>Document business ID</p>
+ * @method void setDocBizId(string $DocBizId) Set <p>Document business ID</p>
+ * @method string getReferBizId() Obtain <p>Document fragment reference ID</p>
+ * @method void setReferBizId(string $ReferBizId) Set <p>Document fragment reference ID</p>
+ * @method string getDocName() Obtain <p>Document name</p>
+ * @method void setDocName(string $DocName) Set <p>Document name</p>
+ * @method string getKnowledgeBizId() Obtain <p>Business ID of the knowledge base where the document resides</p>
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) Set <p>Business ID of the knowledge base where the document resides</p>
+ * @method string getKnowledgeName() Obtain <p>Name of the knowledge base where the document resides</p>
+ * @method void setKnowledgeName(string $KnowledgeName) Set <p>Name of the knowledge base where the document resides</p>
+ * @method string getUrl() Obtain <p>Document Access Address</p>
+ * @method void setUrl(string $Url) Set <p>Document Access Address</p>
  */
 class DocReference extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var string <p>Document business ID</p>
      */
     public $DocBizId;
 
     /**
-     * @var integer 
+     * @var string <p>Document fragment reference ID</p>
      */
     public $ReferBizId;
 
     /**
-     * @var string 
+     * @var string <p>Document name</p>
      */
     public $DocName;
 
     /**
-     * @var integer 
+     * @var string <p>Business ID of the knowledge base where the document resides</p>
      */
     public $KnowledgeBizId;
 
     /**
-     * @var string 
+     * @var string <p>Name of the knowledge base where the document resides</p>
      */
     public $KnowledgeName;
 
     /**
-     * @var string 
+     * @var string <p>Document Access Address</p>
      */
     public $Url;
 
     /**
-     * @param integer $DocBizId 
-     * @param integer $ReferBizId 
-     * @param string $DocName 
-     * @param integer $KnowledgeBizId 
-     * @param string $KnowledgeName 
-     * @param string $Url 
+     * @param string $DocBizId <p>Document business ID</p>
+     * @param string $ReferBizId <p>Document fragment reference ID</p>
+     * @param string $DocName <p>Document name</p>
+     * @param string $KnowledgeBizId <p>Business ID of the knowledge base where the document resides</p>
+     * @param string $KnowledgeName <p>Name of the knowledge base where the document resides</p>
+     * @param string $Url <p>Document Access Address</p>
      */
     function __construct()
     {

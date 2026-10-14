@@ -27,20 +27,20 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCoordinateOrigin() Obtain Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
  * @method void setCoordinateOrigin(string $CoordinateOrigin) Set Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
- * @method string getXPos() Obtain Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+ * @method string getXPos() Obtain Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
- * @method void setXPos(string $XPos) Set Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+ * @method void setXPos(string $XPos) Set Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -52,8 +52,8 @@ Default value: 0px.
 <li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
- * @method RawImageWatermarkInput getImageTemplate() Obtain Image watermark template. This field is required when Type is image, and invalid when Type is text.
- * @method void setImageTemplate(RawImageWatermarkInput $ImageTemplate) Set Image watermark template. This field is required when Type is image, and invalid when Type is text.
+ * @method RawImageWatermarkInput getImageTemplate() Obtain Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
+ * @method void setImageTemplate(RawImageWatermarkInput $ImageTemplate) Set Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
  */
 class RawWatermarkParameter extends AbstractModel
 {
@@ -67,14 +67,14 @@ class RawWatermarkParameter extends AbstractModel
      * @var string Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
      */
     public $CoordinateOrigin;
 
     /**
-     * @var string Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+     * @var string Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -90,7 +90,7 @@ Default value: 0px.
     public $YPos;
 
     /**
-     * @var RawImageWatermarkInput Image watermark template. This field is required when Type is image, and invalid when Type is text.
+     * @var RawImageWatermarkInput Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
      */
     public $ImageTemplate;
 
@@ -100,10 +100,10 @@ Default value: 0px.
      * @param string $CoordinateOrigin Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
-     * @param string $XPos Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+     * @param string $XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -111,7 +111,7 @@ Default value: 0px.
 <li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
-     * @param RawImageWatermarkInput $ImageTemplate Image watermark template. This field is required when Type is image, and invalid when Type is text.
+     * @param RawImageWatermarkInput $ImageTemplate Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
      */
     function __construct()
     {

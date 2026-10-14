@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sensitive information
  *
- * @method float getConfidence() Obtain Video sensitive content score, ranging from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Video sensitive content score, ranging from 0 to 100.
- * @method string getSuggestion() Obtain Result Suggestions for sensitive content, value ranges from...to...
+ * @method float getConfidence() Obtain Sensitive score of the video. The score ranges from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Sensitive score of the video. The score ranges from 0 to 100.
+ * @method string getSuggestion() Obtain Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Result Suggestions for sensitive content, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method string getLabel() Obtain Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+ * @method string getLabel() Obtain Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
- * @method void setLabel(string $Label) Set Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+ * @method void setLabel(string $Label) Set Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
  * @method array getSegmentSet() Obtain List of video segments suspected of containing sensitive content.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of containing sensitive content.
@@ -46,12 +46,12 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
 class AiReviewPoliticalTaskOutput extends AbstractModel
 {
     /**
-     * @var float Video sensitive content score, ranging from 0 to 100.
+     * @var float Sensitive score of the video. The score ranges from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string Result Suggestions for sensitive content, value ranges from...to...
+     * @var string Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -59,10 +59,10 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+     * @var string Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
      */
     public $Label;
@@ -73,15 +73,15 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Video sensitive content score, ranging from 0 to 100.
-     * @param string $Suggestion Result Suggestions for sensitive content, value ranges from...to...
+     * @param float $Confidence Sensitive score of the video. The score ranges from 0 to 100.
+     * @param string $Suggestion Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param string $Label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+     * @param string $Label Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
      * @param array $SegmentSet List of video segments suspected of containing sensitive content.
      */

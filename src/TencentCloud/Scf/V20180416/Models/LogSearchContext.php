@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOffset() Obtain Offset.
  * @method void setOffset(string $Offset) Set Offset.
- * @method integer getLimit() Obtain Log record number
- * @method void setLimit(integer $Limit) Set Log record number
+ * @method integer getLimit() Obtain Number of logs.
+ * @method void setLimit(integer $Limit) Set Number of logs.
  * @method string getKeyword() Obtain Log keyword
  * @method void setKeyword(string $Keyword) Set Log keyword
- * @method string getType() Obtain Log type. The value is `Application` (default) or `Platform`.
- * @method void setType(string $Type) Set Log type. The value is `Application` (default) or `Platform`.
+ * @method string getType() Obtain Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
+ * @method void setType(string $Type) Set Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
  */
 class LogSearchContext extends AbstractModel
 {
@@ -37,7 +37,7 @@ class LogSearchContext extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Log record number
+     * @var integer Number of logs.
      */
     public $Limit;
 
@@ -47,15 +47,15 @@ class LogSearchContext extends AbstractModel
     public $Keyword;
 
     /**
-     * @var string Log type. The value is `Application` (default) or `Platform`.
+     * @var string Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
      */
     public $Type;
 
     /**
      * @param string $Offset Offset.
-     * @param integer $Limit Log record number
+     * @param integer $Limit Number of logs.
      * @param string $Keyword Log keyword
-     * @param string $Type Log type. The value is `Application` (default) or `Platform`.
+     * @param string $Type Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
      */
     function __construct()
     {

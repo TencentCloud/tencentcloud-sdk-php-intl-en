@@ -20,64 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetHostDetail response structure.
  *
- * @method string getUUID() Obtain TCSS UUID
- * @method void setUUID(string $UUID) Set TCSS UUID
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
- * @method string getHostName() Obtain Server name
- * @method void setHostName(string $HostName) Set Server name
- * @method string getGroup() Obtain Server group
- * @method void setGroup(string $Group) Set Server group
- * @method string getHostIP() Obtain Server IP
- * @method void setHostIP(string $HostIP) Set Server IP
- * @method string getOsName() Obtain OS
- * @method void setOsName(string $OsName) Set OS
+ * @method string getUUID() Obtain Container Security UUID
+ * @method void setUUID(string $UUID) Set Container Security UUID
+ * @method string getUpdateTime() Obtain Update time.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time.
+ * @method string getHostName() Obtain Host name
+ * @method void setHostName(string $HostName) Set Host name
+ * @method string getGroup() Obtain Host grouping
+ * @method void setGroup(string $Group) Set Host grouping
+ * @method string getHostIP() Obtain Host IP address
+ * @method void setHostIP(string $HostIP) Set Host IP address
+ * @method string getOsName() Obtain Operating system.
+ * @method void setOsName(string $OsName) Set Operating system.
  * @method string getAgentVersion() Obtain Agent version
  * @method void setAgentVersion(string $AgentVersion) Set Agent version
  * @method string getKernelVersion() Obtain Kernel version
  * @method void setKernelVersion(string $KernelVersion) Set Kernel version
- * @method string getDockerVersion() Obtain Docker version
- * @method void setDockerVersion(string $DockerVersion) Set Docker version
- * @method string getDockerAPIVersion() Obtain Docker API version
- * @method void setDockerAPIVersion(string $DockerAPIVersion) Set Docker API version
- * @method string getDockerGoVersion() Obtain Docker version for Go
- * @method void setDockerGoVersion(string $DockerGoVersion) Set Docker version for Go
- * @method string getDockerFileSystemDriver() Obtain Docker file system type
- * @method void setDockerFileSystemDriver(string $DockerFileSystemDriver) Set Docker file system type
- * @method string getDockerRootDir() Obtain Docker root directory
- * @method void setDockerRootDir(string $DockerRootDir) Set Docker root directory
- * @method integer getImageCnt() Obtain Number of images
- * @method void setImageCnt(integer $ImageCnt) Set Number of images
+ * @method string getDockerVersion() Obtain docker version
+ * @method void setDockerVersion(string $DockerVersion) Set docker version
+ * @method string getDockerAPIVersion() Obtain docker api version
+ * @method void setDockerAPIVersion(string $DockerAPIVersion) Set docker api version
+ * @method string getDockerGoVersion() Obtain docker go version
+ * @method void setDockerGoVersion(string $DockerGoVersion) Set docker go version
+ * @method string getDockerFileSystemDriver() Obtain docker file system type
+ * @method void setDockerFileSystemDriver(string $DockerFileSystemDriver) Set docker file system type
+ * @method string getDockerRootDir() Obtain docker root directory
+ * @method void setDockerRootDir(string $DockerRootDir) Set docker root directory
+ * @method integer getImageCnt() Obtain Image count
+ * @method void setImageCnt(integer $ImageCnt) Set Image count
  * @method integer getContainerCnt() Obtain Number of containers
  * @method void setContainerCnt(integer $ContainerCnt) Set Number of containers
- * @method string getK8sMasterIP() Obtain K8s IP
- * @method void setK8sMasterIP(string $K8sMasterIP) Set K8s IP
- * @method string getK8sVersion() Obtain K8s version
- * @method void setK8sVersion(string $K8sVersion) Set K8s version
+ * @method string getK8sMasterIP() Obtain k8s IP
+ * @method void setK8sMasterIP(string $K8sMasterIP) Set k8s IP
+ * @method string getK8sVersion() Obtain k8s version
+ * @method void setK8sVersion(string $K8sVersion) Set k8s version
  * @method string getKubeProxyVersion() Obtain kube proxy
  * @method void setKubeProxyVersion(string $KubeProxyVersion) Set kube proxy
- * @method string getStatus() Obtain Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
- * @method void setStatus(string $Status) Set Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
- * @method boolean getIsContainerd() Obtain Whether it is Containerd
- * @method void setIsContainerd(boolean $IsContainerd) Set Whether it is Containerd
- * @method string getMachineType() Obtain Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
- * @method void setMachineType(string $MachineType) Set Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
- * @method string getPublicIp() Obtain Public IP
- * @method void setPublicIp(string $PublicIp) Set Public IP
- * @method string getInstanceID() Obtain Server instance ID
- * @method void setInstanceID(string $InstanceID) Set Server instance ID
- * @method integer getRegionID() Obtain Region ID
- * @method void setRegionID(integer $RegionID) Set Region ID
- * @method ProjectInfo getProject() Obtain Project
- * @method void setProject(ProjectInfo $Project) Set Project
- * @method array getTags() Obtain Tags
- * @method void setTags(array $Tags) Set Tags
- * @method string getClusterID() Obtain 
- * @method void setClusterID(string $ClusterID) Set 
- * @method string getClusterName() Obtain 
- * @method void setClusterName(string $ClusterName) Set 
- * @method string getClusterAccessedStatus() Obtain 
- * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) Set 
+ * @method string getStatus() Obtain "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
+ * @method void setStatus(string $Status) Set "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
+ * @method boolean getIsContainerd() Obtain Is Containerd
+ * @method void setIsContainerd(boolean $IsContainerd) Set Is Containerd
+ * @method string getMachineType() Obtain Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
+ * @method void setMachineType(string $MachineType) Set Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
+ * @method string getPublicIp() Obtain Public IP address
+ * @method void setPublicIp(string $PublicIp) Set Public IP address
+ * @method string getInstanceID() Obtain Host instance ID
+ * @method void setInstanceID(string $InstanceID) Set Host instance ID
+ * @method integer getRegionID() Obtain Region ID.
+ * @method void setRegionID(integer $RegionID) Set Region ID.
+ * @method ProjectInfo getProject() Obtain Associated project
+ * @method void setProject(ProjectInfo $Project) Set Associated project
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
+ * @method string getClusterAccessedStatus() Obtain Cluster Access Status
+ * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) Set Cluster Access Status
  * @method string getAssetSyncTime() Obtain Asset synchronization time.
  * @method void setAssetSyncTime(string $AssetSyncTime) Set Asset synchronization time.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -86,32 +86,32 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAssetHostDetailResponse extends AbstractModel
 {
     /**
-     * @var string TCSS UUID
+     * @var string Container Security UUID
      */
     public $UUID;
 
     /**
-     * @var string Update time
+     * @var string Update time.
      */
     public $UpdateTime;
 
     /**
-     * @var string Server name
+     * @var string Host name
      */
     public $HostName;
 
     /**
-     * @var string Server group
+     * @var string Host grouping
      */
     public $Group;
 
     /**
-     * @var string Server IP
+     * @var string Host IP address
      */
     public $HostIP;
 
     /**
-     * @var string OS
+     * @var string Operating system.
      */
     public $OsName;
 
@@ -126,32 +126,32 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $KernelVersion;
 
     /**
-     * @var string Docker version
+     * @var string docker version
      */
     public $DockerVersion;
 
     /**
-     * @var string Docker API version
+     * @var string docker api version
      */
     public $DockerAPIVersion;
 
     /**
-     * @var string Docker version for Go
+     * @var string docker go version
      */
     public $DockerGoVersion;
 
     /**
-     * @var string Docker file system type
+     * @var string docker file system type
      */
     public $DockerFileSystemDriver;
 
     /**
-     * @var string Docker root directory
+     * @var string docker root directory
      */
     public $DockerRootDir;
 
     /**
-     * @var integer Number of images
+     * @var integer Image count
      */
     public $ImageCnt;
 
@@ -161,12 +161,12 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $ContainerCnt;
 
     /**
-     * @var string K8s IP
+     * @var string k8s IP
      */
     public $K8sMasterIP;
 
     /**
-     * @var string K8s version
+     * @var string k8s version
      */
     public $K8sVersion;
 
@@ -176,57 +176,57 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $KubeProxyVersion;
 
     /**
-     * @var string Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
+     * @var string "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
      */
     public $Status;
 
     /**
-     * @var boolean Whether it is Containerd
+     * @var boolean Is Containerd
      */
     public $IsContainerd;
 
     /**
-     * @var string Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
+     * @var string Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
      */
     public $MachineType;
 
     /**
-     * @var string Public IP
+     * @var string Public IP address
      */
     public $PublicIp;
 
     /**
-     * @var string Server instance ID
+     * @var string Host instance ID
      */
     public $InstanceID;
 
     /**
-     * @var integer Region ID
+     * @var integer Region ID.
      */
     public $RegionID;
 
     /**
-     * @var ProjectInfo Project
+     * @var ProjectInfo Associated project
      */
     public $Project;
 
     /**
-     * @var array Tags
+     * @var array Tag.
      */
     public $Tags;
 
     /**
-     * @var string 
+     * @var string Cluster ID
      */
     public $ClusterID;
 
     /**
-     * @var string 
+     * @var string Cluster name.
      */
     public $ClusterName;
 
     /**
-     * @var string 
+     * @var string Cluster Access Status
      */
     public $ClusterAccessedStatus;
 
@@ -241,35 +241,35 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UUID TCSS UUID
-     * @param string $UpdateTime Update time
-     * @param string $HostName Server name
-     * @param string $Group Server group
-     * @param string $HostIP Server IP
-     * @param string $OsName OS
+     * @param string $UUID Container Security UUID
+     * @param string $UpdateTime Update time.
+     * @param string $HostName Host name
+     * @param string $Group Host grouping
+     * @param string $HostIP Host IP address
+     * @param string $OsName Operating system.
      * @param string $AgentVersion Agent version
      * @param string $KernelVersion Kernel version
-     * @param string $DockerVersion Docker version
-     * @param string $DockerAPIVersion Docker API version
-     * @param string $DockerGoVersion Docker version for Go
-     * @param string $DockerFileSystemDriver Docker file system type
-     * @param string $DockerRootDir Docker root directory
-     * @param integer $ImageCnt Number of images
+     * @param string $DockerVersion docker version
+     * @param string $DockerAPIVersion docker api version
+     * @param string $DockerGoVersion docker go version
+     * @param string $DockerFileSystemDriver docker file system type
+     * @param string $DockerRootDir docker root directory
+     * @param integer $ImageCnt Image count
      * @param integer $ContainerCnt Number of containers
-     * @param string $K8sMasterIP K8s IP
-     * @param string $K8sVersion K8s version
+     * @param string $K8sMasterIP k8s IP
+     * @param string $K8sVersion k8s version
      * @param string $KubeProxyVersion kube proxy
-     * @param string $Status Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
-     * @param boolean $IsContainerd Whether it is Containerd
-     * @param string $MachineType Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
-     * @param string $PublicIp Public IP
-     * @param string $InstanceID Server instance ID
-     * @param integer $RegionID Region ID
-     * @param ProjectInfo $Project Project
-     * @param array $Tags Tags
-     * @param string $ClusterID 
-     * @param string $ClusterName 
-     * @param string $ClusterAccessedStatus 
+     * @param string $Status "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
+     * @param boolean $IsContainerd Is Containerd
+     * @param string $MachineType Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
+     * @param string $PublicIp Public IP address
+     * @param string $InstanceID Host instance ID
+     * @param integer $RegionID Region ID.
+     * @param ProjectInfo $Project Associated project
+     * @param array $Tags Tag.
+     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName Cluster name.
+     * @param string $ClusterAccessedStatus Cluster Access Status
      * @param string $AssetSyncTime Asset synchronization time.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */

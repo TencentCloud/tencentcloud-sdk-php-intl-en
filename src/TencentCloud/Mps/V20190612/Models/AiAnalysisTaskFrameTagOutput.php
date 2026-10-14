@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent frame tagging result information
+ * Intelligent frame tagging result information.
  *
- * @method array getSegmentSet() Obtain Video frame tagging list.
- * @method void setSegmentSet(array $SegmentSet) Set Video frame tagging list.
+ * @method array getSegmentSet() Obtain Frame-specific tag list of the video.
+ * @method void setSegmentSet(array $SegmentSet) Set Frame-specific tag list of the video.
  */
 class AiAnalysisTaskFrameTagOutput extends AbstractModel
 {
     /**
-     * @var array Video frame tagging list.
+     * @var array Frame-specific tag list of the video.
      */
     public $SegmentSet;
 
     /**
-     * @param array $SegmentSet Video frame tagging list.
+     * @param array $SegmentSet Frame-specific tag list of the video.
      */
     function __construct()
     {

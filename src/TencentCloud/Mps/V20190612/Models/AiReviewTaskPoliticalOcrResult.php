@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review Ocr text sensitive task result type
+ * Result type of the sensitive Ocr text task in content review
  *
  * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewPoliticalOcrTaskInput getInput() Obtain Content review Ocr text sensitivity task input.
- * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) Set Content review Ocr text sensitivity task input.
- * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain 
- * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set 
+ * @method AiReviewPoliticalOcrTaskInput getInput() Obtain Input of the sensitive Ocr text task in content review.
+ * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) Set Input of the sensitive Ocr text task in content review.
+ * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain Content review Ocr text sensitivity task output.
+ * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set Content review Ocr text sensitivity task output.
  */
 class AiReviewTaskPoliticalOcrResult extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AiReviewTaskPoliticalOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPoliticalOcrTaskInput Content review Ocr text sensitivity task input.
+     * @var AiReviewPoliticalOcrTaskInput Input of the sensitive Ocr text task in content review.
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalOcrTaskOutput 
+     * @var AiReviewPoliticalOcrTaskOutput Content review Ocr text sensitivity task output.
      */
     public $Output;
 
@@ -70,8 +70,8 @@ class AiReviewTaskPoliticalOcrResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewPoliticalOcrTaskInput $Input Content review Ocr text sensitivity task input.
-     * @param AiReviewPoliticalOcrTaskOutput $Output 
+     * @param AiReviewPoliticalOcrTaskInput $Input Input of the sensitive Ocr text task in content review.
+     * @param AiReviewPoliticalOcrTaskOutput $Output Content review Ocr text sensitivity task output.
      */
     function __construct()
     {

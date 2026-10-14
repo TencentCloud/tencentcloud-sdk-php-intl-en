@@ -18,28 +18,28 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Variable parameter
+ * Variable parameters
  *
- * @method string getKey() Obtain Variable name
- * @method void setKey(string $Key) Set Variable name
- * @method string getValue() Obtain Variable value
- * @method void setValue(string $Value) Set Variable value
+ * @method string getKey() Obtain Variable name. Cannot be empty.
+ * @method void setKey(string $Key) Set Variable name. Cannot be empty.
+ * @method string getValue() Obtain Variable value. Cannot be empty.
+ * @method void setValue(string $Value) Set Variable value. Cannot be empty.
  */
 class Variable extends AbstractModel
 {
     /**
-     * @var string Variable name
+     * @var string Variable name. Cannot be empty.
      */
     public $Key;
 
     /**
-     * @var string Variable value
+     * @var string Variable value. Cannot be empty.
      */
     public $Value;
 
     /**
-     * @param string $Key Variable name
-     * @param string $Value Variable value
+     * @param string $Key Variable name. Cannot be empty.
+     * @param string $Value Variable value. Cannot be empty.
      */
     function __construct()
     {

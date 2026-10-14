@@ -18,16 +18,16 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom parameters for AI Dubbing
+ * Custom parameter for AI dubbing
  *
  * @method DubbingTranslateConfig getTranslateConfig() Obtain <p>Translation configuration message.</p>
  * @method void setTranslateConfig(DubbingTranslateConfig $TranslateConfig) Set <p>Translation configuration message.</p>
- * @method DubbingSubtitleConfig getSubtitleConfig() Obtain <p>Subtitle configuration information.</p>
- * @method void setSubtitleConfig(DubbingSubtitleConfig $SubtitleConfig) Set <p>Subtitle configuration information.</p>
+ * @method DubbingSubtitleConfig getSubtitleConfig() Obtain <p>Subtitle configuration message.</p>
+ * @method void setSubtitleConfig(DubbingSubtitleConfig $SubtitleConfig) Set <p>Subtitle configuration message.</p>
  * @method DubbingConfig getDubbingConfig() Obtain <p>Dubbing configuration message.</p>
  * @method void setDubbingConfig(DubbingConfig $DubbingConfig) Set <p>Dubbing configuration message.</p>
- * @method DubbingOutputConfig getOutputConfig() Obtain <p>Output configuration message.</p>
- * @method void setOutputConfig(DubbingOutputConfig $OutputConfig) Set <p>Output configuration message.</p>
+ * @method DubbingOutputConfig getOutputConfig() Obtain <p>Outputs configuration message.</p>
+ * @method void setOutputConfig(DubbingOutputConfig $OutputConfig) Set <p>Outputs configuration message.</p>
  */
 class RawAIDubbingParameter extends AbstractModel
 {
@@ -37,7 +37,7 @@ class RawAIDubbingParameter extends AbstractModel
     public $TranslateConfig;
 
     /**
-     * @var DubbingSubtitleConfig <p>Subtitle configuration information.</p>
+     * @var DubbingSubtitleConfig <p>Subtitle configuration message.</p>
      */
     public $SubtitleConfig;
 
@@ -47,15 +47,15 @@ class RawAIDubbingParameter extends AbstractModel
     public $DubbingConfig;
 
     /**
-     * @var DubbingOutputConfig <p>Output configuration message.</p>
+     * @var DubbingOutputConfig <p>Outputs configuration message.</p>
      */
     public $OutputConfig;
 
     /**
      * @param DubbingTranslateConfig $TranslateConfig <p>Translation configuration message.</p>
-     * @param DubbingSubtitleConfig $SubtitleConfig <p>Subtitle configuration information.</p>
+     * @param DubbingSubtitleConfig $SubtitleConfig <p>Subtitle configuration message.</p>
      * @param DubbingConfig $DubbingConfig <p>Dubbing configuration message.</p>
-     * @param DubbingOutputConfig $OutputConfig <p>Output configuration message.</p>
+     * @param DubbingOutputConfig $OutputConfig <p>Outputs configuration message.</p>
      */
     function __construct()
     {

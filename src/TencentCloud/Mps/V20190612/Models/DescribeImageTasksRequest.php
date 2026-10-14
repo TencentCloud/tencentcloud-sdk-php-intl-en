@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageTasks request structure.
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getScrollToken() Obtain 
- * @method void setScrollToken(string $ScrollToken) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method boolean getSubTaskHasFailed() Obtain 
- * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) Set 
+ * @method string getStatus() Obtain <p>Task status filter condition.</p>
+ * @method void setStatus(string $Status) Set <p>Task status filter condition.</p>
+ * @method integer getLimit() Obtain <p>Number of returned records.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned records.</p>
+ * @method string getScrollToken() Obtain <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+ * @method void setScrollToken(string $ScrollToken) Set <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+ * @method string getStartTime() Obtain <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setStartTime(string $StartTime) Set <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method string getEndTime() Obtain <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setEndTime(string $EndTime) Set <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+ * @method boolean getSubTaskHasFailed() Obtain <p>Filter subtask status.</p>
+ * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) Set <p>Filter subtask status.</p>
  */
 class DescribeImageTasksRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Task status filter condition.</p>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of returned records.</p>
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     public $ScrollToken;
 
     /**
-     * @var string 
+     * @var string <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $EndTime;
 
     /**
-     * @var boolean 
+     * @var boolean <p>Filter subtask status.</p>
      */
     public $SubTaskHasFailed;
 
     /**
-     * @param string $Status 
-     * @param integer $Limit 
-     * @param string $ScrollToken 
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param boolean $SubTaskHasFailed 
+     * @param string $Status <p>Task status filter condition.</p>
+     * @param integer $Limit <p>Number of returned records.</p>
+     * @param string $ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+     * @param string $StartTime <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @param string $EndTime <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @param boolean $SubTaskHasFailed <p>Filter subtask status.</p>
      */
     function __construct()
     {

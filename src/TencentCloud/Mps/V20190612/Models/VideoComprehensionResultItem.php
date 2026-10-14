@@ -18,56 +18,56 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video shot recognition result
+ * Video storyboard recognition result.
  *
- * @method float getStartTime() Obtain Segment start time (unit: seconds)
+ * @method float getStartTime() Obtain Start time of the storyboard segment, in seconds.
 
- * @method void setStartTime(float $StartTime) Set Segment start time (unit: seconds)
+ * @method void setStartTime(float $StartTime) Set Start time of the storyboard segment, in seconds.
 
- * @method float getEndTime() Obtain Segment end time (unit: seconds)
- * @method void setEndTime(float $EndTime) Set Segment end time (unit: seconds)
- * @method string getTitle() Obtain Storyboard clip title
- * @method void setTitle(string $Title) Set Storyboard clip title
- * @method string getDescription() Obtain Segment information description
- * @method void setDescription(string $Description) Set Segment information description
- * @method array getKeywords() Obtain Storyboard clip keywords
- * @method void setKeywords(array $Keywords) Set Storyboard clip keywords
+ * @method float getEndTime() Obtain Segment end time (unit: second)
+ * @method void setEndTime(float $EndTime) Set Segment end time (unit: second)
+ * @method string getTitle() Obtain Segment title.
+ * @method void setTitle(string $Title) Set Segment title.
+ * @method string getDescription() Obtain Description of the storyboard segment information
+ * @method void setDescription(string $Description) Set Description of the storyboard segment information
+ * @method array getKeywords() Obtain Segment keywords.
+ * @method void setKeywords(array $Keywords) Set Segment keywords.
  */
 class VideoComprehensionResultItem extends AbstractModel
 {
     /**
-     * @var float Segment start time (unit: seconds)
+     * @var float Start time of the storyboard segment, in seconds.
 
      */
     public $StartTime;
 
     /**
-     * @var float Segment end time (unit: seconds)
+     * @var float Segment end time (unit: second)
      */
     public $EndTime;
 
     /**
-     * @var string Storyboard clip title
+     * @var string Segment title.
      */
     public $Title;
 
     /**
-     * @var string Segment information description
+     * @var string Description of the storyboard segment information
      */
     public $Description;
 
     /**
-     * @var array Storyboard clip keywords
+     * @var array Segment keywords.
      */
     public $Keywords;
 
     /**
-     * @param float $StartTime Segment start time (unit: seconds)
+     * @param float $StartTime Start time of the storyboard segment, in seconds.
 
-     * @param float $EndTime Segment end time (unit: seconds)
-     * @param string $Title Storyboard clip title
-     * @param string $Description Segment information description
-     * @param array $Keywords Storyboard clip keywords
+     * @param float $EndTime Segment end time (unit: second)
+     * @param string $Title Segment title.
+     * @param string $Description Description of the storyboard segment information
+     * @param array $Keywords Segment keywords.
      */
     function __construct()
     {

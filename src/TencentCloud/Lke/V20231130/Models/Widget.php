@@ -18,68 +18,72 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Widget structure of the dialogue side
  *
- * @method string getWidgetId() Obtain 
- * @method void setWidgetId(string $WidgetId) Set 
- * @method string getWidgetRunId() Obtain 
- * @method void setWidgetRunId(string $WidgetRunId) Set 
- * @method string getView() Obtain 
- * @method void setView(string $View) Set 
- * @method string getState() Obtain 
- * @method void setState(string $State) Set 
- * @method integer getPosition() Obtain 
- * @method void setPosition(integer $Position) Set 
- * @method string getEncodedWidget() Obtain 
- * @method void setEncodedWidget(string $EncodedWidget) Set 
- * @method string getPayload() Obtain 
- * @method void setPayload(string $Payload) Set 
+ * @method string getWidgetId() Obtain Widget configuration ID
+
+ * @method void setWidgetId(string $WidgetId) Set Widget configuration ID
+
+ * @method string getWidgetRunId() Obtain Widget instance ID
+ * @method void setWidgetRunId(string $WidgetRunId) Set Widget instance ID
+ * @method string getView() Obtain Widget display data
+ * @method void setView(string $View) Set Widget display data
+ * @method string getState() Obtain Widget status information
+ * @method void setState(string $State) Set Widget status information
+ * @method integer getPosition() Obtain Widget position
+ * @method void setPosition(integer $Position) Set Widget position
+ * @method string getEncodedWidget() Obtain Base64-encoded Widget information.
+ * @method void setEncodedWidget(string $EncodedWidget) Set Base64-encoded Widget information.
+ * @method string getPayload() Obtain payload of the user's last submission
+ * @method void setPayload(string $Payload) Set payload of the user's last submission
  */
 class Widget extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Widget configuration ID
+
      */
     public $WidgetId;
 
     /**
-     * @var string 
+     * @var string Widget instance ID
      */
     public $WidgetRunId;
 
     /**
-     * @var string 
+     * @var string Widget display data
      */
     public $View;
 
     /**
-     * @var string 
+     * @var string Widget status information
      */
     public $State;
 
     /**
-     * @var integer 
+     * @var integer Widget position
      */
     public $Position;
 
     /**
-     * @var string 
+     * @var string Base64-encoded Widget information.
      */
     public $EncodedWidget;
 
     /**
-     * @var string 
+     * @var string payload of the user's last submission
      */
     public $Payload;
 
     /**
-     * @param string $WidgetId 
-     * @param string $WidgetRunId 
-     * @param string $View 
-     * @param string $State 
-     * @param integer $Position 
-     * @param string $EncodedWidget 
-     * @param string $Payload 
+     * @param string $WidgetId Widget configuration ID
+
+     * @param string $WidgetRunId Widget instance ID
+     * @param string $View Widget display data
+     * @param string $State Widget status information
+     * @param integer $Position Widget position
+     * @param string $EncodedWidget Base64-encoded Widget information.
+     * @param string $Payload payload of the user's last submission
      */
     function __construct()
     {

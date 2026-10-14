@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent landscape-to-portrait result.
  *
- * @method string getPath() Obtain 
- * @method void setPath(string $Path) Set 
- * @method TaskOutputStorage getOutputStorage() Obtain 
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method string getPath() Obtain Intelligent landscape-to-portrait video list.
+ * @method void setPath(string $Path) Set Intelligent landscape-to-portrait video list.
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of intelligent landscape-to-portrait videos.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of intelligent landscape-to-portrait videos.
+ * @method float getConfidence() Obtain Confidence degree.	
+ * @method void setConfidence(float $Confidence) Set Confidence degree.	
  */
 class AiAnalysisTaskHorizontalToVerticalOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Intelligent landscape-to-portrait video list.
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage 
+     * @var TaskOutputStorage Storage location of intelligent landscape-to-portrait videos.
      */
     public $OutputStorage;
 
     /**
-     * @var float 
+     * @var float Confidence degree.	
      */
     public $Confidence;
 
     /**
-     * @param string $Path 
-     * @param TaskOutputStorage $OutputStorage 
-     * @param float $Confidence 
+     * @param string $Path Intelligent landscape-to-portrait video list.
+     * @param TaskOutputStorage $OutputStorage Storage location of intelligent landscape-to-portrait videos.
+     * @param float $Confidence Confidence degree.	
      */
     function __construct()
     {

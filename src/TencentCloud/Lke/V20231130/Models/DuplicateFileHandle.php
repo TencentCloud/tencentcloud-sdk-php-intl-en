@@ -18,28 +18,28 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Processing method for duplicate documents
  *
- * @method integer getCheckType() Obtain 
- * @method void setCheckType(integer $CheckType) Set 
- * @method integer getHandleType() Obtain 
- * @method void setHandleType(integer $HandleType) Set 
+ * @method integer getCheckType() Obtain Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
+ * @method void setCheckType(integer $CheckType) Set Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
+ * @method integer getHandleType() Obtain Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
+ * @method void setHandleType(integer $HandleType) Set Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
  */
 class DuplicateFileHandle extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
      */
     public $CheckType;
 
     /**
-     * @var integer 
+     * @var integer Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
      */
     public $HandleType;
 
     /**
-     * @param integer $CheckType 
-     * @param integer $HandleType 
+     * @param integer $CheckType Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
+     * @param integer $HandleType Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
      */
     function __construct()
     {

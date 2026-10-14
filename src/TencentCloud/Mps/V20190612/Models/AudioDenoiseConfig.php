@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
  */
 class AudioDenoiseConfig extends AbstractModel
@@ -34,7 +34,7 @@ class AudioDenoiseConfig extends AbstractModel
     /**
      * @var string Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
@@ -42,7 +42,7 @@ Default value: ON.
     /**
      * @param string $Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     function __construct()

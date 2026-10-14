@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * dubbing task translation configuration
+ * Translation configuration for a dubbing task
  *
- * @method string getSubtitleSource() Obtain <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
- * @method void setSubtitleSource(string $SubtitleSource) Set <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
- * @method string getAsrAssistOcr() Obtain <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
- * @method void setAsrAssistOcr(string $AsrAssistOcr) Set <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
- * @method string getEraseOriginalSubtitle() Obtain <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
- * @method void setEraseOriginalSubtitle(string $EraseOriginalSubtitle) Set <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
- * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() Obtain <p>Subtitle location information.</p>
- * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) Set <p>Subtitle location information.</p>
+ * @method string getSubtitleSource() Obtain <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
+ * @method void setSubtitleSource(string $SubtitleSource) Set <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
+ * @method string getAsrAssistOcr() Obtain <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
+ * @method void setAsrAssistOcr(string $AsrAssistOcr) Set <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
+ * @method string getEraseOriginalSubtitle() Obtain <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+ * @method void setEraseOriginalSubtitle(string $EraseOriginalSubtitle) Set <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+ * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() Obtain <p>Subtitle position information.</p>
+ * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) Set <p>Subtitle position information.</p>
  */
 class DubbingSubtitleConfig extends AbstractModel
 {
     /**
-     * @var string <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
+     * @var string <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
      */
     public $SubtitleSource;
 
     /**
-     * @var string <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
+     * @var string <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
      */
     public $AsrAssistOcr;
 
     /**
-     * @var string <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+     * @var string <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
      */
     public $EraseOriginalSubtitle;
 
     /**
-     * @var SelectingSubtitleAreasConfig <p>Subtitle location information.</p>
+     * @var SelectingSubtitleAreasConfig <p>Subtitle position information.</p>
      */
     public $SelectingSubtitleAreasConfig;
 
     /**
-     * @param string $SubtitleSource <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
-     * @param string $AsrAssistOcr <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
-     * @param string $EraseOriginalSubtitle <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
-     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig <p>Subtitle location information.</p>
+     * @param string $SubtitleSource <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
+     * @param string $AsrAssistOcr <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
+     * @param string $EraseOriginalSubtitle <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig <p>Subtitle position information.</p>
      */
     function __construct()
     {

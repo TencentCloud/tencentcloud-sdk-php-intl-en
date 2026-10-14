@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message
  * @method SmartSubtitleTaskResultInput getInput() Obtain Translation task input information.
  * @method void setInput(SmartSubtitleTaskResultInput $Input) Set Translation task input information.
- * @method PureSubtitleTransResultOutput getOutput() Obtain 
- * @method void setOutput(PureSubtitleTransResultOutput $Output) Set 
+ * @method PureSubtitleTransResultOutput getOutput() Obtain Translation output result of pure subtitle files.
+ * @method void setOutput(PureSubtitleTransResultOutput $Output) Set Translation output result of pure subtitle files.
  * @method integer getProgress() Obtain Task progress.
  * @method void setProgress(integer $Progress) Set Task progress.
  */
@@ -72,7 +72,7 @@ class PureSubtitleTransResult extends AbstractModel
     public $Input;
 
     /**
-     * @var PureSubtitleTransResultOutput 
+     * @var PureSubtitleTransResultOutput Translation output result of pure subtitle files.
      */
     public $Output;
 
@@ -90,7 +90,7 @@ class PureSubtitleTransResult extends AbstractModel
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message
      * @param SmartSubtitleTaskResultInput $Input Translation task input information.
-     * @param PureSubtitleTransResultOutput $Output 
+     * @param PureSubtitleTransResultOutput $Output Translation output result of pure subtitle files.
      * @param integer $Progress Task progress.
      */
     function __construct()

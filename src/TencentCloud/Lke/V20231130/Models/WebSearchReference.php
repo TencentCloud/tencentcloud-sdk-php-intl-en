@@ -18,20 +18,20 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Online retrieval content reference details
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getUrl() Obtain Webpage URL
+ * @method void setUrl(string $Url) Set Webpage URL
  */
 class WebSearchReference extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Webpage URL
      */
     public $Url;
 
     /**
-     * @param string $Url 
+     * @param string $Url Webpage URL
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review Ocr text pornography detection task result type
+ * Result type of the Ocr text pornography detection task for content review
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewPornOcrTaskInput getInput() Obtain Content review Ocr text pornography detection task input.
- * @method void setInput(AiReviewPornOcrTaskInput $Input) Set Content review Ocr text pornography detection task input.
- * @method AiReviewPornOcrTaskOutput getOutput() Obtain 
- * @method void setOutput(AiReviewPornOcrTaskOutput $Output) Set 
+ * @method AiReviewPornOcrTaskInput getInput() Obtain Task input for porn detection in Ocr text during content review.
+ * @method void setInput(AiReviewPornOcrTaskInput $Input) Set Task input for porn detection in Ocr text during content review.
+ * @method AiReviewPornOcrTaskOutput getOutput() Obtain Output of the Ocr text pornography detection task for content review.
+ * @method void setOutput(AiReviewPornOcrTaskOutput $Output) Set Output of the Ocr text pornography detection task for content review.
  */
 class AiReviewTaskPornOcrResult extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AiReviewTaskPornOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPornOcrTaskInput Content review Ocr text pornography detection task input.
+     * @var AiReviewPornOcrTaskInput Task input for porn detection in Ocr text during content review.
      */
     public $Input;
 
     /**
-     * @var AiReviewPornOcrTaskOutput 
+     * @var AiReviewPornOcrTaskOutput Output of the Ocr text pornography detection task for content review.
      */
     public $Output;
 
@@ -70,8 +70,8 @@ class AiReviewTaskPornOcrResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewPornOcrTaskInput $Input Content review Ocr text pornography detection task input.
-     * @param AiReviewPornOcrTaskOutput $Output 
+     * @param AiReviewPornOcrTaskInput $Input Task input for porn detection in Ocr text during content review.
+     * @param AiReviewPornOcrTaskOutput $Output Output of the Ocr text pornography detection task for content review.
      */
     function __construct()
     {

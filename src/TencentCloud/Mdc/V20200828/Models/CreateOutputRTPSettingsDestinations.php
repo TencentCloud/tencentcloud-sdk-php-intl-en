@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The RTP destination address of the output to create.
+ * Create the RTP destination address for the output of a media transmission stream.
  *
- * @method string getIp() Obtain The relay destination IP.
- * @method void setIp(string $Ip) Set The relay destination IP.
- * @method integer getPort() Obtain The relay destination port.
- * @method void setPort(integer $Port) Set The relay destination port.
+ * @method string getIp() Obtain Destination IP for repush.
+ * @method void setIp(string $Ip) Set Destination IP for repush.
+ * @method integer getPort() Obtain Destination port for push.
+ * @method void setPort(integer $Port) Set Destination port for push.
  */
 class CreateOutputRTPSettingsDestinations extends AbstractModel
 {
     /**
-     * @var string The relay destination IP.
+     * @var string Destination IP for repush.
      */
     public $Ip;
 
     /**
-     * @var integer The relay destination port.
+     * @var integer Destination port for push.
      */
     public $Port;
 
     /**
-     * @param string $Ip The relay destination IP.
-     * @param integer $Port The relay destination port.
+     * @param string $Ip Destination IP for repush.
+     * @param integer $Port Destination port for push.
      */
     function __construct()
     {

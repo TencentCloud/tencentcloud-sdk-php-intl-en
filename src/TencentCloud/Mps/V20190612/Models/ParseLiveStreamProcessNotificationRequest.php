@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseLiveStreamProcessNotification request structure.
  *
- * @method string getContent() Obtain Event notification content for live streams obtained from CMQ.
- * @method void setContent(string $Content) Set Event notification content for live streams obtained from CMQ.
+ * @method string getContent() Obtain Content of the live stream event notification obtained from CMQ.
+ * @method void setContent(string $Content) Set Content of the live stream event notification obtained from CMQ.
  */
 class ParseLiveStreamProcessNotificationRequest extends AbstractModel
 {
     /**
-     * @var string Event notification content for live streams obtained from CMQ.
+     * @var string Content of the live stream event notification obtained from CMQ.
      */
     public $Content;
 
     /**
-     * @param string $Content Event notification content for live streams obtained from CMQ.
+     * @param string $Content Content of the live stream event notification obtained from CMQ.
      */
     function __construct()
     {

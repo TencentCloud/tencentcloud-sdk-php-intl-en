@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Text keyword recognition result.
+ * Keyword recognition result of the text.
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiRecognitionTaskOcrWordsResultInput getInput() Obtain Text keyword recognition task input.
- * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) Set Text keyword recognition task input.
- * @method AiRecognitionTaskOcrWordsResultOutput getOutput() Obtain 
- * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) Set 
+ * @method AiRecognitionTaskOcrWordsResultInput getInput() Obtain Input information for the text keyword recognition task.
+ * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) Set Input information for the text keyword recognition task.
+ * @method AiRecognitionTaskOcrWordsResultOutput getOutput() Obtain Output message of the text keyword recognition task.
+ * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) Set Output message of the text keyword recognition task.
  */
 class AiRecognitionTaskOcrWordsResult extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResultInput Text keyword recognition task input.
+     * @var AiRecognitionTaskOcrWordsResultInput Input information for the text keyword recognition task.
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResultOutput 
+     * @var AiRecognitionTaskOcrWordsResultOutput Output message of the text keyword recognition task.
      */
     public $Output;
 
@@ -70,8 +70,8 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiRecognitionTaskOcrWordsResultInput $Input Text keyword recognition task input.
-     * @param AiRecognitionTaskOcrWordsResultOutput $Output 
+     * @param AiRecognitionTaskOcrWordsResultInput $Input Input information for the text keyword recognition task.
+     * @param AiRecognitionTaskOcrWordsResultOutput $Output Output message of the text keyword recognition task.
      */
     function __construct()
     {

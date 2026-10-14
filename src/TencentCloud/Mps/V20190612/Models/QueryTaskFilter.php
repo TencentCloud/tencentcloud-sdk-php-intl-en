@@ -18,18 +18,24 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Query the list filter criteria for AIGC tasks
+ * List filter criteria for querying AIGC tasks
  *
  * @method string getTaskId() Obtain <p>Task ID.</p>
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
- * @method string getTaskType() Obtain <p>Task type</p>
- * @method void setTaskType(string $TaskType) Set <p>Task type</p>
+ * @method string getTaskType() Obtain <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
+ * @method void setTaskType(string $TaskType) Set <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
  * @method string getTaskStatus() Obtain <p>Task status.</p>
  * @method void setTaskStatus(string $TaskStatus) Set <p>Task status.</p>
  * @method string getResolution() Obtain <p>Resolution</p>
  * @method void setResolution(string $Resolution) Set <p>Resolution</p>
  * @method string getRatio() Obtain <p>Aspect ratio.</p>
  * @method void setRatio(string $Ratio) Set <p>Aspect ratio.</p>
+ * @method string getExecuteMode() Obtain <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+ * @method void setExecuteMode(string $ExecuteMode) Set <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+ * @method string getVideoType() Obtain <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+ * @method void setVideoType(string $VideoType) Set <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+ * @method string getModelTier() Obtain <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+ * @method void setModelTier(string $ModelTier) Set <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
  */
 class QueryTaskFilter extends AbstractModel
 {
@@ -39,7 +45,7 @@ class QueryTaskFilter extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string <p>Task type</p>
+     * @var string <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
      */
     public $TaskType;
 
@@ -59,11 +65,29 @@ class QueryTaskFilter extends AbstractModel
     public $Ratio;
 
     /**
+     * @var string <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+     */
+    public $ExecuteMode;
+
+    /**
+     * @var string <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+     */
+    public $VideoType;
+
+    /**
+     * @var string <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+     */
+    public $ModelTier;
+
+    /**
      * @param string $TaskId <p>Task ID.</p>
-     * @param string $TaskType <p>Task type</p>
+     * @param string $TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
      * @param string $TaskStatus <p>Task status.</p>
      * @param string $Resolution <p>Resolution</p>
      * @param string $Ratio <p>Aspect ratio.</p>
+     * @param string $ExecuteMode <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+     * @param string $VideoType <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+     * @param string $ModelTier <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class QueryTaskFilter extends AbstractModel
 
         if (array_key_exists("Ratio",$param) and $param["Ratio"] !== null) {
             $this->Ratio = $param["Ratio"];
+        }
+
+        if (array_key_exists("ExecuteMode",$param) and $param["ExecuteMode"] !== null) {
+            $this->ExecuteMode = $param["ExecuteMode"];
+        }
+
+        if (array_key_exists("VideoType",$param) and $param["VideoType"] !== null) {
+            $this->VideoType = $param["VideoType"];
+        }
+
+        if (array_key_exists("ModelTier",$param) and $param["ModelTier"] !== null) {
+            $this->ModelTier = $param["ModelTier"];
         }
     }
 }

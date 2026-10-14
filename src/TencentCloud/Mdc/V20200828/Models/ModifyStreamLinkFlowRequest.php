@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStreamLinkFlow request structure.
  *
- * @method string getFlowId() Obtain Flow ID
- * @method void setFlowId(string $FlowId) Set Flow ID
- * @method string getFlowName() Obtain Name of the flow to modify
- * @method void setFlowName(string $FlowName) Set Name of the flow to modify
+ * @method string getFlowId() Obtain Stream Id.
+ * @method void setFlowId(string $FlowId) Set Stream Id.
+ * @method string getFlowName() Obtain Stream name to be modified.
+ * @method void setFlowName(string $FlowName) Set Stream name to be modified.
  */
 class ModifyStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string Flow ID
+     * @var string Stream Id.
      */
     public $FlowId;
 
     /**
-     * @var string Name of the flow to modify
+     * @var string Stream name to be modified.
      */
     public $FlowName;
 
     /**
-     * @param string $FlowId Flow ID
-     * @param string $FlowName Name of the flow to modify
+     * @param string $FlowId Stream Id.
+     * @param string $FlowName Stream name to be modified.
      */
     function __construct()
     {

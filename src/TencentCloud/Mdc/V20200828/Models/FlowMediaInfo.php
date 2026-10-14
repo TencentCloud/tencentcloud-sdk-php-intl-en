@@ -18,60 +18,60 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The media data of a flow.
+ * Media data in the transport stream.
  *
- * @method integer getTimestamp() Obtain The timestamp (seconds).
- * @method void setTimestamp(integer $Timestamp) Set The timestamp (seconds).
- * @method integer getNetwork() Obtain The total bandwidth.
- * @method void setNetwork(integer $Network) Set The total bandwidth.
- * @method array getVideo() Obtain The video data of the flow.
- * @method void setVideo(array $Video) Set The video data of the flow.
- * @method array getAudio() Obtain The audio data of the flow.
- * @method void setAudio(array $Audio) Set The audio data of the flow.
- * @method string getSessionId() Obtain The ID of a push session.
- * @method void setSessionId(string $SessionId) Set The ID of a push session.
- * @method string getClientIp() Obtain The client IP.
- * @method void setClientIp(string $ClientIp) Set The client IP.
+ * @method integer getTimestamp() Obtain Timestamp in seconds.
+ * @method void setTimestamp(integer $Timestamp) Set Timestamp in seconds.
+ * @method integer getNetwork() Obtain Total bandwidth.
+ * @method void setNetwork(integer $Network) Set Total bandwidth.
+ * @method array getVideo() Obtain Video data of the transport stream.
+ * @method void setVideo(array $Video) Set Video data of the transport stream.
+ * @method array getAudio() Obtain Audio data of the transport stream.
+ * @method void setAudio(array $Audio) Set Audio data of the transport stream.
+ * @method string getSessionId() Obtain Flag of the same push.
+ * @method void setSessionId(string $SessionId) Set Flag of the same push.
+ * @method string getClientIp() Obtain Client IP.
+ * @method void setClientIp(string $ClientIp) Set Client IP.
  */
 class FlowMediaInfo extends AbstractModel
 {
     /**
-     * @var integer The timestamp (seconds).
+     * @var integer Timestamp in seconds.
      */
     public $Timestamp;
 
     /**
-     * @var integer The total bandwidth.
+     * @var integer Total bandwidth.
      */
     public $Network;
 
     /**
-     * @var array The video data of the flow.
+     * @var array Video data of the transport stream.
      */
     public $Video;
 
     /**
-     * @var array The audio data of the flow.
+     * @var array Audio data of the transport stream.
      */
     public $Audio;
 
     /**
-     * @var string The ID of a push session.
+     * @var string Flag of the same push.
      */
     public $SessionId;
 
     /**
-     * @var string The client IP.
+     * @var string Client IP.
      */
     public $ClientIp;
 
     /**
-     * @param integer $Timestamp The timestamp (seconds).
-     * @param integer $Network The total bandwidth.
-     * @param array $Video The video data of the flow.
-     * @param array $Audio The audio data of the flow.
-     * @param string $SessionId The ID of a push session.
-     * @param string $ClientIp The client IP.
+     * @param integer $Timestamp Timestamp in seconds.
+     * @param integer $Network Total bandwidth.
+     * @param array $Video Video data of the transport stream.
+     * @param array $Audio Audio data of the transport stream.
+     * @param string $SessionId Flag of the same push.
+     * @param string $ClientIp Client IP.
      */
     function __construct()
     {

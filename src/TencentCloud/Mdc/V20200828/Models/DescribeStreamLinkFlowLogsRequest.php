@@ -20,82 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamLinkFlowLogs request structure.
  *
- * @method string getFlowId() Obtain The flow ID.
- * @method void setFlowId(string $FlowId) Set The flow ID.
- * @method string getStartTime() Obtain The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method void setStartTime(string $StartTime) Set The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method string getEndTime() Obtain The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method void setEndTime(string $EndTime) Set The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
- * @method array getType() Obtain Whether to query the inputs or outputs. Valid values: input, output.
- * @method void setType(array $Type) Set Whether to query the inputs or outputs. Valid values: input, output.
- * @method array getPipeline() Obtain Whether to query the primary or backup pipeline. Valid values: 0, 1.
- * @method void setPipeline(array $Pipeline) Set Whether to query the primary or backup pipeline. Valid values: 0, 1.
- * @method integer getPageSize() Obtain The page size. Value range: [1, 1000]. Default: 100.
- * @method void setPageSize(integer $PageSize) Set The page size. Value range: [1, 1000]. Default: 100.
- * @method string getSortType() Obtain Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
- * @method void setSortType(string $SortType) Set Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
- * @method integer getPageNum() Obtain The page number. Value range: [1, 1000]. Default: 1.
- * @method void setPageNum(integer $PageNum) Set The page number. Value range: [1, 1000]. Default: 1.
+ * @method string getFlowId() Obtain <p>Transport stream Id.</p>
+ * @method void setFlowId(string $FlowId) Set <p>Transport stream Id.</p>
+ * @method string getStartTime() Obtain <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+ * @method string getEndTime() Obtain <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+ * @method array getType() Obtain <p>Input or output type. Valid values: `input`, `output`.</p>
+ * @method void setType(array $Type) Set <p>Input or output type. Valid values: `input`, `output`.</p>
+ * @method array getPipeline() Obtain <p>Primary or backup channel. Option [0|1].</p>
+ * @method void setPipeline(array $Pipeline) Set <p>Primary or backup channel. Option [0|1].</p>
+ * @method integer getPageSize() Obtain <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
+ * @method void setPageSize(integer $PageSize) Set <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
+ * @method string getSortType() Obtain <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
+ * @method void setSortType(string $SortType) Set <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
+ * @method integer getPageNum() Obtain <p>Page number. Default value: 1. Value range: [1, 1000].</p>
+ * @method void setPageNum(integer $PageNum) Set <p>Page number. Default value: 1. Value range: [1, 1000].</p>
  */
 class DescribeStreamLinkFlowLogsRequest extends AbstractModel
 {
     /**
-     * @var string The flow ID.
+     * @var string <p>Transport stream Id.</p>
      */
     public $FlowId;
 
     /**
-     * @var string The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * @var string <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
      */
     public $StartTime;
 
     /**
-     * @var string The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * @var string <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
      */
     public $EndTime;
 
     /**
-     * @var array Whether to query the inputs or outputs. Valid values: input, output.
+     * @var array <p>Input or output type. Valid values: `input`, `output`.</p>
      */
     public $Type;
 
     /**
-     * @var array Whether to query the primary or backup pipeline. Valid values: 0, 1.
+     * @var array <p>Primary or backup channel. Option [0|1].</p>
      */
     public $Pipeline;
 
     /**
-     * @var integer The page size. Value range: [1, 1000]. Default: 100.
+     * @var integer <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
      */
     public $PageSize;
 
     /**
-     * @var string Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+     * @var string <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
      */
     public $SortType;
 
     /**
-     * @var integer The page number. Value range: [1, 1000]. Default: 1.
+     * @var integer <p>Page number. Default value: 1. Value range: [1, 1000].</p>
      */
     public $PageNum;
 
     /**
-     * @param string $FlowId The flow ID.
-     * @param string $StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param string $EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param array $Type Whether to query the inputs or outputs. Valid values: input, output.
-     * @param array $Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
-     * @param integer $PageSize The page size. Value range: [1, 1000]. Default: 100.
-     * @param string $SortType Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
-     * @param integer $PageNum The page number. Value range: [1, 1000]. Default: 1.
+     * @param string $FlowId <p>Transport stream Id.</p>
+     * @param string $StartTime <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+     * @param string $EndTime <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+     * @param array $Type <p>Input or output type. Valid values: `input`, `output`.</p>
+     * @param array $Pipeline <p>Primary or backup channel. Option [0|1].</p>
+     * @param integer $PageSize <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
+     * @param string $SortType <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
+     * @param integer $PageNum <p>Page number. Default value: 1. Value range: [1, 1000].</p>
      */
     function __construct()
     {

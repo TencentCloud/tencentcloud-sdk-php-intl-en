@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a recognized segment, in seconds.
  * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
  * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method boolean getSteadyState() Obtain 
- * @method void setSteadyState(boolean $SteadyState) Set 
- * @method string getUserId() Obtain 
- * @method void setUserId(string $UserId) Set 
+ * @method string getStartTime() Obtain Recognition start UTC time.
+ * @method void setStartTime(string $StartTime) Set Recognition start UTC time.
+ * @method string getEndTime() Obtain UTC time when recognition is completed.
+ * @method void setEndTime(string $EndTime) Set UTC time when recognition is completed.
+ * @method boolean getSteadyState() Obtain Steady-state tag.
+ * @method void setSteadyState(boolean $SteadyState) Set Steady-state tag.
+ * @method string getUserId() Obtain UserId of the websocket and trtc recognition result
+ * @method void setUserId(string $UserId) Set UserId of the websocket and trtc recognition result
  */
 class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
 {
@@ -60,22 +60,22 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Recognition start UTC time.
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string UTC time when recognition is completed.
      */
     public $EndTime;
 
     /**
-     * @var boolean 
+     * @var boolean Steady-state tag.
      */
     public $SteadyState;
 
     /**
-     * @var string 
+     * @var string UserId of the websocket and trtc recognition result
      */
     public $UserId;
 
@@ -84,10 +84,10 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
      * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
      * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
      * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param boolean $SteadyState 
-     * @param string $UserId 
+     * @param string $StartTime Recognition start UTC time.
+     * @param string $EndTime UTC time when recognition is completed.
+     * @param boolean $SteadyState Steady-state tag.
+     * @param string $UserId UserId of the websocket and trtc recognition result
      */
     function __construct()
     {

@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ocr text sensitive information
  *
- * @method float getConfidence() Obtain Ocr text sensitive content score, ranging from 0 to III.
- * @method void setConfidence(float $Confidence) Set Ocr text sensitive content score, ranging from 0 to III.
- * @method string getSuggestion() Obtain Ocr text sensitive result suggestion, value ranges from...to...
+ * @method float getConfidence() Obtain Sensitive score of the Ocr text. The score ranges from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Sensitive score of the Ocr text. The score ranges from 0 to 100.
+ * @method string getSuggestion() Obtain Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Ocr text sensitive result suggestion, value ranges from...to...
+ * @method void setSuggestion(string $Suggestion) Set Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getSegmentSet() Obtain List of video segments suspected of containing sensitive content in Ocr text.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of containing sensitive content in Ocr text.
+ * @method array getSegmentSet() Obtain List of video segments whose Ocr text is suspected of containing sensitive content.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments whose Ocr text is suspected of containing sensitive content.
  */
 class AiReviewTerrorismOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Ocr text sensitive content score, ranging from 0 to III.
+     * @var float Sensitive score of the Ocr text. The score ranges from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string Ocr text sensitive result suggestion, value ranges from...to...
+     * @var string Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,17 +49,17 @@ class AiReviewTerrorismOcrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array List of video segments suspected of containing sensitive content in Ocr text.
+     * @var array List of video segments whose Ocr text is suspected of containing sensitive content.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Ocr text sensitive content score, ranging from 0 to III.
-     * @param string $Suggestion Ocr text sensitive result suggestion, value ranges from...to...
+     * @param float $Confidence Sensitive score of the Ocr text. The score ranges from 0 to 100.
+     * @param string $Suggestion Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $SegmentSet List of video segments suspected of containing sensitive content in Ocr text.
+     * @param array $SegmentSet List of video segments whose Ocr text is suspected of containing sensitive content.
      */
     function __construct()
     {

@@ -18,60 +18,60 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent classification task result type
+ * Intelligent classification task result type.
  *
- * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method AiAnalysisTaskClassificationInput getInput() Obtain Intelligent classification task input.
- * @method void setInput(AiAnalysisTaskClassificationInput $Input) Set Intelligent classification task input.
- * @method AiAnalysisTaskClassificationOutput getOutput() Obtain 
- * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) Set 
+ * @method string getStatus() Obtain <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+ * @method string getErrCodeExt() Obtain <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+ * @method integer getErrCode() Obtain <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+ * @method void setErrCode(integer $ErrCode) Set <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+ * @method string getMessage() Obtain <p>Error message.</p>
+ * @method void setMessage(string $Message) Set <p>Error message.</p>
+ * @method AiAnalysisTaskClassificationInput getInput() Obtain <p>Intelligent categorization task input.</p>
+ * @method void setInput(AiAnalysisTaskClassificationInput $Input) Set <p>Intelligent categorization task input.</p>
+ * @method AiAnalysisTaskClassificationOutput getOutput() Obtain <p>Intelligent categorization task output.</p>
+ * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) Set <p>Intelligent categorization task output.</p>
  */
 class AiAnalysisTaskClassificationResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @var string <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @var integer <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string <p>Error message.</p>
      */
     public $Message;
 
     /**
-     * @var AiAnalysisTaskClassificationInput Intelligent classification task input.
+     * @var AiAnalysisTaskClassificationInput <p>Intelligent categorization task input.</p>
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskClassificationOutput 
+     * @var AiAnalysisTaskClassificationOutput <p>Intelligent categorization task output.</p>
      */
     public $Output;
 
     /**
-     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
-     * @param string $Message Error message.
-     * @param AiAnalysisTaskClassificationInput $Input Intelligent classification task input.
-     * @param AiAnalysisTaskClassificationOutput $Output 
+     * @param string $Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+     * @param string $ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+     * @param integer $ErrCode <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+     * @param string $Message <p>Error message.</p>
+     * @param AiAnalysisTaskClassificationInput $Input <p>Intelligent categorization task input.</p>
+     * @param AiAnalysisTaskClassificationOutput $Output <p>Intelligent categorization task output.</p>
      */
     function __construct()
     {

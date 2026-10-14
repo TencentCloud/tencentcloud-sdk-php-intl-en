@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content review sensitive task input parameter type
+ * Content review sensitivity task input parameter type
  *
  * @method integer getDefinition() Obtain Template ID.
  * @method void setDefinition(integer $Definition) Set Template ID.

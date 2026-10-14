@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Segment information.
  *
- * @method string getSummary() Obtain 
- * @method void setSummary(string $Summary) Set 
+ * @method string getSummary() Obtain Segment summary.
+ * @method void setSummary(string $Summary) Set Segment summary.
  * @method string getTitle() Obtain Segment title.
  * @method void setTitle(string $Title) Set Segment title.
  * @method array getKeywords() Obtain Segment keyword.
  * @method void setKeywords(array $Keywords) Set Segment keyword.
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getStartTimeOffset() Obtain Starting time point of the segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Starting time point of the segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time point of the segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time point of the segment, in seconds.
  */
 class AiParagraphInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Segment summary.
      */
     public $Summary;
 
@@ -49,21 +49,21 @@ class AiParagraphInfo extends AbstractModel
     public $Keywords;
 
     /**
-     * @var float 
+     * @var float Starting time point of the segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float End time point of the segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $Summary 
+     * @param string $Summary Segment summary.
      * @param string $Title Segment title.
      * @param array $Keywords Segment keyword.
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param float $StartTimeOffset Starting time point of the segment, in seconds.
+     * @param float $EndTimeOffset End time point of the segment, in seconds.
      */
     function __construct()
     {

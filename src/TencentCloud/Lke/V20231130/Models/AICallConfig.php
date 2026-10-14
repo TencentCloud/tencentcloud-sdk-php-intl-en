@@ -18,52 +18,52 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent call
  *
- * @method boolean getEnableVoiceInteract() Obtain 
- * @method void setEnableVoiceInteract(boolean $EnableVoiceInteract) Set 
- * @method boolean getEnableVoiceCall() Obtain 
- * @method void setEnableVoiceCall(boolean $EnableVoiceCall) Set 
- * @method boolean getEnableDigitalHuman() Obtain 
- * @method void setEnableDigitalHuman(boolean $EnableDigitalHuman) Set 
- * @method VoiceConfig getVoice() Obtain 
- * @method void setVoice(VoiceConfig $Voice) Set 
- * @method DigitalHumanConfig getDigitalHuman() Obtain 
- * @method void setDigitalHuman(DigitalHumanConfig $DigitalHuman) Set 
+ * @method boolean getEnableVoiceInteract() Obtain Enable the voice interaction feature
+ * @method void setEnableVoiceInteract(boolean $EnableVoiceInteract) Set Enable the voice interaction feature
+ * @method boolean getEnableVoiceCall() Obtain Enable voice call
+ * @method void setEnableVoiceCall(boolean $EnableVoiceCall) Set Enable voice call
+ * @method boolean getEnableDigitalHuman() Obtain Enable digital human
+ * @method void setEnableDigitalHuman(boolean $EnableDigitalHuman) Set Enable digital human
+ * @method VoiceConfig getVoice() Obtain Voice type configuration
+ * @method void setVoice(VoiceConfig $Voice) Set Voice type configuration
+ * @method DigitalHumanConfig getDigitalHuman() Obtain Digital human configuration
+ * @method void setDigitalHuman(DigitalHumanConfig $DigitalHuman) Set Digital human configuration
  */
 class AICallConfig extends AbstractModel
 {
     /**
-     * @var boolean 
+     * @var boolean Enable the voice interaction feature
      */
     public $EnableVoiceInteract;
 
     /**
-     * @var boolean 
+     * @var boolean Enable voice call
      */
     public $EnableVoiceCall;
 
     /**
-     * @var boolean 
+     * @var boolean Enable digital human
      */
     public $EnableDigitalHuman;
 
     /**
-     * @var VoiceConfig 
+     * @var VoiceConfig Voice type configuration
      */
     public $Voice;
 
     /**
-     * @var DigitalHumanConfig 
+     * @var DigitalHumanConfig Digital human configuration
      */
     public $DigitalHuman;
 
     /**
-     * @param boolean $EnableVoiceInteract 
-     * @param boolean $EnableVoiceCall 
-     * @param boolean $EnableDigitalHuman 
-     * @param VoiceConfig $Voice 
-     * @param DigitalHumanConfig $DigitalHuman 
+     * @param boolean $EnableVoiceInteract Enable the voice interaction feature
+     * @param boolean $EnableVoiceCall Enable voice call
+     * @param boolean $EnableDigitalHuman Enable digital human
+     * @param VoiceConfig $Voice Voice type configuration
+     * @param DigitalHumanConfig $DigitalHuman Digital human configuration
      */
     function __construct()
     {

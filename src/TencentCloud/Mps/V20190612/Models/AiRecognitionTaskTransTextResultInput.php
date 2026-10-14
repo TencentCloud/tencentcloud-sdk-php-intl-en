@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Translate the input.
+ * Input for translation.
  *
  * @method integer getDefinition() Obtain Translation template ID.
  * @method void setDefinition(integer $Definition) Set Translation template ID.

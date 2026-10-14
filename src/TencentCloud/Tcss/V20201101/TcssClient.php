@@ -29,7 +29,7 @@ Create a network policy and add and distribute tasks for the container network.
  * @method Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse AddAndPublishNetworkFirewallPolicyYamlDetail(Models\AddAndPublishNetworkFirewallPolicyYamlDetailRequest $req) This feature is deprecated pending tripartite reconstruction
 
 Create a YAML network policy and distribute tasks for the container network.
- * @method Models\AddAssetImageRegistryRegistryDetailResponse AddAssetImageRegistryRegistryDetail(Models\AddAssetImageRegistryRegistryDetailRequest $req) This API is used to add the details of an image repository.
+ * @method Models\AddAssetImageRegistryRegistryDetailResponse AddAssetImageRegistryRegistryDetail(Models\AddAssetImageRegistryRegistryDetailRequest $req) This example shows you how to add details for an image repository.
  * @method Models\AddComplianceAssetPolicySetToWhitelistResponse AddComplianceAssetPolicySetToWhitelist(Models\AddComplianceAssetPolicySetToWhitelistRequest $req) This API is used to ignore the specified asset IDs and check item IDs so as to hide the assets contained in the specified check items.
 `AddCompliancePolicyItemToWhitelist` is the reference API. Except for the input field, others should be the same, and if not, it may be due to the definition.
  * @method Models\AddCompliancePolicyAssetSetToWhitelistResponse AddCompliancePolicyAssetSetToWhitelist(Models\AddCompliancePolicyAssetSetToWhitelistRequest $req) This API is used to ignore the specified asset IDs and check item IDs so as to hide the assets contained in the specified check items.
@@ -61,7 +61,7 @@ Create a network policy and confirm tasks for the container network.
  * @method Models\CreateAbnormalProcessRulesExportJobResponse CreateAbnormalProcessRulesExportJob(Models\CreateAbnormalProcessRulesExportJobRequest $req) This API is used to export abnormal process rules.
  * @method Models\CreateAccessControlsRuleExportJobResponse CreateAccessControlsRuleExportJob(Models\CreateAccessControlsRuleExportJobRequest $req) This API is used to export file tampering detection rules.
  * @method Models\CreateAssetImageRegistryScanTaskResponse CreateAssetImageRegistryScanTask(Models\CreateAssetImageRegistryScanTaskRequest $req) This API is used to create an image scan task for an image repository.
- * @method Models\CreateAssetImageRegistryScanTaskOneKeyResponse CreateAssetImageRegistryScanTaskOneKey(Models\CreateAssetImageRegistryScanTaskOneKeyRequest $req) This API is used to create a quick image scan task for an image repository.
+ * @method Models\CreateAssetImageRegistryScanTaskOneKeyResponse CreateAssetImageRegistryScanTaskOneKey(Models\CreateAssetImageRegistryScanTaskOneKeyRequest $req) Creating a Task to Scan Images in an Image Repository with One Click
  * @method Models\CreateAssetImageScanSettingResponse CreateAssetImageScanSetting(Models\CreateAssetImageScanSettingRequest $req) This API is used to set an image scan.
  * @method Models\CreateAssetImageScanTaskResponse CreateAssetImageScanTask(Models\CreateAssetImageScanTaskRequest $req) This API is used to create an image scan task.
  * @method Models\CreateAssetImageVirusExportJobResponse CreateAssetImageVirusExportJob(Models\CreateAssetImageVirusExportJobRequest $req) This API is used to create a task to export the list of trojans in a local image.
@@ -152,7 +152,7 @@ Create a network policy and delete tasks for the container network.
  * @method Models\DescribeAssetContainerDetailResponse DescribeAssetContainerDetail(Models\DescribeAssetContainerDetailRequest $req) This API is used to query the information of a container.
  * @method Models\DescribeAssetContainerListResponse DescribeAssetContainerList(Models\DescribeAssetContainerListRequest $req) This API is used to query the list of containers.
  * @method Models\DescribeAssetDBServiceListResponse DescribeAssetDBServiceList(Models\DescribeAssetDBServiceListRequest $req) This API is used to query the list of database services.
- * @method Models\DescribeAssetHostDetailResponse DescribeAssetHostDetail(Models\DescribeAssetHostDetailRequest $req) This API is used to query the details of a server.
+ * @method Models\DescribeAssetHostDetailResponse DescribeAssetHostDetail(Models\DescribeAssetHostDetailRequest $req) This example shows you how to query host details.
  * @method Models\DescribeAssetHostListResponse DescribeAssetHostList(Models\DescribeAssetHostListRequest $req) This API is used to query the list of servers.
  * @method Models\DescribeAssetImageBindRuleInfoResponse DescribeAssetImageBindRuleInfo(Models\DescribeAssetImageBindRuleInfoRequest $req) This API is used to query the list of rules bound to images, including runtime access control and abnormal process rules.
  * @method Models\DescribeAssetImageDetailResponse DescribeAssetImageDetail(Models\DescribeAssetImageDetailRequest $req) This API is used to query the details of an image.
@@ -167,7 +167,7 @@ Create a network policy and delete tasks for the container network.
  * @method Models\DescribeAssetImageRegistryRiskInfoListResponse DescribeAssetImageRegistryRiskInfoList(Models\DescribeAssetImageRegistryRiskInfoListRequest $req) This API is used to query the list of image high-risk behaviors of an image repository.
  * @method Models\DescribeAssetImageRegistryRiskListExportResponse DescribeAssetImageRegistryRiskListExport(Models\DescribeAssetImageRegistryRiskListExportRequest $req) This API is used to export the list of sensitive data for an image repository.
  * @method Models\DescribeAssetImageRegistryScanStatusOneKeyResponse DescribeAssetImageRegistryScanStatusOneKey(Models\DescribeAssetImageRegistryScanStatusOneKeyRequest $req) This API is used to query the quick image scanning status of an image repository.
- * @method Models\DescribeAssetImageRegistrySummaryResponse DescribeAssetImageRegistrySummary(Models\DescribeAssetImageRegistrySummaryRequest $req) This API is used to query the image statistics of an image repository.
+ * @method Models\DescribeAssetImageRegistrySummaryResponse DescribeAssetImageRegistrySummary(Models\DescribeAssetImageRegistrySummaryRequest $req) Querying the Image Statistics of an Image Repository
  * @method Models\DescribeAssetImageRegistryVirusListResponse DescribeAssetImageRegistryVirusList(Models\DescribeAssetImageRegistryVirusListRequest $req) This API is used to query the list of viruses and trojans in an image repository.
  * @method Models\DescribeAssetImageRegistryVirusListExportResponse DescribeAssetImageRegistryVirusListExport(Models\DescribeAssetImageRegistryVirusListExportRequest $req) This API is used to export the list of trojan information for an image repository.
  * @method Models\DescribeAssetImageRegistryVulListResponse DescribeAssetImageRegistryVulList(Models\DescribeAssetImageRegistryVulListRequest $req) This API is used to query the list of image vulnerabilities of an image repository
@@ -185,7 +185,7 @@ Create a network policy and delete tasks for the container network.
  * @method Models\DescribeAssetPortListResponse DescribeAssetPortList(Models\DescribeAssetPortListRequest $req) This API is used to query the list of occupied ports.
  * @method Models\DescribeAssetProcessListResponse DescribeAssetProcessList(Models\DescribeAssetProcessListRequest $req) This API is used to query the list of processes.
  * @method Models\DescribeAssetSummaryResponse DescribeAssetSummary(Models\DescribeAssetSummaryRequest $req) This API is used to query the statistics of containers and images under an account.
- * @method Models\DescribeAssetSyncLastTimeResponse DescribeAssetSyncLastTime(Models\DescribeAssetSyncLastTimeRequest $req) This API is used to query the last asset sync time.
+ * @method Models\DescribeAssetSyncLastTimeResponse DescribeAssetSyncLastTime(Models\DescribeAssetSyncLastTimeRequest $req) Query the latest time for asset synchronization.
  * @method Models\DescribeAssetWebServiceListResponse DescribeAssetWebServiceList(Models\DescribeAssetWebServiceListRequest $req) This API is used to query the list of web services.
  * @method Models\DescribeAutoAuthorizedRuleHostResponse DescribeAutoAuthorizedRuleHost(Models\DescribeAutoAuthorizedRuleHostRequest $req) This API is used to query the servers licensed according to an automatic licensing rule.
  * @method Models\DescribeCheckItemListResponse DescribeCheckItemList(Models\DescribeCheckItemListRequest $req) This API is used to query all check items and return the total number and list of check items.
@@ -216,9 +216,9 @@ Create a network policy and delete tasks for the container network.
  * @method Models\DescribeExportJobDownloadURLResponse DescribeExportJobDownloadURL(Models\DescribeExportJobDownloadURLRequest $req) This API is used to query the URL to download the result of an exportation task.
  * @method Models\DescribeExportJobManageListResponse DescribeExportJobManageList(Models\DescribeExportJobManageListRequest $req) This API is used to query the export job management list.
  * @method Models\DescribeExportJobResultResponse DescribeExportJobResult(Models\DescribeExportJobResultRequest $req) Query the progress of the export interface
- * @method Models\DescribeImageAuthorizedInfoResponse DescribeImageAuthorizedInfo(Models\DescribeImageAuthorizedInfoRequest $req) This API is used to query the image licensing information.
+ * @method Models\DescribeImageAuthorizedInfoResponse DescribeImageAuthorizedInfo(Models\DescribeImageAuthorizedInfoRequest $req) This API is used to query image authorization info.
  * @method Models\DescribeImageAutoAuthorizedLogListResponse DescribeImageAutoAuthorizedLogList(Models\DescribeImageAutoAuthorizedLogListRequest $req) This API is used to query the list of automatic image licensing results.
- * @method Models\DescribeImageAutoAuthorizedRuleResponse DescribeImageAutoAuthorizedRule(Models\DescribeImageAutoAuthorizedRuleRequest $req) This API is used to query an automatic licensing rule for local images.
+ * @method Models\DescribeImageAutoAuthorizedRuleResponse DescribeImageAutoAuthorizedRule(Models\DescribeImageAutoAuthorizedRuleRequest $req) Query local image auto-authorization rules.
  * @method Models\DescribeImageAutoAuthorizedTaskListResponse DescribeImageAutoAuthorizedTaskList(Models\DescribeImageAutoAuthorizedTaskListRequest $req) This API is used to query the list of automatic image licensing tasks.
  * @method Models\DescribeImageComponentListResponse DescribeImageComponentList(Models\DescribeImageComponentListRequest $req) This API is used to query the list of components in an local image.
  * @method Models\DescribeImageDenyEventDetailResponse DescribeImageDenyEventDetail(Models\DescribeImageDenyEventDetailRequest $req) Query image interception event details.
@@ -277,7 +277,7 @@ View YAML network policy details of clusters for the container network.
  * @method Models\DescribeProVersionInfoResponse DescribeProVersionInfo(Models\DescribeProVersionInfoRequest $req) This API is used to check whether the Pro Edition needs to be purchased.
  * @method Models\DescribePromotionActivityResponse DescribePromotionActivity(Models\DescribePromotionActivityRequest $req) This API is used to query promotions.
  * @method Models\DescribePublicKeyResponse DescribePublicKey(Models\DescribePublicKeyRequest $req) This API is used to get the public key.
- * @method Models\DescribePurchaseStateInfoResponse DescribePurchaseStateInfo(Models\DescribePurchaseStateInfoRequest $req) This API is used to check whether TCSS is purchased.
+ * @method Models\DescribePurchaseStateInfoResponse DescribePurchaseStateInfo(Models\DescribePurchaseStateInfoRequest $req) This API is used to query the purchase information on the container security service.
  * @method Models\DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(Models\DescribeRaspRuleVulsRequest $req) Retrieve the list of vulnerabilities in the Vulnerability Defense Allowlist
  * @method Models\DescribeRaspRulesResponse DescribeRaspRules(Models\DescribeRaspRulesRequest $req) Query the list of vulnerabilities that can be defensed.
  * @method Models\DescribeRefreshTaskResponse DescribeRefreshTask(Models\DescribeRefreshTaskRequest $req) This API is used to query a refresh task.
@@ -418,7 +418,7 @@ Create a network policy and update and distribute tasks for the container networ
 
 Update the YAML network policy and distribute tasks for the container network.
  * @method Models\UpdateAssetImageRegistryRegistryDetailResponse UpdateAssetImageRegistryRegistryDetail(Models\UpdateAssetImageRegistryRegistryDetailRequest $req) This API is used to update the details of an image repository.
- * @method Models\UpdateImageRegistryTimingScanTaskResponse UpdateImageRegistryTimingScanTask(Models\UpdateImageRegistryTimingScanTaskRequest $req) This API is used to update a scheduled task for an image repository.
+ * @method Models\UpdateImageRegistryTimingScanTaskResponse UpdateImageRegistryTimingScanTask(Models\UpdateImageRegistryTimingScanTaskRequest $req) Update scheduled tasks in the mirror repository
  * @method Models\UpdateNetworkFirewallPolicyDetailResponse UpdateNetworkFirewallPolicyDetail(Models\UpdateNetworkFirewallPolicyDetailRequest $req) This feature is deprecated pending tripartite reconstruction
 
 Create a network policy update task for the container network.

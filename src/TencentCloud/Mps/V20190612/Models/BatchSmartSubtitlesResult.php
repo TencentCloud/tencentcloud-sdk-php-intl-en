@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle task result.
  *
- * @method SmartSubtitleTaskResultInput getInput() Obtain 
- * @method void setInput(SmartSubtitleTaskResultInput $Input) Set 
- * @method array getOutputs() Obtain 
- * @method void setOutputs(array $Outputs) Set 
+ * @method SmartSubtitleTaskResultInput getInput() Obtain Input information for smart subtitle tasks.
+ * @method void setInput(SmartSubtitleTaskResultInput $Input) Set Input information for smart subtitle tasks.
+ * @method array getOutputs() Obtain Output information for smart subtitle tasks.
+ * @method void setOutputs(array $Outputs) Set Output information for smart subtitle tasks.
  */
 class BatchSmartSubtitlesResult extends AbstractModel
 {
     /**
-     * @var SmartSubtitleTaskResultInput 
+     * @var SmartSubtitleTaskResultInput Input information for smart subtitle tasks.
      */
     public $Input;
 
     /**
-     * @var array 
+     * @var array Output information for smart subtitle tasks.
      */
     public $Outputs;
 
     /**
-     * @param SmartSubtitleTaskResultInput $Input 
-     * @param array $Outputs 
+     * @param SmartSubtitleTaskResultInput $Input Input information for smart subtitle tasks.
+     * @param array $Outputs Output information for smart subtitle tasks.
      */
     function __construct()
     {

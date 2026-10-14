@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Public network access configuration
  *
- * @method string getPublicNetStatus() Obtain Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
- * @method void setPublicNetStatus(string $PublicNetStatus) Set Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
- * @method EipConfigIn getEipConfig() Obtain EIP configuration
- * @method void setEipConfig(EipConfigIn $EipConfig) Set EIP configuration
+ * @method string getPublicNetStatus() Obtain Whether to enable public network access. Valid values: DISABLE, ENABLE.
+ * @method void setPublicNetStatus(string $PublicNetStatus) Set Whether to enable public network access. Valid values: DISABLE, ENABLE.
+ * @method EipConfigIn getEipConfig() Obtain Eip configuration
+ * @method void setEipConfig(EipConfigIn $EipConfig) Set Eip configuration
  */
 class PublicNetConfigIn extends AbstractModel
 {
     /**
-     * @var string Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+     * @var string Whether to enable public network access. Valid values: DISABLE, ENABLE.
      */
     public $PublicNetStatus;
 
     /**
-     * @var EipConfigIn EIP configuration
+     * @var EipConfigIn Eip configuration
      */
     public $EipConfig;
 
     /**
-     * @param string $PublicNetStatus Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
-     * @param EipConfigIn $EipConfig EIP configuration
+     * @param string $PublicNetStatus Whether to enable public network access. Valid values: DISABLE, ENABLE.
+     * @param EipConfigIn $EipConfig Eip configuration
      */
     function __construct()
     {

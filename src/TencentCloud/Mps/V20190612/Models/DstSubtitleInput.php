@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI Dubbing external translation subtitle information
+ * External translation subtitle information for AI dubbing
  *
- * @method MediaInputInfo getDstSubtitleInfo() Obtain <p>External translation subtitle information.</p>
- * @method void setDstSubtitleInfo(MediaInputInfo $DstSubtitleInfo) Set <p>External translation subtitle information.</p>
+ * @method MediaInputInfo getDstSubtitleInfo() Obtain <p>External translated subtitle info.</p>
+ * @method void setDstSubtitleInfo(MediaInputInfo $DstSubtitleInfo) Set <p>External translated subtitle info.</p>
  */
 class DstSubtitleInput extends AbstractModel
 {
     /**
-     * @var MediaInputInfo <p>External translation subtitle information.</p>
+     * @var MediaInputInfo <p>External translated subtitle info.</p>
      */
     public $DstSubtitleInfo;
 
     /**
-     * @param MediaInputInfo $DstSubtitleInfo <p>External translation subtitle information.</p>
+     * @param MediaInputInfo $DstSubtitleInfo <p>External translated subtitle info.</p>
      */
     function __construct()
     {

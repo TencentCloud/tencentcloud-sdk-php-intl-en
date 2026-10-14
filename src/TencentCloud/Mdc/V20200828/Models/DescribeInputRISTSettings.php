@@ -18,36 +18,36 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Query the RIST configuration message of the input.
  *
- * @method string getMode() Obtain 
- * @method void setMode(string $Mode) Set 
- * @method string getProfile() Obtain 
- * @method void setProfile(string $Profile) Set 
- * @method integer getBuffer() Obtain 
- * @method void setBuffer(integer $Buffer) Set 
+ * @method string getMode() Obtain RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
+ * @method void setMode(string $Mode) Set RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
+ * @method string getProfile() Obtain RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+ * @method void setProfile(string $Profile) Set RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+ * @method integer getBuffer() Obtain RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
+ * @method void setBuffer(integer $Buffer) Set RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
  */
 class DescribeInputRISTSettings extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
      */
     public $Mode;
 
     /**
-     * @var string 
+     * @var string RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
      */
     public $Profile;
 
     /**
-     * @var integer 
+     * @var integer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
      */
     public $Buffer;
 
     /**
-     * @param string $Mode 
-     * @param string $Profile 
-     * @param integer $Buffer 
+     * @param string $Mode RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
+     * @param string $Profile RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+     * @param integer $Buffer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
      */
     function __construct()
     {
