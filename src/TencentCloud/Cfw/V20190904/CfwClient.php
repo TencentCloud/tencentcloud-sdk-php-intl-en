@@ -23,7 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cfw\V20190904\Models as Models;
 
 /**
- * @method Models\AddAcRuleResponse AddAcRule(Models\AddAcRuleRequest $req) This API is used to add edge firewall rules.
  * @method Models\AddAclRuleResponse AddAclRule(Models\AddAclRuleRequest $req) Add one or more Internet Boundary Access Control Rules.
  * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) This API is used to create enterprise security group rules (new).
  * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) This API is used to add NAT access control rules.
@@ -32,10 +31,8 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) This API is used to create a firewall instance with domain name (The Region parameter is required).
  * @method Models\CreateSecurityGroupRulesResponse CreateSecurityGroupRules(Models\CreateSecurityGroupRulesRequest $req) This API is used to create enterprise security group rules.
  * @method Models\DeleteAcRuleResponse DeleteAcRule(Models\DeleteAcRuleRequest $req) This API is used to delete a rule.
- * @method Models\DeleteAllAccessControlRuleResponse DeleteAllAccessControlRule(Models\DeleteAllAccessControlRuleRequest $req) This API is used to delete all rules.
  * @method Models\DeleteResourceGroupResponse DeleteResourceGroup(Models\DeleteResourceGroupRequest $req) This API is used to delete asset groups in Asset Management.
  * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) This API is used to delete security group rules.
- * @method Models\DeleteVpcInstanceResponse DeleteVpcInstance(Models\DeleteVpcInstanceRequest $req) This API is used to delete firewall instance.
  * @method Models\DescribeAcListsResponse DescribeAcLists(Models\DescribeAcListsRequest $req) This API is used to get the access control list.
  * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) This API is used to get the list of instances associated with a security group.
  * @method Models\DescribeBlockByIpTimesListResponse DescribeBlockByIpTimesList(Models\DescribeBlockByIpTimesListRequest $req) This API is used to get blocked IP data.
@@ -68,11 +65,11 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeUnHandleEventTabListResponse DescribeUnHandleEventTabList(Models\DescribeUnHandleEventTabListRequest $req) This API is used to get unhandled security events.
 
  * @method Models\DescribeVpcAcRuleResponse DescribeVpcAcRule(Models\DescribeVpcAcRuleRequest $req) Query Inter-VPC rules
+ * @method Models\DescribeVpcFwIpStatResponse DescribeVpcFwIpStat(Models\DescribeVpcFwIpStatRequest $req) This API is used to query the traffic statistics under VPC firewalls at the single IP granularity.
  * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) This API is used to increase the firewall bandwidth.
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) This API is used to modify rules.
  * @method Models\ModifyAllPublicIPSwitchStatusResponse ModifyAllPublicIPSwitchStatus(Models\ModifyAllPublicIPSwitchStatusRequest $req) This API is used to enable or disable one or multiple edge firewalls.
  * @method Models\ModifyAllRuleStatusResponse ModifyAllRuleStatus(Models\ModifyAllRuleStatusRequest $req) This API is used to enable or disable all rules.
- * @method Models\ModifyAllVPCSwitchStatusResponse ModifyAllVPCSwitchStatus(Models\ModifyAllVPCSwitchStatusRequest $req) This API is used to enable or disable one or multiple VPC firewalls.
  * @method Models\ModifyAssetScanResponse ModifyAssetScan(Models\ModifyAssetScanRequest $req) This API is used to modify asset scan settings.
  * @method Models\ModifyBlockIgnoreListResponse ModifyBlockIgnoreList(Models\ModifyBlockIgnoreListRequest $req) This API is used to manage blocked/allowed IPs and domains.
 Add IPs/domains to the blocked/allowed list
@@ -86,7 +83,6 @@ Modify events related with the IPs/domains in the blocked/allowed list
  * @method Models\ModifyNatFwSwitchResponse ModifyNatFwSwitch(Models\ModifyNatFwSwitchRequest $req) This API is used to enable or disable a NAT firewall.
  * @method Models\ModifyNatFwVpcDnsSwitchResponse ModifyNatFwVpcDnsSwitch(Models\ModifyNatFwVpcDnsSwitchRequest $req) This API is used to modify the VPC DNS status of NAT firewall instances.
  * @method Models\ModifyNatSequenceRulesResponse ModifyNatSequenceRules(Models\ModifyNatSequenceRulesRequest $req) This API is used to change the sequence number of NAT firewall rules.
- * @method Models\ModifyPublicIPSwitchStatusResponse ModifyPublicIPSwitchStatus(Models\ModifyPublicIPSwitchStatusRequest $req) This API is used to enable or disable an edge firewall.
  * @method Models\ModifyResourceGroupResponse ModifyResourceGroup(Models\ModifyResourceGroupRequest $req) This API is used to modify the asset group information in Asset Management.
 
 

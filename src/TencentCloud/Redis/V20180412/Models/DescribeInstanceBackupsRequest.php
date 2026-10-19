@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
  * @method string getEndTime() Obtain <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
  * @method void setEndTime(string $EndTime) Set <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
- * @method array getStatus() Obtain <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
- * @method void setStatus(array $Status) Set <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+ * @method array getStatus() Obtain <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
+ * @method void setStatus(array $Status) Set <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
  * @method string getInstanceName() Obtain <p>Instance name, supports name fuzzy search based on instance name.</p>
  * @method void setInstanceName(string $InstanceName) Set <p>Instance name, supports name fuzzy search based on instance name.</p>
  */
@@ -63,7 +63,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+     * @var array <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
      */
     public $Status;
 
@@ -78,7 +78,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
      * @param string $InstanceId <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
      * @param string $BeginTime <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
      * @param string $EndTime <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
-     * @param array $Status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+     * @param array $Status <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
      * @param string $InstanceName <p>Instance name, supports name fuzzy search based on instance name.</p>
      */
     function __construct()

@@ -47,6 +47,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(Models\DescribeAutoBackupConfigRequest $req) This API is used to get the configuration rules for an automatic backup.
  * @method Models\DescribeBackupDetailResponse DescribeBackupDetail(Models\DescribeBackupDetailRequest $req) This API is used to query the backup details of an instance.
  * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) This API is used to query the download address for a database backup file in the current region.
+ * @method Models\DescribeBackupEncryptConfigResponse DescribeBackupEncryptConfig(Models\DescribeBackupEncryptConfigRequest $req) This API is used to query information related to backup encryption for an instance, including the enabled status and encryption keys.
  * @method Models\DescribeBackupUrlResponse DescribeBackupUrl(Models\DescribeBackupUrlRequest $req) This API is used to query the download address of a backup RDB file.
  * @method Models\DescribeBandwidthRangeResponse DescribeBandwidthRange(Models\DescribeBandwidthRangeRequest $req) This API is used to query the information of instance bandwidth.
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) This API is used to query the list of Redis instances. It is now deprecated.
@@ -70,6 +71,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(Models\DescribeInstanceNodeInfoRequest $req) This API is used to query the information of an instance node.
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) This API is used to query the parameter modification record list.
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) This API is used to query the parameter list of an instance.
+ * @method Models\DescribeInstancePasswordPolicyResponse DescribeInstancePasswordPolicy(Models\DescribeInstancePasswordPolicyRequest $req) This API is used to query the current password complexity configuration of a specified instance.
  * @method Models\DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroup(Models\DescribeInstanceSecurityGroupRequest $req) This API is used to query the security group information of an instance.
  * @method Models\DescribeInstanceShardsResponse DescribeInstanceShards(Models\DescribeInstanceShardsRequest $req) This API is used to get the shard information of the instance on cluster architecture.
  * @method Models\DescribeInstanceSpecBandwidthResponse DescribeInstanceSpecBandwidth(Models\DescribeInstanceSpecBandwidthRequest $req) This API is used to query or calculate bandwidth specifications.
@@ -107,6 +109,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModfiyInstancePasswordResponse ModfiyInstancePassword(Models\ModfiyInstancePasswordRequest $req) This API is used to change the instance access password. Due to a spelling error in the original API name, it has been corrected to [ModifyInstancePassword](https://intl.cloud.tencent.com/document/product/239/111555?from_cn_redirect=1). It is recommended to use the corrected API.
  * @method Models\ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(Models\ModifyAutoBackupConfigRequest $req) This API is used to set the configuration for an automatic backup.
  * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) This API is used to modify the network information and address for downloading a backup file.
+ * @method Models\ModifyBackupEncryptResponse ModifyBackupEncrypt(Models\ModifyBackupEncryptRequest $req) This API is used to turn on or disable backup encryption and modify backup key functionality.
  * @method Models\ModifyConnectionConfigResponse ModifyConnectionConfig(Models\ModifyConnectionConfigRequest $req) This API is used to modify the connection configuration of an instance, including the bandwidth and maximum number of connections.
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) This API is used to modify the original security group list of an instance.
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify instance information.
@@ -118,6 +121,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(Models\ModifyInstanceLogDeliveryRequest $req) This API is used to enable or disable the shipping of instance logs to CLS.
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) This API is used to modify the parameter configuration of a Redis instance.
  * @method Models\ModifyInstancePasswordResponse ModifyInstancePassword(Models\ModifyInstancePasswordRequest $req) This API is used to change the instance access password.
+ * @method Models\ModifyInstancePasswordPolicyResponse ModifyInstancePasswordPolicy(Models\ModifyInstancePasswordPolicyRequest $req) This API is used to modify the password complexity of an instance.
  * @method Models\ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(Models\ModifyInstanceReadOnlyRequest $req) This API is used to set the instance input mode.
  * @method Models\ModifyLogResponse ModifyLog(Models\ModifyLogRequest $req) change log
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) This API is used to modify the time of instance maintenance window. Instances that require the version or architecture upgrade will undergo time switching during the maintenance window. Note: If the version or architecture upgrade has been initiated for an instance, its maintenance window cannot be modified.
@@ -137,6 +141,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\SwitchInstanceVipResponse SwitchInstanceVip(Models\SwitchInstanceVipRequest $req) This API is used to swap the VIPs of instances for disaster recovery in DTS-based cross-AZ disaster recovery scenarios. After the swapping, the target instance becomes writable, the VIPs of the source and target instances are swapped, and the DTS synchronization task between the source and target instances is disconnected.
  * @method Models\SwitchProxyResponse SwitchProxy(Models\SwitchProxyRequest $req) This API is used to simulate the fault of a Proxy node.
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to change the configuration specifications of an instance.
+ * @method Models\UpgradeInstanceProductVersionResponse UpgradeInstanceProductVersion(Models\UpgradeInstanceProductVersionRequest $req) This API is used to upgrade the instance type from common I to common II.
  * @method Models\UpgradeInstanceVersionResponse UpgradeInstanceVersion(Models\UpgradeInstanceVersionRequest $req) This API is used to upgrade the current instance to a later version or upgrade the current standard architecture to a cluster architecture.
  * @method Models\UpgradeProxyVersionResponse UpgradeProxyVersion(Models\UpgradeProxyVersionRequest $req) This API is used to upgrade the instance Proxy version.
  * @method Models\UpgradeSmallVersionResponse UpgradeSmallVersion(Models\UpgradeSmallVersionRequest $req) This API is used to upgrade the minor version of an instance.

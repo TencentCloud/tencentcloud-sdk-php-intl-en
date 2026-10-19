@@ -18,63 +18,37 @@ namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource list information response parameters structure
+ * Resource list information
  *
- * @method string getResourceType() Obtain Resource type
- * @method void setResourceType(string $ResourceType) Set Resource type
+ * @method string getResourceType() Obtain Resource type.
+ * @method void setResourceType(string $ResourceType) Set Resource type.
  * @method string getResourceName() Obtain Resource name
  * @method void setResourceName(string $ResourceName) Set Resource name
  * @method string getResourceId() Obtain Resource ID
  * @method void setResourceId(string $ResourceId) Set Resource ID
- * @method string getResourceRegion() Obtain Region
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceRegion(string $ResourceRegion) Set Region
-
-Note: This field may return null, indicating that no valid value is found.
- * @method string getResourceStatus() Obtain Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceStatus(string $ResourceStatus) Set Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
- * @method integer getResourceDelete() Obtain Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceDelete(integer $ResourceDelete) Set Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getResourceRegion() Obtain Region.
+ * @method void setResourceRegion(string $ResourceRegion) Set Region.
+ * @method string getResourceStatus() Obtain Resource status.
+ * @method void setResourceStatus(string $ResourceStatus) Set Resource status.
+ * @method integer getResourceDelete() Obtain Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
+ * @method void setResourceDelete(integer $ResourceDelete) Set Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
  * @method string getResourceCreateTime() Obtain Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setResourceCreateTime(string $ResourceCreateTime) Set Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
- * @method array getTags() Obtain Tag information
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setTags(array $Tags) Set Tag information
-
-Note: This field may return null, indicating that no valid value is found.
- * @method string getResourceZone() Obtain Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceZone(string $ResourceZone) Set Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+ * @method array getTags() Obtain Tag information.
+ * @method void setTags(array $Tags) Set Tag information.
+ * @method string getResourceZone() Obtain AZ.
+ * @method void setResourceZone(string $ResourceZone) Set AZ.
  * @method string getComplianceResult() Obtain Compliance status
-Note: This field may return null, indicating that no valid value is found.
  * @method void setComplianceResult(string $ComplianceResult) Set Compliance status
-Note: This field may return null, indicating that no valid value is found.
- * @method integer getResourceOwnerId() Obtain Resource owner uid
- * @method void setResourceOwnerId(integer $ResourceOwnerId) Set Resource owner uid
- * @method string getResourceOwnerName() Obtain User nickname
-Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceOwnerName(string $ResourceOwnerName) Set User nickname
-Note: This field may return null, indicating that no valid value is found.
+ * @method integer getResourceOwnerId() Obtain Resource owner ID.
+ * @method void setResourceOwnerId(integer $ResourceOwnerId) Set Resource owner ID.
+ * @method string getResourceOwnerName() Obtain User Nickname
+ * @method void setResourceOwnerName(string $ResourceOwnerName) Set User Nickname
  */
 class AggregateResourceInfo extends AbstractModel
 {
     /**
-     * @var string Resource type
+     * @var string Resource type.
      */
     public $ResourceType;
 
@@ -89,89 +63,63 @@ class AggregateResourceInfo extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string Region
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Region.
      */
     public $ResourceRegion;
 
     /**
-     * @var string Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Resource status.
      */
     public $ResourceStatus;
 
     /**
-     * @var integer Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+     * @var integer Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
      */
     public $ResourceDelete;
 
     /**
      * @var string Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $ResourceCreateTime;
 
     /**
-     * @var array Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var array Tag information.
      */
     public $Tags;
 
     /**
-     * @var string Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var string AZ.
      */
     public $ResourceZone;
 
     /**
      * @var string Compliance status
-Note: This field may return null, indicating that no valid value is found.
      */
     public $ComplianceResult;
 
     /**
-     * @var integer Resource owner uid
+     * @var integer Resource owner ID.
      */
     public $ResourceOwnerId;
 
     /**
-     * @var string User nickname
-Note: This field may return null, indicating that no valid value is found.
+     * @var string User Nickname
      */
     public $ResourceOwnerName;
 
     /**
-     * @param string $ResourceType Resource type
+     * @param string $ResourceType Resource type.
      * @param string $ResourceName Resource name
      * @param string $ResourceId Resource ID
-     * @param string $ResourceRegion Region
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $ResourceStatus Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param integer $ResourceDelete Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $ResourceRegion Region.
+     * @param string $ResourceStatus Resource status.
+     * @param integer $ResourceDelete Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
      * @param string $ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $Tags Tag information
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $ResourceZone Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+     * @param array $Tags Tag information.
+     * @param string $ResourceZone AZ.
      * @param string $ComplianceResult Compliance status
-Note: This field may return null, indicating that no valid value is found.
-     * @param integer $ResourceOwnerId Resource owner uid
-     * @param string $ResourceOwnerName User nickname
-Note: This field may return null, indicating that no valid value is found.
+     * @param integer $ResourceOwnerId Resource owner ID.
+     * @param string $ResourceOwnerName User Nickname
      */
     function __construct()
     {

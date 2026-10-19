@@ -18,28 +18,28 @@ namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource list filter
+ * Resource list filtering.
  *
- * @method string getName() Obtain Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
- * @method void setName(string $Name) Set Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
- * @method array getValues() Obtain Value of the field to query
- * @method void setValues(array $Values) Set Value of the field to query
+ * @method string getName() Obtain Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
+ * @method void setName(string $Name) Set Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
+ * @method array getValues() Obtain Queried field values.
+ * @method void setValues(array $Values) Set Queried field values.
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+     * @var string Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
      */
     public $Name;
 
     /**
-     * @var array Value of the field to query
+     * @var array Queried field values.
      */
     public $Values;
 
     /**
-     * @param string $Name Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
-     * @param array $Values Value of the field to query
+     * @param string $Name Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
+     * @param array $Values Queried field values.
      */
     function __construct()
     {

@@ -21,41 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Tag
  *
  * @method string getTagKey() Obtain Tag key
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setTagKey(string $TagKey) Set Tag key
-
-Note: This field may return null, indicating that no valid value is found.
  * @method string getTagValue() Obtain Tag value
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setTagValue(string $TagValue) Set Tag value
-
-Note: This field may return null, indicating that no valid value is found.
  */
 class Tag extends AbstractModel
 {
     /**
      * @var string Tag key
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $TagKey;
 
     /**
      * @var string Tag value
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $TagValue;
 
     /**
      * @param string $TagKey Tag key
-
-Note: This field may return null, indicating that no valid value is found.
      * @param string $TagValue Tag value
-
-Note: This field may return null, indicating that no valid value is found.
      */
     function __construct()
     {

@@ -18,80 +18,52 @@ namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Managing end rule conditions
+ * Rule conditions on the operation side.
  *
- * @method string getEmptyAs() Obtain Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setEmptyAs(string $EmptyAs) Set Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getEmptyAs() Obtain Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
+ * @method void setEmptyAs(string $EmptyAs) Set Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
  * @method string getSelectPath() Obtain Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setSelectPath(string $SelectPath) Set Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
- * @method string getOperator() Obtain Operators
-Note: This field may return null, indicating that no valid value is found.
- * @method void setOperator(string $Operator) Set Operators
-Note: This field may return null, indicating that no valid value is found.
- * @method boolean getRequired() Obtain Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setRequired(boolean $Required) Set Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getOperator() Obtain Operator.
+ * @method void setOperator(string $Operator) Set Operator.
+ * @method boolean getRequired() Obtain Whether it is mandatory.
+ * @method void setRequired(boolean $Required) Set Whether it is mandatory.
  * @method string getDesiredValue() Obtain Expected value
-Note: This field may return null, indicating that no valid value is found.
  * @method void setDesiredValue(string $DesiredValue) Set Expected value
-Note: This field may return null, indicating that no valid value is found.
  */
 class SourceConditionForManage extends AbstractModel
 {
     /**
-     * @var string Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
      */
     public $EmptyAs;
 
     /**
      * @var string Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $SelectPath;
 
     /**
-     * @var string Operators
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Operator.
      */
     public $Operator;
 
     /**
-     * @var boolean Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var boolean Whether it is mandatory.
      */
     public $Required;
 
     /**
      * @var string Expected value
-Note: This field may return null, indicating that no valid value is found.
      */
     public $DesiredValue;
 
     /**
-     * @param string $EmptyAs Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $EmptyAs Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
      * @param string $SelectPath Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $Operator Operators
-Note: This field may return null, indicating that no valid value is found.
-     * @param boolean $Required Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $Operator Operator.
+     * @param boolean $Required Whether it is mandatory.
      * @param string $DesiredValue Expected value
-Note: This field may return null, indicating that no valid value is found.
      */
     function __construct()
     {

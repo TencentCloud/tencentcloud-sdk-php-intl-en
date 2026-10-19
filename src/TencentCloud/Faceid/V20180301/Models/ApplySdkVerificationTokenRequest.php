@@ -76,16 +76,14 @@ Default value: 4
  * @method void setCompareImage(string $CompareImage) Set The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method boolean getNeedVerifyIdCard() Obtain Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
  * @method void setNeedVerifyIdCard(boolean $NeedVerifyIdCard) Set Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
- * @method boolean getDisableChangeOcrResult() Obtain Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
- * @method void setDisableChangeOcrResult(boolean $DisableChangeOcrResult) Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+ * @method boolean getDisableChangeOcrResult() Obtain Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
+ * @method void setDisableChangeOcrResult(boolean $DisableChangeOcrResult) Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
  * @method boolean getDisableCheckOcrWarnings() Obtain Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
  * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
  * @method array getSelectedWarningCodes() Obtain Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
  * @method void setSelectedWarningCodes(array $SelectedWarningCodes) Set Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
  * @method string getExtra() Obtain A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method void setExtra(string $Extra) Set A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method string getSdkVersion() Obtain BASIC: Basic version (Default).
@@ -225,19 +223,18 @@ Default value: 4
     public $NeedVerifyIdCard;
 
     /**
-     * @var boolean Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+     * @var boolean Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
      */
     public $DisableChangeOcrResult;
 
     /**
      * @var boolean Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      */
     public $DisableCheckOcrWarnings;
 
     /**
      * @var array Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
      */
     public $SelectedWarningCodes;
 
@@ -377,11 +374,10 @@ Default value: 4
 13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
      * @param string $CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
      * @param boolean $NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-     * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+     * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
      * @param boolean $DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      * @param array $SelectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
      * @param string $Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
      * @param string $SdkVersion BASIC: Basic version (Default).
 ENHANCED: Enhance version, enable additional output of device risk level field.

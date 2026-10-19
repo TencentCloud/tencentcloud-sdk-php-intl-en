@@ -20,98 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAggregateConfigRules request structure.
  *
- * @method integer getLimit() Obtain Specifies the limit per page.
- * @method void setLimit(integer $Limit) Set Specifies the limit per page.
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
- * @method string getAccountGroupId() Obtain Account group ID
- * @method void setAccountGroupId(string $AccountGroupId) Set Account group ID
- * @method string getOrderType() Obtain Sort type, descending: desc, ascending: asc.
- * @method void setOrderType(string $OrderType) Set Sort type, descending: desc, ascending: asc.
- * @method array getRiskLevel() Obtain Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
- * @method void setRiskLevel(array $RiskLevel) Set Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
- * @method string getState() Obtain Rule status
- * @method void setState(string $State) Set Rule status
- * @method array getComplianceResult() Obtain Evaluation result
- * @method void setComplianceResult(array $ComplianceResult) Set Evaluation result
- * @method string getRuleName() Obtain Name of the rule
- * @method void setRuleName(string $RuleName) Set Name of the rule
- * @method integer getRuleOwnerId() Obtain Rule ownership account ID
- * @method void setRuleOwnerId(integer $RuleOwnerId) Set Rule ownership account ID
+ * @method integer getLimit() Obtain <p>Number of items per page.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items per page.</p>
+ * @method integer getOffset() Obtain <p>Offset.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset.</p>
+ * @method string getAccountGroupId() Obtain <p>Account group ID.</p>
+ * @method void setAccountGroupId(string $AccountGroupId) Set <p>Account group ID.</p>
+ * @method string getOrderType() Obtain <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
+ * @method void setOrderType(string $OrderType) Set <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
+ * @method array getRiskLevel() Obtain <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
+ * @method void setRiskLevel(array $RiskLevel) Set <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
+ * @method string getState() Obtain <p>Rule status.</p>
+ * @method void setState(string $State) Set <p>Rule status.</p>
+ * @method array getComplianceResult() Obtain <p>Evaluation results.</p>
+ * @method void setComplianceResult(array $ComplianceResult) Set <p>Evaluation results.</p>
+ * @method string getRuleName() Obtain <p>Rule name.</p>
+ * @method void setRuleName(string $RuleName) Set <p>Rule name.</p>
+ * @method integer getRuleOwnerId() Obtain <p>ID of the account to which the rule belongs.</p>
+ * @method void setRuleOwnerId(integer $RuleOwnerId) Set <p>ID of the account to which the rule belongs.</p>
  */
 class ListAggregateConfigRulesRequest extends AbstractModel
 {
     /**
-     * @var integer Specifies the limit per page.
+     * @var integer <p>Number of items per page.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset.
+     * @var integer <p>Offset.</p>
      */
     public $Offset;
 
     /**
-     * @var string Account group ID
+     * @var string <p>Account group ID.</p>
      */
     public $AccountGroupId;
 
     /**
-     * @var string Sort type, descending: desc, ascending: asc.
+     * @var string <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
      */
     public $OrderType;
 
     /**
-     * @var array Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
+     * @var array <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string Rule status
+     * @var string <p>Rule status.</p>
      */
     public $State;
 
     /**
-     * @var array Evaluation result
+     * @var array <p>Evaluation results.</p>
      */
     public $ComplianceResult;
 
     /**
-     * @var string Name of the rule
+     * @var string <p>Rule name.</p>
      */
     public $RuleName;
 
     /**
-     * @var integer Rule ownership account ID
+     * @var integer <p>ID of the account to which the rule belongs.</p>
      */
     public $RuleOwnerId;
 
     /**
-     * @param integer $Limit Specifies the limit per page.
-     * @param integer $Offset Offset.
-     * @param string $AccountGroupId Account group ID
-     * @param string $OrderType Sort type, descending: desc, ascending: asc.
-     * @param array $RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
-     * @param string $State Rule status
-     * @param array $ComplianceResult Evaluation result
-     * @param string $RuleName Name of the rule
-     * @param integer $RuleOwnerId Rule ownership account ID
+     * @param integer $Limit <p>Number of items per page.</p>
+     * @param integer $Offset <p>Offset.</p>
+     * @param string $AccountGroupId <p>Account group ID.</p>
+     * @param string $OrderType <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
+     * @param array $RiskLevel <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
+     * @param string $State <p>Rule status.</p>
+     * @param array $ComplianceResult <p>Evaluation results.</p>
+     * @param string $RuleName <p>Rule name.</p>
+     * @param integer $RuleOwnerId <p>ID of the account to which the rule belongs.</p>
      */
     function __construct()
     {

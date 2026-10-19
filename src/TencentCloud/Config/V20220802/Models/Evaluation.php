@@ -18,72 +18,72 @@ namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom rule evaluation result
+ * Custom rule evaluation result.
  *
- * @method string getComplianceResourceId() Obtain Evaluated resource id. It can contain 0 to 256 characters.
- * @method void setComplianceResourceId(string $ComplianceResourceId) Set Evaluated resource id. It can contain 0 to 256 characters.
+ * @method string getComplianceResourceId() Obtain Evaluated resource ID, which is 0 to 256 characters in length.
+ * @method void setComplianceResourceId(string $ComplianceResourceId) Set Evaluated resource ID, which is 0 to 256 characters in length.
  * @method string getComplianceResourceType() Obtain Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
  * @method void setComplianceResourceType(string $ComplianceResourceType) Set Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
  * @method string getComplianceRegion() Obtain Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
  * @method void setComplianceRegion(string $ComplianceRegion) Set Evaluated resource region.
-It can contain 0 to 32 characters.
- * @method string getComplianceType() Obtain Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
- * @method void setComplianceType(string $ComplianceType) Set Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
- * @method Annotation getAnnotation() Obtain Supplementary information for non-compliant resources.
- * @method void setAnnotation(Annotation $Annotation) Set Supplementary information for non-compliant resources.
+0 to 32 characters in length.
+ * @method string getComplianceType() Obtain Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+ * @method void setComplianceType(string $ComplianceType) Set Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+ * @method Annotation getAnnotation() Obtain Supplementary information of non-compliant resources.
+ * @method void setAnnotation(Annotation $Annotation) Set Supplementary information of non-compliant resources.
  */
 class Evaluation extends AbstractModel
 {
     /**
-     * @var string Evaluated resource id. It can contain 0 to 256 characters.
+     * @var string Evaluated resource ID, which is 0 to 256 characters in length.
      */
     public $ComplianceResourceId;
 
     /**
      * @var string Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
      */
     public $ComplianceResourceType;
 
     /**
      * @var string Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
      */
     public $ComplianceRegion;
 
     /**
-     * @var string Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
+     * @var string Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
      */
     public $ComplianceType;
 
     /**
-     * @var Annotation Supplementary information for non-compliant resources.
+     * @var Annotation Supplementary information of non-compliant resources.
      */
     public $Annotation;
 
     /**
-     * @param string $ComplianceResourceId Evaluated resource id. It can contain 0 to 256 characters.
+     * @param string $ComplianceResourceId Evaluated resource ID, which is 0 to 256 characters in length.
      * @param string $ComplianceResourceType Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
      * @param string $ComplianceRegion Evaluated resource region.
-It can contain 0 to 32 characters.
-     * @param string $ComplianceType Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
-     * @param Annotation $Annotation Supplementary information for non-compliant resources.
+0 to 32 characters in length.
+     * @param string $ComplianceType Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+     * @param Annotation $Annotation Supplementary information of non-compliant resources.
      */
     function __construct()
     {

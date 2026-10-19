@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVulWhitelistConfig request structure.
  *
- * @method integer getId() Obtain <p>id list</
- * @method void setId(integer $Id) Set <p>id list</
+ * @method integer getId() Obtain <p>id list</p>
+ * @method void setId(integer $Id) Set <p>id list</p>
  * @method array getMemberId() Obtain <p>Group account member id</p>
  * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
  * @method string getRemark() Obtain <p>Remarks.</p>
  * @method void setRemark(string $Remark) Set <p>Remarks.</p>
- * @method integer getAssetRange() Obtain <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
- * @method void setAssetRange(integer $AssetRange) Set <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+ * @method integer getAssetRange() Obtain <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
+ * @method void setAssetRange(integer $AssetRange) Set <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
  * @method array getAssetList() Obtain <p>Asset list (Quuid list)</p>
  * @method void setAssetList(array $AssetList) Set <p>Asset list (Quuid list)</p>
  */
 class ModifyVulWhitelistConfigRequest extends AbstractModel
 {
     /**
-     * @var integer <p>id list</
+     * @var integer <p>id list</p>
      */
     public $Id;
 
@@ -49,7 +49,7 @@ class ModifyVulWhitelistConfigRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+     * @var integer <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
      */
     public $AssetRange;
 
@@ -59,10 +59,10 @@ class ModifyVulWhitelistConfigRequest extends AbstractModel
     public $AssetList;
 
     /**
-     * @param integer $Id <p>id list</
+     * @param integer $Id <p>id list</p>
      * @param array $MemberId <p>Group account member id</p>
      * @param string $Remark <p>Remarks.</p>
-     * @param integer $AssetRange <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+     * @param integer $AssetRange <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
      * @param array $AssetList <p>Asset list (Quuid list)</p>
      */
     function __construct()

@@ -67,6 +67,10 @@ Create an AI scheduled task by entering the task name, prompt content, and trigg
  * @method Models\CreateClusterNamespaceListExportJobResponse CreateClusterNamespaceListExportJob(Models\CreateClusterNamespaceListExportJobRequest $req) Creates a cluster namespace list export task. The export fields include namespace name, Labels, and creation time. Filter filtering is supported. Export is implemented through an async task. After JobId is returned, the frontend polls to query the export task status.
  * @method Models\CreateClusterNodeListExportJobResponse CreateClusterNodeListExportJob(Models\CreateClusterNodeListExportJobRequest $req) This API is used to create a cluster node list export task. The export fields include node ID, node name, public IP address, private IP address, node type, cores, client status, and running state. NodeType, ClientStatus, and RunStatus are internationalized. Filter filtering is supported, including ClientStatus memory filtering. Export is implemented through an async task. After JobId is returned, the frontend polls to query the export task status.
  * @method Models\CreateComplianceRiskExportJobResponse CreateComplianceRiskExportJob(Models\CreateComplianceRiskExportJobRequest $req) Example of creating a risk list export task from a compliance standard aggregation perspective
+ * @method Models\CreateCosAssetSyncTaskResponse CreateCosAssetSyncTask(Models\CreateCosAssetSyncTaskRequest $req) Creates an asset sync task
+ * @method Models\CreateCosObjectScanTaskResponse CreateCosObjectScanTask(Models\CreateCosObjectScanTaskRequest $req) This API is used to create cos virus scan and sensitive data identification tasks.
+ * @method Models\CreateCosPolicyResponse CreateCosPolicy(Models\CreateCosPolicyRequest $req) Add a cos alarm policy
+ * @method Models\CreateCosRiskScanTaskResponse CreateCosRiskScanTask(Models\CreateCosRiskScanTaskRequest $req) This API is used to create a risk monitor task.
  * @method Models\CreateDomainAndIpResponse CreateDomainAndIp(Models\CreateDomainAndIpRequest $req) Create Domain and IP Information
  * @method Models\CreateDspmAccessExportJobResponse CreateDspmAccessExportJob(Models\CreateDspmAccessExportJobRequest $req) Creates a Dspm access record export task
  * @method Models\CreateDspmApplyOrderResponse CreateDspmApplyOrder(Models\CreateDspmApplyOrderRequest $req) This API is used to create a Dspm application.
@@ -144,6 +148,8 @@ This API is used to delete a scheduled task based on the specified AI scheduled 
  * @method Models\DeleteBaselineSelfDefinedPolicyListResponse DeleteBaselineSelfDefinedPolicyList(Models\DeleteBaselineSelfDefinedPolicyListRequest $req) Delete custom baseline policies in batches. Only support deletion of policies with PolicyType=SELF. After deletion, historical risk records are retained, but no new results are generated.
  * @method Models\DeleteCSIPMalwareScanTaskResponse DeleteCSIPMalwareScanTask(Models\DeleteCSIPMalwareScanTaskRequest $req) CSIP manual scan task delete API
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) Deleting a cluster
+ * @method Models\DeleteCosAkAssetResponse DeleteCosAkAsset(Models\DeleteCosAkAssetRequest $req) Delete deleted cos ak assets.
+ * @method Models\DeleteCosPolicyResponse DeleteCosPolicy(Models\DeleteCosPolicyRequest $req) Deleting a Policy
  * @method Models\DeleteDomainAndIpResponse DeleteDomainAndIp(Models\DeleteDomainAndIpRequest $req) Delete Domain and IP Request
  * @method Models\DeleteDspmApplyOrderResponse DeleteDspmApplyOrder(Models\DeleteDspmApplyOrderRequest $req) Deletes a Dspm application form.
  * @method Models\DeleteDspmAssetAccountResponse DeleteDspmAssetAccount(Models\DeleteDspmAssetAccountRequest $req) Delete a Dspm asset account
@@ -242,6 +248,7 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeAssetTagsResponse DescribeAssetTags(Models\DescribeAssetTagsRequest $req) All assets
  * @method Models\DescribeAssetTreeResponse DescribeAssetTree(Models\DescribeAssetTreeRequest $req) Asset tree structure
  * @method Models\DescribeAssetViewVulRiskListResponse DescribeAssetViewVulRiskList(Models\DescribeAssetViewVulRiskListRequest $req) Obtain Vulnerability Risk List from Asset's Perspective
+ * @method Models\DescribeAssumeRoleResponse DescribeAssumeRole(Models\DescribeAssumeRoleRequest $req) Query whether it is bound to a role
  * @method Models\DescribeBackendScanEngineRegionListResponse DescribeBackendScanEngineRegionList(Models\DescribeBackendScanEngineRegionListRequest $req) This API is used to query the region list of the backend scanning engine.
  * @method Models\DescribeBanModeResponse DescribeBanMode(Models\DescribeBanModeRequest $req) This API is used to obtain the brute-force blocking mode.
  * @method Models\DescribeBanStatusResponse DescribeBanStatus(Models\DescribeBanStatusRequest $req) This API is used to obtain the block button status.
@@ -264,6 +271,7 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeBaselineUserOtherConfResponse DescribeBaselineUserOtherConf(Models\DescribeBaselineUserOtherConfRequest $req) Retrieve user-level baseline configuration for the current account.
  * @method Models\DescribeBaselineUserWeakPasswordConfResponse DescribeBaselineUserWeakPasswordConf(Models\DescribeBaselineUserWeakPasswordConfRequest $req) This API is used to search for the custom dictionary of weak passwords for users under the current account.
  * @method Models\DescribeBruteAttackRulesResponse DescribeBruteAttackRules(Models\DescribeBruteAttackRulesRequest $req) This API is used to obtain brute force cracking rules.
+ * @method Models\DescribeBucketInvokeIpListResponse DescribeBucketInvokeIpList(Models\DescribeBucketInvokeIpListRequest $req) This API is used to view the bucket call source ip list.
  * @method Models\DescribeCFGRiskReportStatisticsResponse DescribeCFGRiskReportStatistics(Models\DescribeCFGRiskReportStatisticsRequest $req) Risk statistics for cloud resource configuration check reports
  * @method Models\DescribeCFGRiskStatisticsResponse DescribeCFGRiskStatistics(Models\DescribeCFGRiskStatisticsRequest $req) Query the statistical information of scanning results.
  * @method Models\DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatistics(Models\DescribeCFWAssetStatisticsRequest $req) Cloud Defense Asset Center Statistics
@@ -319,6 +327,34 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeComplianceStandardTermTreeResponse DescribeComplianceStandardTermTree(Models\DescribeComplianceStandardTermTreeRequest $req) Cloud resource configuration inspection standard chapter clause tree
  * @method Models\DescribeComplianceStatisticsResponse DescribeComplianceStatistics(Models\DescribeComplianceStatisticsRequest $req) Category statistics for cloud resource configuration detection specifications
  * @method Models\DescribeConfigCheckRulesResponse DescribeConfigCheckRules(Models\DescribeConfigCheckRulesRequest $req) Example of cloud resource configuration risk rule list
+ * @method Models\DescribeCosAccessPermissionResponse DescribeCosAccessPermission(Models\DescribeCosAccessPermissionRequest $req) View cos bucket access permission information
+ * @method Models\DescribeCosAccessPermissionsResponse DescribeCosAccessPermissions(Models\DescribeCosAccessPermissionsRequest $req) View the access privilege list of object storage
+ * @method Models\DescribeCosActionListResponse DescribeCosActionList(Models\DescribeCosActionListRequest $req) View the COS API list
+ * @method Models\DescribeCosAkAssetResponse DescribeCosAkAsset(Models\DescribeCosAkAssetRequest $req) View the ak asset information list
+ * @method Models\DescribeCosAkInvokeIpListResponse DescribeCosAkInvokeIpList(Models\DescribeCosAkInvokeIpListRequest $req) View the source ip list of bucket calls
+ * @method Models\DescribeCosAlarmListResponse DescribeCosAlarmList(Models\DescribeCosAlarmListRequest $req) View alarm list
+ * @method Models\DescribeCosAlarmTrendDataResponse DescribeCosAlarmTrendData(Models\DescribeCosAlarmTrendDataRequest $req) Daily alerts newly added data
+ * @method Models\DescribeCosAssetResponse DescribeCosAsset(Models\DescribeCosAssetRequest $req) Views the cos asset list
+ * @method Models\DescribeCosAssetSyncTaskResponse DescribeCosAssetSyncTask(Models\DescribeCosAssetSyncTaskRequest $req) Get the taskid currently being scanned for the corresponding appid.
+ * @method Models\DescribeCosAuditAppIdListResponse DescribeCosAuditAppIdList(Models\DescribeCosAuditAppIdListRequest $req) View the purchased appid collection under this appid.
+ * @method Models\DescribeCosAuditDictionaryListResponse DescribeCosAuditDictionaryList(Models\DescribeCosAuditDictionaryListRequest $req) Query the cos audit dictionary information list.
+ * @method Models\DescribeCosAuditPayInfoResponse DescribeCosAuditPayInfo(Models\DescribeCosAuditPayInfoRequest $req) This API is used to obtain audit payment information.
+ * @method Models\DescribeCosBucketBillingInfoResponse DescribeCosBucketBillingInfo(Models\DescribeCosBucketBillingInfoRequest $req) This API is used to obtain the billing information of a bucket.
+ * @method Models\DescribeCosBucketListResponse DescribeCosBucketList(Models\DescribeCosBucketListRequest $req) This API is used to obtain bucket information.
+ * @method Models\DescribeCosBucketRiskResponse DescribeCosBucketRisk(Models\DescribeCosBucketRiskRequest $req) Views the risk asset perspective
+ * @method Models\DescribeCosIdentifyFileListResponse DescribeCosIdentifyFileList(Models\DescribeCosIdentifyFileListRequest $req) Queries the list of cos file data identification results.
+ * @method Models\DescribeCosInvokeUaResponse DescribeCosInvokeUa(Models\DescribeCosInvokeUaRequest $req) View file information associated with call records
+ * @method Models\DescribeCosIpInvokeLogResponse DescribeCosIpInvokeLog(Models\DescribeCosIpInvokeLogRequest $req) Views the cos call log.
+ * @method Models\DescribeCosIpInvokeRecordFileResponse DescribeCosIpInvokeRecordFile(Models\DescribeCosIpInvokeRecordFileRequest $req) View file information associated with the call record
+ * @method Models\DescribeCosObjectScanTaskResponse DescribeCosObjectScanTask(Models\DescribeCosObjectScanTaskRequest $req) Query cos risk file scan tasks
+ * @method Models\DescribeCosOverviewResponse DescribeCosOverview(Models\DescribeCosOverviewRequest $req) cos overview information
+ * @method Models\DescribeCosPolicyResponse DescribeCosPolicy(Models\DescribeCosPolicyRequest $req) Gets policy list information
+ * @method Models\DescribeCosRiskActionListResponse DescribeCosRiskActionList(Models\DescribeCosRiskActionListRequest $req) Risk API information list
+ * @method Models\DescribeCosRiskEvidenceResponse DescribeCosRiskEvidence(Models\DescribeCosRiskEvidenceRequest $req) View risk evidence and description.
+ * @method Models\DescribeCosRiskScanTaskResponse DescribeCosRiskScanTask(Models\DescribeCosRiskScanTaskRequest $req) View bucket scan task details
+ * @method Models\DescribeCosRoleAccessPermissionResponse DescribeCosRoleAccessPermission(Models\DescribeCosRoleAccessPermissionRequest $req) Views cos bucket access permission information
+ * @method Models\DescribeCosRoleAccessPermissionsResponse DescribeCosRoleAccessPermissions(Models\DescribeCosRoleAccessPermissionsRequest $req) This API is used to obtain the role permission list of a bucket.
+ * @method Models\DescribeCosSourceIpResponse DescribeCosSourceIp(Models\DescribeCosSourceIpRequest $req) Source ip list for calls
  * @method Models\DescribeCspmShardConfigResponse DescribeCspmShardConfig(Models\DescribeCspmShardConfigRequest $req) This API is used to query the CSPM auto quota shared configuration.
  * @method Models\DescribeCustomAssetTagCountResponse DescribeCustomAssetTagCount(Models\DescribeCustomAssetTagCountRequest $req) number of user-customized tags
  * @method Models\DescribeCustomRiskRuleDetailResponse DescribeCustomRiskRuleDetail(Models\DescribeCustomRiskRuleDetailRequest $req) Example of a custom risk rule configuration detail list
@@ -450,6 +486,8 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeImageVulListResponse DescribeImageVulList(Models\DescribeImageVulListRequest $req) This API is used to query the image vulnerability list.
  * @method Models\DescribeImageVulSummaryListResponse DescribeImageVulSummaryList(Models\DescribeImageVulSummaryListRequest $req) Queries the image vulnerability overview list
  * @method Models\DescribeImageVulWhitelistResponse DescribeImageVulWhitelist(Models\DescribeImageVulWhitelistRequest $req) This API is used to query the vulnerability allowlist of a container image.
+ * @method Models\DescribeIpInvokeRecordResponse DescribeIpInvokeRecord(Models\DescribeIpInvokeRecordRequest $req) Object Storage Anomaly Detection call record information
+ * @method Models\DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetail(Models\DescribeIpInvokeRecordDetailRequest $req) ip access list details information
  * @method Models\DescribeKBDetailResponse DescribeKBDetail(Models\DescribeKBDetailRequest $req) Query the details of a single Windows KB patch based on the user's input KB internal ID, and return the basic KB info, release time, whether restart is required, as well as the list of vulnerabilities associated with the KB.
  * @method Models\DescribeKBUpdatableMachineListResponse DescribeKBUpdatableMachineList(Models\DescribeKBUpdatableMachineListRequest $req) Query the list of hosts that can update a specified KB patch. This API is used for Windows patch repair scenarios to query which hosts lack the patch and support auto-update before user-submitted KB patch update tasks.
  * @method Models\DescribeKeySandboxCredentialResponse DescribeKeySandboxCredential(Models\DescribeKeySandboxCredentialRequest $req) This API is used to query credential details and return credential metadata and masked credential data. The access type returns an Access array (original Key, masked Value), and the sts type returns an STS object (original System, masked SecretID and SecretKey).
@@ -483,6 +521,7 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeOrganizationUserInfoResponse DescribeOrganizationUserInfo(Models\DescribeOrganizationUserInfoRequest $req) Query Group Account User List
  * @method Models\DescribeOtherCloudAssetsResponse DescribeOtherCloudAssets(Models\DescribeOtherCloudAssetsRequest $req) Asset list
  * @method Models\DescribePodContainerListResponse DescribePodContainerList(Models\DescribePodContainerListRequest $req) Query the container list associated with a Pod
+ * @method Models\DescribePolicyHitDataResponse DescribePolicyHitData(Models\DescribePolicyHitDataRequest $req) View policy hit details by date
  * @method Models\DescribePortDetectListResponse DescribePortDetectList(Models\DescribePortDetectListRequest $req) Port detection list
  * @method Models\DescribePortScanTaskCountResponse DescribePortScanTaskCount(Models\DescribePortScanTaskCountRequest $req) Query the number of port scanning tasks under the current account.
  * @method Models\DescribePreventUninstallGlobalConfResponse DescribePreventUninstallGlobalConf(Models\DescribePreventUninstallGlobalConfRequest $req) This API is used to obtain the global configuration for anti-uninstallation.
@@ -496,6 +535,7 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeRegistryRegionListResponse DescribeRegistryRegionList(Models\DescribeRegistryRegionListRequest $req) Queries the region list of an image repository.
  * @method Models\DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssets(Models\DescribeRepositoryImageAssetsRequest $req) Repository Image List
  * @method Models\DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfig(Models\DescribeReverseShellSystemPolicyConfigRequest $req) This API is used to query the intranet alert and asset scope configuration for rebound Shell.
+ * @method Models\DescribeRiskBucketListResponse DescribeRiskBucketList(Models\DescribeRiskBucketListRequest $req) View risk-associated bucket info
  * @method Models\DescribeRiskCallRecordResponse DescribeRiskCallRecord(Models\DescribeRiskCallRecordRequest $req) This API is used to obtain the risk call record list.
  * @method Models\DescribeRiskCenterAssetViewCFGRiskListResponse DescribeRiskCenterAssetViewCFGRiskList(Models\DescribeRiskCenterAssetViewCFGRiskListRequest $req) Obtain Configuration Risk List from Asset's Perspective
  * @method Models\DescribeRiskCenterAssetViewPortRiskListResponse DescribeRiskCenterAssetViewPortRiskList(Models\DescribeRiskCenterAssetViewPortRiskListRequest $req) Obtain Port Risk List from Asset's Perspective
@@ -508,9 +548,11 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeRiskCenterVULViewVULRiskListResponse DescribeRiskCenterVULViewVULRiskList(Models\DescribeRiskCenterVULViewVULRiskListRequest $req) Obtain Vulnerability Risk List from Vulnerability's Perspective
  * @method Models\DescribeRiskCenterWebsiteRiskListResponse DescribeRiskCenterWebsiteRiskList(Models\DescribeRiskCenterWebsiteRiskListRequest $req) Obtain Content Risk List
  * @method Models\DescribeRiskDetailListResponse DescribeRiskDetailList(Models\DescribeRiskDetailListRequest $req) Sample risk detail list
+ * @method Models\DescribeRiskItemListResponse DescribeRiskItemList(Models\DescribeRiskItemListRequest $req) Get Risk Item Perspective List
  * @method Models\DescribeRiskRuleDetailResponse DescribeRiskRuleDetail(Models\DescribeRiskRuleDetailRequest $req) Sample code for querying risk rule details
  * @method Models\DescribeRiskRulesResponse DescribeRiskRules(Models\DescribeRiskRulesRequest $req) Illustrative example of the advanced configuration risk rule list
  * @method Models\DescribeRiskScanCronConfigResponse DescribeRiskScanCronConfig(Models\DescribeRiskScanCronConfigRequest $req) Get the periodic schedule for risk scans
+ * @method Models\DescribeRiskTrendDataResponse DescribeRiskTrendData(Models\DescribeRiskTrendDataRequest $req) View the risk trend chart.
  * @method Models\DescribeSCFAliasListResponse DescribeSCFAliasList(Models\DescribeSCFAliasListRequest $req) Queries the alias list of a specified SCF function.
  * @method Models\DescribeSCFFunctionListResponse DescribeSCFFunctionList(Models\DescribeSCFFunctionListRequest $req) Query the list of SCF functions in the specified namespace. Only functions of the Event trigger type are returned.
  * @method Models\DescribeSCFFunctionVersionListResponse DescribeSCFFunctionVersionList(Models\DescribeSCFFunctionVersionListRequest $req) Queries the version list of a specified SCF function.
@@ -609,6 +651,7 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
  * @method Models\ModifyAgentConfigSettingResponse ModifyAgentConfigSetting(Models\ModifyAgentConfigSettingRequest $req) This API is used to modify client log collection settings exclusive to CSIP. It allows you to set the log collection type and asset scope for which the settings take effect.
  * @method Models\ModifyAgentRunModeResponse ModifyAgentRunMode(Models\ModifyAgentRunModeRequest $req) Set the client running mode and configuration
  * @method Models\ModifyAgentRunPolicyResponse ModifyAgentRunPolicy(Models\ModifyAgentRunPolicyRequest $req) Modify the client running policy group. This API is used to set custom policies and associate machine lists.
+ * @method Models\ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatus(Models\ModifyAlarmRiskStatusRequest $req) Modify or change the handling status.
  * @method Models\ModifyAssetCoreAttributeResponse ModifyAssetCoreAttribute(Models\ModifyAssetCoreAttributeRequest $req) Tag an asset as core or not.
  * @method Models\ModifyAssetFilterViewResponse ModifyAssetFilterView(Models\ModifyAssetFilterViewRequest $req) Update the asset search view.
  * @method Models\ModifyAssetTagResponse ModifyAssetTag(Models\ModifyAssetTagRequest $req) This API is used to edit asset tags.
@@ -628,6 +671,10 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
  * @method Models\ModifyCSIPRaspLicenseUnBindsResponse ModifyCSIPRaspLicenseUnBinds(Models\ModifyCSIPRaspLicenseUnBindsRequest $req) Manually unbind RASP authorization. Execute synchronously and return results directly. Only unbind RASP authorization (category=1), with no unbinding frequency limit. In single order mode, appid can locate the order without the need to pass ResourceId.
  * @method Models\ModifyClusterDefendStatusResponse ModifyClusterDefendStatus(Models\ModifyClusterDefendStatusRequest $req) Modify the cluster protection status.
  * @method Models\ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatus(Models\ModifyCosAuditBucketMonitorStatusRequest $req) Modify the bucket monitoring status.
+ * @method Models\ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(Models\ModifyCosAuditMonitorAccountRequest $req) Modify the cos audit monitoring account.
+ * @method Models\ModifyCosAuditObjectIdentifyStatusResponse ModifyCosAuditObjectIdentifyStatus(Models\ModifyCosAuditObjectIdentifyStatusRequest $req) Modify the object storage recognition switch
+ * @method Models\ModifyCosAuditObjectSampleRateResponse ModifyCosAuditObjectSampleRate(Models\ModifyCosAuditObjectSampleRateRequest $req) Set the sampling rate for object storage scan.
+ * @method Models\ModifyCosMarkInfoResponse ModifyCosMarkInfo(Models\ModifyCosMarkInfoRequest $req) This API is used to modify the object storage remark.
  * @method Models\ModifyCspmShardConfigResponse ModifyCspmShardConfig(Models\ModifyCspmShardConfigRequest $req) Updates the CSPM automated quota manager shared switch.
  * @method Models\ModifyDspmAccessRecordResponse ModifyDspmAccessRecord(Models\ModifyDspmAccessRecordRequest $req) Modify Dspm access management information
  * @method Models\ModifyDspmApplyingIdentifyComplianceGroupResponse ModifyDspmApplyingIdentifyComplianceGroup(Models\ModifyDspmApplyingIdentifyComplianceGroupRequest $req) Modifies the data identification template of the current dspm application
@@ -701,6 +748,7 @@ Supplemental description:
 3. HostConfig.Switch linkage map: auto_repurchase_switch; auto_bind_switch is always on and not modified by this API.
 4. Auto renewal (renew_flag) is not modified by this API; to query the limit/amount, call DescribeLicenseStatus.
 5. The top auto scaling global switch state is aggregated by the frontend based on each module switch. The backend does not store or return the global switch.
+ * @method Models\ModifyPolicyStatusResponse ModifyPolicyStatus(Models\ModifyPolicyStatusRequest $req) Modifies policy status
  * @method Models\ModifyProtectionSettingResponse ModifyProtectionSetting(Models\ModifyProtectionSettingRequest $req) This API is used to configure protection settings for the major event protection package.
  * @method Models\ModifyRaspLicenseBindsResponse ModifyRaspLicenseBinds(Models\ModifyRaspLicenseBindsRequest $req) Bind an important period guarantee protection authorization package.
  * @method Models\ModifyReverseShellSystemPolicyConfigResponse ModifyReverseShellSystemPolicyConfig(Models\ModifyReverseShellSystemPolicyConfigRequest $req) This API is used to modify the intranet alert and asset scope configuration for rebound Shell.
@@ -723,7 +771,7 @@ Supplemental description:
  * @method Models\ModifySkillScanAlertStatusResponse ModifySkillScanAlertStatus(Models\ModifySkillScanAlertStatusRequest $req) Batch modify the processing status of Skill security detection alarms.
  * @method Models\ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(Models\ModifyUebaRuleSwitchRequest $req) Update the switch of a custom policy
  * @method Models\ModifyVulScanPeriodicResponse ModifyVulScanPeriodic(Models\ModifyVulScanPeriodicRequest $req) This API is used to modify vulnerability scanning (period scanning).
- * @method Models\ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfig(Models\ModifyVulWhitelistConfigRequest $req) This API is used to modify the vulnerability allowlist configuration.
+ * @method Models\ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfig(Models\ModifyVulWhitelistConfigRequest $req) Modifies the vulnerability allowlist configuration.
  * @method Models\ModifyVulWhitelistSwitchResponse ModifyVulWhitelistSwitch(Models\ModifyVulWhitelistSwitchRequest $req) This API is used to modify the vulnerability allowlist switch.
  * @method Models\ModifyWebhookPolicyResponse ModifyWebhookPolicy(Models\ModifyWebhookPolicyRequest $req) Add or modify a notification policy. ID > 0 means modification; ID = 0 or not passed means adding new. When MemberAppIds is configured as empty, the policy only acts on current root account events; when not empty, it acts on the self account + listed member accounts at the same time.
  * @method Models\ModifyWebhookPolicyStatusResponse ModifyWebhookPolicyStatus(Models\ModifyWebhookPolicyStatusRequest $req) Switch the enable status of the notification policy.

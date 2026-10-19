@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMessageType() Obtain Trigger Type
  * @method void setMessageType(string $MessageType) Set Trigger Type
- * @method string getMaximumExecutionFrequency() Obtain Trigger time period
-Note: This field may return null, indicating that no valid value is found.
- * @method void setMaximumExecutionFrequency(string $MaximumExecutionFrequency) Set Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getMaximumExecutionFrequency() Obtain Triggering time period.
+ * @method void setMaximumExecutionFrequency(string $MaximumExecutionFrequency) Set Triggering time period.
  */
 class TriggerType extends AbstractModel
 {
@@ -35,15 +33,13 @@ class TriggerType extends AbstractModel
     public $MessageType;
 
     /**
-     * @var string Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Triggering time period.
      */
     public $MaximumExecutionFrequency;
 
     /**
      * @param string $MessageType Trigger Type
-     * @param string $MaximumExecutionFrequency Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $MaximumExecutionFrequency Triggering time period.
      */
     function __construct()
     {

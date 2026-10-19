@@ -20,14 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Compliance details
  *
- * @method string getConfiguration() Obtain Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setConfiguration(string $Configuration) Set Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
- * @method string getDesiredValue() Obtain Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setDesiredValue(string $DesiredValue) Set Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getConfiguration() Obtain Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
+ * @method void setConfiguration(string $Configuration) Set Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
+ * @method string getDesiredValue() Obtain Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
+ * @method void setDesiredValue(string $DesiredValue) Set Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
  * @method string getOperator() Obtain Comparison operator between current and desired configuration of the resource. Length is 0-16 characters. This field may be empty when custom rule reporting evaluation result.
  * @method void setOperator(string $Operator) Set Comparison operator between current and desired configuration of the resource. Length is 0-16 characters. This field may be empty when custom rule reporting evaluation result.
  * @method string getProperty() Obtain JSON path of current configuration in resource attribute structure. Length is 0-256 characters. This field may be empty when custom rule reporting evaluation result.
@@ -36,14 +32,12 @@ Note: This field may return null, indicating that no valid value is found.
 class Annotation extends AbstractModel
 {
     /**
-     * @var string Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
      */
     public $Configuration;
 
     /**
-     * @var string Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
      */
     public $DesiredValue;
 
@@ -58,10 +52,8 @@ Note: This field may return null, indicating that no valid value is found.
     public $Property;
 
     /**
-     * @param string $Configuration Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $DesiredValue Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $Configuration Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
+     * @param string $DesiredValue Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
      * @param string $Operator Comparison operator between current and desired configuration of the resource. Length is 0-16 characters. This field may be empty when custom rule reporting evaluation result.
      * @param string $Property JSON path of current configuration in resource attribute structure. Length is 0-256 characters. This field may be empty when custom rule reporting evaluation result.
      */

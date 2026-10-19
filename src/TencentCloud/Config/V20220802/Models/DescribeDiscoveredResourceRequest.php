@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() Obtain Resource ID
  * @method void setResourceId(string $ResourceId) Set Resource ID
- * @method string getResourceType() Obtain Resource type
- * @method void setResourceType(string $ResourceType) Set Resource type
+ * @method string getResourceType() Obtain Resource type.
+ * @method void setResourceType(string $ResourceType) Set Resource type.
  * @method string getResourceRegion() Obtain Resource region
  * @method void setResourceRegion(string $ResourceRegion) Set Resource region
  */
@@ -35,7 +35,7 @@ class DescribeDiscoveredResourceRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string Resource type
+     * @var string Resource type.
      */
     public $ResourceType;
 
@@ -46,7 +46,7 @@ class DescribeDiscoveredResourceRequest extends AbstractModel
 
     /**
      * @param string $ResourceId Resource ID
-     * @param string $ResourceType Resource type
+     * @param string $ResourceType Resource type.
      * @param string $ResourceRegion Resource region
      */
     function __construct()

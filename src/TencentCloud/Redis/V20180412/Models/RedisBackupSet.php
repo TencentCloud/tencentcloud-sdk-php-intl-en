@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set <p>Backup start time.</p>
  * @method string getBackupId() Obtain <p>Backup task ID.</p>
  * @method void setBackupId(string $BackupId) Set <p>Backup task ID.</p>
- * @method string getBackupType() Obtain <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
- * @method void setBackupType(string $BackupType) Set <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+ * @method string getBackupType() Obtain <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
+ * @method void setBackupType(string $BackupType) Set <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
  * @method integer getStatus() Obtain <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
  * @method void setStatus(integer $Status) Set <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
  * @method string getRemark() Obtain <p>Backup remarks.</p>
@@ -66,7 +66,7 @@ class RedisBackupSet extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+     * @var string <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
      */
     public $BackupType;
 
@@ -138,7 +138,7 @@ class RedisBackupSet extends AbstractModel
     /**
      * @param string $StartTime <p>Backup start time.</p>
      * @param string $BackupId <p>Backup task ID.</p>
-     * @param string $BackupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+     * @param string $BackupType <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
      * @param integer $Status <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
      * @param string $Remark <p>Backup remarks.</p>
      * @param integer $Locked <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>

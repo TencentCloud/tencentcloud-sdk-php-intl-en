@@ -18,80 +18,52 @@ namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule input parameters
+ * Rule input parameters.
  *
- * @method string getValueType() Obtain Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setValueType(string $ValueType) Set Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
- * @method string getParameterKey() Obtain Parameter key
-Note: This field may return null, indicating that no valid value is found.
- * @method void setParameterKey(string $ParameterKey) Set Parameter key
-Note: This field may return null, indicating that no valid value is found.
- * @method string getType() Obtain Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setType(string $Type) Set Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getValueType() Obtain Value type. Valid values: Integer and String.
+ * @method void setValueType(string $ValueType) Set Value type. Valid values: Integer and String.
+ * @method string getParameterKey() Obtain Parameter key.
+ * @method void setParameterKey(string $ParameterKey) Set Parameter key.
+ * @method string getType() Obtain Parameter type. Valid values: Require (required) and Optional (optional).
+ * @method void setType(string $Type) Set Parameter type. Valid values: Require (required) and Optional (optional).
  * @method string getDefaultValue() Obtain Default value
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setDefaultValue(string $DefaultValue) Set Default value
-
-Note: This field may return null, indicating that no valid value is found.
  * @method string getDescription() Obtain Description
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setDescription(string $Description) Set Description
-
-Note: This field may return null, indicating that no valid value is found.
  */
 class InputParameterForManage extends AbstractModel
 {
     /**
-     * @var string Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Value type. Valid values: Integer and String.
      */
     public $ValueType;
 
     /**
-     * @var string Parameter key
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Parameter key.
      */
     public $ParameterKey;
 
     /**
-     * @var string Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Parameter type. Valid values: Require (required) and Optional (optional).
      */
     public $Type;
 
     /**
      * @var string Default value
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $DefaultValue;
 
     /**
      * @var string Description
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $Description;
 
     /**
-     * @param string $ValueType Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $ParameterKey Parameter key
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $Type Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $ValueType Value type. Valid values: Integer and String.
+     * @param string $ParameterKey Parameter key.
+     * @param string $Type Parameter type. Valid values: Require (required) and Optional (optional).
      * @param string $DefaultValue Default value
-
-Note: This field may return null, indicating that no valid value is found.
      * @param string $Description Description
-
-Note: This field may return null, indicating that no valid value is found.
      */
     function __construct()
     {

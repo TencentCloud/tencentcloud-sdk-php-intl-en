@@ -20,249 +20,160 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule details
  *
- * @method string getIdentifier() Obtain Rule identifier
-Note: This field may return null, indicating that no valid value is found.
- * @method void setIdentifier(string $Identifier) Set Rule identifier
-Note: This field may return null, indicating that no valid value is found.
- * @method string getRuleName() Obtain Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setRuleName(string $RuleName) Set Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getIdentifier() Obtain Rule ID
+ * @method void setIdentifier(string $Identifier) Set Rule ID
+ * @method string getRuleName() Obtain Rule Name
+ * @method void setRuleName(string $RuleName) Set Rule Name
  * @method array getInputParameter() Obtain Rule parameters
-Note: This field may return null, indicating that no valid value is found.
  * @method void setInputParameter(array $InputParameter) Set Rule parameters
-Note: This field may return null, indicating that no valid value is found.
  * @method array getSourceCondition() Obtain Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setSourceCondition(array $SourceCondition) Set Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
- * @method array getResourceType() Obtain Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setResourceType(array $ResourceType) Set Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
- * @method array getLabels() Obtain Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
- * @method void setLabels(array $Labels) Set Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
- * @method integer getRiskLevel() Obtain Rule risk level
+ * @method array getResourceType() Obtain Resource types supported by the rule. The rule applies only to resources of the specified resource types.
+ * @method void setResourceType(array $ResourceType) Set Resource types supported by the rule. The rule applies only to resources of the specified resource types.
+ * @method array getLabels() Obtain Rule tags.
+ * @method void setLabels(array $Labels) Set Rule tags.
+ * @method integer getRiskLevel() Obtain Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
- * @method void setRiskLevel(integer $RiskLevel) Set Rule risk level
+2: Medium-risk
+3: High-risk
+ * @method void setRiskLevel(integer $RiskLevel) Set Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
- * @method string getServiceFunction() Obtain Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
- * @method void setServiceFunction(string $ServiceFunction) Set Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
- * @method string getCreateTime() Obtain Creation time
-
+2: Medium-risk
+3: High-risk
+ * @method string getServiceFunction() Obtain Function corresponding to the rule.
+ * @method void setServiceFunction(string $ServiceFunction) Set Function corresponding to the rule.
+ * @method string getCreateTime() Obtain Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
- * @method void setCreateTime(string $CreateTime) Set Creation time
-
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
  * @method string getDescription() Obtain Rule description
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setDescription(string $Description) Set Rule description
-
-Note: This field may return null, indicating that no valid value is found.
- * @method string getStatus() Obtain ACTIVE: Enabled
+ * @method string getStatus() Obtain ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
- * @method void setStatus(string $Status) Set ACTIVE: Enabled
+ * @method void setStatus(string $Status) Set ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
- * @method string getComplianceResult() Obtain Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
- * @method void setComplianceResult(string $ComplianceResult) Set Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getComplianceResult() Obtain Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
+ * @method void setComplianceResult(string $ComplianceResult) Set Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
  * @method Annotation getAnnotation() Obtain ["",""]
-Note: This field may return null, indicating that no valid value is found.
  * @method void setAnnotation(Annotation $Annotation) Set ["",""]
-Note: This field may return null, indicating that no valid value is found.
  * @method string getConfigRuleInvokedTime() Obtain Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
  * @method void setConfigRuleInvokedTime(string $ConfigRuleInvokedTime) Set Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
  * @method string getConfigRuleId() Obtain Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setConfigRuleId(string $ConfigRuleId) Set Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
- * @method string getIdentifierType() Obtain CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
- * @method void setIdentifierType(string $IdentifierType) Set CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
- * @method string getCompliancePackId() Obtain Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
- * @method void setCompliancePackId(string $CompliancePackId) Set Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getIdentifierType() Obtain CUSTOMIZE: custom rule
+SYSTEM: managed rule
+ * @method void setIdentifierType(string $IdentifierType) Set CUSTOMIZE: custom rule
+SYSTEM: managed rule
+ * @method string getCompliancePackId() Obtain Compliance package ID.
+ * @method void setCompliancePackId(string $CompliancePackId) Set Compliance package ID.
  * @method array getTriggerType() Obtain Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
  * @method void setTriggerType(array $TriggerType) Set Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
  * @method array getManageInputParameter() Obtain Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
  * @method void setManageInputParameter(array $ManageInputParameter) Set Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
- * @method string getCompliancePackName() Obtain Rule name
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setCompliancePackName(string $CompliancePackName) Set Rule name
-
-Note: This field may return null, indicating that no valid value is found.
- * @method array getRegionsScope() Obtain Associated region
-Note: This field may return null, indicating that no valid value is found.
- * @method void setRegionsScope(array $RegionsScope) Set Associated region
-Note: This field may return null, indicating that no valid value is found.
- * @method array getTagsScope() Obtain Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setTagsScope(array $TagsScope) Set Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
- * @method array getExcludeResourceIdsScope() Obtain  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setExcludeResourceIdsScope(array $ExcludeResourceIdsScope) Set  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
- * @method string getAccountGroupId() Obtain Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setAccountGroupId(string $AccountGroupId) Set Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
- * @method string getAccountGroupName() Obtain Account group name
-Note: This field may return null, indicating that no valid value is found.
- * @method void setAccountGroupName(string $AccountGroupName) Set Account group name
-Note: This field may return null, indicating that no valid value is found.
- * @method integer getRuleOwnerId() Obtain Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
- * @method void setRuleOwnerId(integer $RuleOwnerId) Set Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
- * @method array getManageTriggerType() Obtain Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
- * @method void setManageTriggerType(array $ManageTriggerType) Set Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+ * @method string getCompliancePackName() Obtain Compliance package name
+ * @method void setCompliancePackName(string $CompliancePackName) Set Compliance package name
+ * @method array getRegionsScope() Obtain Associated regions.
+ * @method void setRegionsScope(array $RegionsScope) Set Associated regions.
+ * @method array getTagsScope() Obtain Associated tag
+ * @method void setTagsScope(array $TagsScope) Set Associated tag
+ * @method array getExcludeResourceIdsScope() Obtain  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
+ * @method void setExcludeResourceIdsScope(array $ExcludeResourceIdsScope) Set  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
+ * @method string getAccountGroupId() Obtain Account group ID.
+ * @method void setAccountGroupId(string $AccountGroupId) Set Account group ID.
+ * @method string getAccountGroupName() Obtain Account group name.
+ * @method void setAccountGroupName(string $AccountGroupName) Set Account group name.
+ * @method integer getRuleOwnerId() Obtain Rule owner user ID.
+ * @method void setRuleOwnerId(integer $RuleOwnerId) Set Rule owner user ID.
+ * @method array getManageTriggerType() Obtain Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
+ * @method void setManageTriggerType(array $ManageTriggerType) Set Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
  */
 class ConfigRule extends AbstractModel
 {
     /**
-     * @var string Rule identifier
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Rule ID
      */
     public $Identifier;
 
     /**
-     * @var string Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Rule Name
      */
     public $RuleName;
 
     /**
      * @var array Rule parameters
-Note: This field may return null, indicating that no valid value is found.
      */
     public $InputParameter;
 
     /**
      * @var array Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $SourceCondition;
 
     /**
-     * @var array Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
+     * @var array Resource types supported by the rule. The rule applies only to resources of the specified resource types.
      */
     public $ResourceType;
 
     /**
-     * @var array Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
+     * @var array Rule tags.
      */
     public $Labels;
 
     /**
-     * @var integer Rule risk level
+     * @var integer Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
+2: Medium-risk
+3: High-risk
      */
     public $RiskLevel;
 
     /**
-     * @var string Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Function corresponding to the rule.
      */
     public $ServiceFunction;
 
     /**
-     * @var string Creation time
-
+     * @var string Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
      */
     public $CreateTime;
 
     /**
      * @var string Rule description
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $Description;
 
     /**
-     * @var string ACTIVE: Enabled
+     * @var string ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
      */
     public $Status;
 
     /**
-     * @var string Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
      */
     public $ComplianceResult;
 
     /**
      * @var Annotation ["",""]
-Note: This field may return null, indicating that no valid value is found.
      */
     public $Annotation;
 
@@ -270,176 +181,121 @@ Note: This field may return null, indicating that no valid value is found.
      * @var string Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
      */
     public $ConfigRuleInvokedTime;
 
     /**
      * @var string Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $ConfigRuleId;
 
     /**
-     * @var string CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
+     * @var string CUSTOMIZE: custom rule
+SYSTEM: managed rule
      */
     public $IdentifierType;
 
     /**
-     * @var string Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Compliance package ID.
      */
     public $CompliancePackId;
 
     /**
      * @var array Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
      */
     public $TriggerType;
 
     /**
      * @var array Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public $ManageInputParameter;
 
     /**
-     * @var string Rule name
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Compliance package name
      */
     public $CompliancePackName;
 
     /**
-     * @var array Associated region
-Note: This field may return null, indicating that no valid value is found.
+     * @var array Associated regions.
      */
     public $RegionsScope;
 
     /**
-     * @var array Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var array Associated tag
      */
     public $TagsScope;
 
     /**
-     * @var array  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * @var array  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
      */
     public $ExcludeResourceIdsScope;
 
     /**
-     * @var string Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Account group ID.
      */
     public $AccountGroupId;
 
     /**
-     * @var string Account group name
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Account group name.
      */
     public $AccountGroupName;
 
     /**
-     * @var integer Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
+     * @var integer Rule owner user ID.
      */
     public $RuleOwnerId;
 
     /**
-     * @var array Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+     * @var array Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
      */
     public $ManageTriggerType;
 
     /**
-     * @param string $Identifier Rule identifier
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $RuleName Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $Identifier Rule ID
+     * @param string $RuleName Rule Name
      * @param array $InputParameter Rule parameters
-Note: This field may return null, indicating that no valid value is found.
      * @param array $SourceCondition Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $ResourceType Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $Labels Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
-     * @param integer $RiskLevel Rule risk level
+     * @param array $ResourceType Resource types supported by the rule. The rule applies only to resources of the specified resource types.
+     * @param array $Labels Rule tags.
+     * @param integer $RiskLevel Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $ServiceFunction Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $CreateTime Creation time
-
+2: Medium-risk
+3: High-risk
+     * @param string $ServiceFunction Function corresponding to the rule.
+     * @param string $CreateTime Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
      * @param string $Description Rule description
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $Status ACTIVE: Enabled
+     * @param string $Status ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $ComplianceResult Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $ComplianceResult Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
      * @param Annotation $Annotation ["",""]
-Note: This field may return null, indicating that no valid value is found.
      * @param string $ConfigRuleInvokedTime Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
      * @param string $ConfigRuleId Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $IdentifierType CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $CompliancePackId Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $IdentifierType CUSTOMIZE: custom rule
+SYSTEM: managed rule
+     * @param string $CompliancePackId Compliance package ID.
      * @param array $TriggerType Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
      * @param array $ManageInputParameter Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $CompliancePackName Rule name
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $RegionsScope Associated region
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $TagsScope Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $AccountGroupId Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $AccountGroupName Account group name
-Note: This field may return null, indicating that no valid value is found.
-     * @param integer $RuleOwnerId Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $ManageTriggerType Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+     * @param string $CompliancePackName Compliance package name
+     * @param array $RegionsScope Associated regions.
+     * @param array $TagsScope Associated tag
+     * @param array $ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
+     * @param string $AccountGroupId Account group ID.
+     * @param string $AccountGroupName Account group name.
+     * @param integer $RuleOwnerId Rule owner user ID.
+     * @param array $ManageTriggerType Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
      */
     function __construct()
     {

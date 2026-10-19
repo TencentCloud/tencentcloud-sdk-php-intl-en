@@ -22,66 +22,46 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Search key.
  * @method void setName(string $Name) Set Search key.
- * @method array getValues() Obtain Search values.
- * @method void setValues(array $Values) Set Search values.
- * @method integer getOperatorType() Obtain Enum of integers that represent relations between Name and Values.
+ * @method integer getOperatorType() Obtain Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
- * @method void setOperatorType(integer $OperatorType) Set Enum of integers that represent relations between Name and Values.
+ * @method void setOperatorType(integer $OperatorType) Set Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
+ * @method array getValues() Obtain Search values, with an OR relationship between each search value.
+ * @method void setValues(array $Values) Set Search values, with an OR relationship between each search value.
  */
 class CommonFilter extends AbstractModel
 {
@@ -91,75 +71,55 @@ class CommonFilter extends AbstractModel
     public $Name;
 
     /**
-     * @var array Search values.
-     */
-    public $Values;
-
-    /**
-     * @var integer Enum of integers that represent relations between Name and Values.
+     * @var integer Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
      */
     public $OperatorType;
 
     /**
+     * @var array Search values, with an OR relationship between each search value.
+     */
+    public $Values;
+
+    /**
      * @param string $Name Search key.
-     * @param array $Values Search values.
-     * @param integer $OperatorType Enum of integers that represent relations between Name and Values.
+     * @param integer $OperatorType Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
+     * @param array $Values Search values, with an OR relationship between each search value.
      */
     function __construct()
     {
@@ -178,12 +138,12 @@ enum FilterOperatorType {
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
-        }
-
         if (array_key_exists("OperatorType",$param) and $param["OperatorType"] !== null) {
             $this->OperatorType = $param["OperatorType"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

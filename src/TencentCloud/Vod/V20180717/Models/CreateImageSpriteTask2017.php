@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video image sprite task. This structure is only used for tasks initiated by the 2017 [capture CSS sprites](https://www.tencentcloud.com/document/product/266/8101?from_cn_redirect=1) API.
+ * Video image sprite task. This structure is only used for tasks initiated by the 2017 capture CSS sprites API.
  *
  * @method string getTaskId() Obtain <p>Screenshot image sprite task ID.</p>
  * @method void setTaskId(string $TaskId) Set <p>Screenshot image sprite task ID.</p>

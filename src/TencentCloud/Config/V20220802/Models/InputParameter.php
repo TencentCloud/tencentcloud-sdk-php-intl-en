@@ -24,12 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameterKey(string $ParameterKey) Set Parameter name
  * @method string getType() Obtain Parameter type. Required type: Require, optional type: Optional.
  * @method void setType(string $Type) Set Parameter type. Required type: Require, optional type: Optional.
- * @method string getValue() Obtain Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
- * @method void setValue(string $Value) Set Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getValue() Obtain Parameter value.
+ * @method void setValue(string $Value) Set Parameter value.
  */
 class InputParameter extends AbstractModel
 {
@@ -44,18 +40,14 @@ class InputParameter extends AbstractModel
     public $Type;
 
     /**
-     * @var string Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Parameter value.
      */
     public $Value;
 
     /**
      * @param string $ParameterKey Parameter name
      * @param string $Type Parameter type. Required type: Require, optional type: Optional.
-     * @param string $Value Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $Value Parameter value.
      */
     function __construct()
     {

@@ -20,82 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListConfigRules request structure.
  *
- * @method integer getLimit() Obtain Page limit
- * @method void setLimit(integer $Limit) Set Page limit
+ * @method integer getLimit() Obtain Number of entries per page.
+Valid values: 1-200
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+Valid values: 1-200
  * @method integer getOffset() Obtain Offset.
+Value range: minimum value is 0
  * @method void setOffset(integer $Offset) Set Offset.
- * @method string getOrderType() Obtain Sort type. Descending: desc, Ascending: asc.
- * @method void setOrderType(string $OrderType) Set Sort type. Descending: desc, Ascending: asc.
- * @method array getRiskLevel() Obtain Risk level
-
-1: High risk.
-2: Medium risk.
+Value range: minimum value is 0
+ * @method string getOrderType() Obtain Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
+ * @method void setOrderType(string $OrderType) Set Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
+ * @method array getRiskLevel() Obtain Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
- * @method void setRiskLevel(array $RiskLevel) Set Risk level
-
-1: High risk.
-2: Medium risk.
+ * @method void setRiskLevel(array $RiskLevel) Set Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
- * @method string getState() Obtain Rule status
- * @method void setState(string $State) Set Rule status
- * @method array getComplianceResult() Obtain Evaluation result
- * @method void setComplianceResult(array $ComplianceResult) Set Evaluation result
- * @method string getRuleName() Obtain Name of the rule
- * @method void setRuleName(string $RuleName) Set Name of the rule
+ * @method string getState() Obtain Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
+ * @method void setState(string $State) Set Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
+ * @method array getComplianceResult() Obtain Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+ * @method void setComplianceResult(array $ComplianceResult) Set Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+ * @method string getRuleName() Obtain Rule Name
+ * @method void setRuleName(string $RuleName) Set Rule Name
  */
 class ListConfigRulesRequest extends AbstractModel
 {
     /**
-     * @var integer Page limit
+     * @var integer Number of entries per page.
+Valid values: 1-200
      */
     public $Limit;
 
     /**
      * @var integer Offset.
+Value range: minimum value is 0
      */
     public $Offset;
 
     /**
-     * @var string Sort type. Descending: desc, Ascending: asc.
+     * @var string Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
      */
     public $OrderType;
 
     /**
-     * @var array Risk level
-
-1: High risk.
-2: Medium risk.
+     * @var array Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
      */
     public $RiskLevel;
 
     /**
-     * @var string Rule status
+     * @var string Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
      */
     public $State;
 
     /**
-     * @var array Evaluation result
+     * @var array Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
      */
     public $ComplianceResult;
 
     /**
-     * @var string Name of the rule
+     * @var string Rule Name
      */
     public $RuleName;
 
     /**
-     * @param integer $Limit Page limit
+     * @param integer $Limit Number of entries per page.
+Valid values: 1-200
      * @param integer $Offset Offset.
-     * @param string $OrderType Sort type. Descending: desc, Ascending: asc.
-     * @param array $RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
+Value range: minimum value is 0
+     * @param string $OrderType Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
+     * @param array $RiskLevel Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
-     * @param string $State Rule status
-     * @param array $ComplianceResult Evaluation result
-     * @param string $RuleName Name of the rule
+     * @param string $State Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
+     * @param array $ComplianceResult Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+     * @param string $RuleName Rule Name
      */
     function __construct()
     {

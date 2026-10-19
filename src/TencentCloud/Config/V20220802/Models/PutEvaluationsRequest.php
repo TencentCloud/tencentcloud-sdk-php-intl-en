@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PutEvaluations request structure.
  *
- * @method string getResultToken() Obtain Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
- * @method void setResultToken(string $ResultToken) Set Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
+ * @method string getResultToken() Obtain Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
+ * @method void setResultToken(string $ResultToken) Set Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
  * @method array getEvaluations() Obtain Custom rule evaluation result information.
  * @method void setEvaluations(array $Evaluations) Set Custom rule evaluation result information.
  */
 class PutEvaluationsRequest extends AbstractModel
 {
     /**
-     * @var string Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
+     * @var string Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
      */
     public $ResultToken;
 
@@ -38,7 +41,8 @@ class PutEvaluationsRequest extends AbstractModel
     public $Evaluations;
 
     /**
-     * @param string $ResultToken Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
+     * @param string $ResultToken Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
      * @param array $Evaluations Custom rule evaluation result information.
      */
     function __construct()

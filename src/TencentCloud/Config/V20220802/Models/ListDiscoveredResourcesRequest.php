@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDiscoveredResources request structure.
  *
- * @method integer getMaxResults() Obtain Items per Page
- * @method void setMaxResults(integer $MaxResults) Set Items per Page
- * @method array getFilters() Obtain resourceName: Resource name resourceId: Resource ID
- * @method void setFilters(array $Filters) Set resourceName: Resource name resourceId: Resource ID
- * @method array getTags() Obtain Tag
- * @method void setTags(array $Tags) Set Tag
- * @method string getNextToken() Obtain Next page token.
- * @method void setNextToken(string $NextToken) Set Next page token.
- * @method string getOrderType() Obtain Sorting method asc, desc
- * @method void setOrderType(string $OrderType) Set Sorting method asc, desc
+ * @method integer getMaxResults() Obtain <p>Number of results displayed per page</p>
+ * @method void setMaxResults(integer $MaxResults) Set <p>Number of results displayed per page</p>
+ * @method array getFilters() Obtain <p>resourceName: resource name  resourceId: resource ID</p>
+ * @method void setFilters(array $Filters) Set <p>resourceName: resource name  resourceId: resource ID</p>
+ * @method array getTags() Obtain <p>Tag.</p>
+ * @method void setTags(array $Tags) Set <p>Tag.</p>
+ * @method string getNextToken() Obtain <p>Next page token</p>
+ * @method void setNextToken(string $NextToken) Set <p>Next page token</p>
+ * @method string getOrderType() Obtain <p>Sorting method: asc, desc</p>
+ * @method void setOrderType(string $OrderType) Set <p>Sorting method: asc, desc</p>
  */
 class ListDiscoveredResourcesRequest extends AbstractModel
 {
     /**
-     * @var integer Items per Page
+     * @var integer <p>Number of results displayed per page</p>
      */
     public $MaxResults;
 
     /**
-     * @var array resourceName: Resource name resourceId: Resource ID
+     * @var array <p>resourceName: resource name  resourceId: resource ID</p>
      */
     public $Filters;
 
     /**
-     * @var array Tag
+     * @var array <p>Tag.</p>
      */
     public $Tags;
 
     /**
-     * @var string Next page token.
+     * @var string <p>Next page token</p>
      */
     public $NextToken;
 
     /**
-     * @var string Sorting method asc, desc
+     * @var string <p>Sorting method: asc, desc</p>
      */
     public $OrderType;
 
     /**
-     * @param integer $MaxResults Items per Page
-     * @param array $Filters resourceName: Resource name resourceId: Resource ID
-     * @param array $Tags Tag
-     * @param string $NextToken Next page token.
-     * @param string $OrderType Sorting method asc, desc
+     * @param integer $MaxResults <p>Number of results displayed per page</p>
+     * @param array $Filters <p>resourceName: resource name  resourceId: resource ID</p>
+     * @param array $Tags <p>Tag.</p>
+     * @param string $NextToken <p>Next page token</p>
+     * @param string $OrderType <p>Sorting method: asc, desc</p>
      */
     function __construct()
     {
