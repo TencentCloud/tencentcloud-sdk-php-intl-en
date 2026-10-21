@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * PhoneVerification response structure.
  *
  * @method string getResult() Obtain Verification result code.
--Fee result code
-Three-element information consistency.
+Fee result code
+-0:Three-element information consistency.
 -4: Three-element information inconsistency.
 
--No charge result code
+No charge result code
 -6: Invalid phone number.
 -7: Identity number error.
 -8: Name verification failed.
@@ -34,11 +34,11 @@ Three-element information consistency.
 -12: Authentication attempts exceeded the daily limit. Retry the next day.
 -13: The number range is unsupported for verification.
  * @method void setResult(string $Result) Set Verification result code.
--Fee result code
-Three-element information consistency.
+Fee result code
+-0:Three-element information consistency.
 -4: Three-element information inconsistency.
 
--No charge result code
+No charge result code
 -6: Invalid phone number.
 -7: Identity number error.
 -8: Name verification failed.
@@ -59,11 +59,11 @@ class PhoneVerificationResponse extends AbstractModel
 {
     /**
      * @var string Verification result code.
--Fee result code
-Three-element information consistency.
+Fee result code
+-0:Three-element information consistency.
 -4: Three-element information inconsistency.
 
--No charge result code
+No charge result code
 -6: Invalid phone number.
 -7: Identity number error.
 -8: Name verification failed.
@@ -92,11 +92,11 @@ Three-element information consistency.
 
     /**
      * @param string $Result Verification result code.
--Fee result code
-Three-element information consistency.
+Fee result code
+-0:Three-element information consistency.
 -4: Three-element information inconsistency.
 
--No charge result code
+No charge result code
 -6: Invalid phone number.
 -7: Identity number error.
 -8: Name verification failed.
