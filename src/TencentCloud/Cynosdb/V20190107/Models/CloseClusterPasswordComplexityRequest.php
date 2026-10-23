@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseClusterPasswordComplexity request structure.
  *
- * @method array getClusterIds() Obtain Cluster IDs in array
- * @method void setClusterIds(array $ClusterIds) Set Cluster IDs in array
+ * @method array getClusterIds() Obtain Cluster ID array.
+ * @method void setClusterIds(array $ClusterIds) Set Cluster ID array.
  */
 class CloseClusterPasswordComplexityRequest extends AbstractModel
 {
     /**
-     * @var array Cluster IDs in array
+     * @var array Cluster ID array.
      */
     public $ClusterIds;
 
     /**
-     * @param array $ClusterIds Cluster IDs in array
+     * @param array $ClusterIds Cluster ID array.
      */
     function __construct()
     {

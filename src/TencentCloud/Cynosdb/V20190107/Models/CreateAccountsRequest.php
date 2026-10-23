@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
- * @method array getAccounts() Obtain <p>New account list</p>
- * @method void setAccounts(array $Accounts) Set <p>New account list</p>
+ * @method array getAccounts() Obtain <p>New account list.</p>
+ * @method void setAccounts(array $Accounts) Set <p>New account list.</p>
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateAccountsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array <p>New account list</p>
+     * @var array <p>New account list.</p>
      */
     public $Accounts;
 
     /**
      * @param string $ClusterId <p>Cluster ID.</p>
-     * @param array $Accounts <p>New account list</p>
+     * @param array $Accounts <p>New account list.</p>
      */
     function __construct()
     {

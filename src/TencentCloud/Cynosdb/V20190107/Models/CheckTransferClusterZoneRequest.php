@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckTransferClusterZone request structure.
  *
- * @method string getClusterId() Obtain Source Cluster Id
- * @method void setClusterId(string $ClusterId) Set Source Cluster Id
- * @method string getDstZone() Obtain Target availability zone
- * @method void setDstZone(string $DstZone) Set Target availability zone
+ * @method string getClusterId() Obtain Source cluster Id
+ * @method void setClusterId(string $ClusterId) Set Source cluster Id
+ * @method string getDstZone() Obtain Target zone
+ * @method void setDstZone(string $DstZone) Set Target zone
  * @method array getProxyZones() Obtain Target zone info for proxy migration
  * @method void setProxyZones(array $ProxyZones) Set Target zone info for proxy migration
  */
 class CheckTransferClusterZoneRequest extends AbstractModel
 {
     /**
-     * @var string Source Cluster Id
+     * @var string Source cluster Id
      */
     public $ClusterId;
 
     /**
-     * @var string Target availability zone
+     * @var string Target zone
      */
     public $DstZone;
 
@@ -45,8 +45,8 @@ class CheckTransferClusterZoneRequest extends AbstractModel
     public $ProxyZones;
 
     /**
-     * @param string $ClusterId Source Cluster Id
-     * @param string $DstZone Target availability zone
+     * @param string $ClusterId Source cluster Id
+     * @param string $DstZone Target zone
      * @param array $ProxyZones Target zone info for proxy migration
      */
     function __construct()

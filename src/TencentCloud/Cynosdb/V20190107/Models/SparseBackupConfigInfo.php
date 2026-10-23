@@ -18,18 +18,18 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sparse backup policy configuration info
+ * Sparse backup policy configuration information
  *
  * @method string getOpType() Obtain <p>Operation type: add, modify, remove</p>
  * @method void setOpType(string $OpType) Set <p>Operation type: add, modify, remove</p>
  * @method string getConfigId() Obtain <p>Configuration ID</p>
  * @method void setConfigId(string $ConfigId) Set <p>Configuration ID</p>
- * @method string getSparsePeriodConfig() Obtain <p>Policy type: weekly/monthly/yearly</p>
- * @method void setSparsePeriodConfig(string $SparsePeriodConfig) Set <p>Policy type: weekly/monthly/yearly</p>
- * @method SparsePeriodTime getSparsePeriodTime() Obtain <p>Cycle time configuration</p>
- * @method void setSparsePeriodTime(SparsePeriodTime $SparsePeriodTime) Set <p>Cycle time configuration</p>
- * @method integer getSparseBackupSaveDays() Obtain <p>Retention days (7-7320 days, longest 20 years)</p>
- * @method void setSparseBackupSaveDays(integer $SparseBackupSaveDays) Set <p>Retention days (7-7320 days, longest 20 years)</p>
+ * @method string getSparsePeriodConfig() Obtain <p>Period policy type: weekly/monthly/yearly</p>
+ * @method void setSparsePeriodConfig(string $SparsePeriodConfig) Set <p>Period policy type: weekly/monthly/yearly</p>
+ * @method SparsePeriodTime getSparsePeriodTime() Obtain <p>Periodic time configuration</p>
+ * @method void setSparsePeriodTime(SparsePeriodTime $SparsePeriodTime) Set <p>Periodic time configuration</p>
+ * @method integer getSparseBackupSaveDays() Obtain <p>Retention days (7-7320 days, up to 20 years)</p>
+ * @method void setSparseBackupSaveDays(integer $SparseBackupSaveDays) Set <p>Retention days (7-7320 days, up to 20 years)</p>
  */
 class SparseBackupConfigInfo extends AbstractModel
 {
@@ -44,26 +44,26 @@ class SparseBackupConfigInfo extends AbstractModel
     public $ConfigId;
 
     /**
-     * @var string <p>Policy type: weekly/monthly/yearly</p>
+     * @var string <p>Period policy type: weekly/monthly/yearly</p>
      */
     public $SparsePeriodConfig;
 
     /**
-     * @var SparsePeriodTime <p>Cycle time configuration</p>
+     * @var SparsePeriodTime <p>Periodic time configuration</p>
      */
     public $SparsePeriodTime;
 
     /**
-     * @var integer <p>Retention days (7-7320 days, longest 20 years)</p>
+     * @var integer <p>Retention days (7-7320 days, up to 20 years)</p>
      */
     public $SparseBackupSaveDays;
 
     /**
      * @param string $OpType <p>Operation type: add, modify, remove</p>
      * @param string $ConfigId <p>Configuration ID</p>
-     * @param string $SparsePeriodConfig <p>Policy type: weekly/monthly/yearly</p>
-     * @param SparsePeriodTime $SparsePeriodTime <p>Cycle time configuration</p>
-     * @param integer $SparseBackupSaveDays <p>Retention days (7-7320 days, longest 20 years)</p>
+     * @param string $SparsePeriodConfig <p>Period policy type: weekly/monthly/yearly</p>
+     * @param SparsePeriodTime $SparsePeriodTime <p>Periodic time configuration</p>
+     * @param integer $SparseBackupSaveDays <p>Retention days (7-7320 days, up to 20 years)</p>
      */
     function __construct()
     {

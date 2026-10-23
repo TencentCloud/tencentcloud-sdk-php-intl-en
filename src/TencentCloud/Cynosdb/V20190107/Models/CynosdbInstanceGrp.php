@@ -20,53 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance group information
  *
- * @method integer getAppId() Obtain User `appId`
- * @method void setAppId(integer $AppId) Set User `appId`
+ * @method integer getAppId() Obtain User AppID
+ * @method void setAppId(integer $AppId) Set User AppID
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getCreatedTime() Obtain Creation time
- * @method void setCreatedTime(string $CreatedTime) Set Creation time
+ * @method string getCreatedTime() Obtain Creation time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time.
  * @method string getDeletedTime() Obtain Deletion time
  * @method void setDeletedTime(string $DeletedTime) Set Deletion time
  * @method string getInstanceGrpId() Obtain Instance group ID
  * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID
- * @method string getStatus() Obtain Status
- * @method void setStatus(string $Status) Set Status
- * @method string getType() Obtain Instance group type. ha: HA group; ro: RO group
- * @method void setType(string $Type) Set Instance group type. ha: HA group; ro: RO group
- * @method string getUpdatedTime() Obtain Update time
- * @method void setUpdatedTime(string $UpdatedTime) Set Update time
- * @method string getVip() Obtain Private IP
- * @method void setVip(string $Vip) Set Private IP
- * @method integer getVport() Obtain Private port
- * @method void setVport(integer $Vport) Set Private port
- * @method string getWanDomain() Obtain Public domain name
- * @method void setWanDomain(string $WanDomain) Set Public domain name
- * @method string getWanIP() Obtain Public IP
- * @method void setWanIP(string $WanIP) Set Public IP
- * @method integer getWanPort() Obtain Public port
- * @method void setWanPort(integer $WanPort) Set Public port
- * @method string getWanStatus() Obtain Public network status
- * @method void setWanStatus(string $WanStatus) Set Public network status
- * @method array getInstanceSet() Obtain Information of instances contained in instance group
- * @method void setInstanceSet(array $InstanceSet) Set Information of instances contained in instance group
+ * @method string getStatus() Obtain Status.
+ * @method void setStatus(string $Status) Set Status.
+ * @method string getType() Obtain Instance group type. ha: HA group; ro: read-only group
+ * @method void setType(string $Type) Set Instance group type. ha: HA group; ro: read-only group
+ * @method string getUpdatedTime() Obtain Update time.
+ * @method void setUpdatedTime(string $UpdatedTime) Set Update time.
+ * @method string getVip() Obtain Private IP address
+ * @method void setVip(string $Vip) Set Private IP address
+ * @method integer getVport() Obtain Private network port
+ * @method void setVport(integer $Vport) Set Private network port
+ * @method string getWanDomain() Obtain Public network domain name.
+ * @method void setWanDomain(string $WanDomain) Set Public network domain name.
+ * @method string getWanIP() Obtain Public IP address
+ * @method void setWanIP(string $WanIP) Set Public IP address
+ * @method integer getWanPort() Obtain External port
+ * @method void setWanPort(integer $WanPort) Set External port
+ * @method string getWanStatus() Obtain Public network status.
+ * @method void setWanStatus(string $WanStatus) Set Public network status.
+ * @method array getInstanceSet() Obtain Instance group information including instances
+ * @method void setInstanceSet(array $InstanceSet) Set Instance group information including instances
  * @method string getUniqVpcId() Obtain VPC ID
  * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID
  * @method string getUniqSubnetId() Obtain Subnet ID.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID.
  * @method OldAddrInfo getOldAddrInfo() Obtain Recycling IP information
  * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) Set Recycling IP information
- * @method array getProcessingTasks() Obtain Task in progress
- * @method void setProcessingTasks(array $ProcessingTasks) Set Task in progress
+ * @method array getProcessingTasks() Obtain Ongoing task
+ * @method void setProcessingTasks(array $ProcessingTasks) Set Ongoing task
  * @method array getTasks() Obtain Task list
  * @method void setTasks(array $Tasks) Set Task list
- * @method integer getNetServiceId() Obtain biz_net_service table ID
- * @method void setNetServiceId(integer $NetServiceId) Set biz_net_service table ID
+ * @method integer getNetServiceId() Obtain id of the biz_net_service table
+ * @method void setNetServiceId(integer $NetServiceId) Set id of the biz_net_service table
  */
 class CynosdbInstanceGrp extends AbstractModel
 {
     /**
-     * @var integer User `appId`
+     * @var integer User AppID
      */
     public $AppId;
 
@@ -76,7 +76,7 @@ class CynosdbInstanceGrp extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreatedTime;
 
@@ -91,52 +91,52 @@ class CynosdbInstanceGrp extends AbstractModel
     public $InstanceGrpId;
 
     /**
-     * @var string Status
+     * @var string Status.
      */
     public $Status;
 
     /**
-     * @var string Instance group type. ha: HA group; ro: RO group
+     * @var string Instance group type. ha: HA group; ro: read-only group
      */
     public $Type;
 
     /**
-     * @var string Update time
+     * @var string Update time.
      */
     public $UpdatedTime;
 
     /**
-     * @var string Private IP
+     * @var string Private IP address
      */
     public $Vip;
 
     /**
-     * @var integer Private port
+     * @var integer Private network port
      */
     public $Vport;
 
     /**
-     * @var string Public domain name
+     * @var string Public network domain name.
      */
     public $WanDomain;
 
     /**
-     * @var string Public IP
+     * @var string Public IP address
      */
     public $WanIP;
 
     /**
-     * @var integer Public port
+     * @var integer External port
      */
     public $WanPort;
 
     /**
-     * @var string Public network status
+     * @var string Public network status.
      */
     public $WanStatus;
 
     /**
-     * @var array Information of instances contained in instance group
+     * @var array Instance group information including instances
      */
     public $InstanceSet;
 
@@ -156,7 +156,7 @@ class CynosdbInstanceGrp extends AbstractModel
     public $OldAddrInfo;
 
     /**
-     * @var array Task in progress
+     * @var array Ongoing task
      */
     public $ProcessingTasks;
 
@@ -166,32 +166,32 @@ class CynosdbInstanceGrp extends AbstractModel
     public $Tasks;
 
     /**
-     * @var integer biz_net_service table ID
+     * @var integer id of the biz_net_service table
      */
     public $NetServiceId;
 
     /**
-     * @param integer $AppId User `appId`
+     * @param integer $AppId User AppID
      * @param string $ClusterId Cluster ID
-     * @param string $CreatedTime Creation time
+     * @param string $CreatedTime Creation time.
      * @param string $DeletedTime Deletion time
      * @param string $InstanceGrpId Instance group ID
-     * @param string $Status Status
-     * @param string $Type Instance group type. ha: HA group; ro: RO group
-     * @param string $UpdatedTime Update time
-     * @param string $Vip Private IP
-     * @param integer $Vport Private port
-     * @param string $WanDomain Public domain name
-     * @param string $WanIP Public IP
-     * @param integer $WanPort Public port
-     * @param string $WanStatus Public network status
-     * @param array $InstanceSet Information of instances contained in instance group
+     * @param string $Status Status.
+     * @param string $Type Instance group type. ha: HA group; ro: read-only group
+     * @param string $UpdatedTime Update time.
+     * @param string $Vip Private IP address
+     * @param integer $Vport Private network port
+     * @param string $WanDomain Public network domain name.
+     * @param string $WanIP Public IP address
+     * @param integer $WanPort External port
+     * @param string $WanStatus Public network status.
+     * @param array $InstanceSet Instance group information including instances
      * @param string $UniqVpcId VPC ID
      * @param string $UniqSubnetId Subnet ID.
      * @param OldAddrInfo $OldAddrInfo Recycling IP information
-     * @param array $ProcessingTasks Task in progress
+     * @param array $ProcessingTasks Ongoing task
      * @param array $Tasks Task list
-     * @param integer $NetServiceId biz_net_service table ID
+     * @param integer $NetServiceId id of the biz_net_service table
      */
     function __construct()
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster task ID.
+ * Cluster task ID
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getTaskId() Obtain Task ID
- * @method void setTaskId(string $TaskId) Set Task ID
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
  */
 class ClusterTaskId extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ClusterTaskId extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Task ID
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $TaskId Task ID
+     * @param string $TaskId Task ID.
      */
     function __construct()
     {

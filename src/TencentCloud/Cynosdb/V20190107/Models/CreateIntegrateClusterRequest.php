@@ -20,278 +20,278 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIntegrateCluster request structure.
  *
- * @method string getZone() Obtain Availability zone.
- * @method void setZone(string $Zone) Set Availability zone.
- * @method string getVpcId() Obtain Specifies the ID of the VPC network it belongs to.
- * @method void setVpcId(string $VpcId) Set Specifies the ID of the VPC network it belongs to.
- * @method string getSubnetId() Obtain Subnet ID.
- * @method void setSubnetId(string $SubnetId) Set Subnet ID.
- * @method string getDbVersion() Obtain Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
- * @method void setDbVersion(string $DbVersion) Set Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method string getClusterName() Obtain Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
- * @method void setClusterName(string $ClusterName) Set Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
- * @method string getAdminPassword() Obtain Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
- * @method void setAdminPassword(string $AdminPassword) Set Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
- * @method integer getPort() Obtain Port, default 3306, in the range of [0, 65535).
- * @method void setPort(integer $Port) Set Port, default 3306, in the range of [0, 65535).
- * @method integer getPayMode() Obtain Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
- * @method void setPayMode(integer $PayMode) Set Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
- * @method integer getCount() Obtain Number of clusters to purchase. value range: [1,3]. default is 1.
- * @method void setCount(integer $Count) Set Number of clusters to purchase. value range: [1,3]. default is 1.
- * @method integer getStorageLimit() Obtain Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
- * @method void setStorageLimit(integer $StorageLimit) Set Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
- * @method integer getTimeSpan() Obtain Specifies the annual and monthly subscription duration.
- * @method void setTimeSpan(integer $TimeSpan) Set Specifies the annual and monthly subscription duration.
- * @method string getTimeUnit() Obtain Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
- * @method void setTimeUnit(string $TimeUnit) Set Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
- * @method integer getAutoRenewFlag() Obtain Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
- * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
- * @method array getResourceTags() Obtain Specifies the tag array information that needs to be bound during cluster creation.
- * @method void setResourceTags(array $ResourceTags) Set Specifies the tag array information that needs to be bound during cluster creation.
- * @method integer getStoragePayMode() Obtain Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+ * @method string getZone() Obtain Availability zone
+ * @method void setZone(string $Zone) Set Availability zone
+ * @method string getVpcId() Obtain VPC network ID
+ * @method void setVpcId(string $VpcId) Set VPC network ID
+ * @method string getSubnetId() Obtain Subnet ID
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID
+ * @method string getDbVersion() Obtain Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
+ * @method void setDbVersion(string $DbVersion) Set Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method string getClusterName() Obtain Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
+ * @method void setClusterName(string $ClusterName) Set Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
+ * @method string getAdminPassword() Obtain Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
+ * @method void setAdminPassword(string $AdminPassword) Set Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
+ * @method integer getPort() Obtain Port. Default value: 3306. Value range: [0, 65535).
+ * @method void setPort(integer $Port) Set Port. Default value: 3306. Value range: [0, 65535).
+ * @method integer getPayMode() Obtain Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
+ * @method void setPayMode(integer $PayMode) Set Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
+ * @method integer getCount() Obtain Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
+ * @method void setCount(integer $Count) Set Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
+ * @method integer getStorageLimit() Obtain Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
+ * @method void setStorageLimit(integer $StorageLimit) Set Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
+ * @method integer getTimeSpan() Obtain Annual and monthly subscription duration.
+ * @method void setTimeSpan(integer $TimeSpan) Set Annual and monthly subscription duration.
+ * @method string getTimeUnit() Obtain Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
+ * @method void setTimeUnit(string $TimeUnit) Set Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
+ * @method integer getAutoRenewFlag() Obtain Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
+ * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+ * @method array getResourceTags() Obtain tag array information that needs to be bound for cluster creation
+ * @method void setResourceTags(array $ResourceTags) Set tag array information that needs to be bound for cluster creation
+ * @method integer getStoragePayMode() Obtain Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
- * @method void setStoragePayMode(integer $StoragePayMode) Set Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
- * @method array getSecurityGroupIds() Obtain Security group id array.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group id array.
- * @method array getAlarmPolicyIds() Obtain Specifies the Alarm policy Id array.
- * @method void setAlarmPolicyIds(array $AlarmPolicyIds) Set Specifies the Alarm policy Id array.
- * @method array getClusterParams() Obtain Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
- * @method void setClusterParams(array $ClusterParams) Set Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
- * @method integer getDealMode() Obtain Transaction mode. valid values: 0 (place order and pay), 1 (place order).
- * @method void setDealMode(integer $DealMode) Set Transaction mode. valid values: 0 (place order and pay), 1 (place order).
- * @method integer getParamTemplateId() Obtain Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
- * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
- * @method string getSlaveZone() Obtain Multi-AZ address.
- * @method void setSlaveZone(string $SlaveZone) Set Multi-AZ address.
- * @method array getInstanceInitInfos() Obtain Initializes configuration information, mainly used to purchase clusters with different specification instances.
- * @method void setInstanceInitInfos(array $InstanceInitInfos) Set Initializes configuration information, mainly used to purchase clusters with different specification instances.
- * @method string getGdnId() Obtain Global database unique identifier.
- * @method void setGdnId(string $GdnId) Set Global database unique identifier.
- * @method ProxyConfigInfo getProxyConfig() Obtain Database proxy configuration.
- * @method void setProxyConfig(ProxyConfigInfo $ProxyConfig) Set Database proxy configuration.
- * @method string getAutoArchive() Obtain Specifies whether to automatically archive.
- * @method void setAutoArchive(string $AutoArchive) Set Specifies whether to automatically archive.
- * @method integer getAutoArchiveDelayHours() Obtain Processing time after pausing.
- * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) Set Processing time after pausing.
- * @method string getEncryptMethod() Obtain Encryption method (consists of encryption algorithm and key pair version).
- * @method void setEncryptMethod(string $EncryptMethod) Set Encryption method (consists of encryption algorithm and key pair version).
- * @method IntegrateCreateClusterConfig getIntegrateCreateClusterConfig() Obtain Describes the cluster configuration information.
- * @method void setIntegrateCreateClusterConfig(IntegrateCreateClusterConfig $IntegrateCreateClusterConfig) Set Describes the cluster configuration information.
- * @method string getStorageVersion() Obtain Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
- * @method void setStorageVersion(string $StorageVersion) Set Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
+ * @method array getSecurityGroupIds() Obtain Security group id array
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group id array
+ * @method array getAlarmPolicyIds() Obtain Alarm policy Id array
+ * @method void setAlarmPolicyIds(array $AlarmPolicyIds) Set Alarm policy Id array
+ * @method array getClusterParams() Obtain Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
+ * @method void setClusterParams(array $ClusterParams) Set Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
+ * @method integer getDealMode() Obtain Transaction mode. 0: Place order and pay. 1: Place order
+ * @method void setDealMode(integer $DealMode) Set Transaction mode. 0: Place order and pay. 1: Place order
+ * @method integer getParamTemplateId() Obtain Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
+ * @method string getSlaveZone() Obtain Multi-az address
+ * @method void setSlaveZone(string $SlaveZone) Set Multi-az address
+ * @method array getInstanceInitInfos() Obtain Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
+ * @method void setInstanceInitInfos(array $InstanceInitInfos) Set Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
+ * @method string getGdnId() Obtain Global database unique ID
+ * @method void setGdnId(string $GdnId) Set Global database unique ID
+ * @method ProxyConfigInfo getProxyConfig() Obtain Database proxy configuration
+ * @method void setProxyConfig(ProxyConfigInfo $ProxyConfig) Set Database proxy configuration
+ * @method string getAutoArchive() Obtain Whether to automatically archive
+ * @method void setAutoArchive(string $AutoArchive) Set Whether to automatically archive
+ * @method integer getAutoArchiveDelayHours() Obtain Archiving processing time after pausing
+ * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) Set Archiving processing time after pausing
+ * @method string getEncryptMethod() Obtain Encryption method (consists of the encryption algorithm and key pair version)
+ * @method void setEncryptMethod(string $EncryptMethod) Set Encryption method (consists of the encryption algorithm and key pair version)
+ * @method IntegrateCreateClusterConfig getIntegrateCreateClusterConfig() Obtain Integrated cluster configuration information
+ * @method void setIntegrateCreateClusterConfig(IntegrateCreateClusterConfig $IntegrateCreateClusterConfig) Set Integrated cluster configuration information
+ * @method string getStorageVersion() Obtain Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
+ * @method void setStorageVersion(string $StorageVersion) Set Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
  */
 class CreateIntegrateClusterRequest extends AbstractModel
 {
     /**
-     * @var string Availability zone.
+     * @var string Availability zone
      */
     public $Zone;
 
     /**
-     * @var string Specifies the ID of the VPC network it belongs to.
+     * @var string VPC network ID
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID.
+     * @var string Subnet ID
      */
     public $SubnetId;
 
     /**
-     * @var string Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
+     * @var string Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
      */
     public $DbVersion;
 
     /**
-     * @var integer Project ID.
+     * @var integer Project ID
      */
     public $ProjectId;
 
     /**
-     * @var string Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
+     * @var string Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
      */
     public $ClusterName;
 
     /**
-     * @var string Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+     * @var string Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
      */
     public $AdminPassword;
 
     /**
-     * @var integer Port, default 3306, in the range of [0, 65535).
+     * @var integer Port. Default value: 3306. Value range: [0, 65535).
      */
     public $Port;
 
     /**
-     * @var integer Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
+     * @var integer Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
      */
     public $PayMode;
 
     /**
-     * @var integer Number of clusters to purchase. value range: [1,3]. default is 1.
+     * @var integer Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
      */
     public $Count;
 
     /**
-     * @var integer Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
+     * @var integer Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
      */
     public $StorageLimit;
 
     /**
-     * @var integer Specifies the annual and monthly subscription duration.
+     * @var integer Annual and monthly subscription duration.
      */
     public $TimeSpan;
 
     /**
-     * @var string Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
+     * @var string Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
      */
     public $TimeUnit;
 
     /**
-     * @var integer Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
+     * @var integer Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
+     * @var integer Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
      */
     public $AutoVoucher;
 
     /**
-     * @var array Specifies the tag array information that needs to be bound during cluster creation.
+     * @var array tag array information that needs to be bound for cluster creation
      */
     public $ResourceTags;
 
     /**
-     * @var integer Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+     * @var integer Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
      */
     public $StoragePayMode;
 
     /**
-     * @var array Security group id array.
+     * @var array Security group id array
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array Specifies the Alarm policy Id array.
+     * @var array Alarm policy Id array
      */
     public $AlarmPolicyIds;
 
     /**
-     * @var array Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
+     * @var array Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
      */
     public $ClusterParams;
 
     /**
-     * @var integer Transaction mode. valid values: 0 (place order and pay), 1 (place order).
+     * @var integer Transaction mode. 0: Place order and pay. 1: Place order
      */
     public $DealMode;
 
     /**
-     * @var integer Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
+     * @var integer Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
      */
     public $ParamTemplateId;
 
     /**
-     * @var string Multi-AZ address.
+     * @var string Multi-az address
      */
     public $SlaveZone;
 
     /**
-     * @var array Initializes configuration information, mainly used to purchase clusters with different specification instances.
+     * @var array Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
      */
     public $InstanceInitInfos;
 
     /**
-     * @var string Global database unique identifier.
+     * @var string Global database unique ID
      */
     public $GdnId;
 
     /**
-     * @var ProxyConfigInfo Database proxy configuration.
+     * @var ProxyConfigInfo Database proxy configuration
      */
     public $ProxyConfig;
 
     /**
-     * @var string Specifies whether to automatically archive.
+     * @var string Whether to automatically archive
      */
     public $AutoArchive;
 
     /**
-     * @var integer Processing time after pausing.
+     * @var integer Archiving processing time after pausing
      */
     public $AutoArchiveDelayHours;
 
     /**
-     * @var string Encryption method (consists of encryption algorithm and key pair version).
+     * @var string Encryption method (consists of the encryption algorithm and key pair version)
      */
     public $EncryptMethod;
 
     /**
-     * @var IntegrateCreateClusterConfig Describes the cluster configuration information.
+     * @var IntegrateCreateClusterConfig Integrated cluster configuration information
      */
     public $IntegrateCreateClusterConfig;
 
     /**
-     * @var string Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
+     * @var string Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     public $StorageVersion;
 
     /**
-     * @param string $Zone Availability zone.
-     * @param string $VpcId Specifies the ID of the VPC network it belongs to.
-     * @param string $SubnetId Subnet ID.
-     * @param string $DbVersion Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
-     * @param integer $ProjectId Project ID.
-     * @param string $ClusterName Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
-     * @param string $AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
-     * @param integer $Port Port, default 3306, in the range of [0, 65535).
-     * @param integer $PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-     * @param integer $Count Number of clusters to purchase. value range: [1,3]. default is 1.
-     * @param integer $StorageLimit Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
-     * @param integer $TimeSpan Specifies the annual and monthly subscription duration.
-     * @param string $TimeUnit Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
-     * @param integer $AutoRenewFlag Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
-     * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
-     * @param array $ResourceTags Specifies the tag array information that needs to be bound during cluster creation.
-     * @param integer $StoragePayMode Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+     * @param string $Zone Availability zone
+     * @param string $VpcId VPC network ID
+     * @param string $SubnetId Subnet ID
+     * @param string $DbVersion Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
+     * @param integer $ProjectId Project ID
+     * @param string $ClusterName Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
+     * @param string $AdminPassword Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
+     * @param integer $Port Port. Default value: 3306. Value range: [0, 65535).
+     * @param integer $PayMode Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
+     * @param integer $Count Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
+     * @param integer $StorageLimit Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
+     * @param integer $TimeSpan Annual and monthly subscription duration.
+     * @param string $TimeUnit Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
+     * @param integer $AutoRenewFlag Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
+     * @param integer $AutoVoucher Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+     * @param array $ResourceTags tag array information that needs to be bound for cluster creation
+     * @param integer $StoragePayMode Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
-     * @param array $SecurityGroupIds Security group id array.
-     * @param array $AlarmPolicyIds Specifies the Alarm policy Id array.
-     * @param array $ClusterParams Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
-     * @param integer $DealMode Transaction mode. valid values: 0 (place order and pay), 1 (place order).
-     * @param integer $ParamTemplateId Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
-     * @param string $SlaveZone Multi-AZ address.
-     * @param array $InstanceInitInfos Initializes configuration information, mainly used to purchase clusters with different specification instances.
-     * @param string $GdnId Global database unique identifier.
-     * @param ProxyConfigInfo $ProxyConfig Database proxy configuration.
-     * @param string $AutoArchive Specifies whether to automatically archive.
-     * @param integer $AutoArchiveDelayHours Processing time after pausing.
-     * @param string $EncryptMethod Encryption method (consists of encryption algorithm and key pair version).
-     * @param IntegrateCreateClusterConfig $IntegrateCreateClusterConfig Describes the cluster configuration information.
-     * @param string $StorageVersion Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
+     * @param array $SecurityGroupIds Security group id array
+     * @param array $AlarmPolicyIds Alarm policy Id array
+     * @param array $ClusterParams Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
+     * @param integer $DealMode Transaction mode. 0: Place order and pay. 1: Place order
+     * @param integer $ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
+     * @param string $SlaveZone Multi-az address
+     * @param array $InstanceInitInfos Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
+     * @param string $GdnId Global database unique ID
+     * @param ProxyConfigInfo $ProxyConfig Database proxy configuration
+     * @param string $AutoArchive Whether to automatically archive
+     * @param integer $AutoArchiveDelayHours Archiving processing time after pausing
+     * @param string $EncryptMethod Encryption method (consists of the encryption algorithm and key pair version)
+     * @param IntegrateCreateClusterConfig $IntegrateCreateClusterConfig Integrated cluster configuration information
+     * @param string $StorageVersion Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     function __construct()
     {

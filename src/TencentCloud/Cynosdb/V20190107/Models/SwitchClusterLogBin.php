@@ -18,20 +18,20 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Switch cluster log bin toggle
+ * Switch the log bin of the cluster
  *
- * @method string getStatus() Obtain Status
- * @method void setStatus(string $Status) Set Status
+ * @method string getStatus() Obtain Status.
+ * @method void setStatus(string $Status) Set Status.
  */
 class SwitchClusterLogBin extends AbstractModel
 {
     /**
-     * @var string Status
+     * @var string Status.
      */
     public $Status;
 
     /**
-     * @param string $Status Status
+     * @param string $Status Status.
      */
     function __construct()
     {

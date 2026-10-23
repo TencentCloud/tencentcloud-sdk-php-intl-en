@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Modules supported by the system
+ * Supported modules
  *
- * @method string getIsDisable() Obtain Whether it is supported. Valid values: `yes`, `no`.
- * @method void setIsDisable(string $IsDisable) Set Whether it is supported. Valid values: `yes`, `no`.
- * @method string getModuleName() Obtain Module name
- * @method void setModuleName(string $ModuleName) Set Module name
+ * @method string getIsDisable() Obtain Whether it is supported. Available values: yes, no
+ * @method void setIsDisable(string $IsDisable) Set Whether it is supported. Available values: yes, no
+ * @method string getModuleName() Obtain Module Name
+ * @method void setModuleName(string $ModuleName) Set Module Name
  */
 class Module extends AbstractModel
 {
     /**
-     * @var string Whether it is supported. Valid values: `yes`, `no`.
+     * @var string Whether it is supported. Available values: yes, no
      */
     public $IsDisable;
 
     /**
-     * @var string Module name
+     * @var string Module Name
      */
     public $ModuleName;
 
     /**
-     * @param string $IsDisable Whether it is supported. Valid values: `yes`, `no`.
-     * @param string $ModuleName Module name
+     * @param string $IsDisable Whether it is supported. Available values: yes, no
+     * @param string $ModuleName Module Name
      */
     function __construct()
     {

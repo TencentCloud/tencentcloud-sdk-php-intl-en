@@ -18,44 +18,44 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the instance bound to the resource pack
+ * Information of the instance bound to the resource package
  *
- * @method string getInstanceId() Obtain ID of the bound cluster.
- * @method void setInstanceId(string $InstanceId) Set ID of the bound cluster.
- * @method string getInstanceRegion() Obtain The region where the bound instance is located.
- * @method void setInstanceRegion(string $InstanceRegion) Set The region where the bound instance is located.
- * @method string getInstanceType() Obtain Type of the bound instance.
- * @method void setInstanceType(string $InstanceType) Set Type of the bound instance.
- * @method array getExtendIds() Obtain The instance ID under the bound cluster.
- * @method void setExtendIds(array $ExtendIds) Set The instance ID under the bound cluster.
+ * @method string getInstanceId() Obtain Bound cluster ID.
+ * @method void setInstanceId(string $InstanceId) Set Bound cluster ID.
+ * @method string getInstanceRegion() Obtain Region of the bound instance
+ * @method void setInstanceRegion(string $InstanceRegion) Set Region of the bound instance
+ * @method string getInstanceType() Obtain Bound instance type
+ * @method void setInstanceType(string $InstanceType) Set Bound instance type
+ * @method array getExtendIds() Obtain Instance ID under the bound cluster
+ * @method void setExtendIds(array $ExtendIds) Set Instance ID under the bound cluster
  */
 class BindInstanceInfo extends AbstractModel
 {
     /**
-     * @var string ID of the bound cluster.
+     * @var string Bound cluster ID.
      */
     public $InstanceId;
 
     /**
-     * @var string The region where the bound instance is located.
+     * @var string Region of the bound instance
      */
     public $InstanceRegion;
 
     /**
-     * @var string Type of the bound instance.
+     * @var string Bound instance type
      */
     public $InstanceType;
 
     /**
-     * @var array The instance ID under the bound cluster.
+     * @var array Instance ID under the bound cluster
      */
     public $ExtendIds;
 
     /**
-     * @param string $InstanceId ID of the bound cluster.
-     * @param string $InstanceRegion The region where the bound instance is located.
-     * @param string $InstanceType Type of the bound instance.
-     * @param array $ExtendIds The instance ID under the bound cluster.
+     * @param string $InstanceId Bound cluster ID.
+     * @param string $InstanceRegion Region of the bound instance
+     * @param string $InstanceType Bound instance type
+     * @param array $ExtendIds Instance ID under the bound cluster
      */
     function __construct()
     {

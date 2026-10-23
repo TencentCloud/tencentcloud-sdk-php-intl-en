@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourcePackageClusters request structure.
  *
- * @method string getPackageId() Obtain The unique ID of a resource pack
- * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack
- * @method array getBindClusterIds() Obtain ID of the cluster to be bound
- * @method void setBindClusterIds(array $BindClusterIds) Set ID of the cluster to be bound
- * @method array getUnbindClusterIds() Obtain ID of the cluster to be unbound
- * @method void setUnbindClusterIds(array $UnbindClusterIds) Set ID of the cluster to be unbound
+ * @method string getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(string $PackageId) Set Unique ID of the resource package
+ * @method array getBindClusterIds() Obtain Cluster ID for which a binding relationship needs to be established.
+ * @method void setBindClusterIds(array $BindClusterIds) Set Cluster ID for which a binding relationship needs to be established.
+ * @method array getUnbindClusterIds() Obtain Cluster ID for which the binding relationship needs to be unbound.
+ * @method void setUnbindClusterIds(array $UnbindClusterIds) Set Cluster ID for which the binding relationship needs to be unbound.
  */
 class ModifyResourcePackageClustersRequest extends AbstractModel
 {
     /**
-     * @var string The unique ID of a resource pack
+     * @var string Unique ID of the resource package
      */
     public $PackageId;
 
     /**
-     * @var array ID of the cluster to be bound
+     * @var array Cluster ID for which a binding relationship needs to be established.
      */
     public $BindClusterIds;
 
     /**
-     * @var array ID of the cluster to be unbound
+     * @var array Cluster ID for which the binding relationship needs to be unbound.
      */
     public $UnbindClusterIds;
 
     /**
-     * @param string $PackageId The unique ID of a resource pack
-     * @param array $BindClusterIds ID of the cluster to be bound
-     * @param array $UnbindClusterIds ID of the cluster to be unbound
+     * @param string $PackageId Unique ID of the resource package
+     * @param array $BindClusterIds Cluster ID for which a binding relationship needs to be established.
+     * @param array $UnbindClusterIds Cluster ID for which the binding relationship needs to be unbound.
      */
     function __construct()
     {

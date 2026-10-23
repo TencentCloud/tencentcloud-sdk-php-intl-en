@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getMem() Obtain Memory
- * @method void setMem(integer $Mem) Set Memory
- * @method integer getProxyCount() Obtain Number of nodes in the proxy group
- * @method void setProxyCount(integer $ProxyCount) Set Number of nodes in the proxy group
- * @method string getProxyGroupId() Obtain ID of the database proxy group (disused)
- * @method void setProxyGroupId(string $ProxyGroupId) Set ID of the database proxy group (disused)
- * @method string getReloadBalance() Obtain Load rebalance mode. Valid values: `auto`, `manual`
- * @method void setReloadBalance(string $ReloadBalance) Set Load rebalance mode. Valid values: `auto`, `manual`
- * @method string getIsInMaintainPeriod() Obtain Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
- * @method array getProxyZones() Obtain Node information of the atabase proxy
- * @method void setProxyZones(array $ProxyZones) Set Node information of the atabase proxy
- * @method string getIsRollUpgrade() Obtain whether rolling upgrade
- * @method void setIsRollUpgrade(string $IsRollUpgrade) Set whether rolling upgrade
- * @method integer getRollUpgradeWaitingTime() Obtain Rolling upgrade waiting time, unit: second
- * @method void setRollUpgradeWaitingTime(integer $RollUpgradeWaitingTime) Set Rolling upgrade waiting time, unit: second
+ * @method integer getMem() Obtain memory
+ * @method void setMem(integer $Mem) Set memory
+ * @method integer getProxyCount() Obtain Number of database proxy group nodes
+ * @method void setProxyCount(integer $ProxyCount) Set Number of database proxy group nodes
+ * @method string getProxyGroupId() Obtain Database Proxy Group ID (abandoned)
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database Proxy Group ID (abandoned)
+ * @method string getReloadBalance() Obtain Load rebalance: auto (automatic), manual
+ * @method void setReloadBalance(string $ReloadBalance) Set Load rebalance: auto (automatic), manual
+ * @method string getIsInMaintainPeriod() Obtain Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+ * @method array getProxyZones() Obtain Database proxy node information
+ * @method void setProxyZones(array $ProxyZones) Set Database proxy node information
+ * @method string getIsRollUpgrade() Obtain Whether to perform a rolling upgrade
+ * @method void setIsRollUpgrade(string $IsRollUpgrade) Set Whether to perform a rolling upgrade
+ * @method integer getRollUpgradeWaitingTime() Obtain In-place rolling upgrade waiting time. Unit: seconds
+ * @method void setRollUpgradeWaitingTime(integer $RollUpgradeWaitingTime) Set In-place rolling upgrade waiting time. Unit: seconds
  */
 class UpgradeProxyRequest extends AbstractModel
 {
@@ -54,56 +54,56 @@ class UpgradeProxyRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Memory
+     * @var integer memory
      */
     public $Mem;
 
     /**
-     * @var integer Number of nodes in the proxy group
+     * @var integer Number of database proxy group nodes
      */
     public $ProxyCount;
 
     /**
-     * @var string ID of the database proxy group (disused)
+     * @var string Database Proxy Group ID (abandoned)
      */
     public $ProxyGroupId;
 
     /**
-     * @var string Load rebalance mode. Valid values: `auto`, `manual`
+     * @var string Load rebalance: auto (automatic), manual
      */
     public $ReloadBalance;
 
     /**
-     * @var string Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+     * @var string Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
      */
     public $IsInMaintainPeriod;
 
     /**
-     * @var array Node information of the atabase proxy
+     * @var array Database proxy node information
      */
     public $ProxyZones;
 
     /**
-     * @var string whether rolling upgrade
+     * @var string Whether to perform a rolling upgrade
      */
     public $IsRollUpgrade;
 
     /**
-     * @var integer Rolling upgrade waiting time, unit: second
+     * @var integer In-place rolling upgrade waiting time. Unit: seconds
      */
     public $RollUpgradeWaitingTime;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
-     * @param integer $Mem Memory
-     * @param integer $ProxyCount Number of nodes in the proxy group
-     * @param string $ProxyGroupId ID of the database proxy group (disused)
-     * @param string $ReloadBalance Load rebalance mode. Valid values: `auto`, `manual`
-     * @param string $IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
-     * @param array $ProxyZones Node information of the atabase proxy
-     * @param string $IsRollUpgrade whether rolling upgrade
-     * @param integer $RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+     * @param integer $Mem memory
+     * @param integer $ProxyCount Number of database proxy group nodes
+     * @param string $ProxyGroupId Database Proxy Group ID (abandoned)
+     * @param string $ReloadBalance Load rebalance: auto (automatic), manual
+     * @param string $IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+     * @param array $ProxyZones Database proxy node information
+     * @param string $IsRollUpgrade Whether to perform a rolling upgrade
+     * @param integer $RollUpgradeWaitingTime In-place rolling upgrade waiting time. Unit: seconds
      */
     function __construct()
     {

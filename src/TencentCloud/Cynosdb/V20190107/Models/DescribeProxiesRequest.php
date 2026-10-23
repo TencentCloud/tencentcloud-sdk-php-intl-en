@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies request structure.
  *
- * @method string getClusterId() Obtain <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
- * @method void setClusterId(string $ClusterId) Set <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
- * @method integer getLimit() Obtain <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
- * @method void setLimit(integer $Limit) Set <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
- * @method integer getOffset() Obtain <p>Record offset. Default value is 0</p>
- * @method void setOffset(integer $Offset) Set <p>Record offset. Default value is 0</p>
- * @method string getOrderBy() Obtain <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
- * @method void setOrderBy(string $OrderBy) Set <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
- * @method string getOrderByType() Obtain <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
- * @method void setOrderByType(string $OrderByType) Set <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
- * @method array getFilters() Obtain <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
- * @method void setFilters(array $Filters) Set <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
+ * @method string getClusterId() Obtain <p>Cluster ID (this parameter is required, for example, cynosdbmysql-2u2mh111).</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID (this parameter is required, for example, cynosdbmysql-2u2mh111).</p>
+ * @method integer getLimit() Obtain <p>Number of returns. Default value: 20. Maximum value: 100</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returns. Default value: 20. Maximum value: 100</p>
+ * @method integer getOffset() Obtain <p>Record offset. Default value: 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Record offset. Default value: 0</p>
+ * @method string getOrderBy() Obtain <p>Sorting field. Value range:</p><li> CREATETIME: creation time</li><li> PERIODENDTIME: expiration time</li>
+ * @method void setOrderBy(string $OrderBy) Set <p>Sorting field. Value range:</p><li> CREATETIME: creation time</li><li> PERIODENDTIME: expiration time</li>
+ * @method string getOrderByType() Obtain <p>Sorting type. Value range:</p><li> ASC: ascending sort </li><li> DESC: sort in descending order </li>
+ * @method void setOrderByType(string $OrderByType) Set <p>Sorting type. Value range:</p><li> ASC: ascending sort </li><li> DESC: sort in descending order </li>
+ * @method array getFilters() Obtain <p>Search criteria. If there are multiple Filters, the relationship between them is logical AND.<br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
+ * @method void setFilters(array $Filters) Set <p>Search criteria. If there are multiple Filters, the relationship between them is logical AND.<br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
  */
 class DescribeProxiesRequest extends AbstractModel
 {
     /**
-     * @var string <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
+     * @var string <p>Cluster ID (this parameter is required, for example, cynosdbmysql-2u2mh111).</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
+     * @var integer <p>Number of returns. Default value: 20. Maximum value: 100</p>
      */
     public $Limit;
 
     /**
-     * @var integer <p>Record offset. Default value is 0</p>
+     * @var integer <p>Record offset. Default value: 0</p>
      */
     public $Offset;
 
     /**
-     * @var string <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
+     * @var string <p>Sorting field. Value range:</p><li> CREATETIME: creation time</li><li> PERIODENDTIME: expiration time</li>
      */
     public $OrderBy;
 
     /**
-     * @var string <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
+     * @var string <p>Sorting type. Value range:</p><li> ASC: ascending sort </li><li> DESC: sort in descending order </li>
      */
     public $OrderByType;
 
     /**
-     * @var array <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
+     * @var array <p>Search criteria. If there are multiple Filters, the relationship between them is logical AND.<br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
      */
     public $Filters;
 
     /**
-     * @param string $ClusterId <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
-     * @param integer $Limit <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
-     * @param integer $Offset <p>Record offset. Default value is 0</p>
-     * @param string $OrderBy <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
-     * @param string $OrderByType <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
-     * @param array $Filters <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
+     * @param string $ClusterId <p>Cluster ID (this parameter is required, for example, cynosdbmysql-2u2mh111).</p>
+     * @param integer $Limit <p>Number of returns. Default value: 20. Maximum value: 100</p>
+     * @param integer $Offset <p>Record offset. Default value: 0</p>
+     * @param string $OrderBy <p>Sorting field. Value range:</p><li> CREATETIME: creation time</li><li> PERIODENDTIME: expiration time</li>
+     * @param string $OrderByType <p>Sorting type. Value range:</p><li> ASC: ascending sort </li><li> DESC: sort in descending order </li>
+     * @param array $Filters <p>Search criteria. If there are multiple Filters, the relationship between them is logical AND.<br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
      */
     function __construct()
     {

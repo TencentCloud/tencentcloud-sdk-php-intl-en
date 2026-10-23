@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVip() Obtain IP
  * @method void setVip(string $Vip) Set IP
- * @method integer getVport() Obtain Port
- * @method void setVport(integer $Vport) Set Port
- * @method string getReturnTime() Obtain Expect recycle time.
- * @method void setReturnTime(string $ReturnTime) Set Expect recycle time.
+ * @method integer getVport() Obtain Port.
+ * @method void setVport(integer $Vport) Set Port.
+ * @method string getReturnTime() Obtain Expected recycle time
+ * @method void setReturnTime(string $ReturnTime) Set Expected recycle time
  */
 class OldAddrInfo extends AbstractModel
 {
@@ -35,19 +35,19 @@ class OldAddrInfo extends AbstractModel
     public $Vip;
 
     /**
-     * @var integer Port
+     * @var integer Port.
      */
     public $Vport;
 
     /**
-     * @var string Expect recycle time.
+     * @var string Expected recycle time
      */
     public $ReturnTime;
 
     /**
      * @param string $Vip IP
-     * @param integer $Vport Port
-     * @param string $ReturnTime Expect recycle time.
+     * @param integer $Vport Port.
+     * @param string $ReturnTime Expected recycle time
      */
     function __construct()
     {

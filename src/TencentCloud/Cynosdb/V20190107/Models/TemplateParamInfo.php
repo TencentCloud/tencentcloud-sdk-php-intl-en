@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValue(string $CurrentValue) Set Current value
  * @method string getDefault() Obtain Default value
  * @method void setDefault(string $Default) Set Default value
- * @method array getEnumValue() Obtain The collection of optional value types when the parameter type is `enum`.
- * @method void setEnumValue(array $EnumValue) Set The collection of optional value types when the parameter type is `enum`.
- * @method string getMax() Obtain The maximum value when the parameter type is float/integer.
- * @method void setMax(string $Max) Set The maximum value when the parameter type is float/integer.
- * @method string getMin() Obtain Minimum value when the parameter type is float/integer.
- * @method void setMin(string $Min) Set Minimum value when the parameter type is float/integer.
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
- * @method integer getNeedReboot() Obtain Whether to restart the instance for the parameter to take effect
- * @method void setNeedReboot(integer $NeedReboot) Set Whether to restart the instance for the parameter to take effect
+ * @method array getEnumValue() Obtain Value type collection that is optional when the parameter type is enum
+ * @method void setEnumValue(array $EnumValue) Set Value type collection that is optional when the parameter type is enum
+ * @method string getMax() Obtain Maximum value when the parameter type is float/integer.
+ * @method void setMax(string $Max) Set Maximum value when the parameter type is float/integer.
+ * @method string getMin() Obtain Minimum value when the parameter type is float/integer
+ * @method void setMin(string $Min) Set Minimum value when the parameter type is float/integer
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method integer getNeedReboot() Obtain Whether restart is required
+ * @method void setNeedReboot(integer $NeedReboot) Set Whether restart is required
  * @method string getDescription() Obtain Parameter description
  * @method void setDescription(string $Description) Set Parameter description
- * @method string getParamType() Obtain Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
- * @method void setParamType(string $ParamType) Set Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+ * @method string getParamType() Obtain Parameter type. Valid values: integer, float, string, enum.
+ * @method void setParamType(string $ParamType) Set Parameter type. Valid values: integer, float, string, enum.
  */
 class TemplateParamInfo extends AbstractModel
 {
@@ -52,27 +52,27 @@ class TemplateParamInfo extends AbstractModel
     public $Default;
 
     /**
-     * @var array The collection of optional value types when the parameter type is `enum`.
+     * @var array Value type collection that is optional when the parameter type is enum
      */
     public $EnumValue;
 
     /**
-     * @var string The maximum value when the parameter type is float/integer.
+     * @var string Maximum value when the parameter type is float/integer.
      */
     public $Max;
 
     /**
-     * @var string Minimum value when the parameter type is float/integer.
+     * @var string Minimum value when the parameter type is float/integer
      */
     public $Min;
 
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @var integer Whether to restart the instance for the parameter to take effect
+     * @var integer Whether restart is required
      */
     public $NeedReboot;
 
@@ -82,20 +82,20 @@ class TemplateParamInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+     * @var string Parameter type. Valid values: integer, float, string, enum.
      */
     public $ParamType;
 
     /**
      * @param string $CurrentValue Current value
      * @param string $Default Default value
-     * @param array $EnumValue The collection of optional value types when the parameter type is `enum`.
-     * @param string $Max The maximum value when the parameter type is float/integer.
-     * @param string $Min Minimum value when the parameter type is float/integer.
-     * @param string $ParamName Parameter name
-     * @param integer $NeedReboot Whether to restart the instance for the parameter to take effect
+     * @param array $EnumValue Value type collection that is optional when the parameter type is enum
+     * @param string $Max Maximum value when the parameter type is float/integer.
+     * @param string $Min Minimum value when the parameter type is float/integer
+     * @param string $ParamName Parameter name.
+     * @param integer $NeedReboot Whether restart is required
      * @param string $Description Parameter description
-     * @param string $ParamType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+     * @param string $ParamType Parameter type. Valid values: integer, float, string, enum.
      */
     function __construct()
     {

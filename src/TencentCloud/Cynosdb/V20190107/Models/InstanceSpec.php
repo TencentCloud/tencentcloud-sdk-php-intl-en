@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of purchasable instance specifications. `Cpu` and `Memory` determine the instance specification during instance creation. The value range of the storage capacity is [MinStorageSize,MaxStorageSize]
+ * Detailed information about available instance specifications. When creating an instance, Cpu/Memory determine the instance specification. The selectable storage size ranges from [MinStorageSize, MaxStorageSize].
  *
- * @method integer getCpu() Obtain Number of instance CPU cores
- * @method void setCpu(integer $Cpu) Set Number of instance CPU cores
- * @method integer getMemory() Obtain Instance memory in GB
- * @method void setMemory(integer $Memory) Set Instance memory in GB
- * @method integer getMaxStorageSize() Obtain Maximum instance storage capacity GB
- * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum instance storage capacity GB
- * @method integer getMinStorageSize() Obtain Minimum instance storage capacity GB
- * @method void setMinStorageSize(integer $MinStorageSize) Set Minimum instance storage capacity GB
- * @method boolean getHasStock() Obtain Whether there is an inventory.
- * @method void setHasStock(boolean $HasStock) Set Whether there is an inventory.
+ * @method integer getCpu() Obtain Instance CPU. Measurement unit: core
+ * @method void setCpu(integer $Cpu) Set Instance CPU. Measurement unit: core
+ * @method integer getMemory() Obtain Instance memory. Unit: GB.
+ * @method void setMemory(integer $Memory) Set Instance memory. Unit: GB.
+ * @method integer getMaxStorageSize() Obtain Maximum available storage of an instance, unit: GB
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum available storage of an instance, unit: GB
+ * @method integer getMinStorageSize() Obtain Minimum available storage of an instance, unit: GB
+ * @method void setMinStorageSize(integer $MinStorageSize) Set Minimum available storage of an instance, unit: GB
+ * @method boolean getHasStock() Obtain Whether there is inventory
+ * @method void setHasStock(boolean $HasStock) Set Whether there is inventory
  * @method string getMachineType() Obtain Machine type
  * @method void setMachineType(string $MachineType) Set Machine type
  * @method integer getMaxIops() Obtain Maximum IOPS
  * @method void setMaxIops(integer $MaxIops) Set Maximum IOPS
- * @method integer getMaxIoBandWidth() Obtain Maximum bandwidth
- * @method void setMaxIoBandWidth(integer $MaxIoBandWidth) Set Maximum bandwidth
- * @method array getZoneStockInfos() Obtain Regional inventory information.
- * @method void setZoneStockInfos(array $ZoneStockInfos) Set Regional inventory information.
- * @method integer getStockCount() Obtain Inventory quantity.
- * @method void setStockCount(integer $StockCount) Set Inventory quantity.
+ * @method integer getMaxIoBandWidth() Obtain Maximum IO bandwidth
+ * @method void setMaxIoBandWidth(integer $MaxIoBandWidth) Set Maximum IO bandwidth
+ * @method array getZoneStockInfos() Obtain Regional inventory information
+ * @method void setZoneStockInfos(array $ZoneStockInfos) Set Regional inventory information
+ * @method integer getStockCount() Obtain Inventory quantity
+ * @method void setStockCount(integer $StockCount) Set Inventory quantity
  * @method float getMaxCpu() Obtain Maximum cpu
  * @method void setMaxCpu(float $MaxCpu) Set Maximum cpu
  * @method float getMinCpu() Obtain Minimum cpu
@@ -48,27 +48,27 @@ use TencentCloud\Common\AbstractModel;
 class InstanceSpec extends AbstractModel
 {
     /**
-     * @var integer Number of instance CPU cores
+     * @var integer Instance CPU. Measurement unit: core
      */
     public $Cpu;
 
     /**
-     * @var integer Instance memory in GB
+     * @var integer Instance memory. Unit: GB.
      */
     public $Memory;
 
     /**
-     * @var integer Maximum instance storage capacity GB
+     * @var integer Maximum available storage of an instance, unit: GB
      */
     public $MaxStorageSize;
 
     /**
-     * @var integer Minimum instance storage capacity GB
+     * @var integer Minimum available storage of an instance, unit: GB
      */
     public $MinStorageSize;
 
     /**
-     * @var boolean Whether there is an inventory.
+     * @var boolean Whether there is inventory
      */
     public $HasStock;
 
@@ -83,17 +83,17 @@ class InstanceSpec extends AbstractModel
     public $MaxIops;
 
     /**
-     * @var integer Maximum bandwidth
+     * @var integer Maximum IO bandwidth
      */
     public $MaxIoBandWidth;
 
     /**
-     * @var array Regional inventory information.
+     * @var array Regional inventory information
      */
     public $ZoneStockInfos;
 
     /**
-     * @var integer Inventory quantity.
+     * @var integer Inventory quantity
      */
     public $StockCount;
 
@@ -108,16 +108,16 @@ class InstanceSpec extends AbstractModel
     public $MinCpu;
 
     /**
-     * @param integer $Cpu Number of instance CPU cores
-     * @param integer $Memory Instance memory in GB
-     * @param integer $MaxStorageSize Maximum instance storage capacity GB
-     * @param integer $MinStorageSize Minimum instance storage capacity GB
-     * @param boolean $HasStock Whether there is an inventory.
+     * @param integer $Cpu Instance CPU. Measurement unit: core
+     * @param integer $Memory Instance memory. Unit: GB.
+     * @param integer $MaxStorageSize Maximum available storage of an instance, unit: GB
+     * @param integer $MinStorageSize Minimum available storage of an instance, unit: GB
+     * @param boolean $HasStock Whether there is inventory
      * @param string $MachineType Machine type
      * @param integer $MaxIops Maximum IOPS
-     * @param integer $MaxIoBandWidth Maximum bandwidth
-     * @param array $ZoneStockInfos Regional inventory information.
-     * @param integer $StockCount Inventory quantity.
+     * @param integer $MaxIoBandWidth Maximum IO bandwidth
+     * @param array $ZoneStockInfos Regional inventory information
+     * @param integer $StockCount Inventory quantity
      * @param float $MaxCpu Maximum cpu
      * @param float $MinCpu Minimum cpu
      */

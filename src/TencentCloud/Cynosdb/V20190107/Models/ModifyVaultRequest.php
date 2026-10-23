@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVaultId() Obtain Safe ID
  * @method void setVaultId(string $VaultId) Set Safe ID
- * @method string getVaultName() Obtain Safe name, maximum 255 characters
- * @method void setVaultName(string $VaultName) Set Safe name, maximum 255 characters
- * @method string getVaultDescribe() Obtain Safe description, maximum 1024 characters
- * @method void setVaultDescribe(string $VaultDescribe) Set Safe description, maximum 1024 characters
- * @method integer getBackupSaveSeconds() Obtain Backup retention period (seconds). Range: (0, 632448000].
- * @method void setBackupSaveSeconds(integer $BackupSaveSeconds) Set Backup retention period (seconds). Range: (0, 632448000].
- * @method string getKeyId() Obtain Encryption key ID, maximum 36 characters
- * @method void setKeyId(string $KeyId) Set Encryption key ID, maximum 36 characters
- * @method string getKeyType() Obtain Key type, available values: cloud, custom
- * @method void setKeyType(string $KeyType) Set Key type, available values: cloud, custom
- * @method string getKeyRegion() Obtain Key region, maximum 32 characters
- * @method void setKeyRegion(string $KeyRegion) Set Key region, maximum 32 characters
- * @method boolean getIsLock() Obtain Is the safe locked
- * @method void setIsLock(boolean $IsLock) Set Is the safe locked
- * @method string getLockedTime() Obtain Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
- * @method void setLockedTime(string $LockedTime) Set Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
- * @method boolean getIsEncryption() Obtain Whether it is encrypted
- * @method void setIsEncryption(boolean $IsEncryption) Set Whether it is encrypted
+ * @method string getVaultName() Obtain Safe name. Maximum length: 255 characters.
+ * @method void setVaultName(string $VaultName) Set Safe name. Maximum length: 255 characters.
+ * @method string getVaultDescribe() Obtain Safe description. Maximum length: 1024 characters.
+ * @method void setVaultDescribe(string $VaultDescribe) Set Safe description. Maximum length: 1024 characters.
+ * @method integer getBackupSaveSeconds() Obtain Backup retention period in seconds. Value range: (0, 632448000]
+ * @method void setBackupSaveSeconds(integer $BackupSaveSeconds) Set Backup retention period in seconds. Value range: (0, 632448000]
+ * @method string getKeyId() Obtain Encryption key ID. Maximum length: 36 characters.
+ * @method void setKeyId(string $KeyId) Set Encryption key ID. Maximum length: 36 characters.
+ * @method string getKeyType() Obtain Key type. Available values: cloud, custom
+ * @method void setKeyType(string $KeyType) Set Key type. Available values: cloud, custom
+ * @method string getKeyRegion() Obtain Region of the key. Maximum length: 32 characters.
+ * @method void setKeyRegion(string $KeyRegion) Set Region of the key. Maximum length: 32 characters.
+ * @method boolean getIsLock() Obtain Whether the safe is locked
+ * @method void setIsLock(boolean $IsLock) Set Whether the safe is locked
+ * @method string getLockedTime() Obtain Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
+ * @method void setLockedTime(string $LockedTime) Set Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
+ * @method boolean getIsEncryption() Obtain Encrypted or not
+ * @method void setIsEncryption(boolean $IsEncryption) Set Encrypted or not
  */
 class ModifyVaultRequest extends AbstractModel
 {
@@ -49,61 +49,61 @@ class ModifyVaultRequest extends AbstractModel
     public $VaultId;
 
     /**
-     * @var string Safe name, maximum 255 characters
+     * @var string Safe name. Maximum length: 255 characters.
      */
     public $VaultName;
 
     /**
-     * @var string Safe description, maximum 1024 characters
+     * @var string Safe description. Maximum length: 1024 characters.
      */
     public $VaultDescribe;
 
     /**
-     * @var integer Backup retention period (seconds). Range: (0, 632448000].
+     * @var integer Backup retention period in seconds. Value range: (0, 632448000]
      */
     public $BackupSaveSeconds;
 
     /**
-     * @var string Encryption key ID, maximum 36 characters
+     * @var string Encryption key ID. Maximum length: 36 characters.
      */
     public $KeyId;
 
     /**
-     * @var string Key type, available values: cloud, custom
+     * @var string Key type. Available values: cloud, custom
      */
     public $KeyType;
 
     /**
-     * @var string Key region, maximum 32 characters
+     * @var string Region of the key. Maximum length: 32 characters.
      */
     public $KeyRegion;
 
     /**
-     * @var boolean Is the safe locked
+     * @var boolean Whether the safe is locked
      */
     public $IsLock;
 
     /**
-     * @var string Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+     * @var string Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
      */
     public $LockedTime;
 
     /**
-     * @var boolean Whether it is encrypted
+     * @var boolean Encrypted or not
      */
     public $IsEncryption;
 
     /**
      * @param string $VaultId Safe ID
-     * @param string $VaultName Safe name, maximum 255 characters
-     * @param string $VaultDescribe Safe description, maximum 1024 characters
-     * @param integer $BackupSaveSeconds Backup retention period (seconds). Range: (0, 632448000].
-     * @param string $KeyId Encryption key ID, maximum 36 characters
-     * @param string $KeyType Key type, available values: cloud, custom
-     * @param string $KeyRegion Key region, maximum 32 characters
-     * @param boolean $IsLock Is the safe locked
-     * @param string $LockedTime Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
-     * @param boolean $IsEncryption Whether it is encrypted
+     * @param string $VaultName Safe name. Maximum length: 255 characters.
+     * @param string $VaultDescribe Safe description. Maximum length: 1024 characters.
+     * @param integer $BackupSaveSeconds Backup retention period in seconds. Value range: (0, 632448000]
+     * @param string $KeyId Encryption key ID. Maximum length: 36 characters.
+     * @param string $KeyType Key type. Available values: cloud, custom
+     * @param string $KeyRegion Region of the key. Maximum length: 32 characters.
+     * @param boolean $IsLock Whether the safe is locked
+     * @param string $LockedTime Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
+     * @param boolean $IsEncryption Encrypted or not
      */
     function __construct()
     {

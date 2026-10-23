@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewClusters request structure.
  *
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method float getTimeSpan() Obtain Renewal period.
- * @method void setTimeSpan(float $TimeSpan) Set Renewal period.
- * @method string getTimeUnit() Obtain Time unit, such as y, m, d, h, i, and s.
- * @method void setTimeUnit(string $TimeUnit) Set Time unit, such as y, m, d, h, i, and s.
- * @method integer getDealMode() Obtain "Transaction mode. 	0 - place an order and pay; 1 - place an order."
- * @method void setDealMode(integer $DealMode) Set "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method float getTimeSpan() Obtain Renewal duration
+ * @method void setTimeSpan(float $TimeSpan) Set Renewal duration
+ * @method string getTimeUnit() Obtain Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
+ * @method void setTimeUnit(string $TimeUnit) Set Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
+ * @method integer getDealMode() Obtain Transaction mode 0-Place order and pay 1-Place order
+ * @method void setDealMode(integer $DealMode) Set Transaction mode 0-Place order and pay 1-Place order
  */
 class RenewClustersRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID.
+     * @var string Cluster ID
      */
     public $ClusterId;
 
     /**
-     * @var float Renewal period.
+     * @var float Renewal duration
      */
     public $TimeSpan;
 
     /**
-     * @var string Time unit, such as y, m, d, h, i, and s.
+     * @var string Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
      */
     public $TimeUnit;
 
     /**
-     * @var integer "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+     * @var integer Transaction mode 0-Place order and pay 1-Place order
      */
     public $DealMode;
 
     /**
-     * @param string $ClusterId Cluster ID.
-     * @param float $TimeSpan Renewal period.
-     * @param string $TimeUnit Time unit, such as y, m, d, h, i, and s.
-     * @param integer $DealMode "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+     * @param string $ClusterId Cluster ID
+     * @param float $TimeSpan Renewal duration
+     * @param string $TimeUnit Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
+     * @param integer $DealMode Transaction mode 0-Place order and pay 1-Place order
      */
     function __construct()
     {

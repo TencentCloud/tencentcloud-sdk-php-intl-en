@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Safe info
+ * Safe information
  *
  * @method string getVaultId() Obtain Safe id
  * @method void setVaultId(string $VaultId) Set Safe id

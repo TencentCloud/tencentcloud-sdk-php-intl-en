@@ -18,108 +18,108 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * redo log details.
+ * redo log details
  *
- * @method string getFileName() Obtain Filename.
- * @method void setFileName(string $FileName) Set Filename.
- * @method integer getFileSize() Obtain File size
- * @method void setFileSize(integer $FileSize) Set File size
- * @method string getBackupTime() Obtain Backup time
- * @method void setBackupTime(string $BackupTime) Set Backup time
- * @method integer getRedoLogId() Obtain redoLogId
- * @method void setRedoLogId(integer $RedoLogId) Set redoLogId
- * @method array getRedoCrossRegions() Obtain Cross-Region information.
- * @method void setRedoCrossRegions(array $RedoCrossRegions) Set Cross-Region information.
- * @method string getStatus() Obtain Status.
- * @method void setStatus(string $Status) Set Status.
- * @method string getStartTime() Obtain Start time.
- * @method void setStartTime(string $StartTime) Set Start time.
- * @method string getFinishTime() Obtain Completion time.
- * @method void setFinishTime(string $FinishTime) Set Completion time.
- * @method array getVaultInfos() Obtain Safe info
- * @method void setVaultInfos(array $VaultInfos) Set Safe info
- * @method string getCopyStatus() Obtain Backup delivery status
- * @method void setCopyStatus(string $CopyStatus) Set Backup delivery status
- * @method string getEncryptKeyId() Obtain Encryption key
- * @method void setEncryptKeyId(string $EncryptKeyId) Set Encryption key
- * @method string getEncryptRegion() Obtain Key region for encryption
- * @method void setEncryptRegion(string $EncryptRegion) Set Key region for encryption
+ * @method string getFileName() Obtain <p>File name.</p>
+ * @method void setFileName(string $FileName) Set <p>File name.</p>
+ * @method integer getFileSize() Obtain <p>File size</p>
+ * @method void setFileSize(integer $FileSize) Set <p>File size</p>
+ * @method string getBackupTime() Obtain <p>Backup time</p>
+ * @method void setBackupTime(string $BackupTime) Set <p>Backup time</p>
+ * @method integer getRedoLogId() Obtain <p>redoLogId</p>
+ * @method void setRedoLogId(integer $RedoLogId) Set <p>redoLogId</p>
+ * @method array getRedoCrossRegions() Obtain <p>Cross-regional information</p>
+ * @method void setRedoCrossRegions(array $RedoCrossRegions) Set <p>Cross-regional information</p>
+ * @method string getStatus() Obtain <p>Status.</p>
+ * @method void setStatus(string $Status) Set <p>Status.</p>
+ * @method string getStartTime() Obtain <p>Start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start time.</p>
+ * @method string getFinishTime() Obtain <p>Completion time</p>
+ * @method void setFinishTime(string $FinishTime) Set <p>Completion time</p>
+ * @method array getVaultInfos() Obtain <p>Safe information.</p>
+ * @method void setVaultInfos(array $VaultInfos) Set <p>Safe information.</p>
+ * @method string getCopyStatus() Obtain <p>Backup delivery status</p>
+ * @method void setCopyStatus(string $CopyStatus) Set <p>Backup delivery status</p>
+ * @method string getEncryptKeyId() Obtain <p>Encryption key.</p>
+ * @method void setEncryptKeyId(string $EncryptKeyId) Set <p>Encryption key.</p>
+ * @method string getEncryptRegion() Obtain <p>Encryption key region</p>
+ * @method void setEncryptRegion(string $EncryptRegion) Set <p>Encryption key region</p>
  */
 class RedoLogItem extends AbstractModel
 {
     /**
-     * @var string Filename.
+     * @var string <p>File name.</p>
      */
     public $FileName;
 
     /**
-     * @var integer File size
+     * @var integer <p>File size</p>
      */
     public $FileSize;
 
     /**
-     * @var string Backup time
+     * @var string <p>Backup time</p>
      */
     public $BackupTime;
 
     /**
-     * @var integer redoLogId
+     * @var integer <p>redoLogId</p>
      */
     public $RedoLogId;
 
     /**
-     * @var array Cross-Region information.
+     * @var array <p>Cross-regional information</p>
      */
     public $RedoCrossRegions;
 
     /**
-     * @var string Status.
+     * @var string <p>Status.</p>
      */
     public $Status;
 
     /**
-     * @var string Start time.
+     * @var string <p>Start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string Completion time.
+     * @var string <p>Completion time</p>
      */
     public $FinishTime;
 
     /**
-     * @var array Safe info
+     * @var array <p>Safe information.</p>
      */
     public $VaultInfos;
 
     /**
-     * @var string Backup delivery status
+     * @var string <p>Backup delivery status</p>
      */
     public $CopyStatus;
 
     /**
-     * @var string Encryption key
+     * @var string <p>Encryption key.</p>
      */
     public $EncryptKeyId;
 
     /**
-     * @var string Key region for encryption
+     * @var string <p>Encryption key region</p>
      */
     public $EncryptRegion;
 
     /**
-     * @param string $FileName Filename.
-     * @param integer $FileSize File size
-     * @param string $BackupTime Backup time
-     * @param integer $RedoLogId redoLogId
-     * @param array $RedoCrossRegions Cross-Region information.
-     * @param string $Status Status.
-     * @param string $StartTime Start time.
-     * @param string $FinishTime Completion time.
-     * @param array $VaultInfos Safe info
-     * @param string $CopyStatus Backup delivery status
-     * @param string $EncryptKeyId Encryption key
-     * @param string $EncryptRegion Key region for encryption
+     * @param string $FileName <p>File name.</p>
+     * @param integer $FileSize <p>File size</p>
+     * @param string $BackupTime <p>Backup time</p>
+     * @param integer $RedoLogId <p>redoLogId</p>
+     * @param array $RedoCrossRegions <p>Cross-regional information</p>
+     * @param string $Status <p>Status.</p>
+     * @param string $StartTime <p>Start time.</p>
+     * @param string $FinishTime <p>Completion time</p>
+     * @param array $VaultInfos <p>Safe information.</p>
+     * @param string $CopyStatus <p>Backup delivery status</p>
+     * @param string $EncryptKeyId <p>Encryption key.</p>
+     * @param string $EncryptRegion <p>Encryption key region</p>
      */
     function __construct()
     {

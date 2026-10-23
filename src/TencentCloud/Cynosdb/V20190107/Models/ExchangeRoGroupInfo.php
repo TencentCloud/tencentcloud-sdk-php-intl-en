@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Swap RO group information.
+ * Exchange RO group information
  *
- * @method RollbackRoGroupInfo getSrcRoGroupInfo() Obtain Source RO group information.
- * @method void setSrcRoGroupInfo(RollbackRoGroupInfo $SrcRoGroupInfo) Set Source RO group information.
- * @method RollbackRoGroupInfo getDstRoGroupInfo() Obtain Target RO group information.
- * @method void setDstRoGroupInfo(RollbackRoGroupInfo $DstRoGroupInfo) Set Target RO group information.
+ * @method RollbackRoGroupInfo getSrcRoGroupInfo() Obtain Source RO group information
+ * @method void setSrcRoGroupInfo(RollbackRoGroupInfo $SrcRoGroupInfo) Set Source RO group information
+ * @method RollbackRoGroupInfo getDstRoGroupInfo() Obtain Target RO group information
+ * @method void setDstRoGroupInfo(RollbackRoGroupInfo $DstRoGroupInfo) Set Target RO group information
  */
 class ExchangeRoGroupInfo extends AbstractModel
 {
     /**
-     * @var RollbackRoGroupInfo Source RO group information.
+     * @var RollbackRoGroupInfo Source RO group information
      */
     public $SrcRoGroupInfo;
 
     /**
-     * @var RollbackRoGroupInfo Target RO group information.
+     * @var RollbackRoGroupInfo Target RO group information
      */
     public $DstRoGroupInfo;
 
     /**
-     * @param RollbackRoGroupInfo $SrcRoGroupInfo Source RO group information.
-     * @param RollbackRoGroupInfo $DstRoGroupInfo Target RO group information.
+     * @param RollbackRoGroupInfo $SrcRoGroupInfo Source RO group information
+     * @param RollbackRoGroupInfo $DstRoGroupInfo Target RO group information
      */
     function __construct()
     {

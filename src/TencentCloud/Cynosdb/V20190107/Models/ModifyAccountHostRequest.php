@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAccountHost request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method string getNewHost() Obtain New host
  * @method void setNewHost(string $NewHost) Set New host
- * @method InputAccount getAccount() Obtain Account infomation
- * @method void setAccount(InputAccount $Account) Set Account infomation
+ * @method InputAccount getAccount() Obtain Account information
+ * @method void setAccount(InputAccount $Account) Set Account information
  */
 class ModifyAccountHostRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
@@ -40,14 +40,14 @@ class ModifyAccountHostRequest extends AbstractModel
     public $NewHost;
 
     /**
-     * @var InputAccount Account infomation
+     * @var InputAccount Account information
      */
     public $Account;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @param string $ClusterId Cluster ID.
      * @param string $NewHost New host
-     * @param InputAccount $Account Account infomation
+     * @param InputAccount $Account Account information
      */
     function __construct()
     {

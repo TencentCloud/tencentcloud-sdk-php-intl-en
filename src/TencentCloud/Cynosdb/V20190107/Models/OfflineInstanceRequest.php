@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIdList() Obtain Instance ID array
- * @method void setInstanceIdList(array $InstanceIdList) Set Instance ID array
+ * @method array getInstanceIdList() Obtain Instance ID array.
+ * @method void setInstanceIdList(array $InstanceIdList) Set Instance ID array.
  */
 class OfflineInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class OfflineInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Instance ID array
+     * @var array Instance ID array.
      */
     public $InstanceIdList;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIdList Instance ID array
+     * @param array $InstanceIdList Instance ID array.
      */
     function __construct()
     {

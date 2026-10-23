@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI optimizer task data
+ * Task data of the AI optimizer
  *
  * @method string getTemplateID() Obtain <p>Template ID</p>
  * @method void setTemplateID(string $TemplateID) Set <p>Template ID</p>

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getLogExpireDay() Obtain Log retention period.
  * @method void setLogExpireDay(integer $LogExpireDay) Set Log retention period.
- * @method integer getHighLogExpireDay() Obtain Frequent log retention period.
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set Frequent log retention period.
+ * @method integer getHighLogExpireDay() Obtain High frequency log retention period.
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set High frequency log retention period.
  * @method array getAuditRuleFilters() Obtain Audit rule (deprecated).
  * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule (deprecated).
- * @method array getRuleTemplateIds() Obtain Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
- * @method boolean getAuditAll() Obtain Audit type. true - Full audit; default false - Rule-based audit.
- * @method void setAuditAll(boolean $AuditAll) Set Audit type. true - Full audit; default false - Rule-based audit.
+ * @method array getRuleTemplateIds() Obtain Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
+ * @method boolean getAuditAll() Obtain Audit type. true: full audit; default false: rule audit.
+ * @method void setAuditAll(boolean $AuditAll) Set Audit type. true: full audit; default false: rule audit.
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ class OpenAuditServiceRequest extends AbstractModel
     public $LogExpireDay;
 
     /**
-     * @var integer Frequent log retention period.
+     * @var integer High frequency log retention period.
      */
     public $HighLogExpireDay;
 
@@ -57,22 +57,22 @@ class OpenAuditServiceRequest extends AbstractModel
     public $AuditRuleFilters;
 
     /**
-     * @var array Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * @var array Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
      */
     public $RuleTemplateIds;
 
     /**
-     * @var boolean Audit type. true - Full audit; default false - Rule-based audit.
+     * @var boolean Audit type. true: full audit; default false: rule audit.
      */
     public $AuditAll;
 
     /**
      * @param string $InstanceId Instance ID.
      * @param integer $LogExpireDay Log retention period.
-     * @param integer $HighLogExpireDay Frequent log retention period.
+     * @param integer $HighLogExpireDay High frequency log retention period.
      * @param array $AuditRuleFilters Audit rule (deprecated).
-     * @param array $RuleTemplateIds Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
-     * @param boolean $AuditAll Audit type. true - Full audit; default false - Rule-based audit.
+     * @param array $RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
+     * @param boolean $AuditAll Audit type. true: full audit; default false: rule audit.
      */
     function __construct()
     {

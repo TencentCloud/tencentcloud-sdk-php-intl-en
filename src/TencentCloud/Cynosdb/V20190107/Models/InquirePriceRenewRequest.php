@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getTimeSpan() Obtain Validity period, which needs to be used together with `TimeUnit`.
- * @method void setTimeSpan(integer $TimeSpan) Set Validity period, which needs to be used together with `TimeUnit`.
- * @method string getTimeUnit() Obtain Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
- * @method void setTimeUnit(string $TimeUnit) Set Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+ * @method integer getTimeSpan() Obtain Purchase period, combined with TimeUnit for the changes to take effect
+ * @method void setTimeSpan(integer $TimeSpan) Set Purchase period, combined with TimeUnit for the changes to take effect
+ * @method string getTimeUnit() Obtain Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
+ * @method void setTimeUnit(string $TimeUnit) Set Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
  */
 class InquirePriceRenewRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class InquirePriceRenewRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer Validity period, which needs to be used together with `TimeUnit`.
+     * @var integer Purchase period, combined with TimeUnit for the changes to take effect
      */
     public $TimeSpan;
 
     /**
-     * @var string Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+     * @var string Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
      */
     public $TimeUnit;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param integer $TimeSpan Validity period, which needs to be used together with `TimeUnit`.
-     * @param string $TimeUnit Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+     * @param integer $TimeSpan Purchase period, combined with TimeUnit for the changes to take effect
+     * @param string $TimeUnit Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
      */
     function __construct()
     {

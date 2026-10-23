@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Analyze instance version upgrade, connection information used for grayscale after the upgrade
+ * Analyze the instance version upgrade and the connection information used for grayscale after the upgrade.
  *
  * @method string getVip() Obtain <p>ip</p>
  * @method void setVip(string $Vip) Set <p>ip</p>
  * @method integer getVport() Obtain <p>Port</p>
  * @method void setVport(integer $Vport) Set <p>Port</p>
- * @method string getEngineVersion() Obtain <p>Version</p>
- * @method void setEngineVersion(string $EngineVersion) Set <p>Version</p>
- * @method integer getExpiredTime() Obtain <p>Expiry time</p>
- * @method void setExpiredTime(integer $ExpiredTime) Set <p>Expiry time</p>
+ * @method string getEngineVersion() Obtain <p>Version.</p>
+ * @method void setEngineVersion(string $EngineVersion) Set <p>Version.</p>
+ * @method integer getExpiredTime() Obtain <p>Expiration time.</p>
+ * @method void setExpiredTime(integer $ExpiredTime) Set <p>Expiration time.</p>
  */
 class UpgradeAnalysisInstanceVersionInfo extends AbstractModel
 {
@@ -42,20 +42,20 @@ class UpgradeAnalysisInstanceVersionInfo extends AbstractModel
     public $Vport;
 
     /**
-     * @var string <p>Version</p>
+     * @var string <p>Version.</p>
      */
     public $EngineVersion;
 
     /**
-     * @var integer <p>Expiry time</p>
+     * @var integer <p>Expiration time.</p>
      */
     public $ExpiredTime;
 
     /**
      * @param string $Vip <p>ip</p>
      * @param integer $Vport <p>Port</p>
-     * @param string $EngineVersion <p>Version</p>
-     * @param integer $ExpiredTime <p>Expiry time</p>
+     * @param string $EngineVersion <p>Version.</p>
+     * @param integer $ExpiredTime <p>Expiration time.</p>
      */
     function __construct()
     {

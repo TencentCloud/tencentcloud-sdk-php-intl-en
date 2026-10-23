@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlow request structure.
  *
- * @method integer getFlowId() Obtain Task flow ID
- * @method void setFlowId(integer $FlowId) Set Task flow ID
+ * @method integer getFlowId() Obtain Task flow ID.
+ * @method void setFlowId(integer $FlowId) Set Task flow ID.
  */
 class DescribeFlowRequest extends AbstractModel
 {
     /**
-     * @var integer Task flow ID
+     * @var integer Task flow ID.
      */
     public $FlowId;
 
     /**
-     * @param integer $FlowId Task flow ID
+     * @param integer $FlowId Task flow ID.
      */
     function __construct()
     {

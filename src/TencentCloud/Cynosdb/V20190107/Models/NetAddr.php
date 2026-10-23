@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Network information
+ * Network info
  *
  * @method string getVip() Obtain Private IP address
  * @method void setVip(string $Vip) Set Private IP address
- * @method integer getVport() Obtain Specifies the private network port number.
- * @method void setVport(integer $Vport) Set Specifies the private network port number.
- * @method string getWanDomain() Obtain Specifies the public network domain name.
- * @method void setWanDomain(string $WanDomain) Set Specifies the public network domain name.
- * @method integer getWanPort() Obtain Specifies the public network port number.
- * @method void setWanPort(integer $WanPort) Set Specifies the public network port number.
- * @method string getNetType() Obtain Network type (ro - read-only, rw/ha - read-write).
- * @method void setNetType(string $NetType) Set Network type (ro - read-only, rw/ha - read-write).
- * @method string getUniqSubnetId() Obtain Specifies the subnet ID.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Specifies the subnet ID.
- * @method string getUniqVpcId() Obtain Specifies the virtual private cloud ID.
- * @method void setUniqVpcId(string $UniqVpcId) Set Specifies the virtual private cloud ID.
+ * @method integer getVport() Obtain Private network port number
+ * @method void setVport(integer $Vport) Set Private network port number
+ * @method string getWanDomain() Obtain Public network domain name.
+ * @method void setWanDomain(string $WanDomain) Set Public network domain name.
+ * @method integer getWanPort() Obtain Public network port number.
+ * @method void setWanPort(integer $WanPort) Set Public network port number.
+ * @method string getNetType() Obtain Network type (ro: read-only, rw/ha: read-write)
+ * @method void setNetType(string $NetType) Set Network type (ro: read-only, rw/ha: read-write)
+ * @method string getUniqSubnetId() Obtain Subnet ID.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID.
+ * @method string getUniqVpcId() Obtain VPC ID
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID
  * @method string getDescription() Obtain Description information
  * @method void setDescription(string $Description) Set Description information
  * @method string getWanIP() Obtain Public IP address
  * @method void setWanIP(string $WanIP) Set Public IP address
- * @method string getWanStatus() Obtain Specifies the public network status.
- * @method void setWanStatus(string $WanStatus) Set Specifies the public network status.
+ * @method string getWanStatus() Obtain Public network status.
+ * @method void setWanStatus(string $WanStatus) Set Public network status.
  * @method string getInstanceGroupId() Obtain Instance group ID
  * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID
  */
@@ -51,32 +51,32 @@ class NetAddr extends AbstractModel
     public $Vip;
 
     /**
-     * @var integer Specifies the private network port number.
+     * @var integer Private network port number
      */
     public $Vport;
 
     /**
-     * @var string Specifies the public network domain name.
+     * @var string Public network domain name.
      */
     public $WanDomain;
 
     /**
-     * @var integer Specifies the public network port number.
+     * @var integer Public network port number.
      */
     public $WanPort;
 
     /**
-     * @var string Network type (ro - read-only, rw/ha - read-write).
+     * @var string Network type (ro: read-only, rw/ha: read-write)
      */
     public $NetType;
 
     /**
-     * @var string Specifies the subnet ID.
+     * @var string Subnet ID.
      */
     public $UniqSubnetId;
 
     /**
-     * @var string Specifies the virtual private cloud ID.
+     * @var string VPC ID
      */
     public $UniqVpcId;
 
@@ -91,7 +91,7 @@ class NetAddr extends AbstractModel
     public $WanIP;
 
     /**
-     * @var string Specifies the public network status.
+     * @var string Public network status.
      */
     public $WanStatus;
 
@@ -102,15 +102,15 @@ class NetAddr extends AbstractModel
 
     /**
      * @param string $Vip Private IP address
-     * @param integer $Vport Specifies the private network port number.
-     * @param string $WanDomain Specifies the public network domain name.
-     * @param integer $WanPort Specifies the public network port number.
-     * @param string $NetType Network type (ro - read-only, rw/ha - read-write).
-     * @param string $UniqSubnetId Specifies the subnet ID.
-     * @param string $UniqVpcId Specifies the virtual private cloud ID.
+     * @param integer $Vport Private network port number
+     * @param string $WanDomain Public network domain name.
+     * @param integer $WanPort Public network port number.
+     * @param string $NetType Network type (ro: read-only, rw/ha: read-write)
+     * @param string $UniqSubnetId Subnet ID.
+     * @param string $UniqVpcId VPC ID
      * @param string $Description Description information
      * @param string $WanIP Public IP address
-     * @param string $WanStatus Specifies the public network status.
+     * @param string $WanStatus Public network status.
      * @param string $InstanceGroupId Instance group ID
      */
     function __construct()

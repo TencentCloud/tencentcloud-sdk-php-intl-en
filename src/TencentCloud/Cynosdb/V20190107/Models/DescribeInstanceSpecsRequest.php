@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSpecs request structure.
  *
- * @method string getDbType() Obtain <p>Database type, value ranges from...to... </p><li> MYSQL </li>
- * @method void setDbType(string $DbType) Set <p>Database type, value ranges from...to... </p><li> MYSQL </li>
- * @method boolean getIncludeZoneStocks() Obtain <p>Whether required to return AZ information</p>
- * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) Set <p>Whether required to return AZ information</p>
- * @method string getDeviceType() Obtain <p>Instance machine type.</p>
- * @method void setDeviceType(string $DeviceType) Set <p>Instance machine type.</p>
+ * @method string getDbType() Obtain <p>Database type. Value range: </p><li> MYSQL </li>
+ * @method void setDbType(string $DbType) Set <p>Database type. Value range: </p><li> MYSQL </li>
+ * @method boolean getIncludeZoneStocks() Obtain <p>Whether to return AZ information</p>
+ * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) Set <p>Whether to return AZ information</p>
+ * @method string getDeviceType() Obtain <p>Instance Machine Type</p>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type</p>
  * @method string getClusterLevel() Obtain <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
  * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
  * @method string getZone() Obtain <p>AZ.</p>
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
     /**
-     * @var string <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+     * @var string <p>Database type. Value range: </p><li> MYSQL </li>
      */
     public $DbType;
 
     /**
-     * @var boolean <p>Whether required to return AZ information</p>
+     * @var boolean <p>Whether to return AZ information</p>
      */
     public $IncludeZoneStocks;
 
     /**
-     * @var string <p>Instance machine type.</p>
+     * @var string <p>Instance Machine Type</p>
      */
     public $DeviceType;
 
@@ -59,9 +59,9 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @param string $DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
-     * @param boolean $IncludeZoneStocks <p>Whether required to return AZ information</p>
-     * @param string $DeviceType <p>Instance machine type.</p>
+     * @param string $DbType <p>Database type. Value range: </p><li> MYSQL </li>
+     * @param boolean $IncludeZoneStocks <p>Whether to return AZ information</p>
+     * @param string $DeviceType <p>Instance Machine Type</p>
      * @param string $ClusterLevel <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
      * @param string $Zone <p>AZ.</p>
      */

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIds() Obtain Instance ID
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID
- * @method array getClusterParamList() Obtain List of cluster parameters
- * @method void setClusterParamList(array $ClusterParamList) Set List of cluster parameters
- * @method array getInstanceParamList() Obtain List of the instance parameters
- * @method void setInstanceParamList(array $InstanceParamList) Set List of the instance parameters
- * @method string getIsInMaintainPeriod() Obtain Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+ * @method array getInstanceIds() Obtain Instance ID.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID.
+ * @method array getClusterParamList() Obtain Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
+ * @method void setClusterParamList(array $ClusterParamList) Set Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
+ * @method array getInstanceParamList() Obtain Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+ * @method void setInstanceParamList(array $InstanceParamList) Set Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+ * @method string getIsInMaintainPeriod() Obtain yes: modify within the Ops time window. no: immediately execute (default value).
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set yes: modify within the Ops time window. no: immediately execute (default value).
  */
 class ModifyInstanceParamRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Instance ID
+     * @var array Instance ID.
      */
     public $InstanceIds;
 
     /**
-     * @var array List of cluster parameters
+     * @var array Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
      */
     public $ClusterParamList;
 
     /**
-     * @var array List of the instance parameters
+     * @var array Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public $InstanceParamList;
 
     /**
-     * @var string Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+     * @var string yes: modify within the Ops time window. no: immediately execute (default value).
      */
     public $IsInMaintainPeriod;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIds Instance ID
-     * @param array $ClusterParamList List of cluster parameters
-     * @param array $InstanceParamList List of the instance parameters
-     * @param string $IsInMaintainPeriod Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+     * @param array $InstanceIds Instance ID.
+     * @param array $ClusterParamList Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
+     * @param array $InstanceParamList Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+     * @param string $IsInMaintainPeriod yes: modify within the Ops time window. no: immediately execute (default value).
      */
     function __construct()
     {

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getClusterName() Obtain Cluster name.
  * @method void setClusterName(string $ClusterName) Set Cluster name.
- * @method string getClusterStatus() Obtain Cluster status
- * @method void setClusterStatus(string $ClusterStatus) Set Cluster status
- * @method string getClusterRegion() Obtain cluster region
- * @method void setClusterRegion(string $ClusterRegion) Set cluster region
+ * @method string getClusterStatus() Obtain Cluster status.
+ * @method void setClusterStatus(string $ClusterStatus) Set Cluster status.
+ * @method string getClusterRegion() Obtain Region of the cluster
+ * @method void setClusterRegion(string $ClusterRegion) Set Region of the cluster
  * @method string getClusterZone() Obtain AZ of the cluster
  * @method void setClusterZone(string $ClusterZone) Set AZ of the cluster
  */
@@ -44,12 +44,12 @@ class DescribeVaultBackupClusterInfo extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string Cluster status
+     * @var string Cluster status.
      */
     public $ClusterStatus;
 
     /**
-     * @var string cluster region
+     * @var string Region of the cluster
      */
     public $ClusterRegion;
 
@@ -61,8 +61,8 @@ class DescribeVaultBackupClusterInfo extends AbstractModel
     /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name.
-     * @param string $ClusterStatus Cluster status
-     * @param string $ClusterRegion cluster region
+     * @param string $ClusterStatus Cluster status.
+     * @param string $ClusterRegion Region of the cluster
      * @param string $ClusterZone AZ of the cluster
      */
     function __construct()

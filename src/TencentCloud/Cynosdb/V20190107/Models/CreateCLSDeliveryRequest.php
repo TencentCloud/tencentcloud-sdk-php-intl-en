@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCLSDelivery request structure.
  *
- * @method string getInstanceId() Obtain Intance ID.
- * @method void setInstanceId(string $InstanceId) Set Intance ID.
- * @method array getCLSInfoList() Obtain Log shipping configuration.
- * @method void setCLSInfoList(array $CLSInfoList) Set Log shipping configuration.
- * @method string getLogType() Obtain Log type.
- * @method void setLogType(string $LogType) Set Log type.
- * @method string getIsInMaintainPeriod() Obtain Whether the maintenance time is in operation.
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Whether the maintenance time is in operation.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method array getCLSInfoList() Obtain Log delivery configuration
+ * @method void setCLSInfoList(array $CLSInfoList) Set Log delivery configuration
+ * @method string getLogType() Obtain Log type
+ * @method void setLogType(string $LogType) Set Log type
+ * @method string getIsInMaintainPeriod() Obtain Whether it is running during the maintenance time
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Whether it is running during the maintenance time
  */
 class CreateCLSDeliveryRequest extends AbstractModel
 {
     /**
-     * @var string Intance ID.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var array Log shipping configuration.
+     * @var array Log delivery configuration
      */
     public $CLSInfoList;
 
     /**
-     * @var string Log type.
+     * @var string Log type
      */
     public $LogType;
 
     /**
-     * @var string Whether the maintenance time is in operation.
+     * @var string Whether it is running during the maintenance time
      */
     public $IsInMaintainPeriod;
 
     /**
-     * @param string $InstanceId Intance ID.
-     * @param array $CLSInfoList Log shipping configuration.
-     * @param string $LogType Log type.
-     * @param string $IsInMaintainPeriod Whether the maintenance time is in operation.
+     * @param string $InstanceId Instance ID.
+     * @param array $CLSInfoList Log delivery configuration
+     * @param string $LogType Log type
+     * @param string $IsInMaintainPeriod Whether it is running during the maintenance time
      */
     function __construct()
     {

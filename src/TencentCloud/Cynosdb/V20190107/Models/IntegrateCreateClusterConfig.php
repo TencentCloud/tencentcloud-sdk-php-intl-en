@@ -18,44 +18,44 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Integrated cluster configuration.
+ * Integrated cluster configuration
  *
- * @method integer getBinlogSaveDays() Obtain Retention days of binlog. value range: 7-1830.
- * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set Retention days of binlog. value range: 7-1830.
- * @method integer getBackupSaveDays() Obtain Specifies the backup retention days. value range: 7-1830.
- * @method void setBackupSaveDays(integer $BackupSaveDays) Set Specifies the backup retention days. value range: 7-1830.
- * @method integer getSemiSyncTimeout() Obtain Specifies the semi-sync timeout period. value range: [1000,4294967295].
- * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set Specifies the semi-sync timeout period. value range: [1000,4294967295].
- * @method array getProxyEndPointConfigs() Obtain proxy connection address configuration message.
- * @method void setProxyEndPointConfigs(array $ProxyEndPointConfigs) Set proxy connection address configuration message.
+ * @method integer getBinlogSaveDays() Obtain binlog retention days [7,1830]
+ * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set binlog retention days [7,1830]
+ * @method integer getBackupSaveDays() Obtain Backup retention days [7,1830]
+ * @method void setBackupSaveDays(integer $BackupSaveDays) Set Backup retention days [7,1830]
+ * @method integer getSemiSyncTimeout() Obtain Semi-sync timeout period [1000,4294967295]
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set Semi-sync timeout period [1000,4294967295]
+ * @method array getProxyEndPointConfigs() Obtain proxy connection address configuration message
+ * @method void setProxyEndPointConfigs(array $ProxyEndPointConfigs) Set proxy connection address configuration message
  */
 class IntegrateCreateClusterConfig extends AbstractModel
 {
     /**
-     * @var integer Retention days of binlog. value range: 7-1830.
+     * @var integer binlog retention days [7,1830]
      */
     public $BinlogSaveDays;
 
     /**
-     * @var integer Specifies the backup retention days. value range: 7-1830.
+     * @var integer Backup retention days [7,1830]
      */
     public $BackupSaveDays;
 
     /**
-     * @var integer Specifies the semi-sync timeout period. value range: [1000,4294967295].
+     * @var integer Semi-sync timeout period [1000,4294967295]
      */
     public $SemiSyncTimeout;
 
     /**
-     * @var array proxy connection address configuration message.
+     * @var array proxy connection address configuration message
      */
     public $ProxyEndPointConfigs;
 
     /**
-     * @param integer $BinlogSaveDays Retention days of binlog. value range: 7-1830.
-     * @param integer $BackupSaveDays Specifies the backup retention days. value range: 7-1830.
-     * @param integer $SemiSyncTimeout Specifies the semi-sync timeout period. value range: [1000,4294967295].
-     * @param array $ProxyEndPointConfigs proxy connection address configuration message.
+     * @param integer $BinlogSaveDays binlog retention days [7,1830]
+     * @param integer $BackupSaveDays Backup retention days [7,1830]
+     * @param integer $SemiSyncTimeout Semi-sync timeout period [1000,4294967295]
+     * @param array $ProxyEndPointConfigs proxy connection address configuration message
      */
     function __construct()
     {

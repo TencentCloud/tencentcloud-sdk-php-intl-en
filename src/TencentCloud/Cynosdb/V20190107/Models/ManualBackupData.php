@@ -18,31 +18,31 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Manual backup task information.
+ * Manual backup task information
  *
- * @method string getBackupType() Obtain Backup type. snapshot - Snapshot backup.
- * @method void setBackupType(string $BackupType) Set Backup type. snapshot - Snapshot backup.
- * @method string getBackupMethod() Obtain Backup method. auto - Automatic backup, manual - Manual backup.
- * @method void setBackupMethod(string $BackupMethod) Set Backup method. auto - Automatic backup, manual - Manual backup.
- * @method string getSnapshotTime() Obtain Backup time.
- * @method void setSnapshotTime(string $SnapshotTime) Set Backup time.
+ * @method string getBackupType() Obtain Backup type. snapshot: snapshot backup.
+ * @method void setBackupType(string $BackupType) Set Backup type. snapshot: snapshot backup.
+ * @method string getBackupMethod() Obtain Backup method. auto: automatic backup, manual: manual
+ * @method void setBackupMethod(string $BackupMethod) Set Backup method. auto: automatic backup, manual: manual
+ * @method string getSnapshotTime() Obtain Backup time
+ * @method void setSnapshotTime(string $SnapshotTime) Set Backup time
  * @method array getCrossRegionBackupInfos() Obtain Detailed information of cross-region backup items
  * @method void setCrossRegionBackupInfos(array $CrossRegionBackupInfos) Set Detailed information of cross-region backup items
  */
 class ManualBackupData extends AbstractModel
 {
     /**
-     * @var string Backup type. snapshot - Snapshot backup.
+     * @var string Backup type. snapshot: snapshot backup.
      */
     public $BackupType;
 
     /**
-     * @var string Backup method. auto - Automatic backup, manual - Manual backup.
+     * @var string Backup method. auto: automatic backup, manual: manual
      */
     public $BackupMethod;
 
     /**
-     * @var string Backup time.
+     * @var string Backup time
      */
     public $SnapshotTime;
 
@@ -52,9 +52,9 @@ class ManualBackupData extends AbstractModel
     public $CrossRegionBackupInfos;
 
     /**
-     * @param string $BackupType Backup type. snapshot - Snapshot backup.
-     * @param string $BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
-     * @param string $SnapshotTime Backup time.
+     * @param string $BackupType Backup type. snapshot: snapshot backup.
+     * @param string $BackupMethod Backup method. auto: automatic backup, manual: manual
+     * @param string $SnapshotTime Backup time
      * @param array $CrossRegionBackupInfos Detailed information of cross-region backup items
      */
     function __construct()

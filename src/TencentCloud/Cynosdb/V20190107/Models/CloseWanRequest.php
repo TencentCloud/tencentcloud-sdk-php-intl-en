@@ -20,19 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseWan request structure.
  *
- * @method string getInstanceGrpId() Obtain Instance group ID
- * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID
+ * @method string getInstanceGrpId() Obtain Instance Group ID
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance Group ID
+ * @method string getInstanceGroupId() Obtain Instance Group ID
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance Group ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
 class CloseWanRequest extends AbstractModel
 {
     /**
-     * @var string Instance group ID
+     * @var string Instance Group ID
      * @deprecated
      */
     public $InstanceGrpId;
 
     /**
-     * @param string $InstanceGrpId Instance group ID
+     * @var string Instance Group ID
+     */
+    public $InstanceGroupId;
+
+    /**
+     * @var string Instance ID.
+     */
+    public $InstanceId;
+
+    /**
+     * @param string $InstanceGrpId Instance Group ID
+     * @param string $InstanceGroupId Instance Group ID
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {
@@ -49,6 +65,14 @@ class CloseWanRequest extends AbstractModel
         }
         if (array_key_exists("InstanceGrpId",$param) and $param["InstanceGrpId"] !== null) {
             $this->InstanceGrpId = $param["InstanceGrpId"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVaults request structure.
  *
- * @method array getVaultIds() Obtain Safe ID list for precise filtering
- * @method void setVaultIds(array $VaultIds) Set Safe ID list for precise filtering
- * @method string getVaultName() Obtain Safe name, used for fuzzy filtering
- * @method void setVaultName(string $VaultName) Set Safe name, used for fuzzy filtering
- * @method array getStatus() Obtain Status list of safe for filtering
- * @method void setStatus(array $Status) Set Status list of safe for filtering
- * @method integer getLimit() Obtain Number of items per page, range (0,100], default 100
- * @method void setLimit(integer $Limit) Set Number of items per page, range (0,100], default 100
- * @method integer getOffset() Obtain Offset. Range: [0,+∞). Default is 0
- * @method void setOffset(integer $Offset) Set Offset. Range: [0,+∞). Default is 0
+ * @method array getVaultIds() Obtain List of safe IDs for precise filtering
+ * @method void setVaultIds(array $VaultIds) Set List of safe IDs for precise filtering
+ * @method string getVaultName() Obtain Safe name, used for blurry filtering
+ * @method void setVaultName(string $VaultName) Set Safe name, used for blurry filtering
+ * @method array getStatus() Obtain Safe status list for filtering
+ * @method void setStatus(array $Status) Set Safe status list for filtering
+ * @method integer getLimit() Obtain Number of items per page. Value range: (0,100]. Default: 100
+ * @method void setLimit(integer $Limit) Set Number of items per page. Value range: (0,100]. Default: 100
+ * @method integer getOffset() Obtain Offset. Value range: [0, +∞). Default: 0
+ * @method void setOffset(integer $Offset) Set Offset. Value range: [0, +∞). Default: 0
  * @method string getOrderBy() Obtain Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime
  * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime
- * @method string getOrderByType() Obtain Sorting method, available values: desc, asc, DESC, ASC
- * @method void setOrderByType(string $OrderByType) Set Sorting method, available values: desc, asc, DESC, ASC
+ * @method string getOrderByType() Obtain Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
  */
 class DescribeVaultsRequest extends AbstractModel
 {
     /**
-     * @var array Safe ID list for precise filtering
+     * @var array List of safe IDs for precise filtering
      */
     public $VaultIds;
 
     /**
-     * @var string Safe name, used for fuzzy filtering
+     * @var string Safe name, used for blurry filtering
      */
     public $VaultName;
 
     /**
-     * @var array Status list of safe for filtering
+     * @var array Safe status list for filtering
      */
     public $Status;
 
     /**
-     * @var integer Number of items per page, range (0,100], default 100
+     * @var integer Number of items per page. Value range: (0,100]. Default: 100
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Range: [0,+∞). Default is 0
+     * @var integer Offset. Value range: [0, +∞). Default: 0
      */
     public $Offset;
 
@@ -68,18 +68,18 @@ class DescribeVaultsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string Sorting method, available values: desc, asc, DESC, ASC
+     * @var string Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
      */
     public $OrderByType;
 
     /**
-     * @param array $VaultIds Safe ID list for precise filtering
-     * @param string $VaultName Safe name, used for fuzzy filtering
-     * @param array $Status Status list of safe for filtering
-     * @param integer $Limit Number of items per page, range (0,100], default 100
-     * @param integer $Offset Offset. Range: [0,+∞). Default is 0
+     * @param array $VaultIds List of safe IDs for precise filtering
+     * @param string $VaultName Safe name, used for blurry filtering
+     * @param array $Status Safe status list for filtering
+     * @param integer $Limit Number of items per page. Value range: (0,100]. Default: 100
+     * @param integer $Offset Offset. Value range: [0, +∞). Default: 0
      * @param string $OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime
-     * @param string $OrderByType Sorting method, available values: desc, asc, DESC, ASC
+     * @param string $OrderByType Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Product specification.
+ * Product specification
  *
  * @method integer getGoodsNum() Obtain Number of products
  * @method void setGoodsNum(integer $GoodsNum) Set Number of products
@@ -35,11 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTimeUnit() Obtain Duration unit.
  * @method void setTimeUnit(string $TimeUnit) Set Duration unit.
  * @method string getDeviceType() Obtain Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
  * @method void setDeviceType(string $DeviceType) Set Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
  */
 class GoodsSpec extends AbstractModel
 {
@@ -80,8 +80,8 @@ class GoodsSpec extends AbstractModel
 
     /**
      * @var string Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public $DeviceType;
 
@@ -94,8 +94,8 @@ class GoodsSpec extends AbstractModel
      * @param integer $TimeSpan Purchase period
      * @param string $TimeUnit Duration unit.
      * @param string $DeviceType Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
      */
     function __construct()
     {

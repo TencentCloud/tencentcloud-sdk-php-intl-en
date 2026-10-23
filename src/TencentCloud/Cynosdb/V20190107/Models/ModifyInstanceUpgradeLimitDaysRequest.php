@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceUpgradeLimitDays request structure.
  *
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getUpgradeLimitDays() Obtain Upgrade time limit.
- * @method void setUpgradeLimitDays(integer $UpgradeLimitDays) Set Upgrade time limit.
+ * @method integer getUpgradeLimitDays() Obtain Upgrade time limit
+ * @method void setUpgradeLimitDays(integer $UpgradeLimitDays) Set Upgrade time limit
  */
 class ModifyInstanceUpgradeLimitDaysRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID.
+     * @var string Cluster ID
      */
     public $ClusterId;
 
@@ -40,14 +40,14 @@ class ModifyInstanceUpgradeLimitDaysRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Upgrade time limit.
+     * @var integer Upgrade time limit
      */
     public $UpgradeLimitDays;
 
     /**
-     * @param string $ClusterId Cluster ID.
+     * @param string $ClusterId Cluster ID
      * @param string $InstanceId Instance ID.
-     * @param integer $UpgradeLimitDays Upgrade time limit.
+     * @param integer $UpgradeLimitDays Upgrade time limit
      */
     function __construct()
     {

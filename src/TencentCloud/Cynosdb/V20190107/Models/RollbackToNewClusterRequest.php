@@ -22,68 +22,68 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain <p>AZ.</p>
  * @method void setZone(string $Zone) Set <p>AZ.</p>
- * @method string getOriginalClusterId() Obtain <p>During rollback, input the source cluster ID to search for the source poolId</p>
- * @method void setOriginalClusterId(string $OriginalClusterId) Set <p>During rollback, input the source cluster ID to search for the source poolId</p>
- * @method string getUniqVpcId() Obtain <p>VPC network ID</p>
- * @method void setUniqVpcId(string $UniqVpcId) Set <p>VPC network ID</p>
- * @method string getUniqSubnetId() Obtain <p>Subnet ID</p>
- * @method void setUniqSubnetId(string $UniqSubnetId) Set <p>Subnet ID</p>
- * @method string getClusterName() Obtain <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
- * @method void setClusterName(string $ClusterName) Set <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
- * @method integer getRollbackId() Obtain <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
- * @method void setRollbackId(integer $RollbackId) Set <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+ * @method string getOriginalClusterId() Obtain <p>During rollback, import the source cluster ID to search for the source poolId</p>
+ * @method void setOriginalClusterId(string $OriginalClusterId) Set <p>During rollback, import the source cluster ID to search for the source poolId</p>
+ * @method string getUniqVpcId() Obtain <p>ID of the VPC network it belongs to</p>
+ * @method void setUniqVpcId(string $UniqVpcId) Set <p>ID of the VPC network it belongs to</p>
+ * @method string getUniqSubnetId() Obtain <p>Subnet ID.</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set <p>Subnet ID.</p>
+ * @method string getClusterName() Obtain <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
+ * @method integer getRollbackId() Obtain <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
+ * @method void setRollbackId(integer $RollbackId) Set <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
  * @method string getExpectTime() Obtain <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
  * @method void setExpectTime(string $ExpectTime) Set <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
  * @method integer getAutoVoucher() Obtain <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
  * @method void setAutoVoucher(integer $AutoVoucher) Set <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
- * @method array getResourceTags() Obtain <p>tag Array information that should be bound for cluster creation</p>
- * @method void setResourceTags(array $ResourceTags) Set <p>tag Array information that should be bound for cluster creation</p>
+ * @method array getResourceTags() Obtain <p>tag Array information that need to be bound for cluster creation</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>tag Array information that need to be bound for cluster creation</p>
  * @method string getDbMode() Obtain <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
  * @method void setDbMode(string $DbMode) Set <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
- * @method float getMinCpu() Obtain <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
- * @method void setMinCpu(float $MinCpu) Set <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
- * @method float getMaxCpu() Obtain <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
- * @method void setMaxCpu(float $MaxCpu) Set <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+ * @method float getMinCpu() Obtain <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+ * @method void setMinCpu(float $MinCpu) Set <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+ * @method float getMaxCpu() Obtain <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+ * @method void setMaxCpu(float $MaxCpu) Set <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
  * @method string getAutoPause() Obtain <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
  * @method void setAutoPause(string $AutoPause) Set <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
- * @method integer getAutoPauseDelay() Obtain <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
- * @method void setAutoPauseDelay(integer $AutoPauseDelay) Set <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+ * @method integer getAutoPauseDelay() Obtain <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
+ * @method void setAutoPauseDelay(integer $AutoPauseDelay) Set <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
  * @method array getSecurityGroupIds() Obtain <p>Security group id array</p>
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group id array</p>
  * @method array getAlarmPolicyIds() Obtain <p>Alarm policy Id array</p>
  * @method void setAlarmPolicyIds(array $AlarmPolicyIds) Set <p>Alarm policy Id array</p>
- * @method array getClusterParams() Obtain <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
- * @method void setClusterParams(array $ClusterParams) Set <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
- * @method integer getParamTemplateId() Obtain <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
- * @method void setParamTemplateId(integer $ParamTemplateId) Set <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
- * @method array getInstanceInitInfos() Obtain <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
- * @method void setInstanceInitInfos(array $InstanceInitInfos) Set <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
- * @method integer getDealMode() Obtain <p>0-Place order and pay 1-Placing order</p>
- * @method void setDealMode(integer $DealMode) Set <p>0-Place order and pay 1-Placing order</p>
- * @method integer getPayMode() Obtain <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
- * @method void setPayMode(integer $PayMode) Set <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+ * @method array getClusterParams() Obtain <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
+ * @method void setClusterParams(array $ClusterParams) Set <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
+ * @method integer getParamTemplateId() Obtain <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
+ * @method array getInstanceInitInfos() Obtain <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
+ * @method void setInstanceInitInfos(array $InstanceInitInfos) Set <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
+ * @method integer getDealMode() Obtain <p>0-Place order and pay 1-Place order</p>
+ * @method void setDealMode(integer $DealMode) Set <p>0-Place order and pay 1-Place order</p>
+ * @method integer getPayMode() Obtain <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
+ * @method void setPayMode(integer $PayMode) Set <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
  * @method integer getTimeSpan() Obtain <p>Time</p>
  * @method void setTimeSpan(integer $TimeSpan) Set <p>Time</p>
  * @method string getTimeUnit() Obtain <p>Unit</p>
  * @method void setTimeUnit(string $TimeUnit) Set <p>Unit</p>
- * @method array getRollbackDatabases() Obtain <p>Rollback database info</p>
- * @method void setRollbackDatabases(array $RollbackDatabases) Set <p>Rollback database info</p>
- * @method array getRollbackTables() Obtain <p>Roll back table information</p>
- * @method void setRollbackTables(array $RollbackTables) Set <p>Roll back table information</p>
- * @method array getOriginalROInstanceList() Obtain <p>Original ro instance information</p>
- * @method void setOriginalROInstanceList(array $OriginalROInstanceList) Set <p>Original ro instance information</p>
+ * @method array getRollbackDatabases() Obtain <p>Rollback database information</p>
+ * @method void setRollbackDatabases(array $RollbackDatabases) Set <p>Rollback database information</p>
+ * @method array getRollbackTables() Obtain <p>Rollback table information</p>
+ * @method void setRollbackTables(array $RollbackTables) Set <p>Rollback table information</p>
+ * @method array getOriginalROInstanceList() Obtain <p>Information of the source read-only instance</p>
+ * @method void setOriginalROInstanceList(array $OriginalROInstanceList) Set <p>Information of the source read-only instance</p>
  * @method integer getProjectId() Obtain <p>Project ID.</p>
  * @method void setProjectId(integer $ProjectId) Set <p>Project ID.</p>
- * @method string getAutoArchive() Obtain <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
- * @method void setAutoArchive(string $AutoArchive) Set <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
- * @method boolean getFromSaveBackup() Obtain <p>Whether to restore from the saved backup</p>
- * @method void setFromSaveBackup(boolean $FromSaveBackup) Set <p>Whether to restore from the saved backup</p>
+ * @method string getAutoArchive() Obtain <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
+ * @method void setAutoArchive(string $AutoArchive) Set <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
+ * @method boolean getFromSaveBackup() Obtain <p>Whether to restore from a saved backup</p>
+ * @method void setFromSaveBackup(boolean $FromSaveBackup) Set <p>Whether to restore from a saved backup</p>
  * @method string getSyncWay() Obtain <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
  * @method void setSyncWay(string $SyncWay) Set <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
- * @method integer getSemiSyncTimeout() Obtain <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
- * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
- * @method string getSlaveZone() Obtain <p>Standby availability zone</p>
- * @method void setSlaveZone(string $SlaveZone) Set <p>Standby availability zone</p>
+ * @method integer getSemiSyncTimeout() Obtain <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
+ * @method string getSlaveZone() Obtain <p>Secondary AZ</p>
+ * @method void setSlaveZone(string $SlaveZone) Set <p>Secondary AZ</p>
  */
 class RollbackToNewClusterRequest extends AbstractModel
 {
@@ -93,27 +93,27 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string <p>During rollback, input the source cluster ID to search for the source poolId</p>
+     * @var string <p>During rollback, import the source cluster ID to search for the source poolId</p>
      */
     public $OriginalClusterId;
 
     /**
-     * @var string <p>VPC network ID</p>
+     * @var string <p>ID of the VPC network it belongs to</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string <p>Subnet ID</p>
+     * @var string <p>Subnet ID.</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var string <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+     * @var string <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
      */
     public $ClusterName;
 
     /**
-     * @var integer <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+     * @var integer <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
      */
     public $RollbackId;
 
@@ -128,7 +128,7 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var array <p>tag Array information that should be bound for cluster creation</p>
+     * @var array <p>tag Array information that need to be bound for cluster creation</p>
      */
     public $ResourceTags;
 
@@ -138,12 +138,12 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $DbMode;
 
     /**
-     * @var float <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+     * @var float <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
      */
     public $MinCpu;
 
     /**
-     * @var float <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+     * @var float <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
      */
     public $MaxCpu;
 
@@ -153,7 +153,7 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $AutoPause;
 
     /**
-     * @var integer <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+     * @var integer <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
      */
     public $AutoPauseDelay;
 
@@ -168,27 +168,27 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $AlarmPolicyIds;
 
     /**
-     * @var array <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+     * @var array <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
      */
     public $ClusterParams;
 
     /**
-     * @var integer <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+     * @var integer <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
      */
     public $ParamTemplateId;
 
     /**
-     * @var array <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+     * @var array <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
      */
     public $InstanceInitInfos;
 
     /**
-     * @var integer <p>0-Place order and pay 1-Placing order</p>
+     * @var integer <p>0-Place order and pay 1-Place order</p>
      */
     public $DealMode;
 
     /**
-     * @var integer <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+     * @var integer <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
      */
     public $PayMode;
 
@@ -203,17 +203,17 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $TimeUnit;
 
     /**
-     * @var array <p>Rollback database info</p>
+     * @var array <p>Rollback database information</p>
      */
     public $RollbackDatabases;
 
     /**
-     * @var array <p>Roll back table information</p>
+     * @var array <p>Rollback table information</p>
      */
     public $RollbackTables;
 
     /**
-     * @var array <p>Original ro instance information</p>
+     * @var array <p>Information of the source read-only instance</p>
      */
     public $OriginalROInstanceList;
 
@@ -223,12 +223,12 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+     * @var string <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
      */
     public $AutoArchive;
 
     /**
-     * @var boolean <p>Whether to restore from the saved backup</p>
+     * @var boolean <p>Whether to restore from a saved backup</p>
      */
     public $FromSaveBackup;
 
@@ -238,48 +238,48 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $SyncWay;
 
     /**
-     * @var integer <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * @var integer <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
      */
     public $SemiSyncTimeout;
 
     /**
-     * @var string <p>Standby availability zone</p>
+     * @var string <p>Secondary AZ</p>
      */
     public $SlaveZone;
 
     /**
      * @param string $Zone <p>AZ.</p>
-     * @param string $OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
-     * @param string $UniqVpcId <p>VPC network ID</p>
-     * @param string $UniqSubnetId <p>Subnet ID</p>
-     * @param string $ClusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
-     * @param integer $RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+     * @param string $OriginalClusterId <p>During rollback, import the source cluster ID to search for the source poolId</p>
+     * @param string $UniqVpcId <p>ID of the VPC network it belongs to</p>
+     * @param string $UniqSubnetId <p>Subnet ID.</p>
+     * @param string $ClusterName <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
+     * @param integer $RollbackId <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
      * @param string $ExpectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
      * @param integer $AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
-     * @param array $ResourceTags <p>tag Array information that should be bound for cluster creation</p>
+     * @param array $ResourceTags <p>tag Array information that need to be bound for cluster creation</p>
      * @param string $DbMode <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
-     * @param float $MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
-     * @param float $MaxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+     * @param float $MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+     * @param float $MaxCpu <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
      * @param string $AutoPause <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
-     * @param integer $AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+     * @param integer $AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
      * @param array $SecurityGroupIds <p>Security group id array</p>
      * @param array $AlarmPolicyIds <p>Alarm policy Id array</p>
-     * @param array $ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
-     * @param integer $ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
-     * @param array $InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
-     * @param integer $DealMode <p>0-Place order and pay 1-Placing order</p>
-     * @param integer $PayMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+     * @param array $ClusterParams <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
+     * @param integer $ParamTemplateId <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
+     * @param array $InstanceInitInfos <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
+     * @param integer $DealMode <p>0-Place order and pay 1-Place order</p>
+     * @param integer $PayMode <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
      * @param integer $TimeSpan <p>Time</p>
      * @param string $TimeUnit <p>Unit</p>
-     * @param array $RollbackDatabases <p>Rollback database info</p>
-     * @param array $RollbackTables <p>Roll back table information</p>
-     * @param array $OriginalROInstanceList <p>Original ro instance information</p>
+     * @param array $RollbackDatabases <p>Rollback database information</p>
+     * @param array $RollbackTables <p>Rollback table information</p>
+     * @param array $OriginalROInstanceList <p>Information of the source read-only instance</p>
      * @param integer $ProjectId <p>Project ID.</p>
-     * @param string $AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
-     * @param boolean $FromSaveBackup <p>Whether to restore from the saved backup</p>
+     * @param string $AutoArchive <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
+     * @param boolean $FromSaveBackup <p>Whether to restore from a saved backup</p>
      * @param string $SyncWay <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
-     * @param integer $SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
-     * @param string $SlaveZone <p>Standby availability zone</p>
+     * @param integer $SemiSyncTimeout <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * @param string $SlaveZone <p>Secondary AZ</p>
      */
     function __construct()
     {

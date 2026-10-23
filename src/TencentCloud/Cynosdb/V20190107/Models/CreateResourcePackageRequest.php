@@ -20,74 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateResourcePackage request structure.
  *
- * @method string getInstanceType() Obtain Instance type. currently fixed to cynosdb-serverless.
- * @method void setInstanceType(string $InstanceType) Set Instance type. currently fixed to cynosdb-serverless.
- * @method string getPackageRegion() Obtain Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
- * @method void setPackageRegion(string $PackageRegion) Set Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
- * @method string getPackageType() Obtain Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
- * @method void setPackageType(string $PackageType) Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
- * @method string getPackageVersion() Obtain Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
- * @method void setPackageVersion(string $PackageVersion) Set Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
- * @method float getPackageSpec() Obtain Resource package size. Compute resource unit: unit; storage resource: GB.
- * @method void setPackageSpec(float $PackageSpec) Set Resource package size. Compute resource unit: unit; storage resource: GB.
- * @method integer getExpireDay() Obtain Validity period of a resource pack in days
- * @method void setExpireDay(integer $ExpireDay) Set Validity period of a resource pack in days
- * @method integer getPackageCount() Obtain Number of the resource packs to be purchased
- * @method void setPackageCount(integer $PackageCount) Set Number of the resource packs to be purchased
- * @method string getPackageName() Obtain Resource pack name
- * @method void setPackageName(string $PackageName) Set Resource pack name
+ * @method string getInstanceType() Obtain Instance type. Currently fixed to cynosdb-serverless.
+ * @method void setInstanceType(string $InstanceType) Set Instance type. Currently fixed to cynosdb-serverless.
+ * @method string getPackageRegion() Obtain Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+ * @method void setPackageRegion(string $PackageRegion) Set Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+ * @method string getPackageType() Obtain Resource package type. CCU: compute resource package. DISK: storage resource package.
+ * @method void setPackageType(string $PackageType) Set Resource package type. CCU: compute resource package. DISK: storage resource package.
+ * @method string getPackageVersion() Obtain Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
+ * @method void setPackageVersion(string $PackageVersion) Set Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
+ * @method float getPackageSpec() Obtain Package size. Compute resource unit: count. Storage resource: GB.
+ * @method void setPackageSpec(float $PackageSpec) Set Package size. Compute resource unit: count. Storage resource: GB.
+ * @method integer getExpireDay() Obtain Resource pack validity period. Unit: day.
+ * @method void setExpireDay(integer $ExpireDay) Set Resource pack validity period. Unit: day.
+ * @method integer getPackageCount() Obtain Number of resource packages to purchase
+ * @method void setPackageCount(integer $PackageCount) Set Number of resource packages to purchase
+ * @method string getPackageName() Obtain Resource package name.
+ * @method void setPackageName(string $PackageName) Set Resource package name.
  */
 class CreateResourcePackageRequest extends AbstractModel
 {
     /**
-     * @var string Instance type. currently fixed to cynosdb-serverless.
+     * @var string Instance type. Currently fixed to cynosdb-serverless.
      */
     public $InstanceType;
 
     /**
-     * @var string Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * @var string Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
      */
     public $PackageRegion;
 
     /**
-     * @var string Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * @var string Resource package type. CCU: compute resource package. DISK: storage resource package.
      */
     public $PackageType;
 
     /**
-     * @var string Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+     * @var string Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
      */
     public $PackageVersion;
 
     /**
-     * @var float Resource package size. Compute resource unit: unit; storage resource: GB.
+     * @var float Package size. Compute resource unit: count. Storage resource: GB.
      */
     public $PackageSpec;
 
     /**
-     * @var integer Validity period of a resource pack in days
+     * @var integer Resource pack validity period. Unit: day.
      */
     public $ExpireDay;
 
     /**
-     * @var integer Number of the resource packs to be purchased
+     * @var integer Number of resource packages to purchase
      */
     public $PackageCount;
 
     /**
-     * @var string Resource pack name
+     * @var string Resource package name.
      */
     public $PackageName;
 
     /**
-     * @param string $InstanceType Instance type. currently fixed to cynosdb-serverless.
-     * @param string $PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-     * @param string $PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-     * @param string $PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
-     * @param float $PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
-     * @param integer $ExpireDay Validity period of a resource pack in days
-     * @param integer $PackageCount Number of the resource packs to be purchased
-     * @param string $PackageName Resource pack name
+     * @param string $InstanceType Instance type. Currently fixed to cynosdb-serverless.
+     * @param string $PackageRegion Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+     * @param string $PackageType Resource package type. CCU: compute resource package. DISK: storage resource package.
+     * @param string $PackageVersion Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
+     * @param float $PackageSpec Package size. Compute resource unit: count. Storage resource: GB.
+     * @param integer $ExpireDay Resource pack validity period. Unit: day.
+     * @param integer $PackageCount Number of resource packages to purchase
+     * @param string $PackageName Resource package name.
      */
     function __construct()
     {

@@ -20,67 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourcePackageList request structure.
  *
- * @method array getPackageId() Obtain The unique ID of a resource pack
- * @method void setPackageId(array $PackageId) Set The unique ID of a resource pack
- * @method array getPackageName() Obtain Resource pack name
- * @method void setPackageName(array $PackageName) Set Resource pack name
- * @method array getPackageType() Obtain Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
- * @method void setPackageType(array $PackageType) Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
- * @method array getPackageRegion() Obtain Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
- * @method void setPackageRegion(array $PackageRegion) Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
- * @method array getStatus() Obtain Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
- * @method void setStatus(array $Status) Set Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
- * @method array getOrderBy() Obtain Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
- * @method void setOrderBy(array $OrderBy) Set Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
- * @method string getOrderDirection() Obtain Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
- * @method void setOrderDirection(string $OrderDirection) Set Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
+ * @method array getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(array $PackageId) Set Unique ID of the resource package
+ * @method array getPackageName() Obtain Resource package name.
+ * @method void setPackageName(array $PackageName) Set Resource package name.
+ * @method array getPackageType() Obtain Resource package type
+CCU: compute resource package. DISK: storage resource package.
+ * @method void setPackageType(array $PackageType) Set Resource package type
+CCU: compute resource package. DISK: storage resource package.
+ * @method array getPackageRegion() Obtain Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+ * @method void setPackageRegion(array $PackageRegion) Set Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+ * @method array getStatus() Obtain Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
+ * @method void setStatus(array $Status) Set Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
+ * @method array getOrderBy() Obtain Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
+ * @method void setOrderBy(array $OrderBy) Set Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
+ * @method string getOrderDirection() Obtain Sorting method. `DESC`: descending order. `ASC`: ascending order.
+ * @method void setOrderDirection(string $OrderDirection) Set Sorting method. `DESC`: descending order. `ASC`: ascending order.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
  * @method integer getLimit() Obtain Limit
  * @method void setLimit(integer $Limit) Set Limit
  */
 class DescribeResourcePackageListRequest extends AbstractModel
 {
     /**
-     * @var array The unique ID of a resource pack
+     * @var array Unique ID of the resource package
      */
     public $PackageId;
 
     /**
-     * @var array Resource pack name
+     * @var array Resource package name.
      */
     public $PackageName;
 
     /**
-     * @var array Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * @var array Resource package type
+CCU: compute resource package. DISK: storage resource package.
      */
     public $PackageType;
 
     /**
-     * @var array Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * @var array Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
      */
     public $PackageRegion;
 
     /**
-     * @var array Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+     * @var array Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
      */
     public $Status;
 
     /**
-     * @var array Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
+     * @var array Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+     * @var string Sorting method. `DESC`: descending order. `ASC`: ascending order.
      */
     public $OrderDirection;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
@@ -90,15 +117,24 @@ Sorting by array order
     public $Limit;
 
     /**
-     * @param array $PackageId The unique ID of a resource pack
-     * @param array $PackageName Resource pack name
-     * @param array $PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-     * @param array $PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-     * @param array $Status Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
-     * @param array $OrderBy Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
-     * @param string $OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
-     * @param integer $Offset Offset
+     * @param array $PackageId Unique ID of the resource package
+     * @param array $PackageName Resource package name.
+     * @param array $PackageType Resource package type
+CCU: compute resource package. DISK: storage resource package.
+     * @param array $PackageRegion Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+     * @param array $Status Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
+     * @param array $OrderBy Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
+     * @param string $OrderDirection Sorting method. `DESC`: descending order. `ASC`: ascending order.
+     * @param integer $Offset Offset.
      * @param integer $Limit Limit
      */
     function __construct()

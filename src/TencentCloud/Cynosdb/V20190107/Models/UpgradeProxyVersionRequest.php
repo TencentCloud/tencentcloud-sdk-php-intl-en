@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getSrcProxyVersion() Obtain Current version of database proxy
- * @method void setSrcProxyVersion(string $SrcProxyVersion) Set Current version of database proxy
- * @method string getDstProxyVersion() Obtain Target version of database proxy
- * @method void setDstProxyVersion(string $DstProxyVersion) Set Target version of database proxy
- * @method string getProxyGroupId() Obtain Database proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID
- * @method string getIsInMaintainPeriod() Obtain Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+ * @method string getSrcProxyVersion() Obtain Current version of the database proxy.
+ * @method void setSrcProxyVersion(string $SrcProxyVersion) Set Current version of the database proxy.
+ * @method string getDstProxyVersion() Obtain Database proxy upgrade version
+ * @method void setDstProxyVersion(string $DstProxyVersion) Set Database proxy upgrade version
+ * @method string getProxyGroupId() Obtain Database Proxy Group ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database Proxy Group ID
+ * @method string getIsInMaintainPeriod() Obtain Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
  */
 class UpgradeProxyVersionRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class UpgradeProxyVersionRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Current version of database proxy
+     * @var string Current version of the database proxy.
      */
     public $SrcProxyVersion;
 
     /**
-     * @var string Target version of database proxy
+     * @var string Database proxy upgrade version
      */
     public $DstProxyVersion;
 
     /**
-     * @var string Database proxy group ID
+     * @var string Database Proxy Group ID
      */
     public $ProxyGroupId;
 
     /**
-     * @var string Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+     * @var string Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
      */
     public $IsInMaintainPeriod;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $SrcProxyVersion Current version of database proxy
-     * @param string $DstProxyVersion Target version of database proxy
-     * @param string $ProxyGroupId Database proxy group ID
-     * @param string $IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+     * @param string $SrcProxyVersion Current version of the database proxy.
+     * @param string $DstProxyVersion Database proxy upgrade version
+     * @param string $ProxyGroupId Database Proxy Group ID
+     * @param string $IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
      */
     function __construct()
     {

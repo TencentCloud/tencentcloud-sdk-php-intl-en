@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
- * @method array getTables() Obtain Table name list.
- * @method void setTables(array $Tables) Set Table name list.
+ * @method array getTables() Obtain Table Name List
+ * @method void setTables(array $Tables) Set Table Name List
  */
 class DatabaseTables extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DatabaseTables extends AbstractModel
     public $Database;
 
     /**
-     * @var array Table name list.
+     * @var array Table Name List
      */
     public $Tables;
 
     /**
      * @param string $Database Database name
-     * @param array $Tables Table name list.
+     * @param array $Tables Table Name List
      */
     function __construct()
     {

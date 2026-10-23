@@ -20,22 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditRuleTemplate request structure.
  *
- * @method array getRuleFilters() Obtain Audit rule
- * @method void setRuleFilters(array $RuleFilters) Set Audit rule
- * @method string getRuleTemplateName() Obtain Rule template name
- * @method void setRuleTemplateName(string $RuleTemplateName) Set Rule template name
+ * @method array getRuleFilters() Obtain Audit rule.
+ * @method void setRuleFilters(array $RuleFilters) Set Audit rule.
+ * @method string getRuleTemplateName() Obtain Rule template name.
+ * @method void setRuleTemplateName(string $RuleTemplateName) Set Rule template name.
  * @method string getDescription() Obtain Rule template description.
  * @method void setDescription(string $Description) Set Rule template description.
+ * @method integer getAlarmLevel() Obtain Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method integer getAlarmPolicy() Obtain Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+ * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
  */
 class CreateAuditRuleTemplateRequest extends AbstractModel
 {
     /**
-     * @var array Audit rule
+     * @var array Audit rule.
      */
     public $RuleFilters;
 
     /**
-     * @var string Rule template name
+     * @var string Rule template name.
      */
     public $RuleTemplateName;
 
@@ -45,9 +49,21 @@ class CreateAuditRuleTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param array $RuleFilters Audit rule
-     * @param string $RuleTemplateName Rule template name
+     * @var integer Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     */
+    public $AlarmPolicy;
+
+    /**
+     * @param array $RuleFilters Audit rule.
+     * @param string $RuleTemplateName Rule template name.
      * @param string $Description Rule template description.
+     * @param integer $AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param integer $AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class CreateAuditRuleTemplateRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
         }
     }
 }

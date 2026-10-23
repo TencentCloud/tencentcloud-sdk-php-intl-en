@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getLogType() Obtain Log type.
- * @method void setLogType(string $LogType) Set Log type.
+ * @method string getLogType() Obtain Log type
+ * @method void setLogType(string $LogType) Set Log type
  */
 class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Log type.
+     * @var string Log type
      */
     public $LogType;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $LogType Log type.
+     * @param string $LogType Log type
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter of rule audit
+ * Filter criteria for rule audit
  *
  * @method array getRuleFilters() Obtain A single audit rule.
  * @method void setRuleFilters(array $RuleFilters) Set A single audit rule.

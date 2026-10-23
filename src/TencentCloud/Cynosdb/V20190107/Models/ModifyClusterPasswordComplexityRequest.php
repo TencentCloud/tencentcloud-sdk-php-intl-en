@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterPasswordComplexity request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method integer getValidatePasswordLength() Obtain Password length
  * @method void setValidatePasswordLength(integer $ValidatePasswordLength) Set Password length
- * @method integer getValidatePasswordMixedCaseCount() Obtain Number of letters
- * @method void setValidatePasswordMixedCaseCount(integer $ValidatePasswordMixedCaseCount) Set Number of letters
- * @method integer getValidatePasswordSpecialCharCount() Obtain Number of symbols
- * @method void setValidatePasswordSpecialCharCount(integer $ValidatePasswordSpecialCharCount) Set Number of symbols
+ * @method integer getValidatePasswordMixedCaseCount() Obtain Number of uppercase/lowercase characters
+ * @method void setValidatePasswordMixedCaseCount(integer $ValidatePasswordMixedCaseCount) Set Number of uppercase/lowercase characters
+ * @method integer getValidatePasswordSpecialCharCount() Obtain Number of special characters
+ * @method void setValidatePasswordSpecialCharCount(integer $ValidatePasswordSpecialCharCount) Set Number of special characters
  * @method integer getValidatePasswordNumberCount() Obtain Number of digits
  * @method void setValidatePasswordNumberCount(integer $ValidatePasswordNumberCount) Set Number of digits
- * @method string getValidatePasswordPolicy() Obtain Password strength. Valid values: `MEDIUM`, `STRONG`.
- * @method void setValidatePasswordPolicy(string $ValidatePasswordPolicy) Set Password strength. Valid values: `MEDIUM`, `STRONG`.
+ * @method string getValidatePasswordPolicy() Obtain Password strength ("MEDIUM", "STRONG")
+ * @method void setValidatePasswordPolicy(string $ValidatePasswordPolicy) Set Password strength ("MEDIUM", "STRONG")
  * @method array getValidatePasswordDictionary() Obtain Data dictionary
  * @method void setValidatePasswordDictionary(array $ValidatePasswordDictionary) Set Data dictionary
  */
 class ModifyClusterPasswordComplexityRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
@@ -48,12 +48,12 @@ class ModifyClusterPasswordComplexityRequest extends AbstractModel
     public $ValidatePasswordLength;
 
     /**
-     * @var integer Number of letters
+     * @var integer Number of uppercase/lowercase characters
      */
     public $ValidatePasswordMixedCaseCount;
 
     /**
-     * @var integer Number of symbols
+     * @var integer Number of special characters
      */
     public $ValidatePasswordSpecialCharCount;
 
@@ -63,7 +63,7 @@ class ModifyClusterPasswordComplexityRequest extends AbstractModel
     public $ValidatePasswordNumberCount;
 
     /**
-     * @var string Password strength. Valid values: `MEDIUM`, `STRONG`.
+     * @var string Password strength ("MEDIUM", "STRONG")
      */
     public $ValidatePasswordPolicy;
 
@@ -73,12 +73,12 @@ class ModifyClusterPasswordComplexityRequest extends AbstractModel
     public $ValidatePasswordDictionary;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @param string $ClusterId Cluster ID.
      * @param integer $ValidatePasswordLength Password length
-     * @param integer $ValidatePasswordMixedCaseCount Number of letters
-     * @param integer $ValidatePasswordSpecialCharCount Number of symbols
+     * @param integer $ValidatePasswordMixedCaseCount Number of uppercase/lowercase characters
+     * @param integer $ValidatePasswordSpecialCharCount Number of special characters
      * @param integer $ValidatePasswordNumberCount Number of digits
-     * @param string $ValidatePasswordPolicy Password strength. Valid values: `MEDIUM`, `STRONG`.
+     * @param string $ValidatePasswordPolicy Password strength ("MEDIUM", "STRONG")
      * @param array $ValidatePasswordDictionary Data dictionary
      */
     function __construct()

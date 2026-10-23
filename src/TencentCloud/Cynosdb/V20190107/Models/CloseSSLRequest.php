@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
 class CloseSSLRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CloseSSLRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {

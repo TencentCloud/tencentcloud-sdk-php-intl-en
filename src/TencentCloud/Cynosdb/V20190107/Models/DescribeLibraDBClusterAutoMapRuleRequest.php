@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLibraDBClusterAutoMapRule request structure.
  *
- * @method string getClusterId() Obtain Analysis Cluster ID
- * @method void setClusterId(string $ClusterId) Set Analysis Cluster ID
- * @method string getInstanceId() Obtain Analyze instance ID
- * @method void setInstanceId(string $InstanceId) Set Analyze instance ID
+ * @method string getClusterId() Obtain Analysis cluster ID
+ * @method void setClusterId(string $ClusterId) Set Analysis cluster ID
+ * @method string getInstanceId() Obtain Analysis instance ID
+ * @method void setInstanceId(string $InstanceId) Set Analysis instance ID
  */
 class DescribeLibraDBClusterAutoMapRuleRequest extends AbstractModel
 {
     /**
-     * @var string Analysis Cluster ID
+     * @var string Analysis cluster ID
      */
     public $ClusterId;
 
     /**
-     * @var string Analyze instance ID
+     * @var string Analysis instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $ClusterId Analysis Cluster ID
-     * @param string $InstanceId Analyze instance ID
+     * @param string $ClusterId Analysis cluster ID
+     * @param string $InstanceId Analysis instance ID
      */
     function __construct()
     {

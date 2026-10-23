@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Modify HTTP node response header configuration parameters.
  *
- * @method array getHeaderActions() Obtain HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setHeaderActions(array $HeaderActions) Set HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method array getHeaderActions() Obtain HTTP origin header rule list.
+ * @method void setHeaderActions(array $HeaderActions) Set HTTP origin header rule list.
  */
 class ModifyResponseHeaderParameters extends AbstractModel
 {
     /**
-     * @var array HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var array HTTP origin header rule list.
      */
     public $HeaderActions;
 
     /**
-     * @param array $HeaderActions HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param array $HeaderActions HTTP origin header rule list.
      */
     function __construct()
     {

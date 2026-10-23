@@ -18,44 +18,44 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Inventory information in an AZ
+ * Availability zone inventory information
  *
- * @method string getZone() Obtain AZ
- * @method void setZone(string $Zone) Set AZ
- * @method boolean getHasStock() Obtain Whether there is an inventory.
- * @method void setHasStock(boolean $HasStock) Set Whether there is an inventory.
- * @method integer getStockCount() Obtain Quantity in stock
- * @method void setStockCount(integer $StockCount) Set Quantity in stock
- * @method array getSlaveZoneStockInfos() Obtain Available zone inventory information.
- * @method void setSlaveZoneStockInfos(array $SlaveZoneStockInfos) Set Available zone inventory information.
+ * @method string getZone() Obtain Availability zone
+ * @method void setZone(string $Zone) Set Availability zone
+ * @method boolean getHasStock() Obtain Whether there is inventory
+ * @method void setHasStock(boolean $HasStock) Set Whether there is inventory
+ * @method integer getStockCount() Obtain Inventory quantity
+ * @method void setStockCount(integer $StockCount) Set Inventory quantity
+ * @method array getSlaveZoneStockInfos() Obtain AZ inventory information
+ * @method void setSlaveZoneStockInfos(array $SlaveZoneStockInfos) Set AZ inventory information
  */
 class ZoneStockInfo extends AbstractModel
 {
     /**
-     * @var string AZ
+     * @var string Availability zone
      */
     public $Zone;
 
     /**
-     * @var boolean Whether there is an inventory.
+     * @var boolean Whether there is inventory
      */
     public $HasStock;
 
     /**
-     * @var integer Quantity in stock
+     * @var integer Inventory quantity
      */
     public $StockCount;
 
     /**
-     * @var array Available zone inventory information.
+     * @var array AZ inventory information
      */
     public $SlaveZoneStockInfos;
 
     /**
-     * @param string $Zone AZ
-     * @param boolean $HasStock Whether there is an inventory.
-     * @param integer $StockCount Quantity in stock
-     * @param array $SlaveZoneStockInfos Available zone inventory information.
+     * @param string $Zone Availability zone
+     * @param boolean $HasStock Whether there is inventory
+     * @param integer $StockCount Inventory quantity
+     * @param array $SlaveZoneStockInfos AZ inventory information
      */
     function __construct()
     {

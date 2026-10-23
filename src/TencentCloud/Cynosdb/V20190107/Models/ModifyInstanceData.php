@@ -18,116 +18,116 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance resizing task information.
+ * Instance configuration change task information
  *
- * @method integer getCpu() Obtain CPU after resizing.
- * @method void setCpu(integer $Cpu) Set CPU after resizing.
- * @method integer getMemory() Obtain Memory after resizing.
- * @method void setMemory(integer $Memory) Set Memory after resizing.
- * @method integer getStorageLimit() Obtain Storage upper limit after resizing.
- * @method void setStorageLimit(integer $StorageLimit) Set Storage upper limit after resizing.
- * @method integer getOldCpu() Obtain CPU before resizing.
- * @method void setOldCpu(integer $OldCpu) Set CPU before resizing.
- * @method integer getOldMemory() Obtain Memory before resizing.
- * @method void setOldMemory(integer $OldMemory) Set Memory before resizing.
- * @method integer getOldStorageLimit() Obtain Storage upper limit before resizing.
- * @method void setOldStorageLimit(integer $OldStorageLimit) Set Storage upper limit before resizing.
- * @method string getOldDeviceType() Obtain Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
- * @method void setOldDeviceType(string $OldDeviceType) Set Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
- * @method string getDeviceType() Obtain Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
- * @method void setDeviceType(string $DeviceType) Set Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
- * @method string getUpgradeType() Obtain Upgrade method. Switch after upgrade completes or switch within maintenance window.
- * @method void setUpgradeType(string $UpgradeType) Set Upgrade method. Switch after upgrade completes or switch within maintenance window.
- * @method integer getLibraNodeCount() Obtain Specifies the quantity of libra nodes.
- * @method void setLibraNodeCount(integer $LibraNodeCount) Set Specifies the quantity of libra nodes.
- * @method integer getOldLibraNodeCount() Obtain Specifies the original quantity of libra nodes.
- * @method void setOldLibraNodeCount(integer $OldLibraNodeCount) Set Specifies the original quantity of libra nodes.
+ * @method integer getCpu() Obtain CPU after configuration change
+ * @method void setCpu(integer $Cpu) Set CPU after configuration change
+ * @method integer getMemory() Obtain Memory after configuration change
+ * @method void setMemory(integer $Memory) Set Memory after configuration change
+ * @method integer getStorageLimit() Obtain Storage limit after configuration change
+ * @method void setStorageLimit(integer $StorageLimit) Set Storage limit after configuration change
+ * @method integer getOldCpu() Obtain CPU before specification adjustment
+ * @method void setOldCpu(integer $OldCpu) Set CPU before specification adjustment
+ * @method integer getOldMemory() Obtain Memory before specification modification
+ * @method void setOldMemory(integer $OldMemory) Set Memory before specification modification
+ * @method integer getOldStorageLimit() Obtain Storage limit before configuration change
+ * @method void setOldStorageLimit(integer $OldStorageLimit) Set Storage limit before configuration change
+ * @method string getOldDeviceType() Obtain Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
+ * @method void setOldDeviceType(string $OldDeviceType) Set Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
+ * @method string getDeviceType() Obtain Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
+ * @method string getUpgradeType() Obtain Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
+ * @method void setUpgradeType(string $UpgradeType) Set Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
+ * @method integer getLibraNodeCount() Obtain Number of libra nodes
+ * @method void setLibraNodeCount(integer $LibraNodeCount) Set Number of libra nodes
+ * @method integer getOldLibraNodeCount() Obtain Original libra node count
+ * @method void setOldLibraNodeCount(integer $OldLibraNodeCount) Set Original libra node count
  */
 class ModifyInstanceData extends AbstractModel
 {
     /**
-     * @var integer CPU after resizing.
+     * @var integer CPU after configuration change
      */
     public $Cpu;
 
     /**
-     * @var integer Memory after resizing.
+     * @var integer Memory after configuration change
      */
     public $Memory;
 
     /**
-     * @var integer Storage upper limit after resizing.
+     * @var integer Storage limit after configuration change
      */
     public $StorageLimit;
 
     /**
-     * @var integer CPU before resizing.
+     * @var integer CPU before specification adjustment
      */
     public $OldCpu;
 
     /**
-     * @var integer Memory before resizing.
+     * @var integer Memory before specification modification
      */
     public $OldMemory;
 
     /**
-     * @var integer Storage upper limit before resizing.
+     * @var integer Storage limit before configuration change
      */
     public $OldStorageLimit;
 
     /**
-     * @var string Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+     * @var string Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public $OldDeviceType;
 
     /**
-     * @var string Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+     * @var string Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public $DeviceType;
 
     /**
-     * @var string Upgrade method. Switch after upgrade completes or switch within maintenance window.
+     * @var string Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
      */
     public $UpgradeType;
 
     /**
-     * @var integer Specifies the quantity of libra nodes.
+     * @var integer Number of libra nodes
      */
     public $LibraNodeCount;
 
     /**
-     * @var integer Specifies the original quantity of libra nodes.
+     * @var integer Original libra node count
      */
     public $OldLibraNodeCount;
 
     /**
-     * @param integer $Cpu CPU after resizing.
-     * @param integer $Memory Memory after resizing.
-     * @param integer $StorageLimit Storage upper limit after resizing.
-     * @param integer $OldCpu CPU before resizing.
-     * @param integer $OldMemory Memory before resizing.
-     * @param integer $OldStorageLimit Storage upper limit before resizing.
-     * @param string $OldDeviceType Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
-     * @param string $DeviceType Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
-     * @param string $UpgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
-     * @param integer $LibraNodeCount Specifies the quantity of libra nodes.
-     * @param integer $OldLibraNodeCount Specifies the original quantity of libra nodes.
+     * @param integer $Cpu CPU after configuration change
+     * @param integer $Memory Memory after configuration change
+     * @param integer $StorageLimit Storage limit after configuration change
+     * @param integer $OldCpu CPU before specification adjustment
+     * @param integer $OldMemory Memory before specification modification
+     * @param integer $OldStorageLimit Storage limit before configuration change
+     * @param string $OldDeviceType Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
+     * @param string $DeviceType Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
+     * @param string $UpgradeType Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
+     * @param integer $LibraNodeCount Number of libra nodes
+     * @param integer $OldLibraNodeCount Original libra node count
      */
     function __construct()
     {

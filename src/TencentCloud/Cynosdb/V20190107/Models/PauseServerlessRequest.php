@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getForcePause() Obtain Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
- * @method void setForcePause(integer $ForcePause) Set Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+ * @method integer getForcePause() Obtain Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
+ * @method void setForcePause(integer $ForcePause) Set Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
  */
 class PauseServerlessRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class PauseServerlessRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+     * @var integer Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
      */
     public $ForcePause;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param integer $ForcePause Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+     * @param integer $ForcePause Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
      */
     function __construct()
     {

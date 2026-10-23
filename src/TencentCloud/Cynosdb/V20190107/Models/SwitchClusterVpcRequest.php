@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getUniqVpcId() Obtain VPC ID in string
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID in string
- * @method string getUniqSubnetId() Obtain Subnet ID in string
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID in string
- * @method integer getOldIpReserveHours() Obtain Valid hours of old IP
- * @method void setOldIpReserveHours(integer $OldIpReserveHours) Set Valid hours of old IP
+ * @method string getUniqVpcId() Obtain vpc id in string format
+ * @method void setUniqVpcId(string $UniqVpcId) Set vpc id in string format
+ * @method string getUniqSubnetId() Obtain String subnet id.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set String subnet id.
+ * @method integer getOldIpReserveHours() Obtain Old address reclamation time
+ * @method void setOldIpReserveHours(integer $OldIpReserveHours) Set Old address reclamation time
  */
 class SwitchClusterVpcRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class SwitchClusterVpcRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string VPC ID in string
+     * @var string vpc id in string format
      */
     public $UniqVpcId;
 
     /**
-     * @var string Subnet ID in string
+     * @var string String subnet id.
      */
     public $UniqSubnetId;
 
     /**
-     * @var integer Valid hours of old IP
+     * @var integer Old address reclamation time
      */
     public $OldIpReserveHours;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $UniqVpcId VPC ID in string
-     * @param string $UniqSubnetId Subnet ID in string
-     * @param integer $OldIpReserveHours Valid hours of old IP
+     * @param string $UniqVpcId vpc id in string format
+     * @param string $UniqSubnetId String subnet id.
+     * @param integer $OldIpReserveHours Old address reclamation time
      */
     function __construct()
     {

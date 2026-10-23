@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourcePackagesDeductionPriority request structure.
  *
- * @method string getPackageType() Obtain Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
- * @method void setPackageType(string $PackageType) Set Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
- * @method string getClusterId() Obtain The modified deduction priority takes effect for which cynos resource.
- * @method void setClusterId(string $ClusterId) Set The modified deduction priority takes effect for which cynos resource.
- * @method array getDeductionPriorities() Obtain Resource package deduction priority.
- * @method void setDeductionPriorities(array $DeductionPriorities) Set Resource package deduction priority.
+ * @method string getPackageType() Obtain Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+ * @method void setPackageType(string $PackageType) Set Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+ * @method string getClusterId() Obtain Which cynos resource does the modified deduction priority take effect for?
+ * @method void setClusterId(string $ClusterId) Set Which cynos resource does the modified deduction priority take effect for?
+ * @method array getDeductionPriorities() Obtain Resource package deduction priority
+ * @method void setDeductionPriorities(array $DeductionPriorities) Set Resource package deduction priority
  */
 class ModifyResourcePackagesDeductionPriorityRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+     * @var string Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
      */
     public $PackageType;
 
     /**
-     * @var string The modified deduction priority takes effect for which cynos resource.
+     * @var string Which cynos resource does the modified deduction priority take effect for?
      */
     public $ClusterId;
 
     /**
-     * @var array Resource package deduction priority.
+     * @var array Resource package deduction priority
      */
     public $DeductionPriorities;
 
     /**
-     * @param string $PackageType Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
-     * @param string $ClusterId The modified deduction priority takes effect for which cynos resource.
-     * @param array $DeductionPriorities Resource package deduction priority.
+     * @param string $PackageType Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+     * @param string $ClusterId Which cynos resource does the modified deduction priority take effect for?
+     * @param array $DeductionPriorities Resource package deduction priority
      */
     function __construct()
     {

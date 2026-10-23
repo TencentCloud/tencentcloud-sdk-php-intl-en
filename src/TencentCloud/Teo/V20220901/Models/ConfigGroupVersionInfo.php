@@ -20,78 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Version information about the configuration group.
  *
- * @method string getVersionId() Obtain Version ID.
- * @method void setVersionId(string $VersionId) Set Version ID.
- * @method string getVersionNumber() Obtain Version No.
- * @method void setVersionNumber(string $VersionNumber) Set Version No.
- * @method string getGroupId() Obtain Configuraration group ID.
- * @method void setGroupId(string $GroupId) Set Configuraration group ID.
- * @method string getGroupType() Obtain Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
- * @method void setGroupType(string $GroupType) Set Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
- * @method string getDescription() Obtain Version description.
- * @method void setDescription(string $Description) Set Version description.
- * @method string getStatus() Obtain Version status. Valid values: 
-<li>creating: Being created.</li>
-<li>inactive: Not effective.</li>
-<li>active: Effective. </li>
- * @method void setStatus(string $Status) Set Version status. Valid values: 
-<li>creating: Being created.</li>
-<li>inactive: Not effective.</li>
-<li>active: Effective. </li>
- * @method string getCreateTime() Obtain Version creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
- * @method void setCreateTime(string $CreateTime) Set Version creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+ * @method string getVersionId() Obtain <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method void setVersionId(string $VersionId) Set <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method string getVersionNumber() Obtain <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+ * @method void setVersionNumber(string $VersionNumber) Set <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+ * @method string getSourceVersion() Obtain <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method void setSourceVersion(string $SourceVersion) Set <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method string getGroupType() Obtain <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+ * @method void setGroupType(string $GroupType) Set <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+ * @method string getGroupId() Obtain <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+ * @method void setGroupId(string $GroupId) Set <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+ * @method string getDescription() Obtain <p>Version description.</p>
+ * @method void setDescription(string $Description) Set <p>Version description.</p>
+ * @method string getStatus() Obtain <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+ * @method void setStatus(string $Status) Set <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+ * @method string getCreateTime() Obtain <p>Version creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Version creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
  */
 class ConfigGroupVersionInfo extends AbstractModel
 {
     /**
-     * @var string Version ID.
+     * @var string <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
      */
     public $VersionId;
 
     /**
-     * @var string Version No.
+     * @var string <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
      */
     public $VersionNumber;
 
     /**
-     * @var string Configuraration group ID.
+     * @var string <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
      */
-    public $GroupId;
+    public $SourceVersion;
 
     /**
-     * @var string Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
+     * @var string <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
      */
     public $GroupType;
 
     /**
-     * @var string Version description.
+     * @var string <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+     */
+    public $GroupId;
+
+    /**
+     * @var string <p>Version description.</p>
      */
     public $Description;
 
     /**
-     * @var string Version status. Valid values: 
-<li>creating: Being created.</li>
-<li>inactive: Not effective.</li>
-<li>active: Effective. </li>
+     * @var string <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
      */
     public $Status;
 
     /**
-     * @var string Version creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * @var string <p>Version creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $VersionId Version ID.
-     * @param string $VersionNumber Version No.
-     * @param string $GroupId Configuraration group ID.
-     * @param string $GroupType Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
-     * @param string $Description Version description.
-     * @param string $Status Version status. Valid values: 
-<li>creating: Being created.</li>
-<li>inactive: Not effective.</li>
-<li>active: Effective. </li>
-     * @param string $CreateTime Version creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * @param string $VersionId <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * @param string $VersionNumber <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+     * @param string $SourceVersion <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * @param string $GroupType <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+     * @param string $GroupId <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+     * @param string $Description <p>Version description.</p>
+     * @param string $Status <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+     * @param string $CreateTime <p>Version creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
      */
     function __construct()
     {
@@ -114,12 +110,16 @@ class ConfigGroupVersionInfo extends AbstractModel
             $this->VersionNumber = $param["VersionNumber"];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("SourceVersion",$param) and $param["SourceVersion"] !== null) {
+            $this->SourceVersion = $param["SourceVersion"];
         }
 
         if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
             $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

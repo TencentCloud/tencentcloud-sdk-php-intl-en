@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIdList() Obtain List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
- * @method void setInstanceIdList(array $InstanceIdList) Set List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
+ * @method array getInstanceIdList() Obtain Instance ID list. A single instance ID is in the format of cynosdbmysql-ins-n7ocdslw, identical to the instance ID displayed on the TDSQL-C MySQL database console. You can obtain it through the query instance list API. Its value is the InstanceId field in the output parameter.
+ * @method void setInstanceIdList(array $InstanceIdList) Set Instance ID list. A single instance ID is in the format of cynosdbmysql-ins-n7ocdslw, identical to the instance ID displayed on the TDSQL-C MySQL database console. You can obtain it through the query instance list API. Its value is the InstanceId field in the output parameter.
  */
 class ActivateInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ActivateInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
+     * @var array Instance ID list. A single instance ID is in the format of cynosdbmysql-ins-n7ocdslw, identical to the instance ID displayed on the TDSQL-C MySQL database console. You can obtain it through the query instance list API. Its value is the InstanceId field in the output parameter.
      */
     public $InstanceIdList;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIdList List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
+     * @param array $InstanceIdList Instance ID list. A single instance ID is in the format of cynosdbmysql-ins-n7ocdslw, identical to the instance ID displayed on the TDSQL-C MySQL database console. You can obtain it through the query instance list API. Its value is the InstanceId field in the output parameter.
      */
     function __construct()
     {

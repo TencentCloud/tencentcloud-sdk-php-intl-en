@@ -18,17 +18,17 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Weight ratio between read-write instances and read-only instances
+ * Database proxy, read-write separation instance weight
  *
- * @method string getInstanceId() Obtain InstanID
- * @method void setInstanceId(string $InstanceId) Set InstanID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getWeight() Obtain Instance weight
  * @method void setWeight(integer $Weight) Set Instance weight
  */
 class ProxyInstanceWeight extends AbstractModel
 {
     /**
-     * @var string InstanID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class ProxyInstanceWeight extends AbstractModel
     public $Weight;
 
     /**
-     * @param string $InstanceId InstanID
+     * @param string $InstanceId Instance ID.
      * @param integer $Weight Instance weight
      */
     function __construct()

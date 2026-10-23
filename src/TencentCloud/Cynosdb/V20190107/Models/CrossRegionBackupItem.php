@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cross-Region backup describes the backup information in each region.
+ * Cross-region backup information in each region
  *
- * @method string getCrossRegion() Obtain Target region for backup.
- * @method void setCrossRegion(string $CrossRegion) Set Target region for backup.
- * @method integer getBackupId() Obtain Target region's backup task ID.
- * @method void setBackupId(integer $BackupId) Set Target region's backup task ID.
- * @method string getBackupStatus() Obtain Backup status in the target region.
- * @method void setBackupStatus(string $BackupStatus) Set Backup status in the target region.
+ * @method string getCrossRegion() Obtain Target region for backup
+ * @method void setCrossRegion(string $CrossRegion) Set Target region for backup
+ * @method integer getBackupId() Obtain Backup task ID in the target region
+ * @method void setBackupId(integer $BackupId) Set Backup task ID in the target region
+ * @method string getBackupStatus() Obtain Backup status in the target region
+ * @method void setBackupStatus(string $BackupStatus) Set Backup status in the target region
  */
 class CrossRegionBackupItem extends AbstractModel
 {
     /**
-     * @var string Target region for backup.
+     * @var string Target region for backup
      */
     public $CrossRegion;
 
     /**
-     * @var integer Target region's backup task ID.
+     * @var integer Backup task ID in the target region
      */
     public $BackupId;
 
     /**
-     * @var string Backup status in the target region.
+     * @var string Backup status in the target region
      */
     public $BackupStatus;
 
     /**
-     * @param string $CrossRegion Target region for backup.
-     * @param integer $BackupId Target region's backup task ID.
-     * @param string $BackupStatus Backup status in the target region.
+     * @param string $CrossRegion Target region for backup
+     * @param integer $BackupId Backup task ID in the target region
+     * @param string $BackupStatus Backup status in the target region
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VPC settings for restricting backup download sources.
+ * VPC setting item for restricting the download source of backup files
  *
- * @method string getRegion() Obtain Specifies the region for limiting download sources. currently only supports the current region.
- * @method void setRegion(string $Region) Set Specifies the region for limiting download sources. currently only supports the current region.
- * @method array getVpcList() Obtain Limit the vpc list for downloads.
- * @method void setVpcList(array $VpcList) Set Limit the vpc list for downloads.
+ * @method string getRegion() Obtain Limit the region of the download source. Currently only support the current region.
+ * @method void setRegion(string $Region) Set Limit the region of the download source. Currently only support the current region.
+ * @method array getVpcList() Obtain vpc list with download restrictions
+ * @method void setVpcList(array $VpcList) Set vpc list with download restrictions
  */
 class BackupLimitVpcItem extends AbstractModel
 {
     /**
-     * @var string Specifies the region for limiting download sources. currently only supports the current region.
+     * @var string Limit the region of the download source. Currently only support the current region.
      */
     public $Region;
 
     /**
-     * @var array Limit the vpc list for downloads.
+     * @var array vpc list with download restrictions
      */
     public $VpcList;
 
     /**
-     * @param string $Region Specifies the region for limiting download sources. currently only supports the current region.
-     * @param array $VpcList Limit the vpc list for downloads.
+     * @param string $Region Limit the region of the download source. Currently only support the current region.
+     * @param array $VpcList vpc list with download restrictions
      */
     function __construct()
     {

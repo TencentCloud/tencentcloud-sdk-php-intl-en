@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstancePayMode(integer $InstancePayMode) Set Payment mode
  * @method string getInstancePeriodEndTime() Obtain Payment end time
  * @method void setInstancePeriodEndTime(string $InstancePeriodEndTime) Set Payment end time
- * @method string getInstanceRole() Obtain Instance role
- * @method void setInstanceRole(string $InstanceRole) Set Instance role
+ * @method string getInstanceRole() Obtain Instance role.
+ * @method void setInstanceRole(string $InstanceRole) Set Instance role.
  * @method string getInstanceStatus() Obtain Instance status
  * @method void setInstanceStatus(string $InstanceStatus) Set Instance status
  * @method string getInstanceStatusDesc() Obtain Instance status description
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWanIP(string $WanIP) Set Public IP address
  * @method integer getWanPort() Obtain Public network port
  * @method void setWanPort(integer $WanPort) Set Public network port
- * @method string getWanStatus() Obtain Public network status
- * @method void setWanStatus(string $WanStatus) Set Public network status
+ * @method string getWanStatus() Obtain Public network status.
+ * @method void setWanStatus(string $WanStatus) Set Public network status.
  * @method integer getInstanceStorage() Obtain hard disk
  * @method void setInstanceStorage(integer $InstanceStorage) Set hard disk
  * @method string getInstanceStorageType() Obtain Hard disk type.
@@ -115,7 +115,7 @@ class LibraInstanceSet extends AbstractModel
     public $InstancePeriodEndTime;
 
     /**
-     * @var string Instance role
+     * @var string Instance role.
      */
     public $InstanceRole;
 
@@ -170,7 +170,7 @@ class LibraInstanceSet extends AbstractModel
     public $WanPort;
 
     /**
-     * @var string Public network status
+     * @var string Public network status.
      */
     public $WanStatus;
 
@@ -194,7 +194,7 @@ class LibraInstanceSet extends AbstractModel
      * @param string $InstanceName Instance name.
      * @param integer $InstancePayMode Payment mode
      * @param string $InstancePeriodEndTime Payment end time
-     * @param string $InstanceRole Instance role
+     * @param string $InstanceRole Instance role.
      * @param string $InstanceStatus Instance status
      * @param string $InstanceStatusDesc Instance status description
      * @param string $NetType Network type.
@@ -205,7 +205,7 @@ class LibraInstanceSet extends AbstractModel
      * @param string $WanDomain Public network region
      * @param string $WanIP Public IP address
      * @param integer $WanPort Public network port
-     * @param string $WanStatus Public network status
+     * @param string $WanStatus Public network status.
      * @param integer $InstanceStorage hard disk
      * @param string $InstanceStorageType Hard disk type.
      */

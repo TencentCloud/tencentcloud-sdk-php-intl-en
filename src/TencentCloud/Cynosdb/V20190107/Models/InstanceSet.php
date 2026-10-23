@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) Set Engine type.
  * @method integer getMaintainDuration() Obtain Duration.
  * @method void setMaintainDuration(integer $MaintainDuration) Set Duration.
- * @method integer getMaintainStartTime() Obtain Execution start time (seconds from 00:00)
- * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time (seconds from 00:00)
- * @method array getMaintainWeekDays() Obtain The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
- * @method void setMaintainWeekDays(array $MaintainWeekDays) Set The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+ * @method integer getMaintainStartTime() Obtain Execution start time (seconds from 00:00:00)
+ * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time (seconds from 00:00:00)
+ * @method array getMaintainWeekDays() Obtain The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) Set The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
  * @method array getNodeList() Obtain Node list
  * @method void setNodeList(array $NodeList) Set Node list
  * @method array getInstanceTasks() Obtain Instance task
@@ -123,12 +123,12 @@ class InstanceSet extends AbstractModel
     public $MaintainDuration;
 
     /**
-     * @var integer Execution start time (seconds from 00:00)
+     * @var integer Execution start time (seconds from 00:00:00)
      */
     public $MaintainStartTime;
 
     /**
-     * @var array The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+     * @var array The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      */
     public $MaintainWeekDays;
 
@@ -156,8 +156,8 @@ class InstanceSet extends AbstractModel
      * @param string $InstanceStorageType Hard disk type.
      * @param string $InstanceType Engine type.
      * @param integer $MaintainDuration Duration.
-     * @param integer $MaintainStartTime Execution start time (seconds from 00:00)
-     * @param array $MaintainWeekDays The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+     * @param integer $MaintainStartTime Execution start time (seconds from 00:00:00)
+     * @param array $MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      * @param array $NodeList Node list
      * @param array $InstanceTasks Instance task
      */

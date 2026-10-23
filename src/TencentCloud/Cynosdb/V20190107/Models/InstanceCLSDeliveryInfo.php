@@ -18,32 +18,38 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance log delivery information.
+ * Instance Log Delivery Information
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getInstanceName() Obtain Instance name.
+ * @method string getInstanceName() Obtain Instance name
 
- * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name
 
- * @method string getTopicId() Obtain Log topic id.
+ * @method string getTopicId() Obtain Log topic id
 
- * @method void setTopicId(string $TopicId) Set Log topic id.
+ * @method void setTopicId(string $TopicId) Set Log topic id
 
- * @method string getTopicName() Obtain Log topic name.
- * @method void setTopicName(string $TopicName) Set Log topic name.
- * @method string getGroupId() Obtain Log set id.
- * @method void setGroupId(string $GroupId) Set Log set id.
+ * @method string getTopicName() Obtain Log topic name
+ * @method void setTopicName(string $TopicName) Set Log topic name
+ * @method string getGroupId() Obtain Logset id
+
+ * @method void setGroupId(string $GroupId) Set Logset id
+
  * @method string getGroupName() Obtain Log set name.
 
  * @method void setGroupName(string $GroupName) Set Log set name.
 
- * @method string getRegion() Obtain Log delivery region.
- * @method void setRegion(string $Region) Set Log delivery region.
- * @method string getStatus() Obtain Delivery status: creating, running, offlining, offlined.
- * @method void setStatus(string $Status) Set Delivery status: creating, running, offlining, offlined.
- * @method string getLogType() Obtain Log type.
- * @method void setLogType(string $LogType) Set Log type.
+ * @method string getRegion() Obtain Log delivery region
+
+ * @method void setRegion(string $Region) Set Log delivery region
+
+ * @method string getStatus() Obtain Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
+ * @method void setStatus(string $Status) Set Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
+ * @method string getLogType() Obtain Log type
+ * @method void setLogType(string $LogType) Set Log type
  */
 class InstanceCLSDeliveryInfo extends AbstractModel
 {
@@ -53,24 +59,25 @@ class InstanceCLSDeliveryInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Instance name.
+     * @var string Instance name
 
      */
     public $InstanceName;
 
     /**
-     * @var string Log topic id.
+     * @var string Log topic id
 
      */
     public $TopicId;
 
     /**
-     * @var string Log topic name.
+     * @var string Log topic name
      */
     public $TopicName;
 
     /**
-     * @var string Log set id.
+     * @var string Logset id
+
      */
     public $GroupId;
 
@@ -81,33 +88,38 @@ class InstanceCLSDeliveryInfo extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string Log delivery region.
+     * @var string Log delivery region
+
      */
     public $Region;
 
     /**
-     * @var string Delivery status: creating, running, offlining, offlined.
+     * @var string Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
      */
     public $Status;
 
     /**
-     * @var string Log type.
+     * @var string Log type
      */
     public $LogType;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $InstanceName Instance name.
+     * @param string $InstanceName Instance name
 
-     * @param string $TopicId Log topic id.
+     * @param string $TopicId Log topic id
 
-     * @param string $TopicName Log topic name.
-     * @param string $GroupId Log set id.
+     * @param string $TopicName Log topic name
+     * @param string $GroupId Logset id
+
      * @param string $GroupName Log set name.
 
-     * @param string $Region Log delivery region.
-     * @param string $Status Delivery status: creating, running, offlining, offlined.
-     * @param string $LogType Log type.
+     * @param string $Region Log delivery region
+
+     * @param string $Status Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
+     * @param string $LogType Log type
      */
     function __construct()
     {

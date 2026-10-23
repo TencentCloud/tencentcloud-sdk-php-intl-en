@@ -20,64 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollBackCluster request structure.
  *
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getRollbackStrategy() Obtain Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
- * @method void setRollbackStrategy(string $RollbackStrategy) Set Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
- * @method integer getRollbackId() Obtain Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
- * @method void setRollbackId(integer $RollbackId) Set Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
- * @method string getExpectTime() Obtain Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
- * @method void setExpectTime(string $ExpectTime) Set Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
- * @method integer getExpectTimeThresh() Obtain Expected threshold (deprecated).
- * @method void setExpectTimeThresh(integer $ExpectTimeThresh) Set Expected threshold (deprecated).
- * @method array getRollbackDatabases() Obtain List of rollback databases.
- * @method void setRollbackDatabases(array $RollbackDatabases) Set List of rollback databases.
- * @method array getRollbackTables() Obtain List of rollback databases and tables.
- * @method void setRollbackTables(array $RollbackTables) Set List of rollback databases and tables.
- * @method string getRollbackMode() Obtain Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
- * @method void setRollbackMode(string $RollbackMode) Set Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getRollbackStrategy() Obtain Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
+ * @method void setRollbackStrategy(string $RollbackStrategy) Set Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
+ * @method integer getRollbackId() Obtain Backup file ID.
+Required when the rollback policy is rollback by backup file.
+ * @method void setRollbackId(integer $RollbackId) Set Backup file ID.
+Required when the rollback policy is rollback by backup file.
+ * @method string getExpectTime() Obtain Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
+ * @method void setExpectTime(string $ExpectTime) Set Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
+ * @method integer getExpectTimeThresh() Obtain Expected threshold (abandoned)
+ * @method void setExpectTimeThresh(integer $ExpectTimeThresh) Set Expected threshold (abandoned)
+ * @method array getRollbackDatabases() Obtain Database list for rollback
+ * @method void setRollbackDatabases(array $RollbackDatabases) Set Database list for rollback
+ * @method array getRollbackTables() Obtain List of rollback database tables
+ * @method void setRollbackTables(array $RollbackTables) Set List of rollback database tables
+ * @method string getRollbackMode() Obtain Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
+ * @method void setRollbackMode(string $RollbackMode) Set Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
  * @method string getVaultId() Obtain Safe id
  * @method void setVaultId(string $VaultId) Set Safe id
  */
 class RollBackClusterRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID.
+     * @var string Cluster ID
      */
     public $ClusterId;
 
     /**
-     * @var string Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+     * @var string Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
      */
     public $RollbackStrategy;
 
     /**
-     * @var integer Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+     * @var integer Backup file ID.
+Required when the rollback policy is rollback by backup file.
      */
     public $RollbackId;
 
     /**
-     * @var string Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+     * @var string Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
      */
     public $ExpectTime;
 
     /**
-     * @var integer Expected threshold (deprecated).
+     * @var integer Expected threshold (abandoned)
      */
     public $ExpectTimeThresh;
 
     /**
-     * @var array List of rollback databases.
+     * @var array Database list for rollback
      */
     public $RollbackDatabases;
 
     /**
-     * @var array List of rollback databases and tables.
+     * @var array List of rollback database tables
      */
     public $RollbackTables;
 
     /**
-     * @var string Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+     * @var string Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
      */
     public $RollbackMode;
 
@@ -87,14 +93,16 @@ class RollBackClusterRequest extends AbstractModel
     public $VaultId;
 
     /**
-     * @param string $ClusterId Cluster ID.
-     * @param string $RollbackStrategy Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
-     * @param integer $RollbackId Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
-     * @param string $ExpectTime Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
-     * @param integer $ExpectTimeThresh Expected threshold (deprecated).
-     * @param array $RollbackDatabases List of rollback databases.
-     * @param array $RollbackTables List of rollback databases and tables.
-     * @param string $RollbackMode Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+     * @param string $ClusterId Cluster ID
+     * @param string $RollbackStrategy Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
+     * @param integer $RollbackId Backup file ID.
+Required when the rollback policy is rollback by backup file.
+     * @param string $ExpectTime Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
+     * @param integer $ExpectTimeThresh Expected threshold (abandoned)
+     * @param array $RollbackDatabases Database list for rollback
+     * @param array $RollbackTables List of rollback database tables
+     * @param string $RollbackMode Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
      * @param string $VaultId Safe id
      */
     function __construct()

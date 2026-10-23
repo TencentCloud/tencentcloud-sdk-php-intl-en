@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
  */
 class ModifyClusterNameRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyClusterNameRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Cluster name
+     * @var string Cluster name.
      */
     public $ClusterName;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $ClusterName Cluster name
+     * @param string $ClusterName Cluster name.
      */
     function __construct()
     {

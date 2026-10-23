@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplateDetail request structure.
  *
- * @method integer getTemplateId() Obtain Parameter template ID
- * @method void setTemplateId(integer $TemplateId) Set Parameter template ID
+ * @method integer getTemplateId() Obtain Parameter template ID.
+ * @method void setTemplateId(integer $TemplateId) Set Parameter template ID.
  */
 class DescribeParamTemplateDetailRequest extends AbstractModel
 {
     /**
-     * @var integer Parameter template ID
+     * @var integer Parameter template ID.
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId Parameter template ID
+     * @param integer $TemplateId Parameter template ID.
      */
     function __construct()
     {

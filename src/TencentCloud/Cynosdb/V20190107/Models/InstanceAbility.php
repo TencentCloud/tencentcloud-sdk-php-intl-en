@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of allowed operations for the instance.
+ * Operation list allowed for the instance
  *
- * @method string getIsSupportForceRestart() Obtain Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
- * @method void setIsSupportForceRestart(string $IsSupportForceRestart) Set Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
- * @method string getNonsupportForceRestartReason() Obtain Specifies the causes for not supporting forced reboot.
- * @method void setNonsupportForceRestartReason(string $NonsupportForceRestartReason) Set Specifies the causes for not supporting forced reboot.
+ * @method string getIsSupportForceRestart() Obtain Whether the instance supports forced reboot. Available values: yes: support, no: no support
+ * @method void setIsSupportForceRestart(string $IsSupportForceRestart) Set Whether the instance supports forced reboot. Available values: yes: support, no: no support
+ * @method string getNonsupportForceRestartReason() Obtain The causes for not supporting forced reboot
+ * @method void setNonsupportForceRestartReason(string $NonsupportForceRestartReason) Set The causes for not supporting forced reboot
  */
 class InstanceAbility extends AbstractModel
 {
     /**
-     * @var string Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+     * @var string Whether the instance supports forced reboot. Available values: yes: support, no: no support
      */
     public $IsSupportForceRestart;
 
     /**
-     * @var string Specifies the causes for not supporting forced reboot.
+     * @var string The causes for not supporting forced reboot
      */
     public $NonsupportForceRestartReason;
 
     /**
-     * @param string $IsSupportForceRestart Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
-     * @param string $NonsupportForceRestartReason Specifies the causes for not supporting forced reboot.
+     * @param string $IsSupportForceRestart Whether the instance supports forced reboot. Available values: yes: support, no: no support
+     * @param string $NonsupportForceRestartReason The causes for not supporting forced reboot
      */
     function __construct()
     {

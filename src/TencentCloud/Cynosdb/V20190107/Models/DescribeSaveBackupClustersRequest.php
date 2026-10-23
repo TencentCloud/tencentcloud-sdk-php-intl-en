@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Entries Per Page
  * @method integer getOffset() Obtain Offset.
  * @method void setOffset(integer $Offset) Set Offset.
- * @method array getFilters() Obtain Retrieval criteria.
- * @method void setFilters(array $Filters) Set Retrieval criteria.
+ * @method array getFilters() Obtain Retrieval criteria
+ * @method void setFilters(array $Filters) Set Retrieval criteria
  */
 class DescribeSaveBackupClustersRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeSaveBackupClustersRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Retrieval criteria.
+     * @var array Retrieval criteria
      */
     public $Filters;
 
     /**
      * @param integer $Limit Entries Per Page
      * @param integer $Offset Offset.
-     * @param array $Filters Retrieval criteria.
+     * @param array $Filters Retrieval criteria
      */
     function __construct()
     {

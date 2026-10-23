@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getStartTime() Obtain Log start time.
- * @method void setStartTime(string $StartTime) Set Log start time.
- * @method string getEndTime() Obtain Log end time.
- * @method void setEndTime(string $EndTime) Set Log end time.
- * @method integer getLimit() Obtain The max number of returned results.
- * @method void setLimit(integer $Limit) Set The max number of returned results.
+ * @method string getStartTime() Obtain Earliest log time
+ * @method void setStartTime(string $StartTime) Set Earliest log time
+ * @method string getEndTime() Obtain Latest log time
+ * @method void setEndTime(string $EndTime) Set Latest log time
+ * @method integer getLimit() Obtain Limit of Items
+ * @method void setLimit(integer $Limit) Set Limit of Items
  * @method integer getOffset() Obtain Offset.
  * @method void setOffset(integer $Offset) Set Offset.
  * @method array getLogLevels() Obtain Log level.
  * @method void setLogLevels(array $LogLevels) Set Log level.
- * @method array getKeyWords() Obtain KeyWords.
- * @method void setKeyWords(array $KeyWords) Set KeyWords.
- * @method string getFileType() Obtain The template type. Valid values: `csv`, `original`.
- * @method void setFileType(string $FileType) Set The template type. Valid values: `csv`, `original`.
- * @method string getOrderBy() Obtain Valid value: `Timestamp`.
- * @method void setOrderBy(string $OrderBy) Set Valid value: `Timestamp`.
- * @method string getOrderByType() Obtain Sorting type. valid values: ASC or DESC.
- * @method void setOrderByType(string $OrderByType) Set Sorting type. valid values: ASC or DESC.
+ * @method array getKeyWords() Obtain Keyword.
+ * @method void setKeyWords(array $KeyWords) Set Keyword.
+ * @method string getFileType() Obtain File type. Available values: csv, original
+ * @method void setFileType(string $FileType) Set File type. Available values: csv, original
+ * @method string getOrderBy() Obtain Available values: Timestamp
+ * @method void setOrderBy(string $OrderBy) Set Available values: Timestamp
+ * @method string getOrderByType() Obtain Sorting type. ASC or DESC.
+ * @method void setOrderByType(string $OrderByType) Set Sorting type. ASC or DESC.
  */
 class ExportInstanceErrorLogsRequest extends AbstractModel
 {
@@ -49,17 +49,17 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Log start time.
+     * @var string Earliest log time
      */
     public $StartTime;
 
     /**
-     * @var string Log end time.
+     * @var string Latest log time
      */
     public $EndTime;
 
     /**
-     * @var integer The max number of returned results.
+     * @var integer Limit of Items
      */
     public $Limit;
 
@@ -74,36 +74,36 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
     public $LogLevels;
 
     /**
-     * @var array KeyWords.
+     * @var array Keyword.
      */
     public $KeyWords;
 
     /**
-     * @var string The template type. Valid values: `csv`, `original`.
+     * @var string File type. Available values: csv, original
      */
     public $FileType;
 
     /**
-     * @var string Valid value: `Timestamp`.
+     * @var string Available values: Timestamp
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting type. valid values: ASC or DESC.
+     * @var string Sorting type. ASC or DESC.
      */
     public $OrderByType;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $StartTime Log start time.
-     * @param string $EndTime Log end time.
-     * @param integer $Limit The max number of returned results.
+     * @param string $StartTime Earliest log time
+     * @param string $EndTime Latest log time
+     * @param integer $Limit Limit of Items
      * @param integer $Offset Offset.
      * @param array $LogLevels Log level.
-     * @param array $KeyWords KeyWords.
-     * @param string $FileType The template type. Valid values: `csv`, `original`.
-     * @param string $OrderBy Valid value: `Timestamp`.
-     * @param string $OrderByType Sorting type. valid values: ASC or DESC.
+     * @param array $KeyWords Keyword.
+     * @param string $FileType File type. Available values: csv, original
+     * @param string $OrderBy Available values: Timestamp
+     * @param string $OrderByType Sorting type. ASC or DESC.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The proxy version information supported by TDSQL-C for MySQL.
+ * proxy version information supported by TDSQL-C MySQL
  *
- * @method string getProxyVersion() Obtain proxy version number.
- * @method void setProxyVersion(string $ProxyVersion) Set proxy version number.
- * @method string getProxyVersionType() Obtain Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
- * @method void setProxyVersionType(string $ProxyVersionType) Set Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+ * @method string getProxyVersion() Obtain proxy version number
+ * @method void setProxyVersion(string $ProxyVersion) Set proxy version number
+ * @method string getProxyVersionType() Obtain Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
+ * @method void setProxyVersionType(string $ProxyVersionType) Set Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
  */
 class ProxyVersionInfo extends AbstractModel
 {
     /**
-     * @var string proxy version number.
+     * @var string proxy version number
      */
     public $ProxyVersion;
 
     /**
-     * @var string Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+     * @var string Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
      */
     public $ProxyVersionType;
 
     /**
-     * @param string $ProxyVersion proxy version number.
-     * @param string $ProxyVersionType Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+     * @param string $ProxyVersion proxy version number
+     * @param string $ProxyVersionType Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
      */
     function __construct()
     {

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LibraDB node information
  *
- * @method string getNodeId() Obtain LibraDB Node ID
- * @method void setNodeId(string $NodeId) Set LibraDB Node ID
+ * @method string getNodeId() Obtain LibraDB node ID
+ * @method void setNodeId(string $NodeId) Set LibraDB node ID
  * @method string getStatus() Obtain Node status
  * @method void setStatus(string $Status) Set Node status
- * @method string getDataStatus() Obtain syncing data
- * @method void setDataStatus(string $DataStatus) Set syncing data
+ * @method string getDataStatus() Obtain Syncing data
+ * @method void setDataStatus(string $DataStatus) Set Syncing data
  * @method integer getCpu() Obtain Number of CPU cores.
  * @method void setCpu(integer $Cpu) Set Number of CPU cores.
  * @method integer getMemory() Obtain Memory size. Unit: GB.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class LibraDBNodeInfo extends AbstractModel
 {
     /**
-     * @var string LibraDB Node ID
+     * @var string LibraDB node ID
      */
     public $NodeId;
 
@@ -48,7 +48,7 @@ class LibraDBNodeInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string syncing data
+     * @var string Syncing data
      */
     public $DataStatus;
 
@@ -73,9 +73,9 @@ class LibraDBNodeInfo extends AbstractModel
     public $Message;
 
     /**
-     * @param string $NodeId LibraDB Node ID
+     * @param string $NodeId LibraDB node ID
      * @param string $Status Node status
-     * @param string $DataStatus syncing data
+     * @param string $DataStatus Syncing data
      * @param integer $Cpu Number of CPU cores.
      * @param integer $Memory Memory size. Unit: GB.
      * @param integer $Storage Disk size, in GB

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method BinlogConfigInfo getBinlogConfig() Obtain Specifies the Binlog configuration message.
- * @method void setBinlogConfig(BinlogConfigInfo $BinlogConfig) Set Specifies the Binlog configuration message.
+ * @method BinlogConfigInfo getBinlogConfig() Obtain Binlog configuration message
+ * @method void setBinlogConfig(BinlogConfigInfo $BinlogConfig) Set Binlog configuration message
  */
 class ModifyBinlogConfigRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyBinlogConfigRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var BinlogConfigInfo Specifies the Binlog configuration message.
+     * @var BinlogConfigInfo Binlog configuration message
      */
     public $BinlogConfig;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param BinlogConfigInfo $BinlogConfig Specifies the Binlog configuration message.
+     * @param BinlogConfigInfo $BinlogConfig Binlog configuration message
      */
     function __construct()
     {

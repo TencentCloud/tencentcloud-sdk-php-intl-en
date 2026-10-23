@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Modify parameter task data.
+ * Parameter modification task data
  *
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method array getClusterParamList() Obtain Cluster parameter modification data.
- * @method void setClusterParamList(array $ClusterParamList) Set Cluster parameter modification data.
- * @method array getModifyInstanceParams() Obtain Instance parameter modification data.
- * @method void setModifyInstanceParams(array $ModifyInstanceParams) Set Instance parameter modification data.
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method array getClusterParamList() Obtain Cluster parameter modification data
+ * @method void setClusterParamList(array $ClusterParamList) Set Cluster parameter modification data
+ * @method array getModifyInstanceParams() Obtain Instance parameter modification data
+ * @method void setModifyInstanceParams(array $ModifyInstanceParams) Set Instance parameter modification data
  */
 class BizTaskModifyParamsData extends AbstractModel
 {
     /**
-     * @var string Cluster ID.
+     * @var string Cluster ID
      */
     public $ClusterId;
 
     /**
-     * @var array Cluster parameter modification data.
+     * @var array Cluster parameter modification data
      */
     public $ClusterParamList;
 
     /**
-     * @var array Instance parameter modification data.
+     * @var array Instance parameter modification data
      */
     public $ModifyInstanceParams;
 
     /**
-     * @param string $ClusterId Cluster ID.
-     * @param array $ClusterParamList Cluster parameter modification data.
-     * @param array $ModifyInstanceParams Instance parameter modification data.
+     * @param string $ClusterId Cluster ID
+     * @param array $ClusterParamList Cluster parameter modification data
+     * @param array $ModifyInstanceParams Instance parameter modification data
      */
     function __construct()
     {

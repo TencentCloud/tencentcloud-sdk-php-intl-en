@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getDbName() Obtain Database name
  * @method void setDbName(string $DbName) Set Database name
- * @method string getCharacterSet() Obtain Character set
- * @method void setCharacterSet(string $CharacterSet) Set Character set
- * @method string getCollateRule() Obtain Collation
- * @method void setCollateRule(string $CollateRule) Set Collation
- * @method array getUserHostPrivileges() Obtain Host permissions of the authorized user
- * @method void setUserHostPrivileges(array $UserHostPrivileges) Set Host permissions of the authorized user
- * @method string getDescription() Obtain Remarks
- * @method void setDescription(string $Description) Set Remarks
+ * @method string getCharacterSet() Obtain Character set type.
+ * @method void setCharacterSet(string $CharacterSet) Set Character set type.
+ * @method string getCollateRule() Obtain Sorting rule
+ * @method void setCollateRule(string $CollateRule) Set Sorting rule
+ * @method array getUserHostPrivileges() Obtain Authorize user host permission
+ * @method void setUserHostPrivileges(array $UserHostPrivileges) Set Authorize user host permission
+ * @method string getDescription() Obtain Remarks.
+ * @method void setDescription(string $Description) Set Remarks.
  */
 class CreateClusterDatabaseRequest extends AbstractModel
 {
@@ -46,32 +46,32 @@ class CreateClusterDatabaseRequest extends AbstractModel
     public $DbName;
 
     /**
-     * @var string Character set
+     * @var string Character set type.
      */
     public $CharacterSet;
 
     /**
-     * @var string Collation
+     * @var string Sorting rule
      */
     public $CollateRule;
 
     /**
-     * @var array Host permissions of the authorized user
+     * @var array Authorize user host permission
      */
     public $UserHostPrivileges;
 
     /**
-     * @var string Remarks
+     * @var string Remarks.
      */
     public $Description;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param string $DbName Database name
-     * @param string $CharacterSet Character set
-     * @param string $CollateRule Collation
-     * @param array $UserHostPrivileges Host permissions of the authorized user
-     * @param string $Description Remarks
+     * @param string $CharacterSet Character set type.
+     * @param string $CollateRule Sorting rule
+     * @param array $UserHostPrivileges Authorize user host permission
+     * @param string $Description Remarks.
      */
     function __construct()
     {

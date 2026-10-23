@@ -24,26 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getMem() Obtain Memory
- * @method void setMem(integer $Mem) Set Memory
- * @method string getUniqueVpcId() Obtain VPC ID, which is the same as that of the cluster by default.
- * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC ID, which is the same as that of the cluster by default.
- * @method string getUniqueSubnetId() Obtain VPC subnet ID, which is the same as that of the cluster by default.
- * @method void setUniqueSubnetId(string $UniqueSubnetId) Set VPC subnet ID, which is the same as that of the cluster by default.
- * @method integer getProxyCount() Obtain Number of nodes in the proxy group
- * @method void setProxyCount(integer $ProxyCount) Set Number of nodes in the proxy group
- * @method string getConnectionPoolType() Obtain Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
- * @method string getOpenConnectionPool() Obtain Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
- * @method integer getConnectionPoolTimeOut() Obtain Connection pool threshold in seconds
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection pool threshold in seconds
- * @method array getSecurityGroupIds() Obtain Array of security group IDs
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Array of security group IDs
- * @method string getDescription() Obtain Description
- * @method void setDescription(string $Description) Set Description
- * @method array getProxyZones() Obtain Database node information
- * @method void setProxyZones(array $ProxyZones) Set Database node information
+ * @method integer getMem() Obtain memory
+ * @method void setMem(integer $Mem) Set memory
+ * @method string getUniqueVpcId() Obtain VPC ID. Default value: the VPC ID of the cluster.
+ * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC ID. Default value: the VPC ID of the cluster.
+ * @method string getUniqueSubnetId() Obtain VPC subnet ID. Default value: the cluster subnet ID.
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) Set VPC subnet ID. Default value: the cluster subnet ID.
+ * @method integer getProxyCount() Obtain Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
+ * @method void setProxyCount(integer $ProxyCount) Set Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
+ * @method string getConnectionPoolType() Obtain Connection pool type: SessionConnectionPool (session-level connection pool)
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type: SessionConnectionPool (session-level connection pool)
+ * @method string getOpenConnectionPool() Obtain Whether connection pool is enabled. yes: enabled; no: not enabled
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether connection pool is enabled. yes: enabled; no: not enabled
+ * @method integer getConnectionPoolTimeOut() Obtain Connection pool threshold. Unit: second
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection pool threshold. Unit: second
+ * @method array getSecurityGroupIds() Obtain Security group ID array
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID array
+ * @method string getDescription() Obtain Description.
+ * @method void setDescription(string $Description) Set Description.
+ * @method array getProxyZones() Obtain Database node information (either this parameter or ProxyCount is required)
+ * @method void setProxyZones(array $ProxyZones) Set Database node information (either this parameter or ProxyCount is required)
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -58,68 +58,68 @@ class CreateProxyRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Memory
+     * @var integer memory
      */
     public $Mem;
 
     /**
-     * @var string VPC ID, which is the same as that of the cluster by default.
+     * @var string VPC ID. Default value: the VPC ID of the cluster.
      */
     public $UniqueVpcId;
 
     /**
-     * @var string VPC subnet ID, which is the same as that of the cluster by default.
+     * @var string VPC subnet ID. Default value: the cluster subnet ID.
      */
     public $UniqueSubnetId;
 
     /**
-     * @var integer Number of nodes in the proxy group
+     * @var integer Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
      */
     public $ProxyCount;
 
     /**
-     * @var string Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+     * @var string Connection pool type: SessionConnectionPool (session-level connection pool)
      */
     public $ConnectionPoolType;
 
     /**
-     * @var string Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+     * @var string Whether connection pool is enabled. yes: enabled; no: not enabled
      */
     public $OpenConnectionPool;
 
     /**
-     * @var integer Connection pool threshold in seconds
+     * @var integer Connection pool threshold. Unit: second
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var array Array of security group IDs
+     * @var array Security group ID array
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string Description
+     * @var string Description.
      */
     public $Description;
 
     /**
-     * @var array Database node information
+     * @var array Database node information (either this parameter or ProxyCount is required)
      */
     public $ProxyZones;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
-     * @param integer $Mem Memory
-     * @param string $UniqueVpcId VPC ID, which is the same as that of the cluster by default.
-     * @param string $UniqueSubnetId VPC subnet ID, which is the same as that of the cluster by default.
-     * @param integer $ProxyCount Number of nodes in the proxy group
-     * @param string $ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
-     * @param string $OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
-     * @param integer $ConnectionPoolTimeOut Connection pool threshold in seconds
-     * @param array $SecurityGroupIds Array of security group IDs
-     * @param string $Description Description
-     * @param array $ProxyZones Database node information
+     * @param integer $Mem memory
+     * @param string $UniqueVpcId VPC ID. Default value: the VPC ID of the cluster.
+     * @param string $UniqueSubnetId VPC subnet ID. Default value: the cluster subnet ID.
+     * @param integer $ProxyCount Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
+     * @param string $ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
+     * @param string $OpenConnectionPool Whether connection pool is enabled. yes: enabled; no: not enabled
+     * @param integer $ConnectionPoolTimeOut Connection pool threshold. Unit: second
+     * @param array $SecurityGroupIds Security group ID array
+     * @param string $Description Description.
+     * @param array $ProxyZones Database node information (either this parameter or ProxyCount is required)
      */
     function __construct()
     {

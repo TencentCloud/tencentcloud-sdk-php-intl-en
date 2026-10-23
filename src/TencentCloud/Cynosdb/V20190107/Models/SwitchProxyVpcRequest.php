@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getUniqVpcId() Obtain VPC ID in string
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID in string
- * @method string getUniqSubnetId() Obtain Subnet ID in string
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID in string
- * @method integer getOldIpReserveHours() Obtain Valid hours of old IP
- * @method void setOldIpReserveHours(integer $OldIpReserveHours) Set Valid hours of old IP
- * @method string getProxyGroupId() Obtain Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
+ * @method string getUniqVpcId() Obtain vpc id
+ * @method void setUniqVpcId(string $UniqVpcId) Set vpc id
+ * @method string getUniqSubnetId() Obtain String subnet id
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set String subnet id
+ * @method integer getOldIpReserveHours() Obtain Old address reclamation time
+ * @method void setOldIpReserveHours(integer $OldIpReserveHours) Set Old address reclamation time
+ * @method string getProxyGroupId() Obtain Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
  */
 class SwitchProxyVpcRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class SwitchProxyVpcRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string VPC ID in string
+     * @var string vpc id
      */
     public $UniqVpcId;
 
     /**
-     * @var string Subnet ID in string
+     * @var string String subnet id
      */
     public $UniqSubnetId;
 
     /**
-     * @var integer Valid hours of old IP
+     * @var integer Old address reclamation time
      */
     public $OldIpReserveHours;
 
     /**
-     * @var string Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
+     * @var string Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
      */
     public $ProxyGroupId;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $UniqVpcId VPC ID in string
-     * @param string $UniqSubnetId Subnet ID in string
-     * @param integer $OldIpReserveHours Valid hours of old IP
-     * @param string $ProxyGroupId Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
+     * @param string $UniqVpcId vpc id
+     * @param string $UniqSubnetId String subnet id
+     * @param integer $OldIpReserveHours Old address reclamation time
+     * @param string $ProxyGroupId Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
      */
     function __construct()
     {

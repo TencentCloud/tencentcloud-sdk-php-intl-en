@@ -22,12 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceType() Obtain Instance type
  * @method void setInstanceType(string $InstanceType) Set Instance type
- * @method string getPackageRegion() Obtain Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
- * @method void setPackageRegion(string $PackageRegion) Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
- * @method string getPackageType() Obtain Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
- * @method void setPackageType(string $PackageType) Set Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
+ * @method string getPackageRegion() Obtain Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+ * @method void setPackageRegion(string $PackageRegion) Set Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+ * @method string getPackageType() Obtain Resource package type
+CCU - compute resource package
+DISK - storage resource package
+ * @method void setPackageType(string $PackageType) Set Resource package type
+CCU - compute resource package
+DISK - storage resource package
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
  * @method integer getLimit() Obtain Limit
  * @method void setLimit(integer $Limit) Set Limit
  */
@@ -39,17 +45,20 @@ class DescribeResourcePackageSaleSpecRequest extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * @var string Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
      */
     public $PackageRegion;
 
     /**
-     * @var string Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+     * @var string Resource package type
+CCU - compute resource package
+DISK - storage resource package
      */
     public $PackageType;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
@@ -60,9 +69,12 @@ class DescribeResourcePackageSaleSpecRequest extends AbstractModel
 
     /**
      * @param string $InstanceType Instance type
-     * @param string $PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-     * @param string $PackageType Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
-     * @param integer $Offset Offset
+     * @param string $PackageRegion Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+     * @param string $PackageType Resource package type
+CCU - compute resource package
+DISK - storage resource package
+     * @param integer $Offset Offset.
      * @param integer $Limit Limit
      */
     function __construct()

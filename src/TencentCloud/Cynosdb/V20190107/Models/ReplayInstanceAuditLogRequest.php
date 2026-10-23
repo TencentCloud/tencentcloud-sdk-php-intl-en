@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReplayInstanceAuditLog request structure.
  *
- * @method string getSourceClusterId() Obtain Source cluster id.
- * @method void setSourceClusterId(string $SourceClusterId) Set Source cluster id.
- * @method string getSourceInstanceId() Obtain Source instance id.
- * @method void setSourceInstanceId(string $SourceInstanceId) Set Source instance id.
- * @method string getTargetClusterId() Obtain Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
- * @method void setTargetClusterId(string $TargetClusterId) Set Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
- * @method string getTargetInstanceId() Obtain Target instance id.
- * @method void setTargetInstanceId(string $TargetInstanceId) Set Target instance id.
- * @method string getTargetUserName() Obtain Username. host must be % username.
- * @method void setTargetUserName(string $TargetUserName) Set Username. host must be % username.
+ * @method string getSourceClusterId() Obtain Source cluster id
+ * @method void setSourceClusterId(string $SourceClusterId) Set Source cluster id
+ * @method string getSourceInstanceId() Obtain Source instance ID.
+ * @method void setSourceInstanceId(string $SourceInstanceId) Set Source instance ID.
+ * @method string getTargetClusterId() Obtain Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
+ * @method void setTargetClusterId(string $TargetClusterId) Set Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
+ * @method string getTargetInstanceId() Obtain Target instance ID.
+ * @method void setTargetInstanceId(string $TargetInstanceId) Set Target instance ID.
+ * @method string getTargetUserName() Obtain userName. A userName with the host as % is required.
+ * @method void setTargetUserName(string $TargetUserName) Set userName. A userName with the host as % is required.
  * @method string getTargetPassword() Obtain Password.
  * @method void setTargetPassword(string $TargetPassword) Set Password.
- * @method string getStartTime() Obtain Start time. time format: yyyy-DD-mm hh:mm:ss.
- * @method void setStartTime(string $StartTime) Set Start time. time format: yyyy-DD-mm hh:mm:ss.
- * @method string getEndTime() Obtain Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
- * @method void setEndTime(string $EndTime) Set Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+ * @method string getStartTime() Obtain Start time. Time format: yyyy-DD-mm hh:mm:ss
+ * @method void setStartTime(string $StartTime) Set Start time. Time format: yyyy-DD-mm hh:mm:ss
+ * @method string getEndTime() Obtain End time. Time format: yyyy-DD-mm hh:mm:ss
+ * @method void setEndTime(string $EndTime) Set End time. Time format: yyyy-DD-mm hh:mm:ss
  */
 class ReplayInstanceAuditLogRequest extends AbstractModel
 {
     /**
-     * @var string Source cluster id.
+     * @var string Source cluster id
      */
     public $SourceClusterId;
 
     /**
-     * @var string Source instance id.
+     * @var string Source instance ID.
      */
     public $SourceInstanceId;
 
     /**
-     * @var string Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+     * @var string Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
      */
     public $TargetClusterId;
 
     /**
-     * @var string Target instance id.
+     * @var string Target instance ID.
      */
     public $TargetInstanceId;
 
     /**
-     * @var string Username. host must be % username.
+     * @var string userName. A userName with the host as % is required.
      */
     public $TargetUserName;
 
@@ -73,25 +73,25 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
     public $TargetPassword;
 
     /**
-     * @var string Start time. time format: yyyy-DD-mm hh:mm:ss.
+     * @var string Start time. Time format: yyyy-DD-mm hh:mm:ss
      */
     public $StartTime;
 
     /**
-     * @var string Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+     * @var string End time. Time format: yyyy-DD-mm hh:mm:ss
      */
     public $EndTime;
 
     /**
-     * @param string $SourceClusterId Source cluster id.
-     * @param string $SourceInstanceId Source instance id.
-     * @param string $TargetClusterId Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
-     * @param string $TargetInstanceId Target instance id.
-     * @param string $TargetUserName Username. host must be % username.
+     * @param string $SourceClusterId Source cluster id
+     * @param string $SourceInstanceId Source instance ID.
+     * @param string $TargetClusterId Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
+     * @param string $TargetInstanceId Target instance ID.
+     * @param string $TargetUserName userName. A userName with the host as % is required.
      * @param string $TargetPassword Password.
-     * @param string $StartTime Start time. time format: yyyy-DD-mm hh:mm:ss.
-     * @param string $EndTime Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+     * @param string $StartTime Start time. Time format: yyyy-DD-mm hh:mm:ss
+     * @param string $EndTime End time. Time format: yyyy-DD-mm hh:mm:ss
      */
     function __construct()
     {

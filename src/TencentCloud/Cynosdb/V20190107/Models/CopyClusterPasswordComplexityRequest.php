@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyClusterPasswordComplexity request structure.
  *
- * @method array getClusterIds() Obtain A parameter used to replicate the array of cluster IDs
- * @method void setClusterIds(array $ClusterIds) Set A parameter used to replicate the array of cluster IDs
- * @method string getSourceClusterId() Obtain Cluster ID
- * @method void setSourceClusterId(string $SourceClusterId) Set Cluster ID
+ * @method array getClusterIds() Obtain Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+ * @method void setClusterIds(array $ClusterIds) Set Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+ * @method string getSourceClusterId() Obtain Cluster id, for example, cynosdbmysql-bzxxrmtq
+ * @method void setSourceClusterId(string $SourceClusterId) Set Cluster id, for example, cynosdbmysql-bzxxrmtq
  */
 class CopyClusterPasswordComplexityRequest extends AbstractModel
 {
     /**
-     * @var array A parameter used to replicate the array of cluster IDs
+     * @var array Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
      */
     public $ClusterIds;
 
     /**
-     * @var string Cluster ID
+     * @var string Cluster id, for example, cynosdbmysql-bzxxrmtq
      */
     public $SourceClusterId;
 
     /**
-     * @param array $ClusterIds A parameter used to replicate the array of cluster IDs
-     * @param string $SourceClusterId Cluster ID
+     * @param array $ClusterIds Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+     * @param string $SourceClusterId Cluster id, for example, cynosdbmysql-bzxxrmtq
      */
     function __construct()
     {

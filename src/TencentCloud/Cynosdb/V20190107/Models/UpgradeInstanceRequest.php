@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getCpu() Obtain Database CPU.
- * @method void setCpu(integer $Cpu) Set Database CPU.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getCpu() Obtain Database CPU
+ * @method void setCpu(integer $Cpu) Set Database CPU
  * @method integer getMemory() Obtain Database memory in GB
  * @method void setMemory(integer $Memory) Set Database memory in GB
- * @method string getUpgradeType() Obtain Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
- * @method void setUpgradeType(string $UpgradeType) Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
- * @method string getDeviceType() Obtain Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
- * @method void setDeviceType(string $DeviceType) Set Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
- * @method integer getStorageLimit() Obtain This parameter has been disused.
- * @method void setStorageLimit(integer $StorageLimit) Set This parameter has been disused.
- * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
- * @method string getDbType() Obtain This parameter has been disused.
- * @method void setDbType(string $DbType) Set This parameter has been disused.
- * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
- * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
- * @method string getUpgradeMode() Obtain Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
- * @method void setUpgradeMode(string $UpgradeMode) Set Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
- * @method UpgradeProxy getUpgradeProxy() Obtain Proxy synchronous upgrade.
- * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set Proxy synchronous upgrade.
+ * @method string getUpgradeType() Obtain Upgrade type: upgradeImmediate, upgradeInMaintain
+ * @method void setUpgradeType(string $UpgradeType) Set Upgrade type: upgradeImmediate, upgradeInMaintain
+ * @method string getDeviceType() Obtain Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
+ * @method integer getStorageLimit() Obtain This parameter has been deprecated.
+ * @method void setStorageLimit(integer $StorageLimit) Set This parameter has been deprecated.
+ * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+ * @method string getDbType() Obtain This parameter has been deprecated.
+ * @method void setDbType(string $DbType) Set This parameter has been deprecated.
+ * @method integer getDealMode() Obtain Transaction mode 0-Place order and pay 1-Place order
+ * @method void setDealMode(integer $DealMode) Set Transaction mode 0-Place order and pay 1-Place order
+ * @method string getUpgradeMode() Obtain NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
+ * @method void setUpgradeMode(string $UpgradeMode) Set NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
+ * @method UpgradeProxy getUpgradeProxy() Obtain Synchronously upgrade proxy
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set Synchronously upgrade proxy
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Database CPU.
+     * @var integer Database CPU
      */
     public $Cpu;
 
@@ -65,61 +65,61 @@ class UpgradeInstanceRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var string Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+     * @var string Upgrade type: upgradeImmediate, upgradeInMaintain
      */
     public $UpgradeType;
 
     /**
-     * @var string Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
+     * @var string Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public $DeviceType;
 
     /**
-     * @var integer This parameter has been disused.
+     * @var integer This parameter has been deprecated.
      */
     public $StorageLimit;
 
     /**
-     * @var integer Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+     * @var integer Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
      */
     public $AutoVoucher;
 
     /**
-     * @var string This parameter has been disused.
+     * @var string This parameter has been deprecated.
      */
     public $DbType;
 
     /**
-     * @var integer Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+     * @var integer Transaction mode 0-Place order and pay 1-Place order
      */
     public $DealMode;
 
     /**
-     * @var string Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     * @var string NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
      */
     public $UpgradeMode;
 
     /**
-     * @var UpgradeProxy Proxy synchronous upgrade.
+     * @var UpgradeProxy Synchronously upgrade proxy
      */
     public $UpgradeProxy;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $Cpu Database CPU.
+     * @param string $InstanceId Instance ID.
+     * @param integer $Cpu Database CPU
      * @param integer $Memory Database memory in GB
-     * @param string $UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
-     * @param string $DeviceType Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
-     * @param integer $StorageLimit This parameter has been disused.
-     * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
-     * @param string $DbType This parameter has been disused.
-     * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
-     * @param string $UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
-     * @param UpgradeProxy $UpgradeProxy Proxy synchronous upgrade.
+     * @param string $UpgradeType Upgrade type: upgradeImmediate, upgradeInMaintain
+     * @param string $DeviceType Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
+     * @param integer $StorageLimit This parameter has been deprecated.
+     * @param integer $AutoVoucher Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+     * @param string $DbType This parameter has been deprecated.
+     * @param integer $DealMode Transaction mode 0-Place order and pay 1-Place order
+     * @param string $UpgradeMode NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
+     * @param UpgradeProxy $UpgradeProxy Synchronously upgrade proxy
      */
     function __construct()
     {

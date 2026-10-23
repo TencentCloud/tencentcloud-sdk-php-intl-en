@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster read-only switch list.
+ * List of cluster read-only switches
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getReadOnlyValue() Obtain Specifies the value of the read-only switch.
- * @method void setReadOnlyValue(string $ReadOnlyValue) Set Specifies the value of the read-only switch.
+ * @method string getReadOnlyValue() Obtain Read-only switch value
+ * @method void setReadOnlyValue(string $ReadOnlyValue) Set Read-only switch value
  */
 class ClusterReadOnlyValue extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ClusterReadOnlyValue extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Specifies the value of the read-only switch.
+     * @var string Read-only switch value
      */
     public $ReadOnlyValue;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $ReadOnlyValue Specifies the value of the read-only switch.
+     * @param string $ReadOnlyValue Read-only switch value
      */
     function __construct()
     {

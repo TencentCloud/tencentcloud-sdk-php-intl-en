@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteVaults request structure.
  *
- * @method array getVaultIds() Obtain List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
- * @method void setVaultIds(array $VaultIds) Set List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+ * @method array getVaultIds() Obtain List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
+ * @method void setVaultIds(array $VaultIds) Set List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
  */
 class DeleteVaultsRequest extends AbstractModel
 {
     /**
-     * @var array List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+     * @var array List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
      */
     public $VaultIds;
 
     /**
-     * @param array $VaultIds List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+     * @param array $VaultIds List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
      */
     function __construct()
     {

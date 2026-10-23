@@ -18,7 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Safe execution action specifies additional parameters for the ban.
+ * Additional parameter when the executed action is interception.
+
+This parameter is used for specifying the extra handling action taken by the system when a security rule is hit and an intercept action is executed.
+Different disposal actions are configured with different fixed parameter combinations. The system will determine the actually effective disposal action type according to the configured parameter combination.
+During the same interception execution, only one handling action can be configured and made effective. Parameters for multiple handling actions cannot appear at the same time. Otherwise, it is deemed an invalid configuration. If empty, the default block handling action is used.
+DenyActionParameters supports the following additional handling actions: <li>Default: When DenyActionParameters is empty or no additional handling action is enabled, the system will perform the default block, responding with an interception page.</li><li>IP block: Continuously block the client source IP that triggers the rule. Corresponding parameters: BlockIp, BlockIpDuration.</li><li>Custom page interception: Use the designated custom page content to respond to requests. Corresponding parameters: ReturnCustomPage, ResponseCode, ErrorPageId.</li><li>Silence: Accept client requests but do not return. Corresponding parameter: Stall.</li>
  *
  * @method string getBlockIp() Obtain Specifies whether to extend the ban on the source IP. valid values.
 <li>`on`: Enable;</li>

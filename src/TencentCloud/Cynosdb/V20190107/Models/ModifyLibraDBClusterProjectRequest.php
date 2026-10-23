@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLibraDBClusterProject request structure.
  *
- * @method array getClusterIdSet() Obtain Analysis Cluster ID List
- * @method void setClusterIdSet(array $ClusterIdSet) Set Analysis Cluster ID List
+ * @method array getClusterIdSet() Obtain Analytical cluster ID list
+ * @method void setClusterIdSet(array $ClusterIdSet) Set Analytical cluster ID list
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  */
 class ModifyLibraDBClusterProjectRequest extends AbstractModel
 {
     /**
-     * @var array Analysis Cluster ID List
+     * @var array Analytical cluster ID list
      */
     public $ClusterIdSet;
 
@@ -38,7 +38,7 @@ class ModifyLibraDBClusterProjectRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param array $ClusterIdSet Analysis Cluster ID List
+     * @param array $ClusterIdSet Analytical cluster ID list
      * @param integer $ProjectId Project ID
      */
     function __construct()

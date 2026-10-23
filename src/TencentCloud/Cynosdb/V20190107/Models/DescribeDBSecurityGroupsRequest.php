@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSecurityGroups request structure.
  *
- * @method string getInstanceId() Obtain Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
- * @method void setInstanceId(string $InstanceId) Set Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+ * @method string getInstanceId() Obtain Instance ID (you must import either InstanceId or InstanceGroupId)
+ * @method void setInstanceId(string $InstanceId) Set Instance ID (you must import either InstanceId or InstanceGroupId)
  * @method string getInstanceGroupId() Obtain Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
  * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @var string Instance ID (you must import either InstanceId or InstanceGroupId)
      * @deprecated
      */
     public $InstanceId;
@@ -39,7 +39,7 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
     public $InstanceGroupId;
 
     /**
-     * @param string $InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @param string $InstanceId Instance ID (you must import either InstanceId or InstanceGroupId)
      * @param string $InstanceGroupId Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
      */
     function __construct()

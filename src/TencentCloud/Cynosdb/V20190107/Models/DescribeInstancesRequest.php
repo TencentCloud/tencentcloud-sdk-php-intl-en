@@ -20,75 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances request structure.
  *
- * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100
- * @method integer getOffset() Obtain Record offset. Default value: 0
- * @method void setOffset(integer $Offset) Set Record offset. Default value: 0
- * @method string getOrderBy() Obtain Sort by field. Valid values:
+ * @method integer getLimit() Obtain Number of returns. Default value: 20. Value range: (0, 100].
+ * @method void setLimit(integer $Limit) Set Number of returns. Default value: 20. Value range: (0, 100].
+ * @method integer getOffset() Obtain Record offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Record offset. Default value: 0.
+ * @method string getOrderBy() Obtain Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
- * @method void setOrderBy(string $OrderBy) Set Sort by field. Valid values:
+<li> PERIODENDTIME: Expiration time</li>
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
- * @method string getOrderByType() Obtain Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
- * @method array getFilters() Obtain Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
- * @method void setFilters(array $Filters) Set Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+<li> PERIODENDTIME: Expiration time</li>
+ * @method string getOrderByType() Obtain Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+ * @method void setOrderByType(string $OrderByType) Set Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+ * @method array getFilters() Obtain Search criteria. When multiple filters exist, the relationship between filters is logical AND.
+ * @method void setFilters(array $Filters) Set Search criteria. When multiple filters exist, the relationship between filters is logical AND.
  * @method string getDbType() Obtain Engine type. Currently, `MYSQL` is supported.
  * @method void setDbType(string $DbType) Set Engine type. Currently, `MYSQL` is supported.
- * @method string getStatus() Obtain Instance status. Valid values:
+ * @method string getStatus() Obtain Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
- * @method void setStatus(string $Status) Set Instance status. Valid values:
+Recovering
+offlining
+offlined
+ * @method void setStatus(string $Status) Set Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
+Recovering
+offlining
+offlined
  * @method array getInstanceIds() Obtain Instance ID list
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
- * @method string getClusterType() Obtain Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
- * @method void setClusterType(string $ClusterType) Set Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+ * @method string getClusterType() Obtain Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
+ * @method void setClusterType(string $ClusterType) Set Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer Number of returned results. Default value: 20. Maximum value: 100
+     * @var integer Number of returns. Default value: 20. Value range: (0, 100].
      */
     public $Limit;
 
     /**
-     * @var integer Record offset. Default value: 0
+     * @var integer Record offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var string Sort by field. Valid values:
+     * @var string Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
+<li> PERIODENDTIME: Expiration time</li>
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
+     * @var string Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
      */
     public $OrderByType;
 
     /**
-     * @var array Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+     * @var array Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      */
     public $Filters;
 
@@ -98,14 +98,14 @@ class DescribeInstancesRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var string Instance status. Valid values:
+     * @var string Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
+Recovering
+offlining
+offlined
      */
     public $Status;
 
@@ -115,31 +115,31 @@ offlined: Instance eliminated
     public $InstanceIds;
 
     /**
-     * @var string Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     * @var string Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
      */
     public $ClusterType;
 
     /**
-     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100
-     * @param integer $Offset Record offset. Default value: 0
-     * @param string $OrderBy Sort by field. Valid values:
+     * @param integer $Limit Number of returns. Default value: 20. Value range: (0, 100].
+     * @param integer $Offset Record offset. Default value: 0.
+     * @param string $OrderBy Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
-     * @param string $OrderByType Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
-     * @param array $Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+<li> PERIODENDTIME: Expiration time</li>
+     * @param string $OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+     * @param array $Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      * @param string $DbType Engine type. Currently, `MYSQL` is supported.
-     * @param string $Status Instance status. Valid values:
+     * @param string $Status Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
+Recovering
+offlining
+offlined
      * @param array $InstanceIds Instance ID list
-     * @param string $ClusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     * @param string $ClusterType Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Availability zone attribute item.
+ * Availability zone attribute item
  *
- * @method string getZone() Obtain Availability zone.
- * @method void setZone(string $Zone) Set Availability zone.
- * @method string getBinlogSyncWay() Obtain binlog synchronization mode.
- * @method void setBinlogSyncWay(string $BinlogSyncWay) Set binlog synchronization mode.
- * @method integer getSemiSyncTimeout() Obtain Semi-Sync timeout period in milliseconds.
- * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set Semi-Sync timeout period in milliseconds.
+ * @method string getZone() Obtain Availability zone
+ * @method void setZone(string $Zone) Set Availability zone
+ * @method string getBinlogSyncWay() Obtain binlog synchronization mode
+ * @method void setBinlogSyncWay(string $BinlogSyncWay) Set binlog synchronization mode
+ * @method integer getSemiSyncTimeout() Obtain Semi-sync timeout period, in milliseconds.
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set Semi-sync timeout period, in milliseconds.
  */
 class SlaveZoneAttrItem extends AbstractModel
 {
     /**
-     * @var string Availability zone.
+     * @var string Availability zone
      */
     public $Zone;
 
     /**
-     * @var string binlog synchronization mode.
+     * @var string binlog synchronization mode
      */
     public $BinlogSyncWay;
 
     /**
-     * @var integer Semi-Sync timeout period in milliseconds.
+     * @var integer Semi-sync timeout period, in milliseconds.
      */
     public $SemiSyncTimeout;
 
     /**
-     * @param string $Zone Availability zone.
-     * @param string $BinlogSyncWay binlog synchronization mode.
-     * @param integer $SemiSyncTimeout Semi-Sync timeout period in milliseconds.
+     * @param string $Zone Availability zone
+     * @param string $BinlogSyncWay binlog synchronization mode
+     * @param integer $SemiSyncTimeout Semi-sync timeout period, in milliseconds.
      */
     function __construct()
     {

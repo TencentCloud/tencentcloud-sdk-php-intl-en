@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVersion() Obtain Version
  * @method void setVersion(string $Version) Set Version
- * @method string getTag() Obtain Version tag
- * @method void setTag(string $Tag) Set Version tag
- * @method boolean getHasPermission() Obtain Can be used this version
- * @method void setHasPermission(boolean $HasPermission) Set Can be used this version
+ * @method string getTag() Obtain Version tag.
+ * @method void setTag(string $Tag) Set Version tag.
+ * @method boolean getHasPermission() Obtain Whether this version can be used
+ * @method void setHasPermission(boolean $HasPermission) Set Whether this version can be used
  */
 class LibraDBVersion extends AbstractModel
 {
@@ -35,19 +35,19 @@ class LibraDBVersion extends AbstractModel
     public $Version;
 
     /**
-     * @var string Version tag
+     * @var string Version tag.
      */
     public $Tag;
 
     /**
-     * @var boolean Can be used this version
+     * @var boolean Whether this version can be used
      */
     public $HasPermission;
 
     /**
      * @param string $Version Version
-     * @param string $Tag Version tag
-     * @param boolean $HasPermission Can be used this version
+     * @param string $Tag Version tag.
+     * @param boolean $HasPermission Whether this version can be used
      */
     function __construct()
     {

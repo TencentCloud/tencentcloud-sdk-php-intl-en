@@ -18,17 +18,17 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * binlog retention info for each region
+ * binlog retention info in each region
  *
- * @method string getBackupRegion() Obtain <p>Backup region</p>
- * @method void setBackupRegion(string $BackupRegion) Set <p>Backup region</p>
+ * @method string getBackupRegion() Obtain <p>Backup region.</p>
+ * @method void setBackupRegion(string $BackupRegion) Set <p>Backup region.</p>
  * @method integer getBackupId() Obtain <p>Backup ID</p>
  * @method void setBackupId(integer $BackupId) Set <p>Backup ID</p>
  */
 class BinlogRegionInfo extends AbstractModel
 {
     /**
-     * @var string <p>Backup region</p>
+     * @var string <p>Backup region.</p>
      */
     public $BackupRegion;
 
@@ -38,7 +38,7 @@ class BinlogRegionInfo extends AbstractModel
     public $BackupId;
 
     /**
-     * @param string $BackupRegion <p>Backup region</p>
+     * @param string $BackupRegion <p>Backup region.</p>
      * @param integer $BackupId <p>Backup ID</p>
      */
     function __construct()

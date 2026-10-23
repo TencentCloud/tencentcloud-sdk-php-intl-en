@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getAccountNames() Obtain List of accounts to be filtered
- * @method void setAccountNames(array $AccountNames) Set List of accounts to be filtered
+ * @method array getAccountNames() Obtain Account list to filter
+ * @method void setAccountNames(array $AccountNames) Set Account list to filter
  * @method string getDbType() Obtain Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
  * @method void setDbType(string $DbType) Set Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
- * @method array getHosts() Obtain List of accounts to be filtered
- * @method void setHosts(array $Hosts) Set List of accounts to be filtered
- * @method integer getLimit() Obtain Maximum entries returned per page
- * @method void setLimit(integer $Limit) Set Maximum entries returned per page
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method string getAccountRegular() Obtain Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
- * @method void setAccountRegular(string $AccountRegular) Set Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+This parameter is no longer in use.
+ * @method array getHosts() Obtain Account list to filter
+ * @method void setHosts(array $Hosts) Set Account list to filter
+ * @method integer getLimit() Obtain Limit amount
+ * @method void setLimit(integer $Limit) Set Limit amount
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method string getAccountRegular() Obtain Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
+ * @method void setAccountRegular(string $AccountRegular) Set Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -47,47 +47,47 @@ class DescribeAccountsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array List of accounts to be filtered
+     * @var array Account list to filter
      */
     public $AccountNames;
 
     /**
      * @var string Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
      */
     public $DbType;
 
     /**
-     * @var array List of accounts to be filtered
+     * @var array Account list to filter
      */
     public $Hosts;
 
     /**
-     * @var integer Maximum entries returned per page
+     * @var integer Limit amount
      */
     public $Limit;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var string Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+     * @var string Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
      */
     public $AccountRegular;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $AccountNames List of accounts to be filtered
+     * @param array $AccountNames Account list to filter
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
-     * @param array $Hosts List of accounts to be filtered
-     * @param integer $Limit Maximum entries returned per page
-     * @param integer $Offset Offset
-     * @param string $AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+This parameter is no longer in use.
+     * @param array $Hosts Account list to filter
+     * @param integer $Limit Limit amount
+     * @param integer $Offset Offset.
+     * @param string $AccountRegular Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
      */
     function __construct()
     {

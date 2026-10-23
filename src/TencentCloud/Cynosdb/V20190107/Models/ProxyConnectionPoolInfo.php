@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Connection pool information for the database proxy
+ * Database proxy connection pool information
  *
- * @method integer getConnectionPoolTimeOut() Obtain Specifies the persistence threshold of the connection pool. the unit is seconds.
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Specifies the persistence threshold of the connection pool. the unit is seconds.
- * @method string getOpenConnectionPool() Obtain Whether the connection pool is enabled.
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether the connection pool is enabled.
- * @method string getConnectionPoolType() Obtain Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+ * @method integer getConnectionPoolTimeOut() Obtain Connection pool persistence threshold: measurement unit (seconds)
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection pool persistence threshold: measurement unit (seconds)
+ * @method string getOpenConnectionPool() Obtain Whether the connection pool is enabled
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether the connection pool is enabled
+ * @method string getConnectionPoolType() Obtain Connection pool type: SessionConnectionPool (session-level connection pool)
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type: SessionConnectionPool (session-level connection pool)
  */
 class ProxyConnectionPoolInfo extends AbstractModel
 {
     /**
-     * @var integer Specifies the persistence threshold of the connection pool. the unit is seconds.
+     * @var integer Connection pool persistence threshold: measurement unit (seconds)
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var string Whether the connection pool is enabled.
+     * @var string Whether the connection pool is enabled
      */
     public $OpenConnectionPool;
 
     /**
-     * @var string Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+     * @var string Connection pool type: SessionConnectionPool (session-level connection pool)
      */
     public $ConnectionPoolType;
 
     /**
-     * @param integer $ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
-     * @param string $OpenConnectionPool Whether the connection pool is enabled.
-     * @param string $ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+     * @param integer $ConnectionPoolTimeOut Connection pool persistence threshold: measurement unit (seconds)
+     * @param string $OpenConnectionPool Whether the connection pool is enabled
+     * @param string $ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
      */
     function __construct()
     {

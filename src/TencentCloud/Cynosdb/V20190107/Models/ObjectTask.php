@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(integer $TaskId) Set Task auto-increment ID.
  * @method string getTaskType() Obtain Task type
  * @method void setTaskType(string $TaskType) Set Task type
- * @method string getTaskStatus() Obtain Status of tasks.
- * @method void setTaskStatus(string $TaskStatus) Set Status of tasks.
- * @method string getObjectId() Obtain Task ID (cluster ID | instance group ID | instance ID).
- * @method void setObjectId(string $ObjectId) Set Task ID (cluster ID | instance group ID | instance ID).
+ * @method string getTaskStatus() Obtain Task status.
+ * @method void setTaskStatus(string $TaskStatus) Set Task status.
+ * @method string getObjectId() Obtain Task ID (Cluster ID | instance group ID | instance ID)
+ * @method void setObjectId(string $ObjectId) Set Task ID (Cluster ID | instance group ID | instance ID)
  * @method string getObjectType() Obtain Task type
  * @method void setObjectType(string $ObjectType) Set Task type
  */
@@ -44,12 +44,12 @@ class ObjectTask extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string Status of tasks.
+     * @var string Task status.
      */
     public $TaskStatus;
 
     /**
-     * @var string Task ID (cluster ID | instance group ID | instance ID).
+     * @var string Task ID (Cluster ID | instance group ID | instance ID)
      */
     public $ObjectId;
 
@@ -61,8 +61,8 @@ class ObjectTask extends AbstractModel
     /**
      * @param integer $TaskId Task auto-increment ID.
      * @param string $TaskType Task type
-     * @param string $TaskStatus Status of tasks.
-     * @param string $ObjectId Task ID (cluster ID | instance group ID | instance ID).
+     * @param string $TaskStatus Task status.
+     * @param string $ObjectId Task ID (Cluster ID | instance group ID | instance ID)
      * @param string $ObjectType Task type
      */
     function __construct()

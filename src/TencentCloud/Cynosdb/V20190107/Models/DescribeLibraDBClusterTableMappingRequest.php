@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLibraDBClusterTableMapping request structure.
  *
- * @method string getClusterId() Obtain Analysis Cluster ID
- * @method void setClusterId(string $ClusterId) Set Analysis Cluster ID
+ * @method string getClusterId() Obtain Analysis cluster ID
+ * @method void setClusterId(string $ClusterId) Set Analysis cluster ID
  * @method string getInstanceId() Obtain Analysis engine instance ID
  * @method void setInstanceId(string $InstanceId) Set Analysis engine instance ID
- * @method string getNodeId() Obtain Node ID
- * @method void setNodeId(string $NodeId) Set Node ID
+ * @method string getNodeId() Obtain Node ID.
+ * @method void setNodeId(string $NodeId) Set Node ID.
  * @method integer getOffset() Obtain Offset.
  * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain Page history limit
- * @method void setLimit(integer $Limit) Set Page history limit
+ * @method integer getLimit() Obtain Page record limit
+ * @method void setLimit(integer $Limit) Set Page record limit
  * @method array getSrcSchemas() Obtain Source schema list
  * @method void setSrcSchemas(array $SrcSchemas) Set Source schema list
  * @method array getSrcTableName() Obtain Source table list
  * @method void setSrcTableName(array $SrcTableName) Set Source table list
  * @method array getStatusList() Obtain Status list
  * @method void setStatusList(array $StatusList) Set Status list
- * @method array getMapSchemas() Obtain Map database name
- * @method void setMapSchemas(array $MapSchemas) Set Map database name
+ * @method array getMapSchemas() Obtain Map database names
+ * @method void setMapSchemas(array $MapSchemas) Set Map database names
  * @method array getMapTableName() Obtain Mapping table name
  * @method void setMapTableName(array $MapTableName) Set Mapping table name
- * @method boolean getMapSchemaNotEmpty() Obtain Query records where the database name is not null
- * @method void setMapSchemaNotEmpty(boolean $MapSchemaNotEmpty) Set Query records where the database name is not null
- * @method boolean getMapTableNameNotEmpty() Obtain Query records where the mapping table name is not null
- * @method void setMapTableNameNotEmpty(boolean $MapTableNameNotEmpty) Set Query records where the mapping table name is not null
+ * @method boolean getMapSchemaNotEmpty() Obtain Whether to query records where the mapping database name is not empty
+ * @method void setMapSchemaNotEmpty(boolean $MapSchemaNotEmpty) Set Whether to query records where the mapping database name is not empty
+ * @method boolean getMapTableNameNotEmpty() Obtain Whether to query records where the mapping table name is not empty
+ * @method void setMapTableNameNotEmpty(boolean $MapTableNameNotEmpty) Set Whether to query records where the mapping table name is not empty
  */
 class DescribeLibraDBClusterTableMappingRequest extends AbstractModel
 {
     /**
-     * @var string Analysis Cluster ID
+     * @var string Analysis cluster ID
      */
     public $ClusterId;
 
@@ -58,7 +58,7 @@ class DescribeLibraDBClusterTableMappingRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Node ID
+     * @var string Node ID.
      */
     public $NodeId;
 
@@ -68,7 +68,7 @@ class DescribeLibraDBClusterTableMappingRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Page history limit
+     * @var integer Page record limit
      */
     public $Limit;
 
@@ -88,7 +88,7 @@ class DescribeLibraDBClusterTableMappingRequest extends AbstractModel
     public $StatusList;
 
     /**
-     * @var array Map database name
+     * @var array Map database names
      */
     public $MapSchemas;
 
@@ -98,28 +98,28 @@ class DescribeLibraDBClusterTableMappingRequest extends AbstractModel
     public $MapTableName;
 
     /**
-     * @var boolean Query records where the database name is not null
+     * @var boolean Whether to query records where the mapping database name is not empty
      */
     public $MapSchemaNotEmpty;
 
     /**
-     * @var boolean Query records where the mapping table name is not null
+     * @var boolean Whether to query records where the mapping table name is not empty
      */
     public $MapTableNameNotEmpty;
 
     /**
-     * @param string $ClusterId Analysis Cluster ID
+     * @param string $ClusterId Analysis cluster ID
      * @param string $InstanceId Analysis engine instance ID
-     * @param string $NodeId Node ID
+     * @param string $NodeId Node ID.
      * @param integer $Offset Offset.
-     * @param integer $Limit Page history limit
+     * @param integer $Limit Page record limit
      * @param array $SrcSchemas Source schema list
      * @param array $SrcTableName Source table list
      * @param array $StatusList Status list
-     * @param array $MapSchemas Map database name
+     * @param array $MapSchemas Map database names
      * @param array $MapTableName Mapping table name
-     * @param boolean $MapSchemaNotEmpty Query records where the database name is not null
-     * @param boolean $MapTableNameNotEmpty Query records where the mapping table name is not null
+     * @param boolean $MapSchemaNotEmpty Whether to query records where the mapping database name is not empty
+     * @param boolean $MapTableNameNotEmpty Whether to query records where the mapping table name is not empty
      */
     function __construct()
     {

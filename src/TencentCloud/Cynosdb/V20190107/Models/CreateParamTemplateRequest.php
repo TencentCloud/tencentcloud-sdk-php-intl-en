@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateName() Obtain Template name
  * @method void setTemplateName(string $TemplateName) Set Template name
- * @method string getEngineVersion() Obtain MySQL version number
- * @method void setEngineVersion(string $EngineVersion) Set MySQL version number
+ * @method string getEngineVersion() Obtain mysql version number
+ * @method void setEngineVersion(string $EngineVersion) Set mysql version number
  * @method string getTemplateDescription() Obtain Template description
  * @method void setTemplateDescription(string $TemplateDescription) Set Template description
- * @method integer getTemplateId() Obtain ID of the template to be copied
- * @method void setTemplateId(integer $TemplateId) Set ID of the template to be copied
- * @method string getDbMode() Obtain Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
- * @method void setDbMode(string $DbMode) Set Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
- * @method array getParamList() Obtain List of the parameters
- * @method void setParamList(array $ParamList) Set List of the parameters
+ * @method integer getTemplateId() Obtain Optional parameter. ID of the template to replicate.
+ * @method void setTemplateId(integer $TemplateId) Set Optional parameter. ID of the template to replicate.
+ * @method string getDbMode() Obtain Database type. Available values: NORMAL (default), SERVERLESS
+ * @method void setDbMode(string $DbMode) Set Database type. Available values: NORMAL (default), SERVERLESS
+ * @method array getParamList() Obtain Parameter list
+ * @method void setParamList(array $ParamList) Set Parameter list
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class CreateParamTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var string MySQL version number
+     * @var string mysql version number
      */
     public $EngineVersion;
 
@@ -51,27 +51,27 @@ class CreateParamTemplateRequest extends AbstractModel
     public $TemplateDescription;
 
     /**
-     * @var integer ID of the template to be copied
+     * @var integer Optional parameter. ID of the template to replicate.
      */
     public $TemplateId;
 
     /**
-     * @var string Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+     * @var string Database type. Available values: NORMAL (default), SERVERLESS
      */
     public $DbMode;
 
     /**
-     * @var array List of the parameters
+     * @var array Parameter list
      */
     public $ParamList;
 
     /**
      * @param string $TemplateName Template name
-     * @param string $EngineVersion MySQL version number
+     * @param string $EngineVersion mysql version number
      * @param string $TemplateDescription Template description
-     * @param integer $TemplateId ID of the template to be copied
-     * @param string $DbMode Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
-     * @param array $ParamList List of the parameters
+     * @param integer $TemplateId Optional parameter. ID of the template to replicate.
+     * @param string $DbMode Database type. Available values: NORMAL (default), SERVERLESS
+     * @param array $ParamList Parameter list
      */
     function __construct()
     {

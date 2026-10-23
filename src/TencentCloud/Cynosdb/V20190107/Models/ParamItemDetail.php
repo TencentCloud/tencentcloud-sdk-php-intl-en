@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValue(string $CurrentValue) Set <p>Current value</p>
  * @method string getDefault() Obtain <p>Default value</p>
  * @method void setDefault(string $Default) Set <p>Default value</p>
- * @method array getEnumValue() Obtain <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
- * @method void setEnumValue(array $EnumValue) Set <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
- * @method integer getIsGlobal() Obtain <p>1: Global parameter, 0: Non-global parameter</p>
- * @method void setIsGlobal(integer $IsGlobal) Set <p>1: Global parameter, 0: Non-global parameter</p>
+ * @method array getEnumValue() Obtain <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
+ * @method void setEnumValue(array $EnumValue) Set <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
+ * @method integer getIsGlobal() Obtain <p>1: global parameter, 0: non-global parameter</p>
+ * @method void setIsGlobal(integer $IsGlobal) Set <p>1: global parameter, 0: non-global parameter</p>
  * @method string getMax() Obtain <p>Maximum value</p>
  * @method void setMax(string $Max) Set <p>Maximum value</p>
  * @method string getMin() Obtain <p>Minimum value</p>
  * @method void setMin(string $Min) Set <p>Minimum value</p>
- * @method integer getNeedReboot() Obtain <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
- * @method void setNeedReboot(integer $NeedReboot) Set <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+ * @method integer getNeedReboot() Obtain <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
+ * @method void setNeedReboot(integer $NeedReboot) Set <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
  * @method string getParamName() Obtain <p>Parameter name</p>
  * @method void setParamName(string $ParamName) Set <p>Parameter name</p>
  * @method string getParamType() Obtain <p>Parameter type: integer, enum, float, string, func</p>
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set <p>Whether the parameter is modifiable</p>
  * @method string getDescription() Obtain <p>Parameter description</p>
  * @method void setDescription(string $Description) Set <p>Parameter description</p>
- * @method boolean getIsFunc() Obtain <p>Whether the type is formula</p>
- * @method void setIsFunc(boolean $IsFunc) Set <p>Whether the type is formula</p>
+ * @method boolean getIsFunc() Obtain <p>Whether the type is a formula</p>
+ * @method void setIsFunc(boolean $IsFunc) Set <p>Whether the type is a formula</p>
  * @method string getFunc() Obtain <p>Parameter configuration formula</p>
  * @method void setFunc(string $Func) Set <p>Parameter configuration formula</p>
  * @method string getFuncPattern() Obtain <p>Default formula style for parameters that support formulas</p>
@@ -62,12 +62,12 @@ class ParamItemDetail extends AbstractModel
     public $Default;
 
     /**
-     * @var array <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+     * @var array <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
      */
     public $EnumValue;
 
     /**
-     * @var integer <p>1: Global parameter, 0: Non-global parameter</p>
+     * @var integer <p>1: global parameter, 0: non-global parameter</p>
      */
     public $IsGlobal;
 
@@ -82,7 +82,7 @@ class ParamItemDetail extends AbstractModel
     public $Min;
 
     /**
-     * @var integer <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+     * @var integer <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
      */
     public $NeedReboot;
 
@@ -107,7 +107,7 @@ class ParamItemDetail extends AbstractModel
     public $Description;
 
     /**
-     * @var boolean <p>Whether the type is formula</p>
+     * @var boolean <p>Whether the type is a formula</p>
      */
     public $IsFunc;
 
@@ -124,16 +124,16 @@ class ParamItemDetail extends AbstractModel
     /**
      * @param string $CurrentValue <p>Current value</p>
      * @param string $Default <p>Default value</p>
-     * @param array $EnumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
-     * @param integer $IsGlobal <p>1: Global parameter, 0: Non-global parameter</p>
+     * @param array $EnumValue <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
+     * @param integer $IsGlobal <p>1: global parameter, 0: non-global parameter</p>
      * @param string $Max <p>Maximum value</p>
      * @param string $Min <p>Minimum value</p>
-     * @param integer $NeedReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+     * @param integer $NeedReboot <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
      * @param string $ParamName <p>Parameter name</p>
      * @param string $ParamType <p>Parameter type: integer, enum, float, string, func</p>
      * @param ModifiableInfo $ModifiableInfo <p>Whether the parameter is modifiable</p>
      * @param string $Description <p>Parameter description</p>
-     * @param boolean $IsFunc <p>Whether the type is formula</p>
+     * @param boolean $IsFunc <p>Whether the type is a formula</p>
      * @param string $Func <p>Parameter configuration formula</p>
      * @param string $FuncPattern <p>Default formula style for parameters that support formulas</p>
      */

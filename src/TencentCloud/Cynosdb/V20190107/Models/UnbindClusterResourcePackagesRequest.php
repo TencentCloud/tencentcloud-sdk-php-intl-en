@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getPackageIds() Obtain The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
- * @method void setPackageIds(array $PackageIds) Set The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+ * @method array getPackageIds() Obtain Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
+ * @method void setPackageIds(array $PackageIds) Set Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
  */
 class UnbindClusterResourcePackagesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UnbindClusterResourcePackagesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+     * @var array Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
      */
     public $PackageIds;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $PackageIds The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+     * @param array $PackageIds Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
      */
     function __construct()
     {

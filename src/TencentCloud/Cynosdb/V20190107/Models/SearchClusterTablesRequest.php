@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchClusterTables request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
  * @method string getTable() Obtain Data table name
  * @method void setTable(string $Table) Set Data table name
- * @method string getTableType() Obtain Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
- * @method void setTableType(string $TableType) Set Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+ * @method string getTableType() Obtain Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
+ * @method void setTableType(string $TableType) Set Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
  */
 class SearchClusterTablesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
@@ -53,21 +53,21 @@ class SearchClusterTablesRequest extends AbstractModel
     public $Table;
 
     /**
-     * @var string Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+     * @var string Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
      */
     public $TableType;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @param string $ClusterId Cluster ID.
      * @param string $Database Database name
      * @param string $Table Data table name
-     * @param string $TableType Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+     * @param string $TableType Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
      */
     function __construct()
     {

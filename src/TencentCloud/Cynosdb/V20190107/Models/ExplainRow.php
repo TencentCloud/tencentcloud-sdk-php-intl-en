@@ -20,40 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Execution plan list
  *
- * @method integer getId() Obtain <p>Serial number of the query</p>
- * @method void setId(integer $Id) Set <p>Serial number of the query</p>
- * @method string getSelectType() Obtain <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
- * @method void setSelectType(string $SelectType) Set <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
+ * @method integer getId() Obtain <p>Serial number for querying</p>
+ * @method void setId(integer $Id) Set <p>Serial number for querying</p>
+ * @method string getSelectType() Obtain <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
+ * @method void setSelectType(string $SelectType) Set <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
  * @method string getTable() Obtain <p>Data table name</p>
  * @method void setTable(string $Table) Set <p>Data table name</p>
  * @method string getPartitions() Obtain <p>Query matching partition</p>
  * @method void setPartitions(string $Partitions) Set <p>Query matching partition</p>
- * @method string getType() Obtain <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
- * @method void setType(string $Type) Set <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
- * @method string getPossibleKeys() Obtain <p>Indexes that may be used in querying. NULL means no available index.</p>
- * @method void setPossibleKeys(string $PossibleKeys) Set <p>Indexes that may be used in querying. NULL means no available index.</p>
+ * @method string getType() Obtain <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
+ * @method void setType(string $Type) Set <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
+ * @method string getPossibleKeys() Obtain <p>Indexes that may be used in querying. NULL means no index is available.</p>
+ * @method void setPossibleKeys(string $PossibleKeys) Set <p>Indexes that may be used in querying. NULL means no index is available.</p>
  * @method string getKey() Obtain <p>Indexes actually used. NULL means no index is used.</p>
  * @method void setKey(string $Key) Set <p>Indexes actually used. NULL means no index is used.</p>
- * @method string getKeyLen() Obtain <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
- * @method void setKeyLen(string $KeyLen) Set <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
- * @method string getRef() Obtain <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
- * @method void setRef(string $Ref) Set <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
- * @method integer getRows() Obtain <p>Estimate the number of rows to scan</p>
- * @method void setRows(integer $Rows) Set <p>Estimate the number of rows to scan</p>
- * @method float getFiltered() Obtain <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
- * @method void setFiltered(float $Filtered) Set <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
+ * @method string getKeyLen() Obtain <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
+ * @method void setKeyLen(string $KeyLen) Set <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
+ * @method string getRef() Obtain <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
+ * @method void setRef(string $Ref) Set <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
+ * @method integer getRows() Obtain <p>Estimated Number of Rows to Scan</p>
+ * @method void setRows(integer $Rows) Set <p>Estimated Number of Rows to Scan</p>
+ * @method float getFiltered() Obtain <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
+ * @method void setFiltered(float $Filtered) Set <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
  * @method string getExtra() Obtain <p>Additional information (very important), common values: • Using index: covering index, no need to return to the table (good) • Using where: filter with WHERE after the storage engine returns rows • Using temporary: used a temporary table (commonly used in GROUP BY/ORDER BY, needs optimization) • Using filesort: used file sort instead of index sorting (needs optimization) • Using index condition: used pushdown of index (ICP)</p>
  * @method void setExtra(string $Extra) Set <p>Additional information (very important), common values: • Using index: covering index, no need to return to the table (good) • Using where: filter with WHERE after the storage engine returns rows • Using temporary: used a temporary table (commonly used in GROUP BY/ORDER BY, needs optimization) • Using filesort: used file sort instead of index sorting (needs optimization) • Using index condition: used pushdown of index (ICP)</p>
  */
 class ExplainRow extends AbstractModel
 {
     /**
-     * @var integer <p>Serial number of the query</p>
+     * @var integer <p>Serial number for querying</p>
      */
     public $Id;
 
     /**
-     * @var string <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
+     * @var string <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
      */
     public $SelectType;
 
@@ -68,12 +68,12 @@ class ExplainRow extends AbstractModel
     public $Partitions;
 
     /**
-     * @var string <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
+     * @var string <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
      */
     public $Type;
 
     /**
-     * @var string <p>Indexes that may be used in querying. NULL means no available index.</p>
+     * @var string <p>Indexes that may be used in querying. NULL means no index is available.</p>
      */
     public $PossibleKeys;
 
@@ -83,22 +83,22 @@ class ExplainRow extends AbstractModel
     public $Key;
 
     /**
-     * @var string <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
+     * @var string <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
      */
     public $KeyLen;
 
     /**
-     * @var string <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
+     * @var string <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
      */
     public $Ref;
 
     /**
-     * @var integer <p>Estimate the number of rows to scan</p>
+     * @var integer <p>Estimated Number of Rows to Scan</p>
      */
     public $Rows;
 
     /**
-     * @var float <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
+     * @var float <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
      */
     public $Filtered;
 
@@ -108,17 +108,17 @@ class ExplainRow extends AbstractModel
     public $Extra;
 
     /**
-     * @param integer $Id <p>Serial number of the query</p>
-     * @param string $SelectType <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
+     * @param integer $Id <p>Serial number for querying</p>
+     * @param string $SelectType <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
      * @param string $Table <p>Data table name</p>
      * @param string $Partitions <p>Query matching partition</p>
-     * @param string $Type <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
-     * @param string $PossibleKeys <p>Indexes that may be used in querying. NULL means no available index.</p>
+     * @param string $Type <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
+     * @param string $PossibleKeys <p>Indexes that may be used in querying. NULL means no index is available.</p>
      * @param string $Key <p>Indexes actually used. NULL means no index is used.</p>
-     * @param string $KeyLen <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
-     * @param string $Ref <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
-     * @param integer $Rows <p>Estimate the number of rows to scan</p>
-     * @param float $Filtered <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
+     * @param string $KeyLen <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
+     * @param string $Ref <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
+     * @param integer $Rows <p>Estimated Number of Rows to Scan</p>
+     * @param float $Filtered <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
      * @param string $Extra <p>Additional information (very important), common values: • Using index: covering index, no need to return to the table (good) • Using where: filter with WHERE after the storage engine returns rows • Using temporary: used a temporary table (commonly used in GROUP BY/ORDER BY, needs optimization) • Using filesort: used file sort instead of index sorting (needs optimization) • Using index condition: used pushdown of index (ICP)</p>
      */
     function __construct()

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance parameter information
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getParamsItems() Obtain List of instance parameters
- * @method void setParamsItems(array $ParamsItems) Set List of instance parameters
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method array getParamsItems() Obtain Instance parameter list
+ * @method void setParamsItems(array $ParamsItems) Set Instance parameter list
  */
 class InstanceParamItem extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var array List of instance parameters
+     * @var array Instance parameter list
      */
     public $ParamsItems;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param array $ParamsItems List of instance parameters
+     * @param string $InstanceId Instance ID.
+     * @param array $ParamsItems Instance parameter list
      */
     function __construct()
     {

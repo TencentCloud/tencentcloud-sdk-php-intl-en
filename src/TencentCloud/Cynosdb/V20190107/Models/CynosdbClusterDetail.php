@@ -18,124 +18,124 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster details.
+ * Cluster detail information
  *
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
  * @method string getClusterName() Obtain <p>Cluster name.</p>
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
- * @method string getRegion() Obtain <p>Region</p>
- * @method void setRegion(string $Region) Set <p>Region</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
  * @method string getZone() Obtain <p>Primary availability zone of the cluster</p>
  * @method void setZone(string $Zone) Set <p>Primary availability zone of the cluster</p>
  * @method string getPhysicalZone() Obtain <p>Physical AZ</p>
  * @method void setPhysicalZone(string $PhysicalZone) Set <p>Physical AZ</p>
- * @method string getStatus() Obtain <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
- * @method void setStatus(string $Status) Set <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
- * @method string getStatusDesc() Obtain <p>Status description</p>
- * @method void setStatusDesc(string $StatusDesc) Set <p>Status description</p>
- * @method string getServerlessStatus() Obtain <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
- * @method void setServerlessStatus(string $ServerlessStatus) Set <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+ * @method string getStatus() Obtain <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+ * @method void setStatus(string $Status) Set <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+ * @method string getStatusDesc() Obtain <p>Status description.</p>
+ * @method void setStatusDesc(string $StatusDesc) Set <p>Status description.</p>
+ * @method string getServerlessStatus() Obtain <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) Set <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
  * @method string getStorageId() Obtain <p>Storage Id</p>
  * @method void setStorageId(string $StorageId) Set <p>Storage Id</p>
- * @method integer getStorage() Obtain <p>Storage size in GB</p>
- * @method void setStorage(integer $Storage) Set <p>Storage size in GB</p>
+ * @method integer getStorage() Obtain <p>Storage size, in GB.</p>
+ * @method void setStorage(integer $Storage) Set <p>Storage size, in GB.</p>
  * @method integer getMaxStorageSize() Obtain <p>Maximum storage specification, in GB</p>
  * @method void setMaxStorageSize(integer $MaxStorageSize) Set <p>Maximum storage specification, in GB</p>
- * @method integer getMinStorageSize() Obtain <p>Minimum storage specification, in GB</p>
- * @method void setMinStorageSize(integer $MinStorageSize) Set <p>Minimum storage specification, in GB</p>
- * @method integer getStoragePayMode() Obtain <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
- * @method void setStoragePayMode(integer $StoragePayMode) Set <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
- * @method string getVpcName() Obtain <p>VPC name</p>
- * @method void setVpcName(string $VpcName) Set <p>VPC name</p>
+ * @method integer getMinStorageSize() Obtain <p>Minimum storage specification, in GB.</p>
+ * @method void setMinStorageSize(integer $MinStorageSize) Set <p>Minimum storage specification, in GB.</p>
+ * @method integer getStoragePayMode() Obtain <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
+ * @method void setStoragePayMode(integer $StoragePayMode) Set <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
+ * @method string getVpcName() Obtain <p>VPC name.</p>
+ * @method void setVpcName(string $VpcName) Set <p>VPC name.</p>
  * @method string getVpcId() Obtain <p>vpc Unique id</p>
  * @method void setVpcId(string $VpcId) Set <p>vpc Unique id</p>
  * @method string getSubnetName() Obtain <p>Subnet name.</p>
  * @method void setSubnetName(string $SubnetName) Set <p>Subnet name.</p>
  * @method string getSubnetId() Obtain <p>Subnet ID.</p>
  * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID.</p>
- * @method string getCharset() Obtain <p>Character set.</p>
- * @method void setCharset(string $Charset) Set <p>Character set.</p>
+ * @method string getCharset() Obtain <p>Character set</p>
+ * @method void setCharset(string $Charset) Set <p>Character set</p>
  * @method string getCreateTime() Obtain <p>Creation time.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
  * @method string getDbType() Obtain <p>Database type</p>
  * @method void setDbType(string $DbType) Set <p>Database type</p>
  * @method string getDbMode() Obtain <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
  * @method void setDbMode(string $DbMode) Set <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
- * @method string getDbVersion() Obtain <p>Database version</p>
- * @method void setDbVersion(string $DbVersion) Set <p>Database version</p>
- * @method integer getStorageLimit() Obtain <p>Storage space limit</p>
- * @method void setStorageLimit(integer $StorageLimit) Set <p>Storage space limit</p>
+ * @method string getDbVersion() Obtain <p>Database version.</p>
+ * @method void setDbVersion(string $DbVersion) Set <p>Database version.</p>
+ * @method integer getStorageLimit() Obtain <p>Maximum storage space</p>
+ * @method void setStorageLimit(integer $StorageLimit) Set <p>Maximum storage space</p>
  * @method integer getUsedStorage() Obtain <p>Used capacity</p>
  * @method void setUsedStorage(integer $UsedStorage) Set <p>Used capacity</p>
  * @method string getVip() Obtain <p>vip address</p>
  * @method void setVip(string $Vip) Set <p>vip address</p>
- * @method integer getVport() Obtain <p>vport port</p>
- * @method void setVport(integer $Vport) Set <p>vport port</p>
+ * @method integer getVport() Obtain <p>vport</p>
+ * @method void setVport(integer $Vport) Set <p>vport</p>
  * @method array getRoAddr() Obtain <p>vip address and vport of the cluster read-only instance</p>
  * @method void setRoAddr(array $RoAddr) Set <p>vip address and vport of the cluster read-only instance</p>
  * @method Ability getAbility() Obtain <p>Functions supported by the cluster</p>
  * @method void setAbility(Ability $Ability) Set <p>Functions supported by the cluster</p>
- * @method string getCynosVersion() Obtain <p>cynos version</p>
- * @method void setCynosVersion(string $CynosVersion) Set <p>cynos version</p>
+ * @method string getCynosVersion() Obtain <p>cynos version.</p>
+ * @method void setCynosVersion(string $CynosVersion) Set <p>cynos version.</p>
  * @method string getBusinessType() Obtain <p>Business type</p>
  * @method void setBusinessType(string $BusinessType) Set <p>Business type</p>
  * @method string getHasSlaveZone() Obtain <p>Whether there is a secondary AZ</p>
  * @method void setHasSlaveZone(string $HasSlaveZone) Set <p>Whether there is a secondary AZ</p>
- * @method string getIsFreeze() Obtain <p>Freeze or not</p>
- * @method void setIsFreeze(string $IsFreeze) Set <p>Freeze or not</p>
+ * @method string getIsFreeze() Obtain <p>Whether to freeze</p>
+ * @method void setIsFreeze(string $IsFreeze) Set <p>Whether to freeze</p>
  * @method array getTasks() Obtain <p>Task List</p>
  * @method void setTasks(array $Tasks) Set <p>Task List</p>
  * @method string getMasterZone() Obtain <p>Current instance located availability zone for read-write</p>
  * @method void setMasterZone(string $MasterZone) Set <p>Current instance located availability zone for read-write</p>
- * @method array getSlaveZones() Obtain <p>From the AZ list</p>
- * @method void setSlaveZones(array $SlaveZones) Set <p>From the AZ list</p>
+ * @method array getSlaveZones() Obtain <p>From the availability zone list</p>
+ * @method void setSlaveZones(array $SlaveZones) Set <p>From the availability zone list</p>
  * @method array getInstanceSet() Obtain <p>Instance information</p>
  * @method void setInstanceSet(array $InstanceSet) Set <p>Instance information</p>
  * @method integer getPayMode() Obtain <p>Payment mode</p>
  * @method void setPayMode(integer $PayMode) Set <p>Payment mode</p>
- * @method string getPeriodEndTime() Obtain <p>Expiry time.</p>
- * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>Expiry time.</p>
+ * @method string getPeriodEndTime() Obtain <p>Expiration time.</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>Expiration time.</p>
  * @method integer getProjectID() Obtain <p>Project ID.</p>
  * @method void setProjectID(integer $ProjectID) Set <p>Project ID.</p>
- * @method array getResourceTags() Obtain <p>tag Array information for instance binding</p>
- * @method void setResourceTags(array $ResourceTags) Set <p>tag Array information for instance binding</p>
- * @method string getProxyStatus() Obtain <p>Proxy status</p>
- * @method void setProxyStatus(string $ProxyStatus) Set <p>Proxy status</p>
- * @method string getLogBin() Obtain <p>binlog switch, available values: ON, OFF</p>
- * @method void setLogBin(string $LogBin) Set <p>binlog switch, available values: ON, OFF</p>
- * @method string getIsSkipTrade() Obtain <p>Skip transaction or not</p>
- * @method void setIsSkipTrade(string $IsSkipTrade) Set <p>Skip transaction or not</p>
- * @method string getPitrType() Obtain <p>PITR type, available values: normal, redo_pitr</p>
- * @method void setPitrType(string $PitrType) Set <p>PITR type, available values: normal, redo_pitr</p>
- * @method string getIsOpenPasswordComplexity() Obtain <p>Whether to toggle on password complexity</p>
- * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) Set <p>Whether to toggle on password complexity</p>
+ * @method array getResourceTags() Obtain <p>tag Array information bound to the instance</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>tag Array information bound to the instance</p>
+ * @method string getProxyStatus() Obtain <p>Proxy status.</p>
+ * @method void setProxyStatus(string $ProxyStatus) Set <p>Proxy status.</p>
+ * @method string getLogBin() Obtain <p>binlog switch. Available values: ON, OFF</p>
+ * @method void setLogBin(string $LogBin) Set <p>binlog switch. Available values: ON, OFF</p>
+ * @method string getIsSkipTrade() Obtain <p>Whether to skip transaction</p>
+ * @method void setIsSkipTrade(string $IsSkipTrade) Set <p>Whether to skip transaction</p>
+ * @method string getPitrType() Obtain <p>PITR type. Available values: normal, redo_pitr</p>
+ * @method void setPitrType(string $PitrType) Set <p>PITR type. Available values: normal, redo_pitr</p>
+ * @method string getIsOpenPasswordComplexity() Obtain <p>Whether to enable password complexity</p>
+ * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) Set <p>Whether to enable password complexity</p>
  * @method string getNetworkStatus() Obtain <p>Network type</p>
  * @method void setNetworkStatus(string $NetworkStatus) Set <p>Network type</p>
- * @method array getResourcePackages() Obtain <p>Package info of the bound resource for the cluster</p>
- * @method void setResourcePackages(array $ResourcePackages) Set <p>Package info of the bound resource for the cluster</p>
- * @method integer getRenewFlag() Obtain <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
- * @method void setRenewFlag(integer $RenewFlag) Set <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+ * @method array getResourcePackages() Obtain <p>Resource package information bound to the cluster</p>
+ * @method void setResourcePackages(array $ResourcePackages) Set <p>Resource package information bound to the cluster</p>
+ * @method integer getRenewFlag() Obtain <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
+ * @method void setRenewFlag(integer $RenewFlag) Set <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
  * @method string getNetworkType() Obtain <p>Node network type</p>
  * @method void setNetworkType(string $NetworkType) Set <p>Node network type</p>
- * @method array getSlaveZoneAttr() Obtain <p>Secondary availability zone property</p>
- * @method void setSlaveZoneAttr(array $SlaveZoneAttr) Set <p>Secondary availability zone property</p>
- * @method string getCynosVersionTag() Obtain <p>Version tag</p>
- * @method void setCynosVersionTag(string $CynosVersionTag) Set <p>Version tag</p>
- * @method string getGdnId() Obtain <p>Unique ID of the global database network</p>
- * @method void setGdnId(string $GdnId) Set <p>Unique ID of the global database network</p>
- * @method string getGdnRole() Obtain <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
- * @method void setGdnRole(string $GdnRole) Set <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
- * @method integer getUsedArchiveStorage() Obtain <p>Second-level storage usage in GB</p>
- * @method void setUsedArchiveStorage(integer $UsedArchiveStorage) Set <p>Second-level storage usage in GB</p>
- * @method string getArchiveStatus() Obtain <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
- * @method void setArchiveStatus(string $ArchiveStatus) Set <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+ * @method array getSlaveZoneAttr() Obtain <p>Secondary AZ property</p>
+ * @method void setSlaveZoneAttr(array $SlaveZoneAttr) Set <p>Secondary AZ property</p>
+ * @method string getCynosVersionTag() Obtain <p>Version tag.</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) Set <p>Version tag.</p>
+ * @method string getGdnId() Obtain <p>Global database network unique ID</p>
+ * @method void setGdnId(string $GdnId) Set <p>Global database network unique ID</p>
+ * @method string getGdnRole() Obtain <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
+ * @method void setGdnRole(string $GdnRole) Set <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
+ * @method integer getUsedArchiveStorage() Obtain <p>Level-2 storage usage, in GB.</p>
+ * @method void setUsedArchiveStorage(integer $UsedArchiveStorage) Set <p>Level-2 storage usage, in GB.</p>
+ * @method string getArchiveStatus() Obtain <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+ * @method void setArchiveStatus(string $ArchiveStatus) Set <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
  * @method integer getArchiveProgress() Obtain <p>Archive progress, percentage.</p>
  * @method void setArchiveProgress(integer $ArchiveProgress) Set <p>Archive progress, percentage.</p>
- * @method string getClusterLevel() Obtain <p>Cluster level. For example P0, P1</p>
- * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level. For example P0, P1</p>
- * @method boolean getIsOpenTDE() Obtain <p>Whether to enable transparent data encryption</p>
- * @method void setIsOpenTDE(boolean $IsOpenTDE) Set <p>Whether to enable transparent data encryption</p>
+ * @method string getClusterLevel() Obtain <p>Cluster level. For example, P0, P1</p>
+ * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level. For example, P0, P1</p>
+ * @method boolean getIsOpenTDE() Obtain <p>Whether to enable transparent encryption</p>
+ * @method void setIsOpenTDE(boolean $IsOpenTDE) Set <p>Whether to enable transparent encryption</p>
  * @method string getRealZone() Obtain <p>Current instance availability zone</p>
  * @method void setRealZone(string $RealZone) Set <p>Current instance availability zone</p>
  * @method string getStorageOverUse() Obtain <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
@@ -156,7 +156,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string <p>Region</p>
+     * @var string <p>Region.</p>
      */
     public $Region;
 
@@ -171,17 +171,17 @@ class CynosdbClusterDetail extends AbstractModel
     public $PhysicalZone;
 
     /**
-     * @var string <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+     * @var string <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public $Status;
 
     /**
-     * @var string <p>Status description</p>
+     * @var string <p>Status description.</p>
      */
     public $StatusDesc;
 
     /**
-     * @var string <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * @var string <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public $ServerlessStatus;
 
@@ -191,7 +191,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $StorageId;
 
     /**
-     * @var integer <p>Storage size in GB</p>
+     * @var integer <p>Storage size, in GB.</p>
      */
     public $Storage;
 
@@ -201,17 +201,17 @@ class CynosdbClusterDetail extends AbstractModel
     public $MaxStorageSize;
 
     /**
-     * @var integer <p>Minimum storage specification, in GB</p>
+     * @var integer <p>Minimum storage specification, in GB.</p>
      */
     public $MinStorageSize;
 
     /**
-     * @var integer <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+     * @var integer <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var string <p>VPC name</p>
+     * @var string <p>VPC name.</p>
      */
     public $VpcName;
 
@@ -231,7 +231,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string <p>Character set.</p>
+     * @var string <p>Character set</p>
      */
     public $Charset;
 
@@ -251,12 +251,12 @@ class CynosdbClusterDetail extends AbstractModel
     public $DbMode;
 
     /**
-     * @var string <p>Database version</p>
+     * @var string <p>Database version.</p>
      */
     public $DbVersion;
 
     /**
-     * @var integer <p>Storage space limit</p>
+     * @var integer <p>Maximum storage space</p>
      */
     public $StorageLimit;
 
@@ -271,7 +271,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $Vip;
 
     /**
-     * @var integer <p>vport port</p>
+     * @var integer <p>vport</p>
      */
     public $Vport;
 
@@ -286,7 +286,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $Ability;
 
     /**
-     * @var string <p>cynos version</p>
+     * @var string <p>cynos version.</p>
      */
     public $CynosVersion;
 
@@ -301,7 +301,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $HasSlaveZone;
 
     /**
-     * @var string <p>Freeze or not</p>
+     * @var string <p>Whether to freeze</p>
      */
     public $IsFreeze;
 
@@ -316,7 +316,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $MasterZone;
 
     /**
-     * @var array <p>From the AZ list</p>
+     * @var array <p>From the availability zone list</p>
      */
     public $SlaveZones;
 
@@ -331,7 +331,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string <p>Expiry time.</p>
+     * @var string <p>Expiration time.</p>
      */
     public $PeriodEndTime;
 
@@ -341,32 +341,32 @@ class CynosdbClusterDetail extends AbstractModel
     public $ProjectID;
 
     /**
-     * @var array <p>tag Array information for instance binding</p>
+     * @var array <p>tag Array information bound to the instance</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string <p>Proxy status</p>
+     * @var string <p>Proxy status.</p>
      */
     public $ProxyStatus;
 
     /**
-     * @var string <p>binlog switch, available values: ON, OFF</p>
+     * @var string <p>binlog switch. Available values: ON, OFF</p>
      */
     public $LogBin;
 
     /**
-     * @var string <p>Skip transaction or not</p>
+     * @var string <p>Whether to skip transaction</p>
      */
     public $IsSkipTrade;
 
     /**
-     * @var string <p>PITR type, available values: normal, redo_pitr</p>
+     * @var string <p>PITR type. Available values: normal, redo_pitr</p>
      */
     public $PitrType;
 
     /**
-     * @var string <p>Whether to toggle on password complexity</p>
+     * @var string <p>Whether to enable password complexity</p>
      */
     public $IsOpenPasswordComplexity;
 
@@ -376,12 +376,12 @@ class CynosdbClusterDetail extends AbstractModel
     public $NetworkStatus;
 
     /**
-     * @var array <p>Package info of the bound resource for the cluster</p>
+     * @var array <p>Resource package information bound to the cluster</p>
      */
     public $ResourcePackages;
 
     /**
-     * @var integer <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+     * @var integer <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
      */
     public $RenewFlag;
 
@@ -391,32 +391,32 @@ class CynosdbClusterDetail extends AbstractModel
     public $NetworkType;
 
     /**
-     * @var array <p>Secondary availability zone property</p>
+     * @var array <p>Secondary AZ property</p>
      */
     public $SlaveZoneAttr;
 
     /**
-     * @var string <p>Version tag</p>
+     * @var string <p>Version tag.</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var string <p>Unique ID of the global database network</p>
+     * @var string <p>Global database network unique ID</p>
      */
     public $GdnId;
 
     /**
-     * @var string <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+     * @var string <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
      */
     public $GdnRole;
 
     /**
-     * @var integer <p>Second-level storage usage in GB</p>
+     * @var integer <p>Level-2 storage usage, in GB.</p>
      */
     public $UsedArchiveStorage;
 
     /**
-     * @var string <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+     * @var string <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
      */
     public $ArchiveStatus;
 
@@ -426,12 +426,12 @@ class CynosdbClusterDetail extends AbstractModel
     public $ArchiveProgress;
 
     /**
-     * @var string <p>Cluster level. For example P0, P1</p>
+     * @var string <p>Cluster level. For example, P0, P1</p>
      */
     public $ClusterLevel;
 
     /**
-     * @var boolean <p>Whether to enable transparent data encryption</p>
+     * @var boolean <p>Whether to enable transparent encryption</p>
      */
     public $IsOpenTDE;
 
@@ -453,62 +453,62 @@ class CynosdbClusterDetail extends AbstractModel
     /**
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param string $ClusterName <p>Cluster name.</p>
-     * @param string $Region <p>Region</p>
+     * @param string $Region <p>Region.</p>
      * @param string $Zone <p>Primary availability zone of the cluster</p>
      * @param string $PhysicalZone <p>Physical AZ</p>
-     * @param string $Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
-     * @param string $StatusDesc <p>Status description</p>
-     * @param string $ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * @param string $Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+     * @param string $StatusDesc <p>Status description.</p>
+     * @param string $ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
      * @param string $StorageId <p>Storage Id</p>
-     * @param integer $Storage <p>Storage size in GB</p>
+     * @param integer $Storage <p>Storage size, in GB.</p>
      * @param integer $MaxStorageSize <p>Maximum storage specification, in GB</p>
-     * @param integer $MinStorageSize <p>Minimum storage specification, in GB</p>
-     * @param integer $StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
-     * @param string $VpcName <p>VPC name</p>
+     * @param integer $MinStorageSize <p>Minimum storage specification, in GB.</p>
+     * @param integer $StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
+     * @param string $VpcName <p>VPC name.</p>
      * @param string $VpcId <p>vpc Unique id</p>
      * @param string $SubnetName <p>Subnet name.</p>
      * @param string $SubnetId <p>Subnet ID.</p>
-     * @param string $Charset <p>Character set.</p>
+     * @param string $Charset <p>Character set</p>
      * @param string $CreateTime <p>Creation time.</p>
      * @param string $DbType <p>Database type</p>
      * @param string $DbMode <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
-     * @param string $DbVersion <p>Database version</p>
-     * @param integer $StorageLimit <p>Storage space limit</p>
+     * @param string $DbVersion <p>Database version.</p>
+     * @param integer $StorageLimit <p>Maximum storage space</p>
      * @param integer $UsedStorage <p>Used capacity</p>
      * @param string $Vip <p>vip address</p>
-     * @param integer $Vport <p>vport port</p>
+     * @param integer $Vport <p>vport</p>
      * @param array $RoAddr <p>vip address and vport of the cluster read-only instance</p>
      * @param Ability $Ability <p>Functions supported by the cluster</p>
-     * @param string $CynosVersion <p>cynos version</p>
+     * @param string $CynosVersion <p>cynos version.</p>
      * @param string $BusinessType <p>Business type</p>
      * @param string $HasSlaveZone <p>Whether there is a secondary AZ</p>
-     * @param string $IsFreeze <p>Freeze or not</p>
+     * @param string $IsFreeze <p>Whether to freeze</p>
      * @param array $Tasks <p>Task List</p>
      * @param string $MasterZone <p>Current instance located availability zone for read-write</p>
-     * @param array $SlaveZones <p>From the AZ list</p>
+     * @param array $SlaveZones <p>From the availability zone list</p>
      * @param array $InstanceSet <p>Instance information</p>
      * @param integer $PayMode <p>Payment mode</p>
-     * @param string $PeriodEndTime <p>Expiry time.</p>
+     * @param string $PeriodEndTime <p>Expiration time.</p>
      * @param integer $ProjectID <p>Project ID.</p>
-     * @param array $ResourceTags <p>tag Array information for instance binding</p>
-     * @param string $ProxyStatus <p>Proxy status</p>
-     * @param string $LogBin <p>binlog switch, available values: ON, OFF</p>
-     * @param string $IsSkipTrade <p>Skip transaction or not</p>
-     * @param string $PitrType <p>PITR type, available values: normal, redo_pitr</p>
-     * @param string $IsOpenPasswordComplexity <p>Whether to toggle on password complexity</p>
+     * @param array $ResourceTags <p>tag Array information bound to the instance</p>
+     * @param string $ProxyStatus <p>Proxy status.</p>
+     * @param string $LogBin <p>binlog switch. Available values: ON, OFF</p>
+     * @param string $IsSkipTrade <p>Whether to skip transaction</p>
+     * @param string $PitrType <p>PITR type. Available values: normal, redo_pitr</p>
+     * @param string $IsOpenPasswordComplexity <p>Whether to enable password complexity</p>
      * @param string $NetworkStatus <p>Network type</p>
-     * @param array $ResourcePackages <p>Package info of the bound resource for the cluster</p>
-     * @param integer $RenewFlag <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+     * @param array $ResourcePackages <p>Resource package information bound to the cluster</p>
+     * @param integer $RenewFlag <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
      * @param string $NetworkType <p>Node network type</p>
-     * @param array $SlaveZoneAttr <p>Secondary availability zone property</p>
-     * @param string $CynosVersionTag <p>Version tag</p>
-     * @param string $GdnId <p>Unique ID of the global database network</p>
-     * @param string $GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
-     * @param integer $UsedArchiveStorage <p>Second-level storage usage in GB</p>
-     * @param string $ArchiveStatus <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+     * @param array $SlaveZoneAttr <p>Secondary AZ property</p>
+     * @param string $CynosVersionTag <p>Version tag.</p>
+     * @param string $GdnId <p>Global database network unique ID</p>
+     * @param string $GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
+     * @param integer $UsedArchiveStorage <p>Level-2 storage usage, in GB.</p>
+     * @param string $ArchiveStatus <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
      * @param integer $ArchiveProgress <p>Archive progress, percentage.</p>
-     * @param string $ClusterLevel <p>Cluster level. For example P0, P1</p>
-     * @param boolean $IsOpenTDE <p>Whether to enable transparent data encryption</p>
+     * @param string $ClusterLevel <p>Cluster level. For example, P0, P1</p>
+     * @param boolean $IsOpenTDE <p>Whether to enable transparent encryption</p>
      * @param string $RealZone <p>Current instance availability zone</p>
      * @param string $StorageOverUse <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
      * @param string $StorageAutoExpand <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>

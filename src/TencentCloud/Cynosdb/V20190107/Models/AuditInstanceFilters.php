@@ -18,24 +18,24 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter criteria for querying audit instances.
+ * Filter conditions for querying audit instances.
  *
- * @method string getName() Obtain Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
- * @method void setName(string $Name) Set Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
- * @method boolean getExactMatch() Obtain True indicates exact match, false indicates fuzzy match.
- * @method void setExactMatch(boolean $ExactMatch) Set True indicates exact match, false indicates fuzzy match.
+ * @method string getName() Obtain Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
+ * @method void setName(string $Name) Set Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
+ * @method boolean getExactMatch() Obtain true indicates exact matching; false indicates fuzzy matching.
+ * @method void setExactMatch(boolean $ExactMatch) Set true indicates exact matching; false indicates fuzzy matching.
  * @method array getValues() Obtain Filter value.
  * @method void setValues(array $Values) Set Filter value.
  */
 class AuditInstanceFilters extends AbstractModel
 {
     /**
-     * @var string Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+     * @var string Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
      */
     public $Name;
 
     /**
-     * @var boolean True indicates exact match, false indicates fuzzy match.
+     * @var boolean true indicates exact matching; false indicates fuzzy matching.
      */
     public $ExactMatch;
 
@@ -45,8 +45,8 @@ class AuditInstanceFilters extends AbstractModel
     public $Values;
 
     /**
-     * @param string $Name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
-     * @param boolean $ExactMatch True indicates exact match, false indicates fuzzy match.
+     * @param string $Name Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
+     * @param boolean $ExactMatch true indicates exact matching; false indicates fuzzy matching.
      * @param array $Values Filter value.
      */
     function __construct()

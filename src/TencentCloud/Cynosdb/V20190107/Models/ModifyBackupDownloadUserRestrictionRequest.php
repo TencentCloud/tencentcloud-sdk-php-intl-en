@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBackupDownloadUserRestriction request structure.
  *
- * @method string getLimitType() Obtain Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
- * @method void setLimitType(string $LimitType) Set Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
- * @method string getVpcComparisonSymbol() Obtain This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
- * @method void setVpcComparisonSymbol(string $VpcComparisonSymbol) Set This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
- * @method string getIpComparisonSymbol() Obtain Specified ips can download; specified ips are not allowed to download.
- * @method void setIpComparisonSymbol(string $IpComparisonSymbol) Set Specified ips can download; specified ips are not allowed to download.
- * @method array getLimitVpcs() Obtain Limit the vpc settings for downloads.
- * @method void setLimitVpcs(array $LimitVpcs) Set Limit the vpc settings for downloads.
- * @method array getLimitIps() Obtain Specifies the ip settings for limiting downloads.
- * @method void setLimitIps(array $LimitIps) Set Specifies the ip settings for limiting downloads.
+ * @method string getLimitType() Obtain Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
+ * @method void setLimitType(string $LimitType) Set Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
+ * @method string getVpcComparisonSymbol() Obtain This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+ * @method void setVpcComparisonSymbol(string $VpcComparisonSymbol) Set This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+ * @method string getIpComparisonSymbol() Obtain In: download allowed for the specified ip; NotIn: download not allowed for the specified ip
+ * @method void setIpComparisonSymbol(string $IpComparisonSymbol) Set In: download allowed for the specified ip; NotIn: download not allowed for the specified ip
+ * @method array getLimitVpcs() Obtain vpc settings for download restriction
+ * @method void setLimitVpcs(array $LimitVpcs) Set vpc settings for download restriction
+ * @method array getLimitIps() Obtain ip settings for download restrictions
+ * @method void setLimitIps(array $LimitIps) Set ip settings for download restrictions
  */
 class ModifyBackupDownloadUserRestrictionRequest extends AbstractModel
 {
     /**
-     * @var string Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+     * @var string Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
      */
     public $LimitType;
 
     /**
-     * @var string This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+     * @var string This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
      */
     public $VpcComparisonSymbol;
 
     /**
-     * @var string Specified ips can download; specified ips are not allowed to download.
+     * @var string In: download allowed for the specified ip; NotIn: download not allowed for the specified ip
      */
     public $IpComparisonSymbol;
 
     /**
-     * @var array Limit the vpc settings for downloads.
+     * @var array vpc settings for download restriction
      */
     public $LimitVpcs;
 
     /**
-     * @var array Specifies the ip settings for limiting downloads.
+     * @var array ip settings for download restrictions
      */
     public $LimitIps;
 
     /**
-     * @param string $LimitType Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
-     * @param string $VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-     * @param string $IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
-     * @param array $LimitVpcs Limit the vpc settings for downloads.
-     * @param array $LimitIps Specifies the ip settings for limiting downloads.
+     * @param string $LimitType Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
+     * @param string $VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+     * @param string $IpComparisonSymbol In: download allowed for the specified ip; NotIn: download not allowed for the specified ip
+     * @param array $LimitVpcs vpc settings for download restriction
+     * @param array $LimitIps ip settings for download restrictions
      */
     function __construct()
     {

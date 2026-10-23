@@ -18,14 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the backup download limit parameter.
+ * Backup download limit parameter
  *
- * @method string getLimitType() Obtain Restriction type.
- * @method void setLimitType(string $LimitType) Set Restriction type.
- * @method string getVpcComparisonSymbol() Obtain This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
- * @method void setVpcComparisonSymbol(string $VpcComparisonSymbol) Set This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
- * @method string getIpComparisonSymbol() Obtain Specified ips can download; specified ips are not allowed to download.
- * @method void setIpComparisonSymbol(string $IpComparisonSymbol) Set Specified ips can download; specified ips are not allowed to download.
+ * @method string getLimitType() Obtain Restriction type
+ * @method void setLimitType(string $LimitType) Set Restriction type
+ * @method string getVpcComparisonSymbol() Obtain This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+ * @method void setVpcComparisonSymbol(string $VpcComparisonSymbol) Set This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+ * @method string getIpComparisonSymbol() Obtain In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
+ * @method void setIpComparisonSymbol(string $IpComparisonSymbol) Set In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
  * @method array getLimitVpcs() Obtain Limit download vpc settings
  * @method void setLimitVpcs(array $LimitVpcs) Set Limit download vpc settings
  * @method array getLimitIps() Obtain Limit download ip settings
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class BackupLimitRestriction extends AbstractModel
 {
     /**
-     * @var string Restriction type.
+     * @var string Restriction type
      */
     public $LimitType;
 
     /**
-     * @var string This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+     * @var string This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
      */
     public $VpcComparisonSymbol;
 
     /**
-     * @var string Specified ips can download; specified ips are not allowed to download.
+     * @var string In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
      */
     public $IpComparisonSymbol;
 
@@ -59,9 +59,9 @@ class BackupLimitRestriction extends AbstractModel
     public $LimitIps;
 
     /**
-     * @param string $LimitType Restriction type.
-     * @param string $VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-     * @param string $IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+     * @param string $LimitType Restriction type
+     * @param string $VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+     * @param string $IpComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
      * @param array $LimitVpcs Limit download vpc settings
      * @param array $LimitIps Limit download ip settings
      */

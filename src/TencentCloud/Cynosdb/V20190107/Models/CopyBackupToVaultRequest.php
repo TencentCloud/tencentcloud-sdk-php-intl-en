@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyBackupToVault request structure.
  *
- * @method string getVaultId() Obtain <p>Target safe ID. The backup file will be copied to this safe.</p>
- * @method void setVaultId(string $VaultId) Set <p>Target safe ID. The backup file will be copied to this safe.</p>
- * @method array getBackupIds() Obtain <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
- * @method void setBackupIds(array $BackupIds) Set <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+ * @method string getVaultId() Obtain <p>Target safe ID. The backup file will be copied to this safe</p>
+ * @method void setVaultId(string $VaultId) Set <p>Target safe ID. The backup file will be copied to this safe</p>
+ * @method array getBackupIds() Obtain <p>Backup file ID list. Supports batch replication of multiple backup files</p>
+ * @method void setBackupIds(array $BackupIds) Set <p>Backup file ID list. Supports batch replication of multiple backup files</p>
  */
 class CopyBackupToVaultRequest extends AbstractModel
 {
     /**
-     * @var string <p>Target safe ID. The backup file will be copied to this safe.</p>
+     * @var string <p>Target safe ID. The backup file will be copied to this safe</p>
      */
     public $VaultId;
 
     /**
-     * @var array <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+     * @var array <p>Backup file ID list. Supports batch replication of multiple backup files</p>
      */
     public $BackupIds;
 
     /**
-     * @param string $VaultId <p>Target safe ID. The backup file will be copied to this safe.</p>
-     * @param array $BackupIds <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+     * @param string $VaultId <p>Target safe ID. The backup file will be copied to this safe</p>
+     * @param array $BackupIds <p>Backup file ID list. Supports batch replication of multiple backup files</p>
      */
     function __construct()
     {

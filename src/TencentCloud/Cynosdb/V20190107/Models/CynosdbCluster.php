@@ -18,20 +18,20 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster information
+ * Cluster information.
  *
- * @method string getStatus() Obtain <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
- * @method void setStatus(string $Status) Set <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+ * @method string getStatus() Obtain <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+ * @method void setStatus(string $Status) Set <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
  * @method string getUpdateTime() Obtain <p>Update time.</p>
  * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
  * @method string getZone() Obtain <p>AZ.</p>
  * @method void setZone(string $Zone) Set <p>AZ.</p>
  * @method string getClusterName() Obtain <p>Cluster name.</p>
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
- * @method string getRegion() Obtain <p>Region</p>
- * @method void setRegion(string $Region) Set <p>Region</p>
- * @method string getDbVersion() Obtain <p>Database version</p>
- * @method void setDbVersion(string $DbVersion) Set <p>Database version</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
+ * @method string getDbVersion() Obtain <p>Database version.</p>
+ * @method void setDbVersion(string $DbVersion) Set <p>Database version.</p>
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
  * @method integer getInstanceNum() Obtain <p>Number of instances</p>
@@ -40,14 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) Set <p>User uin</p>
  * @method string getDbType() Obtain <p>Engine type</p>
  * @method void setDbType(string $DbType) Set <p>Engine type</p>
- * @method integer getAppId() Obtain <p>User appid</p>
- * @method void setAppId(integer $AppId) Set <p>User appid</p>
+ * @method integer getAppId() Obtain <p>User AppID.</p>
+ * @method void setAppId(integer $AppId) Set <p>User AppID.</p>
  * @method string getStatusDesc() Obtain <p>Cluster status description</p>
  * @method void setStatusDesc(string $StatusDesc) Set <p>Cluster status description</p>
- * @method string getCreateTime() Obtain <p>Cluster creation time</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Cluster creation time</p>
- * @method integer getPayMode() Obtain <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
- * @method void setPayMode(integer $PayMode) Set <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+ * @method string getCreateTime() Obtain <p>Cluster creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Cluster creation time.</p>
+ * @method integer getPayMode() Obtain <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+ * @method void setPayMode(integer $PayMode) Set <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
  * @method string getPeriodEndTime() Obtain <p>End time</p>
  * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>End time</p>
  * @method string getVip() Obtain <p>Cluster read/write vip</p>
@@ -60,34 +60,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set <p>VPC ID</p>
  * @method string getSubnetId() Obtain <p>Subnet ID.</p>
  * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID.</p>
- * @method string getCynosVersion() Obtain <p>cynos kernel version</p>
- * @method void setCynosVersion(string $CynosVersion) Set <p>cynos kernel version</p>
- * @method string getCynosVersionTag() Obtain <p>cynos version tag</p>
- * @method void setCynosVersionTag(string $CynosVersionTag) Set <p>cynos version tag</p>
- * @method integer getStorageLimit() Obtain <p>Storage capacity</p>
- * @method void setStorageLimit(integer $StorageLimit) Set <p>Storage capacity</p>
- * @method integer getRenewFlag() Obtain <p>Renewal flag</p>
- * @method void setRenewFlag(integer $RenewFlag) Set <p>Renewal flag</p>
- * @method string getProcessingTask() Obtain <p>Currently processing task</p>
- * @method void setProcessingTask(string $ProcessingTask) Set <p>Currently processing task</p>
+ * @method string getCynosVersion() Obtain <p>cynos kernel version.</p>
+ * @method void setCynosVersion(string $CynosVersion) Set <p>cynos kernel version.</p>
+ * @method string getCynosVersionTag() Obtain <p>cynos version tag.</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) Set <p>cynos version tag.</p>
+ * @method integer getStorageLimit() Obtain <p>Storage capacity.</p>
+ * @method void setStorageLimit(integer $StorageLimit) Set <p>Storage capacity.</p>
+ * @method integer getRenewFlag() Obtain <p>Renewal flag.</p>
+ * @method void setRenewFlag(integer $RenewFlag) Set <p>Renewal flag.</p>
+ * @method string getProcessingTask() Obtain <p>Currently Processing Tasks</p>
+ * @method void setProcessingTask(string $ProcessingTask) Set <p>Currently Processing Tasks</p>
  * @method array getTasks() Obtain <p>Task array of the cluster</p>
  * @method void setTasks(array $Tasks) Set <p>Task array of the cluster</p>
- * @method array getResourceTags() Obtain <p>tag Array of cluster binding</p>
- * @method void setResourceTags(array $ResourceTags) Set <p>tag Array of cluster binding</p>
+ * @method array getResourceTags() Obtain <p>tag Array bound to the cluster</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>tag Array bound to the cluster</p>
  * @method string getDbMode() Obtain <p>Db type (NORMAL, SERVERLESS)</p>
  * @method void setDbMode(string $DbMode) Set <p>Db type (NORMAL, SERVERLESS)</p>
- * @method string getServerlessStatus() Obtain <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
- * @method void setServerlessStatus(string $ServerlessStatus) Set <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
- * @method integer getStorage() Obtain <p>Cluster Prepaid storage size</p>
- * @method void setStorage(integer $Storage) Set <p>Cluster Prepaid storage size</p>
- * @method string getStorageId() Obtain <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
- * @method void setStorageId(string $StorageId) Set <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
- * @method integer getStoragePayMode() Obtain <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
- * @method void setStoragePayMode(integer $StoragePayMode) Set <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
- * @method integer getMinStorageSize() Obtain <p>Minimum storage of the cluster compute specification</p>
- * @method void setMinStorageSize(integer $MinStorageSize) Set <p>Minimum storage of the cluster compute specification</p>
- * @method integer getMaxStorageSize() Obtain <p>Maximum storage value of the cluster compute specification</p>
- * @method void setMaxStorageSize(integer $MaxStorageSize) Set <p>Maximum storage value of the cluster compute specification</p>
+ * @method string getServerlessStatus() Obtain <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) Set <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
+ * @method integer getStorage() Obtain <p>Cluster prepaid storage size.</p>
+ * @method void setStorage(integer $Storage) Set <p>Cluster prepaid storage size.</p>
+ * @method string getStorageId() Obtain <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
+ * @method void setStorageId(string $StorageId) Set <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
+ * @method integer getStoragePayMode() Obtain <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+ * @method void setStoragePayMode(integer $StoragePayMode) Set <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+ * @method integer getMinStorageSize() Obtain <p>Minimum storage corresponding to the cluster compute specification.</p>
+ * @method void setMinStorageSize(integer $MinStorageSize) Set <p>Minimum storage corresponding to the cluster compute specification.</p>
+ * @method integer getMaxStorageSize() Obtain <p>Maximum storage value corresponding to the cluster compute specification</p>
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set <p>Maximum storage value corresponding to the cluster compute specification</p>
  * @method array getNetAddrs() Obtain <p>Cluster network information</p>
  * @method void setNetAddrs(array $NetAddrs) Set <p>Cluster network information</p>
  * @method string getPhysicalZone() Obtain <p>Physical AZ</p>
@@ -100,23 +100,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveZones(array $SlaveZones) Set <p>Secondary AZ</p>
  * @method string getBusinessType() Obtain <p>Business type</p>
  * @method void setBusinessType(string $BusinessType) Set <p>Business type</p>
- * @method string getIsFreeze() Obtain <p>Freeze or not</p>
- * @method void setIsFreeze(string $IsFreeze) Set <p>Freeze or not</p>
+ * @method string getIsFreeze() Obtain <p>Whether to freeze</p>
+ * @method void setIsFreeze(string $IsFreeze) Set <p>Whether to freeze</p>
  * @method string getOrderSource() Obtain <p>Order source</p>
  * @method void setOrderSource(string $OrderSource) Set <p>Order source</p>
  * @method Ability getAbility() Obtain <p>Capacity</p>
  * @method void setAbility(Ability $Ability) Set <p>Capacity</p>
- * @method array getResourcePackages() Obtain <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
- * @method void setResourcePackages(array $ResourcePackages) Set <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+ * @method array getResourcePackages() Obtain <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
+ * @method void setResourcePackages(array $ResourcePackages) Set <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
  * @method string getGdnId() Obtain <p>Global database unique ID</p>
  * @method void setGdnId(string $GdnId) Set <p>Global database unique ID</p>
- * @method string getGdnRole() Obtain <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
- * @method void setGdnRole(string $GdnRole) Set <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+ * @method string getGdnRole() Obtain <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
+ * @method void setGdnRole(string $GdnRole) Set <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
  */
 class CynosdbCluster extends AbstractModel
 {
     /**
-     * @var string <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+     * @var string <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
      */
     public $Status;
 
@@ -136,12 +136,12 @@ class CynosdbCluster extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string <p>Region</p>
+     * @var string <p>Region.</p>
      */
     public $Region;
 
     /**
-     * @var string <p>Database version</p>
+     * @var string <p>Database version.</p>
      */
     public $DbVersion;
 
@@ -166,7 +166,7 @@ class CynosdbCluster extends AbstractModel
     public $DbType;
 
     /**
-     * @var integer <p>User appid</p>
+     * @var integer <p>User AppID.</p>
      */
     public $AppId;
 
@@ -176,12 +176,12 @@ class CynosdbCluster extends AbstractModel
     public $StatusDesc;
 
     /**
-     * @var string <p>Cluster creation time</p>
+     * @var string <p>Cluster creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+     * @var integer <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      */
     public $PayMode;
 
@@ -216,27 +216,27 @@ class CynosdbCluster extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string <p>cynos kernel version</p>
+     * @var string <p>cynos kernel version.</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string <p>cynos version tag</p>
+     * @var string <p>cynos version tag.</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var integer <p>Storage capacity</p>
+     * @var integer <p>Storage capacity.</p>
      */
     public $StorageLimit;
 
     /**
-     * @var integer <p>Renewal flag</p>
+     * @var integer <p>Renewal flag.</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string <p>Currently processing task</p>
+     * @var string <p>Currently Processing Tasks</p>
      */
     public $ProcessingTask;
 
@@ -246,7 +246,7 @@ class CynosdbCluster extends AbstractModel
     public $Tasks;
 
     /**
-     * @var array <p>tag Array of cluster binding</p>
+     * @var array <p>tag Array bound to the cluster</p>
      */
     public $ResourceTags;
 
@@ -256,32 +256,32 @@ class CynosdbCluster extends AbstractModel
     public $DbMode;
 
     /**
-     * @var string <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+     * @var string <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var integer <p>Cluster Prepaid storage size</p>
+     * @var integer <p>Cluster prepaid storage size.</p>
      */
     public $Storage;
 
     /**
-     * @var string <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+     * @var string <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
      */
     public $StorageId;
 
     /**
-     * @var integer <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+     * @var integer <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var integer <p>Minimum storage of the cluster compute specification</p>
+     * @var integer <p>Minimum storage corresponding to the cluster compute specification.</p>
      */
     public $MinStorageSize;
 
     /**
-     * @var integer <p>Maximum storage value of the cluster compute specification</p>
+     * @var integer <p>Maximum storage value corresponding to the cluster compute specification</p>
      */
     public $MaxStorageSize;
 
@@ -316,7 +316,7 @@ class CynosdbCluster extends AbstractModel
     public $BusinessType;
 
     /**
-     * @var string <p>Freeze or not</p>
+     * @var string <p>Whether to freeze</p>
      */
     public $IsFreeze;
 
@@ -331,7 +331,7 @@ class CynosdbCluster extends AbstractModel
     public $Ability;
 
     /**
-     * @var array <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+     * @var array <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
      */
     public $ResourcePackages;
 
@@ -341,57 +341,57 @@ class CynosdbCluster extends AbstractModel
     public $GdnId;
 
     /**
-     * @var string <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+     * @var string <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
      */
     public $GdnRole;
 
     /**
-     * @param string $Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+     * @param string $Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
      * @param string $UpdateTime <p>Update time.</p>
      * @param string $Zone <p>AZ.</p>
      * @param string $ClusterName <p>Cluster name.</p>
-     * @param string $Region <p>Region</p>
-     * @param string $DbVersion <p>Database version</p>
+     * @param string $Region <p>Region.</p>
+     * @param string $DbVersion <p>Database version.</p>
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param integer $InstanceNum <p>Number of instances</p>
      * @param string $Uin <p>User uin</p>
      * @param string $DbType <p>Engine type</p>
-     * @param integer $AppId <p>User appid</p>
+     * @param integer $AppId <p>User AppID.</p>
      * @param string $StatusDesc <p>Cluster status description</p>
-     * @param string $CreateTime <p>Cluster creation time</p>
-     * @param integer $PayMode <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+     * @param string $CreateTime <p>Cluster creation time.</p>
+     * @param integer $PayMode <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      * @param string $PeriodEndTime <p>End time</p>
      * @param string $Vip <p>Cluster read/write vip</p>
      * @param integer $Vport <p>Cluster read/write vport</p>
      * @param integer $ProjectID <p>Project ID.</p>
      * @param string $VpcId <p>VPC ID</p>
      * @param string $SubnetId <p>Subnet ID.</p>
-     * @param string $CynosVersion <p>cynos kernel version</p>
-     * @param string $CynosVersionTag <p>cynos version tag</p>
-     * @param integer $StorageLimit <p>Storage capacity</p>
-     * @param integer $RenewFlag <p>Renewal flag</p>
-     * @param string $ProcessingTask <p>Currently processing task</p>
+     * @param string $CynosVersion <p>cynos kernel version.</p>
+     * @param string $CynosVersionTag <p>cynos version tag.</p>
+     * @param integer $StorageLimit <p>Storage capacity.</p>
+     * @param integer $RenewFlag <p>Renewal flag.</p>
+     * @param string $ProcessingTask <p>Currently Processing Tasks</p>
      * @param array $Tasks <p>Task array of the cluster</p>
-     * @param array $ResourceTags <p>tag Array of cluster binding</p>
+     * @param array $ResourceTags <p>tag Array bound to the cluster</p>
      * @param string $DbMode <p>Db type (NORMAL, SERVERLESS)</p>
-     * @param string $ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
-     * @param integer $Storage <p>Cluster Prepaid storage size</p>
-     * @param string $StorageId <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
-     * @param integer $StoragePayMode <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
-     * @param integer $MinStorageSize <p>Minimum storage of the cluster compute specification</p>
-     * @param integer $MaxStorageSize <p>Maximum storage value of the cluster compute specification</p>
+     * @param string $ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
+     * @param integer $Storage <p>Cluster prepaid storage size.</p>
+     * @param string $StorageId <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
+     * @param integer $StoragePayMode <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+     * @param integer $MinStorageSize <p>Minimum storage corresponding to the cluster compute specification.</p>
+     * @param integer $MaxStorageSize <p>Maximum storage value corresponding to the cluster compute specification</p>
      * @param array $NetAddrs <p>Cluster network information</p>
      * @param string $PhysicalZone <p>Physical AZ</p>
      * @param string $MasterZone <p>Primary AZ</p>
      * @param string $HasSlaveZone <p>Whether there is a secondary AZ</p>
      * @param array $SlaveZones <p>Secondary AZ</p>
      * @param string $BusinessType <p>Business type</p>
-     * @param string $IsFreeze <p>Freeze or not</p>
+     * @param string $IsFreeze <p>Whether to freeze</p>
      * @param string $OrderSource <p>Order source</p>
      * @param Ability $Ability <p>Capacity</p>
-     * @param array $ResourcePackages <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+     * @param array $ResourcePackages <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
      * @param string $GdnId <p>Global database unique ID</p>
-     * @param string $GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+     * @param string $GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
      */
     function __construct()
     {

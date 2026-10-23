@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getSnapshotIdList() Obtain Backup file ID. This field is used by legacy versions and thus not recommended.
- * @method void setSnapshotIdList(array $SnapshotIdList) Set Backup file ID. This field is used by legacy versions and thus not recommended.
- * @method array getBackupIds() Obtain Backup file ID. This field is recommended.
- * @method void setBackupIds(array $BackupIds) Set Backup file ID. This field is recommended.
+ * @method array getSnapshotIdList() Obtain Backup file ID. Field used in earlier versions. This is not recommended.
+ * @method void setSnapshotIdList(array $SnapshotIdList) Set Backup file ID. Field used in earlier versions. This is not recommended.
+ * @method array getBackupIds() Obtain Backup file ID. Recommended for use.
+ * @method void setBackupIds(array $BackupIds) Set Backup file ID. Recommended for use.
  */
 class DeleteBackupRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteBackupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Backup file ID. This field is used by legacy versions and thus not recommended.
+     * @var array Backup file ID. Field used in earlier versions. This is not recommended.
      */
     public $SnapshotIdList;
 
     /**
-     * @var array Backup file ID. This field is recommended.
+     * @var array Backup file ID. Recommended for use.
      */
     public $BackupIds;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $SnapshotIdList Backup file ID. This field is used by legacy versions and thus not recommended.
-     * @param array $BackupIds Backup file ID. This field is recommended.
+     * @param array $SnapshotIdList Backup file ID. Field used in earlier versions. This is not recommended.
+     * @param array $BackupIds Backup file ID. Recommended for use.
      */
     function __construct()
     {

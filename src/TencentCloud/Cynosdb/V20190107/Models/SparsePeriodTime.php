@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sparse backup cycle info
+ * Sparse backup cycle information
  *
- * @method array getWeekDays() Obtain Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
- * @method void setWeekDays(array $WeekDays) Set Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
- * @method array getDays() Obtain By month: Date list, 1-31 (for monthly cycle only, up to 7)
- * @method void setDays(array $Days) Set By month: Date list, 1-31 (for monthly cycle only, up to 7)
- * @method array getMonthDays() Obtain Yearly: Month-day composite column (Only for yearly cycle, up to 7)
- * @method void setMonthDays(array $MonthDays) Set Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+ * @method array getWeekDays() Obtain By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
+ * @method void setWeekDays(array $WeekDays) Set By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
+ * @method array getDays() Obtain Monthly: date list, 1-31 (only for monthly cycle, up to 7)
+ * @method void setDays(array $Days) Set Monthly: date list, 1-31 (only for monthly cycle, up to 7)
+ * @method array getMonthDays() Obtain Yearly: list of month-day combinations (only for yearly cycle, up to 7)
+ * @method void setMonthDays(array $MonthDays) Set Yearly: list of month-day combinations (only for yearly cycle, up to 7)
  */
 class SparsePeriodTime extends AbstractModel
 {
     /**
-     * @var array Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+     * @var array By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
      */
     public $WeekDays;
 
     /**
-     * @var array By month: Date list, 1-31 (for monthly cycle only, up to 7)
+     * @var array Monthly: date list, 1-31 (only for monthly cycle, up to 7)
      */
     public $Days;
 
     /**
-     * @var array Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+     * @var array Yearly: list of month-day combinations (only for yearly cycle, up to 7)
      */
     public $MonthDays;
 
     /**
-     * @param array $WeekDays Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
-     * @param array $Days By month: Date list, 1-31 (for monthly cycle only, up to 7)
-     * @param array $MonthDays Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+     * @param array $WeekDays By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
+     * @param array $Days Monthly: date list, 1-31 (only for monthly cycle, up to 7)
+     * @param array $MonthDays Yearly: list of month-day combinations (only for yearly cycle, up to 7)
      */
     function __construct()
     {

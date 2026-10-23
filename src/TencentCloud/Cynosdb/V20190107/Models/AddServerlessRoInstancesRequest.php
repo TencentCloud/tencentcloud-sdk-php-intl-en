@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddServerlessRoInstances request structure.
  *
- * @method string getClusterId() Obtain <p>Cluster Id</p>
- * @method void setClusterId(string $ClusterId) Set <p>Cluster Id</p>
- * @method float getMinCpu() Obtain <p>Minimum specification of the ro instance</p>
- * @method void setMinCpu(float $MinCpu) Set <p>Minimum specification of the ro instance</p>
- * @method float getMaxCpu() Obtain <p>Maximum specification of ro instance</p>
- * @method void setMaxCpu(float $MaxCpu) Set <p>Maximum specification of ro instance</p>
+ * @method string getClusterId() Obtain <p>Cluster Id.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster Id.</p>
+ * @method float getMinCpu() Obtain <p>Minimum specification of a read-only instance</p>
+ * @method void setMinCpu(float $MinCpu) Set <p>Minimum specification of a read-only instance</p>
+ * @method float getMaxCpu() Obtain <p>Maximum specification of a read-only instance</p>
+ * @method void setMaxCpu(float $MaxCpu) Set <p>Maximum specification of a read-only instance</p>
  * @method string getInstanceName() Obtain <p>ro instance name</p>
  * @method void setInstanceName(string $InstanceName) Set <p>ro instance name</p>
  * @method string getVpcId() Obtain <p>VPC network ID</p>
@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set <p>Port used when adding new RO groups, value range [0,65535)</p>
  * @method array getSecurityGroupIds() Obtain <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
- * @method string getAutoPause() Obtain <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
- * @method void setAutoPause(string $AutoPause) Set <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
- * @method integer getAutoPauseDelay() Obtain <p>Auto-pause time</p><p>Unit: s</p>
- * @method void setAutoPauseDelay(integer $AutoPauseDelay) Set <p>Auto-pause time</p><p>Unit: s</p>
+ * @method string getAutoPause() Obtain <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+ * @method void setAutoPause(string $AutoPause) Set <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+ * @method integer getAutoPauseDelay() Obtain <p>Auto-pause time</p><p>Unit: seconds</p>
+ * @method void setAutoPauseDelay(integer $AutoPauseDelay) Set <p>Auto-pause time</p><p>Unit: seconds</p>
  * @method array getInstanceParams() Obtain <p>Instance parameter</p>
  * @method void setInstanceParams(array $InstanceParams) Set <p>Instance parameter</p>
  * @method integer getParamTemplateId() Obtain <p>Parameter template</p>
@@ -50,17 +50,17 @@ use TencentCloud\Common\AbstractModel;
 class AddServerlessRoInstancesRequest extends AbstractModel
 {
     /**
-     * @var string <p>Cluster Id</p>
+     * @var string <p>Cluster Id.</p>
      */
     public $ClusterId;
 
     /**
-     * @var float <p>Minimum specification of the ro instance</p>
+     * @var float <p>Minimum specification of a read-only instance</p>
      */
     public $MinCpu;
 
     /**
-     * @var float <p>Maximum specification of ro instance</p>
+     * @var float <p>Maximum specification of a read-only instance</p>
      */
     public $MaxCpu;
 
@@ -90,12 +90,12 @@ class AddServerlessRoInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var string <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+     * @var string <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
      */
     public $AutoPause;
 
     /**
-     * @var integer <p>Auto-pause time</p><p>Unit: s</p>
+     * @var integer <p>Auto-pause time</p><p>Unit: seconds</p>
      */
     public $AutoPauseDelay;
 
@@ -115,16 +115,16 @@ class AddServerlessRoInstancesRequest extends AbstractModel
     public $RoCount;
 
     /**
-     * @param string $ClusterId <p>Cluster Id</p>
-     * @param float $MinCpu <p>Minimum specification of the ro instance</p>
-     * @param float $MaxCpu <p>Maximum specification of ro instance</p>
+     * @param string $ClusterId <p>Cluster Id.</p>
+     * @param float $MinCpu <p>Minimum specification of a read-only instance</p>
+     * @param float $MaxCpu <p>Maximum specification of a read-only instance</p>
      * @param string $InstanceName <p>ro instance name</p>
      * @param string $VpcId <p>VPC network ID</p>
      * @param string $SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
      * @param integer $Port <p>Port used when adding new RO groups, value range [0,65535)</p>
      * @param array $SecurityGroupIds <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
-     * @param string $AutoPause <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
-     * @param integer $AutoPauseDelay <p>Auto-pause time</p><p>Unit: s</p>
+     * @param string $AutoPause <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+     * @param integer $AutoPauseDelay <p>Auto-pause time</p><p>Unit: seconds</p>
      * @param array $InstanceParams <p>Instance parameter</p>
      * @param integer $ParamTemplateId <p>Parameter template</p>
      * @param integer $RoCount <p>Number of newly-added read-only instances</p>

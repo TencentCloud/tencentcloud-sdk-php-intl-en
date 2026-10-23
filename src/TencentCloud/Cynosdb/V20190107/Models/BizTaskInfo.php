@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task Information
+ * Task information
  *
  * @method integer getID() Obtain <p>Task ID.</p>
  * @method void setID(integer $ID) Set <p>Task ID.</p>
- * @method integer getAppId() Obtain <p>User appid</p>
- * @method void setAppId(integer $AppId) Set <p>User appid</p>
+ * @method integer getAppId() Obtain <p>User AppID.</p>
+ * @method void setAppId(integer $AppId) Set <p>User AppID.</p>
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
- * @method string getRegion() Obtain <p>Region</p>
- * @method void setRegion(string $Region) Set <p>Region</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
  * @method string getCreateTime() Obtain <p>Task creation time</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Task creation time</p>
  * @method string getDelayTime() Obtain <p>Delayed execution time</p>
@@ -38,26 +38,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(integer $FlowId) Set <p>Asynchronous task flow id</p>
  * @method string getInput() Obtain <p>Task input information</p>
  * @method void setInput(string $Input) Set <p>Task input information</p>
- * @method string getInstanceGrpId() Obtain <p>Instance group id.</p>
- * @method void setInstanceGrpId(string $InstanceGrpId) Set <p>Instance group id.</p>
- * @method string getInstanceGroupId() Obtain <p>Instance group id.</p>
- * @method void setInstanceGroupId(string $InstanceGroupId) Set <p>Instance group id.</p>
+ * @method string getInstanceGrpId() Obtain <p>Instance group id</p>
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set <p>Instance group id</p>
+ * @method string getInstanceGroupId() Obtain <p>Instance group id</p>
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set <p>Instance group id</p>
  * @method string getInstanceId() Obtain <p>Instance id</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Instance id</p>
- * @method string getObjectId() Obtain <p>Task operation object id</p>
- * @method void setObjectId(string $ObjectId) Set <p>Task operation object id</p>
- * @method string getObjectType() Obtain <p>Task operation object type.</p>
- * @method void setObjectType(string $ObjectType) Set <p>Task operation object type.</p>
+ * @method string getObjectId() Obtain <p>Task operation object id.</p>
+ * @method void setObjectId(string $ObjectId) Set <p>Task operation object id.</p>
+ * @method string getObjectType() Obtain <p>Task operation object type</p>
+ * @method void setObjectType(string $ObjectType) Set <p>Task operation object type</p>
  * @method string getOperator() Obtain <p>Operator uin</p>
  * @method void setOperator(string $Operator) Set <p>Operator uin</p>
  * @method string getOutput() Obtain <p>Task output information</p>
  * @method void setOutput(string $Output) Set <p>Task output information</p>
- * @method string getStatus() Obtain <p>Task status</p>
- * @method void setStatus(string $Status) Set <p>Task status</p>
+ * @method string getStatus() Obtain <p>Task status.</p>
+ * @method void setStatus(string $Status) Set <p>Task status.</p>
  * @method string getTaskType() Obtain <p>Task type</p>
  * @method void setTaskType(string $TaskType) Set <p>Task type</p>
- * @method integer getTriggerTaskId() Obtain <p>Parent task ID that triggers this task</p>
- * @method void setTriggerTaskId(integer $TriggerTaskId) Set <p>Parent task ID that triggers this task</p>
+ * @method integer getTriggerTaskId() Obtain <p>ID of the parent task that triggers this task</p>
+ * @method void setTriggerTaskId(integer $TriggerTaskId) Set <p>ID of the parent task that triggers this task</p>
  * @method string getUpdateTime() Obtain <p>Update time.</p>
  * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
  * @method string getStartTime() Obtain <p>Task start time</p>
@@ -66,10 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set <p>Task end time</p>
  * @method string getClusterName() Obtain <p>Cluster name.</p>
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
- * @method string getInstanceName() Obtain <p>Instance name</p>
- * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
- * @method integer getProcess() Obtain <p>Task progress</p>
- * @method void setProcess(integer $Process) Set <p>Task progress</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method integer getProcess() Obtain <p>Task Progress</p>
+ * @method void setProcess(integer $Process) Set <p>Task Progress</p>
  * @method array getModifyParamsData() Obtain <p>Modify parameter task information</p>
  * @method void setModifyParamsData(array $ModifyParamsData) Set <p>Modify parameter task information</p>
  * @method CreateClustersData getCreateClustersData() Obtain <p>Create cluster task information</p>
@@ -88,8 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitchClusterLogBin(SwitchClusterLogBin $SwitchClusterLogBin) Set <p>Convert cluster logs</p>
  * @method BizTaskModifyParamsData getModifyInstanceParamsData() Obtain <p>Modify instance parameter data</p>
  * @method void setModifyInstanceParamsData(BizTaskModifyParamsData $ModifyInstanceParamsData) Set <p>Modify instance parameter data</p>
- * @method TaskMaintainInfo getTaskMaintainInfo() Obtain <p>Maintenance time</p>
- * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) Set <p>Maintenance time</p>
+ * @method TaskMaintainInfo getTaskMaintainInfo() Obtain <p>Maintenance time.</p>
+ * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) Set <p>Maintenance time.</p>
  * @method array getInstanceCLSDeliveryInfos() Obtain <p>Instance Log Delivery Information</p>
  * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) Set <p>Instance Log Delivery Information</p>
  * @method TaskProgressInfo getTaskProgressInfo() Obtain <p>Task progress information</p>
@@ -111,7 +111,7 @@ class BizTaskInfo extends AbstractModel
     public $ID;
 
     /**
-     * @var integer <p>User appid</p>
+     * @var integer <p>User AppID.</p>
      */
     public $AppId;
 
@@ -121,7 +121,7 @@ class BizTaskInfo extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string <p>Region</p>
+     * @var string <p>Region.</p>
      */
     public $Region;
 
@@ -151,13 +151,13 @@ class BizTaskInfo extends AbstractModel
     public $Input;
 
     /**
-     * @var string <p>Instance group id.</p>
+     * @var string <p>Instance group id</p>
      * @deprecated
      */
     public $InstanceGrpId;
 
     /**
-     * @var string <p>Instance group id.</p>
+     * @var string <p>Instance group id</p>
      */
     public $InstanceGroupId;
 
@@ -167,12 +167,12 @@ class BizTaskInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string <p>Task operation object id</p>
+     * @var string <p>Task operation object id.</p>
      */
     public $ObjectId;
 
     /**
-     * @var string <p>Task operation object type.</p>
+     * @var string <p>Task operation object type</p>
      */
     public $ObjectType;
 
@@ -187,7 +187,7 @@ class BizTaskInfo extends AbstractModel
     public $Output;
 
     /**
-     * @var string <p>Task status</p>
+     * @var string <p>Task status.</p>
      */
     public $Status;
 
@@ -197,7 +197,7 @@ class BizTaskInfo extends AbstractModel
     public $TaskType;
 
     /**
-     * @var integer <p>Parent task ID that triggers this task</p>
+     * @var integer <p>ID of the parent task that triggers this task</p>
      */
     public $TriggerTaskId;
 
@@ -222,12 +222,12 @@ class BizTaskInfo extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string <p>Instance name</p>
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer <p>Task progress</p>
+     * @var integer <p>Task Progress</p>
      */
     public $Process;
 
@@ -278,7 +278,7 @@ class BizTaskInfo extends AbstractModel
     public $ModifyInstanceParamsData;
 
     /**
-     * @var TaskMaintainInfo <p>Maintenance time</p>
+     * @var TaskMaintainInfo <p>Maintenance time.</p>
      */
     public $TaskMaintainInfo;
 
@@ -314,30 +314,30 @@ class BizTaskInfo extends AbstractModel
 
     /**
      * @param integer $ID <p>Task ID.</p>
-     * @param integer $AppId <p>User appid</p>
+     * @param integer $AppId <p>User AppID.</p>
      * @param string $ClusterId <p>Cluster ID.</p>
-     * @param string $Region <p>Region</p>
+     * @param string $Region <p>Region.</p>
      * @param string $CreateTime <p>Task creation time</p>
      * @param string $DelayTime <p>Delayed execution time</p>
      * @param string $ErrMsg <p>Task failure information</p>
      * @param integer $FlowId <p>Asynchronous task flow id</p>
      * @param string $Input <p>Task input information</p>
-     * @param string $InstanceGrpId <p>Instance group id.</p>
-     * @param string $InstanceGroupId <p>Instance group id.</p>
+     * @param string $InstanceGrpId <p>Instance group id</p>
+     * @param string $InstanceGroupId <p>Instance group id</p>
      * @param string $InstanceId <p>Instance id</p>
-     * @param string $ObjectId <p>Task operation object id</p>
-     * @param string $ObjectType <p>Task operation object type.</p>
+     * @param string $ObjectId <p>Task operation object id.</p>
+     * @param string $ObjectType <p>Task operation object type</p>
      * @param string $Operator <p>Operator uin</p>
      * @param string $Output <p>Task output information</p>
-     * @param string $Status <p>Task status</p>
+     * @param string $Status <p>Task status.</p>
      * @param string $TaskType <p>Task type</p>
-     * @param integer $TriggerTaskId <p>Parent task ID that triggers this task</p>
+     * @param integer $TriggerTaskId <p>ID of the parent task that triggers this task</p>
      * @param string $UpdateTime <p>Update time.</p>
      * @param string $StartTime <p>Task start time</p>
      * @param string $EndTime <p>Task end time</p>
      * @param string $ClusterName <p>Cluster name.</p>
-     * @param string $InstanceName <p>Instance name</p>
-     * @param integer $Process <p>Task progress</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param integer $Process <p>Task Progress</p>
      * @param array $ModifyParamsData <p>Modify parameter task information</p>
      * @param CreateClustersData $CreateClustersData <p>Create cluster task information</p>
      * @param RollbackData $RollbackData <p>Cluster rollback task information</p>
@@ -347,7 +347,7 @@ class BizTaskInfo extends AbstractModel
      * @param ClusterSlaveData $ClusterSlaveData <p>Cluster Availability Zone Information</p>
      * @param SwitchClusterLogBin $SwitchClusterLogBin <p>Convert cluster logs</p>
      * @param BizTaskModifyParamsData $ModifyInstanceParamsData <p>Modify instance parameter data</p>
-     * @param TaskMaintainInfo $TaskMaintainInfo <p>Maintenance time</p>
+     * @param TaskMaintainInfo $TaskMaintainInfo <p>Maintenance time.</p>
      * @param array $InstanceCLSDeliveryInfos <p>Instance Log Delivery Information</p>
      * @param TaskProgressInfo $TaskProgressInfo <p>Task progress information</p>
      * @param GdnTaskInfo $GdnTaskInfo <p>Global database network task</p>

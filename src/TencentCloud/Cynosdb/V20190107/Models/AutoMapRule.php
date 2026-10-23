@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advanced mapping, automated mapping rule
+ * Advanced mapping, automatic mapping rule
  *
  * @method string getSrcInstanceId() Obtain Source instance Id
  * @method void setSrcInstanceId(string $SrcInstanceId) Set Source instance Id

@@ -18,18 +18,18 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the binlog configuration message.
+ * Binlog configuration information.
  *
  * @method integer getBinlogSaveDays() Obtain <p>binlog retention time</p>
  * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set <p>binlog retention time</p>
- * @method string getBinlogCrossRegionsEnable() Obtain <p>Whether cross-region backup of binlog is enabled</p>
- * @method void setBinlogCrossRegionsEnable(string $BinlogCrossRegionsEnable) Set <p>Whether cross-region backup of binlog is enabled</p>
+ * @method string getBinlogCrossRegionsEnable() Obtain <p>Whether binlog cross-region backup is enabled</p>
+ * @method void setBinlogCrossRegionsEnable(string $BinlogCrossRegionsEnable) Set <p>Whether binlog cross-region backup is enabled</p>
  * @method array getBinlogCrossRegions() Obtain <p>Cross-region binlog</p>
  * @method void setBinlogCrossRegions(array $BinlogCrossRegions) Set <p>Cross-region binlog</p>
- * @method integer getBinlogCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: Day</p>
- * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
- * @method array getAutoCopyVaults() Obtain <p>Safe info</p>
- * @method void setAutoCopyVaults(array $AutoCopyVaults) Set <p>Safe info</p>
+ * @method integer getBinlogCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: day</p>
+ * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: day</p>
+ * @method array getAutoCopyVaults() Obtain <p>Safe information</p>
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) Set <p>Safe information</p>
  */
 class BinlogConfigInfo extends AbstractModel
 {
@@ -39,7 +39,7 @@ class BinlogConfigInfo extends AbstractModel
     public $BinlogSaveDays;
 
     /**
-     * @var string <p>Whether cross-region backup of binlog is enabled</p>
+     * @var string <p>Whether binlog cross-region backup is enabled</p>
      */
     public $BinlogCrossRegionsEnable;
 
@@ -49,21 +49,21 @@ class BinlogConfigInfo extends AbstractModel
     public $BinlogCrossRegions;
 
     /**
-     * @var integer <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @var integer <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public $BinlogCrossRegionSaveDays;
 
     /**
-     * @var array <p>Safe info</p>
+     * @var array <p>Safe information</p>
      */
     public $AutoCopyVaults;
 
     /**
      * @param integer $BinlogSaveDays <p>binlog retention time</p>
-     * @param string $BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
+     * @param string $BinlogCrossRegionsEnable <p>Whether binlog cross-region backup is enabled</p>
      * @param array $BinlogCrossRegions <p>Cross-region binlog</p>
-     * @param integer $BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
-     * @param array $AutoCopyVaults <p>Safe info</p>
+     * @param integer $BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
+     * @param array $AutoCopyVaults <p>Safe information</p>
      */
     function __construct()
     {

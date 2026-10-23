@@ -18,10 +18,10 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Proxy group
+ * proxy group
  *
- * @method string getProxyGroupId() Obtain <p>Database Proxy Group ID.</p>
- * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID.</p>
+ * @method string getProxyGroupId() Obtain <p>Database Proxy Group ID</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID</p>
  * @method integer getProxyNodeCount() Obtain <p>Number of database proxy group nodes</p>
  * @method void setProxyNodeCount(integer $ProxyNodeCount) Set <p>Number of database proxy group nodes</p>
  * @method string getStatus() Obtain <p>Database Proxy Group status</p>
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
  * @method integer getAppId() Obtain <p>User AppId</p>
  * @method void setAppId(integer $AppId) Set <p>User AppId</p>
- * @method string getOpenRw() Obtain <p>Activate database proxy for RWNode</p>
- * @method void setOpenRw(string $OpenRw) Set <p>Activate database proxy for RWNode</p>
+ * @method string getOpenRw() Obtain <p>Activate database proxy on the read-write node</p>
+ * @method void setOpenRw(string $OpenRw) Set <p>Activate database proxy on the read-write node</p>
  * @method string getCreateTime() Obtain <p>Creation time.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
  * @method string getUpdateTime() Obtain <p>Update time.</p>
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class ProxyGroup extends AbstractModel
 {
     /**
-     * @var string <p>Database Proxy Group ID.</p>
+     * @var string <p>Database Proxy Group ID</p>
      */
     public $ProxyGroupId;
 
@@ -86,7 +86,7 @@ class ProxyGroup extends AbstractModel
     public $AppId;
 
     /**
-     * @var string <p>Activate database proxy for RWNode</p>
+     * @var string <p>Activate database proxy on the read-write node</p>
      */
     public $OpenRw;
 
@@ -101,7 +101,7 @@ class ProxyGroup extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $ProxyGroupId <p>Database Proxy Group ID.</p>
+     * @param string $ProxyGroupId <p>Database Proxy Group ID</p>
      * @param integer $ProxyNodeCount <p>Number of database proxy group nodes</p>
      * @param string $Status <p>Database Proxy Group status</p>
      * @param string $Region <p>Region.</p>
@@ -109,7 +109,7 @@ class ProxyGroup extends AbstractModel
      * @param string $CurrentProxyVersion <p>Current proxy version</p>
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param integer $AppId <p>User AppId</p>
-     * @param string $OpenRw <p>Activate database proxy for RWNode</p>
+     * @param string $OpenRw <p>Activate database proxy on the read-write node</p>
      * @param string $CreateTime <p>Creation time.</p>
      * @param string $UpdateTime <p>Update time.</p>
      */

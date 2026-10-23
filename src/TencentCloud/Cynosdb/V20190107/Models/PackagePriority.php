@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource package deduction priority.
+ * Resource package deduction priority
  *
- * @method string getPackageId() Obtain The resource pack whose deduction priority needs to be customized.
- * @method void setPackageId(string $PackageId) Set The resource pack whose deduction priority needs to be customized.
- * @method integer getDeductionPriority() Obtain Custom deduction priority.
- * @method void setDeductionPriority(integer $DeductionPriority) Set Custom deduction priority.
+ * @method string getPackageId() Obtain Resource pack with a custom deduction priority
+ * @method void setPackageId(string $PackageId) Set Resource pack with a custom deduction priority
+ * @method integer getDeductionPriority() Obtain Custom deduction priority
+ * @method void setDeductionPriority(integer $DeductionPriority) Set Custom deduction priority
  */
 class PackagePriority extends AbstractModel
 {
     /**
-     * @var string The resource pack whose deduction priority needs to be customized.
+     * @var string Resource pack with a custom deduction priority
      */
     public $PackageId;
 
     /**
-     * @var integer Custom deduction priority.
+     * @var integer Custom deduction priority
      */
     public $DeductionPriority;
 
     /**
-     * @param string $PackageId The resource pack whose deduction priority needs to be customized.
-     * @param integer $DeductionPriority Custom deduction priority.
+     * @param string $PackageId Resource pack with a custom deduction priority
+     * @param integer $DeductionPriority Custom deduction priority
      */
     function __construct()
     {

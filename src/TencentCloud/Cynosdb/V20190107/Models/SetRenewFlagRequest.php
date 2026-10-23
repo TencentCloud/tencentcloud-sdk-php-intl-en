@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetRenewFlag request structure.
  *
- * @method array getResourceIds() Obtain ID of the instance to be manipulated
- * @method void setResourceIds(array $ResourceIds) Set ID of the instance to be manipulated
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+ * @method array getResourceIds() Obtain Cluster ID to operate on
+ * @method void setResourceIds(array $ResourceIds) Set Cluster ID to operate on
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
  */
 class SetRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array ID of the instance to be manipulated
+     * @var array Cluster ID to operate on
      */
     public $ResourceIds;
 
     /**
-     * @var integer Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+     * @var integer Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
      */
     public $AutoRenewFlag;
 
     /**
-     * @param array $ResourceIds ID of the instance to be manipulated
-     * @param integer $AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+     * @param array $ResourceIds Cluster ID to operate on
+     * @param integer $AutoRenewFlag Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
      */
     function __construct()
     {

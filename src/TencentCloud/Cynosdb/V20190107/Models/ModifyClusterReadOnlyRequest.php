@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getClusterIds() Obtain List of cluster IDs
  * @method void setClusterIds(array $ClusterIds) Set List of cluster IDs
- * @method string getReadOnlyOperation() Obtain Cluster read-only switch, valid values: ON, OFF.
- * @method void setReadOnlyOperation(string $ReadOnlyOperation) Set Cluster read-only switch, valid values: ON, OFF.
- * @method string getIsInMaintainPeriod() Obtain Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+ * @method string getReadOnlyOperation() Obtain Cluster read-only switch. Available values: ON, OFF
+ * @method void setReadOnlyOperation(string $ReadOnlyOperation) Set Cluster read-only switch. Available values: ON, OFF
+ * @method string getIsInMaintainPeriod() Obtain yes: Modify within the Ops time window. no: Immediately execute (default value)
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set yes: Modify within the Ops time window. no: Immediately execute (default value)
  */
 class ModifyClusterReadOnlyRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyClusterReadOnlyRequest extends AbstractModel
     public $ClusterIds;
 
     /**
-     * @var string Cluster read-only switch, valid values: ON, OFF.
+     * @var string Cluster read-only switch. Available values: ON, OFF
      */
     public $ReadOnlyOperation;
 
     /**
-     * @var string Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+     * @var string yes: Modify within the Ops time window. no: Immediately execute (default value)
      */
     public $IsInMaintainPeriod;
 
     /**
      * @param array $ClusterIds List of cluster IDs
-     * @param string $ReadOnlyOperation Cluster read-only switch, valid values: ON, OFF.
-     * @param string $IsInMaintainPeriod Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+     * @param string $ReadOnlyOperation Cluster read-only switch. Available values: ON, OFF
+     * @param string $IsInMaintainPeriod yes: Modify within the Ops time window. no: Immediately execute (default value)
      */
     function __construct()
     {

@@ -26,38 +26,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqueVpcId(string $UniqueVpcId) Set <p>VPC ID.</p>
  * @method string getUniqueSubnetId() Obtain <p>VPC subnet ID.</p>
  * @method void setUniqueSubnetId(string $UniqueSubnetId) Set <p>VPC subnet ID.</p>
- * @method string getConnectionPoolType() Obtain <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
- * @method string getOpenConnectionPool() Obtain <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
- * @method integer getConnectionPoolTimeOut() Obtain <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
+ * @method string getConnectionPoolType() Obtain <p>Connection pool type: SessionConnectionPool (session-level connection pool).</p>
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set <p>Connection pool type: SessionConnectionPool (session-level connection pool).</p>
+ * @method string getOpenConnectionPool() Obtain <p>Whether to enable the connection pool.<br>yes: enable.<br>no: disabled.</p>
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set <p>Whether to enable the connection pool.<br>yes: enable.<br>no: disabled.</p>
+ * @method integer getConnectionPoolTimeOut() Obtain <p>Connection pool threshold: unit (seconds), optional range: 0-300 seconds.</p>
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set <p>Connection pool threshold: unit (seconds), optional range: 0-300 seconds.</p>
  * @method array getSecurityGroupIds() Obtain <p>Bound security group ID array.</p>
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Bound security group ID array.</p>
  * @method string getDescription() Obtain <p>Description.</p>
  * @method void setDescription(string $Description) Set <p>Description.</p>
- * @method string getVip() Obtain <p>vip information that should be bound must correspond to UniqueVpcId.</p>
- * @method void setVip(string $Vip) Set <p>vip information that should be bound must correspond to UniqueVpcId.</p>
+ * @method string getVip() Obtain <p>vip information that should be bound, which must correspond to UniqueVpcId.</p>
+ * @method void setVip(string $Vip) Set <p>vip information that should be bound, which must correspond to UniqueVpcId.</p>
  * @method string getWeightMode() Obtain <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
  * @method void setWeightMode(string $WeightMode) Set <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
- * @method string getAutoAddRo() Obtain <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
- * @method void setAutoAddRo(string $AutoAddRo) Set <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
- * @method string getFailOver() Obtain <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
- * @method void setFailOver(string $FailOver) Set <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
- * @method string getConsistencyType() Obtain <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
- * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
- * @method string getRwType() Obtain <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
- * @method void setRwType(string $RwType) Set <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
- * @method integer getConsistencyTimeOut() Obtain <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
- * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) Set <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
- * @method boolean getTransSplit() Obtain <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
- * @method void setTransSplit(boolean $TransSplit) Set <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
- * @method string getAccessMode() Obtain <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
- * @method void setAccessMode(string $AccessMode) Set <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
+ * @method string getAutoAddRo() Obtain <p>Whether to automatically add a read-only instance.<br>yes: automatically add a read-only instance.<br>no: do not automatically add a read-only instance.</p>
+ * @method void setAutoAddRo(string $AutoAddRo) Set <p>Whether to automatically add a read-only instance.<br>yes: automatically add a read-only instance.<br>no: do not automatically add a read-only instance.</p>
+ * @method string getFailOver() Obtain <p>Whether to enable fault migration.<br>yes: enabled. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: disabled.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
+ * @method void setFailOver(string $FailOver) Set <p>Whether to enable fault migration.<br>yes: enabled. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: disabled.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
+ * @method string getConsistencyType() Obtain <p>Consistency type:<br>eventual: final consistency.<br>global: global consistency.<br>session: session consistency.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
+ * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency type:<br>eventual: final consistency.<br>global: global consistency.<br>session: session consistency.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
+ * @method string getRwType() Obtain <p>Read-write attribute:<br>READWRITE: read-write separation. Only when this parameter is set to READWRITE can you set the FailOver and ConsistencyType parameters.<br>READONLY: read-only.</p>
+ * @method void setRwType(string $RwType) Set <p>Read-write attribute:<br>READWRITE: read-write separation. Only when this parameter is set to READWRITE can you set the FailOver and ConsistencyType parameters.<br>READONLY: read-only.</p>
+ * @method integer getConsistencyTimeOut() Obtain <p>Consistency timeout. Value range: 0–1000000 (µs). When set to 0, if a read-only instance has latency causing the consistency policy to fail, the request will wait indefinitely.</p>
+ * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) Set <p>Consistency timeout. Value range: 0–1000000 (µs). When set to 0, if a read-only instance has latency causing the consistency policy to fail, the request will wait indefinitely.</p>
+ * @method boolean getTransSplit() Obtain <p>Whether to enable transaction splitting. Once enabled, reads and writes are split within a transaction and executed on different instances.</p>
+ * @method void setTransSplit(boolean $TransSplit) Set <p>Whether to enable transaction splitting. Once enabled, reads and writes are split within a transaction and executed on different instances.</p>
+ * @method string getAccessMode() Obtain <p>Access mode: <br>nearby: nearest access. <br>balance: balanced distribution.</p>
+ * @method void setAccessMode(string $AccessMode) Set <p>Access mode: <br>nearby: nearest access. <br>balance: balanced distribution.</p>
  * @method array getInstanceWeights() Obtain <p>Instance weight.</p>
  * @method void setInstanceWeights(array $InstanceWeights) Set <p>Instance weight.</p>
- * @method string getLoadBalanceMode() Obtain <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
- * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method string getLoadBalanceMode() Obtain <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method boolean getTransAllSplit() Obtain <p>Whether to enable full transactional sharding. In a transaction, split the reads before and after the transactional write to different instances for execution.</p>
+ * @method void setTransAllSplit(boolean $TransAllSplit) Set <p>Whether to enable full transactional sharding. In a transaction, split the reads before and after the transactional write to different instances for execution.</p>
  */
 class CreateProxyEndPointRequest extends AbstractModel
 {
@@ -77,17 +79,17 @@ class CreateProxyEndPointRequest extends AbstractModel
     public $UniqueSubnetId;
 
     /**
-     * @var string <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
+     * @var string <p>Connection pool type: SessionConnectionPool (session-level connection pool).</p>
      */
     public $ConnectionPoolType;
 
     /**
-     * @var string <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
+     * @var string <p>Whether to enable the connection pool.<br>yes: enable.<br>no: disabled.</p>
      */
     public $OpenConnectionPool;
 
     /**
-     * @var integer <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
+     * @var integer <p>Connection pool threshold: unit (seconds), optional range: 0-300 seconds.</p>
      */
     public $ConnectionPoolTimeOut;
 
@@ -102,7 +104,7 @@ class CreateProxyEndPointRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string <p>vip information that should be bound must correspond to UniqueVpcId.</p>
+     * @var string <p>vip information that should be bound, which must correspond to UniqueVpcId.</p>
      */
     public $Vip;
 
@@ -112,37 +114,37 @@ class CreateProxyEndPointRequest extends AbstractModel
     public $WeightMode;
 
     /**
-     * @var string <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
+     * @var string <p>Whether to automatically add a read-only instance.<br>yes: automatically add a read-only instance.<br>no: do not automatically add a read-only instance.</p>
      */
     public $AutoAddRo;
 
     /**
-     * @var string <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+     * @var string <p>Whether to enable fault migration.<br>yes: enabled. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: disabled.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
      */
     public $FailOver;
 
     /**
-     * @var string <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+     * @var string <p>Consistency type:<br>eventual: final consistency.<br>global: global consistency.<br>session: session consistency.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
      */
     public $ConsistencyType;
 
     /**
-     * @var string <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
+     * @var string <p>Read-write attribute:<br>READWRITE: read-write separation. Only when this parameter is set to READWRITE can you set the FailOver and ConsistencyType parameters.<br>READONLY: read-only.</p>
      */
     public $RwType;
 
     /**
-     * @var integer <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
+     * @var integer <p>Consistency timeout. Value range: 0–1000000 (µs). When set to 0, if a read-only instance has latency causing the consistency policy to fail, the request will wait indefinitely.</p>
      */
     public $ConsistencyTimeOut;
 
     /**
-     * @var boolean <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
+     * @var boolean <p>Whether to enable transaction splitting. Once enabled, reads and writes are split within a transaction and executed on different instances.</p>
      */
     public $TransSplit;
 
     /**
-     * @var string <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
+     * @var string <p>Access mode: <br>nearby: nearest access. <br>balance: balanced distribution.</p>
      */
     public $AccessMode;
 
@@ -152,30 +154,36 @@ class CreateProxyEndPointRequest extends AbstractModel
     public $InstanceWeights;
 
     /**
-     * @var string <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @var string <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public $LoadBalanceMode;
+
+    /**
+     * @var boolean <p>Whether to enable full transactional sharding. In a transaction, split the reads before and after the transactional write to different instances for execution.</p>
+     */
+    public $TransAllSplit;
 
     /**
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param string $UniqueVpcId <p>VPC ID.</p>
      * @param string $UniqueSubnetId <p>VPC subnet ID.</p>
-     * @param string $ConnectionPoolType <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
-     * @param string $OpenConnectionPool <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
-     * @param integer $ConnectionPoolTimeOut <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
+     * @param string $ConnectionPoolType <p>Connection pool type: SessionConnectionPool (session-level connection pool).</p>
+     * @param string $OpenConnectionPool <p>Whether to enable the connection pool.<br>yes: enable.<br>no: disabled.</p>
+     * @param integer $ConnectionPoolTimeOut <p>Connection pool threshold: unit (seconds), optional range: 0-300 seconds.</p>
      * @param array $SecurityGroupIds <p>Bound security group ID array.</p>
      * @param string $Description <p>Description.</p>
-     * @param string $Vip <p>vip information that should be bound must correspond to UniqueVpcId.</p>
+     * @param string $Vip <p>vip information that should be bound, which must correspond to UniqueVpcId.</p>
      * @param string $WeightMode <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
-     * @param string $AutoAddRo <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
-     * @param string $FailOver <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
-     * @param string $ConsistencyType <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
-     * @param string $RwType <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
-     * @param integer $ConsistencyTimeOut <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
-     * @param boolean $TransSplit <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
-     * @param string $AccessMode <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
+     * @param string $AutoAddRo <p>Whether to automatically add a read-only instance.<br>yes: automatically add a read-only instance.<br>no: do not automatically add a read-only instance.</p>
+     * @param string $FailOver <p>Whether to enable fault migration.<br>yes: enabled. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: disabled.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
+     * @param string $ConsistencyType <p>Consistency type:<br>eventual: final consistency.<br>global: global consistency.<br>session: session consistency.<br>Description:<br>This item can be set only when the RwType parameter value is READWRITE.</p>
+     * @param string $RwType <p>Read-write attribute:<br>READWRITE: read-write separation. Only when this parameter is set to READWRITE can you set the FailOver and ConsistencyType parameters.<br>READONLY: read-only.</p>
+     * @param integer $ConsistencyTimeOut <p>Consistency timeout. Value range: 0–1000000 (µs). When set to 0, if a read-only instance has latency causing the consistency policy to fail, the request will wait indefinitely.</p>
+     * @param boolean $TransSplit <p>Whether to enable transaction splitting. Once enabled, reads and writes are split within a transaction and executed on different instances.</p>
+     * @param string $AccessMode <p>Access mode: <br>nearby: nearest access. <br>balance: balanced distribution.</p>
      * @param array $InstanceWeights <p>Instance weight.</p>
-     * @param string $LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param string $LoadBalanceMode <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param boolean $TransAllSplit <p>Whether to enable full transactional sharding. In a transaction, split the reads before and after the transactional write to different instances for execution.</p>
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class CreateProxyEndPointRequest extends AbstractModel
 
         if (array_key_exists("LoadBalanceMode",$param) and $param["LoadBalanceMode"] !== null) {
             $this->LoadBalanceMode = $param["LoadBalanceMode"];
+        }
+
+        if (array_key_exists("TransAllSplit",$param) and $param["TransAllSplit"] !== null) {
+            $this->TransAllSplit = $param["TransAllSplit"];
         }
     }
 }

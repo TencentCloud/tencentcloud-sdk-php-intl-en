@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EdgeOne human-machine verification authenticates instance information.
  *
- * @method string getCaptchaMode() Obtain EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
- * @method void setCaptchaMode(string $CaptchaMode) Set EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+ * @method string getCaptchaMode() Obtain <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+ * @method void setCaptchaMode(string $CaptchaMode) Set <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+ * @method string getMobileCaptchaMode() Obtain <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+ * @method void setMobileCaptchaMode(string $MobileCaptchaMode) Set <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
  */
 class TCEOCaptchaOption extends AbstractModel
 {
     /**
-     * @var string EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+     * @var string <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
      */
     public $CaptchaMode;
 
     /**
-     * @param string $CaptchaMode EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+     * @var string <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+     */
+    public $MobileCaptchaMode;
+
+    /**
+     * @param string $CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+     * @param string $MobileCaptchaMode <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TCEOCaptchaOption extends AbstractModel
         }
         if (array_key_exists("CaptchaMode",$param) and $param["CaptchaMode"] !== null) {
             $this->CaptchaMode = $param["CaptchaMode"];
+        }
+
+        if (array_key_exists("MobileCaptchaMode",$param) and $param["MobileCaptchaMode"] !== null) {
+            $this->MobileCaptchaMode = $param["MobileCaptchaMode"];
         }
     }
 }

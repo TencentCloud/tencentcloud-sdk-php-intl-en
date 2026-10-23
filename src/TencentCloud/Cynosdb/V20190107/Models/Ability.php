@@ -18,42 +18,42 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Features supported by the cluster
+ * Functions supported by the cluster
  *
- * @method string getIsSupportSlaveZone() Obtain <p>Whether support from availability zone is supported</p>
- * @method void setIsSupportSlaveZone(string $IsSupportSlaveZone) Set <p>Whether support from availability zone is supported</p>
- * @method string getNonsupportSlaveZoneReason() Obtain <p>The causes for no support from availability zone</p>
- * @method void setNonsupportSlaveZoneReason(string $NonsupportSlaveZoneReason) Set <p>The causes for no support from availability zone</p>
+ * @method string getIsSupportSlaveZone() Obtain <p>Whether a secondary AZ is supported</p>
+ * @method void setIsSupportSlaveZone(string $IsSupportSlaveZone) Set <p>Whether a secondary AZ is supported</p>
+ * @method string getNonsupportSlaveZoneReason() Obtain <p>The causes for no support from the availability zone</p>
+ * @method void setNonsupportSlaveZoneReason(string $NonsupportSlaveZoneReason) Set <p>The causes for no support from the availability zone</p>
  * @method string getIsSupportRo() Obtain <p>Whether RO instance is supported</p>
  * @method void setIsSupportRo(string $IsSupportRo) Set <p>Whether RO instance is supported</p>
- * @method string getNonsupportRoReason() Obtain <p>Reason for unsupported RO instance</p>
- * @method void setNonsupportRoReason(string $NonsupportRoReason) Set <p>Reason for unsupported RO instance</p>
+ * @method string getNonsupportRoReason() Obtain <p>Reasons for no support for RO instances</p>
+ * @method void setNonsupportRoReason(string $NonsupportRoReason) Set <p>Reasons for no support for RO instances</p>
  * @method string getIsSupportManualSnapshot() Obtain <p>Whether manual snapshot backup initiation is supported</p>
  * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) Set <p>Whether manual snapshot backup initiation is supported</p>
- * @method string getIsSupportTransparentDataEncryption() Obtain <p>Whether transparent data encryption is supported</p>
- * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) Set <p>Whether transparent data encryption is supported</p>
- * @method string getNoSupportTransparentDataEncryptionReason() Obtain <p>The causes for unsupported transparent data encryption</p>
- * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) Set <p>The causes for unsupported transparent data encryption</p>
- * @method string getIsSupportManualLogic() Obtain <p>Whether manual initiation of logical backup is supported</p>
- * @method void setIsSupportManualLogic(string $IsSupportManualLogic) Set <p>Whether manual initiation of logical backup is supported</p>
+ * @method string getIsSupportTransparentDataEncryption() Obtain <p>Whether transparent data encryption is supported.</p>
+ * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) Set <p>Whether transparent data encryption is supported.</p>
+ * @method string getNoSupportTransparentDataEncryptionReason() Obtain <p>Reasons for no support for transparent data encryption</p>
+ * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) Set <p>Reasons for no support for transparent data encryption</p>
+ * @method string getIsSupportManualLogic() Obtain <p>Whether manual initiation of logical backup is supported.</p>
+ * @method void setIsSupportManualLogic(string $IsSupportManualLogic) Set <p>Whether manual initiation of logical backup is supported.</p>
  * @method string getIsSupportGlobalEncryption() Obtain <p>Whether global encryption can be enabled</p>
  * @method void setIsSupportGlobalEncryption(string $IsSupportGlobalEncryption) Set <p>Whether global encryption can be enabled</p>
- * @method string getNoSupportGlobalEncryptionReason() Obtain <p>The causes for unsupported global encryption</p>
- * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) Set <p>The causes for unsupported global encryption</p>
- * @method string getNoSupportTransparentDataEncryptionReasonCode() Obtain <p>Status code for unsupported transparent encryption reason</p>
- * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) Set <p>Status code for unsupported transparent encryption reason</p>
- * @method string getNoSupportGlobalEncryptionReasonCode() Obtain <p>Status code for unsupported global encryption reason</p>
- * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) Set <p>Status code for unsupported global encryption reason</p>
+ * @method string getNoSupportGlobalEncryptionReason() Obtain <p>The causes for no support for global encryption</p>
+ * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) Set <p>The causes for no support for global encryption</p>
+ * @method string getNoSupportTransparentDataEncryptionReasonCode() Obtain <p>Status code for reasons of no support for transparent encryption</p>
+ * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) Set <p>Status code for reasons of no support for transparent encryption</p>
+ * @method string getNoSupportGlobalEncryptionReasonCode() Obtain <p>Status code for the reason why global encryption is not supported</p>
+ * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) Set <p>Status code for the reason why global encryption is not supported</p>
  */
 class Ability extends AbstractModel
 {
     /**
-     * @var string <p>Whether support from availability zone is supported</p>
+     * @var string <p>Whether a secondary AZ is supported</p>
      */
     public $IsSupportSlaveZone;
 
     /**
-     * @var string <p>The causes for no support from availability zone</p>
+     * @var string <p>The causes for no support from the availability zone</p>
      */
     public $NonsupportSlaveZoneReason;
 
@@ -63,7 +63,7 @@ class Ability extends AbstractModel
     public $IsSupportRo;
 
     /**
-     * @var string <p>Reason for unsupported RO instance</p>
+     * @var string <p>Reasons for no support for RO instances</p>
      */
     public $NonsupportRoReason;
 
@@ -73,17 +73,17 @@ class Ability extends AbstractModel
     public $IsSupportManualSnapshot;
 
     /**
-     * @var string <p>Whether transparent data encryption is supported</p>
+     * @var string <p>Whether transparent data encryption is supported.</p>
      */
     public $IsSupportTransparentDataEncryption;
 
     /**
-     * @var string <p>The causes for unsupported transparent data encryption</p>
+     * @var string <p>Reasons for no support for transparent data encryption</p>
      */
     public $NoSupportTransparentDataEncryptionReason;
 
     /**
-     * @var string <p>Whether manual initiation of logical backup is supported</p>
+     * @var string <p>Whether manual initiation of logical backup is supported.</p>
      */
     public $IsSupportManualLogic;
 
@@ -93,33 +93,33 @@ class Ability extends AbstractModel
     public $IsSupportGlobalEncryption;
 
     /**
-     * @var string <p>The causes for unsupported global encryption</p>
+     * @var string <p>The causes for no support for global encryption</p>
      */
     public $NoSupportGlobalEncryptionReason;
 
     /**
-     * @var string <p>Status code for unsupported transparent encryption reason</p>
+     * @var string <p>Status code for reasons of no support for transparent encryption</p>
      */
     public $NoSupportTransparentDataEncryptionReasonCode;
 
     /**
-     * @var string <p>Status code for unsupported global encryption reason</p>
+     * @var string <p>Status code for the reason why global encryption is not supported</p>
      */
     public $NoSupportGlobalEncryptionReasonCode;
 
     /**
-     * @param string $IsSupportSlaveZone <p>Whether support from availability zone is supported</p>
-     * @param string $NonsupportSlaveZoneReason <p>The causes for no support from availability zone</p>
+     * @param string $IsSupportSlaveZone <p>Whether a secondary AZ is supported</p>
+     * @param string $NonsupportSlaveZoneReason <p>The causes for no support from the availability zone</p>
      * @param string $IsSupportRo <p>Whether RO instance is supported</p>
-     * @param string $NonsupportRoReason <p>Reason for unsupported RO instance</p>
+     * @param string $NonsupportRoReason <p>Reasons for no support for RO instances</p>
      * @param string $IsSupportManualSnapshot <p>Whether manual snapshot backup initiation is supported</p>
-     * @param string $IsSupportTransparentDataEncryption <p>Whether transparent data encryption is supported</p>
-     * @param string $NoSupportTransparentDataEncryptionReason <p>The causes for unsupported transparent data encryption</p>
-     * @param string $IsSupportManualLogic <p>Whether manual initiation of logical backup is supported</p>
+     * @param string $IsSupportTransparentDataEncryption <p>Whether transparent data encryption is supported.</p>
+     * @param string $NoSupportTransparentDataEncryptionReason <p>Reasons for no support for transparent data encryption</p>
+     * @param string $IsSupportManualLogic <p>Whether manual initiation of logical backup is supported.</p>
      * @param string $IsSupportGlobalEncryption <p>Whether global encryption can be enabled</p>
-     * @param string $NoSupportGlobalEncryptionReason <p>The causes for unsupported global encryption</p>
-     * @param string $NoSupportTransparentDataEncryptionReasonCode <p>Status code for unsupported transparent encryption reason</p>
-     * @param string $NoSupportGlobalEncryptionReasonCode <p>Status code for unsupported global encryption reason</p>
+     * @param string $NoSupportGlobalEncryptionReason <p>The causes for no support for global encryption</p>
+     * @param string $NoSupportTransparentDataEncryptionReasonCode <p>Status code for reasons of no support for transparent encryption</p>
+     * @param string $NoSupportGlobalEncryptionReasonCode <p>Status code for the reason why global encryption is not supported</p>
      */
     function __construct()
     {

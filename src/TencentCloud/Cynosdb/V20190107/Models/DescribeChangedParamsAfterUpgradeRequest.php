@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChangedParamsAfterUpgrade request structure.
  *
- * @method string getInstanceId() Obtain Cluster ID.
- * @method void setInstanceId(string $InstanceId) Set Cluster ID.
- * @method integer getDstCpu() Obtain CPU after specification adjustment.
- * @method void setDstCpu(integer $DstCpu) Set CPU after specification adjustment.
- * @method integer getDstMem() Obtain Memory after specification adjustment, in GB.
- * @method void setDstMem(integer $DstMem) Set Memory after specification adjustment, in GB.
+ * @method string getInstanceId() Obtain Cluster ID
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID
+ * @method integer getDstCpu() Obtain CPU after configuration change
+ * @method void setDstCpu(integer $DstCpu) Set CPU after configuration change
+ * @method integer getDstMem() Obtain MEM after specification modification, in GB
+ * @method void setDstMem(integer $DstMem) Set MEM after specification modification, in GB
  */
 class DescribeChangedParamsAfterUpgradeRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID.
+     * @var string Cluster ID
      */
     public $InstanceId;
 
     /**
-     * @var integer CPU after specification adjustment.
+     * @var integer CPU after configuration change
      */
     public $DstCpu;
 
     /**
-     * @var integer Memory after specification adjustment, in GB.
+     * @var integer MEM after specification modification, in GB
      */
     public $DstMem;
 
     /**
-     * @param string $InstanceId Cluster ID.
-     * @param integer $DstCpu CPU after specification adjustment.
-     * @param integer $DstMem Memory after specification adjustment, in GB.
+     * @param string $InstanceId Cluster ID
+     * @param integer $DstCpu CPU after configuration change
+     * @param integer $DstMem MEM after specification modification, in GB
      */
     function __construct()
     {

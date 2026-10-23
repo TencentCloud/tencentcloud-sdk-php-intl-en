@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Query filter. Filter criteria for the DescribeClusterAndInstances API.
  *
- * @method array getValues() Obtain Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
- * @method void setValues(array $Values) Set Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
- * @method array getNames() Obtain Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
- * @method void setNames(array $Names) Set Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
- * @method boolean getExactMatch() Obtain Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
- * @method void setExactMatch(boolean $ExactMatch) Set Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
- * @method string getName() Obtain Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
- * @method void setName(string $Name) Set Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+ * @method array getValues() Obtain Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
+ * @method void setValues(array $Values) Set Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
+ * @method array getNames() Obtain List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
+ * @method void setNames(array $Names) Set List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
+ * @method boolean getExactMatch() Obtain Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
+ * @method void setExactMatch(boolean $ExactMatch) Set Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
+ * @method string getName() Obtain Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
+ * @method void setName(string $Name) Set Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
  * @method string getOperator() Obtain Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
  * @method void setOperator(string $Operator) Set Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
  */
 class QueryFilter extends AbstractModel
 {
     /**
-     * @var array Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+     * @var array Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
      */
     public $Values;
 
     /**
-     * @var array Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+     * @var array List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
      */
     public $Names;
 
     /**
-     * @var boolean Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+     * @var boolean Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
      */
     public $ExactMatch;
 
     /**
-     * @var string Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+     * @var string Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
      */
     public $Name;
 
@@ -60,10 +60,10 @@ class QueryFilter extends AbstractModel
     public $Operator;
 
     /**
-     * @param array $Values Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
-     * @param array $Names Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
-     * @param boolean $ExactMatch Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
-     * @param string $Name Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+     * @param array $Values Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
+     * @param array $Names List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
+     * @param boolean $ExactMatch Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
+     * @param string $Name Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
      * @param string $Operator Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
      */
     function __construct()

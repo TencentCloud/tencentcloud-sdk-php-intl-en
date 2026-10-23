@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourcePackageName request structure.
  *
- * @method string getPackageId() Obtain The unique ID of a resource pack
- * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack
- * @method string getPackageName() Obtain Custom resource pack name, which can contains up to 120 characters.
- * @method void setPackageName(string $PackageName) Set Custom resource pack name, which can contains up to 120 characters.
+ * @method string getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(string $PackageId) Set Unique ID of the resource package
+ * @method string getPackageName() Obtain Custom resource package name, supporting up to 120 characters.
+ * @method void setPackageName(string $PackageName) Set Custom resource package name, supporting up to 120 characters.
  */
 class ModifyResourcePackageNameRequest extends AbstractModel
 {
     /**
-     * @var string The unique ID of a resource pack
+     * @var string Unique ID of the resource package
      */
     public $PackageId;
 
     /**
-     * @var string Custom resource pack name, which can contains up to 120 characters.
+     * @var string Custom resource package name, supporting up to 120 characters.
      */
     public $PackageName;
 
     /**
-     * @param string $PackageId The unique ID of a resource pack
-     * @param string $PackageName Custom resource pack name, which can contains up to 120 characters.
+     * @param string $PackageId Unique ID of the resource package
+     * @param string $PackageName Custom resource package name, supporting up to 120 characters.
      */
     function __construct()
     {

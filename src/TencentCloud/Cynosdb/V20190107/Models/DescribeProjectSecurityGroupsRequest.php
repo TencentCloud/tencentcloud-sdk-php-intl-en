@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectSecurityGroups request structure.
  *
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getLimit() Obtain Maximum entries returned per page
- * @method void setLimit(integer $Limit) Set Maximum entries returned per page
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method string getSearchKey() Obtain Search by keyword
- * @method void setSearchKey(string $SearchKey) Set Search by keyword
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method integer getLimit() Obtain Limit amount
+ * @method void setLimit(integer $Limit) Set Limit amount
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method string getSearchKey() Obtain Search Keywords
+ * @method void setSearchKey(string $SearchKey) Set Search Keywords
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectId;
 
     /**
-     * @var integer Maximum entries returned per page
+     * @var integer Limit amount
      */
     public $Limit;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var string Search by keyword
+     * @var string Search Keywords
      */
     public $SearchKey;
 
     /**
-     * @param integer $ProjectId Project ID
-     * @param integer $Limit Maximum entries returned per page
-     * @param integer $Offset Offset
-     * @param string $SearchKey Search by keyword
+     * @param integer $ProjectId Project ID.
+     * @param integer $Limit Limit amount
+     * @param integer $Offset Offset.
+     * @param string $SearchKey Search Keywords
      */
     function __construct()
     {

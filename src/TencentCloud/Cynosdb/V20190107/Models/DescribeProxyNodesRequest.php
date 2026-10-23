@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxyNodes request structure.
  *
- * @method integer getLimit() Obtain Number of returned results. Default value: `20`. Maximum value: `100`,
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: `20`. Maximum value: `100`,
- * @method integer getOffset() Obtain Record offset. Default value: `0`.
- * @method void setOffset(integer $Offset) Set Record offset. Default value: `0`.
+ * @method integer getLimit() Obtain Returned quantity. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Returned quantity. Default value: 20. Maximum value: 100.
+ * @method integer getOffset() Obtain Record offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Record offset. Default value: 0.
  * @method string getOrderBy() Obtain Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
  * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
- * @method string getOrderByType() Obtain Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
- * @method array getFilters() Obtain Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
- * @method void setFilters(array $Filters) Set Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+ * @method string getOrderByType() Obtain Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
+ * @method void setOrderByType(string $OrderByType) Set Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
+ * @method array getFilters() Obtain Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+ * @method void setFilters(array $Filters) Set Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
  */
 class DescribeProxyNodesRequest extends AbstractModel
 {
     /**
-     * @var integer Number of returned results. Default value: `20`. Maximum value: `100`,
+     * @var integer Returned quantity. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Record offset. Default value: `0`.
+     * @var integer Record offset. Default value: 0.
      */
     public $Offset;
 
     /**
      * @var string Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+     * @var string Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
      */
     public $OrderByType;
 
     /**
-     * @var array Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+     * @var array Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     public $Filters;
 
     /**
-     * @param integer $Limit Number of returned results. Default value: `20`. Maximum value: `100`,
-     * @param integer $Offset Record offset. Default value: `0`.
+     * @param integer $Limit Returned quantity. Default value: 20. Maximum value: 100.
+     * @param integer $Offset Record offset. Default value: 0.
      * @param string $OrderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
-     * @param string $OrderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
-     * @param array $Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+     * @param string $OrderByType Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
+     * @param array $Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     function __construct()
     {

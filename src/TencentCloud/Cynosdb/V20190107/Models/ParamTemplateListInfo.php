@@ -18,25 +18,25 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter template information
+ * Parameter template information.
  *
- * @method integer getId() Obtain Parameter template ID
- * @method void setId(integer $Id) Set Parameter template ID
+ * @method integer getId() Obtain Parameter template ID.
+ * @method void setId(integer $Id) Set Parameter template ID.
  * @method string getTemplateName() Obtain Parameter template name
  * @method void setTemplateName(string $TemplateName) Set Parameter template name
  * @method string getTemplateDescription() Obtain Parameter template description
  * @method void setTemplateDescription(string $TemplateDescription) Set Parameter template description
  * @method string getEngineVersion() Obtain Engine version
  * @method void setEngineVersion(string $EngineVersion) Set Engine version
- * @method string getDbMode() Obtain Database Type. Valid values: `NORMAL`, `SERVERLESS`.
- * @method void setDbMode(string $DbMode) Set Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+ * @method string getDbMode() Obtain Database type. Available values: NORMAL, SERVERLESS
+ * @method void setDbMode(string $DbMode) Set Database type. Available values: NORMAL, SERVERLESS
  * @method array getParamInfoSet() Obtain Parameter template details
  * @method void setParamInfoSet(array $ParamInfoSet) Set Parameter template details
  */
 class ParamTemplateListInfo extends AbstractModel
 {
     /**
-     * @var integer Parameter template ID
+     * @var integer Parameter template ID.
      */
     public $Id;
 
@@ -56,7 +56,7 @@ class ParamTemplateListInfo extends AbstractModel
     public $EngineVersion;
 
     /**
-     * @var string Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * @var string Database type. Available values: NORMAL, SERVERLESS
      */
     public $DbMode;
 
@@ -66,11 +66,11 @@ class ParamTemplateListInfo extends AbstractModel
     public $ParamInfoSet;
 
     /**
-     * @param integer $Id Parameter template ID
+     * @param integer $Id Parameter template ID.
      * @param string $TemplateName Parameter template name
      * @param string $TemplateDescription Parameter template description
      * @param string $EngineVersion Engine version
-     * @param string $DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * @param string $DbMode Database type. Available values: NORMAL, SERVERLESS
      * @param array $ParamInfoSet Parameter template details
      */
     function __construct()

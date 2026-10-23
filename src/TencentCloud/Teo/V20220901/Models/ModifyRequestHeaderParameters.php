@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Modify HTTP request header configuration parameters.
  *
- * @method array getHeaderActions() Obtain List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setHeaderActions(array $HeaderActions) Set List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method array getHeaderActions() Obtain HTTP header setting rule list.
+ * @method void setHeaderActions(array $HeaderActions) Set HTTP header setting rule list.
  */
 class ModifyRequestHeaderParameters extends AbstractModel
 {
     /**
-     * @var array List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var array HTTP header setting rule list.
      */
     public $HeaderActions;
 
     /**
-     * @param array $HeaderActions List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param array $HeaderActions HTTP header setting rule list.
      */
     function __construct()
     {

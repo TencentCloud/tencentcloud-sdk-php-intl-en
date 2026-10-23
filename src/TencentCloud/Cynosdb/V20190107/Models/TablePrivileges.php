@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MySQL table permission
+ * mysql table permission
  *
  * @method string getDb() Obtain Database name
  * @method void setDb(string $Db) Set Database name

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance details
  *
- * @method string getUin() Obtain <p>User Uin</p>
- * @method void setUin(string $Uin) Set <p>User Uin</p>
+ * @method string getUin() Obtain <p>User Uin.</p>
+ * @method void setUin(string $Uin) Set <p>User Uin.</p>
  * @method integer getAppId() Obtain <p>User AppId</p>
  * @method void setAppId(integer $AppId) Set <p>User AppId</p>
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
@@ -30,44 +30,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
  * @method string getInstanceId() Obtain <p>Instance ID.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
- * @method string getInstanceName() Obtain <p>Instance name</p>
- * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
  * @method integer getProjectId() Obtain <p>Project ID</p>
  * @method void setProjectId(integer $ProjectId) Set <p>Project ID</p>
- * @method string getRegion() Obtain <p>Region</p>
- * @method void setRegion(string $Region) Set <p>Region</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
  * @method string getZone() Obtain <p>AZ.</p>
  * @method void setZone(string $Zone) Set <p>AZ.</p>
- * @method string getStatus() Obtain <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
- * @method void setStatus(string $Status) Set <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
- * @method string getStatusDesc() Obtain <p>Status description in Chinese of the instance</p>
- * @method void setStatusDesc(string $StatusDesc) Set <p>Status description in Chinese of the instance</p>
- * @method string getServerlessStatus() Obtain <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
- * @method void setServerlessStatus(string $ServerlessStatus) Set <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
- * @method string getDbType() Obtain <p>Database type.</p>
- * @method void setDbType(string $DbType) Set <p>Database type.</p>
- * @method string getDbVersion() Obtain <p>Database version</p>
- * @method void setDbVersion(string $DbVersion) Set <p>Database version</p>
+ * @method string getStatus() Obtain <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
+ * @method void setStatus(string $Status) Set <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
+ * @method string getStatusDesc() Obtain <p>Status description in Chinese of the instance.</p>
+ * @method void setStatusDesc(string $StatusDesc) Set <p>Status description in Chinese of the instance.</p>
+ * @method string getServerlessStatus() Obtain <p>serverless instance status. Possible values: <br>resume<br>pause</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) Set <p>serverless instance status. Possible values: <br>resume<br>pause</p>
+ * @method string getDbType() Obtain <p>Database type</p>
+ * @method void setDbType(string $DbType) Set <p>Database type</p>
+ * @method string getDbVersion() Obtain <p>Database version.</p>
+ * @method void setDbVersion(string $DbVersion) Set <p>Database version.</p>
  * @method integer getCpu() Obtain <p>Cpu, unit: cores</p>
  * @method void setCpu(integer $Cpu) Set <p>Cpu, unit: cores</p>
- * @method integer getMemory() Obtain <p>Memory, unit: GB</p>
- * @method void setMemory(integer $Memory) Set <p>Memory, unit: GB</p>
+ * @method integer getMemory() Obtain <p>Memory in GB</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory in GB</p>
  * @method integer getStorage() Obtain <p>Stored amount, unit: GB</p>
  * @method void setStorage(integer $Storage) Set <p>Stored amount, unit: GB</p>
  * @method string getInstanceType() Obtain <p>Instance type</p>
  * @method void setInstanceType(string $InstanceType) Set <p>Instance type</p>
- * @method string getInstanceRole() Obtain <p>Current instance role</p>
- * @method void setInstanceRole(string $InstanceRole) Set <p>Current instance role</p>
+ * @method string getInstanceRole() Obtain <p>Current role of the instance</p>
+ * @method void setInstanceRole(string $InstanceRole) Set <p>Current role of the instance</p>
  * @method string getUpdateTime() Obtain <p>Update time.</p>
  * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
  * @method string getCreateTime() Obtain <p>Creation time.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
- * @method integer getPayMode() Obtain <p>Payment mode</p>
- * @method void setPayMode(integer $PayMode) Set <p>Payment mode</p>
+ * @method integer getPayMode() Obtain <p>Payment mode.</p>
+ * @method void setPayMode(integer $PayMode) Set <p>Payment mode.</p>
  * @method string getPeriodEndTime() Obtain <p>Instance expiration time</p>
  * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>Instance expiration time</p>
- * @method integer getNetType() Obtain <p>Network type.</p>
- * @method void setNetType(integer $NetType) Set <p>Network type.</p>
+ * @method integer getNetType() Obtain <p>Network type</p>
+ * @method void setNetType(integer $NetType) Set <p>Network type</p>
  * @method string getVpcId() Obtain <p>VPC network ID</p>
  * @method void setVpcId(string $VpcId) Set <p>VPC network ID</p>
  * @method string getSubnetId() Obtain <p>Subnet ID.</p>
@@ -76,22 +76,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set <p>Instance private IP address</p>
  * @method integer getVport() Obtain <p>Instance Intranet Port</p>
  * @method void setVport(integer $Vport) Set <p>Instance Intranet Port</p>
- * @method string getWanDomain() Obtain <p>Instance public network domain name</p>
- * @method void setWanDomain(string $WanDomain) Set <p>Instance public network domain name</p>
- * @method string getCharset() Obtain <p>Character set</p>
- * @method void setCharset(string $Charset) Set <p>Character set</p>
+ * @method string getWanDomain() Obtain <p>Instance public network domain</p>
+ * @method void setWanDomain(string $WanDomain) Set <p>Instance public network domain</p>
+ * @method string getCharset() Obtain <p>Character set.</p>
+ * @method void setCharset(string $Charset) Set <p>Character set.</p>
  * @method string getCynosVersion() Obtain <p>Cynos kernel version</p>
  * @method void setCynosVersion(string $CynosVersion) Set <p>Cynos kernel version</p>
- * @method integer getRenewFlag() Obtain <p>Renewal flag</p>
- * @method void setRenewFlag(integer $RenewFlag) Set <p>Renewal flag</p>
- * @method float getMinCpu() Obtain <p>serverless instance cpu minimum</p>
- * @method void setMinCpu(float $MinCpu) Set <p>serverless instance cpu minimum</p>
- * @method float getMaxCpu() Obtain <p>cpu cap of the serverless instance</p>
- * @method void setMaxCpu(float $MaxCpu) Set <p>cpu cap of the serverless instance</p>
+ * @method integer getRenewFlag() Obtain <p>Renewal flag.</p>
+ * @method void setRenewFlag(integer $RenewFlag) Set <p>Renewal flag.</p>
+ * @method float getMinCpu() Obtain <p>serverless instance cpu lower limit</p>
+ * @method void setMinCpu(float $MinCpu) Set <p>serverless instance cpu lower limit</p>
+ * @method float getMaxCpu() Obtain <p>cpu upper limit of a serverless instance</p>
+ * @method void setMaxCpu(float $MaxCpu) Set <p>cpu upper limit of a serverless instance</p>
  * @method string getDbMode() Obtain <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
  * @method void setDbMode(string $DbMode) Set <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
- * @method string getMasterZone() Obtain <p>Cluster read/write instance Availability Zone</p>
- * @method void setMasterZone(string $MasterZone) Set <p>Cluster read/write instance Availability Zone</p>
+ * @method string getMasterZone() Obtain <p>Availability Zone of the Cluster's Read/Write Instance</p>
+ * @method void setMasterZone(string $MasterZone) Set <p>Availability Zone of the Cluster's Read/Write Instance</p>
  * @method string getRealZone() Obtain <p>Actual availability zone of the instance</p>
  * @method void setRealZone(string $RealZone) Set <p>Actual availability zone of the instance</p>
  * @method array getSlaveZones() Obtain <p>List of standby availability zones</p>
@@ -102,7 +102,7 @@ use TencentCloud\Common\AbstractModel;
 class CynosdbInstanceDetail extends AbstractModel
 {
     /**
-     * @var string <p>User Uin</p>
+     * @var string <p>User Uin.</p>
      */
     public $Uin;
 
@@ -127,7 +127,7 @@ class CynosdbInstanceDetail extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string <p>Instance name</p>
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
@@ -137,7 +137,7 @@ class CynosdbInstanceDetail extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string <p>Region</p>
+     * @var string <p>Region.</p>
      */
     public $Region;
 
@@ -147,27 +147,27 @@ class CynosdbInstanceDetail extends AbstractModel
     public $Zone;
 
     /**
-     * @var string <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
+     * @var string <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
      */
     public $Status;
 
     /**
-     * @var string <p>Status description in Chinese of the instance</p>
+     * @var string <p>Status description in Chinese of the instance.</p>
      */
     public $StatusDesc;
 
     /**
-     * @var string <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
+     * @var string <p>serverless instance status. Possible values: <br>resume<br>pause</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var string <p>Database type.</p>
+     * @var string <p>Database type</p>
      */
     public $DbType;
 
     /**
-     * @var string <p>Database version</p>
+     * @var string <p>Database version.</p>
      */
     public $DbVersion;
 
@@ -177,7 +177,7 @@ class CynosdbInstanceDetail extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer <p>Memory, unit: GB</p>
+     * @var integer <p>Memory in GB</p>
      */
     public $Memory;
 
@@ -192,7 +192,7 @@ class CynosdbInstanceDetail extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string <p>Current instance role</p>
+     * @var string <p>Current role of the instance</p>
      */
     public $InstanceRole;
 
@@ -207,7 +207,7 @@ class CynosdbInstanceDetail extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer <p>Payment mode</p>
+     * @var integer <p>Payment mode.</p>
      */
     public $PayMode;
 
@@ -217,7 +217,7 @@ class CynosdbInstanceDetail extends AbstractModel
     public $PeriodEndTime;
 
     /**
-     * @var integer <p>Network type.</p>
+     * @var integer <p>Network type</p>
      */
     public $NetType;
 
@@ -242,12 +242,12 @@ class CynosdbInstanceDetail extends AbstractModel
     public $Vport;
 
     /**
-     * @var string <p>Instance public network domain name</p>
+     * @var string <p>Instance public network domain</p>
      */
     public $WanDomain;
 
     /**
-     * @var string <p>Character set</p>
+     * @var string <p>Character set.</p>
      */
     public $Charset;
 
@@ -257,17 +257,17 @@ class CynosdbInstanceDetail extends AbstractModel
     public $CynosVersion;
 
     /**
-     * @var integer <p>Renewal flag</p>
+     * @var integer <p>Renewal flag.</p>
      */
     public $RenewFlag;
 
     /**
-     * @var float <p>serverless instance cpu minimum</p>
+     * @var float <p>serverless instance cpu lower limit</p>
      */
     public $MinCpu;
 
     /**
-     * @var float <p>cpu cap of the serverless instance</p>
+     * @var float <p>cpu upper limit of a serverless instance</p>
      */
     public $MaxCpu;
 
@@ -277,7 +277,7 @@ class CynosdbInstanceDetail extends AbstractModel
     public $DbMode;
 
     /**
-     * @var string <p>Cluster read/write instance Availability Zone</p>
+     * @var string <p>Availability Zone of the Cluster's Read/Write Instance</p>
      */
     public $MasterZone;
 
@@ -297,42 +297,42 @@ class CynosdbInstanceDetail extends AbstractModel
     public $StorageVersion;
 
     /**
-     * @param string $Uin <p>User Uin</p>
+     * @param string $Uin <p>User Uin.</p>
      * @param integer $AppId <p>User AppId</p>
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param string $ClusterName <p>Cluster name.</p>
      * @param string $InstanceId <p>Instance ID.</p>
-     * @param string $InstanceName <p>Instance name</p>
+     * @param string $InstanceName <p>Instance name.</p>
      * @param integer $ProjectId <p>Project ID</p>
-     * @param string $Region <p>Region</p>
+     * @param string $Region <p>Region.</p>
      * @param string $Zone <p>AZ.</p>
-     * @param string $Status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
-     * @param string $StatusDesc <p>Status description in Chinese of the instance</p>
-     * @param string $ServerlessStatus <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
-     * @param string $DbType <p>Database type.</p>
-     * @param string $DbVersion <p>Database version</p>
+     * @param string $Status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
+     * @param string $StatusDesc <p>Status description in Chinese of the instance.</p>
+     * @param string $ServerlessStatus <p>serverless instance status. Possible values: <br>resume<br>pause</p>
+     * @param string $DbType <p>Database type</p>
+     * @param string $DbVersion <p>Database version.</p>
      * @param integer $Cpu <p>Cpu, unit: cores</p>
-     * @param integer $Memory <p>Memory, unit: GB</p>
+     * @param integer $Memory <p>Memory in GB</p>
      * @param integer $Storage <p>Stored amount, unit: GB</p>
      * @param string $InstanceType <p>Instance type</p>
-     * @param string $InstanceRole <p>Current instance role</p>
+     * @param string $InstanceRole <p>Current role of the instance</p>
      * @param string $UpdateTime <p>Update time.</p>
      * @param string $CreateTime <p>Creation time.</p>
-     * @param integer $PayMode <p>Payment mode</p>
+     * @param integer $PayMode <p>Payment mode.</p>
      * @param string $PeriodEndTime <p>Instance expiration time</p>
-     * @param integer $NetType <p>Network type.</p>
+     * @param integer $NetType <p>Network type</p>
      * @param string $VpcId <p>VPC network ID</p>
      * @param string $SubnetId <p>Subnet ID.</p>
      * @param string $Vip <p>Instance private IP address</p>
      * @param integer $Vport <p>Instance Intranet Port</p>
-     * @param string $WanDomain <p>Instance public network domain name</p>
-     * @param string $Charset <p>Character set</p>
+     * @param string $WanDomain <p>Instance public network domain</p>
+     * @param string $Charset <p>Character set.</p>
      * @param string $CynosVersion <p>Cynos kernel version</p>
-     * @param integer $RenewFlag <p>Renewal flag</p>
-     * @param float $MinCpu <p>serverless instance cpu minimum</p>
-     * @param float $MaxCpu <p>cpu cap of the serverless instance</p>
+     * @param integer $RenewFlag <p>Renewal flag.</p>
+     * @param float $MinCpu <p>serverless instance cpu lower limit</p>
+     * @param float $MaxCpu <p>cpu upper limit of a serverless instance</p>
      * @param string $DbMode <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
-     * @param string $MasterZone <p>Cluster read/write instance Availability Zone</p>
+     * @param string $MasterZone <p>Availability Zone of the Cluster's Read/Write Instance</p>
      * @param string $RealZone <p>Actual availability zone of the instance</p>
      * @param array $SlaveZones <p>List of standby availability zones</p>
      * @param string $StorageVersion <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>

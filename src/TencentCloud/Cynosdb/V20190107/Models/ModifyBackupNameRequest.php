@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getBackupId() Obtain Backup file ID
  * @method void setBackupId(integer $BackupId) Set Backup file ID
- * @method string getBackupName() Obtain Backup name, which can contain up to 60 characters.
- * @method void setBackupName(string $BackupName) Set Backup name, which can contain up to 60 characters.
+ * @method string getBackupName() Obtain Alias name, which cannot exceed 60 characters.
+ * @method void setBackupName(string $BackupName) Set Alias name, which cannot exceed 60 characters.
  */
 class ModifyBackupNameRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyBackupNameRequest extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string Backup name, which can contain up to 60 characters.
+     * @var string Alias name, which cannot exceed 60 characters.
      */
     public $BackupName;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param integer $BackupId Backup file ID
-     * @param string $BackupName Backup name, which can contain up to 60 characters.
+     * @param string $BackupName Alias name, which cannot exceed 60 characters.
      */
     function __construct()
     {

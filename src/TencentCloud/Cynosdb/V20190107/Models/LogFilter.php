@@ -18,14 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Log filter criteria
+ * Log filter criteria.
  *
  * @method string getType() Obtain Filter items.
  * @method void setType(string $Type) Set Filter items.
- * @method string getCompare() Obtain Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
- * @method void setCompare(string $Compare) Set Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
- * @method array getValue() Obtain Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
- * @method void setValue(array $Value) Set Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+ * @method string getCompare() Obtain Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
+ * @method void setCompare(string $Compare) Set Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
+ * @method array getValue() Obtain Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
+ * @method void setValue(array $Value) Set Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
  */
 class LogFilter extends AbstractModel
 {
@@ -35,19 +35,19 @@ class LogFilter extends AbstractModel
     public $Type;
 
     /**
-     * @var string Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+     * @var string Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
      */
     public $Compare;
 
     /**
-     * @var array Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+     * @var array Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
      */
     public $Value;
 
     /**
      * @param string $Type Filter items.
-     * @param string $Compare Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
-     * @param array $Value Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+     * @param string $Compare Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
+     * @param array $Value Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
      */
     function __construct()
     {

@@ -18,20 +18,20 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sync object details
+ * Details of sync objects
  *
- * @method MigrateObject getDatabaseTables() Obtain Database table information
- * @method void setDatabaseTables(MigrateObject $DatabaseTables) Set Database table information
+ * @method MigrateObject getDatabaseTables() Obtain Contains database table information
+ * @method void setDatabaseTables(MigrateObject $DatabaseTables) Set Contains database table information
  */
 class MigrateOpt extends AbstractModel
 {
     /**
-     * @var MigrateObject Database table information
+     * @var MigrateObject Contains database table information
      */
     public $DatabaseTables;
 
     /**
-     * @param MigrateObject $DatabaseTables Database table information
+     * @param MigrateObject $DatabaseTables Contains database table information
      */
     function __construct()
     {

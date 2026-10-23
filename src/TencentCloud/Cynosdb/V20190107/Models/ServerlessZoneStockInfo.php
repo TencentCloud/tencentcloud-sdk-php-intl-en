@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * serverless type availability zone inventory information.
+ * Inventory information of availability zones for serverless type
  *
  * @method string getZone() Obtain Availability zone
  * @method void setZone(string $Zone) Set Availability zone
- * @method integer getStockCount() Obtain Specifies the stored amount.
- * @method void setStockCount(integer $StockCount) Set Specifies the stored amount.
- * @method boolean getHasStock() Obtain Whether it contains inventory.
- * @method void setHasStock(boolean $HasStock) Set Whether it contains inventory.
- * @method array getSlaveZoneStockInfos() Obtain Inventory information from availability zone.
- * @method void setSlaveZoneStockInfos(array $SlaveZoneStockInfos) Set Inventory information from availability zone.
+ * @method integer getStockCount() Obtain Stored amount
+ * @method void setStockCount(integer $StockCount) Set Stored amount
+ * @method boolean getHasStock() Obtain Whether inventory is included
+ * @method void setHasStock(boolean $HasStock) Set Whether inventory is included
+ * @method array getSlaveZoneStockInfos() Obtain Secondary AZ inventory information
+ * @method void setSlaveZoneStockInfos(array $SlaveZoneStockInfos) Set Secondary AZ inventory information
  */
 class ServerlessZoneStockInfo extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ServerlessZoneStockInfo extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Specifies the stored amount.
+     * @var integer Stored amount
      */
     public $StockCount;
 
     /**
-     * @var boolean Whether it contains inventory.
+     * @var boolean Whether inventory is included
      */
     public $HasStock;
 
     /**
-     * @var array Inventory information from availability zone.
+     * @var array Secondary AZ inventory information
      */
     public $SlaveZoneStockInfos;
 
     /**
      * @param string $Zone Availability zone
-     * @param integer $StockCount Specifies the stored amount.
-     * @param boolean $HasStock Whether it contains inventory.
-     * @param array $SlaveZoneStockInfos Inventory information from availability zone.
+     * @param integer $StockCount Stored amount
+     * @param boolean $HasStock Whether inventory is included
+     * @param array $SlaveZoneStockInfos Secondary AZ inventory information
      */
     function __construct()
     {

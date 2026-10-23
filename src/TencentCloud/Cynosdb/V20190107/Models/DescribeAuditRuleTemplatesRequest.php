@@ -20,19 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditRuleTemplates request structure.
  *
- * @method array getRuleTemplateIds() Obtain Rule template ID
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID
+ * @method array getRuleTemplateIds() Obtain Rule template ID.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID.
  * @method array getRuleTemplateNames() Obtain Rule template name
  * @method void setRuleTemplateNames(array $RuleTemplateNames) Set Rule template name
- * @method integer getLimit() Obtain Number of results returned per request. Default value: `20`.
- * @method void setLimit(integer $Limit) Set Number of results returned per request. Default value: `20`.
- * @method integer getOffset() Obtain Offset. Default value: `0`.
- * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
+ * @method integer getLimit() Obtain Number of items returned per request. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Number of items returned per request. Default value: 20.
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getAlarmLevel() Obtain Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method integer getAlarmPolicy() Obtain Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+ * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
  */
 class DescribeAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Rule template ID
+     * @var array Rule template ID.
      */
     public $RuleTemplateIds;
 
@@ -42,20 +46,32 @@ class DescribeAuditRuleTemplatesRequest extends AbstractModel
     public $RuleTemplateNames;
 
     /**
-     * @var integer Number of results returned per request. Default value: `20`.
+     * @var integer Number of items returned per request. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: `0`.
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @param array $RuleTemplateIds Rule template ID
+     * @var integer Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     */
+    public $AlarmPolicy;
+
+    /**
+     * @param array $RuleTemplateIds Rule template ID.
      * @param array $RuleTemplateNames Rule template name
-     * @param integer $Limit Number of results returned per request. Default value: `20`.
-     * @param integer $Offset Offset. Default value: `0`.
+     * @param integer $Limit Number of items returned per request. Default value: 20.
+     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param integer $AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class DescribeAuditRuleTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
         }
     }
 }

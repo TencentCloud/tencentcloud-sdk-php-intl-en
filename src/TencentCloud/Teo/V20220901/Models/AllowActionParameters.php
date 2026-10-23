@@ -18,7 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Additional parameter for Web security Allow.
+ * Additional parameter when the safe execution action is Allow.
+
+This parameter is used to specify the extra handling action taken by the system when a security rule is hit and an Allow action is executed.
+Different handling actions are configured with different fixed parameter combinations. The system will determine the actually effective handling action type according to the configured parameter combination.
+During the same release execution, only one handling action can be configured and made effective. Parameter composites for multiple handling actions cannot appear simultaneously; otherwise, it is deemed an invalid configuration. If empty, the default release handling action is used.
+AllowActionParameters supports the following additional handling actions: <li>Default: When AllowActionParameters is empty, skip the remaining rules of the current security module immediately and continue matching subsequent security modules.</li><li>Delayed pass: Add response delay to the request and continue matching the remaining rules of the current module. Corresponding parameters: MinDelayTime, MaxDelayTime.</li>
  *
  * @method string getMinDelayTime() Obtain Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>.
  * @method void setMinDelayTime(string $MinDelayTime) Set Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>.

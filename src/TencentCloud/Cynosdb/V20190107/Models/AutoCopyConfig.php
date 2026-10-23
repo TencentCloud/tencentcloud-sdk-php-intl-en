@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Safe automatically deliver relationship
+ * Relationship for automatically delivering to a safe
  *
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVaultId(string $VaultId) Set Safe ID
  * @method string getVaultRegion() Obtain Safe region
  * @method void setVaultRegion(string $VaultRegion) Set Safe region
- * @method string getCopyType() Obtain Delivery Type: binlog, redolog, snapshot, logic
- * @method void setCopyType(string $CopyType) Set Delivery Type: binlog, redolog, snapshot, logic
+ * @method string getCopyType() Obtain Delivery type: binlog, redolog, snapshot, logic
+ * @method void setCopyType(string $CopyType) Set Delivery type: binlog, redolog, snapshot, logic
  */
 class AutoCopyConfig extends AbstractModel
 {
@@ -47,7 +47,7 @@ class AutoCopyConfig extends AbstractModel
     public $VaultRegion;
 
     /**
-     * @var string Delivery Type: binlog, redolog, snapshot, logic
+     * @var string Delivery type: binlog, redolog, snapshot, logic
      */
     public $CopyType;
 
@@ -55,7 +55,7 @@ class AutoCopyConfig extends AbstractModel
      * @param string $ClusterId Cluster ID.
      * @param string $VaultId Safe ID
      * @param string $VaultRegion Safe region
-     * @param string $CopyType Delivery Type: binlog, redolog, snapshot, logic
+     * @param string $CopyType Delivery type: binlog, redolog, snapshot, logic
      */
     function __construct()
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The export format for an error log
+ * Error log export format
  *
  * @method string getTimestamp() Obtain Time
  * @method void setTimestamp(string $Timestamp) Set Time
- * @method string getLevel() Obtain Specifies the log level. valid values are note, warning, and error.
- * @method void setLevel(string $Level) Set Specifies the log level. valid values are note, warning, and error.
- * @method string getContent() Obtain Log content.
- * @method void setContent(string $Content) Set Log content.
+ * @method string getLevel() Obtain Log level. Available values: note, warning, error
+ * @method void setLevel(string $Level) Set Log level. Available values: note, warning, error
+ * @method string getContent() Obtain Log content
+ * @method void setContent(string $Content) Set Log content
  */
 class ErrorLogItemExport extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ErrorLogItemExport extends AbstractModel
     public $Timestamp;
 
     /**
-     * @var string Specifies the log level. valid values are note, warning, and error.
+     * @var string Log level. Available values: note, warning, error
      */
     public $Level;
 
     /**
-     * @var string Log content.
+     * @var string Log content
      */
     public $Content;
 
     /**
      * @param string $Timestamp Time
-     * @param string $Level Specifies the log level. valid values are note, warning, and error.
-     * @param string $Content Log content.
+     * @param string $Level Log level. Available values: note, warning, error
+     * @param string $Content Log content
      */
     function __construct()
     {

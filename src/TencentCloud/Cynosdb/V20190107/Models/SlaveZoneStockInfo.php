@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Standby availability zone inventory information.
+ * Available zone inventory information
  *
- * @method string getSlaveZone() Obtain Replica AZ.
- * @method void setSlaveZone(string $SlaveZone) Set Replica AZ.
- * @method integer getStockCount() Obtain Inventory quantity in spare availability zone.	
- * @method void setStockCount(integer $StockCount) Set Inventory quantity in spare availability zone.	
- * @method boolean getHasStock() Obtain Whether there is inventory in the spare availability zone.	
- * @method void setHasStock(boolean $HasStock) Set Whether there is inventory in the spare availability zone.	
+ * @method string getSlaveZone() Obtain Secondary AZ
+ * @method void setSlaveZone(string $SlaveZone) Set Secondary AZ
+ * @method integer getStockCount() Obtain Inventory quantity in spare availability zone	
+ * @method void setStockCount(integer $StockCount) Set Inventory quantity in spare availability zone	
+ * @method boolean getHasStock() Obtain Whether there is inventory in the spare AZ	
+ * @method void setHasStock(boolean $HasStock) Set Whether there is inventory in the spare AZ	
  */
 class SlaveZoneStockInfo extends AbstractModel
 {
     /**
-     * @var string Replica AZ.
+     * @var string Secondary AZ
      */
     public $SlaveZone;
 
     /**
-     * @var integer Inventory quantity in spare availability zone.	
+     * @var integer Inventory quantity in spare availability zone	
      */
     public $StockCount;
 
     /**
-     * @var boolean Whether there is inventory in the spare availability zone.	
+     * @var boolean Whether there is inventory in the spare AZ	
      */
     public $HasStock;
 
     /**
-     * @param string $SlaveZone Replica AZ.
-     * @param integer $StockCount Inventory quantity in spare availability zone.	
-     * @param boolean $HasStock Whether there is inventory in the spare availability zone.	
+     * @param string $SlaveZone Secondary AZ
+     * @param integer $StockCount Inventory quantity in spare availability zone	
+     * @param boolean $HasStock Whether there is inventory in the spare AZ	
      */
     function __construct()
     {

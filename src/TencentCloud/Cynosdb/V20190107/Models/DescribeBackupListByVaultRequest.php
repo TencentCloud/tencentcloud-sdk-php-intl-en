@@ -20,71 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupListByVault request structure.
  *
- * @method string getVaultId() Obtain Safe ID, length must be greater than 0
- * @method void setVaultId(string $VaultId) Set Safe ID, length must be greater than 0
- * @method array getBackupIds() Obtain Backup file ID list for filtering specific backups
- * @method void setBackupIds(array $BackupIds) Set Backup file ID list for filtering specific backups
- * @method string getClusterId() Obtain Cluster ID for filtering backups of a specific cluster
- * @method void setClusterId(string $ClusterId) Set Cluster ID for filtering backups of a specific cluster
- * @method array getBackupNames() Obtain Backup name list for exact matching filter criteria
- * @method void setBackupNames(array $BackupNames) Set Backup name list for exact matching filter criteria
- * @method array getFileNames() Obtain Filename list for exact matching filter
- * @method void setFileNames(array $FileNames) Set Filename list for exact matching filter
- * @method integer getLimit() Obtain Number of pages, range (0,100], default 100
- * @method void setLimit(integer $Limit) Set Number of pages, range (0,100], default 100
- * @method integer getOffset() Obtain Pagination offset. Range: [0, INF). Default is 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Range: [0, INF). Default is 0.
- * @method string getOrderBy() Obtain Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
- * @method string getOrderByType() Obtain Sorting method, available values: desc, asc, DESC, ASC, default desc
- * @method void setOrderByType(string $OrderByType) Set Sorting method, available values: desc, asc, DESC, ASC, default desc
+ * @method string getVaultId() Obtain Safe ID. Its length must be greater than 0.
+ * @method void setVaultId(string $VaultId) Set Safe ID. Its length must be greater than 0.
+ * @method array getBackupIds() Obtain List of the backup file IDs for filtering specific backups.
+ * @method void setBackupIds(array $BackupIds) Set List of the backup file IDs for filtering specific backups.
+ * @method string getClusterId() Obtain Cluster ID, for filtering backups of a specific cluster
+ * @method void setClusterId(string $ClusterId) Set Cluster ID, for filtering backups of a specific cluster
+ * @method array getBackupNames() Obtain List of backup names for exact matching filter criteria
+ * @method void setBackupNames(array $BackupNames) Set List of backup names for exact matching filter criteria
+ * @method array getFileNames() Obtain Filename list for exact matching filter criteria
+ * @method void setFileNames(array $FileNames) Set Filename list for exact matching filter criteria
+ * @method integer getLimit() Obtain Pagination quantity. Value range: (0, 100]. Default value: 100.
+ * @method void setLimit(integer $Limit) Set Pagination quantity. Value range: (0, 100]. Default value: 100.
+ * @method integer getOffset() Obtain Pagination offset. Value range: [0, INF). Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Value range: [0, INF). Default value: 0.
+ * @method string getOrderBy() Obtain Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+ * @method string getOrderByType() Obtain Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
  * @method string getStatus() Obtain Status.
  * @method void setStatus(string $Status) Set Status.
  */
 class DescribeBackupListByVaultRequest extends AbstractModel
 {
     /**
-     * @var string Safe ID, length must be greater than 0
+     * @var string Safe ID. Its length must be greater than 0.
      */
     public $VaultId;
 
     /**
-     * @var array Backup file ID list for filtering specific backups
+     * @var array List of the backup file IDs for filtering specific backups.
      */
     public $BackupIds;
 
     /**
-     * @var string Cluster ID for filtering backups of a specific cluster
+     * @var string Cluster ID, for filtering backups of a specific cluster
      */
     public $ClusterId;
 
     /**
-     * @var array Backup name list for exact matching filter criteria
+     * @var array List of backup names for exact matching filter criteria
      */
     public $BackupNames;
 
     /**
-     * @var array Filename list for exact matching filter
+     * @var array Filename list for exact matching filter criteria
      */
     public $FileNames;
 
     /**
-     * @var integer Number of pages, range (0,100], default 100
+     * @var integer Pagination quantity. Value range: (0, 100]. Default value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset. Range: [0, INF). Default is 0.
+     * @var integer Pagination offset. Value range: [0, INF). Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var string Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+     * @var string Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * @var string Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public $OrderByType;
 
@@ -94,15 +94,15 @@ class DescribeBackupListByVaultRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $VaultId Safe ID, length must be greater than 0
-     * @param array $BackupIds Backup file ID list for filtering specific backups
-     * @param string $ClusterId Cluster ID for filtering backups of a specific cluster
-     * @param array $BackupNames Backup name list for exact matching filter criteria
-     * @param array $FileNames Filename list for exact matching filter
-     * @param integer $Limit Number of pages, range (0,100], default 100
-     * @param integer $Offset Pagination offset. Range: [0, INF). Default is 0.
-     * @param string $OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
-     * @param string $OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * @param string $VaultId Safe ID. Its length must be greater than 0.
+     * @param array $BackupIds List of the backup file IDs for filtering specific backups.
+     * @param string $ClusterId Cluster ID, for filtering backups of a specific cluster
+     * @param array $BackupNames List of backup names for exact matching filter criteria
+     * @param array $FileNames Filename list for exact matching filter criteria
+     * @param integer $Limit Pagination quantity. Value range: (0, 100]. Default value: 100.
+     * @param integer $Offset Pagination offset. Value range: [0, INF). Default value: 0.
+     * @param string $OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+     * @param string $OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      * @param string $Status Status.
      */
     function __construct()

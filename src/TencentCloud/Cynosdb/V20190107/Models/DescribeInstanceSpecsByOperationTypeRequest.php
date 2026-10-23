@@ -23,15 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getOperationType() Obtain Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
  * @method void setOperationType(string $OperationType) Set Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
- * @method string getInstanceId() Obtain Instance ID, required when querying configuration modification specifications
- * @method void setInstanceId(string $InstanceId) Set Instance ID, required when querying configuration modification specifications
- * @method string getDeviceType() Obtain Instance Machine Type
- * @method void setDeviceType(string $DeviceType) Set Instance Machine Type
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
+ * @method string getInstanceId() Obtain Instance ID. Required when querying configuration modification specifications.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Required when querying configuration modification specifications.
+ * @method string getDeviceType() Obtain Instance machine type.
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type.
  */
 class DescribeInstanceSpecsByOperationTypeRequest extends AbstractModel
 {
@@ -42,28 +42,28 @@ class DescribeInstanceSpecsByOperationTypeRequest extends AbstractModel
 
     /**
      * @var string Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
      */
     public $OperationType;
 
     /**
-     * @var string Instance ID, required when querying configuration modification specifications
+     * @var string Instance ID. Required when querying configuration modification specifications.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance Machine Type
+     * @var string Instance machine type.
      */
     public $DeviceType;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param string $OperationType Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
-     * @param string $InstanceId Instance ID, required when querying configuration modification specifications
-     * @param string $DeviceType Instance Machine Type
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
+     * @param string $InstanceId Instance ID. Required when querying configuration modification specifications.
+     * @param string $DeviceType Instance machine type.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceName request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
  */
 class ModifyInstanceNameRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
      */
     function __construct()
     {

@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupConfig response structure.
  *
- * @method integer getBackupTimeBeg() Obtain <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
- * @method void setBackupTimeBeg(integer $BackupTimeBeg) Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
- * @method integer getBackupTimeEnd() Obtain <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
- * @method void setBackupTimeEnd(integer $BackupTimeEnd) Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
- * @method integer getReserveDuration() Obtain <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
- * @method void setReserveDuration(integer $ReserveDuration) Set <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
- * @method array getBackupFreq() Obtain <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
- * @method void setBackupFreq(array $BackupFreq) Set <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
- * @method string getBackupType() Obtain <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
- * @method void setBackupType(string $BackupType) Set <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+ * @method integer getBackupTimeBeg() Obtain <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
+ * @method void setBackupTimeBeg(integer $BackupTimeBeg) Set <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
+ * @method integer getBackupTimeEnd() Obtain <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+ * @method void setBackupTimeEnd(integer $BackupTimeEnd) Set <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+ * @method integer getReserveDuration() Obtain <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
+ * @method void setReserveDuration(integer $ReserveDuration) Set <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
+ * @method array getBackupFreq() Obtain <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
+ * @method void setBackupFreq(array $BackupFreq) Set <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
+ * @method string getBackupType() Obtain <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
+ * @method void setBackupType(string $BackupType) Set <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
  * @method string getLogicCrossRegionsConfigUpdateTime() Obtain <p>Cross-regional logical backup configuration modification time</p>
  * @method void setLogicCrossRegionsConfigUpdateTime(string $LogicCrossRegionsConfigUpdateTime) Set <p>Cross-regional logical backup configuration modification time</p>
  * @method LogicBackupConfigInfo getLogicBackupConfig() Obtain <p>Automatic logical backup configuration</p>
@@ -44,27 +44,27 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var integer <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @var integer <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
      */
     public $BackupTimeBeg;
 
     /**
-     * @var integer <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @var integer <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
      */
     public $BackupTimeEnd;
 
     /**
-     * @var integer <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
+     * @var integer <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
      */
     public $ReserveDuration;
 
     /**
-     * @var array <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
+     * @var array <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
      */
     public $BackupFreq;
 
     /**
-     * @var string <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+     * @var string <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
      */
     public $BackupType;
 
@@ -94,11 +94,11 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-     * @param integer $BackupTimeEnd <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-     * @param integer $ReserveDuration <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
-     * @param array $BackupFreq <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
-     * @param string $BackupType <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+     * @param integer $BackupTimeBeg <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
+     * @param integer $BackupTimeEnd <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+     * @param integer $ReserveDuration <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
+     * @param array $BackupFreq <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
+     * @param string $BackupType <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
      * @param string $LogicCrossRegionsConfigUpdateTime <p>Cross-regional logical backup configuration modification time</p>
      * @param LogicBackupConfigInfo $LogicBackupConfig <p>Automatic logical backup configuration</p>
      * @param BackupConfigInfo $SnapshotSecondaryBackupConfig <p>Secondary snapshot backup configuration information</p>

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getAutoCopyVaults() Obtain Automatically copy the safe configuration list
- * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Automatically copy the safe configuration list
+ * @method array getAutoCopyVaults() Obtain Automatically copy the configuration list of the safe
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Automatically copy the configuration list of the safe
  */
 class ModifyClusterBinlogRedoLogAutoCopyVaultRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyClusterBinlogRedoLogAutoCopyVaultRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Automatically copy the safe configuration list
+     * @var array Automatically copy the configuration list of the safe
      */
     public $AutoCopyVaults;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $AutoCopyVaults Automatically copy the safe configuration list
+     * @param array $AutoCopyVaults Automatically copy the configuration list of the safe
      */
     function __construct()
     {

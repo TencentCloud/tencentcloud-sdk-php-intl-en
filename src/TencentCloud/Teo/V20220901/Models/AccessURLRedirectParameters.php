@@ -20,74 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access URL redirect configuration parameters.
  *
- * @method integer getStatusCode() Obtain Status code. valid values: 301, 302, 303, 307, 308.
- * @method void setStatusCode(integer $StatusCode) Set Status code. valid values: 301, 302, 303, 307, 308.
- * @method string getProtocol() Obtain Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
- * @method void setProtocol(string $Protocol) Set Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
- * @method HostName getHostName() Obtain Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setHostName(HostName $HostName) Set Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method URLPath getURLPath() Obtain Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setURLPath(URLPath $URLPath) Set Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method AccessURLRedirectQueryString getQueryString() Obtain Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setQueryString(AccessURLRedirectQueryString $QueryString) Set Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getStatusCode() Obtain <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
+ * @method void setStatusCode(integer $StatusCode) Set <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
+ * @method string getProtocol() Obtain <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
+ * @method void setProtocol(string $Protocol) Set <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
+ * @method HostName getHostName() Obtain <p>Target HostName.</p>
+ * @method void setHostName(HostName $HostName) Set <p>Target HostName.</p>
+ * @method URLPath getURLPath() Obtain <p>Target path.</p>
+ * @method void setURLPath(URLPath $URLPath) Set <p>Target path.</p>
+ * @method AccessURLRedirectQueryString getQueryString() Obtain <p>Query string.</p>
+ * @method void setQueryString(AccessURLRedirectQueryString $QueryString) Set <p>Query string.</p>
  */
 class AccessURLRedirectParameters extends AbstractModel
 {
     /**
-     * @var integer Status code. valid values: 301, 302, 303, 307, 308.
+     * @var integer <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
      */
     public $StatusCode;
 
     /**
-     * @var string Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
+     * @var string <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
      */
     public $Protocol;
 
     /**
-     * @var HostName Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var HostName <p>Target HostName.</p>
      */
     public $HostName;
 
     /**
-     * @var URLPath Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var URLPath <p>Target path.</p>
      */
     public $URLPath;
 
     /**
-     * @var AccessURLRedirectQueryString Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var AccessURLRedirectQueryString <p>Query string.</p>
      */
     public $QueryString;
 
     /**
-     * @param integer $StatusCode Status code. valid values: 301, 302, 303, 307, 308.
-     * @param string $Protocol Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
-     * @param HostName $HostName Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param URLPath $URLPath Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param AccessURLRedirectQueryString $QueryString Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $StatusCode <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
+     * @param string $Protocol <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
+     * @param HostName $HostName <p>Target HostName.</p>
+     * @param URLPath $URLPath <p>Target path.</p>
+     * @param AccessURLRedirectQueryString $QueryString <p>Query string.</p>
      */
     function __construct()
     {

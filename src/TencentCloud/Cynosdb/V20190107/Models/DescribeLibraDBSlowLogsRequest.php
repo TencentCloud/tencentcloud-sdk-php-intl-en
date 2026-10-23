@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start time, 1753171200.
  * @method integer getEndTime() Obtain End time, 1753171200.
  * @method void setEndTime(integer $EndTime) Set End time, 1753171200.
- * @method string getLimit() Obtain Log items per page limit: 0-200.
- * @method void setLimit(string $Limit) Set Log items per page limit: 0-200.
- * @method string getOffset() Obtain Log paginate, more than 0.
- * @method void setOffset(string $Offset) Set Log paginate, more than 0.
- * @method string getOrder() Obtain Log sorting method, DESC - descending order, ASC - ascending order.
- * @method void setOrder(string $Order) Set Log sorting method, DESC - descending order, ASC - ascending order.
+ * @method string getLimit() Obtain Limit on number of log entries per page: 0-200.
+ * @method void setLimit(string $Limit) Set Limit on number of log entries per page: 0-200.
+ * @method string getOffset() Obtain Log pagination. The value must be greater than 0.
+ * @method void setOffset(string $Offset) Set Log pagination. The value must be greater than 0.
+ * @method string getOrder() Obtain Log sorting method. `DESC`: descending order. `ASC`: ascending order.
+ * @method void setOrder(string $Order) Set Log sorting method. `DESC`: descending order. `ASC`: ascending order.
  * @method string getOrderBy() Obtain Log sorting condition.
  * @method void setOrderBy(string $OrderBy) Set Log sorting condition.
  * @method array getLogFilter() Obtain Filter criteria
@@ -55,17 +55,17 @@ class DescribeLibraDBSlowLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Log items per page limit: 0-200.
+     * @var string Limit on number of log entries per page: 0-200.
      */
     public $Limit;
 
     /**
-     * @var string Log paginate, more than 0.
+     * @var string Log pagination. The value must be greater than 0.
      */
     public $Offset;
 
     /**
-     * @var string Log sorting method, DESC - descending order, ASC - ascending order.
+     * @var string Log sorting method. `DESC`: descending order. `ASC`: ascending order.
      */
     public $Order;
 
@@ -83,9 +83,9 @@ class DescribeLibraDBSlowLogsRequest extends AbstractModel
      * @param string $InstanceId Read-only analysis engine instance ID
      * @param integer $StartTime Start time, 1753171200.
      * @param integer $EndTime End time, 1753171200.
-     * @param string $Limit Log items per page limit: 0-200.
-     * @param string $Offset Log paginate, more than 0.
-     * @param string $Order Log sorting method, DESC - descending order, ASC - ascending order.
+     * @param string $Limit Limit on number of log entries per page: 0-200.
+     * @param string $Offset Log pagination. The value must be greater than 0.
+     * @param string $Order Log sorting method. `DESC`: descending order. `ASC`: ascending order.
      * @param string $OrderBy Log sorting condition.
      * @param array $LogFilter Filter criteria
      */

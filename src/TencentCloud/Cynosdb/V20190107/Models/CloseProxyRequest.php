@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getProxyGroupId() Obtain Database proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID
- * @method boolean getOnlyCloseRW() Obtain Whether only to disable read/write separation. Valid values: `true`, `false`.
- * @method void setOnlyCloseRW(boolean $OnlyCloseRW) Set Whether only to disable read/write separation. Valid values: `true`, `false`.
+ * @method string getProxyGroupId() Obtain Database Proxy Group ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database Proxy Group ID
+ * @method boolean getOnlyCloseRW() Obtain Whether to only disable read-write separation. Value: true or false
+ * @method void setOnlyCloseRW(boolean $OnlyCloseRW) Set Whether to only disable read-write separation. Value: true or false
  */
 class CloseProxyRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CloseProxyRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Database proxy group ID
+     * @var string Database Proxy Group ID
      */
     public $ProxyGroupId;
 
     /**
-     * @var boolean Whether only to disable read/write separation. Valid values: `true`, `false`.
+     * @var boolean Whether to only disable read-write separation. Value: true or false
      */
     public $OnlyCloseRW;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $ProxyGroupId Database proxy group ID
-     * @param boolean $OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`.
+     * @param string $ProxyGroupId Database Proxy Group ID
+     * @param boolean $OnlyCloseRW Whether to only disable read-write separation. Value: true or false
      */
     function __construct()
     {

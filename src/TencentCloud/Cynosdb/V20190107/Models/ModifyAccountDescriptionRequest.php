@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccountName() Obtain Database account name
  * @method void setAccountName(string $AccountName) Set Database account name
- * @method string getDescription() Obtain Database account description
- * @method void setDescription(string $Description) Set Database account description
+ * @method string getDescription() Obtain Database account description information
+ * @method void setDescription(string $Description) Set Database account description information
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getHost() Obtain Host. Default value: `%`
- * @method void setHost(string $Host) Set Host. Default value: `%`
+ * @method string getHost() Obtain Host. Default value: %.
+ * @method void setHost(string $Host) Set Host. Default value: %.
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -37,7 +37,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     public $AccountName;
 
     /**
-     * @var string Database account description
+     * @var string Database account description information
      */
     public $Description;
 
@@ -47,15 +47,15 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Host. Default value: `%`
+     * @var string Host. Default value: %.
      */
     public $Host;
 
     /**
      * @param string $AccountName Database account name
-     * @param string $Description Database account description
+     * @param string $Description Database account description information
      * @param string $ClusterId Cluster ID
-     * @param string $Host Host. Default value: `%`
+     * @param string $Host Host. Default value: %.
      */
     function __construct()
     {

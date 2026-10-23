@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getBinlogId() Obtain Binlog file ID
  * @method void setBinlogId(integer $BinlogId) Set Binlog file ID
- * @method BackupLimitRestriction getDownloadRestriction() Obtain Backup download source restriction condition.
- * @method void setDownloadRestriction(BackupLimitRestriction $DownloadRestriction) Set Backup download source restriction condition.
+ * @method BackupLimitRestriction getDownloadRestriction() Obtain Backup download source limit
+ * @method void setDownloadRestriction(BackupLimitRestriction $DownloadRestriction) Set Backup download source limit
  */
 class DescribeBinlogDownloadUrlRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeBinlogDownloadUrlRequest extends AbstractModel
     public $BinlogId;
 
     /**
-     * @var BackupLimitRestriction Backup download source restriction condition.
+     * @var BackupLimitRestriction Backup download source limit
      */
     public $DownloadRestriction;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param integer $BinlogId Binlog file ID
-     * @param BackupLimitRestriction $DownloadRestriction Backup download source restriction condition.
+     * @param BackupLimitRestriction $DownloadRestriction Backup download source limit
      */
     function __construct()
     {

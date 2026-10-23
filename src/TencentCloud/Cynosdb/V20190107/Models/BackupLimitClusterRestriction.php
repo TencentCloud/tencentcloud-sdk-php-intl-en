@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the backup download cluster restrictions parameter.
+ * Backup download cluster limit parameter
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method BackupLimitRestriction getBackupLimitRestriction() Obtain Download limit configuration.
- * @method void setBackupLimitRestriction(BackupLimitRestriction $BackupLimitRestriction) Set Download limit configuration.
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method BackupLimitRestriction getBackupLimitRestriction() Obtain Download limit configuration
+ * @method void setBackupLimitRestriction(BackupLimitRestriction $BackupLimitRestriction) Set Download limit configuration
  */
 class BackupLimitClusterRestriction extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var BackupLimitRestriction Download limit configuration.
+     * @var BackupLimitRestriction Download limit configuration
      */
     public $BackupLimitRestriction;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param BackupLimitRestriction $BackupLimitRestriction Download limit configuration.
+     * @param string $ClusterId Cluster ID.
+     * @param BackupLimitRestriction $BackupLimitRestriction Download limit configuration
      */
     function __construct()
     {

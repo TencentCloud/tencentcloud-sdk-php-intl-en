@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method InputAccount getAccount() Obtain Account information
  * @method void setAccount(InputAccount $Account) Set Account information
- * @method array getDbTablePrivileges() Obtain Array of table permission codes
- * @method void setDbTablePrivileges(array $DbTablePrivileges) Set Array of table permission codes
+ * @method array getDbTablePrivileges() Obtain Array of database table permission codes
+ * @method void setDbTablePrivileges(array $DbTablePrivileges) Set Array of database table permission codes
  * @method array getDbTables() Obtain Database table information
  * @method void setDbTables(array $DbTables) Set Database table information
  */
@@ -42,7 +42,7 @@ class GrantAccountPrivilegesRequest extends AbstractModel
     public $Account;
 
     /**
-     * @var array Array of table permission codes
+     * @var array Array of database table permission codes
      */
     public $DbTablePrivileges;
 
@@ -54,7 +54,7 @@ class GrantAccountPrivilegesRequest extends AbstractModel
     /**
      * @param string $ClusterId Cluster ID.
      * @param InputAccount $Account Account information
-     * @param array $DbTablePrivileges Array of table permission codes
+     * @param array $DbTablePrivileges Array of database table permission codes
      * @param array $DbTables Database table information
      */
     function __construct()

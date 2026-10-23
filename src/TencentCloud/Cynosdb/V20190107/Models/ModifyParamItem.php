@@ -18,21 +18,21 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the modified instance parameter
+ * Modified instance parameter information
  *
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
  * @method string getCurrentValue() Obtain Current parameter value
  * @method void setCurrentValue(string $CurrentValue) Set Current parameter value
- * @method string getOldValue() Obtain Old parameter value (useful only in output parameters).
- * @method void setOldValue(string $OldValue) Set Old parameter value (useful only in output parameters).
- * @method string getComponent() Obtain libra component type.
- * @method void setComponent(string $Component) Set libra component type.
+ * @method string getOldValue() Obtain Old parameter value (only useful for output parameters)
+ * @method void setOldValue(string $OldValue) Set Old parameter value (only useful for output parameters)
+ * @method string getComponent() Obtain libra component type
+ * @method void setComponent(string $Component) Set libra component type
  */
 class ModifyParamItem extends AbstractModel
 {
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $ParamName;
 
@@ -42,20 +42,20 @@ class ModifyParamItem extends AbstractModel
     public $CurrentValue;
 
     /**
-     * @var string Old parameter value (useful only in output parameters).
+     * @var string Old parameter value (only useful for output parameters)
      */
     public $OldValue;
 
     /**
-     * @var string libra component type.
+     * @var string libra component type
      */
     public $Component;
 
     /**
-     * @param string $ParamName Parameter name
+     * @param string $ParamName Parameter name.
      * @param string $CurrentValue Current parameter value
-     * @param string $OldValue Old parameter value (useful only in output parameters).
-     * @param string $Component libra component type.
+     * @param string $OldValue Old parameter value (only useful for output parameters)
+     * @param string $Component libra component type
      */
     function __construct()
     {

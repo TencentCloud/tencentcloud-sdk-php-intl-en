@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Number of proxy nodes and their AZs
+ * Count of nodes in the proxy node availability zone
  *
- * @method string getProxyNodeZone() Obtain AZ of the proxy node
- * @method void setProxyNodeZone(string $ProxyNodeZone) Set AZ of the proxy node
- * @method integer getProxyNodeCount() Obtain The number of proxy nodes
- * @method void setProxyNodeCount(integer $ProxyNodeCount) Set The number of proxy nodes
+ * @method string getProxyNodeZone() Obtain proxy node availability zone
+ * @method void setProxyNodeZone(string $ProxyNodeZone) Set proxy node availability zone
+ * @method integer getProxyNodeCount() Obtain Number of proxy nodes.
+ * @method void setProxyNodeCount(integer $ProxyNodeCount) Set Number of proxy nodes.
  */
 class ProxyZone extends AbstractModel
 {
     /**
-     * @var string AZ of the proxy node
+     * @var string proxy node availability zone
      */
     public $ProxyNodeZone;
 
     /**
-     * @var integer The number of proxy nodes
+     * @var integer Number of proxy nodes.
      */
     public $ProxyNodeCount;
 
     /**
-     * @param string $ProxyNodeZone AZ of the proxy node
-     * @param integer $ProxyNodeCount The number of proxy nodes
+     * @param string $ProxyNodeZone proxy node availability zone
+     * @param integer $ProxyNodeCount Number of proxy nodes.
      */
     function __construct()
     {

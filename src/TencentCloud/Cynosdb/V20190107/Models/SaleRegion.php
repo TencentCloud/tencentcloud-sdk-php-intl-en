@@ -18,60 +18,60 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a purchasable region
+ * Sales region information
  *
- * @method string getRegion() Obtain Region name
- * @method void setRegion(string $Region) Set Region name
- * @method integer getRegionId() Obtain Numeric ID of a region
- * @method void setRegionId(integer $RegionId) Set Numeric ID of a region
- * @method string getRegionZh() Obtain Region name
- * @method void setRegionZh(string $RegionZh) Set Region name
- * @method array getZoneSet() Obtain List of purchasable AZs
- * @method void setZoneSet(array $ZoneSet) Set List of purchasable AZs
- * @method string getDbType() Obtain Engine type
- * @method void setDbType(string $DbType) Set Engine type
- * @method array getModules() Obtain Supported modules in a region
- * @method void setModules(array $Modules) Set Supported modules in a region
+ * @method string getRegion() Obtain English name of the region
+ * @method void setRegion(string $Region) Set English name of the region
+ * @method integer getRegionId() Obtain Region numeric ID.
+ * @method void setRegionId(integer $RegionId) Set Region numeric ID.
+ * @method string getRegionZh() Obtain Region Name in Chinese
+ * @method void setRegionZh(string $RegionZh) Set Region Name in Chinese
+ * @method array getZoneSet() Obtain List of available saleable zones
+ * @method void setZoneSet(array $ZoneSet) Set List of available saleable zones
+ * @method string getDbType() Obtain Engine type.
+ * @method void setDbType(string $DbType) Set Engine type.
+ * @method array getModules() Obtain Region module support status
+ * @method void setModules(array $Modules) Set Region module support status
  */
 class SaleRegion extends AbstractModel
 {
     /**
-     * @var string Region name
+     * @var string English name of the region
      */
     public $Region;
 
     /**
-     * @var integer Numeric ID of a region
+     * @var integer Region numeric ID.
      */
     public $RegionId;
 
     /**
-     * @var string Region name
+     * @var string Region Name in Chinese
      */
     public $RegionZh;
 
     /**
-     * @var array List of purchasable AZs
+     * @var array List of available saleable zones
      */
     public $ZoneSet;
 
     /**
-     * @var string Engine type
+     * @var string Engine type.
      */
     public $DbType;
 
     /**
-     * @var array Supported modules in a region
+     * @var array Region module support status
      */
     public $Modules;
 
     /**
-     * @param string $Region Region name
-     * @param integer $RegionId Numeric ID of a region
-     * @param string $RegionZh Region name
-     * @param array $ZoneSet List of purchasable AZs
-     * @param string $DbType Engine type
-     * @param array $Modules Supported modules in a region
+     * @param string $Region English name of the region
+     * @param integer $RegionId Region numeric ID.
+     * @param string $RegionZh Region Name in Chinese
+     * @param array $ZoneSet List of available saleable zones
+     * @param string $DbType Engine type.
+     * @param array $Modules Region module support status
      */
     function __construct()
     {

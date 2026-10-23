@@ -18,10 +18,10 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Legacy backup list.
+ * Legacy backup list
  *
- * @method integer getBackupId() Obtain Backup id of the deceased.
- * @method void setBackupId(integer $BackupId) Set Backup id of the deceased.
+ * @method integer getBackupId() Obtain Backup id
+ * @method void setBackupId(integer $BackupId) Set Backup id
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method string getClusterName() Obtain Cluster name.
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupTime(string $BackupTime) Set Backup time
  * @method string getDbVersion() Obtain Database version.
  * @method void setDbVersion(string $DbVersion) Set Database version.
- * @method string getDbMode() Obtain Db type (NORMAL, SERVERLESS).
- * @method void setDbMode(string $DbMode) Set Db type (NORMAL, SERVERLESS).
+ * @method string getDbMode() Obtain Db type. Available values: NORMAL, SERVERLESS
+ * @method void setDbMode(string $DbMode) Set Db type. Available values: NORMAL, SERVERLESS
  * @method string getClusterStatus() Obtain Cluster status.
  * @method void setClusterStatus(string $ClusterStatus) Set Cluster status.
- * @method array getTasks() Obtain Task list.
- * @method void setTasks(array $Tasks) Set Task list.
+ * @method array getTasks() Obtain Task list
+ * @method void setTasks(array $Tasks) Set Task list
  */
 class SaveBackupClusterInfo extends AbstractModel
 {
     /**
-     * @var integer Backup id of the deceased.
+     * @var integer Backup id
      */
     public $BackupId;
 
@@ -79,7 +79,7 @@ class SaveBackupClusterInfo extends AbstractModel
     public $DbVersion;
 
     /**
-     * @var string Db type (NORMAL, SERVERLESS).
+     * @var string Db type. Available values: NORMAL, SERVERLESS
      */
     public $DbMode;
 
@@ -89,21 +89,21 @@ class SaveBackupClusterInfo extends AbstractModel
     public $ClusterStatus;
 
     /**
-     * @var array Task list.
+     * @var array Task list
      */
     public $Tasks;
 
     /**
-     * @param integer $BackupId Backup id of the deceased.
+     * @param integer $BackupId Backup id
      * @param string $ClusterId Cluster ID.
      * @param string $ClusterName Cluster name.
      * @param string $Region Region.
      * @param string $Zone Availability zone
      * @param string $BackupTime Backup time
      * @param string $DbVersion Database version.
-     * @param string $DbMode Db type (NORMAL, SERVERLESS).
+     * @param string $DbMode Db type. Available values: NORMAL, SERVERLESS
      * @param string $ClusterStatus Cluster status.
-     * @param array $Tasks Task list.
+     * @param array $Tasks Task list
      */
     function __construct()
     {

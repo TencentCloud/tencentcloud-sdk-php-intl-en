@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTemplateId(string $RuleTemplateId) Set Rule template ID.
  * @method string getRuleTemplateName() Obtain Rule template name.
  * @method void setRuleTemplateName(string $RuleTemplateName) Set Rule template name.
- * @method array getRuleFilters() Obtain The rule content.
- * @method void setRuleFilters(array $RuleFilters) Set The rule content.
- * @method integer getAlarmLevel() Obtain Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
- * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
- * @method integer getAlarmPolicy() Obtain Alarm policy. 0 - no alert, 1 - alert.
- * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alarm policy. 0 - no alert, 1 - alert.
+ * @method array getRuleFilters() Obtain Rule content.
+ * @method void setRuleFilters(array $RuleFilters) Set Rule content.
+ * @method integer getAlarmLevel() Obtain Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method integer getAlarmPolicy() Obtain Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+ * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
  * @method string getDescription() Obtain Rule description.
  * @method void setDescription(string $Description) Set Rule description.
  */
@@ -46,17 +46,17 @@ class RuleTemplateInfo extends AbstractModel
     public $RuleTemplateName;
 
     /**
-     * @var array The rule content.
+     * @var array Rule content.
      */
     public $RuleFilters;
 
     /**
-     * @var integer Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     * @var integer Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public $AlarmLevel;
 
     /**
-     * @var integer Alarm policy. 0 - no alert, 1 - alert.
+     * @var integer Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public $AlarmPolicy;
 
@@ -68,9 +68,9 @@ class RuleTemplateInfo extends AbstractModel
     /**
      * @param string $RuleTemplateId Rule template ID.
      * @param string $RuleTemplateName Rule template name.
-     * @param array $RuleFilters The rule content.
-     * @param integer $AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-     * @param integer $AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+     * @param array $RuleFilters Rule content.
+     * @param integer $AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param integer $AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      * @param string $Description Rule description.
      */
     function __construct()

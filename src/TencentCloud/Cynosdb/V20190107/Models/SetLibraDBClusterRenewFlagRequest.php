@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetLibraDBClusterRenewFlag request structure.
  *
- * @method array getResourceIds() Obtain Analysis Cluster ID List
- * @method void setResourceIds(array $ResourceIds) Set Analysis Cluster ID List
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
+ * @method array getResourceIds() Obtain Analytical cluster ID list
+ * @method void setResourceIds(array $ResourceIds) Set Analytical cluster ID list
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
  */
 class SetLibraDBClusterRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array Analysis Cluster ID List
+     * @var array Analytical cluster ID list
      */
     public $ResourceIds;
 
     /**
-     * @var integer Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
+     * @var integer Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
      */
     public $AutoRenewFlag;
 
     /**
-     * @param array $ResourceIds Analysis Cluster ID List
-     * @param integer $AutoRenewFlag Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
+     * @param array $ResourceIds Analytical cluster ID list
+     * @param integer $AutoRenewFlag Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
      */
     function __construct()
     {

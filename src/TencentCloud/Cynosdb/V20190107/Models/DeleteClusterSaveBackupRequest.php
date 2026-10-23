@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getSaveBackupId() Obtain Reserved backup file ID. recommended.
- * @method void setSaveBackupId(integer $SaveBackupId) Set Reserved backup file ID. recommended.
+ * @method integer getSaveBackupId() Obtain Backup file ID to be reserved. Recommended for use.
+ * @method void setSaveBackupId(integer $SaveBackupId) Set Backup file ID to be reserved. Recommended for use.
  */
 class DeleteClusterSaveBackupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteClusterSaveBackupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer Reserved backup file ID. recommended.
+     * @var integer Backup file ID to be reserved. Recommended for use.
      */
     public $SaveBackupId;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param integer $SaveBackupId Reserved backup file ID. recommended.
+     * @param integer $SaveBackupId Backup file ID to be reserved. Recommended for use.
      */
     function __construct()
     {

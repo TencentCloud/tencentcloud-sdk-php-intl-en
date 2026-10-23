@@ -18,30 +18,30 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance network information
+ * Instance network information.
  *
  * @method string getInstanceGroupType() Obtain Network type.
  * @method void setInstanceGroupType(string $InstanceGroupType) Set Network type.
  * @method string getInstanceGroupId() Obtain Instance group ID
  * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID
- * @method string getVpcId() Obtain Specifies the virtual private cloud ID.
- * @method void setVpcId(string $VpcId) Set Specifies the virtual private cloud ID.
- * @method string getSubnetId() Obtain Specifies the subnet ID.
- * @method void setSubnetId(string $SubnetId) Set Specifies the subnet ID.
- * @method integer getNetType() Obtain Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
- * @method void setNetType(integer $NetType) Set Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
- * @method string getVip() Obtain VPC IP.
- * @method void setVip(string $Vip) Set VPC IP.
+ * @method string getVpcId() Obtain VPC ID
+ * @method void setVpcId(string $VpcId) Set VPC ID
+ * @method string getSubnetId() Obtain Subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID.
+ * @method integer getNetType() Obtain Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
+ * @method void setNetType(integer $NetType) Set Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
+ * @method string getVip() Obtain VPC IP
+ * @method void setVip(string $Vip) Set VPC IP
  * @method integer getVport() Obtain VPC port.
  * @method void setVport(integer $Vport) Set VPC port.
- * @method string getWanDomain() Obtain Specifies the public network domain name.
- * @method void setWanDomain(string $WanDomain) Set Specifies the public network domain name.
+ * @method string getWanDomain() Obtain Public network domain name.
+ * @method void setWanDomain(string $WanDomain) Set Public network domain name.
  * @method string getWanIP() Obtain Public IP address
  * @method void setWanIP(string $WanIP) Set Public IP address
- * @method integer getWanPort() Obtain Public network port.
- * @method void setWanPort(integer $WanPort) Set Public network port.
- * @method string getWanStatus() Obtain Public network enabled status.
- * @method void setWanStatus(string $WanStatus) Set Public network enabled status.
+ * @method integer getWanPort() Obtain External port
+ * @method void setWanPort(integer $WanPort) Set External port
+ * @method string getWanStatus() Obtain Public network status
+ * @method void setWanStatus(string $WanStatus) Set Public network status
  */
 class InstanceNetInfo extends AbstractModel
 {
@@ -56,22 +56,22 @@ class InstanceNetInfo extends AbstractModel
     public $InstanceGroupId;
 
     /**
-     * @var string Specifies the virtual private cloud ID.
+     * @var string VPC ID
      */
     public $VpcId;
 
     /**
-     * @var string Specifies the subnet ID.
+     * @var string Subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @var integer Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+     * @var integer Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
      */
     public $NetType;
 
     /**
-     * @var string VPC IP.
+     * @var string VPC IP
      */
     public $Vip;
 
@@ -81,7 +81,7 @@ class InstanceNetInfo extends AbstractModel
     public $Vport;
 
     /**
-     * @var string Specifies the public network domain name.
+     * @var string Public network domain name.
      */
     public $WanDomain;
 
@@ -91,27 +91,27 @@ class InstanceNetInfo extends AbstractModel
     public $WanIP;
 
     /**
-     * @var integer Public network port.
+     * @var integer External port
      */
     public $WanPort;
 
     /**
-     * @var string Public network enabled status.
+     * @var string Public network status
      */
     public $WanStatus;
 
     /**
      * @param string $InstanceGroupType Network type.
      * @param string $InstanceGroupId Instance group ID
-     * @param string $VpcId Specifies the virtual private cloud ID.
-     * @param string $SubnetId Specifies the subnet ID.
-     * @param integer $NetType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
-     * @param string $Vip VPC IP.
+     * @param string $VpcId VPC ID
+     * @param string $SubnetId Subnet ID.
+     * @param integer $NetType Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
+     * @param string $Vip VPC IP
      * @param integer $Vport VPC port.
-     * @param string $WanDomain Specifies the public network domain name.
+     * @param string $WanDomain Public network domain name.
      * @param string $WanIP Public IP address
-     * @param integer $WanPort Public network port.
-     * @param string $WanStatus Public network enabled status.
+     * @param integer $WanPort External port
+     * @param string $WanStatus Public network status
      */
     function __construct()
     {

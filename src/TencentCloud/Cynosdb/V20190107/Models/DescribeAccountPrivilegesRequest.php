@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountPrivileges request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method string getAccountName() Obtain Account name
  * @method void setAccountName(string $AccountName) Set Account name
  * @method string getHost() Obtain Host
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
@@ -66,7 +66,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     public $TableName;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @param string $ClusterId Cluster ID.
      * @param string $AccountName Account name
      * @param string $Host Host
      * @param string $Db Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.

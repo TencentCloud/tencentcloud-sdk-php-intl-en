@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TaskMaintainInfo
  *
- * @method integer getMaintainStartTime() Obtain Execution start time (seconds from 0 o'clock).
- * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time (seconds from 0 o'clock).
- * @method integer getMaintainDuration() Obtain Specifies the continuous time. the unit is second.
- * @method void setMaintainDuration(integer $MaintainDuration) Set Specifies the continuous time. the unit is second.
- * @method array getMaintainWeekDays() Obtain Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
- * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+ * @method integer getMaintainStartTime() Obtain Execution start time (seconds from 00:00:00)
+ * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time (seconds from 00:00:00)
+ * @method integer getMaintainDuration() Obtain Continuous time (unit: second)
+ * @method void setMaintainDuration(integer $MaintainDuration) Set Continuous time (unit: second)
+ * @method array getMaintainWeekDays() Obtain The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) Set The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
  */
 class TaskMaintainInfo extends AbstractModel
 {
     /**
-     * @var integer Execution start time (seconds from 0 o'clock).
+     * @var integer Execution start time (seconds from 00:00:00)
      */
     public $MaintainStartTime;
 
     /**
-     * @var integer Specifies the continuous time. the unit is second.
+     * @var integer Continuous time (unit: second)
      */
     public $MaintainDuration;
 
     /**
-     * @var array Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * @var array The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      */
     public $MaintainWeekDays;
 
     /**
-     * @param integer $MaintainStartTime Execution start time (seconds from 0 o'clock).
-     * @param integer $MaintainDuration Specifies the continuous time. the unit is second.
-     * @param array $MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * @param integer $MaintainStartTime Execution start time (seconds from 00:00:00)
+     * @param integer $MaintainDuration Continuous time (unit: second)
+     * @param array $MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      */
     function __construct()
     {

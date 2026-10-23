@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIdList() Obtain Instance ID array
- * @method void setInstanceIdList(array $InstanceIdList) Set Instance ID array
- * @method string getDbType() Obtain This parameter has been disused.
- * @method void setDbType(string $DbType) Set This parameter has been disused.
- * @method array getIsolateReasonTypes() Obtain Instance Refund Reason Types
- * @method void setIsolateReasonTypes(array $IsolateReasonTypes) Set Instance Refund Reason Types
- * @method string getIsolateReason() Obtain Instance Refund Reason Supplement
- * @method void setIsolateReason(string $IsolateReason) Set Instance Refund Reason Supplement
- * @method boolean getSaveBackup() Obtain Backup retention
- * @method void setSaveBackup(boolean $SaveBackup) Set Backup retention
+ * @method array getInstanceIdList() Obtain Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+ * @method void setInstanceIdList(array $InstanceIdList) Set Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+ * @method string getDbType() Obtain This parameter has been deprecated.
+ * @method void setDbType(string $DbType) Set This parameter has been deprecated.
+ * @method array getIsolateReasonTypes() Obtain Refund reason type of the instance
+ * @method void setIsolateReasonTypes(array $IsolateReasonTypes) Set Refund reason type of the instance
+ * @method string getIsolateReason() Obtain Supplementary reason for instance return
+ * @method void setIsolateReason(string $IsolateReason) Set Supplementary reason for instance return
+ * @method boolean getSaveBackup() Obtain Retain backups
+ * @method void setSaveBackup(boolean $SaveBackup) Set Retain backups
  */
 class IsolateInstanceRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class IsolateInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Instance ID array
+     * @var array Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
      */
     public $InstanceIdList;
 
     /**
-     * @var string This parameter has been disused.
+     * @var string This parameter has been deprecated.
      */
     public $DbType;
 
     /**
-     * @var array Instance Refund Reason Types
+     * @var array Refund reason type of the instance
      */
     public $IsolateReasonTypes;
 
     /**
-     * @var string Instance Refund Reason Supplement
+     * @var string Supplementary reason for instance return
      */
     public $IsolateReason;
 
     /**
-     * @var boolean Backup retention
+     * @var boolean Retain backups
      */
     public $SaveBackup;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIdList Instance ID array
-     * @param string $DbType This parameter has been disused.
-     * @param array $IsolateReasonTypes Instance Refund Reason Types
-     * @param string $IsolateReason Instance Refund Reason Supplement
-     * @param boolean $SaveBackup Backup retention
+     * @param array $InstanceIdList Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+     * @param string $DbType This parameter has been deprecated.
+     * @param array $IsolateReasonTypes Refund reason type of the instance
+     * @param string $IsolateReason Supplementary reason for instance return
+     * @param boolean $SaveBackup Retain backups
      */
     function __construct()
     {

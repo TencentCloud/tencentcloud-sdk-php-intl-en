@@ -20,44 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportResourcePackageDeductDetails request structure.
  *
- * @method string getPackageId() Obtain Resource package ID to be exported.
- * @method void setPackageId(string $PackageId) Set Resource package ID to be exported.
- * @method array getClusterIds() Obtain Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
- * @method void setClusterIds(array $ClusterIds) Set Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
- * @method string getOrderBy() Obtain Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
- * @method void setOrderBy(string $OrderBy) Set Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
- * @method string getOrderByType() Obtain Sorting type. supports ASC, DESC, ASC, DESC.
- * @method void setOrderByType(string $OrderByType) Set Sorting type. supports ASC, DESC, ASC, DESC.
+ * @method string getPackageId() Obtain Resource package ID to be exported
+ * @method void setPackageId(string $PackageId) Set Resource package ID to be exported
+ * @method array getClusterIds() Obtain cynos cluster ID that uses the resource pack capacity
+ * @method void setClusterIds(array $ClusterIds) Set cynos cluster ID that uses the resource pack capacity
+ * @method string getOrderBy() Obtain Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
+ * @method string getOrderByType() Obtain Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
  * @method string getStartTime() Obtain Start time.
  * @method void setStartTime(string $StartTime) Set Start time.
  * @method string getEndTime() Obtain End time.
  * @method void setEndTime(string $EndTime) Set End time.
- * @method string getLimit() Obtain A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
- * @method void setLimit(string $Limit) Set A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
- * @method string getOffset() Obtain Offset and page number.
- * @method void setOffset(string $Offset) Set Offset and page number.
- * @method string getFileType() Obtain Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
- * @method void setFileType(string $FileType) Set Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
+ * @method string getLimit() Obtain A maximum of 2000 rows of data can be exported at a time.
+ * @method void setLimit(string $Limit) Set A maximum of 2000 rows of data can be exported at a time.
+ * @method string getOffset() Obtain Offset and page number
+ * @method void setOffset(string $Offset) Set Offset and page number
+ * @method string getFileType() Obtain Data export format. Currently only csv format is supported. Reserved for extension.
+ * @method void setFileType(string $FileType) Set Data export format. Currently only csv format is supported. Reserved for extension.
  */
 class ExportResourcePackageDeductDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Resource package ID to be exported.
+     * @var string Resource package ID to be exported
      */
     public $PackageId;
 
     /**
-     * @var array Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
+     * @var array cynos cluster ID that uses the resource pack capacity
      */
     public $ClusterIds;
 
     /**
-     * @var string Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
+     * @var string Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting type. supports ASC, DESC, ASC, DESC.
+     * @var string Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
      */
     public $OrderByType;
 
@@ -72,30 +72,30 @@ class ExportResourcePackageDeductDetailsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
+     * @var string A maximum of 2000 rows of data can be exported at a time.
      */
     public $Limit;
 
     /**
-     * @var string Offset and page number.
+     * @var string Offset and page number
      */
     public $Offset;
 
     /**
-     * @var string Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
+     * @var string Data export format. Currently only csv format is supported. Reserved for extension.
      */
     public $FileType;
 
     /**
-     * @param string $PackageId Resource package ID to be exported.
-     * @param array $ClusterIds Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
-     * @param string $OrderBy Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
-     * @param string $OrderByType Sorting type. supports ASC, DESC, ASC, DESC.
+     * @param string $PackageId Resource package ID to be exported
+     * @param array $ClusterIds cynos cluster ID that uses the resource pack capacity
+     * @param string $OrderBy Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
+     * @param string $OrderByType Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
      * @param string $StartTime Start time.
      * @param string $EndTime End time.
-     * @param string $Limit A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
-     * @param string $Offset Offset and page number.
-     * @param string $FileType Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
+     * @param string $Limit A maximum of 2000 rows of data can be exported at a time.
+     * @param string $Offset Offset and page number
+     * @param string $FileType Data export format. Currently only csv format is supported. Reserved for extension.
      */
     function __construct()
     {

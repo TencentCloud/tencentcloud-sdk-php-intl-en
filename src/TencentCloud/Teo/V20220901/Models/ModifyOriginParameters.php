@@ -62,10 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateAccess(string $PrivateAccess) Set Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
 <li>off: disable private authentication.</li>.
- * @method OriginPrivateParameters getPrivateParameters() Obtain Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setPrivateParameters(OriginPrivateParameters $PrivateParameters) Set Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method OriginPrivateParameters getPrivateParameters() Obtain Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
+ * @method void setPrivateParameters(OriginPrivateParameters $PrivateParameters) Set Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
  */
 class ModifyOriginParameters extends AbstractModel
 {
@@ -115,8 +113,7 @@ class ModifyOriginParameters extends AbstractModel
     public $PrivateAccess;
 
     /**
-     * @var OriginPrivateParameters Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var OriginPrivateParameters Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
      */
     public $PrivateParameters;
 
@@ -142,8 +139,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
      * @param string $PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
 <li>off: disable private authentication.</li>.
-     * @param OriginPrivateParameters $PrivateParameters Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param OriginPrivateParameters $PrivateParameters Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
      */
     function __construct()
     {

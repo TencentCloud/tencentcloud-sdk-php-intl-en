@@ -18,20 +18,20 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of whether the parameter can be modified.
+ * Detailed information on whether the parameter is modifiable
  *
- * @method integer getIsModifiable() Obtain Whether the parameter can be modified, 1: Yes 0: No.
- * @method void setIsModifiable(integer $IsModifiable) Set Whether the parameter can be modified, 1: Yes 0: No.
+ * @method integer getIsModifiable() Obtain Whether the parameter can be modified. 1: allowed, 0: not allowed
+ * @method void setIsModifiable(integer $IsModifiable) Set Whether the parameter can be modified. 1: allowed, 0: not allowed
  */
 class ModifiableInfo extends AbstractModel
 {
     /**
-     * @var integer Whether the parameter can be modified, 1: Yes 0: No.
+     * @var integer Whether the parameter can be modified. 1: allowed, 0: not allowed
      */
     public $IsModifiable;
 
     /**
-     * @param integer $IsModifiable Whether the parameter can be modified, 1: Yes 0: No.
+     * @param integer $IsModifiable Whether the parameter can be modified. 1: allowed, 0: not allowed
      */
     function __construct()
     {

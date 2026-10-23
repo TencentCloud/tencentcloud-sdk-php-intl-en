@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAccountPrivileges request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method InputAccount getAccount() Obtain Account infomation
- * @method void setAccount(InputAccount $Account) Set Account infomation
- * @method array getGlobalPrivileges() Obtain Array of global permissions
- * @method void setGlobalPrivileges(array $GlobalPrivileges) Set Array of global permissions
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method InputAccount getAccount() Obtain Account information
+ * @method void setAccount(InputAccount $Account) Set Account information
+ * @method array getGlobalPrivileges() Obtain Global permission array
+ * @method void setGlobalPrivileges(array $GlobalPrivileges) Set Global permission array
  * @method array getDatabasePrivileges() Obtain Array of database permissions
  * @method void setDatabasePrivileges(array $DatabasePrivileges) Set Array of database permissions
- * @method array getTablePrivileges() Obtain Array of table permissions
- * @method void setTablePrivileges(array $TablePrivileges) Set Array of table permissions
+ * @method array getTablePrivileges() Obtain Table permission array
+ * @method void setTablePrivileges(array $TablePrivileges) Set Table permission array
  */
 class ModifyAccountPrivilegesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var InputAccount Account infomation
+     * @var InputAccount Account information
      */
     public $Account;
 
     /**
-     * @var array Array of global permissions
+     * @var array Global permission array
      */
     public $GlobalPrivileges;
 
@@ -54,16 +54,16 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
     public $DatabasePrivileges;
 
     /**
-     * @var array Array of table permissions
+     * @var array Table permission array
      */
     public $TablePrivileges;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param InputAccount $Account Account infomation
-     * @param array $GlobalPrivileges Array of global permissions
+     * @param string $ClusterId Cluster ID.
+     * @param InputAccount $Account Account information
+     * @param array $GlobalPrivileges Global permission array
      * @param array $DatabasePrivileges Array of database permissions
-     * @param array $TablePrivileges Array of table permissions
+     * @param array $TablePrivileges Table permission array
      */
     function __construct()
     {

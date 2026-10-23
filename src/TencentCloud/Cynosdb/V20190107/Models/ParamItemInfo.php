@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter change information.
+ * Parameter change information
  *
  * @method string getParamName() Obtain Parameter name.
  * @method void setParamName(string $ParamName) Set Parameter name.
@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setOldValue(string $OldValue) Set Old parameter value.
 
- * @method string getValueFunction() Obtain Parameter formula.
+ * @method string getValueFunction() Obtain Parameter formula
 
- * @method void setValueFunction(string $ValueFunction) Set Parameter formula.
+ * @method void setValueFunction(string $ValueFunction) Set Parameter formula
  */
 class ParamItemInfo extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ParamItemInfo extends AbstractModel
     public $OldValue;
 
     /**
-     * @var string Parameter formula.
+     * @var string Parameter formula
 
      */
     public $ValueFunction;
@@ -65,7 +65,7 @@ class ParamItemInfo extends AbstractModel
 
      * @param string $OldValue Old parameter value.
 
-     * @param string $ValueFunction Parameter formula.
+     * @param string $ValueFunction Parameter formula
      */
     function __construct()
     {

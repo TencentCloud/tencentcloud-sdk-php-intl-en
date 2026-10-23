@@ -18,14 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filters for query
+ * Query parameter filter
  *
  * @method array getNames() Obtain Search field. Currently supports: ProxyGroupId
  * @method void setNames(array $Names) Set Search field. Currently supports: ProxyGroupId
- * @method array getValues() Obtain Search string
- * @method void setValues(array $Values) Set Search string
- * @method boolean getExactMatch() Obtain Whether to use exact match
- * @method void setExactMatch(boolean $ExactMatch) Set Whether to use exact match
+ * @method array getValues() Obtain String for search.
+ * @method void setValues(array $Values) Set String for search.
+ * @method boolean getExactMatch() Obtain Whether to match exactly.
+ * @method void setExactMatch(boolean $ExactMatch) Set Whether to match exactly.
  */
 class QueryParamFilter extends AbstractModel
 {
@@ -35,19 +35,19 @@ class QueryParamFilter extends AbstractModel
     public $Names;
 
     /**
-     * @var array Search string
+     * @var array String for search.
      */
     public $Values;
 
     /**
-     * @var boolean Whether to use exact match
+     * @var boolean Whether to match exactly.
      */
     public $ExactMatch;
 
     /**
      * @param array $Names Search field. Currently supports: ProxyGroupId
-     * @param array $Values Search string
-     * @param boolean $ExactMatch Whether to use exact match
+     * @param array $Values String for search.
+     * @param boolean $ExactMatch Whether to match exactly.
      */
     function __construct()
     {

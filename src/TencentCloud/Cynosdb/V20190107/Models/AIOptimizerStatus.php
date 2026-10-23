@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI optimizer status
  *
- * @method string getStatus() Obtain <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
- * @method void setStatus(string $Status) Set <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
- * @method string getOpenTime() Obtain <p>Start time.</p>
- * @method void setOpenTime(string $OpenTime) Set <p>Start time.</p>
+ * @method string getStatus() Obtain <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
+ * @method void setStatus(string $Status) Set <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
+ * @method string getOpenTime() Obtain <p>Activation time.</p>
+ * @method void setOpenTime(string $OpenTime) Set <p>Activation time.</p>
  * @method integer getTrainingProgress() Obtain <p>Training progress</p>
  * @method void setTrainingProgress(integer $TrainingProgress) Set <p>Training progress</p>
  */
 class AIOptimizerStatus extends AbstractModel
 {
     /**
-     * @var string <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+     * @var string <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
      */
     public $Status;
 
     /**
-     * @var string <p>Start time.</p>
+     * @var string <p>Activation time.</p>
      */
     public $OpenTime;
 
@@ -45,8 +45,8 @@ class AIOptimizerStatus extends AbstractModel
     public $TrainingProgress;
 
     /**
-     * @param string $Status <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
-     * @param string $OpenTime <p>Start time.</p>
+     * @param string $Status <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
+     * @param string $OpenTime <p>Activation time.</p>
      * @param integer $TrainingProgress <p>Training progress</p>
      */
     function __construct()

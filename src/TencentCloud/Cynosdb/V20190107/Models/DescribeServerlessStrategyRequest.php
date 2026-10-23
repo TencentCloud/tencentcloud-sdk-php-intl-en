@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServerlessStrategy request structure.
  *
- * @method string getClusterId() Obtain Specifies the serverless cluster id.
- * @method void setClusterId(string $ClusterId) Set Specifies the serverless cluster id.
+ * @method string getClusterId() Obtain serverless cluster id
+ * @method void setClusterId(string $ClusterId) Set serverless cluster id
  */
 class DescribeServerlessStrategyRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the serverless cluster id.
+     * @var string serverless cluster id
      */
     public $ClusterId;
 
     /**
-     * @param string $ClusterId Specifies the serverless cluster id.
+     * @param string $ClusterId serverless cluster id
      */
     function __construct()
     {

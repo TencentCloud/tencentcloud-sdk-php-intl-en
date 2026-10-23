@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBType(string $DBType) Set Source database type
  * @method string getIP() Obtain Source database IP
  * @method void setIP(string $IP) Set Source database IP
- * @method integer getPort() Obtain Source database port
- * @method void setPort(integer $Port) Set Source database port
+ * @method integer getPort() Obtain Source database port.
+ * @method void setPort(integer $Port) Set Source database port.
  * @method string getRegion() Obtain Source instance region
  * @method void setRegion(string $Region) Set Source instance region
- * @method string getZone() Obtain Source instance availability zone
- * @method void setZone(string $Zone) Set Source instance availability zone
- * @method string getSrcUin() Obtain Source main account uin
- * @method void setSrcUin(string $SrcUin) Set Source main account uin
+ * @method string getZone() Obtain Source instance AZ
+ * @method void setZone(string $Zone) Set Source instance AZ
+ * @method string getSrcUin() Obtain Source root account uin
+ * @method void setSrcUin(string $SrcUin) Set Source root account uin
  * @method string getAccountMode() Obtain Account type
  * @method void setAccountMode(string $AccountMode) Set Account type
- * @method string getReplicationJobStatus() Obtain sync task status
- * @method void setReplicationJobStatus(string $ReplicationJobStatus) Set sync task status
+ * @method string getReplicationJobStatus() Obtain Sync task status
+ * @method void setReplicationJobStatus(string $ReplicationJobStatus) Set Sync task status
  */
 class DataSourceItem extends AbstractModel
 {
@@ -64,7 +64,7 @@ class DataSourceItem extends AbstractModel
     public $IP;
 
     /**
-     * @var integer Source database port
+     * @var integer Source database port.
      */
     public $Port;
 
@@ -74,12 +74,12 @@ class DataSourceItem extends AbstractModel
     public $Region;
 
     /**
-     * @var string Source instance availability zone
+     * @var string Source instance AZ
      */
     public $Zone;
 
     /**
-     * @var string Source main account uin
+     * @var string Source root account uin
      */
     public $SrcUin;
 
@@ -89,7 +89,7 @@ class DataSourceItem extends AbstractModel
     public $AccountMode;
 
     /**
-     * @var string sync task status
+     * @var string Sync task status
      */
     public $ReplicationJobStatus;
 
@@ -98,12 +98,12 @@ class DataSourceItem extends AbstractModel
      * @param string $ClusterId Source cluster ID
      * @param string $DBType Source database type
      * @param string $IP Source database IP
-     * @param integer $Port Source database port
+     * @param integer $Port Source database port.
      * @param string $Region Source instance region
-     * @param string $Zone Source instance availability zone
-     * @param string $SrcUin Source main account uin
+     * @param string $Zone Source instance AZ
+     * @param string $SrcUin Source root account uin
      * @param string $AccountMode Account type
-     * @param string $ReplicationJobStatus sync task status
+     * @param string $ReplicationJobStatus Sync task status
      */
     function __construct()
     {

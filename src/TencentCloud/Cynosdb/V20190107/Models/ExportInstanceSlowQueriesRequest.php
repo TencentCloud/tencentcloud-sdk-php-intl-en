@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportInstanceSlowQueries request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getStartTime() Obtain Transaction start time
- * @method void setStartTime(string $StartTime) Set Transaction start time
- * @method string getEndTime() Obtain Transaction end time
- * @method void setEndTime(string $EndTime) Set Transaction end time
- * @method integer getLimit() Obtain Maximum number
- * @method void setLimit(integer $Limit) Set Maximum number
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method string getUsername() Obtain Username
- * @method void setUsername(string $Username) Set Username
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getStartTime() Obtain Earliest transaction start time.
+ * @method void setStartTime(string $StartTime) Set Earliest transaction start time.
+ * @method string getEndTime() Obtain Latest transaction start time.
+ * @method void setEndTime(string $EndTime) Set Latest transaction start time.
+ * @method integer getLimit() Obtain Limit of Items
+ * @method void setLimit(integer $Limit) Set Limit of Items
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method string getUsername() Obtain Username.
+ * @method void setUsername(string $Username) Set Username.
  * @method string getHost() Obtain Client host
  * @method void setHost(string $Host) Set Client host
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
- * @method string getFileType() Obtain File type. Valid values: csv, original.
- * @method void setFileType(string $FileType) Set File type. Valid values: csv, original.
- * @method string getOrderBy() Obtain Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `asc`, `desc`.
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc`, `desc`.
+ * @method string getFileType() Obtain File type. Available values: csv, original
+ * @method void setFileType(string $FileType) Set File type. Available values: csv, original
+ * @method string getOrderBy() Obtain Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
+ * @method string getOrderByType() Obtain Sorting type. Valid values: asc and desc.
+ * @method void setOrderByType(string $OrderByType) Set Sorting type. Valid values: asc and desc.
  */
 class ExportInstanceSlowQueriesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Transaction start time
+     * @var string Earliest transaction start time.
      */
     public $StartTime;
 
     /**
-     * @var string Transaction end time
+     * @var string Latest transaction start time.
      */
     public $EndTime;
 
     /**
-     * @var integer Maximum number
+     * @var integer Limit of Items
      */
     public $Limit;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var string Username
+     * @var string Username.
      */
     public $Username;
 
@@ -86,32 +86,32 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
     public $Database;
 
     /**
-     * @var string File type. Valid values: csv, original.
+     * @var string File type. Available values: csv, original
      */
     public $FileType;
 
     /**
-     * @var string Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * @var string Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `asc`, `desc`.
+     * @var string Sorting type. Valid values: asc and desc.
      */
     public $OrderByType;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $StartTime Transaction start time
-     * @param string $EndTime Transaction end time
-     * @param integer $Limit Maximum number
-     * @param integer $Offset Offset
-     * @param string $Username Username
+     * @param string $InstanceId Instance ID.
+     * @param string $StartTime Earliest transaction start time.
+     * @param string $EndTime Latest transaction start time.
+     * @param integer $Limit Limit of Items
+     * @param integer $Offset Offset.
+     * @param string $Username Username.
      * @param string $Host Client host
      * @param string $Database Database name
-     * @param string $FileType File type. Valid values: csv, original.
-     * @param string $OrderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
-     * @param string $OrderByType Sorting order. Valid values: `asc`, `desc`.
+     * @param string $FileType File type. Available values: csv, original
+     * @param string $OrderBy Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
+     * @param string $OrderByType Sorting type. Valid values: asc and desc.
      */
     function __construct()
     {

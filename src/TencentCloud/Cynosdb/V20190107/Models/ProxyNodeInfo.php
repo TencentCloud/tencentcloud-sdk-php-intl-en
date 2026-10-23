@@ -18,30 +18,30 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Node in the database proxy group.
+ * Database Proxy Group node
  *
- * @method string getProxyNodeId() Obtain <p>Database Proxy Node ID</p>
- * @method void setProxyNodeId(string $ProxyNodeId) Set <p>Database Proxy Node ID</p>
- * @method integer getProxyNodeConnections() Obtain <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
- * @method void setProxyNodeConnections(integer $ProxyNodeConnections) Set <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+ * @method string getProxyNodeId() Obtain <p>Database proxy node ID</p>
+ * @method void setProxyNodeId(string $ProxyNodeId) Set <p>Database proxy node ID</p>
+ * @method integer getProxyNodeConnections() Obtain <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
+ * @method void setProxyNodeConnections(integer $ProxyNodeConnections) Set <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
  * @method integer getCpu() Obtain <p>Database proxy node cpu</p>
  * @method void setCpu(integer $Cpu) Set <p>Database proxy node cpu</p>
  * @method integer getMem() Obtain <p>Database proxy node memory</p>
  * @method void setMem(integer $Mem) Set <p>Database proxy node memory</p>
- * @method string getStatus() Obtain <p>Database Proxy Node Status</p>
- * @method void setStatus(string $Status) Set <p>Database Proxy Node Status</p>
+ * @method string getStatus() Obtain <p>Database proxy node status</p>
+ * @method void setStatus(string $Status) Set <p>Database proxy node status</p>
  * @method string getProxyGroupId() Obtain <p>Database Proxy Group ID</p>
  * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID</p>
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
- * @method integer getAppId() Obtain <p>User AppID</p>
- * @method void setAppId(integer $AppId) Set <p>User AppID</p>
+ * @method integer getAppId() Obtain <p>User AppID.</p>
+ * @method void setAppId(integer $AppId) Set <p>User AppID.</p>
  * @method string getRegion() Obtain <p>Region.</p>
  * @method void setRegion(string $Region) Set <p>Region.</p>
  * @method string getZone() Obtain <p>AZ.</p>
  * @method void setZone(string $Zone) Set <p>AZ.</p>
- * @method string getOssProxyNodeName() Obtain <p>Database Proxy Node Name</p>
- * @method void setOssProxyNodeName(string $OssProxyNodeName) Set <p>Database Proxy Node Name</p>
+ * @method string getOssProxyNodeName() Obtain <p>Database proxy node name</p>
+ * @method void setOssProxyNodeName(string $OssProxyNodeName) Set <p>Database proxy node name</p>
  * @method string getCreateTime() Obtain <p>Creation time.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
  * @method string getUpdateTime() Obtain <p>Update time.</p>
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class ProxyNodeInfo extends AbstractModel
 {
     /**
-     * @var string <p>Database Proxy Node ID</p>
+     * @var string <p>Database proxy node ID</p>
      */
     public $ProxyNodeId;
 
     /**
-     * @var integer <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+     * @var integer <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
      */
     public $ProxyNodeConnections;
 
@@ -70,7 +70,7 @@ class ProxyNodeInfo extends AbstractModel
     public $Mem;
 
     /**
-     * @var string <p>Database Proxy Node Status</p>
+     * @var string <p>Database proxy node status</p>
      */
     public $Status;
 
@@ -85,7 +85,7 @@ class ProxyNodeInfo extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer <p>User AppID</p>
+     * @var integer <p>User AppID.</p>
      */
     public $AppId;
 
@@ -100,7 +100,7 @@ class ProxyNodeInfo extends AbstractModel
     public $Zone;
 
     /**
-     * @var string <p>Database Proxy Node Name</p>
+     * @var string <p>Database proxy node name</p>
      */
     public $OssProxyNodeName;
 
@@ -115,17 +115,17 @@ class ProxyNodeInfo extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $ProxyNodeId <p>Database Proxy Node ID</p>
-     * @param integer $ProxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+     * @param string $ProxyNodeId <p>Database proxy node ID</p>
+     * @param integer $ProxyNodeConnections <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
      * @param integer $Cpu <p>Database proxy node cpu</p>
      * @param integer $Mem <p>Database proxy node memory</p>
-     * @param string $Status <p>Database Proxy Node Status</p>
+     * @param string $Status <p>Database proxy node status</p>
      * @param string $ProxyGroupId <p>Database Proxy Group ID</p>
      * @param string $ClusterId <p>Cluster ID.</p>
-     * @param integer $AppId <p>User AppID</p>
+     * @param integer $AppId <p>User AppID.</p>
      * @param string $Region <p>Region.</p>
      * @param string $Zone <p>AZ.</p>
-     * @param string $OssProxyNodeName <p>Database Proxy Node Name</p>
+     * @param string $OssProxyNodeName <p>Database proxy node name</p>
      * @param string $CreateTime <p>Creation time.</p>
      * @param string $UpdateTime <p>Update time.</p>
      */

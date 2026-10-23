@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security group rule
  *
- * @method string getAction() Obtain Policy, which can be `ACCEPT` or `DROP`
- * @method void setAction(string $Action) Set Policy, which can be `ACCEPT` or `DROP`
- * @method string getCidrIp() Obtain Source IP or source IP range, such as 192.168.0.0/16
- * @method void setCidrIp(string $CidrIp) Set Source IP or source IP range, such as 192.168.0.0/16
- * @method string getPortRange() Obtain Port
- * @method void setPortRange(string $PortRange) Set Port
- * @method string getIpProtocol() Obtain Network protocol, such as UDP and TCP
- * @method void setIpProtocol(string $IpProtocol) Set Network protocol, such as UDP and TCP
+ * @method string getAction() Obtain Policy. Valid values: ACCEPT and DROP.
+ * @method void setAction(string $Action) Set Policy. Valid values: ACCEPT and DROP.
+ * @method string getCidrIp() Obtain Source Ip or Ip range, for example, 192.168.0.0/16
+ * @method void setCidrIp(string $CidrIp) Set Source Ip or Ip range, for example, 192.168.0.0/16
+ * @method string getPortRange() Obtain Port.
+ * @method void setPortRange(string $PortRange) Set Port.
+ * @method string getIpProtocol() Obtain Network protocol. Supports udp and tcp.
+ * @method void setIpProtocol(string $IpProtocol) Set Network protocol. Supports udp and tcp.
  * @method string getServiceModule() Obtain Protocol port ID or protocol port group ID.
  * @method void setServiceModule(string $ServiceModule) Set Protocol port ID or protocol port group ID.
- * @method string getAddressModule() Obtain IP address ID or IP address group ID.
- * @method void setAddressModule(string $AddressModule) Set IP address ID or IP address group ID.
+ * @method string getAddressModule() Obtain IP address ID or IP address group ID
+ * @method void setAddressModule(string $AddressModule) Set IP address ID or IP address group ID
  * @method string getId() Obtain id
  * @method void setId(string $Id) Set id
  * @method string getDesc() Obtain Description
@@ -40,22 +40,22 @@ use TencentCloud\Common\AbstractModel;
 class PolicyRule extends AbstractModel
 {
     /**
-     * @var string Policy, which can be `ACCEPT` or `DROP`
+     * @var string Policy. Valid values: ACCEPT and DROP.
      */
     public $Action;
 
     /**
-     * @var string Source IP or source IP range, such as 192.168.0.0/16
+     * @var string Source Ip or Ip range, for example, 192.168.0.0/16
      */
     public $CidrIp;
 
     /**
-     * @var string Port
+     * @var string Port.
      */
     public $PortRange;
 
     /**
-     * @var string Network protocol, such as UDP and TCP
+     * @var string Network protocol. Supports udp and tcp.
      */
     public $IpProtocol;
 
@@ -65,7 +65,7 @@ class PolicyRule extends AbstractModel
     public $ServiceModule;
 
     /**
-     * @var string IP address ID or IP address group ID.
+     * @var string IP address ID or IP address group ID
      */
     public $AddressModule;
 
@@ -80,12 +80,12 @@ class PolicyRule extends AbstractModel
     public $Desc;
 
     /**
-     * @param string $Action Policy, which can be `ACCEPT` or `DROP`
-     * @param string $CidrIp Source IP or source IP range, such as 192.168.0.0/16
-     * @param string $PortRange Port
-     * @param string $IpProtocol Network protocol, such as UDP and TCP
+     * @param string $Action Policy. Valid values: ACCEPT and DROP.
+     * @param string $CidrIp Source Ip or Ip range, for example, 192.168.0.0/16
+     * @param string $PortRange Port.
+     * @param string $IpProtocol Network protocol. Supports udp and tcp.
      * @param string $ServiceModule Protocol port ID or protocol port group ID.
-     * @param string $AddressModule IP address ID or IP address group ID.
+     * @param string $AddressModule IP address ID or IP address group ID
      * @param string $Id id
      * @param string $Desc Description
      */

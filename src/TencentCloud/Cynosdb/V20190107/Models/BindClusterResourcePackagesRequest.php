@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindClusterResourcePackages request structure.
  *
- * @method array getPackageIds() Obtain The unique ID of a resource pack
- * @method void setPackageIds(array $PackageIds) Set The unique ID of a resource pack
+ * @method array getPackageIds() Obtain Unique ID of the resource package
+ * @method void setPackageIds(array $PackageIds) Set Unique ID of the resource package
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  */
 class BindClusterResourcePackagesRequest extends AbstractModel
 {
     /**
-     * @var array The unique ID of a resource pack
+     * @var array Unique ID of the resource package
      */
     public $PackageIds;
 
@@ -38,7 +38,7 @@ class BindClusterResourcePackagesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @param array $PackageIds The unique ID of a resource pack
+     * @param array $PackageIds Unique ID of the resource package
      * @param string $ClusterId Cluster ID
      */
     function __construct()

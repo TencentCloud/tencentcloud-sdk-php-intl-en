@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getBackupIds() Obtain List of the backup IDs.
  * @method void setBackupIds(array $BackupIds) Set List of the backup IDs.
- * @method array getBackupNames() Obtain Backup name list
- * @method void setBackupNames(array $BackupNames) Set Backup name list
- * @method array getFileNames() Obtain Filename list
- * @method void setFileNames(array $FileNames) Set Filename list
- * @method integer getLimit() Obtain Number of returned results, range (0,100], default 100
- * @method void setLimit(integer $Limit) Set Number of returned results, range (0,100], default 100
- * @method integer getOffset() Obtain Offset. Range: [0, INF). Default is 0
- * @method void setOffset(integer $Offset) Set Offset. Range: [0, INF). Default is 0
- * @method string getOrderBy() Obtain Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
- * @method string getOrderByType() Obtain Sorting method, available values: desc, asc, DESC, ASC, default desc
- * @method void setOrderByType(string $OrderByType) Set Sorting method, available values: desc, asc, DESC, ASC, default desc
+ * @method array getBackupNames() Obtain List of backup names
+ * @method void setBackupNames(array $BackupNames) Set List of backup names
+ * @method array getFileNames() Obtain File name list
+ * @method void setFileNames(array $FileNames) Set File name list
+ * @method integer getLimit() Obtain Number of returned results. Value range: (0, 100]. Default value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Value range: (0, 100]. Default value: 100.
+ * @method integer getOffset() Obtain Offset. Value range: [0, INF). Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Value range: [0, INF). Default value: 0.
+ * @method string getOrderBy() Obtain Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+ * @method string getOrderByType() Obtain Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
  * @method string getStatus() Obtain Status.
  * @method void setStatus(string $Status) Set Status.
  */
@@ -59,32 +59,32 @@ class DescribeBinlogListByVaultRequest extends AbstractModel
     public $BackupIds;
 
     /**
-     * @var array Backup name list
+     * @var array List of backup names
      */
     public $BackupNames;
 
     /**
-     * @var array Filename list
+     * @var array File name list
      */
     public $FileNames;
 
     /**
-     * @var integer Number of returned results, range (0,100], default 100
+     * @var integer Number of returned results. Value range: (0, 100]. Default value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Range: [0, INF). Default is 0
+     * @var integer Offset. Value range: [0, INF). Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var string Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+     * @var string Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * @var string Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public $OrderByType;
 
@@ -97,12 +97,12 @@ class DescribeBinlogListByVaultRequest extends AbstractModel
      * @param string $VaultId Safe ID
      * @param string $ClusterId Cluster ID
      * @param array $BackupIds List of the backup IDs.
-     * @param array $BackupNames Backup name list
-     * @param array $FileNames Filename list
-     * @param integer $Limit Number of returned results, range (0,100], default 100
-     * @param integer $Offset Offset. Range: [0, INF). Default is 0
-     * @param string $OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
-     * @param string $OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * @param array $BackupNames List of backup names
+     * @param array $FileNames File name list
+     * @param integer $Limit Number of returned results. Value range: (0, 100]. Default value: 100.
+     * @param integer $Offset Offset. Value range: [0, INF). Default value: 0.
+     * @param string $OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+     * @param string $OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      * @param string $Status Status.
      */
     function __construct()

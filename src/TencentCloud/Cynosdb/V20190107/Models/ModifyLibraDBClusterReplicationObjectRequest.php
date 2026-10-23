@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLibraDBClusterReplicationObject request structure.
  *
- * @method string getClusterId() Obtain Analysis Cluster ID
- * @method void setClusterId(string $ClusterId) Set Analysis Cluster ID
+ * @method string getClusterId() Obtain Analysis cluster ID
+ * @method void setClusterId(string $ClusterId) Set Analysis cluster ID
  * @method string getInstanceId() Obtain Read-only analysis engine instance ID
  * @method void setInstanceId(string $InstanceId) Set Read-only analysis engine instance ID
- * @method string getForceDefaultMapRule() Obtain Map mode
- * @method void setForceDefaultMapRule(string $ForceDefaultMapRule) Set Map mode
- * @method array getObjects() Obtain sync object
- * @method void setObjects(array $Objects) Set sync object
+ * @method string getForceDefaultMapRule() Obtain Mapping mode
+ * @method void setForceDefaultMapRule(string $ForceDefaultMapRule) Set Mapping mode
+ * @method array getObjects() Obtain Synchronization object
+ * @method void setObjects(array $Objects) Set Synchronization object
  * @method array getAutoMapRules() Obtain Automated mapping rule
  * @method void setAutoMapRules(array $AutoMapRules) Set Automated mapping rule
- * @method boolean getRefreshMapping() Obtain Whether to refresh existing mapping relationships according to the latest mapping rule
- * @method void setRefreshMapping(boolean $RefreshMapping) Set Whether to refresh existing mapping relationships according to the latest mapping rule
+ * @method boolean getRefreshMapping() Obtain Whether to update existing mapping relationships according to the latest mapping rule
+ * @method void setRefreshMapping(boolean $RefreshMapping) Set Whether to update existing mapping relationships according to the latest mapping rule
  */
 class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel
 {
     /**
-     * @var string Analysis Cluster ID
+     * @var string Analysis cluster ID
      */
     public $ClusterId;
 
@@ -46,12 +46,12 @@ class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Map mode
+     * @var string Mapping mode
      */
     public $ForceDefaultMapRule;
 
     /**
-     * @var array sync object
+     * @var array Synchronization object
      */
     public $Objects;
 
@@ -61,17 +61,17 @@ class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel
     public $AutoMapRules;
 
     /**
-     * @var boolean Whether to refresh existing mapping relationships according to the latest mapping rule
+     * @var boolean Whether to update existing mapping relationships according to the latest mapping rule
      */
     public $RefreshMapping;
 
     /**
-     * @param string $ClusterId Analysis Cluster ID
+     * @param string $ClusterId Analysis cluster ID
      * @param string $InstanceId Read-only analysis engine instance ID
-     * @param string $ForceDefaultMapRule Map mode
-     * @param array $Objects sync object
+     * @param string $ForceDefaultMapRule Mapping mode
+     * @param array $Objects Synchronization object
      * @param array $AutoMapRules Automated mapping rule
-     * @param boolean $RefreshMapping Whether to refresh existing mapping relationships according to the latest mapping rule
+     * @param boolean $RefreshMapping Whether to update existing mapping relationships according to the latest mapping rule
      */
     function __construct()
     {

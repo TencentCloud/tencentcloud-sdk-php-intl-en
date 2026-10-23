@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RefundResourcePackage request structure.
  *
- * @method string getPackageId() Obtain The unique ID of a resource pack
- * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack
+ * @method string getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(string $PackageId) Set Unique ID of the resource package
  */
 class RefundResourcePackageRequest extends AbstractModel
 {
     /**
-     * @var string The unique ID of a resource pack
+     * @var string Unique ID of the resource package
      */
     public $PackageId;
 
     /**
-     * @param string $PackageId The unique ID of a resource pack
+     * @param string $PackageId Unique ID of the resource package
      */
     function __construct()
     {

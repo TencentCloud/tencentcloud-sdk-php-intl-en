@@ -18,32 +18,32 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rollback progress details.
+ * Rollback progress details
  *
- * @method boolean getIsVipSwitchable() Obtain Is it possible to switch vip.
- * @method void setIsVipSwitchable(boolean $IsVipSwitchable) Set Is it possible to switch vip.
- * @method string getVipSwitchableTime() Obtain The exchangeable time of vip.
- * @method void setVipSwitchableTime(string $VipSwitchableTime) Set The exchangeable time of vip.
+ * @method boolean getIsVipSwitchable() Obtain Is it possible to switch vip
+ * @method void setIsVipSwitchable(boolean $IsVipSwitchable) Set Is it possible to switch vip
+ * @method string getVipSwitchableTime() Obtain vip exchangeable time
+ * @method void setVipSwitchableTime(string $VipSwitchableTime) Set vip exchangeable time
  * @method array getExchangeInstanceInfoList() Obtain Exchange instance list
  * @method void setExchangeInstanceInfoList(array $ExchangeInstanceInfoList) Set Exchange instance list
  * @method array getExchangeRoGroupInfoList() Obtain Exchange RO group list
  * @method void setExchangeRoGroupInfoList(array $ExchangeRoGroupInfoList) Set Exchange RO group list
- * @method string getCurrentStep() Obtain Current step.
- * @method void setCurrentStep(string $CurrentStep) Set Current step.
+ * @method string getCurrentStep() Obtain Details of the current step
+ * @method void setCurrentStep(string $CurrentStep) Set Details of the current step
  * @method integer getCurrentStepProgress() Obtain Current step progress.
  * @method void setCurrentStepProgress(integer $CurrentStepProgress) Set Current step progress.
- * @method string getCurrentStepRemainingTime() Obtain Remaining time of the current step.
- * @method void setCurrentStepRemainingTime(string $CurrentStepRemainingTime) Set Remaining time of the current step.
+ * @method string getCurrentStepRemainingTime() Obtain Remaining time of the current step
+ * @method void setCurrentStepRemainingTime(string $CurrentStepRemainingTime) Set Remaining time of the current step
  */
 class RollbackProcessInfo extends AbstractModel
 {
     /**
-     * @var boolean Is it possible to switch vip.
+     * @var boolean Is it possible to switch vip
      */
     public $IsVipSwitchable;
 
     /**
-     * @var string The exchangeable time of vip.
+     * @var string vip exchangeable time
      */
     public $VipSwitchableTime;
 
@@ -58,7 +58,7 @@ class RollbackProcessInfo extends AbstractModel
     public $ExchangeRoGroupInfoList;
 
     /**
-     * @var string Current step.
+     * @var string Details of the current step
      */
     public $CurrentStep;
 
@@ -68,18 +68,18 @@ class RollbackProcessInfo extends AbstractModel
     public $CurrentStepProgress;
 
     /**
-     * @var string Remaining time of the current step.
+     * @var string Remaining time of the current step
      */
     public $CurrentStepRemainingTime;
 
     /**
-     * @param boolean $IsVipSwitchable Is it possible to switch vip.
-     * @param string $VipSwitchableTime The exchangeable time of vip.
+     * @param boolean $IsVipSwitchable Is it possible to switch vip
+     * @param string $VipSwitchableTime vip exchangeable time
      * @param array $ExchangeInstanceInfoList Exchange instance list
      * @param array $ExchangeRoGroupInfoList Exchange RO group list
-     * @param string $CurrentStep Current step.
+     * @param string $CurrentStep Details of the current step
      * @param integer $CurrentStepProgress Current step progress.
-     * @param string $CurrentStepRemainingTime Remaining time of the current step.
+     * @param string $CurrentStepRemainingTime Remaining time of the current step
      */
     function __construct()
     {

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateID(string $TemplateID) Set <p>Template ID</p>
  * @method string getDb() Obtain <p>Database name.</p>
  * @method void setDb(string $Db) Set <p>Database name.</p>
- * @method string getSQLSample() Obtain <p>Original SQL sample</p>
- * @method void setSQLSample(string $SQLSample) Set <p>Original SQL sample</p>
+ * @method string getSQLSample() Obtain <p>Original SQL sample.</p>
+ * @method void setSQLSample(string $SQLSample) Set <p>Original SQL sample.</p>
  * @method string getSQLSampleRewritten() Obtain <p>Sample SQL after rewrite</p>
  * @method void setSQLSampleRewritten(string $SQLSampleRewritten) Set <p>Sample SQL after rewrite</p>
  * @method array getTablePlanBefore() Obtain <p>Execution plan before optimization - List</p>
  * @method void setTablePlanBefore(array $TablePlanBefore) Set <p>Execution plan before optimization - List</p>
- * @method array getTablePlanAfter() Obtain <p>Execution plan after optimization - List</p>
- * @method void setTablePlanAfter(array $TablePlanAfter) Set <p>Execution plan after optimization - List</p>
+ * @method array getTablePlanAfter() Obtain <p>Execution plan after optimization - list</p>
+ * @method void setTablePlanAfter(array $TablePlanAfter) Set <p>Execution plan after optimization - list</p>
  * @method string getTreePlanBefore() Obtain <p>Tree execution plan before optimization</p>
  * @method void setTreePlanBefore(string $TreePlanBefore) Set <p>Tree execution plan before optimization</p>
  * @method string getTreePlanAfter() Obtain <p>Tree execution plan after optimization</p>
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryTimeBefore(float $QueryTimeBefore) Set <p>Query time before optimization</p>
  * @method float getQueryTimeAfter() Obtain <p>Query time after optimization</p>
  * @method void setQueryTimeAfter(float $QueryTimeAfter) Set <p>Query time after optimization</p>
- * @method integer getSQLScanRowsBefore() Obtain <p>Number of scanned rows before optimization</p>
- * @method void setSQLScanRowsBefore(integer $SQLScanRowsBefore) Set <p>Number of scanned rows before optimization</p>
+ * @method integer getSQLScanRowsBefore() Obtain <p>Scanned rows before optimization</p>
+ * @method void setSQLScanRowsBefore(integer $SQLScanRowsBefore) Set <p>Scanned rows before optimization</p>
  * @method integer getSQLScanRowsAfter() Obtain <p>Number of scanned rows after optimization</p>
  * @method void setSQLScanRowsAfter(integer $SQLScanRowsAfter) Set <p>Number of scanned rows after optimization</p>
  */
@@ -58,7 +58,7 @@ class ExecutionPlanDetail extends AbstractModel
     public $Db;
 
     /**
-     * @var string <p>Original SQL sample</p>
+     * @var string <p>Original SQL sample.</p>
      */
     public $SQLSample;
 
@@ -73,7 +73,7 @@ class ExecutionPlanDetail extends AbstractModel
     public $TablePlanBefore;
 
     /**
-     * @var array <p>Execution plan after optimization - List</p>
+     * @var array <p>Execution plan after optimization - list</p>
      */
     public $TablePlanAfter;
 
@@ -98,7 +98,7 @@ class ExecutionPlanDetail extends AbstractModel
     public $QueryTimeAfter;
 
     /**
-     * @var integer <p>Number of scanned rows before optimization</p>
+     * @var integer <p>Scanned rows before optimization</p>
      */
     public $SQLScanRowsBefore;
 
@@ -110,15 +110,15 @@ class ExecutionPlanDetail extends AbstractModel
     /**
      * @param string $TemplateID <p>Template ID</p>
      * @param string $Db <p>Database name.</p>
-     * @param string $SQLSample <p>Original SQL sample</p>
+     * @param string $SQLSample <p>Original SQL sample.</p>
      * @param string $SQLSampleRewritten <p>Sample SQL after rewrite</p>
      * @param array $TablePlanBefore <p>Execution plan before optimization - List</p>
-     * @param array $TablePlanAfter <p>Execution plan after optimization - List</p>
+     * @param array $TablePlanAfter <p>Execution plan after optimization - list</p>
      * @param string $TreePlanBefore <p>Tree execution plan before optimization</p>
      * @param string $TreePlanAfter <p>Tree execution plan after optimization</p>
      * @param float $QueryTimeBefore <p>Query time before optimization</p>
      * @param float $QueryTimeAfter <p>Query time after optimization</p>
-     * @param integer $SQLScanRowsBefore <p>Number of scanned rows before optimization</p>
+     * @param integer $SQLScanRowsBefore <p>Scanned rows before optimization</p>
      * @param integer $SQLScanRowsAfter <p>Number of scanned rows after optimization</p>
      */
     function __construct()

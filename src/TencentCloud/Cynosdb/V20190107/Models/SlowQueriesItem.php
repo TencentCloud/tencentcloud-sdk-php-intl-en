@@ -18,58 +18,58 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Slow query information of the instance
+ * Instance query statistics
  *
  * @method integer getTimestamp() Obtain Execution timestamp
  * @method void setTimestamp(integer $Timestamp) Set Execution timestamp
- * @method float getQueryTime() Obtain Execution duration in seconds
- * @method void setQueryTime(float $QueryTime) Set Execution duration in seconds
- * @method string getSqlText() Obtain SQL statement
- * @method void setSqlText(string $SqlText) Set SQL statement
+ * @method float getQueryTime() Obtain Execution duration in seconds.
+ * @method void setQueryTime(float $QueryTime) Set Execution duration in seconds.
+ * @method string getSqlText() Obtain sql statement
+ * @method void setSqlText(string $SqlText) Set sql statement
  * @method string getUserHost() Obtain Client host
  * @method void setUserHost(string $UserHost) Set Client host
- * @method string getUserName() Obtain Username
- * @method void setUserName(string $UserName) Set Username
+ * @method string getUserName() Obtain Username.
+ * @method void setUserName(string $UserName) Set Username.
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
- * @method float getLockTime() Obtain Lock duration in seconds
- * @method void setLockTime(float $LockTime) Set Lock duration in seconds
- * @method integer getRowsExamined() Obtain Number of scanned rows
- * @method void setRowsExamined(integer $RowsExamined) Set Number of scanned rows
- * @method integer getRowsSent() Obtain Number of returned rows
- * @method void setRowsSent(integer $RowsSent) Set Number of returned rows
- * @method string getSqlTemplate() Obtain SQL template
- * @method void setSqlTemplate(string $SqlTemplate) Set SQL template
- * @method string getSqlMd5() Obtain MD5 value of the SQL statement
- * @method void setSqlMd5(string $SqlMd5) Set MD5 value of the SQL statement
- * @method integer getSyncReadCountRemote() Obtain Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
- * @method void setSyncReadCountRemote(integer $SyncReadCountRemote) Set Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
- * @method integer getSyncReadBytesRemote() Obtain Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
- * @method void setSyncReadBytesRemote(integer $SyncReadBytesRemote) Set Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
- * @method integer getSyncReadTimeRemote() Obtain Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
- * @method void setSyncReadTimeRemote(integer $SyncReadTimeRemote) Set Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
- * @method integer getSyncWriteCountRemote() Obtain Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
- * @method void setSyncWriteCountRemote(integer $SyncWriteCountRemote) Set Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
- * @method integer getSyncWriteBytesRemote() Obtain Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
- * @method void setSyncWriteBytesRemote(integer $SyncWriteBytesRemote) Set Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+ * @method float getLockTime() Obtain Lock duration in seconds.
+ * @method void setLockTime(float $LockTime) Set Lock duration in seconds.
+ * @method integer getRowsExamined() Obtain Number of scanned rows.
+ * @method void setRowsExamined(integer $RowsExamined) Set Number of scanned rows.
+ * @method integer getRowsSent() Obtain Rows returned
+ * @method void setRowsSent(integer $RowsSent) Set Rows returned
+ * @method string getSqlTemplate() Obtain sql template
+ * @method void setSqlTemplate(string $SqlTemplate) Set sql template
+ * @method string getSqlMd5() Obtain md5 of the sql statement
+ * @method void setSqlMd5(string $SqlMd5) Set md5 of the sql statement
+ * @method integer getSyncReadCountRemote() Obtain Remote reading count
+Database kernel version above 3.1.12
+ * @method void setSyncReadCountRemote(integer $SyncReadCountRemote) Set Remote reading count
+Database kernel version above 3.1.12
+ * @method integer getSyncReadBytesRemote() Obtain Number of remote read bytes
+Database kernel version above 3.1.12
+ * @method void setSyncReadBytesRemote(integer $SyncReadBytesRemote) Set Number of remote read bytes
+Database kernel version above 3.1.12
+ * @method integer getSyncReadTimeRemote() Obtain Time spent on remote reads (µs)
+Database kernel version above 3.1.12
+ * @method void setSyncReadTimeRemote(integer $SyncReadTimeRemote) Set Time spent on remote reads (µs)
+Database kernel version above 3.1.12
+ * @method integer getSyncWriteCountRemote() Obtain Remote write count
+Database kernel version above 3.1.12
+ * @method void setSyncWriteCountRemote(integer $SyncWriteCountRemote) Set Remote write count
+Database kernel version above 3.1.12
+ * @method integer getSyncWriteBytesRemote() Obtain Number of remote written bytes.
+Database kernel version above 3.1.12
+ * @method void setSyncWriteBytesRemote(integer $SyncWriteBytesRemote) Set Number of remote written bytes.
+Database kernel version above 3.1.12
  * @method integer getSyncWriteTimeRemote() Obtain Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
  * @method void setSyncWriteTimeRemote(integer $SyncWriteTimeRemote) Set Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
- * @method integer getTrxCommitDelay() Obtain Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
- * @method void setTrxCommitDelay(integer $TrxCommitDelay) Set Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
+ * @method integer getTrxCommitDelay() Obtain Transaction submission delay (µs)
+Database kernel version above 3.1.12
+ * @method void setTrxCommitDelay(integer $TrxCommitDelay) Set Transaction submission delay (µs)
+Database kernel version above 3.1.12
  */
 class SlowQueriesItem extends AbstractModel
 {
@@ -79,12 +79,12 @@ class SlowQueriesItem extends AbstractModel
     public $Timestamp;
 
     /**
-     * @var float Execution duration in seconds
+     * @var float Execution duration in seconds.
      */
     public $QueryTime;
 
     /**
-     * @var string SQL statement
+     * @var string sql statement
      */
     public $SqlText;
 
@@ -94,7 +94,7 @@ class SlowQueriesItem extends AbstractModel
     public $UserHost;
 
     /**
-     * @var string Username
+     * @var string Username.
      */
     public $UserName;
 
@@ -104,98 +104,98 @@ class SlowQueriesItem extends AbstractModel
     public $Database;
 
     /**
-     * @var float Lock duration in seconds
+     * @var float Lock duration in seconds.
      */
     public $LockTime;
 
     /**
-     * @var integer Number of scanned rows
+     * @var integer Number of scanned rows.
      */
     public $RowsExamined;
 
     /**
-     * @var integer Number of returned rows
+     * @var integer Rows returned
      */
     public $RowsSent;
 
     /**
-     * @var string SQL template
+     * @var string sql template
      */
     public $SqlTemplate;
 
     /**
-     * @var string MD5 value of the SQL statement
+     * @var string md5 of the sql statement
      */
     public $SqlMd5;
 
     /**
-     * @var integer Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
+     * @var integer Remote reading count
+Database kernel version above 3.1.12
      */
     public $SyncReadCountRemote;
 
     /**
-     * @var integer Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+     * @var integer Number of remote read bytes
+Database kernel version above 3.1.12
      */
     public $SyncReadBytesRemote;
 
     /**
-     * @var integer Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+     * @var integer Time spent on remote reads (µs)
+Database kernel version above 3.1.12
      */
     public $SyncReadTimeRemote;
 
     /**
-     * @var integer Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
+     * @var integer Remote write count
+Database kernel version above 3.1.12
      */
     public $SyncWriteCountRemote;
 
     /**
-     * @var integer Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+     * @var integer Number of remote written bytes.
+Database kernel version above 3.1.12
      */
     public $SyncWriteBytesRemote;
 
     /**
      * @var integer Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
      */
     public $SyncWriteTimeRemote;
 
     /**
-     * @var integer Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+     * @var integer Transaction submission delay (µs)
+Database kernel version above 3.1.12
      */
     public $TrxCommitDelay;
 
     /**
      * @param integer $Timestamp Execution timestamp
-     * @param float $QueryTime Execution duration in seconds
-     * @param string $SqlText SQL statement
+     * @param float $QueryTime Execution duration in seconds.
+     * @param string $SqlText sql statement
      * @param string $UserHost Client host
-     * @param string $UserName Username
+     * @param string $UserName Username.
      * @param string $Database Database name
-     * @param float $LockTime Lock duration in seconds
-     * @param integer $RowsExamined Number of scanned rows
-     * @param integer $RowsSent Number of returned rows
-     * @param string $SqlTemplate SQL template
-     * @param string $SqlMd5 MD5 value of the SQL statement
-     * @param integer $SyncReadCountRemote Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param integer $SyncReadBytesRemote Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param integer $SyncReadTimeRemote Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param integer $SyncWriteCountRemote Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param integer $SyncWriteBytesRemote Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+     * @param float $LockTime Lock duration in seconds.
+     * @param integer $RowsExamined Number of scanned rows.
+     * @param integer $RowsSent Rows returned
+     * @param string $SqlTemplate sql template
+     * @param string $SqlMd5 md5 of the sql statement
+     * @param integer $SyncReadCountRemote Remote reading count
+Database kernel version above 3.1.12
+     * @param integer $SyncReadBytesRemote Number of remote read bytes
+Database kernel version above 3.1.12
+     * @param integer $SyncReadTimeRemote Time spent on remote reads (µs)
+Database kernel version above 3.1.12
+     * @param integer $SyncWriteCountRemote Remote write count
+Database kernel version above 3.1.12
+     * @param integer $SyncWriteBytesRemote Number of remote written bytes.
+Database kernel version above 3.1.12
      * @param integer $SyncWriteTimeRemote Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param integer $TrxCommitDelay Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
+     * @param integer $TrxCommitDelay Transaction submission delay (µs)
+Database kernel version above 3.1.12
      */
     function __construct()
     {

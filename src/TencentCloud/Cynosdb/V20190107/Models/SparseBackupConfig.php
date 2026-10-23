@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSparseBackupSwitch() Obtain Sparse backup switch: ON/OFF
  * @method void setSparseBackupSwitch(string $SparseBackupSwitch) Set Sparse backup switch: ON/OFF
- * @method array getSparseBackupConfigInfos() Obtain Sparse backup policy list (1-3)
- * @method void setSparseBackupConfigInfos(array $SparseBackupConfigInfos) Set Sparse backup policy list (1-3)
+ * @method array getSparseBackupConfigInfos() Obtain List of sparse backup policies (1-3)
+ * @method void setSparseBackupConfigInfos(array $SparseBackupConfigInfos) Set List of sparse backup policies (1-3)
  */
 class SparseBackupConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SparseBackupConfig extends AbstractModel
     public $SparseBackupSwitch;
 
     /**
-     * @var array Sparse backup policy list (1-3)
+     * @var array List of sparse backup policies (1-3)
      */
     public $SparseBackupConfigInfos;
 
     /**
      * @param string $SparseBackupSwitch Sparse backup switch: ON/OFF
-     * @param array $SparseBackupConfigInfos Sparse backup policy list (1-3)
+     * @param array $SparseBackupConfigInfos List of sparse backup policies (1-3)
      */
     function __construct()
     {

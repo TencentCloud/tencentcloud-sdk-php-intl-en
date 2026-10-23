@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterDatabaseTables request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method string getDb() Obtain Database name
  * @method void setDb(string $Db) Set Database name
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number
  * @method void setLimit(integer $Limit) Set Number
- * @method string getTableType() Obtain Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
- * @method void setTableType(string $TableType) Set Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+ * @method string getTableType() Obtain Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
+ * @method void setTableType(string $TableType) Set Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
  */
 class DescribeClusterDatabaseTablesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
@@ -56,18 +56,18 @@ class DescribeClusterDatabaseTablesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+     * @var string Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
      */
     public $TableType;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @param string $ClusterId Cluster ID.
      * @param string $Db Database name
      * @param integer $Offset Offset
      * @param integer $Limit Number
-     * @param string $TableType Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+     * @param string $TableType Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
      */
     function __construct()
     {

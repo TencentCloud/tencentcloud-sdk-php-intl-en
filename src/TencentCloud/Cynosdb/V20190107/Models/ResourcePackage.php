@@ -18,40 +18,40 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a resource pack
+ * Resource package information
  *
- * @method string getPackageId() Obtain The unique ID of the resource package.
- * @method void setPackageId(string $PackageId) Set The unique ID of the resource package.
- * @method string getPackageType() Obtain Resource package type: CCU: compute resource package.
-DISK: storage resource package.
- * @method void setPackageType(string $PackageType) Set Resource package type: CCU: compute resource package.
-DISK: storage resource package.
- * @method integer getDeductionPriority() Obtain Deduction priority of the current resource package bound to the current instance.
- * @method void setDeductionPriority(integer $DeductionPriority) Set Deduction priority of the current resource package bound to the current instance.
+ * @method string getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(string $PackageId) Set Unique ID of the resource package
+ * @method string getPackageType() Obtain Resource package type. CCU: compute resource package.
+DISK: storage resource package
+ * @method void setPackageType(string $PackageType) Set Resource package type. CCU: compute resource package.
+DISK: storage resource package
+ * @method integer getDeductionPriority() Obtain Deduction priority of the current resource pack bound to the current instance
+ * @method void setDeductionPriority(integer $DeductionPriority) Set Deduction priority of the current resource pack bound to the current instance
  */
 class ResourcePackage extends AbstractModel
 {
     /**
-     * @var string The unique ID of the resource package.
+     * @var string Unique ID of the resource package
      */
     public $PackageId;
 
     /**
-     * @var string Resource package type: CCU: compute resource package.
-DISK: storage resource package.
+     * @var string Resource package type. CCU: compute resource package.
+DISK: storage resource package
      */
     public $PackageType;
 
     /**
-     * @var integer Deduction priority of the current resource package bound to the current instance.
+     * @var integer Deduction priority of the current resource pack bound to the current instance
      */
     public $DeductionPriority;
 
     /**
-     * @param string $PackageId The unique ID of the resource package.
-     * @param string $PackageType Resource package type: CCU: compute resource package.
-DISK: storage resource package.
-     * @param integer $DeductionPriority Deduction priority of the current resource package bound to the current instance.
+     * @param string $PackageId Unique ID of the resource package
+     * @param string $PackageType Resource package type. CCU: compute resource package.
+DISK: storage resource package
+     * @param integer $DeductionPriority Deduction priority of the current resource pack bound to the current instance
      */
     function __construct()
     {

@@ -20,41 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVipVport request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getInstanceGrpId() Obtain Instance group ID
- * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID
- * @method string getVip() Obtain Target IP to be modified
- * @method void setVip(string $Vip) Set Target IP to be modified
- * @method integer getVport() Obtain Target port to be modified
- * @method void setVport(integer $Vport) Set Target port to be modified
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getInstanceGrpId() Obtain Instance Group ID
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance Group ID
+ * @method string getInstanceGroupId() Obtain Instance Group ID
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance Group ID
+ * @method string getVip() Obtain Destination ip that needs to be modified
+ * @method void setVip(string $Vip) Set Destination ip that needs to be modified
+ * @method integer getVport() Obtain Destination port that needs to be modified
+ * @method void setVport(integer $Vport) Set Destination port that needs to be modified
  * @method string getDbType() Obtain Database type. Valid values: 
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) Set Database type. Valid values: 
 <li> MYSQL </li>
- * @method integer getOldIpReserveHours() Obtain Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
- * @method void setOldIpReserveHours(integer $OldIpReserveHours) Set Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+ * @method integer getOldIpReserveHours() Obtain Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
+ * @method void setOldIpReserveHours(integer $OldIpReserveHours) Set Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
  */
 class ModifyVipVportRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Instance group ID
+     * @var string Instance Group ID
      * @deprecated
      */
     public $InstanceGrpId;
 
     /**
-     * @var string Target IP to be modified
+     * @var string Instance Group ID
+     */
+    public $InstanceGroupId;
+
+    /**
+     * @var string Destination ip that needs to be modified
      */
     public $Vip;
 
     /**
-     * @var integer Target port to be modified
+     * @var integer Destination port that needs to be modified
      */
     public $Vport;
 
@@ -65,18 +72,19 @@ class ModifyVipVportRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var integer Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+     * @var integer Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
      */
     public $OldIpReserveHours;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $InstanceGrpId Instance group ID
-     * @param string $Vip Target IP to be modified
-     * @param integer $Vport Target port to be modified
+     * @param string $ClusterId Cluster ID.
+     * @param string $InstanceGrpId Instance Group ID
+     * @param string $InstanceGroupId Instance Group ID
+     * @param string $Vip Destination ip that needs to be modified
+     * @param integer $Vport Destination port that needs to be modified
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
-     * @param integer $OldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+     * @param integer $OldIpReserveHours Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class ModifyVipVportRequest extends AbstractModel
 
         if (array_key_exists("InstanceGrpId",$param) and $param["InstanceGrpId"] !== null) {
             $this->InstanceGrpId = $param["InstanceGrpId"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {

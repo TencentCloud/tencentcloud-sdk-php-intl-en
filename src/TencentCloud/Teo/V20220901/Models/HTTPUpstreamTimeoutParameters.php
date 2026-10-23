@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Layer-7 origin-pull timeout configuration.
  *
- * @method integer getResponseTimeout() Obtain HTTP response timeout in seconds. value range: 5–600.
- * @method void setResponseTimeout(integer $ResponseTimeout) Set HTTP response timeout in seconds. value range: 5–600.
+ * @method integer getResponseTimeout() Obtain <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
+ * @method void setResponseTimeout(integer $ResponseTimeout) Set <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
  */
 class HTTPUpstreamTimeoutParameters extends AbstractModel
 {
     /**
-     * @var integer HTTP response timeout in seconds. value range: 5–600.
+     * @var integer <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
      */
     public $ResponseTimeout;
 
     /**
-     * @param integer $ResponseTimeout HTTP response timeout in seconds. value range: 5–600.
+     * @param integer $ResponseTimeout <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
      */
     function __construct()
     {

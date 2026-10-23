@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenClusterTransparentEncrypt request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getKeyType() Obtain Key type (cloud, custom).
- * @method void setKeyType(string $KeyType) Set Key type (cloud, custom).
- * @method string getKeyId() Obtain Key Id.
- * @method void setKeyId(string $KeyId) Set Key Id.
- * @method string getKeyRegion() Obtain Key region.
- * @method void setKeyRegion(string $KeyRegion) Set Key region.
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getKeyType() Obtain Key type (cloud, custom)
+ * @method void setKeyType(string $KeyType) Set Key type (cloud, custom)
+ * @method string getKeyId() Obtain Secret Id
+ * @method void setKeyId(string $KeyId) Set Secret Id
+ * @method string getKeyRegion() Obtain Key region
+ * @method void setKeyRegion(string $KeyRegion) Set Key region
  * @method boolean getIsOpenGlobalEncryption() Obtain Whether global encryption is enabled
  * @method void setIsOpenGlobalEncryption(boolean $IsOpenGlobalEncryption) Set Whether global encryption is enabled
  */
 class OpenClusterTransparentEncryptRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Key type (cloud, custom).
+     * @var string Key type (cloud, custom)
      */
     public $KeyType;
 
     /**
-     * @var string Key Id.
+     * @var string Secret Id
      */
     public $KeyId;
 
     /**
-     * @var string Key region.
+     * @var string Key region
      */
     public $KeyRegion;
 
@@ -59,10 +59,10 @@ class OpenClusterTransparentEncryptRequest extends AbstractModel
     public $IsOpenGlobalEncryption;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $KeyType Key type (cloud, custom).
-     * @param string $KeyId Key Id.
-     * @param string $KeyRegion Key region.
+     * @param string $ClusterId Cluster ID.
+     * @param string $KeyType Key type (cloud, custom)
+     * @param string $KeyId Secret Id
+     * @param string $KeyRegion Key region
      * @param boolean $IsOpenGlobalEncryption Whether global encryption is enabled
      */
     function __construct()

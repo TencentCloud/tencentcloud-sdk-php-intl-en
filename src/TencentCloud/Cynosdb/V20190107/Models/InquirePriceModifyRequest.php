@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getCpu() Obtain Specifies the number of CPU cores.
- * @method void setCpu(integer $Cpu) Set Specifies the number of CPU cores.
- * @method integer getMemory() Obtain Memory Size
- * @method void setMemory(integer $Memory) Set Memory Size
- * @method integer getStorageLimit() Obtain Storage size, storage resource adjustment: ClusterId, StorageLimit.
- * @method void setStorageLimit(integer $StorageLimit) Set Storage size, storage resource adjustment: ClusterId, StorageLimit.
- * @method string getInstanceId() Obtain Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
- * @method string getDeviceType() Obtain Instance device type.
- * @method void setDeviceType(string $DeviceType) Set Instance device type.
- * @method float getCcu() Obtain Specifies the ccu size of the serverless instance.
- * @method void setCcu(float $Ccu) Set Specifies the ccu size of the serverless instance.
+ * @method integer getCpu() Obtain Number of CPU cores.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores.
+ * @method integer getMemory() Obtain Memory size.
+ * @method void setMemory(integer $Memory) Set Memory size.
+ * @method integer getStorageLimit() Obtain Storage size and storage resource configuration change: ClusterId, StorageLimit
+ * @method void setStorageLimit(integer $StorageLimit) Set Storage size and storage resource configuration change: ClusterId, StorageLimit
+ * @method string getInstanceId() Obtain Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
+ * @method string getDeviceType() Obtain Instance device type
+ * @method void setDeviceType(string $DeviceType) Set Instance device type
+ * @method float getCcu() Obtain ccu size of a serverless instance
+ * @method void setCcu(float $Ccu) Set ccu size of a serverless instance
  */
 class InquirePriceModifyRequest extends AbstractModel
 {
@@ -43,43 +43,43 @@ class InquirePriceModifyRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer Specifies the number of CPU cores.
+     * @var integer Number of CPU cores.
      */
     public $Cpu;
 
     /**
-     * @var integer Memory Size
+     * @var integer Memory size.
      */
     public $Memory;
 
     /**
-     * @var integer Storage size, storage resource adjustment: ClusterId, StorageLimit.
+     * @var integer Storage size and storage resource configuration change: ClusterId, StorageLimit
      */
     public $StorageLimit;
 
     /**
-     * @var string Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+     * @var string Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance device type.
+     * @var string Instance device type
      */
     public $DeviceType;
 
     /**
-     * @var float Specifies the ccu size of the serverless instance.
+     * @var float ccu size of a serverless instance
      */
     public $Ccu;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param integer $Cpu Specifies the number of CPU cores.
-     * @param integer $Memory Memory Size
-     * @param integer $StorageLimit Storage size, storage resource adjustment: ClusterId, StorageLimit.
-     * @param string $InstanceId Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
-     * @param string $DeviceType Instance device type.
-     * @param float $Ccu Specifies the ccu size of the serverless instance.
+     * @param integer $Cpu Number of CPU cores.
+     * @param integer $Memory Memory size.
+     * @param integer $StorageLimit Storage size and storage resource configuration change: ClusterId, StorageLimit
+     * @param string $InstanceId Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
+     * @param string $DeviceType Instance device type
+     * @param float $Ccu ccu size of a serverless instance
      */
     function __construct()
     {

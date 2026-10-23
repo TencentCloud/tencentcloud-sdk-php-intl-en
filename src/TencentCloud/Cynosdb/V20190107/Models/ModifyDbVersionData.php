@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Modify database kernel version task information.
+ * Modify database kernel version task information
  *
  * @method string getOldVersion() Obtain <p>Version before modification</p>
  * @method void setOldVersion(string $OldVersion) Set <p>Version before modification</p>

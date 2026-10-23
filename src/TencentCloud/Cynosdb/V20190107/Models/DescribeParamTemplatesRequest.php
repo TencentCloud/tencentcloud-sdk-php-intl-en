@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplates request structure.
  *
- * @method array getEngineVersions() Obtain Database engine version number
- * @method void setEngineVersions(array $EngineVersions) Set Database engine version number
+ * @method array getEngineVersions() Obtain Database engine version
+ * @method void setEngineVersions(array $EngineVersions) Set Database engine version
  * @method array getTemplateNames() Obtain Template name
  * @method void setTemplateNames(array $TemplateNames) Set Template name
- * @method array getTemplateIds() Obtain Template ID
- * @method void setTemplateIds(array $TemplateIds) Set Template ID
- * @method array getDbModes() Obtain Database Type. Valid values: `NORMAL`, `SERVERLESS`.
- * @method void setDbModes(array $DbModes) Set Database Type. Valid values: `NORMAL`, `SERVERLESS`.
- * @method integer getOffset() Obtain Offset for query
- * @method void setOffset(integer $Offset) Set Offset for query
- * @method integer getLimit() Obtain Limit on queries
- * @method void setLimit(integer $Limit) Set Limit on queries
- * @method array getProducts() Obtain Product type of the queried template
- * @method void setProducts(array $Products) Set Product type of the queried template
+ * @method array getTemplateIds() Obtain Template ID.
+ * @method void setTemplateIds(array $TemplateIds) Set Template ID.
+ * @method array getDbModes() Obtain Database type. Available values: NORMAL, SERVERLESS
+ * @method void setDbModes(array $DbModes) Set Database type. Available values: NORMAL, SERVERLESS
+ * @method integer getOffset() Obtain Query offset
+ * @method void setOffset(integer $Offset) Set Query offset
+ * @method integer getLimit() Obtain Query limit count
+ * @method void setLimit(integer $Limit) Set Query limit count
+ * @method array getProducts() Obtain Product type corresponding to the queried template.
+ * @method void setProducts(array $Products) Set Product type corresponding to the queried template.
  * @method array getTemplateTypes() Obtain Template type
  * @method void setTemplateTypes(array $TemplateTypes) Set Template type
  * @method array getEngineTypes() Obtain Version type
  * @method void setEngineTypes(array $EngineTypes) Set Version type
- * @method string getOrderBy() Obtain The sorting order of the returned results
- * @method void setOrderBy(string $OrderBy) Set The sorting order of the returned results
- * @method string getOrderDirection() Obtain Sorting order. Valid values: `desc`, `asc `.
- * @method void setOrderDirection(string $OrderDirection) Set Sorting order. Valid values: `desc`, `asc `.
+ * @method string getOrderBy() Obtain Sorting field of returned results
+ * @method void setOrderBy(string $OrderBy) Set Sorting field of returned results
+ * @method string getOrderDirection() Obtain Sorting method (asc, desc)
+ * @method void setOrderDirection(string $OrderDirection) Set Sorting method (asc, desc)
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Database engine version number
+     * @var array Database engine version
      */
     public $EngineVersions;
 
@@ -56,27 +56,27 @@ class DescribeParamTemplatesRequest extends AbstractModel
     public $TemplateNames;
 
     /**
-     * @var array Template ID
+     * @var array Template ID.
      */
     public $TemplateIds;
 
     /**
-     * @var array Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * @var array Database type. Available values: NORMAL, SERVERLESS
      */
     public $DbModes;
 
     /**
-     * @var integer Offset for query
+     * @var integer Query offset
      */
     public $Offset;
 
     /**
-     * @var integer Limit on queries
+     * @var integer Query limit count
      */
     public $Limit;
 
     /**
-     * @var array Product type of the queried template
+     * @var array Product type corresponding to the queried template.
      */
     public $Products;
 
@@ -91,27 +91,27 @@ class DescribeParamTemplatesRequest extends AbstractModel
     public $EngineTypes;
 
     /**
-     * @var string The sorting order of the returned results
+     * @var string Sorting field of returned results
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `desc`, `asc `.
+     * @var string Sorting method (asc, desc)
      */
     public $OrderDirection;
 
     /**
-     * @param array $EngineVersions Database engine version number
+     * @param array $EngineVersions Database engine version
      * @param array $TemplateNames Template name
-     * @param array $TemplateIds Template ID
-     * @param array $DbModes Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-     * @param integer $Offset Offset for query
-     * @param integer $Limit Limit on queries
-     * @param array $Products Product type of the queried template
+     * @param array $TemplateIds Template ID.
+     * @param array $DbModes Database type. Available values: NORMAL, SERVERLESS
+     * @param integer $Offset Query offset
+     * @param integer $Limit Query limit count
+     * @param array $Products Product type corresponding to the queried template.
      * @param array $TemplateTypes Template type
      * @param array $EngineTypes Version type
-     * @param string $OrderBy The sorting order of the returned results
-     * @param string $OrderDirection Sorting order. Valid values: `desc`, `asc `.
+     * @param string $OrderBy Sorting field of returned results
+     * @param string $OrderDirection Sorting method (asc, desc)
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rollback table information.
+ * Table information for rollback
  *
- * @method string getOldTable() Obtain Old table name.
- * @method void setOldTable(string $OldTable) Set Old table name.
- * @method string getNewTable() Obtain New table name.
- * @method void setNewTable(string $NewTable) Set New table name.
+ * @method string getOldTable() Obtain Old table name
+ * @method void setOldTable(string $OldTable) Set Old table name
+ * @method string getNewTable() Obtain New table name
+ * @method void setNewTable(string $NewTable) Set New table name
  */
 class RollbackTableInfo extends AbstractModel
 {
     /**
-     * @var string Old table name.
+     * @var string Old table name
      */
     public $OldTable;
 
     /**
-     * @var string New table name.
+     * @var string New table name
      */
     public $NewTable;
 
     /**
-     * @param string $OldTable Old table name.
-     * @param string $NewTable New table name.
+     * @param string $OldTable Old table name
+     * @param string $NewTable New table name
      */
     function __construct()
     {

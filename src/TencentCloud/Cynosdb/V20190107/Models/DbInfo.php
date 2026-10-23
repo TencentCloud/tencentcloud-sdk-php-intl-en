@@ -18,24 +18,24 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Database details
+ * Database details.
  *
- * @method string getDbName() Obtain Database name
- * @method void setDbName(string $DbName) Set Database name
- * @method string getCharacterSet() Obtain Character set
- * @method void setCharacterSet(string $CharacterSet) Set Character set
- * @method string getStatus() Obtain Database status
- * @method void setStatus(string $Status) Set Database status
- * @method string getCollateRule() Obtain Collation
- * @method void setCollateRule(string $CollateRule) Set Collation
- * @method string getDescription() Obtain Specifies the remark of the database.
- * @method void setDescription(string $Description) Set Specifies the remark of the database.
+ * @method string getDbName() Obtain Database name.
+ * @method void setDbName(string $DbName) Set Database name.
+ * @method string getCharacterSet() Obtain Character set type
+ * @method void setCharacterSet(string $CharacterSet) Set Character set type
+ * @method string getStatus() Obtain Database status.
+ * @method void setStatus(string $Status) Set Database status.
+ * @method string getCollateRule() Obtain Sorting rule
+ * @method void setCollateRule(string $CollateRule) Set Sorting rule
+ * @method string getDescription() Obtain Database remarks.
+ * @method void setDescription(string $Description) Set Database remarks.
  * @method array getUserHostPrivileges() Obtain User permission
  * @method void setUserHostPrivileges(array $UserHostPrivileges) Set User permission
- * @method integer getDbId() Obtain Database ID
- * @method void setDbId(integer $DbId) Set Database ID
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method integer getDbId() Obtain Database ID.
+ * @method void setDbId(integer $DbId) Set Database ID.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
  * @method string getUpdateTime() Obtain Update time.
  * @method void setUpdateTime(string $UpdateTime) Set Update time.
  * @method integer getAppId() Obtain User appid.
@@ -48,27 +48,27 @@ use TencentCloud\Common\AbstractModel;
 class DbInfo extends AbstractModel
 {
     /**
-     * @var string Database name
+     * @var string Database name.
      */
     public $DbName;
 
     /**
-     * @var string Character set
+     * @var string Character set type
      */
     public $CharacterSet;
 
     /**
-     * @var string Database status
+     * @var string Database status.
      */
     public $Status;
 
     /**
-     * @var string Collation
+     * @var string Sorting rule
      */
     public $CollateRule;
 
     /**
-     * @var string Specifies the remark of the database.
+     * @var string Database remarks.
      */
     public $Description;
 
@@ -78,12 +78,12 @@ class DbInfo extends AbstractModel
     public $UserHostPrivileges;
 
     /**
-     * @var integer Database ID
+     * @var integer Database ID.
      */
     public $DbId;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
@@ -108,14 +108,14 @@ class DbInfo extends AbstractModel
     public $ClusterId;
 
     /**
-     * @param string $DbName Database name
-     * @param string $CharacterSet Character set
-     * @param string $Status Database status
-     * @param string $CollateRule Collation
-     * @param string $Description Specifies the remark of the database.
+     * @param string $DbName Database name.
+     * @param string $CharacterSet Character set type
+     * @param string $Status Database status.
+     * @param string $CollateRule Sorting rule
+     * @param string $Description Database remarks.
      * @param array $UserHostPrivileges User permission
-     * @param integer $DbId Database ID
-     * @param string $CreateTime Creation time
+     * @param integer $DbId Database ID.
+     * @param string $CreateTime Creation time.
      * @param string $UpdateTime Update time.
      * @param integer $AppId User appid.
      * @param string $Uin User UIN

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditRuleWithInstanceIds request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID. Currently, only one single instance can be queried.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID. Currently, only one single instance can be queried.
+ * @method array getInstanceIds() Obtain Instance ID. Currently only support querying a single instance.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID. Currently only support querying a single instance.
  */
 class DescribeAuditRuleWithInstanceIdsRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID. Currently, only one single instance can be queried.
+     * @var array Instance ID. Currently only support querying a single instance.
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds Instance ID. Currently, only one single instance can be queried.
+     * @param array $InstanceIds Instance ID. Currently only support querying a single instance.
      */
     function __construct()
     {

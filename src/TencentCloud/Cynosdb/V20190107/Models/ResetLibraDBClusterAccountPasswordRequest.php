@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountName(string $AccountName) Set Account
  * @method string getEncryptMethod() Obtain Encryption method
  * @method void setEncryptMethod(string $EncryptMethod) Set Encryption method
- * @method string getHost() Obtain host
- * @method void setHost(string $Host) Set host
+ * @method string getHost() Obtain Host
+ * @method void setHost(string $Host) Set Host
  */
 class ResetLibraDBClusterAccountPasswordRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ResetLibraDBClusterAccountPasswordRequest extends AbstractModel
     public $EncryptMethod;
 
     /**
-     * @var string host
+     * @var string Host
      */
     public $Host;
 
@@ -63,7 +63,7 @@ class ResetLibraDBClusterAccountPasswordRequest extends AbstractModel
      * @param string $AccountPassword Password.
      * @param string $AccountName Account
      * @param string $EncryptMethod Encryption method
-     * @param string $Host host
+     * @param string $Host Host
      */
     function __construct()
     {

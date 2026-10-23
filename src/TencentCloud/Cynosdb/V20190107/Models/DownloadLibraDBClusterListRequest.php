@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset.
  * @method string getOrderBy() Obtain Sorting field.
  * @method void setOrderBy(string $OrderBy) Set Sorting field.
- * @method string getOrderByType() Obtain Sorting method, desc, asc, DESC, ASC
- * @method void setOrderByType(string $OrderByType) Set Sorting method, desc, asc, DESC, ASC
+ * @method string getOrderByType() Obtain Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
  * @method array getFilters() Obtain Filter criteria.
  * @method void setFilters(array $Filters) Set Filter criteria.
  */
@@ -49,7 +49,7 @@ class DownloadLibraDBClusterListRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string Sorting method, desc, asc, DESC, ASC
+     * @var string Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
      */
     public $OrderByType;
 
@@ -62,7 +62,7 @@ class DownloadLibraDBClusterListRequest extends AbstractModel
      * @param integer $Limit Limit Quantity
      * @param integer $Offset Offset.
      * @param string $OrderBy Sorting field.
-     * @param string $OrderByType Sorting method, desc, asc, DESC, ASC
+     * @param string $OrderByType Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
      * @param array $Filters Filter criteria.
      */
     function __construct()

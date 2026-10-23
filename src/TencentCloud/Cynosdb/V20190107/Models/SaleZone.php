@@ -18,63 +18,63 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a purchasable AZ
+ * Information on AZs for sale.
  *
- * @method string getZone() Obtain AZ name
- * @method void setZone(string $Zone) Set AZ name
- * @method integer getZoneId() Obtain Numeric ID of an AZ
- * @method void setZoneId(integer $ZoneId) Set Numeric ID of an AZ
- * @method string getZoneZh() Obtain AZ name
- * @method void setZoneZh(string $ZoneZh) Set AZ name
- * @method integer getIsSupportServerless() Obtain Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
- * @method void setIsSupportServerless(integer $IsSupportServerless) Set Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
- * @method integer getIsSupportNormal() Obtain Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
- * @method void setIsSupportNormal(integer $IsSupportNormal) Set Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+ * @method string getZone() Obtain Availability zone name
+ * @method void setZone(string $Zone) Set Availability zone name
+ * @method integer getZoneId() Obtain Availability zone numeric ID
+ * @method void setZoneId(integer $ZoneId) Set Availability zone numeric ID
+ * @method string getZoneZh() Obtain AZ Chinese name
+ * @method void setZoneZh(string $ZoneZh) Set AZ Chinese name
+ * @method integer getIsSupportServerless() Obtain Whether serverless cluster is supported<br>
+0: not supported
+1: Support
+ * @method void setIsSupportServerless(integer $IsSupportServerless) Set Whether serverless cluster is supported<br>
+0: not supported
+1: Support
+ * @method integer getIsSupportNormal() Obtain Whether a general cluster is supported
+0: not supported
+1: Support
+ * @method void setIsSupportNormal(integer $IsSupportNormal) Set Whether a general cluster is supported
+0: not supported
+1: Support
  * @method string getPhysicalZone() Obtain Physical zone
  * @method void setPhysicalZone(string $PhysicalZone) Set Physical zone
- * @method boolean getHasPermission() Obtain Whether the user has AZ permission.
- * @method void setHasPermission(boolean $HasPermission) Set Whether the user has AZ permission.
- * @method string getIsWholeRdmaZone() Obtain Whether it is a full-linkage RDMA AZ.
- * @method void setIsWholeRdmaZone(string $IsWholeRdmaZone) Set Whether it is a full-linkage RDMA AZ.
- * @method integer getIsSupportCreateCluster() Obtain Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
- * @method void setIsSupportCreateCluster(integer $IsSupportCreateCluster) Set Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+ * @method boolean getHasPermission() Obtain Whether the user has AZ permissions
+ * @method void setHasPermission(boolean $HasPermission) Set Whether the user has AZ permissions
+ * @method string getIsWholeRdmaZone() Obtain Whether it is an all-link RDMA availability zone
+ * @method void setIsWholeRdmaZone(string $IsWholeRdmaZone) Set Whether it is an all-link RDMA availability zone
+ * @method integer getIsSupportCreateCluster() Obtain Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
+ * @method void setIsSupportCreateCluster(integer $IsSupportCreateCluster) Set Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
  */
 class SaleZone extends AbstractModel
 {
     /**
-     * @var string AZ name
+     * @var string Availability zone name
      */
     public $Zone;
 
     /**
-     * @var integer Numeric ID of an AZ
+     * @var integer Availability zone numeric ID
      */
     public $ZoneId;
 
     /**
-     * @var string AZ name
+     * @var string AZ Chinese name
      */
     public $ZoneZh;
 
     /**
-     * @var integer Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+     * @var integer Whether serverless cluster is supported<br>
+0: not supported
+1: Support
      */
     public $IsSupportServerless;
 
     /**
-     * @var integer Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+     * @var integer Whether a general cluster is supported
+0: not supported
+1: Support
      */
     public $IsSupportNormal;
 
@@ -84,34 +84,34 @@ class SaleZone extends AbstractModel
     public $PhysicalZone;
 
     /**
-     * @var boolean Whether the user has AZ permission.
+     * @var boolean Whether the user has AZ permissions
      */
     public $HasPermission;
 
     /**
-     * @var string Whether it is a full-linkage RDMA AZ.
+     * @var string Whether it is an all-link RDMA availability zone
      */
     public $IsWholeRdmaZone;
 
     /**
-     * @var integer Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     * @var integer Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
      */
     public $IsSupportCreateCluster;
 
     /**
-     * @param string $Zone AZ name
-     * @param integer $ZoneId Numeric ID of an AZ
-     * @param string $ZoneZh AZ name
-     * @param integer $IsSupportServerless Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
-     * @param integer $IsSupportNormal Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+     * @param string $Zone Availability zone name
+     * @param integer $ZoneId Availability zone numeric ID
+     * @param string $ZoneZh AZ Chinese name
+     * @param integer $IsSupportServerless Whether serverless cluster is supported<br>
+0: not supported
+1: Support
+     * @param integer $IsSupportNormal Whether a general cluster is supported
+0: not supported
+1: Support
      * @param string $PhysicalZone Physical zone
-     * @param boolean $HasPermission Whether the user has AZ permission.
-     * @param string $IsWholeRdmaZone Whether it is a full-linkage RDMA AZ.
-     * @param integer $IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     * @param boolean $HasPermission Whether the user has AZ permissions
+     * @param string $IsWholeRdmaZone Whether it is an all-link RDMA availability zone
+     * @param integer $IsSupportCreateCluster Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
      */
     function __construct()
     {

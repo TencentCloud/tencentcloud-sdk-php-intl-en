@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Database address
  *
- * @method string getIP() Obtain IP address
- * @method void setIP(string $IP) Set IP address
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
+ * @method string getIP() Obtain IP address.
+ * @method void setIP(string $IP) Set IP address.
+ * @method integer getPort() Obtain Port.
+ * @method void setPort(integer $Port) Set Port.
  */
 class Addr extends AbstractModel
 {
     /**
-     * @var string IP address
+     * @var string IP address.
      */
     public $IP;
 
     /**
-     * @var integer Port
+     * @var integer Port.
      */
     public $Port;
 
     /**
-     * @param string $IP IP address
-     * @param integer $Port Port
+     * @param string $IP IP address.
+     * @param integer $Port Port.
      */
     function __construct()
     {

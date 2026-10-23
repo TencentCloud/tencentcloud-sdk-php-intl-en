@@ -20,70 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource pack details
  *
- * @method string getPackageRegion() Obtain Resource package region of use.
- * @method void setPackageRegion(string $PackageRegion) Set Resource package region of use.
- * @method string getPackageType() Obtain Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
- * @method void setPackageType(string $PackageType) Set Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
- * @method string getPackageVersion() Obtain Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
- * @method void setPackageVersion(string $PackageVersion) Set Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
- * @method float getMinPackageSpec() Obtain Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
- * @method void setMinPackageSpec(float $MinPackageSpec) Set Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
- * @method float getMaxPackageSpec() Obtain Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
- * @method void setMaxPackageSpec(float $MaxPackageSpec) Set Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
- * @method integer getExpireDay() Obtain Specifies the resource pack validity period. the measurement unit is day.
- * @method void setExpireDay(integer $ExpireDay) Set Specifies the resource pack validity period. the measurement unit is day.
+ * @method string getPackageRegion() Obtain Region of use for the resource package
+ * @method void setPackageRegion(string $PackageRegion) Set Region of use for the resource package
+ * @method string getPackageType() Obtain Resource package type
+CCU: compute resource package
+DISK: storage resource package.
+ * @method void setPackageType(string $PackageType) Set Resource package type
+CCU: compute resource package
+DISK: storage resource package.
+ * @method string getPackageVersion() Obtain Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
+ * @method void setPackageVersion(string $PackageVersion) Set Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
+ * @method float getMinPackageSpec() Obtain Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+ * @method void setMinPackageSpec(float $MinPackageSpec) Set Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+ * @method float getMaxPackageSpec() Obtain Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+ * @method void setMaxPackageSpec(float $MaxPackageSpec) Set Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+ * @method integer getExpireDay() Obtain Resource pack validity period. Unit: day.
+ * @method void setExpireDay(integer $ExpireDay) Set Resource pack validity period. Unit: day.
  */
 class SalePackageSpec extends AbstractModel
 {
     /**
-     * @var string Resource package region of use.
+     * @var string Region of use for the resource package
      */
     public $PackageRegion;
 
     /**
-     * @var string Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
+     * @var string Resource package type
+CCU: compute resource package
+DISK: storage resource package.
      */
     public $PackageType;
 
     /**
-     * @var string Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
+     * @var string Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
      */
     public $PackageVersion;
 
     /**
-     * @var float Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+     * @var float Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
      */
     public $MinPackageSpec;
 
     /**
-     * @var float Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+     * @var float Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
      */
     public $MaxPackageSpec;
 
     /**
-     * @var integer Specifies the resource pack validity period. the measurement unit is day.
+     * @var integer Resource pack validity period. Unit: day.
      */
     public $ExpireDay;
 
     /**
-     * @param string $PackageRegion Resource package region of use.
-     * @param string $PackageType Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
-     * @param string $PackageVersion Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
-     * @param float $MinPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
-     * @param float $MaxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
-     * @param integer $ExpireDay Specifies the resource pack validity period. the measurement unit is day.
+     * @param string $PackageRegion Region of use for the resource package
+     * @param string $PackageType Resource package type
+CCU: compute resource package
+DISK: storage resource package.
+     * @param string $PackageVersion Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
+     * @param float $MinPackageSpec Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+     * @param float $MaxPackageSpec Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+     * @param integer $ExpireDay Resource pack validity period. Unit: day.
      */
     function __construct()
     {

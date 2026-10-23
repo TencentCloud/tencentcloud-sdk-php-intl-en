@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID.
  * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method integer getOffset() Obtain Pagination offset.
- * @method void setOffset(integer $Offset) Set Pagination offset.
- * @method integer getLimit() Obtain Pagination number limit.
- * @method void setLimit(integer $Limit) Set Pagination number limit.
+ * @method integer getOffset() Obtain Pagination Offset
+ * @method void setOffset(integer $Offset) Set Pagination Offset
+ * @method integer getLimit() Obtain Page limit
+ * @method void setLimit(integer $Limit) Set Page limit
  */
 class DescribeClusterDatabasesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeClusterDatabasesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer Pagination offset.
+     * @var integer Pagination Offset
      */
     public $Offset;
 
     /**
-     * @var integer Pagination number limit.
+     * @var integer Page limit
      */
     public $Limit;
 
     /**
      * @param string $ClusterId Cluster ID.
-     * @param integer $Offset Pagination offset.
-     * @param integer $Limit Pagination number limit.
+     * @param integer $Offset Pagination Offset
+     * @param integer $Limit Page limit
      */
     function __construct()
     {

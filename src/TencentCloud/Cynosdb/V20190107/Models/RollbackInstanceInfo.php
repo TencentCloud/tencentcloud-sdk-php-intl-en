@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rollback instance information.
+ * Rollback instance information
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
@@ -28,22 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set VPC information
  * @method string getUniqSubnetId() Obtain Subnet information.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet information.
- * @method string getVip() Obtain vip information.
- * @method void setVip(string $Vip) Set vip information.
- * @method integer getVport() Obtain Specifies the vport information.
- * @method void setVport(integer $Vport) Set Specifies the vport information.
+ * @method string getVip() Obtain VIP information.
+ * @method void setVip(string $Vip) Set VIP information.
+ * @method integer getVport() Obtain Virtual port information.
+ * @method void setVport(integer $Vport) Set Virtual port information.
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getInstanceName() Obtain Instance name.
  * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method string getStatus() Obtain Status.
  * @method void setStatus(string $Status) Set Status.
- * @method integer getCpu() Obtain CPU Size.
- * @method void setCpu(integer $Cpu) Set CPU Size.
- * @method integer getMem() Obtain Memory Size.
- * @method void setMem(integer $Mem) Set Memory Size.
- * @method integer getStorageLimit() Obtain Storage size.
- * @method void setStorageLimit(integer $StorageLimit) Set Storage size.
+ * @method integer getCpu() Obtain CPU Size
+ * @method void setCpu(integer $Cpu) Set CPU Size
+ * @method integer getMem() Obtain Memory size.
+ * @method void setMem(integer $Mem) Set Memory size.
+ * @method integer getStorageLimit() Obtain Storage size
+ * @method void setStorageLimit(integer $StorageLimit) Set Storage size
  */
 class RollbackInstanceInfo extends AbstractModel
 {
@@ -68,12 +68,12 @@ class RollbackInstanceInfo extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var string vip information.
+     * @var string VIP information.
      */
     public $Vip;
 
     /**
-     * @var integer Specifies the vport information.
+     * @var integer Virtual port information.
      */
     public $Vport;
 
@@ -93,17 +93,17 @@ class RollbackInstanceInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer CPU Size.
+     * @var integer CPU Size
      */
     public $Cpu;
 
     /**
-     * @var integer Memory Size.
+     * @var integer Memory size.
      */
     public $Mem;
 
     /**
-     * @var integer Storage size.
+     * @var integer Storage size
      */
     public $StorageLimit;
 
@@ -112,14 +112,14 @@ class RollbackInstanceInfo extends AbstractModel
      * @param string $ClusterName Cluster name.
      * @param string $UniqVpcId VPC information
      * @param string $UniqSubnetId Subnet information.
-     * @param string $Vip vip information.
-     * @param integer $Vport Specifies the vport information.
+     * @param string $Vip VIP information.
+     * @param integer $Vport Virtual port information.
      * @param string $InstanceId Instance ID.
      * @param string $InstanceName Instance name.
      * @param string $Status Status.
-     * @param integer $Cpu CPU Size.
-     * @param integer $Mem Memory Size.
-     * @param integer $StorageLimit Storage size.
+     * @param integer $Cpu CPU Size
+     * @param integer $Mem Memory size.
+     * @param integer $StorageLimit Storage size
      */
     function __construct()
     {

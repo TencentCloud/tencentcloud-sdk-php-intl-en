@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuditService request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getLogExpireDay() Obtain Log retention period
- * @method void setLogExpireDay(integer $LogExpireDay) Set Log retention period
- * @method integer getHighLogExpireDay() Obtain Frequent log retention period
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set Frequent log retention period
- * @method boolean getAuditAll() Obtain The parameter used to change the audit rule of the instance to full audit
- * @method void setAuditAll(boolean $AuditAll) Set The parameter used to change the audit rule of the instance to full audit
- * @method array getAuditRuleFilters() Obtain Rule audit
- * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Rule audit
- * @method array getRuleTemplateIds() Obtain Rule template ID
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getLogExpireDay() Obtain Log retention period.
+ * @method void setLogExpireDay(integer $LogExpireDay) Set Log retention period.
+ * @method integer getHighLogExpireDay() Obtain High frequency log retention period.
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set High frequency log retention period.
+ * @method boolean getAuditAll() Obtain Modifies the instance audit rule to Full audit.
+ * @method void setAuditAll(boolean $AuditAll) Set Modifies the instance audit rule to Full audit.
+ * @method array getAuditRuleFilters() Obtain Rule audit.
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Rule audit.
+ * @method array getRuleTemplateIds() Obtain Rule template ID.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID.
  */
 class ModifyAuditServiceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Log retention period
+     * @var integer Log retention period.
      */
     public $LogExpireDay;
 
     /**
-     * @var integer Frequent log retention period
+     * @var integer High frequency log retention period.
      */
     public $HighLogExpireDay;
 
     /**
-     * @var boolean The parameter used to change the audit rule of the instance to full audit
+     * @var boolean Modifies the instance audit rule to Full audit.
      */
     public $AuditAll;
 
     /**
-     * @var array Rule audit
+     * @var array Rule audit.
      */
     public $AuditRuleFilters;
 
     /**
-     * @var array Rule template ID
+     * @var array Rule template ID.
      */
     public $RuleTemplateIds;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $LogExpireDay Log retention period
-     * @param integer $HighLogExpireDay Frequent log retention period
-     * @param boolean $AuditAll The parameter used to change the audit rule of the instance to full audit
-     * @param array $AuditRuleFilters Rule audit
-     * @param array $RuleTemplateIds Rule template ID
+     * @param string $InstanceId Instance ID.
+     * @param integer $LogExpireDay Log retention period.
+     * @param integer $HighLogExpireDay High frequency log retention period.
+     * @param boolean $AuditAll Modifies the instance audit rule to Full audit.
+     * @param array $AuditRuleFilters Rule audit.
+     * @param array $RuleTemplateIds Rule template ID.
      */
     function __construct()
     {

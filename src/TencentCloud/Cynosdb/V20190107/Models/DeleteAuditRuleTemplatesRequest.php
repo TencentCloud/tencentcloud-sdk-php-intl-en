@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAuditRuleTemplates request structure.
  *
- * @method array getRuleTemplateIds() Obtain Audit rule template ID
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Audit rule template ID
+ * @method array getRuleTemplateIds() Obtain Audit rule template ID.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Audit rule template ID.
  */
 class DeleteAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Audit rule template ID
+     * @var array Audit rule template ID.
      */
     public $RuleTemplateIds;
 
     /**
-     * @param array $RuleTemplateIds Audit rule template ID
+     * @param array $RuleTemplateIds Audit rule template ID.
      */
     function __construct()
     {

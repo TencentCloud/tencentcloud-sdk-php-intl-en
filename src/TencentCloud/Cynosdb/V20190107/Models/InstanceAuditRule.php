@@ -18,18 +18,18 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audit rule details of the instance, which is an output parameter of the `DescribeAuditRuleWithInstanceIds` API.
+ * Audit rule details of the instance.
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method boolean getAuditRule() Obtain Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
- * @method void setAuditRule(boolean $AuditRule) Set Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
- * @method array getAuditRuleFilters() Obtain Specifies the audit rule details. valid when AuditRule=true.
- * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Specifies the audit rule details. valid when AuditRule=true.
+ * @method boolean getAuditRule() Obtain Whether it is rule audit. true - Rule audit, false - Full audit.
+ * @method void setAuditRule(boolean $AuditRule) Set Whether it is rule audit. true - Rule audit, false - Full audit.
+ * @method array getAuditRuleFilters() Obtain Audit rule details. Valid only when AuditRule=true.
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule details. Valid only when AuditRule=true.
  * @method boolean getOldRule() Obtain Whether it is an audit policy.
  * @method void setOldRule(boolean $OldRule) Set Whether it is an audit policy.
- * @method array getRuleTemplates() Obtain The rule template details of the instance application.
- * @method void setRuleTemplates(array $RuleTemplates) Set The rule template details of the instance application.
+ * @method array getRuleTemplates() Obtain Description of the rule template applied to the instance.
+ * @method void setRuleTemplates(array $RuleTemplates) Set Description of the rule template applied to the instance.
  */
 class InstanceAuditRule extends AbstractModel
 {
@@ -39,12 +39,12 @@ class InstanceAuditRule extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var boolean Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+     * @var boolean Whether it is rule audit. true - Rule audit, false - Full audit.
      */
     public $AuditRule;
 
     /**
-     * @var array Specifies the audit rule details. valid when AuditRule=true.
+     * @var array Audit rule details. Valid only when AuditRule=true.
      */
     public $AuditRuleFilters;
 
@@ -54,16 +54,16 @@ class InstanceAuditRule extends AbstractModel
     public $OldRule;
 
     /**
-     * @var array The rule template details of the instance application.
+     * @var array Description of the rule template applied to the instance.
      */
     public $RuleTemplates;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param boolean $AuditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
-     * @param array $AuditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
+     * @param boolean $AuditRule Whether it is rule audit. true - Rule audit, false - Full audit.
+     * @param array $AuditRuleFilters Audit rule details. Valid only when AuditRule=true.
      * @param boolean $OldRule Whether it is an audit policy.
-     * @param array $RuleTemplates The rule template details of the instance application.
+     * @param array $RuleTemplates Description of the rule template applied to the instance.
      */
     function __construct()
     {

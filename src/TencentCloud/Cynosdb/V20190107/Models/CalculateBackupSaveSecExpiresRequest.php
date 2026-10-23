@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVaultId() Obtain Backup safe ID
  * @method void setVaultId(string $VaultId) Set Backup safe ID
- * @method integer getBackupSaveSeconds() Obtain Backup retention period (seconds). Must be greater than 0.
- * @method void setBackupSaveSeconds(integer $BackupSaveSeconds) Set Backup retention period (seconds). Must be greater than 0.
- * @method integer getLimit() Obtain Number of items per page, range (0,100], default 10
- * @method void setLimit(integer $Limit) Set Number of items per page, range (0,100], default 10
- * @method integer getOffset() Obtain Offset. Range: [0,INF). Default is 0
- * @method void setOffset(integer $Offset) Set Offset. Range: [0,INF). Default is 0
- * @method string getOrderBy() Obtain Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
- * @method string getOrderByType() Obtain Sorting method, available values: desc, asc, DESC, ASC, default desc
- * @method void setOrderByType(string $OrderByType) Set Sorting method, available values: desc, asc, DESC, ASC, default desc
+ * @method integer getBackupSaveSeconds() Obtain Backup retention period (in seconds). Must be greater than 0.
+ * @method void setBackupSaveSeconds(integer $BackupSaveSeconds) Set Backup retention period (in seconds). Must be greater than 0.
+ * @method integer getLimit() Obtain Number of items per page. Value range: (0,100]. Default: 10.
+ * @method void setLimit(integer $Limit) Set Number of items per page. Value range: (0,100]. Default: 10.
+ * @method integer getOffset() Obtain Offset. Value range: [0, INF). Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Value range: [0, INF). Default value: 0.
+ * @method string getOrderBy() Obtain Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
+ * @method string getOrderByType() Obtain Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
  */
 class CalculateBackupSaveSecExpiresRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class CalculateBackupSaveSecExpiresRequest extends AbstractModel
     public $VaultId;
 
     /**
-     * @var integer Backup retention period (seconds). Must be greater than 0.
+     * @var integer Backup retention period (in seconds). Must be greater than 0.
      */
     public $BackupSaveSeconds;
 
     /**
-     * @var integer Number of items per page, range (0,100], default 10
+     * @var integer Number of items per page. Value range: (0,100]. Default: 10.
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Range: [0,INF). Default is 0
+     * @var integer Offset. Value range: [0, INF). Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var string Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+     * @var string Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * @var string Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public $OrderByType;
 
     /**
      * @param string $VaultId Backup safe ID
-     * @param integer $BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
-     * @param integer $Limit Number of items per page, range (0,100], default 10
-     * @param integer $Offset Offset. Range: [0,INF). Default is 0
-     * @param string $OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
-     * @param string $OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * @param integer $BackupSaveSeconds Backup retention period (in seconds). Must be greater than 0.
+     * @param integer $Limit Number of items per page. Value range: (0,100]. Default: 10.
+     * @param integer $Offset Offset. Value range: [0, INF). Default value: 0.
+     * @param string $OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
+     * @param string $OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     function __construct()
     {

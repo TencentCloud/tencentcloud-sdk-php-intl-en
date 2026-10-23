@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IsolateCluster request structure.
  *
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method string getDbType() Obtain This parameter has been disused.
- * @method void setDbType(string $DbType) Set This parameter has been disused.
- * @method array getIsolateReasonTypes() Obtain Instance return reason type.
- * @method void setIsolateReasonTypes(array $IsolateReasonTypes) Set Instance return reason type.
- * @method string getIsolateReason() Obtain Instance return reason supplement.
- * @method void setIsolateReason(string $IsolateReason) Set Instance return reason supplement.
- * @method boolean getSaveBackup() Obtain Retain backup, true - Retained (incur fees).
- * @method void setSaveBackup(boolean $SaveBackup) Set Retain backup, true - Retained (incur fees).
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getDbType() Obtain This parameter has been deprecated.
+ * @method void setDbType(string $DbType) Set This parameter has been deprecated.
+ * @method array getIsolateReasonTypes() Obtain Reason type for instance return
+ * @method void setIsolateReasonTypes(array $IsolateReasonTypes) Set Reason type for instance return
+ * @method string getIsolateReason() Obtain Supplementary reason for instance return
+ * @method void setIsolateReason(string $IsolateReason) Set Supplementary reason for instance return
+ * @method boolean getSaveBackup() Obtain Retain backup. true: retain (fees will be incurred)
+ * @method void setSaveBackup(boolean $SaveBackup) Set Retain backup. true: retain (fees will be incurred)
  */
 class IsolateClusterRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID.
+     * @var string Cluster ID
      */
     public $ClusterId;
 
     /**
-     * @var string This parameter has been disused.
+     * @var string This parameter has been deprecated.
      */
     public $DbType;
 
     /**
-     * @var array Instance return reason type.
+     * @var array Reason type for instance return
      */
     public $IsolateReasonTypes;
 
     /**
-     * @var string Instance return reason supplement.
+     * @var string Supplementary reason for instance return
      */
     public $IsolateReason;
 
     /**
-     * @var boolean Retain backup, true - Retained (incur fees).
+     * @var boolean Retain backup. true: retain (fees will be incurred)
      */
     public $SaveBackup;
 
     /**
-     * @param string $ClusterId Cluster ID.
-     * @param string $DbType This parameter has been disused.
-     * @param array $IsolateReasonTypes Instance return reason type.
-     * @param string $IsolateReason Instance return reason supplement.
-     * @param boolean $SaveBackup Retain backup, true - Retained (incur fees).
+     * @param string $ClusterId Cluster ID
+     * @param string $DbType This parameter has been deprecated.
+     * @param array $IsolateReasonTypes Reason type for instance return
+     * @param string $IsolateReason Supplementary reason for instance return
+     * @param boolean $SaveBackup Retain backup. true: retain (fees will be incurred)
      */
     function __construct()
     {

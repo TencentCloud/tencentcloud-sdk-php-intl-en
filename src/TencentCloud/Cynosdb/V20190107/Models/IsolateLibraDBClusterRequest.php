@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Analysis Cluster ID
  * @method array getIsolateReasonTypes() Obtain Isolation reason type
  * @method void setIsolateReasonTypes(array $IsolateReasonTypes) Set Isolation reason type
- * @method string getIsolateReason() Obtain Cause of isolation
- * @method void setIsolateReason(string $IsolateReason) Set Cause of isolation
+ * @method string getIsolateReason() Obtain Isolation reason
+ * @method void setIsolateReason(string $IsolateReason) Set Isolation reason
  */
 class IsolateLibraDBClusterRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class IsolateLibraDBClusterRequest extends AbstractModel
     public $IsolateReasonTypes;
 
     /**
-     * @var string Cause of isolation
+     * @var string Isolation reason
      */
     public $IsolateReason;
 
     /**
      * @param string $ClusterId Analysis Cluster ID
      * @param array $IsolateReasonTypes Isolation reason type
-     * @param string $IsolateReason Cause of isolation
+     * @param string $IsolateReason Isolation reason
      */
     function __construct()
     {

@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getDbName() Obtain Database name
  * @method void setDbName(string $DbName) Set Database name
- * @method array getNewUserHostPrivileges() Obtain Host permissions of the new authorized user
- * @method void setNewUserHostPrivileges(array $NewUserHostPrivileges) Set Host permissions of the new authorized user
- * @method string getDescription() Obtain Remarks
- * @method void setDescription(string $Description) Set Remarks
- * @method array getOldUserHostPrivileges() Obtain Host permissions of previously authorized users
- * @method void setOldUserHostPrivileges(array $OldUserHostPrivileges) Set Host permissions of previously authorized users
+ * @method array getNewUserHostPrivileges() Obtain Host permissions for new authorized users
+ * @method void setNewUserHostPrivileges(array $NewUserHostPrivileges) Set Host permissions for new authorized users
+ * @method string getDescription() Obtain Remarks.
+ * @method void setDescription(string $Description) Set Remarks.
+ * @method array getOldUserHostPrivileges() Obtain Historical authorization of user host permissions
+ * @method void setOldUserHostPrivileges(array $OldUserHostPrivileges) Set Historical authorization of user host permissions
  */
 class ModifyClusterDatabaseRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class ModifyClusterDatabaseRequest extends AbstractModel
     public $DbName;
 
     /**
-     * @var array Host permissions of the new authorized user
+     * @var array Host permissions for new authorized users
      */
     public $NewUserHostPrivileges;
 
     /**
-     * @var string Remarks
+     * @var string Remarks.
      */
     public $Description;
 
     /**
-     * @var array Host permissions of previously authorized users
+     * @var array Historical authorization of user host permissions
      */
     public $OldUserHostPrivileges;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param string $DbName Database name
-     * @param array $NewUserHostPrivileges Host permissions of the new authorized user
-     * @param string $Description Remarks
-     * @param array $OldUserHostPrivileges Host permissions of previously authorized users
+     * @param array $NewUserHostPrivileges Host permissions for new authorized users
+     * @param string $Description Remarks.
+     * @param array $OldUserHostPrivileges Historical authorization of user host permissions
      */
     function __construct()
     {

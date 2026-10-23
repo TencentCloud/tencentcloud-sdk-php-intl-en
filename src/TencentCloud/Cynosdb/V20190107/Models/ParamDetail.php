@@ -18,57 +18,57 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance parameter details
+ * Detailed description of instance parameters
  *
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
- * @method string getParamType() Obtain Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
- * @method void setParamType(string $ParamType) Set Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
- * @method boolean getSupportFunc() Obtain Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
- * @method void setSupportFunc(boolean $SupportFunc) Set Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method string getParamType() Obtain Parameter type: integer, enum, float, string, func
+ * @method void setParamType(string $ParamType) Set Parameter type: integer, enum, float, string, func
+ * @method boolean getSupportFunc() Obtain true: supports "func"; false: no formula support
+ * @method void setSupportFunc(boolean $SupportFunc) Set true: supports "func"; false: no formula support
  * @method string getDefault() Obtain Default value
  * @method void setDefault(string $Default) Set Default value
  * @method string getDescription() Obtain Parameter description
  * @method void setDescription(string $Description) Set Parameter description
- * @method string getCurrentValue() Obtain Current value of the parameter
- * @method void setCurrentValue(string $CurrentValue) Set Current value of the parameter
- * @method integer getNeedReboot() Obtain Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
- * @method void setNeedReboot(integer $NeedReboot) Set Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
- * @method string getMax() Obtain Maximum value of the parameter
- * @method void setMax(string $Max) Set Maximum value of the parameter
- * @method string getMin() Obtain Minimum value of the parameter
- * @method void setMin(string $Min) Set Minimum value of the parameter
- * @method array getEnumValue() Obtain Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
- * @method void setEnumValue(array $EnumValue) Set Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
- * @method integer getIsGlobal() Obtain Valid values: `1` (global parameter),  `0`  (non-global parameter).
- * @method void setIsGlobal(integer $IsGlobal) Set Valid values: `1` (global parameter),  `0`  (non-global parameter).
- * @method string getMatchType() Obtain The match type. Valid value: `multiVal`.
- * @method void setMatchType(string $MatchType) Set The match type. Valid value: `multiVal`.
- * @method string getMatchValue() Obtain Match values, which will be separated by comma when `MatchType` is `multiVal`.
- * @method void setMatchValue(string $MatchValue) Set Match values, which will be separated by comma when `MatchType` is `multiVal`.
- * @method boolean getIsFunc() Obtain true - indicates a formula. false - indicates it is not a formula.
- * @method void setIsFunc(boolean $IsFunc) Set true - indicates a formula. false - indicates it is not a formula.
- * @method string getFunc() Obtain Specifies that when the parameter is set as a formula, Func returns the set formula content.
- * @method void setFunc(string $Func) Set Specifies that when the parameter is set as a formula, Func returns the set formula content.
- * @method ModifiableInfo getModifiableInfo() Obtain Whether the parameter is modifiable.
- * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set Whether the parameter is modifiable.
- * @method string getFuncPattern() Obtain The default formula style of parameters that support formulas.
- * @method void setFuncPattern(string $FuncPattern) Set The default formula style of parameters that support formulas.
+ * @method string getCurrentValue() Obtain Current parameter value
+ * @method void setCurrentValue(string $CurrentValue) Set Current parameter value
+ * @method integer getNeedReboot() Obtain Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
+ * @method void setNeedReboot(integer $NeedReboot) Set Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
+ * @method string getMax() Obtain Maximum value allowed for the parameter
+ * @method void setMax(string $Max) Set Maximum value allowed for the parameter
+ * @method string getMin() Obtain Minimum allowed parameter value
+ * @method void setMin(string $Min) Set Minimum allowed parameter value
+ * @method array getEnumValue() Obtain Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
+ * @method void setEnumValue(array $EnumValue) Set Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
+ * @method integer getIsGlobal() Obtain 1: global parameter, 0: non-global parameter
+ * @method void setIsGlobal(integer $IsGlobal) Set 1: global parameter, 0: non-global parameter
+ * @method string getMatchType() Obtain Match type. multiVal
+ * @method void setMatchType(string $MatchType) Set Match type. multiVal
+ * @method string getMatchValue() Obtain Match target value. If multiVal is set, separate each key with a comma.
+ * @method void setMatchValue(string $MatchValue) Set Match target value. If multiVal is set, separate each key with a comma.
+ * @method boolean getIsFunc() Obtain true: formula; false: non-formula
+ * @method void setIsFunc(boolean $IsFunc) Set true: formula; false: non-formula
+ * @method string getFunc() Obtain When the parameter is set to a formula, Func returns the set formula content.
+ * @method void setFunc(string $Func) Set When the parameter is set to a formula, Func returns the set formula content.
+ * @method ModifiableInfo getModifiableInfo() Obtain Whether the parameter is modifiable
+ * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set Whether the parameter is modifiable
+ * @method string getFuncPattern() Obtain Default formula style for parameters that support formulas
+ * @method void setFuncPattern(string $FuncPattern) Set Default formula style for parameters that support formulas
  */
 class ParamDetail extends AbstractModel
 {
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @var string Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+     * @var string Parameter type: integer, enum, float, string, func
      */
     public $ParamType;
 
     /**
-     * @var boolean Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+     * @var boolean true: supports "func"; false: no formula support
      */
     public $SupportFunc;
 
@@ -83,83 +83,83 @@ class ParamDetail extends AbstractModel
     public $Description;
 
     /**
-     * @var string Current value of the parameter
+     * @var string Current parameter value
      */
     public $CurrentValue;
 
     /**
-     * @var integer Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+     * @var integer Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
      */
     public $NeedReboot;
 
     /**
-     * @var string Maximum value of the parameter
+     * @var string Maximum value allowed for the parameter
      */
     public $Max;
 
     /**
-     * @var string Minimum value of the parameter
+     * @var string Minimum allowed parameter value
      */
     public $Min;
 
     /**
-     * @var array Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+     * @var array Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
      */
     public $EnumValue;
 
     /**
-     * @var integer Valid values: `1` (global parameter),  `0`  (non-global parameter).
+     * @var integer 1: global parameter, 0: non-global parameter
      */
     public $IsGlobal;
 
     /**
-     * @var string The match type. Valid value: `multiVal`.
+     * @var string Match type. multiVal
      */
     public $MatchType;
 
     /**
-     * @var string Match values, which will be separated by comma when `MatchType` is `multiVal`.
+     * @var string Match target value. If multiVal is set, separate each key with a comma.
      */
     public $MatchValue;
 
     /**
-     * @var boolean true - indicates a formula. false - indicates it is not a formula.
+     * @var boolean true: formula; false: non-formula
      */
     public $IsFunc;
 
     /**
-     * @var string Specifies that when the parameter is set as a formula, Func returns the set formula content.
+     * @var string When the parameter is set to a formula, Func returns the set formula content.
      */
     public $Func;
 
     /**
-     * @var ModifiableInfo Whether the parameter is modifiable.
+     * @var ModifiableInfo Whether the parameter is modifiable
      */
     public $ModifiableInfo;
 
     /**
-     * @var string The default formula style of parameters that support formulas.
+     * @var string Default formula style for parameters that support formulas
      */
     public $FuncPattern;
 
     /**
-     * @param string $ParamName Parameter name
-     * @param string $ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
-     * @param boolean $SupportFunc Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+     * @param string $ParamName Parameter name.
+     * @param string $ParamType Parameter type: integer, enum, float, string, func
+     * @param boolean $SupportFunc true: supports "func"; false: no formula support
      * @param string $Default Default value
      * @param string $Description Parameter description
-     * @param string $CurrentValue Current value of the parameter
-     * @param integer $NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
-     * @param string $Max Maximum value of the parameter
-     * @param string $Min Minimum value of the parameter
-     * @param array $EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
-     * @param integer $IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
-     * @param string $MatchType The match type. Valid value: `multiVal`.
-     * @param string $MatchValue Match values, which will be separated by comma when `MatchType` is `multiVal`.
-     * @param boolean $IsFunc true - indicates a formula. false - indicates it is not a formula.
-     * @param string $Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
-     * @param ModifiableInfo $ModifiableInfo Whether the parameter is modifiable.
-     * @param string $FuncPattern The default formula style of parameters that support formulas.
+     * @param string $CurrentValue Current parameter value
+     * @param integer $NeedReboot Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
+     * @param string $Max Maximum value allowed for the parameter
+     * @param string $Min Minimum allowed parameter value
+     * @param array $EnumValue Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
+     * @param integer $IsGlobal 1: global parameter, 0: non-global parameter
+     * @param string $MatchType Match type. multiVal
+     * @param string $MatchValue Match target value. If multiVal is set, separate each key with a comma.
+     * @param boolean $IsFunc true: formula; false: non-formula
+     * @param string $Func When the parameter is set to a formula, Func returns the set formula content.
+     * @param ModifiableInfo $ModifiableInfo Whether the parameter is modifiable
+     * @param string $FuncPattern Default formula style for parameters that support formulas
      */
     function __construct()
     {

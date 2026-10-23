@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroups request structure.
  *
- * @method string getInstanceId() Obtain <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
- * @method void setInstanceId(string $InstanceId) Set <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
- * @method array getSecurityGroupIds() Obtain <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+ * @method string getInstanceId() Obtain <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
+ * @method array getSecurityGroupIds() Obtain <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
  * @method string getZone() Obtain <p>AZ.</p>
  * @method void setZone(string $Zone) Set <p>AZ.</p>
- * @method string getUniqVpcId() Obtain <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
- * @method void setUniqVpcId(string $UniqVpcId) Set <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
- * @method string getVip() Obtain <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
- * @method void setVip(string $Vip) Set <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
- * @method integer getVport() Obtain <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
- * @method void setVport(integer $Vport) Set <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+ * @method string getUniqVpcId() Obtain <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+ * @method void setUniqVpcId(string $UniqVpcId) Set <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+ * @method string getVip() Obtain <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
+ * @method void setVip(string $Vip) Set <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
+ * @method integer getVport() Obtain <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
+ * @method void setVport(integer $Vport) Set <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
+     * @var string <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
      */
     public $InstanceId;
 
     /**
-     * @var array <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+     * @var array <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
      */
     public $SecurityGroupIds;
 
@@ -51,27 +51,27 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+     * @var string <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+     * @var string <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
      */
     public $Vip;
 
     /**
-     * @var integer <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+     * @var integer <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
      */
     public $Vport;
 
     /**
-     * @param string $InstanceId <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
-     * @param array $SecurityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+     * @param string $InstanceId <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
+     * @param array $SecurityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
      * @param string $Zone <p>AZ.</p>
-     * @param string $UniqVpcId <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
-     * @param string $Vip <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
-     * @param integer $Vport <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+     * @param string $UniqVpcId <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+     * @param string $Vip <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
+     * @param integer $Vport <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
      */
     function __construct()
     {

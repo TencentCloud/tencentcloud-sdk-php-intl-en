@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mapping relationship
+ * Table mapping relationship
  *
  * @method string getSrcInstanceId() Obtain Source instance Id
  * @method void setSrcInstanceId(string $SrcInstanceId) Set Source instance Id
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) Set Database name.
  * @method string getTableName() Obtain Table name
  * @method void setTableName(string $TableName) Set Table name
- * @method string getMapDatabaseName() Obtain Map database name
- * @method void setMapDatabaseName(string $MapDatabaseName) Set Map database name
+ * @method string getMapDatabaseName() Obtain Map database names
+ * @method void setMapDatabaseName(string $MapDatabaseName) Set Map database names
  * @method string getMapTableName() Obtain Mapping table name
  * @method void setMapTableName(string $MapTableName) Set Mapping table name
  * @method string getStatus() Obtain Synchronization status
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Message
  * @method boolean getIsPrimary() Obtain Whether it is the main table
  * @method void setIsPrimary(boolean $IsPrimary) Set Whether it is the main table
- * @method string getVirtualColValue() Obtain Virtual column padding value
- * @method void setVirtualColValue(string $VirtualColValue) Set Virtual column padding value
+ * @method string getVirtualColValue() Obtain Fill value of the virtual column
+ * @method void setVirtualColValue(string $VirtualColValue) Set Fill value of the virtual column
  */
 class TableMappingObject extends AbstractModel
 {
@@ -61,7 +61,7 @@ class TableMappingObject extends AbstractModel
     public $TableName;
 
     /**
-     * @var string Map database name
+     * @var string Map database names
      */
     public $MapDatabaseName;
 
@@ -96,7 +96,7 @@ class TableMappingObject extends AbstractModel
     public $IsPrimary;
 
     /**
-     * @var string Virtual column padding value
+     * @var string Fill value of the virtual column
      */
     public $VirtualColValue;
 
@@ -104,14 +104,14 @@ class TableMappingObject extends AbstractModel
      * @param string $SrcInstanceId Source instance Id
      * @param string $DatabaseName Database name.
      * @param string $TableName Table name
-     * @param string $MapDatabaseName Map database name
+     * @param string $MapDatabaseName Map database names
      * @param string $MapTableName Mapping table name
      * @param string $Status Synchronization status
      * @param float $Process Sync progress
      * @param integer $Lag Delay
      * @param string $Message Message
      * @param boolean $IsPrimary Whether it is the main table
-     * @param string $VirtualColValue Virtual column padding value
+     * @param string $VirtualColValue Fill value of the virtual column
      */
     function __construct()
     {

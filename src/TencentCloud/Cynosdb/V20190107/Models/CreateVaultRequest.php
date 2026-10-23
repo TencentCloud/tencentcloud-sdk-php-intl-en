@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVault request structure.
  *
- * @method string getVaultName() Obtain Safe name, length must be greater than 0
- * @method void setVaultName(string $VaultName) Set Safe name, length must be greater than 0
- * @method integer getBackupSaveSeconds() Obtain Backup retention period (seconds). Must be greater than 0.
- * @method void setBackupSaveSeconds(integer $BackupSaveSeconds) Set Backup retention period (seconds). Must be greater than 0.
- * @method string getVaultDescribe() Obtain Safe description
- * @method void setVaultDescribe(string $VaultDescribe) Set Safe description
- * @method string getKeyId() Obtain KMS key ID, length 0-36 characters
- * @method void setKeyId(string $KeyId) Set KMS key ID, length 0-36 characters
- * @method string getKeyType() Obtain Key type, available values: cloud (KMS managed keys), custom (custom key)
- * @method void setKeyType(string $KeyType) Set Key type, available values: cloud (KMS managed keys), custom (custom key)
- * @method string getKeyRegion() Obtain Key region, length 0-32 characters
- * @method void setKeyRegion(string $KeyRegion) Set Key region, length 0-32 characters
- * @method string getLockedTime() Obtain Lock time, format: YYYY-MM-DD HH:mm:ss
- * @method void setLockedTime(string $LockedTime) Set Lock time, format: YYYY-MM-DD HH:mm:ss
+ * @method string getVaultName() Obtain Safe name. The length must be greater than 0.
+ * @method void setVaultName(string $VaultName) Set Safe name. The length must be greater than 0.
+ * @method integer getBackupSaveSeconds() Obtain Backup retention period in seconds. It must be greater than 0.
+ * @method void setBackupSaveSeconds(integer $BackupSaveSeconds) Set Backup retention period in seconds. It must be greater than 0.
+ * @method string getVaultDescribe() Obtain Description of the safe
+ * @method void setVaultDescribe(string $VaultDescribe) Set Description of the safe
+ * @method string getKeyId() Obtain KMS key ID, 0-36 characters in length
+ * @method void setKeyId(string $KeyId) Set KMS key ID, 0-36 characters in length
+ * @method string getKeyType() Obtain Key type. Available values: cloud (cloud-managed key), custom (custom key)
+ * @method void setKeyType(string $KeyType) Set Key type. Available values: cloud (cloud-managed key), custom (custom key)
+ * @method string getKeyRegion() Obtain Region of the key, 0–32 characters in length
+ * @method void setKeyRegion(string $KeyRegion) Set Region of the key, 0–32 characters in length
+ * @method string getLockedTime() Obtain Lock time. Format: YYYY-MM-DD HH:mm:ss
+ * @method void setLockedTime(string $LockedTime) Set Lock time. Format: YYYY-MM-DD HH:mm:ss
  */
 class CreateVaultRequest extends AbstractModel
 {
     /**
-     * @var string Safe name, length must be greater than 0
+     * @var string Safe name. The length must be greater than 0.
      */
     public $VaultName;
 
     /**
-     * @var integer Backup retention period (seconds). Must be greater than 0.
+     * @var integer Backup retention period in seconds. It must be greater than 0.
      */
     public $BackupSaveSeconds;
 
     /**
-     * @var string Safe description
+     * @var string Description of the safe
      */
     public $VaultDescribe;
 
     /**
-     * @var string KMS key ID, length 0-36 characters
+     * @var string KMS key ID, 0-36 characters in length
      */
     public $KeyId;
 
     /**
-     * @var string Key type, available values: cloud (KMS managed keys), custom (custom key)
+     * @var string Key type. Available values: cloud (cloud-managed key), custom (custom key)
      */
     public $KeyType;
 
     /**
-     * @var string Key region, length 0-32 characters
+     * @var string Region of the key, 0–32 characters in length
      */
     public $KeyRegion;
 
     /**
-     * @var string Lock time, format: YYYY-MM-DD HH:mm:ss
+     * @var string Lock time. Format: YYYY-MM-DD HH:mm:ss
      */
     public $LockedTime;
 
     /**
-     * @param string $VaultName Safe name, length must be greater than 0
-     * @param integer $BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
-     * @param string $VaultDescribe Safe description
-     * @param string $KeyId KMS key ID, length 0-36 characters
-     * @param string $KeyType Key type, available values: cloud (KMS managed keys), custom (custom key)
-     * @param string $KeyRegion Key region, length 0-32 characters
-     * @param string $LockedTime Lock time, format: YYYY-MM-DD HH:mm:ss
+     * @param string $VaultName Safe name. The length must be greater than 0.
+     * @param integer $BackupSaveSeconds Backup retention period in seconds. It must be greater than 0.
+     * @param string $VaultDescribe Description of the safe
+     * @param string $KeyId KMS key ID, 0-36 characters in length
+     * @param string $KeyType Key type. Available values: cloud (cloud-managed key), custom (custom key)
+     * @param string $KeyRegion Region of the key, 0–32 characters in length
+     * @param string $LockedTime Lock time. Format: YYYY-MM-DD HH:mm:ss
      */
     function __construct()
     {

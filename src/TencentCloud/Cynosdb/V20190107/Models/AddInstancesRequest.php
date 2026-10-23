@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
- * @method integer getCpu() Obtain <p>Cpu cores</p>
- * @method void setCpu(integer $Cpu) Set <p>Cpu cores</p>
+ * @method integer getCpu() Obtain <p>Number of Cpu cores.</p>
+ * @method void setCpu(integer $Cpu) Set <p>Number of Cpu cores.</p>
  * @method integer getMemory() Obtain <p>Memory in GB</p>
  * @method void setMemory(integer $Memory) Set <p>Memory in GB</p>
  * @method integer getReadOnlyCount() Obtain <p>Number of newly-added read-only instances, value range (0,15]</p>
  * @method void setReadOnlyCount(integer $ReadOnlyCount) Set <p>Number of newly-added read-only instances, value range (0,15]</p>
- * @method string getDeviceType() Obtain <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
- * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+ * @method string getDeviceType() Obtain <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
  * @method string getInstanceGrpId() Obtain <p>This field has been deprecated. The current version no longer transmits this value.</p>
  * @method void setInstanceGrpId(string $InstanceGrpId) Set <p>This field has been deprecated. The current version no longer transmits this value.</p>
- * @method string getVpcId() Obtain <p>ID of the associated VPC network.</p>
- * @method void setVpcId(string $VpcId) Set <p>ID of the associated VPC network.</p>
+ * @method string getVpcId() Obtain <p>ID of the VPC network it belongs to.</p>
+ * @method void setVpcId(string $VpcId) Set <p>ID of the VPC network it belongs to.</p>
  * @method string getSubnetId() Obtain <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
  * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
  * @method integer getPort() Obtain <p>Port used when adding new RO groups, value range [0,65535)</p>
@@ -42,20 +42,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
  * @method integer getAutoVoucher() Obtain <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
  * @method void setAutoVoucher(integer $AutoVoucher) Set <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
- * @method string getDbType() Obtain <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
- * @method void setDbType(string $DbType) Set <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+ * @method string getDbType() Obtain <p>Database type. Value range: </p><li> MYSQL </li>
+ * @method void setDbType(string $DbType) Set <p>Database type. Value range: </p><li> MYSQL </li>
  * @method string getOrderSource() Obtain <p>Order source, string length range [0,64)</p>
  * @method void setOrderSource(string $OrderSource) Set <p>Order source, string length range [0,64)</p>
- * @method integer getDealMode() Obtain <p>Transaction mode. 0: place order and pay; 1: place order</p>
- * @method void setDealMode(integer $DealMode) Set <p>Transaction mode. 0: place order and pay; 1: place order</p>
- * @method integer getParamTemplateId() Obtain <p>Parameter template ID</p>
- * @method void setParamTemplateId(integer $ParamTemplateId) Set <p>Parameter template ID</p>
+ * @method integer getDealMode() Obtain <p>Transaction mode 0-Place order and pay 1-Place order</p>
+ * @method void setDealMode(integer $DealMode) Set <p>Transaction mode 0-Place order and pay 1-Place order</p>
+ * @method integer getParamTemplateId() Obtain <p>Parameter template ID.</p>
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set <p>Parameter template ID.</p>
  * @method array getInstanceParams() Obtain <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
  * @method void setInstanceParams(array $InstanceParams) Set <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
  * @method array getSecurityGroupIds() Obtain <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
- * @method UpgradeProxy getUpgradeProxy() Obtain <p>proxy sync upgrade</p>
- * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set <p>proxy sync upgrade</p>
+ * @method UpgradeProxy getUpgradeProxy() Obtain <p>Upgrade proxy synchronously</p>
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set <p>Upgrade proxy synchronously</p>
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -65,7 +65,7 @@ class AddInstancesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer <p>Cpu cores</p>
+     * @var integer <p>Number of Cpu cores.</p>
      */
     public $Cpu;
 
@@ -80,7 +80,7 @@ class AddInstancesRequest extends AbstractModel
     public $ReadOnlyCount;
 
     /**
-     * @var string <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     * @var string <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
      */
     public $DeviceType;
 
@@ -91,7 +91,7 @@ class AddInstancesRequest extends AbstractModel
     public $InstanceGrpId;
 
     /**
-     * @var string <p>ID of the associated VPC network.</p>
+     * @var string <p>ID of the VPC network it belongs to.</p>
      */
     public $VpcId;
 
@@ -116,7 +116,7 @@ class AddInstancesRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var string <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+     * @var string <p>Database type. Value range: </p><li> MYSQL </li>
      */
     public $DbType;
 
@@ -126,12 +126,12 @@ class AddInstancesRequest extends AbstractModel
     public $OrderSource;
 
     /**
-     * @var integer <p>Transaction mode. 0: place order and pay; 1: place order</p>
+     * @var integer <p>Transaction mode 0-Place order and pay 1-Place order</p>
      */
     public $DealMode;
 
     /**
-     * @var integer <p>Parameter template ID</p>
+     * @var integer <p>Parameter template ID.</p>
      */
     public $ParamTemplateId;
 
@@ -146,29 +146,29 @@ class AddInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var UpgradeProxy <p>proxy sync upgrade</p>
+     * @var UpgradeProxy <p>Upgrade proxy synchronously</p>
      */
     public $UpgradeProxy;
 
     /**
      * @param string $ClusterId <p>Cluster ID.</p>
-     * @param integer $Cpu <p>Cpu cores</p>
+     * @param integer $Cpu <p>Number of Cpu cores.</p>
      * @param integer $Memory <p>Memory in GB</p>
      * @param integer $ReadOnlyCount <p>Number of newly-added read-only instances, value range (0,15]</p>
-     * @param string $DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     * @param string $DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
      * @param string $InstanceGrpId <p>This field has been deprecated. The current version no longer transmits this value.</p>
-     * @param string $VpcId <p>ID of the associated VPC network.</p>
+     * @param string $VpcId <p>ID of the VPC network it belongs to.</p>
      * @param string $SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
      * @param integer $Port <p>Port used when adding new RO groups, value range [0,65535)</p>
      * @param string $InstanceName <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
      * @param integer $AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
-     * @param string $DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+     * @param string $DbType <p>Database type. Value range: </p><li> MYSQL </li>
      * @param string $OrderSource <p>Order source, string length range [0,64)</p>
-     * @param integer $DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
-     * @param integer $ParamTemplateId <p>Parameter template ID</p>
+     * @param integer $DealMode <p>Transaction mode 0-Place order and pay 1-Place order</p>
+     * @param integer $ParamTemplateId <p>Parameter template ID.</p>
      * @param array $InstanceParams <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
      * @param array $SecurityGroupIds <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
-     * @param UpgradeProxy $UpgradeProxy <p>proxy sync upgrade</p>
+     * @param UpgradeProxy $UpgradeProxy <p>Upgrade proxy synchronously</p>
      */
     function __construct()
     {

@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Binlog description
  *
- * @method string getFileName() Obtain <p>Binlog filename</p>
- * @method void setFileName(string $FileName) Set <p>Binlog filename</p>
- * @method integer getFileSize() Obtain <p>File size, measurement unit: byte</p>
- * @method void setFileSize(integer $FileSize) Set <p>File size, measurement unit: byte</p>
+ * @method string getFileName() Obtain <p>Binlog file name</p>
+ * @method void setFileName(string $FileName) Set <p>Binlog file name</p>
+ * @method integer getFileSize() Obtain <p>File size, unit: byte</p>
+ * @method void setFileSize(integer $FileSize) Set <p>File size, unit: byte</p>
  * @method string getStartTime() Obtain <p>Earliest transaction time</p>
  * @method void setStartTime(string $StartTime) Set <p>Earliest transaction time</p>
  * @method string getFinishTime() Obtain <p>Latest transaction time</p>
  * @method void setFinishTime(string $FinishTime) Set <p>Latest transaction time</p>
  * @method integer getBinlogId() Obtain <p>Binlog file ID</p>
  * @method void setBinlogId(integer $BinlogId) Set <p>Binlog file ID</p>
- * @method array getCrossRegions() Obtain <p>Cross-regional binlog</p>
- * @method void setCrossRegions(array $CrossRegions) Set <p>Cross-regional binlog</p>
+ * @method array getCrossRegions() Obtain <p>Cross-region of binlog</p>
+ * @method void setCrossRegions(array $CrossRegions) Set <p>Cross-region of binlog</p>
  * @method string getCopyStatus() Obtain <p>Backup delivery status</p>
  * @method void setCopyStatus(string $CopyStatus) Set <p>Backup delivery status</p>
- * @method array getVaultInfos() Obtain <p>Safe information</p>
- * @method void setVaultInfos(array $VaultInfos) Set <p>Safe information</p>
+ * @method array getVaultInfos() Obtain <p>Safe information.</p>
+ * @method void setVaultInfos(array $VaultInfos) Set <p>Safe information.</p>
  * @method string getEncryptKeyId() Obtain <p>Encryption key</p>
  * @method void setEncryptKeyId(string $EncryptKeyId) Set <p>Encryption key</p>
  * @method string getEncryptRegion() Obtain <p>Key region for encryption</p>
  * @method void setEncryptRegion(string $EncryptRegion) Set <p>Key region for encryption</p>
- * @method array getExistRegions() Obtain <p>Geographical distribution of backups</p>
- * @method void setExistRegions(array $ExistRegions) Set <p>Geographical distribution of backups</p>
+ * @method array getExistRegions() Obtain <p>Geographical distribution information of backups</p>
+ * @method void setExistRegions(array $ExistRegions) Set <p>Geographical distribution information of backups</p>
  */
 class BinlogItem extends AbstractModel
 {
     /**
-     * @var string <p>Binlog filename</p>
+     * @var string <p>Binlog file name</p>
      */
     public $FileName;
 
     /**
-     * @var integer <p>File size, measurement unit: byte</p>
+     * @var integer <p>File size, unit: byte</p>
      */
     public $FileSize;
 
@@ -71,7 +71,7 @@ class BinlogItem extends AbstractModel
     public $BinlogId;
 
     /**
-     * @var array <p>Cross-regional binlog</p>
+     * @var array <p>Cross-region of binlog</p>
      */
     public $CrossRegions;
 
@@ -81,7 +81,7 @@ class BinlogItem extends AbstractModel
     public $CopyStatus;
 
     /**
-     * @var array <p>Safe information</p>
+     * @var array <p>Safe information.</p>
      */
     public $VaultInfos;
 
@@ -96,22 +96,22 @@ class BinlogItem extends AbstractModel
     public $EncryptRegion;
 
     /**
-     * @var array <p>Geographical distribution of backups</p>
+     * @var array <p>Geographical distribution information of backups</p>
      */
     public $ExistRegions;
 
     /**
-     * @param string $FileName <p>Binlog filename</p>
-     * @param integer $FileSize <p>File size, measurement unit: byte</p>
+     * @param string $FileName <p>Binlog file name</p>
+     * @param integer $FileSize <p>File size, unit: byte</p>
      * @param string $StartTime <p>Earliest transaction time</p>
      * @param string $FinishTime <p>Latest transaction time</p>
      * @param integer $BinlogId <p>Binlog file ID</p>
-     * @param array $CrossRegions <p>Cross-regional binlog</p>
+     * @param array $CrossRegions <p>Cross-region of binlog</p>
      * @param string $CopyStatus <p>Backup delivery status</p>
-     * @param array $VaultInfos <p>Safe information</p>
+     * @param array $VaultInfos <p>Safe information.</p>
      * @param string $EncryptKeyId <p>Encryption key</p>
      * @param string $EncryptRegion <p>Key region for encryption</p>
-     * @param array $ExistRegions <p>Geographical distribution of backups</p>
+     * @param array $ExistRegions <p>Geographical distribution information of backups</p>
      */
     function __construct()
     {

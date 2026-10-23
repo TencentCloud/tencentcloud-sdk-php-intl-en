@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getLimit() Obtain Limit on the number of logs.
- * @method void setLimit(integer $Limit) Set Limit on the number of logs.
- * @method integer getOffset() Obtain Offset of the log number.
- * @method void setOffset(integer $Offset) Set Offset of the log number.
+ * @method integer getLimit() Obtain Log entry limit
+ * @method void setLimit(integer $Limit) Set Log entry limit
+ * @method integer getOffset() Obtain Log entry offset
+ * @method void setOffset(integer $Offset) Set Log entry offset
  * @method string getStartTime() Obtain Start time.
  * @method void setStartTime(string $StartTime) Set Start time.
  * @method string getEndTime() Obtain End time.
  * @method void setEndTime(string $EndTime) Set End time.
- * @method string getOrderBy() Obtain Sorting field. Valid value: 'Timestamp'.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid value: 'Timestamp'.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `ASC`, `DESC`.
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `ASC`, `DESC`.
- * @method array getLogLevels() Obtain Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
- * @method void setLogLevels(array $LogLevels) Set Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
- * @method array getKeyWords() Obtain Keywords, supports fuzzy search.
- * @method void setKeyWords(array $KeyWords) Set Keywords, supports fuzzy search.
+ * @method string getOrderBy() Obtain Sorting field. Valid values: `Timestamp` (enumeration value).
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: `Timestamp` (enumeration value).
+ * @method string getOrderByType() Obtain Sorting type. Valid values: `ASC`, `DESC`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting type. Valid values: `ASC`, `DESC`.
+ * @method array getLogLevels() Obtain Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
+ * @method void setLogLevels(array $LogLevels) Set Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
+ * @method array getKeyWords() Obtain Keyword. Fuzzy search is supported.
+ * @method void setKeyWords(array $KeyWords) Set Keyword. Fuzzy search is supported.
  */
 class DescribeInstanceErrorLogsRequest extends AbstractModel
 {
@@ -47,12 +47,12 @@ class DescribeInstanceErrorLogsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Limit on the number of logs.
+     * @var integer Log entry limit
      */
     public $Limit;
 
     /**
-     * @var integer Offset of the log number.
+     * @var integer Log entry offset
      */
     public $Offset;
 
@@ -67,35 +67,35 @@ class DescribeInstanceErrorLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Sorting field. Valid value: 'Timestamp'.
+     * @var string Sorting field. Valid values: `Timestamp` (enumeration value).
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `ASC`, `DESC`.
+     * @var string Sorting type. Valid values: `ASC`, `DESC`.
      */
     public $OrderByType;
 
     /**
-     * @var array Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+     * @var array Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
      */
     public $LogLevels;
 
     /**
-     * @var array Keywords, supports fuzzy search.
+     * @var array Keyword. Fuzzy search is supported.
      */
     public $KeyWords;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param integer $Limit Limit on the number of logs.
-     * @param integer $Offset Offset of the log number.
+     * @param integer $Limit Log entry limit
+     * @param integer $Offset Log entry offset
      * @param string $StartTime Start time.
      * @param string $EndTime End time.
-     * @param string $OrderBy Sorting field. Valid value: 'Timestamp'.
-     * @param string $OrderByType Sorting order. Valid values: `ASC`, `DESC`.
-     * @param array $LogLevels Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
-     * @param array $KeyWords Keywords, supports fuzzy search.
+     * @param string $OrderBy Sorting field. Valid values: `Timestamp` (enumeration value).
+     * @param string $OrderByType Sorting type. Valid values: `ASC`, `DESC`.
+     * @param array $LogLevels Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
+     * @param array $KeyWords Keyword. Fuzzy search is supported.
      */
     function __construct()
     {

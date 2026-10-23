@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Create cluster task information.
+ * Create cluster task information
  *
- * @method integer getCpu() Obtain Instance CPU.
- * @method void setCpu(integer $Cpu) Set Instance CPU.
- * @method integer getMemory() Obtain Instance memory.
- * @method void setMemory(integer $Memory) Set Instance memory.
- * @method integer getStorageLimit() Obtain Cluster storage upper limit.
- * @method void setStorageLimit(integer $StorageLimit) Set Cluster storage upper limit.
+ * @method integer getCpu() Obtain Instance CPU
+ * @method void setCpu(integer $Cpu) Set Instance CPU
+ * @method integer getMemory() Obtain Instance memory
+ * @method void setMemory(integer $Memory) Set Instance memory
+ * @method integer getStorageLimit() Obtain Cluster storage limit
+ * @method void setStorageLimit(integer $StorageLimit) Set Cluster storage limit
  */
 class CreateClustersData extends AbstractModel
 {
     /**
-     * @var integer Instance CPU.
+     * @var integer Instance CPU
      */
     public $Cpu;
 
     /**
-     * @var integer Instance memory.
+     * @var integer Instance memory
      */
     public $Memory;
 
     /**
-     * @var integer Cluster storage upper limit.
+     * @var integer Cluster storage limit
      */
     public $StorageLimit;
 
     /**
-     * @param integer $Cpu Instance CPU.
-     * @param integer $Memory Instance memory.
-     * @param integer $StorageLimit Cluster storage upper limit.
+     * @param integer $Cpu Instance CPU
+     * @param integer $Memory Instance memory
+     * @param integer $StorageLimit Cluster storage limit
      */
     function __construct()
     {

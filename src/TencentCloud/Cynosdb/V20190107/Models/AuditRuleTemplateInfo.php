@@ -18,43 +18,43 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of an audit rule template
+ * Details of an audit rule template.
  *
- * @method string getRuleTemplateId() Obtain Rule template ID
- * @method void setRuleTemplateId(string $RuleTemplateId) Set Rule template ID
- * @method string getRuleTemplateName() Obtain Rule template name
- * @method void setRuleTemplateName(string $RuleTemplateName) Set Rule template name
- * @method array getRuleFilters() Obtain Filter of the rule template
- * @method void setRuleFilters(array $RuleFilters) Set Filter of the rule template
+ * @method string getRuleTemplateId() Obtain Rule template ID.
+ * @method void setRuleTemplateId(string $RuleTemplateId) Set Rule template ID.
+ * @method string getRuleTemplateName() Obtain Rule template name.
+ * @method void setRuleTemplateName(string $RuleTemplateName) Set Rule template name.
+ * @method array getRuleFilters() Obtain Filter criteria of the rule template
+ * @method void setRuleFilters(array $RuleFilters) Set Filter criteria of the rule template
  * @method string getDescription() Obtain Rule template description.
  * @method void setDescription(string $Description) Set Rule template description.
- * @method string getCreateAt() Obtain Creation time of a rule template
- * @method void setCreateAt(string $CreateAt) Set Creation time of a rule template
+ * @method string getCreateAt() Obtain Rule template creation time.
+ * @method void setCreateAt(string $CreateAt) Set Rule template creation time.
  * @method string getUpdateAt() Obtain Rule template modification time.
  * @method void setUpdateAt(string $UpdateAt) Set Rule template modification time.
- * @method integer getAlarmLevel() Obtain Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
- * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
- * @method integer getAlarmPolicy() Obtain Alarm policy. 0 - no alert, 1 - alert.
- * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alarm policy. 0 - no alert, 1 - alert.
- * @method integer getStatus() Obtain Template status. 0 - no task, 1 - modifying.
- * @method void setStatus(integer $Status) Set Template status. 0 - no task, 1 - modifying.
- * @method array getAffectedInstances() Obtain Template application is used in which instances.
- * @method void setAffectedInstances(array $AffectedInstances) Set Template application is used in which instances.
+ * @method integer getAlarmLevel() Obtain Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method integer getAlarmPolicy() Obtain Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+ * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+ * @method integer getStatus() Obtain Template status. Valid values: 0 - No task, 1 - modifying.
+ * @method void setStatus(integer $Status) Set Template status. Valid values: 0 - No task, 1 - modifying.
+ * @method array getAffectedInstances() Obtain Instances to which this rule template is applied.
+ * @method void setAffectedInstances(array $AffectedInstances) Set Instances to which this rule template is applied.
  */
 class AuditRuleTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Rule template ID
+     * @var string Rule template ID.
      */
     public $RuleTemplateId;
 
     /**
-     * @var string Rule template name
+     * @var string Rule template name.
      */
     public $RuleTemplateName;
 
     /**
-     * @var array Filter of the rule template
+     * @var array Filter criteria of the rule template
      */
     public $RuleFilters;
 
@@ -64,7 +64,7 @@ class AuditRuleTemplateInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string Creation time of a rule template
+     * @var string Rule template creation time.
      */
     public $CreateAt;
 
@@ -74,36 +74,36 @@ class AuditRuleTemplateInfo extends AbstractModel
     public $UpdateAt;
 
     /**
-     * @var integer Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     * @var integer Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public $AlarmLevel;
 
     /**
-     * @var integer Alarm policy. 0 - no alert, 1 - alert.
+     * @var integer Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public $AlarmPolicy;
 
     /**
-     * @var integer Template status. 0 - no task, 1 - modifying.
+     * @var integer Template status. Valid values: 0 - No task, 1 - modifying.
      */
     public $Status;
 
     /**
-     * @var array Template application is used in which instances.
+     * @var array Instances to which this rule template is applied.
      */
     public $AffectedInstances;
 
     /**
-     * @param string $RuleTemplateId Rule template ID
-     * @param string $RuleTemplateName Rule template name
-     * @param array $RuleFilters Filter of the rule template
+     * @param string $RuleTemplateId Rule template ID.
+     * @param string $RuleTemplateName Rule template name.
+     * @param array $RuleFilters Filter criteria of the rule template
      * @param string $Description Rule template description.
-     * @param string $CreateAt Creation time of a rule template
+     * @param string $CreateAt Rule template creation time.
      * @param string $UpdateAt Rule template modification time.
-     * @param integer $AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-     * @param integer $AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
-     * @param integer $Status Template status. 0 - no task, 1 - modifying.
-     * @param array $AffectedInstances Template application is used in which instances.
+     * @param integer $AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param integer $AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     * @param integer $Status Template status. Valid values: 0 - No task, 1 - modifying.
+     * @param array $AffectedInstances Instances to which this rule template is applied.
      */
     function __construct()
     {

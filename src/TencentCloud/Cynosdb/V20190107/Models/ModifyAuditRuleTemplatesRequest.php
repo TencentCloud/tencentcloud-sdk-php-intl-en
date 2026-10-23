@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuditRuleTemplates request structure.
  *
- * @method array getRuleTemplateIds() Obtain Audit rule template ID
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Audit rule template ID
- * @method array getRuleFilters() Obtain Audit rule after modification
- * @method void setRuleFilters(array $RuleFilters) Set Audit rule after modification
- * @method string getRuleTemplateName() Obtain New name of the rule template
- * @method void setRuleTemplateName(string $RuleTemplateName) Set New name of the rule template
- * @method string getDescription() Obtain New description of the rule template
- * @method void setDescription(string $Description) Set New description of the rule template
- * @method integer getAlarmLevel() Obtain Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
- * @method void setAlarmLevel(integer $AlarmLevel) Set Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
- * @method integer getAlarmPolicy() Obtain Alert policy. 0 - No alert, 1 - Alert.
- * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alert policy. 0 - No alert, 1 - Alert.
+ * @method array getRuleTemplateIds() Obtain Audit rule template ID.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Audit rule template ID.
+ * @method array getRuleFilters() Obtain Modified audit rule.
+ * @method void setRuleFilters(array $RuleFilters) Set Modified audit rule.
+ * @method string getRuleTemplateName() Obtain Modified rule template name.
+ * @method void setRuleTemplateName(string $RuleTemplateName) Set Modified rule template name.
+ * @method string getDescription() Obtain Modified rule template description.
+ * @method void setDescription(string $Description) Set Modified rule template description.
+ * @method integer getAlarmLevel() Obtain Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method integer getAlarmPolicy() Obtain Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+ * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
  */
 class ModifyAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Audit rule template ID
+     * @var array Audit rule template ID.
      */
     public $RuleTemplateIds;
 
     /**
-     * @var array Audit rule after modification
+     * @var array Modified audit rule.
      */
     public $RuleFilters;
 
     /**
-     * @var string New name of the rule template
+     * @var string Modified rule template name.
      */
     public $RuleTemplateName;
 
     /**
-     * @var string New description of the rule template
+     * @var string Modified rule template description.
      */
     public $Description;
 
     /**
-     * @var integer Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     * @var integer Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public $AlarmLevel;
 
     /**
-     * @var integer Alert policy. 0 - No alert, 1 - Alert.
+     * @var integer Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public $AlarmPolicy;
 
     /**
-     * @param array $RuleTemplateIds Audit rule template ID
-     * @param array $RuleFilters Audit rule after modification
-     * @param string $RuleTemplateName New name of the rule template
-     * @param string $Description New description of the rule template
-     * @param integer $AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
-     * @param integer $AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+     * @param array $RuleTemplateIds Audit rule template ID.
+     * @param array $RuleFilters Modified audit rule.
+     * @param string $RuleTemplateName Modified rule template name.
+     * @param string $Description Modified rule template description.
+     * @param integer $AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param integer $AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     function __construct()
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Backup Usage Info
+ * Backup usage information
  *
  * @method float getBackupVolume() Obtain Backup usage
  * @method void setBackupVolume(float $BackupVolume) Set Backup usage
  * @method string getBackupType() Obtain Backup type
  * @method void setBackupType(string $BackupType) Set Backup type
- * @method string getBackupMethod() Obtain Backup method
- * @method void setBackupMethod(string $BackupMethod) Set Backup method
+ * @method string getBackupMethod() Obtain Backup method.
+ * @method void setBackupMethod(string $BackupMethod) Set Backup method.
  */
 class BackupVolumeInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class BackupVolumeInfo extends AbstractModel
     public $BackupType;
 
     /**
-     * @var string Backup method
+     * @var string Backup method.
      */
     public $BackupMethod;
 
     /**
      * @param float $BackupVolume Backup usage
      * @param string $BackupType Backup type
-     * @param string $BackupMethod Backup method
+     * @param string $BackupMethod Backup method.
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditInstanceList request structure.
  *
- * @method integer getAuditSwitch() Obtain Enabling status of instance audit. 1 - enabled; 0 - not enabled.
- * @method void setAuditSwitch(integer $AuditSwitch) Set Enabling status of instance audit. 1 - enabled; 0 - not enabled.
- * @method array getFilters() Obtain Filtering conditions for querying the instance list.
- * @method void setFilters(array $Filters) Set Filtering conditions for querying the instance list.
- * @method integer getAuditMode() Obtain Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
- * @method void setAuditMode(integer $AuditMode) Set Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
- * @method integer getLimit() Obtain Number of entries returned per request. The default value is 30, and the maximum value is 100.
- * @method void setLimit(integer $Limit) Set Number of entries returned per request. The default value is 30, and the maximum value is 100.
- * @method integer getOffset() Obtain Offset. The default value is 0.
- * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
+ * @method integer getAuditSwitch() Obtain Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
+ * @method void setAuditSwitch(integer $AuditSwitch) Set Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
+ * @method array getFilters() Obtain Filter conditions for querying the instance list.
+ * @method void setFilters(array $Filters) Set Filter conditions for querying the instance list.
+ * @method integer getAuditMode() Obtain Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
+ * @method void setAuditMode(integer $AuditMode) Set Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
+ * @method integer getLimit() Obtain Number of entries to return per request. Default value: 30. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of entries to return per request. Default value: 30. Maximum value: 100.
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
 class DescribeAuditInstanceListRequest extends AbstractModel
 {
     /**
-     * @var integer Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+     * @var integer Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
      */
     public $AuditSwitch;
 
     /**
-     * @var array Filtering conditions for querying the instance list.
+     * @var array Filter conditions for querying the instance list.
      */
     public $Filters;
 
     /**
-     * @var integer Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+     * @var integer Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
      */
     public $AuditMode;
 
     /**
-     * @var integer Number of entries returned per request. The default value is 30, and the maximum value is 100.
+     * @var integer Number of entries to return per request. Default value: 30. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Offset. The default value is 0.
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @param integer $AuditSwitch Enabling status of instance audit. 1 - enabled; 0 - not enabled.
-     * @param array $Filters Filtering conditions for querying the instance list.
-     * @param integer $AuditMode Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
-     * @param integer $Limit Number of entries returned per request. The default value is 30, and the maximum value is 100.
-     * @param integer $Offset Offset. The default value is 0.
+     * @param integer $AuditSwitch Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
+     * @param array $Filters Filter conditions for querying the instance list.
+     * @param integer $AuditMode Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
+     * @param integer $Limit Number of entries to return per request. Default value: 30. Maximum value: 100.
+     * @param integer $Offset Offset. Default value: 0.
      */
     function __construct()
     {

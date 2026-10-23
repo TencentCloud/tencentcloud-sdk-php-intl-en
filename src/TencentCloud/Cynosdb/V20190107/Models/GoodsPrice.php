@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Item price.
+ * Item price
  *
  * @method TradePrice getInstancePrice() Obtain Instance price
  * @method void setInstancePrice(TradePrice $InstancePrice) Set Instance price

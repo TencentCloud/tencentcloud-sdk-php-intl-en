@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
  * @method integer getBinlogSaveDays() Obtain <p>Binlog retention days</p>
  * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set <p>Binlog retention days</p>
- * @method integer getBinlogCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: Day</p>
- * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
+ * @method integer getBinlogCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: day</p>
+ * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: day</p>
  */
 class ModifyBinlogSaveDaysRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyBinlogSaveDaysRequest extends AbstractModel
     public $BinlogSaveDays;
 
     /**
-     * @var integer <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @var integer <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public $BinlogCrossRegionSaveDays;
 
     /**
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param integer $BinlogSaveDays <p>Binlog retention days</p>
-     * @param integer $BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @param integer $BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     function __construct()
     {

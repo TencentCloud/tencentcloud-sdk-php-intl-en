@@ -18,17 +18,17 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Database proxy specifications
+ * Database proxy specification
  *
- * @method integer getCpu() Obtain Number of database proxy CPU cores
- * @method void setCpu(integer $Cpu) Set Number of database proxy CPU cores
+ * @method integer getCpu() Obtain Number of cpu cores for the database proxy
+ * @method void setCpu(integer $Cpu) Set Number of cpu cores for the database proxy
  * @method integer getMem() Obtain Database proxy memory
  * @method void setMem(integer $Mem) Set Database proxy memory
  */
 class ProxySpec extends AbstractModel
 {
     /**
-     * @var integer Number of database proxy CPU cores
+     * @var integer Number of cpu cores for the database proxy
      */
     public $Cpu;
 
@@ -38,7 +38,7 @@ class ProxySpec extends AbstractModel
     public $Mem;
 
     /**
-     * @param integer $Cpu Number of database proxy CPU cores
+     * @param integer $Cpu Number of cpu cores for the database proxy
      * @param integer $Mem Database proxy memory
      */
     function __construct()

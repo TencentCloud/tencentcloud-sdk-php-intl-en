@@ -18,55 +18,55 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Global database task info
+ * Global database task information
  *
- * @method string getGdnId() Obtain Unique ID of the global database
- * @method void setGdnId(string $GdnId) Set Unique ID of the global database
- * @method string getGdnName() Obtain unique alias of the global database
- * @method void setGdnName(string $GdnName) Set unique alias of the global database
- * @method string getPrimaryClusterId() Obtain Primary Cluster ID
- * @method void setPrimaryClusterId(string $PrimaryClusterId) Set Primary Cluster ID
- * @method string getPrimaryClusterRegion() Obtain Master cluster region
- * @method void setPrimaryClusterRegion(string $PrimaryClusterRegion) Set Master cluster region
- * @method string getStandbyClusterRegion() Obtain from the cluster region
- * @method void setStandbyClusterRegion(string $StandbyClusterRegion) Set from the cluster region
+ * @method string getGdnId() Obtain Global database unique ID
+ * @method void setGdnId(string $GdnId) Set Global database unique ID
+ * @method string getGdnName() Obtain Unique alias of the global database
+ * @method void setGdnName(string $GdnName) Set Unique alias of the global database
+ * @method string getPrimaryClusterId() Obtain Primary cluster ID
+ * @method void setPrimaryClusterId(string $PrimaryClusterId) Set Primary cluster ID
+ * @method string getPrimaryClusterRegion() Obtain Region of the primary cluster
+ * @method void setPrimaryClusterRegion(string $PrimaryClusterRegion) Set Region of the primary cluster
+ * @method string getStandbyClusterRegion() Obtain From the cluster region
+ * @method void setStandbyClusterRegion(string $StandbyClusterRegion) Set From the cluster region
  * @method string getStandbyClusterId() Obtain Slave cluster ID
  * @method void setStandbyClusterId(string $StandbyClusterId) Set Slave cluster ID
  * @method string getStandbyClusterName() Obtain From the cluster name
  * @method void setStandbyClusterName(string $StandbyClusterName) Set From the cluster name
- * @method string getForceSwitchGdn() Obtain Whether forced switchover is performed
- * @method void setForceSwitchGdn(string $ForceSwitchGdn) Set Whether forced switchover is performed
- * @method integer getCode() Obtain Return code
- * @method void setCode(integer $Code) Set Return code
- * @method string getMessage() Obtain prompt message
- * @method void setMessage(string $Message) Set prompt message
+ * @method string getForceSwitchGdn() Obtain Whether a forced switchover has been performed
+ * @method void setForceSwitchGdn(string $ForceSwitchGdn) Set Whether a forced switchover has been performed
+ * @method integer getCode() Obtain code
+ * @method void setCode(integer $Code) Set code
+ * @method string getMessage() Obtain Prompt message
+ * @method void setMessage(string $Message) Set Prompt message
  * @method string getIsSupportForce() Obtain Whether forced switchover is supported
  * @method void setIsSupportForce(string $IsSupportForce) Set Whether forced switchover is supported
  */
 class GdnTaskInfo extends AbstractModel
 {
     /**
-     * @var string Unique ID of the global database
+     * @var string Global database unique ID
      */
     public $GdnId;
 
     /**
-     * @var string unique alias of the global database
+     * @var string Unique alias of the global database
      */
     public $GdnName;
 
     /**
-     * @var string Primary Cluster ID
+     * @var string Primary cluster ID
      */
     public $PrimaryClusterId;
 
     /**
-     * @var string Master cluster region
+     * @var string Region of the primary cluster
      */
     public $PrimaryClusterRegion;
 
     /**
-     * @var string from the cluster region
+     * @var string From the cluster region
      */
     public $StandbyClusterRegion;
 
@@ -81,17 +81,17 @@ class GdnTaskInfo extends AbstractModel
     public $StandbyClusterName;
 
     /**
-     * @var string Whether forced switchover is performed
+     * @var string Whether a forced switchover has been performed
      */
     public $ForceSwitchGdn;
 
     /**
-     * @var integer Return code
+     * @var integer code
      */
     public $Code;
 
     /**
-     * @var string prompt message
+     * @var string Prompt message
      */
     public $Message;
 
@@ -101,16 +101,16 @@ class GdnTaskInfo extends AbstractModel
     public $IsSupportForce;
 
     /**
-     * @param string $GdnId Unique ID of the global database
-     * @param string $GdnName unique alias of the global database
-     * @param string $PrimaryClusterId Primary Cluster ID
-     * @param string $PrimaryClusterRegion Master cluster region
-     * @param string $StandbyClusterRegion from the cluster region
+     * @param string $GdnId Global database unique ID
+     * @param string $GdnName Unique alias of the global database
+     * @param string $PrimaryClusterId Primary cluster ID
+     * @param string $PrimaryClusterRegion Region of the primary cluster
+     * @param string $StandbyClusterRegion From the cluster region
      * @param string $StandbyClusterId Slave cluster ID
      * @param string $StandbyClusterName From the cluster name
-     * @param string $ForceSwitchGdn Whether forced switchover is performed
-     * @param integer $Code Return code
-     * @param string $Message prompt message
+     * @param string $ForceSwitchGdn Whether a forced switchover has been performed
+     * @param integer $Code code
+     * @param string $Message Prompt message
      * @param string $IsSupportForce Whether forced switchover is supported
      */
     function __construct()

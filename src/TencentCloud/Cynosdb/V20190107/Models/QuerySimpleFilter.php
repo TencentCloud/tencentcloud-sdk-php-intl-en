@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Blurry query filter.
+ * Blurry query filter
  *
- * @method array getNames() Obtain Field name
- * @method void setNames(array $Names) Set Field name
- * @method array getValues() Obtain Field value.
- * @method void setValues(array $Values) Set Field value.
- * @method boolean getExactMatch() Obtain Fuzzy matching. valid values: true (yes), false (no).
- * @method void setExactMatch(boolean $ExactMatch) Set Fuzzy matching. valid values: true (yes), false (no).
+ * @method array getNames() Obtain Field name.
+ * @method void setNames(array $Names) Set Field name.
+ * @method array getValues() Obtain Field value
+ * @method void setValues(array $Values) Set Field value
+ * @method boolean getExactMatch() Obtain Fuzzy matching. true: yes; false: no
+ * @method void setExactMatch(boolean $ExactMatch) Set Fuzzy matching. true: yes; false: no
  */
 class QuerySimpleFilter extends AbstractModel
 {
     /**
-     * @var array Field name
+     * @var array Field name.
      */
     public $Names;
 
     /**
-     * @var array Field value.
+     * @var array Field value
      */
     public $Values;
 
     /**
-     * @var boolean Fuzzy matching. valid values: true (yes), false (no).
+     * @var boolean Fuzzy matching. true: yes; false: no
      */
     public $ExactMatch;
 
     /**
-     * @param array $Names Field name
-     * @param array $Values Field value.
-     * @param boolean $ExactMatch Fuzzy matching. valid values: true (yes), false (no).
+     * @param array $Names Field name.
+     * @param array $Values Field value
+     * @param boolean $ExactMatch Fuzzy matching. true: yes; false: no
      */
     function __construct()
     {

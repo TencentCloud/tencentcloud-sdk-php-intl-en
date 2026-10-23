@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceMultiSpec request structure.
  *
- * @method string getZone() Obtain Availability zone. specifies the best practice for region provision.
- * @method void setZone(string $Zone) Set Availability zone. specifies the best practice for region provision.
- * @method string getInstancePayMode() Obtain Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
- * @method void setInstancePayMode(string $InstancePayMode) Set Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
- * @method string getStoragePayMode() Obtain Storage purchase type. available values are: PREPAID, POSTPAID.
- * @method void setStoragePayMode(string $StoragePayMode) Set Storage purchase type. available values are: PREPAID, POSTPAID.
- * @method array getGoodsSpecs() Obtain Specifies the product specification.
- * @method void setGoodsSpecs(array $GoodsSpecs) Set Specifies the product specification.
+ * @method string getZone() Obtain AZ. Best practice provided by each region
+ * @method void setZone(string $Zone) Set AZ. Best practice provided by each region
+ * @method string getInstancePayMode() Obtain Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
+ * @method void setInstancePayMode(string $InstancePayMode) Set Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
+ * @method string getStoragePayMode() Obtain Storage purchase type. Available values are: PREPAID, POSTPAID
+ * @method void setStoragePayMode(string $StoragePayMode) Set Storage purchase type. Available values are: PREPAID, POSTPAID
+ * @method array getGoodsSpecs() Obtain Product specification
+ * @method void setGoodsSpecs(array $GoodsSpecs) Set Product specification
  */
 class InquirePriceMultiSpecRequest extends AbstractModel
 {
     /**
-     * @var string Availability zone. specifies the best practice for region provision.
+     * @var string AZ. Best practice provided by each region
      */
     public $Zone;
 
     /**
-     * @var string Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+     * @var string Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
      */
     public $InstancePayMode;
 
     /**
-     * @var string Storage purchase type. available values are: PREPAID, POSTPAID.
+     * @var string Storage purchase type. Available values are: PREPAID, POSTPAID
      */
     public $StoragePayMode;
 
     /**
-     * @var array Specifies the product specification.
+     * @var array Product specification
      */
     public $GoodsSpecs;
 
     /**
-     * @param string $Zone Availability zone. specifies the best practice for region provision.
-     * @param string $InstancePayMode Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
-     * @param string $StoragePayMode Storage purchase type. available values are: PREPAID, POSTPAID.
-     * @param array $GoodsSpecs Specifies the product specification.
+     * @param string $Zone AZ. Best practice provided by each region
+     * @param string $InstancePayMode Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
+     * @param string $StoragePayMode Storage purchase type. Available values are: PREPAID, POSTPAID
+     * @param array $GoodsSpecs Product specification
      */
     function __construct()
     {

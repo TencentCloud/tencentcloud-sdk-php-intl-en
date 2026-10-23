@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of tags associated with cluster, including `TagKey` and `TagValue`
+ * Tag information bound to the cluster, including TagKey and TagValue
  *
- * @method string getTagKey() Obtain Tag key
- * @method void setTagKey(string $TagKey) Set Tag key
- * @method string getTagValue() Obtain Tag value
- * @method void setTagValue(string $TagValue) Set Tag value
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var string Tag key.
      */
     public $TagKey;
 
     /**
-     * @var string Tag value
+     * @var string Tag value.
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey Tag key
-     * @param string $TagValue Tag value
+     * @param string $TagKey Tag key.
+     * @param string $TagValue Tag value.
      */
     function __construct()
     {

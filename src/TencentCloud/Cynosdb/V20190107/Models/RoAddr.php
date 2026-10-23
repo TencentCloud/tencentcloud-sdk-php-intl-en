@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Read-only instance address
  *
- * @method string getIP() Obtain IP address
- * @method void setIP(string $IP) Set IP address
+ * @method string getIP() Obtain IP address.
+ * @method void setIP(string $IP) Set IP address.
  * @method integer getPort() Obtain Port.
  * @method void setPort(integer $Port) Set Port.
  */
 class RoAddr extends AbstractModel
 {
     /**
-     * @var string IP address
+     * @var string IP address.
      */
     public $IP;
 
@@ -38,7 +38,7 @@ class RoAddr extends AbstractModel
     public $Port;
 
     /**
-     * @param string $IP IP address
+     * @param string $IP IP address.
      * @param integer $Port Port.
      */
     function __construct()

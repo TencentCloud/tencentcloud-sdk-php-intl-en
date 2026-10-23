@@ -18,24 +18,24 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task progress query.
+ * Task progress query
  *
- * @method string getCurrentStep() Obtain Current step.
- * @method void setCurrentStep(string $CurrentStep) Set Current step.
- * @method integer getCurrentStepProgress() Obtain Current progress.
- * @method void setCurrentStepProgress(integer $CurrentStepProgress) Set Current progress.
+ * @method string getCurrentStep() Obtain Details of the current step
+ * @method void setCurrentStep(string $CurrentStep) Set Details of the current step
+ * @method integer getCurrentStepProgress() Obtain Current progress
+ * @method void setCurrentStepProgress(integer $CurrentStepProgress) Set Current progress
  * @method string getCurrentStepRemainingTime() Obtain Estimated Time
  * @method void setCurrentStepRemainingTime(string $CurrentStepRemainingTime) Set Estimated Time
  */
 class TaskProgressInfo extends AbstractModel
 {
     /**
-     * @var string Current step.
+     * @var string Details of the current step
      */
     public $CurrentStep;
 
     /**
-     * @var integer Current progress.
+     * @var integer Current progress
      */
     public $CurrentStepProgress;
 
@@ -45,8 +45,8 @@ class TaskProgressInfo extends AbstractModel
     public $CurrentStepRemainingTime;
 
     /**
-     * @param string $CurrentStep Current step.
-     * @param integer $CurrentStepProgress Current progress.
+     * @param string $CurrentStep Details of the current step
+     * @param integer $CurrentStepProgress Current progress
      * @param string $CurrentStepRemainingTime Estimated Time
      */
     function __construct()

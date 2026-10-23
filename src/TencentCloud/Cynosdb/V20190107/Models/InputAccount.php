@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Account. Valid values: `accountName`, `host`.
+ * Account, including `accountName` and `host`
  *
  * @method string getAccountName() Obtain Account
  * @method void setAccountName(string $AccountName) Set Account
- * @method string getHost() Obtain Host. Default value: `%`
- * @method void setHost(string $Host) Set Host. Default value: `%`
+ * @method string getHost() Obtain Host. Default value: `%`.
+ * @method void setHost(string $Host) Set Host. Default value: `%`.
  */
 class InputAccount extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InputAccount extends AbstractModel
     public $AccountName;
 
     /**
-     * @var string Host. Default value: `%`
+     * @var string Host. Default value: `%`.
      */
     public $Host;
 
     /**
      * @param string $AccountName Account
-     * @param string $Host Host. Default value: `%`
+     * @param string $Host Host. Default value: `%`.
      */
     function __construct()
     {

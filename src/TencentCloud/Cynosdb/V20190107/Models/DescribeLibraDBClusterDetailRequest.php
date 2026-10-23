@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Analysis Cluster ID
  * @method void setClusterId(string $ClusterId) Set Analysis Cluster ID
- * @method string getGetServerInfo() Obtain Whether to get more server information, available values yes no
- * @method void setGetServerInfo(string $GetServerInfo) Set Whether to get more server information, available values yes no
+ * @method string getGetServerInfo() Obtain Whether to get more server information. Available values: yes, no
+ * @method void setGetServerInfo(string $GetServerInfo) Set Whether to get more server information. Available values: yes, no
  */
 class DescribeLibraDBClusterDetailRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeLibraDBClusterDetailRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Whether to get more server information, available values yes no
+     * @var string Whether to get more server information. Available values: yes, no
      */
     public $GetServerInfo;
 
     /**
      * @param string $ClusterId Analysis Cluster ID
-     * @param string $GetServerInfo Whether to get more server information, available values yes no
+     * @param string $GetServerInfo Whether to get more server information. Available values: yes, no
      */
     function __construct()
     {

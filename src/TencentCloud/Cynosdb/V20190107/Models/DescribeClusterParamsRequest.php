@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterParams request structure.
  *
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getParamName() Obtain Parameter name.
  * @method void setParamName(string $ParamName) Set Parameter name.
- * @method string getIsGlobal() Obtain Whether it is a global parameter.
- * @method void setIsGlobal(string $IsGlobal) Set Whether it is a global parameter.
+ * @method string getIsGlobal() Obtain Whether it is a global parameter
+ * @method void setIsGlobal(string $IsGlobal) Set Whether it is a global parameter
  */
 class DescribeClusterParamsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID.
+     * @var string Cluster ID
      */
     public $ClusterId;
 
@@ -40,14 +40,14 @@ class DescribeClusterParamsRequest extends AbstractModel
     public $ParamName;
 
     /**
-     * @var string Whether it is a global parameter.
+     * @var string Whether it is a global parameter
      */
     public $IsGlobal;
 
     /**
-     * @param string $ClusterId Cluster ID.
+     * @param string $ClusterId Cluster ID
      * @param string $ParamName Parameter name.
-     * @param string $IsGlobal Whether it is a global parameter.
+     * @param string $IsGlobal Whether it is a global parameter
      */
     function __construct()
     {

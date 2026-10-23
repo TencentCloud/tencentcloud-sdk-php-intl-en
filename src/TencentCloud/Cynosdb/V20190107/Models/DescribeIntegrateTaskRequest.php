@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrateTask request structure.
  *
- * @method string getBigDealId() Obtain Large order id. must choose between large order id and sub-order id.
- * @method void setBigDealId(string $BigDealId) Set Large order id. must choose between large order id and sub-order id.
+ * @method string getBigDealId() Obtain Large order id. Either the large order id or the sub-order id must be selected.
+ * @method void setBigDealId(string $BigDealId) Set Large order id. Either the large order id or the sub-order id must be selected.
  * @method array getDealNames() Obtain Order list
  * @method void setDealNames(array $DealNames) Set Order list
  */
 class DescribeIntegrateTaskRequest extends AbstractModel
 {
     /**
-     * @var string Large order id. must choose between large order id and sub-order id.
+     * @var string Large order id. Either the large order id or the sub-order id must be selected.
      */
     public $BigDealId;
 
@@ -38,7 +38,7 @@ class DescribeIntegrateTaskRequest extends AbstractModel
     public $DealNames;
 
     /**
-     * @param string $BigDealId Large order id. must choose between large order id and sub-order id.
+     * @param string $BigDealId Large order id. Either the large order id or the sub-order id must be selected.
      * @param array $DealNames Order list
      */
     function __construct()

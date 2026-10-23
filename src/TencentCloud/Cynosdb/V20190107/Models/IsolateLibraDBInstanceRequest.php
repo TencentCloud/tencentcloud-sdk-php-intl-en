@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getInstanceIdList() Obtain Read-only analysis engine instance ID list
  * @method void setInstanceIdList(array $InstanceIdList) Set Read-only analysis engine instance ID list
- * @method boolean getForceIsolate() Obtain Whether to force isolation
- * @method void setForceIsolate(boolean $ForceIsolate) Set Whether to force isolation
+ * @method boolean getForceIsolate() Obtain Whether to forcibly isolate
+ * @method void setForceIsolate(boolean $ForceIsolate) Set Whether to forcibly isolate
  * @method array getIsolateReasonTypes() Obtain Isolation reason type
  * @method void setIsolateReasonTypes(array $IsolateReasonTypes) Set Isolation reason type
- * @method string getIsolateReason() Obtain Cause of isolation
- * @method void setIsolateReason(string $IsolateReason) Set Cause of isolation
+ * @method string getIsolateReason() Obtain Isolation reason
+ * @method void setIsolateReason(string $IsolateReason) Set Isolation reason
  */
 class IsolateLibraDBInstanceRequest extends AbstractModel
 {
@@ -44,7 +44,7 @@ class IsolateLibraDBInstanceRequest extends AbstractModel
     public $InstanceIdList;
 
     /**
-     * @var boolean Whether to force isolation
+     * @var boolean Whether to forcibly isolate
      */
     public $ForceIsolate;
 
@@ -54,16 +54,16 @@ class IsolateLibraDBInstanceRequest extends AbstractModel
     public $IsolateReasonTypes;
 
     /**
-     * @var string Cause of isolation
+     * @var string Isolation reason
      */
     public $IsolateReason;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIdList Read-only analysis engine instance ID list
-     * @param boolean $ForceIsolate Whether to force isolation
+     * @param boolean $ForceIsolate Whether to forcibly isolate
      * @param array $IsolateReasonTypes Isolation reason type
-     * @param string $IsolateReason Cause of isolation
+     * @param string $IsolateReason Isolation reason
      */
     function __construct()
     {

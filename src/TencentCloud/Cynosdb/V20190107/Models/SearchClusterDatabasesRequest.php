@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchClusterDatabases request structure.
  *
- * @method string getClusterId() Obtain The cluster ID
- * @method void setClusterId(string $ClusterId) Set The cluster ID
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
  * @method string getDatabase() Obtain Database name
  * @method void setDatabase(string $Database) Set Database name
- * @method integer getMatchType() Obtain Whether to search exactly
+ * @method integer getMatchType() Obtain Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
- * @method void setMatchType(integer $MatchType) Set Whether to search exactly
+The default is 0.
+ * @method void setMatchType(integer $MatchType) Set Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
  */
 class SearchClusterDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string The cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
@@ -44,18 +44,18 @@ class SearchClusterDatabasesRequest extends AbstractModel
     public $Database;
 
     /**
-     * @var integer Whether to search exactly
+     * @var integer Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
      */
     public $MatchType;
 
     /**
-     * @param string $ClusterId The cluster ID
+     * @param string $ClusterId Cluster ID.
      * @param string $Database Database name
-     * @param integer $MatchType Whether to search exactly
+     * @param integer $MatchType Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
      */
     function __construct()
     {

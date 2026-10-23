@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * serverless specification.
+ * serverless specification
  *
- * @method float getMinCpu() Obtain <p>cpu minimum value</p>
- * @method void setMinCpu(float $MinCpu) Set <p>cpu minimum value</p>
+ * @method float getMinCpu() Obtain <p>Minimum cpu value</p>
+ * @method void setMinCpu(float $MinCpu) Set <p>Minimum cpu value</p>
  * @method float getMaxCpu() Obtain <p>Maximum value of cpu</p>
  * @method void setMaxCpu(float $MaxCpu) Set <p>Maximum value of cpu</p>
- * @method integer getMaxStorageSize() Obtain <p>Maximum storage space</p>
- * @method void setMaxStorageSize(integer $MaxStorageSize) Set <p>Maximum storage space</p>
- * @method integer getIsDefault() Obtain <p>Is the default specification</p>
- * @method void setIsDefault(integer $IsDefault) Set <p>Is the default specification</p>
+ * @method integer getMaxStorageSize() Obtain <p>maximum storage space</p>
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set <p>maximum storage space</p>
+ * @method integer getIsDefault() Obtain <p>Whether it is the default specification.</p>
+ * @method void setIsDefault(integer $IsDefault) Set <p>Whether it is the default specification.</p>
  * @method boolean getHasStock() Obtain <p>Whether there is inventory</p>
  * @method void setHasStock(boolean $HasStock) Set <p>Whether there is inventory</p>
  * @method integer getStockCount() Obtain <p>Inventory quantity</p>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ServerlessSpec extends AbstractModel
 {
     /**
-     * @var float <p>cpu minimum value</p>
+     * @var float <p>Minimum cpu value</p>
      */
     public $MinCpu;
 
@@ -48,12 +48,12 @@ class ServerlessSpec extends AbstractModel
     public $MaxCpu;
 
     /**
-     * @var integer <p>Maximum storage space</p>
+     * @var integer <p>maximum storage space</p>
      */
     public $MaxStorageSize;
 
     /**
-     * @var integer <p>Is the default specification</p>
+     * @var integer <p>Whether it is the default specification.</p>
      */
     public $IsDefault;
 
@@ -73,10 +73,10 @@ class ServerlessSpec extends AbstractModel
     public $ZoneStockInfos;
 
     /**
-     * @param float $MinCpu <p>cpu minimum value</p>
+     * @param float $MinCpu <p>Minimum cpu value</p>
      * @param float $MaxCpu <p>Maximum value of cpu</p>
-     * @param integer $MaxStorageSize <p>Maximum storage space</p>
-     * @param integer $IsDefault <p>Is the default specification</p>
+     * @param integer $MaxStorageSize <p>maximum storage space</p>
+     * @param integer $IsDefault <p>Whether it is the default specification.</p>
      * @param boolean $HasStock <p>Whether there is inventory</p>
      * @param integer $StockCount <p>Inventory quantity</p>
      * @param array $ZoneStockInfos <p>AZ inventory information</p>

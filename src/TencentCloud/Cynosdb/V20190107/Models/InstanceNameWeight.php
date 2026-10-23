@@ -18,17 +18,17 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance weight.
+ * Instance weight
  *
- * @method string getInstanceName() Obtain Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
- * @method void setInstanceName(string $InstanceName) Set Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+ * @method string getInstanceName() Obtain Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
+ * @method void setInstanceName(string $InstanceName) Set Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
  * @method integer getWeight() Obtain Weight
  * @method void setWeight(integer $Weight) Set Weight
  */
 class InstanceNameWeight extends AbstractModel
 {
     /**
-     * @var string Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+     * @var string Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
      */
     public $InstanceName;
 
@@ -38,7 +38,7 @@ class InstanceNameWeight extends AbstractModel
     public $Weight;
 
     /**
-     * @param string $InstanceName Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+     * @param string $InstanceName Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
      * @param integer $Weight Weight
      */
     function __construct()

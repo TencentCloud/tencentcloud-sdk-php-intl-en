@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVaultId() Obtain Backup safe ID. The length must be greater than 0.
  * @method void setVaultId(string $VaultId) Set Backup safe ID. The length must be greater than 0.
- * @method array getBackupIds() Obtain Backup file ID list to be deleted, cannot be empty
- * @method void setBackupIds(array $BackupIds) Set Backup file ID list to be deleted, cannot be empty
+ * @method array getBackupIds() Obtain List of backup file IDs to be deleted. Values cannot be empty.
+ * @method void setBackupIds(array $BackupIds) Set List of backup file IDs to be deleted. Values cannot be empty.
  */
 class DeleteBackupVaultRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteBackupVaultRequest extends AbstractModel
     public $VaultId;
 
     /**
-     * @var array Backup file ID list to be deleted, cannot be empty
+     * @var array List of backup file IDs to be deleted. Values cannot be empty.
      */
     public $BackupIds;
 
     /**
      * @param string $VaultId Backup safe ID. The length must be greater than 0.
-     * @param array $BackupIds Backup file ID list to be deleted, cannot be empty
+     * @param array $BackupIds List of backup file IDs to be deleted. Values cannot be empty.
      */
     function __construct()
     {

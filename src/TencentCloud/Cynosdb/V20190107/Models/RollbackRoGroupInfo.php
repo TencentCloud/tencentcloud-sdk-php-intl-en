@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rollback RO group information.
+ * Rollback RO group information
  *
- * @method string getInstanceGroupId() Obtain Instance group ID.
- * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID.
- * @method string getUniqVpcId() Obtain VPC information.
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC information.
+ * @method string getInstanceGroupId() Obtain Instance group ID
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID
+ * @method string getUniqVpcId() Obtain VPC information
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC information
  * @method string getUniqSubnetId() Obtain Subnet information.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet information.
- * @method string getVip() Obtain vip information.
- * @method void setVip(string $Vip) Set vip information.
- * @method integer getVport() Obtain Specifies the vport information.
- * @method void setVport(integer $Vport) Set Specifies the vport information.
+ * @method string getVip() Obtain VIP information.
+ * @method void setVip(string $Vip) Set VIP information.
+ * @method integer getVport() Obtain Virtual port information.
+ * @method void setVport(integer $Vport) Set Virtual port information.
  */
 class RollbackRoGroupInfo extends AbstractModel
 {
     /**
-     * @var string Instance group ID.
+     * @var string Instance group ID
      */
     public $InstanceGroupId;
 
     /**
-     * @var string VPC information.
+     * @var string VPC information
      */
     public $UniqVpcId;
 
@@ -49,21 +49,21 @@ class RollbackRoGroupInfo extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var string vip information.
+     * @var string VIP information.
      */
     public $Vip;
 
     /**
-     * @var integer Specifies the vport information.
+     * @var integer Virtual port information.
      */
     public $Vport;
 
     /**
-     * @param string $InstanceGroupId Instance group ID.
-     * @param string $UniqVpcId VPC information.
+     * @param string $InstanceGroupId Instance group ID
+     * @param string $UniqVpcId VPC information
      * @param string $UniqSubnetId Subnet information.
-     * @param string $Vip vip information.
-     * @param integer $Vport Specifies the vport information.
+     * @param string $Vip VIP information.
+     * @param integer $Vport Virtual port information.
      */
     function __construct()
     {

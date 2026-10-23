@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Billable resource information
+ * Billing resource information
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIds() Obtain Instance ID list
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
+ * @method array getInstanceIds() Obtain Instance ID list.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list.
  * @method string getDealName() Obtain Order ID
  * @method void setDealName(string $DealName) Set Order ID
  */
@@ -35,7 +35,7 @@ class BillingResourceInfo extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Instance ID list
+     * @var array Instance ID list.
      */
     public $InstanceIds;
 
@@ -46,7 +46,7 @@ class BillingResourceInfo extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIds Instance ID list
+     * @param array $InstanceIds Instance ID list.
      * @param string $DealName Order ID
      */
     function __construct()

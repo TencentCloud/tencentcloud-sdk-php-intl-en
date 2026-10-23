@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Status Code Cache TTL configuration parameters.
  *
- * @method array getStatusCodeCacheParams() Obtain Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setStatusCodeCacheParams(array $StatusCodeCacheParams) Set Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method array getStatusCodeCacheParams() Obtain Status code cache TTL.
+ * @method void setStatusCodeCacheParams(array $StatusCodeCacheParams) Set Status code cache TTL.
  */
 class StatusCodeCacheParameters extends AbstractModel
 {
     /**
-     * @var array Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var array Status code cache TTL.
      */
     public $StatusCodeCacheParams;
 
     /**
-     * @param array $StatusCodeCacheParams Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param array $StatusCodeCacheParams Status code cache TTL.
      */
     function __construct()
     {

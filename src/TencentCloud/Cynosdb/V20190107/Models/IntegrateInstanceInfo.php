@@ -18,52 +18,52 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Initializes the configuration information of an instance.
+ * Instance initialization configuration information
  *
- * @method integer getCpu() Obtain Specifies the cpu of the instance.
- * @method void setCpu(integer $Cpu) Set Specifies the cpu of the instance.
- * @method integer getMemory() Obtain Specifies the instance memory.
- * @method void setMemory(integer $Memory) Set Specifies the instance memory.
- * @method string getInstanceType() Obtain Instance type (rw/ro).
- * @method void setInstanceType(string $InstanceType) Set Instance type (rw/ro).
- * @method integer getInstanceCount() Obtain Number of instances. value range: [1,15].
- * @method void setInstanceCount(integer $InstanceCount) Set Number of instances. value range: [1,15].
- * @method string getDeviceType() Obtain Instance machine type. valid values: universal type (common), exclusive type.
- * @method void setDeviceType(string $DeviceType) Set Instance machine type. valid values: universal type (common), exclusive type.
+ * @method integer getCpu() Obtain Instance cpu
+ * @method void setCpu(integer $Cpu) Set Instance cpu
+ * @method integer getMemory() Obtain Instance memory
+ * @method void setMemory(integer $Memory) Set Instance memory
+ * @method string getInstanceType() Obtain Instance type. Valid values: `rw` (primary), `ro` (read-only).
+ * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values: `rw` (primary), `ro` (read-only).
+ * @method integer getInstanceCount() Obtain Number of instances. Value range: 1-15.
+ * @method void setInstanceCount(integer $InstanceCount) Set Number of instances. Value range: 1-15.
+ * @method string getDeviceType() Obtain Instance machine type. common: universal type; exclusive: dedicated type
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type. common: universal type; exclusive: dedicated type
  */
 class IntegrateInstanceInfo extends AbstractModel
 {
     /**
-     * @var integer Specifies the cpu of the instance.
+     * @var integer Instance cpu
      */
     public $Cpu;
 
     /**
-     * @var integer Specifies the instance memory.
+     * @var integer Instance memory
      */
     public $Memory;
 
     /**
-     * @var string Instance type (rw/ro).
+     * @var string Instance type. Valid values: `rw` (primary), `ro` (read-only).
      */
     public $InstanceType;
 
     /**
-     * @var integer Number of instances. value range: [1,15].
+     * @var integer Number of instances. Value range: 1-15.
      */
     public $InstanceCount;
 
     /**
-     * @var string Instance machine type. valid values: universal type (common), exclusive type.
+     * @var string Instance machine type. common: universal type; exclusive: dedicated type
      */
     public $DeviceType;
 
     /**
-     * @param integer $Cpu Specifies the cpu of the instance.
-     * @param integer $Memory Specifies the instance memory.
-     * @param string $InstanceType Instance type (rw/ro).
-     * @param integer $InstanceCount Number of instances. value range: [1,15].
-     * @param string $DeviceType Instance machine type. valid values: universal type (common), exclusive type.
+     * @param integer $Cpu Instance cpu
+     * @param integer $Memory Instance memory
+     * @param string $InstanceType Instance type. Valid values: `rw` (primary), `ro` (read-only).
+     * @param integer $InstanceCount Number of instances. Value range: 1-15.
+     * @param string $DeviceType Instance machine type. common: universal type; exclusive: dedicated type
      */
     function __construct()
     {

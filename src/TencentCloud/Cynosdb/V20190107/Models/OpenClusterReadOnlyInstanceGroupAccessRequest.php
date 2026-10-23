@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getPort() Obtain Port
- * @method void setPort(string $Port) Set Port
- * @method array getSecurityGroupIds() Obtain Security group ID.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID.
+ * @method string getPort() Obtain Port.
+ * @method void setPort(string $Port) Set Port.
+ * @method array getSecurityGroupIds() Obtain Security group ID
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID
  */
 class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Port
+     * @var string Port.
      */
     public $Port;
 
     /**
-     * @var array Security group ID.
+     * @var array Security group ID
      */
     public $SecurityGroupIds;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $Port Port
-     * @param array $SecurityGroupIds Security group ID.
+     * @param string $Port Port.
+     * @param array $SecurityGroupIds Security group ID
      */
     function __construct()
     {

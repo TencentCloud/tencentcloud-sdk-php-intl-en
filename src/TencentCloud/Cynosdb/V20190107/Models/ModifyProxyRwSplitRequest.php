@@ -22,40 +22,42 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain <p>Cluster ID, for example, cynosdbmysql-asd123</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID, for example, cynosdbmysql-asd123</p>
- * @method string getProxyGroupId() Obtain <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
- * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
- * @method string getConsistencyType() Obtain <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
- * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
- * @method string getConsistencyTimeOut() Obtain <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
- * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) Set <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
- * @method string getWeightMode() Obtain <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
- * @method void setWeightMode(string $WeightMode) Set <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
- * @method array getInstanceWeights() Obtain <p>Instance read-only weight.</p>
- * @method void setInstanceWeights(array $InstanceWeights) Set <p>Instance read-only weight.</p>
- * @method string getFailOver() Obtain <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
- * @method void setFailOver(string $FailOver) Set <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
- * @method string getAutoAddRo() Obtain <p>Automatically add read-only instance, value: "yes", "no"</p>
- * @method void setAutoAddRo(string $AutoAddRo) Set <p>Automatically add read-only instance, value: "yes", "no"</p>
+ * @method string getProxyGroupId() Obtain <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
+ * @method string getConsistencyType() Obtain <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+ * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+ * @method string getConsistencyTimeOut() Obtain <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+ * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) Set <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+ * @method string getWeightMode() Obtain <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
+ * @method void setWeightMode(string $WeightMode) Set <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
+ * @method array getInstanceWeights() Obtain <p>Instance Read-Only Weight.</p>
+ * @method void setInstanceWeights(array $InstanceWeights) Set <p>Instance Read-Only Weight.</p>
+ * @method string getFailOver() Obtain <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
+ * @method void setFailOver(string $FailOver) Set <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
+ * @method string getAutoAddRo() Obtain <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
+ * @method void setAutoAddRo(string $AutoAddRo) Set <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
  * @method string getOpenRw() Obtain <p>Whether to enable read-write separation.<br>This parameter is deprecated. Set the read-write attribute through RwType.</p>
  * @method void setOpenRw(string $OpenRw) Set <p>Whether to enable read-write separation.<br>This parameter is deprecated. Set the read-write attribute through RwType.</p>
- * @method string getRwType() Obtain <p>Read-write type:<br>READWRITE, READONLY</p>
- * @method void setRwType(string $RwType) Set <p>Read-write type:<br>READWRITE, READONLY</p>
- * @method boolean getTransSplit() Obtain <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
- * @method void setTransSplit(boolean $TransSplit) Set <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
- * @method string getAccessMode() Obtain <p>Connection mode:<br>nearby, balance</p>
- * @method void setAccessMode(string $AccessMode) Set <p>Connection mode:<br>nearby, balance</p>
- * @method string getOpenConnectionPool() Obtain <p>Whether to enable the connection pool:<br>yes, no</p>
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set <p>Whether to enable the connection pool:<br>yes, no</p>
- * @method string getConnectionPoolType() Obtain <p>Connection pool Type:<br>SessionConnectionPool</p>
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set <p>Connection pool Type:<br>SessionConnectionPool</p>
- * @method integer getConnectionPoolTimeOut() Obtain <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
+ * @method string getRwType() Obtain <p>Read-write type:<br>READWRITE,READONLY</p>
+ * @method void setRwType(string $RwType) Set <p>Read-write type:<br>READWRITE,READONLY</p>
+ * @method boolean getTransSplit() Obtain <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
+ * @method void setTransSplit(boolean $TransSplit) Set <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
+ * @method string getAccessMode() Obtain <p>Connection mode: <br>nearby, balance</p>
+ * @method void setAccessMode(string $AccessMode) Set <p>Connection mode: <br>nearby, balance</p>
+ * @method string getOpenConnectionPool() Obtain <p>Whether to enable connection pool: <br>yes,no</p>
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set <p>Whether to enable connection pool: <br>yes,no</p>
+ * @method string getConnectionPoolType() Obtain <p>Connection pool type: <br>SessionConnectionPool</p>
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set <p>Connection pool type: <br>SessionConnectionPool</p>
+ * @method integer getConnectionPoolTimeOut() Obtain <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
  * @method boolean getApNodeAsRoNode() Obtain <p>Whether to treat the libra node as an ordinary RO node</p>
  * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set <p>Whether to treat the libra node as an ordinary RO node</p>
  * @method boolean getApQueryToOtherNode() Obtain <p>Whether to forward to other nodes when a libra node fault occurs</p>
  * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set <p>Whether to forward to other nodes when a libra node fault occurs</p>
- * @method string getLoadBalanceMode() Obtain <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
- * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method string getLoadBalanceMode() Obtain <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method boolean getTransAllSplit() Obtain <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
+ * @method void setTransAllSplit(boolean $TransAllSplit) Set <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
@@ -65,37 +67,37 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
+     * @var string <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+     * @var string <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
      */
     public $ConsistencyType;
 
     /**
-     * @var string <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
+     * @var string <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
      */
     public $ConsistencyTimeOut;
 
     /**
-     * @var string <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
+     * @var string <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
      */
     public $WeightMode;
 
     /**
-     * @var array <p>Instance read-only weight.</p>
+     * @var array <p>Instance Read-Only Weight.</p>
      */
     public $InstanceWeights;
 
     /**
-     * @var string <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
+     * @var string <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
      */
     public $FailOver;
 
     /**
-     * @var string <p>Automatically add read-only instance, value: "yes", "no"</p>
+     * @var string <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
      */
     public $AutoAddRo;
 
@@ -105,32 +107,32 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $OpenRw;
 
     /**
-     * @var string <p>Read-write type:<br>READWRITE, READONLY</p>
+     * @var string <p>Read-write type:<br>READWRITE,READONLY</p>
      */
     public $RwType;
 
     /**
-     * @var boolean <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
+     * @var boolean <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
      */
     public $TransSplit;
 
     /**
-     * @var string <p>Connection mode:<br>nearby, balance</p>
+     * @var string <p>Connection mode: <br>nearby, balance</p>
      */
     public $AccessMode;
 
     /**
-     * @var string <p>Whether to enable the connection pool:<br>yes, no</p>
+     * @var string <p>Whether to enable connection pool: <br>yes,no</p>
      */
     public $OpenConnectionPool;
 
     /**
-     * @var string <p>Connection pool Type:<br>SessionConnectionPool</p>
+     * @var string <p>Connection pool type: <br>SessionConnectionPool</p>
      */
     public $ConnectionPoolType;
 
     /**
-     * @var integer <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
+     * @var integer <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
      */
     public $ConnectionPoolTimeOut;
 
@@ -145,29 +147,35 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ApQueryToOtherNode;
 
     /**
-     * @var string <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @var string <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public $LoadBalanceMode;
 
     /**
+     * @var boolean <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
+     */
+    public $TransAllSplit;
+
+    /**
      * @param string $ClusterId <p>Cluster ID, for example, cynosdbmysql-asd123</p>
-     * @param string $ProxyGroupId <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
-     * @param string $ConsistencyType <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
-     * @param string $ConsistencyTimeOut <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
-     * @param string $WeightMode <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
-     * @param array $InstanceWeights <p>Instance read-only weight.</p>
-     * @param string $FailOver <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
-     * @param string $AutoAddRo <p>Automatically add read-only instance, value: "yes", "no"</p>
+     * @param string $ProxyGroupId <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
+     * @param string $ConsistencyType <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+     * @param string $ConsistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+     * @param string $WeightMode <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
+     * @param array $InstanceWeights <p>Instance Read-Only Weight.</p>
+     * @param string $FailOver <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
+     * @param string $AutoAddRo <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
      * @param string $OpenRw <p>Whether to enable read-write separation.<br>This parameter is deprecated. Set the read-write attribute through RwType.</p>
-     * @param string $RwType <p>Read-write type:<br>READWRITE, READONLY</p>
-     * @param boolean $TransSplit <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
-     * @param string $AccessMode <p>Connection mode:<br>nearby, balance</p>
-     * @param string $OpenConnectionPool <p>Whether to enable the connection pool:<br>yes, no</p>
-     * @param string $ConnectionPoolType <p>Connection pool Type:<br>SessionConnectionPool</p>
-     * @param integer $ConnectionPoolTimeOut <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
+     * @param string $RwType <p>Read-write type:<br>READWRITE,READONLY</p>
+     * @param boolean $TransSplit <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
+     * @param string $AccessMode <p>Connection mode: <br>nearby, balance</p>
+     * @param string $OpenConnectionPool <p>Whether to enable connection pool: <br>yes,no</p>
+     * @param string $ConnectionPoolType <p>Connection pool type: <br>SessionConnectionPool</p>
+     * @param integer $ConnectionPoolTimeOut <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
      * @param boolean $ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
      * @param boolean $ApQueryToOtherNode <p>Whether to forward to other nodes when a libra node fault occurs</p>
-     * @param string $LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param string $LoadBalanceMode <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param boolean $TransAllSplit <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class ModifyProxyRwSplitRequest extends AbstractModel
 
         if (array_key_exists("LoadBalanceMode",$param) and $param["LoadBalanceMode"] !== null) {
             $this->LoadBalanceMode = $param["LoadBalanceMode"];
+        }
+
+        if (array_key_exists("TransAllSplit",$param) and $param["TransAllSplit"] !== null) {
+            $this->TransAllSplit = $param["TransAllSplit"];
         }
     }
 }

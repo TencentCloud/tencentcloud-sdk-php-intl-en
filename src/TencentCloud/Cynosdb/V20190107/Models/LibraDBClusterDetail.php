@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
  * @method string getClusterName() Obtain <p>Cluster name.</p>
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
- * @method string getRegion() Obtain <p>Region</p>
- * @method void setRegion(string $Region) Set <p>Region</p>
- * @method string getStatus() Obtain <p>Status</p>
- * @method void setStatus(string $Status) Set <p>Status</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
+ * @method string getStatus() Obtain <p>Status.</p>
+ * @method void setStatus(string $Status) Set <p>Status.</p>
  * @method string getStatusDesc() Obtain <p>Status description</p>
  * @method void setStatusDesc(string $StatusDesc) Set <p>Status description</p>
  * @method integer getStorage() Obtain <p>Storage size</p>
  * @method void setStorage(integer $Storage) Set <p>Storage size</p>
- * @method string getVpcName() Obtain <p>VPC name</p>
- * @method void setVpcName(string $VpcName) Set <p>VPC name</p>
+ * @method string getVpcName() Obtain <p>VPC name.</p>
+ * @method void setVpcName(string $VpcName) Set <p>VPC name.</p>
  * @method string getVpcId() Obtain <p>vpc Unique id</p>
  * @method void setVpcId(string $VpcId) Set <p>vpc Unique id</p>
  * @method string getSubnetName() Obtain <p>Subnet name.</p>
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID.</p>
  * @method string getCreateTime() Obtain <p>Creation time.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
- * @method string getDbVersion() Obtain <p>Database version</p>
- * @method void setDbVersion(string $DbVersion) Set <p>Database version</p>
+ * @method string getDbVersion() Obtain <p>Database version.</p>
+ * @method void setDbVersion(string $DbVersion) Set <p>Database version.</p>
  * @method integer getUsedStorage() Obtain <p>Used capacity</p>
  * @method void setUsedStorage(integer $UsedStorage) Set <p>Used capacity</p>
  * @method string getVip() Obtain <p>vip address</p>
@@ -52,10 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(integer $Vport) Set <p>vport</p>
  * @method array getRoAddr() Obtain <p>vip address and vport of the cluster read-only instance</p>
  * @method void setRoAddr(array $RoAddr) Set <p>vip address and vport of the cluster read-only instance</p>
- * @method string getCynosVersion() Obtain <p>cynos version</p>
- * @method void setCynosVersion(string $CynosVersion) Set <p>cynos version</p>
- * @method string getIsFreeze() Obtain <p>Freeze or not</p>
- * @method void setIsFreeze(string $IsFreeze) Set <p>Freeze or not</p>
+ * @method string getCynosVersion() Obtain <p>cynos version.</p>
+ * @method void setCynosVersion(string $CynosVersion) Set <p>cynos version.</p>
+ * @method string getIsFreeze() Obtain <p>Whether to freeze</p>
+ * @method void setIsFreeze(string $IsFreeze) Set <p>Whether to freeze</p>
  * @method array getTasks() Obtain <p>Task List</p>
  * @method void setTasks(array $Tasks) Set <p>Task List</p>
  * @method string getMasterZone() Obtain <p>Primary AZ</p>
@@ -64,16 +64,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceSet(array $InstanceSet) Set <p>Instance collection</p>
  * @method integer getPayMode() Obtain <p>Payment mode</p>
  * @method void setPayMode(integer $PayMode) Set <p>Payment mode</p>
- * @method string getPeriodEndTime() Obtain <p>Expiry time</p>
- * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>Expiry time</p>
+ * @method string getPeriodEndTime() Obtain <p>Expiration time</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>Expiration time</p>
  * @method integer getProjectID() Obtain <p>Project ID.</p>
  * @method void setProjectID(integer $ProjectID) Set <p>Project ID.</p>
  * @method integer getRenewFlag() Obtain <p>Auto-renewal flag</p>
  * @method void setRenewFlag(integer $RenewFlag) Set <p>Auto-renewal flag</p>
- * @method string getCynosVersionTag() Obtain <p>Version tag</p>
- * @method void setCynosVersionTag(string $CynosVersionTag) Set <p>Version tag</p>
- * @method string getNoSupportAddRo() Obtain <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
- * @method void setNoSupportAddRo(string $NoSupportAddRo) Set <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+ * @method string getCynosVersionTag() Obtain <p>Version tag.</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) Set <p>Version tag.</p>
+ * @method string getNoSupportAddRo() Obtain <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
+ * @method void setNoSupportAddRo(string $NoSupportAddRo) Set <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
  * @method string getZone() Obtain <p>AZ.</p>
  * @method void setZone(string $Zone) Set <p>AZ.</p>
  * @method string getPhysicalZone() Obtain <p>Physical AZ</p>
@@ -94,12 +94,12 @@ class LibraDBClusterDetail extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string <p>Region</p>
+     * @var string <p>Region.</p>
      */
     public $Region;
 
     /**
-     * @var string <p>Status</p>
+     * @var string <p>Status.</p>
      */
     public $Status;
 
@@ -114,7 +114,7 @@ class LibraDBClusterDetail extends AbstractModel
     public $Storage;
 
     /**
-     * @var string <p>VPC name</p>
+     * @var string <p>VPC name.</p>
      */
     public $VpcName;
 
@@ -139,7 +139,7 @@ class LibraDBClusterDetail extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string <p>Database version</p>
+     * @var string <p>Database version.</p>
      */
     public $DbVersion;
 
@@ -164,12 +164,12 @@ class LibraDBClusterDetail extends AbstractModel
     public $RoAddr;
 
     /**
-     * @var string <p>cynos version</p>
+     * @var string <p>cynos version.</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string <p>Freeze or not</p>
+     * @var string <p>Whether to freeze</p>
      */
     public $IsFreeze;
 
@@ -194,7 +194,7 @@ class LibraDBClusterDetail extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string <p>Expiry time</p>
+     * @var string <p>Expiration time</p>
      */
     public $PeriodEndTime;
 
@@ -209,12 +209,12 @@ class LibraDBClusterDetail extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string <p>Version tag</p>
+     * @var string <p>Version tag.</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var string <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+     * @var string <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
      */
     public $NoSupportAddRo;
 
@@ -236,31 +236,31 @@ class LibraDBClusterDetail extends AbstractModel
     /**
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param string $ClusterName <p>Cluster name.</p>
-     * @param string $Region <p>Region</p>
-     * @param string $Status <p>Status</p>
+     * @param string $Region <p>Region.</p>
+     * @param string $Status <p>Status.</p>
      * @param string $StatusDesc <p>Status description</p>
      * @param integer $Storage <p>Storage size</p>
-     * @param string $VpcName <p>VPC name</p>
+     * @param string $VpcName <p>VPC name.</p>
      * @param string $VpcId <p>vpc Unique id</p>
      * @param string $SubnetName <p>Subnet name.</p>
      * @param string $SubnetId <p>Subnet ID.</p>
      * @param string $CreateTime <p>Creation time.</p>
-     * @param string $DbVersion <p>Database version</p>
+     * @param string $DbVersion <p>Database version.</p>
      * @param integer $UsedStorage <p>Used capacity</p>
      * @param string $Vip <p>vip address</p>
      * @param integer $Vport <p>vport</p>
      * @param array $RoAddr <p>vip address and vport of the cluster read-only instance</p>
-     * @param string $CynosVersion <p>cynos version</p>
-     * @param string $IsFreeze <p>Freeze or not</p>
+     * @param string $CynosVersion <p>cynos version.</p>
+     * @param string $IsFreeze <p>Whether to freeze</p>
      * @param array $Tasks <p>Task List</p>
      * @param string $MasterZone <p>Primary AZ</p>
      * @param array $InstanceSet <p>Instance collection</p>
      * @param integer $PayMode <p>Payment mode</p>
-     * @param string $PeriodEndTime <p>Expiry time</p>
+     * @param string $PeriodEndTime <p>Expiration time</p>
      * @param integer $ProjectID <p>Project ID.</p>
      * @param integer $RenewFlag <p>Auto-renewal flag</p>
-     * @param string $CynosVersionTag <p>Version tag</p>
-     * @param string $NoSupportAddRo <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+     * @param string $CynosVersionTag <p>Version tag.</p>
+     * @param string $NoSupportAddRo <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
      * @param string $Zone <p>AZ.</p>
      * @param string $PhysicalZone <p>Physical AZ</p>
      * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>Grayscale information for version upgrade</p>

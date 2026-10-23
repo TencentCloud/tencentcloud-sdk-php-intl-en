@@ -18,39 +18,41 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Read/write separation information of the database proxy group
+ * Read-write separation info of the Database Proxy Group
  *
- * @method string getConsistencyType() Obtain <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
- * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+ * @method string getConsistencyType() Obtain <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
+ * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
  * @method integer getConsistencyTimeOut() Obtain <p>Consistency timeout</p>
  * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) Set <p>Consistency timeout</p>
- * @method string getWeightMode() Obtain <p>Weight mode system-system-assigned, custom-custom</p>
- * @method void setWeightMode(string $WeightMode) Set <p>Weight mode system-system-assigned, custom-custom</p>
+ * @method string getWeightMode() Obtain <p>Weight mode: system - system-assigned, custom - custom</p>
+ * @method void setWeightMode(string $WeightMode) Set <p>Weight mode: system - system-assigned, custom - custom</p>
  * @method string getFailOver() Obtain <p>Whether fault migration is enabled</p>
  * @method void setFailOver(string $FailOver) Set <p>Whether fault migration is enabled</p>
- * @method string getAutoAddRo() Obtain <p>Automatically add read-only instance, yes-yes, no-no</p>
- * @method void setAutoAddRo(string $AutoAddRo) Set <p>Automatically add read-only instance, yes-yes, no-no</p>
+ * @method string getAutoAddRo() Obtain <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
+ * @method void setAutoAddRo(string $AutoAddRo) Set <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
  * @method array getInstanceWeights() Obtain <p>Instance weight array</p>
  * @method void setInstanceWeights(array $InstanceWeights) Set <p>Instance weight array</p>
- * @method string getOpenRw() Obtain <p>Whether to enable the read-write node, yes - enable, no - disable</p>
- * @method void setOpenRw(string $OpenRw) Set <p>Whether to enable the read-write node, yes - enable, no - disable</p>
- * @method string getRwType() Obtain <p>Read-write attribute, value range: READWRITE, READONLY</p>
- * @method void setRwType(string $RwType) Set <p>Read-write attribute, value range: READWRITE, READONLY</p>
+ * @method string getOpenRw() Obtain <p>Whether to enable read-write node. yes: enable, no: disable</p>
+ * @method void setOpenRw(string $OpenRw) Set <p>Whether to enable read-write node. yes: enable, no: disable</p>
+ * @method string getRwType() Obtain <p>Read-write attribute. Available values: READWRITE, READONLY</p>
+ * @method void setRwType(string $RwType) Set <p>Read-write attribute. Available values: READWRITE, READONLY</p>
  * @method boolean getTransSplit() Obtain <p>Transaction split</p>
  * @method void setTransSplit(boolean $TransSplit) Set <p>Transaction split</p>
- * @method string getAccessMode() Obtain <p>Connection mode, available values: balance, nearby</p>
- * @method void setAccessMode(string $AccessMode) Set <p>Connection mode, available values: balance, nearby</p>
+ * @method string getAccessMode() Obtain <p>Connection mode. Available values: balance, nearby</p>
+ * @method void setAccessMode(string $AccessMode) Set <p>Connection mode. Available values: balance, nearby</p>
  * @method boolean getApNodeAsRoNode() Obtain <p>Whether to treat the libra node as an ordinary RO node</p>
  * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set <p>Whether to treat the libra node as an ordinary RO node</p>
  * @method boolean getApQueryToOtherNode() Obtain <p>Whether to forward to other nodes when a libra node fault occurs</p>
  * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set <p>Whether to forward to other nodes when a libra node fault occurs</p>
- * @method string getLoadBalanceMode() Obtain <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
- * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method string getLoadBalanceMode() Obtain <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method boolean getTransAllSplit() Obtain <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+ * @method void setTransAllSplit(boolean $TransAllSplit) Set <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
  */
 class ProxyGroupRwInfo extends AbstractModel
 {
     /**
-     * @var string <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+     * @var string <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
      */
     public $ConsistencyType;
 
@@ -60,7 +62,7 @@ class ProxyGroupRwInfo extends AbstractModel
     public $ConsistencyTimeOut;
 
     /**
-     * @var string <p>Weight mode system-system-assigned, custom-custom</p>
+     * @var string <p>Weight mode: system - system-assigned, custom - custom</p>
      */
     public $WeightMode;
 
@@ -70,7 +72,7 @@ class ProxyGroupRwInfo extends AbstractModel
     public $FailOver;
 
     /**
-     * @var string <p>Automatically add read-only instance, yes-yes, no-no</p>
+     * @var string <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
      */
     public $AutoAddRo;
 
@@ -80,12 +82,12 @@ class ProxyGroupRwInfo extends AbstractModel
     public $InstanceWeights;
 
     /**
-     * @var string <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+     * @var string <p>Whether to enable read-write node. yes: enable, no: disable</p>
      */
     public $OpenRw;
 
     /**
-     * @var string <p>Read-write attribute, value range: READWRITE, READONLY</p>
+     * @var string <p>Read-write attribute. Available values: READWRITE, READONLY</p>
      */
     public $RwType;
 
@@ -95,7 +97,7 @@ class ProxyGroupRwInfo extends AbstractModel
     public $TransSplit;
 
     /**
-     * @var string <p>Connection mode, available values: balance, nearby</p>
+     * @var string <p>Connection mode. Available values: balance, nearby</p>
      */
     public $AccessMode;
 
@@ -110,24 +112,30 @@ class ProxyGroupRwInfo extends AbstractModel
     public $ApQueryToOtherNode;
 
     /**
-     * @var string <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @var string <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public $LoadBalanceMode;
 
     /**
-     * @param string $ConsistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+     * @var boolean <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+     */
+    public $TransAllSplit;
+
+    /**
+     * @param string $ConsistencyType <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
      * @param integer $ConsistencyTimeOut <p>Consistency timeout</p>
-     * @param string $WeightMode <p>Weight mode system-system-assigned, custom-custom</p>
+     * @param string $WeightMode <p>Weight mode: system - system-assigned, custom - custom</p>
      * @param string $FailOver <p>Whether fault migration is enabled</p>
-     * @param string $AutoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
+     * @param string $AutoAddRo <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
      * @param array $InstanceWeights <p>Instance weight array</p>
-     * @param string $OpenRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
-     * @param string $RwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
+     * @param string $OpenRw <p>Whether to enable read-write node. yes: enable, no: disable</p>
+     * @param string $RwType <p>Read-write attribute. Available values: READWRITE, READONLY</p>
      * @param boolean $TransSplit <p>Transaction split</p>
-     * @param string $AccessMode <p>Connection mode, available values: balance, nearby</p>
+     * @param string $AccessMode <p>Connection mode. Available values: balance, nearby</p>
      * @param boolean $ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
      * @param boolean $ApQueryToOtherNode <p>Whether to forward to other nodes when a libra node fault occurs</p>
-     * @param string $LoadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param string $LoadBalanceMode <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param boolean $TransAllSplit <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
      */
     function __construct()
     {
@@ -197,6 +205,10 @@ class ProxyGroupRwInfo extends AbstractModel
 
         if (array_key_exists("LoadBalanceMode",$param) and $param["LoadBalanceMode"] !== null) {
             $this->LoadBalanceMode = $param["LoadBalanceMode"];
+        }
+
+        if (array_key_exists("TransAllSplit",$param) and $param["TransAllSplit"] !== null) {
+            $this->TransAllSplit = $param["TransAllSplit"];
         }
     }
 }

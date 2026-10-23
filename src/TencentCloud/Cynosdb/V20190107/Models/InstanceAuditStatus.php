@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance audit details information.
+ * Instance audit details.
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getAuditStatus() Obtain Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
- * @method void setAuditStatus(string $AuditStatus) Set Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
- * @method integer getLogExpireDay() Obtain Specifies the log retention period.
- * @method void setLogExpireDay(integer $LogExpireDay) Set Specifies the log retention period.
- * @method integer getHighLogExpireDay() Obtain High-Frequency storage duration.
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set High-Frequency storage duration.
- * @method integer getLowLogExpireDay() Obtain Specifies the duration of low-frequency storage.
- * @method void setLowLogExpireDay(integer $LowLogExpireDay) Set Specifies the duration of low-frequency storage.
- * @method float getBillingAmount() Obtain Specifies the log storage volume.
- * @method void setBillingAmount(float $BillingAmount) Set Specifies the log storage volume.
- * @method float getHighRealStorage() Obtain Specifies the high-frequency storage volume.
- * @method void setHighRealStorage(float $HighRealStorage) Set Specifies the high-frequency storage volume.
- * @method float getLowRealStorage() Obtain Specifies the infrequent access storage size.
- * @method void setLowRealStorage(float $LowRealStorage) Set Specifies the infrequent access storage size.
- * @method boolean getAuditAll() Obtain Specifies whether it is a full audit. true - indicates a full audit.
- * @method void setAuditAll(boolean $AuditAll) Set Specifies whether it is a full audit. true - indicates a full audit.
- * @method string getCreateAt() Obtain Specifies the audit activation time.
- * @method void setCreateAt(string $CreateAt) Set Specifies the audit activation time.
- * @method AuditInstanceInfo getInstanceInfo() Obtain Instance-Related information.
- * @method void setInstanceInfo(AuditInstanceInfo $InstanceInfo) Set Instance-Related information.
- * @method float getRealStorage() Obtain Specifies the total storage capacity.
- * @method void setRealStorage(float $RealStorage) Set Specifies the total storage capacity.
- * @method array getRuleTemplateIds() Obtain The rule template applied to the instance.
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set The rule template applied to the instance.
- * @method string getDeliver() Obtain Specifies whether to enable log delivery: ON, OFF.
- * @method void setDeliver(string $Deliver) Set Specifies whether to enable log delivery: ON, OFF.
+ * @method string getAuditStatus() Obtain Audit status. ON - Audit is enabled, OFF - Audit is disabled.
+ * @method void setAuditStatus(string $AuditStatus) Set Audit status. ON - Audit is enabled, OFF - Audit is disabled.
+ * @method integer getLogExpireDay() Obtain Log retention period.
+ * @method void setLogExpireDay(integer $LogExpireDay) Set Log retention period.
+ * @method integer getHighLogExpireDay() Obtain High-frequency storage duration.
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set High-frequency storage duration.
+ * @method integer getLowLogExpireDay() Obtain Low-frequency storage duration.
+ * @method void setLowLogExpireDay(integer $LowLogExpireDay) Set Low-frequency storage duration.
+ * @method float getBillingAmount() Obtain Log storage volume.
+ * @method void setBillingAmount(float $BillingAmount) Set Log storage volume.
+ * @method float getHighRealStorage() Obtain High-frequency storage volume.
+ * @method void setHighRealStorage(float $HighRealStorage) Set High-frequency storage volume.
+ * @method float getLowRealStorage() Obtain Infrequent access storage size.
+ * @method void setLowRealStorage(float $LowRealStorage) Set Infrequent access storage size.
+ * @method boolean getAuditAll() Obtain Whether full audit is enabled. true - Full audit.
+ * @method void setAuditAll(boolean $AuditAll) Set Whether full audit is enabled. true - Full audit.
+ * @method string getCreateAt() Obtain Time when the audit service was activated.
+ * @method void setCreateAt(string $CreateAt) Set Time when the audit service was activated.
+ * @method AuditInstanceInfo getInstanceInfo() Obtain Instance-related information.
+ * @method void setInstanceInfo(AuditInstanceInfo $InstanceInfo) Set Instance-related information.
+ * @method float getRealStorage() Obtain Total storage.
+ * @method void setRealStorage(float $RealStorage) Set Total storage.
+ * @method array getRuleTemplateIds() Obtain Rule template applied to the instance.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template applied to the instance.
+ * @method string getDeliver() Obtain Whether to enable log delivery: ON, OFF
+ * @method void setDeliver(string $Deliver) Set Whether to enable log delivery: ON, OFF
  * @method array getDeliverSummary() Obtain Log shipping type.
  * @method void setDeliverSummary(array $DeliverSummary) Set Log shipping type.
  */
@@ -59,67 +59,67 @@ class InstanceAuditStatus extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+     * @var string Audit status. ON - Audit is enabled, OFF - Audit is disabled.
      */
     public $AuditStatus;
 
     /**
-     * @var integer Specifies the log retention period.
+     * @var integer Log retention period.
      */
     public $LogExpireDay;
 
     /**
-     * @var integer High-Frequency storage duration.
+     * @var integer High-frequency storage duration.
      */
     public $HighLogExpireDay;
 
     /**
-     * @var integer Specifies the duration of low-frequency storage.
+     * @var integer Low-frequency storage duration.
      */
     public $LowLogExpireDay;
 
     /**
-     * @var float Specifies the log storage volume.
+     * @var float Log storage volume.
      */
     public $BillingAmount;
 
     /**
-     * @var float Specifies the high-frequency storage volume.
+     * @var float High-frequency storage volume.
      */
     public $HighRealStorage;
 
     /**
-     * @var float Specifies the infrequent access storage size.
+     * @var float Infrequent access storage size.
      */
     public $LowRealStorage;
 
     /**
-     * @var boolean Specifies whether it is a full audit. true - indicates a full audit.
+     * @var boolean Whether full audit is enabled. true - Full audit.
      */
     public $AuditAll;
 
     /**
-     * @var string Specifies the audit activation time.
+     * @var string Time when the audit service was activated.
      */
     public $CreateAt;
 
     /**
-     * @var AuditInstanceInfo Instance-Related information.
+     * @var AuditInstanceInfo Instance-related information.
      */
     public $InstanceInfo;
 
     /**
-     * @var float Specifies the total storage capacity.
+     * @var float Total storage.
      */
     public $RealStorage;
 
     /**
-     * @var array The rule template applied to the instance.
+     * @var array Rule template applied to the instance.
      */
     public $RuleTemplateIds;
 
     /**
-     * @var string Specifies whether to enable log delivery: ON, OFF.
+     * @var string Whether to enable log delivery: ON, OFF
      */
     public $Deliver;
 
@@ -130,19 +130,19 @@ class InstanceAuditStatus extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $AuditStatus Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
-     * @param integer $LogExpireDay Specifies the log retention period.
-     * @param integer $HighLogExpireDay High-Frequency storage duration.
-     * @param integer $LowLogExpireDay Specifies the duration of low-frequency storage.
-     * @param float $BillingAmount Specifies the log storage volume.
-     * @param float $HighRealStorage Specifies the high-frequency storage volume.
-     * @param float $LowRealStorage Specifies the infrequent access storage size.
-     * @param boolean $AuditAll Specifies whether it is a full audit. true - indicates a full audit.
-     * @param string $CreateAt Specifies the audit activation time.
-     * @param AuditInstanceInfo $InstanceInfo Instance-Related information.
-     * @param float $RealStorage Specifies the total storage capacity.
-     * @param array $RuleTemplateIds The rule template applied to the instance.
-     * @param string $Deliver Specifies whether to enable log delivery: ON, OFF.
+     * @param string $AuditStatus Audit status. ON - Audit is enabled, OFF - Audit is disabled.
+     * @param integer $LogExpireDay Log retention period.
+     * @param integer $HighLogExpireDay High-frequency storage duration.
+     * @param integer $LowLogExpireDay Low-frequency storage duration.
+     * @param float $BillingAmount Log storage volume.
+     * @param float $HighRealStorage High-frequency storage volume.
+     * @param float $LowRealStorage Infrequent access storage size.
+     * @param boolean $AuditAll Whether full audit is enabled. true - Full audit.
+     * @param string $CreateAt Time when the audit service was activated.
+     * @param AuditInstanceInfo $InstanceInfo Instance-related information.
+     * @param float $RealStorage Total storage.
+     * @param array $RuleTemplateIds Rule template applied to the instance.
+     * @param string $Deliver Whether to enable log delivery: ON, OFF
      * @param array $DeliverSummary Log shipping type.
      */
     function __construct()

@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchClusterZone request structure.
  *
- * @method string getClusterId() Obtain <p>Cluster Id</p>
- * @method void setClusterId(string $ClusterId) Set <p>Cluster Id</p>
+ * @method string getClusterId() Obtain <p>Cluster Id.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster Id.</p>
  * @method string getOldZone() Obtain <p>Current availability zone</p>
  * @method void setOldZone(string $OldZone) Set <p>Current availability zone</p>
  * @method string getNewZone() Obtain <p>Availability zone to switch to</p>
  * @method void setNewZone(string $NewZone) Set <p>Availability zone to switch to</p>
- * @method string getIsInMaintainPeriod() Obtain <p>Execute during maintenance period - yes, immediately execute - no</p>
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set <p>Execute during maintenance period - yes, immediately execute - no</p>
+ * @method string getIsInMaintainPeriod() Obtain <p>Execute during the maintenance period - yes, immediate execution - no</p>
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set <p>Execute during the maintenance period - yes, immediate execution - no</p>
  */
 class SwitchClusterZoneRequest extends AbstractModel
 {
     /**
-     * @var string <p>Cluster Id</p>
+     * @var string <p>Cluster Id.</p>
      */
     public $ClusterId;
 
@@ -47,15 +47,15 @@ class SwitchClusterZoneRequest extends AbstractModel
     public $NewZone;
 
     /**
-     * @var string <p>Execute during maintenance period - yes, immediately execute - no</p>
+     * @var string <p>Execute during the maintenance period - yes, immediate execution - no</p>
      */
     public $IsInMaintainPeriod;
 
     /**
-     * @param string $ClusterId <p>Cluster Id</p>
+     * @param string $ClusterId <p>Cluster Id.</p>
      * @param string $OldZone <p>Current availability zone</p>
      * @param string $NewZone <p>Availability zone to switch to</p>
-     * @param string $IsInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
+     * @param string $IsInMaintainPeriod <p>Execute during the maintenance period - yes, immediate execution - no</p>
      */
     function __construct()
     {

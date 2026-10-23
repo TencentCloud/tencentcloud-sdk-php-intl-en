@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountPassword(string $AccountPassword) Set New password of the database account
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getHost() Obtain Host. Default value: `%`
- * @method void setHost(string $Host) Set Host. Default value: `%`
+ * @method string getHost() Obtain Host. Default value: %.
+ * @method void setHost(string $Host) Set Host. Default value: %.
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Host. Default value: `%`
+     * @var string Host. Default value: %.
      */
     public $Host;
 
@@ -55,7 +55,7 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @param string $AccountName Database account name
      * @param string $AccountPassword New password of the database account
      * @param string $ClusterId Cluster ID
-     * @param string $Host Host. Default value: `%`
+     * @param string $Host Host. Default value: %.
      */
     function __construct()
     {

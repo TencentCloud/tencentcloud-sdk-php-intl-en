@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIds() Obtain Instance ID, which supports batch query.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID, which supports batch query.
- * @method string getParamKeyword() Obtain Search condition for a parameter name, which supports fuzzy search.
- * @method void setParamKeyword(string $ParamKeyword) Set Search condition for a parameter name, which supports fuzzy search.
+ * @method array getInstanceIds() Obtain Instance ID. Support batch querying.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID. Support batch querying.
+ * @method string getParamKeyword() Obtain Parameter name search criteria. Fuzzy matching is supported.
+ * @method void setParamKeyword(string $ParamKeyword) Set Parameter name search criteria. Fuzzy matching is supported.
+ * @method string getIsGlobal() Obtain Whether it is a global parameter
+ * @method void setIsGlobal(string $IsGlobal) Set Whether it is a global parameter
  */
 class DescribeInstanceParamsRequest extends AbstractModel
 {
@@ -35,19 +37,25 @@ class DescribeInstanceParamsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Instance ID, which supports batch query.
+     * @var array Instance ID. Support batch querying.
      */
     public $InstanceIds;
 
     /**
-     * @var string Search condition for a parameter name, which supports fuzzy search.
+     * @var string Parameter name search criteria. Fuzzy matching is supported.
      */
     public $ParamKeyword;
 
     /**
+     * @var string Whether it is a global parameter
+     */
+    public $IsGlobal;
+
+    /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIds Instance ID, which supports batch query.
-     * @param string $ParamKeyword Search condition for a parameter name, which supports fuzzy search.
+     * @param array $InstanceIds Instance ID. Support batch querying.
+     * @param string $ParamKeyword Parameter name search criteria. Fuzzy matching is supported.
+     * @param string $IsGlobal Whether it is a global parameter
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeInstanceParamsRequest extends AbstractModel
 
         if (array_key_exists("ParamKeyword",$param) and $param["ParamKeyword"] !== null) {
             $this->ParamKeyword = $param["ParamKeyword"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
     }
 }

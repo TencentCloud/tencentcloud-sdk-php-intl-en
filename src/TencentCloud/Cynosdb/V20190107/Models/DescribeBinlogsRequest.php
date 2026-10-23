@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Limit on the number of records. The default value is 20.
- * @method void setLimit(integer $Limit) Set Limit on the number of records. The default value is 20.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain Limit entries. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Limit entries. Default value: 20.
  */
 class DescribeBinlogsRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeBinlogsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Start time
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string End time
+     * @var string End time.
      */
     public $EndTime;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer Limit on the number of records. The default value is 20.
+     * @var integer Limit entries. Default value: 20.
      */
     public $Limit;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $StartTime Start time
-     * @param string $EndTime End time
-     * @param integer $Offset Offset
-     * @param integer $Limit Limit on the number of records. The default value is 20.
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
+     * @param integer $Offset Offset.
+     * @param integer $Limit Limit entries. Default value: 20.
      */
     function __construct()
     {

@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Create account
  *
- * @method string getAccountName() Obtain <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
- * @method void setAccountName(string $AccountName) Set <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
- * @method string getHost() Obtain <p>host (% or ipv4 address)</p>
- * @method void setHost(string $Host) Set <p>host (% or ipv4 address)</p>
- * @method string getAccountPassword() Obtain <p>Password. The length range is 8 to 64 characters.</p>
- * @method void setAccountPassword(string $AccountPassword) Set <p>Password. The length range is 8 to 64 characters.</p>
+ * @method string getAccountName() Obtain <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
+ * @method void setAccountName(string $AccountName) Set <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
+ * @method string getHost() Obtain <p>Host (% or ipv4 address)</p>
+ * @method void setHost(string $Host) Set <p>Host (% or ipv4 address)</p>
+ * @method string getAccountPassword() Obtain <p>Password. The password length range is 8 to 64 characters.</p>
+ * @method void setAccountPassword(string $AccountPassword) Set <p>Password. The password length range is 8 to 64 characters.</p>
  * @method integer getPasswordRotation() Obtain <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
  * @method void setPasswordRotation(integer $PasswordRotation) Set <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
  * @method string getDescription() Obtain <p>Description.</p>
  * @method void setDescription(string $Description) Set <p>Description.</p>
- * @method integer getMaxUserConnections() Obtain <p>Maximum user connections cannot be greater than 10240</p>
- * @method void setMaxUserConnections(integer $MaxUserConnections) Set <p>Maximum user connections cannot be greater than 10240</p>
+ * @method integer getMaxUserConnections() Obtain <p>Maximum user connections, cannot be greater than 10240</p>
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set <p>Maximum user connections, cannot be greater than 10240</p>
  */
 class NewAccount extends AbstractModel
 {
     /**
-     * @var string <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+     * @var string <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
      */
     public $AccountName;
 
     /**
-     * @var string <p>host (% or ipv4 address)</p>
+     * @var string <p>Host (% or ipv4 address)</p>
      */
     public $Host;
 
     /**
-     * @var string <p>Password. The length range is 8 to 64 characters.</p>
+     * @var string <p>Password. The password length range is 8 to 64 characters.</p>
      */
     public $AccountPassword;
 
@@ -61,17 +61,17 @@ class NewAccount extends AbstractModel
     public $Description;
 
     /**
-     * @var integer <p>Maximum user connections cannot be greater than 10240</p>
+     * @var integer <p>Maximum user connections, cannot be greater than 10240</p>
      */
     public $MaxUserConnections;
 
     /**
-     * @param string $AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
-     * @param string $Host <p>host (% or ipv4 address)</p>
-     * @param string $AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
+     * @param string $AccountName <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
+     * @param string $Host <p>Host (% or ipv4 address)</p>
+     * @param string $AccountPassword <p>Password. The password length range is 8 to 64 characters.</p>
      * @param integer $PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      * @param string $Description <p>Description.</p>
-     * @param integer $MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
+     * @param integer $MaxUserConnections <p>Maximum user connections, cannot be greater than 10240</p>
      */
     function __construct()
     {

@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource pack details
  *
- * @method integer getAppId() Obtain AppId account ID.
- * @method void setAppId(integer $AppId) Set AppId account ID.
- * @method string getPackageId() Obtain The unique ID of the resource package.
- * @method void setPackageId(string $PackageId) Set The unique ID of the resource package.
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method float getSuccessDeductSpec() Obtain Successfully deduct capacity.
- * @method void setSuccessDeductSpec(float $SuccessDeductSpec) Set Successfully deduct capacity.
- * @method float getPackageTotalUsedSpec() Obtain The used capacity of the resource package up to the present.
- * @method void setPackageTotalUsedSpec(float $PackageTotalUsedSpec) Set The used capacity of the resource package up to the present.
- * @method string getStartTime() Obtain Deduction start time.
- * @method void setStartTime(string $StartTime) Set Deduction start time.
- * @method string getEndTime() Obtain Deduction end time.
- * @method void setEndTime(string $EndTime) Set Deduction end time.
+ * @method integer getAppId() Obtain AppId account ID
+ * @method void setAppId(integer $AppId) Set AppId account ID
+ * @method string getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(string $PackageId) Set Unique ID of the resource package
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method float getSuccessDeductSpec() Obtain Capacity deducted successfully
+ * @method void setSuccessDeductSpec(float $SuccessDeductSpec) Set Capacity deducted successfully
+ * @method float getPackageTotalUsedSpec() Obtain Used capacity of the resource package as of now.
+ * @method void setPackageTotalUsedSpec(float $PackageTotalUsedSpec) Set Used capacity of the resource package as of now.
+ * @method string getStartTime() Obtain Deduction start time
+ * @method void setStartTime(string $StartTime) Set Deduction start time
+ * @method string getEndTime() Obtain Offset end time
+ * @method void setEndTime(string $EndTime) Set Offset end time
  * @method string getExtendInfo() Obtain Extension Information
  * @method void setExtendInfo(string $ExtendInfo) Set Extension Information
  */
 class PackageDetail extends AbstractModel
 {
     /**
-     * @var integer AppId account ID.
+     * @var integer AppId account ID
      */
     public $AppId;
 
     /**
-     * @var string The unique ID of the resource package.
+     * @var string Unique ID of the resource package
      */
     public $PackageId;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var float Successfully deduct capacity.
+     * @var float Capacity deducted successfully
      */
     public $SuccessDeductSpec;
 
     /**
-     * @var float The used capacity of the resource package up to the present.
+     * @var float Used capacity of the resource package as of now.
      */
     public $PackageTotalUsedSpec;
 
     /**
-     * @var string Deduction start time.
+     * @var string Deduction start time
      */
     public $StartTime;
 
     /**
-     * @var string Deduction end time.
+     * @var string Offset end time
      */
     public $EndTime;
 
@@ -80,13 +80,13 @@ class PackageDetail extends AbstractModel
     public $ExtendInfo;
 
     /**
-     * @param integer $AppId AppId account ID.
-     * @param string $PackageId The unique ID of the resource package.
-     * @param string $InstanceId Instance ID
-     * @param float $SuccessDeductSpec Successfully deduct capacity.
-     * @param float $PackageTotalUsedSpec The used capacity of the resource package up to the present.
-     * @param string $StartTime Deduction start time.
-     * @param string $EndTime Deduction end time.
+     * @param integer $AppId AppId account ID
+     * @param string $PackageId Unique ID of the resource package
+     * @param string $InstanceId Instance ID.
+     * @param float $SuccessDeductSpec Capacity deducted successfully
+     * @param float $PackageTotalUsedSpec Used capacity of the resource package as of now.
+     * @param string $StartTime Deduction start time
+     * @param string $EndTime Offset end time
      * @param string $ExtendInfo Extension Information
      */
     function __construct()

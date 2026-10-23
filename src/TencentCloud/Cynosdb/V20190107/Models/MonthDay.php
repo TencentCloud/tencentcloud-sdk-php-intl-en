@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * month date info
+ * Month, date, and info
  *
  * @method integer getMonth() Obtain Month info
  * @method void setMonth(integer $Month) Set Month info
- * @method integer getDay() Obtain date info
- * @method void setDay(integer $Day) Set date info
+ * @method integer getDay() Obtain Date information
+ * @method void setDay(integer $Day) Set Date information
  */
 class MonthDay extends AbstractModel
 {
@@ -33,13 +33,13 @@ class MonthDay extends AbstractModel
     public $Month;
 
     /**
-     * @var integer date info
+     * @var integer Date information
      */
     public $Day;
 
     /**
      * @param integer $Month Month info
-     * @param integer $Day date info
+     * @param integer $Day Date information
      */
     function __construct()
     {

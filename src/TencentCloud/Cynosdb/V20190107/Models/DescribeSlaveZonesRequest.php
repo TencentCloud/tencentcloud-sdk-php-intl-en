@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain Availability zone
  * @method void setZone(string $Zone) Set Availability zone
- * @method integer getOssClusterId() Obtain Cloud frame cluster ID.
- * @method void setOssClusterId(integer $OssClusterId) Set Cloud frame cluster ID.
- * @method string getStorageVersion() Obtain Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
- * @method void setStorageVersion(string $StorageVersion) Set Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+ * @method integer getOssClusterId() Obtain Cloud cluster ID
+ * @method void setOssClusterId(integer $OssClusterId) Set Cloud cluster ID
+ * @method string getStorageVersion() Obtain Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
+ * @method void setStorageVersion(string $StorageVersion) Set Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
  */
 class DescribeSlaveZonesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeSlaveZonesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Cloud frame cluster ID.
+     * @var integer Cloud cluster ID
      */
     public $OssClusterId;
 
     /**
-     * @var string Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+     * @var string Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     public $StorageVersion;
 
     /**
      * @param string $Zone Availability zone
-     * @param integer $OssClusterId Cloud frame cluster ID.
-     * @param string $StorageVersion Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+     * @param integer $OssClusterId Cloud cluster ID
+     * @param string $StorageVersion Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     function __construct()
     {

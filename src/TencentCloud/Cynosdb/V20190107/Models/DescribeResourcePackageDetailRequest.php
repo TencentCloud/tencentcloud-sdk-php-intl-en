@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourcePackageDetail request structure.
  *
- * @method string getPackageId() Obtain The unique ID of a resource pack
- * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack
+ * @method string getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(string $PackageId) Set Unique ID of the resource package
  * @method array getClusterIds() Obtain Cluster ID
  * @method void setClusterIds(array $ClusterIds) Set Cluster ID
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
- * @method string getOffset() Obtain Offset
- * @method void setOffset(string $Offset) Set Offset
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
+ * @method string getOffset() Obtain Offset.
+ * @method void setOffset(string $Offset) Set Offset.
  * @method string getLimit() Obtain Limit
  * @method void setLimit(string $Limit) Set Limit
  * @method array getInstanceIds() Obtain Instance D
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeResourcePackageDetailRequest extends AbstractModel
 {
     /**
-     * @var string The unique ID of a resource pack
+     * @var string Unique ID of the resource package
      */
     public $PackageId;
 
@@ -48,17 +48,17 @@ class DescribeResourcePackageDetailRequest extends AbstractModel
     public $ClusterIds;
 
     /**
-     * @var string Start time
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string End time
+     * @var string End time.
      */
     public $EndTime;
 
     /**
-     * @var string Offset
+     * @var string Offset.
      */
     public $Offset;
 
@@ -73,11 +73,11 @@ class DescribeResourcePackageDetailRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @param string $PackageId The unique ID of a resource pack
+     * @param string $PackageId Unique ID of the resource package
      * @param array $ClusterIds Cluster ID
-     * @param string $StartTime Start time
-     * @param string $EndTime End time
-     * @param string $Offset Offset
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
+     * @param string $Offset Offset.
      * @param string $Limit Limit
      * @param array $InstanceIds Instance D
      */

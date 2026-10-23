@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Custom error page configuration parameters.
  *
  * @method array getErrorPageParams() Obtain Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setErrorPageParams(array $ErrorPageParams) Set Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  */
 class ErrorPageParameters extends AbstractModel
 {
     /**
      * @var array Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $ErrorPageParams;
 
     /**
      * @param array $ErrorPageParams Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     function __construct()
     {

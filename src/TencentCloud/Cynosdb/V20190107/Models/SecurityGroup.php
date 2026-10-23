@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security group details
  *
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getCreateTime() Obtain Creation time in the format of yyyy-mm-dd hh:mm:ss
- * @method void setCreateTime(string $CreateTime) Set Creation time in the format of yyyy-mm-dd hh:mm:ss
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method string getCreateTime() Obtain Creation time. Time format: yyyy-mm-dd hh:mm:ss
+ * @method void setCreateTime(string $CreateTime) Set Creation time. Time format: yyyy-mm-dd hh:mm:ss
  * @method array getInbound() Obtain Inbound rule
  * @method void setInbound(array $Inbound) Set Inbound rule
  * @method array getOutbound() Obtain Outbound rule
  * @method void setOutbound(array $Outbound) Set Outbound rule
  * @method string getSecurityGroupId() Obtain Security group ID
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
- * @method string getSecurityGroupName() Obtain Security group name
- * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group name
+ * @method string getSecurityGroupName() Obtain Security group name.
+ * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group name.
  * @method string getSecurityGroupRemark() Obtain Security group remarks
  * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set Security group remarks
  */
 class SecurityGroup extends AbstractModel
 {
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectId;
 
     /**
-     * @var string Creation time in the format of yyyy-mm-dd hh:mm:ss
+     * @var string Creation time. Time format: yyyy-mm-dd hh:mm:ss
      */
     public $CreateTime;
 
@@ -63,7 +63,7 @@ class SecurityGroup extends AbstractModel
     public $SecurityGroupId;
 
     /**
-     * @var string Security group name
+     * @var string Security group name.
      */
     public $SecurityGroupName;
 
@@ -73,12 +73,12 @@ class SecurityGroup extends AbstractModel
     public $SecurityGroupRemark;
 
     /**
-     * @param integer $ProjectId Project ID
-     * @param string $CreateTime Creation time in the format of yyyy-mm-dd hh:mm:ss
+     * @param integer $ProjectId Project ID.
+     * @param string $CreateTime Creation time. Time format: yyyy-mm-dd hh:mm:ss
      * @param array $Inbound Inbound rule
      * @param array $Outbound Outbound rule
      * @param string $SecurityGroupId Security group ID
-     * @param string $SecurityGroupName Security group name
+     * @param string $SecurityGroupName Security group name.
      * @param string $SecurityGroupRemark Security group remarks
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Source database information of the libra analysis cluster
  *
- * @method string getSrcInstanceType() Obtain Source endpoint type
- * @method void setSrcInstanceType(string $SrcInstanceType) Set Source endpoint type
+ * @method string getSrcInstanceType() Obtain Source type
+ * @method void setSrcInstanceType(string $SrcInstanceType) Set Source type
  * @method string getAccessType() Obtain Network type.
  * @method void setAccessType(string $AccessType) Set Network type.
  * @method string getSrcInstanceId() Obtain Source instance ID
@@ -36,25 +36,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUser(string $User) Set Username.
  * @method string getPassword() Obtain Password.
  * @method void setPassword(string $Password) Set Password.
- * @method string getSqlMode() Obtain Source sql mode
- * @method void setSqlMode(string $SqlMode) Set Source sql mode
+ * @method string getSqlMode() Obtain sql_mode of the source
+ * @method void setSqlMode(string $SqlMode) Set sql_mode of the source
  * @method integer getSrcAppId() Obtain Source application id
  * @method void setSrcAppId(integer $SrcAppId) Set Source application id
- * @method string getSrcUin() Obtain source account
- * @method void setSrcUin(string $SrcUin) Set source account
- * @method string getSrcSubAccountUin() Obtain sub-account
- * @method void setSrcSubAccountUin(string $SrcSubAccountUin) Set sub-account
+ * @method string getSrcUin() Obtain Source account
+ * @method void setSrcUin(string $SrcUin) Set Source account
+ * @method string getSrcSubAccountUin() Obtain Source sub-account
+ * @method void setSrcSubAccountUin(string $SrcSubAccountUin) Set Source sub-account
  * @method string getAccountMode() Obtain Account
  * @method void setAccountMode(string $AccountMode) Set Account
  * @method string getRegion() Obtain Source instance region
  * @method void setRegion(string $Region) Set Source instance region
- * @method string getOperation() Obtain Operation of the source instance
- * @method void setOperation(string $Operation) Set Operation of the source instance
+ * @method string getOperation() Obtain Operations on the source instance
+ * @method void setOperation(string $Operation) Set Operations on the source instance
  */
 class LibraDBClusterSrcInfo extends AbstractModel
 {
     /**
-     * @var string Source endpoint type
+     * @var string Source type
      */
     public $SrcInstanceType;
 
@@ -94,7 +94,7 @@ class LibraDBClusterSrcInfo extends AbstractModel
     public $Password;
 
     /**
-     * @var string Source sql mode
+     * @var string sql_mode of the source
      */
     public $SqlMode;
 
@@ -104,12 +104,12 @@ class LibraDBClusterSrcInfo extends AbstractModel
     public $SrcAppId;
 
     /**
-     * @var string source account
+     * @var string Source account
      */
     public $SrcUin;
 
     /**
-     * @var string sub-account
+     * @var string Source sub-account
      */
     public $SrcSubAccountUin;
 
@@ -124,12 +124,12 @@ class LibraDBClusterSrcInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string Operation of the source instance
+     * @var string Operations on the source instance
      */
     public $Operation;
 
     /**
-     * @param string $SrcInstanceType Source endpoint type
+     * @param string $SrcInstanceType Source type
      * @param string $AccessType Network type.
      * @param string $SrcInstanceId Source instance ID
      * @param string $SrcClusterId Source cluster ID
@@ -137,13 +137,13 @@ class LibraDBClusterSrcInfo extends AbstractModel
      * @param string $Port Port.
      * @param string $User Username.
      * @param string $Password Password.
-     * @param string $SqlMode Source sql mode
+     * @param string $SqlMode sql_mode of the source
      * @param integer $SrcAppId Source application id
-     * @param string $SrcUin source account
-     * @param string $SrcSubAccountUin sub-account
+     * @param string $SrcUin Source account
+     * @param string $SrcSubAccountUin Source sub-account
      * @param string $AccountMode Account
      * @param string $Region Source instance region
-     * @param string $Operation Operation of the source instance
+     * @param string $Operation Operations on the source instance
      */
     function __construct()
     {

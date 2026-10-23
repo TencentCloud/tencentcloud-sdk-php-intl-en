@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() Obtain Limit
  * @method void setLimit(integer $Limit) Set Limit
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getOffset() Obtain Bias
+ * @method void setOffset(integer $Offset) Set Bias
  * @method string getOrderBy() Obtain Sorting field.
  * @method void setOrderBy(string $OrderBy) Set Sorting field.
  * @method string getOrderByType() Obtain Sort method
@@ -39,7 +39,7 @@ class DescribeLibraDBClustersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Offset
+     * @var integer Bias
      */
     public $Offset;
 
@@ -60,7 +60,7 @@ class DescribeLibraDBClustersRequest extends AbstractModel
 
     /**
      * @param integer $Limit Limit
-     * @param integer $Offset Offset
+     * @param integer $Offset Bias
      * @param string $OrderBy Sorting field.
      * @param string $OrderByType Sort method
      * @param array $Filters Filter criteria.

@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Region where backup files are located and ID.
+ * Region and ID of the backup file
  *
- * @method string getBackupRegion() Obtain Backup region.
- * @method void setBackupRegion(string $BackupRegion) Set Backup region.
- * @method integer getBackupId() Obtain Backup ID.
- * @method void setBackupId(integer $BackupId) Set Backup ID.
+ * @method string getBackupRegion() Obtain Backup region
+ * @method void setBackupRegion(string $BackupRegion) Set Backup region
+ * @method integer getBackupId() Obtain Backup ID
+ * @method void setBackupId(integer $BackupId) Set Backup ID
  */
 class BackupRegionAndIds extends AbstractModel
 {
     /**
-     * @var string Backup region.
+     * @var string Backup region
      */
     public $BackupRegion;
 
     /**
-     * @var integer Backup ID.
+     * @var integer Backup ID
      */
     public $BackupId;
 
     /**
-     * @param string $BackupRegion Backup region.
-     * @param integer $BackupId Backup ID.
+     * @param string $BackupRegion Backup region
+     * @param integer $BackupId Backup ID
      */
     function __construct()
     {

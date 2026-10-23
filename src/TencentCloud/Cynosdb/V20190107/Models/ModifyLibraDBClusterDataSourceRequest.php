@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLibraDBClusterDataSource request structure.
  *
- * @method string getClusterId() Obtain Analysis Cluster ID
- * @method void setClusterId(string $ClusterId) Set Analysis Cluster ID
+ * @method string getClusterId() Obtain Analysis cluster ID
+ * @method void setClusterId(string $ClusterId) Set Analysis cluster ID
  * @method string getInstanceId() Obtain Read-only analysis engine instance ID
  * @method void setInstanceId(string $InstanceId) Set Read-only analysis engine instance ID
  * @method array getSrcInfo() Obtain Source information
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLibraDBClusterDataSourceRequest extends AbstractModel
 {
     /**
-     * @var string Analysis Cluster ID
+     * @var string Analysis cluster ID
      */
     public $ClusterId;
 
@@ -45,7 +45,7 @@ class ModifyLibraDBClusterDataSourceRequest extends AbstractModel
     public $SrcInfo;
 
     /**
-     * @param string $ClusterId Analysis Cluster ID
+     * @param string $ClusterId Analysis cluster ID
      * @param string $InstanceId Read-only analysis engine instance ID
      * @param array $SrcInfo Source information
      */

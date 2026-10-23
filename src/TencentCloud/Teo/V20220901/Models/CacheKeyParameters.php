@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <Li>`On`: enable;</li>
 .
 <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
- * @method CacheKeyQueryString getQueryString() Obtain Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setQueryString(CacheKeyQueryString $QueryString) Set Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method CacheKeyQueryString getQueryString() Obtain Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+ * @method void setQueryString(CacheKeyQueryString $QueryString) Set Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
  * @method string getIgnoreCase() Obtain Switch for ignoring case. values:.
 <Li>`On`: enable;</li>
 .
@@ -40,10 +38,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 <Li>`On`: enable;</li>
 .
 <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
- * @method CacheKeyHeader getHeader() Obtain HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setHeader(CacheKeyHeader $Header) Set HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method CacheKeyHeader getHeader() Obtain HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+ * @method void setHeader(CacheKeyHeader $Header) Set HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
  * @method string getScheme() Obtain Request protocol switch. valid values:.
 <Li>`On`: enable;</li>
 .
@@ -52,10 +48,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 <Li>`On`: enable;</li>
 .
 <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
- * @method CacheKeyCookie getCookie() Obtain Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setCookie(CacheKeyCookie $Cookie) Set Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method CacheKeyCookie getCookie() Obtain Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+ * @method void setCookie(CacheKeyCookie $Cookie) Set Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
  */
 class CacheKeyParameters extends AbstractModel
 {
@@ -68,8 +62,7 @@ class CacheKeyParameters extends AbstractModel
     public $FullURLCache;
 
     /**
-     * @var CacheKeyQueryString Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CacheKeyQueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
      */
     public $QueryString;
 
@@ -82,8 +75,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $IgnoreCase;
 
     /**
-     * @var CacheKeyHeader HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CacheKeyHeader HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public $Header;
 
@@ -96,8 +88,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $Scheme;
 
     /**
-     * @var CacheKeyCookie Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CacheKeyCookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public $Cookie;
 
@@ -106,20 +97,17 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 <Li>`On`: enable;</li>
 .
 <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
-     * @param CacheKeyQueryString $QueryString Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param CacheKeyQueryString $QueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
      * @param string $IgnoreCase Switch for ignoring case. values:.
 <Li>`On`: enable;</li>
 .
 <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-     * @param CacheKeyHeader $Header HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param CacheKeyHeader $Header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      * @param string $Scheme Request protocol switch. valid values:.
 <Li>`On`: enable;</li>
 .
 <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-     * @param CacheKeyCookie $Cookie Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param CacheKeyCookie $Cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     function __construct()
     {

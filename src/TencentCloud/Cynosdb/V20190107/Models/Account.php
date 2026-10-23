@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccountName() Obtain <p>Database account name.</p>
  * @method void setAccountName(string $AccountName) Set <p>Database account name.</p>
- * @method string getHost() Obtain <p>host</p>
- * @method void setHost(string $Host) Set <p>host</p>
- * @method string getDescription() Obtain <p>Database account description.</p>
- * @method void setDescription(string $Description) Set <p>Database account description.</p>
+ * @method string getHost() Obtain <p>Host</p>
+ * @method void setHost(string $Host) Set <p>Host</p>
+ * @method string getDescription() Obtain <p>Database account description</p>
+ * @method void setDescription(string $Description) Set <p>Database account description</p>
  * @method string getCreateTime() Obtain <p>Creation time.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
  * @method string getUpdateTime() Obtain <p>Update time.</p>
@@ -43,12 +43,12 @@ class Account extends AbstractModel
     public $AccountName;
 
     /**
-     * @var string <p>host</p>
+     * @var string <p>Host</p>
      */
     public $Host;
 
     /**
-     * @var string <p>Database account description.</p>
+     * @var string <p>Database account description</p>
      */
     public $Description;
 
@@ -74,8 +74,8 @@ class Account extends AbstractModel
 
     /**
      * @param string $AccountName <p>Database account name.</p>
-     * @param string $Host <p>host</p>
-     * @param string $Description <p>Database account description.</p>
+     * @param string $Host <p>Host</p>
+     * @param string $Description <p>Database account description</p>
      * @param string $CreateTime <p>Creation time.</p>
      * @param string $UpdateTime <p>Update time.</p>
      * @param integer $MaxUserConnections <p>Maximum user connections</p>

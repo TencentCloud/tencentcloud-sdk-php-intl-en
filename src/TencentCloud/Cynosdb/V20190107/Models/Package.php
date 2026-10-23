@@ -18,54 +18,54 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource pack
+ * Resource package
  *
  * @method integer getAppId() Obtain AppID
  * @method void setAppId(integer $AppId) Set AppID
- * @method string getPackageId() Obtain The unique ID of the resource package.
- * @method void setPackageId(string $PackageId) Set The unique ID of the resource package.
+ * @method string getPackageId() Obtain Unique ID of the resource package
+ * @method void setPackageId(string $PackageId) Set Unique ID of the resource package
  * @method string getPackageName() Obtain Resource package name.
  * @method void setPackageName(string $PackageName) Set Resource package name.
- * @method string getPackageType() Obtain Specifies the resource package type.
+ * @method string getPackageType() Obtain Resource package type
 CCU: compute resource package. DISK: storage resource package.
- * @method void setPackageType(string $PackageType) Set Specifies the resource package type.
+ * @method void setPackageType(string $PackageType) Set Resource package type
 CCU: compute resource package. DISK: storage resource package.
  * @method string getPackageVersion() Obtain Resource package edition
 base - basic, common - general, enterprise - business
  * @method void setPackageVersion(string $PackageVersion) Set Resource package edition
 base - basic, common - general, enterprise - business
- * @method string getPackageRegion() Obtain Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
- * @method void setPackageRegion(string $PackageRegion) Set Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
- * @method string getStatus() Obtain Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
- * @method void setStatus(string $Status) Set Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
- * @method float getPackageTotalSpec() Obtain Total resource package quantity.
- * @method void setPackageTotalSpec(float $PackageTotalSpec) Set Total resource package quantity.
- * @method float getPackageUsedSpec() Obtain Used amount of resource package.
- * @method void setPackageUsedSpec(float $PackageUsedSpec) Set Used amount of resource package.
- * @method boolean getHasQuota() Obtain Whether there is inventory surplus.
- * @method void setHasQuota(boolean $HasQuota) Set Whether there is inventory surplus.
- * @method array getBindInstanceInfos() Obtain Specifies the bound instance information.
- * @method void setBindInstanceInfos(array $BindInstanceInfos) Set Specifies the bound instance information.
- * @method string getStartTime() Obtain Specifies the effective time: 2022-07-01 00:00:00.
- * @method void setStartTime(string $StartTime) Set Specifies the effective time: 2022-07-01 00:00:00.
- * @method string getExpireTime() Obtain Specifies the expiration time: 2022-08-01 00:00:00.
- * @method void setExpireTime(string $ExpireTime) Set Specifies the expiration time: 2022-08-01 00:00:00.
- * @method array getHistoryBindResourceInfos() Obtain Information of the instance historically bound (now unbound) to the resource pack.
- * @method void setHistoryBindResourceInfos(array $HistoryBindResourceInfos) Set Information of the instance historically bound (now unbound) to the resource pack.
+ * @method string getPackageRegion() Obtain Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+ * @method void setPackageRegion(string $PackageRegion) Set Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+ * @method string getStatus() Obtain Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
+ * @method void setStatus(string $Status) Set Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
+ * @method float getPackageTotalSpec() Obtain Total resource package quantity
+ * @method void setPackageTotalSpec(float $PackageTotalSpec) Set Total resource package quantity
+ * @method float getPackageUsedSpec() Obtain Used amount of the resource package
+ * @method void setPackageUsedSpec(float $PackageUsedSpec) Set Used amount of the resource package
+ * @method boolean getHasQuota() Obtain Whether there is still inventory surplus
+ * @method void setHasQuota(boolean $HasQuota) Set Whether there is still inventory surplus
+ * @method array getBindInstanceInfos() Obtain Bound instance information
+ * @method void setBindInstanceInfos(array $BindInstanceInfos) Set Bound instance information
+ * @method string getStartTime() Obtain Effective time: 2022-07-01 00:00:00
+ * @method void setStartTime(string $StartTime) Set Effective time: 2022-07-01 00:00:00
+ * @method string getExpireTime() Obtain Expiration time: 2022-08-01 00:00:00
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time: 2022-08-01 00:00:00
+ * @method array getHistoryBindResourceInfos() Obtain Resource package historic bound (unbound) instance information
+ * @method void setHistoryBindResourceInfos(array $HistoryBindResourceInfos) Set Resource package historic bound (unbound) instance information
  */
 class Package extends AbstractModel
 {
@@ -75,7 +75,7 @@ class Package extends AbstractModel
     public $AppId;
 
     /**
-     * @var string The unique ID of the resource package.
+     * @var string Unique ID of the resource package
      */
     public $PackageId;
 
@@ -85,7 +85,7 @@ class Package extends AbstractModel
     public $PackageName;
 
     /**
-     * @var string Specifies the resource package type.
+     * @var string Resource package type
 CCU: compute resource package. DISK: storage resource package.
      */
     public $PackageType;
@@ -97,81 +97,81 @@ base - basic, common - general, enterprise - business
     public $PackageVersion;
 
     /**
-     * @var string Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * @var string Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
      */
     public $PackageRegion;
 
     /**
-     * @var string Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
+     * @var string Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
      */
     public $Status;
 
     /**
-     * @var float Total resource package quantity.
+     * @var float Total resource package quantity
      */
     public $PackageTotalSpec;
 
     /**
-     * @var float Used amount of resource package.
+     * @var float Used amount of the resource package
      */
     public $PackageUsedSpec;
 
     /**
-     * @var boolean Whether there is inventory surplus.
+     * @var boolean Whether there is still inventory surplus
      */
     public $HasQuota;
 
     /**
-     * @var array Specifies the bound instance information.
+     * @var array Bound instance information
      */
     public $BindInstanceInfos;
 
     /**
-     * @var string Specifies the effective time: 2022-07-01 00:00:00.
+     * @var string Effective time: 2022-07-01 00:00:00
      */
     public $StartTime;
 
     /**
-     * @var string Specifies the expiration time: 2022-08-01 00:00:00.
+     * @var string Expiration time: 2022-08-01 00:00:00
      */
     public $ExpireTime;
 
     /**
-     * @var array Information of the instance historically bound (now unbound) to the resource pack.
+     * @var array Resource package historic bound (unbound) instance information
      */
     public $HistoryBindResourceInfos;
 
     /**
      * @param integer $AppId AppID
-     * @param string $PackageId The unique ID of the resource package.
+     * @param string $PackageId Unique ID of the resource package
      * @param string $PackageName Resource package name.
-     * @param string $PackageType Specifies the resource package type.
+     * @param string $PackageType Resource package type
 CCU: compute resource package. DISK: storage resource package.
      * @param string $PackageVersion Resource package edition
 base - basic, common - general, enterprise - business
-     * @param string $PackageRegion Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-     * @param string $Status Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
-     * @param float $PackageTotalSpec Total resource package quantity.
-     * @param float $PackageUsedSpec Used amount of resource package.
-     * @param boolean $HasQuota Whether there is inventory surplus.
-     * @param array $BindInstanceInfos Specifies the bound instance information.
-     * @param string $StartTime Specifies the effective time: 2022-07-01 00:00:00.
-     * @param string $ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
-     * @param array $HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+     * @param string $PackageRegion Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+     * @param string $Status Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
+     * @param float $PackageTotalSpec Total resource package quantity
+     * @param float $PackageUsedSpec Used amount of the resource package
+     * @param boolean $HasQuota Whether there is still inventory surplus
+     * @param array $BindInstanceInfos Bound instance information
+     * @param string $StartTime Effective time: 2022-07-01 00:00:00
+     * @param string $ExpireTime Expiration time: 2022-08-01 00:00:00
+     * @param array $HistoryBindResourceInfos Resource package historic bound (unbound) instance information
      */
     function __construct()
     {

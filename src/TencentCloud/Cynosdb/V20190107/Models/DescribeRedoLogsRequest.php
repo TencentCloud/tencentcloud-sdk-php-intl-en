@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time.
  * @method string getEndTime() Obtain End time.
  * @method void setEndTime(string $EndTime) Set End time.
- * @method array getFileNames() Obtain Log file name.
- * @method void setFileNames(array $FileNames) Set Log file name.
+ * @method array getFileNames() Obtain redolog file name
+ * @method void setFileNames(array $FileNames) Set redolog file name
  */
 class DescribeRedoLogsRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeRedoLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Log file name.
+     * @var array redolog file name
      */
     public $FileNames;
 
@@ -71,7 +71,7 @@ class DescribeRedoLogsRequest extends AbstractModel
      * @param integer $Offset Offset.
      * @param string $StartTime Start time.
      * @param string $EndTime End time.
-     * @param array $FileNames Log file name.
+     * @param array $FileNames redolog file name
      */
     function __construct()
     {

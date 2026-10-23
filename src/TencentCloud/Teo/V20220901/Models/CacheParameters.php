@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node Cache TTL configuration parameters
  *
- * @method FollowOrigin getFollowOrigin() Obtain Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setFollowOrigin(FollowOrigin $FollowOrigin) Set Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method NoCache getNoCache() Obtain No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setNoCache(NoCache $NoCache) Set No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method CustomTime getCustomTime() Obtain Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setCustomTime(CustomTime $CustomTime) Set Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method FollowOrigin getFollowOrigin() Obtain Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+ * @method void setFollowOrigin(FollowOrigin $FollowOrigin) Set Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+ * @method NoCache getNoCache() Obtain No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+ * @method void setNoCache(NoCache $NoCache) Set No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+ * @method CustomTime getCustomTime() Obtain Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+ * @method void setCustomTime(CustomTime $CustomTime) Set Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
  */
 class CacheParameters extends AbstractModel
 {
     /**
-     * @var FollowOrigin Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var FollowOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
      */
     public $FollowOrigin;
 
     /**
-     * @var NoCache No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var NoCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
      */
     public $NoCache;
 
     /**
-     * @var CustomTime Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CustomTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
      */
     public $CustomTime;
 
     /**
-     * @param FollowOrigin $FollowOrigin Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param NoCache $NoCache No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CustomTime $CustomTime Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param FollowOrigin $FollowOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+     * @param NoCache $NoCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+     * @param CustomTime $CustomTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
      */
     function __construct()
     {

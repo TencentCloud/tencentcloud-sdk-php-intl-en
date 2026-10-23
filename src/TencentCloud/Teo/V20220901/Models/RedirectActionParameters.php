@@ -18,7 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Additional parameter for SecurityAction `Redirect`.
+ * Additional parameter for safe execution when the action is set to redirect.
+
+This parameter is used to specify the extra handling action taken by the system when a security rule is hit and a redirection action is executed.
+Different disposal actions are configured with different fixed parameter combinations. The system will determine the actually effective disposal action type according to the configured parameter combination.
+During the same redirection execution, only one handling action can be configured and made effective. Parameter combinations for multiple disposal actions cannot appear at the same time. Otherwise, it is deemed as an invalid configuration.
+RedirectActionParameters supports the following extra handling actions: <li>Redirect: redirect client requests to the specified destination URL. Corresponding parameter: URL.</li>
  *
  * @method string getURL() Obtain Redirect URL.
  * @method void setURL(string $URL) Set Redirect URL.

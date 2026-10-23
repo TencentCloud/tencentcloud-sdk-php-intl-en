@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupSnapshotVolume(float $BackupSnapshotVolume) Set Backup snapshot capacity
  * @method float getBackupLogicVolume() Obtain Backup logical capacity
  * @method void setBackupLogicVolume(float $BackupLogicVolume) Set Backup logical capacity
- * @method float getLogTotalVolume() Obtain Total Log Capacity
- * @method void setLogTotalVolume(float $LogTotalVolume) Set Total Log Capacity
+ * @method float getLogTotalVolume() Obtain Total log capacity
+ * @method void setLogTotalVolume(float $LogTotalVolume) Set Total log capacity
  * @method float getLogBinlogVolume() Obtain binlog capacity
  * @method void setLogBinlogVolume(float $LogBinlogVolume) Set binlog capacity
- * @method float getLogRedoLogVolume() Obtain Redo log capacity
- * @method void setLogRedoLogVolume(float $LogRedoLogVolume) Set Redo log capacity
- * @method float getCrossTotalVolume() Obtain Total Cross-Region Backup Capacity
- * @method void setCrossTotalVolume(float $CrossTotalVolume) Set Total Cross-Region Backup Capacity
- * @method float getCrossRegionBackupVolume() Obtain Cross-Region Backup Capacity
- * @method void setCrossRegionBackupVolume(float $CrossRegionBackupVolume) Set Cross-Region Backup Capacity
+ * @method float getLogRedoLogVolume() Obtain redolog capacity
+ * @method void setLogRedoLogVolume(float $LogRedoLogVolume) Set redolog capacity
+ * @method float getCrossTotalVolume() Obtain Total cross-region backup capacity
+ * @method void setCrossTotalVolume(float $CrossTotalVolume) Set Total cross-region backup capacity
+ * @method float getCrossRegionBackupVolume() Obtain Cross-region backup capacity.
+ * @method void setCrossRegionBackupVolume(float $CrossRegionBackupVolume) Set Cross-region backup capacity.
  * @method float getCrossRegionLogVolume() Obtain Cross-regional log capacity
  * @method void setCrossRegionLogVolume(float $CrossRegionLogVolume) Set Cross-regional log capacity
  * @method array getBackupVolumeInfos() Obtain Backup capacity details
@@ -65,7 +65,7 @@ class DescribeBackupOverviewResponse extends AbstractModel
     public $BackupLogicVolume;
 
     /**
-     * @var float Total Log Capacity
+     * @var float Total log capacity
      */
     public $LogTotalVolume;
 
@@ -75,17 +75,17 @@ class DescribeBackupOverviewResponse extends AbstractModel
     public $LogBinlogVolume;
 
     /**
-     * @var float Redo log capacity
+     * @var float redolog capacity
      */
     public $LogRedoLogVolume;
 
     /**
-     * @var float Total Cross-Region Backup Capacity
+     * @var float Total cross-region backup capacity
      */
     public $CrossTotalVolume;
 
     /**
-     * @var float Cross-Region Backup Capacity
+     * @var float Cross-region backup capacity.
      */
     public $CrossRegionBackupVolume;
 
@@ -118,11 +118,11 @@ class DescribeBackupOverviewResponse extends AbstractModel
      * @param float $BackupTotalVolume Total Backup Capacity
      * @param float $BackupSnapshotVolume Backup snapshot capacity
      * @param float $BackupLogicVolume Backup logical capacity
-     * @param float $LogTotalVolume Total Log Capacity
+     * @param float $LogTotalVolume Total log capacity
      * @param float $LogBinlogVolume binlog capacity
-     * @param float $LogRedoLogVolume Redo log capacity
-     * @param float $CrossTotalVolume Total Cross-Region Backup Capacity
-     * @param float $CrossRegionBackupVolume Cross-Region Backup Capacity
+     * @param float $LogRedoLogVolume redolog capacity
+     * @param float $CrossTotalVolume Total cross-region backup capacity
+     * @param float $CrossRegionBackupVolume Cross-region backup capacity.
      * @param float $CrossRegionLogVolume Cross-regional log capacity
      * @param array $BackupVolumeInfos Backup capacity details
      * @param array $CrossRegionBackupVolumeInfos Cross-region backup capacity details

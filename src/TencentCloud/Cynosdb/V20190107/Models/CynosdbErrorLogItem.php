@@ -18,19 +18,19 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Types of the returned error logs for an instance
+ * Return type of the instance error log
  *
- * @method integer getTimestamp() Obtain Log timestamp.
- * @method void setTimestamp(integer $Timestamp) Set Log timestamp.
+ * @method integer getTimestamp() Obtain Log timestamp
+ * @method void setTimestamp(integer $Timestamp) Set Log timestamp
  * @method string getLevel() Obtain Log level.
  * @method void setLevel(string $Level) Set Log level.
- * @method string getContent() Obtain Log content.
- * @method void setContent(string $Content) Set Log content.
+ * @method string getContent() Obtain Log content
+ * @method void setContent(string $Content) Set Log content
  */
 class CynosdbErrorLogItem extends AbstractModel
 {
     /**
-     * @var integer Log timestamp.
+     * @var integer Log timestamp
      */
     public $Timestamp;
 
@@ -40,14 +40,14 @@ class CynosdbErrorLogItem extends AbstractModel
     public $Level;
 
     /**
-     * @var string Log content.
+     * @var string Log content
      */
     public $Content;
 
     /**
-     * @param integer $Timestamp Log timestamp.
+     * @param integer $Timestamp Log timestamp
      * @param string $Level Log level.
-     * @param string $Content Log content.
+     * @param string $Content Log content
      */
     function __construct()
     {

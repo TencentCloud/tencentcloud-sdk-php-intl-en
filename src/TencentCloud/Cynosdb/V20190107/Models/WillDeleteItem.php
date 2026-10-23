@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Backup file list that will be deleted
+ * List of backup files to be deleted
  *
  * @method integer getBackupId() Obtain Backup file ID
  * @method void setBackupId(integer $BackupId) Set Backup file ID
- * @method string getBackupName() Obtain Backup file name
- * @method void setBackupName(string $BackupName) Set Backup file name
+ * @method string getBackupName() Obtain Backup file name.
+ * @method void setBackupName(string $BackupName) Set Backup file name.
  */
 class WillDeleteItem extends AbstractModel
 {
@@ -33,13 +33,13 @@ class WillDeleteItem extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string Backup file name
+     * @var string Backup file name.
      */
     public $BackupName;
 
     /**
      * @param integer $BackupId Backup file ID
-     * @param string $BackupName Backup file name
+     * @param string $BackupName Backup file name.
      */
     function __construct()
     {

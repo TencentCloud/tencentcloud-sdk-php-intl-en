@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
  * @method string getTemplateID() Obtain <p>SQL Template ID</p>
  * @method void setTemplateID(string $TemplateID) Set <p>SQL Template ID</p>
- * @method integer getPlanDetailId() Obtain <p>Plan details serial number</p>
- * @method void setPlanDetailId(integer $PlanDetailId) Set <p>Plan details serial number</p>
+ * @method integer getPlanDetailId() Obtain <p>Plan detail serial number.</p>
+ * @method void setPlanDetailId(integer $PlanDetailId) Set <p>Plan detail serial number.</p>
  */
 class DescribeSQLExecutionPlanRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeSQLExecutionPlanRequest extends AbstractModel
     public $TemplateID;
 
     /**
-     * @var integer <p>Plan details serial number</p>
+     * @var integer <p>Plan detail serial number.</p>
      */
     public $PlanDetailId;
 
@@ -55,7 +55,7 @@ class DescribeSQLExecutionPlanRequest extends AbstractModel
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param string $InstanceId <p>Instance ID.</p>
      * @param string $TemplateID <p>SQL Template ID</p>
-     * @param integer $PlanDetailId <p>Plan details serial number</p>
+     * @param integer $PlanDetailId <p>Plan detail serial number.</p>
      */
     function __construct()
     {

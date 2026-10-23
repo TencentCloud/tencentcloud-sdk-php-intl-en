@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getBackupType() Obtain Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
- * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
- * @method array getBackupDatabases() Obtain Backup database, which is valid when `BackupType` is `logic`.
- * @method void setBackupDatabases(array $BackupDatabases) Set Backup database, which is valid when `BackupType` is `logic`.
- * @method array getBackupTables() Obtain Backup table, which is valid when `BackupType` is `logic`.
- * @method void setBackupTables(array $BackupTables) Set Backup table, which is valid when `BackupType` is `logic`.
- * @method string getBackupName() Obtain Backup name
- * @method void setBackupName(string $BackupName) Set Backup name
- * @method array getVaults() Obtain 	Message sent to safe
- * @method void setVaults(array $Vaults) Set 	Message sent to safe
+ * @method string getBackupType() Obtain Backup type. Available values: logic (logical backup); snapshot (physical backup).
+ * @method void setBackupType(string $BackupType) Set Backup type. Available values: logic (logical backup); snapshot (physical backup).
+ * @method array getBackupDatabases() Obtain Database to be backed up. This parameter is valid only when BackupType is logic.
+ * @method void setBackupDatabases(array $BackupDatabases) Set Database to be backed up. This parameter is valid only when BackupType is logic.
+ * @method array getBackupTables() Obtain Tables to be backed up. This parameter is valid only when BackupType is logic.
+ * @method void setBackupTables(array $BackupTables) Set Tables to be backed up. This parameter is valid only when BackupType is logic.
+ * @method string getBackupName() Obtain Alias name
+ * @method void setBackupName(string $BackupName) Set Alias name
+ * @method array getVaults() Obtain 	Information sent to the safe
+ * @method void setVaults(array $Vaults) Set 	Information sent to the safe
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class CreateBackupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+     * @var string Backup type. Available values: logic (logical backup); snapshot (physical backup).
      */
     public $BackupType;
 
     /**
-     * @var array Backup database, which is valid when `BackupType` is `logic`.
+     * @var array Database to be backed up. This parameter is valid only when BackupType is logic.
      */
     public $BackupDatabases;
 
     /**
-     * @var array Backup table, which is valid when `BackupType` is `logic`.
+     * @var array Tables to be backed up. This parameter is valid only when BackupType is logic.
      */
     public $BackupTables;
 
     /**
-     * @var string Backup name
+     * @var string Alias name
      */
     public $BackupName;
 
     /**
-     * @var array 	Message sent to safe
+     * @var array 	Information sent to the safe
      */
     public $Vaults;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $BackupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
-     * @param array $BackupDatabases Backup database, which is valid when `BackupType` is `logic`.
-     * @param array $BackupTables Backup table, which is valid when `BackupType` is `logic`.
-     * @param string $BackupName Backup name
-     * @param array $Vaults 	Message sent to safe
+     * @param string $BackupType Backup type. Available values: logic (logical backup); snapshot (physical backup).
+     * @param array $BackupDatabases Database to be backed up. This parameter is valid only when BackupType is logic.
+     * @param array $BackupTables Tables to be backed up. This parameter is valid only when BackupType is logic.
+     * @param string $BackupName Alias name
+     * @param array $Vaults 	Information sent to the safe
      */
     function __construct()
     {

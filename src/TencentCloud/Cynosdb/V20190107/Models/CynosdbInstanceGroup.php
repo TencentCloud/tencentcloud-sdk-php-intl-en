@@ -18,125 +18,125 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance group information
  *
- * @method integer getAppId() Obtain 
- * @method void setAppId(integer $AppId) Set 
- * @method string getClusterId() Obtain 
- * @method void setClusterId(string $ClusterId) Set 
- * @method string getCreatedTime() Obtain 
- * @method void setCreatedTime(string $CreatedTime) Set 
- * @method string getDeletedTime() Obtain 
- * @method void setDeletedTime(string $DeletedTime) Set 
- * @method string getInstanceGroupId() Obtain 
- * @method void setInstanceGroupId(string $InstanceGroupId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getType() Obtain Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
- * @method void setType(string $Type) Set Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
- * @method string getUpdatedTime() Obtain 
- * @method void setUpdatedTime(string $UpdatedTime) Set 
- * @method string getVip() Obtain 
- * @method void setVip(string $Vip) Set 
- * @method integer getVport() Obtain 
- * @method void setVport(integer $Vport) Set 
- * @method string getWanDomain() Obtain 
- * @method void setWanDomain(string $WanDomain) Set 
- * @method string getWanIP() Obtain 
- * @method void setWanIP(string $WanIP) Set 
- * @method integer getWanPort() Obtain 
- * @method void setWanPort(integer $WanPort) Set 
- * @method string getWanStatus() Obtain 
- * @method void setWanStatus(string $WanStatus) Set 
- * @method array getInstanceSet() Obtain 
- * @method void setInstanceSet(array $InstanceSet) Set 
+ * @method integer getAppId() Obtain User AppID
+ * @method void setAppId(integer $AppId) Set User AppID
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getCreatedTime() Obtain Creation time.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time.
+ * @method string getDeletedTime() Obtain Deletion time.
+ * @method void setDeletedTime(string $DeletedTime) Set Deletion time.
+ * @method string getInstanceGroupId() Obtain Instance group ID
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID
+ * @method string getStatus() Obtain Status.
+ * @method void setStatus(string $Status) Set Status.
+ * @method string getType() Obtain Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
+ * @method void setType(string $Type) Set Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
+ * @method string getUpdatedTime() Obtain Update time.
+ * @method void setUpdatedTime(string $UpdatedTime) Set Update time.
+ * @method string getVip() Obtain Private IP address
+ * @method void setVip(string $Vip) Set Private IP address
+ * @method integer getVport() Obtain Private network port.
+ * @method void setVport(integer $Vport) Set Private network port.
+ * @method string getWanDomain() Obtain Public network domain name.
+ * @method void setWanDomain(string $WanDomain) Set Public network domain name.
+ * @method string getWanIP() Obtain Public IP address
+ * @method void setWanIP(string $WanIP) Set Public IP address
+ * @method integer getWanPort() Obtain External port
+ * @method void setWanPort(integer $WanPort) Set External port
+ * @method string getWanStatus() Obtain Public network status.
+ * @method void setWanStatus(string $WanStatus) Set Public network status.
+ * @method array getInstanceSet() Obtain Instance group information including instances
+ * @method void setInstanceSet(array $InstanceSet) Set Instance group information including instances
  * @method string getUniqVpcId() Obtain VPC ID
  * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID
- * @method string getUniqSubnetId() Obtain Specifies the subnet ID.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Specifies the subnet ID.
- * @method OldAddrInfo getOldAddrInfo() Obtain Recycling IP information.
- * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) Set Recycling IP information.
- * @method array getProcessingTasks() Obtain 
- * @method void setProcessingTasks(array $ProcessingTasks) Set 
- * @method array getTasks() Obtain 
- * @method void setTasks(array $Tasks) Set 
- * @method integer getNetServiceId() Obtain 
- * @method void setNetServiceId(integer $NetServiceId) Set 
+ * @method string getUniqSubnetId() Obtain Subnet ID.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID.
+ * @method OldAddrInfo getOldAddrInfo() Obtain Recycling IP information
+ * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) Set Recycling IP information
+ * @method array getProcessingTasks() Obtain Ongoing task
+ * @method void setProcessingTasks(array $ProcessingTasks) Set Ongoing task
+ * @method array getTasks() Obtain Task list
+ * @method void setTasks(array $Tasks) Set Task list
+ * @method integer getNetServiceId() Obtain id of the biz_net_service table
+ * @method void setNetServiceId(integer $NetServiceId) Set id of the biz_net_service table
  */
 class CynosdbInstanceGroup extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer User AppID
      */
     public $AppId;
 
     /**
-     * @var string 
+     * @var string Cluster ID
      */
     public $ClusterId;
 
     /**
-     * @var string 
+     * @var string Creation time.
      */
     public $CreatedTime;
 
     /**
-     * @var string 
+     * @var string Deletion time.
      */
     public $DeletedTime;
 
     /**
-     * @var string 
+     * @var string Instance group ID
      */
     public $InstanceGroupId;
 
     /**
-     * @var string 
+     * @var string Status.
      */
     public $Status;
 
     /**
-     * @var string Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
+     * @var string Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Update time.
      */
     public $UpdatedTime;
 
     /**
-     * @var string 
+     * @var string Private IP address
      */
     public $Vip;
 
     /**
-     * @var integer 
+     * @var integer Private network port.
      */
     public $Vport;
 
     /**
-     * @var string 
+     * @var string Public network domain name.
      */
     public $WanDomain;
 
     /**
-     * @var string 
+     * @var string Public IP address
      */
     public $WanIP;
 
     /**
-     * @var integer 
+     * @var integer External port
      */
     public $WanPort;
 
     /**
-     * @var string 
+     * @var string Public network status.
      */
     public $WanStatus;
 
     /**
-     * @var array 
+     * @var array Instance group information including instances
      */
     public $InstanceSet;
 
@@ -146,52 +146,52 @@ class CynosdbInstanceGroup extends AbstractModel
     public $UniqVpcId;
 
     /**
-     * @var string Specifies the subnet ID.
+     * @var string Subnet ID.
      */
     public $UniqSubnetId;
 
     /**
-     * @var OldAddrInfo Recycling IP information.
+     * @var OldAddrInfo Recycling IP information
      */
     public $OldAddrInfo;
 
     /**
-     * @var array 
+     * @var array Ongoing task
      */
     public $ProcessingTasks;
 
     /**
-     * @var array 
+     * @var array Task list
      */
     public $Tasks;
 
     /**
-     * @var integer 
+     * @var integer id of the biz_net_service table
      */
     public $NetServiceId;
 
     /**
-     * @param integer $AppId 
-     * @param string $ClusterId 
-     * @param string $CreatedTime 
-     * @param string $DeletedTime 
-     * @param string $InstanceGroupId 
-     * @param string $Status 
-     * @param string $Type Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
-     * @param string $UpdatedTime 
-     * @param string $Vip 
-     * @param integer $Vport 
-     * @param string $WanDomain 
-     * @param string $WanIP 
-     * @param integer $WanPort 
-     * @param string $WanStatus 
-     * @param array $InstanceSet 
+     * @param integer $AppId User AppID
+     * @param string $ClusterId Cluster ID
+     * @param string $CreatedTime Creation time.
+     * @param string $DeletedTime Deletion time.
+     * @param string $InstanceGroupId Instance group ID
+     * @param string $Status Status.
+     * @param string $Type Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
+     * @param string $UpdatedTime Update time.
+     * @param string $Vip Private IP address
+     * @param integer $Vport Private network port.
+     * @param string $WanDomain Public network domain name.
+     * @param string $WanIP Public IP address
+     * @param integer $WanPort External port
+     * @param string $WanStatus Public network status.
+     * @param array $InstanceSet Instance group information including instances
      * @param string $UniqVpcId VPC ID
-     * @param string $UniqSubnetId Specifies the subnet ID.
-     * @param OldAddrInfo $OldAddrInfo Recycling IP information.
-     * @param array $ProcessingTasks 
-     * @param array $Tasks 
-     * @param integer $NetServiceId 
+     * @param string $UniqSubnetId Subnet ID.
+     * @param OldAddrInfo $OldAddrInfo Recycling IP information
+     * @param array $ProcessingTasks Ongoing task
+     * @param array $Tasks Task list
+     * @param integer $NetServiceId id of the biz_net_service table
      */
     function __construct()
     {

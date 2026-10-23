@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User host permissions
+ * User host permission
  *
  * @method string getDbUserName() Obtain Authorized user
  * @method void setDbUserName(string $DbUserName) Set Authorized user

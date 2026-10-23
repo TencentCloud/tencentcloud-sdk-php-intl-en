@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Inventory information of regions sold by Libra
+ * Regional inventory information sold by Libra
  *
  * @method string getZone() Obtain Availability zone
  * @method void setZone(string $Zone) Set Availability zone

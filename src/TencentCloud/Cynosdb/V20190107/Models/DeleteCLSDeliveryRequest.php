@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method array getCLSTopicIds() Obtain Log topic ID.
- * @method void setCLSTopicIds(array $CLSTopicIds) Set Log topic ID.
- * @method string getLogType() Obtain Log type.
- * @method void setLogType(string $LogType) Set Log type.
- * @method string getIsInMaintainPeriod() Obtain Whether the maintenance time is in operation.
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Whether the maintenance time is in operation.
+ * @method array getCLSTopicIds() Obtain Log topic id
+ * @method void setCLSTopicIds(array $CLSTopicIds) Set Log topic id
+ * @method string getLogType() Obtain Log type
+ * @method void setLogType(string $LogType) Set Log type
+ * @method string getIsInMaintainPeriod() Obtain Whether to run during the maintenance time
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Whether to run during the maintenance time
  */
 class DeleteCLSDeliveryRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DeleteCLSDeliveryRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Log topic ID.
+     * @var array Log topic id
      */
     public $CLSTopicIds;
 
     /**
-     * @var string Log type.
+     * @var string Log type
      */
     public $LogType;
 
     /**
-     * @var string Whether the maintenance time is in operation.
+     * @var string Whether to run during the maintenance time
      */
     public $IsInMaintainPeriod;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param array $CLSTopicIds Log topic ID.
-     * @param string $LogType Log type.
-     * @param string $IsInMaintainPeriod Whether the maintenance time is in operation.
+     * @param array $CLSTopicIds Log topic id
+     * @param string $LogType Log type
+     * @param string $IsInMaintainPeriod Whether to run during the maintenance time
      */
     function __construct()
     {

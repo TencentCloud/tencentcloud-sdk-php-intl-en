@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDownloadUserRestriction request structure.
  *
- * @method integer getLimit() Obtain Pagination size
- * @method void setLimit(integer $Limit) Set Pagination size
+ * @method integer getLimit() Obtain Pagination size.
+ * @method void setLimit(integer $Limit) Set Pagination size.
  * @method integer getOffset() Obtain Offset.
  * @method void setOffset(integer $Offset) Set Offset.
- * @method boolean getOnlyUserRestriction() Obtain Specifies whether to query only user-level download limits. true - yes, false - no.
- * @method void setOnlyUserRestriction(boolean $OnlyUserRestriction) Set Specifies whether to query only user-level download limits. true - yes, false - no.
+ * @method boolean getOnlyUserRestriction() Obtain Whether to query only user-level download limits. true: yes; false: no
+ * @method void setOnlyUserRestriction(boolean $OnlyUserRestriction) Set Whether to query only user-level download limits. true: yes; false: no
  */
 class DescribeBackupDownloadUserRestrictionRequest extends AbstractModel
 {
     /**
-     * @var integer Pagination size
+     * @var integer Pagination size.
      */
     public $Limit;
 
@@ -40,14 +40,14 @@ class DescribeBackupDownloadUserRestrictionRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var boolean Specifies whether to query only user-level download limits. true - yes, false - no.
+     * @var boolean Whether to query only user-level download limits. true: yes; false: no
      */
     public $OnlyUserRestriction;
 
     /**
-     * @param integer $Limit Pagination size
+     * @param integer $Limit Pagination size.
      * @param integer $Offset Offset.
-     * @param boolean $OnlyUserRestriction Specifies whether to query only user-level download limits. true - yes, false - no.
+     * @param boolean $OnlyUserRestriction Whether to query only user-level download limits. true: yes; false: no
      */
     function __construct()
     {

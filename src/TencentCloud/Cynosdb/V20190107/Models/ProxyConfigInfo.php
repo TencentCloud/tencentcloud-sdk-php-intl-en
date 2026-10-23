@@ -18,23 +18,23 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access proxy configuration.
+ * Access proxy configuration
  *
- * @method integer getProxyCount() Obtain Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
- * @method void setProxyCount(integer $ProxyCount) Set Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+ * @method integer getProxyCount() Obtain Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
+ * @method void setProxyCount(integer $ProxyCount) Set Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getMem() Obtain Specifies the memory.
- * @method void setMem(integer $Mem) Set Specifies the memory.
+ * @method integer getMem() Obtain memory
+ * @method void setMem(integer $Mem) Set memory
  * @method string getDescription() Obtain Description.
  * @method void setDescription(string $Description) Set Description.
- * @method array getProxyZones() Obtain Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
- * @method void setProxyZones(array $ProxyZones) Set Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+ * @method array getProxyZones() Obtain Database node information (either this parameter or ProxyCount is required)
+ * @method void setProxyZones(array $ProxyZones) Set Database node information (either this parameter or ProxyCount is required)
  */
 class ProxyConfigInfo extends AbstractModel
 {
     /**
-     * @var integer Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+     * @var integer Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
      */
     public $ProxyCount;
 
@@ -44,7 +44,7 @@ class ProxyConfigInfo extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Specifies the memory.
+     * @var integer memory
      */
     public $Mem;
 
@@ -54,16 +54,16 @@ class ProxyConfigInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var array Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * @var array Database node information (either this parameter or ProxyCount is required)
      */
     public $ProxyZones;
 
     /**
-     * @param integer $ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+     * @param integer $ProxyCount Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
      * @param integer $Cpu Number of CPU cores
-     * @param integer $Mem Specifies the memory.
+     * @param integer $Mem memory
      * @param string $Description Description.
-     * @param array $ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * @param array $ProxyZones Database node information (either this parameter or ProxyCount is required)
      */
     function __construct()
     {

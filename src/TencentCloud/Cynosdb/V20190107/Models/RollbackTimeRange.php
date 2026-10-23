@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rollback time range
+ * Time range available for rollback
  *
- * @method string getTimeRangeStart() Obtain Start time
- * @method void setTimeRangeStart(string $TimeRangeStart) Set Start time
- * @method string getTimeRangeEnd() Obtain End time
- * @method void setTimeRangeEnd(string $TimeRangeEnd) Set End time
+ * @method string getTimeRangeStart() Obtain Start time.
+ * @method void setTimeRangeStart(string $TimeRangeStart) Set Start time.
+ * @method string getTimeRangeEnd() Obtain End time.
+ * @method void setTimeRangeEnd(string $TimeRangeEnd) Set End time.
  */
 class RollbackTimeRange extends AbstractModel
 {
     /**
-     * @var string Start time
+     * @var string Start time.
      */
     public $TimeRangeStart;
 
     /**
-     * @var string End time
+     * @var string End time.
      */
     public $TimeRangeEnd;
 
     /**
-     * @param string $TimeRangeStart Start time
-     * @param string $TimeRangeEnd End time
+     * @param string $TimeRangeStart Start time.
+     * @param string $TimeRangeEnd End time.
      */
     function __construct()
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Swap instance information.
+ * Exchange instance information
  *
  * @method RollbackInstanceInfo getSrcInstanceInfo() Obtain Source instance information.
  * @method void setSrcInstanceInfo(RollbackInstanceInfo $SrcInstanceInfo) Set Source instance information.
- * @method RollbackInstanceInfo getDstInstanceInfo() Obtain Target instance information.
- * @method void setDstInstanceInfo(RollbackInstanceInfo $DstInstanceInfo) Set Target instance information.
+ * @method RollbackInstanceInfo getDstInstanceInfo() Obtain Destination instance information.
+ * @method void setDstInstanceInfo(RollbackInstanceInfo $DstInstanceInfo) Set Destination instance information.
  */
 class ExchangeInstanceInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ExchangeInstanceInfo extends AbstractModel
     public $SrcInstanceInfo;
 
     /**
-     * @var RollbackInstanceInfo Target instance information.
+     * @var RollbackInstanceInfo Destination instance information.
      */
     public $DstInstanceInfo;
 
     /**
      * @param RollbackInstanceInfo $SrcInstanceInfo Source instance information.
-     * @param RollbackInstanceInfo $DstInstanceInfo Target instance information.
+     * @param RollbackInstanceInfo $DstInstanceInfo Destination instance information.
      */
     function __construct()
     {

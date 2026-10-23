@@ -18,30 +18,30 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Database proxy group details
+ * Detailed information of the database proxy group
  *
- * @method ProxyGroup getProxyGroup() Obtain Database proxy group.
- * @method void setProxyGroup(ProxyGroup $ProxyGroup) Set Database proxy group.
- * @method ProxyGroupRwInfo getProxyGroupRwInfo() Obtain Database proxy group read-write separation information.
- * @method void setProxyGroupRwInfo(ProxyGroupRwInfo $ProxyGroupRwInfo) Set Database proxy group read-write separation information.
+ * @method ProxyGroup getProxyGroup() Obtain Database Proxy Group
+ * @method void setProxyGroup(ProxyGroup $ProxyGroup) Set Database Proxy Group
+ * @method ProxyGroupRwInfo getProxyGroupRwInfo() Obtain Read-write separation info of the Database Proxy Group
+ * @method void setProxyGroupRwInfo(ProxyGroupRwInfo $ProxyGroupRwInfo) Set Read-write separation info of the Database Proxy Group
  * @method array getProxyNodes() Obtain Database proxy node info
  * @method void setProxyNodes(array $ProxyNodes) Set Database proxy node info
- * @method ProxyConnectionPoolInfo getConnectionPool() Obtain Database proxy connection pool information.
- * @method void setConnectionPool(ProxyConnectionPoolInfo $ConnectionPool) Set Database proxy connection pool information.
+ * @method ProxyConnectionPoolInfo getConnectionPool() Obtain Database proxy connection pool information
+ * @method void setConnectionPool(ProxyConnectionPoolInfo $ConnectionPool) Set Database proxy connection pool information
  * @method array getNetAddrInfos() Obtain Database proxy network info
  * @method void setNetAddrInfos(array $NetAddrInfos) Set Database proxy network info
- * @method array getTasks() Obtain Database proxy task set.
- * @method void setTasks(array $Tasks) Set Database proxy task set.
+ * @method array getTasks() Obtain Task set of the database proxy
+ * @method void setTasks(array $Tasks) Set Task set of the database proxy
  */
 class ProxyGroupInfo extends AbstractModel
 {
     /**
-     * @var ProxyGroup Database proxy group.
+     * @var ProxyGroup Database Proxy Group
      */
     public $ProxyGroup;
 
     /**
-     * @var ProxyGroupRwInfo Database proxy group read-write separation information.
+     * @var ProxyGroupRwInfo Read-write separation info of the Database Proxy Group
      */
     public $ProxyGroupRwInfo;
 
@@ -51,7 +51,7 @@ class ProxyGroupInfo extends AbstractModel
     public $ProxyNodes;
 
     /**
-     * @var ProxyConnectionPoolInfo Database proxy connection pool information.
+     * @var ProxyConnectionPoolInfo Database proxy connection pool information
      */
     public $ConnectionPool;
 
@@ -61,17 +61,17 @@ class ProxyGroupInfo extends AbstractModel
     public $NetAddrInfos;
 
     /**
-     * @var array Database proxy task set.
+     * @var array Task set of the database proxy
      */
     public $Tasks;
 
     /**
-     * @param ProxyGroup $ProxyGroup Database proxy group.
-     * @param ProxyGroupRwInfo $ProxyGroupRwInfo Database proxy group read-write separation information.
+     * @param ProxyGroup $ProxyGroup Database Proxy Group
+     * @param ProxyGroupRwInfo $ProxyGroupRwInfo Read-write separation info of the Database Proxy Group
      * @param array $ProxyNodes Database proxy node info
-     * @param ProxyConnectionPoolInfo $ConnectionPool Database proxy connection pool information.
+     * @param ProxyConnectionPoolInfo $ConnectionPool Database proxy connection pool information
      * @param array $NetAddrInfos Database proxy network info
-     * @param array $Tasks Database proxy task set.
+     * @param array $Tasks Task set of the database proxy
      */
     function __construct()
     {

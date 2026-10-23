@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin-pull request parameters configuration.
  *
- * @method UpstreamRequestQueryString getQueryString() Obtain Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setQueryString(UpstreamRequestQueryString $QueryString) Set Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method UpstreamRequestCookie getCookie() Obtain Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setCookie(UpstreamRequestCookie $Cookie) Set Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method UpstreamRequestQueryString getQueryString() Obtain Query string configuration. Optional configuration, leave blank for no configuration.
+ * @method void setQueryString(UpstreamRequestQueryString $QueryString) Set Query string configuration. Optional configuration, leave blank for no configuration.
+ * @method UpstreamRequestCookie getCookie() Obtain Cookie configuration. Optional configuration. Leave it blank for no configuration.
+ * @method void setCookie(UpstreamRequestCookie $Cookie) Set Cookie configuration. Optional configuration. Leave it blank for no configuration.
  */
 class UpstreamRequestParameters extends AbstractModel
 {
     /**
-     * @var UpstreamRequestQueryString Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var UpstreamRequestQueryString Query string configuration. Optional configuration, leave blank for no configuration.
      */
     public $QueryString;
 
     /**
-     * @var UpstreamRequestCookie Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var UpstreamRequestCookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
      */
     public $Cookie;
 
     /**
-     * @param UpstreamRequestQueryString $QueryString Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param UpstreamRequestCookie $Cookie Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param UpstreamRequestQueryString $QueryString Query string configuration. Optional configuration, leave blank for no configuration.
+     * @param UpstreamRequestCookie $Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
      */
     function __construct()
     {

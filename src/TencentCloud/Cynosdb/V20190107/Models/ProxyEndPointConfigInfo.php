@@ -18,27 +18,27 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * proxy address configuration of the integrated cluster.
+ * proxy address configuration for the integrated cluster
  *
- * @method string getUniqueVpcId() Obtain Specifies the ID of the VPC network it belongs to.
- * @method void setUniqueVpcId(string $UniqueVpcId) Set Specifies the ID of the VPC network it belongs to.
+ * @method string getUniqueVpcId() Obtain VPC network ID
+ * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC network ID
  * @method string getUniqueSubnetId() Obtain Subnet ID.
  * @method void setUniqueSubnetId(string $UniqueSubnetId) Set Subnet ID.
- * @method array getSecurityGroupIds() Obtain Security group id array.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group id array.
- * @method string getWeightMode() Obtain Weight mode: system-system allocation, custom-custom.
- * @method void setWeightMode(string $WeightMode) Set Weight mode: system-system allocation, custom-custom.
- * @method string getAutoAddRo() Obtain Specifies whether to automatically add a read-only instance. valid values: yes, no.
- * @method void setAutoAddRo(string $AutoAddRo) Set Specifies whether to automatically add a read-only instance. valid values: yes, no.
- * @method string getRwType() Obtain Read-Write attribute. valid values: READWRITE, READONLY.
- * @method void setRwType(string $RwType) Set Read-Write attribute. valid values: READWRITE, READONLY.
- * @method array getInstanceNameWeights() Obtain Weight information.
- * @method void setInstanceNameWeights(array $InstanceNameWeights) Set Weight information.
+ * @method array getSecurityGroupIds() Obtain Security group id array
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group id array
+ * @method string getWeightMode() Obtain Weight mode: system: system-assigned, custom: customization
+ * @method void setWeightMode(string $WeightMode) Set Weight mode: system: system-assigned, custom: customization
+ * @method string getAutoAddRo() Obtain Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
+ * @method void setAutoAddRo(string $AutoAddRo) Set Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
+ * @method string getRwType() Obtain Read-write attribute. Available values: READWRITE, READONLY
+ * @method void setRwType(string $RwType) Set Read-write attribute. Available values: READWRITE, READONLY
+ * @method array getInstanceNameWeights() Obtain Weight information
+ * @method void setInstanceNameWeights(array $InstanceNameWeights) Set Weight information
  */
 class ProxyEndPointConfigInfo extends AbstractModel
 {
     /**
-     * @var string Specifies the ID of the VPC network it belongs to.
+     * @var string VPC network ID
      */
     public $UniqueVpcId;
 
@@ -48,38 +48,38 @@ class ProxyEndPointConfigInfo extends AbstractModel
     public $UniqueSubnetId;
 
     /**
-     * @var array Security group id array.
+     * @var array Security group id array
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string Weight mode: system-system allocation, custom-custom.
+     * @var string Weight mode: system: system-assigned, custom: customization
      */
     public $WeightMode;
 
     /**
-     * @var string Specifies whether to automatically add a read-only instance. valid values: yes, no.
+     * @var string Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
      */
     public $AutoAddRo;
 
     /**
-     * @var string Read-Write attribute. valid values: READWRITE, READONLY.
+     * @var string Read-write attribute. Available values: READWRITE, READONLY
      */
     public $RwType;
 
     /**
-     * @var array Weight information.
+     * @var array Weight information
      */
     public $InstanceNameWeights;
 
     /**
-     * @param string $UniqueVpcId Specifies the ID of the VPC network it belongs to.
+     * @param string $UniqueVpcId VPC network ID
      * @param string $UniqueSubnetId Subnet ID.
-     * @param array $SecurityGroupIds Security group id array.
-     * @param string $WeightMode Weight mode: system-system allocation, custom-custom.
-     * @param string $AutoAddRo Specifies whether to automatically add a read-only instance. valid values: yes, no.
-     * @param string $RwType Read-Write attribute. valid values: READWRITE, READONLY.
-     * @param array $InstanceNameWeights Weight information.
+     * @param array $SecurityGroupIds Security group id array
+     * @param string $WeightMode Weight mode: system: system-assigned, custom: customization
+     * @param string $AutoAddRo Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
+     * @param string $RwType Read-write attribute. Available values: READWRITE, READONLY
+     * @param array $InstanceNameWeights Weight information
      */
     function __construct()
     {

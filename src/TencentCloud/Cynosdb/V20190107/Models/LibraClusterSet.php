@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time.
  * @method string getDbVersion() Obtain Database version.
  * @method void setDbVersion(string $DbVersion) Set Database version.
- * @method array getInstanceSet() Obtain instance information
- * @method void setInstanceSet(array $InstanceSet) Set instance information
+ * @method array getInstanceSet() Obtain Instance information
+ * @method void setInstanceSet(array $InstanceSet) Set Instance information
  * @method integer getPayMode() Obtain Payment mode
  * @method void setPayMode(integer $PayMode) Set Payment mode
  * @method string getPeriodEndTime() Obtain Expiration time.
@@ -40,20 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectID(integer $ProjectID) Set Project ID
  * @method string getRegion() Obtain Region.
  * @method void setRegion(string $Region) Set Region.
- * @method integer getRenewFlag() Obtain Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
- * @method void setRenewFlag(integer $RenewFlag) Set Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+ * @method integer getRenewFlag() Obtain Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
+ * @method void setRenewFlag(integer $RenewFlag) Set Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
  * @method string getStatus() Obtain Status.
  * @method void setStatus(string $Status) Set Status.
  * @method string getStatusDesc() Obtain Status description.
  * @method void setStatusDesc(string $StatusDesc) Set Status description.
  * @method integer getStorage() Obtain Storage size
  * @method void setStorage(integer $Storage) Set Storage size
- * @method integer getUsedStorage() Obtain Used Capacity
- * @method void setUsedStorage(integer $UsedStorage) Set Used Capacity
+ * @method integer getUsedStorage() Obtain Used capacity
+ * @method void setUsedStorage(integer $UsedStorage) Set Used capacity
  * @method string getVip() Obtain VIP address
  * @method void setVip(string $Vip) Set VIP address
- * @method integer getVport() Obtain vport port
- * @method void setVport(integer $Vport) Set vport port
+ * @method integer getVport() Obtain vport
+ * @method void setVport(integer $Vport) Set vport
  */
 class LibraClusterSet extends AbstractModel
 {
@@ -83,7 +83,7 @@ class LibraClusterSet extends AbstractModel
     public $DbVersion;
 
     /**
-     * @var array instance information
+     * @var array Instance information
      */
     public $InstanceSet;
 
@@ -108,7 +108,7 @@ class LibraClusterSet extends AbstractModel
     public $Region;
 
     /**
-     * @var integer Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+     * @var integer Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
      */
     public $RenewFlag;
 
@@ -128,7 +128,7 @@ class LibraClusterSet extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer Used Capacity
+     * @var integer Used capacity
      */
     public $UsedStorage;
 
@@ -138,7 +138,7 @@ class LibraClusterSet extends AbstractModel
     public $Vip;
 
     /**
-     * @var integer vport port
+     * @var integer vport
      */
     public $Vport;
 
@@ -148,18 +148,18 @@ class LibraClusterSet extends AbstractModel
      * @param string $ClusterName Cluster name.
      * @param string $CreateTime Creation time.
      * @param string $DbVersion Database version.
-     * @param array $InstanceSet instance information
+     * @param array $InstanceSet Instance information
      * @param integer $PayMode Payment mode
      * @param string $PeriodEndTime Expiration time.
      * @param integer $ProjectID Project ID
      * @param string $Region Region.
-     * @param integer $RenewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+     * @param integer $RenewFlag Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
      * @param string $Status Status.
      * @param string $StatusDesc Status description.
      * @param integer $Storage Storage size
-     * @param integer $UsedStorage Used Capacity
+     * @param integer $UsedStorage Used capacity
      * @param string $Vip VIP address
-     * @param integer $Vport vport port
+     * @param integer $Vport vport
      */
     function __construct()
     {

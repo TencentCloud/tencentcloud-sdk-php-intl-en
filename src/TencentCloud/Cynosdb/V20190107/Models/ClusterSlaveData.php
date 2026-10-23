@@ -18,25 +18,25 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster slave availability zone information.
+ * Cluster AZ information.
  *
- * @method string getOldMasterZone() Obtain Old primary availability zone.
- * @method void setOldMasterZone(string $OldMasterZone) Set Old primary availability zone.
+ * @method string getOldMasterZone() Obtain Old primary AZ
+ * @method void setOldMasterZone(string $OldMasterZone) Set Old primary AZ
  * @method array getOldSlaveZone() Obtain Secondary availability zone
  * @method void setOldSlaveZone(array $OldSlaveZone) Set Secondary availability zone
- * @method string getNewMasterZone() Obtain New primary availability zone.
- * @method void setNewMasterZone(string $NewMasterZone) Set New primary availability zone.
+ * @method string getNewMasterZone() Obtain New primary AZ
+ * @method void setNewMasterZone(string $NewMasterZone) Set New primary AZ
  * @method array getNewSlaveZone() Obtain Secondary AZ
  * @method void setNewSlaveZone(array $NewSlaveZone) Set Secondary AZ
- * @method array getNewSlaveZoneAttr() Obtain New from availability zone attribute.
- * @method void setNewSlaveZoneAttr(array $NewSlaveZoneAttr) Set New from availability zone attribute.
- * @method array getOldSlaveZoneAttr() Obtain Old availability zone attributes.
- * @method void setOldSlaveZoneAttr(array $OldSlaveZoneAttr) Set Old availability zone attributes.
+ * @method array getNewSlaveZoneAttr() Obtain New secondary availability zone attribute
+ * @method void setNewSlaveZoneAttr(array $NewSlaveZoneAttr) Set New secondary availability zone attribute
+ * @method array getOldSlaveZoneAttr() Obtain Old availability zone attributes
+ * @method void setOldSlaveZoneAttr(array $OldSlaveZoneAttr) Set Old availability zone attributes
  */
 class ClusterSlaveData extends AbstractModel
 {
     /**
-     * @var string Old primary availability zone.
+     * @var string Old primary AZ
      */
     public $OldMasterZone;
 
@@ -46,7 +46,7 @@ class ClusterSlaveData extends AbstractModel
     public $OldSlaveZone;
 
     /**
-     * @var string New primary availability zone.
+     * @var string New primary AZ
      */
     public $NewMasterZone;
 
@@ -56,22 +56,22 @@ class ClusterSlaveData extends AbstractModel
     public $NewSlaveZone;
 
     /**
-     * @var array New from availability zone attribute.
+     * @var array New secondary availability zone attribute
      */
     public $NewSlaveZoneAttr;
 
     /**
-     * @var array Old availability zone attributes.
+     * @var array Old availability zone attributes
      */
     public $OldSlaveZoneAttr;
 
     /**
-     * @param string $OldMasterZone Old primary availability zone.
+     * @param string $OldMasterZone Old primary AZ
      * @param array $OldSlaveZone Secondary availability zone
-     * @param string $NewMasterZone New primary availability zone.
+     * @param string $NewMasterZone New primary AZ
      * @param array $NewSlaveZone Secondary AZ
-     * @param array $NewSlaveZoneAttr New from availability zone attribute.
-     * @param array $OldSlaveZoneAttr Old availability zone attributes.
+     * @param array $NewSlaveZoneAttr New secondary availability zone attribute
+     * @param array $OldSlaveZoneAttr Old availability zone attributes
      */
     function __construct()
     {
