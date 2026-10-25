@@ -84,14 +84,24 @@ Note:
  * @method Models\CreatePurgeTaskResponse CreatePurgeTask(Models\CreatePurgeTaskRequest $req) When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves the latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
 
 </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
- * @method Models\CreateRealtimeLogDeliveryTaskResponse CreateRealtimeLogDeliveryTask(Models\CreateRealtimeLogDeliveryTaskRequest $req) This API is used to create a real-time log delivery task. The following limits apply:
--When the data delivery type (LogType) is Layer 7 Access Logs, four-layer proxy logs, or edge function logs, an entity (layer-7 domain name, L4 proxy instance, or edge function instance) can only be added to the following combination of real-time log delivery task types (TaskType) under the same combination of data delivery type (LogType) and data delivery area (Area):
--A task that pushes to Tencent Cloud CLS, add an additional task that pushes to a custom HTTP(S) address.
--A task to push to Tencent Cloud CLS, add another task to push to AWS S3-compatible object storage;
--When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the combination of the same data delivery type (LogType) and data delivery Area.
--When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only data delivery types (LogType) of Layer 7 Access Logs (l7-access-logs) or managed rule logs (web-attack). Under the combination of the same site (ZoneId), same data delivery area (Area), and data, each data delivery type (LogType) can only add one real-time log delivery task pushed to EdgeOne log analysis.
+ * @method Models\CreateRealtimeLogDeliveryTaskResponse CreateRealtimeLogDeliveryTask(Models\CreateRealtimeLogDeliveryTaskRequest $req) This API is used to create a real-time log delivery task.
 
-It is advisable to first query the real-time log delivery task list based on the physical entity using the DescribeRealtimeLogDeliveryTasks API (https://www.tencentcloud.com/document/product/1552/104110?from_cn_redirect=1) to check whether the entity has been added to another real-time log delivery task.
+**Restrictions**
+
+An entity (a Layer 7 domain name, a Layer 4 proxy instance, or an Edge Function instance) under the same combination of `LogType` and `Area` can only have one task created for each `TaskType`. The mutual exclusion rules for different `LogType` values are as follows:
+
+| LogType | Conflicting TaskType |
+|---|---|
+| Layer 4 proxy logs, Edge Function execution logs | Choose one of `custom_endpoint`, `s3`, and `aws_s3` |
+
+When `TaskType` is `log_analysis`:
+
+<ul>
+<li>Only `LogType` = `l7-access-logs` or `web-attack` is supported.</li>
+<li>Under the same combination of `ZoneId` and `Area`, only one task can be created for each `LogType`.</li>
+</ul>
+
+**Recommendation**: Before creating a task, call the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.com/document/product/1145/59503) API to query existing tasks and avoid duplicate additions.
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) This interface is the old version of the rule engine creation interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule creation interface, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
  * @method Models\CreateSecurityAPIResourceResponse CreateSecurityAPIResource(Models\CreateSecurityAPIResourceRequest $req) This API is used to create an API resource.
  * @method Models\CreateSecurityAPIServiceResponse CreateSecurityAPIService(Models\CreateSecurityAPIServiceRequest $req) This API is used to create an API service.
@@ -304,7 +314,13 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
  * @method Models\ModifyPlanResponse ModifyPlan(Models\ModifyPlanRequest $req) Modify the plan settings. Currently, only the auto-renewal switch of prepaid plans can be modified.
  * @method Models\ModifyPrefetchOriginLimitResponse ModifyPrefetchOriginLimit(Models\ModifyPrefetchOriginLimitRequest $req) This API is used to configure the origin speed limit. This feature is in beta test.
 This API is used to create, modify and delete preheating origin speed limit restrictions. Each account supports up to 100 restrictions.
- * @method Models\ModifyRealtimeLogDeliveryTaskResponse ModifyRealtimeLogDeliveryTask(Models\ModifyRealtimeLogDeliveryTaskRequest $req) This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType);</li><li>Does not support modifying the data delivery area (Area);</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+ * @method Models\ModifyRealtimeLogDeliveryTaskResponse ModifyRealtimeLogDeliveryTask(Models\ModifyRealtimeLogDeliveryTaskRequest $req) This API is used to modify the configuration of a real-time log delivery task. It has the following limits:
+<ul>
+<li>The destination type (`TaskType`) of a real-time log delivery task cannot be modified;</li>
+<li>The data delivery type (`LogType`) cannot be modified;</li>
+<li>The data delivery region (`Area`) cannot be modified;</li>
+<li>When the destination of the original real-time log delivery task is Tencent Cloud CLS, the destination details such as the log set and log topic cannot be modified.</li>
+</ul>
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) This API is on an earlier version. EdgeOne has comprehensively upgraded the relevant APIs of the rule engine on January 21, 2025. For details about the new version of the API for modifying layer-7 acceleration rules, see ModifyL7AccRule(https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
 <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
  * @method Models\ModifySecurityAPIResourceResponse ModifySecurityAPIResource(Models\ModifySecurityAPIResourceRequest $req) This API is used to modify an API resource.

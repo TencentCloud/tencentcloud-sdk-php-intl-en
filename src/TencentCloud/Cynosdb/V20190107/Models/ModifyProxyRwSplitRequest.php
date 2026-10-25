@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
  * @method string getConsistencyType() Obtain <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
  * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
- * @method string getConsistencyTimeOut() Obtain <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
- * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) Set <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+ * @method string getConsistencyTimeOut() Obtain <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
+ * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) Set <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
  * @method string getWeightMode() Obtain <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
  * @method void setWeightMode(string $WeightMode) Set <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
  * @method array getInstanceWeights() Obtain <p>Instance Read-Only Weight.</p>
@@ -77,7 +77,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ConsistencyType;
 
     /**
-     * @var string <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+     * @var string <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
      */
     public $ConsistencyTimeOut;
 
@@ -160,7 +160,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
      * @param string $ClusterId <p>Cluster ID, for example, cynosdbmysql-asd123</p>
      * @param string $ProxyGroupId <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
      * @param string $ConsistencyType <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
-     * @param string $ConsistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+     * @param string $ConsistencyTimeOut <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
      * @param string $WeightMode <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
      * @param array $InstanceWeights <p>Instance Read-Only Weight.</p>
      * @param string $FailOver <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>

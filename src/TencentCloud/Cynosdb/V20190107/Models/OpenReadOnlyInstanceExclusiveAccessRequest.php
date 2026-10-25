@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenReadOnlyInstanceExclusiveAccess request structure.
  *
- * @method string getClusterId() Obtain Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
- * @method void setClusterId(string $ClusterId) Set Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+ * @method string getClusterId() Obtain Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+ * @method void setClusterId(string $ClusterId) Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
  * @method string getInstanceId() Obtain Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
  * @method void setInstanceId(string $InstanceId) Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
- * @method string getVpcId() Obtain Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
- * @method void setVpcId(string $VpcId) Set Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
- * @method string getSubnetId() Obtain Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
- * @method void setSubnetId(string $SubnetId) Set Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+ * @method string getVpcId() Obtain Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+ * @method void setVpcId(string $VpcId) Set Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+ * @method string getSubnetId() Obtain Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+ * @method void setSubnetId(string $SubnetId) Set Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
  * @method integer getPort() Obtain User-defined port.
  * @method void setPort(integer $Port) Set User-defined port.
  * @method array getSecurityGroupIds() Obtain Security group ID. Please use [View Security Group](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1) to get the SecurityGroupId.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel
 {
     /**
-     * @var string Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * @var string Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
      */
     public $ClusterId;
 
@@ -46,12 +46,12 @@ class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+     * @var string Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
      */
     public $VpcId;
 
     /**
-     * @var string Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * @var string Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public $SubnetId;
 
@@ -66,10 +66,10 @@ class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterId Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * @param string $ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
      * @param string $InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
-     * @param string $VpcId Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
-     * @param string $SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * @param string $VpcId Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+     * @param string $SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      * @param integer $Port User-defined port.
      * @param array $SecurityGroupIds Security group ID. Please use [View Security Group](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1) to get the SecurityGroupId.
      */

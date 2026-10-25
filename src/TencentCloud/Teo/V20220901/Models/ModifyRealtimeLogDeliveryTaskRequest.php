@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRealtimeLogDeliveryTask request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getTaskId() Obtain The ID of the real-time log delivery task.
- * @method void setTaskId(string $TaskId) Set The ID of the real-time log delivery task.
- * @method string getTaskName() Obtain The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
- * @method void setTaskName(string $TaskName) Set The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
- * @method string getDeliveryStatus() Obtain The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
- * @method void setDeliveryStatus(string $DeliveryStatus) Set The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
- * @method array getEntityList() Obtain The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
- * @method void setEntityList(array $EntityList) Set The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
- * @method array getFields() Obtain The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
- * @method void setFields(array $Fields) Set The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
- * @method array getCustomFields() Obtain The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
- * @method void setCustomFields(array $CustomFields) Set The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
- * @method array getDeliveryConditions() Obtain Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
- * @method void setDeliveryConditions(array $DeliveryConditions) Set Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
- * @method integer getSample() Obtain The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
- * @method void setSample(integer $Sample) Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
- * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
- * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
- * @method CustomEndpoint getCustomEndpoint() Obtain The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
- * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
- * @method S3 getS3() Obtain The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
- * @method void setS3(S3 $S3) Set The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
+ * @method string getZoneId() Obtain <p>Site ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
+ * @method string getTaskId() Obtain <p>ID of the real-time log delivery task.</p>
+ * @method void setTaskId(string $TaskId) Set <p>ID of the real-time log delivery task.</p>
+ * @method string getTaskName() Obtain <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
+ * @method void setTaskName(string $TaskName) Set <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
+ * @method string getDeliveryStatus() Obtain <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
+ * @method void setDeliveryStatus(string $DeliveryStatus) Set <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
+ * @method array getEntityList() Obtain <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
+ * @method void setEntityList(array $EntityList) Set <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
+ * @method array getFields() Obtain <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
+ * @method void setFields(array $Fields) Set <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
+ * @method array getCustomFields() Obtain <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
+ * @method void setCustomFields(array $CustomFields) Set <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
+ * @method array getCustomExpressionFields() Obtain <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+ * @method void setCustomExpressionFields(array $CustomExpressionFields) Set <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+ * @method array getDeliveryConditions() Obtain <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
+ * @method void setDeliveryConditions(array $DeliveryConditions) Set <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
+ * @method integer getSample() Obtain <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
+ * @method void setSample(integer $Sample) Set <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
+ * @method LogFormat getLogFormat() Obtain <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
+ * @method void setLogFormat(LogFormat $LogFormat) Set <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
+ * @method CustomEndpoint getCustomEndpoint() Obtain <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
+ * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
+ * @method S3 getS3() Obtain <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
+ * @method void setS3(S3 $S3) Set <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
+ * @method AWSS3 getAWSS3() Obtain <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
+ * @method void setAWSS3(AWSS3 $AWSS3) Set <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
  */
 class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string <p>Site ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string The ID of the real-time log delivery task.
+     * @var string <p>ID of the real-time log delivery task.</p>
      */
     public $TaskId;
 
     /**
-     * @var string The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
+     * @var string <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
      */
     public $TaskName;
 
     /**
-     * @var string The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+     * @var string <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
      */
     public $DeliveryStatus;
 
     /**
-     * @var array The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
+     * @var array <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
      */
     public $EntityList;
 
     /**
-     * @var array The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
+     * @var array <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
      */
     public $Fields;
 
     /**
-     * @var array The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+     * @var array <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
      */
     public $CustomFields;
 
     /**
-     * @var array Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+     * @var array <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+     */
+    public $CustomExpressionFields;
+
+    /**
+     * @var array <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
      */
     public $DeliveryConditions;
 
     /**
-     * @var integer The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
+     * @var integer <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
      */
     public $Sample;
 
     /**
-     * @var LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * @var LogFormat <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
      */
     public $LogFormat;
 
     /**
-     * @var CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
+     * @var CustomEndpoint <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
      */
     public $CustomEndpoint;
 
     /**
-     * @var S3 The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
+     * @var S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
      */
     public $S3;
 
     /**
-     * @param string $ZoneId Zone ID.
-     * @param string $TaskId The ID of the real-time log delivery task.
-     * @param string $TaskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
-     * @param string $DeliveryStatus The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
-     * @param array $EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
-     * @param array $Fields The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
-     * @param array $CustomFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
-     * @param array $DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
-     * @param integer $Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
-     * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
-     * @param CustomEndpoint $CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
-     * @param S3 $S3 The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
+     * @var AWSS3 <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
+     */
+    public $AWSS3;
+
+    /**
+     * @param string $ZoneId <p>Site ID.</p>
+     * @param string $TaskId <p>ID of the real-time log delivery task.</p>
+     * @param string $TaskName <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
+     * @param string $DeliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
+     * @param array $EntityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
+     * @param array $Fields <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
+     * @param array $CustomFields <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
+     * @param array $CustomExpressionFields <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+     * @param array $DeliveryConditions <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
+     * @param integer $Sample <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
+     * @param LogFormat $LogFormat <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
+     * @param CustomEndpoint $CustomEndpoint <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
+     * @param S3 $S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
+     * @param AWSS3 $AWSS3 <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
      */
     function __construct()
     {
@@ -183,6 +183,15 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("CustomExpressionFields",$param) and $param["CustomExpressionFields"] !== null) {
+            $this->CustomExpressionFields = [];
+            foreach ($param["CustomExpressionFields"] as $key => $value){
+                $obj = new CustomExpressionField();
+                $obj->deserialize($value);
+                array_push($this->CustomExpressionFields, $obj);
+            }
+        }
+
         if (array_key_exists("DeliveryConditions",$param) and $param["DeliveryConditions"] !== null) {
             $this->DeliveryConditions = [];
             foreach ($param["DeliveryConditions"] as $key => $value){
@@ -209,6 +218,11 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
         if (array_key_exists("S3",$param) and $param["S3"] !== null) {
             $this->S3 = new S3();
             $this->S3->deserialize($param["S3"]);
+        }
+
+        if (array_key_exists("AWSS3",$param) and $param["AWSS3"] !== null) {
+            $this->AWSS3 = new AWSS3();
+            $this->AWSS3->deserialize($param["AWSS3"]);
         }
     }
 }

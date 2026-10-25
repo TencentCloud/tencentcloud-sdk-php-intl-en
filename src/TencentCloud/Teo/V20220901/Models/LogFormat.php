@@ -18,29 +18,29 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output format for real-time log delivery. You can directly use the specified predefined log output format (JSON Lines / csv) through the FormatType parameter, or define a variant output format through additional parameters based on the predefined log output format. For usage details, see Custom Log Output Format (https://www.tencentcloud.com/document/product/1552/110448?from_cn_redirect=1).
+ * Output format for real-time log delivery. You can directly use the specified predefined log output format (JSON Lines / csv) through the FormatType parameter, or define a variant output format through additional parameters based on the predefined log output format. For usage details, see [Custom Log Output Format](https://www.tencentcloud.com/document/product/1552/110448?from_cn_redirect=1).
  *
- * @method string getFormatType() Obtain <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
- * @method void setFormatType(string $FormatType) Set <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+ * @method string getFormatType() Obtain <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
+ * @method void setFormatType(string $FormatType) Set <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
  * @method string getBatchPrefix() Obtain <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
  * @method void setBatchPrefix(string $BatchPrefix) Set <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
  * @method string getBatchSuffix() Obtain <p>A string appended after each log delivery batch.</p>
  * @method void setBatchSuffix(string $BatchSuffix) Set <p>A string appended after each log delivery batch.</p>
- * @method string getRecordPrefix() Obtain <p>Log prefix, a string added before each log record.</p>
- * @method void setRecordPrefix(string $RecordPrefix) Set <p>Log prefix, a string added before each log record.</p>
- * @method string getRecordSuffix() Obtain <p>Single-line log suffix, a string appended after each log record.</p>
- * @method void setRecordSuffix(string $RecordSuffix) Set <p>Single-line log suffix, a string appended after each log record.</p>
- * @method string getRecordDelimiter() Obtain <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
- * @method void setRecordDelimiter(string $RecordDelimiter) Set <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
- * @method string getRecordTemplate() Obtain <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
- * @method void setRecordTemplate(string $RecordTemplate) Set <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
- * @method string getFieldDelimiter() Obtain <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
- * @method void setFieldDelimiter(string $FieldDelimiter) Set <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+ * @method string getRecordPrefix() Obtain <p>Prefix of a single log entry. String added before each log record.</p>
+ * @method void setRecordPrefix(string $RecordPrefix) Set <p>Prefix of a single log entry. String added before each log record.</p>
+ * @method string getRecordSuffix() Obtain <p>Suffix of a single log entry. String appended after each log record.</p>
+ * @method void setRecordSuffix(string $RecordSuffix) Set <p>Suffix of a single log entry. String appended after each log record.</p>
+ * @method string getRecordDelimiter() Obtain <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
+ * @method void setRecordDelimiter(string $RecordDelimiter) Set <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
+ * @method string getRecordTemplate() Obtain <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
+ * @method void setRecordTemplate(string $RecordTemplate) Set <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
+ * @method string getFieldDelimiter() Obtain <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
+ * @method void setFieldDelimiter(string $FieldDelimiter) Set <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
  */
 class LogFormat extends AbstractModel
 {
     /**
-     * @var string <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+     * @var string <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
      */
     public $FormatType;
 
@@ -55,39 +55,39 @@ class LogFormat extends AbstractModel
     public $BatchSuffix;
 
     /**
-     * @var string <p>Log prefix, a string added before each log record.</p>
+     * @var string <p>Prefix of a single log entry. String added before each log record.</p>
      */
     public $RecordPrefix;
 
     /**
-     * @var string <p>Single-line log suffix, a string appended after each log record.</p>
+     * @var string <p>Suffix of a single log entry. String appended after each log record.</p>
      */
     public $RecordSuffix;
 
     /**
-     * @var string <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
+     * @var string <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
      */
     public $RecordDelimiter;
 
     /**
-     * @var string <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+     * @var string <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
      */
     public $RecordTemplate;
 
     /**
-     * @var string <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+     * @var string <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
      */
     public $FieldDelimiter;
 
     /**
-     * @param string $FormatType <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+     * @param string $FormatType <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
      * @param string $BatchPrefix <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
      * @param string $BatchSuffix <p>A string appended after each log delivery batch.</p>
-     * @param string $RecordPrefix <p>Log prefix, a string added before each log record.</p>
-     * @param string $RecordSuffix <p>Single-line log suffix, a string appended after each log record.</p>
-     * @param string $RecordDelimiter <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
-     * @param string $RecordTemplate <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
-     * @param string $FieldDelimiter <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+     * @param string $RecordPrefix <p>Prefix of a single log entry. String added before each log record.</p>
+     * @param string $RecordSuffix <p>Suffix of a single log entry. String appended after each log record.</p>
+     * @param string $RecordDelimiter <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
+     * @param string $RecordTemplate <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
+     * @param string $FieldDelimiter <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
      */
     function __construct()
     {

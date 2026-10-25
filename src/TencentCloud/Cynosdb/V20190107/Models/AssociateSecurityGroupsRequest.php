@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateSecurityGroups request structure.
  *
- * @method array getInstanceIds() Obtain Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
- * @method void setInstanceIds(array $InstanceIds) Set Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+ * @method array getInstanceIds() Obtain Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+ * @method void setInstanceIds(array $InstanceIds) Set Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
  * @method array getSecurityGroupIds() Obtain Security group ID list to modify, which is an array of one or more security group IDs.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID list to modify, which is an array of one or more security group IDs.
  * @method string getZone() Obtain Availability zone
@@ -32,8 +32,8 @@ Description: To get the instance group ID of a cluster, perform [Query cluster i
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * @var array Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      */
     public $InstanceIds;
 
@@ -49,8 +49,8 @@ Description: To get the instance group ID of a cluster, perform [Query cluster i
     public $Zone;
 
     /**
-     * @param array $InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * @param array $InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      * @param array $SecurityGroupIds Security group ID list to modify, which is an array of one or more security group IDs.
      * @param string $Zone Availability zone
      */

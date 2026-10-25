@@ -18,12 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom log fields in a real-time log delivery task are customizable and support value expression configurations. For usage details, see [Custom Log Field Expression]().
+ * Custom log field in a real-time log delivery task. You can define a custom field name and configure a value expression for it. For details, see [Custom Log Field Expressions](https://www.tencentcloud.com/document/product/1145/61302).
  *
  * @method string getName() Obtain <p>Custom log field name. Enter 1-100 characters. Allowed characters are letters, digits, and _. It must start with a letter. This name must be unique.</p>
  * @method void setName(string $Name) Set <p>Custom log field name. Enter 1-100 characters. Allowed characters are letters, digits, and _. It must start with a letter. This name must be unique.</p>
- * @method string getExpression() Obtain <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
- * @method void setExpression(string $Expression) Set <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+ * @method string getExpression() Obtain <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
+ * @method void setExpression(string $Expression) Set <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
  * @method boolean getEnabled() Obtain <p>Whether to deliver this field. If left blank, it means not to deliver this field.</p>
  * @method void setEnabled(boolean $Enabled) Set <p>Whether to deliver this field. If left blank, it means not to deliver this field.</p>
  */
@@ -35,7 +35,7 @@ class CustomExpressionField extends AbstractModel
     public $Name;
 
     /**
-     * @var string <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+     * @var string <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
      */
     public $Expression;
 
@@ -46,7 +46,7 @@ class CustomExpressionField extends AbstractModel
 
     /**
      * @param string $Name <p>Custom log field name. Enter 1-100 characters. Allowed characters are letters, digits, and _. It must start with a letter. This name must be unique.</p>
-     * @param string $Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+     * @param string $Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
      * @param boolean $Enabled <p>Whether to deliver this field. If left blank, it means not to deliver this field.</p>
      */
     function __construct()

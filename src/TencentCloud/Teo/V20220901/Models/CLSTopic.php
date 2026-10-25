@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The configuration information of real-time log delivery to Tencent Cloud CLS
+ * Configuration information of real-time log delivery to Tencent Cloud CLS.
  *
- * @method string getLogSetId() Obtain The ID of the Tencent Cloud CLS log set.
- * @method void setLogSetId(string $LogSetId) Set The ID of the Tencent Cloud CLS log set.
- * @method string getTopicId() Obtain The ID of the Tencent Cloud CLS log topic.
- * @method void setTopicId(string $TopicId) Set The ID of the Tencent Cloud CLS log topic.
- * @method string getLogSetRegion() Obtain The region of the Tencent Cloud CLS log set.
- * @method void setLogSetRegion(string $LogSetRegion) Set The region of the Tencent Cloud CLS log set.
+ * @method string getLogSetId() Obtain Tencent Cloud CLS log set ID.	
+ * @method void setLogSetId(string $LogSetId) Set Tencent Cloud CLS log set ID.	
+ * @method string getTopicId() Obtain Tencent Cloud CLS log topic ID.
+ * @method void setTopicId(string $TopicId) Set Tencent Cloud CLS log topic ID.
+ * @method string getLogSetRegion() Obtain Region of the Tencent Cloud CLS log set.
+ * @method void setLogSetRegion(string $LogSetRegion) Set Region of the Tencent Cloud CLS log set.
  */
 class CLSTopic extends AbstractModel
 {
     /**
-     * @var string The ID of the Tencent Cloud CLS log set.
+     * @var string Tencent Cloud CLS log set ID.	
      */
     public $LogSetId;
 
     /**
-     * @var string The ID of the Tencent Cloud CLS log topic.
+     * @var string Tencent Cloud CLS log topic ID.
      */
     public $TopicId;
 
     /**
-     * @var string The region of the Tencent Cloud CLS log set.
+     * @var string Region of the Tencent Cloud CLS log set.
      */
     public $LogSetRegion;
 
     /**
-     * @param string $LogSetId The ID of the Tencent Cloud CLS log set.
-     * @param string $TopicId The ID of the Tencent Cloud CLS log topic.
-     * @param string $LogSetRegion The region of the Tencent Cloud CLS log set.
+     * @param string $LogSetId Tencent Cloud CLS log set ID.	
+     * @param string $TopicId Tencent Cloud CLS log topic ID.
+     * @param string $LogSetRegion Region of the Tencent Cloud CLS log set.
      */
     function __construct()
     {
