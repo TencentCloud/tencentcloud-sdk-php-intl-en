@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() Obtain 
  * @method void setResourceId(string $ResourceId) Set 
+ * @method string getOutputAudioFormat() Obtain 
+ * @method void setOutputAudioFormat(string $OutputAudioFormat) Set 
  */
 class AigcAudioExtraParam extends AbstractModel
 {
@@ -31,7 +33,13 @@ class AigcAudioExtraParam extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var string 
+     */
+    public $OutputAudioFormat;
+
+    /**
      * @param string $ResourceId 
+     * @param string $OutputAudioFormat 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AigcAudioExtraParam extends AbstractModel
         }
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("OutputAudioFormat",$param) and $param["OutputAudioFormat"] !== null) {
+            $this->OutputAudioFormat = $param["OutputAudioFormat"];
         }
     }
 }

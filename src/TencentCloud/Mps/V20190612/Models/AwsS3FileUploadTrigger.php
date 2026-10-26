@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getS3Bucket() Obtain The AWS S3 bucket bound to the scheme.
  * @method void setS3Bucket(string $S3Bucket) Set The AWS S3 bucket bound to the scheme.
- * @method string getS3Region() Obtain The region of the AWS S3 bucket.
- * @method void setS3Region(string $S3Region) Set The region of the AWS S3 bucket.
+ * @method string getS3Region() Obtain The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
+ * @method void setS3Region(string $S3Region) Set The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
  * @method string getDir() Obtain The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
  * @method void setDir(string $Dir) Set The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
  * @method array getFormats() Obtain The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
@@ -45,7 +47,8 @@ class AwsS3FileUploadTrigger extends AbstractModel
     public $S3Bucket;
 
     /**
-     * @var string The region of the AWS S3 bucket.
+     * @var string The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
      */
     public $S3Region;
 
@@ -77,7 +80,8 @@ Note: The queue and bucket need to be in the same region.
 
     /**
      * @param string $S3Bucket The AWS S3 bucket bound to the scheme.
-     * @param string $S3Region The region of the AWS S3 bucket.
+     * @param string $S3Region The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
      * @param string $Dir The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
      * @param array $Formats The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
      * @param string $S3SecretId Secret key ID of the bound AWS S3 bucket.

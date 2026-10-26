@@ -20,54 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkflows request structure.
  *
- * @method array getWorkflowIds() Obtain Workflow ID filter. Array length limit: 100.
- * @method void setWorkflowIds(array $WorkflowIds) Set Workflow ID filter. Array length limit: 100.
- * @method string getStatus() Obtain Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
- * @method void setStatus(string $Status) Set Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
- * @method integer getOffset() Obtain Paging offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method array getWorkflowIds() Obtain <p>Workflow ID filter condition, with an array length limit of 100.</p>
+ * @method void setWorkflowIds(array $WorkflowIds) Set <p>Workflow ID filter condition, with an array length limit of 100.</p>
+ * @method string getStatus() Obtain <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
+ * @method void setStatus(string $Status) Set <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
+ * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
  */
 class DescribeWorkflowsRequest extends AbstractModel
 {
     /**
-     * @var array Workflow ID filter. Array length limit: 100.
+     * @var array <p>Workflow ID filter condition, with an array length limit of 100.</p>
      */
     public $WorkflowIds;
 
     /**
-     * @var string Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
+     * @var string <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
      */
     public $Status;
 
     /**
-     * @var integer Paging offset. Default value: 0.
+     * @var integer <p>Paging offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
+     * @var integer <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @param array $WorkflowIds Workflow ID filter. Array length limit: 100.
-     * @param string $Status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
-     * @param integer $Offset Paging offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param array $WorkflowIds <p>Workflow ID filter condition, with an array length limit of 100.</p>
+     * @param string $Status <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
+     * @param integer $Offset <p>Paging offset. Default value: 0.</p>
+     * @param integer $Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     function __construct()
     {

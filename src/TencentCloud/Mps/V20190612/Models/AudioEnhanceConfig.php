@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeparate(AudioSeparateConfig $Separate) Set <p>Audio separation configuration.</p>
  * @method VolumeBalanceConfig getVolumeBalance() Obtain <p>Volume equalization configuration.</p>
  * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set <p>Volume equalization configuration.</p>
- * @method AudioBeautifyConfig getBeautify() Obtain <p>Audio beautification configurations.</p>
- * @method void setBeautify(AudioBeautifyConfig $Beautify) Set <p>Audio beautification configurations.</p>
+ * @method AudioBeautifyConfig getBeautify() Obtain <p>Audio improvement configuration.</p>
+ * @method void setBeautify(AudioBeautifyConfig $Beautify) Set <p>Audio improvement configuration.</p>
  * @method AudioEnhanceEditConfig getAudioEnhanceEdit() Obtain <p>Audio enhancement edit.</p>
  * @method void setAudioEnhanceEdit(AudioEnhanceEditConfig $AudioEnhanceEdit) Set <p>Audio enhancement edit.</p>
  */
@@ -49,7 +49,7 @@ class AudioEnhanceConfig extends AbstractModel
     public $VolumeBalance;
 
     /**
-     * @var AudioBeautifyConfig <p>Audio beautification configurations.</p>
+     * @var AudioBeautifyConfig <p>Audio improvement configuration.</p>
      */
     public $Beautify;
 
@@ -62,7 +62,7 @@ class AudioEnhanceConfig extends AbstractModel
      * @param AudioDenoiseConfig $Denoise <p>Audio noise reduction configuration.</p>
      * @param AudioSeparateConfig $Separate <p>Audio separation configuration.</p>
      * @param VolumeBalanceConfig $VolumeBalance <p>Volume equalization configuration.</p>
-     * @param AudioBeautifyConfig $Beautify <p>Audio beautification configurations.</p>
+     * @param AudioBeautifyConfig $Beautify <p>Audio improvement configuration.</p>
      * @param AudioEnhanceEditConfig $AudioEnhanceEdit <p>Audio enhancement edit.</p>
      */
     function __construct()

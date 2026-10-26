@@ -18,50 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Workflow information details.
+ * Workflow information description.
  *
  * @method integer getWorkflowId() Obtain Workflow ID.
  * @method void setWorkflowId(integer $WorkflowId) Set Workflow ID.
  * @method string getWorkflowName() Obtain Workflow name.
  * @method void setWorkflowName(string $WorkflowName) Set Workflow name.
  * @method string getStatus() Obtain Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
  * @method void setStatus(string $Status) Set Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
- * @method WorkflowTrigger getTrigger() Obtain Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
- * @method void setTrigger(WorkflowTrigger $Trigger) Set Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
- * @method TaskOutputStorage getOutputStorage() Obtain The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Video content analysis task parameter.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTaskPriority() Obtain Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
- * @method void setTaskPriority(integer $TaskPriority) Set Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
- * @method string getOutputDir() Obtain The directory to save the media processing output file, such as `/movie/201907/`.
- * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, such as `/movie/201907/`.
- * @method string getCreateTime() Obtain Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setCreateTime(string $CreateTime) Set Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getUpdateTime() Obtain Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method WorkflowTrigger getTrigger() Obtain The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
+ * @method void setTrigger(WorkflowTrigger $Trigger) Set The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
+ * @method TaskOutputStorage getOutputStorage() Obtain 
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain 
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set 
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain 
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set 
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
+ * @method TaskNotifyConfig getTaskNotifyConfig() Obtain 
+ * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set 
+ * @method integer getTaskPriority() Obtain Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method void setTaskPriority(integer $TaskPriority) Set Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+ * @method string getOutputDir() Obtain Storage directory for the output file, such as `/movie/201907/`.
+ * @method void setOutputDir(string $OutputDir) Set Storage directory for the output file, such as `/movie/201907/`.
+ * @method string getCreateTime() Obtain Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setCreateTime(string $CreateTime) Set Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUpdateTime() Obtain Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class WorkflowInfo extends AbstractModel
 {
@@ -77,68 +67,63 @@ class WorkflowInfo extends AbstractModel
 
     /**
      * @var string Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
      */
     public $Status;
 
     /**
-     * @var WorkflowTrigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+     * @var WorkflowTrigger The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
      */
     public $Trigger;
 
     /**
-     * @var TaskOutputStorage The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var TaskOutputStorage 
      */
     public $OutputStorage;
 
     /**
-     * @var MediaProcessTaskInput The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var MediaProcessTaskInput 
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiContentReviewTaskInput 
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput Video content analysis task parameter.
+     * @var AiAnalysisTaskInput 
      */
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskInput 
      */
     public $AiRecognitionTask;
 
     /**
-     * @var TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TaskNotifyConfig 
      */
     public $TaskNotifyConfig;
 
     /**
-     * @var integer Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+     * @var integer Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public $TaskPriority;
 
     /**
-     * @var string The directory to save the media processing output file, such as `/movie/201907/`.
+     * @var string Storage directory for the output file, such as `/movie/201907/`.
      */
     public $OutputDir;
 
     /**
-     * @var string Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $UpdateTime;
 
@@ -146,24 +131,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $WorkflowId Workflow ID.
      * @param string $WorkflowName Workflow name.
      * @param string $Status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
-     * @param WorkflowTrigger $Trigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-     * @param TaskOutputStorage $OutputStorage The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MediaProcessTaskInput $MediaProcessTask The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
-     * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TaskPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-     * @param string $OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
-     * @param string $CreateTime Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $UpdateTime Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param WorkflowTrigger $Trigger The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
+     * @param TaskOutputStorage $OutputStorage 
+     * @param MediaProcessTaskInput $MediaProcessTask 
+     * @param AiContentReviewTaskInput $AiContentReviewTask 
+     * @param AiAnalysisTaskInput $AiAnalysisTask 
+     * @param AiRecognitionTaskInput $AiRecognitionTask 
+     * @param TaskNotifyConfig $TaskNotifyConfig 
+     * @param integer $TaskPriority Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param string $OutputDir Storage directory for the output file, such as `/movie/201907/`.
+     * @param string $CreateTime Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $UpdateTime Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

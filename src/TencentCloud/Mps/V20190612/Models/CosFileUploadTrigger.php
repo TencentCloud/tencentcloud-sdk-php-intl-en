@@ -20,35 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input rule bound to COS.
  *
- * @method string getBucket() Obtain Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
- * @method void setBucket(string $Bucket) Set Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
+ * @method string getBucket() Obtain Name of the COS Bucket bound to the workflow, for example, TopRankVideo-125xxx88.
+ * @method void setBucket(string $Bucket) Set Name of the COS Bucket bound to the workflow, for example, TopRankVideo-125xxx88.
  * @method string getRegion() Obtain Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
  * @method void setRegion(string $Region) Set Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
- * @method string getDir() Obtain Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
- * @method void setDir(string $Dir) Set Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
+ * @method string getDir() Obtain The bucket directory bound to a workflow. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.
+ * @method void setDir(string $Dir) Set The bucket directory bound to a workflow. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.
  * @method array getFormats() Obtain All supported formats are as follows:
+
 - Video file extension. The following 15 options are supported:
-`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, `.m4v`
+
 - Audio file extension. The following 7 options are supported:
-`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, `.amr`
+
 - Subtitle file extension. The following 2 options are supported:
-`.vtt` and `.srt`.
-- `*`: any file format is supported.
-- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
-**Note**:
+`.vtt`, `.srt`
+
+- `*`: any file format is supported.- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).**Note**:
 1. If the input format list includes `*`, it indicates that any file format is supported.
 2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
 3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
  * @method void setFormats(array $Formats) Set All supported formats are as follows:
+
 - Video file extension. The following 15 options are supported:
-`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, `.m4v`
+
 - Audio file extension. The following 7 options are supported:
-`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, `.amr`
+
 - Subtitle file extension. The following 2 options are supported:
-`.vtt` and `.srt`.
-- `*`: any file format is supported.
-- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
-**Note**:
+`.vtt`, `.srt`
+
+- `*`: any file format is supported.- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).**Note**:
 1. If the input format list includes `*`, it indicates that any file format is supported.
 2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
 3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
@@ -56,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class CosFileUploadTrigger extends AbstractModel
 {
     /**
-     * @var string Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
+     * @var string Name of the COS Bucket bound to the workflow, for example, TopRankVideo-125xxx88.
      */
     public $Bucket;
 
@@ -66,21 +70,23 @@ class CosFileUploadTrigger extends AbstractModel
     public $Region;
 
     /**
-     * @var string Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
+     * @var string The bucket directory bound to a workflow. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.
      */
     public $Dir;
 
     /**
      * @var array All supported formats are as follows:
+
 - Video file extension. The following 15 options are supported:
-`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, `.m4v`
+
 - Audio file extension. The following 7 options are supported:
-`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, `.amr`
+
 - Subtitle file extension. The following 2 options are supported:
-`.vtt` and `.srt`.
-- `*`: any file format is supported.
-- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
-**Note**:
+`.vtt`, `.srt`
+
+- `*`: any file format is supported.- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).**Note**:
 1. If the input format list includes `*`, it indicates that any file format is supported.
 2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
 3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
@@ -88,19 +94,21 @@ class CosFileUploadTrigger extends AbstractModel
     public $Formats;
 
     /**
-     * @param string $Bucket Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
+     * @param string $Bucket Name of the COS Bucket bound to the workflow, for example, TopRankVideo-125xxx88.
      * @param string $Region Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
-     * @param string $Dir Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
+     * @param string $Dir The bucket directory bound to a workflow. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.
      * @param array $Formats All supported formats are as follows:
+
 - Video file extension. The following 15 options are supported:
-`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, `.m4v`
+
 - Audio file extension. The following 7 options are supported:
-`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, `.amr`
+
 - Subtitle file extension. The following 2 options are supported:
-`.vtt` and `.srt`.
-- `*`: any file format is supported.
-- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
-**Note**:
+`.vtt`, `.srt`
+
+- `*`: any file format is supported.- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).**Note**:
 1. If the input format list includes `*`, it indicates that any file format is supported.
 2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
 3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.

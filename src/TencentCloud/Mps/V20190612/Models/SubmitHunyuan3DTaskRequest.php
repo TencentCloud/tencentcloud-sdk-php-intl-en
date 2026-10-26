@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeed(integer $Seed) Set <p>Random Seed. The result can be reproduced with identical Seed input.</p>
  * @method string getStyle() Obtain <p>Style control words</p>
  * @method void setStyle(string $Style) Set <p>Style control words</p>
+ * @method AigcStoreCosParam getStoreCosParam() Obtain <p>COS bucket that the customer applies to create</p>
+ * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) Set <p>COS bucket that the customer applies to create</p>
  */
 class SubmitHunyuan3DTaskRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class SubmitHunyuan3DTaskRequest extends AbstractModel
     public $Style;
 
     /**
+     * @var AigcStoreCosParam <p>COS bucket that the customer applies to create</p>
+     */
+    public $StoreCosParam;
+
+    /**
      * @param string $Prompt <p>Prompt for text-to-3D</p><p>Input limit: up to 1024 utf-8 characters</p>
      * @param string $ImageUrl <p>Image URL (http/https) for image-to-3D</p>
      * @param array $MultiViewImages <p>Generate 3D from multi-perspective images. At least 2 images are required, and a front view must be included.</p>
@@ -112,6 +119,7 @@ class SubmitHunyuan3DTaskRequest extends AbstractModel
      * @param string $ResultFormat <p>A format attached to the output in addition to the default obj + glb. Currently only support FBX</p>
      * @param integer $Seed <p>Random Seed. The result can be reproduced with identical Seed input.</p>
      * @param string $Style <p>Style control words</p>
+     * @param AigcStoreCosParam $StoreCosParam <p>COS bucket that the customer applies to create</p>
      */
     function __construct()
     {
@@ -173,6 +181,11 @@ class SubmitHunyuan3DTaskRequest extends AbstractModel
 
         if (array_key_exists("Style",$param) and $param["Style"] !== null) {
             $this->Style = $param["Style"];
+        }
+
+        if (array_key_exists("StoreCosParam",$param) and $param["StoreCosParam"] !== null) {
+            $this->StoreCosParam = new AigcStoreCosParam();
+            $this->StoreCosParam->deserialize($param["StoreCosParam"]);
         }
     }
 }

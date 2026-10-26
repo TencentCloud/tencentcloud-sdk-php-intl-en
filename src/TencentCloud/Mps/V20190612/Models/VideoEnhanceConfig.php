@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrameRateWithDen(FrameRateWithDenConfig $FrameRateWithDen) Set <p>New frame interpolation frame rate configuration, supporting fractions. Note that you can only choose one between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
  * @method AiRestorationConfig getAiRestoration() Obtain <p>Large model repair configuration. Note that at most one of large model, comprehensive enhancement, and jitter removal can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.</p>
  * @method void setAiRestoration(AiRestorationConfig $AiRestoration) Set <p>Large model repair configuration. Note that at most one of large model, comprehensive enhancement, and jitter removal can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.</p>
- * @method DiffusionEnhanceV2Config getDiffusionEnhanceV2() Obtain <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
- * @method void setDiffusionEnhanceV2(DiffusionEnhanceV2Config $DiffusionEnhanceV2) Set <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+ * @method DiffusionEnhanceV2Config getDiffusionEnhanceV2() Obtain <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
+ * @method void setDiffusionEnhanceV2(DiffusionEnhanceV2Config $DiffusionEnhanceV2) Set <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
  */
 class VideoEnhanceConfig extends AbstractModel
 {
@@ -117,7 +117,7 @@ class VideoEnhanceConfig extends AbstractModel
     public $AiRestoration;
 
     /**
-     * @var DiffusionEnhanceV2Config <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+     * @var DiffusionEnhanceV2Config <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
      */
     public $DiffusionEnhanceV2;
 
@@ -135,7 +135,7 @@ class VideoEnhanceConfig extends AbstractModel
      * @param DiffusionEnhanceConfig $DiffusionEnhance <p>Large model enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super resolution and noise reduction.</p>
      * @param FrameRateWithDenConfig $FrameRateWithDen <p>New frame interpolation frame rate configuration, supporting fractions. Note that you can only choose one between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
      * @param AiRestorationConfig $AiRestoration <p>Large model repair configuration. Note that at most one of large model, comprehensive enhancement, and jitter removal can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.</p>
-     * @param DiffusionEnhanceV2Config $DiffusionEnhanceV2 <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+     * @param DiffusionEnhanceV2Config $DiffusionEnhanceV2 <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
      */
     function __construct()
     {

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileUrl(array $FileUrl) Set <p>Document link for video generation.</p><p>Supported document types: pdf, pptx, docx, png, jpg<br>Document count limit: 3<br>Document size limit: 10MB<br>Document page limit: 100</p>
  * @method string getPrompt() Obtain <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
  * @method void setPrompt(string $Prompt) Set <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
- * @method string getModelName() Obtain <p>Document-to-video model name</p><p>Default value: Wand</p>
- * @method void setModelName(string $ModelName) Set <p>Document-to-video model name</p><p>Default value: Wand</p>
- * @method string getModelVersion() Obtain <p>Document-to-video model version number</p><p>Default value: 1.0</p>
- * @method void setModelVersion(string $ModelVersion) Set <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+ * @method string getModelVersion() Obtain <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
+ * @method void setModelVersion(string $ModelVersion) Set <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
+ * @method string getModelName() Obtain <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+ * @method void setModelName(string $ModelName) Set <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
  * @method string getRatio() Obtain <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
  * @method void setRatio(string $Ratio) Set <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
  * @method string getLanguage() Obtain <p>Language of the generated video.</p><p>Enumeration values: </p><ul><li>zh: Chinese</li><li>en: English</li><li>ja: Japanese</li><li>ko: Korean</li><li>ru: Russian</li><li>fr: French</li><li>es: Spanish</li><li>de: German</li></ul><p>Default value: zh</p>
@@ -62,14 +62,14 @@ class DocToVideoInput extends AbstractModel
     public $Prompt;
 
     /**
-     * @var string <p>Document-to-video model name</p><p>Default value: Wand</p>
-     */
-    public $ModelName;
-
-    /**
-     * @var string <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+     * @var string <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
      */
     public $ModelVersion;
+
+    /**
+     * @var string <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+     */
+    public $ModelName;
 
     /**
      * @var string <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
@@ -124,8 +124,8 @@ class DocToVideoInput extends AbstractModel
     /**
      * @param array $FileUrl <p>Document link for video generation.</p><p>Supported document types: pdf, pptx, docx, png, jpg<br>Document count limit: 3<br>Document size limit: 10MB<br>Document page limit: 100</p>
      * @param string $Prompt <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
-     * @param string $ModelName <p>Document-to-video model name</p><p>Default value: Wand</p>
-     * @param string $ModelVersion <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+     * @param string $ModelVersion <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
+     * @param string $ModelName <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
      * @param string $Ratio <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
      * @param string $Language <p>Language of the generated video.</p><p>Enumeration values: </p><ul><li>zh: Chinese</li><li>en: English</li><li>ja: Japanese</li><li>ko: Korean</li><li>ru: Russian</li><li>fr: French</li><li>es: Spanish</li><li>de: German</li></ul><p>Default value: zh</p>
      * @param integer $ReferenceDuration <p>Video duration for reference.</p><p>This is not an exact duration; it serves as a reference for the LLM only.</p><p>Range: [15, 1200]</p><p>Unit: second</p>
@@ -158,12 +158,12 @@ class DocToVideoInput extends AbstractModel
             $this->Prompt = $param["Prompt"];
         }
 
-        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
-            $this->ModelName = $param["ModelName"];
-        }
-
         if (array_key_exists("ModelVersion",$param) and $param["ModelVersion"] !== null) {
             $this->ModelVersion = $param["ModelVersion"];
+        }
+
+        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
+            $this->ModelName = $param["ModelName"];
         }
 
         if (array_key_exists("Ratio",$param) and $param["Ratio"] !== null) {

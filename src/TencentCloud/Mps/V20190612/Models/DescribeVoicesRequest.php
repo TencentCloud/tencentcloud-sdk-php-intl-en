@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set <p>Tag.</p>
  * @method array getScenes() Obtain <p>Scenario.</p>
  * @method void setScenes(array $Scenes) Set <p>Scenario.</p>
+ * @method integer getPageNum() Obtain <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+ * @method void setPageNum(integer $PageNum) Set <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+ * @method integer getPageSize() Obtain <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+ * @method void setPageSize(integer $PageSize) Set <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
  * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
 voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
  * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
@@ -91,6 +95,16 @@ class DescribeVoicesRequest extends AbstractModel
     public $Scenes;
 
     /**
+     * @var integer <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+     */
+    public $PageNum;
+
+    /**
+     * @var integer <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+     */
+    public $PageSize;
+
+    /**
      * @var string <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
 voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
      */
@@ -106,6 +120,8 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
      * @param array $Languages <p>Language.</p>
      * @param array $Labels <p>Tag.</p>
      * @param array $Scenes <p>Scenario.</p>
+     * @param integer $PageNum <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+     * @param integer $PageSize <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
      * @param string $ExtParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
 voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
      */
@@ -156,6 +172,14 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
 
         if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
             $this->Scenes = $param["Scenes"];
+        }
+
+        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
+            $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
 
         if (array_key_exists("ExtParam",$param) and $param["ExtParam"] !== null) {

@@ -153,7 +153,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeVoicesResponse DescribeVoices(Models\DescribeVoicesRequest $req) This synchronous API is used to query available voices. It supports filtering voices by type, tag, language, and other criteria.
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) This API is used to query custom watermarking templates and supports paged queries by filters.
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) This API is used to perform paged queries of keyword sample information by use case, keyword, and tag.
- * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) This API is used to get the list of workflow details by workflow ID.
+ * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) Based on the workflow ID, get the workflow details list.
  * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) This API is used to design a voice. It generates a voice ID based on a prompt. The default maximum number of cloned or designed voices is 100.
  * @method Models\DetectVideoSubtitleAreaResponse DetectVideoSubtitleArea(Models\DetectVideoSubtitleAreaRequest $req) This API is used to quickly detect the hard subtitle area in a video file.
  * @method Models\DetectVideoWatermarkResponse DetectVideoWatermark(Models\DetectVideoWatermarkRequest $req) This API is used to quickly detect whether a video file contains a watermark.
