@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenReadOnlyInstanceExclusiveAccess request structure.
  *
- * @method string getClusterId() Obtain Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
- * @method void setClusterId(string $ClusterId) Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
- * @method string getInstanceId() Obtain Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
- * @method void setInstanceId(string $InstanceId) Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+ * @method string getClusterId() Obtain Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
+ * @method void setClusterId(string $ClusterId) Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
+ * @method string getInstanceId() Obtain Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
+ * @method void setInstanceId(string $InstanceId) Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
  * @method string getVpcId() Obtain Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
  * @method void setVpcId(string $VpcId) Set Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
  * @method string getSubnetId() Obtain Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel
 {
     /**
-     * @var string Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * @var string Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
      */
     public $ClusterId;
 
     /**
-     * @var string Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+     * @var string Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
      */
     public $InstanceId;
 
@@ -66,8 +66,8 @@ class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
-     * @param string $InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+     * @param string $ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
+     * @param string $InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
      * @param string $VpcId Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
      * @param string $SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      * @param integer $Port User-defined port.

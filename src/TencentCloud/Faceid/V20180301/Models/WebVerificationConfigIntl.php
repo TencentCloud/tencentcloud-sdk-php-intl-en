@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSkip(boolean $AutoSkip) Set <p>Whether to skip the result display page and automatically jump to RedirectURL when verification is successful. Default false.</p>
  * @method integer getCheckMode() Obtain <p>Detection mode. Parameter values are as follows:<br>1: OCR+liveness detection+face comparison;<br>2: liveness detection+face comparison;<br>3: liveness detection;<br>4: OCR;<br>Default value is 2.</p>
  * @method void setCheckMode(integer $CheckMode) Set <p>Detection mode. Parameter values are as follows:<br>1: OCR+liveness detection+face comparison;<br>2: liveness detection+face comparison;<br>3: liveness detection;<br>4: OCR;<br>Default value is 2.</p>
- * @method string getIDCardType() Obtain <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
- * @method void setIDCardType(string $IDCardType) Set <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
+ * @method string getIDCardType() Obtain <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
+ * @method void setIDCardType(string $IDCardType) Set <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
  * @method boolean getDisableCheckOcrWarnings() Obtain <p>Want to close document alarm, false by default (enable alarm detection). When enabled, the identity verification process will intercept based on the document alarm status. If you need to use document anti-counterfeiting functionality, <a href="https://www.tencentcloud.com/zh/contact-us">contact us</a>.</p>
  * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set <p>Want to close document alarm, false by default (enable alarm detection). When enabled, the identity verification process will intercept based on the document alarm status. If you need to use document anti-counterfeiting functionality, <a href="https://www.tencentcloud.com/zh/contact-us">contact us</a>.</p>
  * @method integer getSecurityLevel() Obtain <p>Security level of authentication:<br>1: Silent liveness;<br>2: Action liveness;<br>3: Light liveness;<br>4: Action + light liveness;<br>Default value is 3.</p>
@@ -54,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllowExpiredDocument(boolean $AllowExpiredDocument) Set <p>Whether to allow expired identity documents to enter the liveness detection process. This parameter is valid only when the document type is Hong Kong identity card (HKID).<br>true (default value): Allow expired Hong Kong identity card to enter the liveness detection process.<br>false: Reject expired Hong Kong identity card, not accessible to the liveness detection process.</p>
  * @method string getVersion() Obtain <p>Service version, including basic version (BASIC) and PLUS version (PLUS).</p><p>Enumeration value:</p><ul><li>BASIC: Basic version</li><li>PLUS: PLUS version</li></ul><p>Default value: BASIC.</p>
  * @method void setVersion(string $Version) Set <p>Service version, including basic version (BASIC) and PLUS version (PLUS).</p><p>Enumeration value:</p><ul><li>BASIC: Basic version</li><li>PLUS: PLUS version</li></ul><p>Default value: BASIC.</p>
+ * @method string getOcrWaitPolicy() Obtain When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+ * @method void setOcrWaitPolicy(string $OcrWaitPolicy) Set When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+ * @method string getWebhookUrl() Obtain When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
+ * @method void setWebhookUrl(string $WebhookUrl) Set When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
@@ -73,7 +85,7 @@ class WebVerificationConfigIntl extends AbstractModel
     public $CheckMode;
 
     /**
-     * @var string <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
+     * @var string <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
      */
     public $IDCardType;
 
@@ -143,10 +155,24 @@ class WebVerificationConfigIntl extends AbstractModel
     public $Version;
 
     /**
+     * @var string When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+     */
+    public $OcrWaitPolicy;
+
+    /**
+     * @var string When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
+     */
+    public $WebhookUrl;
+
+    /**
      * @param boolean $AutoSkipStartPage <p>Whether to skip the start verification webpage when starting verification. If true, directly enter the verification process. Default false. If the degradation policy is triggered, this configuration will not take effect.</p>
      * @param boolean $AutoSkip <p>Whether to skip the result display page and automatically jump to RedirectURL when verification is successful. Default false.</p>
      * @param integer $CheckMode <p>Detection mode. Parameter values are as follows:<br>1: OCR+liveness detection+face comparison;<br>2: liveness detection+face comparison;<br>3: liveness detection;<br>4: OCR;<br>Default value is 2.</p>
-     * @param string $IDCardType <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
+     * @param string $IDCardType <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
      * @param boolean $DisableCheckOcrWarnings <p>Want to close document alarm, false by default (enable alarm detection). When enabled, the identity verification process will intercept based on the document alarm status. If you need to use document anti-counterfeiting functionality, <a href="https://www.tencentcloud.com/zh/contact-us">contact us</a>.</p>
      * @param integer $SecurityLevel <p>Security level of authentication:<br>1: Silent liveness;<br>2: Action liveness;<br>3: Light liveness;<br>4: Action + light liveness;<br>Default value is 3.</p>
      * @param boolean $SkipPrivacyPolicy <p>Whether to skip the privacy agreement webpage, default false. When SkipPrivacyPolicy is false, the privacy agreement webpage will show and the privacy agreement must be checked. When SkipPrivacyPolicy is true, the privacy agreement webpage will be skipped to directly enter the Live Face Process without the need to check the privacy agreement webpage.</p>
@@ -160,6 +186,12 @@ class WebVerificationConfigIntl extends AbstractModel
      * @param string $SelectedWarningCodes <p>Select OCR alarms that require attention. When an OCR alarm is generated, the identity verification process will be interrupted. The default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the alarm is disabled, this parameter will not be effective.</p><p>Alarm code list and definitions:<br>-9101 Incomplete border alarm<br>-9102 Photocopies alarm<br>-9103 Alarm for rephotographing<br>-9104 ps alarm<br>-9107 Reflective alarm<br>-9108 Blurry alarm<br>-9109 Alarm not enabled</p>
      * @param boolean $AllowExpiredDocument <p>Whether to allow expired identity documents to enter the liveness detection process. This parameter is valid only when the document type is Hong Kong identity card (HKID).<br>true (default value): Allow expired Hong Kong identity card to enter the liveness detection process.<br>false: Reject expired Hong Kong identity card, not accessible to the liveness detection process.</p>
      * @param string $Version <p>Service version, including basic version (BASIC) and PLUS version (PLUS).</p><p>Enumeration value:</p><ul><li>BASIC: Basic version</li><li>PLUS: PLUS version</li></ul><p>Default value: BASIC.</p>
+     * @param string $OcrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+     * @param string $WebhookUrl When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
      */
     function __construct()
     {
@@ -240,6 +272,14 @@ class WebVerificationConfigIntl extends AbstractModel
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {
             $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("OcrWaitPolicy",$param) and $param["OcrWaitPolicy"] !== null) {
+            $this->OcrWaitPolicy = $param["OcrWaitPolicy"];
+        }
+
+        if (array_key_exists("WebhookUrl",$param) and $param["WebhookUrl"] !== null) {
+            $this->WebhookUrl = $param["WebhookUrl"];
         }
     }
 }
