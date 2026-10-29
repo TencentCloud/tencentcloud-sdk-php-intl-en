@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP range details.
  *
- * @method array getIPv4() Obtain IPv4 subnet.
- * @method void setIPv4(array $IPv4) Set IPv4 subnet.
- * @method array getIPv6() Obtain IPv6 subnet.
- * @method void setIPv6(array $IPv6) Set IPv6 subnet.
+ * @method array getIPv4() Obtain IPv4 IP range list.
+ * @method void setIPv4(array $IPv4) Set IPv4 IP range list.
+ * @method array getIPv6() Obtain IPv6 IP range list.
+ * @method void setIPv6(array $IPv6) Set IPv6 IP range list.
  */
 class Addresses extends AbstractModel
 {
     /**
-     * @var array IPv4 subnet.
+     * @var array IPv4 IP range list.
      */
     public $IPv4;
 
     /**
-     * @var array IPv6 subnet.
+     * @var array IPv6 IP range list.
      */
     public $IPv6;
 
     /**
-     * @param array $IPv4 IPv4 subnet.
-     * @param array $IPv6 IPv6 subnet.
+     * @param array $IPv4 IPv4 IP range list.
+     * @param array $IPv6 IPv6 IP range list.
      */
     function __construct()
     {

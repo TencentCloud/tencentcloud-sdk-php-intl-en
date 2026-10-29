@@ -18,14 +18,14 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair filters for conditional filtering queries, such as filtering ID, name, and status.
-If more than one filter exists, the logical relationship between these filters is `AND`.
-If multiple values exist in one filter, the logical relationship between these values under the same filter is `OR`.
+ * Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
+If there are multiple Filters, the logical relationship between them is AND.
+If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
  *
  * @method string getName() Obtain Fields to be filtered.
  * @method void setName(string $Name) Set Fields to be filtered.
- * @method array getValues() Obtain Value of the filtered field.
- * @method void setValues(array $Values) Set Value of the filtered field.
+ * @method array getValues() Obtain Filter value of the field.
+ * @method void setValues(array $Values) Set Filter value of the field.
  */
 class Filter extends AbstractModel
 {
@@ -35,13 +35,13 @@ class Filter extends AbstractModel
     public $Name;
 
     /**
-     * @var array Value of the filtered field.
+     * @var array Filter value of the field.
      */
     public $Values;
 
     /**
      * @param string $Name Fields to be filtered.
-     * @param array $Values Value of the filtered field.
+     * @param array $Values Filter value of the field.
      */
     function __construct()
     {

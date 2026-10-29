@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeadImageBase64(string $HeadImageBase64) Set <p>Portrait matting in the document</p>
  * @method string getCardBackImageBase64() Obtain <p>Base64 of the back image of the identity document</p>
  * @method void setCardBackImageBase64(string $CardBackImageBase64) Set <p>Base64 of the back image of the identity document</p>
+ * @method string getCardResultStatus() Obtain Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+ * @method void setCardResultStatus(string $CardResultStatus) Set Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
  */
 class OCRResult extends AbstractModel
 {
@@ -102,6 +110,14 @@ class OCRResult extends AbstractModel
     public $CardBackImageBase64;
 
     /**
+     * @var string Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+     */
+    public $CardResultStatus;
+
+    /**
      * @param boolean $IsPass <p>Whether the identity authentication or OCR process is successful.</p>
      * @param string $CardImageBase64 <p>Base64 of the front image of the identity document</p>
      * @param CardInfo $CardInfo <p>ID document recognition result</p>
@@ -113,6 +129,10 @@ class OCRResult extends AbstractModel
      * @param string $OriginalCardInfo <p>Original document recognition information (when CheckMode value is 4, the current field will be returned)</p>
      * @param string $HeadImageBase64 <p>Portrait matting in the document</p>
      * @param string $CardBackImageBase64 <p>Base64 of the back image of the identity document</p>
+     * @param string $CardResultStatus Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
      */
     function __construct()
     {
@@ -171,6 +191,10 @@ class OCRResult extends AbstractModel
 
         if (array_key_exists("CardBackImageBase64",$param) and $param["CardBackImageBase64"] !== null) {
             $this->CardBackImageBase64 = $param["CardBackImageBase64"];
+        }
+
+        if (array_key_exists("CardResultStatus",$param) and $param["CardResultStatus"] !== null) {
+            $this->CardResultStatus = $param["CardResultStatus"];
         }
     }
 }

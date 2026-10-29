@@ -150,6 +150,23 @@ The feature is only supported by the enterprise plan and is currently in closed 
 The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
  * @method Models\DescribeApplicationProxiesResponse DescribeApplicationProxies(Models\DescribeApplicationProxiesRequest $req) This API is on an earlier version. If you want to call it, please switch to the latest version. In the latest version, this API has been split into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [DescribeL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103413?from_cn_redirect=1) and [DescribeL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103412?from_cn_redirect=1).
  * @method Models\DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngine(Models\DescribeAvailableCustomActionsForRuleEngineRequest $req) This API is used to query the list of available custom configurations for rule engine operations on a site.
+ * @method Models\DescribeAvailableOriginACLFamilyResponse DescribeAvailableOriginACLFamily(Models\DescribeAvailableOriginACLFamilyRequest $req) This API is used to query detailed information about the origin protection IP range control domain, including the version number and specific IP range information.
+The main difference between standard control domain and streamlined control domain is the number of IP ranges provided. The latter has fewer IP ranges, but has some usage restrictions. For specific restrictions, consult the product. The format description is as follows:
+Standard control domain:
+<li>gaz: standard global control domain;</li>
+<li>mlc: Standard China control domain;</li>
+<li>emc: standard overseas (worldwide excluding China) control domain;</li>
+Streamline the control domain.
+<li>plat-gaz: simplified global control domain;</li>
+<li>plat-mlc: Simplified China control domain;</li>
+<li>plat-emc: Simplified overseas (global excluding China) control domain;</li>
+<li>plat-specific-gaz: custom edition global availability zone control domain;</li>
+<li>plat-specific-mlc: custom edition for controlling the Chinese mainland availability zone control domain;</li>
+<li>plat-specific-emc: custom edition control domain for availability zones worldwide (excluding Chinese mainland);</li>
+Abbreviation description:
+<li>gaz:Global AZ Availability Zone;</li>
+<li>mlc:mainlandChina;</li>
+<li>emc:Exclude mainlandChina.</li>
  * @method Models\DescribeAvailablePlansResponse DescribeAvailablePlans(Models\DescribeAvailablePlansRequest $req) This API is used to query plan options available for purchase.
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) This API is used to query billing data.
  * @method Models\DescribeConfigGroupVersionDetailResponse DescribeConfigGroupVersionDetail(Models\DescribeConfigGroupVersionDetailRequest $req) This API is used to obtain detailed information about a version in version management mode. The response includes the version ID, description, status, creation time, configuration group information, and the content of the version configuration file. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
