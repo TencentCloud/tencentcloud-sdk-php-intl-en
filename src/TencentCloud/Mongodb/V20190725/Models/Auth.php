@@ -24,20 +24,16 @@ use TencentCloud\Common\AbstractModel;
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMask(integer $Mask) Set Permission information of the current account.
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNameSpace() Obtain Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNameSpace(string $NameSpace) Set Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Auth extends AbstractModel
 {
@@ -46,7 +42,6 @@ class Auth extends AbstractModel
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Mask;
 
@@ -54,7 +49,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NameSpace;
 
@@ -63,11 +57,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NameSpace Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

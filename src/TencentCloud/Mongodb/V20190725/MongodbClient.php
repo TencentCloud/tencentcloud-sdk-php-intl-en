@@ -32,9 +32,13 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) This API is used to create a pay-as-you-go TencentDB for MongoDB instance.
  * @method Models\CreateDBInstanceParamTplResponse CreateDBInstanceParamTpl(Models\CreateDBInstanceParamTplRequest $req) This API is used to create a parameter template for TencentDB for MongoDB.
 **Description:** The CreateDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+ * @method Models\CreateInstanceRoleResponse CreateInstanceRole(Models\CreateInstanceRoleRequest $req) Create a database role
+ * @method Models\CreateInstanceUserResponse CreateInstanceUser(Models\CreateInstanceUserRequest $req) Create a database account
  * @method Models\CreateLogDownloadTaskResponse CreateLogDownloadTask(Models\CreateLogDownloadTaskRequest $req) This API is used to create a log download task.
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) This API is used to delete a custom account of an instance.
  * @method Models\DeleteDBBackupsResponse DeleteDBBackups(Models\DeleteDBBackupsRequest $req) This API is used to delete full backups.
+ * @method Models\DeleteInstanceRoleResponse DeleteInstanceRole(Models\DeleteInstanceRoleRequest $req) Delete role
+ * @method Models\DeleteInstanceUserResponse DeleteInstanceUser(Models\DeleteInstanceUserRequest $req) This API is used to delete a database account.
  * @method Models\DeleteLogDownloadTaskResponse DeleteLogDownloadTask(Models\DeleteLogDownloadTaskRequest $req) This API is used to delete a log download task.
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) This API is used to obtain all accounts of the current instance.
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) This API is used to query the asynchronous task status.
@@ -56,7 +60,9 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
  * @method Models\DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogs(Models\DescribeDetailedSlowLogsRequest $req) This API is used to query slow log details of the instance.
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) This API is used to query the list of parameters that can be modified for the current instance.
+ * @method Models\DescribeInstanceRolesResponse DescribeInstanceRoles(Models\DescribeInstanceRolesRequest $req) Obtains the list of roles
  * @method Models\DescribeInstanceSSLResponse DescribeInstanceSSL(Models\DescribeInstanceSSLRequest $req) This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
+ * @method Models\DescribeInstanceUsersResponse DescribeInstanceUsers(Models\DescribeInstanceUsersRequest $req) This API is used to obtain the list of accounts.
  * @method Models\DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(Models\DescribeLogDownloadTasksRequest $req) This API is used to query a log download task.
  * @method Models\DescribeMongodbLogsResponse DescribeMongodbLogs(Models\DescribeMongodbLogsRequest $req) This API is used to query running logs.
  * @method Models\DescribePasswordRotationResponse DescribePasswordRotation(Models\DescribePasswordRotationRequest $req) Retrieve the rotation status info
@@ -93,6 +99,8 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtection(Models\SetDBInstanceDeletionProtectionRequest $req) This API is used to set instance termination protection.
  * @method Models\SetInstanceMaintenanceResponse SetInstanceMaintenance(Models\SetInstanceMaintenanceRequest $req) This API is used to set the instance maintenance window.
  * @method Models\TerminateDBInstancesResponse TerminateDBInstances(Models\TerminateDBInstancesRequest $req) This API is used to terminate monthly subscription billing instances.
+ * @method Models\UpdateInstanceRoleResponse UpdateInstanceRole(Models\UpdateInstanceRoleRequest $req) This API is used to update a database role.
+ * @method Models\UpdateInstanceUserResponse UpdateInstanceUser(Models\UpdateInstanceUserRequest $req) Update database account
  * @method Models\UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(Models\UpgradeDBInstanceKernelVersionRequest $req) This API is used to upgrade the kernel version of the database instance.
  * @method Models\UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersion(Models\UpgradeDbInstanceVersionRequest $req) This API is used to upgrade database version.
 **Description**: Upgrade to version 3.6 and above is supported. Only upgrading from a lower version to a higher version step by step is allowed. Cross-version upgrade or version downgrade is not supported.
