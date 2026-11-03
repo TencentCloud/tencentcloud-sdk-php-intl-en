@@ -18,12 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Managed rule detail.
+ * Details of managed rules
  *
  * @method string getRuleId() Obtain Managed rule Id.
  * @method void setRuleId(string $RuleId) Set Managed rule Id.
- * @method string getRiskLevel() Obtain Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
- * @method void setRiskLevel(string $RiskLevel) Set Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
+ * @method string getRiskLevel() Obtain Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
+ * @method void setRiskLevel(string $RiskLevel) Set Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
  * @method string getDescription() Obtain Rule description.
  * @method void setDescription(string $Description) Set Rule description.
  * @method array getTags() Obtain Rule tag. Some types of rules do not have tags.
@@ -39,7 +39,7 @@ class ManagedRuleDetail extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
+     * @var string Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
      */
     public $RiskLevel;
 
@@ -60,7 +60,7 @@ class ManagedRuleDetail extends AbstractModel
 
     /**
      * @param string $RuleId Managed rule Id.
-     * @param string $RiskLevel Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
+     * @param string $RiskLevel Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
      * @param string $Description Rule description.
      * @param array $Tags Rule tag. Some types of rules do not have tags.
      * @param string $RuleVersion Rule version.

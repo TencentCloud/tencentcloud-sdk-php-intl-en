@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Precision rate limiting configuration.
+ * Configuration of precise rate limiting
  *
- * @method array getRules() Obtain Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
- * @method void setRules(array $Rules) Set Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+ * @method array getRules() Obtain Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
+ * @method void setRules(array $Rules) Set Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
  */
 class RateLimitingRules extends AbstractModel
 {
     /**
-     * @var array Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+     * @var array Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
      */
     public $Rules;
 
     /**
-     * @param array $Rules Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+     * @param array $Rules Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
      */
     function __construct()
     {

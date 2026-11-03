@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Body transfer timeout duration configuration.
+ * Specific configuration of the body transfer timeout duration.
  *
- * @method string getIdleTimeout() Obtain Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
- * @method void setIdleTimeout(string $IdleTimeout) Set Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
- * @method string getEnabled() Obtain Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
- * @method void setEnabled(string $Enabled) Set Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+ * @method string getIdleTimeout() Obtain Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
+ * @method void setIdleTimeout(string $IdleTimeout) Set Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
+ * @method string getEnabled() Obtain Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+ * @method void setEnabled(string $Enabled) Set Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
  */
 class RequestBodyTransferTimeout extends AbstractModel
 {
     /**
-     * @var string Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+     * @var string Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
      */
     public $IdleTimeout;
 
     /**
-     * @var string Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+     * @var string Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public $Enabled;
 
     /**
-     * @param string $IdleTimeout Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
-     * @param string $Enabled Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+     * @param string $IdleTimeout Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
+     * @param string $Enabled Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     function __construct()
     {

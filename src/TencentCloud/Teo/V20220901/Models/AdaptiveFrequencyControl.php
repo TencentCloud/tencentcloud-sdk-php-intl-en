@@ -18,44 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive frequency control.
+ * Adaptive frequency control
  *
- * @method string getEnabled() Obtain Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
- * @method void setEnabled(string $Enabled) Set Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
- * @method string getId() Obtain Rule ID of adaptive frequency control, returned as an output parameter.
- * @method void setId(string $Id) Set Rule ID of adaptive frequency control, returned as an output parameter.
- * @method string getSensitivity() Obtain The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
- * @method void setSensitivity(string $Sensitivity) Set The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
- * @method SecurityAction getAction() Obtain The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
- * @method void setAction(SecurityAction $Action) Set The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+ * @method string getEnabled() Obtain Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+ * @method void setEnabled(string $Enabled) Set Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+ * @method string getId() Obtain Rule ID of adaptive frequency control, returned only as an output parameter.
+ * @method void setId(string $Id) Set Rule ID of adaptive frequency control, returned only as an output parameter.
+ * @method string getSensitivity() Obtain The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
+ * @method void setSensitivity(string $Sensitivity) Set The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
+ * @method SecurityAction getAction() Obtain Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
+ * @method void setAction(SecurityAction $Action) Set Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
  */
 class AdaptiveFrequencyControl extends AbstractModel
 {
     /**
-     * @var string Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * @var string Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public $Enabled;
 
     /**
-     * @var string Rule ID of adaptive frequency control, returned as an output parameter.
+     * @var string Rule ID of adaptive frequency control, returned only as an output parameter.
      */
     public $Id;
 
     /**
-     * @var string The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+     * @var string The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
      */
     public $Sensitivity;
 
     /**
-     * @var SecurityAction The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * @var SecurityAction Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     public $Action;
 
     /**
-     * @param string $Enabled Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param string $Id Rule ID of adaptive frequency control, returned as an output parameter.
-     * @param string $Sensitivity The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
-     * @param SecurityAction $Action The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * @param string $Enabled Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param string $Id Rule ID of adaptive frequency control, returned only as an output parameter.
+     * @param string $Sensitivity The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
+     * @param SecurityAction $Action Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     function __construct()
     {

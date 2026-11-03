@@ -18,60 +18,68 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Managed rules configuration.
+ * Managed rules for Web security
  *
- * @method string getEnabled() Obtain The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
- * @method void setEnabled(string $Enabled) Set The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
- * @method string getDetectionOnly() Obtain Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
- * @method void setDetectionOnly(string $DetectionOnly) Set Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
- * @method string getSemanticAnalysis() Obtain Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
- * @method void setSemanticAnalysis(string $SemanticAnalysis) Set Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
- * @method ManagedRuleAutoUpdate getAutoUpdate() Obtain Managed rule automatic update option.
- * @method void setAutoUpdate(ManagedRuleAutoUpdate $AutoUpdate) Set Managed rule automatic update option.
- * @method array getManagedRuleGroups() Obtain Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
- * @method void setManagedRuleGroups(array $ManagedRuleGroups) Set Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
- * @method FrequentScanningProtection getFrequentScanningProtection() Obtain High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
- * @method void setFrequentScanningProtection(FrequentScanningProtection $FrequentScanningProtection) Set High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+ * @method string getEnabled() Obtain <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
+ * @method void setEnabled(string $Enabled) Set <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
+ * @method string getDetectionOnly() Obtain <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
+ * @method void setDetectionOnly(string $DetectionOnly) Set <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
+ * @method string getSemanticAnalysis() Obtain <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
+ * @method void setSemanticAnalysis(string $SemanticAnalysis) Set <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
+ * @method SemanticAnalysisRules getSemanticAnalysisRules() Obtain <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+ * @method void setSemanticAnalysisRules(SemanticAnalysisRules $SemanticAnalysisRules) Set <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+ * @method ManagedRuleAutoUpdate getAutoUpdate() Obtain <p>Auto-update option for managed rules.</p>
+ * @method void setAutoUpdate(ManagedRuleAutoUpdate $AutoUpdate) Set <p>Auto-update option for managed rules.</p>
+ * @method array getManagedRuleGroups() Obtain <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
+ * @method void setManagedRuleGroups(array $ManagedRuleGroups) Set <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
+ * @method FrequentScanningProtection getFrequentScanningProtection() Obtain <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
+ * @method void setFrequentScanningProtection(FrequentScanningProtection $FrequentScanningProtection) Set <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
  */
 class ManagedRules extends AbstractModel
 {
     /**
-     * @var string The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+     * @var string <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
      */
     public $Enabled;
 
     /**
-     * @var string Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+     * @var string <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
      */
     public $DetectionOnly;
 
     /**
-     * @var string Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+     * @var string <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
      */
     public $SemanticAnalysis;
 
     /**
-     * @var ManagedRuleAutoUpdate Managed rule automatic update option.
+     * @var SemanticAnalysisRules <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+     */
+    public $SemanticAnalysisRules;
+
+    /**
+     * @var ManagedRuleAutoUpdate <p>Auto-update option for managed rules.</p>
      */
     public $AutoUpdate;
 
     /**
-     * @var array Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+     * @var array <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
      */
     public $ManagedRuleGroups;
 
     /**
-     * @var FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     * @var FrequentScanningProtection <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
      */
     public $FrequentScanningProtection;
 
     /**
-     * @param string $Enabled The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
-     * @param string $DetectionOnly Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
-     * @param string $SemanticAnalysis Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
-     * @param ManagedRuleAutoUpdate $AutoUpdate Managed rule automatic update option.
-     * @param array $ManagedRuleGroups Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
-     * @param FrequentScanningProtection $FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     * @param string $Enabled <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
+     * @param string $DetectionOnly <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
+     * @param string $SemanticAnalysis <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
+     * @param SemanticAnalysisRules $SemanticAnalysisRules <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+     * @param ManagedRuleAutoUpdate $AutoUpdate <p>Auto-update option for managed rules.</p>
+     * @param array $ManagedRuleGroups <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
+     * @param FrequentScanningProtection $FrequentScanningProtection <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
      */
     function __construct()
     {
@@ -96,6 +104,11 @@ class ManagedRules extends AbstractModel
 
         if (array_key_exists("SemanticAnalysis",$param) and $param["SemanticAnalysis"] !== null) {
             $this->SemanticAnalysis = $param["SemanticAnalysis"];
+        }
+
+        if (array_key_exists("SemanticAnalysisRules",$param) and $param["SemanticAnalysisRules"] !== null) {
+            $this->SemanticAnalysisRules = new SemanticAnalysisRules();
+            $this->SemanticAnalysisRules->deserialize($param["SemanticAnalysisRules"]);
         }
 
         if (array_key_exists("AutoUpdate",$param) and $param["AutoUpdate"] !== null) {

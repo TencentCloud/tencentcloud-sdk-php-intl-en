@@ -55,6 +55,7 @@ This API is used to implement best practices.
 1. This API is used to recommend reusing temporary access credentials within their validity period to avoid rate limiting due to increased business request rates.
 2. This API is used to recommend granting temporary access credentials with the principle of least privilege.
 3. This API is used to recommend not using the root account for permanent keys calling the API.
+ * @method Models\GetSessionTokenResponse GetSessionToken(Models\GetSessionTokenRequest $req) Obtain the MFA temporary certificate.
  */
 
 class StsClient extends AbstractClient

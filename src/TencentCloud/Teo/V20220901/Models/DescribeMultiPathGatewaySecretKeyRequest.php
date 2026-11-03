@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMultiPathGatewaySecretKey request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getZoneId() Obtain <p>Site ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
  */
 class DescribeMultiPathGatewaySecretKeyRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string <p>Site ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId Zone ID.
+     * @param string $ZoneId <p>Site ID.</p>
      */
     function __construct()
     {

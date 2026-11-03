@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the configuration for Cookie verification and session tracking behavior.
+ * Cookie verification and session tracking behavior configuration.
  *
- * @method string getIssueNewBotSessionCookie() Obtain Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
- * @method void setIssueNewBotSessionCookie(string $IssueNewBotSessionCookie) Set Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
- * @method MaxNewSessionTriggerConfig getMaxNewSessionTriggerConfig() Obtain Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
- * @method void setMaxNewSessionTriggerConfig(MaxNewSessionTriggerConfig $MaxNewSessionTriggerConfig) Set Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
- * @method SecurityAction getSessionExpiredAction() Obtain Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
- * @method void setSessionExpiredAction(SecurityAction $SessionExpiredAction) Set Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
- * @method SecurityAction getSessionInvalidAction() Obtain Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
- * @method void setSessionInvalidAction(SecurityAction $SessionInvalidAction) Set Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
- * @method SessionRateControl getSessionRateControl() Obtain Specifies the session rate and periodic feature verification configuration.
- * @method void setSessionRateControl(SessionRateControl $SessionRateControl) Set Specifies the session rate and periodic feature verification configuration.
+ * @method string getIssueNewBotSessionCookie() Obtain Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
+ * @method void setIssueNewBotSessionCookie(string $IssueNewBotSessionCookie) Set Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
+ * @method MaxNewSessionTriggerConfig getMaxNewSessionTriggerConfig() Obtain Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
+ * @method void setMaxNewSessionTriggerConfig(MaxNewSessionTriggerConfig $MaxNewSessionTriggerConfig) Set Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
+ * @method SecurityAction getSessionExpiredAction() Obtain Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+ * @method void setSessionExpiredAction(SecurityAction $SessionExpiredAction) Set Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+ * @method SecurityAction getSessionInvalidAction() Obtain Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
+ * @method void setSessionInvalidAction(SecurityAction $SessionInvalidAction) Set Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
+ * @method SessionRateControl getSessionRateControl() Obtain Specific configuration for session rate and periodic feature verification.
+ * @method void setSessionRateControl(SessionRateControl $SessionRateControl) Set Specific configuration for session rate and periodic feature verification.
  */
 class BotSessionValidation extends AbstractModel
 {
     /**
-     * @var string Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
+     * @var string Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
      */
     public $IssueNewBotSessionCookie;
 
     /**
-     * @var MaxNewSessionTriggerConfig Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
+     * @var MaxNewSessionTriggerConfig Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
      */
     public $MaxNewSessionTriggerConfig;
 
     /**
-     * @var SecurityAction Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+     * @var SecurityAction Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
      */
     public $SessionExpiredAction;
 
     /**
-     * @var SecurityAction Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
+     * @var SecurityAction Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
      */
     public $SessionInvalidAction;
 
     /**
-     * @var SessionRateControl Specifies the session rate and periodic feature verification configuration.
+     * @var SessionRateControl Specific configuration for session rate and periodic feature verification.
      */
     public $SessionRateControl;
 
     /**
-     * @param string $IssueNewBotSessionCookie Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
-     * @param MaxNewSessionTriggerConfig $MaxNewSessionTriggerConfig Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
-     * @param SecurityAction $SessionExpiredAction Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
-     * @param SecurityAction $SessionInvalidAction Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
-     * @param SessionRateControl $SessionRateControl Specifies the session rate and periodic feature verification configuration.
+     * @param string $IssueNewBotSessionCookie Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
+     * @param MaxNewSessionTriggerConfig $MaxNewSessionTriggerConfig Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
+     * @param SecurityAction $SessionExpiredAction Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+     * @param SecurityAction $SessionInvalidAction Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
+     * @param SessionRateControl $SessionRateControl Specific configuration for session rate and periodic feature verification.
      */
     function __construct()
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot management basic configuration takes effect for all domains with policy association. CustomRules can be used to customize.
+ * Basic configuration of Bot management, which takes effect for all domain names associated with the policy. Fine-grained customization can be done through CustomRules.
  *
- * @method SourceIDC getSourceIDC() Obtain Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
- * @method void setSourceIDC(SourceIDC $SourceIDC) Set Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
- * @method SearchEngineBots getSearchEngineBots() Obtain Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
- * @method void setSearchEngineBots(SearchEngineBots $SearchEngineBots) Set Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
- * @method KnownBotCategories getKnownBotCategories() Obtain Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
- * @method void setKnownBotCategories(KnownBotCategories $KnownBotCategories) Set Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
- * @method IPReputation getIPReputation() Obtain Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
- * @method void setIPReputation(IPReputation $IPReputation) Set Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
- * @method BotIntelligence getBotIntelligence() Obtain Specifies the configuration for Bot intelligent analysis.
- * @method void setBotIntelligence(BotIntelligence $BotIntelligence) Set Specifies the configuration for Bot intelligent analysis.
+ * @method SourceIDC getSourceIDC() Obtain Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
+ * @method void setSourceIDC(SourceIDC $SourceIDC) Set Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
+ * @method SearchEngineBots getSearchEngineBots() Obtain Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+ * @method void setSearchEngineBots(SearchEngineBots $SearchEngineBots) Set Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+ * @method KnownBotCategories getKnownBotCategories() Obtain UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
+ * @method void setKnownBotCategories(KnownBotCategories $KnownBotCategories) Set UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
+ * @method IPReputation getIPReputation() Obtain IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
+ * @method void setIPReputation(IPReputation $IPReputation) Set IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
+ * @method BotIntelligence getBotIntelligence() Obtain Specific configuration for Bot intelligent analysis.
+ * @method void setBotIntelligence(BotIntelligence $BotIntelligence) Set Specific configuration for Bot intelligent analysis.
  */
 class BasicBotSettings extends AbstractModel
 {
     /**
-     * @var SourceIDC Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
+     * @var SourceIDC Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
      */
     public $SourceIDC;
 
     /**
-     * @var SearchEngineBots Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+     * @var SearchEngineBots Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
      */
     public $SearchEngineBots;
 
     /**
-     * @var KnownBotCategories Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
+     * @var KnownBotCategories UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
      */
     public $KnownBotCategories;
 
     /**
-     * @var IPReputation Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
+     * @var IPReputation IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
      */
     public $IPReputation;
 
     /**
-     * @var BotIntelligence Specifies the configuration for Bot intelligent analysis.
+     * @var BotIntelligence Specific configuration for Bot intelligent analysis.
      */
     public $BotIntelligence;
 
     /**
-     * @param SourceIDC $SourceIDC Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
-     * @param SearchEngineBots $SearchEngineBots Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
-     * @param KnownBotCategories $KnownBotCategories Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
-     * @param IPReputation $IPReputation Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
-     * @param BotIntelligence $BotIntelligence Specifies the configuration for Bot intelligent analysis.
+     * @param SourceIDC $SourceIDC Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
+     * @param SearchEngineBots $SearchEngineBots Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+     * @param KnownBotCategories $KnownBotCategories UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
+     * @param IPReputation $IPReputation IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
+     * @param BotIntelligence $BotIntelligence Specific configuration for Bot intelligent analysis.
      */
     function __construct()
     {

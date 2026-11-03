@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Human-Machine verification page configuration.
+ * Specific configuration of the CAPTCHA page.
  *
- * @method string getEnabled() Obtain Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
- * @method void setEnabled(string $Enabled) Set Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+ * @method string getEnabled() Obtain Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+ * @method void setEnabled(string $Enabled) Set Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
  */
 class CAPTCHAPageChallenge extends AbstractModel
 {
     /**
-     * @var string Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * @var string Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public $Enabled;
 
     /**
-     * @param string $Enabled Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * @param string $Enabled Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     function __construct()
     {

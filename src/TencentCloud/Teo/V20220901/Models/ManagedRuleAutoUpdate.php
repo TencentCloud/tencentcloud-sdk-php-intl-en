@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Managed rule automatic update option.
+ * Automatic update options for managed rules
  *
- * @method string getAutoUpdateToLatestVersion() Obtain Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
- * @method void setAutoUpdateToLatestVersion(string $AutoUpdateToLatestVersion) Set Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
- * @method string getRulesetVersion() Obtain Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
- * @method void setRulesetVersion(string $RulesetVersion) Set Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+ * @method string getAutoUpdateToLatestVersion() Obtain Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+ * @method void setAutoUpdateToLatestVersion(string $AutoUpdateToLatestVersion) Set Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+ * @method string getRulesetVersion() Obtain Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
+ * @method void setRulesetVersion(string $RulesetVersion) Set Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
  */
 class ManagedRuleAutoUpdate extends AbstractModel
 {
     /**
-     * @var string Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+     * @var string Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
      */
     public $AutoUpdateToLatestVersion;
 
     /**
-     * @var string Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+     * @var string Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
      */
     public $RulesetVersion;
 
     /**
-     * @param string $AutoUpdateToLatestVersion Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
-     * @param string $RulesetVersion Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+     * @param string $AutoUpdateToLatestVersion Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+     * @param string $RulesetVersion Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
      */
     function __construct()
     {

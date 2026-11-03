@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Managed rule group meta information.
+ * Managed rule group information
  *
- * @method string getGroupDetail() Obtain ManagedRuleGroup detailed information, output parameter only.
- * @method void setGroupDetail(string $GroupDetail) Set ManagedRuleGroup detailed information, output parameter only.
- * @method string getGroupName() Obtain ManagedRuleGroup name, output parameter only.
- * @method void setGroupName(string $GroupName) Set ManagedRuleGroup name, output parameter only.
- * @method array getRuleDetails() Obtain All sub-rules information under current ManagedRuleGroup, output parameter only.
- * @method void setRuleDetails(array $RuleDetails) Set All sub-rules information under current ManagedRuleGroup, output parameter only.
+ * @method string getGroupDetail() Obtain Managed rule group description. For output usage only.
+ * @method void setGroupDetail(string $GroupDetail) Set Managed rule group description. For output usage only.
+ * @method string getGroupName() Obtain Managed rule group name. Output parameter only.
+ * @method void setGroupName(string $GroupName) Set Managed rule group name. Output parameter only.
+ * @method array getRuleDetails() Obtain Rule information of all sub-rules in the current managed rule group. Output parameter only.
+ * @method void setRuleDetails(array $RuleDetails) Set Rule information of all sub-rules in the current managed rule group. Output parameter only.
  */
 class ManagedRuleGroupMeta extends AbstractModel
 {
     /**
-     * @var string ManagedRuleGroup detailed information, output parameter only.
+     * @var string Managed rule group description. For output usage only.
      */
     public $GroupDetail;
 
     /**
-     * @var string ManagedRuleGroup name, output parameter only.
+     * @var string Managed rule group name. Output parameter only.
      */
     public $GroupName;
 
     /**
-     * @var array All sub-rules information under current ManagedRuleGroup, output parameter only.
+     * @var array Rule information of all sub-rules in the current managed rule group. Output parameter only.
      */
     public $RuleDetails;
 
     /**
-     * @param string $GroupDetail ManagedRuleGroup detailed information, output parameter only.
-     * @param string $GroupName ManagedRuleGroup name, output parameter only.
-     * @param array $RuleDetails All sub-rules information under current ManagedRuleGroup, output parameter only.
+     * @param string $GroupDetail Managed rule group description. For output usage only.
+     * @param string $GroupName Managed rule group name. Output parameter only.
+     * @param array $RuleDetails Rule information of all sub-rules in the current managed rule group. Output parameter only.
      */
     function __construct()
     {

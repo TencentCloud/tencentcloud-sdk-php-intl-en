@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Slow attack protection configuration.
+ * Specific configuration for slow attack protection.
  *
- * @method string getEnabled() Obtain Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
- * @method void setEnabled(string $Enabled) Set Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
- * @method string getId() Obtain Rule ID of slow attack protection, returned as an output parameter.
- * @method void setId(string $Id) Set Rule ID of slow attack protection, returned as an output parameter.
- * @method SecurityAction getAction() Obtain Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
- * @method void setAction(SecurityAction $Action) Set Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
- * @method MinimalRequestBodyTransferRate getMinimalRequestBodyTransferRate() Obtain The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
- * @method void setMinimalRequestBodyTransferRate(MinimalRequestBodyTransferRate $MinimalRequestBodyTransferRate) Set The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
- * @method RequestBodyTransferTimeout getRequestBodyTransferTimeout() Obtain Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
- * @method void setRequestBodyTransferTimeout(RequestBodyTransferTimeout $RequestBodyTransferTimeout) Set Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+ * @method string getEnabled() Obtain Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+ * @method void setEnabled(string $Enabled) Set Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+ * @method string getId() Obtain Rule ID of slow attack protection, returned only as an output parameter.
+ * @method void setId(string $Id) Set Rule ID of slow attack protection, returned only as an output parameter.
+ * @method SecurityAction getAction() Obtain Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
+ * @method void setAction(SecurityAction $Action) Set Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
+ * @method MinimalRequestBodyTransferRate getMinimalRequestBodyTransferRate() Obtain Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
+ * @method void setMinimalRequestBodyTransferRate(MinimalRequestBodyTransferRate $MinimalRequestBodyTransferRate) Set Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
+ * @method RequestBodyTransferTimeout getRequestBodyTransferTimeout() Obtain Specific configuration of the body transfer timeout duration. Required if Enabled is on.
+ * @method void setRequestBodyTransferTimeout(RequestBodyTransferTimeout $RequestBodyTransferTimeout) Set Specific configuration of the body transfer timeout duration. Required if Enabled is on.
  */
 class SlowAttackDefense extends AbstractModel
 {
     /**
-     * @var string Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * @var string Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public $Enabled;
 
     /**
-     * @var string Rule ID of slow attack protection, returned as an output parameter.
+     * @var string Rule ID of slow attack protection, returned only as an output parameter.
      */
     public $Id;
 
     /**
-     * @var SecurityAction Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+     * @var SecurityAction Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
      */
     public $Action;
 
     /**
-     * @var MinimalRequestBodyTransferRate The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+     * @var MinimalRequestBodyTransferRate Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
      */
     public $MinimalRequestBodyTransferRate;
 
     /**
-     * @var RequestBodyTransferTimeout Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+     * @var RequestBodyTransferTimeout Specific configuration of the body transfer timeout duration. Required if Enabled is on.
      */
     public $RequestBodyTransferTimeout;
 
     /**
-     * @param string $Enabled Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-     * @param string $Id Rule ID of slow attack protection, returned as an output parameter.
-     * @param SecurityAction $Action Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
-     * @param MinimalRequestBodyTransferRate $MinimalRequestBodyTransferRate The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
-     * @param RequestBodyTransferTimeout $RequestBodyTransferTimeout Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+     * @param string $Enabled Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param string $Id Rule ID of slow attack protection, returned only as an output parameter.
+     * @param SecurityAction $Action Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
+     * @param MinimalRequestBodyTransferRate $MinimalRequestBodyTransferRate Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
+     * @param RequestBodyTransferTimeout $RequestBodyTransferTimeout Specific configuration of the body transfer timeout duration. Required if Enabled is on.
      */
     function __construct()
     {

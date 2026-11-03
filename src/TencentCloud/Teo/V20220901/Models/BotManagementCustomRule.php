@@ -18,60 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Web security Bot custom rule.
+ * Custom Bot rules for Web security.
  *
- * @method string getId() Obtain The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
- * @method void setId(string $Id) Set The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
- * @method string getName() Obtain Specifies the name of the Bot custom rule.
- * @method void setName(string $Name) Set Specifies the name of the Bot custom rule.
- * @method string getEnabled() Obtain Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
- * @method void setEnabled(string $Enabled) Set Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
- * @method integer getPriority() Obtain Priority of custom Bot rules. value range: 1–100. default value is 50.
- * @method void setPriority(integer $Priority) Set Priority of custom Bot rules. value range: 1–100. default value is 50.
- * @method string getCondition() Obtain Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
- * @method void setCondition(string $Condition) Set Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
- * @method array getAction() Obtain The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
- * @method void setAction(array $Action) Set The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
+ * @method string getId() Obtain <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
+ * @method void setId(string $Id) Set <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
+ * @method string getName() Obtain <p>Name of the Bot custom rule.</p>
+ * @method void setName(string $Name) Set <p>Name of the Bot custom rule.</p>
+ * @method string getEnabled() Obtain <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
+ * @method void setEnabled(string $Enabled) Set <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
+ * @method integer getPriority() Obtain <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
+ * @method void setPriority(integer $Priority) Set <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
+ * @method string getCondition() Obtain <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
+ * @method void setCondition(string $Condition) Set <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
+ * @method array getAction() Obtain <p>List of safe execution actions by weight assignment.</p>
+ * @method void setAction(array $Action) Set <p>List of safe execution actions by weight assignment.</p>
  */
 class BotManagementCustomRule extends AbstractModel
 {
     /**
-     * @var string The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
+     * @var string <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
      */
     public $Id;
 
     /**
-     * @var string Specifies the name of the Bot custom rule.
+     * @var string <p>Name of the Bot custom rule.</p>
      */
     public $Name;
 
     /**
-     * @var string Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * @var string <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
      */
     public $Enabled;
 
     /**
-     * @var integer Priority of custom Bot rules. value range: 1–100. default value is 50.
+     * @var integer <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
      */
     public $Priority;
 
     /**
-     * @var string Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
+     * @var string <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
      */
     public $Condition;
 
     /**
-     * @var array The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
+     * @var array <p>List of safe execution actions by weight assignment.</p>
      */
     public $Action;
 
     /**
-     * @param string $Id The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
-     * @param string $Name Specifies the name of the Bot custom rule.
-     * @param string $Enabled Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-     * @param integer $Priority Priority of custom Bot rules. value range: 1–100. default value is 50.
-     * @param string $Condition Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
-     * @param array $Action The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
+     * @param string $Id <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
+     * @param string $Name <p>Name of the Bot custom rule.</p>
+     * @param string $Enabled <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
+     * @param integer $Priority <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
+     * @param string $Condition <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
+     * @param array $Action <p>List of safe execution actions by weight assignment.</p>
      */
     function __construct()
     {

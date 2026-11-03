@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Additional parameter for SecurityAction `ReturnCustomPage`.
+ * Additional parameter of the custom page for Web security
  *
- * @method string getResponseCode() Obtain Response custom status code.
- * @method void setResponseCode(string $ResponseCode) Set Response custom status code.
- * @method string getErrorPageId() Obtain Response custom page ID.
- * @method void setErrorPageId(string $ErrorPageId) Set Response custom page ID.
+ * @method string getResponseCode() Obtain status code.
+ * @method void setResponseCode(string $ResponseCode) Set status code.
+ * @method string getErrorPageId() Obtain ID of the custom page in the response.
+ * @method void setErrorPageId(string $ErrorPageId) Set ID of the custom page in the response.
  */
 class ReturnCustomPageActionParameters extends AbstractModel
 {
     /**
-     * @var string Response custom status code.
+     * @var string status code.
      */
     public $ResponseCode;
 
     /**
-     * @var string Response custom page ID.
+     * @var string ID of the custom page in the response.
      */
     public $ErrorPageId;
 
     /**
-     * @param string $ResponseCode Response custom status code.
-     * @param string $ErrorPageId Response custom page ID.
+     * @param string $ResponseCode status code.
+     * @param string $ErrorPageId ID of the custom page in the response.
      */
     function __construct()
     {

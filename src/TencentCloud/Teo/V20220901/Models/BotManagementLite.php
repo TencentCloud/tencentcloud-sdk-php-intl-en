@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Foundation of Web security BOT rule architecture.
+ * Structure of BOT rules for Web security.
  *
- * @method CAPTCHAPageChallenge getCAPTCHAPageChallenge() Obtain Configuration of the human-machine verification page.
- * @method void setCAPTCHAPageChallenge(CAPTCHAPageChallenge $CAPTCHAPageChallenge) Set Configuration of the human-machine verification page.
- * @method AICrawlerDetection getAICrawlerDetection() Obtain AI crawler detection configuration.
- * @method void setAICrawlerDetection(AICrawlerDetection $AICrawlerDetection) Set AI crawler detection configuration.
+ * @method CAPTCHAPageChallenge getCAPTCHAPageChallenge() Obtain Configuration of the CAPTCHA page.
+ * @method void setCAPTCHAPageChallenge(CAPTCHAPageChallenge $CAPTCHAPageChallenge) Set Configuration of the CAPTCHA page.
+ * @method AICrawlerDetection getAICrawlerDetection() Obtain Specific configuration for AI crawler detection.
+ * @method void setAICrawlerDetection(AICrawlerDetection $AICrawlerDetection) Set Specific configuration for AI crawler detection.
  */
 class BotManagementLite extends AbstractModel
 {
     /**
-     * @var CAPTCHAPageChallenge Configuration of the human-machine verification page.
+     * @var CAPTCHAPageChallenge Configuration of the CAPTCHA page.
      */
     public $CAPTCHAPageChallenge;
 
     /**
-     * @var AICrawlerDetection AI crawler detection configuration.
+     * @var AICrawlerDetection Specific configuration for AI crawler detection.
      */
     public $AICrawlerDetection;
 
     /**
-     * @param CAPTCHAPageChallenge $CAPTCHAPageChallenge Configuration of the human-machine verification page.
-     * @param AICrawlerDetection $AICrawlerDetection AI crawler detection configuration.
+     * @param CAPTCHAPageChallenge $CAPTCHAPageChallenge Configuration of the CAPTCHA page.
+     * @param AICrawlerDetection $AICrawlerDetection Specific configuration for AI crawler detection.
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Minimum minimum body transfer rate threshold configuration.
+ * Configuration of the minimum body transfer rate threshold.
  *
- * @method string getMinimalAvgTransferRateThreshold() Obtain Minimum body transfer rate threshold, the measurement unit is only supported in bps.
- * @method void setMinimalAvgTransferRateThreshold(string $MinimalAvgTransferRateThreshold) Set Minimum body transfer rate threshold, the measurement unit is only supported in bps.
- * @method string getCountingPeriod() Obtain Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
- * @method void setCountingPeriod(string $CountingPeriod) Set Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
- * @method string getEnabled() Obtain Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
- * @method void setEnabled(string $Enabled) Set Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+ * @method string getMinimalAvgTransferRateThreshold() Obtain Minimum body transfer rate threshold. The measurement unit only supports bps.
+ * @method void setMinimalAvgTransferRateThreshold(string $MinimalAvgTransferRateThreshold) Set Minimum body transfer rate threshold. The measurement unit only supports bps.
+ * @method string getCountingPeriod() Obtain Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
+ * @method void setCountingPeriod(string $CountingPeriod) Set Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
+ * @method string getEnabled() Obtain Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+ * @method void setEnabled(string $Enabled) Set Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
  */
 class MinimalRequestBodyTransferRate extends AbstractModel
 {
     /**
-     * @var string Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+     * @var string Minimum body transfer rate threshold. The measurement unit only supports bps.
      */
     public $MinimalAvgTransferRateThreshold;
 
     /**
-     * @var string Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+     * @var string Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
      */
     public $CountingPeriod;
 
     /**
-     * @var string Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * @var string Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public $Enabled;
 
     /**
-     * @param string $MinimalAvgTransferRateThreshold Minimum body transfer rate threshold, the measurement unit is only supported in bps.
-     * @param string $CountingPeriod Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
-     * @param string $Enabled Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * @param string $MinimalAvgTransferRateThreshold Minimum body transfer rate threshold. The measurement unit only supports bps.
+     * @param string $CountingPeriod Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
+     * @param string $Enabled Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     function __construct()
     {

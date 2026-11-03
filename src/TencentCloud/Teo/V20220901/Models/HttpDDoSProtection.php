@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP DDOS protection configuration.
  *
- * @method AdaptiveFrequencyControl getAdaptiveFrequencyControl() Obtain Specifies the specific configuration of adaptive frequency control.
- * @method void setAdaptiveFrequencyControl(AdaptiveFrequencyControl $AdaptiveFrequencyControl) Set Specifies the specific configuration of adaptive frequency control.
- * @method ClientFiltering getClientFiltering() Obtain Specifies the intelligent client filter configuration.
- * @method void setClientFiltering(ClientFiltering $ClientFiltering) Set Specifies the intelligent client filter configuration.
- * @method BandwidthAbuseDefense getBandwidthAbuseDefense() Obtain Specifies the specific configuration for bandwidth abuse protection.
- * @method void setBandwidthAbuseDefense(BandwidthAbuseDefense $BandwidthAbuseDefense) Set Specifies the specific configuration for bandwidth abuse protection.
- * @method SlowAttackDefense getSlowAttackDefense() Obtain Specifies the configuration of slow attack protection.
- * @method void setSlowAttackDefense(SlowAttackDefense $SlowAttackDefense) Set Specifies the configuration of slow attack protection.
+ * @method AdaptiveFrequencyControl getAdaptiveFrequencyControl() Obtain Specific configuration of adaptive frequency control.
+ * @method void setAdaptiveFrequencyControl(AdaptiveFrequencyControl $AdaptiveFrequencyControl) Set Specific configuration of adaptive frequency control.
+ * @method ClientFiltering getClientFiltering() Obtain Specific configuration for intelligent client filtering.
+ * @method void setClientFiltering(ClientFiltering $ClientFiltering) Set Specific configuration for intelligent client filtering.
+ * @method BandwidthAbuseDefense getBandwidthAbuseDefense() Obtain Bandwidth abuse protection configuration.
+ * @method void setBandwidthAbuseDefense(BandwidthAbuseDefense $BandwidthAbuseDefense) Set Bandwidth abuse protection configuration.
+ * @method SlowAttackDefense getSlowAttackDefense() Obtain Specific configuration of slow attack protection.
+ * @method void setSlowAttackDefense(SlowAttackDefense $SlowAttackDefense) Set Specific configuration of slow attack protection.
  */
 class HttpDDoSProtection extends AbstractModel
 {
     /**
-     * @var AdaptiveFrequencyControl Specifies the specific configuration of adaptive frequency control.
+     * @var AdaptiveFrequencyControl Specific configuration of adaptive frequency control.
      */
     public $AdaptiveFrequencyControl;
 
     /**
-     * @var ClientFiltering Specifies the intelligent client filter configuration.
+     * @var ClientFiltering Specific configuration for intelligent client filtering.
      */
     public $ClientFiltering;
 
     /**
-     * @var BandwidthAbuseDefense Specifies the specific configuration for bandwidth abuse protection.
+     * @var BandwidthAbuseDefense Bandwidth abuse protection configuration.
      */
     public $BandwidthAbuseDefense;
 
     /**
-     * @var SlowAttackDefense Specifies the configuration of slow attack protection.
+     * @var SlowAttackDefense Specific configuration of slow attack protection.
      */
     public $SlowAttackDefense;
 
     /**
-     * @param AdaptiveFrequencyControl $AdaptiveFrequencyControl Specifies the specific configuration of adaptive frequency control.
-     * @param ClientFiltering $ClientFiltering Specifies the intelligent client filter configuration.
-     * @param BandwidthAbuseDefense $BandwidthAbuseDefense Specifies the specific configuration for bandwidth abuse protection.
-     * @param SlowAttackDefense $SlowAttackDefense Specifies the configuration of slow attack protection.
+     * @param AdaptiveFrequencyControl $AdaptiveFrequencyControl Specific configuration of adaptive frequency control.
+     * @param ClientFiltering $ClientFiltering Specific configuration for intelligent client filtering.
+     * @param BandwidthAbuseDefense $BandwidthAbuseDefense Bandwidth abuse protection configuration.
+     * @param SlowAttackDefense $SlowAttackDefense Specific configuration of slow attack protection.
      */
     function __construct()
     {

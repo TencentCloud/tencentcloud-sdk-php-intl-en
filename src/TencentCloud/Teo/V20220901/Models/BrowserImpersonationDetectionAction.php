@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the Action of the Bot browser verification rule (formerly active feature detection rule).
+ * Action of the Bot browser verification rule (formerly active feature detection rule).
  *
- * @method BotSessionValidation getBotSessionValidation() Obtain Configures Cookie verification and session tracking.
- * @method void setBotSessionValidation(BotSessionValidation $BotSessionValidation) Set Configures Cookie verification and session tracking.
- * @method ClientBehaviorDetection getClientBehaviorDetection() Obtain Configures client behavior validation.
- * @method void setClientBehaviorDetection(ClientBehaviorDetection $ClientBehaviorDetection) Set Configures client behavior validation.
+ * @method BotSessionValidation getBotSessionValidation() Obtain Cookie verification and session tracking configuration.
+ * @method void setBotSessionValidation(BotSessionValidation $BotSessionValidation) Set Cookie verification and session tracking configuration.
+ * @method ClientBehaviorDetection getClientBehaviorDetection() Obtain Client behavior validation configuration.
+ * @method void setClientBehaviorDetection(ClientBehaviorDetection $ClientBehaviorDetection) Set Client behavior validation configuration.
  */
 class BrowserImpersonationDetectionAction extends AbstractModel
 {
     /**
-     * @var BotSessionValidation Configures Cookie verification and session tracking.
+     * @var BotSessionValidation Cookie verification and session tracking configuration.
      */
     public $BotSessionValidation;
 
     /**
-     * @var ClientBehaviorDetection Configures client behavior validation.
+     * @var ClientBehaviorDetection Client behavior validation configuration.
      */
     public $ClientBehaviorDetection;
 
     /**
-     * @param BotSessionValidation $BotSessionValidation Configures Cookie verification and session tracking.
-     * @param ClientBehaviorDetection $ClientBehaviorDetection Configures client behavior validation.
+     * @param BotSessionValidation $BotSessionValidation Cookie verification and session tracking configuration.
+     * @param ClientBehaviorDetection $ClientBehaviorDetection Client behavior validation configuration.
      */
     function __construct()
     {

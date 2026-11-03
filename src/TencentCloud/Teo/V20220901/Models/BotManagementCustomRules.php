@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration of Bot custom rule.
+ * Configuration of the Bot custom rule.
  *
- * @method array getRules() Obtain List of Bot custom Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li> if Rules in SecurityPolicy.BotManagement.CustomRules is not specified or parameter length of Rules is zero: clear all Bot custom rule configurations.</li> <li> if CustomRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing Bot custom rule configurations and do not modify them.</li>.
- * @method void setRules(array $Rules) Set List of Bot custom Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li> if Rules in SecurityPolicy.BotManagement.CustomRules is not specified or parameter length of Rules is zero: clear all Bot custom rule configurations.</li> <li> if CustomRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing Bot custom rule configurations and do not modify them.</li>.
+ * @method array getRules() Obtain List of Bot custom Rules. When using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.CustomRules is not specified, or the Rules parameter length is zero: clear all Bot custom rule configurations.</li> <li> If the CustomRules parameter value is not specified in the SecurityPolicy.BotManagement parameters: keep the existing Bot custom rule configuration without modification.</li>
+ * @method void setRules(array $Rules) Set List of Bot custom Rules. When using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.CustomRules is not specified, or the Rules parameter length is zero: clear all Bot custom rule configurations.</li> <li> If the CustomRules parameter value is not specified in the SecurityPolicy.BotManagement parameters: keep the existing Bot custom rule configuration without modification.</li>
  */
 class BotManagementCustomRules extends AbstractModel
 {
     /**
-     * @var array List of Bot custom Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li> if Rules in SecurityPolicy.BotManagement.CustomRules is not specified or parameter length of Rules is zero: clear all Bot custom rule configurations.</li> <li> if CustomRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing Bot custom rule configurations and do not modify them.</li>.
+     * @var array List of Bot custom Rules. When using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.CustomRules is not specified, or the Rules parameter length is zero: clear all Bot custom rule configurations.</li> <li> If the CustomRules parameter value is not specified in the SecurityPolicy.BotManagement parameters: keep the existing Bot custom rule configuration without modification.</li>
      */
     public $Rules;
 
     /**
-     * @param array $Rules List of Bot custom Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li> if Rules in SecurityPolicy.BotManagement.CustomRules is not specified or parameter length of Rules is zero: clear all Bot custom rule configurations.</li> <li> if CustomRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing Bot custom rule configurations and do not modify them.</li>.
+     * @param array $Rules List of Bot custom Rules. When using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.CustomRules is not specified, or the Rules parameter length is zero: clear all Bot custom rule configurations.</li> <li> If the CustomRules parameter value is not specified in the SecurityPolicy.BotManagement parameters: keep the existing Bot custom rule configuration without modification.</li>
      */
     function __construct()
     {

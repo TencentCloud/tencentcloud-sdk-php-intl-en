@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Commercial or open-source tool UA feature configuration (formerly UA feature rule).
+ * UA feature configuration for commercial or open-source tools (formerly UA feature rule).
  *
- * @method SecurityAction getBaseAction() Obtain Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
- * @method void setBaseAction(SecurityAction $BaseAction) Set Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
- * @method array getBotManagementActionOverrides() Obtain Specifies the handling method for access requests from known commercial tools or open-source tools.
- * @method void setBotManagementActionOverrides(array $BotManagementActionOverrides) Set Specifies the handling method for access requests from known commercial tools or open-source tools.
+ * @method SecurityAction getBaseAction() Obtain Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
+ * @method void setBaseAction(SecurityAction $BaseAction) Set Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
+ * @method array getBotManagementActionOverrides() Obtain Specify the handling method for access requests from known commercial or open-source tools.
+ * @method void setBotManagementActionOverrides(array $BotManagementActionOverrides) Set Specify the handling method for access requests from known commercial or open-source tools.
  */
 class KnownBotCategories extends AbstractModel
 {
     /**
-     * @var SecurityAction Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * @var SecurityAction Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
      */
     public $BaseAction;
 
     /**
-     * @var array Specifies the handling method for access requests from known commercial tools or open-source tools.
+     * @var array Specify the handling method for access requests from known commercial or open-source tools.
      */
     public $BotManagementActionOverrides;
 
     /**
-     * @param SecurityAction $BaseAction Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-     * @param array $BotManagementActionOverrides Specifies the handling method for access requests from known commercial tools or open-source tools.
+     * @param SecurityAction $BaseAction Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
+     * @param array $BotManagementActionOverrides Specify the handling method for access requests from known commercial or open-source tools.
      */
     function __construct()
     {

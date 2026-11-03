@@ -18,90 +18,74 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Additional parameter when the executed action is interception.
+ * Additional parameter for the safe execution action when it is interception.
 
-This parameter is used for specifying the extra handling action taken by the system when a security rule is hit and an intercept action is executed.
-Different disposal actions are configured with different fixed parameter combinations. The system will determine the actually effective disposal action type according to the configured parameter combination.
-During the same interception execution, only one handling action can be configured and made effective. Parameters for multiple handling actions cannot appear at the same time. Otherwise, it is deemed an invalid configuration. If empty, the default block handling action is used.
-DenyActionParameters supports the following additional handling actions: <li>Default: When DenyActionParameters is empty or no additional handling action is enabled, the system will perform the default block, responding with an interception page.</li><li>IP block: Continuously block the client source IP that triggers the rule. Corresponding parameters: BlockIp, BlockIpDuration.</li><li>Custom page interception: Use the designated custom page content to respond to requests. Corresponding parameters: ReturnCustomPage, ResponseCode, ErrorPageId.</li><li>Silence: Accept client requests but do not return. Corresponding parameter: Stall.</li>
+This parameter is used to specify the extra handling action taken by the system when a security rule is hit and an intercept action is executed.
+Different handling actions are configured with different fixed parameter combinations. The system will determine the actually effective handling action type according to the configured parameter combination.
+Only one handling action can be configured and made effective during the same block execution. Parameters corresponding to multiple handling actions cannot appear simultaneously, otherwise the configuration is deemed invalid. If empty, the default block handling action is used.
+DenyActionParameters supports the following extra handling actions: <li>Default: When DenyActionParameters is empty or no extra handling action is enabled, the system will perform the default block, responding with an interception page.</li><li>IP blocking: Continuously block the client source IP that triggers the rule. Corresponding parameters: BlockIp, BlockIpDuration.</li><li>Custom page interception: Use the specified custom page content to respond to requests. Corresponding parameters: ReturnCustomPage, ResponseCode, ErrorPageId.</li><li>Silence: Accept client requests but do not return. Corresponding parameter: Stall.</li>
  *
- * @method string getBlockIp() Obtain Specifies whether to extend the ban on the source IP. valid values.
+ * @method string getBlockIp() Obtain Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
- * @method void setBlockIp(string $BlockIp) Set Specifies whether to extend the ban on the source IP. valid values.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
+ * @method void setBlockIp(string $BlockIp) Set Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
- * @method string getBlockIpDuration() Obtain The ban duration when BlockIP is on.
- * @method void setBlockIpDuration(string $BlockIpDuration) Set The ban duration when BlockIP is on.
- * @method string getReturnCustomPage() Obtain Specifies whether to use a custom page. valid values:.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
+ * @method string getBlockIpDuration() Obtain IP ban duration when BlockIP is on.
+ * @method void setBlockIpDuration(string $BlockIpDuration) Set IP ban duration when BlockIP is on.
+ * @method string getReturnCustomPage() Obtain Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
-
- * @method void setReturnCustomPage(string $ReturnCustomPage) Set Specifies whether to use a custom page. valid values:.
+ * @method void setReturnCustomPage(string $ReturnCustomPage) Set Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
  * @method string getResponseCode() Obtain Status code of the custom page.
  * @method void setResponseCode(string $ResponseCode) Set Status code of the custom page.
- * @method string getErrorPageId() Obtain Specifies the page id of the custom page.
- * @method void setErrorPageId(string $ErrorPageId) Set Specifies the page id of the custom page.
- * @method string getStall() Obtain Specifies whether to suspend the request source without processing. valid values:.
+ * @method string getErrorPageId() Obtain PageId of the custom page.
+ * @method void setErrorPageId(string $ErrorPageId) Set PageId of the custom page.
+ * @method string getStall() Obtain Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
- * @method void setStall(string $Stall) Set Specifies whether to suspend the request source without processing. valid values:.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
+ * @method void setStall(string $Stall) Set Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
  */
 class DenyActionParameters extends AbstractModel
 {
     /**
-     * @var string Specifies whether to extend the ban on the source IP. valid values.
+     * @var string Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
      */
     public $BlockIp;
 
     /**
-     * @var string The ban duration when BlockIP is on.
+     * @var string IP ban duration when BlockIP is on.
      */
     public $BlockIpDuration;
 
     /**
-     * @var string Specifies whether to use a custom page. valid values:.
+     * @var string Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
      */
     public $ReturnCustomPage;
@@ -112,47 +96,39 @@ Note: this option cannot intersect with the BlockIp or Stall option.
     public $ResponseCode;
 
     /**
-     * @var string Specifies the page id of the custom page.
+     * @var string PageId of the custom page.
      */
     public $ErrorPageId;
 
     /**
-     * @var string Specifies whether to suspend the request source without processing. valid values:.
+     * @var string Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
      */
     public $Stall;
 
     /**
-     * @param string $BlockIp Specifies whether to extend the ban on the source IP. valid values.
+     * @param string $BlockIp Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
-     * @param string $BlockIpDuration The ban duration when BlockIP is on.
-     * @param string $ReturnCustomPage Specifies whether to use a custom page. valid values:.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
+     * @param string $BlockIpDuration IP ban duration when BlockIP is on.
+     * @param string $ReturnCustomPage Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
      * @param string $ResponseCode Status code of the custom page.
-     * @param string $ErrorPageId Specifies the page id of the custom page.
-     * @param string $Stall Specifies whether to suspend the request source without processing. valid values:.
+     * @param string $ErrorPageId PageId of the custom page.
+     * @param string $Stall Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
      */
     function __construct()
     {

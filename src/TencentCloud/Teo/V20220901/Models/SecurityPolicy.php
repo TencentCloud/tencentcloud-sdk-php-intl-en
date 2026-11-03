@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Web security policy.
+ * Security policy configuration.
  *
- * @method CustomRules getCustomRules() Obtain Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCustomRules(CustomRules $CustomRules) Set Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method ManagedRules getManagedRules() Obtain Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setManagedRules(ManagedRules $ManagedRules) Set Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method HttpDDoSProtection getHttpDDoSProtection() Obtain HTTP DDOS protection configuration.
- * @method void setHttpDDoSProtection(HttpDDoSProtection $HttpDDoSProtection) Set HTTP DDOS protection configuration.
- * @method RateLimitingRules getRateLimitingRules() Obtain Configures the rate limiting rule.
- * @method void setRateLimitingRules(RateLimitingRules $RateLimitingRules) Set Configures the rate limiting rule.
- * @method ExceptionRules getExceptionRules() Obtain Exception rule configuration.
- * @method void setExceptionRules(ExceptionRules $ExceptionRules) Set Exception rule configuration.
- * @method BotManagement getBotManagement() Obtain Bot management configuration.
- * @method void setBotManagement(BotManagement $BotManagement) Set Bot management configuration.
- * @method BotManagementLite getBotManagementLite() Obtain Basic Bot management configuration.
- * @method void setBotManagementLite(BotManagementLite $BotManagementLite) Set Basic Bot management configuration.
- * @method DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() Obtain Default intercept action configuration.
- * @method void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters) Set Default intercept action configuration.
+ * @method CustomRules getCustomRules() Obtain <p>Custom rule configuration.</p>
+ * @method void setCustomRules(CustomRules $CustomRules) Set <p>Custom rule configuration.</p>
+ * @method ManagedRules getManagedRules() Obtain <p>Managed rule configuration.</p>
+ * @method void setManagedRules(ManagedRules $ManagedRules) Set <p>Managed rule configuration.</p>
+ * @method HttpDDoSProtection getHttpDDoSProtection() Obtain <p>HTTP DDoS protection configuration.</p>
+ * @method void setHttpDDoSProtection(HttpDDoSProtection $HttpDDoSProtection) Set <p>HTTP DDoS protection configuration.</p>
+ * @method RateLimitingRules getRateLimitingRules() Obtain <p>Rate limiting rule configuration.</p>
+ * @method void setRateLimitingRules(RateLimitingRules $RateLimitingRules) Set <p>Rate limiting rule configuration.</p>
+ * @method ExceptionRules getExceptionRules() Obtain <p>Exception rule configuration.</p>
+ * @method void setExceptionRules(ExceptionRules $ExceptionRules) Set <p>Exception rule configuration.</p>
+ * @method BotManagement getBotManagement() Obtain <p>Bot management configuration.</p>
+ * @method void setBotManagement(BotManagement $BotManagement) Set <p>Bot management configuration.</p>
+ * @method BotManagementLite getBotManagementLite() Obtain <p>Basic Bot management configuration.</p>
+ * @method void setBotManagementLite(BotManagementLite $BotManagementLite) Set <p>Basic Bot management configuration.</p>
+ * @method DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() Obtain <p>Default block action configuration.</p>
+ * @method void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters) Set <p>Default block action configuration.</p>
+ * @method SecurityHeadersToOrigin getSecurityHeadersToOrigin() Obtain <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+ * @method void setSecurityHeadersToOrigin(SecurityHeadersToOrigin $SecurityHeadersToOrigin) Set <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
  */
 class SecurityPolicy extends AbstractModel
 {
     /**
-     * @var CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var CustomRules <p>Custom rule configuration.</p>
      */
     public $CustomRules;
 
     /**
-     * @var ManagedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ManagedRules <p>Managed rule configuration.</p>
      */
     public $ManagedRules;
 
     /**
-     * @var HttpDDoSProtection HTTP DDOS protection configuration.
+     * @var HttpDDoSProtection <p>HTTP DDoS protection configuration.</p>
      */
     public $HttpDDoSProtection;
 
     /**
-     * @var RateLimitingRules Configures the rate limiting rule.
+     * @var RateLimitingRules <p>Rate limiting rule configuration.</p>
      */
     public $RateLimitingRules;
 
     /**
-     * @var ExceptionRules Exception rule configuration.
+     * @var ExceptionRules <p>Exception rule configuration.</p>
      */
     public $ExceptionRules;
 
     /**
-     * @var BotManagement Bot management configuration.
+     * @var BotManagement <p>Bot management configuration.</p>
      */
     public $BotManagement;
 
     /**
-     * @var BotManagementLite Basic Bot management configuration.
+     * @var BotManagementLite <p>Basic Bot management configuration.</p>
      */
     public $BotManagementLite;
 
     /**
-     * @var DefaultDenySecurityActionParameters Default intercept action configuration.
+     * @var DefaultDenySecurityActionParameters <p>Default block action configuration.</p>
      */
     public $DefaultDenySecurityActionParameters;
 
     /**
-     * @param CustomRules $CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ManagedRules $ManagedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param HttpDDoSProtection $HttpDDoSProtection HTTP DDOS protection configuration.
-     * @param RateLimitingRules $RateLimitingRules Configures the rate limiting rule.
-     * @param ExceptionRules $ExceptionRules Exception rule configuration.
-     * @param BotManagement $BotManagement Bot management configuration.
-     * @param BotManagementLite $BotManagementLite Basic Bot management configuration.
-     * @param DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters Default intercept action configuration.
+     * @var SecurityHeadersToOrigin <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+     */
+    public $SecurityHeadersToOrigin;
+
+    /**
+     * @param CustomRules $CustomRules <p>Custom rule configuration.</p>
+     * @param ManagedRules $ManagedRules <p>Managed rule configuration.</p>
+     * @param HttpDDoSProtection $HttpDDoSProtection <p>HTTP DDoS protection configuration.</p>
+     * @param RateLimitingRules $RateLimitingRules <p>Rate limiting rule configuration.</p>
+     * @param ExceptionRules $ExceptionRules <p>Exception rule configuration.</p>
+     * @param BotManagement $BotManagement <p>Bot management configuration.</p>
+     * @param BotManagementLite $BotManagementLite <p>Basic Bot management configuration.</p>
+     * @param DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters <p>Default block action configuration.</p>
+     * @param SecurityHeadersToOrigin $SecurityHeadersToOrigin <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
      */
     function __construct()
     {
@@ -148,6 +148,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("DefaultDenySecurityActionParameters",$param) and $param["DefaultDenySecurityActionParameters"] !== null) {
             $this->DefaultDenySecurityActionParameters = new DefaultDenySecurityActionParameters();
             $this->DefaultDenySecurityActionParameters->deserialize($param["DefaultDenySecurityActionParameters"]);
+        }
+
+        if (array_key_exists("SecurityHeadersToOrigin",$param) and $param["SecurityHeadersToOrigin"] !== null) {
+            $this->SecurityHeadersToOrigin = new SecurityHeadersToOrigin();
+            $this->SecurityHeadersToOrigin->deserialize($param["SecurityHeadersToOrigin"]);
         }
     }
 }

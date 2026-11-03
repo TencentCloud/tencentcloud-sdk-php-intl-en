@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP intelligence library (formerly client profile analysis) configuration.
+ * IP Intelligence Library (formerly client profile analysis) configuration.
  *
- * @method string getEnabled() Obtain IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
- * @method void setEnabled(string $Enabled) Set IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
- * @method IPReputationGroup getIPReputationGroup() Obtain IP intelligence library (formerly client profile analysis) configuration content.
- * @method void setIPReputationGroup(IPReputationGroup $IPReputationGroup) Set IP intelligence library (formerly client profile analysis) configuration content.
+ * @method string getEnabled() Obtain IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
+ * @method void setEnabled(string $Enabled) Set IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
+ * @method IPReputationGroup getIPReputationGroup() Obtain Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
+ * @method void setIPReputationGroup(IPReputationGroup $IPReputationGroup) Set Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
  */
 class IPReputation extends AbstractModel
 {
     /**
-     * @var string IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * @var string IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public $Enabled;
 
     /**
-     * @var IPReputationGroup IP intelligence library (formerly client profile analysis) configuration content.
+     * @var IPReputationGroup Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
      */
     public $IPReputationGroup;
 
     /**
-     * @param string $Enabled IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param IPReputationGroup $IPReputationGroup IP intelligence library (formerly client profile analysis) configuration content.
+     * @param string $Enabled IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
+     * @param IPReputationGroup $IPReputationGroup Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
      */
     function __construct()
     {

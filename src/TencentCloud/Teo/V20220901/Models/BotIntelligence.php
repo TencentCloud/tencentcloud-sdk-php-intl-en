@@ -18,48 +18,48 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot intelligent analysis configuration.
+ * Specific configuration for Bot intelligent analysis.
  *
- * @method string getEnabled() Obtain Specifies the switch for Bot intelligent analysis configuration. valid values:.
+ * @method string getEnabled() Obtain Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
- * @method void setEnabled(string $Enabled) Set Specifies the switch for Bot intelligent analysis configuration. valid values:.
+on: enable;
+off: Disable.
+ * @method void setEnabled(string $Enabled) Set Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
- * @method string getId() Obtain Rule ID of Bot intelligent analysis, returned as an output parameter.
- * @method void setId(string $Id) Set Rule ID of Bot intelligent analysis, returned as an output parameter.
- * @method BotRatings getBotRatings() Obtain Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
- * @method void setBotRatings(BotRatings $BotRatings) Set Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+on: enable;
+off: Disable.
+ * @method string getId() Obtain Rule ID of Bot intelligent analysis, returned only as an output parameter.
+ * @method void setId(string $Id) Set Rule ID of Bot intelligent analysis, returned only as an output parameter.
+ * @method BotRatings getBotRatings() Obtain Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
+ * @method void setBotRatings(BotRatings $BotRatings) Set Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
  */
 class BotIntelligence extends AbstractModel
 {
     /**
-     * @var string Specifies the switch for Bot intelligent analysis configuration. valid values:.
+     * @var string Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
+on: enable;
+off: Disable.
      */
     public $Enabled;
 
     /**
-     * @var string Rule ID of Bot intelligent analysis, returned as an output parameter.
+     * @var string Rule ID of Bot intelligent analysis, returned only as an output parameter.
      */
     public $Id;
 
     /**
-     * @var BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     * @var BotRatings Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
      */
     public $BotRatings;
 
     /**
-     * @param string $Enabled Specifies the switch for Bot intelligent analysis configuration. valid values:.
+     * @param string $Enabled Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
-     * @param string $Id Rule ID of Bot intelligent analysis, returned as an output parameter.
-     * @param BotRatings $BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+on: enable;
+off: Disable.
+     * @param string $Id Rule ID of Bot intelligent analysis, returned only as an output parameter.
+     * @param BotRatings $BotRatings Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configures rules for the search engine.
+ * Search engine rule configuration.
  *
- * @method SecurityAction getBaseAction() Obtain Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
- * @method void setBaseAction(SecurityAction $BaseAction) Set Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
- * @method array getBotManagementActionOverrides() Obtain Specifies the handling method for search engine crawler requests.
- * @method void setBotManagementActionOverrides(array $BotManagementActionOverrides) Set Specifies the handling method for search engine crawler requests.
+ * @method SecurityAction getBaseAction() Obtain Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+ * @method void setBaseAction(SecurityAction $BaseAction) Set Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+ * @method array getBotManagementActionOverrides() Obtain Specify the handling method for search engine crawler requests.
+ * @method void setBotManagementActionOverrides(array $BotManagementActionOverrides) Set Specify the handling method for search engine crawler requests.
  */
 class SearchEngineBots extends AbstractModel
 {
     /**
-     * @var SecurityAction Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * @var SecurityAction Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
      */
     public $BaseAction;
 
     /**
-     * @var array Specifies the handling method for search engine crawler requests.
+     * @var array Specify the handling method for search engine crawler requests.
      */
     public $BotManagementActionOverrides;
 
     /**
-     * @param SecurityAction $BaseAction Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-     * @param array $BotManagementActionOverrides Specifies the handling method for search engine crawler requests.
+     * @param SecurityAction $BaseAction Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+     * @param array $BotManagementActionOverrides Specify the handling method for search engine crawler requests.
      */
     function __construct()
     {

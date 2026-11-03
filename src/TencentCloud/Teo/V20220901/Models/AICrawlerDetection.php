@@ -31,12 +31,12 @@ use TencentCloud\Common\AbstractModel;
  * @method SecurityAction getAction() Obtain Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
  * @method void setAction(SecurityAction $Action) Set Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
  */
 class AICrawlerDetection extends AbstractModel
@@ -53,7 +53,7 @@ class AICrawlerDetection extends AbstractModel
      * @var SecurityAction Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
      */
     public $Action;
@@ -66,7 +66,7 @@ class AICrawlerDetection extends AbstractModel
      * @param SecurityAction $Action Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
      */
     function __construct()

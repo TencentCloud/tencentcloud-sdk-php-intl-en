@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Trigger threshold for verification in Bot management.
+ * Trigger threshold of verification in Bot management.
  *
- * @method string getMaxNewSessionCountInterval() Obtain Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
- * @method void setMaxNewSessionCountInterval(string $MaxNewSessionCountInterval) Set Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
- * @method integer getMaxNewSessionCountThreshold() Obtain Trigger threshold cumulative count. value range: 1-100000000.
- * @method void setMaxNewSessionCountThreshold(integer $MaxNewSessionCountThreshold) Set Trigger threshold cumulative count. value range: 1-100000000.
+ * @method string getMaxNewSessionCountInterval() Obtain Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+ * @method void setMaxNewSessionCountInterval(string $MaxNewSessionCountInterval) Set Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+ * @method integer getMaxNewSessionCountThreshold() Obtain Cumulative count of trigger threshold statistics. Value range: 1-100000000.
+ * @method void setMaxNewSessionCountThreshold(integer $MaxNewSessionCountThreshold) Set Cumulative count of trigger threshold statistics. Value range: 1-100000000.
  */
 class MaxNewSessionTriggerConfig extends AbstractModel
 {
     /**
-     * @var string Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+     * @var string Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
      */
     public $MaxNewSessionCountInterval;
 
     /**
-     * @var integer Trigger threshold cumulative count. value range: 1-100000000.
+     * @var integer Cumulative count of trigger threshold statistics. Value range: 1-100000000.
      */
     public $MaxNewSessionCountThreshold;
 
     /**
-     * @param string $MaxNewSessionCountInterval Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
-     * @param integer $MaxNewSessionCountThreshold Trigger threshold cumulative count. value range: 1-100000000.
+     * @param string $MaxNewSessionCountInterval Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+     * @param integer $MaxNewSessionCountThreshold Cumulative count of trigger threshold statistics. Value range: 1-100000000.
      */
     function __construct()
     {

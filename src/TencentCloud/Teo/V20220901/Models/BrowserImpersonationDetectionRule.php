@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Browser spoofing identification rule (formerly active feature detection rule).
  *
- * @method string getId() Obtain Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
- * @method void setId(string $Id) Set Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
- * @method string getName() Obtain Specifies the name of the browser spoofing identification rule.
- * @method void setName(string $Name) Set Specifies the name of the browser spoofing identification rule.
- * @method string getEnabled() Obtain Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
- * @method void setEnabled(string $Enabled) Set Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
- * @method string getCondition() Obtain Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
- * @method void setCondition(string $Condition) Set Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
- * @method BrowserImpersonationDetectionAction getAction() Obtain Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
- * @method void setAction(BrowserImpersonationDetectionAction $Action) Set Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+ * @method string getId() Obtain ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
+ * @method void setId(string $Id) Set ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
+ * @method string getName() Obtain Name of the browser spoofing identification rule.
+ * @method void setName(string $Name) Set Name of the browser spoofing identification rule.
+ * @method string getEnabled() Obtain Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
+ * @method void setEnabled(string $Enabled) Set Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
+ * @method string getCondition() Obtain Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
+ * @method void setCondition(string $Condition) Set Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
+ * @method BrowserImpersonationDetectionAction getAction() Obtain Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+ * @method void setAction(BrowserImpersonationDetectionAction $Action) Set Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
  */
 class BrowserImpersonationDetectionRule extends AbstractModel
 {
     /**
-     * @var string Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+     * @var string ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
      */
     public $Id;
 
     /**
-     * @var string Specifies the name of the browser spoofing identification rule.
+     * @var string Name of the browser spoofing identification rule.
      */
     public $Name;
 
     /**
-     * @var string Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * @var string Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public $Enabled;
 
     /**
-     * @var string Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+     * @var string Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
      */
     public $Condition;
 
     /**
-     * @var BrowserImpersonationDetectionAction Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+     * @var BrowserImpersonationDetectionAction Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
      */
     public $Action;
 
     /**
-     * @param string $Id Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
-     * @param string $Name Specifies the name of the browser spoofing identification rule.
-     * @param string $Enabled Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-     * @param string $Condition Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
-     * @param BrowserImpersonationDetectionAction $Action Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+     * @param string $Id ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
+     * @param string $Name Name of the browser spoofing identification rule.
+     * @param string $Enabled Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
+     * @param string $Condition Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
+     * @param BrowserImpersonationDetectionAction $Action Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
      */
     function __construct()
     {

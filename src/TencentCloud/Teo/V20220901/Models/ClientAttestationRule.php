@@ -18,76 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Client authentication rule.
+ * Client authentication rules
  *
- * @method string getId() Obtain Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
- * @method void setId(string $Id) Set Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
- * @method string getName() Obtain Specifies the name of the client authentication rule.
- * @method void setName(string $Name) Set Specifies the name of the client authentication rule.
- * @method string getEnabled() Obtain Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
- * @method void setEnabled(string $Enabled) Set Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
- * @method integer getPriority() Obtain Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
- * @method void setPriority(integer $Priority) Set Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
- * @method string getCondition() Obtain The rule content must comply with expression grammar. for details, see the product document.
- * @method void setCondition(string $Condition) Set The rule content must comply with expression grammar. for details, see the product document.
- * @method string getAttesterId() Obtain Specifies the client authentication option ID.
- * @method void setAttesterId(string $AttesterId) Set Specifies the client authentication option ID.
- * @method array getDeviceProfiles() Obtain Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
- * @method void setDeviceProfiles(array $DeviceProfiles) Set Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
- * @method SecurityAction getInvalidAttestationAction() Obtain Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
- * @method void setInvalidAttestationAction(SecurityAction $InvalidAttestationAction) Set Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+ * @method string getId() Obtain <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
+ * @method void setId(string $Id) Set <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
+ * @method string getName() Obtain <p>Name of the client authentication rule.</p>
+ * @method void setName(string $Name) Set <p>Name of the client authentication rule.</p>
+ * @method string getEnabled() Obtain <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+ * @method void setEnabled(string $Enabled) Set <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+ * @method integer getPriority() Obtain <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
+ * @method void setPriority(integer $Priority) Set <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
+ * @method string getCondition() Obtain <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
+ * @method void setCondition(string $Condition) Set <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
+ * @method string getAttesterId() Obtain <p>Client authentication option ID.</p>
+ * @method void setAttesterId(string $AttesterId) Set <p>Client authentication option ID.</p>
+ * @method SecurityAction getInvalidAttestationAction() Obtain <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+ * @method void setInvalidAttestationAction(SecurityAction $InvalidAttestationAction) Set <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+ * @method array getDeviceProfiles() Obtain <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+ * @method void setDeviceProfiles(array $DeviceProfiles) Set <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+ * @method AccountProtectionSettings getAccountProtectionSettings() Obtain <p>Account protection configuration.</p>
+ * @method void setAccountProtectionSettings(AccountProtectionSettings $AccountProtectionSettings) Set <p>Account protection configuration.</p>
  */
 class ClientAttestationRule extends AbstractModel
 {
     /**
-     * @var string Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+     * @var string <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
      */
     public $Id;
 
     /**
-     * @var string Specifies the name of the client authentication rule.
+     * @var string <p>Name of the client authentication rule.</p>
      */
     public $Name;
 
     /**
-     * @var string Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+     * @var string <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
      */
     public $Enabled;
 
     /**
-     * @var integer Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+     * @var integer <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
      */
     public $Priority;
 
     /**
-     * @var string The rule content must comply with expression grammar. for details, see the product document.
+     * @var string <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
      */
     public $Condition;
 
     /**
-     * @var string Specifies the client authentication option ID.
+     * @var string <p>Client authentication option ID.</p>
      */
     public $AttesterId;
 
     /**
-     * @var array Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-     */
-    public $DeviceProfiles;
-
-    /**
-     * @var SecurityAction Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+     * @var SecurityAction <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
      */
     public $InvalidAttestationAction;
 
     /**
-     * @param string $Id Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
-     * @param string $Name Specifies the name of the client authentication rule.
-     * @param string $Enabled Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-     * @param integer $Priority Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
-     * @param string $Condition The rule content must comply with expression grammar. for details, see the product document.
-     * @param string $AttesterId Specifies the client authentication option ID.
-     * @param array $DeviceProfiles Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-     * @param SecurityAction $InvalidAttestationAction Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+     * @var array <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+     */
+    public $DeviceProfiles;
+
+    /**
+     * @var AccountProtectionSettings <p>Account protection configuration.</p>
+     */
+    public $AccountProtectionSettings;
+
+    /**
+     * @param string $Id <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
+     * @param string $Name <p>Name of the client authentication rule.</p>
+     * @param string $Enabled <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+     * @param integer $Priority <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
+     * @param string $Condition <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
+     * @param string $AttesterId <p>Client authentication option ID.</p>
+     * @param SecurityAction $InvalidAttestationAction <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+     * @param array $DeviceProfiles <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+     * @param AccountProtectionSettings $AccountProtectionSettings <p>Account protection configuration.</p>
      */
     function __construct()
     {
@@ -126,6 +134,11 @@ class ClientAttestationRule extends AbstractModel
             $this->AttesterId = $param["AttesterId"];
         }
 
+        if (array_key_exists("InvalidAttestationAction",$param) and $param["InvalidAttestationAction"] !== null) {
+            $this->InvalidAttestationAction = new SecurityAction();
+            $this->InvalidAttestationAction->deserialize($param["InvalidAttestationAction"]);
+        }
+
         if (array_key_exists("DeviceProfiles",$param) and $param["DeviceProfiles"] !== null) {
             $this->DeviceProfiles = [];
             foreach ($param["DeviceProfiles"] as $key => $value){
@@ -135,9 +148,9 @@ class ClientAttestationRule extends AbstractModel
             }
         }
 
-        if (array_key_exists("InvalidAttestationAction",$param) and $param["InvalidAttestationAction"] !== null) {
-            $this->InvalidAttestationAction = new SecurityAction();
-            $this->InvalidAttestationAction->deserialize($param["InvalidAttestationAction"]);
+        if (array_key_exists("AccountProtectionSettings",$param) and $param["AccountProtectionSettings"] !== null) {
+            $this->AccountProtectionSettings = new AccountProtectionSettings();
+            $this->AccountProtectionSettings->deserialize($param["AccountProtectionSettings"]);
         }
     }
 }

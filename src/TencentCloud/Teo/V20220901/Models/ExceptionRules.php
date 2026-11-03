@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Web security exception rules.
+ * Exception rule for Web security
  *
- * @method array getRules() Obtain Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
- * @method void setRules(array $Rules) Set Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+ * @method array getRules() Obtain Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
+ * @method void setRules(array $Rules) Set Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
  */
 class ExceptionRules extends AbstractModel
 {
     /**
-     * @var array Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+     * @var array Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
      */
     public $Rules;
 
     /**
-     * @param array $Rules Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+     * @param array $Rules Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
      */
     function __construct()
     {
