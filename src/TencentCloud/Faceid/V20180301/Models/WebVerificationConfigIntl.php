@@ -56,13 +56,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) Set <p>Service version, including basic version (BASIC) and PLUS version (PLUS).</p><p>Enumeration value:</p><ul><li>BASIC: Basic version</li><li>PLUS: PLUS version</li></ul><p>Default value: BASIC.</p>
  * @method string getOcrWaitPolicy() Obtain When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
  * @method void setOcrWaitPolicy(string $OcrWaitPolicy) Set When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
  * @method string getWebhookUrl() Obtain When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
  * @method void setWebhookUrl(string $WebhookUrl) Set When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
@@ -157,8 +157,8 @@ class WebVerificationConfigIntl extends AbstractModel
     /**
      * @var string When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
      */
     public $OcrWaitPolicy;
@@ -188,8 +188,8 @@ Default value: required.
      * @param string $Version <p>Service version, including basic version (BASIC) and PLUS version (PLUS).</p><p>Enumeration value:</p><ul><li>BASIC: Basic version</li><li>PLUS: PLUS version</li></ul><p>Default value: BASIC.</p>
      * @param string $OcrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
      * @param string $WebhookUrl When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
      */

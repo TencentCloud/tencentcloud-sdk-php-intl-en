@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI scheduled task information
  *
- * @method string getScheduleId() Obtain <p>ID of the AI scheduled task.</p>
- * @method void setScheduleId(string $ScheduleId) Set <p>ID of the AI scheduled task.</p>
+ * @method string getScheduleId() Obtain <p>AI scheduled task ID.</p>
+ * @method void setScheduleId(string $ScheduleId) Set <p>AI scheduled task ID.</p>
  * @method string getName() Obtain <p>Task name. Maximum 128 characters.</p>
  * @method void setName(string $Name) Set <p>Task name. Maximum 128 characters.</p>
  * @method string getPrompts() Obtain <p>Execute the prompt content. Maximum 2048 characters.</p>
  * @method void setPrompts(string $Prompts) Set <p>Execute the prompt content. Maximum 2048 characters.</p>
- * @method integer getStatus() Obtain <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
- * @method void setStatus(integer $Status) Set <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+ * @method integer getStatus() Obtain <p>Status. Value: 1 (enabled), 2 (disabled).</p>
+ * @method void setStatus(integer $Status) Set <p>Status. Value: 1 (enabled), 2 (disabled).</p>
  * @method array getTriggers() Obtain <p>Trigger</p>
  * @method void setTriggers(array $Triggers) Set <p>Trigger</p>
  * @method integer getMaxFireCount() Obtain <p>Maximum trigger count. 0 indicates unlimited.</p>
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class AiScheduleInfo extends AbstractModel
 {
     /**
-     * @var string <p>ID of the AI scheduled task.</p>
+     * @var string <p>AI scheduled task ID.</p>
      */
     public $ScheduleId;
 
@@ -63,7 +63,7 @@ class AiScheduleInfo extends AbstractModel
     public $Prompts;
 
     /**
-     * @var integer <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+     * @var integer <p>Status. Value: 1 (enabled), 2 (disabled).</p>
      */
     public $Status;
 
@@ -108,10 +108,10 @@ class AiScheduleInfo extends AbstractModel
     public $Identity;
 
     /**
-     * @param string $ScheduleId <p>ID of the AI scheduled task.</p>
+     * @param string $ScheduleId <p>AI scheduled task ID.</p>
      * @param string $Name <p>Task name. Maximum 128 characters.</p>
      * @param string $Prompts <p>Execute the prompt content. Maximum 2048 characters.</p>
-     * @param integer $Status <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+     * @param integer $Status <p>Status. Value: 1 (enabled), 2 (disabled).</p>
      * @param array $Triggers <p>Trigger</p>
      * @param integer $MaxFireCount <p>Maximum trigger count. 0 indicates unlimited.</p>
      * @param integer $CurrentFireCount <p>Trigger count.</p>

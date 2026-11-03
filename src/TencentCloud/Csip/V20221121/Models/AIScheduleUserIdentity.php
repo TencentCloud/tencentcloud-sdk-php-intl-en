@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User identity information of the AI assistant
+ * User identity information for the AI assistant
  *
  * @method integer getAppId() Obtain <p>appid</p>
  * @method void setAppId(integer $AppId) Set <p>appid</p>
- * @method string getUin() Obtain <p>Account Uin</p>
- * @method void setUin(string $Uin) Set <p>Account Uin</p>
+ * @method string getUin() Obtain <p>Account UIN.</p>
+ * @method void setUin(string $Uin) Set <p>Account UIN.</p>
  * @method string getSubUin() Obtain <p>Sub-account uin</p>
  * @method void setSubUin(string $SubUin) Set <p>Sub-account uin</p>
  * @method string getUserId() Obtain <p>uid</p>
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotId(string $BotId) Set <p>Robot ID</p>
  * @method string getChatId() Obtain <p>Chat ID.</p>
  * @method void setChatId(string $ChatId) Set <p>Chat ID.</p>
- * @method string getChannel() Obtain <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
- * @method void setChannel(string $Channel) Set <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+ * @method string getChannel() Obtain <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
+ * @method void setChannel(string $Channel) Set <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
  */
 class AIScheduleUserIdentity extends AbstractModel
 {
@@ -43,7 +43,7 @@ class AIScheduleUserIdentity extends AbstractModel
     public $AppId;
 
     /**
-     * @var string <p>Account Uin</p>
+     * @var string <p>Account UIN.</p>
      */
     public $Uin;
 
@@ -68,18 +68,18 @@ class AIScheduleUserIdentity extends AbstractModel
     public $ChatId;
 
     /**
-     * @var string <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+     * @var string <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     public $Channel;
 
     /**
      * @param integer $AppId <p>appid</p>
-     * @param string $Uin <p>Account Uin</p>
+     * @param string $Uin <p>Account UIN.</p>
      * @param string $SubUin <p>Sub-account uin</p>
      * @param string $UserId <p>uid</p>
      * @param string $BotId <p>Robot ID</p>
      * @param string $ChatId <p>Chat ID.</p>
-     * @param string $Channel <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+     * @param string $Channel <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     function __construct()
     {

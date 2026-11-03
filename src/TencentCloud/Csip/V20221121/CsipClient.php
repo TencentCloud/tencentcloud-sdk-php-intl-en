@@ -405,7 +405,7 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
  * @method Models\DescribeDspmIdentifyLevelGroupListResponse DescribeDspmIdentifyLevelGroupList(Models\DescribeDspmIdentifyLevelGroupListRequest $req) Query the dspm data identification classification group list
  * @method Models\DescribeDspmIdentifyRuleDetailResponse DescribeDspmIdentifyRuleDetail(Models\DescribeDspmIdentifyRuleDetailRequest $req) Queries the dspm data identification data item details
  * @method Models\DescribeDspmIdentifyRuleListResponse DescribeDspmIdentifyRuleList(Models\DescribeDspmIdentifyRuleListRequest $req) Query the list of dspm identification data items.
- * @method Models\DescribeDspmIdentifyRuleTestResultResponse DescribeDspmIdentifyRuleTestResult(Models\DescribeDspmIdentifyRuleTestResultRequest $req) This API is used to query verification results of dspm data identification data items.
+ * @method Models\DescribeDspmIdentifyRuleTestResultResponse DescribeDspmIdentifyRuleTestResult(Models\DescribeDspmIdentifyRuleTestResultRequest $req) Queries the verification result of a dspm data identification data item
  * @method Models\DescribeDspmLogDeliveryTypeResponse DescribeDspmLogDeliveryType(Models\DescribeDspmLogDeliveryTypeRequest $req) This API is used to query the log type for log shipping.
  * @method Models\DescribeDspmLogListResponse DescribeDspmLogList(Models\DescribeDspmLogListRequest $req) This API is used to query the log list information.
  * @method Models\DescribeDspmLogTypeConfigListResponse DescribeDspmLogTypeConfigList(Models\DescribeDspmLogTypeConfigListRequest $req) This API is used to query the log shipping configuration of a tenant.

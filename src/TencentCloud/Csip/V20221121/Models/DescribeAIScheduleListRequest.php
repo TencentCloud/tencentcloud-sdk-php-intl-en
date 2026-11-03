@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set <p>Pagination size. Default: 20. Maximum: 100.</p>
  * @method integer getStatus() Obtain <p>Status filtering. Value: 0 (all), 1 (enabled), 2 (disabled). Default: 0.</p>
  * @method void setStatus(integer $Status) Set <p>Status filtering. Value: 0 (all), 1 (enabled), 2 (disabled). Default: 0.</p>
- * @method string getScheduleId() Obtain <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
- * @method void setScheduleId(string $ScheduleId) Set <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+ * @method string getScheduleId() Obtain <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
+ * @method void setScheduleId(string $ScheduleId) Set <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
  */
 class DescribeAIScheduleListRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeAIScheduleListRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+     * @var string <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
      */
     public $ScheduleId;
 
@@ -55,7 +55,7 @@ class DescribeAIScheduleListRequest extends AbstractModel
      * @param integer $Offset <p>Pagination offset. Default: 0.</p>
      * @param integer $Limit <p>Pagination size. Default: 20. Maximum: 100.</p>
      * @param integer $Status <p>Status filtering. Value: 0 (all), 1 (enabled), 2 (disabled). Default: 0.</p>
-     * @param string $ScheduleId <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+     * @param string $ScheduleId <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
      */
     function __construct()
     {
