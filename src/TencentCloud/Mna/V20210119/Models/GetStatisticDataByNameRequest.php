@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetStatisticDataByName request structure.
  *
- * @method string getDeviceName() Obtain Device name. If not specified, pass "-1".
- * @method void setDeviceName(string $DeviceName) Set Device name. If not specified, pass "-1".
- * @method integer getBeginTime() Obtain Start time of statistics (seconds).
- * @method void setBeginTime(integer $BeginTime) Set Start time of statistics (seconds).
- * @method integer getEndTime() Obtain Statistics end time (s).
- * @method void setEndTime(integer $EndTime) Set Statistics end time (s).
- * @method integer getTimeGranularity() Obtain Aggregation granularity:
-Hourly statistics
-2: Daily statistics
- * @method void setTimeGranularity(integer $TimeGranularity) Set Aggregation granularity:
-Hourly statistics
-2: Daily statistics
- * @method string getAccessRegion() Obtain Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
- * @method void setAccessRegion(string $AccessRegion) Set Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
- * @method integer getGatewayType() Obtain Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
- * @method void setGatewayType(integer $GatewayType) Set Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
- * @method array getDeviceList() Obtain Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
- * @method void setDeviceList(array $DeviceList) Set Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
- * @method string getGroupId() Obtain Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
- * @method void setGroupId(string $GroupId) Set Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
- * @method string getMpApplicationId() Obtain Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
- * @method void setMpApplicationId(string $MpApplicationId) Set Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
+ * @method string getDeviceName() Obtain <p>Device name. If no device is specified, you can pass "-1"</p>
+ * @method void setDeviceName(string $DeviceName) Set <p>Device name. If no device is specified, you can pass "-1"</p>
+ * @method integer getBeginTime() Obtain <p>Start time of statistics, unit: s</p>
+ * @method void setBeginTime(integer $BeginTime) Set <p>Start time of statistics, unit: s</p>
+ * @method integer getEndTime() Obtain <p>Statistics end time, unit: s</p>
+ * @method void setEndTime(integer $EndTime) Set <p>Statistics end time, unit: s</p>
+ * @method integer getTimeGranularity() Obtain <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
+ * @method void setTimeGranularity(integer $TimeGranularity) Set <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
+ * @method string getAccessRegion() Obtain <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
+ * @method void setAccessRegion(string $AccessRegion) Set <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
+ * @method integer getGatewayType() Obtain <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
+ * @method void setGatewayType(integer $GatewayType) Set <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
+ * @method array getDeviceList() Obtain <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
+ * @method void setDeviceList(array $DeviceList) Set <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
+ * @method string getGroupId() Obtain <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
+ * @method void setGroupId(string $GroupId) Set <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
+ * @method string getMpApplicationId() Obtain <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
+ * @method void setMpApplicationId(string $MpApplicationId) Set <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
  */
 class GetStatisticDataByNameRequest extends AbstractModel
 {
     /**
-     * @var string Device name. If not specified, pass "-1".
+     * @var string <p>Device name. If no device is specified, you can pass "-1"</p>
      */
     public $DeviceName;
 
     /**
-     * @var integer Start time of statistics (seconds).
+     * @var integer <p>Start time of statistics, unit: s</p>
      */
     public $BeginTime;
 
     /**
-     * @var integer Statistics end time (s).
+     * @var integer <p>Statistics end time, unit: s</p>
      */
     public $EndTime;
 
     /**
-     * @var integer Aggregation granularity:
-Hourly statistics
-2: Daily statistics
+     * @var integer <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
      */
     public $TimeGranularity;
 
     /**
-     * @var string Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
+     * @var string <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
      */
     public $AccessRegion;
 
     /**
-     * @var integer Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+     * @var integer <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
      */
     public $GatewayType;
 
     /**
-     * @var array Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
+     * @var array <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
      */
     public $DeviceList;
 
     /**
-     * @var string Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
+     * @var string <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
      */
     public $GroupId;
 
     /**
-     * @var string Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
+     * @var string <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
      */
     public $MpApplicationId;
 
     /**
-     * @param string $DeviceName Device name. If not specified, pass "-1".
-     * @param integer $BeginTime Start time of statistics (seconds).
-     * @param integer $EndTime Statistics end time (s).
-     * @param integer $TimeGranularity Aggregation granularity:
-Hourly statistics
-2: Daily statistics
-     * @param string $AccessRegion Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
-     * @param integer $GatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
-     * @param array $DeviceList Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
-     * @param string $GroupId Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
-     * @param string $MpApplicationId Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
+     * @param string $DeviceName <p>Device name. If no device is specified, you can pass "-1"</p>
+     * @param integer $BeginTime <p>Start time of statistics, unit: s</p>
+     * @param integer $EndTime <p>Statistics end time, unit: s</p>
+     * @param integer $TimeGranularity <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
+     * @param string $AccessRegion <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
+     * @param integer $GatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
+     * @param array $DeviceList <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
+     * @param string $GroupId <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
+     * @param string $MpApplicationId <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Model details
  *
- * @method string getAlias() Obtain Model alias.
- * @method void setAlias(string $Alias) Set Model alias.
+ * @method string getAlias() Obtain Model alias
+ * @method void setAlias(string $Alias) Set Model alias
  * @method integer getHistoryLimit() Obtain Limit on number of historical conversations
  * @method void setHistoryLimit(integer $HistoryLimit) Set Limit on number of historical conversations
  * @method string getModelId() Obtain Unique model ID
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModelDetailInfo extends AbstractModel
 {
     /**
-     * @var string Model alias.
+     * @var string Model alias
      */
     public $Alias;
 
@@ -52,7 +52,7 @@ class ModelDetailInfo extends AbstractModel
     public $ModelParams;
 
     /**
-     * @param string $Alias Model alias.
+     * @param string $Alias Model alias
      * @param integer $HistoryLimit Limit on number of historical conversations
      * @param string $ModelId Unique model ID
      * @param ModelParams $ModelParams Model parameters

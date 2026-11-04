@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Model parameters
  *
- * @method string getDeepThinking() Obtain <p>Whether deep thinking is enabled</p>
- * @method void setDeepThinking(string $DeepThinking) Set <p>Whether deep thinking is enabled</p>
+ * @method string getDeepThinking() Obtain <p>Whether to enable deep thinking</p>
+ * @method void setDeepThinking(string $DeepThinking) Set <p>Whether to enable deep thinking</p>
  * @method float getFrequencyPenalty() Obtain <p>Frequency penalty</p>
  * @method void setFrequencyPenalty(float $FrequencyPenalty) Set <p>Frequency penalty</p>
  * @method integer getMaxTokens() Obtain <p>Maximum output length</p>
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class ModelParams extends AbstractModel
 {
     /**
-     * @var string <p>Whether deep thinking is enabled</p>
+     * @var string <p>Whether to enable deep thinking</p>
      */
     public $DeepThinking;
 
@@ -108,7 +108,7 @@ class ModelParams extends AbstractModel
     public $TopK;
 
     /**
-     * @param string $DeepThinking <p>Whether deep thinking is enabled</p>
+     * @param string $DeepThinking <p>Whether to enable deep thinking</p>
      * @param float $FrequencyPenalty <p>Frequency penalty</p>
      * @param integer $MaxTokens <p>Maximum output length</p>
      * @param float $PresencePenalty <p>Existence penalty</p>

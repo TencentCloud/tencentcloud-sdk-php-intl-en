@@ -60,7 +60,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetNetMonitorByNameResponse GetNetMonitorByName(Models\GetNetMonitorByNameRequest $req) This API is used to obtain real-time traffic statistics per device.
  * @method Models\GetPublicKeyResponse GetPublicKey(Models\GetPublicKeyRequest $req) This API is used to access the public key for signature verification.
  * @method Models\GetStatisticDataResponse GetStatisticData(Models\GetStatisticDataRequest $req) Download traffic data on the usage statistics page
- * @method Models\GetStatisticDataByNameResponse GetStatisticDataByName(Models\GetStatisticDataByNameRequest $req) Download traffic data on the usage statistics page
+ * @method Models\GetStatisticDataByNameResponse GetStatisticDataByName(Models\GetStatisticDataByNameRequest $req) Download traffic data on the usage statistics page.
  * @method Models\GetVendorHardwareResponse GetVendorHardware(Models\GetVendorHardwareRequest $req) This API is used to get the hardware device list of the manufacturer.
  * @method Models\GroupAddDeviceResponse GroupAddDevice(Models\GroupAddDeviceRequest $req) Add device to already exist group
  * @method Models\GroupDeleteDeviceResponse GroupDeleteDevice(Models\GroupDeleteDeviceRequest $req) Delete devices in the group

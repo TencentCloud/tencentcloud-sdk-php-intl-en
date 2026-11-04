@@ -75,6 +75,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
  * @method Models\GetUserResponse GetUser(Models\GetUserRequest $req) This API is used to query sub-users.
  * @method Models\GetUserAppIdResponse GetUserAppId(Models\GetUserAppIdRequest $req) This API is used to get the user AppId.
  * @method Models\ListAccessKeysResponse ListAccessKeys(Models\ListAccessKeysRequest $req) This API is used to list the access keys associated with a specified CAM user.
+ * @method Models\ListAccountsResponse ListAccounts(Models\ListAccountsRequest $req) Query all account lists.
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) This API (ListAttachedRolePolicies) is used to obtain the list of the policies associated with a role.
  * @method Models\ListAttachedUserAllPoliciesResponse ListAttachedUserAllPolicies(Models\ListAttachedUserAllPoliciesRequest $req) This API is used to list policies associated with the user (including those inherited from the user group).
