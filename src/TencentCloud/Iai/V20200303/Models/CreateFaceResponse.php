@@ -20,82 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFace response structure.
  *
- * @method integer getSucFaceNum() Obtain Number of successfully added faces
- * @method void setSucFaceNum(integer $SucFaceNum) Set Number of successfully added faces
- * @method array getSucFaceIds() Obtain List of IDs of successfully added faces
- * @method void setSucFaceIds(array $SucFaceIds) Set List of IDs of successfully added faces
- * @method array getRetCode() Obtain Adding result for each face image. -1101: no face detected; -1102: image decoding failed; 
--1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
-Other non-zero values: algorithm service exception. 
-The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
- * @method void setRetCode(array $RetCode) Set Adding result for each face image. -1101: no face detected; -1102: image decoding failed; 
--1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
-Other non-zero values: algorithm service exception. 
-The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
- * @method array getSucIndexes() Obtain Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
-For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
- * @method void setSucIndexes(array $SucIndexes) Set Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
-For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
- * @method array getSucFaceRects() Obtain Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
- * @method void setSucFaceRects(array $SucFaceRects) Set Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
- * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition.
- * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition.
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getSucFaceNum() Obtain <p>Number of faces that joined successfully.</p>
+ * @method void setSucFaceNum(integer $SucFaceNum) Set <p>Number of faces that joined successfully.</p>
+ * @method array getSucFaceIds() Obtain <p>List of face IDs that joined successfully.</p>
+ * @method void setSucFaceIds(array $SucFaceIds) Set <p>List of face IDs that joined successfully.</p>
+ * @method array getRetCode() Obtain <p>Addition result of each face image.</p><ul><li>Other non-zero values represent algorithm service exceptions, with the following value ranges:<br>-1101 represents no face detected.<br>-1102 represents image decoding failure.<br>-1109 represents image size too large or too small.<br>-1601 represents the image quality control requirement is not met.<br>-1604 represents face similarity does not exceed FaceMatchThreshold. </li><li>The order of RetCode is consistent with the sequence of Images or Urls in the input parameters.</li></ul>
+ * @method void setRetCode(array $RetCode) Set <p>Addition result of each face image.</p><ul><li>Other non-zero values represent algorithm service exceptions, with the following value ranges:<br>-1101 represents no face detected.<br>-1102 represents image decoding failure.<br>-1109 represents image size too large or too small.<br>-1601 represents the image quality control requirement is not met.<br>-1604 represents face similarity does not exceed FaceMatchThreshold. </li><li>The order of RetCode is consistent with the sequence of Images or Urls in the input parameters.</li></ul>
+ * @method array getSucIndexes() Obtain <p>Index of successfully added faces.</p><ul><li>The index order is consistent with the sequence of Images or Urls in the input parameter.</li><li>For example, if there are 3 Urls in Urls and the second url fails, the value of SucIndexes is [0,2].</li></ul>
+ * @method void setSucIndexes(array $SucIndexes) Set <p>Index of successfully added faces.</p><ul><li>The index order is consistent with the sequence of Images or Urls in the input parameter.</li><li>For example, if there are 3 Urls in Urls and the second url fails, the value of SucIndexes is [0,2].</li></ul>
+ * @method array getSucFaceRects() Obtain <p>Face bounding box position of successfully joined faces. The sequence is consistent with the sequence of Images or Urls in the input parameter.</p>
+ * @method void setSucFaceRects(array $SucFaceRects) Set <p>Face bounding box position of successfully joined faces. The sequence is consistent with the sequence of Images or Urls in the input parameter.</p>
+ * @method string getFaceModelVersion() Obtain <p>Algorithm model version used for face recognition.</p>
+ * @method void setFaceModelVersion(string $FaceModelVersion) Set <p>Algorithm model version used for face recognition.</p>
+ * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class CreateFaceResponse extends AbstractModel
 {
     /**
-     * @var integer Number of successfully added faces
+     * @var integer <p>Number of faces that joined successfully.</p>
      */
     public $SucFaceNum;
 
     /**
-     * @var array List of IDs of successfully added faces
+     * @var array <p>List of face IDs that joined successfully.</p>
      */
     public $SucFaceIds;
 
     /**
-     * @var array Adding result for each face image. -1101: no face detected; -1102: image decoding failed; 
--1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
-Other non-zero values: algorithm service exception. 
-The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
+     * @var array <p>Addition result of each face image.</p><ul><li>Other non-zero values represent algorithm service exceptions, with the following value ranges:<br>-1101 represents no face detected.<br>-1102 represents image decoding failure.<br>-1109 represents image size too large or too small.<br>-1601 represents the image quality control requirement is not met.<br>-1604 represents face similarity does not exceed FaceMatchThreshold. </li><li>The order of RetCode is consistent with the sequence of Images or Urls in the input parameters.</li></ul>
      */
     public $RetCode;
 
     /**
-     * @var array Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
-For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
+     * @var array <p>Index of successfully added faces.</p><ul><li>The index order is consistent with the sequence of Images or Urls in the input parameter.</li><li>For example, if there are 3 Urls in Urls and the second url fails, the value of SucIndexes is [0,2].</li></ul>
      */
     public $SucIndexes;
 
     /**
-     * @var array Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
+     * @var array <p>Face bounding box position of successfully joined faces. The sequence is consistent with the sequence of Images or Urls in the input parameter.</p>
      */
     public $SucFaceRects;
 
     /**
-     * @var string Algorithm model version used for face recognition.
+     * @var string <p>Algorithm model version used for face recognition.</p>
      */
     public $FaceModelVersion;
 
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param integer $SucFaceNum Number of successfully added faces
-     * @param array $SucFaceIds List of IDs of successfully added faces
-     * @param array $RetCode Adding result for each face image. -1101: no face detected; -1102: image decoding failed; 
--1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
-Other non-zero values: algorithm service exception. 
-The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
-     * @param array $SucIndexes Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
-For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
-     * @param array $SucFaceRects Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
-     * @param string $FaceModelVersion Algorithm model version used for face recognition.
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param integer $SucFaceNum <p>Number of faces that joined successfully.</p>
+     * @param array $SucFaceIds <p>List of face IDs that joined successfully.</p>
+     * @param array $RetCode <p>Addition result of each face image.</p><ul><li>Other non-zero values represent algorithm service exceptions, with the following value ranges:<br>-1101 represents no face detected.<br>-1102 represents image decoding failure.<br>-1109 represents image size too large or too small.<br>-1601 represents the image quality control requirement is not met.<br>-1604 represents face similarity does not exceed FaceMatchThreshold. </li><li>The order of RetCode is consistent with the sequence of Images or Urls in the input parameters.</li></ul>
+     * @param array $SucIndexes <p>Index of successfully added faces.</p><ul><li>The index order is consistent with the sequence of Images or Urls in the input parameter.</li><li>For example, if there are 3 Urls in Urls and the second url fails, the value of SucIndexes is [0,2].</li></ul>
+     * @param array $SucFaceRects <p>Face bounding box position of successfully joined faces. The sequence is consistent with the sequence of Images or Urls in the input parameter.</p>
+     * @param string $FaceModelVersion <p>Algorithm model version used for face recognition.</p>
+     * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
     {

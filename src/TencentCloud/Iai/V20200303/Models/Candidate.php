@@ -18,96 +18,84 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Most matching candidate recognized
+ * The most similar candidate identified
  *
- * @method string getPersonId() Obtain Person ID
- * @method void setPersonId(string $PersonId) Set Person ID
- * @method string getFaceId() Obtain Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
- * @method void setFaceId(string $FaceId) Set Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
- * @method float getScore() Obtain Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
- * @method void setScore(float $Score) Set Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
- * @method string getPersonName() Obtain Person name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPersonName(string $PersonName) Set Person name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getGender() Obtain Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setGender(integer $Gender) Set Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getPersonGroupInfos() Obtain List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPersonGroupInfos(array $PersonGroupInfos) Set List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPersonId() Obtain Person ID.
+ * @method void setPersonId(string $PersonId) Set Person ID.
+ * @method string getFaceId() Obtain Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
+ * @method void setFaceId(string $FaceId) Set Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
+ * @method float getScore() Obtain Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
+ * @method void setScore(float $Score) Set Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
+ * @method string getPersonName() Obtain Person name.
+ * @method void setPersonName(string $PersonName) Set Person name.
+ * @method integer getGender() Obtain Gender of personnel.
+ * @method void setGender(integer $Gender) Set Gender of personnel.
+ * @method array getPersonGroupInfos() Obtain List of person libraries containing this person and the content of the description field.
+ * @method void setPersonGroupInfos(array $PersonGroupInfos) Set List of person libraries containing this person and the content of the description field.
  */
 class Candidate extends AbstractModel
 {
     /**
-     * @var string Person ID
+     * @var string Person ID.
      */
     public $PersonId;
 
     /**
-     * @var string Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+     * @var string Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
      */
     public $FaceId;
 
     /**
-     * @var float Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+     * @var float Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
      */
     public $Score;
 
     /**
-     * @var string Person name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Person name.
      */
     public $PersonName;
 
     /**
-     * @var integer Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Gender of personnel.
      */
     public $Gender;
 
     /**
-     * @var array List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of person libraries containing this person and the content of the description field.
      */
     public $PersonGroupInfos;
 
     /**
-     * @param string $PersonId Person ID
-     * @param string $FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
-     * @param float $Score Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
-     * @param string $PersonName Person name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Gender Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $PersonGroupInfos List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $PersonId Person ID.
+     * @param string $FaceId Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
+     * @param float $Score Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
+     * @param string $PersonName Person name.
+     * @param integer $Gender Gender of personnel.
+     * @param array $PersonGroupInfos List of person libraries containing this person and the content of the description field.
      */
     function __construct()
     {

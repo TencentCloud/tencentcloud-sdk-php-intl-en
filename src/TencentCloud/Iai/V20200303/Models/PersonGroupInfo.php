@@ -18,28 +18,28 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of groups containing this person and their description fields
+ * List of person libraries containing this person and description field content
  *
- * @method string getGroupId() Obtain ID of the group that contains this person
- * @method void setGroupId(string $GroupId) Set ID of the group that contains this person
- * @method array getPersonExDescriptions() Obtain Content of person description field
- * @method void setPersonExDescriptions(array $PersonExDescriptions) Set Content of person description field
+ * @method string getGroupId() Obtain Personnel database ID that contains this person.
+ * @method void setGroupId(string $GroupId) Set Personnel database ID that contains this person.
+ * @method array getPersonExDescriptions() Obtain Person description field content.
+ * @method void setPersonExDescriptions(array $PersonExDescriptions) Set Person description field content.
  */
 class PersonGroupInfo extends AbstractModel
 {
     /**
-     * @var string ID of the group that contains this person
+     * @var string Personnel database ID that contains this person.
      */
     public $GroupId;
 
     /**
-     * @var array Content of person description field
+     * @var array Person description field content.
      */
     public $PersonExDescriptions;
 
     /**
-     * @param string $GroupId ID of the group that contains this person
-     * @param array $PersonExDescriptions Content of person description field
+     * @param string $GroupId Personnel database ID that contains this person.
+     * @param array $PersonExDescriptions Person description field content.
      */
     function __construct()
     {

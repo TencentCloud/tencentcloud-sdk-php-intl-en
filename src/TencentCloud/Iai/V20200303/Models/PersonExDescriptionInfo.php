@@ -18,32 +18,28 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom description field of the person to be modified, which is a `key-value` pair.
+ * Content of the person description field to be modified, key-value
  *
- * @method integer getPersonExDescriptionIndex() Obtain Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPersonExDescriptionIndex(integer $PersonExDescriptionIndex) Set Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPersonExDescription() Obtain Content of the person description field to be updated
- * @method void setPersonExDescription(string $PersonExDescription) Set Content of the person description field to be updated
+ * @method integer getPersonExDescriptionIndex() Obtain Person description field Index, starts from 0.
+ * @method void setPersonExDescriptionIndex(integer $PersonExDescriptionIndex) Set Person description field Index, starts from 0.
+ * @method string getPersonExDescription() Obtain Person description field content that needs to be updated.
+ * @method void setPersonExDescription(string $PersonExDescription) Set Person description field content that needs to be updated.
  */
 class PersonExDescriptionInfo extends AbstractModel
 {
     /**
-     * @var integer Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Person description field Index, starts from 0.
      */
     public $PersonExDescriptionIndex;
 
     /**
-     * @var string Content of the person description field to be updated
+     * @var string Person description field content that needs to be updated.
      */
     public $PersonExDescription;
 
     /**
-     * @param integer $PersonExDescriptionIndex Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PersonExDescription Content of the person description field to be updated
+     * @param integer $PersonExDescriptionIndex Person description field Index, starts from 0.
+     * @param string $PersonExDescription Person description field content that needs to be updated.
      */
     function __construct()
     {

@@ -18,60 +18,60 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Position of detected face frame
+ * Location of the detected face frame
  *
- * @method integer getX() Obtain Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
- * @method void setX(integer $X) Set Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
- * @method integer getY() Obtain Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
- * @method void setY(integer $Y) Set Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
- * @method integer getWidth() Obtain Face width
- * @method void setWidth(integer $Width) Set Face width
- * @method integer getHeight() Obtain Face height
- * @method void setHeight(integer $Height) Set Face height
+ * @method integer getX() Obtain Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+ * @method void setX(integer $X) Set Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+ * @method integer getY() Obtain Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+ * @method void setY(integer $Y) Set Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+ * @method integer getWidth() Obtain Face width.
+ * @method void setWidth(integer $Width) Set Face width.
+ * @method integer getHeight() Obtain Face height.
+ * @method void setHeight(integer $Height) Set Face height.
  */
 class FaceRect extends AbstractModel
 {
     /**
-     * @var integer Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * @var integer Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
      */
     public $X;
 
     /**
-     * @var integer Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * @var integer Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
      */
     public $Y;
 
     /**
-     * @var integer Face width
+     * @var integer Face width.
      */
     public $Width;
 
     /**
-     * @var integer Face height
+     * @var integer Face height.
      */
     public $Height;
 
     /**
-     * @param integer $X Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
-     * @param integer $Y Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
-     * @param integer $Width Face width
-     * @param integer $Height Face height
+     * @param integer $X Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+     * @param integer $Y Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+     * @param integer $Width Face width.
+     * @param integer $Height Face height.
      */
     function __construct()
     {
