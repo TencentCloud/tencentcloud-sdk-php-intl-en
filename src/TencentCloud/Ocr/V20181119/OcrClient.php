@@ -65,7 +65,7 @@ A maximum of 10 requests can be initiated per second for this API.
 
 This API is used to set the default request rate limit to 5 requests/second.
  * @method Models\RecognizeBrazilDriverLicenseOCRResponse RecognizeBrazilDriverLicenseOCR(Models\RecognizeBrazilDriverLicenseOCRRequest $req) This interface supports identification of the front and back of Brazilian driver's license. The identification fields include name, driver's license category, number, validity period, etc.
- * @method Models\RecognizeBrazilIDCardOCRResponse RecognizeBrazilIDCardOCR(Models\RecognizeBrazilIDCardOCRRequest $req) This interface supports identification of the front and back of Brazilian ID license. The identification fields include name, driver's license category, number, validity period, etc.
+ * @method Models\RecognizeBrazilIDCardOCRResponse RecognizeBrazilIDCardOCR(Models\RecognizeBrazilIDCardOCRRequest $req) This interface supports recognition of both the front and back sides of Brazilian ID cards. Default API request rate limit: 5 requests per second.
  * @method Models\RecognizeBrazilRNEOCRResponse RecognizeBrazilRNEOCR(Models\RecognizeBrazilRNEOCRRequest $req) Brazil RNE document recognition Default interface request frequency limit: 5 times/second
  * @method Models\RecognizeBrazilRNMOCRResponse RecognizeBrazilRNMOCR(Models\RecognizeBrazilRNMOCRRequest $req) This interface supports identification of the front and back of Brazilian RNM license. The default interface request frequency limit is 5 times per second.
  * @method Models\RecognizeDetectCardCoordsResponse RecognizeDetectCardCoords(Models\RecognizeDetectCardCoordsRequest $req) This API is used to recognize the coordinates of four corners of cards.
