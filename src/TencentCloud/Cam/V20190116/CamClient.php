@@ -62,6 +62,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
  * @method Models\DetachRolePolicyResponse DetachRolePolicy(Models\DetachRolePolicyRequest $req) This API (DetachRolePolicy) is used to unassociate a policy and a role.
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) This API (DetachUserPolicy) is used to unassociate a policy and a user.
  * @method Models\DisableUserSSOResponse DisableUserSSO(Models\DisableUserSSORequest $req) This API is used to disable user SSO.
+ * @method Models\GenerateOIDCAccessTokenResponse GenerateOIDCAccessToken(Models\GenerateOIDCAccessTokenRequest $req) Generate an OIDC access token. This feature is in grayscale stage. Contact Tencent Cloud if needed.
  * @method Models\GetAccountSummaryResponse GetAccountSummary(Models\GetAccountSummaryRequest $req) This API is used to query account summary. 
  * @method Models\GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(Models\GetCustomMFATokenInfoRequest $req) This API is used to get information associated with a custom multi-factor Token
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) This API is used to query user group details.

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAigcApiToken request structure.
  *
- * @method integer getSubAppId() Obtain <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
- * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
  * @method string getApiToken() Obtain <p>To update the Api Key</p>
  * @method void setApiToken(string $ApiToken) Set <p>To update the Api Key</p>
- * @method string getActionType() Obtain <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
- * @method void setActionType(string $ActionType) Set <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
- * @method string getExtInfo() Obtain <p>Extended information of the token</p>
- * @method void setExtInfo(string $ExtInfo) Set <p>Extended information of the token</p>
+ * @method integer getSubAppId() Obtain <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method void setSubAppId(integer $SubAppId) Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+ * @method string getActionType() Obtain <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+ * @method void setActionType(string $ActionType) Set <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+ * @method string getExtInfo() Obtain <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
+ * @method void setExtInfo(string $ExtInfo) Set <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
  */
 class UpdateAigcApiTokenRequest extends AbstractModel
 {
-    /**
-     * @var integer <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     */
-    public $SubAppId;
-
     /**
      * @var string <p>To update the Api Key</p>
      */
     public $ApiToken;
 
     /**
-     * @var string <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+     * @var integer <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     */
+    public $SubAppId;
+
+    /**
+     * @var string <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
      */
     public $ActionType;
 
     /**
-     * @var string <p>Extended information of the token</p>
+     * @var string <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
      */
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      * @param string $ApiToken <p>To update the Api Key</p>
-     * @param string $ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
-     * @param string $ExtInfo <p>Extended information of the token</p>
+     * @param integer $SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param string $ActionType <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+     * @param string $ExtInfo <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
      */
     function __construct()
     {
@@ -70,12 +70,12 @@ class UpdateAigcApiTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
-        }
-
         if (array_key_exists("ApiToken",$param) and $param["ApiToken"] !== null) {
             $this->ApiToken = $param["ApiToken"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
